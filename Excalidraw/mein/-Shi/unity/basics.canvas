@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"df466e2860b2299d","type":"text","text":"components = + objects feature","x":-268,"y":-114,"width":250,"height":60},
+		{"id":"f6a604ce54f89bd7","type":"text","text":"mesh filter then mesh renderer - material\n\n","x":-268,"y":-40,"width":250,"height":60},
+		{"id":"c513c68646594285","type":"text","text":"physics rigid body","x":-268,"y":40,"width":250,"height":60},
+		{"id":"83fa019f02a08b8a","type":"text","text":"CUSTOM COMPONENTS","x":-300,"y":220,"width":250,"height":60},
+		{"id":"3c0a65231d4725cb","type":"text","text":"start on start- update on every frame nonstop","x":-140,"y":420,"width":250,"height":60},
+		{"id":"2d1492b35c0d7a2e","type":"text","text":"legacy input system","x":-140,"y":580,"width":250,"height":60},
+		{"id":"9a752b8aca3bcc60","type":"file","file":"someimages/Pasted image 20250209041031.png","x":-15,"y":697,"width":400,"height":243},
+		{"id":"971c7fcdb0abdcc6","type":"file","file":"someimages/Pasted image 20250209041026.png","x":-15,"y":940,"width":400,"height":141}
+	],
+	"edges":[
+		{"id":"c1aa9fd457256edd","fromNode":"83fa019f02a08b8a","fromSide":"bottom","toNode":"3c0a65231d4725cb","toSide":"top"},
+		{"id":"e40098c4b62452a6","fromNode":"2d1492b35c0d7a2e","fromSide":"bottom","toNode":"9a752b8aca3bcc60","toSide":"top"},
+		{"id":"0fed7739bbac4568","fromNode":"9a752b8aca3bcc60","fromSide":"bottom","toNode":"971c7fcdb0abdcc6","toSide":"top"}
+	]
+}

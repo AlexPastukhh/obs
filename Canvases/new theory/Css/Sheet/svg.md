@@ -1,0 +1,35 @@
+---
+
+excalidraw-plugin: parsed
+tags: [excalidraw]
+
+---
+==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plugin settings under 'Saving'
+
+
+# Excalidraw Data
+## Text Elements
+const s = document.querySelector('.inner-search-container .link-primary svg');
+const b = s.getBBox(); // { x, y, width, height }
+console.log(b.x, b.y, b.width, b.height); ^EmYHCdFK
+
+%%
+## Drawing
+```compressed-json
+N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATLZMzYBXUtiRoIACyhQ4zZAHoFAc0JRJQgEYA6bGwC2CgF7N6hbEcK4OCtptbErHALRY8RMpWdx8Q1TdIEfARcZgRmBShcZQUebQBWbR4aOiCEfQQOKGZuAG1wMFAwYuh4cXQoLCgU4shGFnYuNAB2ADZ+EvrWTgA5TjFuAEZB1oBmABZW+IAOVvGOyEIOYixu
+
+CFwABhqSwmYAETTK4m4AMwIwhYgSNYBRfQBNAAkAYWIAMQBpbcgTwnx8ADKsGCa0EHm+EGYUFIbAA1ggAOokdTcPgFATQuEIIEwEESMHXS4wvySDjhHJoQaXNhwXDYNQwIYbDaXazKPGoFnoiCYbjOUbNUbaQbTHgATmmo1GEvGAvil0ZlJ4g20U1aPHl3KhMPhzzY+DYpDWAGJBggzWaIZo6bDlMTlnqDUaJNDrMxaYEshCKMjJNxBc1hWKxRMN
+
+qKNqNBhrLpIEIRlNJ/ZrapCEAhjpSNs0NnMNvF2ty7cI4ABJYgU1C5AC6lxO5AyZe4HCE/yJwmWZOYFebre5mnbxBuwQyWQr1cuQjgxFwRyGzWzgyzPA1GtGlyIHFhTZb+HXbGw8IzqDO+Au3JOnCgAMIRnKPC5KYvWTeuH0f0VqGTJUqmGqEj0HBQqgzCoAAvKgxD7kII5QNoACOQhMDAAJpNgUCGgAFAA5NoSxkqQzhhLgoiSM4AFREsTCoNoG
+
+6wt4pCEPoxEwMB9DKFhACUADcAA6HAAUBmhgcB2jKAgUAAEISWwmAYdxqBKKgwCoJg1CoDAak+sQ6hqbG8bSKgAC+fECfqCA0WwygYToqmoDoGl2doWk6Y5ekJlA3EQuQFAACpVGsAlQMBwmQdg0GZLBCFIShwRoZhOF4UwhEhCRZGXrglGkNRtH0YxzGsex3EmZwgnCcwoniVJMlyVxCkKEpKlqQ5zmSLpcbuUZxWAWZFlWTZan2QNTm+kNbnSJ
+
+5lw/lAACCRDKE06DBCc1SXPUUDmAQs3xgt0A0hC5EZfhjZoD2u7coa8ZLAQfm/gFJVBSB4GheFWTwYhpDIah6GkNhuEcPhyXEdgpEHZl2VLHRcAMUxH0FZxvH8fddllRVknSbJ8mKcptnNSNqBjUFxmI91wS9dZ2i2YNjktaN7XjVxEK4EI6EAErhDe5TQoh66UY8dN/qgKoagUhngDWdC4HAcBAjO5RFJA6jpOUEDTqQW4dAwhAIBQEk2kWQgOv
+
+qhomicptm9sEBhaQnpQCWlT6ECOoII6xsSKa5oexbVs23b6S6we+uG06ayuoBHoRV7Ig+/bbx/ICwLKwSxwa97EW+w7mLwki2l+mgaIlKnWTp47WI4hykL6oSBSW1Haf2yzwgJp2FZUtXhe2/bADytL0rATIPpA7fp28l4vm++Afl+NfW3X6Qj1k163qiA/T9H6Q3TNc07UtK1t7XRf2zLpAzdbbAULGuBHqdKf7x36Q3Ms02n+fIRHusz+RzPB/
+
+pE/MK+WUax7TJ2rswbAMJ/gAA1uDxA2GKbQzQp6gPAfge43BxgbBVIMfM0Zq5GDYAYbg8s6gEEQkMEWN8v5330A3A2xBm6AIHBbO0JBF53hXsw4gQIEBwGgRrDhABZNgKwH64E0MEI8J4zwlA4S7Z0SluTSXwG/UgyhrQYWVM0NSGitGDE0ZyBIHEIRs2UC2YigDVG4HUaMFkvBrFaLsfo+IhjyF70oSXeE3d1olW3L2EodZXwIDZssJgSxlCEO5
+
+JkUR4juBcwQJcbARAeFoFiZcDgASYmkG5udZmG5OaZIQC4kodgABWCA0LMABGkuAgjhFpLEemU45w4nVzpOtRgPl8H4HCSmWAiBQRfUaPtIQUIDA+QASdHce4DwNLQJI5pKZ8ChBmmhQg7TOk+PwCLcAhl+AQF+MECswBRaGSAA=
+```
+%%
