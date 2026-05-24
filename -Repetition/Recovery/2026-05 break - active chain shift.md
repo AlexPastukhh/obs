@@ -6,6 +6,25 @@ Status: recovery rule / active context.
 
 May was missed. The old reconstruction was based on an imagined current date of 2026-04-28, but the active working schedule should continue later.
 
+## This is an explicit one-time recovery decision
+
+The `+1 calendar month` shift is **not** the default scheduling rule.
+
+It was an explicit recovery decision for this specific break:
+
+```text
+Because May was missed, active chains were rewritten so the first pending stage on/after 2026-04-28 is moved by +1 calendar month.
+```
+
+Normal/default scheduling is still:
+
+```text
+When a new repeat unit is created, use exact gaps:
+processing -> +5 -> +10 -> +20 -> +40 -> +80 -> review / decide next
+```
+
+Do not apply `+1 calendar month` to future breaks unless the user explicitly asks for a similar recovery shift.
+
 ## Active shift rule
 
 ```text
