@@ -10,6 +10,14 @@ That folder is old/source/sensitive material.
 Use `-Repetition` for active chains and schedules.
 ```
 
+## New AI chat handoff
+
+Start here when opening this system in a new chat:
+
+- [[FOR NEW AI CHAT]]
+
+This handoff explains what to do when the user says they processed something on a specific date: create a new repeat unit in the chain and add the generated repeat dates to schedule files.
+
 ## Rules and principles
 
 - [[AI System/Conspects Repetition/README]]
