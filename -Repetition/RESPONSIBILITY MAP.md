@@ -35,6 +35,23 @@ Update when:
 - active read order changes;
 - new major area becomes part of the system.
 
+### `-Repetition/SYSTEM OVERVIEW.md`
+
+Owns:
+- conceptual explanation of how the whole repetition system works;
+- relationships between chains, schedules, recovery, repeat material, lookup and further study;
+- source-of-truth boundaries at system level.
+
+Read when:
+- new AI chat/user needs the model of the system, not just navigation;
+- it is unclear how different parts of `-Repetition` fit together;
+- before changing core architecture or source-of-truth boundaries.
+
+Update when:
+- a new major subsystem is added;
+- the conceptual model changes;
+- source-of-truth boundaries change.
+
 ### `-Repetition/FOR NEW AI CHAT.md`
 
 Owns:
@@ -115,6 +132,16 @@ Owns:
 
 Owns:
 - unscheduled branches of topics that need deeper study later.
+
+### `-Repetition/Further Study/Further Study Index.md`
+
+Owns:
+- register of open/promoted/closed further-study branches.
+
+### `-Repetition/Further Study/Branches/`
+
+Owns:
+- concrete Further Study Branch notes.
 
 ## Existing AI-system docs
 
