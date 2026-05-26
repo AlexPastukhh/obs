@@ -14,15 +14,17 @@ Use `-Repetition` for active chains and schedules.
 
 ```text
 1. -Repetition/START HERE.md
-2. -Repetition/FOR NEW AI CHAT.md
-3. -Repetition/USE CASE MAP.md
-4. -Repetition/RESPONSIBILITY MAP.md
-5. -Repetition/Documentation Principles.md
-6. Relevant workflow/template/source files for the requested action.
+2. -Repetition/SYSTEM OVERVIEW.md
+3. -Repetition/FOR NEW AI CHAT.md
+4. -Repetition/USE CASE MAP.md
+5. -Repetition/RESPONSIBILITY MAP.md
+6. -Repetition/Documentation Principles.md
+7. Relevant workflow/template/source files for the requested action.
 ```
 
 ## Root routing docs
 
+- [[SYSTEM OVERVIEW]]
 - [[FOR NEW AI CHAT]]
 - [[USE CASE MAP]]
 - [[RESPONSIBILITY MAP]]
@@ -76,6 +78,7 @@ Lookup:
 
 Further study:
 - [[Further Study/Further Study Index]]
+- [[Further Study/Branches/README]]
 
 ## Source archive
 
