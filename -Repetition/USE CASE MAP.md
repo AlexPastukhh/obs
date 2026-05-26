@@ -12,9 +12,11 @@ This file is not a full workflow and not a template. It routes commands to the r
 1. -Repetition/START HERE.md
 2. -Repetition/FOR NEW AI CHAT.md
 3. -Repetition/USE CASE MAP.md
-4. Relevant workflow file from -Repetition/Workflows/
-5. Relevant template file from -Repetition/Templates/
-6. Relevant source file:
+4. -Repetition/RESPONSIBILITY MAP.md
+5. -Repetition/Documentation Principles.md
+6. Relevant workflow file from -Repetition/Workflows/
+7. Relevant template file from -Repetition/Templates/
+8. Relevant source file:
    - chain file
    - schedule file
    - recovery note
@@ -27,7 +29,7 @@ This file is not a full workflow and not a template. It routes commands to the r
 
 | Mode | Meaning | Use when |
 |---|---|---|
-| Full traversal | Read handoff + use-case map + relevant workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect. |
+| Full traversal | Read handoff + use-case map + responsibility map + relevant workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect, new documentation category. |
 | Targeted traversal | Read only relevant workflow/template/source files. | Known use case, narrow update, named schedule/chain/conspect. |
 | Reuse context | Reuse current chat context and read only target files if needed. | Same active draft/repeat material/schedule update. |
 | No traversal | Answer from active context. | Simple clarification or explanation without repo change. |
@@ -44,41 +46,37 @@ This file is not a full workflow and not a template. It routes commands to the r
 | “после перерыва хочу откатить стадии”, “40->80 слишком поздно” | Explicit recovery stage rollback | active chains, schedules, recovery notes, schedule rules | [[Workflows/Long Break Stage Rollback Workflow]] | recovery note style | Explicit recovery decision + changed active stages + regenerated future schedules | Not default; must be explicit. |
 | “обнови карту поиска / добавь entry” | Locator update | Knowledge Locator Map, source repeat material/conspect | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] | New/updated locator entry | Add only after enough source context. |
 | “инвентаризация конспектов” | Inventory / classification | lookup map, inventory notes, selected conspect list | Knowledge lookup + repeat material workflow | locator entry template | Classified list: known/unknown/to process/to review | Avoid broad destructive moves. |
+| “куда положить эту инфу?”, “создай файл для этого”, “добавь новый workflow/template”, “обнови доки с новым правилом” | Add or route new information | RESPONSIBILITY MAP, Documentation Principles, likely target files | [[Workflows/Add Or Route New Information Workflow]] | [[Templates/Responsibility Map Entry Template]] if new file/category is created | Existing-file update or new file proposal/update with responsibility sync | Repo edits require explicit permission. |
 
 ## 4. Core command interpretations
 
-### Processing creates a repeat unit
-
-If user says they processed something on a date, create a repeat unit using the processing date.
-
+Processing creates a repeat unit:
 ```text
 raw date = context
 processing date = repeat unit date
 ```
 
-Default processing date is today's date unless user clearly gives another processing date.
+Questions do not replace visual conspects. Questions are an active recall layer; visual conspects remain the map/spatial memory source.
 
-### Questions do not replace visual conspects
-
-Questions are an active recall layer. Visual conspects remain the map/spatial memory source.
-
-Repeat material should preserve visual anchors.
-
-### Use cases are required for useful repeat material
-
-Repeat material should include real-world use cases and lookup situations, not only abstract questions.
-
-### Further study is not scheduling
+Use cases are required for useful repeat material.
 
 Further Study Branches are linked to source notes but are not active tasks and do not enter repeat chains automatically.
 
-### Recovery shifts/rollbacks are explicit
+Recovery shifts/rollbacks are explicit decisions, not default rules.
 
-`+1 calendar month` shift and long-break stage rollback are explicit recovery decisions, not default rules.
+New information must be routed before file creation:
+
+```text
+USE CASE MAP -> RESPONSIBILITY MAP -> Add Or Route New Information Workflow
+```
+
+If a new durable file/category is created, update `RESPONSIBILITY MAP.md`.
+
+If navigation changes, update `START HERE.md`.
+
+If command routing changes, update `USE CASE MAP.md`.
 
 ## 5. Expected source reporting in chat
-
-When doing non-trivial work, report briefly:
 
 ```text
 Read:
@@ -96,8 +94,6 @@ Not checked:
 Output:
 - ...
 ```
-
-For small updates, a shorter report is enough.
 
 ## 6. Maintenance notes
 

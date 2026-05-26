@@ -1,6 +1,6 @@
 # Repetition System — Start Here
 
-Status: active navigation note.
+Status: active entrypoint / navigation note.
 
 ## Main rule
 
@@ -10,13 +10,23 @@ That folder is old/source/sensitive material.
 Use `-Repetition` for active chains and schedules.
 ```
 
-## New AI chat handoff
+## New AI chat read order
 
-Start here when opening this system in a new chat:
+```text
+1. -Repetition/START HERE.md
+2. -Repetition/FOR NEW AI CHAT.md
+3. -Repetition/USE CASE MAP.md
+4. -Repetition/RESPONSIBILITY MAP.md
+5. -Repetition/Documentation Principles.md
+6. Relevant workflow/template/source files for the requested action.
+```
+
+## Root routing docs
 
 - [[FOR NEW AI CHAT]]
-
-This handoff explains what to do when the user says they processed something on a specific date: create a new repeat unit in the chain and add the generated repeat dates to schedule files.
+- [[USE CASE MAP]]
+- [[RESPONSIBILITY MAP]]
+- [[Documentation Principles]]
 
 ## Rules and principles
 
@@ -43,6 +53,29 @@ This handoff explains what to do when the user says they processed something on 
 - [[Schedules/2026-09]]
 - [[Schedules/2026-10]]
 - [[Schedules/2026-11]]
+
+## Documentation architecture
+
+Workflows:
+- [[Workflows/Process New Repeat Unit Workflow]]
+- [[Workflows/Create Repeat Material From Conspect Workflow]]
+- [[Workflows/Knowledge Lookup Workflow]]
+- [[Workflows/Create Further Study Branch Workflow]]
+- [[Workflows/Long Break Stage Rollback Workflow]]
+- [[Workflows/Add Or Route New Information Workflow]]
+
+Templates:
+- [[Templates/Repeat Material Template]]
+- [[Templates/Knowledge Locator Entry Template]]
+- [[Templates/Further Study Branch Template]]
+- [[Templates/Responsibility Map Entry Template]]
+
+Lookup:
+- [[Lookup/Knowledge Locator Map]]
+- [[Lookup/Inventory Notes]]
+
+Further study:
+- [[Further Study/Further Study Index]]
 
 ## Source archive
 
