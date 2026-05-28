@@ -1,0 +1,189 @@
+diff --git a/-Planning/Work Rails Principles.md b/-Planning/Work Rails Principles.md
+--- a/-Planning/Work Rails Principles.md
++++ b/-Planning/Work Rails Principles.md
+@@ -264,6 +264,58 @@ Progress Signal is not a fifth score criterion.
+ 
+ It is a short operational check after a session.
+ 
++## Default Dashboard Mode
++
++When AI is acting as the planning/session-control assistant, it should show the Default Dashboard by default.
++
++The user should not have to ask for it.
++
++Do not tell the user to open state files when the AI can summarize the relevant state itself.
++
++The dashboard should be compact and should not replace file updates.
++
++Default Dashboard:
++
++### Global
++
++- Current focus:
++- Main course:
++- Recovery background:
++
++### Today
++
++- Main goal:
++- Desired result:
++- Undesired result:
++- Session target:
++
++### Progress
++
++- Sessions:
++- High-focus:
++- Points:
++- Flags:
++
++### Recent sessions
++
++- last logged sessions with D/F/K/P, points, Progress Signal, and flags;
++- if no sessions exist, say “none yet”.
++
++### Current / Next
++
++- Current session:
++- Next physical action:
++
++Rules:
++
++1. AI may tell the user to open or edit a file only when manual editing, review, or diff inspection is actually needed.
++2. For normal planning guidance, AI should summarize the relevant state itself.
++3. For “what next?”, “show state”, “start session”, “finish session”, drift correction, or day planning, the Default Dashboard is the default response shape.
++4. The dashboard should include both global and daily context so the user does not lose the larger course while working on the current session.
++5. Recent sessions should show enough information to feel the day’s progress, not just raw counters.
++
++Example recent session line:
++
++`S1: D1 F1 Kmain P1 = 4.5, progress: closer, flags: none.`
++
+ ## Core Rails Algorithm
+ 
+ This algorithm describes how to act on rails.
+diff --git a/-Planning/Workflows/Log Session Workflow.md b/-Planning/Workflows/Log Session Workflow.md
+--- a/-Planning/Workflows/Log Session Workflow.md
++++ b/-Planning/Workflows/Log Session Workflow.md
+@@ -52,28 +52,38 @@ Progress signal tracks whether the desired situation moved closer.
+ 
+ ## Required response after logging
+ 
+-After every session/event log, AI must return:
++After every session/event log, AI must return the Default Dashboard, not only a short “logged” response.
+ 
+ 1. Logged score:
+    - D/F/K/P;
+    - points;
+    - flags.
+ 
+-2. Today progress:
++2. Default Dashboard:
++   - global context;
++   - today goal / desired / undesired;
++   - session target;
++   - progress counters;
++   - recent sessions;
++   - current / next.
++
++3. Today progress:
+    - sessions done / target;
+    - high-focus sessions done / target;
+    - points;
+    - main flags if relevant.
+ 
+-3. Result progress:
++4. Result progress:
+    - closer / slightly closer / not closer / misleading progress;
+    - one short reason.
+ 
+-4. Next action:
++5. Next action:
+    - one concrete next physical action.
++
++Do not respond with only “logged” or “open file X”.
++
++The user should immediately see the current global context, daily goal, session progress, recent session scores, and what to do next.
+ 
+ ## Output
+ 
+ - session/event entry;
+ - updated counters;
+-- progress snapshot;
++- Default Dashboard;
+ - next action.
+diff --git a/-Planning/Workflows/Start Day Workflow.md b/-Planning/Workflows/Start Day Workflow.md
+--- a/-Planning/Workflows/Start Day Workflow.md
++++ b/-Planning/Workflows/Start Day Workflow.md
+@@ -20,6 +20,18 @@ Status: active workflow.
+ 6. Set next action.
+ 7. Update `Today State.md`.
+ 
+-## Output
++## Required response after starting/updating day
+ 
+-Updated `Today State.md`.
++After starting or updating the day, AI must return the Default Dashboard:
++
++- current focus / main course;
++- background recovery goal if relevant;
++- day goal;
++- desired result;
++- undesired result;
++- session target;
++- counters;
++- recent sessions if any;
++- current session goal;
++- one concrete next physical action.
++
++Do not only say that `Today State.md` was updated. The user should immediately see the current state.
+diff --git a/-Planning/Use Case Map.md b/-Planning/Use Case Map.md
+--- a/-Planning/Use Case Map.md
++++ b/-Planning/Use Case Map.md
+@@ -23,22 +23,25 @@ User intent -> read needed files -> run workflow -> update owner file -> return n
+ | “вот список дел / планы / расписание” | `Current Plan State.md` | `Update Current Plan Workflow.md` | `Current Plan State.md` | Updated plan |
+ | “это отложенная задача / идея / потом” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Deferred note |
+ | “опасный сценарий / возможная ошибка” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Open/dangerous scenario note |
+-| `/start-day` | `Current Plan State.md`, `Today State.md` | `Start Day Workflow.md` | `Today State.md` | Structured day plan |
+-| “цель на день…” | `Current Plan State.md`, `Today State.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal |
+-| “я начинаю работу / сессию” | `Work Rails Principles.md`, `Today State.md` | none | maybe `Today State.md` | Use Core Rails Algorithm / Start Path |
++| `/start-day` | `Current Plan State.md`, `Today State.md` | `Start Day Workflow.md` | `Today State.md` | Structured day plan + Default Dashboard |
++| “цель на день…” | `Current Plan State.md`, `Today State.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal + Default Dashboard |
++| “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | none | none | Default Dashboard + next physical action |
++| “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | none | none | Default Dashboard |
++| “дай дашборд” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | none | none | Default Dashboard |
++| “я начинаю работу / сессию” | `Work Rails Principles.md`, `Today State.md`, `Current Plan State.md` | none | maybe `Today State.md` | Use Core Rails Algorithm / Start Path + Default Dashboard + next action |
+ | “следующая сессия X” | `Current Plan State.md`, `Today State.md` | `Check Course Alignment Workflow.md` | `Today State.md` | Session goal / warning |
+-| `/s ...`, “30 мин делал…” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry + counters |
+-| “я оцениваю сессию так: D/F/K/P…” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry; check contradictions |
+-| “сессия приблизила результат?” | `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md` | Progress Signal |
++| `/s ...`, “30 мин делал…” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md`, `Session Log.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry + Default Dashboard + next action |
++| “я оцениваю сессию так: D/F/K/P…” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md`, `Session Log.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry; check contradictions; Default Dashboard |
++| “сессия приблизила результат?” | `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md` | Progress Signal + Default Dashboard |
+ | “это по курсу?” | `Current Plan State.md`, `Work Rails Principles.md` | `Check Course Alignment Workflow.md` | none or `Session Log.md` | K rating / justification |
+ | “важно, но не сейчас” | `Current Plan State.md` or `Deferred and Ideas Notes.md` | `Update Current Plan Workflow.md` or none | owner file | Added to plan or deferred notes |
+-| “я теряю результат / утопаю в процессе” | `Today State.md`, `Work Rails Principles.md` | none | maybe `Today State.md` | Re-check Result Anchor / Core Rails Algorithm |
+-| “я заметил, что свернул” | `Work Rails Principles.md`, `Today State.md` | none | maybe `Session Log.md` | Use Core Rails Algorithm / Correction Path |
+-| “мне нужно поправиться” | `Work Rails Principles.md`, `Today State.md` | none | maybe `Session Log.md` | Diagnose what broke and restart |
+-| “потерял темп / вязну” | `Work Rails Principles.md`, `Today State.md` | none | maybe `Session Log.md` | Score Action / tempo correction |
++| “я теряю результат / утопаю в процессе” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md` | none | maybe `Today State.md` | Re-check Result Anchor / Core Rails Algorithm + Default Dashboard |
++| “я заметил, что свернул” | `Work Rails Principles.md`, `Today State.md`, `Current Plan State.md` | none | maybe `Session Log.md` | Use Core Rails Algorithm / Correction Path + Default Dashboard |
++| “мне нужно поправиться” | `Work Rails Principles.md`, `Today State.md`, `Current Plan State.md` | none | maybe `Session Log.md` | Diagnose what broke and restart + Default Dashboard |
++| “потерял темп / вязну” | `Work Rails Principles.md`, `Today State.md`, `Current Plan State.md` | none | maybe `Session Log.md` | Score Action / tempo correction + Default Dashboard |
+ | “я раскис / знал но ушёл” | `Today State.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | CV/SD event + next action |
+ | “что с recovery / 4г 2м 15д?” | `Current Plan State.md`, `Work Rails Principles.md` | none | maybe `Current Plan State.md` | Recovery goal / NDU explanation |
+-| “закрываем день” | `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | `End Day Workflow.md` | `Session Log.md`, maybe `Today State.md` | Day summary |
++| “закрываем день” | `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | `End Day Workflow.md` | `Session Log.md`, maybe `Today State.md` | Day summary + final dashboard |
+@@ -67,6 +70,12 @@ Do not use old V/Q/C/L notation.
+ 
+ ## Core Rails Algorithm
+ 
++## Default Dashboard Mode
++
++When the AI is acting as the planning/session-control assistant, normal working answers should return the Default Dashboard by default.
++
++Do not tell the user to open files when the AI can summarize the relevant state itself.
++
+ Use `Work Rails Principles.md` for Core Rails Algorithm.
+ 
+ Core Rails Algorithm is not a separate workflow yet.
