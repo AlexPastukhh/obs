@@ -16,7 +16,7 @@ Status: active entrypoint.
 - [[Today State]]
 - [[Session Log]]
 - [[Work Rails Principles]]
-- [[Planning Ideas Notes]]
+- [[Deferred and Ideas Notes]]
 
 ## Workflows
 
@@ -31,16 +31,17 @@ Status: active entrypoint.
 - [[Templates/Current Plan State Template]]
 - [[Templates/Today State Template]]
 - [[Templates/Session Log Entry Template]]
+- [[Templates/Deferred and Ideas Notes Template]]
 
 ## First-batch scope
 
-This first batch supports:
+This system supports:
 
 - keeping a flexible current plan;
 - starting a structured day;
 - logging work sessions;
-- scoring sessions with V/Q/C/L;
+- scoring sessions with D/F/K/P;
 - checking course alignment;
-- recording unstable ideas without creating extra files.
+- keeping deferred tasks, ideas, and open scenarios without creating extra files.
 
 Do not create extra files unless the user explicitly asks or [[Responsibility Map]] says the new file has a distinct durable responsibility.

@@ -12,6 +12,16 @@ Done:
 
 Score:
 
+D:
+
+F:
+
+K:
+
+P:
+
+Points:
+
 Flags:
 
 Next:
@@ -26,6 +36,8 @@ Type:
 
 What happened:
 
+Score:
+
 Flags:
 
 Next:
@@ -38,12 +50,14 @@ Date:
 
 Sessions:
 
-Plus:
+High-focus sessions:
 
 Points:
 
 Main course movement:
 
 Goal outcome:
+
+CV / SD / EX:
 
 Notes:

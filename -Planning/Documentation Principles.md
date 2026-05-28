@@ -26,7 +26,7 @@ Later it may be merged into repo-level documentation principles.
 
 `... Log.md` = accumulated factual history.
 
-`... Notes.md` = unstable ideas / staging.
+`... Notes.md` = deferred items, unstable ideas, open questions, staging.
 
 ## No duplication
 
@@ -38,7 +38,16 @@ Other files may link to it.
 
 Do not create a file for every idea.
 
-Use `Planning Ideas Notes.md` until the idea becomes stable.
+Use `Deferred and Ideas Notes.md` until the idea becomes stable.
+
+## Notes files can have templates
+
+A notes file may have a template when it needs recurring sections.
+
+Example:
+
+- `Deferred and Ideas Notes.md`
+- `Templates/Deferred and Ideas Notes Template.md`
 
 ## Natural language first
 
