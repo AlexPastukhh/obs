@@ -24,8 +24,8 @@ Create a new file only when there is a new durable responsibility.
 | `Session Log.md` | factual session/event/day-summary history |
 | `Work Rails Principles.md` | D/F/K/P, flags, course violations, recovery/NDU, work rails context, Truth Promise principles, dashboard meaning |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
-| `Templates/Planning State Output Template.md` | planning state output skeleton: result tracking, global, progress, recent sessions, current/next |
-| `Templates/Default Dashboard Template.md` | compact action/memory core: 🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ |
+| `Templates/Planning State Output Template.md` | planning state output skeleton: result tracking, active truth promises, global, progress, recent sessions, current/next |
+| `Templates/Default Dashboard Template.md` | compact action/memory core + attached Mnemonic Emoji Table: 🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ |
 | `Workflows/Use Dashboard Workflow.md` | how to combine Planning State Output with Default Dashboard Core |
 | `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise |
 | `Workflows/*.md` | algorithms |

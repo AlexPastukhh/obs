@@ -2,7 +2,7 @@
 
 Status: active workflow.
 
-Purpose: create or refresh a stitched analytical promise that becomes a source of truth for action and internal state.
+Purpose: create or refresh a stitched analytical promise that becomes a source of truth for action and internal state, then update Active Truth Promises in planning state.
 
 ## Uses
 
@@ -41,23 +41,38 @@ Use this workflow when the user says or implies:
    - state that this promise is accepted as the current source of truth for actions and internal state.
 7. Choose the short-distance rule:
    - the next small segment to win now.
-8. Return Default Dashboard Core if useful.
+8. Update Active Truth Promises in the relevant state owner:
+   - use `Today State.md` for today's/session-level active promise;
+   - use `Current Plan State.md` only when the promise is broader/global enough to belong there.
+9. Return Dashboard Core + Mnemonic Emoji Table + updated Active Truth Promises + short-distance action.
 
 ## Output template
 
-### 🧵📜 Truth Promise / Пришитое обещание
+### Default Dashboard Core
 
-- 📐 Analytical prediction:
-- 📜 Promise:
-- 🧵 Stitch / пришить:
-- 🎯 Full target:
+Use `Templates/Default Dashboard Template.md`.
+
+### Mnemonic Emoji Table
+
+Use the emoji-only table attached to `Templates/Default Dashboard Template.md`.
+
+### Active Truth Promises
+
+- 🧵📜 Main active promise:
+- 🎯 Promise target:
 - 🌅 Real reward:
 - 🌑 Drift lie / false promise:
-- 🧪 Chemistry note:
+- 🧪 Chemistry mismatch:
 - 🏁 Short-distance rule:
+
+### Short-distance action
+
+- Next small segment:
 
 ## Principle
 
 Do not present the promise as empty motivation.
 
 The promise should be grounded in current goals, realistic consequences, prior experience, and D/F/K/P.
+
+Active promises are concrete current promises attached to current goals. Do not confuse them with the general Truth Promise principles.

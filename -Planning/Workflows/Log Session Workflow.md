@@ -24,8 +24,10 @@ Status: active workflow.
 7. Add progress signal.
 8. Add entry to `Session Log.md`.
 9. Update counters in `Today State.md`.
-10. Render updated Planning State Output using `Templates/Planning State Output Template.md`.
-11. Render Default Dashboard Core using `Templates/Default Dashboard Template.md` when useful.
+10. Refresh Active Truth Promise if the session changed goals, progress, chemistry, or next action.
+11. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
+12. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
+13. Render updated Planning State Output using `Templates/Planning State Output Template.md`, including Active Truth Promises.
 
 ## Explicit score handling
 
@@ -62,32 +64,37 @@ After every session/event log, AI must return:
    - points;
    - flags.
 
-2. Updated Planning State Output:
+2. Default Dashboard Core:
+   - `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ`.
+
+3. Mnemonic Emoji Table:
+   - emoji-only table attached to the dashboard.
+
+4. Updated Planning State Output:
    - Result Tracking;
+   - Active Truth Promises;
    - Global if relevant;
    - Progress counters;
    - Recent sessions;
    - Current / Next.
 
-3. Default Dashboard Core when useful:
-   - `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ`.
-
-4. Result progress:
+5. Result progress:
    - closer / slightly closer / not closer / misleading progress;
    - one short reason.
 
-5. Next physical action:
+6. Next physical action:
    - one concrete next physical action.
 
 Do not respond with only “logged” or “open file X”.
 
-The user should immediately see the current state and what to do next.
+The user should immediately see the score, dashboard, state, active promise, and what to do next.
 
 ## Output
 
 - session/event entry;
 - updated counters;
-- Planning State Output;
-- optional Default Dashboard Core;
+- Default Dashboard Core;
+- Mnemonic Emoji Table;
+- Planning State Output with Active Truth Promises;
 - result progress;
 - next physical action.

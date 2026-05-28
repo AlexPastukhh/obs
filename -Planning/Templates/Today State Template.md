@@ -18,6 +18,20 @@ Desired result:
 
 Undesired result:
 
+## Active Truth Promises
+
+Main active promise:
+
+Promise target:
+
+Real reward:
+
+Drift lie / false promise:
+
+Chemistry mismatch:
+
+Short-distance rule:
+
 ## Session target
 
 Sessions:

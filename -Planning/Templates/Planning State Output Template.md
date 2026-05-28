@@ -4,7 +4,7 @@ Status: active template.
 
 Purpose: state/output template for planning AI. This is not the Default Dashboard mnemonic core.
 
-AI uses this template to show the maintained planning state: goals, desired/undesired, progress, sessions, global context, and current/next.
+AI uses this template to show the maintained planning state: goals, desired/undesired, active truth promises, progress, sessions, global context, and current/next.
 
 ## Result Tracking
 
@@ -16,6 +16,17 @@ AI uses this template to show the maintained planning state: goals, desired/unde
 | 📈 Progress Signal | `<closer / slightly closer / not closer / misleading progress>` |
 | 🧾 Sessions / Score | `<recent sessions with D/F/K/P, points, flags, relation to desired>` |
 | 🗺️ Ближайшие глобальные цели | `<nearest global goals that current desired state belongs to>` |
+
+## Active Truth Promises
+
+| Поле | Значение |
+|---|---|
+| 🧵📜 Main active promise | `<current stitched promise for today/main goal>` |
+| 🎯 Promise target | `<result + good D/F/K/P + course + value left + correct inertia>` |
+| 🌅 Real reward | `<real pleasure / relief / control / improvement this promise points to>` |
+| 🌑 Drift lie / false promise | `<what chemistry/stimulation/process falsely promises>` |
+| 🧪 Chemistry mismatch | `<current feeling/craving/lack of pull/noise that should not be treated as truth>` |
+| 🏁 Short-distance rule | `<next small segment to win now>` |
 
 ## Global
 
@@ -42,6 +53,12 @@ AI uses this template to show the maintained planning state: goals, desired/unde
 ## Rule
 
 This template owns state output.
+
+It also owns Active Truth Promises as current planning state.
+
+`Work Rails Principles.md` owns the theory of Truth Promises.
+
+`Workflows/Build Truth Promise Workflow.md` owns creating/updating active promises.
 
 The Default Dashboard owns only the compact action/memory core.
 

@@ -44,6 +44,10 @@ Rails / РОСИ: 🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲З�
 
 Default Dashboard is the compact mnemonic/action core only.
 
+In planning/session-control mode, Dashboard Core and Mnemonic Emoji Table are shown together by default.
+
 Mnemonic Emoji Table is emoji-only by design. It exists for visual memory, not for new content.
+
+The table can be omitted only for narrow technical answers, diff/file checks, or when the user explicitly asks for a short answer.
 
 It may be shown with Planning State Output, but it does not replace Planning State Output.

@@ -272,6 +272,7 @@ Planning State Output and Default Dashboard are different layers.
 Planning State Output is AI-maintained state output. It owns:
 
 - Result Tracking;
+- Active Truth Promises;
 - current goals;
 - desired / undesired;
 - Progress Signal;
@@ -281,6 +282,8 @@ Planning State Output is AI-maintained state output. It owns:
 - counters;
 - recent sessions;
 - current / next physical action.
+
+Planning State Output owns Active Truth Promises as current state.
 
 Planning State Output should use `Templates/Planning State Output Template.md`.
 
@@ -305,25 +308,30 @@ The user should not have to ask for it.
 
 AI should not tell the user to open state files when it can summarize the relevant state itself.
 
+Default planning/session-control output should include:
+
+1. Default Dashboard Core.
+2. Mnemonic Emoji Table.
+3. Planning State Output with Active Truth Promises when state/action guidance is needed.
+4. Next physical action when direction is needed.
+
 Use:
 
-- `Templates/Planning State Output Template.md` for maintained state output;
-- `Templates/Default Dashboard Template.md` for compact action/memory core;
+- `Templates/Default Dashboard Template.md` for Dashboard Core and Mnemonic Emoji Table;
+- `Templates/Planning State Output Template.md` for maintained state output and Active Truth Promises;
 - `Workflows/Use Dashboard Workflow.md` for how to combine them.
+
+Dashboard Core and Mnemonic Emoji Table are shown together by default in planning mode.
+
+The dashboard pack may be omitted only for narrow technical answers, diffs, file checks, or when the user explicitly asks for a short answer.
 
 Use Planning State Output when:
 
 - starting or updating the day;
 - logging a session or event;
 - answering “what next?”;
-- checking current state.
-
-Use Default Dashboard Core when:
-
-- the user needs action orientation;
-- the user asks for dashboard;
-- the user is starting, correcting, drifting, or losing tempo;
-- the user needs the compact rails mnemonic.
+- checking current state;
+- showing or updating active promises.
 
 Rule:
 
@@ -681,6 +689,15 @@ The fire/wood ideas belong to 🧵📜>🧪Обещ:
 ## Truth Promise / Пришитое обещание
 
 Пришитое обещание is an analytical promise stitched as a source of truth for actions and internal state.
+
+Truth Promise has two forms:
+
+1. Principles/workflow explanation — stored in `Work Rails Principles.md` and `Workflows/Build Truth Promise Workflow.md`.
+2. Active Truth Promises — stored/rendered in Planning State Output and current state.
+
+Do not confuse promise principles with active promises.
+
+Active promises are concrete current promises attached to current goals.
 
 It is not just a motivational phrase.
 
