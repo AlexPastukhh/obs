@@ -24,6 +24,18 @@ Purpose: capture deferred tasks, system ideas, open scenarios, dangerous scenari
 
 -
 
+## Future workflow candidates
+
+### Core Rails Algorithm as workflow
+
+Idea:
+- Core Rails Algorithm currently lives in `Work Rails Principles.md`.
+- If it becomes too large or is used constantly as a step-by-step procedure, it may later become a separate workflow.
+- Do not create a separate workflow yet.
+
+Status:
+- deferred.
+
 ## Scoring questions
 
 -

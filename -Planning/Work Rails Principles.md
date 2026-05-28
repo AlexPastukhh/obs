@@ -265,6 +265,311 @@ Progress Signal is not a fifth score criterion.
 
 It is a short operational check after a session.
 
+## Core Rails Algorithm
+
+This algorithm describes how to act on rails.
+
+D/F/K/P tracks what happened.
+
+Core Rails Algorithm describes how to act so D/F/K/P and progress become better.
+
+Groups are memory containers, not levels.
+
+Groups do not replace low-level details.
+
+All low-level checks still matter.
+
+### Start Path
+
+Use Start Path when starting a day, starting a session, or returning to work without an active drift event.
+
+Start Path:
+
+1. Result.
+2. Clean Field.
+3. Score Action.
+4. Progress.
+
+#### 1. Result
+
+Purpose:
+
+Keep the result alive and avoid drowning in process.
+
+Low-level checks:
+
+1. Remember the local target.
+
+   What exactly do I want to get in this session / today?
+
+2. Remember that process exists for the result.
+
+   I am not just “doing something”.
+
+   I am trying to move the desired situation closer.
+
+3. Imagine the desired state.
+
+   Not “work”, but a concrete situation:
+
+   what exists, what is ready, what changed, what result was obtained.
+
+4. Imagine the undesired state.
+
+   What outcome do I refuse to accept:
+
+   the day went into thoughts, YouTube, preparation, process without result, or useful-but-not-now work.
+
+5. Feel readiness to receive the desired state now.
+
+   Not someday, not later, but as if I am actually ready to be in that situation now.
+
+6. Feel non-readiness to accept the undesired state.
+
+   Do not dramatize, but clearly refuse the outcome where I did not move forward again.
+
+7. Remember global goals in the background.
+
+   The local target is connected to the larger trajectory:
+
+   diploma, work, recovery, 4y 2m 15d, future state.
+
+#### 2. Clean Field
+
+Purpose:
+
+Keep only goal, progress, and the next physical action in the active field.
+
+Low-level checks:
+
+1. Cut off everything unrelated to the goal.
+
+   If it does not help the current goal, it is not the work field right now.
+
+2. Cut off everything unrelated to progress toward the goal.
+
+   Even if it is interesting or generally useful, it should not capture the current session.
+
+3. Do not take stimulation from sources unrelated to the goal.
+
+   YouTube, extra music, food, tabs, endless thoughts, random topics are not the source of acceleration.
+
+4. Fix the stimulation source.
+
+   The allowed source of stimulation now is movement toward the goal and the feeling of progress.
+
+5. Do not treat false feelings as authority.
+
+   Pull toward bad things, lack of pull toward useful work, “I do not want to”, “later”, “I need to think more” are not decisions.
+
+6. Do not treat thought noise as a command.
+
+   Thoughts may jump, stimulate, and feel important, but I do not have to follow them.
+
+7. Do not add fuel to irrelevant impulses.
+
+   Feeding stimulation, self-talk, YouTube, or thoughts makes them carry me further by inertia.
+
+8. Leave only goal, progress, and next physical action in the field.
+
+   Everything else is either later, goes to Deferred and Ideas Notes, or is not needed.
+
+#### 3. Score Action
+
+Purpose:
+
+Act so the session becomes good by D/F/K/P.
+
+Low-level checks:
+
+1. Do what is needed for high D.
+
+   Produce useful work, not just time spent.
+
+2. Create useful progress.
+
+   Write, make, solve, clarify, remove a blocker, create the next step.
+
+3. Do what is needed for high F.
+
+   Manage myself: keep attention, do not spread out, do not drift into self-talk, do not do the right task in a useless way.
+
+4. Keep working tempo.
+
+   Do not let the session become sticky, stretched, self-talk, endless preparation, or process without movement.
+
+5. Remember: tempo is not rushing.
+
+   Tempo does not mean panic, stress, or forcing.
+
+   Tempo means that actions keep producing useful progress.
+
+6. If tempo is lost, D usually drops.
+
+   F keeps tempo.
+
+   Tempo produces D.
+
+   D moves progress.
+
+7. Do what is needed for high K.
+
+   Stay with the current course:
+
+   Kmain or Ksupport, not Klater/Kside/Koff without a reason.
+
+8. Do what is needed for high P.
+
+   Leave value after the session:
+
+   result, understanding, artifact, experience, removed blocker, lookup, repeat material, clear next action.
+
+9. Do not confuse busyness with useful work.
+
+   If time passed but D is low, it was not a good session.
+
+10. Do not confuse the right task with good work.
+
+    I can be on Kmain but still have D0/D.5 and F0.
+
+11. Do not confuse interesting with needed.
+
+    I can work well but drift into Klater/Kside: this is productive procrastination.
+
+12. Do not drown in process.
+
+    If the process does not move D/P and Progress Signal, it should be shortened or changed.
+
+13. Act so the current session improves future actions.
+
+    A good session feeds the inertia of useful work.
+
+    A bad session feeds the inertia of drift, thoughts, or stimulation.
+
+#### 4. Progress
+
+Purpose:
+
+Check whether the desired situation moved closer and choose the next step.
+
+Low-level checks:
+
+1. Check Progress Signal.
+
+   Did the session move the desired state closer?
+
+2. Choose one:
+
+   - closer;
+   - slightly closer;
+   - not closer;
+   - misleading progress.
+
+3. Connect progress to the desired state.
+
+   Not just “I did something”, but:
+
+   the desired situation became closer / did not become closer / became closer deceptively.
+
+4. Look at current counters.
+
+   Sessions:
+
+   High-focus:
+
+   Points:
+
+   Flags:
+
+5. Notice what inertia the session reinforced.
+
+   Not as a separate score, but as understanding:
+
+   did this reinforce movement toward the goal or reinforce drift?
+
+6. Choose one next physical action.
+
+   Not “continue working”, but a concrete action:
+
+   open file, write paragraph, fix function, close tab, start timer.
+
+7. Return to the next cycle.
+
+   Result -> Clean Field -> Score Action -> Progress.
+
+### Correction Path
+
+Use Correction Path when I notice that I drifted, got sticky, followed the wrong branch, lost tempo, or need to correct myself.
+
+Correction Path is not separate magic.
+
+It mirrors Start Path.
+
+Correction Path:
+
+1. Notice.
+2. Diagnose.
+3. Stop.
+4. Restart.
+5. One Physical Action.
+
+#### 1. Notice
+
+Notice that I am not on rails.
+
+#### 2. Diagnose
+
+Diagnose what broke using the same groups as Start Path.
+
+##### Result broke
+
+- forgot the local target;
+- forgot the desired state;
+- accepted the undesired state;
+- drowned in process instead of result;
+- lost connection to the global goal.
+
+##### Clean Field broke
+
+- allowed stimulation unrelated to the goal;
+- followed thought noise;
+- believed a false feeling;
+- started feeding an unnecessary impulse;
+- left irrelevant things in the field.
+
+##### Score Action broke
+
+- did not try to get high D;
+- did not try to get high F;
+- lost working tempo;
+- became sticky / overthinking / self-talking;
+- process stopped producing useful progress;
+- did not hold K;
+- did not leave P;
+- did the right task in a useless way;
+- did interesting work instead of needed work.
+
+##### Progress broke
+
+- did not check whether the result moved closer;
+- did not see counters;
+- did not choose a next physical action;
+- continued drift inertia.
+
+#### 3. Stop
+
+Stop feeding the broken path.
+
+#### 4. Restart
+
+Return to Start Path:
+
+Result -> Clean Field -> Score Action -> Progress.
+
+#### 5. One Physical Action
+
+Choose one concrete physical action and do it.
+
 ## Future behavior algorithms are deferred
 
 Chemical fire / no-fuel / silence / thought-stop ideas are important.
@@ -365,18 +670,12 @@ Meaning:
 Points:
 - 1 + 1 + 1.5 + 1 = 4.5
 
-Progress:
-- closer, if the desired result is a written diploma section.
-
 ### Strong main-course session
 
 `/s 30м диплом D1.5 F1 Kmain P1.5 снял блокер и сделал важную структуру`
 
 Points:
 - 1.5 + 1 + 1.5 + 1.5 = 5.5
-
-Progress:
-- closer.
 
 ### Right course, weak session
 
@@ -387,10 +686,6 @@ Meaning:
 - self-management was poor;
 - the task was still on the main course.
 
-Progress:
-- slightly closer, if something useful became clearer;
-- not closer, if there was almost no useful movement.
-
 ### Productive procrastination
 
 `/s 30м читал важную тему D1 F1 Klater P1 IB`
@@ -398,9 +693,6 @@ Progress:
 Meaning:
 - useful and focused work;
 - but important later, not now.
-
-Progress:
-- misleading progress, if it did not move today's desired result closer.
 
 ### Stimulation drift
 
@@ -410,9 +702,6 @@ Meaning:
 - no useful work;
 - off-course;
 - course violation and stimulation drift if the correct course was visible and available.
-
-Progress:
-- not closer.
 
 ## No over-accounting
 
