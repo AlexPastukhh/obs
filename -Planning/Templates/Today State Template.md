@@ -12,11 +12,17 @@ Good:
 
 Strong:
 
+## Result Anchor
+
+Desired result:
+
+Undesired result:
+
 ## Session target
 
 Sessions:
 
-Plus sessions:
+High-focus sessions:
 
 Points / NDU:
 
@@ -36,7 +42,7 @@ Next action:
 
 Sessions:
 
-Plus:
+High-focus:
 
 Points:
 

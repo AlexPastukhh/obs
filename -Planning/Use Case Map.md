@@ -23,9 +23,12 @@ User intent -> read needed files -> run workflow -> update owner file -> return 
 | “опасный сценарий / возможная ошибка” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Open/dangerous scenario note |
 | `/start-day` | `Current Plan State.md`, `Today State.md` | `Start Day Workflow.md` | `Today State.md` | Structured day plan |
 | “цель на день…” | `Current Plan State.md`, `Today State.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal |
+| “желаемый / нежелательный результат сегодня” | `Today State.md`, `Work Rails Principles.md` | none | `Today State.md` | Updated Result Anchor |
+| “я теряю результат / утопаю в процессе” | `Today State.md`, `Work Rails Principles.md` | none | maybe `Today State.md` | Re-check Result Anchor |
 | “следующая сессия X” | `Current Plan State.md`, `Today State.md` | `Check Course Alignment Workflow.md` | `Today State.md` | Session goal / warning |
-| `/s ...`, “30 мин делал…” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry + counters |
+| `/s ...`, “30 мин делал…” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry + counters + progress snapshot |
 | “я оцениваю сессию так: D/F/K/P…” | `Today State.md`, `Current Plan State.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry; check contradictions |
+| “сессия приблизила результат?” | `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md` | Progress signal |
 | “это по курсу?” | `Current Plan State.md`, `Work Rails Principles.md` | `Check Course Alignment Workflow.md` | none or `Session Log.md` | K rating / justification |
 | “важно, но не сейчас” | `Current Plan State.md` or `Deferred and Ideas Notes.md` | `Update Current Plan Workflow.md` or none | owner file | Added to plan or deferred notes |
 | “я раскис / знал но ушёл” | `Today State.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | CV/SD event + next action |

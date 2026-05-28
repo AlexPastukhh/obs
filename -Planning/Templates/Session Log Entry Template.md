@@ -22,6 +22,8 @@ P:
 
 Points:
 
+Progress:
+
 Flags:
 
 Next:

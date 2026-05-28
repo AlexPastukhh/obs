@@ -238,6 +238,41 @@ But if the user writes:
 
 AI should flag the contradiction and ask how it relates to the current plan.
 
+## Result Anchor and Progress Signal
+
+Desired / Undesired Result are operational anchors, not scoring criteria.
+
+D/F/K/P tracks what happened.
+
+Progress Signal tracks whether the desired situation moved closer.
+
+Desired result = realistic situation the user wants to reach now/today.
+
+Undesired result = realistic situation the user refuses to accept as the outcome.
+
+The point is not fantasy.
+
+The point is to keep the result more real than process drift.
+
+Progress Signal values:
+
+- closer = the desired situation clearly moved closer;
+- slightly closer = there was some real movement, but limited;
+- not closer = the desired situation did not move closer;
+- misleading progress = work happened, but it may not support the desired situation now.
+
+Progress Signal is not a fifth score criterion.
+
+It is a short operational check after a session.
+
+## Future behavior algorithms are deferred
+
+Chemical fire / no-fuel / silence / thought-stop ideas are important.
+
+But they are not fields in `Today State.md` or `Session Log.md` yet.
+
+They are future behavior algorithms and should stay in `Deferred and Ideas Notes.md` until designed.
+
 ## Flags
 
 CV = Course Violation.
@@ -330,12 +365,18 @@ Meaning:
 Points:
 - 1 + 1 + 1.5 + 1 = 4.5
 
+Progress:
+- closer, if the desired result is a written diploma section.
+
 ### Strong main-course session
 
 `/s 30м диплом D1.5 F1 Kmain P1.5 снял блокер и сделал важную структуру`
 
 Points:
 - 1.5 + 1 + 1.5 + 1.5 = 5.5
+
+Progress:
+- closer.
 
 ### Right course, weak session
 
@@ -346,6 +387,10 @@ Meaning:
 - self-management was poor;
 - the task was still on the main course.
 
+Progress:
+- slightly closer, if something useful became clearer;
+- not closer, if there was almost no useful movement.
+
 ### Productive procrastination
 
 `/s 30м читал важную тему D1 F1 Klater P1 IB`
@@ -353,6 +398,9 @@ Meaning:
 Meaning:
 - useful and focused work;
 - but important later, not now.
+
+Progress:
+- misleading progress, if it did not move today's desired result closer.
 
 ### Stimulation drift
 
@@ -362,6 +410,9 @@ Meaning:
 - no useful work;
 - off-course;
 - course violation and stimulation drift if the correct course was visible and available.
+
+Progress:
+- not closer.
 
 ## No over-accounting
 
