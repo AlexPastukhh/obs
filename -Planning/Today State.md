@@ -30,7 +30,7 @@ Points / NDU: Start with points only; NDU remains provisional.
 
 Goal: Finish initializing today's planning state and choose the first real work target.
 
-Next action: Open `Current Plan State.md`, read the current focus, and pick the concrete external project/result for the first logged session.
+Next action: Write in chat one concrete external project/result for the first logged 30-minute session.
 
 ## Active queue
 
@@ -52,3 +52,4 @@ Flags: none
 
 - Today starts from system initialization, but progress should quickly move into a real work session.
 - Avoid creating new files or workflows unless explicitly requested.
+- Default Dashboard Mode is active: summarize current state directly instead of asking the user to open state files when manual review is not needed.
