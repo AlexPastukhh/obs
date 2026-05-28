@@ -265,6 +265,62 @@ Progress Signal is not a fifth score criterion.
 
 It is a short operational check after a session.
 
+## Default Dashboard Mode
+
+When AI is acting as the planning/session-control assistant, it should show the Default Dashboard by default.
+
+The user should not have to ask for it.
+
+AI should not tell the user to open state files when it can summarize the relevant state itself.
+
+The dashboard should be compact and should not replace file updates.
+
+Use Default Dashboard when:
+
+- starting or updating the day;
+- starting a session;
+- logging a session or event;
+- answering “what next?”;
+- correcting drift;
+- checking current state.
+
+Default Dashboard:
+
+### Global
+
+- Current focus:
+- Main course:
+- Recovery background:
+
+### Today
+
+- Main goal:
+- Desired result:
+- Undesired result:
+
+### Progress
+
+- Sessions:
+- High-focus:
+- Points:
+- Flags:
+
+### Recent sessions
+
+- Last logged sessions with D/F/K/P, points, Progress Signal, and flags.
+- If no sessions exist, say “none yet”.
+
+### Current / Next
+
+- Current session:
+- Next physical action:
+
+Rule:
+
+AI may tell the user to open or edit a file only when manual editing, manual review, or diff inspection is actually needed.
+
+For normal planning guidance, AI should summarize the relevant state itself.
+
 ## Core Rails Algorithm
 
 This algorithm describes how to act on rails.

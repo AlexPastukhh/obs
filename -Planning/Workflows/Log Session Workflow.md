@@ -6,6 +6,7 @@ Status: active workflow.
 
 - `Today State.md`
 - `Current Plan State.md`
+- `Session Log.md`
 - `Work Rails Principles.md`
 - `Templates/Session Log Entry Template.md`
 
@@ -20,6 +21,7 @@ Status: active workflow.
 7. Add progress signal.
 8. Add entry to `Session Log.md`.
 9. Update counters in `Today State.md`.
+10. Return the Default Dashboard.
 
 ## Explicit score handling
 
@@ -56,22 +58,28 @@ After every session/event log, AI must return:
    - points;
    - flags.
 
-2. Today progress:
-   - sessions done / target;
-   - high-focus sessions done / target;
-   - points;
-   - main flags if relevant.
+2. Default Dashboard:
+   - global context;
+   - today goal / desired / undesired;
+   - progress counters;
+   - recent sessions;
+   - current / next.
 
 3. Result progress:
    - closer / slightly closer / not closer / misleading progress;
    - one short reason.
 
-4. Next action:
+4. Next physical action:
    - one concrete next physical action.
+
+Do not respond with only “logged” or “open file X”.
+
+The user should immediately see the current state and what to do next.
 
 ## Output
 
 - session/event entry;
 - updated counters;
-- progress snapshot;
-- next action.
+- Default Dashboard;
+- result progress;
+- next physical action.
