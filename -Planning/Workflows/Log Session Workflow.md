@@ -70,7 +70,7 @@ After every session/event log, AI must return:
    - Current / Next.
 
 3. Default Dashboard Core when useful:
-   - `🎯Рез -> 🧵📜Обещ -> 📊Скор -> 🧲ЗИ`.
+   - `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ`.
 
 4. Result progress:
    - closer / slightly closer / not closer / misleading progress;

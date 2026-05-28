@@ -26,7 +26,7 @@ Purpose: explain how AI should use Planning State Output together with the compa
 3. Show Default Dashboard Core when action/memory guidance is useful.
 4. Decide which dashboard column is most relevant now:
    - 🎯Рез = reconnect to result;
-   - 🧵📜Обещ = recall or build Truth Promise;
+   - 🧵📜>🧪Обещ = recall or build Truth Promise and treat it as stronger than current chemistry;
    - 📊Скор = improve D/F/K/P, tempo, short-distance execution;
    - 🧲ЗИ = notice what inertia/habit is being fed.
 5. Give one concrete next physical action when the user needs direction.
@@ -35,8 +35,8 @@ Purpose: explain how AI should use Planning State Output together with the compa
 
 For “покажи состояние”, Planning State Output may be enough.
 
-For “дай dashboard”, output Default Dashboard Core.
+For “дай dashboard”, output Default Dashboard Core. Include Mnemonic Emoji Table when the user is learning, refreshing, or trying to memorize the dashboard.
 
-For “что дальше?”, output Planning State Output + Default Dashboard Core + next physical action.
+For “что дальше?”, output Planning State Output + Default Dashboard Core + next physical action. Keep Mnemonic Emoji Table optional unless memory support is useful.
 
 Do not force the user to manually open state files unless manual review, edit, or diff inspection is actually needed.

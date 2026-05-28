@@ -39,7 +39,7 @@ After starting or updating the day, AI must return:
    - Current / Next.
 
 2. Default Dashboard Core:
-   - compact Rails table `🎯Рез -> 🧵📜Обещ -> 📊Скор -> 🧲ЗИ` when useful.
+   - compact Rails table `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ` when useful.
 
 3. One concrete next physical action.
 

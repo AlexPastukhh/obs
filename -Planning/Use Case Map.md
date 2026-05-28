@@ -27,7 +27,7 @@ User intent -> read needed files -> run workflow -> update owner file -> return 
 | “дай дашборд” | `Templates/Default Dashboard Template.md`, `Work Rails Principles.md` | none | none | Default Dashboard Core |
 | “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Use Dashboard Workflow.md` | none | Planning State Output + Default Dashboard Core + next physical action |
 | “напомни алгоритм” | `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Default Dashboard Core + short principle summary |
-| “дай мнемонику” | `Templates/Default Dashboard Template.md` | none | none | Dashboard core mnemonic |
+| “дай мнемонику” | `Templates/Default Dashboard Template.md` | none | none | Dashboard core mnemonic + optional Mnemonic Emoji Table |
 | “дай короткую таблицу” | `Templates/Default Dashboard Template.md` | none | none | Default Dashboard Core table |
 | “создай обещание” / “обнови обещание” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md` | maybe `Today State.md` or note | Truth Promise + short-distance action |
 | “химия не совпадает” / “не хочется” / “тянет не туда” | `Templates/Planning State Output Template.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md` | maybe `Session Log.md` | Recall/build Truth Promise + Default Dashboard Core + short-distance action |
@@ -84,7 +84,7 @@ Default Dashboard Core:
 
 - owned by `Templates/Default Dashboard Template.md`;
 - compact mnemonic/action core;
-- `🎯Рез -> 🧵📜Обещ -> 📊Скор -> 🧲ЗИ`.
+- `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ`.
 
 Truth Promise:
 

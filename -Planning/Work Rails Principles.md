@@ -287,7 +287,7 @@ Planning State Output should use `Templates/Planning State Output Template.md`.
 Default Dashboard is the compact action/memory core. It owns:
 
 - 🎯Рез;
-- 🧵📜Обещ;
+- 🧵📜>🧪Обещ;
 - 📊Скор;
 - 🧲ЗИ.
 
@@ -641,23 +641,42 @@ Do not over-normalize them.
 
 Default Dashboard Core:
 
-🎯Рез -> 🧵📜Обещ -> 📊Скор -> 🧲ЗИ
+🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ
 
-| 🎯Рез Algorithm | 🧵📜 Truth / ЧП-СДВГ | 📊Скор | 🧲ЗИ |
+| 🎯Рез Algorithm | 🧵📜>🧪 Обещ > химия | 📊Скор | 🧲ЗИ |
 |---|---|---|---|
-| 🤑 готов получить сейчас | 🧪 химикаты не ты | **Core:** ✅D ⚡F ⏱️T 🛤️K 💎P | 🧲 куда заносит магнит |
-| 🚫 не принимаю слив | 📐 обещание > текущая химия | **Guard:** ⚠️ занятость≠D / процесс≠результат / интересно≠нужно | 🔥 что кормлю огнём |
-| 🎯 ради Result Tracking, не ради процесса | 🧵 пришить обещание как источник истины | **Boost:** 🏁 короткая дистанция / 🥊 self-competition | 🧱📈 привычка крепнет / будущие действия улучшаются |
-|  | 💊 эффект может появиться после действия |  |  |
-|  | 🔥🚫 не подкидывать лишнему |  |  |
-|  | 🪵 дрова не бесконечные |  |  |
+| 🤑🎯🏁✅ готов получить сейчас | 🧪🌪️🧠❌ химикаты не ты | **Core:** ✅D🛠️📦 ⚡F🎛️🧠 ⏱️T🚫🕸️🏃 🛤️K🎯 💎P📦📌 | 🧲➡️🎯/🌪️ куда заносит магнит |
+| 🚫🕳️📉 не принимаю слив | 📐📜👑 > 🧪🌪️ обещание > текущая химия | **Guard:** ⚠️🔁≠✅D / 🎭≠🎯 / 🎪≠🛤️ | 🧱📈👤➡️👤✅ привычка крепнет / будущие действия улучшаются |
+| 🎯📈≠🎭🔁 ради Result Tracking, не ради процесса | 🧵📜❤️‍🔥👤 пришить обещание как источник истины | **Boost:** 🏁🥊👤↔️👤⏱️ короткая дистанция / self-competition |  |
+|  | 💊➡️⚙️➡️✨ эффект может появиться после действия |  |  |
+|  | 🔥🚫🧯 не подкидывать лишнему |  |  |
+|  | 🪵⏳🔋📉 дрова не бесконечные |  |  |
+
+### Mnemonic Emoji Table
+
+| 🎯Рез | 🧵📜>🧪Обещ | 📊Скор | 🧲ЗИ |
+|---|---|---|---|
+| 🤑🎯🏁✅ | 🧪🌪️🧠❌ | ✅D🛠️📦 | 🧲➡️🎯/🌪️ |
+| 🚫🕳️📉 | 📐📜👑>🧪🌪️ | ⚡F🎛️🧠 | 🧱📈👤➡️👤✅ |
+| 🎯📈≠🎭🔁 | 🧵📜❤️‍🔥👤 | ⏱️T🚫🕸️🏃 |  |
+|  | 💊➡️⚙️➡️✨ | 🛤️K🎯 |  |
+|  | 🔥🚫🧯 | 💎P📦📌 |  |
+|  | 🪵⏳🔋📉 | ⚠️🔁≠✅D / 🎭≠🎯 / 🎪≠🛤️ |  |
+|  |  | 🏁🥊👤↔️👤⏱️ |  |
 
 Meaning:
 
 - 🎯Рез = готов получить результат сейчас / не принимаю слив / действую ради Result Tracking, а не ради процесса.
-- 🧵📜Обещ = пришитое обещание сильнее текущей химии and can become the source of truth for action and internal state.
+- 🧵📜>🧪Обещ = пришитое обещание сильнее текущей химии and can become the source of truth for action and internal state.
 - 📊Скор = D/F/K/P + tempo + guard + short-distance execution.
 - 🧲ЗИ = занос / инерция / habit / future actions.
+
+The fire/wood ideas belong to 🧵📜>🧪Обещ:
+
+- 🔥🚫🧯 = do not feed what pulls away from the goal;
+- 🪵⏳🔋📉 = wood/resource is limited, and if it is spent on drift, desired gets less.
+
+🧲ЗИ does not repeat the fire/wood idea. It only tracks where the magnet pulls and what happens to future actions.
 
 ## Truth Promise / Пришитое обещание
 
