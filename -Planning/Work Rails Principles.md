@@ -269,21 +269,30 @@ It is a short operational check after a session.
 
 Planning State Output and Default Dashboard are different layers.
 
-Planning State Output is AI-maintained state output. It owns:
+Planning State Output is AI-maintained compact state output. It owns only:
 
-- Result Tracking;
-- Active Truth Promises;
-- current goals;
-- desired / undesired;
-- Progress Signal;
-- sessions / score;
-- nearest global goals;
-- global context;
-- counters;
-- recent sessions;
-- current / next physical action.
+1. 🎯 Result Tracking;
+2. 🧵📜>🧪 Active Promises;
+3. 🧾 Finished Sessions.
 
-Planning State Output owns Active Truth Promises as current state.
+Result Tracking includes:
+
+- 🎯 Цель;
+- 🧩 Подцель сейчас;
+- ➡️ Next physical action;
+- 🌅 Desired;
+- 🌑 Undesired;
+- 📈 Current progress signal.
+
+Progress is represented by Finished Sessions, not by a separate Progress counters block.
+
+Next physical action is represented inside Result Tracking, not as a separate block.
+
+Active promises are represented as rows in the Active Promises table.
+
+Global/background context is not shown as a default block. Use it only when directly relevant.
+
+Flags may exist in `Session Log.md`, but they are not shown in default Planning State Output.
 
 Planning State Output should use `Templates/Planning State Output Template.md`.
 
@@ -312,20 +321,25 @@ Default planning/session-control output should include:
 
 1. Default Dashboard Core.
 2. Mnemonic Emoji Table.
-3. Planning State Output with Active Truth Promises when state/action guidance is needed.
-4. Next physical action when direction is needed.
+3. Compact Planning State Output when state/action guidance is needed.
+
+Compact Planning State Output contains:
+
+- 🎯 Result Tracking;
+- 🧵📜>🧪 Active Promises;
+- 🧾 Finished Sessions.
 
 Use:
 
 - `Templates/Default Dashboard Template.md` for Dashboard Core and Mnemonic Emoji Table;
-- `Templates/Planning State Output Template.md` for maintained state output and Active Truth Promises;
+- `Templates/Planning State Output Template.md` for compact maintained state output;
 - `Workflows/Use Dashboard Workflow.md` for how to combine them.
 
 Dashboard Core and Mnemonic Emoji Table are shown together by default in planning mode.
 
 The dashboard pack may be omitted only for narrow technical answers, diffs, file checks, or when the user explicitly asks for a short answer.
 
-Use Planning State Output when:
+Use compact Planning State Output when:
 
 - starting or updating the day;
 - logging a session or event;
@@ -693,11 +707,14 @@ The fire/wood ideas belong to 🧵📜>🧪Обещ:
 Truth Promise has two forms:
 
 1. Principles/workflow explanation — stored in `Work Rails Principles.md` and `Workflows/Build Truth Promise Workflow.md`.
-2. Active Truth Promises — stored/rendered in Planning State Output and current state.
+2. Active Promises — stored/rendered as rows in compact Planning State Output and current state.
 
 Do not confuse promise principles with active promises.
 
-Active promises are concrete current promises attached to current goals.
+Active promises are concrete current promises attached to current goals and rendered as a table:
+
+| # | 🧪 Сейчас чувствую / тянет | 📐 Аналитически выведено | 🧵📜 Пришить как истину | 🌑 Не покупать | 🏁 Отрезок |
+|---|---|---|---|---|---|
 
 It is not just a motivational phrase.
 

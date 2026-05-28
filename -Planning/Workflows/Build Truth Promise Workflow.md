@@ -2,7 +2,7 @@
 
 Status: active workflow.
 
-Purpose: create or refresh a stitched analytical promise that becomes a source of truth for action and internal state, then update Active Truth Promises in planning state.
+Purpose: create or refresh a stitched analytical promise that becomes a source of truth for action and internal state, then update the Active Promises table in planning state.
 
 ## Uses
 
@@ -27,24 +27,27 @@ Use this workflow when the user says or implies:
 
 ## Steps
 
-1. Read Result Tracking from Planning State Output.
-2. Identify the current goal and nearest global goal it belongs to.
-3. Identify the real reward:
+1. Read Result Tracking from compact Planning State Output.
+2. Identify the current goal and subgoal.
+3. Identify what the user currently feels / what pulls them:
+   - craving;
+   - lack of pull;
+   - noise;
+   - urge to polish/process instead of result.
+4. Build the analytical prediction:
    - what will actually improve the user’s state;
-   - what gives control, relief, strength, pleasure, or a sense that life/work moved forward.
-4. Identify the drift lie / false promise:
-   - what stimulation, process drift, or current chemistry promises;
-   - why it is weaker than the real reward.
-5. Formulate the Truth Promise:
-   - result + good D/F/K/P + course + value left + correct inertia.
-6. Stitch it:
-   - state that this promise is accepted as the current source of truth for actions and internal state.
-7. Choose the short-distance rule:
-   - the next small segment to win now.
-8. Update Active Truth Promises in the relevant state owner:
+   - what gives control, relief, strength, pleasure, or a sense that life/work moved forward;
+   - how this connects to result + good D/F/K/P + course + value left + correct inertia.
+5. Formulate what should be stitched as the current source of truth.
+6. Identify what not to buy:
+   - the false promise of chemistry/stimulation/process drift;
+   - why it is weaker than the analytical promise.
+7. Choose the short-distance segment to win now.
+8. Add or update one row in the Active Promises table.
+9. Update the relevant state owner:
    - use `Today State.md` for today's/session-level active promise;
    - use `Current Plan State.md` only when the promise is broader/global enough to belong there.
-9. Return Dashboard Core + Mnemonic Emoji Table + updated Active Truth Promises + short-distance action.
+10. Return Dashboard Core + Mnemonic Emoji Table + updated Active Promises table.
 
 ## Output template
 
@@ -56,18 +59,11 @@ Use `Templates/Default Dashboard Template.md`.
 
 Use the emoji-only table attached to `Templates/Default Dashboard Template.md`.
 
-### Active Truth Promises
+### 🧵📜>🧪 Active Promises
 
-- 🧵📜 Main active promise:
-- 🎯 Promise target:
-- 🌅 Real reward:
-- 🌑 Drift lie / false promise:
-- 🧪 Chemistry mismatch:
-- 🏁 Short-distance rule:
-
-### Short-distance action
-
-- Next small segment:
+| # | 🧪 Сейчас чувствую / тянет | 📐 Аналитически выведено | 🧵📜 Пришить как истину | 🌑 Не покупать | 🏁 Отрезок |
+|---|---|---|---|---|---|
+| 1 | `<current feeling / pull / lack of pull>` | `<analytical prediction>` | `<what should replace current feeling as source of truth>` | `<false promise / drift lie>` | `<short-distance segment>` |
 
 ## Principle
 

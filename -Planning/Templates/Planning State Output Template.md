@@ -2,64 +2,51 @@
 
 Status: active template.
 
-Purpose: state/output template for planning AI. This is not the Default Dashboard mnemonic core.
+Purpose: compact state/output template for planning AI. This is not the Default Dashboard mnemonic core.
 
-AI uses this template to show the maintained planning state: goals, desired/undesired, active truth promises, progress, sessions, global context, and current/next.
+AI uses this template to show only the maintained planning state that matters for action: result tracking, active promises, and finished sessions.
 
-## Result Tracking
-
-| Поле | Значение |
-|---|---|
-| 🎯 Текущие цели | `<session goal / day goal / active target>` |
-| 🌅 Desired | `<current goals moved/completed + good D/F/K/P>` |
-| 🌑 Undesired | `<goals not moved/completed + bad D/F/K/P / drift / process instead of result>` |
-| 📈 Progress Signal | `<closer / slightly closer / not closer / misleading progress>` |
-| 🧾 Sessions / Score | `<recent sessions with D/F/K/P, points, flags, relation to desired>` |
-| 🗺️ Ближайшие глобальные цели | `<nearest global goals that current desired state belongs to>` |
-
-## Active Truth Promises
+## 🎯 Result Tracking
 
 | Поле | Значение |
 |---|---|
-| 🧵📜 Main active promise | `<current stitched promise for today/main goal>` |
-| 🎯 Promise target | `<result + good D/F/K/P + course + value left + correct inertia>` |
-| 🌅 Real reward | `<real pleasure / relief / control / improvement this promise points to>` |
-| 🌑 Drift lie / false promise | `<what chemistry/stimulation/process falsely promises>` |
-| 🧪 Chemistry mismatch | `<current feeling/craving/lack of pull/noise that should not be treated as truth>` |
-| 🏁 Short-distance rule | `<next small segment to win now>` |
+| 🎯 Цель | `<main goal / day goal>` |
+| 🧩 Подцель сейчас | `<current subgoal>` |
+| ➡️ Next physical action | `<one concrete next physical action>` |
+| 🌅 Desired | `<desired result / good outcome>` |
+| 🌑 Undesired | `<undesired result / bad outcome>` |
+| 📈 Current progress signal | `<closer / slightly closer / not closer / misleading risk>` |
 
-## Global
+## 🧵📜>🧪 Active Promises
 
-- 🌍 Current focus:
-- 🛤️ Main course:
-- 🧭 Recovery background:
+| # | 🧪 Сейчас чувствую / тянет | 📐 Аналитически выведено | 🧵📜 Пришить как истину | 🌑 Не покупать | 🏁 Отрезок |
+|---|---|---|---|---|---|
+| 1 | `<current feeling / pull / lack of pull>` | `<analytical prediction>` | `<what should replace current feeling as source of truth>` | `<false promise / drift lie>` | `<short-distance segment>` |
 
-## Progress
+## 🧾 Finished Sessions
 
-- 🧾 Sessions:
-- ⚡ High-focus:
-- 📊 Points:
-- 🚩 Flags:
-
-## Recent sessions
-
-- `<recent sessions or none yet>`
-
-## Current / Next
-
-- 🎯 Current session:
-- ➡️ Next physical action:
+| # | Session | D/F/K/P | Points | Progress Signal | Result |
+|---|---|---|---:|---|---|
+| 1 | `<finished session>` | `<D# F# K# P#>` | `<points>` | `<progress signal>` | `<what changed>` |
 
 ## Rule
 
-This template owns state output.
+This template owns compact planning state output.
 
-It also owns Active Truth Promises as current planning state.
+Default Planning State Output contains only:
 
-`Work Rails Principles.md` owns the theory of Truth Promises.
+1. 🎯 Result Tracking;
+2. 🧵📜>🧪 Active Promises;
+3. 🧾 Finished Sessions.
 
-`Workflows/Build Truth Promise Workflow.md` owns creating/updating active promises.
+Progress is represented by Finished Sessions, not by a separate Progress counters block.
 
-The Default Dashboard owns only the compact action/memory core.
+Next physical action is represented inside Result Tracking, not as a separate block.
+
+Active promises are represented as rows in the Active Promises table.
+
+Global/background context is not shown as a default block. Use it only when directly relevant.
+
+Flags may exist in `Session Log.md`, but they are not shown in default Planning State Output.
 
 Do not force the user to memorize this template. AI maintains and fills it.

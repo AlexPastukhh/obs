@@ -2,65 +2,28 @@
 
 Status: active day state.
 
-## Day goal
+## 🎯 Result Tracking
 
-Main:
+| Поле | Значение |
+|---|---|
+| 🎯 Цель |  |
+| 🧩 Подцель сейчас |  |
+| ➡️ Next physical action |  |
+| 🌅 Desired |  |
+| 🌑 Undesired |  |
+| 📈 Current progress signal |  |
 
-Minimum:
+## 🧵📜>🧪 Active Promises
 
-Good:
+| # | 🧪 Сейчас чувствую / тянет | 📐 Аналитически выведено | 🧵📜 Пришить как истину | 🌑 Не покупать | 🏁 Отрезок |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  |  |
 
-Strong:
+## 🧾 Finished Sessions
 
-## Result Anchor
-
-Desired result:
-
-Undesired result:
-
-## Active Truth Promises
-
-Main active promise:
-
-Promise target:
-
-Real reward:
-
-Drift lie / false promise:
-
-Chemistry mismatch:
-
-Short-distance rule:
-
-## Session target
-
-Sessions:
-
-High-focus sessions:
-
-Points / NDU:
-
-## Current session
-
-Goal:
-
-Next action:
-
-## Active queue
-
-1.
-2.
-3.
-
-## Counters
-
-Sessions:
-
-High-focus:
-
-Points:
-
-Flags:
+| # | Session | D/F/K/P | Points | Progress Signal | Result |
+|---|---|---|---:|---|---|
+|  |  |  |  |  |  |
 
 ## Notes
 

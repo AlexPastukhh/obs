@@ -7,17 +7,26 @@ Status: active workflow.
 - `Today State.md`
 - `Session Log.md`
 - `Work Rails Principles.md`
+- `Templates/Planning State Output Template.md`
+- `Templates/Default Dashboard Template.md`
 
 ## Steps
 
-1. Count sessions.
-2. Count plus / high-focus sessions.
-3. Estimate points from D/F/K/P.
-4. Summarize main course movement.
-5. Explain goal outcome.
-6. Note CV / SD / EX if present.
-7. Add day summary to `Session Log.md`.
+1. Read Finished Sessions from `Today State.md` and `Session Log.md`.
+2. Summarize main result movement.
+3. Explain goal outcome using Desired / Undesired and Progress Signal.
+4. Note CV / SD / EX in `Session Log.md` only if relevant.
+5. Add day summary to `Session Log.md`.
+6. Render Default Dashboard Core.
+7. Render Mnemonic Emoji Table.
+8. Render final compact Planning State Output:
+   - 🎯 Result Tracking;
+   - 🧵📜>🧪 Active Promises;
+   - 🧾 Finished Sessions.
 
 ## Output
 
-Day summary entry.
+- Day summary entry;
+- Default Dashboard Core;
+- Mnemonic Emoji Table;
+- final compact Planning State Output.

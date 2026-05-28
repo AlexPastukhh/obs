@@ -20,14 +20,18 @@ Status: active workflow.
 3. Extract done.
 4. Check course alignment.
 5. Assign D/F/K/P.
-6. Add flags.
-7. Add progress signal.
+6. Add flags to `Session Log.md` only when needed.
+7. Add Progress Signal.
 8. Add entry to `Session Log.md`.
-9. Update counters in `Today State.md`.
-10. Refresh Active Truth Promise if the session changed goals, progress, chemistry, or next action.
-11. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
-12. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
-13. Render updated Planning State Output using `Templates/Planning State Output Template.md`, including Active Truth Promises.
+9. Add/update row in `Finished Sessions` in `Today State.md`.
+10. Update `Current progress signal` in Result Tracking.
+11. Refresh Active Promises if the session changed goals, progress, chemistry, or next action.
+12. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
+13. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
+14. Render compact Planning State Output:
+    - 🎯 Result Tracking;
+    - 🧵📜>🧪 Active Promises;
+    - 🧾 Finished Sessions.
 
 ## Explicit score handling
 
@@ -53,7 +57,9 @@ This is not a new score criterion.
 
 D/F/K/P tracks what happened.
 
-Progress signal tracks whether the desired situation moved closer.
+Progress Signal tracks whether the desired situation moved closer.
+
+Progress in default Planning State Output is represented through the Finished Sessions table.
 
 ## Required response after logging
 
@@ -61,8 +67,7 @@ After every session/event log, AI must return:
 
 1. Logged score:
    - D/F/K/P;
-   - points;
-   - flags.
+   - points.
 
 2. Default Dashboard Core:
    - `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ`.
@@ -70,31 +75,24 @@ After every session/event log, AI must return:
 3. Mnemonic Emoji Table:
    - emoji-only table attached to the dashboard.
 
-4. Updated Planning State Output:
-   - Result Tracking;
-   - Active Truth Promises;
-   - Global if relevant;
-   - Progress counters;
-   - Recent sessions;
-   - Current / Next.
+4. Updated compact Planning State Output:
+   - 🎯 Result Tracking;
+   - 🧵📜>🧪 Active Promises;
+   - 🧾 Finished Sessions.
 
 5. Result progress:
    - closer / slightly closer / not closer / misleading progress;
    - one short reason.
 
-6. Next physical action:
-   - one concrete next physical action.
-
 Do not respond with only “logged” or “open file X”.
 
-The user should immediately see the score, dashboard, state, active promise, and what to do next.
+The user should immediately see the score, dashboard, compact state, active promise, finished sessions, and next physical action inside Result Tracking.
 
 ## Output
 
 - session/event entry;
-- updated counters;
+- updated Finished Sessions;
 - Default Dashboard Core;
 - Mnemonic Emoji Table;
-- Planning State Output with Active Truth Promises;
-- result progress;
-- next physical action.
+- compact Planning State Output;
+- result progress.

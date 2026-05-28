@@ -20,14 +20,14 @@ Create a new file only when there is a new durable responsibility.
 | `Responsibility Map.md` | file ownership |
 | `Documentation Principles.md` | file types and documentation rules |
 | `Current Plan State.md` | flexible current plan, focus, tasks, rough schedule, background recovery goal |
-| `Today State.md` | structured active day state |
-| `Session Log.md` | factual session/event/day-summary history |
+| `Today State.md` | active day state: Result Tracking, Active Promises, Finished Sessions, notes |
+| `Session Log.md` | factual session/event/day-summary history; may store flags when useful |
 | `Work Rails Principles.md` | D/F/K/P, flags, course violations, recovery/NDU, work rails context, Truth Promise principles, dashboard meaning |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
-| `Templates/Planning State Output Template.md` | planning state output skeleton: result tracking, active truth promises, global, progress, recent sessions, current/next |
+| `Templates/Planning State Output Template.md` | compact planning state output skeleton: Result Tracking, Active Promises, Finished Sessions |
 | `Templates/Default Dashboard Template.md` | compact action/memory core + attached Mnemonic Emoji Table: 🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ |
-| `Workflows/Use Dashboard Workflow.md` | how to combine Planning State Output with Default Dashboard Core |
-| `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise |
+| `Workflows/Use Dashboard Workflow.md` | how to combine compact Planning State Output with Default Dashboard Core |
+| `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row |
 | `Workflows/*.md` | algorithms |
 | `Templates/*.md` | skeletons |
 

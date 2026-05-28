@@ -16,19 +16,20 @@ Status: active workflow.
 ## Steps
 
 1. Read current plan.
-2. Choose today’s main goal.
-3. Set minimum / good / strong.
-4. Set desired result.
-5. Set undesired result.
-6. Set session target.
-7. Set current session goal.
-8. Set next action.
-9. Set or refresh Active Truth Promise if enough context exists.
-   - If not enough context exists, mark Active Truth Promise as unclear / needs target.
-10. Update `Today State.md`.
-11. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
-12. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
-13. Render Planning State Output using `Templates/Planning State Output Template.md`, including Active Truth Promises.
+2. Set compact Result Tracking:
+   - 🎯 Цель;
+   - 🧩 Подцель сейчас;
+   - ➡️ Next physical action;
+   - 🌅 Desired;
+   - 🌑 Undesired;
+   - 📈 Current progress signal.
+3. Set or refresh Active Promises if enough context exists.
+   - If not enough context exists, create an empty/unclear Active Promises row or mark it as needs target.
+4. Initialize Finished Sessions as empty.
+5. Update `Today State.md` using `Templates/Today State Template.md`.
+6. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
+7. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
+8. Render compact Planning State Output using `Templates/Planning State Output Template.md`.
 
 ## Required response after starting/updating day
 
@@ -40,24 +41,18 @@ After starting or updating the day, AI must return:
 2. Mnemonic Emoji Table:
    - emoji-only table attached to the dashboard.
 
-3. Planning State Output:
-   - Result Tracking;
-   - Active Truth Promises;
-   - Global;
-   - Progress;
-   - Recent sessions if relevant;
-   - Current / Next.
-
-4. One concrete next physical action.
+3. Compact Planning State Output:
+   - 🎯 Result Tracking;
+   - 🧵📜>🧪 Active Promises;
+   - 🧾 Finished Sessions.
 
 Do not respond with only “Updated Today State.md”.
 
-The user should immediately see the dashboard, current state, active promise, and what to do next.
+The user should immediately see the dashboard, current result tracking, active promises, finished sessions, and the next physical action inside Result Tracking.
 
 ## Output
 
 - updated `Today State.md`;
 - Default Dashboard Core;
 - Mnemonic Emoji Table;
-- Planning State Output with Active Truth Promises;
-- next physical action.
+- compact Planning State Output.
