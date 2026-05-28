@@ -36,9 +36,17 @@ Purpose: explain how AI should use the compact Planning State Output together wi
 7. Read progress from Finished Sessions, not from a separate Progress counters block.
 8. Decide which dashboard column is most relevant now:
    - 🎯Рез = reconnect to result;
-   - 🧵📜>🧪Обещ = recall or build promise and treat it as stronger than current chemistry;
-   - 📊Скор = improve D/F/K/P, tempo, short-distance execution;
+   - 🧵📜>🧪Обещ = Chem vs Promise + Fire / Wood;
+   - 📊Скор = Core D/F/K/P + Tempo + Guard + Boost;
    - 🧲ЗИ = notice where the magnet pulls and what happens to future actions.
+9. If the user is confused by `📊Скор`, explain:
+   - D = useful work actually done;
+   - F = focus / self-management;
+   - K = relation to current course;
+   - P = value left after the session;
+   - Tempo supports D/F but is not a fifth score criterion;
+   - Guard prevents fake progress: занятость≠D, процесс≠результат, интересно≠нужно;
+   - Boost means short-distance execution / self-competition.
 
 ## Output rule
 
