@@ -265,62 +265,65 @@ Progress Signal is not a fifth score criterion.
 
 It is a short operational check after a session.
 
+## Planning State Output vs Default Dashboard
+
+Planning State Output and Default Dashboard are different layers.
+
+Planning State Output is AI-maintained state output. It owns:
+
+- Result Tracking;
+- current goals;
+- desired / undesired;
+- Progress Signal;
+- sessions / score;
+- nearest global goals;
+- global context;
+- counters;
+- recent sessions;
+- current / next physical action.
+
+Planning State Output should use `Templates/Planning State Output Template.md`.
+
+Default Dashboard is the compact action/memory core. It owns:
+
+- 🎯Рез;
+- 🧵📜Обещ;
+- 📊Скор;
+- 🧲ЗИ.
+
+Default Dashboard should use `Templates/Default Dashboard Template.md`.
+
+The user does not need to memorize the Planning State Output template.
+
+The user should be able to remember and use the compact dashboard core.
+
 ## Default Dashboard Mode
 
-When AI is acting as the planning/session-control assistant, it should show the Default Dashboard by default.
+When AI is acting as the planning/session-control assistant, it should show useful state and action guidance by default.
 
 The user should not have to ask for it.
 
 AI should not tell the user to open state files when it can summarize the relevant state itself.
 
-The dashboard should be compact and should not replace file updates.
+Use:
 
-Use Default Dashboard when:
+- `Templates/Planning State Output Template.md` for maintained state output;
+- `Templates/Default Dashboard Template.md` for compact action/memory core;
+- `Workflows/Use Dashboard Workflow.md` for how to combine them.
+
+Use Planning State Output when:
 
 - starting or updating the day;
-- starting a session;
 - logging a session or event;
 - answering “what next?”;
-- correcting drift;
 - checking current state.
 
-Default Dashboard should use `Templates/Default Dashboard Template.md` as the reusable skeleton.
+Use Default Dashboard Core when:
 
-Default Dashboard includes:
-
-### Rails
-
-- short Rails mnemonic: `🎯Р -> 🧹ЧП-СДВГ -> 📊Скор -> 🧲ЗИ`;
-- short Rails table when useful, especially for starting, correcting, or asking for the algorithm.
-
-### Global
-
-- Current focus:
-- Main course:
-- Recovery background:
-
-### Today
-
-- Main goal:
-- Desired result:
-- Undesired result:
-
-### Progress
-
-- Sessions:
-- High-focus:
-- Points:
-- Flags:
-
-### Recent sessions
-
-- Last logged sessions with D/F/K/P, points, Progress Signal, and flags.
-- If no sessions exist, say “none yet”.
-
-### Current / Next
-
-- Current session:
-- Next physical action:
+- the user needs action orientation;
+- the user asks for dashboard;
+- the user is starting, correcting, drifting, or losing tempo;
+- the user needs the compact rails mnemonic.
 
 Rule:
 
@@ -626,7 +629,7 @@ Result -> Clean Field -> Score Action -> Momentum / Inertia.
 
 Choose one concrete physical action and do it.
 
-## Core Rails Mnemonic
+## Dashboard Core / Mnemonic
 
 Mnemonic is a memory handle.
 
@@ -636,83 +639,84 @@ Use the user's sticky phrases.
 
 Do not over-normalize them.
 
-Main form:
+Default Dashboard Core:
 
-🎯 Result -> 🧹 Clean Field / ЧП-СДВГ -> 📊 Скор -> 🧲 Занос / Инерция
+🎯Рез -> 🧵📜Обещ -> 📊Скор -> 🧲ЗИ
 
-Short dashboard form:
-
-🎯Р -> 🧹ЧП-СДВГ -> 📊Скор -> 🧲ЗИ
-
-| 🎯Р Result / active planning | 🧹ЧП-СДВГ Field | 📊Скор | 🧲ЗИ Занос / Инерция |
+| 🎯Рез Algorithm | 🧵📜 Truth / ЧП-СДВГ | 📊Скор | 🧲ЗИ |
 |---|---|---|---|
-| 🎯 текущие цели — сессия/день/ближайшее | 🎯📈➡️ нет всего, только goal/progress/action | ✅D useful work — полезное реально сделано | 🧲 куда заносит магнит — что начинает тянуть дальше |
-| 🌅 desired = текущие цели + хороший D/F/K/P | 📵 фикс стимул, без левой стимуляции | ⚡F плюсовая / стремительно — самоменеджмент без вязкости | 🔥 что кормлю огнём — какой путь усиливаю |
-| 🌑 undesired = цели не сделаны + плохой D/F/K/P / drift | 🌫️ шум не рулит | ⏱️T темп, не вязнуть | 🧱📈 привычка крепнет / будущие действия улучшаются |
-| 📈 progress signal — ближе ли desired | 🧪 химикаты не ты | 🛤️K курс |  |
-| 🤑 готов получить сейчас | 🔥🚫 не подкидывать лишнему | 💎P остаточная польза |  |
-| 🚫 не принимаю слив | 🪵 дрова не бесконечные | ⚠️ занятость≠D / процесс≠результат / интересно≠нужно |  |
-| 🗺️ ближайшие глобальные цели |  |  |  |
+| 🤑 готов получить сейчас | 🧪 химикаты не ты | **Core:** ✅D ⚡F ⏱️T 🛤️K 💎P | 🧲 куда заносит магнит |
+| 🚫 не принимаю слив | 📐 обещание > текущая химия | **Guard:** ⚠️ занятость≠D / процесс≠результат / интересно≠нужно | 🔥 что кормлю огнём |
+| 🎯 ради Result Tracking, не ради процесса | 🧵 пришить обещание как источник истины | **Boost:** 🏁 короткая дистанция / 🥊 self-competition | 🧱📈 привычка крепнет / будущие действия улучшаются |
+|  | 💊 эффект может появиться после действия |  |  |
+|  | 🔥🚫 не подкидывать лишнему |  |  |
+|  | 🪵 дрова не бесконечные |  |  |
 
-### 🎯Р is dynamic
+Meaning:
 
-In Default Dashboard, AI must fill 🎯Р with real current values from:
+- 🎯Рез = готов получить результат сейчас / не принимаю слив / действую ради Result Tracking, а не ради процесса.
+- 🧵📜Обещ = пришитое обещание сильнее текущей химии and can become the source of truth for action and internal state.
+- 📊Скор = D/F/K/P + tempo + guard + short-distance execution.
+- 🧲ЗИ = занос / инерция / habit / future actions.
 
-- `Current Plan State.md`;
-- `Today State.md`;
-- `Session Log.md`;
-- user's current message.
+## Truth Promise / Пришитое обещание
 
-🎯Р may function as the active planning/result column.
+Пришитое обещание is an analytical promise stitched as a source of truth for actions and internal state.
 
-Desired is not a separate fantasy.
+It is not just a motivational phrase.
 
-Desired = current goals moved/completed with good D/F/K/P.
+It answers:
 
-Undesired = current goals not moved/completed, bad D/F/K/P, or drift/stimulation/process replacing useful work.
+- what will really make the user feel better;
+- what will improve the user’s position;
+- what gives control, relief, strength, real pleasure, or the sense that life/work moved forward;
+- why current chemistry, stimulation pull, or lack of pull is not the authority.
 
-Progress Signal belongs to 🎯Р because it checks whether the desired state moved closer.
+The promise should contain the full target:
 
-If some values are missing, AI should infer a reasonable version from the current plan or mark it as unclear.
+- result;
+- good D/F/K/P;
+- course;
+- value left;
+- correct inertia.
 
-### 🧹ЧП-СДВГ
+Operating principle:
 
-ЧП-СДВГ = clean the field from ADHD/stimulation drift.
+1. Start by naming goals.
+2. Identify the real source of pleasure / relief / control.
+3. Build an analytical promise from goals, reality, experience, and D/F/K/P.
+4. Stitch the promise to yourself: treat it as the source of truth for action and internal state.
+5. Do not wait for the right feeling first.
+6. Work through short distances.
+7. If chemistry/noise/drift appears, name it, recall or rebuild the promise, and continue through the next short-distance action.
 
-🔥🚫 Do not feed the wrong fire:
+Short Russian form:
 
-Feeding stimulation, thoughts, or off-course branches makes them pull harder by inertia.
+Цели -> источник настоящего удовольствия -> пришитое обещание -> источник истины -> короткая дистанция -> если химия ломает, вернуться к обещанию.
 
-🪵 Wood is not infinite:
+For the step-by-step process, see:
 
-Attention, energy, stimulation, and start impulse are limited.
+`Workflows/Build Truth Promise Workflow.md`.
 
-If they are spent on drift, they cannot be spent on the desired result.
+## Workflow references
 
-Then the user gets less than they realistically could have got.
-
-### 🧲ЗИ
-
-🧲ЗИ is not the next-action block.
-
-It means current action changes future inertia and habit.
-
-It asks:
-
-- куда заносит магнит?
-- что я кормлю огнём?
-- какая привычка крепнет?
-- будут ли будущие действия легче стать правильными?
-
-The actual Next physical action remains a separate dashboard field.
+- Dashboard usage: `Workflows/Use Dashboard Workflow.md`.
+- Truth Promise creation/refresh: `Workflows/Build Truth Promise Workflow.md`.
+- State output: `Templates/Planning State Output Template.md`.
+- Dashboard core: `Templates/Default Dashboard Template.md`.
 
 ## Future behavior algorithms are deferred
 
-Chemical fire / no-fuel / silence / thought-stop ideas are important.
+Some behavior algorithms are still not designed as standalone workflows.
 
-But they are not fields in `Today State.md` or `Session Log.md` yet.
+Examples:
 
-They are future behavior algorithms and should stay in `Deferred and Ideas Notes.md` until designed.
+- silence / thought-stop algorithm;
+- waiting-gap workflow;
+- possible separate chemistry-drift recovery workflow;
+- possible separate plus-session workflow.
+
+Keep these in `Deferred and Ideas Notes.md` until they become stable enough to own a separate file.
 
 ## Flags
 

@@ -2,57 +2,34 @@
 
 Status: active template.
 
-Purpose: skeleton for the default planning dashboard output and short Rails mnemonic/table.
+Purpose: compact action/memory core for staying on rails.
 
-## Dashboard
+This is not the full planning state output.
 
-### Rails
+Planning state output is owned by `Templates/Planning State Output Template.md`.
 
-Rails: 🎯Р -> 🧹ЧП-СДВГ -> 📊Скор -> 🧲ЗИ
+## Dashboard Core
 
-| 🎯Р Result / active planning | 🧹ЧП-СДВГ Field | 📊Скор | 🧲ЗИ Занос / Инерция |
+Rails: 🎯Рез -> 🧵📜Обещ -> 📊Скор -> 🧲ЗИ
+
+| 🎯Рез Algorithm | 🧵📜 Truth / ЧП-СДВГ | 📊Скор | 🧲ЗИ |
 |---|---|---|---|
-| 🎯 текущие цели: `<session/day goals>` | 🎯📈➡️ нет всего, только goal/progress/action | ✅D полезное сделано | 🧲 куда заносит магнит |
-| 🌅 desired: `<goals moved/completed + good D/F/K/P>` | 📵 фикс стимул, без левой стимуляции | ⚡F плюсовая / стремительно | 🔥 что кормлю огнём |
-| 🌑 undesired: `<goals not moved + bad D/F/K/P/drift>` | 🌫️ шум не рулит | ⏱️T темп, не вязнуть | 🧱📈 привычка крепнет / будущие действия улучшаются |
-| 📈 progress signal: `<closer/slightly/not/misleading>` | 🧪 химикаты не ты | 🛤️K курс |  |
-| 🤑 готов получить сейчас: `<desired now>` | 🔥🚫 не подкидывать лишнему | 💎P остаточная польза |  |
-| 🚫 не принимаю слив: `<undesired refused>` | 🪵 дрова не бесконечные | ⚠️ занятость≠D / процесс≠результат / интересно≠нужно |  |
-| 🗺️ ближайшие глобальные цели: `<near global goals>` |  |  |  |
+| 🤑 готов получить сейчас | 🧪 химикаты не ты | **Core:** ✅D ⚡F ⏱️T 🛤️K 💎P | 🧲 куда заносит магнит |
+| 🚫 не принимаю слив | 📐 обещание > текущая химия | **Guard:** ⚠️ занятость≠D / процесс≠результат / интересно≠нужно | 🔥 что кормлю огнём |
+| 🎯 ради Result Tracking, не ради процесса | 🧵 пришить обещание как источник истины | **Boost:** 🏁 короткая дистанция / 🥊 self-competition | 🧱📈 привычка крепнет / будущие действия улучшаются |
+|  | 💊 эффект может появиться после действия |  |  |
+|  | 🔥🚫 не подкидывать лишнему |  |  |
+|  | 🪵 дрова не бесконечные |  |  |
 
-Rule:
+## Meaning
 
-AI must fill the 🎯Р column with real current values.
+- 🎯Рез = готов получить результат сейчас / не принимаю слив / действую ради Result Tracking, а не ради процесса.
+- 🧵📜Обещ = пришитое обещание сильнее текущей химии и может быть источником истины для действий и внутреннего состояния.
+- 📊Скор = D/F/K/P + темп + guard + короткие дистанции.
+- 🧲ЗИ = занос / инерция / привычка / будущие действия.
 
-Do not leave placeholders if values can be inferred from `Current Plan State.md`, `Today State.md`, `Session Log.md`, or the user's current message.
+## Rule
 
-The 🧲ЗИ column is about inertia/habit/future pull, not the next-action field.
+Default Dashboard is the compact mnemonic/action core only.
 
-### Global
-
-- Current focus:
-- Main course:
-- Recovery background:
-
-### Today
-
-- Main goal:
-- Desired result:
-- Undesired result:
-
-### Progress
-
-- Sessions:
-- High-focus:
-- Points:
-- Flags:
-
-### Recent sessions
-
-- Last sessions with D/F/K/P, points, Progress Signal, and flags.
-- If no sessions exist, say `none yet`.
-
-### Current / Next
-
-- Current session:
-- Next physical action:
+It may be shown with Planning State Output, but it does not replace Planning State Output.

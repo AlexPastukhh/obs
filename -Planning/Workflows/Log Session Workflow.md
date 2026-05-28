@@ -9,7 +9,9 @@ Status: active workflow.
 - `Session Log.md`
 - `Work Rails Principles.md`
 - `Templates/Session Log Entry Template.md`
+- `Templates/Planning State Output Template.md`
 - `Templates/Default Dashboard Template.md`
+- `Workflows/Use Dashboard Workflow.md`
 
 ## Steps
 
@@ -22,7 +24,8 @@ Status: active workflow.
 7. Add progress signal.
 8. Add entry to `Session Log.md`.
 9. Update counters in `Today State.md`.
-10. Render the Default Dashboard using `Templates/Default Dashboard Template.md`.
+10. Render updated Planning State Output using `Templates/Planning State Output Template.md`.
+11. Render Default Dashboard Core using `Templates/Default Dashboard Template.md` when useful.
 
 ## Explicit score handling
 
@@ -59,39 +62,32 @@ After every session/event log, AI must return:
    - points;
    - flags.
 
-2. Default Dashboard rendered from `Templates/Default Dashboard Template.md`:
-   - short Rails mnemonic/table;
-   - real current 🎯Р values;
-   - global context;
-   - today goal / desired / undesired;
-   - progress counters;
-   - recent sessions;
-   - current / next.
+2. Updated Planning State Output:
+   - Result Tracking;
+   - Global if relevant;
+   - Progress counters;
+   - Recent sessions;
+   - Current / Next.
 
-3. Result progress:
+3. Default Dashboard Core when useful:
+   - `🎯Рез -> 🧵📜Обещ -> 📊Скор -> 🧲ЗИ`.
+
+4. Result progress:
    - closer / slightly closer / not closer / misleading progress;
    - one short reason.
 
-4. Next physical action:
+5. Next physical action:
    - one concrete next physical action.
 
 Do not respond with only “logged” or “open file X”.
 
 The user should immediately see the current state and what to do next.
 
-When rendering the dashboard after a session/event, the 🎯Р column must reflect the updated real state after the log:
-
-- current goals;
-- desired/undesired;
-- progress signal;
-- nearest global goals if relevant.
-
-Do not leave placeholders if values can be inferred.
-
 ## Output
 
 - session/event entry;
 - updated counters;
-- Default Dashboard rendered from `Templates/Default Dashboard Template.md`;
+- Planning State Output;
+- optional Default Dashboard Core;
 - result progress;
 - next physical action.

@@ -62,6 +62,25 @@ Status:
 
 ## Future behavior algorithms
 
+### Truth Promise as separate template
+
+Idea:
+- Truth Promise currently lives as a principle in `Work Rails Principles.md` and as a workflow in `Workflows/Build Truth Promise Workflow.md`.
+- If AI starts outputting the same promise structure constantly, it may later become `Templates/Truth Promise Template.md`.
+
+Status:
+- open design question.
+
+### Separate chemistry-drift recovery workflow
+
+Idea:
+- `Build Truth Promise Workflow.md` covers chemistry mismatch for now.
+- If recovery from active drift becomes more complex, it may later become `Workflows/Recover From Chemistry Drift Workflow.md`.
+
+Status:
+- deferred.
+
+
 ### Chemical fire / no-fuel algorithm
 
 Idea:
