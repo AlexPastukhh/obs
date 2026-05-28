@@ -14,6 +14,34 @@ Purpose: explain how AI should use the compact Planning State Output together wi
 - `Session Log.md`
 - `Examples/Midday Planning State Output Example.md`
 
+## Source precedence
+
+When rendering Dashboard Core or Mnemonic Emoji Table, use:
+
+`Templates/Default Dashboard Template.md`
+
+Do not reconstruct dashboard from:
+
+- memory;
+- old chat context;
+- `Work Rails Principles.md` prose;
+- older examples.
+
+A rendered dashboard is stale if it lacks:
+
+- Chem vs Promise;
+- Fire / Wood;
+- Core D/F/K/P;
+- Tempo;
+- Guard;
+- Boost.
+
+When rendering Compact Planning State Output, use:
+
+`Templates/Planning State Output Template.md`
+
+Examples are references only. Templates remain the source of truth for rendered structures.
+
 ## Steps
 
 1. Show Default Dashboard Core.

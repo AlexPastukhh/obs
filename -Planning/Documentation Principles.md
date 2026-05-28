@@ -40,6 +40,25 @@ Examples are not templates, workflows, principles, or source-of-truth state.
 
 If an example conflicts with a template/workflow/principle, update the example or the owner file intentionally; do not silently treat the example as the owner.
 
+## Single source of truth
+
+Each durable structure has exactly one owner.
+
+- Templates own rendered structures and skeletons.
+- Workflows own behavior and steps.
+- Principles own meaning and rules.
+- Use Case Map owns routing.
+- Examples show reference output only.
+
+Do not copy owned structures into non-owner files.
+
+Link to the responsible file instead.
+
+Allowed duplication:
+
+- Examples may render full output for demonstration.
+- Short summaries may exist, but they must name the owner and must not override it.
+
 ## No duplication
 
 One rule = one owner file.

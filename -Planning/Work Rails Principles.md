@@ -1,6 +1,26 @@
 # Work Rails Principles
 
 Status: active principles.
+## Source-of-truth rule
+
+This file owns meaning and principles only.
+
+It does not own rendered structures.
+
+Do not use this file as the source of truth for:
+
+- rendered Dashboard Core table;
+- rendered Mnemonic Emoji Table;
+- Compact Planning State Output schema;
+- Today State schema.
+
+For rendered structures, use the responsible template files:
+
+- `Templates/Default Dashboard Template.md` owns rendered Dashboard Core, Mnemonic Emoji Table, and 📊Скор Details.
+- `Templates/Planning State Output Template.md` owns Compact Planning State Output.
+- `Templates/Today State Template.md` owns the active day-state skeleton.
+
+If this file conflicts with a template about rendered structure, the template wins.
 
 ## Background
 
@@ -378,7 +398,7 @@ Use Start Path when starting a day, starting a session, or returning to work wit
 Start Path:
 
 1. Result.
-2. Clean Field.
+2. Promise / Chemistry Field.
 3. Score Action.
 4. Momentum / Inertia.
 
@@ -432,41 +452,39 @@ Low-level checks:
 
    diploma, work, recovery, 4y 2m 15d, future state, and current nearest global goals.
 
-#### 2. Clean Field
+#### 2. Promise / Chemistry Field
 
 Purpose:
 
-ЧП-СДВГ = clean the field from ADHD/stimulation drift.
+Do not treat current chemistry as authority.
 
-Keep only goal, progress, and the next physical action in the active field.
+Use analytical promise, short-distance segment, and fire/wood awareness.
+
+This group maps to `🧵📜>🧪Обещ` in `Templates/Default Dashboard Template.md`.
 
 Low-level checks:
 
-1. Нет всего, только goal/progress/action.
+1. Химикаты не ты.
 
-   If it does not help the current goal or progress toward it, it is not the work field right now.
+   Pull toward bad things, lack of pull toward useful work, “I do not want to”, “later”, and “I need to think more” are body/chemistry/noise events, not identity and not authority.
 
-2. Fixed stimulation source.
+2. Обещание > текущая химия.
 
-   The allowed source of stimulation now is movement toward the goal and the feeling of progress.
+   Analytical promise from goals, reality, experience, and D/F/K/P is stronger than the current feeling.
 
-3. No unrelated stimulation.
+3. Эффект может появиться после действия.
 
-   YouTube, extra music, food, tabs, endless thoughts, random topics are not the source of acceleration.
+   Do not wait until the right feeling appears first.
 
-4. Thought noise does not rule.
+4. Пришить обещание как источник истины.
 
-   Thoughts may jump, stimulate, and feel important, but I do not have to follow them.
+   Use the promise as the authority for action and internal state.
 
-5. Химикаты не ты.
+5. Не подкидывать лишнему.
 
-   Pull toward bad things, lack of pull toward useful work, “I do not want to”, “later”, “I need to think more” are body/chemistry/noise events, not identity and not decisions.
+   Do not feed stimulation, thought loops, self-talk, YouTube, or off-course branches.
 
-6. Do not feed the wrong fire.
-
-   Feeding stimulation, thoughts, self-talk, YouTube, or off-course branches makes them pull harder by inertia.
-
-7. Wood is not infinite.
+6. Дрова не бесконечные.
 
    Attention, energy, stimulation, and start impulse are limited.
 
@@ -474,8 +492,9 @@ Low-level checks:
 
    Then I get less than I realistically could have got.
 
-8. Everything else is either later, goes to `Deferred and Ideas Notes.md`, or is not needed.
+7. Concrete action lives in Active Promises as `🏁 Отрезок`.
 
+   It is not a separate Result Tracking field and not a separate dashboard block.
 #### 3. Score Action
 
 Purpose:
@@ -552,11 +571,17 @@ Low-level checks:
 
 Purpose:
 
-Notice what the current action feeds in future behavior.
+Notice what the current action trains and makes more likely next.
 
-This group is about занос / инерция / habit, not about the next-action field.
+This group maps to `🧲ЗИ`.
 
-The actual Next physical action remains a separate dashboard/workflow field.
+It does not own Fire / Wood.
+
+Fire / Wood belongs to `🧵📜>🧪Обещ` and is rendered from `Templates/Default Dashboard Template.md`.
+
+The concrete short action is not a separate dashboard/output field.
+
+It is represented inside Active Promises as `🏁 Отрезок`.
 
 Low-level checks:
 
@@ -564,20 +589,15 @@ Low-level checks:
 
    Does this action start pulling me toward useful work or toward drift/stimulation/thought loops?
 
-2. Что кормлю огнём?
-
-   Which path gets stronger because I gave it attention, stimulation, or time?
-
-3. Какая привычка крепнет?
+2. Какая привычка крепнет?
 
    Am I training “do the needed thing” or training “soften, drift, self-talk, stimulate, or avoid”?
 
-4. Do future actions become more likely to be correct?
+3. Do future actions become more likely to be correct?
 
    A good session feeds the inertia of useful work.
 
-   A bad session feeds the inertia of drift, thoughts, or stimulation.
-
+   A bad session feeds drift inertia.
 ### Correction Path
 
 Use Correction Path when I notice that I drifted, got sticky, followed the wrong branch, lost tempo, or need to correct myself.
@@ -592,7 +612,7 @@ Correction Path:
 2. Diagnose.
 3. Stop.
 4. Restart.
-5. One Physical Action.
+5. Short-distance restart.
 
 #### 1. Notice
 
@@ -611,15 +631,15 @@ Diagnose what broke using the same groups as Start Path.
 - did not check Progress Signal against desired;
 - lost connection to nearest global goals.
 
-##### Clean Field broke
+##### Promise / Chemistry Field broke
 
-- allowed stimulation unrelated to the goal;
-- followed thought noise;
 - treated chemicals/noise as identity or authority;
+- forgot or did not rebuild the analytical promise;
+- waited for the right feeling before acting;
+- failed to stitch the promise as the source of truth;
 - started feeding an unnecessary impulse;
 - spent limited wood on the wrong fire;
-- left irrelevant things in the field.
-
+- left irrelevant stimulation in the field.
 ##### Score Action broke
 
 - did not try to get high D;
@@ -636,11 +656,9 @@ Diagnose what broke using the same groups as Start Path.
 ##### Momentum / Inertia broke
 
 - did not notice where the magnet pulls next;
-- kept feeding the wrong fire;
 - strengthened a bad habit pattern;
 - made future correct actions less likely;
 - continued drift inertia.
-
 #### 3. Stop
 
 Stop feeding the broken path.
@@ -651,77 +669,27 @@ Return to Start Path:
 
 Result -> Clean Field -> Score Action -> Momentum / Inertia.
 
-#### 5. One Physical Action
+#### 5. Short-distance restart
 
-Choose one concrete physical action and do it.
-
+Choose or refresh `🏁 Отрезок` in Active Promises and start there.
 ## Dashboard Core / Mnemonic
 
-Mnemonic is a memory handle.
+Rendered Dashboard Core, Mnemonic Emoji Table, and 📊Скор Details are owned by:
 
-It does not replace the full low-level Core Rails Algorithm.
+`Templates/Default Dashboard Template.md`
 
-Use the user's sticky phrases.
+This file explains meaning only.
 
-Do not over-normalize them.
+Dashboard columns:
 
-Default Dashboard Core:
-
-🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ
-
-| 🎯Рез Algorithm | 🧵📜>🧪 Обещ > химия | 📊Скор | 🧲ЗИ |
-|---|---|---|---|
-| 🤑🎯🏁✅ готов получить сейчас | **Chem vs Promise** | **Core D/F/K/P:** ✅D🛠️📦 полезное реально сделано; ⚡F🎛️🧠 фокус / самоуправление; 🛤️K🎯 курс; 💎P📦📌 остаточная польза | 🧲➡️🎯/🌪️ куда заносит магнит |
-| 🚫🕳️📉 не принимаю слив | 🧪🌪️🧠❌ химикаты не ты | **Tempo:** ⏱️T🚫🕸️🏃 не вязнуть, не превращать работу в липкий процесс | 🧱📈👤➡️👤✅ привычка крепнет / будущие действия улучшаются |
-| 🎯📈≠🎭🔁 ради Result Tracking, не ради процесса | 📐📜👑 > 🧪🌪️ обещание > текущая химия | **Guard:** ⚠️🔁≠✅D занятость≠полезно сделано; 🎭≠🎯 процесс≠результат; 🎪≠🛤️ интересно≠нужно |  |
-|  | 💊➡️⚙️➡️✨ эффект может появиться после действия | **Boost:** 🏁🥊👤↔️👤⏱️ короткая дистанция / соревнование с собой |  |
-|  | 🧵📜❤️‍🔥👤 пришить обещание как источник истины |  |  |
-|  | **Fire / Wood** |  |  |
-|  | 🔥🚫🧯 не подкидывать лишнему |  |  |
-|  | 🪵⏳🔋📉 дрова не бесконечные |  |  |
-
-### Mnemonic Emoji Table
-
-| 🎯Рез | 🧵📜>🧪Обещ | 📊Скор | 🧲ЗИ |
-|---|---|---|---|
-| 🤑🎯🏁✅ | **Chem vs Promise** | **Core ✅D ⚡F 🛤️K 💎P** | 🧲➡️🎯/🌪️ |
-| 🚫🕳️📉 | 🧪🌪️🧠❌ | ⏱️T🚫🕸️🏃 | 🧱📈👤➡️👤✅ |
-| 🎯📈≠🎭🔁 | 📐📜👑>🧪🌪️ | ⚠️🔁≠✅D / 🎭≠🎯 / 🎪≠🛤️ |  |
-|  | 💊➡️⚙️➡️✨ | 🏁🥊👤↔️👤⏱️ |  |
-|  | 🧵📜❤️‍🔥👤 |  |  |
-|  | **Fire / Wood** |  |  |
-|  | 🔥🚫🧯 |  |  |
-|  | 🪵⏳🔋📉 |  |  |
-
-Meaning:
-
-- 🎯Рез = готов получить результат сейчас / не принимаю слив / действую ради Result Tracking, а не ради процесса.
+- 🎯Рез = result orientation: готов получить сейчас / не принимаю слив / ради Result Tracking.
 - 🧵📜>🧪Обещ = Chem vs Promise + Fire / Wood.
-- Chem vs Promise = химикаты не ты -> обещание сильнее химии -> эффект может появиться после действия -> пришить обещание как источник истины.
-- Fire / Wood = не подкидывать лишнему -> дрова не бесконечные.
-- 📊Скор = как сделать сессию хорошей по D/F/K/P, темпу, guard и boost.
-- 🧲ЗИ = занос / инерция / habit / future actions.
+- 📊Скор = Core D/F/K/P + Tempo + Guard + Boost.
+- 🧲ЗИ = занос / инерция / привычка / будущие действия.
 
-### 📊Скор Details
+Do not copy or reconstruct rendered dashboard tables from this file.
 
-| Code | Meaning | Question |
-|---|---|---|
-| ✅D🛠️📦 | D = Done / Useful Work | Что полезного реально сделано? |
-| ⚡F🎛️🧠 | F = Focus / Self-management | Насколько я управлял вниманием, темпом и собой? |
-| 🛤️K🎯 | K = Kurs / course alignment | Это было по текущему курсу? |
-| 💎P📦📌 | P = Польза / value left | Что полезного осталось после сессии? |
-| ⏱️T🚫🕸️🏃 | Tempo support | Не вязнуть, не превращать работу в липкий процесс. |
-| ⚠️🔁≠✅D | Guard | Занятость ≠ полезно сделано. |
-| 🎭≠🎯 | Guard | Процесс ≠ результат. |
-| 🎪≠🛤️ | Guard | Интересно ≠ нужно / по курсу. |
-| 🏁🥊👤↔️👤⏱️ | Boost | Короткая дистанция / соревнование с собой. |
-
-The fire/wood ideas belong to 🧵📜>🧪Обещ:
-
-- 🔥🚫🧯 = do not feed what pulls away from the goal;
-- 🪵⏳🔋📉 = wood/resource is limited, and if it is spent on drift, desired gets less.
-
-🧲ЗИ does not repeat the fire/wood idea. It only tracks where the magnet pulls and what happens to future actions.
+If the rendered dashboard lacks `Chem vs Promise`, `Fire / Wood`, `Core D/F/K/P`, `Tempo`, `Guard`, or `Boost`, it is stale and must be replaced from `Templates/Default Dashboard Template.md`.
 ## Truth Promise / Пришитое обещание
 
 Пришитое обещание is an analytical promise stitched as a source of truth for actions and internal state.

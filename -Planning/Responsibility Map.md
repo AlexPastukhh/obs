@@ -16,19 +16,19 @@ Create a new file only when there is a new durable responsibility.
 |---|---|
 | `START HERE.md` | entrypoint, read order, navigation |
 | `System Overview.md` | conceptual model |
-| `Use Case Map.md` | use-case routing |
+| `Use Case Map.md` | routing only; points to owners instead of owning schemas |
 | `Responsibility Map.md` | file ownership |
 | `Documentation Principles.md` | file types and documentation rules |
 | `Current Plan State.md` | flexible current plan, focus, tasks, rough schedule, background recovery goal |
 | `Today State.md` | active day state: compact Result Tracking, Active Promises, Finished Sessions, notes |
 | `Session Log.md` | factual session/event/day-summary history; may store flags when useful |
-| `Work Rails Principles.md` | D/F/K/P, flags, course violations, recovery/NDU, work rails context, Truth Promise principles, dashboard meaning |
+| `Work Rails Principles.md` | meaning and principles only; does not own rendered dashboard or compact state tables |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
-| `Templates/Planning State Output Template.md` | compact planning state output skeleton: Result Tracking, Active Promises, Finished Sessions |
-| `Templates/Default Dashboard Template.md` | compact action/memory core + attached Mnemonic Emoji Table: 🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ |
-| `Examples/*.md` | concrete examples of expected rendered planning outputs; reference only, not source of truth |
+| `Templates/Planning State Output Template.md` | only source of truth for compact Planning State Output structure |
+| `Templates/Default Dashboard Template.md` | only source of truth for rendered Dashboard Core, Mnemonic Emoji Table, and 📊Скор Details |
+| `Examples/*.md` | rendered reference outputs only; templates win if conflict exists |
 | `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using dashboard, mnemonic, and compact planning state |
-| `Workflows/Use Dashboard Workflow.md` | how to combine compact Planning State Output with Default Dashboard Core |
+| `Workflows/Use Dashboard Workflow.md` | behavior for combining dashboard + compact state; source precedence for rendered output |
 | `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row |
 | `Workflows/*.md` | algorithms |
 | `Templates/*.md` | skeletons |

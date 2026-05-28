@@ -24,7 +24,7 @@ User intent -> read needed files -> run workflow -> update owner file -> return 
 | `/start-day` | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Midday Planning State Output Example.md` | `Start Day Workflow.md` | `Today State.md` | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
 | “цель на день…” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal + Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
 | “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Examples/Midday Planning State Output Example.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
-| “дай дашборд” | `Templates/Default Dashboard Template.md`, `Work Rails Principles.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table |
+| “дай дашборд” | `Templates/Default Dashboard Template.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table |
 | “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Midday Planning State Output Example.md` | `Use Dashboard Workflow.md` | none | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
 | “напомни алгоритм” | `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table + short principle summary |
 | “дай мнемонику” | `Templates/Default Dashboard Template.md` | none | none | Dashboard core mnemonic + Mnemonic Emoji Table |
@@ -75,47 +75,34 @@ Do not use old V/Q/C/L notation.
 
 ## Output layers
 
-Planning State Output:
+### Default Dashboard Core
 
-- owned by `Templates/Planning State Output Template.md`;
-- AI-maintained compact state output;
-- includes only: 🎯 Result Tracking, 🧵📜>🧪 Active Promises, 🧾 Finished Sessions.
+Owner: `Templates/Default Dashboard Template.md`
 
-Result Tracking includes:
+Use it for rendered Dashboard Core, Mnemonic Emoji Table, and 📊Скор Details.
 
-- 🎯 Цель дня;
-- 🌅 Desired;
-- 🌑 Undesired.
+Do not reconstruct dashboard from memory or from `Work Rails Principles.md`.
 
-Desired = current meaningful desired goal/result the user wants to get now.
+Old dashboard variants without `Chem vs Promise`, `Fire / Wood`, `Core D/F/K/P`, `Tempo`, `Guard`, and `Boost` are stale.
 
-Concrete short action lives in Active Promises as `🏁 Отрезок`.
+### Compact Planning State Output
 
-Progress Signal lives in Finished Sessions.
+Owner: `Templates/Planning State Output Template.md`
 
-There is no separate Progress counters block in default output.
+Use it for exact compact state structure.
 
-Global/background context is not shown as a default block.
+### Principles
 
-Flags may exist in Session Log, but are not shown in default Planning State Output.
+Owner: `Work Rails Principles.md`
 
-Default Dashboard Core:
+Use it for meaning and principles, not rendered structures.
 
-- owned by `Templates/Default Dashboard Template.md`;
-- compact mnemonic/action core;
-- includes attached Mnemonic Emoji Table by default in planning mode;
-- `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ`.
+### Examples
 
-Truth Promise:
+Owner: `Examples/*.md`
 
-- principle described in `Work Rails Principles.md`;
-- step-by-step creation in `Workflows/Build Truth Promise Workflow.md`;
-- active promises are rendered as rows in the Active Promises table.
+Examples show rendered reference output only.
 
-Examples:
-
-- owned by `Examples/*.md`;
-- examples are reference outputs, not templates, workflows, or source-of-truth state;
-- use examples to check formatting and expected rendered shape.
+If examples conflict with templates, templates win.
 
 Do not confuse these layers.

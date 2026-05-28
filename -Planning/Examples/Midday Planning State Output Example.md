@@ -5,6 +5,12 @@ Status: reference example.
 Purpose: show what a default planning-mode answer can look like in the middle of a day.
 
 This file is an example, not a template, workflow, or source-of-truth state.
+If this example conflicts with:
+
+- `Templates/Default Dashboard Template.md`;
+- `Templates/Planning State Output Template.md`;
+
+the templates win.
 
 Templates define structure.
 
