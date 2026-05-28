@@ -28,6 +28,18 @@ Later it may be merged into repo-level documentation principles.
 
 `... Notes.md` = deferred items, unstable ideas, open questions, staging.
 
+`Examples/*.md` = concrete rendered examples of expected output.
+
+## Examples rule
+
+Examples are reference outputs.
+
+They show what a good rendered answer or state view should look like.
+
+Examples are not templates, workflows, principles, or source-of-truth state.
+
+If an example conflicts with a template/workflow/principle, update the example or the owner file intentionally; do not silently treat the example as the owner.
+
 ## No duplication
 
 One rule = one owner file.
@@ -39,6 +51,8 @@ Other files may link to it.
 Do not create a file for every idea.
 
 Use `Deferred and Ideas Notes.md` until the idea becomes stable.
+
+Create an example file only when repeated output shape needs a stable reference.
 
 ## Notes files can have templates
 

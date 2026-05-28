@@ -12,19 +12,18 @@ Status: active workflow.
 - `Templates/Planning State Output Template.md`
 - `Templates/Default Dashboard Template.md`
 - `Workflows/Use Dashboard Workflow.md`
+- `Examples/Midday Planning State Output Example.md`
 
 ## Steps
 
 1. Read current plan.
 2. Set compact Result Tracking:
-   - 🎯 Цель;
-   - 🧩 Подцель сейчас;
-   - ➡️ Next physical action;
+   - 🎯 Цель дня;
    - 🌅 Desired;
-   - 🌑 Undesired;
-   - 📈 Current progress signal.
+   - 🌑 Undesired.
 3. Set or refresh Active Promises if enough context exists.
    - If not enough context exists, create an empty/unclear Active Promises row or mark it as needs target.
+   - Put the concrete next/short-distance move in `🏁 Отрезок`, not in Result Tracking.
 4. Initialize Finished Sessions as empty.
 5. Update `Today State.md` using `Templates/Today State Template.md`.
 6. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
@@ -48,7 +47,7 @@ After starting or updating the day, AI must return:
 
 Do not respond with only “Updated Today State.md”.
 
-The user should immediately see the dashboard, current result tracking, active promises, finished sessions, and the next physical action inside Result Tracking.
+The user should immediately see the dashboard, current result tracking, active promises, and finished sessions.
 
 ## Output
 

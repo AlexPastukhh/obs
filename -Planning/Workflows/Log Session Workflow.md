@@ -12,6 +12,7 @@ Status: active workflow.
 - `Templates/Planning State Output Template.md`
 - `Templates/Default Dashboard Template.md`
 - `Workflows/Use Dashboard Workflow.md`
+- `Examples/Midday Planning State Output Example.md`
 
 ## Steps
 
@@ -21,14 +22,13 @@ Status: active workflow.
 4. Check course alignment.
 5. Assign D/F/K/P.
 6. Add flags to `Session Log.md` only when needed.
-7. Add Progress Signal.
+7. Add Progress Signal to the session.
 8. Add entry to `Session Log.md`.
 9. Add/update row in `Finished Sessions` in `Today State.md`.
-10. Update `Current progress signal` in Result Tracking.
-11. Refresh Active Promises if the session changed goals, progress, chemistry, or next action.
-12. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
-13. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
-14. Render compact Planning State Output:
+10. Refresh Active Promises if the session changed goals, progress, chemistry, or the short-distance action.
+11. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
+12. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
+13. Render compact Planning State Output:
     - 🎯 Result Tracking;
     - 🧵📜>🧪 Active Promises;
     - 🧾 Finished Sessions.
@@ -86,7 +86,7 @@ After every session/event log, AI must return:
 
 Do not respond with only “logged” or “open file X”.
 
-The user should immediately see the score, dashboard, compact state, active promise, finished sessions, and next physical action inside Result Tracking.
+The user should immediately see the score, dashboard, compact state, active promise, and finished sessions.
 
 ## Output
 

@@ -275,18 +275,19 @@ Planning State Output is AI-maintained compact state output. It owns only:
 2. 🧵📜>🧪 Active Promises;
 3. 🧾 Finished Sessions.
 
-Result Tracking includes:
+Result Tracking contains only:
 
-- 🎯 Цель;
-- 🧩 Подцель сейчас;
-- ➡️ Next physical action;
+- 🎯 Цель дня;
 - 🌅 Desired;
-- 🌑 Undesired;
-- 📈 Current progress signal.
+- 🌑 Undesired.
 
-Progress is represented by Finished Sessions, not by a separate Progress counters block.
+Desired = the current meaningful desired goal/result the user wants to get now.
 
-Next physical action is represented inside Result Tracking, not as a separate block.
+Concrete short action belongs to Active Promises as `🏁 Отрезок`.
+
+Progress is represented through Finished Sessions, not through a separate progress counters block.
+
+Progress Signal is stored in Finished Sessions rows, not in Result Tracking.
 
 Active promises are represented as rows in the Active Promises table.
 
@@ -304,6 +305,8 @@ Default Dashboard is the compact action/memory core. It owns:
 - 🧲ЗИ.
 
 Default Dashboard should use `Templates/Default Dashboard Template.md`.
+
+Examples show rendered reference outputs. They do not replace templates, workflows, or principles.
 
 The user does not need to memorize the Planning State Output template.
 
@@ -333,13 +336,14 @@ Use:
 
 - `Templates/Default Dashboard Template.md` for Dashboard Core and Mnemonic Emoji Table;
 - `Templates/Planning State Output Template.md` for compact maintained state output;
-- `Workflows/Use Dashboard Workflow.md` for how to combine them.
+- `Workflows/Use Dashboard Workflow.md` for how to combine them;
+- `Examples/Midday Planning State Output Example.md` as a rendered reference example only.
 
 Dashboard Core and Mnemonic Emoji Table are shown together by default in planning mode.
 
 The dashboard pack may be omitted only for narrow technical answers, diffs, file checks, or when the user explicitly asks for a short answer.
 
-Use compact Planning State Output when:
+Use Compact Planning State Output when:
 
 - starting or updating the day;
 - logging a session or event;
@@ -757,6 +761,7 @@ For the step-by-step process, see:
 - Truth Promise creation/refresh: `Workflows/Build Truth Promise Workflow.md`.
 - State output: `Templates/Planning State Output Template.md`.
 - Dashboard core: `Templates/Default Dashboard Template.md`.
+- Rendered example: `Examples/Midday Planning State Output Example.md`.
 
 ## Future behavior algorithms are deferred
 

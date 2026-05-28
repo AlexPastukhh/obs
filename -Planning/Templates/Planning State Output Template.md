@@ -10,18 +10,15 @@ AI uses this template to show only the maintained planning state that matters fo
 
 | Поле | Значение |
 |---|---|
-| 🎯 Цель | `<main goal / day goal>` |
-| 🧩 Подцель сейчас | `<current subgoal>` |
-| ➡️ Next physical action | `<one concrete next physical action>` |
-| 🌅 Desired | `<desired result / good outcome>` |
-| 🌑 Undesired | `<undesired result / bad outcome>` |
-| 📈 Current progress signal | `<closer / slightly closer / not closer / misleading risk>` |
+| 🎯 Цель дня | `<day goal / broad daily target>` |
+| 🌅 Desired | `<current meaningful desired goal/result the user wants to get now>` |
+| 🌑 Undesired | `<undesired state / bad outcome the user refuses>` |
 
 ## 🧵📜>🧪 Active Promises
 
 | # | 🧪 Сейчас чувствую / тянет | 📐 Аналитически выведено | 🧵📜 Пришить как истину | 🌑 Не покупать | 🏁 Отрезок |
 |---|---|---|---|---|---|
-| 1 | `<current feeling / pull / lack of pull>` | `<analytical prediction>` | `<what should replace current feeling as source of truth>` | `<false promise / drift lie>` | `<short-distance segment>` |
+| 1 | `<current feeling / pull / lack of pull>` | `<analytical prediction>` | `<what should replace current feeling as source of truth>` | `<false promise / drift lie>` | `<short-distance segment / concrete short action>` |
 
 ## 🧾 Finished Sessions
 
@@ -39,9 +36,21 @@ Default Planning State Output contains only:
 2. 🧵📜>🧪 Active Promises;
 3. 🧾 Finished Sessions.
 
-Progress is represented by Finished Sessions, not by a separate Progress counters block.
+Result Tracking contains only:
 
-Next physical action is represented inside Result Tracking, not as a separate block.
+- 🎯 Цель дня;
+- 🌅 Desired;
+- 🌑 Undesired.
+
+Desired means the current meaningful desired goal/result the user wants to get now.
+
+Concrete next/short action is not a separate Planning State Output block and not a Result Tracking field.
+
+Concrete action belongs inside Active Promises as `🏁 Отрезок`.
+
+Progress Signal is not a Result Tracking field.
+
+Progress is represented by Finished Sessions, not by a separate Progress counters block.
 
 Active promises are represented as rows in the Active Promises table.
 

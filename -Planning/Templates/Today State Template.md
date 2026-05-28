@@ -6,12 +6,9 @@ Status: active day state.
 
 | Поле | Значение |
 |---|---|
-| 🎯 Цель |  |
-| 🧩 Подцель сейчас |  |
-| ➡️ Next physical action |  |
+| 🎯 Цель дня |  |
 | 🌅 Desired |  |
 | 🌑 Undesired |  |
-| 📈 Current progress signal |  |
 
 ## 🧵📜>🧪 Active Promises
 

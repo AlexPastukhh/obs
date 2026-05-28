@@ -21,14 +21,15 @@ User intent -> read needed files -> run workflow -> update owner file -> return 
 | “вот список дел / планы / расписание” | `Current Plan State.md` | `Update Current Plan Workflow.md` | `Current Plan State.md` | Updated plan |
 | “это отложенная задача / идея / потом” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Deferred note |
 | “опасный сценарий / возможная ошибка” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Open/dangerous scenario note |
-| `/start-day` | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Start Day Workflow.md` | `Today State.md` | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
+| `/start-day` | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Midday Planning State Output Example.md` | `Start Day Workflow.md` | `Today State.md` | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
 | “цель на день…” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal + Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
-| “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
+| “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Examples/Midday Planning State Output Example.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
 | “дай дашборд” | `Templates/Default Dashboard Template.md`, `Work Rails Principles.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table |
-| “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Use Dashboard Workflow.md` | none | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
+| “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Midday Planning State Output Example.md` | `Use Dashboard Workflow.md` | none | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
 | “напомни алгоритм” | `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table + short principle summary |
 | “дай мнемонику” | `Templates/Default Dashboard Template.md` | none | none | Dashboard core mnemonic + Mnemonic Emoji Table |
 | “дай короткую таблицу” | `Templates/Default Dashboard Template.md` | none | none | Default Dashboard Core + Mnemonic Emoji Table |
+| “дай пример output” / “как должен выглядеть planning output?” | `Examples/Midday Planning State Output Example.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | none | none | Example output + note that examples are reference only |
 | “создай обещание” / “обнови обещание” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md` | maybe `Today State.md` or note | Default Dashboard Core + Mnemonic Emoji Table + updated Active Promises table |
 | “химия не совпадает” / “не хочется” / “тянет не туда” | `Templates/Planning State Output Template.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md` | maybe `Today State.md` | Default Dashboard Core + Mnemonic Emoji Table + Active Promises update |
 | “я начинаю работу / сессию” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Use Dashboard Workflow.md` | maybe `Today State.md` | Default Dashboard Core + Mnemonic Emoji Table + compact Planning State Output |
@@ -82,14 +83,15 @@ Planning State Output:
 
 Result Tracking includes:
 
-- 🎯 Цель;
-- 🧩 Подцель сейчас;
-- ➡️ Next physical action;
+- 🎯 Цель дня;
 - 🌅 Desired;
-- 🌑 Undesired;
-- 📈 Current progress signal.
+- 🌑 Undesired.
 
-Progress is read from Finished Sessions.
+Desired = current meaningful desired goal/result the user wants to get now.
+
+Concrete short action lives in Active Promises as `🏁 Отрезок`.
+
+Progress Signal lives in Finished Sessions.
 
 There is no separate Progress counters block in default output.
 
@@ -109,5 +111,11 @@ Truth Promise:
 - principle described in `Work Rails Principles.md`;
 - step-by-step creation in `Workflows/Build Truth Promise Workflow.md`;
 - active promises are rendered as rows in the Active Promises table.
+
+Examples:
+
+- owned by `Examples/*.md`;
+- examples are reference outputs, not templates, workflows, or source-of-truth state;
+- use examples to check formatting and expected rendered shape.
 
 Do not confuse these layers.

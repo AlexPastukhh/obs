@@ -12,6 +12,7 @@ Purpose: explain how AI should use the compact Planning State Output together wi
 - `Current Plan State.md`
 - `Today State.md`
 - `Session Log.md`
+- `Examples/Midday Planning State Output Example.md`
 
 ## Steps
 
@@ -22,25 +23,22 @@ Purpose: explain how AI should use the compact Planning State Output together wi
    - 🧵📜>🧪 Active Promises;
    - 🧾 Finished Sessions.
 4. Identify the current Result Tracking:
-   - 🎯 Цель;
-   - 🧩 Подцель сейчас;
-   - ➡️ Next physical action;
+   - 🎯 Цель дня;
    - 🌅 Desired;
-   - 🌑 Undesired;
-   - 📈 Current progress signal.
+   - 🌑 Undesired.
 5. Identify Active Promises as rows:
    - 🧪 Сейчас чувствую / тянет;
    - 📐 Аналитически выведено;
    - 🧵📜 Пришить как истину;
    - 🌑 Не покупать;
    - 🏁 Отрезок.
-6. Read progress from Finished Sessions, not from a separate Progress counters block.
-7. Decide which dashboard column is most relevant now:
+6. Use `🏁 Отрезок` from Active Promises when a concrete action / short-distance move is needed.
+7. Read progress from Finished Sessions, not from a separate Progress counters block.
+8. Decide which dashboard column is most relevant now:
    - 🎯Рез = reconnect to result;
    - 🧵📜>🧪Обещ = recall or build promise and treat it as stronger than current chemistry;
    - 📊Скор = improve D/F/K/P, tempo, short-distance execution;
    - 🧲ЗИ = notice where the magnet pulls and what happens to future actions.
-8. Use `➡️ Next physical action` from Result Tracking when direction is needed.
 
 ## Output rule
 
@@ -60,3 +58,5 @@ Do not treat Mnemonic Emoji Table as optional in planning mode.
 For narrow technical answers, diffs, file checks, or when the user explicitly asks for a short answer, AI may omit the dashboard pack.
 
 Do not force the user to manually open state files unless manual review, edit, or diff inspection is actually needed.
+
+Use `Examples/Midday Planning State Output Example.md` only as a formatting/reference example. Templates and workflows remain the source of truth.
