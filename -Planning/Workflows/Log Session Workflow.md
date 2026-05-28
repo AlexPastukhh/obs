@@ -9,6 +9,7 @@ Status: active workflow.
 - `Session Log.md`
 - `Work Rails Principles.md`
 - `Templates/Session Log Entry Template.md`
+- `Templates/Default Dashboard Template.md`
 
 ## Steps
 
@@ -21,7 +22,7 @@ Status: active workflow.
 7. Add progress signal.
 8. Add entry to `Session Log.md`.
 9. Update counters in `Today State.md`.
-10. Return the Default Dashboard.
+10. Render the Default Dashboard using `Templates/Default Dashboard Template.md`.
 
 ## Explicit score handling
 
@@ -58,7 +59,9 @@ After every session/event log, AI must return:
    - points;
    - flags.
 
-2. Default Dashboard:
+2. Default Dashboard rendered from `Templates/Default Dashboard Template.md`:
+   - short Rails mnemonic/table;
+   - real current 🎯Р values;
    - global context;
    - today goal / desired / undesired;
    - progress counters;
@@ -76,10 +79,19 @@ Do not respond with only “logged” or “open file X”.
 
 The user should immediately see the current state and what to do next.
 
+When rendering the dashboard after a session/event, the 🎯Р column must reflect the updated real state after the log:
+
+- current goals;
+- desired/undesired;
+- progress signal;
+- nearest global goals if relevant.
+
+Do not leave placeholders if values can be inferred.
+
 ## Output
 
 - session/event entry;
 - updated counters;
-- Default Dashboard;
+- Default Dashboard rendered from `Templates/Default Dashboard Template.md`;
 - result progress;
 - next physical action.

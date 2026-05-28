@@ -23,9 +23,12 @@ User intent -> read needed files -> run workflow -> update owner file -> return 
 | “опасный сценарий / возможная ошибка” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Open/dangerous scenario note |
 | `/start-day` | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | `Start Day Workflow.md` | `Today State.md` | Default Dashboard + structured day plan + next physical action |
 | “цель на день…” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal + Default Dashboard + next physical action |
-| “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | none | none | Default Dashboard + next physical action |
-| “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | none | none | Default Dashboard |
-| “дай дашборд” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | none | none | Default Dashboard |
+| “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Default Dashboard using template + next physical action |
+| “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Default Dashboard using template |
+| “дай дашборд” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Default Dashboard using template |
+| “напомни алгоритм” | `Work Rails Principles.md` | none | none | Full Core Rails Mnemonic |
+| “дай мнемонику” | `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Full or short Core Rails Mnemonic depending on request |
+| “дай короткую таблицу” | `Templates/Default Dashboard Template.md` | none | none | Short Rails table |
 | “я начинаю работу / сессию” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md` | none | maybe `Today State.md` | Default Dashboard + Core Rails Algorithm / Start Path + next physical action |
 | “следующая сессия X” | `Current Plan State.md`, `Today State.md` | `Check Course Alignment Workflow.md` | `Today State.md` | Session goal / warning |
 | `/s ...`, “30 мин делал…” | `Today State.md`, `Current Plan State.md`, `Session Log.md`, `Work Rails Principles.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry + Default Dashboard + next physical action |
@@ -73,8 +76,10 @@ When AI is acting as the planning/session-control assistant, outputs should defa
 
 Use `Work Rails Principles.md` for the full Default Dashboard Mode rule.
 
-Default Dashboard includes:
+Default Dashboard uses `Templates/Default Dashboard Template.md` and includes:
 
+- short Rails mnemonic/table;
+- dynamic 🎯Р values;
 - Global context;
 - Today goal / Desired / Undesired;
 - Progress counters;
@@ -93,7 +98,7 @@ Start Path:
 - Result
 - Clean Field
 - Score Action
-- Progress
+- Momentum / Inertia
 
 Correction Path:
 - Notice

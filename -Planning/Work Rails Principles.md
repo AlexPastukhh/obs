@@ -284,7 +284,14 @@ Use Default Dashboard when:
 - correcting drift;
 - checking current state.
 
-Default Dashboard:
+Default Dashboard should use `Templates/Default Dashboard Template.md` as the reusable skeleton.
+
+Default Dashboard includes:
+
+### Rails
+
+- short Rails mnemonic: `🎯Р -> 🧹ЧП-СДВГ -> 📊Скор -> 🧲ЗИ`;
+- short Rails table when useful, especially for starting, correcting, or asking for the algorithm.
 
 ### Global
 
@@ -344,19 +351,23 @@ Start Path:
 1. Result.
 2. Clean Field.
 3. Score Action.
-4. Progress.
+4. Momentum / Inertia.
 
 #### 1. Result
 
 Purpose:
 
-Keep the result alive and avoid drowning in process.
+Keep real goals and desired results alive, not just the process.
+
+Result is dynamic.
+
+It should use real current values from `Current Plan State.md`, `Today State.md`, `Session Log.md`, and the user's current message.
 
 Low-level checks:
 
-1. Remember the local target.
+1. Fill the current goals.
 
-   What exactly do I want to get in this session / today?
+   Use the session goal, day goal, and nearest global goals when available.
 
 2. Remember that process exists for the result.
 
@@ -364,71 +375,77 @@ Low-level checks:
 
    I am trying to move the desired situation closer.
 
-3. Imagine the desired state.
+3. Generate the desired state from current goals + good D/F/K/P.
 
-   Not “work”, but a concrete situation:
+   Desired is not a separate fantasy.
 
-   what exists, what is ready, what changed, what result was obtained.
+   Desired = current goals moved/completed with good D/F/K/P.
 
-4. Imagine the undesired state.
+4. Generate the undesired state from missed goals + bad D/F/K/P / drift.
 
-   What outcome do I refuse to accept:
+   Undesired = current goals not moved/completed, bad D/F/K/P, or drift/stimulation/process replacing useful work.
 
-   the day went into thoughts, YouTube, preparation, process without result, or useful-but-not-now work.
+5. Check Progress Signal.
 
-5. Feel readiness to receive the desired state now.
+   Progress Signal belongs to Result because it checks whether the desired state moved closer.
+
+6. Feel readiness to receive the desired state now.
 
    Not someday, not later, but as if I am actually ready to be in that situation now.
 
-6. Feel non-readiness to accept the undesired state.
+7. Feel non-readiness to accept the undesired state.
 
    Do not dramatize, but clearly refuse the outcome where I did not move forward again.
 
-7. Remember global goals in the background.
+8. Keep nearest global goals in the background.
 
    The local target is connected to the larger trajectory:
 
-   diploma, work, recovery, 4y 2m 15d, future state.
+   diploma, work, recovery, 4y 2m 15d, future state, and current nearest global goals.
 
 #### 2. Clean Field
 
 Purpose:
 
+ЧП-СДВГ = clean the field from ADHD/stimulation drift.
+
 Keep only goal, progress, and the next physical action in the active field.
 
 Low-level checks:
 
-1. Cut off everything unrelated to the goal.
+1. Нет всего, только goal/progress/action.
 
-   If it does not help the current goal, it is not the work field right now.
+   If it does not help the current goal or progress toward it, it is not the work field right now.
 
-2. Cut off everything unrelated to progress toward the goal.
-
-   Even if it is interesting or generally useful, it should not capture the current session.
-
-3. Do not take stimulation from sources unrelated to the goal.
-
-   YouTube, extra music, food, tabs, endless thoughts, random topics are not the source of acceleration.
-
-4. Fix the stimulation source.
+2. Fixed stimulation source.
 
    The allowed source of stimulation now is movement toward the goal and the feeling of progress.
 
-5. Do not treat false feelings as authority.
+3. No unrelated stimulation.
 
-   Pull toward bad things, lack of pull toward useful work, “I do not want to”, “later”, “I need to think more” are not decisions.
+   YouTube, extra music, food, tabs, endless thoughts, random topics are not the source of acceleration.
 
-6. Do not treat thought noise as a command.
+4. Thought noise does not rule.
 
    Thoughts may jump, stimulate, and feel important, but I do not have to follow them.
 
-7. Do not add fuel to irrelevant impulses.
+5. Химикаты не ты.
 
-   Feeding stimulation, self-talk, YouTube, or thoughts makes them carry me further by inertia.
+   Pull toward bad things, lack of pull toward useful work, “I do not want to”, “later”, “I need to think more” are body/chemistry/noise events, not identity and not decisions.
 
-8. Leave only goal, progress, and next physical action in the field.
+6. Do not feed the wrong fire.
 
-   Everything else is either later, goes to Deferred and Ideas Notes, or is not needed.
+   Feeding stimulation, thoughts, self-talk, YouTube, or off-course branches makes them pull harder by inertia.
+
+7. Wood is not infinite.
+
+   Attention, energy, stimulation, and start impulse are limited.
+
+   If they are spent on drift, they cannot be spent on the desired result.
+
+   Then I get less than I realistically could have got.
+
+8. Everything else is either later, goes to `Deferred and Ideas Notes.md`, or is not needed.
 
 #### 3. Score Action
 
@@ -502,56 +519,35 @@ Low-level checks:
 
     A bad session feeds the inertia of drift, thoughts, or stimulation.
 
-#### 4. Progress
+#### 4. Momentum / Inertia
 
 Purpose:
 
-Check whether the desired situation moved closer and choose the next step.
+Notice what the current action feeds in future behavior.
+
+This group is about занос / инерция / habit, not about the next-action field.
+
+The actual Next physical action remains a separate dashboard/workflow field.
 
 Low-level checks:
 
-1. Check Progress Signal.
+1. Куда заносит магнит?
 
-   Did the session move the desired state closer?
+   Does this action start pulling me toward useful work or toward drift/stimulation/thought loops?
 
-2. Choose one:
+2. Что кормлю огнём?
 
-   - closer;
-   - slightly closer;
-   - not closer;
-   - misleading progress.
+   Which path gets stronger because I gave it attention, stimulation, or time?
 
-3. Connect progress to the desired state.
+3. Какая привычка крепнет?
 
-   Not just “I did something”, but:
+   Am I training “do the needed thing” or training “soften, drift, self-talk, stimulate, or avoid”?
 
-   the desired situation became closer / did not become closer / became closer deceptively.
+4. Do future actions become more likely to be correct?
 
-4. Look at current counters.
+   A good session feeds the inertia of useful work.
 
-   Sessions:
-
-   High-focus:
-
-   Points:
-
-   Flags:
-
-5. Notice what inertia the session reinforced.
-
-   Not as a separate score, but as understanding:
-
-   did this reinforce movement toward the goal or reinforce drift?
-
-6. Choose one next physical action.
-
-   Not “continue working”, but a concrete action:
-
-   open file, write paragraph, fix function, close tab, start timer.
-
-7. Return to the next cycle.
-
-   Result -> Clean Field -> Score Action -> Progress.
+   A bad session feeds the inertia of drift, thoughts, or stimulation.
 
 ### Correction Path
 
@@ -579,18 +575,20 @@ Diagnose what broke using the same groups as Start Path.
 
 ##### Result broke
 
-- forgot the local target;
+- forgot current session/day goals;
 - forgot the desired state;
 - accepted the undesired state;
 - drowned in process instead of result;
-- lost connection to the global goal.
+- did not check Progress Signal against desired;
+- lost connection to nearest global goals.
 
 ##### Clean Field broke
 
 - allowed stimulation unrelated to the goal;
 - followed thought noise;
-- believed a false feeling;
+- treated chemicals/noise as identity or authority;
 - started feeding an unnecessary impulse;
+- spent limited wood on the wrong fire;
 - left irrelevant things in the field.
 
 ##### Score Action broke
@@ -602,14 +600,16 @@ Diagnose what broke using the same groups as Start Path.
 - process stopped producing useful progress;
 - did not hold K;
 - did not leave P;
-- did the right task in a useless way;
-- did interesting work instead of needed work.
+- busyness replaced D;
+- process replaced result;
+- interesting replaced needed.
 
-##### Progress broke
+##### Momentum / Inertia broke
 
-- did not check whether the result moved closer;
-- did not see counters;
-- did not choose a next physical action;
+- did not notice where the magnet pulls next;
+- kept feeding the wrong fire;
+- strengthened a bad habit pattern;
+- made future correct actions less likely;
 - continued drift inertia.
 
 #### 3. Stop
@@ -620,11 +620,91 @@ Stop feeding the broken path.
 
 Return to Start Path:
 
-Result -> Clean Field -> Score Action -> Progress.
+Result -> Clean Field -> Score Action -> Momentum / Inertia.
 
 #### 5. One Physical Action
 
 Choose one concrete physical action and do it.
+
+## Core Rails Mnemonic
+
+Mnemonic is a memory handle.
+
+It does not replace the full low-level Core Rails Algorithm.
+
+Use the user's sticky phrases.
+
+Do not over-normalize them.
+
+Main form:
+
+🎯 Result -> 🧹 Clean Field / ЧП-СДВГ -> 📊 Скор -> 🧲 Занос / Инерция
+
+Short dashboard form:
+
+🎯Р -> 🧹ЧП-СДВГ -> 📊Скор -> 🧲ЗИ
+
+| 🎯Р Result / active planning | 🧹ЧП-СДВГ Field | 📊Скор | 🧲ЗИ Занос / Инерция |
+|---|---|---|---|
+| 🎯 текущие цели — сессия/день/ближайшее | 🎯📈➡️ нет всего, только goal/progress/action | ✅D useful work — полезное реально сделано | 🧲 куда заносит магнит — что начинает тянуть дальше |
+| 🌅 desired = текущие цели + хороший D/F/K/P | 📵 фикс стимул, без левой стимуляции | ⚡F плюсовая / стремительно — самоменеджмент без вязкости | 🔥 что кормлю огнём — какой путь усиливаю |
+| 🌑 undesired = цели не сделаны + плохой D/F/K/P / drift | 🌫️ шум не рулит | ⏱️T темп, не вязнуть | 🧱📈 привычка крепнет / будущие действия улучшаются |
+| 📈 progress signal — ближе ли desired | 🧪 химикаты не ты | 🛤️K курс |  |
+| 🤑 готов получить сейчас | 🔥🚫 не подкидывать лишнему | 💎P остаточная польза |  |
+| 🚫 не принимаю слив | 🪵 дрова не бесконечные | ⚠️ занятость≠D / процесс≠результат / интересно≠нужно |  |
+| 🗺️ ближайшие глобальные цели |  |  |  |
+
+### 🎯Р is dynamic
+
+In Default Dashboard, AI must fill 🎯Р with real current values from:
+
+- `Current Plan State.md`;
+- `Today State.md`;
+- `Session Log.md`;
+- user's current message.
+
+🎯Р may function as the active planning/result column.
+
+Desired is not a separate fantasy.
+
+Desired = current goals moved/completed with good D/F/K/P.
+
+Undesired = current goals not moved/completed, bad D/F/K/P, or drift/stimulation/process replacing useful work.
+
+Progress Signal belongs to 🎯Р because it checks whether the desired state moved closer.
+
+If some values are missing, AI should infer a reasonable version from the current plan or mark it as unclear.
+
+### 🧹ЧП-СДВГ
+
+ЧП-СДВГ = clean the field from ADHD/stimulation drift.
+
+🔥🚫 Do not feed the wrong fire:
+
+Feeding stimulation, thoughts, or off-course branches makes them pull harder by inertia.
+
+🪵 Wood is not infinite:
+
+Attention, energy, stimulation, and start impulse are limited.
+
+If they are spent on drift, they cannot be spent on the desired result.
+
+Then the user gets less than they realistically could have got.
+
+### 🧲ЗИ
+
+🧲ЗИ is not the next-action block.
+
+It means current action changes future inertia and habit.
+
+It asks:
+
+- куда заносит магнит?
+- что я кормлю огнём?
+- какая привычка крепнет?
+- будут ли будущие действия легче стать правильными?
+
+The actual Next physical action remains a separate dashboard field.
 
 ## Future behavior algorithms are deferred
 

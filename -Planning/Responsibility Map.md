@@ -22,8 +22,9 @@ Create a new file only when there is a new durable responsibility.
 | `Current Plan State.md` | flexible current plan, focus, tasks, rough schedule, background recovery goal |
 | `Today State.md` | structured active day state |
 | `Session Log.md` | factual session/event/day-summary history |
-| `Work Rails Principles.md` | D/F/K/P, flags, course violations, recovery/NDU, work rails context |
+| `Work Rails Principles.md` | D/F/K/P, flags, course violations, recovery/NDU, work rails context, full Core Rails Mnemonic |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
+| `Templates/Default Dashboard Template.md` | default planning dashboard skeleton and short Rails mnemonic/table |
 | `Workflows/*.md` | algorithms |
 | `Templates/*.md` | skeletons |
 

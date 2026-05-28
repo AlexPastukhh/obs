@@ -46,7 +46,19 @@ Status:
 
 ## Documentation questions
 
--
+### 🎯Р as separate view
+
+Idea:
+- 🎯Р may later become a separate planning/result view if it grows too large.
+- It may eventually replace or absorb some places where session goals / day goals / nearest global goals are displayed.
+
+For now:
+- keep 🎯Р inside `Templates/Default Dashboard Template.md`;
+- let planning AI fill it with real current values;
+- do not create a separate Result Planning Template yet.
+
+Status:
+- open design question.
 
 ## Future behavior algorithms
 
