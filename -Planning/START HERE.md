@@ -1,0 +1,46 @@
+# Planning System — Start Here
+
+Status: active entrypoint.
+
+## Read order
+
+1. [[System Overview]]
+2. [[Use Case Map]]
+3. [[Responsibility Map]]
+4. [[Documentation Principles]]
+5. Relevant workflow / state / log / template.
+
+## Core files
+
+- [[Current Plan State]]
+- [[Today State]]
+- [[Session Log]]
+- [[Work Rails Principles]]
+- [[Planning Ideas Notes]]
+
+## Workflows
+
+- [[Workflows/Update Current Plan Workflow]]
+- [[Workflows/Start Day Workflow]]
+- [[Workflows/Log Session Workflow]]
+- [[Workflows/Check Course Alignment Workflow]]
+- [[Workflows/End Day Workflow]]
+
+## Templates
+
+- [[Templates/Current Plan State Template]]
+- [[Templates/Today State Template]]
+- [[Templates/Session Log Entry Template]]
+
+## First-batch scope
+
+This first batch supports:
+
+- keeping a flexible current plan;
+- starting a structured day;
+- logging work sessions;
+- scoring sessions with V/Q/C/L;
+- checking course alignment;
+- recording unstable ideas without creating extra files.
+
+Do not create extra files unless the user explicitly asks or [[Responsibility Map]] says the new file has a distinct durable responsibility.
