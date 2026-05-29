@@ -7,8 +7,8 @@ Status: active day state.
 | Поле | Значение |
 |---|---|
 | 🎯 Цель дня | Закончить с системой документирования; начать работать с системой планирования; разобраться, как снова начать повторять и учиться; желательно повторить или сделать конспект из долгов. |
-| 🌅 Desired | Система документирования доведена до рабочего состояния; planning-система реально используется; есть понятный старт повторения/учёбы; по долгам сделано хотя бы одно повторение или один конспект. |
-| 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
+| 🌅 Desired | Закончил с документированием; всё максимально просто и ясно; есть понимание движения дальше; веду планирование лучше, чем когда-либо. |
+| 🌑 Undesired | Рассеянный фокус; нет реальной пользы от действий. |
 
 ## 🧵📜>🧪 Active Promises
 
@@ -24,6 +24,6 @@ Status: active day state.
 ## Notes
 
 - Day goal provided by user on 2026-05-29.
-- Desired is filled from the user's stated day goal and preferred outcomes.
-- Undesired, current feeling/pull, and analytical prediction are not yet provided.
+- Desired and Undesired updated from user's explicit wording.
+- Current feeling/pull and analytical prediction are not yet provided.
 - Active Promises are not created automatically without enough current material.
