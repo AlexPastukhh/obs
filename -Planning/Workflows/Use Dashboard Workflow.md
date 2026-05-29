@@ -9,6 +9,7 @@ Purpose: explain how AI should use the compact Planning State Output together wi
 - `Templates/Planning State Output Template.md`
 - `Templates/Default Dashboard Template.md`
 - `Work Rails Principles.md`
+- `Workflows/Real Reward Work Loop Workflow.md`
 - `Current Plan State.md`
 - `Today State.md`
 - `Session Log.md`
@@ -125,6 +126,25 @@ The full Dashboard Core and Mnemonic Emoji Table share one source of truth, but 
     - Tempo supports D/F but is not a fifth score criterion;
     - Guard prevents fake progress: занятость≠D, процесс≠результат, интересно≠нужно;
     - Boost means short-distance execution / self-competition.
+
+## Real Reward Work Loop
+
+For the full action loop that connects real reward, empty stimulation/chemistry, needed stimuli, promises, and D/F/K/P short-distance race, use:
+
+`Workflows/Real Reward Work Loop Workflow.md`
+
+This workflow answers:
+
+- What real reward makes the time non-empty?
+- What is only stimulation / chemistry pretending to be reward?
+- Which stimulation should be redirected toward the target?
+- Does chemistry need to be noticed and allowed to burn out?
+- Is a promise needed?
+- What short D/F/K/P race should be won now?
+
+Do not duplicate the full Real Reward Work Loop here.
+
+This file owns dashboard/mnemonic usage and output composition only.
 
 ## Output rule
 
