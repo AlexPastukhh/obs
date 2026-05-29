@@ -480,9 +480,23 @@ Low-level checks:
 
    Use the promise as the authority for action and internal state.
 
-5. Не подкидывать лишнему.
+5. Не разжигать химикаты/стимулы; не подкидывать лишнему.
 
-   Do not feed stimulation, thought loops, self-talk, YouTube, or off-course branches.
+   Do not provoke the chemistry/stimulation loop.
+
+   For chemistry:
+   notice it, name it, do not argue with it, do not feed it,
+   and wait until it burns out / fades.
+
+   For stimulation:
+   do not feed the wrong stimulus.
+   Switch to needed stimulation:
+   goal, visible progress, timer, visible score, and short-distance race.
+
+   Short-distance race belongs to `📊Скор -> Boost`.
+
+   The problem is not only that stimulation is “bad”.
+   The problem is that stimulation can become stronger when fed and can compete with real good things.
 
 6. Дрова не бесконечные.
 
