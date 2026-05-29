@@ -1,4 +1,4 @@
-# Use Dashboard Workflow
+﻿# Use Dashboard Workflow
 
 Status: active workflow.
 
@@ -29,6 +29,11 @@ Do not reconstruct dashboard from:
 
 A rendered dashboard is stale if it lacks:
 
+- Real Fun vs Stimulation;
+- `стимуляция соперничает с реально хорошими вещами`;
+- Desired prediction;
+- Real Pain vs Chemistry;
+- Undesired prediction;
 - Chem vs Promise;
 - Fire / Wood;
 - Core D/F/K/P;
@@ -36,11 +41,11 @@ A rendered dashboard is stale if it lacks:
 - Guard;
 - Boost.
 
-When rendering Compact Planning State Output, use:
+When rendering compact Planning State Output, use:
 
 `Templates/Planning State Output Template.md`
 
-Examples are references only. Templates remain the source of truth for rendered structures.
+Examples are references only.
 
 ## Steps
 
@@ -63,7 +68,12 @@ Examples are references only. Templates remain the source of truth for rendered 
 6. Use `🏁 Отрезок` from Active Promises when a concrete action / short-distance move is needed.
 7. Read progress from Finished Sessions, not from a separate Progress counters block.
 8. Decide which dashboard column is most relevant now:
-   - 🎯Рез = reconnect to result;
+   - 🎯Рез = reconnect to real result:
+     - identify real fun vs stimulation;
+     - remember that stimulation competes with real good things;
+     - identify real pain vs chemistry;
+     - build Desired/Undesired as analytical predictions;
+     - return to Result Tracking instead of process.
    - 🧵📜>🧪Обещ = Chem vs Promise + Fire / Wood;
    - 📊Скор = Core D/F/K/P + Tempo + Guard + Boost;
    - 🧲ЗИ = notice where the magnet pulls and what happens to future actions.

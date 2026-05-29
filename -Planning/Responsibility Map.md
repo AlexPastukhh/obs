@@ -1,4 +1,4 @@
-# Planning Responsibility Map
+﻿# Planning Responsibility Map
 
 Status: active responsibility map.
 
@@ -52,3 +52,4 @@ Examples = rendered reference outputs. They are not state, not templates, and no
 If it is not clearly a new responsibility, put it into `Deferred and Ideas Notes.md`.
 
 A notes file may have a template when repeated structure is useful.
+

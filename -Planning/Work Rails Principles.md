@@ -1,4 +1,4 @@
-# Work Rails Principles
+﻿# Work Rails Principles
 
 Status: active principles.
 ## Source-of-truth rule
@@ -667,7 +667,7 @@ Stop feeding the broken path.
 
 Return to Start Path:
 
-Result -> Clean Field -> Score Action -> Momentum / Inertia.
+Result -> Promise / Chemistry Field -> Score Action -> Momentum / Inertia.
 
 #### 5. Short-distance restart
 
@@ -682,7 +682,7 @@ This file explains meaning only.
 
 Dashboard columns:
 
-- 🎯Рез = result orientation: готов получить сейчас / не принимаю слив / ради Result Tracking.
+- 🎯Рез = Real Fun vs Stimulation + Real Pain vs Chemistry + predicted Desired/Undesired + readiness/refusal/result tracking.
 - 🧵📜>🧪Обещ = Chem vs Promise + Fire / Wood.
 - 📊Скор = Core D/F/K/P + Tempo + Guard + Boost.
 - 🧲ЗИ = занос / инерция / привычка / будущие действия.
@@ -690,6 +690,38 @@ Dashboard columns:
 Do not copy or reconstruct rendered dashboard tables from this file.
 
 If the rendered dashboard lacks `Chem vs Promise`, `Fire / Wood`, `Core D/F/K/P`, `Tempo`, `Guard`, or `Boost`, it is stale and must be replaced from `Templates/Default Dashboard Template.md`.
+
+### Real Fun / Pain Prediction
+
+This belongs to `🎯Рез`.
+
+It is related to `🧵📜>🧪Обещ`, but it is not the whole promise mechanism.
+
+`🧵📜>🧪Обещ` explains the general mechanism:
+chemistry / stimulation / noise vs analytical prediction / promise / stitched source of truth.
+
+`🎯Рез` uses that mechanism for one fundamental result question:
+what is the real reward, and what is only stimulation competing with real good things?
+
+Stimulation competes with real good things.
+
+It can feel like pleasure, safety, novelty, or relief,
+but it may spend attention, energy, start impulse, and time
+that could have produced a better real state.
+
+Desired should be built as an analytical prediction of real pleasure, relief, control, strength, or life/work improvement.
+
+Undesired should be built as an analytical prediction of real bad price, drain, drift, or lost opportunity.
+
+Ask:
+
+- What is the real fun / real reward here?
+- What is only stimulation pretending to be fun?
+- What real good thing is stimulation competing against?
+- What would I be glad to have already received right now?
+- What is the real bad price / anti-fun if I drift?
+- What is only chemistry, start resistance, discomfort, or noise pretending to be danger?
+
 ## Truth Promise / Пришитое обещание
 
 Пришитое обещание is an analytical promise stitched as a source of truth for actions and internal state.
@@ -894,3 +926,4 @@ Scores are practical approximations.
 They should guide behavior, not become perfect math.
 
 If uncertain, choose a reasonable score, add a note, and continue.
+
