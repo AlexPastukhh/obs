@@ -26,18 +26,26 @@ Use:
 | 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
 | 🗺️ Ближайшие глобальные цели | ⚠️ не подтянуты — нужно прочитать / обновить Current Plan State.md |
 
-Use `<br>` line breaks or short list formatting inside table cells when values contain multiple items.
+Use `<br>` line breaks inside table cells when values contain multiple items.
+
+For `🎯 Цель дня`, `🌅 Desired`, and `🌑 Undesired`, do not use markdown bullets like `-`.
+
+Write each logical phrase on a new line via `<br>`.
+
+For `🗺️ Ближайшие глобальные цели`, numbered lines are allowed and preferred for the first 3–5 goals, then `...` when more goals exist.
 
 Do not collapse day goal / Desired / Undesired / global goals into one long sentence.
+
+Do not turn day goal / Desired / Undesired into markdown bullet lists inside table cells.
 
 Example formatting:
 
 | Поле | Значение |
 |---|---|
-| 🎯 Цель дня | - закончить систему документирования;<br>- начать работать с planning-системой;<br>- разобраться, как снова повторять и учиться |
-| 🌅 Desired | - документирование закончено;<br>- всё максимально просто и ясно;<br>- есть понимание движения дальше;<br>- веду планирование лучше, чем когда-либо |
-| 🌑 Undesired | - рассеянный фокус;<br>- нет реальной пользы от действий |
-| 🗺️ Ближайшие глобальные цели | 1. запустить planning/doc/AI-work систему;<br>2. снова начать повторять и учить теорию;<br>3. вспомнить важное забытое;<br>4. доделать диплом;<br>... |
+| 🎯 Цель дня | закончить систему документирования<br>начать работать с planning-системой<br>разобраться, как снова повторять и учиться |
+| 🌅 Desired | документирование закончено<br>всё максимально просто и ясно<br>есть понимание движения дальше<br>веду планирование лучше, чем когда-либо |
+| 🌑 Undesired | рассеянный фокус<br>нет реальной пользы от действий |
+| 🗺️ Ближайшие глобальные цели | 1. запустить planning/doc/AI-work систему<br>2. снова начать повторять и учить теорию<br>3. вспомнить важное забытое<br>4. доделать диплом<br>... |
 
 ## 🧵📜>🧪 Active Promises
 
