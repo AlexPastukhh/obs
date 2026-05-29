@@ -6,24 +6,23 @@ Status: active day state.
 
 | Поле | Значение |
 |---|---|
-| 🎯 Цель дня | Начать день с нуля по `-Planning` и сделать минимум одну реальную внешнюю work-session. |
-| 🌅 Desired | Реальное удовольствие / контроль / облегчение: есть выбранный внешний target и первый measurable output, а не только настройка planning-системы. |
-| 🌑 Undesired | Реальная плохая цена / слив: день снова ушёл в подготовку, систему, обсуждение или процесс без внешней work-session. |
+| 🎯 Цель дня | ⚠️ не задана — нужно выбрать цель дня |
+| 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую желаемую цель |
+| 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
 
 ## 🧵📜>🧪 Active Promises
 
-| # | 🧪 Сейчас чувствую / тянет | 📐 Аналитически выведено | 🧵📜 Пришить как истину | 🌑 Не покупать | 🏁 Отрезок |
-|---|---|---|---|---|---|
-| 1 | День начинается; внешний target ещё не выбран; может тянуть сначала донастраивать систему. | Первый короткий внешний output даст больше контроля и облегчения, чем дополнительная подготовка planning-системы. | Сначала маленькая реальная работа, потом уточнение системы; эффект может появиться после действия. | “Сначала ещё подготовиться / настроить” может быть стимуляцией и процессом вместо результата. | Назвать один внешний target и сделать первый 10-минутный measurable output. |
+Нет активных promises.
+
+⚠️ Promise не создаётся автоматически. Сначала нужно определить цель / Desired / текущее ощущение / аналитическое предсказание.
 
 ## 🧾 Finished Sessions
 
 | # | Session | D/F/K/P | Points | Progress Signal | Result |
 |---|---|---|---:|---|---|
-|  |  |  |  |  |  |
 
 ## Notes
 
-- Day restarted from zero on 2026-05-29.
-- Finished Sessions intentionally empty at day start.
-- Concrete short-distance move lives in `Active Promises -> 🏁 Отрезок`.
+- Day restarted from zero on 2026-05-29 after docs refresh.
+- Missing input is preserved instead of invented.
+- Active Promises are not created automatically without enough current material.
