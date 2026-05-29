@@ -18,6 +18,10 @@ Owner workflow:
 
 `Workflows/Real Reward Work Loop Workflow.md`
 
+Emoji notation owner:
+
+`Emoji Notation Map.md`
+
 ## Pattern categories
 
 ### Fundamental score patterns
@@ -59,10 +63,24 @@ These commands output pattern templates from this playbook.
 
 They do not render full Dashboard Core unless explicitly requested.
 
+## Active point-6 pattern labels
+
+| Emoji | Pattern | Type |
+|---|---|---|
+| 🏁🥊👤↔️👤⏱️ | Short-distance self-competition | Fundamental |
+| 🎯📈≠🎭🔁 | Result Tracking over process | Fundamental |
+| ⏱️🚂🛤️➡️🎯 | Session frame / visible target | Fundamental |
+| 🧲⚡🧪➡️🎯 | Targeted stimuli / chemistry only | Fundamental |
+| 🛤️🌅➡️🎯 | Course / Desired connection | Fundamental |
+| 👁️⏳➡️💎 | Value left after attention ends | Fundamental |
+| 🧩🪜⚠️➡️🧲⚡ | Complex multi-level problem -> easy stimulation | Frequent situational |
+| 🚂🛤️⚠️🎯 | Automatic rails but Result forgotten | Frequent situational |
+
 ## Pattern format
 
 Each pattern should include:
 
+- Emoji;
 - Type;
 - Frequency, if situational;
 - Default point 6 status;
@@ -77,7 +95,9 @@ Each pattern should include:
 
 ## Fundamental score patterns
 
-### Pattern: Short-distance self-competition
+### Pattern: 🏁🥊👤↔️👤⏱️ Short-distance self-competition
+
+Emoji: 🏁🥊👤↔️👤⏱️
 
 Type: Fundamental score pattern.
 
@@ -164,7 +184,9 @@ What habit does this action train?
 
 ---
 
-### Pattern: Result Tracking over process
+### Pattern: 🎯📈≠🎭🔁 Result Tracking over process
+
+Emoji: 🎯📈≠🎭🔁
 
 Type: Fundamental score pattern.
 
@@ -238,7 +260,9 @@ Leave something usable after the segment.
 
 ---
 
-### Pattern: Session frame / visible target
+### Pattern: ⏱️🚂🛤️➡️🎯 Session frame / visible target
+
+Emoji: ⏱️🚂🛤️➡️🎯
 
 Type: Fundamental score pattern.
 
@@ -251,6 +275,10 @@ Affects: F primary; D/P secondary.
 F растёт, когда есть рамка сессии, visible target, timer / короткий отрезок, score awareness и понятный конец.
 
 F падает, когда “работа” идёт размазано, без сессии и без управления собой.
+
+`🚂🛤️` means rails / frame / process on rails.
+
+Bare `🛤️` means course, not rails.
 
 #### What adds score
 
@@ -316,7 +344,9 @@ What value should be left when the frame ends?
 
 ---
 
-### Pattern: Targeted stimuli / chemistry only
+### Pattern: 🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only
+
+Emoji: 🧲⚡🧪➡️🎯
 
 Type: Fundamental score pattern.
 
@@ -414,7 +444,9 @@ Leave value from the target, not residue from stimulation.
 
 ---
 
-### Pattern: Course / Desired connection
+### Pattern: 🛤️🌅➡️🎯 Course / Desired connection
+
+Emoji: 🛤️🌅➡️🎯
 
 Type: Fundamental score pattern.
 
@@ -427,6 +459,8 @@ Affects: K primary; D/P secondary.
 K grows when the segment is connected to current course / Desired / nearest global goals.
 
 K falls when interesting, easy, or important-but-not-now replaces needed.
+
+Bare `🛤️` means course / K / direction.
 
 #### What adds score
 
@@ -486,7 +520,9 @@ Leave value that supports current or nearest goals.
 
 ---
 
-### Pattern: Value left after attention ends
+### Pattern: 👁️⏳➡️💎 Value left after attention ends
+
+Emoji: 👁️⏳➡️💎
 
 Type: Fundamental score pattern.
 
@@ -566,7 +602,9 @@ Leave artifact, clarity, next action, or removed blocker.
 
 ## Situational patterns
 
-### Pattern: Complex multi-level problem -> easy stimulation
+### Pattern: 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation
+
+Emoji: 🧩🪜⚠️➡️🧲⚡
 
 Type: Situational pattern.
 
@@ -723,7 +761,9 @@ A structure remains, so the problem is easier to continue.
 
 ---
 
-### Pattern: Automatic rails but Result forgotten
+### Pattern: 🚂🛤️⚠️🎯 Automatic rails but Result forgotten
+
+Emoji: 🚂🛤️⚠️🎯
 
 Type: Situational pattern.
 

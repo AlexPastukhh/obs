@@ -36,14 +36,15 @@ In normal planning/state/session-control mode, the Default Daily Template Pack i
 | “цель на день…” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal + Mnemonic Emoji Table + compact Planning State Output |
 | “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Start Day Missing Input Example.md`, `Examples/Midday Planning State Output Example.md` | `Use Dashboard Workflow.md` | none | Mnemonic Emoji Table + compact Planning State Output |
 | “дай дашборд” / “покажи полный дашборд” / “покажи структуру дашборда” | `Templates/Default Dashboard Template.md` | none | none | Full Dashboard Core + Mnemonic Emoji Table |
-| “обновим / проверим дашборд” | `Templates/Default Dashboard Template.md`, `Work Rails Principles.md`, `Responsibility Map.md` | maybe docs update workflow | maybe `Templates/Default Dashboard Template.md` | Full Dashboard Core + Mnemonic Emoji Table + update summary |
+| “обновим / проверим дашборд” | `Templates/Default Dashboard Template.md`, `Work Rails Principles.md`, `Responsibility Map.md`, `Emoji Notation Map.md` | maybe docs update workflow | maybe `Templates/Default Dashboard Template.md` | Full Dashboard Core + Mnemonic Emoji Table + update summary |
 | “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Start Day Missing Input Example.md`, `Examples/Midday Planning State Output Example.md` | `Use Dashboard Workflow.md` | none | Mnemonic Emoji Table + compact Planning State Output |
 | “напомни алгоритм” | `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md` | maybe `Real Reward Work Loop Workflow.md` | none | Mnemonic Emoji Table + short principle/workflow summary + compact Planning State Output if state/action guidance is relevant |
 | “дай мнемонику” | `Templates/Default Dashboard Template.md` | none | none | Mnemonic Emoji Table |
 | “дай короткую таблицу” | `Templates/Default Dashboard Template.md` | none | none | Mnemonic Emoji Table, unless user asks for full Dashboard Core |
 | “дай пример output” / “как должен выглядеть planning output?” | `Examples/Start Day Missing Input Example.md`, `Examples/Midday Planning State Output Example.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | none | none | Example output + note that examples are reference only |
-| `/patterns` / “покажи паттерны пункта 6” / “покажи активные score patterns” / “покажи полные паттерны” | `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | none | none | Full templates for point-6 active patterns: all Fundamental score patterns + Situational patterns marked frequent; no full Dashboard Core unless explicitly requested |
-| `/pattern <name>` / “разверни паттерн X” | `Workflows/Real Reward Pattern Playbook.md` | none | none | Full selected pattern template from Real Reward Pattern Playbook |
+| `/patterns` / “покажи паттерны пункта 6” / “покажи активные score patterns” / “покажи полные паттерны” | `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none | none | Full templates for point-6 active patterns: all Fundamental score patterns + Situational patterns marked frequent; no full Dashboard Core unless explicitly requested |
+| `/pattern <name>` / “разверни паттерн X” | `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none | none | Full selected pattern template from Real Reward Pattern Playbook |
+| “что значит emoji X?” / “почему такой emoji?” / “обновим emoji notation” / “заменим emoji для стимулов” | `Emoji Notation Map.md`, owner file that uses emoji | none or docs update | owner file | Emoji meaning / update routing |
 | “создай обещание” / “обнови обещание” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md` | maybe `Today State.md` or note | Mnemonic Emoji Table + updated Active Promises table; if required material is missing, show missing fields instead of inventing a promise |
 | “химия не совпадает” / “не хочется” / “тянет не туда” | `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Work Rails Principles.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md`, maybe `Build Truth Promise Workflow.md` | maybe `Today State.md` | Mnemonic Emoji Table + Active Promises update or missing promise requirements + short real-reward correction |
 | “тянет на пустые стимулы / пустая трата / хочу не туда” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md` | maybe `Today State.md` | Short real-reward correction + Mnemonic Emoji Table + compact Planning State Output |
@@ -136,11 +137,25 @@ Full Dashboard Core is not a default output block.
 
 Mnemonic Emoji Table is the default lightweight dashboard memory layer.
 
+### Emoji notation
+
+Owner: `Emoji Notation Map.md`
+
+Use it for explicit emoji notation agreements.
+
+Do not reconstruct emoji notation from memory when the meaning has an owner.
+
+`🧲⚡` = stimulus pull / easy stimulation.
+
+`🚂🛤️` = rails / automatic rails.
+
+Bare `🛤️` = course / direction / relation to current course.
+
 ### Compact Planning State Output
 
 Owner: `Templates/Planning State Output Template.md`
 
-Use it for exact compact state structure.
+Use it for exact compact state structure, including Point 6 compact score-check block.
 
 ### Real Reward Work Loop
 
@@ -156,12 +171,12 @@ Owner: `Workflows/Real Reward Pattern Playbook.md`
 
 Use it for full pattern templates and point-6 active score patterns.
 
-`/patterns` shows full templates for active point-6 patterns:
+/patterns shows full templates for active point-6 patterns:
 
 - all Fundamental score patterns;
 - Situational patterns marked `Frequency: frequent`.
 
-`/pattern <name>` shows one selected pattern.
+/pattern <name> shows one selected pattern.
 
 Do not treat the playbook as log, state, rendered output, or principles.
 

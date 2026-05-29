@@ -8,6 +8,10 @@ This workflow owns the user's core work loop:
 
 Real reward -> separate from empty stimulation/chemistry -> attach needed stimulation -> handle chemistry/stimulation -> promise when needed -> short-distance D/F/K/P race with active score patterns -> log session.
 
+Emoji notation owner:
+
+`Emoji Notation Map.md`
+
 ## Core formula
 
 Реальное удовольствие делает потраченное время не пустой тратой.
@@ -163,31 +167,26 @@ Real reward -> separate from empty stimulation/chemistry -> attach needed stimul
 
    Affects D:
 
-   - Result Tracking over process;
-   - useful output, not small motor/thought movements.
+   - 🎯📈≠🎭🔁 Result Tracking over process;
+   - 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation;
+   - 🚂🛤️⚠️🎯 Automatic rails but Result forgotten.
 
    Affects F:
 
-   - Short-distance self-competition, also affects D/K/P and future inertia;
-   - session frame / visible target;
-   - targeted stimuli / chemistry only;
-   - tempo without panic;
-   - wrong stimuli not fed.
+   - 🏁🥊👤↔️👤⏱️ Short-distance self-competition, also affects D/K/P and future inertia;
+   - ⏱️🚂🛤️➡️🎯 Session frame / visible target;
+   - 🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only;
+   - 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation.
 
    Affects K:
 
-   - course / Desired / nearest goals connection;
-   - interesting/easy does not replace needed.
+   - 🛤️🌅➡️🎯 Course / Desired connection;
+   - 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation.
 
    Affects P:
 
-   - value left after attention ends;
-   - artifact, structure, clarity, next action, removed blocker.
-
-   Frequent situational patterns currently included:
-
-   - Complex multi-level problem -> easy stimulation;
-   - Automatic rails but Result forgotten.
+   - 👁️⏳➡️💎 Value left after attention ends;
+   - 🚂🛤️⚠️🎯 Automatic rails but Result forgotten.
 
    For full pattern templates, use:
 

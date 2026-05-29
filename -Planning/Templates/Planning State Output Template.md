@@ -4,7 +4,9 @@ Status: active template.
 
 Purpose: compact state/output template for planning AI. This is not the Default Dashboard mnemonic core.
 
-AI uses this template to show only the maintained planning state that matters for action: result tracking, active promises, and finished sessions.
+AI uses this template to show only the maintained planning state that matters for action: result tracking, point-6 active score patterns, active promises, and finished sessions.
+
+Emoji notation agreements are owned by `Emoji Notation Map.md`.
 
 ## 🎯 Result Tracking
 
@@ -55,6 +57,27 @@ Example formatting:
 | 🌑 Undesired | Рассеянный фокус<br>Нет реальной пользы от действий |
 | 🗺️ Ближайшие глобальные цели | 1. Запустить planning/doc/AI-work систему<br>2. Снова начать повторять и учить теорию<br>3. Вспомнить важное забытое<br>4. Доделать диплом<br>... |
 
+## 🏁📊 Point 6 — Short D/F/K/P Race
+
+| Влияет на | Active score patterns |
+|---|---|
+| ✅D | 🎯📈≠🎭🔁 Result Tracking over process<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
+| 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
+| 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| 🔎 Full patterns | `/patterns` |
+
+Rules:
+
+- Show only active pattern names in this block.
+- Do not show detailed `adds score` / `subtracts score` text in default daily output.
+- Fundamental score patterns are always active.
+- Situational patterns marked `Frequency: frequent` are active while frequent.
+- Non-frequent Situational patterns are not shown by default.
+- Frequent Situational patterns are shown inside the concrete D/F/K/P rows they affect, not as a separate row.
+- Full pattern templates are shown only by `/patterns` or `/pattern <name>`.
+- Pattern names and meanings are owned by `Workflows/Real Reward Pattern Playbook.md`.
+
 ## 🧵📜>🧪 Active Promises
 
 When active promises exist:
@@ -88,8 +111,9 @@ This template owns compact planning state output.
 Default Planning State Output contains only:
 
 1. 🎯 Result Tracking;
-2. 🧵📜>🧪 Active Promises;
-3. 🧾 Finished Sessions.
+2. 🏁📊 Point 6 — Short D/F/K/P Race;
+3. 🧵📜>🧪 Active Promises;
+4. 🧾 Finished Sessions.
 
 Result Tracking contains only:
 
@@ -105,6 +129,12 @@ Global goals are not a separate default block.
 Global goals live inside 🎯 Result Tracking as a compact snapshot.
 
 Use 3–5 nearest/relevant global goals from `Current Plan State.md`, preferably numbered, then `...` when more goals exist.
+
+Point 6 is a compact active score-check layer, not the full workflow.
+
+Point 6 shows active pattern names grouped under D/F/K/P.
+
+Point 6 does not show detailed `adds score` / `subtracts score` text by default.
 
 Concrete next/short action is not a separate Planning State Output block and not a Result Tracking field.
 
