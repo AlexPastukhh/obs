@@ -32,7 +32,15 @@ For `🎯 Цель дня`, `🌅 Desired`, and `🌑 Undesired`, do not use mar
 
 Write each logical phrase on a new line via `<br>`.
 
+Each new logical line should start with a capital letter.
+
+This capitalization marks where a new line/thought starts without using bullets.
+
+Continuation inside the same line may stay lowercase if it is grammatically part of the same phrase.
+
 For `🗺️ Ближайшие глобальные цели`, numbered lines are allowed and preferred for the first 3–5 goals, then `...` when more goals exist.
+
+Each numbered global-goal line should start with a capital letter after the number.
 
 Do not collapse day goal / Desired / Undesired / global goals into one long sentence.
 
@@ -42,10 +50,10 @@ Example formatting:
 
 | Поле | Значение |
 |---|---|
-| 🎯 Цель дня | закончить систему документирования<br>начать работать с planning-системой<br>разобраться, как снова повторять и учиться |
-| 🌅 Desired | документирование закончено<br>всё максимально просто и ясно<br>есть понимание движения дальше<br>веду планирование лучше, чем когда-либо |
-| 🌑 Undesired | рассеянный фокус<br>нет реальной пользы от действий |
-| 🗺️ Ближайшие глобальные цели | 1. запустить planning/doc/AI-work систему<br>2. снова начать повторять и учить теорию<br>3. вспомнить важное забытое<br>4. доделать диплом<br>... |
+| 🎯 Цель дня | Закончить систему документирования<br>Начать работать с planning-системой<br>Разобраться, как снова повторять и учиться |
+| 🌅 Desired | Документирование закончено<br>Всё максимально просто и ясно<br>Есть понимание движения дальше<br>Веду планирование лучше, чем когда-либо |
+| 🌑 Undesired | Рассеянный фокус<br>Нет реальной пользы от действий |
+| 🗺️ Ближайшие глобальные цели | 1. Запустить planning/doc/AI-work систему<br>2. Снова начать повторять и учить теорию<br>3. Вспомнить важное забытое<br>4. Доделать диплом<br>... |
 
 ## 🧵📜>🧪 Active Promises
 
