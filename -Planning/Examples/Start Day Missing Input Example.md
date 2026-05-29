@@ -6,35 +6,13 @@ This is a rendered reference example.
 
 It is not a template, workflow, or source-of-truth state.
 
-If this example conflicts with `Templates/Default Dashboard Template.md` or `Templates/Planning State Output Template.md`, templates win.
-
-Purpose: show what `/start-day` should look like when the user starts the day but did not provide enough target / Desired / Undesired / promise material.
+Purpose: show what `/start-day YYYY-MM-DD` should look like when the user starts a date-based day file but did not provide enough target / Desired / Undesired / promise material.
 
 ## Seed state
 
-- User starts the day from zero.
-- User did not provide a specific day goal.
-- User did not define Desired.
-- User did not define Undesired.
-- User did not provide current felt pull / chemistry.
-- User did not ask to create a specific Active Promise.
-- `Current Plan State.md` contains global goals / active directions.
-
-## Output note
-
-In actual planning mode, render:
-
-1. Normal update / missing-input note.
-2. Mnemonic Emoji Table from `Templates/Default Dashboard Template.md`.
-3. Compact Planning State Output below.
-
-This example does not duplicate the full Dashboard Core because `Templates/Default Dashboard Template.md` owns the rendered dashboard.
-
-Full Dashboard Core is rendered only on explicit dashboard request.
-
-## Mnemonic Emoji Table
-
-Use the current Mnemonic Emoji Table from `Templates/Default Dashboard Template.md`.
+- User starts date `2026-05-30`.
+- Day file path: `Days/2026/2026-05-30.md`.
+- Missing day goal / Desired / Undesired / promise material.
 
 ## Compact Planning State Output
 
@@ -43,51 +21,29 @@ Use the current Mnemonic Emoji Table from `Templates/Default Dashboard Template.
 | Поле | Значение |
 |---|---|
 | 🎯 Цель дня | ⚠️ не задана — нужно выбрать цель дня |
-| 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую желаемую цель |
+| 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую цель |
 | 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
 | 🗺️ Ближайшие глобальные цели | 1. Запустить planning/doc/AI-work систему<br>2. Снова начать повторять и учить теорию<br>3. Вспомнить важное забытое<br>4. Доделать диплом<br>... |
 
 ### 🏁📊 Point 6 — Short D/F/K/P Race
 
-| Влияет на | Active score patterns |
-|---|---|
-| ✅D | 🎯📈≠🎭🔁 Result Tracking over process<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
-| ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
-| 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
-| 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
-| 🔎 Full patterns | `/patterns` |
+Use the standard Point 6 block from `Templates/Planning State Output Template.md`.
 
 ### 🧵📜>🧪 Active Promises
 
 Нет активных promises.
 
-⚠️ Promise не создаётся автоматически.
-
-Сначала нужно определить:
-
-- цель / target;
-- Desired;
-- Undesired;
-- текущее ощущение / куда тянет;
-- аналитическое предсказание;
-- короткий отрезок.
+⚠️ Promise не создаётся автоматически. Сначала нужно определить цель / Desired / текущее ощущение / аналитическое предсказание.
 
 ### 🧾 Finished Sessions
 
-| # | Session | D/F/K/P | Points | Progress Signal | Result |
-|---|---|---|---:|---|---|
+| # | Time | Session | D/F/K/P | Points | Progress Signal | Result |
+|---|---|---|---|---:|---|---|
 
 ## What AI should say
 
+Created/opened day file:
+
+`Days/2026/2026-05-30.md`
+
 Start-day state has missing required inputs.
-
-The next planning task is to define:
-
-1. 🎯 Цель дня.
-2. 🌅 Desired.
-3. 🌑 Undesired.
-4. Whether an Active Promise is needed after the target is known.
-
-Do not replace these missing inputs with a generic external-work target.
-
-Do not render full Dashboard Core unless the user explicitly asks for it.

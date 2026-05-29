@@ -8,202 +8,102 @@ This file is not a workflow and not a template.
 
 ## Main process
 
-User intent -> read needed files -> run workflow -> update owner file -> return the normal work/update summary -> return Default Daily Template Pack when relevant.
+User intent -> identify date when day-state is involved -> read needed files -> run workflow -> update owner file -> return normal work/update summary -> return Default Daily Template Pack when relevant.
 
-Default Daily Template Pack:
+AI must not infer current day automatically.
+
+For day-state work, the user provides the date or establishes an active conversation day date.
+
+Date-based day file:
+
+`Days/YYYY/YYYY-MM-DD.md`
+
+## Default Daily Template Pack
 
 1. Mnemonic Emoji Table.
 2. Compact Planning State Output.
 
 Full Dashboard Core is not part of the default pack.
 
-Full Dashboard Core is rendered only on explicit dashboard request.
+Support Facts are not part of default compact output unless relevant, requested, or during day close / support review.
 
-In normal planning/state/session-control mode, the Default Daily Template Pack is the default output after the normal answer.
-
-## Use cases
+## Core date-based routes
 
 | User says / means | Read | Workflow | Update | Output |
 |---|---|---|---|---|
-| “что это за система?” | `System Overview.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md` | none | none | Explanation + Default Daily Template Pack if current planning state is relevant |
-| “куда это записать?” | `Responsibility Map.md`, `Documentation Principles.md` | none | owner file or `Deferred and Ideas Notes.md` | Routing decision; Default Daily Template Pack only if planning state changed |
-| “обновим текущий план” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Update Current Plan Workflow.md` | `Current Plan State.md` | Updated plan summary + Mnemonic Emoji Table + compact Planning State Output |
-| “сейчас главное X” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Update Current Plan Workflow.md` | `Current Plan State.md` | Updated focus summary + Mnemonic Emoji Table + compact Planning State Output |
-| “вот список дел / планы / расписание” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Update Current Plan Workflow.md` | `Current Plan State.md` | Updated plan summary + Mnemonic Emoji Table + compact Planning State Output |
-| “это отложенная задача / идея / потом” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Deferred note; Default Daily Template Pack only if current planning state changed |
-| “опасный сценарий / возможная ошибка” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Open/dangerous scenario note; Default Daily Template Pack only if current planning state changed |
-| `/start-day` | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Start Day Missing Input Example.md` | `Start Day Workflow.md` | `Today State.md` | Mnemonic Emoji Table + compact Planning State Output; if goal/Desired/Undesired are missing, show missing fields instead of inventing them; do not create Active Promises by default |
-| “цель на день…” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Start Day Workflow.md` | `Today State.md` | Updated day goal + Mnemonic Emoji Table + compact Planning State Output |
-| “покажи состояние” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Start Day Missing Input Example.md`, `Examples/Midday Planning State Output Example.md` | `Use Dashboard Workflow.md` | none | Mnemonic Emoji Table + compact Planning State Output |
+| “начинаем 2026-05-30” / “создай день 2026-05-30” / “работаем с 2026-05-30” / “открой день 2026-05-30” | `Days/README.md`, `Templates/Day File Template.md`, `Current Plan State.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Use Day File Workflow.md`, `Start Day Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Created/opened day file + Mnemonic Emoji Table + compact Planning State Output |
+| `/start-day 2026-05-30` | `Days/README.md`, `Templates/Day File Template.md`, `Current Plan State.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Start Day Missing Input Example.md` | `Use Day File Workflow.md`, `Start Day Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Missing fields if needed + Default Daily Template Pack |
+| “покажи 2026-05-30” / “дай состояние дня 2026-05-30” | `Days/YYYY/YYYY-MM-DD.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | `Use Day File Workflow.md`, `Use Dashboard Workflow.md` | none | Mnemonic Emoji Table + compact state from that day file |
+| `/s 2026-05-30 30м ...` / `/s 30м ...` with active day date | `Days/YYYY/YYYY-MM-DD.md`, `Current Plan State.md`, `Work Rails Principles.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Log Session Workflow.md`, `Use Day File Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Logged session + Work Score Summary + Default Daily Template Pack |
+| “2026-05-30: не объелся” / “после S5 двигался 15 минут” / “объелся” / “пытался заснуть час” / “был stimulus drift перед сном” | `Days/YYYY/YYYY-MM-DD.md`, `Templates/Support Facts Table Template.md`, `Support Score Guide.md` | `Use Day File Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Support fact added. No Support Score calculated during the day. |
+| “посчитай support за 2026-05-30” / “закрой support за вчера” / “утренний review 2026-05-30” | `Days/YYYY/YYYY-MM-DD.md`, `Support Score Guide.md`, `Templates/Support Score Review Template.md`, `Examples/Support Score Day Examples.md` | `Support Score Review Workflow.md`, `Use Day File Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Support Score breakdown + interpretation + updated day file |
+| “закрываем 2026-05-30” / “закрой день 2026-05-30” | `Days/YYYY/YYYY-MM-DD.md`, `Support Score Guide.md`, `Templates/Support Score Review Template.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | `End Day Workflow.md`, `Use Day File Workflow.md`, maybe `Support Score Review Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Final Day Summary + Work Score + Support Score if calculated + final compact output |
+
+## Other routes
+
+| User says / means | Read | Workflow | Update | Output |
+|---|---|---|---|---|
+| “что это за система?” | `System Overview.md`, `Work Rails Principles.md`, `Days/README.md`, `Templates/Default Dashboard Template.md` | none | none | Explanation + Default Daily Template Pack if relevant |
+| “куда это записать?” | `Responsibility Map.md`, `Documentation Principles.md` | none | owner file or `Deferred and Ideas Notes.md` | Routing decision |
 | “дай дашборд” / “покажи полный дашборд” / “покажи структуру дашборда” | `Templates/Default Dashboard Template.md` | none | none | Full Dashboard Core + Mnemonic Emoji Table |
-| “обновим / проверим дашборд” | `Templates/Default Dashboard Template.md`, `Work Rails Principles.md`, `Responsibility Map.md`, `Emoji Notation Map.md` | maybe docs update workflow | maybe `Templates/Default Dashboard Template.md` | Full Dashboard Core + Mnemonic Emoji Table + update summary |
-| “что дальше?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Start Day Missing Input Example.md`, `Examples/Midday Planning State Output Example.md` | `Use Dashboard Workflow.md` | none | Mnemonic Emoji Table + compact Planning State Output |
-| “напомни алгоритм” | `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md` | maybe `Real Reward Work Loop Workflow.md` | none | Mnemonic Emoji Table + short principle/workflow summary + compact Planning State Output if state/action guidance is relevant |
 | “дай мнемонику” | `Templates/Default Dashboard Template.md` | none | none | Mnemonic Emoji Table |
-| “дай короткую таблицу” | `Templates/Default Dashboard Template.md` | none | none | Mnemonic Emoji Table, unless user asks for full Dashboard Core |
-| “дай пример output” / “как должен выглядеть planning output?” | `Examples/Start Day Missing Input Example.md`, `Examples/Midday Planning State Output Example.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | none | none | Example output + note that examples are reference only |
-| `/patterns` / “покажи паттерны пункта 6” / “покажи активные score patterns” / “покажи полные паттерны” | `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none | none | Full templates for point-6 active patterns: all Fundamental score patterns + Situational patterns marked frequent; no full Dashboard Core unless explicitly requested |
-| `/pattern <name>` / “разверни паттерн X” | `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none | none | Full selected pattern template from Real Reward Pattern Playbook |
-| “что значит emoji X?” / “почему такой emoji?” / “обновим emoji notation” / “заменим emoji для стимулов” | `Emoji Notation Map.md`, owner file that uses emoji | none or docs update | owner file | Emoji meaning / update routing |
-| “создай обещание” / “обнови обещание” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md` | maybe `Today State.md` or note | Mnemonic Emoji Table + updated Active Promises table; if required material is missing, show missing fields instead of inventing a promise |
-| “химия не совпадает” / “не хочется” / “тянет не туда” | `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Work Rails Principles.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md`, maybe `Build Truth Promise Workflow.md` | maybe `Today State.md` | Mnemonic Emoji Table + Active Promises update or missing promise requirements + short real-reward correction |
-| “тянет на пустые стимулы / пустая трата / хочу не туда” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md` | maybe `Today State.md` | Short real-reward correction + Mnemonic Emoji Table + compact Planning State Output |
-| “как сделать это не пустой тратой?” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md` | maybe `Today State.md` | Identify real reward + needed stimulation + short D/F/K/P race + Mnemonic Emoji Table + compact Planning State Output |
-| “как пришить нужные стимулы / химию?” | `Current Plan State.md`, `Today State.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md` | maybe `Today State.md` | Needed-stimulus redirect + possible promise requirements + Mnemonic Emoji Table + compact Planning State Output |
-| “я начинаю работу / сессию” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, maybe `Workflows/Real Reward Work Loop Workflow.md`, maybe `Workflows/Real Reward Pattern Playbook.md` | `Use Dashboard Workflow.md`, maybe `Real Reward Work Loop Workflow.md` | maybe `Today State.md` | Mnemonic Emoji Table + compact Planning State Output |
-| “следующая сессия X” | `Current Plan State.md`, `Today State.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | `Check Course Alignment Workflow.md` | `Today State.md` | Session goal / warning + Default Daily Template Pack if planning state changed |
-| `/s ...`, “30 мин делал…” | `Today State.md`, `Current Plan State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry + Mnemonic Emoji Table + updated compact Planning State Output + result progress |
-| “я оцениваю сессию так: D/F/K/P…” | `Today State.md`, `Current Plan State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | Session entry + contradiction check + Mnemonic Emoji Table + updated compact Planning State Output |
-| “сессия приблизила результат?” | `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Log Session Workflow.md` | maybe `Session Log.md` | Progress Signal + Mnemonic Emoji Table + compact Planning State Output |
-| “это по курсу?” | `Current Plan State.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | `Check Course Alignment Workflow.md` | none or `Session Log.md` | K rating / justification + Default Daily Template Pack if planning state changed |
-| “важно, но не сейчас” | `Current Plan State.md` or `Deferred and Ideas Notes.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | `Update Current Plan Workflow.md` or none | owner file | Added to plan or deferred notes + Default Daily Template Pack if planning/current state changed |
-| “я теряю результат / утопаю в процессе” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Use Dashboard Workflow.md`, maybe `Real Reward Work Loop Workflow.md` | maybe `Today State.md` | Mnemonic Emoji Table + compact Planning State Output / result correction |
-| “я заметил, что свернул” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, maybe `Workflows/Real Reward Work Loop Workflow.md`, maybe `Workflows/Real Reward Pattern Playbook.md` | `Use Dashboard Workflow.md`, maybe `Real Reward Work Loop Workflow.md` | maybe `Session Log.md` | Mnemonic Emoji Table + Correction Path; update compact Planning State Output if needed |
-| “мне нужно поправиться” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md` | `Use Dashboard Workflow.md`, maybe `Real Reward Work Loop Workflow.md` | maybe `Session Log.md` | Diagnose what broke + restart + Default Daily Template Pack |
-| “потерял темп / вязну” | `Current Plan State.md`, `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, maybe `Workflows/Real Reward Work Loop Workflow.md`, maybe `Workflows/Real Reward Pattern Playbook.md` | `Use Dashboard Workflow.md` | maybe `Session Log.md` | Mnemonic Emoji Table + Score/tempo correction + compact Planning State Output |
-| “я раскис / знал но ушёл” | `Today State.md`, `Current Plan State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md`, maybe `Workflows/Real Reward Work Loop Workflow.md`, maybe `Workflows/Real Reward Pattern Playbook.md` | `Log Session Workflow.md` | `Session Log.md`, `Today State.md` | CV/SD event + Default Daily Template Pack |
-| “что с recovery / 4г 2м 15д?” | `Current Plan State.md`, `Work Rails Principles.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | none | maybe `Current Plan State.md` | Recovery goal / NDU explanation + Default Daily Template Pack if planning state changed |
-| “закрываем день” | `Today State.md`, `Session Log.md`, `Work Rails Principles.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `End Day Workflow.md` | `Session Log.md`, maybe `Today State.md` | Day summary + final Mnemonic Emoji Table + final compact Planning State Output |
+| “дай пример output” | `Examples/Start Day Missing Input Example.md`, `Examples/Midday Planning State Output Example.md`, `Templates/Planning State Output Template.md` | none | none | Example output + source-of-truth note |
+| `/patterns` / “покажи паттерны пункта 6” | `Workflows/Real Reward Work Loop Workflow.md`, `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none | none | Full templates for active point-6 patterns |
+| `/pattern <name>` | `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none | none | Full selected pattern template |
+| “что значит emoji X?” / “обновим emoji notation” | `Emoji Notation Map.md` | none or docs update | owner file | Emoji meaning / update routing |
+| “создай обещание” / “обнови обещание” | relevant day file, `Current Plan State.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md`, `Use Day File Workflow.md` | day file | Updated Active Promises or missing requirement |
+| “химия не совпадает” / “не хочется” / “тянет не туда” | relevant day file, `Real Reward Work Loop Workflow.md`, `Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md` | maybe day file | Real-reward correction + Default Daily Template Pack |
+| “это по курсу?” | `Current Plan State.md`, `Work Rails Principles.md` | `Check Course Alignment Workflow.md` | none or relevant day file if logging result | K rating / justification |
+| “обновим текущий план” / “сейчас главное X” | `Current Plan State.md`, relevant day file if day-state involved | `Update Current Plan Workflow.md` | `Current Plan State.md` | Updated plan/focus summary + Default Daily Template Pack |
+| “это отложенная задача / идея / потом” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Deferred note |
+| “закрываем старый baseline / 35 / 70” | relevant day file, `Work Rails Principles.md`, `Support Score Guide.md` | `Use Day File Workflow.md` | maybe day file | Work Score interpretation; Support Score stays separate |
 
 ## Commands
 
-`/start-day` = start/update day state.
+`/start-day <YYYY-MM-DD>` = create/open/update date-based day file.
 
-`/s` = log session.
+`/s <YYYY-MM-DD> ...` = log work session to date-based day file.
 
-`/align` = check course alignment.
+`/support <YYYY-MM-DD> ...` = add support fact to date-based day file.
 
-`/idea` = add to Deferred and Ideas Notes.
+`/support-review <YYYY-MM-DD>` = calculate support score for the day.
 
-`/cv` = log possible Course Violation.
+`/close-day <YYYY-MM-DD>` = close day file.
 
-`/patterns` = show full templates for active point-6 patterns: all Fundamental score patterns + Situational patterns marked frequent.
+`/patterns` = show full templates for active point-6 patterns.
 
-`/pattern <name>` = show one selected full pattern template from `Workflows/Real Reward Pattern Playbook.md`.
+`/pattern <name>` = show one selected full pattern template.
 
-## Default output contract
+## Date rule
 
-For normal planning/state/session-control answers, after the normal response about what was done, return the Default Daily Template Pack:
+AI must not infer current day automatically.
 
-1. Mnemonic Emoji Table.
-2. Compact Planning State Output.
+Use the date provided by the user or the active conversation day date established by the user.
 
-This applies especially after updates to:
+If no date is available for a day-state update, ask for the date.
 
-- `Current Plan State.md`;
-- `Today State.md`;
-- `Session Log.md`;
-- Active Promises;
-- day goal / Desired / Undesired;
-- current focus / global goals / active directions.
+## Support rule
 
-Do not output only a prose summary or commit hash after a planning file update.
+Support Facts are collected during the day.
 
-Do not render full Dashboard Core by default.
+Support Score is calculated at day close / next morning.
 
-Full Dashboard Core is rendered only on explicit dashboard request.
-
-## Narrow-output exception
-
-AI may omit the Default Daily Template Pack only when the user explicitly asks for a short answer, asks for a narrow technical/repo/file check, asks for an archive/package, or when the action is pure routing with no planning-state relevance.
-
-## Routing rule
-
-If information is stable and has an owner, update the owner file.
-
-If information is unstable, deferred, or an open scenario, put it in `Deferred and Ideas Notes.md`.
-
-If no owner exists, check `Responsibility Map.md`.
-
-## Scoring notation
-
-Use D/F/K/P.
-
-Do not use old V/Q/C/L notation.
+Support Score never replaces Work Score and never closes 35 / 70.
 
 ## Output layers
 
-### Full Dashboard Core
+Full Dashboard Core owner: `Templates/Default Dashboard Template.md`
 
-Owner: `Templates/Default Dashboard Template.md`
+Emoji notation owner: `Emoji Notation Map.md`
 
-Use it for rendered Dashboard Core, Mnemonic Emoji Table, 🎯Рез Details, 🧵📜>🧪Обещ Details, and 📊Скор Details.
+Compact Planning State Output owner: `Templates/Planning State Output Template.md`
 
-Do not reconstruct dashboard from memory or from `Work Rails Principles.md`.
+Day files owner: `Days/YYYY/YYYY-MM-DD.md`, created from `Templates/Day File Template.md`
 
-Old dashboard variants without `Real Fun vs Stimulation`, `стимуляция соперничает с реально хорошими вещами`, `Desired prediction`, `Real Pain vs Chemistry`, `Undesired prediction`, `Chem vs Promise`, `Fire / Wood`, `не разжигать химикаты/стимулы`, `химикаты: осознать и дать догореть`, `стимулы: переключить на нужные стимулы`, `short-distance race / 📊Скор Boost`, `Core D/F/K/P`, `Tempo`, `Guard`, and `Boost` are stale.
+Support facts layout owner: `Templates/Support Facts Table Template.md`
 
-Full Dashboard Core is not a default output block.
+Support score rules owner: `Support Score Guide.md`
 
-Mnemonic Emoji Table is the default lightweight dashboard memory layer.
+Support review workflow owner: `Workflows/Support Score Review Workflow.md`
 
-### Emoji notation
-
-Owner: `Emoji Notation Map.md`
-
-Use it for explicit emoji notation agreements.
-
-Do not reconstruct emoji notation from memory when the meaning has an owner.
-
-`🧲⚡` = stimulus pull / easy stimulation.
-
-`🚂🛤️` = rails / automatic rails.
-
-Bare `🛤️` = course / direction / relation to current course.
-
-### Compact Planning State Output
-
-Owner: `Templates/Planning State Output Template.md`
-
-Use it for exact compact state structure, including Point 6 compact score-check block.
-
-### Real Reward Work Loop
-
-Owner: `Workflows/Real Reward Work Loop Workflow.md`
-
-Use it when the user needs the action loop for real reward vs empty stimulation/chemistry, needed-stimulus redirect, promise when needed, and short-distance D/F/K/P self-competition.
-
-Do not duplicate that workflow in this router.
-
-### Real Reward Pattern Playbook
-
-Owner: `Workflows/Real Reward Pattern Playbook.md`
-
-Use it for full pattern templates and point-6 active score patterns.
-
-/patterns shows full templates for active point-6 patterns:
-
-- all Fundamental score patterns;
-- Situational patterns marked `Frequency: frequent`.
-
-/pattern <name> shows one selected pattern.
-
-Do not treat the playbook as log, state, rendered output, or principles.
-
-### Start-day missing input
-
-Owner: `Workflows/Start Day Workflow.md`
-
-At day start, missing target / Desired / Undesired is valid state.
-
-AI should surface missing input and direct the user to define it, not fabricate a default external work target or promise.
-
-Do not create Active Promises by default.
-
-Use `Examples/Start Day Missing Input Example.md` as reference.
-
-### Principles
-
-Owner: `Work Rails Principles.md`
-
-Use it for meaning and principles, not rendered structures.
-
-### Examples
-
-Owner: `Examples/*.md`
-
-Examples show rendered reference output only.
-
-If examples conflict with templates, templates win.
-
-Do not confuse these layers.
+Examples owner: `Examples/*.md`

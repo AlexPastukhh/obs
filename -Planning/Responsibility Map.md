@@ -20,22 +20,34 @@ Create a new file only when there is a new durable responsibility.
 | `Responsibility Map.md` | file ownership |
 | `Documentation Principles.md` | file types and documentation rules |
 | `Current Plan State.md` | flexible current plan, focus, tasks, rough schedule, background recovery goal, global goals / active directions |
-| `Today State.md` | active day state: compact Result Tracking, Active Promises, Finished Sessions, notes |
-| `Session Log.md` | factual session/event/day-summary history; may store flags when useful |
+| `Days/README.md` | date-based day file storage, naming, and active/completed day-file rule |
+| `Days/YYYY/YYYY-MM-DD.md` | concrete day record for one date; owns that date's Result Tracking, Active Promises, Finished Sessions, Work Score Summary, Support Facts, Support Score Review, Final Day Summary, and Notes |
+| `Support Score Guide.md` | rules for approximate support scoring; max 10, category max 2, sleep min -5/max 2, AI participation, and separation from Work Score |
+| `Today State.md` | legacy pointer only; replaced by date-based day files |
+| `Session Log.md` | legacy / optional index; detailed sessions and day summaries live in date-based day files |
 | `Work Rails Principles.md` | meaning and principles only; does not own rendered dashboard or compact state tables |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
 | `Emoji Notation Map.md` | explicit emoji notation agreements used across planning docs; prevents notation drift; not a full glossary and not owner of dashboard layout |
-| `Templates/Planning State Output Template.md` | only source of truth for compact Planning State Output structure, including Result Tracking, global-goals snapshot inside Result Tracking, Point 6 compact score-check block, Active Promises, Finished Sessions, missing-field format, and no-promises format |
-| `Templates/Today State Template.md` | skeleton for active day state; starts with missing fields, global-goals snapshot placeholder, and no active promises unless user provided enough input |
-| `Templates/Default Dashboard Template.md` | only source of truth for full Dashboard Core, Mnemonic Emoji Table, 🎯Рез Details, 🧵📜>🧪Обещ Details, and 📊Скор Details; full Dashboard Core is rendered only on explicit request, Mnemonic Emoji Table is used by default |
+| `Templates/Day File Template.md` | reusable skeleton for creating new date-based day files |
+| `Templates/Planning State Output Template.md` | compact Planning State Output structure, including Result Tracking, Point 6, Active Promises, Finished Sessions, and optional Support Facts when relevant |
+| `Templates/Support Facts Table Template.md` | reusable table structure for between-session/support facts; no scoring during the day |
+| `Templates/Support Score Review Template.md` | reusable layout for day close / next-morning support review |
+| `Templates/Today State Template.md` | legacy template; replaced by `Templates/Day File Template.md` |
+| `Templates/Default Dashboard Template.md` | source of truth for full Dashboard Core and Mnemonic Emoji Table |
+| `Templates/Session Log Entry Template.md` | legacy/general entry skeleton; date-based day files own detailed daily records |
 | `Examples/*.md` | rendered reference outputs only; templates win if conflict exists |
-| `Examples/Start Day Missing Input Example.md` | example of `/start-day` when target / Desired / Undesired / promises are missing; shows mnemonic + compact state, not full dashboard by default |
-| `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using mnemonic and compact planning state |
-| `Workflows/Start Day Workflow.md` | how to start/update day state, including missing-input handling, global goals inside Result Tracking, and no default promise creation |
+| `Examples/Start Day Missing Input Example.md` | example of starting a date-based day file when target / Desired / Undesired / promises are missing |
+| `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using mnemonic and compact planning state from a day file |
+| `Examples/Support Score Day Examples.md` | curated support-score calibration examples; not factual complete log |
+| `Workflows/Use Day File Workflow.md` | how to resolve, create, read, and update date-based day files |
+| `Workflows/Support Score Review Workflow.md` | how to calculate previous-day / day-close Support Score from support facts |
+| `Workflows/Start Day Workflow.md` | how to start/update a date-based day file, including missing-input handling and no default promise creation |
+| `Workflows/Log Session Workflow.md` | how to log work sessions into date-based day files and update Work Score Summary |
+| `Workflows/End Day Workflow.md` | how to close date-based day files and write final day summary/support review |
 | `Workflows/Use Dashboard Workflow.md` | behavior for combining mnemonic + compact state; source precedence for full dashboard and mnemonic |
-| `Workflows/Real Reward Work Loop Workflow.md` | core personal work loop: real reward vs empty stimulation/chemistry, attaching needed stimuli, handling chemistry/stimulation, promises when needed, and short-distance D/F/K/P self-competition with active score patterns |
-| `Workflows/Real Reward Pattern Playbook.md` | score-relevant behavioral patterns for Real Reward Work Loop; owns full pattern templates, emoji labels, Fundamental/Situational/Frequent categories, including frequent Situational patterns that are included in point 6 by default; not a log, not rendered output, not state |
-| `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row; must not invent promises without enough current material |
+| `Workflows/Real Reward Work Loop Workflow.md` | core work loop: real reward vs empty stimulation/chemistry and short-distance D/F/K/P race |
+| `Workflows/Real Reward Pattern Playbook.md` | score-relevant behavioral patterns for Real Reward Work Loop |
+| `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row |
 | `Workflows/Update Current Plan Workflow.md` | how to update current/global plan and return mnemonic + compact planning state by default |
 | `Workflows/*.md` | algorithms |
 | `Templates/*.md` | skeletons |
@@ -45,6 +57,8 @@ Create a new file only when there is a new durable responsibility.
 State = current active situation.
 
 Log = accumulated facts.
+
+Day file = factual state/history for one concrete date.
 
 Notes = incubator for deferred, unstable, or not-yet-owned information.
 
@@ -57,5 +71,3 @@ Examples = rendered reference outputs. They are not state, not templates, and no
 ## New file rule
 
 If it is not clearly a new responsibility, put it into `Deferred and Ideas Notes.md`.
-
-A notes file may have a template when repeated structure is useful.

@@ -1,5 +1,13 @@
 # Session Log Entry Template
 
+Status: legacy / general reference.
+
+Detailed sessions and day summaries now live in date-based day files:
+
+`Days/YYYY/YYYY-MM-DD.md`
+
+Use `Templates/Day File Template.md` for current day records.
+
 ## SESSION
 
 Time:
@@ -50,15 +58,21 @@ Notes:
 
 Date:
 
-Sessions:
+Day file:
 
-High-focus sessions:
+Work Score:
 
-Points:
+Support Score:
+
+Old baseline:
+
+Full closure:
 
 Main course movement:
 
 Goal outcome:
+
+Support interpretation:
 
 CV / SD / EX:
 

@@ -1,27 +1,19 @@
-# Today State — YYYY-MM-DD
+# Today State Template
 
-Status: active day state.
+Status: legacy.
 
-## 🎯 Result Tracking
+Replaced by:
 
-| Поле | Значение |
-|---|---|
-| 🎯 Цель дня | ⚠️ не задана — нужно выбрать цель дня |
-| 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую желаемую цель |
-| 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
-| 🗺️ Ближайшие глобальные цели | ⚠️ не подтянуты — нужно прочитать / обновить Current Plan State.md |
+`Templates/Day File Template.md`
 
-## 🧵📜>🧪 Active Promises
+Active and completed day records now live in:
 
-Нет активных promises.
+`Days/YYYY/YYYY-MM-DD.md`
 
-⚠️ Promise не создаётся автоматически. Сначала нужно определить цель / Desired / текущее ощущение / аналитическое предсказание.
+AI must not infer current day from this template.
 
-## 🧾 Finished Sessions
+User provides the date or establishes an active conversation day date.
 
-| # | Session | D/F/K/P | Points | Progress Signal | Result |
-|---|---|---|---:|---|---|
+Do not create new active day state from this file.
 
-## Notes
-
--
+Use `Workflows/Use Day File Workflow.md` and `Templates/Day File Template.md` instead.

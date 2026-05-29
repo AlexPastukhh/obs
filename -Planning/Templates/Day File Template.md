@@ -1,0 +1,168 @@
+# Day — YYYY-MM-DD
+
+Status: active
+
+Day file source of truth:
+This file owns the concrete state, sessions, support facts, and final review for this date.
+
+AI must not infer current day automatically.
+
+User provides the date or establishes an active conversation day date.
+
+If this file does not exist, create it from `Templates/Day File Template.md`.
+
+Reusable owners:
+
+- Compact planning output structure: `Templates/Planning State Output Template.md`
+- Support facts table: `Templates/Support Facts Table Template.md`
+- Support score review layout: `Templates/Support Score Review Template.md`
+- Support score rules: `Support Score Guide.md`
+- Emoji notation: `Emoji Notation Map.md`
+
+---
+
+## 🎯 Result Tracking
+
+| Поле | Значение |
+|---|---|
+| 🎯 Цель дня | ⚠️ не задана — нужно выбрать цель дня |
+| 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую желаемую цель |
+| 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
+| 🗺️ Ближайшие глобальные цели | ⚠️ не подтянуты — нужно прочитать / обновить Current Plan State.md |
+
+---
+
+## 🏁📊 Point 6 — Short D/F/K/P Race
+
+| Влияет на | Active score patterns |
+|---|---|
+| ✅D | 🎯📈≠🎭🔁 Result Tracking over process<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
+| 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
+| 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| 🔎 Full patterns | `/patterns` |
+
+---
+
+## 🧵📜>🧪 Active Promises
+
+Нет активных promises.
+
+⚠️ Promise не создаётся автоматически. Сначала нужно определить цель / Desired / текущее ощущение / аналитическое предсказание.
+
+---
+
+## 🧾 Finished Sessions
+
+| # | Time | Session | D/F/K/P | Points | Progress Signal | Result |
+|---|---|---|---|---:|---|---|
+
+### Work Score Summary
+
+| Поле | Значение |
+|---|---|
+| Work Points | 0 |
+| Old baseline | 0 / 35 |
+| Full closure | 0 / 70 |
+| Main course movement | — |
+| Progress | — |
+
+Notes:
+
+35 points = close old 4y2m baseline.
+
+70 points = close old baseline + current day.
+
+Work Score is counted only from Finished Sessions.
+
+Support Score never closes 35/70 work baselines.
+
+---
+
+## 🧯 Between-session / Support Facts
+
+During the day, collect facts only.
+
+Do not calculate Support Score during the day.
+
+| # | Time / After | Type | Fact | Effect on next work |
+|---|---|---|---|---|
+| 1 |  |  |  |  |
+
+Types:
+
+| Type | Meaning |
+|---|---|
+| 🛌 sleep / sleep attempt | сон или честная попытка заснуть |
+| 🍽️ food | еда / переедание / не объелся |
+| 🏃 movement / sport | движение, спорт, прогулка |
+| 🧲⚡ stimulus control | стимулы, залипание, не разжёг стимулы |
+| 🔋 recovery / readiness | восстановление, готовность продолжать |
+| 🔁 transition | переход между сессиями |
+| 🩺 health | доп. время для здоровья |
+| 🧩 other | другое |
+
+---
+
+## 🌙 Day Close / Next-Morning Support Review
+
+Status: not calculated yet.
+
+Support Score is calculated only at day close / next-morning review from support facts.
+
+### Support Score
+
+| Категория | Score | Reason |
+|---|---:|---|
+| 🛌 Sleep / sleep attempt |  |  |
+| 🍽️ Food / no overload |  |  |
+| 🏃 Movement / sport |  |  |
+| 🧲⚡ Stimulus control |  |  |
+| 🔋 Recovery / readiness |  |  |
+
+Support Score: not calculated
+
+Rules:
+
+| Rule | Value |
+|---|---|
+| Max Support Score | 10 |
+| Category max | 2 |
+| Sleep max | 2 |
+| Sleep min | -5 |
+| When calculated | Day close / next morning |
+| During day | Collect facts only |
+| AI role | AI may participate actively in approximate support scoring |
+| Relation to Work Score | Support Score does not replace Work Score |
+
+### Support Interpretation
+
+not calculated
+
+### Support Facts Used
+
+| Fact | Effect |
+|---|---|
+
+---
+
+## 🧾 Final Day Summary
+
+Status: not closed.
+
+| Поле | Значение |
+|---|---|
+| Work Score | not closed |
+| Support Score | not calculated |
+| Old baseline | not closed |
+| Full closure | not closed |
+| Day class | active |
+| Main result | — |
+| Main risk / lesson | — |
+| Next-day note | — |
+
+---
+
+## Notes
+
+-
