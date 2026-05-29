@@ -19,29 +19,46 @@ Model:
 ## Current focus
 
 - Use `-Planning` as the active planning/control system for current work.
-- Primary current course: keep the loop `Current Plan -> Today State -> Session -> Session Log -> D/F/K/P score -> Progress Signal -> Next Action` working in real sessions.
-- Immediate focus: finish initializing `Current Plan State.md` and `Today State.md`, then start one concrete work session instead of expanding the system.
+- Start / run the documenting system and AI-assisted work system.
+- Re-start theory repetition and learning through the AI system.
+- Keep diploma completion and defense path visible as major current global work.
+- Clarify work/career readiness and what is needed to be employable.
 
 ## Current plans / tasks
+
+Global goals / active directions from 2026-05-29:
+
+1. Launch the planning system and the documenting + AI-work system.
+2. Restart repeating and learning theory with the AI system; ideally begin broader education across multiple directions.
+3. Remember / recover what was forgotten and what is worth remembering now, especially what should not be postponed to later repetitions.
+4. Finish the diploma.
+5. Clarify the diploma and defense path: what remains, what the process is, and what actions are needed.
+6. Figure out `вб` and `б`; understand what to do about `з` in general.
+7. Start figuring out `з` and `ла`.
+8. Prepare for work: understand whether I can be hired and what is needed.
+9. Do projects, especially projects that use theory I already know.
+
+Planning / operating tasks:
 
 - Keep planning lightweight and use the existing files/responsibilities.
 - After each session, log D/F/K/P, points, flags, progress signal, and one concrete next action.
 - Route ideas, deferred tasks, open scenarios, and future workflow thoughts to `Deferred and Ideas Notes.md`.
-- During the first real session, clarify the actual external project/result that should become the main course after setup.
+- Use day planning to choose a real current target from the global goals instead of treating the full list as today’s task.
 
 ## Rough schedule / deadlines
 
-- 2026-05-28: initialize `Current Plan State.md` and `Today State.md`; begin using the planning loop on a real next action.
+- 2026-05-29: global goals refreshed.
 - No external deadline captured yet.
 
 ## Important but not now
 
 - Designing future behavior algorithms or extra workflows.
 - Perfecting NDU math.
-- Expanding architecture beyond the first-batch scope.
+- Expanding architecture beyond the current planning/doc/AI-work setup.
+- Turning the full global goal list into a complex roadmap before choosing today’s concrete target.
 
 ## Notes
 
 - Branch: `ai-conspects-repetition-plan`.
-- This state is initialized from the user's current instruction and the existing planning docs.
-- Refine the main course after the first real logged session.
+- Abbreviations kept as provided: `вб`, `б`, `з`, `ла`.
+- Next day/session planning should select one concrete target from the global goals and define Desired / Undesired before creating an Active Promise.
