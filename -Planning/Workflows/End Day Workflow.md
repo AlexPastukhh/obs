@@ -18,16 +18,17 @@ Status: active workflow.
 3. Explain goal outcome using Desired / Undesired and Progress Signal from Finished Sessions.
 4. Note CV / SD / EX in `Session Log.md` only if relevant.
 5. Add day summary to `Session Log.md`.
-6. Render Default Dashboard Core.
-7. Render Mnemonic Emoji Table.
-8. Render final compact Planning State Output:
+6. Render Mnemonic Emoji Table.
+7. Render final compact Planning State Output:
    - 🎯 Result Tracking;
    - 🧵📜>🧪 Active Promises;
    - 🧾 Finished Sessions.
+8. Render full Dashboard Core only if the user explicitly asks for the full dashboard.
 
 ## Output
 
 - Day summary entry;
-- Default Dashboard Core;
 - Mnemonic Emoji Table;
 - final compact Planning State Output.
+
+Do not render full Dashboard Core by default.

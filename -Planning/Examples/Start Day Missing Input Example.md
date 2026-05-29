@@ -18,16 +18,23 @@ Purpose: show what `/start-day` should look like when the user starts the day bu
 - User did not define Undesired.
 - User did not provide current felt pull / chemistry.
 - User did not ask to create a specific Active Promise.
+- `Current Plan State.md` contains global goals / active directions.
 
 ## Output note
 
 In actual planning mode, render:
 
-1. Default Dashboard Core from `Templates/Default Dashboard Template.md`.
+1. Normal update / missing-input note.
 2. Mnemonic Emoji Table from `Templates/Default Dashboard Template.md`.
 3. Compact Planning State Output below.
 
-This example does not duplicate the dashboard table because `Templates/Default Dashboard Template.md` owns the rendered dashboard.
+This example does not duplicate the full Dashboard Core because `Templates/Default Dashboard Template.md` owns the rendered dashboard.
+
+Full Dashboard Core is rendered only on explicit dashboard request.
+
+## Mnemonic Emoji Table
+
+Use the current Mnemonic Emoji Table from `Templates/Default Dashboard Template.md`.
 
 ## Compact Planning State Output
 
@@ -38,6 +45,7 @@ This example does not duplicate the dashboard table because `Templates/Default D
 | 🎯 Цель дня | ⚠️ не задана — нужно выбрать цель дня |
 | 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую желаемую цель |
 | 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
+| 🗺️ Ближайшие глобальные цели | 1. запустить planning/doc/AI-work систему;<br>2. снова начать повторять и учить теорию;<br>3. вспомнить важное забытое;<br>4. доделать диплом;<br>... |
 
 ### 🧵📜>🧪 Active Promises
 
@@ -71,3 +79,5 @@ The next planning task is to define:
 4. Whether an Active Promise is needed after the target is known.
 
 Do not replace these missing inputs with a generic external-work target.
+
+Do not render full Dashboard Core unless the user explicitly asks for it.

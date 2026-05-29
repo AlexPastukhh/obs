@@ -26,12 +26,12 @@ Status: active workflow.
 8. Add entry to `Session Log.md`.
 9. Add/update row in `Finished Sessions` in `Today State.md`.
 10. Refresh Active Promises if the session changed goals, progress, chemistry, or the short-distance action.
-11. Render Default Dashboard Core using `Templates/Default Dashboard Template.md`.
-12. Render Mnemonic Emoji Table attached to `Templates/Default Dashboard Template.md`.
-13. Render compact Planning State Output:
+11. Render Mnemonic Emoji Table using `Templates/Default Dashboard Template.md`.
+12. Render compact Planning State Output:
     - 🎯 Result Tracking;
     - 🧵📜>🧪 Active Promises;
     - 🧾 Finished Sessions.
+13. Render full Dashboard Core only if the user explicitly asks for the full dashboard.
 
 ## Explicit score handling
 
@@ -69,30 +69,31 @@ After every session/event log, AI must return:
    - D/F/K/P;
    - points.
 
-2. Default Dashboard Core:
-   - `🎯Рез -> 🧵📜>🧪Обещ -> 📊Скор -> 🧲ЗИ`.
+2. Result progress:
+   - closer / slightly closer / not closer / misleading progress;
+   - one short reason.
 
 3. Mnemonic Emoji Table:
-   - emoji-only table attached to the dashboard.
+   - from `Templates/Default Dashboard Template.md`.
 
 4. Updated compact Planning State Output:
    - 🎯 Result Tracking;
    - 🧵📜>🧪 Active Promises;
    - 🧾 Finished Sessions.
 
-5. Result progress:
-   - closer / slightly closer / not closer / misleading progress;
-   - one short reason.
+Do not render full Dashboard Core by default.
+
+Render full Dashboard Core only on explicit dashboard request.
 
 Do not respond with only “logged” or “open file X”.
 
-The user should immediately see the score, dashboard, compact state, active promise, and finished sessions.
+The user should immediately see the score, result progress, mnemonic, compact state, active promise if any, and finished sessions.
 
 ## Output
 
 - session/event entry;
 - updated Finished Sessions;
-- Default Dashboard Core;
+- logged score;
+- result progress;
 - Mnemonic Emoji Table;
-- compact Planning State Output;
-- result progress.
+- compact Planning State Output.

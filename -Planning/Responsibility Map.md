@@ -19,20 +19,21 @@ Create a new file only when there is a new durable responsibility.
 | `Use Case Map.md` | routing only; points to owners instead of owning schemas |
 | `Responsibility Map.md` | file ownership |
 | `Documentation Principles.md` | file types and documentation rules |
-| `Current Plan State.md` | flexible current plan, focus, tasks, rough schedule, background recovery goal |
+| `Current Plan State.md` | flexible current plan, focus, tasks, rough schedule, background recovery goal, global goals / active directions |
 | `Today State.md` | active day state: compact Result Tracking, Active Promises, Finished Sessions, notes |
 | `Session Log.md` | factual session/event/day-summary history; may store flags when useful |
 | `Work Rails Principles.md` | meaning and principles only; does not own rendered dashboard or compact state tables |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
-| `Templates/Planning State Output Template.md` | only source of truth for compact Planning State Output structure, including missing-field format and no-promises format |
-| `Templates/Today State Template.md` | skeleton for active day state; starts with missing fields and no active promises unless user provided enough input |
-| `Templates/Default Dashboard Template.md` | only source of truth for rendered Dashboard Core, Mnemonic Emoji Table, 🎯Рез Details, 🧵📜>🧪Обещ Details, and 📊Скор Details |
+| `Templates/Planning State Output Template.md` | only source of truth for compact Planning State Output structure, including Result Tracking, global-goals snapshot inside Result Tracking, Active Promises, Finished Sessions, missing-field format, and no-promises format |
+| `Templates/Today State Template.md` | skeleton for active day state; starts with missing fields, global-goals snapshot placeholder, and no active promises unless user provided enough input |
+| `Templates/Default Dashboard Template.md` | only source of truth for full Dashboard Core, Mnemonic Emoji Table, 🎯Рез Details, 🧵📜>🧪Обещ Details, and 📊Скор Details; full Dashboard Core is rendered only on explicit request, Mnemonic Emoji Table is used by default |
 | `Examples/*.md` | rendered reference outputs only; templates win if conflict exists |
-| `Examples/Start Day Missing Input Example.md` | example of `/start-day` when target / Desired / Undesired / promises are missing |
-| `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using dashboard, mnemonic, and compact planning state |
-| `Workflows/Start Day Workflow.md` | how to start/update day state, including missing-input handling and no default promise creation |
-| `Workflows/Use Dashboard Workflow.md` | behavior for combining dashboard + compact state; source precedence for rendered output |
+| `Examples/Start Day Missing Input Example.md` | example of `/start-day` when target / Desired / Undesired / promises are missing; shows mnemonic + compact state, not full dashboard by default |
+| `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using mnemonic and compact planning state |
+| `Workflows/Start Day Workflow.md` | how to start/update day state, including missing-input handling, global goals inside Result Tracking, and no default promise creation |
+| `Workflows/Use Dashboard Workflow.md` | behavior for combining mnemonic + compact state; source precedence for full dashboard and mnemonic |
 | `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row; must not invent promises without enough current material |
+| `Workflows/Update Current Plan Workflow.md` | how to update current/global plan and return mnemonic + compact planning state by default |
 | `Workflows/*.md` | algorithms |
 | `Templates/*.md` | skeletons |
 

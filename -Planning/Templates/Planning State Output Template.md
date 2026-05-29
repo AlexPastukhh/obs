@@ -13,6 +13,7 @@ AI uses this template to show only the maintained planning state that matters fo
 | 🎯 Цель дня | `<day goal / broad daily target>` |
 | 🌅 Desired | `<current meaningful desired goal/result the user wants to get now>` |
 | 🌑 Undesired | `<undesired state / bad outcome the user refuses>` |
+| 🗺️ Ближайшие глобальные цели | `<3–5 nearest/relevant global goals from Current Plan State.md, then ... if more exist>` |
 
 If a field is missing, do not invent it.
 
@@ -23,6 +24,20 @@ Use:
 | 🎯 Цель дня | ⚠️ не задана — нужно выбрать цель дня |
 | 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую желаемую цель |
 | 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
+| 🗺️ Ближайшие глобальные цели | ⚠️ не подтянуты — нужно прочитать / обновить Current Plan State.md |
+
+Use `<br>` line breaks or short list formatting inside table cells when values contain multiple items.
+
+Do not collapse day goal / Desired / Undesired / global goals into one long sentence.
+
+Example formatting:
+
+| Поле | Значение |
+|---|---|
+| 🎯 Цель дня | - закончить систему документирования;<br>- начать работать с planning-системой;<br>- разобраться, как снова повторять и учиться |
+| 🌅 Desired | - документирование закончено;<br>- всё максимально просто и ясно;<br>- есть понимание движения дальше;<br>- веду планирование лучше, чем когда-либо |
+| 🌑 Undesired | - рассеянный фокус;<br>- нет реальной пользы от действий |
+| 🗺️ Ближайшие глобальные цели | 1. запустить planning/doc/AI-work систему;<br>2. снова начать повторять и учить теорию;<br>3. вспомнить важное забытое;<br>4. доделать диплом;<br>... |
 
 ## 🧵📜>🧪 Active Promises
 
@@ -64,9 +79,16 @@ Result Tracking contains only:
 
 - 🎯 Цель дня;
 - 🌅 Desired;
-- 🌑 Undesired.
+- 🌑 Undesired;
+- 🗺️ Ближайшие глобальные цели.
 
 Desired means the current meaningful desired goal/result the user wants to get now.
+
+Global goals are not a separate default block.
+
+Global goals live inside 🎯 Result Tracking as a compact snapshot.
+
+Use 3–5 nearest/relevant global goals from `Current Plan State.md`, preferably numbered, then `...` when more goals exist.
 
 Concrete next/short action is not a separate Planning State Output block and not a Result Tracking field.
 
@@ -78,7 +100,7 @@ Progress is represented by Finished Sessions, not by a separate Progress counter
 
 Active promises are represented as rows in the Active Promises table only when they actually exist.
 
-Global/background context is not shown as a default block. Use it only when directly relevant.
+Global/background context is not shown as a separate default block. A compact global-goals snapshot may be shown inside 🎯 Result Tracking.
 
 Flags may exist in `Session Log.md`, but they are not shown in default Planning State Output.
 
