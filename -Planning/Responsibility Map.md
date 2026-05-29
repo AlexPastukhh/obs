@@ -1,4 +1,4 @@
-﻿# Planning Responsibility Map
+# Planning Responsibility Map
 
 Status: active responsibility map.
 
@@ -24,12 +24,15 @@ Create a new file only when there is a new durable responsibility.
 | `Session Log.md` | factual session/event/day-summary history; may store flags when useful |
 | `Work Rails Principles.md` | meaning and principles only; does not own rendered dashboard or compact state tables |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
-| `Templates/Planning State Output Template.md` | only source of truth for compact Planning State Output structure |
+| `Templates/Planning State Output Template.md` | only source of truth for compact Planning State Output structure, including missing-field format and no-promises format |
+| `Templates/Today State Template.md` | skeleton for active day state; starts with missing fields and no active promises unless user provided enough input |
 | `Templates/Default Dashboard Template.md` | only source of truth for rendered Dashboard Core, Mnemonic Emoji Table, 🎯Рез Details, 🧵📜>🧪Обещ Details, and 📊Скор Details |
 | `Examples/*.md` | rendered reference outputs only; templates win if conflict exists |
+| `Examples/Start Day Missing Input Example.md` | example of `/start-day` when target / Desired / Undesired / promises are missing |
 | `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using dashboard, mnemonic, and compact planning state |
+| `Workflows/Start Day Workflow.md` | how to start/update day state, including missing-input handling and no default promise creation |
 | `Workflows/Use Dashboard Workflow.md` | behavior for combining dashboard + compact state; source precedence for rendered output |
-| `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row |
+| `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row; must not invent promises without enough current material |
 | `Workflows/*.md` | algorithms |
 | `Templates/*.md` | skeletons |
 

@@ -14,17 +14,41 @@ AI uses this template to show only the maintained planning state that matters fo
 | 🌅 Desired | `<current meaningful desired goal/result the user wants to get now>` |
 | 🌑 Undesired | `<undesired state / bad outcome the user refuses>` |
 
+If a field is missing, do not invent it.
+
+Use:
+
+| Поле | Значение |
+|---|---|
+| 🎯 Цель дня | ⚠️ не задана — нужно выбрать цель дня |
+| 🌅 Desired | ⚠️ не задан — нужно определить текущую значимую желаемую цель |
+| 🌑 Undesired | ⚠️ не задан — нужно определить реальную плохую цену / слив |
+
 ## 🧵📜>🧪 Active Promises
+
+When active promises exist:
 
 | # | 🧪 Сейчас чувствую / тянет | 📐 Аналитически выведено | 🧵📜 Пришить как истину | 🌑 Не покупать | 🏁 Отрезок |
 |---|---|---|---|---|---|
 | 1 | `<current feeling / pull / lack of pull>` | `<analytical prediction>` | `<what should replace current feeling as source of truth>` | `<false promise / drift lie>` | `<short-distance segment / concrete short action>` |
 
+If no active promises exist, do not invent rows.
+
+Use:
+
+Нет активных promises.
+
+⚠️ Promise не создаётся автоматически. Сначала нужно определить цель / Desired / текущее ощущение / аналитическое предсказание.
+
 ## 🧾 Finished Sessions
+
+When finished sessions exist:
 
 | # | Session | D/F/K/P | Points | Progress Signal | Result |
 |---|---|---|---:|---|---|
 | 1 | `<finished session>` | `<D# F# K# P#>` | `<points>` | `<progress signal>` | `<what changed>` |
+
+If no finished sessions exist, use a header-only table or `none yet`; do not fabricate sessions.
 
 ## Rule
 
@@ -52,10 +76,24 @@ Progress Signal is not a Result Tracking field.
 
 Progress is represented by Finished Sessions, not by a separate Progress counters block.
 
-Active promises are represented as rows in the Active Promises table.
+Active promises are represented as rows in the Active Promises table only when they actually exist.
 
 Global/background context is not shown as a default block. Use it only when directly relevant.
 
 Flags may exist in `Session Log.md`, but they are not shown in default Planning State Output.
 
 Do not force the user to memorize this template. AI maintains and fills it.
+
+## No-fabrication rule
+
+AI must not convert lack of input into invented planning content.
+
+Missing target is not a target.
+
+Missing Desired is not a Desired.
+
+Missing promise is not a promise.
+
+At start-day, if input is missing, surface the missing fields.
+
+The user should define them as part of starting the day.
