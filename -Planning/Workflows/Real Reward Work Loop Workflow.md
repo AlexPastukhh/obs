@@ -6,7 +6,7 @@ Purpose: turn work from empty effort / stimulation chase into real reward-direct
 
 This workflow owns the user's core work loop:
 
-Real reward -> separate from empty stimulation/chemistry -> attach needed stimulation -> handle chemistry/stimulation -> promise when needed -> short-distance D/F/K/P race -> log session.
+Real reward -> separate from empty stimulation/chemistry -> attach needed stimulation -> handle chemistry/stimulation -> promise when needed -> short-distance D/F/K/P race with active score patterns -> log session.
 
 ## Core formula
 
@@ -18,7 +18,7 @@ Real reward -> separate from empty stimulation/chemistry -> attach needed stimul
 
 Стимулы чаще надо перенаправить на нужный результат.
 
-Короткая гонка по D/F/K/P превращает энергию в полезное действие.
+Короткая гонка по D/F/K/P превращает энергию в полезное действие и тренирует будущие действия.
 
 ## Core loop
 
@@ -129,22 +129,69 @@ Real reward -> separate from empty stimulation/chemistry -> attach needed stimul
 
    A promise is used when it must replace current chemistry as the source of truth.
 
-6. Race yourself on the short distance.
+6. Race yourself on the short distance with D/F/K/P to improve further actions.
 
    Use `📊Скор -> Boost`.
 
-   Win the next small segment by improving:
+   Use the short-distance race to beat the drifting / weaker / past version of yourself.
+
+   This race should improve:
 
    - ✅D: useful work actually done;
-   - ⚡F: focus / self-management;
-   - 🛤️K: relation to current course;
-   - 💎P: value left after the session.
+   - ⚡F: self-management, tempo, target control;
+   - 🛤️K: relation to current course / Desired / nearest goals;
+   - 💎P: value left after the session;
+   - 🧲 future inertia: what this action trains and makes more likely next.
 
-   The question is not “did I generally work?”.
+   The race is not only “move faster”.
 
-   The question is:
+   It is:
 
-   Did I win this short distance by producing better D/F/K/P than drift would have produced?
+   Produce better D/F/K/P than drift would have produced,
+   and train better future actions.
+
+   Use active score patterns as score-check criteria.
+
+   Active point-6 patterns are:
+
+   - all Fundamental score patterns;
+   - Situational patterns marked `Frequency: frequent`.
+
+   Non-frequent Situational patterns are used only when the user says the pattern happened, asks to evaluate it, or the current situation clearly matches it.
+
+   Current active score-check summary:
+
+   Affects D:
+
+   - Result Tracking over process;
+   - useful output, not small motor/thought movements.
+
+   Affects F:
+
+   - Short-distance self-competition, also affects D/K/P and future inertia;
+   - session frame / visible target;
+   - targeted stimuli / chemistry only;
+   - tempo without panic;
+   - wrong stimuli not fed.
+
+   Affects K:
+
+   - course / Desired / nearest goals connection;
+   - interesting/easy does not replace needed.
+
+   Affects P:
+
+   - value left after attention ends;
+   - artifact, structure, clarity, next action, removed blocker.
+
+   Frequent situational patterns currently included:
+
+   - Complex multi-level problem -> easy stimulation;
+   - Automatic rails but Result forgotten.
+
+   For full pattern templates, use:
+
+   `Workflows/Real Reward Pattern Playbook.md`
 
 7. Log finished session.
 
@@ -155,6 +202,24 @@ Real reward -> separate from empty stimulation/chemistry -> attach needed stimul
    - log Progress Signal;
    - update Finished Sessions;
    - decide the next short segment only if needed.
+
+## Pattern playbook
+
+For full score-pattern templates and situational/frequent patterns, use:
+
+`Workflows/Real Reward Pattern Playbook.md`
+
+The playbook is not a log and not rendered output.
+
+It stores:
+
+- Fundamental score patterns that are always active in point 6;
+- Situational patterns that are used only when the situation matches;
+- Situational patterns marked `Frequency: frequent`, which are included in point 6 by default while frequent.
+
+Use `/patterns` or “покажи паттерны пункта 6” to show the full templates for active point-6 patterns.
+
+Use `/pattern <name>` or “разверни паттерн X” to show one full pattern template.
 
 ## When to use this workflow
 

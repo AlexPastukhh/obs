@@ -32,7 +32,8 @@ Create a new file only when there is a new durable responsibility.
 | `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using mnemonic and compact planning state |
 | `Workflows/Start Day Workflow.md` | how to start/update day state, including missing-input handling, global goals inside Result Tracking, and no default promise creation |
 | `Workflows/Use Dashboard Workflow.md` | behavior for combining mnemonic + compact state; source precedence for full dashboard and mnemonic |
-| `Workflows/Real Reward Work Loop Workflow.md` | core personal work loop: real reward vs empty stimulation/chemistry, attaching needed stimuli, handling chemistry/stimulation, promises when needed, and short-distance D/F/K/P self-competition |
+| `Workflows/Real Reward Work Loop Workflow.md` | core personal work loop: real reward vs empty stimulation/chemistry, attaching needed stimuli, handling chemistry/stimulation, promises when needed, and short-distance D/F/K/P self-competition with active score patterns |
+| `Workflows/Real Reward Pattern Playbook.md` | score-relevant behavioral patterns for Real Reward Work Loop; stores Fundamental score patterns and Situational patterns, including frequent Situational patterns that are included in point 6 by default; not a log, not rendered output, not state |
 | `Workflows/Build Truth Promise Workflow.md` | how to create or refresh a stitched analytical promise and Active Promises row; must not invent promises without enough current material |
 | `Workflows/Update Current Plan Workflow.md` | how to update current/global plan and return mnemonic + compact planning state by default |
 | `Workflows/*.md` | algorithms |
