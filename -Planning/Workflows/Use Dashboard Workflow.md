@@ -36,6 +36,10 @@ A rendered dashboard is stale if it lacks:
 - Undesired prediction;
 - Chem vs Promise;
 - Fire / Wood;
+- `не разжигать химикаты/стимулы`;
+- `химикаты: осознать и дать догореть`;
+- `стимулы: переключить на нужные стимулы`;
+- short-distance race / `📊Скор -> Boost`;
 - Core D/F/K/P;
 - Tempo;
 - Guard;
@@ -74,7 +78,16 @@ Examples are references only.
      - identify real pain vs chemistry;
      - build Desired/Undesired as analytical predictions;
      - return to Result Tracking instead of process.
-   - 🧵📜>🧪Обещ = Chem vs Promise + Fire / Wood;
+   - 🧵📜>🧪Обещ = use promise over chemistry:
+     - do not treat chemistry as authority;
+     - use analytical promise;
+     - remember effect may appear after action;
+     - stitch promise as source of truth;
+     - do not ignite chemistry/stimulation;
+     - chemistry response: notice and wait until it burns out;
+     - stimulation response: switch to needed stimuli;
+     - for short race, use `📊Скор -> Boost`;
+     - remember wood is limited.
    - 📊Скор = Core D/F/K/P + Tempo + Guard + Boost;
    - 🧲ЗИ = notice where the magnet pulls and what happens to future actions.
 9. If the user is confused by `📊Скор`, explain:

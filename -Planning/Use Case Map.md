@@ -79,11 +79,11 @@ Do not use old V/Q/C/L notation.
 
 Owner: `Templates/Default Dashboard Template.md`
 
-Use it for rendered Dashboard Core, Mnemonic Emoji Table, and 📊Скор Details.
+Use it for rendered Dashboard Core, Mnemonic Emoji Table, 🎯Рез Details, 🧵📜>🧪Обещ Details, and 📊Скор Details.
 
 Do not reconstruct dashboard from memory or from `Work Rails Principles.md`.
 
-Old dashboard variants without `Chem vs Promise`, `Fire / Wood`, `Core D/F/K/P`, `Tempo`, `Guard`, and `Boost` are stale.
+Old dashboard variants without `Real Fun vs Stimulation`, `стимуляция соперничает с реально хорошими вещами`, `Desired prediction`, `Real Pain vs Chemistry`, `Undesired prediction`, `Chem vs Promise`, `Fire / Wood`, `не разжигать химикаты/стимулы`, `химикаты: осознать и дать догореть`, `стимулы: переключить на нужные стимулы`, `short-distance race / 📊Скор Boost`, `Core D/F/K/P`, `Tempo`, `Guard`, and `Boost` are stale.
 
 ### Compact Planning State Output
 

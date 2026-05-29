@@ -25,7 +25,7 @@ Create a new file only when there is a new durable responsibility.
 | `Work Rails Principles.md` | meaning and principles only; does not own rendered dashboard or compact state tables |
 | `Deferred and Ideas Notes.md` | deferred tasks, unstable ideas, future workflows, open/dangerous scenarios |
 | `Templates/Planning State Output Template.md` | only source of truth for compact Planning State Output structure |
-| `Templates/Default Dashboard Template.md` | only source of truth for rendered Dashboard Core, Mnemonic Emoji Table, and 📊Скор Details |
+| `Templates/Default Dashboard Template.md` | only source of truth for rendered Dashboard Core, Mnemonic Emoji Table, 🎯Рез Details, 🧵📜>🧪Обещ Details, and 📊Скор Details |
 | `Examples/*.md` | rendered reference outputs only; templates win if conflict exists |
 | `Examples/Midday Planning State Output Example.md` | example of default planning-mode output using dashboard, mnemonic, and compact planning state |
 | `Workflows/Use Dashboard Workflow.md` | behavior for combining dashboard + compact state; source precedence for rendered output |
@@ -52,4 +52,3 @@ Examples = rendered reference outputs. They are not state, not templates, and no
 If it is not clearly a new responsibility, put it into `Deferred and Ideas Notes.md`.
 
 A notes file may have a template when repeated structure is useful.
-
