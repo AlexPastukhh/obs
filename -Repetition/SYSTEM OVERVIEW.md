@@ -6,7 +6,7 @@ Purpose: explain how the whole `-Repetition` system works, not just where files 
 
 Use this file when a new AI chat or the user needs to understand the model of the system before doing concrete work.
 
-## 1. What this system is for
+## 1. What This System Is For
 
 `-Repetition` exists to manage studying/conspects/repetition work without modifying old sensitive source material.
 
@@ -24,7 +24,7 @@ The system has four main jobs:
 4. Help AI know where to put new information without making the docs chaotic.
 ```
 
-## 2. Core repetition model
+## 2. Core Repetition Model
 
 The core model is:
 
@@ -86,7 +86,7 @@ They record explicit one-time decisions, such as:
 
 Recovery decisions are not default behavior. They must be explicit.
 
-## 3. Processing creates repeat units
+## 3. Processing Creates Repeat Units
 
 When the user says they processed something, AI should treat that as a new repeat unit.
 
@@ -116,7 +116,7 @@ Use the workflow:
 -Repetition/Workflows/Process New Repeat Unit Workflow.md
 ```
 
-## 4. Visual conspects are not replaced by questions
+## 4. Visual Conspects Are Not Replaced By Questions
 
 Old visual conspects are valuable because they work like a spatial memory map / “memory palace”.
 
@@ -169,7 +169,7 @@ Use:
 
 For old chaotic Excalidraw/SVG/PDF/PNG conspects, AI output is draft until the user reviews the structure.
 
-## 6. Knowledge lookup model
+## 6. Knowledge Lookup Model
 
 The user may need to find information later by term, use case, vague memory or real-world problem.
 
@@ -244,7 +244,7 @@ Use:
 -Repetition/Templates/Further Study Branch Template.md
 ```
 
-## 8. Documentation architecture model
+## 8. Documentation Architecture Model
 
 The docs are organized by responsibility.
 
@@ -254,7 +254,7 @@ SYSTEM OVERVIEW = conceptual model of how the system works.
 FOR NEW AI CHAT = AI behavior and critical interpretation rules.
 USE CASE MAP = user command -> required reads/workflow/template/output.
 RESPONSIBILITY MAP = what information belongs in which file/folder.
-Documentation Principles = general rules for maintaining the docs.
+Documentation Architecture Adapter = local application of reusable docs architecture.
 Workflows = algorithms.
 Templates = output/file skeletons.
 ```
@@ -274,7 +274,7 @@ Prefer updating an existing owner file.
 Create a new file only if it defines a new responsibility, reduces confusion, or is a durable artifact type.
 ```
 
-## 9. Read path for new AI chat
+## 9. Read Path For New AI Chat
 
 Default read path:
 
@@ -284,11 +284,11 @@ Default read path:
 3. -Repetition/FOR NEW AI CHAT.md
 4. -Repetition/USE CASE MAP.md
 5. -Repetition/RESPONSIBILITY MAP.md
-6. -Repetition/Documentation Principles.md
+6. -Repetition/Documentation Architecture Adapter.md
 7. Relevant workflow/template/source files for the requested action.
 ```
 
-## 10. Source-of-truth boundaries
+## 10. Source-of-Truth Boundaries
 
 ```text
 Chains are source of truth for repeat units/repeat dates.

@@ -4,7 +4,7 @@ Status: active AI handoff.
 
 Read this file first when helping with the repetition system.
 
-## 1. Where to work
+## 1. Where To Work
 
 Active working folder:
 
@@ -20,7 +20,7 @@ Canvases/-repeat notes
 
 Do not modify `Canvases/-repeat notes` unless the user explicitly asks. That folder contains old raw/source repeat data.
 
-## 2. Read order
+## 2. Read Order
 
 For simple repetition work:
 
@@ -37,7 +37,7 @@ For documentation structure / new file / where-to-put-info work:
 1. -Repetition/START HERE.md
 2. -Repetition/USE CASE MAP.md
 3. -Repetition/RESPONSIBILITY MAP.md
-4. -Repetition/Documentation Principles.md
+4. -Repetition/Documentation Architecture Adapter.md
 5. -Repetition/Workflows/Add Or Route New Information Workflow.md
 ```
 
@@ -47,10 +47,10 @@ For active schedule/repeat-chain work:
 1. -Repetition/Recovery/2026-05 break - active chain shift.md
 2. -Repetition/Chains/Repeat Chains 2026-02..2026-04 active shifted.md
 3. Current month file in -Repetition/Schedules/
-4. AI System/Conspects Repetition/Schedule Rules.md when rules are needed
+4. AI System/Conspects Repetition/Schedule Rules.md as temporary source until Repetition Schedule Principles is promoted.
 ```
 
-## 3. Core model
+## 3. Core Model
 
 Repeat chains are the source of truth for what should be repeated.
 
@@ -65,7 +65,7 @@ Do not generate repeat units from calendar dates. Generate repeat units only whe
 
 Holes are valid.
 
-## 4. Critical rule: processing creates a new repeat unit
+## 4. Critical Rule: Processing Creates A New Repeat Unit
 
 When the user says something like:
 
@@ -90,7 +90,7 @@ Default processing date:
 Use today's date unless the user explicitly gives another processing date.
 ```
 
-## 5. What AI must update after processing
+## 5. What AI Must Update After Processing
 
 After a new repeat unit is created, AI should update:
 
@@ -119,7 +119,7 @@ D + 155 days = +80 repeat / review
 
 Use real calendar dates. Do not invent impossible dates.
 
-## 6. New information / new file rule
+## 6. New Information / New File Rule
 
 If the user gives new information and asks where/how to document it:
 
@@ -127,7 +127,7 @@ If the user gives new information and asks where/how to document it:
 1. Do not guess.
 2. Read USE CASE MAP.
 3. Read RESPONSIBILITY MAP.
-4. Read Documentation Principles.
+4. Read Documentation Architecture Adapter.
 5. Use Add Or Route New Information Workflow.
 6. Prefer existing owner file when possible.
 7. Create a new file only if it reduces confusion or defines a new durable responsibility.
@@ -136,12 +136,12 @@ If the user gives new information and asks where/how to document it:
 10. If command routing changes, update USE CASE MAP.
 ```
 
-## 7. Do not silently reschedule
+## 7. Do Not Silently Reschedule
 
 If the user says a repeat was done late, record planned and actual dates.
 
 Do not silently change a theoretical/active chain unless the user explicitly says to reschedule or apply a recovery rule.
 
-## 8. User communication rule
+## 8. User Communication Rule
 
 The user may answer only one part of a message. If there was an important unanswered question or warning, repeat it briefly in the next answer.

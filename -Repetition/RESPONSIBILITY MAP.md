@@ -4,7 +4,7 @@ Status: active responsibility / information ownership map.
 
 Purpose: explain what information belongs in which file or folder.
 
-## Core rule
+## Core Rule
 
 ```text
 Prefer updating the existing owner file.
@@ -15,7 +15,38 @@ When a new file or new category of files is created, update this responsibility 
 
 If new information is added to an existing owner file and the responsibility model did not change, this map usually does not need to change.
 
-## Root files
+## File Type Postfix Rule
+
+Durable documentation files should usually reflect their file type in the filename postfix.
+
+| Postfix | Use for |
+|---|---|
+| `Principles.md` | invariants, source-of-truth boundaries, stable rules. |
+| `Workflow.md` | repeated algorithms/processes. |
+| `Template.md` | skeleton/output/file shapes. |
+| `Map.md` | routing/ownership maps. |
+| `Register.md` | durable open/deferred/shared lists. |
+| `Log.md` | completed actions/history. |
+| `Adapter.md` | local application of reusable/external architecture. |
+| `Profile.md` | role/capability/domain model. |
+| `Overview.md` | conceptual model of a system. |
+| `Index.md` | navigation/catalog list. |
+
+Avoid `Rules.md` and `Guide.md` as durable type postfixes when a clearer type exists.
+
+```text
+Rules -> Principles, if it stores invariants.
+Guide -> Workflow, if it describes how to do something.
+```
+
+Allowed conventional exceptions for now:
+
+```text
+START HERE.md
+FOR NEW AI CHAT.md
+```
+
+## Root Files
 
 ### `-Repetition/START HERE.md`
 
@@ -73,15 +104,23 @@ Owns:
 - file/folder responsibilities;
 - new-file vs existing-file decision boundaries.
 
-### `-Repetition/Documentation Principles.md`
+### `-Repetition/Documentation Architecture Adapter.md`
 
 Owns:
-- general documentation architecture principles;
-- file type definitions;
-- no-duplication rules;
-- source-of-truth boundaries.
+- local application of reusable documentation architecture rules;
+- local file type/postfix rules;
+- local documentation source-of-truth boundaries;
+- local AI System migration boundary.
 
-## Active repetition data
+Does not own:
+- universal reusable documentation principles;
+- repetition schedule invariants;
+- question creation invariants;
+- workflows;
+- templates;
+- active chain/schedule/recovery data.
+
+## Active Repetition Data
 
 ### `-Repetition/Chains/`
 
@@ -104,12 +143,12 @@ Owns:
 - break/shift/rollback notes;
 - one-time exceptions that are not default rules.
 
-## Knowledge and conspect support
+## Knowledge And Conspect Support
 
 ### `-Repetition/Workflows/`
 
 Owns:
-- step-by-step algorithms.
+- step-by-step repeated algorithms.
 
 ### `-Repetition/Templates/`
 
@@ -143,17 +182,32 @@ Owns:
 Owns:
 - concrete Further Study Branch notes.
 
-## Existing AI-system docs
+## Pending AI System Source Material
 
 ### `AI System/Conspects Repetition/`
 
-Owns:
-- broader AI/system principles;
-- question creation principles;
-- export format guide;
-- templates that are not active schedule data.
+Status:
+- pending source material for migration into typed `-Repetition/` owners.
 
-## New file decision rule
+Owns temporarily:
+- source/design material that has not yet been promoted;
+- broader AI/system notes that still need classification.
+
+Does not own after migration:
+- active schedule principles;
+- active question creation principles;
+- active workflows;
+- active templates;
+- active documentation architecture.
+
+Target migration:
+- schedule invariants -> `-Repetition/Repetition Schedule Principles.md`;
+- question invariants -> `-Repetition/Question Creation Principles.md`;
+- AI role model -> `-Repetition/AI Work Areas Profile.md`;
+- export procedure -> `-Repetition/Workflows/Export Conspect For AI Processing Workflow.md`;
+- templates -> `-Repetition/Templates/* Template.md`.
+
+## New File Decision Rule
 
 Use [[Workflows/Add Or Route New Information Workflow]].
 
@@ -162,9 +216,10 @@ Short version:
 ```text
 1. Classify information type.
 2. Check this responsibility map.
-3. Prefer existing owner file.
-4. Create a new file only if no owner exists or current owner would become overloaded.
-5. If new file/category is created, update this map.
-6. If navigation changes, update START HERE.
-7. If user command routing changes, update USE CASE MAP.
+3. Check Documentation Architecture Adapter when the question is about file type / docs architecture.
+4. Prefer existing owner file.
+5. Create a new file only if no owner exists or current owner would become overloaded.
+6. If new file/category is created, update this map.
+7. If navigation changes, update START HERE.
+8. If user command routing changes, update USE CASE MAP.
 ```

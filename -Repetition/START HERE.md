@@ -2,7 +2,7 @@
 
 Status: active entrypoint / navigation note.
 
-## Main rule
+## Main Rule
 
 ```text
 Do not work from `Canvases/-repeat notes` as the active schedule area.
@@ -10,7 +10,7 @@ That folder is old/source/sensitive material.
 Use `-Repetition` for active chains and schedules.
 ```
 
-## New AI chat read order
+## New AI Chat Read Order
 
 ```text
 1. -Repetition/START HERE.md
@@ -18,36 +18,46 @@ Use `-Repetition` for active chains and schedules.
 3. -Repetition/FOR NEW AI CHAT.md
 4. -Repetition/USE CASE MAP.md
 5. -Repetition/RESPONSIBILITY MAP.md
-6. -Repetition/Documentation Principles.md
+6. -Repetition/Documentation Architecture Adapter.md
 7. Relevant workflow/template/source files for the requested action.
 ```
 
-## Root routing docs
+## Root Routing Docs
 
 - [[SYSTEM OVERVIEW]]
 - [[FOR NEW AI CHAT]]
 - [[USE CASE MAP]]
 - [[RESPONSIBILITY MAP]]
-- [[Documentation Principles]]
+- [[Documentation Architecture Adapter]]
 
-## Rules and principles
+## Local Documentation Architecture
+
+- [[Documentation Architecture Adapter]]
+
+## Pending AI System Source Material
+
+These files are part of the Repetition domain but are pending promotion into typed `-Repetition/` owners.
+
+Read them only when the relevant active owner has not been promoted yet.
 
 - [[AI System/Conspects Repetition/README]]
 - [[AI System/Conspects Repetition/Schedule Rules]]
 - [[AI System/Conspects Repetition/AI Work Areas]]
+- [[AI System/Conspects Repetition/Question Creation Principles]]
+- [[AI System/Conspects Repetition/Export Format Guide]]
 - [[AI System/Conspects Repetition/Templates/Repeat Chains Template]]
 - [[AI System/Conspects Repetition/Templates/Month Repeat Plan Template]]
 
-## Active recovery context
+## Active Recovery Context
 
 - [[Recovery/2026-05 break - active chain shift]]
 - [[Recovery/2026-05-31 active chain delay]]
 
-## Active repeat chains
+## Active Repeat Chains
 
 - [[Chains/Repeat Chains 2026-02..2026-04 active shifted]]
 
-## Active schedules
+## Active Schedules
 
 - [[Schedules/2026-05]]
 - [[Schedules/2026-06]]
@@ -57,7 +67,7 @@ Use `-Repetition` for active chains and schedules.
 - [[Schedules/2026-10]]
 - [[Schedules/2026-11]]
 
-## Documentation architecture
+## Documentation Architecture
 
 Workflows:
 - [[Workflows/Process New Repeat Unit Workflow]]
@@ -81,7 +91,7 @@ Further study:
 - [[Further Study/Further Study Index]]
 - [[Further Study/Branches/README]]
 
-## Source archive
+## Source Archive
 
 Old repeat drawings/source data are still in:
 

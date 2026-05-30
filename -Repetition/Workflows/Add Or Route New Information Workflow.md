@@ -16,7 +16,7 @@ Route new information to the correct existing owner file, or create a new file o
 2. Read:
    - -Repetition/USE CASE MAP.md
    - -Repetition/RESPONSIBILITY MAP.md
-   - -Repetition/Documentation Principles.md
+   - -Repetition/Documentation Architecture Adapter.md
    - target files if a likely owner exists.
 
 3. Decide whether an existing owner file already owns this information.
@@ -34,7 +34,8 @@ Route new information to the correct existing owner file, or create a new file o
      - new chain/schedule file;
      - new locator entry;
      - new further-study branch;
-     - new documentation architecture file;
+     - new documentation architecture adapter/update;
+     - new principles/profile/register/log file;
      - temporary inventory note.
 
 6. Create a new file only if it reduces confusion or defines a durable responsibility.
@@ -53,14 +54,18 @@ Route new information to the correct existing owner file, or create a new file o
    - responsibility map update yes/no.
 ```
 
-## Classification guide
+## Classification Guide
 
 ```text
 user command / action -> USE CASE MAP
 step-by-step algorithm -> Workflows/
 output skeleton -> Templates/
 where information belongs -> RESPONSIBILITY MAP
-general docs principle -> Documentation Principles.md
+local documentation architecture / file-type rule -> Documentation Architecture Adapter.md
+domain invariant -> * Principles.md
+role/capability model -> * Profile.md
+durable open/deferred/shared list -> * Register.md
+completed action history -> * Log.md
 AI behavior / handoff -> FOR NEW AI CHAT.md
 navigation / read order -> START HERE.md
 repeat unit / repeat dates -> Chains/
@@ -71,7 +76,7 @@ unclear old conspect or inventory staging -> Lookup/Inventory Notes.md
 unscheduled deeper-study branch -> Further Study/
 ```
 
-## Output shape
+## Output Shape
 
 ```text
 Information type:
@@ -99,7 +104,7 @@ Touched files:
 - ...
 ```
 
-## Do not
+## Do Not
 
 ```text
 - Do not create new files just because information is new.
