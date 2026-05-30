@@ -79,6 +79,13 @@ Use `-Repetition` for active chains and schedules.
 - [[Templates/Further Study Branch Template]]
 - [[Templates/Responsibility Map Entry Template]]
 
+## Area Processing
+
+- [[Area Processing/Area Processing Index]]
+- [[Area Processing/ASP/ASP 0326 Area Source Conversion]]
+- [[Area Processing/ASP/ASP 0326 Deep Fragment Processing]]
+- [[Area Processing/ASP/ASP 0326 Processing Notes]]
+
 ## Lookup
 
 - [[Lookup/Knowledge Locator Map]]

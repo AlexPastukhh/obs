@@ -46,6 +46,8 @@ START HERE.md
 FOR NEW AI CHAT.md
 ```
 
+Current local area-processing artifact names use descriptive names (`Area Source Conversion`, `Deep Fragment Processing`, `Processing Notes`) until reusable docs principles define a stricter artifact type. They are owned by `-Repetition/Area Processing/`.
+
 ## Root Files
 
 ### `-Repetition/START HERE.md`
@@ -222,6 +224,59 @@ Key templates:
 - `Further Study Branch Template.md`;
 - `Responsibility Map Entry Template.md`.
 
+## Area Processing
+
+### `-Repetition/Area Processing/`
+
+Owns:
+- durable source-derived area processing artifacts;
+- conversion of old area/source notes into topic-note candidates, literal fragments, deep fragment questions and clarity review;
+- drafts before promotion into final repeat material, question notes, locator entries or further-study branches.
+
+Does not own:
+- active repeat chains;
+- active schedules;
+- final canonical topic notes outside this processing layer;
+- final canonical question notes after promotion;
+- recovery decisions.
+
+### `-Repetition/Area Processing/Area Processing Index.md`
+
+Owns:
+- list of active area-processing artifacts;
+- source file names;
+- area/domain;
+- status;
+- links to conversion/deep-processing/notes files;
+- next action.
+
+### `-Repetition/Area Processing/ASP/ASP 0326 Area Source Conversion.md`
+
+Owns:
+- day-by-day topic-note candidates;
+- topic-note sections;
+- first-pass literal fragments and broad questions;
+- source labels and missing-day notes;
+- warning that source days do not automatically create repeat units.
+
+### `-Repetition/Area Processing/ASP/ASP 0326 Deep Fragment Processing.md`
+
+Owns:
+- deeper interpretation of screenshot/code fragments;
+- mechanism/syntax guesses;
+- deep repeat questions;
+- confidence and source-check markers;
+- priority fragments for later promotion.
+
+### `-Repetition/Area Processing/ASP/ASP 0326 Processing Notes.md`
+
+Owns:
+- processing status;
+- batch history;
+- what has and has not been deep-processed;
+- promotion targets and next actions;
+- unresolved source checks.
+
 ## Knowledge And Conspect Support
 
 ### `-Repetition/Lookup/Knowledge Locator Map.md`
@@ -258,32 +313,3 @@ Owns:
 Status:
 - retained old/source material;
 - not active owner after R-AI-1 promotion.
-
-Useful content was promoted to:
-
-```text
-AI roles       -> -Repetition/AI Work Areas Profile.md
-schedule rules -> -Repetition/Repetition Schedule Principles.md
-questions      -> -Repetition/Question Creation Principles.md
-export guide   -> -Repetition/Workflows/Export Conspect For AI Processing Workflow.md
-templates      -> -Repetition/Templates/
-```
-
-Do not add new active repetition rules there.
-
-## New File Decision Rule
-
-Use [[Workflows/Add Or Route New Information Workflow]].
-
-Short version:
-
-```text
-1. Classify information type.
-2. Check this responsibility map.
-3. Check Documentation Architecture Adapter when the question is about file type / docs architecture.
-4. Prefer existing owner file.
-5. Create a new file only if no owner exists or current owner would become overloaded.
-6. If new file/category is created, update this map.
-7. If navigation changes, update START HERE.
-8. If user command routing changes, update USE CASE MAP.
-```

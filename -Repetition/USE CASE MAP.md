@@ -21,6 +21,7 @@ This file is not a full workflow and not a template. It routes commands to the r
    - chain file
    - schedule file
    - recovery note
+   - area-processing file
    - lookup map
    - further study index
    - source conspect/export supplied by user
@@ -42,6 +43,7 @@ This file is not a full workflow and not a template. It routes commands to the r
 | “запроцессил X today”, “processed X”, “processed 26.04 raw today” | New repeat unit | FOR NEW AI CHAT, Repetition Schedule Principles, chain file, current/future schedule files | [[Workflows/Process New Repeat Unit Workflow]] | [[Templates/Repeat Chains Template]], [[Templates/Month Repeat Plan Template]] as reference | New chain row + generated schedule entries | Repo edits require explicit permission. |
 | “я повторил X”, “done repeat X”, “повторил на дату Y” | Repeat completion update | Repetition Schedule Principles, chain row, schedule item, recovery notes if late/very late | [[Workflows/Process Repeat Completion Workflow]] | [[Templates/Month Repeat Plan Template]] | Mark done / record planned vs actual / add next stage if needed | Do not silently reschedule. |
 | “создай вопросы по конспекту”, “вот svg/pdf/png конспекта” | Repeat material creation | source conspect/export, AI Work Areas Profile, Question Creation Principles, Export Conspect workflow | [[Workflows/Create Repeat Material From Conspect Workflow]] | [[Templates/Repeat Material Template]], [[Templates/Question Note Template]] | Draft repeat material with visual anchors, questions, use cases, lookup index, weak spots | Draft until user review. |
+| “разбери старый area note”, “конвертируй старый area note”, “process area source”, “сделай deep processing фрагментов” | Area source processing | source conspect/export, AI Work Areas Profile, Question Creation Principles, Area Processing Index, existing area-processing files for same source if present | [[Workflows/Create Repeat Material From Conspect Workflow]], [[Workflows/Export Conspect For AI Processing Workflow]] if source format matters | [[Templates/Area Day Note Template]], [[Templates/Question Note Template]] as reference | Area-processing artifact with topic-note candidates, literal fragments, deep fragment questions, clarity/confidence notes and next actions | Do not create repeat units/chains/schedules automatically from source days. |
 | “подготовь svg/png/pdf для обработки”, “как лучше дать конспект” | Source export/preparation | Export workflow, target source context | [[Workflows/Export Conspect For AI Processing Workflow]] | none | Recommended export format and source preparation instructions | Do not treat ambiguous source as confirmed. |
 | “где у меня было про X?”, “не могу найти инфу” | Knowledge lookup | [[Lookup/Knowledge Locator Map]], repeat materials, source notes if needed | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] if adding entry | Candidate notes/sections and why they match | Do not invent location if not found. |
 | “это надо изучить глубже, но не сейчас” | Further study branch | source conspect/repeat material, Further Study Index | [[Workflows/Create Further Study Branch Workflow]] | [[Templates/Further Study Branch Template]] | Branch linked to source topic/visual anchor, not scheduled by default | Do not add to repeat chain automatically. |
@@ -67,6 +69,8 @@ Use cases are required for useful repeat material.
 Further Study Branches are linked to source notes but are not active tasks and do not enter repeat chains automatically.
 
 Recovery shifts/rollbacks are explicit decisions, not default rules.
+
+Area-processing files are durable source-processing drafts. They do not create repeat units or schedules automatically.
 
 New information must be routed before file creation:
 
