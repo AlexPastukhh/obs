@@ -32,12 +32,21 @@ Support Facts are not part of default compact output unless relevant, requested,
 | User says / means | Read | Workflow | Update | Output |
 |---|---|---|---|---|
 | “начинаем 2026-05-30” / “создай день 2026-05-30” / “работаем с 2026-05-30” / “открой день 2026-05-30” | `Days/README.md`, `Templates/Day File Template.md`, `Current Plan State.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Use Day File Workflow.md`, `Start Day Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Created/opened day file + Mnemonic Emoji Table + compact Planning State Output |
-| `/start-day 2026-05-30` | `Days/README.md`, `Templates/Day File Template.md`, `Current Plan State.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md`, `Examples/Start Day Missing Input Example.md` | `Use Day File Workflow.md`, `Start Day Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Missing fields if needed + Default Daily Template Pack |
-| “покажи 2026-05-30” / “дай состояние дня 2026-05-30” | `Days/YYYY/YYYY-MM-DD.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | `Use Day File Workflow.md`, `Use Dashboard Workflow.md` | none | Mnemonic Emoji Table + compact state from that day file |
 | `/s 2026-05-30 30м ...` / `/s 30м ...` with active day date | `Days/YYYY/YYYY-MM-DD.md`, `Current Plan State.md`, `Work Rails Principles.md`, `Templates/Planning State Output Template.md`, `Templates/Default Dashboard Template.md` | `Log Session Workflow.md`, `Use Day File Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Logged session + Work Score Summary + Default Daily Template Pack |
 | “2026-05-30: не объелся” / “после S5 двигался 15 минут” / “объелся” / “пытался заснуть час” / “был stimulus drift перед сном” | `Days/YYYY/YYYY-MM-DD.md`, `Templates/Support Facts Table Template.md`, `Support Score Guide.md` | `Use Day File Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Support fact added. No Support Score calculated during the day. |
 | “посчитай support за 2026-05-30” / “закрой support за вчера” / “утренний review 2026-05-30” | `Days/YYYY/YYYY-MM-DD.md`, `Support Score Guide.md`, `Templates/Support Score Review Template.md`, `Examples/Support Score Day Examples.md` | `Support Score Review Workflow.md`, `Use Day File Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Support Score breakdown + interpretation + updated day file |
 | “закрываем 2026-05-30” / “закрой день 2026-05-30” | `Days/YYYY/YYYY-MM-DD.md`, `Support Score Guide.md`, `Templates/Support Score Review Template.md`, `Templates/Default Dashboard Template.md`, `Templates/Planning State Output Template.md` | `End Day Workflow.md`, `Use Day File Workflow.md`, maybe `Support Score Review Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Final Day Summary + Work Score + Support Score if calculated + final compact output |
+
+## Pattern Capture routes
+
+| User says / means | Read | Workflow | Update | Output |
+|---|---|---|---|---|
+| “спланируем Tampermonkey capture” / “как делать панель паттернов” | `Tools/Pattern Capture/README.md`, files in `Tools/Pattern Capture/` | none or docs update | tool docs | Tool plan / requirements |
+| “обновим требования к Pattern Capture panel” | `Tools/Pattern Capture/Panel UI Requirements.md`, `Tools/Pattern Capture/Storage and Data Model.md` | docs update | tool docs | Updated UI/storage requirements |
+| “импортируй pattern capture в day file 2026-05-30” | `Templates/Pattern Capture Export Template.md`, `Workflows/Pattern Capture Import Workflow.md`, `Days/YYYY/YYYY-MM-DD.md`, `Templates/Support Facts Table Template.md` | `Pattern Capture Import Workflow.md`, `Use Day File Workflow.md` | `Days/YYYY/YYYY-MM-DD.md` | Imported event counts + updated day file |
+| “дай формат экспорта Pattern Capture” | `Tools/Pattern Capture/Export Format.md`, `Templates/Pattern Capture Export Template.md` | none | none | Markdown/json export format |
+| “какие кнопки должны быть в Pattern Capture” | `Tools/Pattern Capture/Event Taxonomy.md`, `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none or docs update | maybe tool docs | Button taxonomy |
+| “реализуем userscript” / “напиши Tampermonkey v1” | `Tools/Pattern Capture/Implementation Plan.md`, `Tools/Pattern Capture/Script File Structure.md`, `Tools/Pattern Capture/Storage and Data Model.md`, `Tools/Pattern Capture/Panel UI Requirements.md` | implementation task | script file / response | Userscript implementation plan or code |
 
 ## Other routes
 
@@ -52,11 +61,9 @@ Support Facts are not part of default compact output unless relevant, requested,
 | `/pattern <name>` | `Workflows/Real Reward Pattern Playbook.md`, `Emoji Notation Map.md` | none | none | Full selected pattern template |
 | “что значит emoji X?” / “обновим emoji notation” | `Emoji Notation Map.md` | none or docs update | owner file | Emoji meaning / update routing |
 | “создай обещание” / “обнови обещание” | relevant day file, `Current Plan State.md`, `Work Rails Principles.md` | `Build Truth Promise Workflow.md`, `Use Day File Workflow.md` | day file | Updated Active Promises or missing requirement |
-| “химия не совпадает” / “не хочется” / “тянет не туда” | relevant day file, `Real Reward Work Loop Workflow.md`, `Real Reward Pattern Playbook.md` | `Real Reward Work Loop Workflow.md` | maybe day file | Real-reward correction + Default Daily Template Pack |
 | “это по курсу?” | `Current Plan State.md`, `Work Rails Principles.md` | `Check Course Alignment Workflow.md` | none or relevant day file if logging result | K rating / justification |
 | “обновим текущий план” / “сейчас главное X” | `Current Plan State.md`, relevant day file if day-state involved | `Update Current Plan Workflow.md` | `Current Plan State.md` | Updated plan/focus summary + Default Daily Template Pack |
 | “это отложенная задача / идея / потом” | `Deferred and Ideas Notes.md` | none | `Deferred and Ideas Notes.md` | Deferred note |
-| “закрываем старый baseline / 35 / 70” | relevant day file, `Work Rails Principles.md`, `Support Score Guide.md` | `Use Day File Workflow.md` | maybe day file | Work Score interpretation; Support Score stays separate |
 
 ## Commands
 
@@ -69,6 +76,8 @@ Support Facts are not part of default compact output unless relevant, requested,
 `/support-review <YYYY-MM-DD>` = calculate support score for the day.
 
 `/close-day <YYYY-MM-DD>` = close day file.
+
+`/pattern-capture-import <YYYY-MM-DD>` = import Pattern Capture export into date-based day file.
 
 `/patterns` = show full templates for active point-6 patterns.
 
@@ -90,6 +99,16 @@ Support Score is calculated at day close / next morning.
 
 Support Score never replaces Work Score and never closes 35 / 70.
 
+## Pattern Capture rule
+
+Pattern Capture exports are raw events.
+
+They do not calculate Work Score.
+
+They do not calculate Support Score.
+
+They are imported into date-based day files through `Workflows/Pattern Capture Import Workflow.md`.
+
 ## Output layers
 
 Full Dashboard Core owner: `Templates/Default Dashboard Template.md`
@@ -104,6 +123,10 @@ Support facts layout owner: `Templates/Support Facts Table Template.md`
 
 Support score rules owner: `Support Score Guide.md`
 
-Support review workflow owner: `Workflows/Support Score Review Workflow.md`
+Pattern Capture tool docs owner: `Tools/Pattern Capture/README.md`
+
+Pattern Capture export template owner: `Templates/Pattern Capture Export Template.md`
+
+Pattern Capture import workflow owner: `Workflows/Pattern Capture Import Workflow.md`
 
 Examples owner: `Examples/*.md`

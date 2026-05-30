@@ -23,6 +23,13 @@ Create a new file only when there is a new durable responsibility.
 | `Days/README.md` | date-based day file storage, naming, and active/completed day-file rule |
 | `Days/YYYY/YYYY-MM-DD.md` | concrete day record for one date; owns that date's Result Tracking, Active Promises, Finished Sessions, Work Score Summary, Support Facts, Support Score Review, Final Day Summary, and Notes |
 | `Support Score Guide.md` | rules for approximate support scoring; max 10, category max 2, sleep min -5/max 2, AI participation, and separation from Work Score |
+| `Tools/Pattern Capture/README.md` | owner folder entrypoint for the Tampermonkey Pattern Capture tool plan and boundaries |
+| `Tools/Pattern Capture/Panel UI Requirements.md` | collapsed/expanded draggable panel UX requirements |
+| `Tools/Pattern Capture/Storage and Data Model.md` | GM storage keys, persistence, event schemas, and safety requirements |
+| `Tools/Pattern Capture/Event Taxonomy.md` | work-pattern/support-fact button taxonomy and event effects |
+| `Tools/Pattern Capture/Export Format.md` | markdown/json export contract for chat import |
+| `Tools/Pattern Capture/Implementation Plan.md` | staged v1/v2 implementation plan |
+| `Tools/Pattern Capture/Script File Structure.md` | planned internal structure of the Tampermonkey userscript |
 | `Today State.md` | legacy pointer only; replaced by date-based day files |
 | `Session Log.md` | legacy / optional index; detailed sessions and day summaries live in date-based day files |
 | `Work Rails Principles.md` | meaning and principles only; does not own rendered dashboard or compact state tables |
@@ -32,6 +39,7 @@ Create a new file only when there is a new durable responsibility.
 | `Templates/Planning State Output Template.md` | compact Planning State Output structure, including Result Tracking, Point 6, Active Promises, Finished Sessions, and optional Support Facts when relevant |
 | `Templates/Support Facts Table Template.md` | reusable table structure for between-session/support facts; no scoring during the day |
 | `Templates/Support Score Review Template.md` | reusable layout for day close / next-morning support review |
+| `Templates/Pattern Capture Export Template.md` | expected markdown export shape from the Tampermonkey Pattern Capture tool |
 | `Templates/Today State Template.md` | legacy template; replaced by `Templates/Day File Template.md` |
 | `Templates/Default Dashboard Template.md` | source of truth for full Dashboard Core and Mnemonic Emoji Table |
 | `Templates/Session Log Entry Template.md` | legacy/general entry skeleton; date-based day files own detailed daily records |
@@ -41,6 +49,7 @@ Create a new file only when there is a new durable responsibility.
 | `Examples/Support Score Day Examples.md` | curated support-score calibration examples; not factual complete log |
 | `Workflows/Use Day File Workflow.md` | how to resolve, create, read, and update date-based day files |
 | `Workflows/Support Score Review Workflow.md` | how to calculate previous-day / day-close Support Score from support facts |
+| `Workflows/Pattern Capture Import Workflow.md` | how to import Tampermonkey Pattern Capture exports into date-based day files |
 | `Workflows/Start Day Workflow.md` | how to start/update a date-based day file, including missing-input handling and no default promise creation |
 | `Workflows/Log Session Workflow.md` | how to log work sessions into date-based day files and update Work Score Summary |
 | `Workflows/End Day Workflow.md` | how to close date-based day files and write final day summary/support review |
@@ -59,6 +68,8 @@ State = current active situation.
 Log = accumulated facts.
 
 Day file = factual state/history for one concrete date.
+
+Tool docs = requirements and implementation plan for external helpers.
 
 Notes = incubator for deferred, unstable, or not-yet-owned information.
 

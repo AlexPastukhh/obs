@@ -8,7 +8,7 @@ Status: active entrypoint.
 2. [[Use Case Map]]
 3. [[Responsibility Map]]
 4. [[Documentation Principles]]
-5. Relevant workflow / state / day file / template / example.
+5. Relevant workflow / state / day file / tool / template / example.
 
 ## Core files
 
@@ -18,6 +18,10 @@ Status: active entrypoint.
 - [[Work Rails Principles]]
 - [[Deferred and Ideas Notes]]
 - [[Emoji Notation Map]]
+
+## Tool docs
+
+- [[Tools/Pattern Capture/README]]
 
 Legacy / optional:
 
@@ -31,6 +35,7 @@ Legacy / optional:
 - [[Workflows/Log Session Workflow]]
 - [[Workflows/End Day Workflow]]
 - [[Workflows/Support Score Review Workflow]]
+- [[Workflows/Pattern Capture Import Workflow]]
 - [[Workflows/Use Dashboard Workflow]]
 - [[Workflows/Update Current Plan Workflow]]
 - [[Workflows/Check Course Alignment Workflow]]
@@ -44,6 +49,7 @@ Legacy / optional:
 - [[Templates/Planning State Output Template]]
 - [[Templates/Support Facts Table Template]]
 - [[Templates/Support Score Review Template]]
+- [[Templates/Pattern Capture Export Template]]
 - [[Templates/Default Dashboard Template]]
 - [[Templates/Session Log Entry Template]]
 - [[Templates/Deferred and Ideas Notes Template]]
@@ -72,6 +78,8 @@ This system supports:
 - tracking Work Score against 35 / 70 baselines;
 - collecting between-session / support facts during the day;
 - calculating Support Score at day close / next morning;
+- capturing work patterns/support facts through a planned Tampermonkey Pattern Capture tool;
+- importing Pattern Capture exports into date-based day files;
 - checking course alignment;
 - keeping deferred tasks, ideas, and open scenarios without creating extra files;
 - showing mnemonic + compact planning state output by default;
