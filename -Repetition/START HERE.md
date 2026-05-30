@@ -41,6 +41,7 @@ Use `-Repetition` for active chains and schedules.
 ## Active recovery context
 
 - [[Recovery/2026-05 break - active chain shift]]
+- [[Recovery/2026-05-31 active chain delay]]
 
 ## Active repeat chains
 
