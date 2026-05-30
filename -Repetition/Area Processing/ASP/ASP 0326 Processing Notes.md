@@ -24,6 +24,7 @@ This file does not own the conversion content or the deep questions themselves. 
 | Day 30 deep processing | yes | [[ASP 0326 Deep Fragment Processing]] |
 | Day 13/14/16/17 deep processing | yes | [[ASP 0326 Deep Fragment Processing]] |
 | Day 22/24/25 deep processing | yes | [[ASP 0326 Deep Fragment Processing]] |
+| AP-2 remaining-days deep processing: Days 01-09, 11-12, 15, 19-21, 23 | yes | [[ASP 0326 Deep Fragment Processing]] |
 
 ## Source days currently represented
 
@@ -51,7 +52,7 @@ It contains:
 - syntax/feature fragments;
 - unclear shorthand labels;
 - repeat questions;
-- deep-processing questions for selected high-value clusters.
+- deep-processing questions for all represented source days.
 
 ## Important boundaries
 
@@ -66,11 +67,16 @@ Do not hide unclear fragments; keep source-check markers visible.
 
 | Days | Status | Notes |
 |---|---|---|
+| Days 01-09 | deep processed | StringReader, System.Text.Json, SSE buffering, route constraints, Retry-After, compression, ProblemDetails, caching, Razor, EF comparer, auth/security basics. |
 | Day 10 | deep processed | HttpClientFactory, DelegatingHandler, streaming retry, Polly, SSE/EventSource, hedging, OptionsMonitor. |
-| Day 30 | deep processed | browser storage, antiforgery mismatch, EF translation, interceptors, content negotiation, WebSockets, REST/HATEOAS. |
+| Days 11-12 | deep processed / sparse where source is sparse | Hashing theory, Identity, lockout, RateLimiter, Redis, static state, reCAPTCHA. |
 | Days 13/14/16/17 | deep processed | FluentValidation, middleware response writing, request body reading, Polly, RateLimiter, OIDC, token storage, ProblemDetails, ETag. |
+| Day 15 | deep processed | HttpClient pool/DNS, shared Polly pipelines, ConfigureAwait, async state machine, Produces/Vary, password hasher, Content-Disposition. |
+| Days 19-21 | deep processed / sparse where source is sparse | OIDC resources/events, ReadAsStreamAsync buffering, WebSockets, custom authorization policy, endpoint metadata, RandomNumberGenerator, options with DI. |
 | Days 22/24/25 | deep processed | EF/LINQ, transactions, interceptors, DTOs, Span/Memory, UTF8 chunks, content negotiation, exception filters. |
-| Days 01-09, 11-12, 15, 19-21, 23 | first-pass only | candidates for future deep-processing if needed. |
+| Day 23 | deep processed | REST IDs/bulk methods, IQueryable, protector services, WebSockets one-send-one-receive, Channels, async enumerable, C# ref/in/out, locks, EF state. |
+| Day 30 | deep processed | browser storage, antiforgery mismatch, EF translation, interceptors, content negotiation, WebSockets, REST/HATEOAS. |
+| Days 18, 26-29 | no explicit source labels | Nothing to process unless source is reviewed visually and labels are found. |
 
 ## Priority promotion candidates
 
@@ -82,6 +88,9 @@ Do not hide unclear fragments; keep source-check markers visible.
 5. Antiforgery / CORS / CSRF boundary.
 6. WebSockets protocol/state/send-receive/subprotocol handling.
 7. Streams / UTF8 decoder / StreamReader / ReadAsString / buffering caveats.
+8. Cache invalidation / stampede / distributed/hybrid cache.
+9. Identity lockout / RateLimiter / Redis distributed state.
+10. C# memory/struct/equality/Span/async-state-machine fragments.
 ```
 
 ## Unresolved source checks
@@ -95,8 +104,9 @@ Do not hide unclear fragments; keep source-check markers visible.
 - Day 10: exact streaming retry code path.
 - Day 13: typed HttpClient with DB context.
 - Day 14: RateLimiter lease / Retry-After extraction.
-- Day 16: CORS for normal POSTs security conclusion.
+- Day 16: CORS for normal posts security conclusion.
 - Day 17: ProblemDetails writer order.
+- Day 21: `Complex types` exact meaning.
 - Day 22: EF materialization / partial initialization / identity map cluster.
 - Day 24: filters / content negotiation / interceptors cluster.
 - Day 30: DelegatingHandler streaming retry fix, content negotiation matcher and REST/HATEOAS conclusions.
@@ -105,8 +115,8 @@ Do not hide unclear fragments; keep source-check markers visible.
 ## Next actions
 
 ```text
-1. Keep adding deep-processing batches to ASP 0326 Deep Fragment Processing.md.
-2. When a cluster stabilizes, promote it into repeat material/question notes.
+1. Source-check unresolved fragments against the original SVG/screenshots.
+2. Promote stable clusters into repeat material/question notes.
 3. Add locator entries only after source location and meaning are stable.
 4. Use further-study branches for topics that need separate deep learning.
 ```

@@ -18,7 +18,7 @@ question notes, locator entries or further-study branches.
 
 | Source | Area | Files | Status | Included processing | Next action |
 |---|---|---|---|---|---|
-| `qs asp 0326.svg` | ASP | [[ASP/ASP 0326 Area Source Conversion]], [[ASP/ASP 0326 Deep Fragment Processing]], [[ASP/ASP 0326 Processing Notes]] | draft / source-derived | base day conversion; Day 10/30 deep pass; Day 13/14/16/17 deep batch; Day 22/24/25 deep batch | continue remaining deep processing; later promote selected clusters to repeat material/question notes |
+| `qs asp 0326.svg` | ASP | [[Area Processing/ASP/ASP 0326 Area Source Conversion]], [[Area Processing/ASP/ASP 0326 Deep Fragment Processing]], [[Area Processing/ASP/ASP 0326 Processing Notes]] | draft / source-derived / full represented-day deep coverage | base day conversion; Day 10/30 deep pass; Day 13/14/16/17 deep batch; Day 22/24/25 deep batch; AP-2 remaining-days deep batch for Days 01-09, 11-12, 15, 19-21, 23 | source-check unresolved fragments; promote selected clusters to repeat material/question notes |
 
 ## Promotion targets
 
