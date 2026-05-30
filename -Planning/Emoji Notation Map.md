@@ -4,12 +4,7 @@ Status: active notation map.
 
 Purpose: store explicit emoji notation agreements used across planning docs.
 
-This file stores only explicit agreements.
-It is not a full emoji glossary.
-It does not own Dashboard Core layout.
-It does not own Pattern Playbook content.
-It does not own workflow logic.
-It only prevents emoji notation drift.
+This file stores only explicit agreements. It is not a full emoji glossary.
 
 ## Core agreements
 
@@ -26,6 +21,10 @@ It only prevents emoji notation drift.
 | ⏱️🚂🛤️➡️🎯 | session frame / visible target | Timer/frame/rails point toward target |
 | 🛤️🌅➡️🎯 | course / Desired connection | Current segment connects to course / Desired / nearest goals |
 | 👁️⏳➡️💎 | value left after attention ends | After attention ends, useful value remains |
+| 📉📈 | fast recovery after slip | Went down / slipped, then recovered quickly |
+| 🏙️🧠🔁⏳ | public anxiety -> inner-dialogue slowdown | Public/crowded place anxiety turns into mental loop and slows action |
+| 🧠🌪️🚫🎯 | unactionable out-of-scope worry | Worry storm outside current scope; cannot become action now |
+| 👁️🚫🥊🎭➡️🕳️ | no-resistance known drift | Saw it was wrong, did not fight, normalized it, drifted into damage |
 
 ## Rules
 
@@ -39,4 +38,11 @@ Do not use bare `🛤️` for rails.
 
 Bare `🛤️` means course / K / direction.
 
-When a rendered output needs pattern labels, use the emoji agreements from this file and the pattern names from `Workflows/Real Reward Pattern Playbook.md`.
+`📉📈` means slip/collapse followed by quick recovery.
+
+`👁️🚫🥊🎭➡️🕳️` must show lack of struggle:
+
+- 👁️ = saw / understood;
+- 🚫🥊 = no fight;
+- 🎭 = pretended it was fine;
+- ➡️🕳️ = drifted into damage.

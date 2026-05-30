@@ -4,17 +4,6 @@ Status: active workflow.
 
 Purpose: import Tampermonkey Pattern Capture exports into date-based day files.
 
-## Uses
-
-- `Tools/Pattern Capture/README.md`
-- `Tools/Pattern Capture/Export Format.md`
-- `Templates/Pattern Capture Export Template.md`
-- `Workflows/Use Day File Workflow.md`
-- `Days/YYYY/YYYY-MM-DD.md`
-- `Templates/Support Facts Table Template.md`
-- `Workflows/Real Reward Pattern Playbook.md`
-- `Support Score Guide.md`
-
 ## Core rule
 
 Pattern Capture exports are raw event data.
@@ -32,59 +21,48 @@ They should be imported into the relevant date-based day file.
 3. Parse `Work Pattern Events`.
 4. Parse `Support Facts`.
 5. Import support facts into `Between-session / Support Facts`.
-6. Import work-pattern events into the day file as one of:
-   - Notes;
-   - session review hints;
-   - pattern review section;
-   - relevant session note if session id is clear.
-7. Do not change D/F/K/P unless the user explicitly asks to revise session scoring.
-8. Do not calculate Support Score during day import.
-9. Preserve raw event meaning and time.
-10. Summarize what was imported.
+6. Import work-pattern events into Notes / session review hints / pattern review section / relevant session note.
+7. Handle `👁️🚫🥊🎭➡️🕳️ No-resistance known drift` specially.
+8. Do not change D/F/K/P unless the user explicitly asks to revise session scoring.
+9. Do not calculate Support Score during day import.
+10. Preserve raw event meaning and time.
 
-## Work-pattern event handling
+## Penalty event handling
 
-Work-pattern events are usually context for later review.
+If imported event is `👁️🚫🥊🎭➡️🕳️ No-resistance known drift`, do not silently import it as a normal note only.
 
-Examples:
+If penalty fields are missing, ask whether to create a Penalty Event.
 
-- Complexity → easy stimulation;
-- Rails but Result forgotten;
-- Result over process;
-- Self-race;
-- Target stimuli;
-- Value left.
+Create a Penalty Event only when user confirms:
 
-They may influence later interpretation of F/K/P, but they are not scores by themselves.
+1. the user understood the action was wrong / off-scope / damaging;
+2. the user did not fight, stop, mark, recover, or create a promise;
+3. the user normalized it as okay;
+4. damage or time loss happened.
+
+Minimum base penalty: `-10`.
+
+If time loss is known, add time-loss penalty.
+
+If time loss is unclear, record base penalty and mark time-loss as `needs estimate`.
+
+## Recovery event handling
+
+If imported event is `📉📈 Fast recovery after slip`, preserve it as recovery context.
+
+It may reduce interpretation damage from a slip and can prevent a slip from becoming `No-resistance known drift`.
+
+Do not convert it into positive Work Score automatically.
 
 ## Support fact handling
 
-Support facts should map into the day file support table:
+Support facts map into:
 
 | # | Time / After | Type | Fact | Effect on next work |
 |---|---|---|---|---|
-
-Do not add a separate `Tags` column.
 
 Emoji belongs in `Type`.
 
 ## Output
 
-Return:
-
-- date;
-- day file path;
-- imported work-pattern event count;
-- imported support fact count;
-- any ambiguous rows needing clarification;
-- reminder that Support Score is calculated at close/next morning.
-
-## Do not
-
-Do not overwrite existing day facts without confirmation.
-
-Do not clear Tampermonkey storage.
-
-Do not invent facts missing from the export.
-
-Do not treat captured events as completed work sessions.
+Return date, day file path, imported work-pattern count, imported support fact count, imported penalty candidate count, ambiguous rows, and reminder that Support Score is calculated at close/next morning.

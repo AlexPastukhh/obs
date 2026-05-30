@@ -2,35 +2,62 @@
 
 Status: active design requirement.
 
-Purpose: define the initial quick-button taxonomy.
+Purpose: define the quick-button taxonomy.
 
 ## Rule
 
-Events are raw captured facts.
+Events are raw captured facts. They are not scores. They become useful when imported into date-based day files and reviewed by chat.
 
-They are not scores.
+## UI grouping rule
 
-They become useful when imported into date-based day files and reviewed by chat.
+Pattern Capture should not show every pattern as an equal always-visible button.
 
-## Work-pattern events
+Use two layers:
 
-Work-pattern events mostly connect to Point 6 and the Real Reward Pattern Playbook.
+1. Fundamental / active Point-6 patterns get concrete quick buttons.
+2. Situational patterns live in a dropdown / expandable list / secondary menu.
 
-Initial buttons:
+Frequent situational patterns may be pinned in a small `Frequent` row.
 
-| Button | Event pattern |
-|---|---|
-| 🎯📈≠🎭🔁 Result > Process | Result Tracking over process |
-| 🧩🪜⚠️➡️🧲⚡ Complexity → Stim | Complex multi-level problem → easy stimulation |
-| 🚂🛤️⚠️🎯 Rails no Result | Automatic rails but Result forgotten |
-| 🏁🥊👤↔️👤⏱️ Self-race | Short-distance self-competition |
-| ⏱️🚂🛤️➡️🎯 Frame | Session frame / visible target |
-| 🧲⚡🧪➡️🎯 Target stimuli | Targeted stimuli / chemistry only |
-| 🛤️🌅➡️🎯 Course | Course / Desired connection |
-| 👁️⏳➡️💎 Value left | Value left after attention ends |
-| 🧵📜 Need Promise | Promise may be needed |
+## Fundamental quick buttons
 
-Suggested effects:
+| Button | Event pattern | Notes |
+|---|---|---|
+| 🏁🥊👤↔️👤⏱️ Self-race | Short-distance self-competition | fundamental |
+| 🎯📈≠🎭🔁 Result > Process | Result Tracking over process | fundamental |
+| ⏱️🚂🛤️➡️🎯 Frame | Session frame / visible target | fundamental |
+| 🧲⚡🧪➡️🎯 Target stimuli | Targeted stimuli / chemistry only | fundamental |
+| 🛤️🌅➡️🎯 Course | Course / Desired connection | fundamental |
+| 👁️⏳➡️💎 Value left | Value left after attention ends | fundamental |
+| 👁️🚫🥊🎭➡️🕳️ No resistance | No-resistance known drift | fundamental penalty; require confirmation |
+
+## Frequent situational quick buttons
+
+| Button | Event pattern | Notes |
+|---|---|---|
+| 🧩🪜⚠️➡️🧲⚡ Complexity → Stim | Complex multi-level problem → easy stimulation | frequent situational |
+| 🚂🛤️⚠️🎯 Rails no Result | Automatic rails but Result forgotten | frequent situational |
+
+## Situational dropdown
+
+| Button | Event pattern | Notes |
+|---|---|---|
+| 📉📈 Recovery | Fast recovery after slip | situational |
+| 🏙️🧠🔁⏳ Public anxiety | Public anxiety → inner-dialogue slowdown | situational |
+| 🧠🌪️🚫🎯 Worry loop | Unactionable out-of-scope worry | situational |
+| 🧵📜 Need Promise | Promise may be needed | situational marker |
+
+## Penalty confirmation
+
+The `👁️🚫🥊🎭➡️🕳️ No resistance` button should require confirmation before saving.
+
+Suggested confirm text:
+
+`Log no-resistance known drift penalty event?`
+
+The script still only captures raw event data. It does not calculate the penalty by itself.
+
+## Suggested effects
 
 | Effect | Meaning |
 |---|---|
@@ -39,13 +66,11 @@ Suggested effects:
 | drifted | pattern pulled user away |
 | avoided | user avoided negative version |
 | used | user used the pattern positively |
+| recovered | user slipped but recovered |
+| penalty_candidate | possible penalty event requiring chat review |
 | needs_review | needs later chat review |
 
 ## Support fact events
-
-Support events import into `Between-session / Support Facts`.
-
-Initial buttons:
 
 | Button | Type | Fact | Effect |
 |---|---|---|---|
@@ -57,25 +82,3 @@ Initial buttons:
 | 🔋 recovered | 🔋 recovery / readiness | Восстановился | helped continue |
 | 🔁 returned | 🔁 transition | Вернулся к следующей сессии | helped continue |
 | 🩺 health | 🩺 health | Сделал доп. время для здоровья | supported day |
-
-## Session/control events
-
-Optional v1 or v2:
-
-| Button | Meaning |
-|---|---|
-| Start S | start/mark active session |
-| End S | end/mark active session |
-| After S | set session context to `after S#` |
-| Pause | mark pause |
-| Back | returned from pause/drift |
-
-These events are optional and should not replace actual session logging.
-
-## Customization
-
-V1 may use fixed buttons.
-
-V2 may allow editing buttons/config locally.
-
-Custom buttons should still export into the same data model.

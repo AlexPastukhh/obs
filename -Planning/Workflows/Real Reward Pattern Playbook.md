@@ -4,64 +4,38 @@ Status: active workflow companion.
 
 Purpose: store score-relevant behavioral patterns for applying the Real Reward Work Loop.
 
-This is not a log.
+This is not a log, not today's documentation, and not rendered output.
 
-This is not documentation of what happened today.
+Owner workflow: `Workflows/Real Reward Work Loop Workflow.md`
 
-This is not rendered output.
-
-This file stores reusable patterns, some learned from experience, so the same drift/stimulation mistakes are not repeated.
-
-Patterns explain what adds to or subtracts from D/F/K/P depending on how the situation is handled.
-
-Owner workflow:
-
-`Workflows/Real Reward Work Loop Workflow.md`
-
-Emoji notation owner:
-
-`Emoji Notation Map.md`
+Emoji notation owner: `Emoji Notation Map.md`
 
 ## Pattern categories
 
 ### Fundamental score patterns
 
-Fundamental score patterns are always used in point 6 of `Real Reward Work Loop Workflow.md`.
+Always used in point 6. They are score-check criteria for D/F/K/P in every short-distance race.
 
-They are always score-check criteria for D/F/K/P.
+### Fundamental penalty patterns
 
-They are not situational.
+Always checked in point 6, but they are not normal D/F/K/P criteria. They create negative Work Score adjustment when the user knowingly normalizes a wrong action without resistance.
 
-They describe the basic factors that add to or subtract from score in every short-distance race.
+Minimum confirmed penalty: `-10`. Additional penalty is proportional to lost session-equivalent time.
+
+Apply only when all are true:
+
+1. The user understood the action was wrong / off-scope / damaging.
+2. The user did not fight, stop, mark, recover, or create a promise.
+3. The user normalized it as okay.
+4. Damage or time loss happened.
 
 ### Situational patterns
 
-Situational patterns are used only when the user says the pattern happened, asks to evaluate it, or the current situation clearly matches it.
-
-They do not go into point 6 by default.
+Used only when the user says the pattern happened, asks to evaluate it, or the situation clearly matches it. They do not go into point 6 by default.
 
 ### Frequent situational patterns
 
-Situational patterns marked:
-
-`Frequency: frequent`
-
-are included in point 6 together with Fundamental score patterns while they remain frequent.
-
-If a frequent pattern stops being frequent, it should stay in this playbook but should no longer be pulled into point 6 by default.
-
-## Pattern output commands
-
-`/patterns` or “покажи паттерны пункта 6” shows full templates for active point-6 patterns:
-
-- all Fundamental score patterns;
-- Situational patterns marked `Frequency: frequent`.
-
-`/pattern <name>` or “разверни паттерн X” shows the full template for one selected pattern.
-
-These commands output pattern templates from this playbook.
-
-They do not render full Dashboard Core unless explicitly requested.
+Situational patterns marked `Frequency: frequent` are included in point 6 while frequent.
 
 ## Active point-6 pattern labels
 
@@ -73,818 +47,227 @@ They do not render full Dashboard Core unless explicitly requested.
 | 🧲⚡🧪➡️🎯 | Targeted stimuli / chemistry only | Fundamental |
 | 🛤️🌅➡️🎯 | Course / Desired connection | Fundamental |
 | 👁️⏳➡️💎 | Value left after attention ends | Fundamental |
+| 👁️🚫🥊🎭➡️🕳️ | No-resistance known drift | Fundamental penalty |
 | 🧩🪜⚠️➡️🧲⚡ | Complex multi-level problem -> easy stimulation | Frequent situational |
 | 🚂🛤️⚠️🎯 | Automatic rails but Result forgotten | Frequent situational |
 
+## Situational pattern labels
+
+| Emoji | Pattern | Type |
+|---|---|---|
+| 📉📈 | Fast recovery after slip | Situational |
+| 🏙️🧠🔁⏳ | Public anxiety -> inner-dialogue slowdown | Situational |
+| 🧠🌪️🚫🎯 | Unactionable out-of-scope worry | Situational |
+| 🧩🪜⚠️➡️🧲⚡ | Complex multi-level problem -> easy stimulation | Frequent situational |
+| 🚂🛤️⚠️🎯 | Automatic rails but Result forgotten | Frequent situational |
+
+## Point 6 compact table
+
+| Влияет на | Active score patterns |
+|---|---|
+| ✅D | 🎯📈≠🎭🔁 Result Tracking over process<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
+| 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
+| 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| 🚨 Penalty | 👁️🚫🥊🎭➡️🕳️ No-resistance known drift |
+| 🔎 Full patterns | `/patterns` |
+
 ## Pattern format
 
-Each pattern should include:
+Each pattern should include Emoji, Type, Default point 6 status, Affects, Core idea, What adds score, What subtracts score, What not to do, What to do instead, Promise need when relevant, and Short D/F/K/P race.
 
-- Emoji;
-- Type;
-- Frequency, if situational;
-- Default point 6 status;
-- Affects;
-- Core idea;
-- What adds score;
-- What subtracts score;
-- What not to do;
-- What to do instead;
-- Promise need, if relevant;
-- Short D/F/K/P race.
+Penalty patterns also include penalty condition, base penalty, time-loss penalty, and confirmation/safety rule.
+
+---
 
 ## Fundamental score patterns
 
 ### Pattern: 🏁🥊👤↔️👤⏱️ Short-distance self-competition
 
-Emoji: 🏁🥊👤↔️👤⏱️
+Type: Fundamental score pattern. Default point 6: yes. Affects: F primary; also D/K/P and future inertia.
 
-Type: Fundamental score pattern.
+Core idea: гонка с собой на короткой дистанции добавляет score, если я делаю отрезок лучше, чем сделал бы прошлый / дрейфующий я. Race means better D/F/K/P and future inertia, not panic-speed.
 
-Default point 6: yes.
+Adds: short segment, visible target, tempo, attempt to beat drifting self, useful output, future habit training.
 
-Affects: F primary; also affects D/K/P and future inertia.
+Subtracts: no race, no attempt to do better, segment spreads, tempo dies, process presence without useful improvement.
 
-#### Core idea
+Do instead: make the next segment short, target visible, timer/score visible, win by improving D/F/K/P.
 
-Гонка с собой на короткой дистанции добавляет score, если я делаю отрезок лучше, чем сделал бы прошлый / дрейфующий я.
-
-This is the operational core of point 6.
-
-The race is not only speed.
-
-It is better D/F/K/P than drift would have produced, plus better future inertia.
-
-#### What adds score
-
-Есть короткий отрезок.
-
-Есть попытка выиграть у прошлого / дрейфующего себя.
-
-Есть tempo без паники.
-
-Есть visible progress.
-
-Есть удержание target.
-
-Есть действие, которое тренирует будущие правильные действия.
-
-D/F/K/P лучше, чем дал бы drift.
-
-#### What subtracts score
-
-Нет гонки.
-
-Нет попытки сделать лучше, чем обычно.
-
-Отрезок расползся.
-
-Темп умер.
-
-Я просто присутствовал в процессе.
-
-Действие тренирует drift / softness / stimulation instead of useful rails.
-
-#### What not to do
-
-Do not treat the race as stress or panic.
-
-Do not make speed replace useful work.
-
-Do not “race” into random stimulation or side branches.
-
-#### What to do instead
-
-Make the next segment short.
-
-Make the target visible.
-
-Compete with the drifting / weaker / past version of yourself.
-
-Use timer, visible progress, and score awareness.
-
-Win by improving D/F/K/P, not by merely moving fast.
-
-#### Short D/F/K/P race
-
-D:
-What useful thing will exist by the end?
-
-F:
-How will I keep tempo, target, and self-management?
-
-K:
-Why is this on-course now?
-
-P:
-What value will remain after the segment?
-
-Future inertia:
-What habit does this action train?
+Short race: D useful thing exists; F target/tempo/self-management; K on-course; P value remains; future inertia improves.
 
 ---
 
 ### Pattern: 🎯📈≠🎭🔁 Result Tracking over process
 
-Emoji: 🎯📈≠🎭🔁
+Type: Fundamental score pattern. Default point 6: yes. Affects: D primary; P secondary.
 
-Type: Fundamental score pattern.
+Core idea: D grows when real Desired / Result Tracking moves. D does not grow from process repetition, small movements, or feeling busy.
 
-Default point 6: yes.
+Adds: useful output, Desired closer, artifact/decision/decomposition/clarity/test exists, residual value remains.
 
-Affects: D primary; P secondary.
+Subtracts: small motor/thought movements, automatic repetition, work-looking process without reality closer, nothing useful remains.
 
-Dashboard anchor:
-
-`🎯📈≠🎭🔁` — ради Result Tracking, не ради процесса.
-
-#### Core idea
-
-D растёт, когда реальный Desired / Result Tracking двигается.
-
-D не растёт просто от повторения процесса, мелких движений, ощущения занятости или “я вроде что-то делаю”.
-
-#### What adds score
-
-Реальный useful output появился.
-
-Desired / Result Tracking стал ближе.
-
-Что-то написано, решено, разложено, прояснено, построено, протестировано или moved.
-
-После отрезка есть остаточная польза.
-
-#### What subtracts score
-
-Мелкие моторные движения.
-
-Мелкие мысленные движения.
-
-Автоматическое повторение процесса.
-
-Выглядит как работа, но желаемая реальность не приблизилась.
-
-После внимания ничего полезного не осталось.
-
-#### What not to do
-
-Do not count process repetition as D by itself.
-
-Do not mistake busy movement for useful output.
-
-Do not keep doing a process after Result Tracking has been forgotten.
-
-#### What to do instead
-
-Reconnect to Desired / Result Tracking.
-
-Ask what should become more real by the end of the segment.
-
-Produce a small visible output.
-
-If the task is vague, decompose it in writing.
-
-#### Short D/F/K/P race
-
-D:
-Make a real useful output exist.
-
-F:
-Stop process drift and return to target.
-
-K:
-Check that the output supports current Desired / course.
-
-P:
-Leave something usable after the segment.
+Do instead: reconnect to Desired, ask what should become more real, produce a small visible output, decompose vague work in writing.
 
 ---
 
 ### Pattern: ⏱️🚂🛤️➡️🎯 Session frame / visible target
 
-Emoji: ⏱️🚂🛤️➡️🎯
+Type: Fundamental score pattern. Default point 6: yes. Affects: F primary; D/P secondary.
 
-Type: Fundamental score pattern.
+Core idea: F grows when there is a session frame, visible target, timer/short segment, score awareness, and clear end. `🚂🛤️` means rails/frame; bare `🛤️` means course.
 
-Default point 6: yes.
+Adds: session frame, visible target, timer, score awareness, clear end, loggable result.
 
-Affects: F primary; D/P secondary.
+Subtracts: unframed work, no target, unclear D/F/K/P, foggy “doing something”.
 
-#### Core idea
-
-F растёт, когда есть рамка сессии, visible target, timer / короткий отрезок, score awareness и понятный конец.
-
-F падает, когда “работа” идёт размазано, без сессии и без управления собой.
-
-`🚂🛤️` means rails / frame / process on rails.
-
-Bare `🛤️` means course, not rails.
-
-#### What adds score
-
-Есть session frame.
-
-Есть visible target.
-
-Есть timer / короткий отрезок.
-
-Есть score awareness.
-
-Есть понятный конец отрезка.
-
-Понятно, что потом логировать.
-
-#### What subtracts score
-
-Работа идёт без сессии.
-
-Нет рамки.
-
-Нет target.
-
-Непонятно, что считать D/F/K/P.
-
-Непонятно, что потом логировать.
-
-Работа идёт как туманное “что-то делаю”.
-
-#### What not to do
-
-Do not keep “working” without a segment.
-
-Do not let the task dissolve into unbounded process.
-
-Do not avoid logging because the session was not framed.
-
-#### What to do instead
-
-Start a session or short segment.
-
-Name the target.
-
-Make the target visible.
-
-Use timer or another clear frame.
-
-Afterwards, log D/F/K/P and Progress Signal.
-
-#### Short D/F/K/P race
-
-D:
-What output should this framed segment produce?
-
-F:
-What frame keeps attention and tempo alive?
-
-K:
-Why is this target relevant now?
-
-P:
-What value should be left when the frame ends?
+Do instead: start a session, name target, make target visible, use timer/frame, log after.
 
 ---
 
 ### Pattern: 🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only
 
-Emoji: 🧲⚡🧪➡️🎯
+Type: Fundamental score pattern. Default point 6: yes. Affects: F primary; also D/K/P.
 
-Type: Fundamental score pattern.
+Core idea: score rises when valid stimulation and useful chemistry are narrowed to target. Non-target stimuli/chemistry should not become authority.
 
-Default point 6: yes.
+Adds: stimuli fuel target, chemistry supports target, wrong stimuli not fed, non-target reactions noticed and not treated as truth, promise used when pull is strong.
 
-Affects: F primary; also D/K/P.
+Subtracts: stimuli spread to non-target branches, chemistry becomes authority, easy stimuli replace target, reaction is served instead of result.
 
-#### Core idea
-
-Score rises when valid stimulation and useful chemistry are narrowed to the target.
-
-Non-target stimuli and chemistry should not become authority.
-
-Wrong stimulation should not be fed.
-
-Strong pull may require a promise.
-
-#### What adds score
-
-Стимулы направлены на target.
-
-Химия используется только если помогает target.
-
-Лишние стимулы не кормятся.
-
-Нецелевые химические реакции замечаются и не получают управления.
-
-Нецелевые реакции не становятся источником истины.
-
-Если тяга сильная — используется promise.
-
-#### What subtracts score
-
-Стимулы расползлись в нетаргетные ветки.
-
-Химия стала источником истины.
-
-Лёгкие стимулы заменили target.
-
-Я начал обслуживать реакцию, а не результат.
-
-Я разжёг лишнюю стимуляцию вместо target-related stimulation.
-
-#### What not to do
-
-Do not provoke more stimulation.
-
-Do not open extra branches that make pull stronger.
-
-Do not treat chemistry as identity or decision authority.
-
-Do not feed wrong stimuli.
-
-#### What to do instead
-
-Notice chemistry.
-
-Name it.
-
-Do not argue with it.
-
-Do not feed it.
-
-Wait until it burns out when needed.
-
-Redirect stimulation toward target:
-
-Timer.
-
-Visible progress.
-
-Visible score.
-
-Short-distance race.
-
-Self-competition.
-
-D/F/K/P.
-
-Use promise if current chemistry conflicts with the analytical prediction.
-
-#### Short D/F/K/P race
-
-D:
-Use stimulation to produce target output.
-
-F:
-Keep stimuli narrowed to target.
-
-K:
-Reject stimuli that pull away from current course.
-
-P:
-Leave value from the target, not residue from stimulation.
+Do instead: notice/name chemistry, do not argue/feed it, let it burn out when needed, redirect stimulation to timer/visible progress/score/race/D-F-K-P.
 
 ---
 
 ### Pattern: 🛤️🌅➡️🎯 Course / Desired connection
 
-Emoji: 🛤️🌅➡️🎯
+Type: Fundamental score pattern. Default point 6: yes. Affects: K primary; D/P secondary.
 
-Type: Fundamental score pattern.
+Core idea: K grows when segment connects to current course / Desired / nearest global goals. K falls when interesting/easy/important-but-not-now replaces needed.
 
-Default point 6: yes.
+Adds: day goal, Desired, nearest global goals, current course, useful-now over useful-later.
 
-Affects: K primary; D/P secondary.
+Subtracts: interesting replaces needed, easy branch replaces course, important-but-not-now steals segment, side branch pretends to be main.
 
-#### Core idea
-
-K grows when the segment is connected to current course / Desired / nearest global goals.
-
-K falls when interesting, easy, or important-but-not-now replaces needed.
-
-Bare `🛤️` means course / K / direction.
-
-#### What adds score
-
-Отрезок связан с целью дня.
-
-Отрезок связан с Desired.
-
-Отрезок связан с ближайшими глобальными целями.
-
-Действие поддерживает текущий курс.
-
-Important-but-not-now work is not stealing the segment.
-
-#### What subtracts score
-
-Интересное заменило нужное.
-
-Лёгкая ветка заменила текущий курс.
-
-Important-but-not-now украл отрезок.
-
-Side branch стал выглядеть как main course.
-
-Complex work is avoided instead of decomposed.
-
-#### What not to do
-
-Do not call interesting work main-course automatically.
-
-Do not let easier stimulation or side-work replace the current course.
-
-Do not let useful-later work steal useful-now work.
-
-#### What to do instead
-
-Check day goal.
-
-Check Desired.
-
-Check nearest global goals.
-
-If the work is not current-course, defer it or name why it is allowed now.
-
-#### Short D/F/K/P race
-
-D:
-Produce useful output on the current course.
-
-F:
-Stay with the chosen course despite easier branches.
-
-K:
-Make the current-course connection explicit.
-
-P:
-Leave value that supports current or nearest goals.
+Do instead: check day goal/Desired/global goals; defer non-current work or explicitly allow it.
 
 ---
 
 ### Pattern: 👁️⏳➡️💎 Value left after attention ends
 
-Emoji: 👁️⏳➡️💎
+Type: Fundamental score pattern. Default point 6: yes. Affects: P primary.
 
-Type: Fundamental score pattern.
+Core idea: P grows when something useful remains after the segment. P falls when the session disappears with attention.
 
-Default point 6: yes.
+Adds: artifact, structure, written decomposition, decision, draft, removed blocker, clear next action, continuation material.
 
-Affects: P primary.
+Subtracts: only memory of effort remains; nothing can be continued; process ate time but left no value.
 
-#### Core idea
+Do instead: leave a small artifact, capture decision, write decomposition, name blocker, create next action.
 
-P grows when something useful remains after the segment.
+---
 
-P falls when the session disappears with attention and only the memory of effort remains.
+## Fundamental penalty patterns
 
-#### What adds score
+### Pattern: 👁️🚫🥊🎭➡️🕳️ No-resistance known drift
 
-Остался артефакт.
+Type: Fundamental penalty pattern. Default point 6: yes. Affects: Net Work Score through penalty adjustment; F/K/P meaning; future inertia.
 
-Осталась структура.
+Emoji: 👁️ = saw/understood; 🚫🥊 = no fight; 🎭 = pretended it was fine; ➡️🕳️ = drifted into damage.
 
-Осталась письменная декомпозиция.
+Core idea: this is not ordinary drift. I understand the action is not needed / off-scope / not Desired / damaging, but I do not fight, recover, stop, mark, or promise. I normalize it and continue.
 
-Осталось решение.
+Formula: `noticed wrong -> normalized wrong -> continued`.
 
-Остался черновик.
+Penalty condition: apply when the user understood it was wrong, did not resist/recover, normalized it, and damage/time loss happened.
 
-Остался снятый блокер.
+Penalty rule: minimum `-10`; add time-loss penalty proportional to lost sessions. Example: base `-10`, lost 2 sessions ≈ `-7.5`, total `-17.5`.
 
-Остался ясный next action.
+Subtracts: knowingly continued wrong action, no fight, no recovery, no honest mark, no promise when needed, off-scope action treated as allowed, future inertia trains no-resistance drift.
 
-Остался материал для продолжения.
+Prevents penalty: 📉📈 Fast recovery after slip, honest mark, stopping branch, promise, small recovery segment.
 
-#### What subtracts score
+Do not: call known wrong drift rest/normal; hide it inside F0/Koff; let it disappear from day file.
 
-Осталось только ощущение усилия.
+Do instead: mark event, stop wrong action, use 📉📈 if recovered, create Penalty Event if no-resistance happened, use promise if pull is strong, return to smallest target segment.
 
-Ничего нельзя продолжить.
-
-Нет артефакта, структуры, ясности или next action.
-
-Процесс съел время, но не оставил ценности.
-
-#### What not to do
-
-Do not let useful effort vanish without capture.
-
-Do not over-document if it does not increase future value.
-
-Do not confuse memory of effort with value left.
-
-#### What to do instead
-
-Leave a small artifact.
-
-Capture the decision.
-
-Write the decomposition.
-
-Name the blocker.
-
-Create the next action.
-
-Make the next session easier to start.
-
-#### Short D/F/K/P race
-
-D:
-Produce useful work.
-
-F:
-Stop before the segment dissolves.
-
-K:
-Keep value tied to the current course.
-
-P:
-Leave artifact, clarity, next action, or removed blocker.
+---
 
 ## Situational patterns
 
+### Pattern: 📉📈 Fast recovery after slip
+
+Type: Situational pattern. Default point 6: no unless marked frequent later. Affects: F primary; P/future inertia secondary.
+
+When this appears: a slip happened, but user noticed quickly and recovered quickly.
+
+Core idea: a slip is not good, but fast recovery sharply reduces damage and can prevent `👁️🚫🥊🎭➡️🕳️`.
+
+Adds: quick noticing, honest mark, branch stopped, target segment restarted, future recovery trained.
+
+Subtracts: slip hidden, called normal, recovery delayed, drift continues.
+
+Do instead: mark slip, return quickly, start short target segment, use timer/visible target/promise if needed.
+
+---
+
+### Pattern: 🏙️🧠🔁⏳ Public anxiety -> inner-dialogue slowdown
+
+Type: Situational pattern. Default point 6: no unless marked frequent later. Affects: F primary; D/P secondary; support if draining.
+
+When this appears: in a public/crowded place, anxiety starts and user tries to handle it through internal dialogue, making simple actions take too long.
+
+Core idea: internal dialogue often does not solve public anxiety; it becomes a loop that slows physical action. Replacement is external next action.
+
+Adds: anxiety noticed, inner dialogue shortened/stopped, next external action named, task continues, physical checklist/route replaces mental argument.
+
+Subtracts: trying to think anxiety away, simple actions stretched, environment becomes focus, F/tempo collapse.
+
+Do instead: name next external action, tiny checklist, move physically, keep task small, use timer.
+
+---
+
+### Pattern: 🧠🌪️🚫🎯 Unactionable out-of-scope worry
+
+Type: Situational pattern. Default point 6: no unless marked frequent later. Affects: F/K primary; P secondary; support if damaging sleep/recovery.
+
+When this appears: worry is outside current scope and cannot become action now.
+
+Core idea: if worry cannot become action now, it is not planning; it is an unactionable loop that pulls from K and leaves residue.
+
+Test: `Can this worry become an action in the current scope right now?` If no, it is unactionable worry.
+
+Adds: recognized as unactionable, written into deferred/later if useful, returned to current scope, promise/timer if sticky.
+
+Subtracts: worry continues, pretends to be planning, steals current scope, leaves anxiety residue and no action.
+
+Do instead: write one deferred line if needed, name not actionable now, return to current scope.
+
+---
+
 ### Pattern: 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation
 
-Emoji: 🧩🪜⚠️➡️🧲⚡
+Type: Situational pattern. Frequency: frequent. Default point 6: yes while frequent. Affects: D/F/K/P depending on handling.
 
-Type: Situational pattern.
+Core idea: complex multi-level problem becomes heavy, mind wants easier stimulation. Real blocker is usually insufficient written decomposition.
 
-Frequency: frequent.
+Subtracts: opens YouTube/easy branch/external source without question, calls escape a break, searches easier stimuli, avoids written decomposition.
 
-Default point 6: yes while frequent.
+Adds: recognizes problem is not decomposed, writes 3–5 points, picks first layer, makes first analytical move, uses timer/checklist/self-race as target stimulation.
 
-Affects: D/F/K/P depending on handling.
-
-#### When this appears
-
-A complex multi-level problem becomes heavy.
-
-Because of the complexity, the mind wants easier stimulation:
-
-YouTube.
-
-Music.
-
-Food.
-
-Easy branch.
-
-Pseudo-warmup.
-
-Extra sources.
-
-Loose browsing.
-
-Another “useful” but easier task.
-
-#### What is probably really happening
-
-The problem is not decomposed enough.
-
-The user is not choosing real rest.
-
-The mind is escaping from unclear analytical pressure.
-
-The easier stimulus pretends to be relief.
-
-The real blocker is that the problem needs written decomposition.
-
-#### False permission / false reward
-
-“I can open YouTube for a minute.”
-
-“I need to warm up first.”
-
-“I will just check something.”
-
-“I need more input before thinking.”
-
-“This is a break.”
-
-This is usually stimulation pretending to be relief.
-
-#### What subtracts score
-
-Ушёл в лёгкий стимул.
-
-Открыл YouTube / внешние ветки без ясного вопроса.
-
-Назвал escape отдыхом.
-
-Начал искать стимулы, которые даются легче.
-
-Не разложил проблему письменно.
-
-Оставил аналитическую мутность.
-
-#### What adds score
-
-Распознал, что проблема не разложена.
-
-Письменно разложил проблему на 3–5 пунктов.
-
-Выделил первый слой.
-
-Сделал первый маленький аналитический шаг.
-
-Использовал timer / checklist / self-competition как target-related stimulus.
-
-#### What not to do
-
-Do not open YouTube to solve vague analytical pressure.
-
-Do not call escape a break.
-
-Do not open external sources without a clear question.
-
-Do not start an easier branch just because the real problem is heavy.
-
-Do not wait until the complex problem feels easy.
-
-#### What to do instead
-
-Name the real blocker:
-
-The problem is complex and not decomposed.
-
-Write 3–5 small points.
-
-Pick the first layer.
-
-Make the first analytical move very small.
-
-Use target-related stimulation:
-
-Timer.
-
-Visible checklist.
-
-Small score.
-
-Short-distance race.
-
-Self-competition.
-
-#### Promise need
-
-Use promise if the pull to easier stimulation is strong or repeated.
-
-Possible promise material:
-
-🧪 Сейчас чувствую / тянет:
-Тянет открыть лёгкий стимул, потому что комплексная аналитическая задача кажется тяжёлой и мутной.
-
-📐 Аналитически выведено:
-Не лёгкий стимул даст облегчение, а письменная декомпозиция проблемы. После 10 минут ясности контроля будет больше.
-
-🧵📜 Пришить как истину:
-Тяжесть аналитики = сигнал декомпозировать, не сигнал сбежать.
-
-🌑 Не покупать:
-“Сначала лёгкий стимул / YouTube / псевдоразминка” — это стимуляция, которая усилит побег и не решит мутность.
-
-🏁 Отрезок:
-10 минут: написать 3–5 маленьких пунктов проблемы и сделать первый маленький аналитический шаг.
-
-#### Short D/F/K/P race
-
-D:
-Written decomposition exists and first analytical step is made.
-
-F:
-No easy stimulation; timer/checklist/self-competition used as target-related stimulation.
-
-K:
-The decomposition supports the current course / Desired.
-
-P:
-A structure remains, so the problem is easier to continue.
+Do instead: name blocker, write 3–5 points, first layer, first small analytical move. Use promise if pull is strong.
 
 ---
 
 ### Pattern: 🚂🛤️⚠️🎯 Automatic rails but Result forgotten
 
-Emoji: 🚂🛤️⚠️🎯
+Type: Situational pattern. Frequency: frequent. Default point 6: yes while frequent. Affects: D/P primary; F/K secondary.
 
-Type: Situational pattern.
+Core idea: user is on rails, which is better than drift, but Desired/Result Tracking is forgotten. Process runs, but D/P may stop growing.
 
-Frequency: frequent.
+Subtracts: mechanical process continues, Desired not checked, D/P stop growing, desired reality not closer.
 
-Default point 6: yes while frequent.
+Adds: Desired remembered, Result Tracking checked, action returned to result, fuel added: timer/score/visible progress/short race/self-competition.
 
-Affects: D/P primary; F/K secondary.
-
-#### When this appears
-
-The user is technically on rails.
-
-Actions are happening automatically.
-
-This is better than drift.
-
-But Desired / Result Tracking is forgotten.
-
-The process starts running by itself.
-
-#### What is probably really happening
-
-The system is working at the process level, but the result has gone dim.
-
-The user is not off the rails, but the engine needs fuel.
-
-Твоя формула:
-
-Ты на рельсах, но нужно ещё дрова в двигатель подкидывать.
-
-#### False permission / false reward
-
-“I am already working, so this is enough.”
-
-“I am on rails, so the process can continue.”
-
-“I do not need to check the result now.”
-
-This hides that D/P may stop growing.
-
-#### What subtracts score
-
-Продолжил процесс автоматически.
-
-Не вспомнил Desired.
-
-Не проверил Result Tracking.
-
-D/P перестали расти.
-
-Работа стала механической.
-
-Процесс крутится, но желаемая реальность не становится ближе.
-
-#### What adds score
-
-Вспомнил Desired.
-
-Проверил, что именно должно стать реальнее.
-
-Вернул действие к Result Tracking.
-
-Подкинул дрова:
-
-Timer.
-
-Score.
-
-Visible progress.
-
-Short race.
-
-Self-competition.
-
-#### What not to do
-
-Do not punish the fact that rails exist.
-
-Do not treat automatic rails as failure.
-
-But do not let rails become empty process.
-
-Do not continue mechanically if D/P stopped growing.
-
-#### What to do instead
-
-Pause briefly.
-
-Name Desired / Result Tracking.
-
-Ask what should become more real.
-
-Add fuel to the engine:
-
-Timer.
-
-Score.
-
-Visible progress.
-
-Short-distance race.
-
-Then continue the rails with renewed result pressure.
-
-#### Promise need
-
-Promise is usually not required if the user is already on rails.
-
-Use promise only if chemistry/stimulation starts pulling away from the result or the user starts resisting result reconnection.
-
-#### Short D/F/K/P race
-
-D:
-Make the current process produce a real useful output again.
-
-F:
-Keep rails, but add tempo and result pressure.
-
-K:
-Reconnect the action to Desired / current course.
-
-P:
-Leave a clearer artifact, structure, next action, or visible progress.
+Do instead: pause briefly, name Desired, ask what should become more real, add fuel to rails, continue with result pressure.

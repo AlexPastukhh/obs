@@ -12,15 +12,7 @@ The panel behaves like a small draggable sticky-note-style widget, but expanded 
 
 Collapsed mode is a small movable rectangle / handle.
 
-It should show only compact status, for example:
-
-`🧲 Capture (7)`
-
-or:
-
-`Pattern Capture (7)`
-
-Where `(7)` is the number of stored events for the active date or active session.
+It should show only compact status, for example `🧲 Capture (7)`.
 
 Requirements:
 
@@ -31,13 +23,7 @@ Requirements:
 - does not show long notes;
 - displays event count;
 - position persists;
-- collapsed state persists;
-- should not cover much of the screen.
-
-Optional collapsed controls:
-
-- close/hide button;
-- small expand icon.
+- collapsed state persists.
 
 ## Expanded mode
 
@@ -48,7 +34,9 @@ It should include:
 - header;
 - date input;
 - session input;
-- work-pattern buttons;
+- fundamental quick buttons;
+- frequent situational quick buttons;
+- situational dropdown / expandable list;
 - support-fact buttons;
 - last event preview;
 - event counters;
@@ -59,17 +47,15 @@ It should include:
 - collapse button;
 - hide button.
 
-Suggested shape:
+## Pattern button layout
 
-| Area | Content |
-|---|---|
-| Header | `🧲 Pattern Capture (7)` + collapse/hide controls |
-| Active state | Date + Session |
-| Work patterns | quick buttons for Point-6 / Real Reward patterns |
-| Support facts | quick buttons for food/sleep/movement/stimulus/recovery |
-| Last event | short preview of latest event |
-| Export | Copy MD / Copy JSON |
-| Maintenance | Undo / Clear Date |
+Fundamental / active point-6 patterns should get concrete always-visible buttons.
+
+Situational patterns should be in a dropdown / expandable list by default.
+
+Frequent situational patterns may be pinned into a small visible `Frequent` row.
+
+The penalty pattern `👁️🚫🥊🎭➡️🕳️ No-resistance known drift` should require confirmation before save.
 
 ## Window behavior
 
@@ -78,39 +64,19 @@ Suggested shape:
 - Clicking collapsed rectangle expands it.
 - `×` hides the panel; it does not delete data.
 - Deleting data requires explicit Clear Date / Clear All action.
-- The panel should stay above page content with high z-index.
-- The panel should not break page interactions when not used.
-- Text selection / typing in page should still work.
 
 ## Quick-capture rule
 
-The default action should be:
+The default action is button click -> event saved immediately.
 
-button click -> event saved immediately.
+Exception: penalty candidate button may require confirmation.
 
 Optional short note is allowed, but it should not be required.
 
 Do not make freeform note typing the main workflow.
 
-## Visual style
-
-- compact;
-- readable;
-- dark/light safe;
-- not flashy;
-- small enough to keep open during work;
-- collapsed mode should be minimal.
-
 ## Counts
 
-The panel should show useful counts:
-
-- active date events;
-- current session events;
-- work-pattern event count;
-- support-fact count;
-- last event time/type.
+The panel should show active date events, current session events, work-pattern count, support-fact count, penalty candidate count, and last event.
 
 Counts are not scores.
-
-They are only capture summaries.

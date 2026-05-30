@@ -2,8 +2,7 @@
 
 Status: active
 
-Day file source of truth:
-This file owns the concrete state, sessions, support facts, and final review for this date.
+Day file source of truth: this file owns the concrete state, sessions, support facts, penalty events, and final review for this date.
 
 AI must not infer current day automatically.
 
@@ -17,6 +16,7 @@ Reusable owners:
 - Support facts table: `Templates/Support Facts Table Template.md`
 - Support score review layout: `Templates/Support Score Review Template.md`
 - Support score rules: `Support Score Guide.md`
+- Pattern meanings: `Workflows/Real Reward Pattern Playbook.md`
 - Emoji notation: `Emoji Notation Map.md`
 
 ---
@@ -40,6 +40,7 @@ Reusable owners:
 | ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| 🚨 Penalty | 👁️🚫🥊🎭➡️🕳️ No-resistance known drift |
 | 🔎 Full patterns | `/patterns` |
 
 ---
@@ -57,11 +58,29 @@ Reusable owners:
 | # | Time | Session | D/F/K/P | Points | Progress Signal | Result |
 |---|---|---|---|---:|---|---|
 
+---
+
+## 🚨 Penalty Events
+
+| # | Time | Pattern | Base penalty | Time loss | Total penalty | Reason |
+|---|---|---|---:|---:|---:|---|
+
+Rules:
+
+- Penalty Events are not normal Finished Sessions.
+- Penalty Events create negative Work Score adjustment.
+- `👁️🚫🥊🎭➡️🕳️ No-resistance known drift` minimum penalty is `-10`.
+- Additional penalty is proportional to lost session-equivalent time.
+- Apply penalty only when the user knowingly normalized wrong drift without resistance.
+- Fast recovery after slip `📉📈` can prevent a slip from becoming a penalty event.
+
 ### Work Score Summary
 
 | Поле | Значение |
 |---|---|
 | Work Points | 0 |
+| Penalties | 0 |
+| Net Work Score | 0 |
 | Old baseline | 0 / 35 |
 | Full closure | 0 / 70 |
 | Main course movement | — |
@@ -73,7 +92,13 @@ Notes:
 
 70 points = close old baseline + current day.
 
-Work Score is counted only from Finished Sessions.
+Work Points are counted only from Finished Sessions.
+
+Penalties come only from Penalty Events.
+
+Net Work Score = Work Points + Penalties.
+
+Baseline closure is evaluated from Net Work Score when penalties exist.
 
 Support Score never closes 35/70 work baselines.
 
@@ -122,19 +147,6 @@ Support Score is calculated only at day close / next-morning review from support
 
 Support Score: not calculated
 
-Rules:
-
-| Rule | Value |
-|---|---|
-| Max Support Score | 10 |
-| Category max | 2 |
-| Sleep max | 2 |
-| Sleep min | -5 |
-| When calculated | Day close / next morning |
-| During day | Collect facts only |
-| AI role | AI may participate actively in approximate support scoring |
-| Relation to Work Score | Support Score does not replace Work Score |
-
 ### Support Interpretation
 
 not calculated
@@ -153,6 +165,9 @@ Status: not closed.
 | Поле | Значение |
 |---|---|
 | Work Score | not closed |
+| Work Points | 0 |
+| Penalties | 0 |
+| Net Work Score | 0 |
 | Support Score | not calculated |
 | Old baseline | not closed |
 | Full closure | not closed |
