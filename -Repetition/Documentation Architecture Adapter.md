@@ -17,7 +17,7 @@ This file owns:
 - local file type naming and postfix rules;
 - local source-of-truth boundaries between root docs, workflows, templates, chains, schedules, recovery notes, lookup and further study;
 - local no-duplication rules;
-- how AI System/Conspects Repetition material should be promoted into typed -Repetition owners.
+- how AI System/Conspects Repetition material is promoted into typed -Repetition owners.
 ```
 
 This file does **not** own:
@@ -106,9 +106,9 @@ They are entry/handoff files and are already clear enough.
 | `USE CASE MAP.md` | Map | user command/action -> reads/workflow/template/output mapping. |
 | `RESPONSIBILITY MAP.md` | Map | where information belongs. |
 | `Documentation Architecture Adapter.md` | Adapter | local documentation architecture mapping. |
-| `Repetition Schedule Principles.md` | Principles | schedule/repeat-chain invariants after AI System migration. |
-| `Question Creation Principles.md` | Principles | question/content invariants after AI System migration. |
-| `AI Work Areas Profile.md` | Profile | AI roles/capabilities for repetition work after AI System migration. |
+| `Repetition Schedule Principles.md` | Principles | schedule/repeat-chain invariants. |
+| `Question Creation Principles.md` | Principles | question/content invariants. |
+| `AI Work Areas Profile.md` | Profile | AI roles/capabilities for repetition work. |
 | `Workflows/*.md` | Workflow | repeated procedures. |
 | `Templates/*.md` | Template | output/file skeletons. |
 | `Chains/*.md` | source-of-truth data | repeat units and planned repeat dates. |
@@ -128,6 +128,12 @@ Schedules
 
 Recovery notes
   = explicit non-default decisions; not default schedule rules.
+
+Principles
+  = invariants and source-of-truth boundaries.
+
+Profiles
+  = role/capability/domain model.
 
 Workflows
   = how to do repeated actions.
@@ -160,21 +166,21 @@ When new information appears:
 9. If command routing changes, update USE CASE MAP.md.
 ```
 
-## 7. AI System Migration Boundary
+## 7. AI System Source Boundary
 
-`AI System/Conspects Repetition/` is part of the Repetition domain, but it should not remain a second active owner layer.
+`AI System/Conspects Repetition/` is part of the Repetition domain, but it is not an active owner layer after R-AI-1 promotion.
 
-During migration:
+Useful content has been promoted to:
 
 ```text
-- useful principles move to typed -Repetition/* Principles.md owners;
-- useful workflows move to -Repetition/Workflows/* Workflow.md;
-- useful templates move to -Repetition/Templates/* Template.md;
-- AI role/capability model moves to a Profile file;
-- old AI System files are kept only until promotion is verified.
+- useful schedule principles -> -Repetition/Repetition Schedule Principles.md;
+- useful question principles -> -Repetition/Question Creation Principles.md;
+- useful workflows -> -Repetition/Workflows/* Workflow.md;
+- useful templates -> -Repetition/Templates/* Template.md;
+- AI role/capability model -> -Repetition/AI Work Areas Profile.md.
 ```
 
-After promotion, active repetition rules should live under `-Repetition/`.
+The old `AI System/Conspects Repetition/` folder may remain as retained source/history, but active repetition updates should go to typed `-Repetition/` owners.
 
 ## 8. No-Duplication Rule
 
@@ -201,5 +207,5 @@ Use full routing/workflow only when:
 - creating repeat material;
 - changing recovery decisions;
 - adding new documentation categories;
-- migrating AI System content into typed active owners.
+- migrating or reclassifying old source content into typed active owners.
 ```

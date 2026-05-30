@@ -12,24 +12,70 @@ Use this file when a new AI chat or the user needs to understand the model of th
 
 ```text
 Active work happens in -Repetition/.
-Old source/reconstruction material remains in Canvases/-repeat notes.
+Old source/reconstruction material remains in Canvases/-repeat notes and retained legacy source folders.
 ```
 
-The system has four main jobs:
+The system has five main jobs:
 
 ```text
-1. Track what knowledge units exist and when they should be repeated.
-2. Create daily queues from those repeat chains.
-3. Turn visual/source conspects into repeat material with questions, use cases and lookup support.
-4. Help AI know where to put new information without making the docs chaotic.
+1. Keep repetition chains and schedules.
+2. Process raw study-day/source notes into structured repeat material.
+3. Create questions for topic/source notes.
+4. Repeat conspects using questions, visual anchors and use cases.
+5. Track weak parts and further-study branches without duplicating note fragments.
 ```
 
-## 2. Core Repetition Model
+## 2. Core Pipeline
 
-The core model is:
+The conceptual pipeline is:
 
 ```text
-Repeat Chain = source of truth for repeat units and their planned repeat dates.
+Raw/source note
+  -> processing session
+  -> topic/repeat material
+  -> question notes
+  -> area-day notes
+  -> repeat chain
+  -> month schedule
+  -> scheduled repeats
+  -> focused repeat sessions when weak parts are found
+```
+
+## 3. Main Entities
+
+```text
+Raw/source note
+  = original study capture, often a large Excalidraw drawing or export.
+
+Processing session
+  = moment when raw/source material is understood and turned into structured repeatable material.
+
+Repeat unit
+  = material created by a processing/general-note date. If no processing/general note exists for a date, no repeat unit exists for that date.
+
+Repeat chain
+  = source-of-truth path of a repeat unit through planned repeat stages.
+
+Topic/repeat material
+  = structured material used for understanding/repeating one conspect/topic.
+
+Question note
+  = markdown question bank for a topic/source note; questions are a main repeat method, not only a weak-part tool.
+
+Area-day note
+  = clean markdown index for one processing/general-note day and one area.
+
+Month schedule
+  = markdown daily queue that says what to process or repeat on each date.
+
+Focused repeat session
+  = separate note for a weak part found during scheduled repeat that should be repeated sooner or separately.
+```
+
+## 4. Core Repetition Model
+
+```text
+Repeat Chain = source of truth for repeat units and planned repeat dates.
 Monthly Schedule = daily queue generated from chains/recovery decisions.
 Recovery Note = explicit exception/decision when normal scheduling is not enough.
 ```
@@ -52,6 +98,13 @@ What future repeats should exist?
 
 A repeat unit is created when something is actually processed, not merely because a calendar date exists.
 
+Use:
+
+```text
+-Repetition/Repetition Schedule Principles.md
+-Repetition/Templates/Repeat Chains Template.md
+```
+
 ### Schedules
 
 Schedules live in:
@@ -68,6 +121,12 @@ What should be processed/repeated on this exact day?
 
 Schedules are daily queues only. They should not become the place for theory, source-of-truth rules, or full explanations.
 
+Use:
+
+```text
+-Repetition/Templates/Month Repeat Plan Template.md
+```
+
 ### Recovery
 
 Recovery notes live in:
@@ -81,12 +140,13 @@ They record explicit one-time decisions, such as:
 ```text
 - +1 calendar month shift after a missed month;
 - long-break stage rollback;
+- historical reconstruction assumptions;
 - other non-default rescheduling decisions.
 ```
 
 Recovery decisions are not default behavior. They must be explicit.
 
-## 3. Processing Creates Repeat Units
+## 5. Processing Creates Repeat Units
 
 When the user says they processed something, AI should treat that as a new repeat unit.
 
@@ -104,21 +164,22 @@ User says on 2026-06-05: "processed 26.04 raw today"
 => new repeat unit starts from 2026-06-05
 ```
 
-Default ladder:
+Current active local ladder:
 
 ```text
 processing -> +5 -> +10 -> +20 -> +40 -> +80 -> review / decide next
 ```
 
-Use the workflow:
+Use:
 
 ```text
 -Repetition/Workflows/Process New Repeat Unit Workflow.md
+-Repetition/Repetition Schedule Principles.md
 ```
 
-## 4. Visual Conspects Are Not Replaced By Questions
+## 6. Visual Conspects Are Not Replaced By Questions
 
-Old visual conspects are valuable because they work like a spatial memory map / “memory palace”.
+Old visual/source conspects are valuable because they work like a spatial memory map / “memory palace”.
 
 Questions are not meant to replace the visual conspect.
 
@@ -141,7 +202,15 @@ Recommended repeat flow for one conspect:
 5. Mark weak spots or further-study branches.
 ```
 
-## 5. Repeat Material
+Use:
+
+```text
+-Repetition/Question Creation Principles.md
+-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
+-Repetition/Templates/Question Note Template.md
+```
+
+## 7. Repeat Material
 
 Repeat material is a wrapper around a source conspect.
 
@@ -163,13 +232,32 @@ It should usually contain:
 Use:
 
 ```text
+-Repetition/Workflows/Export Conspect For AI Processing Workflow.md
 -Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
 -Repetition/Templates/Repeat Material Template.md
 ```
 
 For old chaotic Excalidraw/SVG/PDF/PNG conspects, AI output is draft until the user reviews the structure.
 
-## 6. Knowledge Lookup Model
+## 8. AI Work Areas
+
+AI roles/capabilities are described in:
+
+```text
+-Repetition/AI Work Areas Profile.md
+```
+
+Core areas:
+
+```text
+- schedule keeper;
+- question creator;
+- note processor;
+- repeat assistant;
+- focused repeat assistant.
+```
+
+## 9. Knowledge Lookup Model
 
 The user may need to find information later by term, use case, vague memory or real-world problem.
 
@@ -203,7 +291,7 @@ Use:
 -Repetition/Templates/Knowledge Locator Entry Template.md
 ```
 
-## 7. Further Study Branches
+## 10. Further Study Branches
 
 Sometimes a conspect contains something that should be studied deeper later, but not now.
 
@@ -244,7 +332,7 @@ Use:
 -Repetition/Templates/Further Study Branch Template.md
 ```
 
-## 8. Documentation Architecture Model
+## 11. Documentation Architecture Model
 
 The docs are organized by responsibility.
 
@@ -255,6 +343,8 @@ FOR NEW AI CHAT = AI behavior and critical interpretation rules.
 USE CASE MAP = user command -> required reads/workflow/template/output.
 RESPONSIBILITY MAP = what information belongs in which file/folder.
 Documentation Architecture Adapter = local application of reusable docs architecture.
+Principles = invariants.
+Profiles = role/capability models.
 Workflows = algorithms.
 Templates = output/file skeletons.
 ```
@@ -274,7 +364,7 @@ Prefer updating an existing owner file.
 Create a new file only if it defines a new responsibility, reduces confusion, or is a durable artifact type.
 ```
 
-## 9. Read Path For New AI Chat
+## 12. Read Path For New AI Chat
 
 Default read path:
 
@@ -285,16 +375,18 @@ Default read path:
 4. -Repetition/USE CASE MAP.md
 5. -Repetition/RESPONSIBILITY MAP.md
 6. -Repetition/Documentation Architecture Adapter.md
-7. Relevant workflow/template/source files for the requested action.
+7. Relevant principles/profile/workflow/template/source files for the requested action.
 ```
 
-## 10. Source-of-Truth Boundaries
+## 13. Source-of-Truth Boundaries
 
 ```text
 Chains are source of truth for repeat units/repeat dates.
 Schedules are daily queues generated from chains/recovery.
 Recovery notes are explicit non-default decisions.
+Schedule principles own invariants.
 Repeat material is how to repeat/understand one conspect.
+Question principles own question invariants.
 Knowledge Locator Map is where to find information.
 Further Study Branches are unscheduled future topic expansions.
 Responsibility Map decides where information belongs.

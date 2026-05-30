@@ -19,7 +19,7 @@ Use `-Repetition` for active chains and schedules.
 4. -Repetition/USE CASE MAP.md
 5. -Repetition/RESPONSIBILITY MAP.md
 6. -Repetition/Documentation Architecture Adapter.md
-7. Relevant workflow/template/source files for the requested action.
+7. Relevant principles/profile/workflow/template/source files for the requested action.
 ```
 
 ## Root Routing Docs
@@ -30,23 +30,11 @@ Use `-Repetition` for active chains and schedules.
 - [[RESPONSIBILITY MAP]]
 - [[Documentation Architecture Adapter]]
 
-## Local Documentation Architecture
+## Active Principles And Profiles
 
-- [[Documentation Architecture Adapter]]
-
-## Pending AI System Source Material
-
-These files are part of the Repetition domain but are pending promotion into typed `-Repetition/` owners.
-
-Read them only when the relevant active owner has not been promoted yet.
-
-- [[AI System/Conspects Repetition/README]]
-- [[AI System/Conspects Repetition/Schedule Rules]]
-- [[AI System/Conspects Repetition/AI Work Areas]]
-- [[AI System/Conspects Repetition/Question Creation Principles]]
-- [[AI System/Conspects Repetition/Export Format Guide]]
-- [[AI System/Conspects Repetition/Templates/Repeat Chains Template]]
-- [[AI System/Conspects Repetition/Templates/Month Repeat Plan Template]]
+- [[Repetition Schedule Principles]]
+- [[Question Creation Principles]]
+- [[AI Work Areas Profile]]
 
 ## Active Recovery Context
 
@@ -67,27 +55,37 @@ Read them only when the relevant active owner has not been promoted yet.
 - [[Schedules/2026-10]]
 - [[Schedules/2026-11]]
 
-## Documentation Architecture
+## Workflows
 
-Workflows:
 - [[Workflows/Process New Repeat Unit Workflow]]
+- [[Workflows/Process Repeat Completion Workflow]]
+- [[Workflows/Reconstruct Historical Repeat Schedule Workflow]]
+- [[Workflows/Export Conspect For AI Processing Workflow]]
 - [[Workflows/Create Repeat Material From Conspect Workflow]]
 - [[Workflows/Knowledge Lookup Workflow]]
 - [[Workflows/Create Further Study Branch Workflow]]
 - [[Workflows/Long Break Stage Rollback Workflow]]
 - [[Workflows/Add Or Route New Information Workflow]]
 
-Templates:
+## Templates
+
 - [[Templates/Repeat Material Template]]
+- [[Templates/Question Note Template]]
+- [[Templates/Area Day Note Template]]
+- [[Templates/Repeat Chains Template]]
+- [[Templates/Month Repeat Plan Template]]
+- [[Templates/Focused Repeat Session Template]]
 - [[Templates/Knowledge Locator Entry Template]]
 - [[Templates/Further Study Branch Template]]
 - [[Templates/Responsibility Map Entry Template]]
 
-Lookup:
+## Lookup
+
 - [[Lookup/Knowledge Locator Map]]
 - [[Lookup/Inventory Notes]]
 
-Further study:
+## Further Study
+
 - [[Further Study/Further Study Index]]
 - [[Further Study/Branches/README]]
 
@@ -100,3 +98,19 @@ Canvases/-repeat notes
 ```
 
 Avoid modifying that folder unless explicitly needed.
+
+## Superseded Source Material
+
+`AI System/Conspects Repetition/` is retained as old/source material only.
+
+Its useful repetition information has been promoted into typed `-Repetition/` owners:
+
+```text
+AI roles       -> -Repetition/AI Work Areas Profile.md
+schedule rules -> -Repetition/Repetition Schedule Principles.md
+questions      -> -Repetition/Question Creation Principles.md
+export guide   -> -Repetition/Workflows/Export Conspect For AI Processing Workflow.md
+templates      -> -Repetition/Templates/
+```
+
+Do not use `AI System/Conspects Repetition/` as the active owner for new updates.

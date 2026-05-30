@@ -8,6 +8,21 @@ Use when the user says they processed / запроцессил a raw note, area 
 
 Create a new repeat unit and schedule all future repeats.
 
+## Required Reads
+
+```text
+-Repetition/Repetition Schedule Principles.md
+-Repetition/Chains/
+-Repetition/Schedules/
+```
+
+Use templates as reference when creating a new chain/schedule style:
+
+```text
+-Repetition/Templates/Repeat Chains Template.md
+-Repetition/Templates/Month Repeat Plan Template.md
+```
+
 ## Inputs
 
 ```text
@@ -54,16 +69,17 @@ Create a new repeat unit and schedule all future repeats.
 7. Report what changed and which months were touched.
 ```
 
-## Do not
+## Do Not
 
 ```text
 - Do not use raw-study date as repeat unit date when processing date is different.
 - Do not create repeat units for calendar holes.
 - Do not silently apply +1 month recovery shift.
 - Do not silently rollback stages.
+- Do not silently rewrite existing chain rows unless explicitly asked.
 ```
 
-## Output shape
+## Output Shape
 
 ```text
 Created repeat unit:

@@ -14,9 +14,10 @@ This file is not a full workflow and not a template. It routes commands to the r
 3. -Repetition/USE CASE MAP.md
 4. -Repetition/RESPONSIBILITY MAP.md
 5. -Repetition/Documentation Architecture Adapter.md
-6. Relevant workflow file from -Repetition/Workflows/
-7. Relevant template file from -Repetition/Templates/
-8. Relevant source file:
+6. Relevant principles/profile file when the task depends on invariants/roles.
+7. Relevant workflow file from -Repetition/Workflows/
+8. Relevant template file from -Repetition/Templates/
+9. Relevant source file:
    - chain file
    - schedule file
    - recovery note
@@ -29,8 +30,8 @@ This file is not a full workflow and not a template. It routes commands to the r
 
 | Mode | Meaning | Use when |
 |---|---|---|
-| Full traversal | Read handoff + use-case map + responsibility map + adapter + relevant workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect, new documentation category. |
-| Targeted traversal | Read only relevant workflow/template/source files. | Known use case, narrow update, named schedule/chain/conspect. |
+| Full traversal | Read handoff + use-case map + responsibility map + adapter + relevant principles/profile + workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect, new documentation category. |
+| Targeted traversal | Read only relevant workflow/template/source files and required principles if needed. | Known use case, narrow update, named schedule/chain/conspect. |
 | Reuse context | Reuse current chat context and read only target files if needed. | Same active draft/repeat material/schedule update. |
 | No traversal | Answer from active context. | Simple clarification or explanation without repo change. |
 
@@ -38,12 +39,14 @@ This file is not a full workflow and not a template. It routes commands to the r
 
 | User says / means | Task type | Required reads | Workflow | Template | Expected output | Permission boundary |
 |---|---|---|---|---|---|---|
-| “запроцессил X today”, “processed X”, “processed 26.04 raw today” | New repeat unit | chain file, current/future schedule files, FOR NEW AI CHAT | [[Workflows/Process New Repeat Unit Workflow]] | schedule file pattern from existing months | New chain row + generated schedule entries | Repo edits require explicit permission. |
-| “я повторил X”, “done repeat X”, “повторил на дату Y” | Repeat completion update | chain row, schedule item, recovery rules if late; pending source: `AI System/Conspects Repetition/Schedule Rules.md` until promoted | [[Workflows/Process New Repeat Unit Workflow]] as reference | existing schedule style | Mark done / record planned vs actual / add next stage if needed | Do not silently reschedule. |
-| “создай вопросы по конспекту”, “вот svg/pdf/png конспекта” | Repeat material creation | source conspect/export, question principles source, use-case map | [[Workflows/Create Repeat Material From Conspect Workflow]] | [[Templates/Repeat Material Template]] | Draft repeat material with visual anchors, questions, use cases, lookup index, weak spots | Draft until user review. |
+| “запроцессил X today”, “processed X”, “processed 26.04 raw today” | New repeat unit | FOR NEW AI CHAT, Repetition Schedule Principles, chain file, current/future schedule files | [[Workflows/Process New Repeat Unit Workflow]] | [[Templates/Repeat Chains Template]], [[Templates/Month Repeat Plan Template]] as reference | New chain row + generated schedule entries | Repo edits require explicit permission. |
+| “я повторил X”, “done repeat X”, “повторил на дату Y” | Repeat completion update | Repetition Schedule Principles, chain row, schedule item, recovery notes if late/very late | [[Workflows/Process Repeat Completion Workflow]] | [[Templates/Month Repeat Plan Template]] | Mark done / record planned vs actual / add next stage if needed | Do not silently reschedule. |
+| “создай вопросы по конспекту”, “вот svg/pdf/png конспекта” | Repeat material creation | source conspect/export, AI Work Areas Profile, Question Creation Principles, Export Conspect workflow | [[Workflows/Create Repeat Material From Conspect Workflow]] | [[Templates/Repeat Material Template]], [[Templates/Question Note Template]] | Draft repeat material with visual anchors, questions, use cases, lookup index, weak spots | Draft until user review. |
+| “подготовь svg/png/pdf для обработки”, “как лучше дать конспект” | Source export/preparation | Export workflow, target source context | [[Workflows/Export Conspect For AI Processing Workflow]] | none | Recommended export format and source preparation instructions | Do not treat ambiguous source as confirmed. |
 | “где у меня было про X?”, “не могу найти инфу” | Knowledge lookup | [[Lookup/Knowledge Locator Map]], repeat materials, source notes if needed | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] if adding entry | Candidate notes/sections and why they match | Do not invent location if not found. |
 | “это надо изучить глубже, но не сейчас” | Further study branch | source conspect/repeat material, Further Study Index | [[Workflows/Create Further Study Branch Workflow]] | [[Templates/Further Study Branch Template]] | Branch linked to source topic/visual anchor, not scheduled by default | Do not add to repeat chain automatically. |
-| “после перерыва хочу откатить стадии”, “40->80 слишком поздно” | Explicit recovery stage rollback | active chains, schedules, recovery notes, schedule principles/source | [[Workflows/Long Break Stage Rollback Workflow]] | recovery note style | Explicit recovery decision + changed active stages + regenerated future schedules | Not default; must be explicit. |
+| “после перерыва хочу откатить стадии”, “40->80 слишком поздно” | Explicit recovery stage rollback | Repetition Schedule Principles, active chains, schedules, recovery notes | [[Workflows/Long Break Stage Rollback Workflow]] | recovery note style | Explicit recovery decision + changed active stages + regenerated future schedules | Not default; must be explicit. |
+| “восстанови старое расписание”, “собери цепочки из старых рисунков” | Historical reconstruction | Repetition Schedule Principles, recovery notes, old source material when explicitly provided | [[Workflows/Reconstruct Historical Repeat Schedule Workflow]] | [[Templates/Repeat Chains Template]], [[Templates/Month Repeat Plan Template]] | Reconstructed chains/schedules with assumptions and review markers | Do not invent repeat units or delete uncertain legacy items. |
 | “обнови карту поиска / добавь entry” | Locator update | Knowledge Locator Map, source repeat material/conspect | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] | New/updated locator entry | Add only after enough source context. |
 | “инвентаризация конспектов” | Inventory / classification | lookup map, inventory notes, selected conspect list | Knowledge lookup + repeat material workflow | locator entry template | Classified list: known/unknown/to process/to review | Avoid broad destructive moves. |
 | “куда положить эту инфу?”, “создай файл для этого”, “добавь новый workflow/template”, “обнови доки с новым правилом” | Add or route new information | RESPONSIBILITY MAP, Documentation Architecture Adapter, likely target files | [[Workflows/Add Or Route New Information Workflow]] | [[Templates/Responsibility Map Entry Template]] if new file/category is created | Existing-file update or new file proposal/update with responsibility sync | Repo edits require explicit permission. |
@@ -71,16 +74,13 @@ New information must be routed before file creation:
 USE CASE MAP -> RESPONSIBILITY MAP -> Documentation Architecture Adapter when file type/docs architecture matters -> Add Or Route New Information Workflow
 ```
 
-If a new durable file/category is created, update `RESPONSIBILITY MAP.md`.
-
-If navigation changes, update `START HERE.md`.
-
-If command routing changes, update `USE CASE MAP.md`.
-
 ## 5. Expected Source Reporting In Chat
 
 ```text
 Read:
+- ...
+
+Used principles/profile:
 - ...
 
 Used workflow:

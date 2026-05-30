@@ -12,13 +12,14 @@ Active working folder:
 -Repetition/
 ```
 
-Old source/archive folder:
+Old source/archive folders:
 
 ```text
 Canvases/-repeat notes
+AI System/Conspects Repetition/
 ```
 
-Do not modify `Canvases/-repeat notes` unless the user explicitly asks. That folder contains old raw/source repeat data.
+Do not modify those source/archive folders unless the user explicitly asks.
 
 ## 2. Read Order
 
@@ -28,7 +29,7 @@ For simple repetition work:
 1. -Repetition/START HERE.md
 2. -Repetition/FOR NEW AI CHAT.md
 3. -Repetition/USE CASE MAP.md
-4. Relevant workflow/template/source files.
+4. Relevant principles/profile/workflow/template/source files.
 ```
 
 For documentation structure / new file / where-to-put-info work:
@@ -44,20 +45,31 @@ For documentation structure / new file / where-to-put-info work:
 For active schedule/repeat-chain work:
 
 ```text
-1. -Repetition/Recovery/2026-05 break - active chain shift.md
-2. -Repetition/Chains/Repeat Chains 2026-02..2026-04 active shifted.md
-3. Current month file in -Repetition/Schedules/
-4. AI System/Conspects Repetition/Schedule Rules.md as temporary source until Repetition Schedule Principles is promoted.
+1. -Repetition/Repetition Schedule Principles.md
+2. -Repetition/Recovery/2026-05 break - active chain shift.md
+3. -Repetition/Chains/Repeat Chains 2026-02..2026-04 active shifted.md
+4. Current month file in -Repetition/Schedules/
+5. Relevant schedule workflow.
+```
+
+For conspect/question/repeat-material work:
+
+```text
+1. -Repetition/AI Work Areas Profile.md
+2. -Repetition/Question Creation Principles.md
+3. -Repetition/Workflows/Export Conspect For AI Processing Workflow.md when source export/preparation matters
+4. -Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
+5. Relevant templates.
 ```
 
 ## 3. Core Model
 
-Repeat chains are the source of truth for what should be repeated.
+Repeat chains are the source of truth for repeat units and planned repeat dates.
 
-Monthly schedules are daily queues generated from repeat chains.
+Monthly schedules are daily queues generated from repeat chains, processing backlog, focused repeat sessions and explicit recovery decisions.
 
 ```text
-Repeat chain row = one repeat unit and all its planned repeat dates.
+Repeat chain row = one repeat unit and its planned repeat dates.
 Monthly schedule = what to process/repeat on each exact date.
 ```
 
@@ -90,7 +102,28 @@ Default processing date:
 Use today's date unless the user explicitly gives another processing date.
 ```
 
-## 5. What AI Must Update After Processing
+## 5. Current Active Ladder
+
+Current active local ladder:
+
+```text
+processing -> +5 -> +10 -> +20 -> +40 -> +80 -> review / decide next
+```
+
+For a new unit processed on date `D`, add:
+
+```text
+D            = processing date / source of unit
+D + 5 days   = +5 repeat
+D + 15 days  = +10 repeat
+D + 35 days  = +20 repeat
+D + 75 days  = +40 repeat
+D + 155 days = +80 repeat / review
+```
+
+Use real calendar dates. Do not invent impossible dates.
+
+## 6. What AI Must Update After Processing
 
 After a new repeat unit is created, AI should update:
 
@@ -100,26 +133,43 @@ After a new repeat unit is created, AI should update:
 3. optionally a recovery/note-processing note if context is important.
 ```
 
-Current ladder:
+Use:
 
 ```text
-processing -> +5 -> +10 -> +20 -> +40 -> +80 -> review / decide next
+-Repetition/Workflows/Process New Repeat Unit Workflow.md
 ```
 
-For a new unit processed on date `D`, add:
+## 7. Repeat Completion
+
+When user reports a completed repeat, use:
 
 ```text
-D          = processing date / source of unit
-D + 5 days = +5 repeat
-D + 15 days = +10 repeat
-D + 35 days = +20 repeat
-D + 75 days = +40 repeat
-D + 155 days = +80 repeat / review
+-Repetition/Workflows/Process Repeat Completion Workflow.md
 ```
 
-Use real calendar dates. Do not invent impossible dates.
+If the repeat was late, record planned and actual dates.
 
-## 6. New Information / New File Rule
+Do not silently change a theoretical/active chain unless the user explicitly says to reschedule or apply a recovery rule.
+
+## 8. Question / Repeat Material Rule
+
+Questions do not replace visual conspects.
+
+```text
+Visual conspect = map / spatial memory / source shape.
+Questions = active recall layer.
+Use cases = connection to real work.
+Lookup = later search support.
+```
+
+Use:
+
+```text
+-Repetition/Question Creation Principles.md
+-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
+```
+
+## 9. New Information / New File Rule
 
 If the user gives new information and asks where/how to document it:
 
@@ -136,12 +186,6 @@ If the user gives new information and asks where/how to document it:
 10. If command routing changes, update USE CASE MAP.
 ```
 
-## 7. Do Not Silently Reschedule
-
-If the user says a repeat was done late, record planned and actual dates.
-
-Do not silently change a theoretical/active chain unless the user explicitly says to reschedule or apply a recovery rule.
-
-## 8. User Communication Rule
+## 10. User Communication Rule
 
 The user may answer only one part of a message. If there was an important unanswered question or warning, repeat it briefly in the next answer.
