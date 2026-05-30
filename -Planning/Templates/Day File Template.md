@@ -16,7 +16,7 @@ Reusable owners:
 - Support facts table: `Templates/Support Facts Table Template.md`
 - Support score review layout: `Templates/Support Score Review Template.md`
 - Support score rules: `Support Score Guide.md`
-- Pattern meanings: `Workflows/Real Reward Pattern Playbook.md`
+- Pattern meanings and IDs: `Workflows/Real Reward Pattern Playbook.md`
 - Emoji notation: `Emoji Notation Map.md`
 
 ---
@@ -34,9 +34,13 @@ Reusable owners:
 
 ## 🏁📊 Point 6 — Short D/F/K/P Race
 
+Pattern source of truth: `Workflows/Real Reward Pattern Playbook.md`
+
+This section stores the active compact Point-6 view for the day. Pattern meanings and Pattern IDs are owned by the playbook.
+
 | Влияет на | Active score patterns |
 |---|---|
-| ✅D | 🎯📈≠🎭🔁 Result Tracking over process<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ✅D | 🎯💎📉 Useful result with minimal losses<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
 | ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |

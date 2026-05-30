@@ -1,0 +1,2276 @@
+diff --git a/-Repetition/AI Work Areas Profile.md b/-Repetition/AI Work Areas Profile.md
+new file mode 100644
+index 00000000..1ca1c99e
+--- /dev/null
++++ b/-Repetition/AI Work Areas Profile.md	
+@@ -0,0 +1,196 @@
++# AI Work Areas Profile
++
++Status: active profile.
++
++Purpose: define the AI roles/capabilities used in the `-Repetition/` system.
++
++This file is a **Profile**, not a Workflow and not a Principles file.
++
++It describes what kinds of repetition work AI can help with, which owner files each role must use, and what each role must avoid.
++
++## 1. Schedule Keeper
++
++The schedule keeper helps maintain repeat chains, schedules, next repeat dates, and explicit recovery context.
++
++Use for:
++
++```text
++- user reports a newly processed repeat unit;
++- user reports a completed repeat;
++- user reports late / very late completion;
++- user asks to check upcoming repeats;
++- user asks to rebuild or verify schedule consistency.
++```
++
++Required owner files:
++
++```text
++-Repetition/Repetition Schedule Principles.md
++-Repetition/Workflows/Process New Repeat Unit Workflow.md
++-Repetition/Workflows/Process Repeat Completion Workflow.md
++-Repetition/Workflows/Reconstruct Historical Repeat Schedule Workflow.md
++-Repetition/Templates/Repeat Chains Template.md
++-Repetition/Templates/Month Repeat Plan Template.md
++```
++
++Must preserve:
++
++```text
++- create repeat units only from existing processing/general-note units;
++- do not invent repeat chains for calendar holes;
++- holes are valid;
++- do not silently rewrite chains;
++- schedules are derived queues, not source-of-truth theory.
++```
++
++Expected actions:
++
++```text
++- update or propose updates to repeat chains;
++- update monthly schedule entries;
++- record planned vs actual date when repeats are late;
++- create focused repeat sessions when weak parts need special repeat;
++- report touched files and unclear items.
++```
++
++## 2. Question Creator
++
++The question creator helps build active recall material from topic notes, source conspects, raw day notes, focused repeat sessions, and user explanations.
++
++Use for:
++
++```text
++- creating markdown question notes;
++- improving existing question notes;
++- adding weak-point questions;
++- splitting questions by topic section;
++- connecting questions to visual/source anchors.
++```
++
++Required owner files:
++
++```text
++-Repetition/Question Creation Principles.md
++-Repetition/Templates/Question Note Template.md
++-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
++-Repetition/Workflows/Export Conspect For AI Processing Workflow.md
++```
++
++Must preserve:
++
++```text
++- questions are a main repeat method, not only a weak-part tool;
++- every topic note should have a related question note;
++- repeating a topic means answering questions, not only rereading;
++- questions do not replace the visual/source conspect.
++```
++
++## 3. Note Processor
++
++The note processor helps transform raw/source material into structured repeat material.
++
++Processing can include:
++
++```text
++- inspect raw Excalidraw/SVG/PNG/PDF/markdown source;
++- identify topics and visual anchors;
++- create or update topic-note candidates;
++- create or update question-note candidates;
++- create area-day note entries;
++- prepare repeat material;
++- propose chain/schedule updates when processing creates a repeat unit.
++```
++
++Required owner files:
++
++```text
++-Repetition/Workflows/Export Conspect For AI Processing Workflow.md
++-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
++-Repetition/Templates/Repeat Material Template.md
++-Repetition/Templates/Area Day Note Template.md
++```
++
++Must avoid:
++
++```text
++- pasting long topic fragments into general/area notes;
++- treating uncertain visual interpretation as confirmed truth;
++- creating active repeat units without a processing/general-note event.
++```
++
++## 4. Repeat Assistant
++
++The repeat assistant helps run a scheduled repetition session.
++
++During repeat, AI should:
++
++```text
++- open the relevant area-day/repeat material/source material;
++- identify topic notes and question notes;
++- ask active recall questions;
++- check answers against source;
++- mark weak parts;
++- propose focused repeat sessions when needed;
++- update schedule status through the repeat completion workflow.
++```
++
++Required owner files:
++
++```text
++-Repetition/Repetition Schedule Principles.md
++-Repetition/Question Creation Principles.md
++-Repetition/Workflows/Process Repeat Completion Workflow.md
++-Repetition/Templates/Focused Repeat Session Template.md
++```
++
++## 5. Focused Repeat Assistant
++
++When a weak part is found, AI should create or update focused repeat material instead of duplicating long fragments into general notes.
++
++A focused repeat session should link to:
++
++```text
++- source scheduled repeat;
++- source area-day note or repeat material;
++- source topic note or section;
++- relevant question note section.
++```
++
++It should include:
++
++```text
++- why it exists;
++- repeat focus;
++- questions;
++- next due date;
++- status.
++```
++
++Use:
++
++```text
++-Repetition/Templates/Focused Repeat Session Template.md
++```
++
++## 6. Profile Boundary
++
++This profile does not own algorithms or file shapes.
++
++Use workflows for algorithms:
++
++```text
++-Repetition/Workflows/
++```
++
++Use templates for file/output shapes:
++
++```text
++-Repetition/Templates/
++```
++
++Use principles for invariants:
++
++```text
++-Repetition/Repetition Schedule Principles.md
++-Repetition/Question Creation Principles.md
++```
+diff --git a/-Repetition/Documentation Architecture Adapter.md b/-Repetition/Documentation Architecture Adapter.md
+index 9cee645e..e51abe13 100644
+--- a/-Repetition/Documentation Architecture Adapter.md	
++++ b/-Repetition/Documentation Architecture Adapter.md	
+@@ -17,7 +17,7 @@ This file owns:
+ - local file type naming and postfix rules;
+ - local source-of-truth boundaries between root docs, workflows, templates, chains, schedules, recovery notes, lookup and further study;
+ - local no-duplication rules;
+-- how AI System/Conspects Repetition material should be promoted into typed -Repetition owners.
++- how AI System/Conspects Repetition material is promoted into typed -Repetition owners.
+ ```
+ 
+ This file does **not** own:
+@@ -106,9 +106,9 @@ They are entry/handoff files and are already clear enough.
+ | `USE CASE MAP.md` | Map | user command/action -> reads/workflow/template/output mapping. |
+ | `RESPONSIBILITY MAP.md` | Map | where information belongs. |
+ | `Documentation Architecture Adapter.md` | Adapter | local documentation architecture mapping. |
+-| `Repetition Schedule Principles.md` | Principles | schedule/repeat-chain invariants after AI System migration. |
+-| `Question Creation Principles.md` | Principles | question/content invariants after AI System migration. |
+-| `AI Work Areas Profile.md` | Profile | AI roles/capabilities for repetition work after AI System migration. |
++| `Repetition Schedule Principles.md` | Principles | schedule/repeat-chain invariants. |
++| `Question Creation Principles.md` | Principles | question/content invariants. |
++| `AI Work Areas Profile.md` | Profile | AI roles/capabilities for repetition work. |
+ | `Workflows/*.md` | Workflow | repeated procedures. |
+ | `Templates/*.md` | Template | output/file skeletons. |
+ | `Chains/*.md` | source-of-truth data | repeat units and planned repeat dates. |
+@@ -129,6 +129,12 @@ Schedules
+ Recovery notes
+   = explicit non-default decisions; not default schedule rules.
+ 
++Principles
++  = invariants and source-of-truth boundaries.
++
++Profiles
++  = role/capability/domain model.
++
+ Workflows
+   = how to do repeated actions.
+ 
+@@ -160,21 +166,21 @@ When new information appears:
+ 9. If command routing changes, update USE CASE MAP.md.
+ ```
+ 
+-## 7. AI System Migration Boundary
++## 7. AI System Source Boundary
+ 
+-`AI System/Conspects Repetition/` is part of the Repetition domain, but it should not remain a second active owner layer.
++`AI System/Conspects Repetition/` is part of the Repetition domain, but it is not an active owner layer after R-AI-1 promotion.
+ 
+-During migration:
++Useful content has been promoted to:
+ 
+ ```text
+-- useful principles move to typed -Repetition/* Principles.md owners;
+-- useful workflows move to -Repetition/Workflows/* Workflow.md;
+-- useful templates move to -Repetition/Templates/* Template.md;
+-- AI role/capability model moves to a Profile file;
+-- old AI System files are kept only until promotion is verified.
++- useful schedule principles -> -Repetition/Repetition Schedule Principles.md;
++- useful question principles -> -Repetition/Question Creation Principles.md;
++- useful workflows -> -Repetition/Workflows/* Workflow.md;
++- useful templates -> -Repetition/Templates/* Template.md;
++- AI role/capability model -> -Repetition/AI Work Areas Profile.md.
+ ```
+ 
+-After promotion, active repetition rules should live under `-Repetition/`.
++The old `AI System/Conspects Repetition/` folder may remain as retained source/history, but active repetition updates should go to typed `-Repetition/` owners.
+ 
+ ## 8. No-Duplication Rule
+ 
+@@ -201,5 +207,5 @@ Use full routing/workflow only when:
+ - creating repeat material;
+ - changing recovery decisions;
+ - adding new documentation categories;
+-- migrating AI System content into typed active owners.
++- migrating or reclassifying old source content into typed active owners.
+ ```
+diff --git a/-Repetition/FOR NEW AI CHAT.md b/-Repetition/FOR NEW AI CHAT.md
+index 2d74ee95..07faf1ee 100644
+--- a/-Repetition/FOR NEW AI CHAT.md	
++++ b/-Repetition/FOR NEW AI CHAT.md	
+@@ -12,13 +12,14 @@ Active working folder:
+ -Repetition/
+ ```
+ 
+-Old source/archive folder:
++Old source/archive folders:
+ 
+ ```text
+ Canvases/-repeat notes
++AI System/Conspects Repetition/
+ ```
+ 
+-Do not modify `Canvases/-repeat notes` unless the user explicitly asks. That folder contains old raw/source repeat data.
++Do not modify those source/archive folders unless the user explicitly asks.
+ 
+ ## 2. Read Order
+ 
+@@ -28,7 +29,7 @@ For simple repetition work:
+ 1. -Repetition/START HERE.md
+ 2. -Repetition/FOR NEW AI CHAT.md
+ 3. -Repetition/USE CASE MAP.md
+-4. Relevant workflow/template/source files.
++4. Relevant principles/profile/workflow/template/source files.
+ ```
+ 
+ For documentation structure / new file / where-to-put-info work:
+@@ -44,20 +45,31 @@ For documentation structure / new file / where-to-put-info work:
+ For active schedule/repeat-chain work:
+ 
+ ```text
+-1. -Repetition/Recovery/2026-05 break - active chain shift.md
+-2. -Repetition/Chains/Repeat Chains 2026-02..2026-04 active shifted.md
+-3. Current month file in -Repetition/Schedules/
+-4. AI System/Conspects Repetition/Schedule Rules.md as temporary source until Repetition Schedule Principles is promoted.
++1. -Repetition/Repetition Schedule Principles.md
++2. -Repetition/Recovery/2026-05 break - active chain shift.md
++3. -Repetition/Chains/Repeat Chains 2026-02..2026-04 active shifted.md
++4. Current month file in -Repetition/Schedules/
++5. Relevant schedule workflow.
++```
++
++For conspect/question/repeat-material work:
++
++```text
++1. -Repetition/AI Work Areas Profile.md
++2. -Repetition/Question Creation Principles.md
++3. -Repetition/Workflows/Export Conspect For AI Processing Workflow.md when source export/preparation matters
++4. -Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
++5. Relevant templates.
+ ```
+ 
+ ## 3. Core Model
+ 
+-Repeat chains are the source of truth for what should be repeated.
++Repeat chains are the source of truth for repeat units and planned repeat dates.
+ 
+-Monthly schedules are daily queues generated from repeat chains.
++Monthly schedules are daily queues generated from repeat chains, processing backlog, focused repeat sessions and explicit recovery decisions.
+ 
+ ```text
+-Repeat chain row = one repeat unit and all its planned repeat dates.
++Repeat chain row = one repeat unit and its planned repeat dates.
+ Monthly schedule = what to process/repeat on each exact date.
+ ```
+ 
+@@ -90,7 +102,28 @@ Default processing date:
+ Use today's date unless the user explicitly gives another processing date.
+ ```
+ 
+-## 5. What AI Must Update After Processing
++## 5. Current Active Ladder
++
++Current active local ladder:
++
++```text
++processing -> +5 -> +10 -> +20 -> +40 -> +80 -> review / decide next
++```
++
++For a new unit processed on date `D`, add:
++
++```text
++D            = processing date / source of unit
++D + 5 days   = +5 repeat
++D + 15 days  = +10 repeat
++D + 35 days  = +20 repeat
++D + 75 days  = +40 repeat
++D + 155 days = +80 repeat / review
++```
++
++Use real calendar dates. Do not invent impossible dates.
++
++## 6. What AI Must Update After Processing
+ 
+ After a new repeat unit is created, AI should update:
+ 
+@@ -100,26 +133,43 @@ After a new repeat unit is created, AI should update:
+ 3. optionally a recovery/note-processing note if context is important.
+ ```
+ 
+-Current ladder:
++Use:
+ 
+ ```text
+-processing -> +5 -> +10 -> +20 -> +40 -> +80 -> review / decide next
++-Repetition/Workflows/Process New Repeat Unit Workflow.md
+ ```
+ 
+-For a new unit processed on date `D`, add:
++## 7. Repeat Completion
++
++When user reports a completed repeat, use:
+ 
+ ```text
+-D          = processing date / source of unit
+-D + 5 days = +5 repeat
+-D + 15 days = +10 repeat
+-D + 35 days = +20 repeat
+-D + 75 days = +40 repeat
+-D + 155 days = +80 repeat / review
++-Repetition/Workflows/Process Repeat Completion Workflow.md
+ ```
+ 
+-Use real calendar dates. Do not invent impossible dates.
++If the repeat was late, record planned and actual dates.
++
++Do not silently change a theoretical/active chain unless the user explicitly says to reschedule or apply a recovery rule.
++
++## 8. Question / Repeat Material Rule
++
++Questions do not replace visual conspects.
+ 
+-## 6. New Information / New File Rule
++```text
++Visual conspect = map / spatial memory / source shape.
++Questions = active recall layer.
++Use cases = connection to real work.
++Lookup = later search support.
++```
++
++Use:
++
++```text
++-Repetition/Question Creation Principles.md
++-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
++```
++
++## 9. New Information / New File Rule
+ 
+ If the user gives new information and asks where/how to document it:
+ 
+@@ -136,12 +186,6 @@ If the user gives new information and asks where/how to document it:
+ 10. If command routing changes, update USE CASE MAP.
+ ```
+ 
+-## 7. Do Not Silently Reschedule
+-
+-If the user says a repeat was done late, record planned and actual dates.
+-
+-Do not silently change a theoretical/active chain unless the user explicitly says to reschedule or apply a recovery rule.
+-
+-## 8. User Communication Rule
++## 10. User Communication Rule
+ 
+ The user may answer only one part of a message. If there was an important unanswered question or warning, repeat it briefly in the next answer.
+diff --git a/-Repetition/Question Creation Principles.md b/-Repetition/Question Creation Principles.md
+new file mode 100644
+index 00000000..fde40ab9
+--- /dev/null
++++ b/-Repetition/Question Creation Principles.md	
+@@ -0,0 +1,136 @@
++# Question Creation Principles
++
++Status: active principles.
++
++Purpose: define stable question/content invariants for repeat material and question notes.
++
++This file is a **Principles** file. It stores what must remain true about question creation.
++
++Use templates for file shape:
++
++```text
++-Repetition/Templates/Question Note Template.md
++-Repetition/Templates/Repeat Material Template.md
++```
++
++Use workflows for action steps:
++
++```text
++-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
++-Repetition/Workflows/Export Conspect For AI Processing Workflow.md
++```
++
++## 1. Questions Are A Main Repeat Method
++
++Questions are not only for weak parts.
++
++Core rule:
++
++```text
++Every topic note should have a related markdown question note.
++Repeating a topic means answering questions, not only rereading.
++```
++
++Questions do not replace source conspects or topic notes.
++
++They are an active recall layer.
++
++## 2. Question Note Per Topic Note
++
++Preferred relationship:
++
++```text
++Topics/Server/Antiforgery.md
++Topics/Server/Antiforgery.questions.md
++```
++
++The question note should link back to the topic note.
++
++If exact folder paths differ, preserve the relationship:
++
++```text
++topic note
++  -> related question note
++```
++
++## 3. Question Types
++
++AI should create questions that test:
++
++```text
++- core definitions;
++- why the concept exists;
++- step-by-step flows;
++- comparisons;
++- common mistakes;
++- edge cases;
++- practical usage;
++- section-specific understanding;
++- weak points found during repetition.
++```
++
++## 4. Good Questions
++
++Good repeat questions should:
++
++```text
++- force recall, not recognition;
++- ask for explanation from memory;
++- expose hidden gaps;
++- be answerable from the source topic/conspect;
++- be grouped by topic section when the topic is large;
++- include practical examples when useful;
++- avoid yes/no questions unless followed by why/how.
++```
++
++## 5. Visual Conspects Are Not Replaced
++
++Visual/source conspects remain valuable as map/spatial-memory/source material.
++
++Questions should point back to source anchors when useful.
++
++Recommended repeat pattern:
++
++```text
++1. Restore the visual/source map.
++2. Answer questions without looking.
++3. Return to exact source anchors for weak/unclear parts.
++4. Update weak-point questions or focused repeat sessions when needed.
++```
++
++## 6. Section-Specific Scope
++
++When a topic note becomes large, area-day/repeat material may point to a section instead of the whole note.
++
++Example:
++
++```md
++- [[Antiforgery#Token validation flow]]
++  Questions: [[Antiforgery.questions#Token validation flow]]
++```
++
++The user can choose the section manually when needed.
++
++## 7. Weak-Point Questions
++
++If a weak part is found during a scheduled repeat, AI should:
++
++```text
++- add or update weak-point questions in the topic question note;
++- create a focused repeat session note if the part needs earlier/special repeat;
++- avoid pasting long topic fragments into area-day/general notes.
++```
++
++## 8. Boundary
++
++This file owns question invariants.
++
++It does not own:
++
++```text
++- exact question note skeleton;
++- full repeat material skeleton;
++- schedule update process;
++- export procedure;
++- topic-note content.
++```
+diff --git a/-Repetition/RESPONSIBILITY MAP.md b/-Repetition/RESPONSIBILITY MAP.md
+index 93f34fe8..07993c11 100644
+--- a/-Repetition/RESPONSIBILITY MAP.md	
++++ b/-Repetition/RESPONSIBILITY MAP.md	
+@@ -56,16 +56,6 @@ Owns:
+ - high-level navigation;
+ - links to root docs, active chains, schedules and indexes.
+ 
+-Read when:
+-- new AI chat starts;
+-- user asks where to begin;
+-- navigation seems unclear.
+-
+-Update when:
+-- important new root doc/folder is created;
+-- active read order changes;
+-- new major area becomes part of the system.
+-
+ ### `-Repetition/SYSTEM OVERVIEW.md`
+ 
+ Owns:
+@@ -73,16 +63,6 @@ Owns:
+ - relationships between chains, schedules, recovery, repeat material, lookup and further study;
+ - source-of-truth boundaries at system level.
+ 
+-Read when:
+-- new AI chat/user needs the model of the system, not just navigation;
+-- it is unclear how different parts of `-Repetition` fit together;
+-- before changing core architecture or source-of-truth boundaries.
+-
+-Update when:
+-- a new major subsystem is added;
+-- the conceptual model changes;
+-- source-of-truth boundaries change.
+-
+ ### `-Repetition/FOR NEW AI CHAT.md`
+ 
+ Owns:
+@@ -120,6 +100,48 @@ Does not own:
+ - templates;
+ - active chain/schedule/recovery data.
+ 
++## Active Principles And Profiles
++
++### `-Repetition/Repetition Schedule Principles.md`
++
++Owns:
++- repeat-unit and schedule invariants;
++- source-of-truth split between chains and schedules;
++- rule that repeat units come from processing/general-note units, not calendar dates;
++- holes-valid rule;
++- theoretical chain default;
++- late/recovery boundary principles.
++
++Does not own:
++- step-by-step schedule update algorithm;
++- actual chain rows;
++- actual monthly schedules.
++
++### `-Repetition/Question Creation Principles.md`
++
++Owns:
++- question creation invariants;
++- role of questions as active recall layer;
++- question note per topic-note principle;
++- question quality rules;
++- weak-point question principle.
++
++Does not own:
++- exact question note skeleton;
++- full repeat material skeleton;
++- export procedure.
++
++### `-Repetition/AI Work Areas Profile.md`
++
++Owns:
++- AI roles/capabilities in the repetition system;
++- relationship between AI roles and owner workflows/principles/templates.
++
++Does not own:
++- algorithms;
++- templates;
++- schedule data.
++
+ ## Active Repetition Data
+ 
+ ### `-Repetition/Chains/`
+@@ -143,18 +165,65 @@ Owns:
+ - break/shift/rollback notes;
+ - one-time exceptions that are not default rules.
+ 
+-## Knowledge And Conspect Support
++## Workflows
+ 
+-### `-Repetition/Workflows/`
++### `-Repetition/Workflows/Process New Repeat Unit Workflow.md`
+ 
+ Owns:
+-- step-by-step repeated algorithms.
++- creating a new repeat unit after processing/general-note creation;
++- adding chain row and future schedule entries for new unit.
++
++### `-Repetition/Workflows/Process Repeat Completion Workflow.md`
++
++Owns:
++- marking a repeat done;
++- recording planned vs actual completion date;
++- handling late/very late completion without silent reschedule;
++- creating/proposing next repeat event from chain.
++
++### `-Repetition/Workflows/Reconstruct Historical Repeat Schedule Workflow.md`
++
++Owns:
++- recovery reconstruction from old drawings/schedules;
++- preserving holes and uncertain legacy items;
++- generating chains/schedules from confirmed historical repeat units.
++
++### `-Repetition/Workflows/Export Conspect For AI Processing Workflow.md`
++
++Owns:
++- how to prepare SVG/PNG/PDF/markdown source input for AI-assisted processing.
++
++### `-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md`
++
++Owns:
++- creating repeat material drafts from source conspects;
++- connecting visual anchors, questions, use cases, lookup and weak spots.
++
++### `-Repetition/Workflows/Add Or Route New Information Workflow.md`
++
++Owns:
++- process for deciding where new information belongs.
++
++## Templates
+ 
+ ### `-Repetition/Templates/`
+ 
+ Owns:
+ - output/file skeletons.
+ 
++Key templates:
++- `Repeat Material Template.md`;
++- `Question Note Template.md`;
++- `Area Day Note Template.md`;
++- `Repeat Chains Template.md`;
++- `Month Repeat Plan Template.md`;
++- `Focused Repeat Session Template.md`;
++- `Knowledge Locator Entry Template.md`;
++- `Further Study Branch Template.md`;
++- `Responsibility Map Entry Template.md`.
++
++## Knowledge And Conspect Support
++
+ ### `-Repetition/Lookup/Knowledge Locator Map.md`
+ 
+ Owns:
+@@ -182,30 +251,25 @@ Owns:
+ Owns:
+ - concrete Further Study Branch notes.
+ 
+-## Pending AI System Source Material
++## Superseded Source Material
+ 
+ ### `AI System/Conspects Repetition/`
+ 
+ Status:
+-- pending source material for migration into typed `-Repetition/` owners.
+-
+-Owns temporarily:
+-- source/design material that has not yet been promoted;
+-- broader AI/system notes that still need classification.
+-
+-Does not own after migration:
+-- active schedule principles;
+-- active question creation principles;
+-- active workflows;
+-- active templates;
+-- active documentation architecture.
+-
+-Target migration:
+-- schedule invariants -> `-Repetition/Repetition Schedule Principles.md`;
+-- question invariants -> `-Repetition/Question Creation Principles.md`;
+-- AI role model -> `-Repetition/AI Work Areas Profile.md`;
+-- export procedure -> `-Repetition/Workflows/Export Conspect For AI Processing Workflow.md`;
+-- templates -> `-Repetition/Templates/* Template.md`.
++- retained old/source material;
++- not active owner after R-AI-1 promotion.
++
++Useful content was promoted to:
++
++```text
++AI roles       -> -Repetition/AI Work Areas Profile.md
++schedule rules -> -Repetition/Repetition Schedule Principles.md
++questions      -> -Repetition/Question Creation Principles.md
++export guide   -> -Repetition/Workflows/Export Conspect For AI Processing Workflow.md
++templates      -> -Repetition/Templates/
++```
++
++Do not add new active repetition rules there.
+ 
+ ## New File Decision Rule
+ 
+diff --git a/-Repetition/Repetition Schedule Principles.md b/-Repetition/Repetition Schedule Principles.md
+new file mode 100644
+index 00000000..35510124
+--- /dev/null
++++ b/-Repetition/Repetition Schedule Principles.md	
+@@ -0,0 +1,275 @@
++# Repetition Schedule Principles
++
++Status: active principles.
++
++Purpose: define stable schedule/repeat-chain invariants for the `-Repetition/` system.
++
++This file is a **Principles** file. It stores invariants and source-of-truth boundaries, not step-by-step procedures.
++
++Use workflows for action steps:
++
++```text
++-Repetition/Workflows/Process New Repeat Unit Workflow.md
++-Repetition/Workflows/Process Repeat Completion Workflow.md
++-Repetition/Workflows/Reconstruct Historical Repeat Schedule Workflow.md
++-Repetition/Workflows/Long Break Stage Rollback Workflow.md
++```
++
++## 1. Core Rule
++
++```text
++Do not generate repeats from calendar dates.
++Generate repeats only from existing processing/general-note repeat units.
++```
++
++A date can exist on the calendar without producing a repeat unit.
++
++A repeat unit exists only when material was actually processed or created as a general/repeatable note.
++
++## 2. Repeat Unit Date
++
++In the current `-Repetition/` system:
++
++```text
++raw/source date = context;
++processing date = repeat unit date.
++```
++
++Example:
++
++```text
++2026-04-24 raw note exists
++-> processed on 2026-04-26
++-> 2026-04-26 is the repeat unit date
++-> chain row may be created for the 2026-04-26 processing unit
++```
++
++But:
++
++```text
++2026-04-24 raw note does not exist
++-> no 2026-04-26 processing from it
++-> no 2026-04-26 repeat unit
++-> no chain row just to fill the date
++```
++
++## 3. Holes Are Valid
++
++If a processing/general-note date does not exist, the chain has a valid hole.
++
++Example:
++
++```text
++1904 exists
++2004 exists
++2104 missing
++2204 exists
++```
++
++This does not mean `2104` is missing and should be invented.
++
++It means:
++
++```text
++No processing/general note created a 2104 repeat unit.
++Therefore no 2104 chain row should exist.
++```
++
++Do not fill missing calendar dates just to make chains continuous.
++
++## 4. Source-of-Truth Split
++
++The repetition system has two schedule layers:
++
++```text
++Repeat Chains
++  = source of truth / orientation for existing repeat units and planned repeat dates.
++
++Monthly Schedules
++  = derived daily queues generated from chains, processing backlog, focused repeats and explicit recovery decisions.
++```
++
++A monthly schedule answers only:
++
++```text
++What do I process or repeat on this date?
++```
++
++A monthly schedule should not contain:
++
++```text
++- schedule theory;
++- copied topic fragments;
++- long topic-note content;
++- duplicate source-of-truth rules.
++```
++
++Detailed learning material belongs in:
++
++```text
++- repeat material;
++- area-day notes;
++- topic notes;
++- question notes;
++- focused repeat session notes.
++```
++
++## 5. Repeat Chain Definition
++
++A repeat chain is the theoretical path of one repeat unit.
++
++Current active local ladder:
++
++```text
++processing
++  -> +5
++  -> +10
++  -> +20
++  -> +40
++  -> +80
++  -> review / decide next
++```
++
++For a new unit processed on date `D`, active local workflow currently uses:
++
++```text
++D            = processing date / source of unit
++D + 5 days   = +5 repeat
++D + 15 days  = +10 repeat
++D + 35 days  = +20 repeat
++D + 75 days  = +40 repeat
++D + 155 days = +80 repeat / review
++```
++
++The chain helps us:
++
++```text
++- check whether a repeat unit disappeared from schedules;
++- know what next repeat should be;
++- preserve orientation when old schedules are messy;
++- reconstruct schedules after breaks or legacy imports.
++```
++
++## 6. Theoretical Chains Are Default
++
++For each repeat unit that exists, store the theoretical chain.
++
++Use theoretical chains by default.
++
++Change a chain only when:
++
++```text
++- the user explicitly says to reschedule;
++- a recovery note defines an explicit non-default decision;
++- there is clear evidence the current chain row is wrong and the user approves correction.
++```
++
++Do not silently rewrite theoretical chains because a repeat was done late.
++
++## 7. Stage Markers
++
++Schedule items should show current stage and next gap.
++
++Preferred compact examples:
++
++```md
++- [ ] REPEAT [[2026-04-23.server]] (+5 -> +10)
++- [ ] REPEAT `0104 added asp react` (+20 -> +40)
++```
++
++If the stage is unclear in legacy notes:
++
++```md
++- [ ] REPEAT `react 2` (stage unknown)
++```
++
++Unknown stage is better than invented precision.
++
++## 8. Exact Gaps vs Chain Preservation
++
++Exact gaps are the normal rule.
++
++But chain preservation can win when old schedules are messy.
++
++Example:
++
++```text
++Day 14 and Day 15 were accidentally repeated in swapped order.
++Pure date math would make Day 15 appear before Day 14 next time.
++```
++
++In that case, preserve orientation:
++
++```text
++14 -> 15 -> 16
++```
++
++not:
++
++```text
++15 -> 14 -> 16
++```
++
++This does not mean dates are ignored. It means exact dates are default, but chain order can be preserved when swaps/reschedules would make the schedule confusing.
++
++## 9. Late And Very Late Repeats
++
++If a repeat is slightly late, record both planned and actual completion date.
++
++Do not silently mutate the chain.
++
++If a repeat is very late, treat it as a schedule conflict/recovery question.
++
++Possible explicit outcomes:
++
++```text
++- keep the theoretical chain but record late completion;
++- schedule a recovery repeat;
++- create a focused repeat session;
++- explicitly reschedule the chain if user asks;
++- apply a documented recovery workflow/rule.
++```
++
++Use:
++
++```text
++-Repetition/Workflows/Process Repeat Completion Workflow.md
++-Repetition/Workflows/Long Break Stage Rollback Workflow.md
++```
++
++## 10. Old Drawing / Legacy Reconstruction
++
++Old Excalidraw schedules can be messy but valid.
++
++If an item appears on a date in an old schedule, treat it as a valid scheduled event unless there is evidence it is wrong.
++
++Strange date math may mean:
++
++```text
++- manual reschedule;
++- old naming style;
++- legacy repeat unit;
++- shifted chain event;
++- old recovery decision.
++```
++
++If uncertain, keep the item with `review` or `stage unknown` rather than deleting it.
++
++Historical reconstruction is a recovery mode, not default scheduling behavior.
++
++Use:
++
++```text
++-Repetition/Workflows/Reconstruct Historical Repeat Schedule Workflow.md
++```
++
++## 11. Do Not
++
++```text
++- Do not create repeat units from calendar holes.
++- Do not use raw-study date as repeat unit date when processing date is different.
++- Do not copy topic-note content into schedules.
++- Do not silently change theoretical chains after late completion.
++- Do not treat recovery decisions as default schedule rules.
++- Do not delete uncertain legacy items just because they do not match clean date math.
++```
+diff --git a/-Repetition/START HERE.md b/-Repetition/START HERE.md
+index 4a40eeca..56d4fdce 100644
+--- a/-Repetition/START HERE.md	
++++ b/-Repetition/START HERE.md	
+@@ -19,7 +19,7 @@ Use `-Repetition` for active chains and schedules.
+ 4. -Repetition/USE CASE MAP.md
+ 5. -Repetition/RESPONSIBILITY MAP.md
+ 6. -Repetition/Documentation Architecture Adapter.md
+-7. Relevant workflow/template/source files for the requested action.
++7. Relevant principles/profile/workflow/template/source files for the requested action.
+ ```
+ 
+ ## Root Routing Docs
+@@ -30,23 +30,11 @@ Use `-Repetition` for active chains and schedules.
+ - [[RESPONSIBILITY MAP]]
+ - [[Documentation Architecture Adapter]]
+ 
+-## Local Documentation Architecture
++## Active Principles And Profiles
+ 
+-- [[Documentation Architecture Adapter]]
+-
+-## Pending AI System Source Material
+-
+-These files are part of the Repetition domain but are pending promotion into typed `-Repetition/` owners.
+-
+-Read them only when the relevant active owner has not been promoted yet.
+-
+-- [[AI System/Conspects Repetition/README]]
+-- [[AI System/Conspects Repetition/Schedule Rules]]
+-- [[AI System/Conspects Repetition/AI Work Areas]]
+-- [[AI System/Conspects Repetition/Question Creation Principles]]
+-- [[AI System/Conspects Repetition/Export Format Guide]]
+-- [[AI System/Conspects Repetition/Templates/Repeat Chains Template]]
+-- [[AI System/Conspects Repetition/Templates/Month Repeat Plan Template]]
++- [[Repetition Schedule Principles]]
++- [[Question Creation Principles]]
++- [[AI Work Areas Profile]]
+ 
+ ## Active Recovery Context
+ 
+@@ -67,27 +55,37 @@ Read them only when the relevant active owner has not been promoted yet.
+ - [[Schedules/2026-10]]
+ - [[Schedules/2026-11]]
+ 
+-## Documentation Architecture
++## Workflows
+ 
+-Workflows:
+ - [[Workflows/Process New Repeat Unit Workflow]]
++- [[Workflows/Process Repeat Completion Workflow]]
++- [[Workflows/Reconstruct Historical Repeat Schedule Workflow]]
++- [[Workflows/Export Conspect For AI Processing Workflow]]
+ - [[Workflows/Create Repeat Material From Conspect Workflow]]
+ - [[Workflows/Knowledge Lookup Workflow]]
+ - [[Workflows/Create Further Study Branch Workflow]]
+ - [[Workflows/Long Break Stage Rollback Workflow]]
+ - [[Workflows/Add Or Route New Information Workflow]]
+ 
+-Templates:
++## Templates
++
+ - [[Templates/Repeat Material Template]]
++- [[Templates/Question Note Template]]
++- [[Templates/Area Day Note Template]]
++- [[Templates/Repeat Chains Template]]
++- [[Templates/Month Repeat Plan Template]]
++- [[Templates/Focused Repeat Session Template]]
+ - [[Templates/Knowledge Locator Entry Template]]
+ - [[Templates/Further Study Branch Template]]
+ - [[Templates/Responsibility Map Entry Template]]
+ 
+-Lookup:
++## Lookup
++
+ - [[Lookup/Knowledge Locator Map]]
+ - [[Lookup/Inventory Notes]]
+ 
+-Further study:
++## Further Study
++
+ - [[Further Study/Further Study Index]]
+ - [[Further Study/Branches/README]]
+ 
+@@ -100,3 +98,19 @@ Canvases/-repeat notes
+ ```
+ 
+ Avoid modifying that folder unless explicitly needed.
++
++## Superseded Source Material
++
++`AI System/Conspects Repetition/` is retained as old/source material only.
++
++Its useful repetition information has been promoted into typed `-Repetition/` owners:
++
++```text
++AI roles       -> -Repetition/AI Work Areas Profile.md
++schedule rules -> -Repetition/Repetition Schedule Principles.md
++questions      -> -Repetition/Question Creation Principles.md
++export guide   -> -Repetition/Workflows/Export Conspect For AI Processing Workflow.md
++templates      -> -Repetition/Templates/
++```
++
++Do not use `AI System/Conspects Repetition/` as the active owner for new updates.
+diff --git a/-Repetition/SYSTEM OVERVIEW.md b/-Repetition/SYSTEM OVERVIEW.md
+index 2adb18ce..3016913a 100644
+--- a/-Repetition/SYSTEM OVERVIEW.md	
++++ b/-Repetition/SYSTEM OVERVIEW.md	
+@@ -12,24 +12,70 @@ Use this file when a new AI chat or the user needs to understand the model of th
+ 
+ ```text
+ Active work happens in -Repetition/.
+-Old source/reconstruction material remains in Canvases/-repeat notes.
++Old source/reconstruction material remains in Canvases/-repeat notes and retained legacy source folders.
+ ```
+ 
+-The system has four main jobs:
++The system has five main jobs:
+ 
+ ```text
+-1. Track what knowledge units exist and when they should be repeated.
+-2. Create daily queues from those repeat chains.
+-3. Turn visual/source conspects into repeat material with questions, use cases and lookup support.
+-4. Help AI know where to put new information without making the docs chaotic.
++1. Keep repetition chains and schedules.
++2. Process raw study-day/source notes into structured repeat material.
++3. Create questions for topic/source notes.
++4. Repeat conspects using questions, visual anchors and use cases.
++5. Track weak parts and further-study branches without duplicating note fragments.
+ ```
+ 
+-## 2. Core Repetition Model
++## 2. Core Pipeline
+ 
+-The core model is:
++The conceptual pipeline is:
+ 
+ ```text
+-Repeat Chain = source of truth for repeat units and their planned repeat dates.
++Raw/source note
++  -> processing session
++  -> topic/repeat material
++  -> question notes
++  -> area-day notes
++  -> repeat chain
++  -> month schedule
++  -> scheduled repeats
++  -> focused repeat sessions when weak parts are found
++```
++
++## 3. Main Entities
++
++```text
++Raw/source note
++  = original study capture, often a large Excalidraw drawing or export.
++
++Processing session
++  = moment when raw/source material is understood and turned into structured repeatable material.
++
++Repeat unit
++  = material created by a processing/general-note date. If no processing/general note exists for a date, no repeat unit exists for that date.
++
++Repeat chain
++  = source-of-truth path of a repeat unit through planned repeat stages.
++
++Topic/repeat material
++  = structured material used for understanding/repeating one conspect/topic.
++
++Question note
++  = markdown question bank for a topic/source note; questions are a main repeat method, not only a weak-part tool.
++
++Area-day note
++  = clean markdown index for one processing/general-note day and one area.
++
++Month schedule
++  = markdown daily queue that says what to process or repeat on each date.
++
++Focused repeat session
++  = separate note for a weak part found during scheduled repeat that should be repeated sooner or separately.
++```
++
++## 4. Core Repetition Model
++
++```text
++Repeat Chain = source of truth for repeat units and planned repeat dates.
+ Monthly Schedule = daily queue generated from chains/recovery decisions.
+ Recovery Note = explicit exception/decision when normal scheduling is not enough.
+ ```
+@@ -52,6 +98,13 @@ What future repeats should exist?
+ 
+ A repeat unit is created when something is actually processed, not merely because a calendar date exists.
+ 
++Use:
++
++```text
++-Repetition/Repetition Schedule Principles.md
++-Repetition/Templates/Repeat Chains Template.md
++```
++
+ ### Schedules
+ 
+ Schedules live in:
+@@ -68,6 +121,12 @@ What should be processed/repeated on this exact day?
+ 
+ Schedules are daily queues only. They should not become the place for theory, source-of-truth rules, or full explanations.
+ 
++Use:
++
++```text
++-Repetition/Templates/Month Repeat Plan Template.md
++```
++
+ ### Recovery
+ 
+ Recovery notes live in:
+@@ -81,12 +140,13 @@ They record explicit one-time decisions, such as:
+ ```text
+ - +1 calendar month shift after a missed month;
+ - long-break stage rollback;
++- historical reconstruction assumptions;
+ - other non-default rescheduling decisions.
+ ```
+ 
+ Recovery decisions are not default behavior. They must be explicit.
+ 
+-## 3. Processing Creates Repeat Units
++## 5. Processing Creates Repeat Units
+ 
+ When the user says they processed something, AI should treat that as a new repeat unit.
+ 
+@@ -104,21 +164,22 @@ User says on 2026-06-05: "processed 26.04 raw today"
+ => new repeat unit starts from 2026-06-05
+ ```
+ 
+-Default ladder:
++Current active local ladder:
+ 
+ ```text
+ processing -> +5 -> +10 -> +20 -> +40 -> +80 -> review / decide next
+ ```
+ 
+-Use the workflow:
++Use:
+ 
+ ```text
+ -Repetition/Workflows/Process New Repeat Unit Workflow.md
++-Repetition/Repetition Schedule Principles.md
+ ```
+ 
+-## 4. Visual Conspects Are Not Replaced By Questions
++## 6. Visual Conspects Are Not Replaced By Questions
+ 
+-Old visual conspects are valuable because they work like a spatial memory map / “memory palace”.
++Old visual/source conspects are valuable because they work like a spatial memory map / “memory palace”.
+ 
+ Questions are not meant to replace the visual conspect.
+ 
+@@ -141,7 +202,15 @@ Recommended repeat flow for one conspect:
+ 5. Mark weak spots or further-study branches.
+ ```
+ 
+-## 5. Repeat Material
++Use:
++
++```text
++-Repetition/Question Creation Principles.md
++-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
++-Repetition/Templates/Question Note Template.md
++```
++
++## 7. Repeat Material
+ 
+ Repeat material is a wrapper around a source conspect.
+ 
+@@ -163,13 +232,32 @@ It should usually contain:
+ Use:
+ 
+ ```text
++-Repetition/Workflows/Export Conspect For AI Processing Workflow.md
+ -Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
+ -Repetition/Templates/Repeat Material Template.md
+ ```
+ 
+ For old chaotic Excalidraw/SVG/PDF/PNG conspects, AI output is draft until the user reviews the structure.
+ 
+-## 6. Knowledge Lookup Model
++## 8. AI Work Areas
++
++AI roles/capabilities are described in:
++
++```text
++-Repetition/AI Work Areas Profile.md
++```
++
++Core areas:
++
++```text
++- schedule keeper;
++- question creator;
++- note processor;
++- repeat assistant;
++- focused repeat assistant.
++```
++
++## 9. Knowledge Lookup Model
+ 
+ The user may need to find information later by term, use case, vague memory or real-world problem.
+ 
+@@ -203,7 +291,7 @@ Use:
+ -Repetition/Templates/Knowledge Locator Entry Template.md
+ ```
+ 
+-## 7. Further Study Branches
++## 10. Further Study Branches
+ 
+ Sometimes a conspect contains something that should be studied deeper later, but not now.
+ 
+@@ -244,7 +332,7 @@ Use:
+ -Repetition/Templates/Further Study Branch Template.md
+ ```
+ 
+-## 8. Documentation Architecture Model
++## 11. Documentation Architecture Model
+ 
+ The docs are organized by responsibility.
+ 
+@@ -255,6 +343,8 @@ FOR NEW AI CHAT = AI behavior and critical interpretation rules.
+ USE CASE MAP = user command -> required reads/workflow/template/output.
+ RESPONSIBILITY MAP = what information belongs in which file/folder.
+ Documentation Architecture Adapter = local application of reusable docs architecture.
++Principles = invariants.
++Profiles = role/capability models.
+ Workflows = algorithms.
+ Templates = output/file skeletons.
+ ```
+@@ -274,7 +364,7 @@ Prefer updating an existing owner file.
+ Create a new file only if it defines a new responsibility, reduces confusion, or is a durable artifact type.
+ ```
+ 
+-## 9. Read Path For New AI Chat
++## 12. Read Path For New AI Chat
+ 
+ Default read path:
+ 
+@@ -285,16 +375,18 @@ Default read path:
+ 4. -Repetition/USE CASE MAP.md
+ 5. -Repetition/RESPONSIBILITY MAP.md
+ 6. -Repetition/Documentation Architecture Adapter.md
+-7. Relevant workflow/template/source files for the requested action.
++7. Relevant principles/profile/workflow/template/source files for the requested action.
+ ```
+ 
+-## 10. Source-of-Truth Boundaries
++## 13. Source-of-Truth Boundaries
+ 
+ ```text
+ Chains are source of truth for repeat units/repeat dates.
+ Schedules are daily queues generated from chains/recovery.
+ Recovery notes are explicit non-default decisions.
++Schedule principles own invariants.
+ Repeat material is how to repeat/understand one conspect.
++Question principles own question invariants.
+ Knowledge Locator Map is where to find information.
+ Further Study Branches are unscheduled future topic expansions.
+ Responsibility Map decides where information belongs.
+diff --git a/-Repetition/Templates/Area Day Note Template.md b/-Repetition/Templates/Area Day Note Template.md
+new file mode 100644
+index 00000000..44f800f6
+--- /dev/null
++++ b/-Repetition/Templates/Area Day Note Template.md	
+@@ -0,0 +1,42 @@
++# YYYY-MM-DD — Area
++
++Status: draft / active / archived
++
++Raw source:
++- [[YYYY-MM-DD.excalidraw]]
++
++Processed on:
++- YYYY-MM-DD
++
++Repeat batch:
++- YYYY-MM-DD area
++
++## Topic notes
++
++- [[Topic Name]]
++  Questions: [[Topic Name.questions]]
++  Scope: whole note / section
++  Repeat focus:
++  - 
++
++## Small raw notes
++
++Short notes only if they are not worth a topic note yet.
++
++- 
++
++## Focused repeat sessions
++
++- 
++
++## Repeat schedule
++
++- +5:
++- +10:
++- +20:
++- +40:
++- +80 / review:
++
++## Processing notes
++
++-
+diff --git a/-Repetition/Templates/Focused Repeat Session Template.md b/-Repetition/Templates/Focused Repeat Session Template.md
+new file mode 100644
+index 00000000..bf4126b5
+--- /dev/null
++++ b/-Repetition/Templates/Focused Repeat Session Template.md	
+@@ -0,0 +1,36 @@
++# YYYY-MM-DD — Focused Repeat — Topic / Weak Part
++
++Status: planned / done / postponed
++
++Source scheduled repeat:
++- [[YYYY-MM-DD.area]] (+stage -> +next)
++
++Source topic:
++- [[Topic Name#Section]]
++
++Question note:
++- [[Topic Name.questions#Section]]
++
++## Why this session exists
++
++- 
++
++## Repeat focus
++
++- 
++
++## Questions
++
++- 
++
++## Result
++
++- 
++
++## Next due
++
++- YYYY-MM-DD
++
++## Notes
++
++-
+diff --git a/-Repetition/Templates/Month Repeat Plan Template.md b/-Repetition/Templates/Month Repeat Plan Template.md
+new file mode 100644
+index 00000000..4d372010
+--- /dev/null
++++ b/-Repetition/Templates/Month Repeat Plan Template.md	
+@@ -0,0 +1,49 @@
++# Repetition Plan — YYYY-MM
++
++Status: draft / active / closed
++
++Purpose:
++
++```text
++Daily queue: what to process or repeat on each date.
++```
++
++Generated from:
++
++```text
++- repeat chains;
++- processing backlog;
++- focused repeat sessions;
++- explicit reschedules;
++- recovery notes.
++```
++
++This file should not contain theory or copied topic fragments.
++
++## Known state / month notes
++
++- 
++
++## YYYY-MM-DD
++
++- [ ] PROCESS_RAW [[YYYY-MM-DD raw]]
++- [ ] REPEAT [[YYYY-MM-DD.area]] (+5 -> +10)
++- [ ] REPEAT `legacy repeat unit` (stage unknown)
++- [ ] FOCUSED_REPEAT [[Focused Repeat Session Name]]
++
++## Completed
++
++- [x] REPEAT [[YYYY-MM-DD.area]] (+5 -> +10)
++  planned: YYYY-MM-DD
++  done: YYYY-MM-DD
++  status: done / late done / recovery done
++  next: YYYY-MM-DD
++
++## Late / reschedule notes
++
++- 
++
++## Review / unclear items
++
++- [ ] REPEAT `unclear legacy unit` (stage unknown)
++  note: keep for review rather than deleting
+diff --git a/-Repetition/Templates/Question Note Template.md b/-Repetition/Templates/Question Note Template.md
+new file mode 100644
+index 00000000..aec95209
+--- /dev/null
++++ b/-Repetition/Templates/Question Note Template.md	
+@@ -0,0 +1,42 @@
++# Topic Name — Questions
++
++Source:
++- [[Topic Name]]
++
++## Core questions
++
++- 
++
++## Why / purpose questions
++
++- 
++
++## Flow / process questions
++
++- 
++
++## Comparison questions
++
++- 
++
++## Practical questions
++
++- 
++
++## Edge cases / mistakes
++
++- 
++
++## Section-specific questions
++
++### Section name
++
++- 
++
++## Weak-point questions
++
++- 
++
++## Repeat history
++
++-
+diff --git a/-Repetition/Templates/Repeat Chains Template.md b/-Repetition/Templates/Repeat Chains Template.md
+new file mode 100644
+index 00000000..346c852a
+--- /dev/null
++++ b/-Repetition/Templates/Repeat Chains Template.md	
+@@ -0,0 +1,34 @@
++# Repeat Chains
++
++Status: draft / active
++
++Purpose:
++
++```text
++Source of truth / orientation for repeat units and planned repeat dates.
++```
++
++Rules:
++
++```text
++- Add rows only for repeat units that actually exist.
++- A repeat unit is created by a processing/general-note date.
++- Do not add rows for holes.
++- Use active local theoretical gaps by default: +5, +10, +20, +40, +80 / review.
++- Change a chain only when explicitly rescheduled or documented by recovery decision.
++```
++
++## YYYY-MM chains
++
++| Unit | Processing date | +5 | +10 | +20 | +40 | +80 / review | Notes |
++|---|---:|---:|---:|---:|---:|---:|---|
++| `YYYY-MM-DD.area` | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | theoretical |
++| `legacy repeat unit` | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | YYYY-MM-DD | legacy / review |
++
++## Holes / absent units
++
++Optional. Use only when absence needs to be remembered.
++
++```text
++YYYY-MM-DD did not create a repeat unit because no processing/general note existed.
++```
+diff --git a/-Repetition/USE CASE MAP.md b/-Repetition/USE CASE MAP.md
+index e7200ac8..dd585e18 100644
+--- a/-Repetition/USE CASE MAP.md	
++++ b/-Repetition/USE CASE MAP.md	
+@@ -14,9 +14,10 @@ This file is not a full workflow and not a template. It routes commands to the r
+ 3. -Repetition/USE CASE MAP.md
+ 4. -Repetition/RESPONSIBILITY MAP.md
+ 5. -Repetition/Documentation Architecture Adapter.md
+-6. Relevant workflow file from -Repetition/Workflows/
+-7. Relevant template file from -Repetition/Templates/
+-8. Relevant source file:
++6. Relevant principles/profile file when the task depends on invariants/roles.
++7. Relevant workflow file from -Repetition/Workflows/
++8. Relevant template file from -Repetition/Templates/
++9. Relevant source file:
+    - chain file
+    - schedule file
+    - recovery note
+@@ -29,8 +30,8 @@ This file is not a full workflow and not a template. It routes commands to the r
+ 
+ | Mode | Meaning | Use when |
+ |---|---|---|
+-| Full traversal | Read handoff + use-case map + responsibility map + adapter + relevant workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect, new documentation category. |
+-| Targeted traversal | Read only relevant workflow/template/source files. | Known use case, narrow update, named schedule/chain/conspect. |
++| Full traversal | Read handoff + use-case map + responsibility map + adapter + relevant principles/profile + workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect, new documentation category. |
++| Targeted traversal | Read only relevant workflow/template/source files and required principles if needed. | Known use case, narrow update, named schedule/chain/conspect. |
+ | Reuse context | Reuse current chat context and read only target files if needed. | Same active draft/repeat material/schedule update. |
+ | No traversal | Answer from active context. | Simple clarification or explanation without repo change. |
+ 
+@@ -38,12 +39,14 @@ This file is not a full workflow and not a template. It routes commands to the r
+ 
+ | User says / means | Task type | Required reads | Workflow | Template | Expected output | Permission boundary |
+ |---|---|---|---|---|---|---|
+-| “запроцессил X today”, “processed X”, “processed 26.04 raw today” | New repeat unit | chain file, current/future schedule files, FOR NEW AI CHAT | [[Workflows/Process New Repeat Unit Workflow]] | schedule file pattern from existing months | New chain row + generated schedule entries | Repo edits require explicit permission. |
+-| “я повторил X”, “done repeat X”, “повторил на дату Y” | Repeat completion update | chain row, schedule item, recovery rules if late; pending source: `AI System/Conspects Repetition/Schedule Rules.md` until promoted | [[Workflows/Process New Repeat Unit Workflow]] as reference | existing schedule style | Mark done / record planned vs actual / add next stage if needed | Do not silently reschedule. |
+-| “создай вопросы по конспекту”, “вот svg/pdf/png конспекта” | Repeat material creation | source conspect/export, question principles source, use-case map | [[Workflows/Create Repeat Material From Conspect Workflow]] | [[Templates/Repeat Material Template]] | Draft repeat material with visual anchors, questions, use cases, lookup index, weak spots | Draft until user review. |
++| “запроцессил X today”, “processed X”, “processed 26.04 raw today” | New repeat unit | FOR NEW AI CHAT, Repetition Schedule Principles, chain file, current/future schedule files | [[Workflows/Process New Repeat Unit Workflow]] | [[Templates/Repeat Chains Template]], [[Templates/Month Repeat Plan Template]] as reference | New chain row + generated schedule entries | Repo edits require explicit permission. |
++| “я повторил X”, “done repeat X”, “повторил на дату Y” | Repeat completion update | Repetition Schedule Principles, chain row, schedule item, recovery notes if late/very late | [[Workflows/Process Repeat Completion Workflow]] | [[Templates/Month Repeat Plan Template]] | Mark done / record planned vs actual / add next stage if needed | Do not silently reschedule. |
++| “создай вопросы по конспекту”, “вот svg/pdf/png конспекта” | Repeat material creation | source conspect/export, AI Work Areas Profile, Question Creation Principles, Export Conspect workflow | [[Workflows/Create Repeat Material From Conspect Workflow]] | [[Templates/Repeat Material Template]], [[Templates/Question Note Template]] | Draft repeat material with visual anchors, questions, use cases, lookup index, weak spots | Draft until user review. |
++| “подготовь svg/png/pdf для обработки”, “как лучше дать конспект” | Source export/preparation | Export workflow, target source context | [[Workflows/Export Conspect For AI Processing Workflow]] | none | Recommended export format and source preparation instructions | Do not treat ambiguous source as confirmed. |
+ | “где у меня было про X?”, “не могу найти инфу” | Knowledge lookup | [[Lookup/Knowledge Locator Map]], repeat materials, source notes if needed | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] if adding entry | Candidate notes/sections and why they match | Do not invent location if not found. |
+ | “это надо изучить глубже, но не сейчас” | Further study branch | source conspect/repeat material, Further Study Index | [[Workflows/Create Further Study Branch Workflow]] | [[Templates/Further Study Branch Template]] | Branch linked to source topic/visual anchor, not scheduled by default | Do not add to repeat chain automatically. |
+-| “после перерыва хочу откатить стадии”, “40->80 слишком поздно” | Explicit recovery stage rollback | active chains, schedules, recovery notes, schedule principles/source | [[Workflows/Long Break Stage Rollback Workflow]] | recovery note style | Explicit recovery decision + changed active stages + regenerated future schedules | Not default; must be explicit. |
++| “после перерыва хочу откатить стадии”, “40->80 слишком поздно” | Explicit recovery stage rollback | Repetition Schedule Principles, active chains, schedules, recovery notes | [[Workflows/Long Break Stage Rollback Workflow]] | recovery note style | Explicit recovery decision + changed active stages + regenerated future schedules | Not default; must be explicit. |
++| “восстанови старое расписание”, “собери цепочки из старых рисунков” | Historical reconstruction | Repetition Schedule Principles, recovery notes, old source material when explicitly provided | [[Workflows/Reconstruct Historical Repeat Schedule Workflow]] | [[Templates/Repeat Chains Template]], [[Templates/Month Repeat Plan Template]] | Reconstructed chains/schedules with assumptions and review markers | Do not invent repeat units or delete uncertain legacy items. |
+ | “обнови карту поиска / добавь entry” | Locator update | Knowledge Locator Map, source repeat material/conspect | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] | New/updated locator entry | Add only after enough source context. |
+ | “инвентаризация конспектов” | Inventory / classification | lookup map, inventory notes, selected conspect list | Knowledge lookup + repeat material workflow | locator entry template | Classified list: known/unknown/to process/to review | Avoid broad destructive moves. |
+ | “куда положить эту инфу?”, “создай файл для этого”, “добавь новый workflow/template”, “обнови доки с новым правилом” | Add or route new information | RESPONSIBILITY MAP, Documentation Architecture Adapter, likely target files | [[Workflows/Add Or Route New Information Workflow]] | [[Templates/Responsibility Map Entry Template]] if new file/category is created | Existing-file update or new file proposal/update with responsibility sync | Repo edits require explicit permission. |
+@@ -71,18 +74,15 @@ New information must be routed before file creation:
+ USE CASE MAP -> RESPONSIBILITY MAP -> Documentation Architecture Adapter when file type/docs architecture matters -> Add Or Route New Information Workflow
+ ```
+ 
+-If a new durable file/category is created, update `RESPONSIBILITY MAP.md`.
+-
+-If navigation changes, update `START HERE.md`.
+-
+-If command routing changes, update `USE CASE MAP.md`.
+-
+ ## 5. Expected Source Reporting In Chat
+ 
+ ```text
+ Read:
+ - ...
+ 
++Used principles/profile:
++- ...
++
+ Used workflow:
+ - ...
+ 
+diff --git a/-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md b/-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
+index 429d1f1b..10cef0c4 100644
+--- a/-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md	
++++ b/-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md	
+@@ -6,7 +6,17 @@ Use when the user provides an old/new conspect export and wants questions or rep
+ 
+ ## Goal
+ 
+-Create repeat material that preserves the value of the visual conspect while adding active recall questions, use cases, lookup index, weak spots and further-study branches.
++Create repeat material that preserves the value of the visual/source conspect while adding active recall questions, use cases, lookup index, weak spots and further-study branches.
++
++## Required Reads
++
++```text
++-Repetition/AI Work Areas Profile.md
++-Repetition/Question Creation Principles.md
++-Repetition/Workflows/Export Conspect For AI Processing Workflow.md
++-Repetition/Templates/Repeat Material Template.md
++-Repetition/Templates/Question Note Template.md
++```
+ 
+ ## Inputs
+ 
+@@ -14,21 +24,30 @@ Create repeat material that preserves the value of the visual conspect while add
+ - visual/source conspect: SVG/PDF/PNG/Excalidraw export or markdown note;
+ - user corrections about structure;
+ - optional target topic name;
+-- optional existing source note links.
++- optional existing source note links;
++- optional desired output: questions only / repeat material / locator entries / further-study branches.
+ ```
+ 
+ ## Algorithm
+ 
+ ```text
+-1. Inspect source conspect.
+-2. Extract rough topic map:
++1. Check source format.
++   - If source is visual/Excalidraw/export material, use Export Conspect For AI Processing Workflow as needed.
++   - Prefer SVG + optional PNG crops for dense/important areas when the user is preparing source.
++
++2. Inspect source conspect.
++
++3. Extract rough topic map:
+    - main blocks;
+    - visual anchors;
+    - suspected flows;
+    - important terms;
+    - unclear zones.
+-3. State uncertainty clearly.
+-4. Create repeat material draft:
++
++4. State uncertainty clearly.
++
++5. Create repeat material draft:
++   - source links;
+    - search terms;
+    - visual map anchors;
+    - warm-up map recall prompts;
+@@ -38,11 +57,19 @@ Create repeat material that preserves the value of the visual conspect while add
+    - lookup index;
+    - weak spots;
+    - further study branch candidates.
+-5. Ask user to correct structure if source is old/chaotic.
+-6. After user review, update repeat material and optionally locator map.
++
++6. Apply Question Creation Principles:
++   - questions should force recall;
++   - questions should be answerable from source;
++   - large topics should have section-specific questions;
++   - weak parts should become weak-point questions or focused repeat candidates.
++
++7. Ask user to correct structure if source is old/chaotic.
++
++8. After user review, update repeat material and optionally locator map.
+ ```
+ 
+-## Important principles
++## Important Principles
+ 
+ ```text
+ Questions do not replace the visual conspect.
+@@ -52,7 +79,7 @@ Use cases connect the conspect to real work.
+ Lookup index makes the material useful when searching for forgotten information.
+ ```
+ 
+-## Output shape
++## Output Shape
+ 
+ ```text
+ Topic:
+@@ -75,3 +102,11 @@ Repeat material draft:
+ Needs user review:
+ - ...
+ ```
++
++## Do Not
++
++```text
++- Do not treat uncertain visual/source interpretation as confirmed truth.
++- Do not replace visual conspect with questions.
++- Do not create active repeat chain/schedule entries unless the user says this material was processed as a repeat unit.
++```
+diff --git a/-Repetition/Workflows/Export Conspect For AI Processing Workflow.md b/-Repetition/Workflows/Export Conspect For AI Processing Workflow.md
+new file mode 100644
+index 00000000..d5d07945
+--- /dev/null
++++ b/-Repetition/Workflows/Export Conspect For AI Processing Workflow.md	
+@@ -0,0 +1,108 @@
++# Export Conspect For AI Processing Workflow
++
++Status: active workflow.
++
++Use when the user wants to process an Excalidraw/visual conspect with AI, create repeat material, or create question candidates from visual/source material.
++
++## Goal
++
++Prepare source material so AI can inspect it reliably and produce useful repeat material, topic candidates, question drafts, unclear-part questions and weak/repeat focus candidates.
++
++## Required Reads
++
++```text
++-Repetition/Question Creation Principles.md
++-Repetition/Workflows/Create Repeat Material From Conspect Workflow.md
++-Repetition/Templates/Repeat Material Template.md
++-Repetition/Templates/Question Note Template.md
++```
++
++## Recommended Source Format
++
++Best default:
++
++```text
++Full SVG export
+++ optional PNG crops for important/dense regions
++```
++
++## Format Choice
++
++| Format | Use when | Notes |
++|---|---|---|
++| SVG | default for full Excalidraw drawing / large visual conspect | scalable, preserves layout, may preserve text and embedded images |
++| PNG crop | focused region, dense area, screenshot inside canvas, visual detail | better for one specific region |
++| PDF | only when already exported or SVG/PNG is not practical | not first choice for one huge canvas; can crop/scale strangely |
++
++## Algorithm
++
++```text
++1. Identify source context:
++   - raw day date;
++   - area/topic if known;
++   - source file/export format;
++   - desired output: questions, repeat material, topic candidates, lookup entries, or all.
++
++2. Prefer full SVG export for whole-canvas understanding.
++
++3. Add PNG crops for:
++   - dense/important regions;
++   - embedded screenshots;
++   - areas where text/layout is hard to inspect from full SVG.
++
++4. Use PDF only if:
++   - it is already exported;
++   - multi-page/print form is useful;
++   - SVG/PNG is not practical.
++
++5. Ask user for missing context if source meaning is ambiguous.
++
++6. Inspect source and produce:
++   - possible topic notes;
++   - possible area-day note entries;
++   - question note drafts;
++   - unclear parts/questions for the user;
++   - weak/repeat focus candidates;
++   - visual anchors.
++
++7. Hand off to:
++   - Create Repeat Material From Conspect Workflow, if producing repeat material;
++   - Question Creation Principles, if producing/improving questions.
++```
++
++## Output Shape
++
++```text
++Source received:
++- ...
++
++Format used:
++- SVG / PNG crop / PDF / markdown / mixed
++
++AI-readable enough?
++- yes / partially / no
++
++Detected topics:
++- ...
++
++Visual anchors:
++- ...
++
++Question candidates:
++- ...
++
++Unclear parts:
++- ...
++
++Recommended next action:
++- create repeat material / ask user / export more crops / update question note / update locator
++```
++
++## Do Not
++
++```text
++- Do not treat ambiguous visual interpretation as confirmed source truth.
++- Do not discard the visual/source conspect after creating questions.
++- Do not use PDF as first choice for one huge Excalidraw canvas unless needed.
++- Do not paste long source fragments into schedules.
++```
+diff --git a/-Repetition/Workflows/Process New Repeat Unit Workflow.md b/-Repetition/Workflows/Process New Repeat Unit Workflow.md
+index 630523fc..e9a777d3 100644
+--- a/-Repetition/Workflows/Process New Repeat Unit Workflow.md	
++++ b/-Repetition/Workflows/Process New Repeat Unit Workflow.md	
+@@ -8,6 +8,21 @@ Use when the user says they processed / запроцессил a raw note, area
+ 
+ Create a new repeat unit and schedule all future repeats.
+ 
++## Required Reads
++
++```text
++-Repetition/Repetition Schedule Principles.md
++-Repetition/Chains/
++-Repetition/Schedules/
++```
++
++Use templates as reference when creating a new chain/schedule style:
++
++```text
++-Repetition/Templates/Repeat Chains Template.md
++-Repetition/Templates/Month Repeat Plan Template.md
++```
++
+ ## Inputs
+ 
+ ```text
+@@ -54,16 +69,17 @@ Create a new repeat unit and schedule all future repeats.
+ 7. Report what changed and which months were touched.
+ ```
+ 
+-## Do not
++## Do Not
+ 
+ ```text
+ - Do not use raw-study date as repeat unit date when processing date is different.
+ - Do not create repeat units for calendar holes.
+ - Do not silently apply +1 month recovery shift.
+ - Do not silently rollback stages.
++- Do not silently rewrite existing chain rows unless explicitly asked.
+ ```
+ 
+-## Output shape
++## Output Shape
+ 
+ ```text
+ Created repeat unit:
+diff --git a/-Repetition/Workflows/Process Repeat Completion Workflow.md b/-Repetition/Workflows/Process Repeat Completion Workflow.md
+new file mode 100644
+index 00000000..0d2cac46
+--- /dev/null
++++ b/-Repetition/Workflows/Process Repeat Completion Workflow.md	
+@@ -0,0 +1,126 @@
++# Process Repeat Completion Workflow
++
++Status: active workflow.
++
++Use when the user says a repeat was completed, done late, partially done, weak, very late, or explicitly rescheduled.
++
++## Goal
++
++Update schedule/repeat state after a repeat completion without silently rewriting repeat chains.
++
++## Required Reads
++
++```text
++-Repetition/Repetition Schedule Principles.md
++-Repetition/Chains/
++-Repetition/Schedules/
++-Repetition/Recovery/ if completion is late, very late, or affected by a recovery decision
++```
++
++## Inputs
++
++```text
++- repeat unit / schedule item;
++- actual completion date;
++- planned date if known;
++- current stage marker if known;
++- user statement: done / weak / partial / late / very late / rescheduled;
++- optional recovery instruction.
++```
++
++## Algorithm
++
++```text
++1. Identify the repeat item.
++   - Find matching schedule entry.
++   - Find matching chain row.
++   - If uncertain, mark as unclear and ask instead of guessing.
++
++2. Confirm planned date and stage.
++   - Use schedule item marker if present.
++   - Use chain row if schedule marker is missing.
++   - If stage is unclear, preserve `stage unknown`.
++
++3. Mark the schedule item done.
++   - Record actual completion date.
++   - Record planned date when completion was late or recovered.
++   - Preserve status: done / late done / weak / partial / recovery done.
++
++4. Decide next event.
++   - Use next stage from chain if clear.
++   - Do not mutate theoretical chain just because actual completion was late.
++   - If user explicitly reschedules, update chain/schedule according to that instruction and record why.
++
++5. Handle weak or partial repeat.
++   - Add weak-point note/question if needed.
++   - Create or propose focused repeat session if the weak part needs earlier/special repeat.
++
++6. Report touched files and unclear items.
++```
++
++## Late Repeat Rule
++
++If a repeat is slightly late:
++
++```md
++- [x] REPEAT [[2026-03-20.server]] (+20 -> +40)
++  planned: 2026-04-09
++  done: 2026-04-11
++  status: late done
++```
++
++Do not silently rewrite theoretical chain.
++
++## Very Late Repeat Rule
++
++If a repeat is very late, treat it as a schedule conflict / recovery question.
++
++Possible actions:
++
++```text
++- keep theoretical chain but record late completion;
++- schedule a recovery repeat;
++- create focused repeat session;
++- explicitly reschedule chain if user asks;
++- apply Long Break Stage Rollback Workflow if user requests recovery rollback.
++```
++
++## Output Shape
++
++```text
++Completed repeat:
++- ...
++
++Planned date:
++- ...
++
++Done date:
++- ...
++
++Status:
++- done / late done / weak / partial / recovery done
++
++Chain update:
++- none / next event added / explicitly rescheduled
++
++Schedule update:
++- ...
++
++Focused repeat / weak questions:
++- none / proposed / created
++
++Touched files:
++- ...
++
++Unclear / needs user check:
++- ...
++```
++
++## Do Not
++
++```text
++- Do not silently reschedule.
++- Do not delete uncertain legacy items.
++- Do not create a new repeat unit for a completion event.
++- Do not treat recovery decisions as default schedule rules.
++```
+diff --git a/-Repetition/Workflows/Reconstruct Historical Repeat Schedule Workflow.md b/-Repetition/Workflows/Reconstruct Historical Repeat Schedule Workflow.md
+new file mode 100644
+index 00000000..41d2e314
+--- /dev/null
++++ b/-Repetition/Workflows/Reconstruct Historical Repeat Schedule Workflow.md	
+@@ -0,0 +1,135 @@
++# Reconstruct Historical Repeat Schedule Workflow
++
++Status: active workflow.
++
++Use when reconstructing historical repeat chains/schedules from old drawings, old schedules, or messy legacy material.
++
++This workflow is for recovery/reconstruction mode, not normal daily scheduling.
++
++## Goal
++
++Build or verify chains and monthly queues from historical source material without inventing repeat units or deleting uncertain legacy items.
++
++## Required Reads
++
++```text
++-Repetition/Repetition Schedule Principles.md
++-Repetition/Recovery/
++-Repetition/Chains/
++-Repetition/Schedules/
++old source material only if user explicitly provides or asks to use it
++```
++
++## Applicability
++
++Use this workflow when:
++
++```text
++- old Excalidraw schedules need to be turned into chain/schedule files;
++- historical repeat units may be missing from current chain files;
++- the user asks to rebuild February/March/April/etc. schedules;
++- a recovery note says to reconstruct from an imagined historical state.
++```
++
++Do not use this workflow for ordinary new repeat unit creation.
++
++## Core Assumption Pattern
++
++Historical reconstruction may use an explicit imagined state, for example:
++
++```text
++Imagine today is 2026-04-28.
++Everything before 2026-04-28 was repeated/processed as planned.
++```
++
++Such assumptions must be visible in the output/recovery note.
++
++## Algorithm
++
++```text
++1. Identify the reconstruction scope.
++   - date range;
++   - source drawings/schedules;
++   - imagined current date if any;
++   - known last processing date;
++   - active recovery notes.
++
++2. Identify which processing/general-note dates actually created repeat units.
++
++3. Create chain rows only for real repeat units.
++
++4. Do not create rows for holes.
++
++5. Use active local theoretical ladder:
++   - +5;
++   - +10;
++   - +20;
++   - +40;
++   - +80 / review when active local workflow requires it.
++
++6. Preserve old labels for legacy units.
++
++7. Generate monthly daily queues from chain rows.
++
++8. Add processing backlog for unprocessed raw notes.
++
++9. If old drawing conflicts with theory, treat it as possible reschedule.
++   - Do not mutate theoretical chain unless the user confirms.
++   - Keep uncertain items with `review` or `stage unknown`.
++
++10. Report assumptions, touched files, uncertain items and decisions requiring user confirmation.
++```
++
++## Unprocessed Raw Notes
++
++Unprocessed raw notes are not repeat chains yet.
++
++Example:
++
++```md
++- [ ] PROCESS_RAW [[2026-04-26 raw]]
++- [ ] PROCESS_RAW [[2026-04-27 raw]]
++- [ ] PROCESS_RAW [[2026-04-28 raw]]
++```
++
++They become repeat units only after processing.
++
++## Output Shape
++
++```text
++Reconstruction scope:
++- ...
++
++Assumptions:
++- ...
++
++Repeat units confirmed:
++- ...
++
++Holes preserved:
++- ...
++
++Chain rows created/updated:
++- ...
++
++Schedules generated/updated:
++- ...
++
++Backlog added:
++- ...
++
++Unclear / review items:
++- ...
++
++Touched files:
++- ...
++```
++
++## Do Not
++
++```text
++- Do not reconstruct from calendar dates alone.
++- Do not fill holes to make sequences continuous.
++- Do not delete uncertain old items only because date math is messy.
++- Do not treat reconstruction mode as default future scheduling.
++```

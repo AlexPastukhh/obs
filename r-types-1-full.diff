@@ -1,0 +1,908 @@
+diff --git a/-Repetition/Documentation Architecture Adapter.md b/-Repetition/Documentation Architecture Adapter.md
+new file mode 100644
+index 00000000..9cee645e
+--- /dev/null
++++ b/-Repetition/Documentation Architecture Adapter.md	
+@@ -0,0 +1,205 @@
++# Repetition Documentation Architecture Adapter
++
++Status: active local adapter for documentation architecture.
++
++Purpose: explain how reusable documentation-architecture rules apply inside `-Repetition/`.
++
++This file is an **adapter**, not the universal source of documentation principles.
++
++Reusable documentation principles can be imported or mirrored from a shared/reusable docs layer later. This file owns only the local mapping for the Repetition problem area.
++
++## 1. Adapter Boundary
++
++This file owns:
++
++```text
++- how shared/reusable documentation architecture rules apply to -Repetition/;
++- local file type naming and postfix rules;
++- local source-of-truth boundaries between root docs, workflows, templates, chains, schedules, recovery notes, lookup and further study;
++- local no-duplication rules;
++- how AI System/Conspects Repetition material should be promoted into typed -Repetition owners.
++```
++
++This file does **not** own:
++
++```text
++- universal reusable documentation principles;
++- repetition schedule invariants;
++- question creation/content invariants;
++- workflows;
++- templates;
++- examples;
++- active chain/schedule/recovery data.
++```
++
++## 2. Principles vs Adapter
++
++Principles files store invariants:
++
++```text
++- how the system should be;
++- what must not be violated;
++- source-of-truth boundaries;
++- stable entity/file-type boundaries;
++- rules that should remain true across updates.
++```
++
++Adapter files store local application:
++
++```text
++- how reusable principles apply in this project/problem area;
++- which local files instantiate the shared model;
++- which names, routes and folders are used here.
++```
++
++Therefore this file is named `Documentation Architecture Adapter.md`, not `Documentation Principles.md`.
++
++## 3. File Type Postfix Rule
++
++Durable documentation files should usually end with their type.
++
++Use these postfixes by default:
++
++| Postfix | Owns |
++|---|---|
++| `Principles.md` | system/domain invariants and source-of-truth boundaries. |
++| `Workflow.md` | repeated algorithm/process. |
++| `Template.md` | skeleton/output/file shape. |
++| `Map.md` | routing or ownership map. |
++| `Register.md` | durable list of open/deferred/shared items. |
++| `Log.md` | completed actions/history. |
++| `Adapter.md` | local application of external/reusable architecture. |
++| `Profile.md` | role model, capability model or project/domain profile. |
++| `Overview.md` | conceptual explanation of the system. |
++| `Index.md` | navigation/catalog list. |
++
++Avoid these as primary durable file types when a clearer type exists:
++
++```text
++Rules.md
++Guide.md
++```
++
++Use:
++
++```text
++Rules -> Principles, if it stores invariants.
++Guide -> Workflow, if it describes how to do something.
++```
++
++Allowed conventional exceptions for now:
++
++```text
++START HERE.md
++FOR NEW AI CHAT.md
++```
++
++They are entry/handoff files and are already clear enough.
++
++## 4. Local Repetition File Type Map
++
++| Current / target file | Type | Responsibility |
++|---|---|---|
++| `START HERE.md` | entrypoint / index exception | where to start, read order, high-level links. |
++| `SYSTEM OVERVIEW.md` | Overview | conceptual model of the whole repetition system. |
++| `FOR NEW AI CHAT.md` | handoff exception | AI behavior and critical interpretation rules for a new chat. |
++| `USE CASE MAP.md` | Map | user command/action -> reads/workflow/template/output mapping. |
++| `RESPONSIBILITY MAP.md` | Map | where information belongs. |
++| `Documentation Architecture Adapter.md` | Adapter | local documentation architecture mapping. |
++| `Repetition Schedule Principles.md` | Principles | schedule/repeat-chain invariants after AI System migration. |
++| `Question Creation Principles.md` | Principles | question/content invariants after AI System migration. |
++| `AI Work Areas Profile.md` | Profile | AI roles/capabilities for repetition work after AI System migration. |
++| `Workflows/*.md` | Workflow | repeated procedures. |
++| `Templates/*.md` | Template | output/file skeletons. |
++| `Chains/*.md` | source-of-truth data | repeat units and planned repeat dates. |
++| `Schedules/*.md` | derived queue | what to process/repeat on exact dates. |
++| `Recovery/*.md` | recovery note | explicit non-default decisions/exceptions. |
++| `Lookup/*.md` | index/register | knowledge lookup and temporary inventory. |
++| `Further Study/*.md` | index/register/branch notes | unscheduled deeper-study branches. |
++
++## 5. Source-of-Truth Boundaries
++
++```text
++Chains
++  = source of truth for repeat units and planned repeat dates.
++
++Schedules
++  = derived daily/monthly queues generated from chains and recovery decisions.
++
++Recovery notes
++  = explicit non-default decisions; not default schedule rules.
++
++Workflows
++  = how to do repeated actions.
++
++Templates
++  = output/file skeletons.
++
++Maps
++  = routing/ownership, not workflows.
++
++Adapter
++  = local application of docs architecture, not universal principles.
++```
++
++Do not move information across these boundaries without a reason.
++
++## 6. New Information Routing
++
++When new information appears:
++
++```text
++1. Identify information type.
++2. Check USE CASE MAP.md.
++3. Check RESPONSIBILITY MAP.md.
++4. Check this adapter if the question is about documentation/file type/ownership.
++5. If an owner exists, update the owner file.
++6. Create a new file only when it has a durable distinct responsibility or prevents confusion.
++7. If a new file/category is created, update RESPONSIBILITY MAP.md.
++8. If navigation changes, update START HERE.md.
++9. If command routing changes, update USE CASE MAP.md.
++```
++
++## 7. AI System Migration Boundary
++
++`AI System/Conspects Repetition/` is part of the Repetition domain, but it should not remain a second active owner layer.
++
++During migration:
++
++```text
++- useful principles move to typed -Repetition/* Principles.md owners;
++- useful workflows move to -Repetition/Workflows/* Workflow.md;
++- useful templates move to -Repetition/Templates/* Template.md;
++- AI role/capability model moves to a Profile file;
++- old AI System files are kept only until promotion is verified.
++```
++
++After promotion, active repetition rules should live under `-Repetition/`.
++
++## 8. No-Duplication Rule
++
++Do not copy the same rule into many files unless it is a short routing reminder.
++
++Prefer:
++
++```text
++- one owner file with the full explanation;
++- other files link to it.
++```
++
++If changing one owner would require editing the same logic in many files, the logic is probably duplicated incorrectly.
++
++## 9. Simplicity Principle
++
++Do not make simple note-taking too heavy.
++
++Use full routing/workflow only when:
++
++```text
++- creating/updating durable structure;
++- touching chains/schedules/recovery;
++- creating repeat material;
++- changing recovery decisions;
++- adding new documentation categories;
++- migrating AI System content into typed active owners.
++```
+diff --git a/-Repetition/Documentation Principles.md b/-Repetition/Documentation Principles.md
+deleted file mode 100644
+index a1642f3e..00000000
+--- a/-Repetition/Documentation Principles.md	
++++ /dev/null
+@@ -1,107 +0,0 @@
+-# Repetition Documentation Principles
+-
+-Status: active documentation architecture principles.
+-
+-Purpose: explain how docs in `-Repetition` should be organized and maintained.
+-
+-## File type responsibilities
+-
+-Entry files (`START HERE.md`) show where to begin, read order and high-level navigation.
+-
+-Use-case maps (`USE CASE MAP.md`) map user-visible commands/actions to required reads, workflows, templates, expected output and permission boundaries.
+-
+-Responsibility maps (`RESPONSIBILITY MAP.md`) explain where information belongs and guide new-file vs existing-file decisions.
+-
+-Workflow files (`Workflows/*.md`) contain step-by-step algorithms.
+-
+-Template files (`Templates/*.md`) contain output/file skeletons.
+-
+-Source-of-truth files (`Chains/*.md`) contain repeat units and repeat dates.
+-
+-Derived working files (`Schedules/*.md`) contain daily queues generated from chains and recovery decisions.
+-
+-Recovery files (`Recovery/*.md`) contain explicit one-time decisions or exceptions, not default rules.
+-
+-Index/register files (`Lookup/*.md`, `Further Study/*.md`) help find information or keep durable lists.
+-
+-## No-duplication rule
+-
+-Do not copy the same rule into many files unless it is a short routing reminder.
+-
+-Prefer:
+-
+-```text
+-- one owner file with full explanation;
+-- other files link to it.
+-```
+-
+-## New information routing
+-
+-When new information appears:
+-
+-```text
+-1. Identify information type.
+-2. Check `RESPONSIBILITY MAP.md`.
+-3. If owner exists, update that file.
+-4. If no owner exists, decide whether new file/category is justified.
+-5. If a new file/category is created, update `RESPONSIBILITY MAP.md`.
+-6. If navigation changes, update `START HERE.md`.
+-7. If it creates a new user action, update `USE CASE MAP.md`.
+-```
+-
+-## When to create a new file
+-
+-Create a new file when:
+-
+-```text
+-- information has a distinct responsibility;
+-- it will be reused often;
+-- it would overload an existing file;
+-- it is a recurring workflow;
+-- it is a reusable template;
+-- it is an explicit recovery decision;
+-- it is an index/register that grows over time.
+-```
+-
+-Prefer existing file when:
+-
+-```text
+-- information is a small clarification;
+-- an owner file already exists;
+-- new file would only split one short paragraph;
+-- content is temporary and belongs in inventory/staging note.
+-```
+-
+-## AI behavior principles
+-
+-For non-trivial repo/doc work, AI should report:
+-
+-```text
+-Read:
+-- ...
+-
+-Used workflow:
+-- ...
+-
+-Used template:
+-- ...
+-
+-Not checked:
+-- ...
+-
+-Output:
+-- ...
+-```
+-
+-AI should not silently:
+-- create files without permission;
+-- invent source locations;
+-- reschedule chains;
+-- apply recovery shifts or rollbacks;
+-- modify `Canvases/-repeat notes`.
+-
+-## Simplicity principle
+-
+-Do not make simple note-taking too heavy.
+-
+-Use full workflow only when creating/updating durable structure, touching schedules/chains, creating repeat material, changing recovery decisions, or adding new docs categories.
+diff --git a/-Repetition/FOR NEW AI CHAT.md b/-Repetition/FOR NEW AI CHAT.md
+index 1e16b9a7..2d74ee95 100644
+--- a/-Repetition/FOR NEW AI CHAT.md	
++++ b/-Repetition/FOR NEW AI CHAT.md	
+@@ -4,7 +4,7 @@ Status: active AI handoff.
+ 
+ Read this file first when helping with the repetition system.
+ 
+-## 1. Where to work
++## 1. Where To Work
+ 
+ Active working folder:
+ 
+@@ -20,7 +20,7 @@ Canvases/-repeat notes
+ 
+ Do not modify `Canvases/-repeat notes` unless the user explicitly asks. That folder contains old raw/source repeat data.
+ 
+-## 2. Read order
++## 2. Read Order
+ 
+ For simple repetition work:
+ 
+@@ -37,7 +37,7 @@ For documentation structure / new file / where-to-put-info work:
+ 1. -Repetition/START HERE.md
+ 2. -Repetition/USE CASE MAP.md
+ 3. -Repetition/RESPONSIBILITY MAP.md
+-4. -Repetition/Documentation Principles.md
++4. -Repetition/Documentation Architecture Adapter.md
+ 5. -Repetition/Workflows/Add Or Route New Information Workflow.md
+ ```
+ 
+@@ -47,10 +47,10 @@ For active schedule/repeat-chain work:
+ 1. -Repetition/Recovery/2026-05 break - active chain shift.md
+ 2. -Repetition/Chains/Repeat Chains 2026-02..2026-04 active shifted.md
+ 3. Current month file in -Repetition/Schedules/
+-4. AI System/Conspects Repetition/Schedule Rules.md when rules are needed
++4. AI System/Conspects Repetition/Schedule Rules.md as temporary source until Repetition Schedule Principles is promoted.
+ ```
+ 
+-## 3. Core model
++## 3. Core Model
+ 
+ Repeat chains are the source of truth for what should be repeated.
+ 
+@@ -65,7 +65,7 @@ Do not generate repeat units from calendar dates. Generate repeat units only whe
+ 
+ Holes are valid.
+ 
+-## 4. Critical rule: processing creates a new repeat unit
++## 4. Critical Rule: Processing Creates A New Repeat Unit
+ 
+ When the user says something like:
+ 
+@@ -90,7 +90,7 @@ Default processing date:
+ Use today's date unless the user explicitly gives another processing date.
+ ```
+ 
+-## 5. What AI must update after processing
++## 5. What AI Must Update After Processing
+ 
+ After a new repeat unit is created, AI should update:
+ 
+@@ -119,7 +119,7 @@ D + 155 days = +80 repeat / review
+ 
+ Use real calendar dates. Do not invent impossible dates.
+ 
+-## 6. New information / new file rule
++## 6. New Information / New File Rule
+ 
+ If the user gives new information and asks where/how to document it:
+ 
+@@ -127,7 +127,7 @@ If the user gives new information and asks where/how to document it:
+ 1. Do not guess.
+ 2. Read USE CASE MAP.
+ 3. Read RESPONSIBILITY MAP.
+-4. Read Documentation Principles.
++4. Read Documentation Architecture Adapter.
+ 5. Use Add Or Route New Information Workflow.
+ 6. Prefer existing owner file when possible.
+ 7. Create a new file only if it reduces confusion or defines a new durable responsibility.
+@@ -136,12 +136,12 @@ If the user gives new information and asks where/how to document it:
+ 10. If command routing changes, update USE CASE MAP.
+ ```
+ 
+-## 7. Do not silently reschedule
++## 7. Do Not Silently Reschedule
+ 
+ If the user says a repeat was done late, record planned and actual dates.
+ 
+ Do not silently change a theoretical/active chain unless the user explicitly says to reschedule or apply a recovery rule.
+ 
+-## 8. User communication rule
++## 8. User Communication Rule
+ 
+ The user may answer only one part of a message. If there was an important unanswered question or warning, repeat it briefly in the next answer.
+diff --git a/-Repetition/RESPONSIBILITY MAP.md b/-Repetition/RESPONSIBILITY MAP.md
+index 5b9b7c8a..93f34fe8 100644
+--- a/-Repetition/RESPONSIBILITY MAP.md	
++++ b/-Repetition/RESPONSIBILITY MAP.md	
+@@ -4,7 +4,7 @@ Status: active responsibility / information ownership map.
+ 
+ Purpose: explain what information belongs in which file or folder.
+ 
+-## Core rule
++## Core Rule
+ 
+ ```text
+ Prefer updating the existing owner file.
+@@ -15,7 +15,38 @@ When a new file or new category of files is created, update this responsibility
+ 
+ If new information is added to an existing owner file and the responsibility model did not change, this map usually does not need to change.
+ 
+-## Root files
++## File Type Postfix Rule
++
++Durable documentation files should usually reflect their file type in the filename postfix.
++
++| Postfix | Use for |
++|---|---|
++| `Principles.md` | invariants, source-of-truth boundaries, stable rules. |
++| `Workflow.md` | repeated algorithms/processes. |
++| `Template.md` | skeleton/output/file shapes. |
++| `Map.md` | routing/ownership maps. |
++| `Register.md` | durable open/deferred/shared lists. |
++| `Log.md` | completed actions/history. |
++| `Adapter.md` | local application of reusable/external architecture. |
++| `Profile.md` | role/capability/domain model. |
++| `Overview.md` | conceptual model of a system. |
++| `Index.md` | navigation/catalog list. |
++
++Avoid `Rules.md` and `Guide.md` as durable type postfixes when a clearer type exists.
++
++```text
++Rules -> Principles, if it stores invariants.
++Guide -> Workflow, if it describes how to do something.
++```
++
++Allowed conventional exceptions for now:
++
++```text
++START HERE.md
++FOR NEW AI CHAT.md
++```
++
++## Root Files
+ 
+ ### `-Repetition/START HERE.md`
+ 
+@@ -73,15 +104,23 @@ Owns:
+ - file/folder responsibilities;
+ - new-file vs existing-file decision boundaries.
+ 
+-### `-Repetition/Documentation Principles.md`
++### `-Repetition/Documentation Architecture Adapter.md`
+ 
+ Owns:
+-- general documentation architecture principles;
+-- file type definitions;
+-- no-duplication rules;
+-- source-of-truth boundaries.
++- local application of reusable documentation architecture rules;
++- local file type/postfix rules;
++- local documentation source-of-truth boundaries;
++- local AI System migration boundary.
++
++Does not own:
++- universal reusable documentation principles;
++- repetition schedule invariants;
++- question creation invariants;
++- workflows;
++- templates;
++- active chain/schedule/recovery data.
+ 
+-## Active repetition data
++## Active Repetition Data
+ 
+ ### `-Repetition/Chains/`
+ 
+@@ -104,12 +143,12 @@ Owns:
+ - break/shift/rollback notes;
+ - one-time exceptions that are not default rules.
+ 
+-## Knowledge and conspect support
++## Knowledge And Conspect Support
+ 
+ ### `-Repetition/Workflows/`
+ 
+ Owns:
+-- step-by-step algorithms.
++- step-by-step repeated algorithms.
+ 
+ ### `-Repetition/Templates/`
+ 
+@@ -143,17 +182,32 @@ Owns:
+ Owns:
+ - concrete Further Study Branch notes.
+ 
+-## Existing AI-system docs
++## Pending AI System Source Material
+ 
+ ### `AI System/Conspects Repetition/`
+ 
+-Owns:
+-- broader AI/system principles;
+-- question creation principles;
+-- export format guide;
+-- templates that are not active schedule data.
++Status:
++- pending source material for migration into typed `-Repetition/` owners.
++
++Owns temporarily:
++- source/design material that has not yet been promoted;
++- broader AI/system notes that still need classification.
++
++Does not own after migration:
++- active schedule principles;
++- active question creation principles;
++- active workflows;
++- active templates;
++- active documentation architecture.
++
++Target migration:
++- schedule invariants -> `-Repetition/Repetition Schedule Principles.md`;
++- question invariants -> `-Repetition/Question Creation Principles.md`;
++- AI role model -> `-Repetition/AI Work Areas Profile.md`;
++- export procedure -> `-Repetition/Workflows/Export Conspect For AI Processing Workflow.md`;
++- templates -> `-Repetition/Templates/* Template.md`.
+ 
+-## New file decision rule
++## New File Decision Rule
+ 
+ Use [[Workflows/Add Or Route New Information Workflow]].
+ 
+@@ -162,9 +216,10 @@ Short version:
+ ```text
+ 1. Classify information type.
+ 2. Check this responsibility map.
+-3. Prefer existing owner file.
+-4. Create a new file only if no owner exists or current owner would become overloaded.
+-5. If new file/category is created, update this map.
+-6. If navigation changes, update START HERE.
+-7. If user command routing changes, update USE CASE MAP.
++3. Check Documentation Architecture Adapter when the question is about file type / docs architecture.
++4. Prefer existing owner file.
++5. Create a new file only if no owner exists or current owner would become overloaded.
++6. If new file/category is created, update this map.
++7. If navigation changes, update START HERE.
++8. If user command routing changes, update USE CASE MAP.
+ ```
+diff --git a/-Repetition/START HERE.md b/-Repetition/START HERE.md
+index 87668fe1..4a40eeca 100644
+--- a/-Repetition/START HERE.md	
++++ b/-Repetition/START HERE.md	
+@@ -2,7 +2,7 @@
+ 
+ Status: active entrypoint / navigation note.
+ 
+-## Main rule
++## Main Rule
+ 
+ ```text
+ Do not work from `Canvases/-repeat notes` as the active schedule area.
+@@ -10,7 +10,7 @@ That folder is old/source/sensitive material.
+ Use `-Repetition` for active chains and schedules.
+ ```
+ 
+-## New AI chat read order
++## New AI Chat Read Order
+ 
+ ```text
+ 1. -Repetition/START HERE.md
+@@ -18,36 +18,46 @@ Use `-Repetition` for active chains and schedules.
+ 3. -Repetition/FOR NEW AI CHAT.md
+ 4. -Repetition/USE CASE MAP.md
+ 5. -Repetition/RESPONSIBILITY MAP.md
+-6. -Repetition/Documentation Principles.md
++6. -Repetition/Documentation Architecture Adapter.md
+ 7. Relevant workflow/template/source files for the requested action.
+ ```
+ 
+-## Root routing docs
++## Root Routing Docs
+ 
+ - [[SYSTEM OVERVIEW]]
+ - [[FOR NEW AI CHAT]]
+ - [[USE CASE MAP]]
+ - [[RESPONSIBILITY MAP]]
+-- [[Documentation Principles]]
++- [[Documentation Architecture Adapter]]
+ 
+-## Rules and principles
++## Local Documentation Architecture
++
++- [[Documentation Architecture Adapter]]
++
++## Pending AI System Source Material
++
++These files are part of the Repetition domain but are pending promotion into typed `-Repetition/` owners.
++
++Read them only when the relevant active owner has not been promoted yet.
+ 
+ - [[AI System/Conspects Repetition/README]]
+ - [[AI System/Conspects Repetition/Schedule Rules]]
+ - [[AI System/Conspects Repetition/AI Work Areas]]
++- [[AI System/Conspects Repetition/Question Creation Principles]]
++- [[AI System/Conspects Repetition/Export Format Guide]]
+ - [[AI System/Conspects Repetition/Templates/Repeat Chains Template]]
+ - [[AI System/Conspects Repetition/Templates/Month Repeat Plan Template]]
+ 
+-## Active recovery context
++## Active Recovery Context
+ 
+ - [[Recovery/2026-05 break - active chain shift]]
+ - [[Recovery/2026-05-31 active chain delay]]
+ 
+-## Active repeat chains
++## Active Repeat Chains
+ 
+ - [[Chains/Repeat Chains 2026-02..2026-04 active shifted]]
+ 
+-## Active schedules
++## Active Schedules
+ 
+ - [[Schedules/2026-05]]
+ - [[Schedules/2026-06]]
+@@ -57,7 +67,7 @@ Use `-Repetition` for active chains and schedules.
+ - [[Schedules/2026-10]]
+ - [[Schedules/2026-11]]
+ 
+-## Documentation architecture
++## Documentation Architecture
+ 
+ Workflows:
+ - [[Workflows/Process New Repeat Unit Workflow]]
+@@ -81,7 +91,7 @@ Further study:
+ - [[Further Study/Further Study Index]]
+ - [[Further Study/Branches/README]]
+ 
+-## Source archive
++## Source Archive
+ 
+ Old repeat drawings/source data are still in:
+ 
+diff --git a/-Repetition/SYSTEM OVERVIEW.md b/-Repetition/SYSTEM OVERVIEW.md
+index baf29ce0..2adb18ce 100644
+--- a/-Repetition/SYSTEM OVERVIEW.md	
++++ b/-Repetition/SYSTEM OVERVIEW.md	
+@@ -6,7 +6,7 @@ Purpose: explain how the whole `-Repetition` system works, not just where files
+ 
+ Use this file when a new AI chat or the user needs to understand the model of the system before doing concrete work.
+ 
+-## 1. What this system is for
++## 1. What This System Is For
+ 
+ `-Repetition` exists to manage studying/conspects/repetition work without modifying old sensitive source material.
+ 
+@@ -24,7 +24,7 @@ The system has four main jobs:
+ 4. Help AI know where to put new information without making the docs chaotic.
+ ```
+ 
+-## 2. Core repetition model
++## 2. Core Repetition Model
+ 
+ The core model is:
+ 
+@@ -86,7 +86,7 @@ They record explicit one-time decisions, such as:
+ 
+ Recovery decisions are not default behavior. They must be explicit.
+ 
+-## 3. Processing creates repeat units
++## 3. Processing Creates Repeat Units
+ 
+ When the user says they processed something, AI should treat that as a new repeat unit.
+ 
+@@ -116,7 +116,7 @@ Use the workflow:
+ -Repetition/Workflows/Process New Repeat Unit Workflow.md
+ ```
+ 
+-## 4. Visual conspects are not replaced by questions
++## 4. Visual Conspects Are Not Replaced By Questions
+ 
+ Old visual conspects are valuable because they work like a spatial memory map / “memory palace”.
+ 
+@@ -169,7 +169,7 @@ Use:
+ 
+ For old chaotic Excalidraw/SVG/PDF/PNG conspects, AI output is draft until the user reviews the structure.
+ 
+-## 6. Knowledge lookup model
++## 6. Knowledge Lookup Model
+ 
+ The user may need to find information later by term, use case, vague memory or real-world problem.
+ 
+@@ -244,7 +244,7 @@ Use:
+ -Repetition/Templates/Further Study Branch Template.md
+ ```
+ 
+-## 8. Documentation architecture model
++## 8. Documentation Architecture Model
+ 
+ The docs are organized by responsibility.
+ 
+@@ -254,7 +254,7 @@ SYSTEM OVERVIEW = conceptual model of how the system works.
+ FOR NEW AI CHAT = AI behavior and critical interpretation rules.
+ USE CASE MAP = user command -> required reads/workflow/template/output.
+ RESPONSIBILITY MAP = what information belongs in which file/folder.
+-Documentation Principles = general rules for maintaining the docs.
++Documentation Architecture Adapter = local application of reusable docs architecture.
+ Workflows = algorithms.
+ Templates = output/file skeletons.
+ ```
+@@ -274,7 +274,7 @@ Prefer updating an existing owner file.
+ Create a new file only if it defines a new responsibility, reduces confusion, or is a durable artifact type.
+ ```
+ 
+-## 9. Read path for new AI chat
++## 9. Read Path For New AI Chat
+ 
+ Default read path:
+ 
+@@ -284,11 +284,11 @@ Default read path:
+ 3. -Repetition/FOR NEW AI CHAT.md
+ 4. -Repetition/USE CASE MAP.md
+ 5. -Repetition/RESPONSIBILITY MAP.md
+-6. -Repetition/Documentation Principles.md
++6. -Repetition/Documentation Architecture Adapter.md
+ 7. Relevant workflow/template/source files for the requested action.
+ ```
+ 
+-## 10. Source-of-truth boundaries
++## 10. Source-of-Truth Boundaries
+ 
+ ```text
+ Chains are source of truth for repeat units/repeat dates.
+diff --git a/-Repetition/USE CASE MAP.md b/-Repetition/USE CASE MAP.md
+index 6c1d6366..e7200ac8 100644
+--- a/-Repetition/USE CASE MAP.md	
++++ b/-Repetition/USE CASE MAP.md	
+@@ -6,14 +6,14 @@ Purpose: when the user says X, this file tells the AI what to do, which docs to
+ 
+ This file is not a full workflow and not a template. It routes commands to the right files.
+ 
+-## 1. Read order for non-trivial repetition work
++## 1. Read Order For Non-Trivial Repetition Work
+ 
+ ```text
+ 1. -Repetition/START HERE.md
+ 2. -Repetition/FOR NEW AI CHAT.md
+ 3. -Repetition/USE CASE MAP.md
+ 4. -Repetition/RESPONSIBILITY MAP.md
+-5. -Repetition/Documentation Principles.md
++5. -Repetition/Documentation Architecture Adapter.md
+ 6. Relevant workflow file from -Repetition/Workflows/
+ 7. Relevant template file from -Repetition/Templates/
+ 8. Relevant source file:
+@@ -25,32 +25,33 @@ This file is not a full workflow and not a template. It routes commands to the r
+    - source conspect/export supplied by user
+ ```
+ 
+-## 2. Traversal depth
++## 2. Traversal Depth
+ 
+ | Mode | Meaning | Use when |
+ |---|---|---|
+-| Full traversal | Read handoff + use-case map + responsibility map + relevant workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect, new documentation category. |
++| Full traversal | Read handoff + use-case map + responsibility map + adapter + relevant workflow + template + source files. | New chat, new use case, risky schedule/recovery change, first processing of a conspect, new documentation category. |
+ | Targeted traversal | Read only relevant workflow/template/source files. | Known use case, narrow update, named schedule/chain/conspect. |
+ | Reuse context | Reuse current chat context and read only target files if needed. | Same active draft/repeat material/schedule update. |
+ | No traversal | Answer from active context. | Simple clarification or explanation without repo change. |
+ 
+-## 3. Primary use cases
++## 3. Primary Use Cases
+ 
+ | User says / means | Task type | Required reads | Workflow | Template | Expected output | Permission boundary |
+ |---|---|---|---|---|---|---|
+ | “запроцессил X today”, “processed X”, “processed 26.04 raw today” | New repeat unit | chain file, current/future schedule files, FOR NEW AI CHAT | [[Workflows/Process New Repeat Unit Workflow]] | schedule file pattern from existing months | New chain row + generated schedule entries | Repo edits require explicit permission. |
+-| “я повторил X”, “done repeat X”, “повторил на дату Y” | Repeat completion update | chain row, schedule item, recovery rules if late | [[Workflows/Process New Repeat Unit Workflow]] as reference; schedule rules | existing schedule style | Mark done / record planned vs actual / add next stage if needed | Do not silently reschedule. |
+-| “создай вопросы по конспекту”, “вот svg/pdf/png конспекта” | Repeat material creation | source conspect/export, question principles, use-case map | [[Workflows/Create Repeat Material From Conspect Workflow]] | [[Templates/Repeat Material Template]] | Draft repeat material with visual anchors, questions, use cases, lookup index, weak spots | Draft until user review. |
++| “я повторил X”, “done repeat X”, “повторил на дату Y” | Repeat completion update | chain row, schedule item, recovery rules if late; pending source: `AI System/Conspects Repetition/Schedule Rules.md` until promoted | [[Workflows/Process New Repeat Unit Workflow]] as reference | existing schedule style | Mark done / record planned vs actual / add next stage if needed | Do not silently reschedule. |
++| “создай вопросы по конспекту”, “вот svg/pdf/png конспекта” | Repeat material creation | source conspect/export, question principles source, use-case map | [[Workflows/Create Repeat Material From Conspect Workflow]] | [[Templates/Repeat Material Template]] | Draft repeat material with visual anchors, questions, use cases, lookup index, weak spots | Draft until user review. |
+ | “где у меня было про X?”, “не могу найти инфу” | Knowledge lookup | [[Lookup/Knowledge Locator Map]], repeat materials, source notes if needed | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] if adding entry | Candidate notes/sections and why they match | Do not invent location if not found. |
+ | “это надо изучить глубже, но не сейчас” | Further study branch | source conspect/repeat material, Further Study Index | [[Workflows/Create Further Study Branch Workflow]] | [[Templates/Further Study Branch Template]] | Branch linked to source topic/visual anchor, not scheduled by default | Do not add to repeat chain automatically. |
+-| “после перерыва хочу откатить стадии”, “40->80 слишком поздно” | Explicit recovery stage rollback | active chains, schedules, recovery notes, schedule rules | [[Workflows/Long Break Stage Rollback Workflow]] | recovery note style | Explicit recovery decision + changed active stages + regenerated future schedules | Not default; must be explicit. |
++| “после перерыва хочу откатить стадии”, “40->80 слишком поздно” | Explicit recovery stage rollback | active chains, schedules, recovery notes, schedule principles/source | [[Workflows/Long Break Stage Rollback Workflow]] | recovery note style | Explicit recovery decision + changed active stages + regenerated future schedules | Not default; must be explicit. |
+ | “обнови карту поиска / добавь entry” | Locator update | Knowledge Locator Map, source repeat material/conspect | [[Workflows/Knowledge Lookup Workflow]] | [[Templates/Knowledge Locator Entry Template]] | New/updated locator entry | Add only after enough source context. |
+ | “инвентаризация конспектов” | Inventory / classification | lookup map, inventory notes, selected conspect list | Knowledge lookup + repeat material workflow | locator entry template | Classified list: known/unknown/to process/to review | Avoid broad destructive moves. |
+-| “куда положить эту инфу?”, “создай файл для этого”, “добавь новый workflow/template”, “обнови доки с новым правилом” | Add or route new information | RESPONSIBILITY MAP, Documentation Principles, likely target files | [[Workflows/Add Or Route New Information Workflow]] | [[Templates/Responsibility Map Entry Template]] if new file/category is created | Existing-file update or new file proposal/update with responsibility sync | Repo edits require explicit permission. |
++| “куда положить эту инфу?”, “создай файл для этого”, “добавь новый workflow/template”, “обнови доки с новым правилом” | Add or route new information | RESPONSIBILITY MAP, Documentation Architecture Adapter, likely target files | [[Workflows/Add Or Route New Information Workflow]] | [[Templates/Responsibility Map Entry Template]] if new file/category is created | Existing-file update or new file proposal/update with responsibility sync | Repo edits require explicit permission. |
+ 
+-## 4. Core command interpretations
++## 4. Core Command Interpretations
+ 
+ Processing creates a repeat unit:
++
+ ```text
+ raw date = context
+ processing date = repeat unit date
+@@ -67,7 +68,7 @@ Recovery shifts/rollbacks are explicit decisions, not default rules.
+ New information must be routed before file creation:
+ 
+ ```text
+-USE CASE MAP -> RESPONSIBILITY MAP -> Add Or Route New Information Workflow
++USE CASE MAP -> RESPONSIBILITY MAP -> Documentation Architecture Adapter when file type/docs architecture matters -> Add Or Route New Information Workflow
+ ```
+ 
+ If a new durable file/category is created, update `RESPONSIBILITY MAP.md`.
+@@ -76,7 +77,7 @@ If navigation changes, update `START HERE.md`.
+ 
+ If command routing changes, update `USE CASE MAP.md`.
+ 
+-## 5. Expected source reporting in chat
++## 5. Expected Source Reporting In Chat
+ 
+ ```text
+ Read:
+@@ -95,6 +96,6 @@ Output:
+ - ...
+ ```
+ 
+-## 6. Maintenance notes
++## 6. Maintenance Notes
+ 
+ If a command appears often but has no workflow/template yet, add it to a future maintenance register or ask user whether to create a new workflow.
+diff --git a/-Repetition/Workflows/Add Or Route New Information Workflow.md b/-Repetition/Workflows/Add Or Route New Information Workflow.md
+index 9d268f0f..18f82ccb 100644
+--- a/-Repetition/Workflows/Add Or Route New Information Workflow.md	
++++ b/-Repetition/Workflows/Add Or Route New Information Workflow.md	
+@@ -16,7 +16,7 @@ Route new information to the correct existing owner file, or create a new file o
+ 2. Read:
+    - -Repetition/USE CASE MAP.md
+    - -Repetition/RESPONSIBILITY MAP.md
+-   - -Repetition/Documentation Principles.md
++   - -Repetition/Documentation Architecture Adapter.md
+    - target files if a likely owner exists.
+ 
+ 3. Decide whether an existing owner file already owns this information.
+@@ -34,7 +34,8 @@ Route new information to the correct existing owner file, or create a new file o
+      - new chain/schedule file;
+      - new locator entry;
+      - new further-study branch;
+-     - new documentation architecture file;
++     - new documentation architecture adapter/update;
++     - new principles/profile/register/log file;
+      - temporary inventory note.
+ 
+ 6. Create a new file only if it reduces confusion or defines a durable responsibility.
+@@ -53,14 +54,18 @@ Route new information to the correct existing owner file, or create a new file o
+    - responsibility map update yes/no.
+ ```
+ 
+-## Classification guide
++## Classification Guide
+ 
+ ```text
+ user command / action -> USE CASE MAP
+ step-by-step algorithm -> Workflows/
+ output skeleton -> Templates/
+ where information belongs -> RESPONSIBILITY MAP
+-general docs principle -> Documentation Principles.md
++local documentation architecture / file-type rule -> Documentation Architecture Adapter.md
++domain invariant -> * Principles.md
++role/capability model -> * Profile.md
++durable open/deferred/shared list -> * Register.md
++completed action history -> * Log.md
+ AI behavior / handoff -> FOR NEW AI CHAT.md
+ navigation / read order -> START HERE.md
+ repeat unit / repeat dates -> Chains/
+@@ -71,7 +76,7 @@ unclear old conspect or inventory staging -> Lookup/Inventory Notes.md
+ unscheduled deeper-study branch -> Further Study/
+ ```
+ 
+-## Output shape
++## Output Shape
+ 
+ ```text
+ Information type:
+@@ -99,7 +104,7 @@ Touched files:
+ - ...
+ ```
+ 
+-## Do not
++## Do Not
+ 
+ ```text
+ - Do not create new files just because information is new.

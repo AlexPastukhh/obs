@@ -16,8 +16,8 @@ This file stores only explicit agreements. It is not a full emoji glossary.
 | 🧲⚡🧪➡️🎯 | targeted stimuli / chemistry only | Valid stimuli and chemistry are narrowed to target |
 | 🧩🪜⚠️➡️🧲⚡ | complex multi-level problem -> easy stimulation | Complexity creates pull toward easier stimulation |
 | 🏁🥊👤↔️👤⏱️ | short-distance self-competition | Race current self against drifting/past self on a short segment |
-| 🎯📈≠🎭🔁 | Result Tracking over process | Work is for Result Tracking, not process repetition |
-| 🚂🛤️⚠️🎯 | automatic rails but Result forgotten | Rails exist, but Desired / Result Tracking must be reconnected |
+| 🎯💎📉 | useful result with minimal losses | Useful target result with reduced time/focus/energy/inertia losses |
+| 🚂🛤️⚠️🎯 | automatic rails but Result forgotten | Rails exist, but Desired / useful result must be reconnected |
 | ⏱️🚂🛤️➡️🎯 | session frame / visible target | Timer/frame/rails point toward target |
 | 🛤️🌅➡️🎯 | course / Desired connection | Current segment connects to course / Desired / nearest goals |
 | 👁️⏳➡️💎 | value left after attention ends | After attention ends, useful value remains |
@@ -25,6 +25,12 @@ This file stores only explicit agreements. It is not a full emoji glossary.
 | 🏙️🧠🔁⏳ | public anxiety -> inner-dialogue slowdown | Public/crowded place anxiety turns into mental loop and slows action |
 | 🧠🌪️🚫🎯 | unactionable out-of-scope worry | Worry storm outside current scope; cannot become action now |
 | 👁️🚫🥊🎭➡️🕳️ | no-resistance known drift | Saw it was wrong, did not fight, normalized it, drifted into damage |
+
+## Deprecated
+
+| Emoji | Replaced by | Reason |
+|---|---|---|
+| 🎯📈≠🎭🔁 | 🎯💎📉 | Old meaning “Result Tracking over process” was too broad. New meaning emphasizes useful result with minimal losses over merely some result or process. |
 
 ## Rules
 
@@ -38,6 +44,8 @@ Do not use bare `🛤️` for rails.
 
 Bare `🛤️` means course / K / direction.
 
+`🎯💎📉` means useful result with minimal reasonable losses, not just “some result”.
+
 `📉📈` means slip/collapse followed by quick recovery.
 
 `👁️🚫🥊🎭➡️🕳️` must show lack of struggle:
@@ -46,3 +54,5 @@ Bare `🛤️` means course / K / direction.
 - 🚫🥊 = no fight;
 - 🎭 = pretended it was fine;
 - ➡️🕳️ = drifted into damage.
+
+When a rendered output needs pattern labels, use the emoji agreements from this file and the pattern names from `Workflows/Real Reward Pattern Playbook.md`.

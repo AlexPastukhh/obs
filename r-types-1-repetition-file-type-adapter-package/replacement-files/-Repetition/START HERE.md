@@ -1,0 +1,102 @@
+# Repetition System — Start Here
+
+Status: active entrypoint / navigation note.
+
+## Main Rule
+
+```text
+Do not work from `Canvases/-repeat notes` as the active schedule area.
+That folder is old/source/sensitive material.
+Use `-Repetition` for active chains and schedules.
+```
+
+## New AI Chat Read Order
+
+```text
+1. -Repetition/START HERE.md
+2. -Repetition/SYSTEM OVERVIEW.md
+3. -Repetition/FOR NEW AI CHAT.md
+4. -Repetition/USE CASE MAP.md
+5. -Repetition/RESPONSIBILITY MAP.md
+6. -Repetition/Documentation Architecture Adapter.md
+7. Relevant workflow/template/source files for the requested action.
+```
+
+## Root Routing Docs
+
+- [[SYSTEM OVERVIEW]]
+- [[FOR NEW AI CHAT]]
+- [[USE CASE MAP]]
+- [[RESPONSIBILITY MAP]]
+- [[Documentation Architecture Adapter]]
+
+## Local Documentation Architecture
+
+- [[Documentation Architecture Adapter]]
+
+## Pending AI System Source Material
+
+These files are part of the Repetition domain but are pending promotion into typed `-Repetition/` owners.
+
+Read them only when the relevant active owner has not been promoted yet.
+
+- [[AI System/Conspects Repetition/README]]
+- [[AI System/Conspects Repetition/Schedule Rules]]
+- [[AI System/Conspects Repetition/AI Work Areas]]
+- [[AI System/Conspects Repetition/Question Creation Principles]]
+- [[AI System/Conspects Repetition/Export Format Guide]]
+- [[AI System/Conspects Repetition/Templates/Repeat Chains Template]]
+- [[AI System/Conspects Repetition/Templates/Month Repeat Plan Template]]
+
+## Active Recovery Context
+
+- [[Recovery/2026-05 break - active chain shift]]
+- [[Recovery/2026-05-31 active chain delay]]
+
+## Active Repeat Chains
+
+- [[Chains/Repeat Chains 2026-02..2026-04 active shifted]]
+
+## Active Schedules
+
+- [[Schedules/2026-05]]
+- [[Schedules/2026-06]]
+- [[Schedules/2026-07]]
+- [[Schedules/2026-08]]
+- [[Schedules/2026-09]]
+- [[Schedules/2026-10]]
+- [[Schedules/2026-11]]
+
+## Documentation Architecture
+
+Workflows:
+- [[Workflows/Process New Repeat Unit Workflow]]
+- [[Workflows/Create Repeat Material From Conspect Workflow]]
+- [[Workflows/Knowledge Lookup Workflow]]
+- [[Workflows/Create Further Study Branch Workflow]]
+- [[Workflows/Long Break Stage Rollback Workflow]]
+- [[Workflows/Add Or Route New Information Workflow]]
+
+Templates:
+- [[Templates/Repeat Material Template]]
+- [[Templates/Knowledge Locator Entry Template]]
+- [[Templates/Further Study Branch Template]]
+- [[Templates/Responsibility Map Entry Template]]
+
+Lookup:
+- [[Lookup/Knowledge Locator Map]]
+- [[Lookup/Inventory Notes]]
+
+Further study:
+- [[Further Study/Further Study Index]]
+- [[Further Study/Branches/README]]
+
+## Source Archive
+
+Old repeat drawings/source data are still in:
+
+```text
+Canvases/-repeat notes
+```
+
+Avoid modifying that folder unless explicitly needed.

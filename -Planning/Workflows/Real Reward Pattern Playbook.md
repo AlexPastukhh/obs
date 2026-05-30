@@ -10,6 +10,16 @@ Owner workflow: `Workflows/Real Reward Work Loop Workflow.md`
 
 Emoji notation owner: `Emoji Notation Map.md`
 
+## Source of truth rule
+
+This playbook owns pattern IDs, pattern names, emoji labels, pattern meanings, active Point-6 status, and Fundamental / Frequent / Situational / Penalty classification.
+
+Other files may duplicate compact labels for rendering or UI, but must link back to this playbook and must not redefine pattern meaning independently.
+
+Templates may render compact Point-6 labels.
+
+Tampermonkey / Pattern Capture may duplicate UI button labels, but each button must map to a Pattern ID owned here.
+
 ## Pattern categories
 
 ### Fundamental score patterns
@@ -39,33 +49,37 @@ Situational patterns marked `Frequency: frequent` are included in point 6 while 
 
 ## Active point-6 pattern labels
 
-| Emoji | Pattern | Type |
-|---|---|---|
-| 🏁🥊👤↔️👤⏱️ | Short-distance self-competition | Fundamental |
-| 🎯📈≠🎭🔁 | Result Tracking over process | Fundamental |
-| ⏱️🚂🛤️➡️🎯 | Session frame / visible target | Fundamental |
-| 🧲⚡🧪➡️🎯 | Targeted stimuli / chemistry only | Fundamental |
-| 🛤️🌅➡️🎯 | Course / Desired connection | Fundamental |
-| 👁️⏳➡️💎 | Value left after attention ends | Fundamental |
-| 👁️🚫🥊🎭➡️🕳️ | No-resistance known drift | Fundamental penalty |
-| 🧩🪜⚠️➡️🧲⚡ | Complex multi-level problem -> easy stimulation | Frequent situational |
-| 🚂🛤️⚠️🎯 | Automatic rails but Result forgotten | Frequent situational |
+| Pattern ID | Emoji | Pattern | Type |
+|---|---|---|---|
+| short_distance_self_competition | 🏁🥊👤↔️👤⏱️ | Short-distance self-competition | Fundamental |
+| useful_result_min_losses | 🎯💎📉 | Useful result with minimal losses | Fundamental |
+| session_frame_visible_target | ⏱️🚂🛤️➡️🎯 | Session frame / visible target | Fundamental |
+| targeted_stimuli_chemistry_only | 🧲⚡🧪➡️🎯 | Targeted stimuli / chemistry only | Fundamental |
+| course_desired_connection | 🛤️🌅➡️🎯 | Course / Desired connection | Fundamental |
+| value_left_after_attention | 👁️⏳➡️💎 | Value left after attention ends | Fundamental |
+| no_resistance_known_drift | 👁️🚫🥊🎭➡️🕳️ | No-resistance known drift | Fundamental penalty |
+| complex_problem_easy_stimulation | 🧩🪜⚠️➡️🧲⚡ | Complex multi-level problem -> easy stimulation | Frequent situational |
+| automatic_rails_result_forgotten | 🚂🛤️⚠️🎯 | Automatic rails but Result forgotten | Frequent situational |
 
 ## Situational pattern labels
 
-| Emoji | Pattern | Type |
-|---|---|---|
-| 📉📈 | Fast recovery after slip | Situational |
-| 🏙️🧠🔁⏳ | Public anxiety -> inner-dialogue slowdown | Situational |
-| 🧠🌪️🚫🎯 | Unactionable out-of-scope worry | Situational |
-| 🧩🪜⚠️➡️🧲⚡ | Complex multi-level problem -> easy stimulation | Frequent situational |
-| 🚂🛤️⚠️🎯 | Automatic rails but Result forgotten | Frequent situational |
+| Pattern ID | Emoji | Pattern | Type |
+|---|---|---|---|
+| fast_recovery_after_slip | 📉📈 | Fast recovery after slip | Situational |
+| public_anxiety_inner_dialogue_slowdown | 🏙️🧠🔁⏳ | Public anxiety -> inner-dialogue slowdown | Situational |
+| unactionable_out_of_scope_worry | 🧠🌪️🚫🎯 | Unactionable out-of-scope worry | Situational |
+| complex_problem_easy_stimulation | 🧩🪜⚠️➡️🧲⚡ | Complex multi-level problem -> easy stimulation | Frequent situational |
+| automatic_rails_result_forgotten | 🚂🛤️⚠️🎯 | Automatic rails but Result forgotten | Frequent situational |
 
 ## Point 6 compact table
 
+Pattern source of truth: `Workflows/Real Reward Pattern Playbook.md`
+
+This table is a compact rendering of active Point-6 pattern labels. Pattern meanings are defined by Pattern IDs in this playbook.
+
 | Влияет на | Active score patterns |
 |---|---|
-| ✅D | 🎯📈≠🎭🔁 Result Tracking over process<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ✅D | 🎯💎📉 Useful result with minimal losses<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
 | ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
@@ -74,7 +88,7 @@ Situational patterns marked `Frequency: frequent` are included in point 6 while 
 
 ## Pattern format
 
-Each pattern should include Emoji, Type, Default point 6 status, Affects, Core idea, What adds score, What subtracts score, What not to do, What to do instead, Promise need when relevant, and Short D/F/K/P race.
+Each pattern should include Pattern ID, Emoji, Type, Default point 6 status, Affects, Core idea, Adds, Subtracts, Do instead, Promise need when relevant, and Short D/F/K/P race.
 
 Penalty patterns also include penalty condition, base penalty, time-loss penalty, and confirmation/safety rule.
 
@@ -83,6 +97,8 @@ Penalty patterns also include penalty condition, base penalty, time-loss penalty
 ## Fundamental score patterns
 
 ### Pattern: 🏁🥊👤↔️👤⏱️ Short-distance self-competition
+
+Pattern ID: `short_distance_self_competition`
 
 Type: Fundamental score pattern. Default point 6: yes. Affects: F primary; also D/K/P and future inertia.
 
@@ -98,21 +114,37 @@ Short race: D useful thing exists; F target/tempo/self-management; K on-course; 
 
 ---
 
-### Pattern: 🎯📈≠🎭🔁 Result Tracking over process
+### Pattern: 🎯💎📉 Useful result with minimal losses
 
-Type: Fundamental score pattern. Default point 6: yes. Affects: D primary; P secondary.
+Pattern ID: `useful_result_min_losses`
 
-Core idea: D grows when real Desired / Result Tracking moves. D does not grow from process repetition, small movements, or feeling busy.
+Type: Fundamental score pattern. Default point 6: yes. Affects: D primary; F/P secondary.
 
-Adds: useful output, Desired closer, artifact/decision/decomposition/clarity/test exists, residual value remains.
+Core idea: D grows when the segment creates a useful result that moves the real goal with the smallest reasonable losses. D does not grow maximally from just “some result”, process repetition, busy movement, or a result that costs too much.
 
-Subtracts: small motor/thought movements, automatic repetition, work-looking process without reality closer, nothing useful remains.
+Useful result means: it moves Desired/current goal, leaves usable value, reduces future friction, and justifies the time and attention spent.
 
-Do instead: reconnect to Desired, ask what should become more real, produce a small visible output, decompose vague work in writing.
+Losses include: wasted time, focus leakage, unnecessary complexity, overbuilding, stimulation residue, future inertia damage, and process loops.
+
+Adds: useful output exists; result is on-target; losses are limited; next action is easier; result leaves reusable value; result is not merely “something happened”.
+
+Subtracts: process continued but useful result stayed weak; some result appeared but cost was too high; overbuilt solution; unnecessary rabbit holes; stimulation/process residue; result did not justify losses; useful-looking process left little real value.
+
+Do not: count any visible output as good D automatically; count process repetition as D by itself; overbuild when a smaller sufficient result would close the need; keep paying losses after marginal value drops.
+
+Do instead: ask what useful result should exist, what losses must be avoided, what the smallest sufficient output is, and when marginal value drops enough to stop or switch.
+
+Short race: D useful result exists with minimal reasonable losses; F controls losses during the segment; K keeps result on current course / Desired; P leaves usable value after attention ends.
+
+Deprecated previous name: `🎯📈≠🎭🔁 Result Tracking over process`.
+
+Reason for replacement: old name made the contrast too simple. The real criterion is useful target result with minimal reasonable losses over merely some result or process.
 
 ---
 
 ### Pattern: ⏱️🚂🛤️➡️🎯 Session frame / visible target
+
+Pattern ID: `session_frame_visible_target`
 
 Type: Fundamental score pattern. Default point 6: yes. Affects: F primary; D/P secondary.
 
@@ -128,6 +160,8 @@ Do instead: start a session, name target, make target visible, use timer/frame, 
 
 ### Pattern: 🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only
 
+Pattern ID: `targeted_stimuli_chemistry_only`
+
 Type: Fundamental score pattern. Default point 6: yes. Affects: F primary; also D/K/P.
 
 Core idea: score rises when valid stimulation and useful chemistry are narrowed to target. Non-target stimuli/chemistry should not become authority.
@@ -142,6 +176,8 @@ Do instead: notice/name chemistry, do not argue/feed it, let it burn out when ne
 
 ### Pattern: 🛤️🌅➡️🎯 Course / Desired connection
 
+Pattern ID: `course_desired_connection`
+
 Type: Fundamental score pattern. Default point 6: yes. Affects: K primary; D/P secondary.
 
 Core idea: K grows when segment connects to current course / Desired / nearest global goals. K falls when interesting/easy/important-but-not-now replaces needed.
@@ -150,11 +186,13 @@ Adds: day goal, Desired, nearest global goals, current course, useful-now over u
 
 Subtracts: interesting replaces needed, easy branch replaces course, important-but-not-now steals segment, side branch pretends to be main.
 
-Do instead: check day goal/Desired/global goals; defer non-current work or explicitly allow it.
+Do instead: check day goal / Desired / global goals. Defer non-current work or explicitly allow it.
 
 ---
 
 ### Pattern: 👁️⏳➡️💎 Value left after attention ends
+
+Pattern ID: `value_left_after_attention`
 
 Type: Fundamental score pattern. Default point 6: yes. Affects: P primary.
 
@@ -171,6 +209,8 @@ Do instead: leave a small artifact, capture decision, write decomposition, name 
 ## Fundamental penalty patterns
 
 ### Pattern: 👁️🚫🥊🎭➡️🕳️ No-resistance known drift
+
+Pattern ID: `no_resistance_known_drift`
 
 Type: Fundamental penalty pattern. Default point 6: yes. Affects: Net Work Score through penalty adjustment; F/K/P meaning; future inertia.
 
@@ -198,6 +238,8 @@ Do instead: mark event, stop wrong action, use 📉📈 if recovered, create Pen
 
 ### Pattern: 📉📈 Fast recovery after slip
 
+Pattern ID: `fast_recovery_after_slip`
+
 Type: Situational pattern. Default point 6: no unless marked frequent later. Affects: F primary; P/future inertia secondary.
 
 When this appears: a slip happened, but user noticed quickly and recovered quickly.
@@ -213,6 +255,8 @@ Do instead: mark slip, return quickly, start short target segment, use timer/vis
 ---
 
 ### Pattern: 🏙️🧠🔁⏳ Public anxiety -> inner-dialogue slowdown
+
+Pattern ID: `public_anxiety_inner_dialogue_slowdown`
 
 Type: Situational pattern. Default point 6: no unless marked frequent later. Affects: F primary; D/P secondary; support if draining.
 
@@ -230,6 +274,8 @@ Do instead: name next external action, tiny checklist, move physically, keep tas
 
 ### Pattern: 🧠🌪️🚫🎯 Unactionable out-of-scope worry
 
+Pattern ID: `unactionable_out_of_scope_worry`
+
 Type: Situational pattern. Default point 6: no unless marked frequent later. Affects: F/K primary; P secondary; support if damaging sleep/recovery.
 
 When this appears: worry is outside current scope and cannot become action now.
@@ -238,36 +284,50 @@ Core idea: if worry cannot become action now, it is not planning; it is an unact
 
 Test: `Can this worry become an action in the current scope right now?` If no, it is unactionable worry.
 
-Adds: recognized as unactionable, written into deferred/later if useful, returned to current scope, promise/timer if sticky.
+Adds: worry recognized as unactionable now; if useful, one deferred line is written; current scope resumes; promise/timer used if sticky.
 
-Subtracts: worry continues, pretends to be planning, steals current scope, leaves anxiety residue and no action.
+Subtracts: worry continues, worry pretends to be planning, current scope stolen, anxiety residue remains.
 
-Do instead: write one deferred line if needed, name not actionable now, return to current scope.
+Do instead: write one deferred line if needed, name that it is not actionable now, return to current scope.
 
 ---
 
 ### Pattern: 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation
 
+Pattern ID: `complex_problem_easy_stimulation`
+
 Type: Situational pattern. Frequency: frequent. Default point 6: yes while frequent. Affects: D/F/K/P depending on handling.
 
-Core idea: complex multi-level problem becomes heavy, mind wants easier stimulation. Real blocker is usually insufficient written decomposition.
+When this appears: a complex multi-level problem becomes heavy, and the mind wants easier stimulation such as YouTube, music, food, easy branch, pseudo-warmup, extra sources, loose browsing, or another useful-but-easier task.
 
-Subtracts: opens YouTube/easy branch/external source without question, calls escape a break, searches easier stimuli, avoids written decomposition.
+Core idea: the problem is not decomposed enough. The user is not choosing real rest. The mind is escaping from unclear analytical pressure. The real blocker is written decomposition.
 
-Adds: recognizes problem is not decomposed, writes 3–5 points, picks first layer, makes first analytical move, uses timer/checklist/self-race as target stimulation.
+Subtracts: escaped into easy stimulus; opened external branches without a clear question; called escape rest; searched for easier stimulation; did not decompose in writing; left analytical fog.
 
-Do instead: name blocker, write 3–5 points, first layer, first small analytical move. Use promise if pull is strong.
+Adds: recognized that problem is not decomposed; wrote 3–5 points; separated first layer; made first analytical move; used timer/checklist/self-competition as target-related stimulation.
+
+Do instead: name the real blocker, write 3–5 small points, pick first layer, make first analytical move tiny, use target-related stimulation.
+
+Promise need: use promise if pull to easier stimulation is strong or repeated.
 
 ---
 
 ### Pattern: 🚂🛤️⚠️🎯 Automatic rails but Result forgotten
 
+Pattern ID: `automatic_rails_result_forgotten`
+
 Type: Situational pattern. Frequency: frequent. Default point 6: yes while frequent. Affects: D/P primary; F/K secondary.
 
-Core idea: user is on rails, which is better than drift, but Desired/Result Tracking is forgotten. Process runs, but D/P may stop growing.
+When this appears: the user is technically on rails. Actions are happening automatically. This is better than drift. But Desired / useful result is forgotten. The process starts running by itself.
 
-Subtracts: mechanical process continues, Desired not checked, D/P stop growing, desired reality not closer.
+Core idea: the system is working at process level, but the result has gone dim. The user is not off the rails, but the engine needs fuel.
 
-Adds: Desired remembered, Result Tracking checked, action returned to result, fuel added: timer/score/visible progress/short race/self-competition.
+Formula: ты на рельсах, но нужно ещё дрова в двигатель подкидывать.
 
-Do instead: pause briefly, name Desired, ask what should become more real, add fuel to rails, continue with result pressure.
+Subtracts: continued process automatically, did not remember Desired/useful result, D/P stopped growing, work became mechanical, process turns but desired reality does not become closer.
+
+Adds: remembered Desired, checked what should become more real, returned action to useful result, added fuel: timer, score, visible progress, short race, self-competition.
+
+Do instead: pause briefly, name Desired / useful result, ask what should become more real, add timer/score/visible progress, continue rails with result pressure.
+
+Promise need: usually no promise if already on rails. Use promise only if chemistry/stimulation starts pulling away from result or user resists result reconnection.

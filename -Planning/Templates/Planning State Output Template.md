@@ -27,9 +27,13 @@ If a field is missing, do not invent it.
 
 ## 🏁📊 Point 6 — Short D/F/K/P Race
 
+Pattern source of truth: `Workflows/Real Reward Pattern Playbook.md`
+
+This table is a compact rendering of active Point-6 pattern labels. Pattern meanings and Pattern IDs are owned by the playbook.
+
 | Влияет на | Active score patterns |
 |---|---|
-| ✅D | 🎯📈≠🎭🔁 Result Tracking over process<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ✅D | 🎯💎📉 Useful result with minimal losses<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
 | ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
 | 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
@@ -43,6 +47,7 @@ Rules:
 - Frequent situational patterns are active while frequent.
 - Non-frequent Situational patterns are not shown by default.
 - Full pattern templates are shown only by `/patterns` or `/pattern <name>`.
+- This template must not redefine pattern meanings independently from `Workflows/Real Reward Pattern Playbook.md`.
 
 ## 🧵📜>🧪 Active Promises
 
@@ -93,11 +98,3 @@ Default Planning State Output contains only:
 2. 🏁📊 Point 6 — Short D/F/K/P Race;
 3. 🧵📜>🧪 Active Promises;
 4. 🧾 Finished Sessions.
-
-Support Facts and Penalty Events are optional in rendered output.
-
-AI must source daily values from the relevant date-based day file.
-
-## No-fabrication rule
-
-AI must not convert lack of input into invented planning content.
