@@ -42,7 +42,8 @@ At day close / next morning:
 
 - read support facts from the date-based day file;
 - calculate previous-day Support Score approximately;
-- write support breakdown and interpretation into the same day file.
+- calculate Support Penalty if the average is too low;
+- write support breakdown, penalty, and interpretation into the same day file.
 
 ## Support marks
 
@@ -78,6 +79,32 @@ Sleep may use negative marks such as `-5` for a major sleep collapse.
 
 Because sleep can be negative, average Support Score may be below zero.
 
+## Day-close Support Penalty
+
+After Support Score average is calculated, apply a day-close Support Penalty if support was too low.
+
+Thresholds are non-cumulative.
+
+Use the strongest matching penalty only:
+
+| Support Score average | Support Penalty | Meaning |
+|---:|---:|---|
+| `< 1.0` | `-20` | support was too weak / fragile; large day-final penalty |
+| `< 1.25` and `>= 1.0` | `-10` | support was below required minimum; moderate day-final penalty |
+| `>= 1.25` | `0` | no support penalty |
+
+Formula:
+
+`Final Day Score = Net Work Score + Support Penalty`
+
+Support Penalty is not a session penalty and is not a Penalty Event.
+
+Support Penalty must be shown separately from Work Score and Penalty Events.
+
+Work Score, Finished Sessions, and D/F/K/P session records are not rewritten by Support Penalty.
+
+Baseline closure from Work Score remains visible, but the final day result must also show whether support reduced the final day score.
+
 ## Support categories
 
 Categories help group facts and choose marks.
@@ -108,7 +135,8 @@ For Support Score, AI may participate more actively:
 - group facts by category;
 - suggest approximate support marks;
 - calculate the average support mark;
-- explain the score;
+- calculate the Support Penalty from thresholds;
+- explain the score and penalty;
 - compare with previous curated examples;
 - point out sleep/food/stimulus effects.
 
@@ -139,17 +167,20 @@ Support Score measures stability and repeatability.
 
 Examples:
 
-Work Score 38 + Support Score avg 1.8:
+Work Score 38 + Support Score avg 1.8 + Support Penalty 0:
 Old baseline beaten and day support was strong.
 
-Work Score 38 + Support Score avg 0.2:
-Old baseline beaten but the day was fragile / costly.
+Work Score 38 + Support Score avg 1.1 + Support Penalty -10:
+Old baseline beaten, but support was below the minimum and reduced the final day result.
 
-Work Score 0 + Support Score avg 1.8:
+Work Score 38 + Support Score avg 0.2 + Support Penalty -20:
+Old baseline beaten by Work Score, but the day was fragile / costly and heavily penalized in the final day result.
+
+Work Score 0 + Support Score avg 1.8 + Support Penalty 0:
 Good recovery day, but work baseline not closed.
 
-Work Score 70 + Support Score avg negative:
-Very strong work day, but next-day risk may be high.
+Work Score 70 + Support Score avg negative + Support Penalty -20:
+Very strong work day, but next-day risk may be high and the final day result is support-penalized.
 
 ## Calibration
 
