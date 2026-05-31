@@ -110,9 +110,9 @@ Support Score never closes 35/70 work baselines.
 
 ## 🧯 Between-session / Support Facts
 
-During the day, collect facts only.
+During the day, collect facts and/or provisional support marks only.
 
-Do not calculate Support Score during the day.
+Do not calculate final Support Score during the day.
 
 | # | Time / After | Type | Fact | Effect on next work |
 |---|---|---|---|---|
@@ -137,19 +137,27 @@ Types:
 
 Status: not calculated yet.
 
-Support Score is calculated only at day close / next-morning review from support facts.
+Support Score is calculated only at day close / next-morning review from support facts and support marks.
 
-### Support Score
+### Support Marks
 
-| Категория | Score | Reason |
-|---|---:|---|
-| 🛌 Sleep / sleep attempt |  |  |
-| 🍽️ Food / no overload |  |  |
-| 🏃 Movement / sport |  |  |
-| 🧲⚡ Stimulus control |  |  |
-| 🔋 Recovery / readiness |  |  |
+| # | Category | Mark | Reason |
+|---|---|---:|---|
+| 1 |  |  |  |
 
 Support Score: not calculated
+
+Formula:
+
+`Support Score = average(support marks used for the day)`
+
+Rules:
+
+- Do not normalize Support Score to `/10`.
+- Do not calculate `Max Support Score = 10`.
+- Do not sum categories into a 10-point total.
+- Typical positive marks often use a `0..2` feel-scale.
+- Sleep may use strong negative marks, such as `-5`, when sleep collapses.
 
 ### Support Interpretation
 
