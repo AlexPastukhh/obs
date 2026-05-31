@@ -151,11 +151,28 @@ Formula:
 
 `Support Score = average(support marks used for the day)`
 
+### Support Penalty
+
+| Rule | Penalty |
+|---|---:|
+| Support Score `< 1.0` | -20 |
+| Support Score `< 1.25` and `>= 1.0` | -10 |
+| Support Score `>= 1.25` | 0 |
+
+Support Penalty: not calculated
+
+Final Day Score: not calculated
+
+Formula:
+
+`Final Day Score = Net Work Score + Support Penalty`
+
 Rules:
 
 - Do not normalize Support Score to `/10`.
 - Do not calculate `Max Support Score = 10`.
 - Do not sum categories into a 10-point total.
+- Support Penalty thresholds are non-cumulative; use strongest matching penalty only.
 - Typical positive marks often use a `0..2` feel-scale.
 - Sleep may use strong negative marks, such as `-5`, when sleep collapses.
 
@@ -181,6 +198,8 @@ Status: not closed.
 | Penalties | 0 |
 | Net Work Score | 0 |
 | Support Score | not calculated |
+| Support Penalty | not calculated |
+| Final Day Score | not calculated |
 | Old baseline | not closed |
 | Full closure | not closed |
 | Day class | active |
