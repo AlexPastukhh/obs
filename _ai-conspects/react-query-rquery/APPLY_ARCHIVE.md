@@ -1,6 +1,6 @@
-# Apply archive: React Query conspect Stage 3 R10 mutations
+# Apply archive: React Query conspect Stage 3b R10 verification batch 1
 
-Archive type: stage-3 first region transcription draft.
+Archive type: stage-3b region verification update.
 
 Target branch:
 
@@ -14,20 +14,10 @@ Apply from repository root:
 PS C:\Users\alexa\obs>
 ```
 
-## Files included
-
-This archive updates:
-
-```text
-_ai-conspects/react-query-rquery/
-```
-
-It includes Stage 1 and Stage 2 files plus the first Stage 3 region transcription draft.
-
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3-r10-mutations-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3b-r10-mutations-verification-batch1-v001.zip
 ```
 
 ## Apply commands
@@ -36,7 +26,7 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3-r10-mutations-v0
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3-r10-mutations-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3b-r10-mutations-verification-batch1-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
@@ -50,7 +40,7 @@ git diff -- _ai-conspects/react-query-rquery
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query mutations region transcript draft"
+git commit -m "Verify first React Query mutations screenshots"
 ```
 
 ## Push command
@@ -69,4 +59,14 @@ git restore -- _ai-conspects/react-query-rquery
 
 This archive does not delete files.
 
-The region transcript is intentionally marked as OCR-assisted draft and needs visual verification before being treated as exact literal transcription.
+This stage verifies only the first batch of R10 screenshots:
+
+```text
+MUT-S001–MUT-S008
+```
+
+Remaining R10 screenshots still need verification:
+
+```text
+MUT-S009–MUT-S036
+```

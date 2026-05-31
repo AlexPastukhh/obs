@@ -152,3 +152,36 @@ Counts:
 Extended mutation screenshot uses: 36
 Unique fileId shorts: 35
 ```
+
+
+---
+
+## Stage 3b additions
+
+Stage 3b adds the first visual verification batch for `R10 — Mutations`.
+
+Added files:
+
+```text
+_ai-conspects/react-query-rquery/07-stage3b-r10-mutations-verification-batch1.md
+_ai-conspects/react-query-rquery/data/R10-mutations-verification-batch1-stage3b.csv
+_ai-conspects/react-query-rquery/data/R10-mutations-verification-batch1-stage3b.json
+```
+
+Updated file:
+
+```text
+_ai-conspects/react-query-rquery/regions/R10-mutations.md
+```
+
+Verified screenshots:
+
+```text
+MUT-S001–MUT-S008
+```
+
+Remaining R10 verification work:
+
+```text
+MUT-S009–MUT-S036
+```

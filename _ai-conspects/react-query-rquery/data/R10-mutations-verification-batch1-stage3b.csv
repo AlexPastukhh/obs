@@ -1,0 +1,9 @@
+source_id,image_index,file,status,readability,cut_off,confidence,theme,notes
+MUT-S001,130,488e3dbdf9.png,visually-verified-from-original-png,high,no,high,mutation variable flow and optimistic update overview,Source chips like `TanStack +1` are visible but not essential content; they are omitted from the cleaned transcript.
+MUT-S002,005,55a51e51f4.png,visually-verified-from-original-png,high,no,high,optimistic update code example,This image appears twice in the mutation region; the transcript applies to both uses.
+MUT-S003,003,5bec075fe3.png,visually-verified-from-original-png,high,no,high,cancelQueries / optimistic update race,Visually checked against original PNG.
+MUT-S004,150,73b5e8fd66.png,visually-verified-from-original-png,high,no,high,mutate vs mutateAsync / mutate,Visually checked against original PNG.
+MUT-S005,004,f128bccab6.png,visually-verified-from-original-png,high,yes,high-for-visible-text,standard optimistic update flow,The screenshot is cut off below `Example:` in the visible image. Do not infer the missing example from this screenshot; the example is visible in MUT-S002/MUT-S009.
+MUT-S006,149,7de4e030ee.png,visually-verified-from-original-png,high,no,high,mutate UI example,Code-only screenshot. Visually checked against original PNG.
+MUT-S007,151,a7ac382dd0.png,visually-verified-from-original-png,high,no,high,mutateAsync,Visually checked against original PNG.
+MUT-S008,148,8641ca8bc2.png,visually-verified-from-original-png,high,no,high,immutable updates only,The original screenshot has separate Good and Bad TypeScript blocks; the verified transcript keeps them together for compactness while preserving source content.

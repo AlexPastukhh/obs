@@ -53,3 +53,17 @@ _ai-conspects/react-query-rquery/regions/R10-mutations.md
 _ai-conspects/react-query-rquery/data/R10-mutations-screenshot-set-stage3.csv
 _ai-conspects/react-query-rquery/data/R10-mutations-screenshot-set-stage3.json
 ```
+
+
+---
+
+## Stage 3b verification batch 1
+
+A first verification overlay was added for `MUT-S001`–`MUT-S008`.
+
+See:
+
+```text
+07-stage3b-r10-mutations-verification-batch1.md
+```
+

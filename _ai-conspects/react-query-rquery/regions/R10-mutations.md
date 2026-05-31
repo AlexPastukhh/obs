@@ -1350,3 +1350,28 @@ Cleaned notes below are based on the draft transcript above. They are **not** ge
 - Match every fileId to exact copied `images/...` path from `image-index.csv`.
 - Revise Stage 1/2 R10 bounding box because callback-argument screenshots extend below initial R10 region.
 - Decide whether repeated screenshot `55a51e51f4` should be duplicated in final transcript or referenced once with two canvas uses.
+
+---
+
+## 11. Stage 3b verification overlay
+
+A first visual verification batch has been added in:
+
+```text
+_ai-conspects/react-query-rquery/07-stage3b-r10-mutations-verification-batch1.md
+```
+
+Verified batch:
+
+```text
+MUT-S001–MUT-S008
+```
+
+Use the Stage 3b file as the preferred source for these screenshots. The older `Source transcript — OCR-assisted draft` section remains preserved below/above for traceability and should be replaced gradually after each verification batch.
+
+Remaining screenshots still need verification:
+
+```text
+MUT-S009–MUT-S036
+```
+
