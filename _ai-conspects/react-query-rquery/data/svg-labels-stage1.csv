@@ -1,0 +1,219 @@
+label_id,region_id,x,y,x_pct,y_pct,rotation,font_size,line_count,text_original,text_compact
+L-001,R01,3625.022167796993,10.0,18.47,0.02,0.0,174.66674804687506,1,react query + browser cache,react query + browser cache
+L-002,R01,4687.1910487528885,348.78165108816756,23.88,0.73,0.0,58.400000000000006,1,using react query + http cache with headers from server,using react query + http cache with headers from server
+L-003,R01,3593.857674729451,621.2261701311363,18.31,1.3,0.0,41.33333333333333,3,"you need to do calls with if-match yourself
+browser does nothing with it 
+you are handlinkg concurrency ",you need to do calls with if-match yourself browser does nothing with it you are handlinkg concurrency
+L-004,R02,10212.111377801515,1805.6711086007272,52.03,3.79,0.0,76.53334960937502,1,statuses,statuses
+L-005,R02,11471.802915842134,2423.714857342493,58.45,5.08,0.0,64.44441731770057,1,examples,examples
+L-006,R02,8138.352290939421,2841.607066328259,41.47,5.96,0.0,20.0,1,fund,fund
+L-007,R02,13104.68661461619,3000.027903332759,66.77,6.29,0.0,329.333312988281,1,enabled,enabled
+L-008,R02,11343.548870083205,3047.2070128717023,57.8,6.39,0.0,79.04761323474233,2,"Isloading
+and when there is no data and no fetching",Isloading and when there is no data and no fetching
+L-009,R02,13060.018765274883,3476.1044936597973,66.55,7.29,0.0,98.93330078124997,1,conditional queries,conditional queries
+L-010,R03,1927.6872852549495,3688.1875738279196,9.82,7.74,0.0,99.99999999999996,1,notifyonchangeprops,notifyonchangeprops
+L-011,R02,10180.448308366003,4154.820650402427,51.87,8.72,0.0,52.00000000000004,1,throwing/swallowing errors,throwing/swallowing errors
+L-012,R02,7558.543340104285,4278.677886992111,38.51,8.98,0.0,91.11112467448694,1,keys,keys
+L-013,R02,12733.399724921925,4500.194561447577,64.88,9.44,0.0,73.33332519531254,1,dont try to interpret disabled quey state in ui,dont try to interpret disabled quey state in ui
+L-014,R03,2109.354562273178,4591.520805435997,10.75,9.63,0.0,20.0,1,notifyonchangeproops vs select vs structural sharing,notifyonchangeproops vs select vs structural sharing
+L-015,R02,8608.851158730158,4594.934210782085,43.87,9.64,0.0,20.0,3,"so when returning usequey
+we get like a query but 
+dor our specific resource",so when returning usequey we get like a query but dor our specific resource
+L-016,R02,12979.685282260094,4640.908792666189,66.14,9.74,0.0,20.0,4,"move disabled quey to a separate component
+ and mount it only when the condition for queryu is met,
+
+so you wont mount disabled query, and enable is being used only for preventing shit","move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount disabled query, and enable is being used only for preventing shit"
+L-017,R02,8592.615017357979,5084.844690378704,43.78,10.67,0.0,81.77773030598179,2,"manual refetch and using state to make new
+queries on that state change for a new key",manual refetch and using state to make new queries on that state change for a new key
+L-018,R03,2102.687895606512,5696.520805436012,10.71,11.95,0.0,20.0,1,when notifyonchanges is useful,when notifyonchanges is useful
+L-019,R03,3298.0478186058026,6147.84228345727,16.8,12.9,0.0,53.77779134114684,1,why not qc.prefetchquery ?,why not qc.prefetchquery ?
+L-020,R02,12915.06103883298,6197.384330034816,65.81,13.0,0.0,148.00000000000003,1,RETRY,RETRY
+L-021,R02,11705.016507686774,6212.345699589279,59.64,13.03,0.0,44.888888888889056,3,"with static it can be
+ stale but it wont be refetched automatically on 
+some refetch trigger",with static it can be stale but it wont be refetched automatically on some refetch trigger
+L-022,R04,6561.823981150048,6939.750786425073,33.44,14.56,0.0,172.88891601562503,1,rereders,rereders
+L-023,R04,8831.749350793832,7005.403091026266,45.0,14.7,0.0,131.63636363636394,2,"Staleness
+when refetch occurs",Staleness when refetch occurs
+L-024,R04,6449.231519670015,7311.713895759385,32.86,15.34,0.0,24.266662597656254,2,"if after some manipulations the data that is used by so,e component
+from query has changed - then observer notifies react that rerender is needed","if after some manipulations the data that is used by so,e component from query has changed - then observer notifies react that rerender is needed"
+L-025,R04,8133.567837787796,7495.0997809787805,41.44,15.72,0.0,63.636363636363264,1,Refetch triggers,Refetch triggers
+L-026,R04,10142.477003471557,7500.395937953566,51.68,15.74,0.0,57.214822048610976,3,"when a query can become stale
+stale time vs invalidat queires 
+staletime STATIC",when a query can become stale stale time vs invalidat queires staletime STATIC
+L-027,R04,9069.97461887292,7578.130291422916,46.22,15.9,0.0,20.0,9,"so if staletime has passed or if we marked as stale with invalidate
+queries or if we didnt set staletime - by default its 0 
+
+then we wont get refetch automatically (by default query is stale from the start)
+it will refetch only if the trigger occursand we didnt removed it in options 
+1 window focus reggained
+2 reconnect
+3 new component that is subscribed to stale query mounts
+4 we invalidate quey (it marks as stale and by default will refetch all active queries)",so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default its 0  then we wont get refetch automatically (by default query is stale from the start) it will refetch only if the trigger occursand we didnt removed it in options 1 window focus reggained 2 reconnect 3 new component that is subscribed to stale query mounts 4 we invalidate quey (it marks as stale and by default will refetch all active queries)
+L-028,R05,2978.0072954402767,7661.134783956266,15.17,16.07,0.0,180.00000000000006,1,PAGINATION,PAGINATION
+L-029,R04,14259.93188186684,7688.346793936973,72.66,16.13,0.0,20.0,1,so no error thrown bu without auto retry on mount,so no error thrown bu without auto retry on mount
+L-030,R04,5175.231519670015,7702.380369148057,26.37,16.16,0.0,34.39999999999998,4,"structural  sharing, use from query only 
+the data that will cause rerender on change
+
+acts just like a store","structural  sharing, use from query only the data that will cause rerender on change  acts just like a store"
+L-031,R05,106.27087445810321,7857.403872632669,0.54,16.48,0.0,71.55554199218747,2,"usetransition vs
+placeholderdata:keeppreviousdata",usetransition vs placeholderdata:keeppreviousdata
+L-032,R04,7983.264770493761,8125.402820529554,40.68,17.05,0.0,48.444446910511324,3,"removing cache that is not being used
+not active queries
+gctime",removing cache that is not being used not active queries gctime
+L-033,R04,11444.7930783472,8320.53410540949,58.32,17.46,0.0,37.45454545454557,2,"when refetch can happen with STATIC
+refetchontrigger: always vs staletime:static",when refetch can happen with STATIC refetchontrigger: always vs staletime:static
+L-034,R05,1494.7695722259941,9185.325274678908,7.62,19.27,0.0,43.77142857142858,7,"INFINITESCROLL OPTIONS
+
+WHAT DOES USEINFINITEQUERY RETURNS
+
+HOW GETNEXTPAGEPARAM WORKS
+
+HOW DOES IT COMPUTES HASNEXTPAGE",INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE
+L-035,R04,7602.26201313962,9187.89844260535,38.74,19.28,0.0,117.77775065104353,1,refetch interval,refetch interval
+L-036,R05,3194.515445086856,9207.642730152322,16.28,19.32,0.0,76.88883463541566,1,INFINITEQUERY,INFINITEQUERY
+L-037,R05,10.0,9437.398850330967,0.05,19.8,0.0,78.38597347861796,1,!!!,!!!
+L-038,R07,8655.330079315223,10060.093910067313,44.1,21.11,0.0,163.99999999999994,2,"PREFETCHING/ INITIALDATA
+/PLACEHOLDRDATA, USEQUERYCLIENT","PREFETCHING/ INITIALDATA /PLACEHOLDRDATA, USEQUERYCLIENT"
+L-039,R06,5592.842788191092,10448.916932576692,28.5,21.92,0.0,254.66662597656241,2,"use queries
+dependant queries",use queries dependant queries
+L-040,R08,17893.741170830843,10863.18164362876,91.18,22.79,0.0,126.66666666666684,2,"setqueriesdata
+olddatashape",setqueriesdata olddatashape
+L-041,R08,10515.77418419106,11019.642031746713,53.58,23.12,0.0,109.60000000000004,1,QUERYCLIENT,QUERYCLIENT
+L-042,R08,15856.944501529126,11020.736055642767,80.8,23.12,0.0,105.37636215582607,1,QC OUTSIDE REACT,QC OUTSIDE REACT
+L-043,R08,11756.150016896945,11038.342479135492,59.9,23.16,0.0,63.851860894096895,1,QUERY FILTERS,QUERY FILTERS
+L-044,R08,12533.704782370567,11039.246347899461,63.86,23.16,0.0,93.20783781413334,1,METHODS OF QC,METHODS OF QC
+L-045,R06,4774.991632592133,11040.027991129762,24.33,23.16,0.0,85.77775065104063,1,COMBINE,COMBINE
+L-046,R08,13804.722211490063,11131.84730238756,70.34,23.35,0.0,105.37636215582607,1,get queries,get queries
+L-047,R06,7044.324640404633,11146.694739176637,35.89,23.39,0.0,85.77775065104063,1,NOT PARALLEL,NOT PARALLEL
+L-048,R07,8257.150597877526,11173.64387075285,42.07,23.44,0.0,48.110340896446694,3,"PREFETCH STALETIME AND
+REFETCHING ON MOUNT ISSUE EVEN 
+WITH PREFETCH QUERY",PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY
+L-049,R06,7023.880202741873,11318.58360432963,35.79,23.75,0.0,20.0,1,"SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER ","SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER"
+L-050,R08,18089.84186944863,11364.70085874795,92.17,23.84,0.0,20.0,2,"may try to design some abstractions that will 
+ensure that some keys have some specific form",may try to design some abstractions that will ensure that some keys have some specific form
+L-051,R07,9485.684627805638,11890.024239072267,48.33,24.94,0.0,110.84094158496742,1,init data caveats,init data caveats
+L-052,R07,7991.375992144136,12268.577014924951,40.72,25.74,0.0,49.87902151996967,2,"DOES PREFETCH STALETIME BELONGS TO
+ BOTH PREFETCH AND NORMAL QUEY?",DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?
+L-053,R08,13729.727043789648,12647.246849802743,69.96,26.53,0.0,79.25922309027808,2,"refetch type VS filters type
+of invalidate queries",refetch type VS filters type of invalidate queries
+L-054,R06,6929.525412555482,13024.111447512387,35.31,27.32,0.0,50.35898061899039,2,"PROMISE.ALL, SHARE LIFECTCLE
+FETCHING , REFETCHING AND ERRORING","PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING"
+L-055,R07,8911.272451611121,13181.193776345996,45.41,27.65,0.0,20.0,3,"!!! can prefetch
+and then fetch again
+because of default stale time",!!! can prefetch and then fetch again because of default stale time
+L-056,R07,9466.200779034925,13543.126935022497,48.23,28.41,0.0,51.030273437500014,2,"fetchquery
+ensurequerydata",fetchquery ensurequerydata
+L-057,R08,14636.370275592988,13850.072702156162,74.58,29.06,0.0,73.33334585336415,1,CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN,CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN
+L-058,R08,13757.881541426763,13864.845253884216,70.1,29.09,0.0,68.41026893028756,1,CANCELOPTIONS,CANCELOPTIONS
+L-059,R09,5176.793301541654,13875.07734483537,26.38,29.11,0.0,126.6666666666672,2,"OFFLINE
+network mode",OFFLINE network mode
+L-060,R09,6244.254546676728,13894.821745474606,31.82,29.15,0.0,126.6666666666672,3,"mutations
+network mode
+resumepausedmutations",mutations network mode resumepausedmutations
+L-061,R08,13804.973363077606,13987.188664146233,70.34,29.34,0.0,18.47617885044601,1,JUST SET SILENT ABD REVERT TRUE ALWAYS,JUST SET SILENT ABD REVERT TRUE ALWAYS
+L-062,R09,3855.3119782994663,14153.595869005292,19.64,29.69,0.0,126.6666666666672,2,"
+network modes",network modes
+L-063,R09,7722.561756881887,14378.919377528015,39.35,30.17,0.0,73.33325195312499,1,VALIDATION WITH ZOD,VALIDATION WITH ZOD
+L-064,R09,4987.163581489571,14470.632900390925,25.41,30.36,0.0,126.6666666666672,1,fetchstatus paused,fetchstatus paused
+L-065,UNASSIGNED,9303.53403098805,14799.126935022497,47.41,31.05,0.0,51.030273437500014,1,REMOVEQUERIES RESETQUERIES,REMOVEQUERIES RESETQUERIES
+L-066,R08,13675.098633599728,15054.81135562135,69.68,31.58,0.0,61.33331298828125,2,"GETQUERYCACHE 
+GET MUTATIONCACHE",GETQUERYCACHE GET MUTATIONCACHE
+L-067,R08,11481.765351129025,15248.978073150647,58.5,31.99,0.0,54.66662597656251,1,RESUMEPAUSED MUTATIONS,RESUMEPAUSED MUTATIONS
+L-068,R09,6188.825278775213,15482.872445615078,31.53,32.48,0.0,129.47368421052627,1,!!!,!!!
+L-069,R09,6374.15290024915,15817.98806527101,32.48,33.19,0.0,50.90603715945562,2,"SHOULD I USE RESUMEPAUSEDMUT
+ WITH OFFLINEFIRST?",SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?
+L-070,R10,8853.74934247947,16341.715957672131,45.11,34.28,0.0,228.0000000000001,1,MUTATIONS,MUTATIONS
+L-071,R10,7675.601632072881,16557.277963181674,39.11,34.74,0.0,79.52380807059161,2,"STRUCTURE, CALLBACKS
+INVALIDATION IN ONSETTLED","STRUCTURE, CALLBACKS INVALIDATION IN ONSETTLED"
+L-072,R10,6311.306881267723,16660.737392134688,32.16,34.95,0.0,73.33334585336415,2,"CANCELQUERIES IN 
+OPTIMISTIC UPDATES PATTERN",CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN
+L-073,R10,10587.145780073728,16729.267650900278,53.95,35.1,0.0,68.0,1,MUTATE VS MUTATEASYNC,MUTATE VS MUTATEASYNC
+L-074,UNASSIGNED,2841.9257535826164,16769.514101485576,14.48,35.18,0.0,20.0,3,"OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES
+RETRIES WILL BE QUEUED
+CAN TRY TO GET DATA FROM CACHE",OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE
+L-075,R10,9047.98253239882,17307.281577485603,46.1,36.31,0.0,45.21213600852207,1,SETQUERYDATA RETURN FULL OBJECT LIKE PUT,SETQUERYDATA RETURN FULL OBJECT LIKE PUT
+L-076,R10,8022.670907107338,17845.046744492436,40.88,37.44,0.0,63.48715444711559,1,CALLBACKS AND ARGS,CALLBACKS AND ARGS
+L-077,R10,9226.09498769255,18542.598506982158,47.01,38.9,0.0,64.19049944196448,1,INVALIDATION ONSETTLED,INVALIDATION ONSETTLED
+L-078,R10,9171.549533147096,18681.47299492098,46.73,39.19,0.0,20.0,2,"SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL 
+RESULT AS THE TRUE SERVER STATE NO MATTER WHAT ",SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT
+L-079,R10,9160.640442238006,18806.927540375524,46.68,39.46,0.0,20.0,2,"AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS 
+AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT TO GET THE FINAL STATE FROM THE SERVER ",AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT TO GET THE FINAL STATE FROM THE SERVER
+L-080,R10,10573.055918400705,19099.823257318465,53.87,40.07,0.0,52.000000000000036,2,"KEEPING MUTATION IN 
+PENDING STATE UNTIL REVALIDATION + REFETCH",KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH
+L-081,R11,4496.9319798082415,24954.165661863743,22.91,52.35,0.0,77.90478515624996,1,when suspence is being shown,when suspence is being shown
+L-082,R11,2582.2128672111758,25060.68223418544,13.16,52.58,0.0,209.86650390624996,1,websockets,websockets
+L-083,R12,10450.126126248684,25188.410779893962,53.25,52.84,0.0,126.6666666666672,2,"OFFLINE
+network mode",OFFLINE network mode
+L-084,R11,6442.292012854623,25347.70903126125,32.83,53.18,0.0,170.85714285714195,1,suspence,suspence
+L-085,R12,11744.253936325165,25441.48831041601,59.84,53.38,0.0,126.6666666666672,3,"mutations
+network mode
+resumepausedmutations",mutations network mode resumepausedmutations
+L-086,R12,9128.644803006497,25466.929304063884,46.51,53.43,0.0,126.6666666666672,2,"
+network modes",network modes
+L-087,R12,10260.496406196602,25783.966335449517,52.28,54.09,0.0,126.6666666666672,1,fetchstatus paused,fetchstatus paused
+L-088,R12,13016.951254356392,25914.92113746948,66.33,54.37,0.0,103.20004882812498,1,persistance + resumepausedmutations,persistance + resumepausedmutations
+L-089,R12,16858.10215338751,27002.224717474284,85.9,56.65,0.0,61.33331298828126,1,persistqucl vs provider flows,persistqucl vs provider flows
+L-090,R12,15726.940523970785,27023.022731103607,80.13,56.69,0.0,56.26665039062502,1,persist query client,persist query client
+L-091,R12,11688.824668423651,27029.53901055648,59.56,56.71,0.0,129.47368421052627,1,!!!,!!!
+L-092,R12,14416.432712924003,27036.022710758556,73.46,56.72,0.0,48.8,1,"persistqueryclientsave,subscribe,restore","persistqueryclientsave,subscribe,restore"
+L-093,R12,11874.152289897587,27364.654630212415,60.5,57.41,0.0,50.90603715945562,2,"SHOULD I USE RESUMEPAUSEDMUT
+ WITH OFFLINEFIRST?",SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?
+L-094,R12,11822.113985204458,28003.143834409584,60.24,58.75,0.0,80.66668701171872,2,"hydrate/dehydrate options
+buster",hydrate/dehydrate options buster
+L-095,R12,8115.258578289648,28082.84753654417,41.35,58.92,0.0,20.0,3,"OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES
+RETRIES WILL BE QUEUED
+CAN TRY TO GET DATA FROM CACHE",OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE
+L-096,R12,10100.733442533547,28258.459450778853,51.47,59.29,0.0,79.7333414713542,3,"meta for dehydraton 
+filtering to avoid overpopulaton 
+of the store + acessing metha in queryfn",meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn
+L-097,R12,10696.102108747635,29894.45948129643,54.5,62.72,0.0,62.666601562499984,1,pruning,pruning
+L-098,R11,5387.847432776498,30688.264603771015,27.45,64.38,0.0,170.85714285714195,1,"enabled, what to do","enabled, what to do"
+L-099,R12,10668.102108747635,31800.68175099044,54.36,66.72,0.0,53.77775065104215,1,query.state,query.state
+L-100,R13,7201.9260772514335,32778.69454381103,36.7,68.77,0.0,159.99999999999997,1,cancelling queries,cancelling queries
+L-101,R11,5549.97835965556,32808.1893946633,28.28,68.83,0.0,97.93938654119265,2,"serial suspence
+not showing nested",serial suspence not showing nested
+L-102,R13,9516.701851310941,33441.98740625489,48.49,70.16,0.0,150.66668701171872,1,Request cancellation,Request cancellation
+L-103,R15,11952.217649116488,34285.85341732748,60.9,71.93,0.0,136.44447835286408,2,"global/default
+config",global/default config
+L-104,R13,9633.69477392521,34298.3024284569,49.09,71.96,0.0,44.205134465145235,2,"or better excplicitly cancel queries when you 
+need cancellation on some aciton",or better excplicitly cancel queries when you need cancellation on some aciton
+L-105,R13,9326.470447142437,35151.758242447235,47.52,73.75,0.0,114.66668701171875,1,Error handling error boundary,Error handling error boundary
+L-106,R13,9667.422769966099,35768.90109959009,49.26,75.04,0.0,114.66668701171875,1,throw on error,throw on error
+L-107,R15,11966.662025744094,35898.07575822918,60.97,75.31,0.0,92.88891601562493,1,Query key factories,Query key factories
+L-108,R14,2287.8301623497046,36228.981451657695,11.66,76.01,0.0,88.26669921875003,1,urgent/non urgent updates/rerenders,urgent/non urgent updates/rerenders
+L-109,R14,4280.229367998601,36309.14807763426,21.81,76.18,0.0,107.99999999999997,1,usetransition,usetransition
+L-110,R14,2938.2664163384416,36496.571348207945,14.97,76.57,0.0,20.0,2,"react marksstate updates and rerenders that they cause as urgent and non urgent
+so we can have urgent updates while w are preparing non urgent update that will replace the screen finally",react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w are preparing non urgent update that will replace the screen finally
+L-111,R13,7455.4318448921495,36730.05245145592,37.99,77.06,0.0,85.1851671006945,2,"will it retry with 
+throwonerror?",will it retry with throwonerror?
+L-112,R13,8504.491585994807,36764.12641250193,43.33,77.13,0.0,40.543221932870296,3,"flow with catching error in booundary and 
+trying rerender with refetching the query instead
+of rerendering with error state ",flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error state
+L-113,R13,9640.756021919224,36827.567847636965,49.12,77.26,0.0,114.66668701171875,1,queryerrorresetboundary,queryerrorresetboundary
+L-114,R13,9439.140060705218,37222.50062563176,48.1,78.09,0.0,20.0,2,"need retryonmount  true
+(default)",need retryonmount  true (default)
+L-115,R15,11636.65218805647,37879.186852386076,59.29,79.47,0.0,95.85186089409738,3,"performance structural sharing
+observers
+SELECT",performance structural sharing observers SELECT
+L-116,R14,2348.1253894175916,38023.271780262876,11.96,79.77,0.0,34.26262133049267,3,"use to show that new page is 
+loading while the old page is still
+on the screen",use to show that new page is loading while the old page is still on the screen
+L-117,R16,13514.925255591828,38131.629935940764,68.86,80.0,0.0,203.1111246744782,1,select,select
+L-118,R15,9816.066896640205,38338.234351543215,50.02,80.43,0.0,138.6666259765625,1,Testing,Testing
+L-119,R16,14482.18836880782,38643.01278503881,73.79,81.07,0.0,44.88888888888902,1,rerendering with/without select,rerendering with/without select
+L-120,R16,15930.375656211172,38716.419169371715,81.17,81.23,0.0,48.71796123797979,1,select usage examples,select usage examples
+L-121,R15,10988.32130909616,39197.351583914926,55.99,82.24,0.0,199.19999999999993,1,msw,msw
+L-122,R17,4180.233461581611,39928.23427524927,21.3,83.77,0.0,58.666687011718714,1,step by step comparison,step by step comparison
+L-123,R16,16512.426906962373,40254.36791862051,84.14,84.45,0.0,129.1281926081727,1,!!!,!!!
+L-124,R16,13484.788191033527,41283.19349765201,68.71,86.61,0.0,107.11111653645844,2,"memoizing selectors to avoid recomputation of select 
+on every rerender",memoizing selectors to avoid recomputation of select on every rerender
+L-125,R16,14926.645763148914,41618.48704988767,76.06,87.31,0.0,20.0,7,"so we dont memooize result with usecallback, we memoize the reference of the 
+function, we can memoize result with usememo
+
+we need memoize expensive selectors that do expensive work because 
+rquery can run those selectors every rerender even if the was no change in cache data
+just because it sees the new reference of the selector
+so you need to wrap with usecallback","so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with usememo  we need memoize expensive selectors that do expensive work because rquery can run those selectors every rerender even if the was no change in cache data just because it sees the new reference of the selector so you need to wrap with usecallback"
+L-126,R16,13641.33587217319,41851.012834338144,69.51,87.8,0.0,96.79999999999997,1,pure selectors,pure selectors
+L-127,R17,7265.233744959121,42627.75844081149,37.02,89.43,0.0,103.047607421875,2,"best practises summmary
+key points",best practises summmary key points
