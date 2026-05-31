@@ -1,0 +1,344 @@
+﻿fund ^7kJheDOG
+
+so when returning usequey
+we get like a query but 
+dor our specific resource ^yPKPbaSB
+
+throwing/swallowing errors ^SZfXbsEY
+
+keys ^uAALYFVl
+
+manual refetch and using state to make new
+queries on that state change for a new key ^ZjV2c6UQ
+
+examples ^ijUJoETY
+
+Isloading
+and when there is no data and no fetching ^yeAqDpix
+
+structural  sharing, use from query only 
+the data that will cause rerender on change
+
+acts just like a store ^XG9GmaXn
+
+if after some manipulations the data that is used by so,e component
+from query has changed - then observer notifies react that rerender is needed ^kZCQ2EgG
+
+rereders ^jDkzsO4V
+
+Staleness
+when refetch occurs ^8UCfkSff
+
+so if staletime has passed or if we marked as stale with invalidate
+queries or if we didnt set staletime - by default its 0 
+
+then we wont get refetch automatically (by default query is stale from the start)
+it will refetch only if the trigger occursand we didnt removed it in options 
+1 window focus reggained
+2 reconnect
+3 new component that is subscribed to stale query mounts
+4 we invalidate quey (it marks as stale and by default will refetch all active queries) ^SJSv4H3q
+
+Refetch triggers ^SavbXRlz
+
+removing cache that is not being used
+not active queries
+gctime ^A8l4DFhI
+
+when a query can become stale
+stale time vs invalidat queires 
+staletime STATIC ^4pvXkMVM
+
+when refetch can happen with STATIC
+refetchontrigger: always vs staletime:static ^6qLN3JuH
+
+statuses ^RYG1Dear
+
+conditional queries ^KYuiS22y
+
+move disabled quey to a separate component
+ and mount it only when the condition for queryu is met,
+
+so you wont mount disabled query, and enable is being used only for preventing shit ^FnGXc0sI
+
+dont try to interpret disabled quey state in ui ^h0mcjDkE
+
+refetch interval ^Y7WSDmrS
+
+use queries
+dependant queries ^Ik5tLBne
+
+NOT PARALLEL ^yMmcORhk
+
+SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER  ^IWs43hr0
+
+PREFETCHING/ INITIALDATA
+/PLACEHOLDRDATA, USEQUERYCLIENT ^7r6vQVBg
+
+QUERYCLIENT ^GkRjy7mh
+
+PREFETCH STALETIME AND
+REFETCHING ON MOUNT ISSUE EVEN 
+WITH PREFETCH QUERY ^3LhzApgd
+
+DOES PREFETCH STALETIME BELONGS TO
+ BOTH PREFETCH AND NORMAL QUEY? ^ErZyiRZa
+
+METHODS OF QC ^3AthdQdx
+
+QC OUTSIDE REACT ^vd1ei0IX
+
+QUERY FILTERS ^aeA3KlfZ
+
+REMOVEQUERIES RESETQUERIES ^acx9fGbH
+
+CANCELOPTIONS ^UGUaTe8l
+
+CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN ^Dz3x0qi3
+
+JUST SET SILENT ABD REVERT TRUE ALWAYS ^S6B5PfSo
+
+RESUMEPAUSED MUTATIONS ^Ka5b1w2F
+
+GETQUERYCACHE 
+GET MUTATIONCACHE ^bgn4e5d9
+
+MUTATIONS ^Pvqol4yq
+
+CANCELQUERIES IN 
+OPTIMISTIC UPDATES PATTERN ^rS8EDFZ5
+
+STRUCTURE, CALLBACKS
+INVALIDATION IN ONSETTLED ^dgoVf64k
+
+INVALIDATION ONSETTLED ^3SrtoviD
+
+SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL 
+RESULT AS THE TRUE SERVER STATE NO MATTER WHAT  ^LlzfERPn
+
+AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS 
+AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT TO GET THE FINAL STATE FROM THE SERVER  ^z8VSELnz
+
+SETQUERYDATA RETURN FULL OBJECT LIKE PUT ^ZXIO2yrf
+
+CALLBACKS AND ARGS ^2VqXZ52t
+
+MUTATE VS MUTATEASYNC ^Kpc9DQd0
+
+KEEPING MUTATION IN 
+PENDING STATE UNTIL REVALIDATION + REFETCH ^aBhLV5Hh
+
+RETRY ^BNNXV7PF
+
+PAGINATION ^pH2yNrJr
+
+INFINITEQUERY ^03L2bzF9
+
+INFINITESCROLL OPTIONS
+
+WHAT DOES USEINFINITEQUERY RETURNS
+
+HOW GETNEXTPAGEPARAM WORKS
+
+HOW DOES IT COMPUTES HASNEXTPAGE ^mxR3UxH6
+
+VALIDATION WITH ZOD ^WikBunHf
+
+OFFLINE
+network mode ^HHXWhvvT
+
+OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES
+RETRIES WILL BE QUEUED
+CAN TRY TO GET DATA FROM CACHE ^fQvi8zte
+
+SHOULD I USE RESUMEPAUSEDMUT
+ WITH OFFLINEFIRST? ^hdgmRZdr
+
+persistance + resumepausedmutations ^XxbTMU8D
+
+hydrate/dehydrate options
+buster ^7Pza9dGi
+
+persistqueryclientsave,subscribe,restore ^AXmK0nhO
+
+persist query client ^wgccVDnd
+
+persistqucl vs provider flows ^3HTuSy3X
+
+meta for dehydraton 
+filtering to avoid overpopulaton 
+of the store + acessing metha in queryfn ^Yn5SmYSv
+
+pruning ^8Jb8kLxE
+
+query.state ^EzpRTPpO
+
+websockets ^pk8ct6Nz
+
+suspence ^6cmFd74i
+
+use to show that new page is 
+loading while the old page is still
+on the screen ^msxHWzx2
+
+react marksstate updates and rerenders that they cause as urgent and non urgent
+so we can have urgent updates while w are preparing non urgent update that will replace the screen finally ^6uIHL2Rw
+
+usetransition ^llL6JKde
+
+urgent/non urgent updates/rerenders ^5jvSLyZH
+
+step by step comparison ^7fB7HMiS
+
+Request cancellation ^9QzbTai1
+
+Error handling error boundary ^FU51y3sE
+
+Testing ^FfeidryW
+
+best practises summmary
+key points ^GgmjgZDY
+
+global/default
+config ^bzMd7Lp6
+
+Query key factories ^WhH3gn8O
+
+performance structural sharing
+observers
+SELECT ^7ljG38oc
+
+rerendering with/without select ^FwqNAOUN
+
+select usage examples ^HDuVTw9i
+
+!!! ^OAh71kTc
+
+select ^qzKidotF
+
+so we dont memooize result with usecallback, we memoize the reference of the 
+function, we can memoize result with usememo
+
+we need memoize expensive selectors that do expensive work because 
+rquery can run those selectors every rerender even if the was no change in cache data
+just because it sees the new reference of the selector
+so you need to wrap with usecallback ^8q5ngA6Q
+
+memoizing selectors to avoid recomputation of select 
+on every rerender ^uQT7Id0f
+
+pure selectors ^ZBZJRRA0
+
+flow with catching error in booundary and 
+trying rerender with refetching the query instead
+of rerendering with error state  ^6k0pSkvO
+
+will it retry with 
+throwonerror? ^HTnQevjU
+
+msw ^efzUXhqh
+
+you need to do calls with if-match yourself
+browser does nothing with it 
+you are handlinkg concurrency  ^V5is7L5W
+
+using react query + http cache with headers from server ^JHwpGiJq
+
+react query + browser cache ^iNfEfi6k
+
+!!! can prefetch
+and then fetch again
+because of default stale time ^vuRgGjL2
+
+when notifyonchanges is useful ^7TLsirjG
+
+notifyonchangeproops vs select vs structural sharing ^YdRw8tx1
+
+notifyonchangeprops ^aFFvsUHD
+
+why not qc.prefetchquery ? ^NMJjpkz1
+
+so no error thrown bu without auto retry on mount ^gyMYvLqD
+
+with static it can be
+ stale but it wont be refetched automatically on 
+some refetch trigger ^GvJYrGL8
+
+when suspence is being shown ^kbNtk1zf
+
+setqueriesdata
+olddatashape ^EzR59jMM
+
+may try to design some abstractions that will 
+ensure that some keys have some specific form ^llMCYbPU
+
+!!! ^xDf2MfXj
+
+usetransition vs
+placeholderdata:keeppreviousdata ^wn3vUuHg
+
+cancelling queries ^ONozoeBN
+
+get queries ^erurbgrS
+
+fetchquery
+ensurequerydata ^6U9EpU6j
+
+PROMISE.ALL, SHARE LIFECTCLE
+FETCHING , REFETCHING AND ERRORING ^W1nA5Qv5
+
+COMBINE ^K7XVrivL
+
+init data caveats ^oVmZS1x0
+
+refetch type VS filters type
+of invalidate queries ^p4Vu5Ozy
+
+mutations
+network mode
+resumepausedmutations ^ta8AaevQ
+
+
+network modes ^EFMuULsv
+
+fetchstatus paused ^PaYtmwcC
+
+!!! ^ubD9iUdp
+
+OFFLINE
+network mode ^foxGOlCc
+
+fetchstatus paused ^3rUvGyYu
+
+
+network modes ^N8Ag0n8h
+
+mutations
+network mode
+resumepausedmutations ^YJd0hqDk
+
+OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES
+RETRIES WILL BE QUEUED
+CAN TRY TO GET DATA FROM CACHE ^xygfQpiM
+
+SHOULD I USE RESUMEPAUSEDMUT
+ WITH OFFLINEFIRST? ^e64RBSOs
+
+!!! ^Izm3ds86
+
+or better excplicitly cancel queries when you 
+need cancellation on some aciton ^Ricotbaz
+
+throw on error ^x3IU91yK
+
+queryerrorresetboundary ^Cq6Z4qDJ
+
+need retryonmount  true
+(default) ^Yu2QrQGC
+
+enabled, what to do ^DXKlb8tW
+
+serial suspence
+not showing nested ^q27KnLJQ
+
+enabled ^TzPkVlKI
