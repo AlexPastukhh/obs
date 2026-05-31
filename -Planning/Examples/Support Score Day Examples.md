@@ -30,6 +30,18 @@ Do not sum categories into a 10-point total.
 
 Sleep is special: it may use strong negative marks, such as `-5`, when sleep collapses.
 
+Support Penalty thresholds are non-cumulative:
+
+| Support Score average | Support Penalty |
+|---:|---:|
+| `< 1.0` | -20 |
+| `< 1.25` and `>= 1.0` | -10 |
+| `>= 1.25` | 0 |
+
+Final Day Score:
+
+`Final Day Score = Net Work Score + Support Penalty`
+
 ## Example A — High Work Score, weak support
 
 Facts:
@@ -54,9 +66,13 @@ Support Score average: `0.2`
 
 Calculation: `(-2 + 0 + 1 + 1 + 1) / 5 = 0.2`
 
+Support Penalty: `-20`
+
+Final Day Score: `38 + (-20) = 18`
+
 Interpretation:
 
-Work baseline beaten, but support was fragile. Next day should start recovery-aware.
+Work baseline was beaten by Work Score, but support was fragile. The final day result is heavily support-penalized and the next day should start recovery-aware.
 
 ## Example B — Low Work Score, good support
 
@@ -83,6 +99,10 @@ Support Marks:
 Support Score average: `1.8`
 
 Calculation: `(2 + 2 + 1 + 2 + 2) / 5 = 1.8`
+
+Support Penalty: `0`
+
+Final Day Score: unchanged from Net Work Score.
 
 Interpretation:
 
@@ -112,6 +132,40 @@ Support Score average: `-0.8`
 
 Calculation: `(-5 + 1 + 0 + 0 + 0) / 5 = -0.8`
 
+Support Penalty: `-20`
+
+Final Day Score: `Net Work Score - 20`
+
 Interpretation:
 
-Even if Work Score exists, support was negative because sleep collapsed.
+Even if Work Score exists, support was negative because sleep collapsed. The final day result is heavily support-penalized.
+
+## Example D — Borderline support
+
+Facts:
+
+- Work Score: 70.
+- Some pauses helped, but recovery was not stable.
+- Food and stimulus control were acceptable but not strong.
+- Sleep was not collapsed, but not clearly supportive.
+
+Support Marks:
+
+| # | Category | Mark | Reason |
+|---|---|---:|---|
+| 1 | 🛌 Sleep / sleep attempt | 1 | not collapsed, but not strong |
+| 2 | 🍽️ Food / no overload | 1 | acceptable |
+| 3 | 🧲⚡ Stimulus control | 1.25 | handled enough, not strong |
+| 4 | 🔋 Recovery / readiness | 1.25 | helped continue, but fragile |
+
+Support Score average: `1.125`
+
+Calculation: `(1 + 1 + 1.25 + 1.25) / 4 = 1.125`
+
+Support Penalty: `-10`
+
+Final Day Score: `70 - 10 = 60`
+
+Interpretation:
+
+Work full closure was reached, but support was below the required minimum. The final day result is moderately support-penalized.
