@@ -18,14 +18,17 @@ Support Score is separate from Work Score.
 
 Support Score never closes 35 / 70 work baselines.
 
-During the day, collect facts only.
+During the day, collect facts and/or provisional support marks only.
 
 Support Score is calculated at day close / next morning.
 
-Sleep is special:
+Support Score is an average of support marks.
 
-- max 2;
-- min -5.
+Do not normalize Support Score to `/10`.
+
+Do not sum categories into a 10-point total.
+
+Sleep is special: it may use strong negative marks, such as `-5`, when sleep collapses.
 
 ## Example A — High Work Score, weak support
 
@@ -37,17 +40,19 @@ Facts:
 - Had stimulus drift before sleep.
 - Tried to sleep but fell asleep late.
 
-Support Score:
+Support Marks:
 
-| Категория | Score | Reason |
-|---|---:|---|
-| 🛌 Sleep / sleep attempt | -2 | honest attempt, but sleep was damaged |
-| 🍽️ Food / no overload | 0 | overeating hurt state and sleep risk |
-| 🏃 Movement / sport | 1 | some movement happened |
-| 🧲⚡ Stimulus control | 1 | no full collapse, but drift before sleep |
-| 🔋 Recovery / readiness | 1 | partial recovery only |
+| # | Category | Mark | Reason |
+|---|---|---:|---|
+| 1 | 🛌 Sleep / sleep attempt | -2 | honest attempt, but sleep was damaged |
+| 2 | 🍽️ Food / no overload | 0 | overeating hurt state and sleep risk |
+| 3 | 🏃 Movement / sport | 1 | some movement happened |
+| 4 | 🧲⚡ Stimulus control | 1 | no full collapse, but drift before sleep |
+| 5 | 🔋 Recovery / readiness | 1 | partial recovery only |
 
-Total: 1 / 10
+Support Score average: `0.2`
+
+Calculation: `(-2 + 0 + 1 + 1 + 1) / 5 = 0.2`
 
 Interpretation:
 
@@ -65,17 +70,19 @@ Facts:
 - Avoided major stimulus loops.
 - Felt ready for next day.
 
-Support Score:
+Support Marks:
 
-| Категория | Score | Reason |
-|---|---:|---|
-| 🛌 Sleep / sleep attempt | 2 | good sleep |
-| 🍽️ Food / no overload | 2 | no overload |
-| 🏃 Movement / sport | 1 | some movement |
-| 🧲⚡ Stimulus control | 2 | no major stimulus loop |
-| 🔋 Recovery / readiness | 2 | recovery supported next day |
+| # | Category | Mark | Reason |
+|---|---|---:|---|
+| 1 | 🛌 Sleep / sleep attempt | 2 | good sleep |
+| 2 | 🍽️ Food / no overload | 2 | no overload |
+| 3 | 🏃 Movement / sport | 1 | some movement |
+| 4 | 🧲⚡ Stimulus control | 2 | no major stimulus loop |
+| 5 | 🔋 Recovery / readiness | 2 | recovery supported next day |
 
-Total: 9 / 10
+Support Score average: `1.8`
+
+Calculation: `(2 + 2 + 1 + 2 + 2) / 5 = 1.8`
 
 Interpretation:
 
@@ -91,17 +98,19 @@ Facts:
 - Stimulus loop continued late.
 - Sleep failed badly.
 
-Support Score:
+Support Marks:
 
-| Категория | Score | Reason |
-|---|---:|---|
-| 🛌 Sleep / sleep attempt | -5 | sleep foundation failed |
-| 🍽️ Food / no overload | 1 | acceptable but not strong |
-| 🏃 Movement / sport | 0 | no meaningful movement |
-| 🧲⚡ Stimulus control | 0 | stimulus loop hurt sleep |
-| 🔋 Recovery / readiness | 0 | next-day readiness damaged |
+| # | Category | Mark | Reason |
+|---|---|---:|---|
+| 1 | 🛌 Sleep / sleep attempt | -5 | sleep foundation failed |
+| 2 | 🍽️ Food / no overload | 1 | acceptable but not strong |
+| 3 | 🏃 Movement / sport | 0 | no meaningful movement |
+| 4 | 🧲⚡ Stimulus control | 0 | stimulus loop hurt sleep |
+| 5 | 🔋 Recovery / readiness | 0 | next-day readiness damaged |
 
-Total: -4 / 10
+Support Score average: `-0.8`
+
+Calculation: `(-5 + 1 + 0 + 0 + 0) / 5 = -0.8`
 
 Interpretation:
 
