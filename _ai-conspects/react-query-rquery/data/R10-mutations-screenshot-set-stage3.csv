@@ -1,0 +1,430 @@
+order,id,x,y,w,h,fileId_short,source_id,image_index_number,image_path_guess,ocr_assisted_transcript,theme,readability,literal_status
+1,488e3dbdf9a6cb4c4e1fc7b19f59f3f0f2d0d9d1,8854.085802345482,16878.507886705953,919.0,385.0,488e3dbdf9,MUT-S001,130,images/130__488e3dbdf9__Pasted Image ...png,"mutate(variables) and mutateAsync(variables) both pass those variables into onMutate , mutationFn ,
+onSuccess, onError , and onSettled. onMutate runs before the mutation function, which is why it’s the
+right place to do the optimistic cache update and return rollback info for later callbacks. nsec -
+So the flow you described is right:
+
+1. call mutate(...) or mutateAsync(...)
+
+2. ‘ontustate gets the same variables
+
+3. optimistically write to cache before server responds
+
+4. return previous state or rollback context
+
+5. if server mutation fails, onError uses that returned value to restore state
+
+6. ‘onSettled usually invalidates to resync with server truth. tas -",mutation variable flow and optimistic update overview,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+2,55a51e51f437dec3ab46facc5bf4c15fa89fb739,7986.61580278099,16935.841492996446,659.0,430.0,55a51e51f4,MUT-S002,005,images/005__55a51e51f4__Pasted Image ...png,"Example:
+> TypeScript a)
+const mutation = useMutation({
+mutationFn: updateTodo,
+onMutate: async (newlodo, context) => {
+await context.client.cancelQueries({ queryKey: ['todos'] })
+const previousTodos = context.client. getQueryData([ ""todos ])
+context .client .setQueryData([‘todos'], (old) => [---old, newTodo])
+return { previousTodos }
+hb
+onError: (err, newlodo, onMutateResult, context) => {
+context .client .setQueryData(['todos'], onMutateResult . previousTodos)
+Lb
+onSettled: (data, _error, _vars, result, context) => {
+context .client .invalidateQueries({ queryKey: [‘todos""] })
+Lb
+v
+That exact pattern is straight from the docs. —snsacccom",optimistic update code example,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+3,5bec075fe3a00d87161356e7a274af579f00ec7d,6916.566107463917,16946.731954640047,730.0,430.0,5bec075fe3,MUT-S003,003,images/003__5bec075fe3__Pasted Image ...png,"2) Why cancelQueries matters in optimistic updates
+TanStack's optimistic update guide literally says to cancel outgoing refetches so they don’t overwrite your
+optimistic update. trstsckcom -
+The problem without cancellation
+Imagine this timeline:
+1. [‘todos""] query is on screen
+2. arefetch is already in flight
+3. user edits/adds a todo
+4. you optimistically call setQueryData and show the new todo immediately
+5. the older in-flight refetch finishes with stale server data
+6. that old response writes into cache and wipes out your optimistic change
+That is the race you are preventing.  tansackcom +
+So the idea is:
+cancel old fetches first, then write optimistic data, then later sync with the server result. sostctcom",cancelQueries / optimistic update race,medium,partially visually checked; transcript still should be reviewed for exactness
+4,73b5e8fd6633fa9ba78bafbcccd16fe04b9bbff9,10593.16445683154,17012.91577644281,895.0,449.0,73b5e8fd66,MUT-S004,150,images/150__73b5e8fd66__Pasted Image ...png,"mutate VS mutateAsync
+mutate
+Use when you want the callback-style flow and do not need to await the mutation result directly.
+> TypeScript io)
+mutation.mutate(newTodo)
+You usually rely on:
+© onSuccess
+© onError
+© onSettled
+for follow-up behavior. The docs describe mutate as returning void.  tnstac",mutate vs mutateAsync / mutate,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+5,f128bccab609bf76456a2477f30f835e7c60be09,6910.122285020871,17378.39833647599,740.0,308.0,f128bccab6,MUT-S005,004,images/004__f128bccab6__Pasted Image ...png,"3) Standard optimistic update flow with cancelqueries
+TanStack’s documented flow is:
+
+1. onMutate
+
+2. cancel outgoing refetches
+
+3. snapshot previous cache value
+
+4. write optimistic value with setQueryData
+
+5. if mutation fails, roll back using the snapshot
+
+6. on settled, invalidate/refetch to sync with server.  tanstackcom
+a",standard optimistic update flow,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+6,7de4e030ee7931b275819747d155a5b5e1961264,7933.861449475125,17379.455151515096,826.0,341.0,7de4e030ee,MUT-S006,149,images/149__7de4e030ee__Pasted Image ...png,"function RenameButton() {
+const mutation = useMutation({
+mutationFn: updateUser,
+»
+return (
+<button
+onClick={() => mutation.mutate({ id: '1', newName: ‘Alice’ })}
+disabled={mutation.isPending}
+>
+{mutation.isPending ? ‘Saving...' : ‘Rename'}
+</button>
+»)
++",mutate UI example,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+7,a7ac382dd02a306fb445523ca92904a1b2f9e6db,10585.537580727096,17476.156658468637,898.0,354.0,a7ac382dd0,MUT-S007,151,images/151__a7ac382dd0__Pasted Image ...png,"mutateAsync
+Use when you want a Promise and prefer await / try-catch .
+> TypeScript io)
+try {
+const result = await mutation.mutateAsync(newTodo)
+} catch (err) {
+// handle error
++
+The docs say mutateAsync is similar to mutate but returns a Promise that resolves on success or throws on
+error. —Tanstack -",mutateAsync,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+8,8641ca8bc2b715e8fdb5f2b7714d1d00fff5a680,9089.586359062072,17497.9868759713,994.0,572.0,8641ca8bc2,MUT-S008,148,images/148__8641ca8bc2__Pasted Image ...png,"21.2 Immutable updates only
+Always return a new object/array.
+Good
+> TypeScript a)
+queryClient.setQueryData([‘user', id], (prev: any) =>
+prev ? { ..-prev, name: newName } : prev
+»)
+LETe
+> TypeScript a)
+queryClient.setQueryData([‘user', id], (prev: any) => {
+prev.name = newName
+return prev
+»
+If you return the same reference after mutating it, observers may not update correctly.",immutable updates only,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+9,55a51e51f437dec3ab46facc5bf4c15fa89fb739,6900.3469783098935,17711.6840507617,659.0,430.0,55a51e51f4,MUT-S009,005,images/005__55a51e51f4__Pasted Image ...png,"Example:
+> TypeScript a)
+const mutation = useMutation({
+mutationFn: updateTodo,
+onMutate: async (newlodo, context) => {
+await context.client.cancelQueries({ queryKey: ['todos'] })
+const previousTodos = context.client. getQueryData([ ""todos ])
+context .client .setQueryData([‘todos'], (old) => [---old, newTodo])
+return { previousTodos }
+hb
+onError: (err, newlodo, onMutateResult, context) => {
+context .client .setQueryData(['todos'], onMutateResult . previousTodos)
+Lb
+onSettled: (data, _error, _vars, result, context) => {
+context .client .invalidateQueries({ queryKey: [‘todos""] })
+Lb
+v
+That exact pattern is straight from the docs. —snsacccom",optimistic update code example,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+10,e7fe1b2b605cb9ef250315cf99077da63100fc4c,10603.074527341678,17839.138117344504,617.0,191.0,e7fe1b2b60,MUT-S010,152,images/152__e7fe1b2b60__Pasted Image ...png,"When to use which
+Use mutate when:
+* you are happy with mutation callbacks
+* you trigger the mutation from UI events
+* you do not need the result inline in surrounding code",when to use mutate,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+11,7ec1a778b82a222a4b5a879656a7e1db95de67da,10596.148420570846,18036.69367290006,939.0,347.0,7ec1a778b8,MUT-S011,153,images/153__7ec1a778b8__Pasted Image ...png,"Example:
+> TypeScript a)
+const saveTodo = () => {
+mutation.mutate({ id: 1, title: ‘New’ })
++
+Use mutateAsync when:
+© you want to await the result
+* you need sequential async logic
+* you want try/catch/finally style code",when to use mutateAsync,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+12,69bab5a10b41a429c4d05912a32d719dddae5607,7938.990308307535,18092.674713495577,737.0,210.0,69bab5a10b,MUT-S012,131,images/131__69bab5a10b__Pasted Image ...png,"9. Best mental model
+* onMutate = prepare optimistic state before server call
+© mutationFn = do the actual write
+* onSuccess = handle confirmed success
+© onError = rollback failure
+*® onSettled = always-run final synchronization/cleanup — tenstack »",best mental model for lifecycle callbacks,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+13,c11c8e7392a16dfe9650c4859d74978f346283fc,9157.00645818007,18123.07169739987,841.0,375.0,c11c8e7392,MUT-S013,147,images/147__c11c8e7392__Pasted Image ...png,"21.3 When manual updates get hard
+Manual updates become painful when the same entity appears in:
+* sorted lists
+* filtered lists
+* detail page
+© summary cards
+* dashboard data
+If an update changes sort order or filter membership, you may need to update many caches.
+That is a sign to prefer invalidation.",manual updates get hard,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+14,850109ec0ce563f2015d94bebaa2b7b09c66fc5d,6916.893936851298,18256.2030070963,940.0,376.0,850109ec0c,MUT-S014,006,images/006__850109ec0c__Pasted Image ...png,"In v5, useQuery does not have onError, onSuccess , OF onSettled . Those query callbacks were removed in
+v5; they still exist for mutations, not queries. tantackcom «
+So for optimistic updates, you usually do not “handle cancellation in useQuery onError ”, because there is no
+such callback in v5. Instead, you handle it by:
+
+* canceling the relevant queries before your optimistic write,
+
+* optionally making that cancellation silent,
+
+* snapshotting previous cache data,
+
+© writing optimistic data,
+
+* rolling back in the mutation ‘onError ,
+
+* invalidating/refetching in onSettled .  tarstaccom 2",useQuery v5 callbacks removed / mutation callbacks remain,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+15,4b9ba54f9363123130b43988de90f457a8b0501a,10581.315222871192,18401.175131775926,942.0,421.0,4b9ba54f93,MUT-S015,154,images/154__4b9ba54f93__Pasted Image ...png,"Example:
+> TypeScript a)
+const saveTodo = async () => {
+try {
+const saved = await mutation.mutateAsync({ id: 1, title: ‘New’ })
+console. 1og(saved)
+} catch (err) {
+console. error(err)
++
+3
+That's the cleanest difference:
+© mutate = fire and let callbacks handle lifecycle
+© (mutateAsyne = await the mutation like a normal Promise. _tenstat +",mutate vs mutateAsync example,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+16,9373bdbda331e44dbf1e1dd03ab677490344bf1b,7946.0490442493265,18422.66978831618,843.0,482.0,9373bdbda3,MUT-S016,145,images/145__9373bdbda3__Pasted Image ...png,"4. What do we return from onMutate , and why?
+You return rollback or context data that later callbacks may need.
+In v5 docs, the value returned from @niutate is passed to:
+
+© ~~ onSuccess
+
+*¢  onError
+
+* ~~ onSettled
+as the onMutateResult argument. —tnstac
+Typical returned values:
+
+* previous cached data
+
+* temporary optimistic IDs
+
+* metadata needed for rollback
+
+* anything you want later callbacks to know",what onMutate returns,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+17,37ac0e6a45c069165843492d622f0fb91fb5875b,6941.227310874736,18650.536259049422,790.0,302.0,37ac0e6a45,MUT-S017,007,images/007__37ac0e6a45__Pasted Image ...png,"Do I need to do anything special in useQuery for cancellation?
+Usually, no.
+
+For optimistic updates, the recommended handling is:
+
+© call cancelqueries in onMutate
+
+* prefer { silent: true }
+
+* rollback in the mutation’s onError
+
+© refetch/invalidate in onSettled — tarstacccom -2",cancellation handling in mutation callbacks,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+18,6759acc16ac9d1c9e9643f165f293b982d356572,7936.025292854238,18909.003092585157,1004.0,336.0,6759acc16a,MUT-S018,144,images/144__6759acc16a__Pasted Image ...png,"5. Callback arguments, one by one
+onMutate
+Signature in v5:
+> TypeScript io)
+onMutate: (variables, context) => Promise<TOnMutateResult | void> | TOnMutateResult | void
+The docs describe it as receiving the same variables as the mutation function and firing before mutationFn -
+Tanstack",onMutate signature,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+19,a6d0648cd669343f1a06607df83a8407b38adfac,9133.50407860164,18910.200323134755,927.0,448.0,a6d0648cd6,MUT-S019,146,images/146__a6d0648cd6__Pasted Image ...png,"Why do we invalidate in onSettled ?
+
+onSettled runs whether the mutation succeeds or fails. TanStack defines it as the callback that fires when
+the mutation either succeeds or encounters an error. ==>
+You invalidate there because the optimistic cache is only a temporary guess. After the mutation is done, you
+want the real server state to become the source of truth again. TanStack’s optimistic update docs show
+invalidation in onSettled , and even note that you should return that Promise if you want the mutation to
+stay pending until the refetch completes. tansactcom -
+So:
+
+if mutation succeeds, invalidation refetches and confirms the final server state
+
+if mutation fails, onError rolls back, and invalidation can still refresh to the true server state if needed
+
+tanstackcom +",why invalidate in onSettled,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+20,ae6ed651d2fafd20851ddc27d65471f4b1f69294,7945.453864282808,19276.26505547578,928.0,451.0,ae6ed651d2,MUT-S020,143,images/143__ae6ed651d2__Pasted Image ...png,"Arguments
+
+variables
+
+This is the value you passed to mutate(...) -
+
+Example:
+> TypeScript io)
+mutation.mutate({ id: 5, title: ‘New title’ })
+
+Then inside onMutate, variables is:
+> TypeScript io)
+{ id: 5, title: 'New title’ }",variables argument,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+21,db2d4aae55318da2f061cb924b2e5bf1d91a8967,10596.20411176008,19288.76770176291,930.0,151.0,db2d4aae55,MUT-S021,155,images/155__db2d4aae55__Pasted Image ...png,"if your onSettled returns the Promise from queryClient.invalidateQueries(...) , React Query will keep
+the mutation itself in the [pending state until that invalidation-triggered refetch finishes. The official
+optimistic updates guide says to return that Promise “so that the mutation stays in pending state until the
+refetch is finished.” —tanstack «",return invalidateQueries Promise keeps pending,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+22,e2bb07761c02d9b03025b9670d1e3a4c723eb7b9,10602.583169889718,19465.333673985133,772.0,482.0,e2bb07761c,MUT-S022,156,images/156__e2bb07761c__Pasted Image ...png,"Without returning the Promise
+> Typescript is
+onSettled: () => {
+queryClient.invalidateQueries({ queryKey: ['todos""] })
++
+What happens:
+1. mutation request finishes
+2. onSettled runs
+3. invalidation/refetch is started
+4. but onSettled itself finishes immediately
+5. mutation is no longer pending, even though the follow-up refetch may still be running. tsa
+So your mutation state may become:
+© isPending = false
+while the query is still refetching in background.",without returning invalidation Promise,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+23,507dbfa56965f0e98942e4b42575034d21ee4d44,7953.607766437466,19741.960427781287,857.0,463.0,507dbfa569,MUT-S023,142,images/142__507dbfa569__Pasted Image ...png,"context
+This is a mutation function context object. In the optimistic update examples/docs, it includes client , which
+is the QueryClient you use for things like:
+© cancelQueries
+© getQueryData
+*  setQueryData
+© invalidateQueries — tnsac -
+So in practice:
+> TypeScript io)
+onMutate: async (variables, context) => {
+context .client . setQueryData(...)
++",context.client,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+24,35935e7b35cd81bb3047e857ac816caa55558d60,10614.537309459733,19965.37881287402,840.0,220.0,35935e7b35,MUT-S024,157,images/157__35935e7b35__Pasted Image ...png,"Returning the Promise
+> TypeScript (
+onSettled: () => {
+return queryClient.invalidateQueries({ queryKey: [""todos'] })
++
+1",returning the Promise code snippet,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+25,c8aefd2cea781b6a36ab404248956983e8d799d7,10596.333696178484,20190.915895122285,909.0,403.0,c8aefd2cea,MUT-S025,158,images/158__c8aefd2cea__Pasted Image ...png,"or shorter:
+> TypeScript io)
+onSettled: () => queryClient.invalidateQueries({ querykey: ['todos’] })
+Now what happens:
+1. mutation request finishes
+2. onSettled runs
+3. invalidateQueries starts the refetch and returns a Promise
+4, React Query waits for that Promise
+5. mutation stays pending until that Promise resolves, meaning until the refetch work is done. tansac -",returning Promise behavior steps,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+26,5f990bee015201e3a8e4b35463383773c26a580c,7952.966801053071,20209.769893462093,954.0,372.0,5f990bee01,MUT-S026,141,images/141__5f990bee01__Pasted Image ...png,"mutationFn
+This is the actual async function that performs the server write.
+Example:
+> TypeScript io)
+mutationFn: (newTodo) => api-updateTodo(newTodo)
+It receives the same variables you passed to mutate . Mutations are used to create/update/delete data or
+cause side-effects. tanstack -",mutationFn,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+27,ed4ef609cc83f60820980d312bc38051e67e680a,7950.823595137892,20621.93658919312,924.0,401.0,ed4ef609cc,MUT-S027,140,images/140__ed4ef609cc__Pasted Image ...png,"onSuccess
+
+Signature in v5:
+> TypeScript io)
+onSuccess: (data, variables, onMutateResult, context) => Promise<unknown> | unknown
+
+It runs when the mutation succeeds. _ tanswack
+
+Arguments
+
+data
+
+The resolved result of mutationFn .",onSuccess signature and data argument,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+28,9d4d2d9cfa24ca8b14168654cccf289bc9e3143d,10585.518971786125,20626.61957622038,981.0,219.0,9d4d2d9cfa,MUT-S028,159,images/159__9d4d2d9cfa__Pasted Image ...png,"Why this matters
+
+Suppose you are showing an optimistic todo row while:
+> TypeScript io)
+mutation. isPending
+
+wg",why pending matters / cut off,medium / cut off,partially visually checked; transcript still should be reviewed for exactness
+29,57a7aa95eda70dfee4f83a61e7ba7f2cab767d88,7980.918949490571,21043.531856352714,940.0,354.0,57a7aa95ed,MUT-S029,139,images/139__57a7aa95ed__Pasted Image ...png,"Example:
+«> TypeScript ia)
+mutationEn: (todo) => api.updateTodo(todo)
+
+If server returns:
+> TypeScript io)
+{ id: 5, title: 'Saved"", updatedat: '...' }
+
+then (data is that returned payload.",data returned from mutationFn,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+30,27b93b199a39a29cd5245df63f4f1de7ce8b08b8,7983.475201858384,21406.042302083744,855.0,482.0,27b93b199a,MUT-S030,138,images/138__27b93b199a__Pasted Image ...png,"variables
+The original variables passed to mutate(...)
+onMutateResult
+Whatever onMutate returned.
+Example:
+> TypeScript io)
+return { previousTodos }
+then in onSuccess :
+«» TypeScript ia)
+onSuccess: (data, variables, onMutateResult, context) => {
+// onMutateResult.previousTodos is available
++",variables / onMutateResult availability,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+31,c35292d43ded1e4e324197d93d3605f6464e9b06,7986.038055238339,21900.888999209863,865.0,285.0,c35292d43d,MUT-S031,137,images/137__c35292d43d__Pasted Image ...png,"context
+Again, mutation function context, including client . srs
+Typical onSuccess usage:
+
+* replace optimistic item with server-confirmed item
+
+* invalidate related queries
+
+* do success side effects",onSuccess typical usage,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+32,56c5c8888e1b5ef1ef447f9143f4ebb1757dda9d,7997.869390119333,22236.51855068865,685.0,482.0,56c5c8888e,MUT-S032,136,images/136__56c5c8888e__Pasted Image ...png,"onError
+Signature in v5:
+«> TypeScript ia)
+onError: (err, variables, onMutateResult, context) => Promise<unknown> | unknown
+It runs if the mutation errors. _tanstace
+Arguments
+err
+The mutation error thrown/rejected by mutationFn .
+variables
+The original mutation variables.
+onMutateResult
+The value returned from onMutate .
+This is why rollback data is returned from onMutate -
+1",onError signature and arguments,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+33,82af270795bea0a0e46be35a8566ca9ba7e9d2b0,7951.700949351061,22745.08997926008,835.0,482.0,82af270795,MUT-S033,135,images/135__82af270795__Pasted Image ...png,"context
+
+Mutation context, including client. tnstck
+
+Typical onError usage:
+
+* rollback optimistic cache
+
+show error toast
+
+© log failure
+
+Example:
+> TypeScript a)
+onError: (err, newlodo, onMutateResult, context) => {
+
+context .client. setQueryData(['todos'], onMutateResult.previousTodos)
+
++
+
+That is the classic rollback path. tanstack ~",onError rollback usage,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+34,c7dccde3bca171f94c0b3ee14c9e73b36cbf56a4,7941.300005094039,23240.328190755616,726.0,482.0,c7dccde3bc,MUT-S034,134,images/134__c7dccde3bc__Pasted Image ...png,"onSettled
+Signature in v5:
+> TypeScript io)
+onSettled: (data, error, variables, onMutateResult, context) => Promise<unknown> | unknown
+It runs whether the mutation succeeded or failed. _tnsacx
+Arguments
+data
+Mutation result if successful, otherwise typically undefined.
+error
+Mutation error if failed, otherwise typically null/undefined depending on typing/runtime shape.
+variables
+Original mutation variables. v",onSettled signature and arguments,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+35,1cb0706b7f7881f428df532769350fa83c6880d8,7960.355447040403,23737.471047898474,692.0,482.0,1cb0706b7f,MUT-S035,133,images/133__1cb0706b7f__Pasted Image ...png,"onMutateResult
+The value returned from onMutate .
+context
+Mutation context, including client. tnstck
+Typical onSettled usage:
+* invalidate related queries
+do “always cleanup” logic
+© resync with server after optimistic update
+Example:
+«» TypeScript (a)
+onSettled: (_data, _error, _vars, _onMutateResult, context) => {
+return context.client.invalidateQueries({ queryKey: ['todos""] })
++
+The optimistic updates guide uses [onSettled) for inv {tation so the cache is synchronized with the true
+server state after the mutation is done. tenstx -",onMutateResult / context / onSettled example,medium,OCR-assisted draft; needs visual verification for exact literal transcript
+36,af1044b3cf04b62dfed615aa0b91888dada5e06f,7941.49089504121,24242.23292359602,726.0,482.0,af1044b3cf,MUT-S036,132,images/132__af1044b3cf__Pasted Image ...png,"8. One subtle detail: async callbacks are awaited
+The docs say if onMutate , onSuccess, onError , Of onSettled return a promise, it is awaited before
+proceeding. tensece
+That means:
+> TypeScript a)
+onMutate: async (..-) => {
+await context .client.cancelQueries(...)
++
+is not just stylistic. TanStack Query will wait for it.
+That is useful because in optimistic updates you usually want:
+* cancel old refetches first
+«then write optimistic cache
+in that exact order. tnsact -",async callbacks are awaited,medium,OCR-assisted draft; needs visual verification for exact literal transcript

@@ -1,6 +1,6 @@
-# Apply archive: React Query conspect Stage 2 screenshot mapping
+# Apply archive: React Query conspect Stage 3 R10 mutations
 
-Archive type: stage-2 screenshot mapping update.
+Archive type: stage-3 first region transcription draft.
 
 Target branch:
 
@@ -22,12 +22,12 @@ This archive updates:
 _ai-conspects/react-query-rquery/
 ```
 
-It includes Stage 1 files plus Stage 2 screenshot mapping files.
+It includes Stage 1 and Stage 2 files plus the first Stage 3 region transcription draft.
 
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage2-screenshot-mapping-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3-r10-mutations-v001.zip
 ```
 
 ## Apply commands
@@ -36,7 +36,7 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage2-screenshot-mappi
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage2-screenshot-mapping-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3-r10-mutations-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
@@ -50,7 +50,7 @@ git diff -- _ai-conspects/react-query-rquery
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query conspect stage 2 screenshot mapping"
+git commit -m "Add React Query mutations region transcript draft"
 ```
 
 ## Push command
@@ -69,8 +69,4 @@ git restore -- _ai-conspects/react-query-rquery
 
 This archive does not delete files.
 
-This stage does not contain full screenshot transcription. The real source-preserving transcriptions will be created in:
-
-```text
-_ai-conspects/react-query-rquery/regions/*.md
-```
+The region transcript is intentionally marked as OCR-assisted draft and needs visual verification before being treated as exact literal transcription.

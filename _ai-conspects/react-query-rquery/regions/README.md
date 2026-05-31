@@ -35,3 +35,10 @@ Question hooks
 ```
 
 Actual screenshot transcription starts in Stage 3.
+
+
+---
+
+## Current region files
+
+- `R10-mutations.md` — Stage 3 first region transcript draft. OCR-assisted; needs visual verification.

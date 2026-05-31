@@ -123,3 +123,32 @@ Main future text transcription files will live in:
 ```text
 _ai-conspects/react-query-rquery/regions/*.md
 ```
+
+
+---
+
+## Stage 3 additions — R10 Mutations
+
+Stage 3 adds the first real region transcription draft.
+
+Added files:
+
+```text
+_ai-conspects/react-query-rquery/06-stage3-r10-mutations.md
+_ai-conspects/react-query-rquery/regions/R10-mutations.md
+_ai-conspects/react-query-rquery/data/R10-mutations-screenshot-set-stage3.csv
+_ai-conspects/react-query-rquery/data/R10-mutations-screenshot-set-stage3.json
+```
+
+Important status:
+
+```text
+R10 transcript = OCR-assisted draft; needs visual verification.
+```
+
+Counts:
+
+```text
+Extended mutation screenshot uses: 36
+Unique fileId shorts: 35
+```
