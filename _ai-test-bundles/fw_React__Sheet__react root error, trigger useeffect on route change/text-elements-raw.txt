@@ -1,0 +1,26 @@
+﻿THE PROBLEM 
+
+NEED SOME ROOT ERRORS
+
+BUT IF I NEED THEM TO BE REMOVED ON SOME ACTION/ON NEXT RENDER/ON ROUTE CHANGE
+
+THEN I NEED TO USE CONTEXT FUNC INSUDE USELAYOUT EFFECT TO GET RID OF ERROR
+MESSAGE 
+ ^XmsCcMTq
+
+fucntion from usestate hook
+never changes identity
+so with this dep arr
+my func will never recompute
+i dont need it to recompute,
+i dont have dep
+and i wont get useeffect exec
+on every rerender ^cATTSpfM
+
+return values, not the object 
+can help theoretically when you dont
+wrap it with usememo
+to avoid problems from
+putting it into dep array ^y5TvjV2z
+
+will have page content styles per page ^loUEtrqC

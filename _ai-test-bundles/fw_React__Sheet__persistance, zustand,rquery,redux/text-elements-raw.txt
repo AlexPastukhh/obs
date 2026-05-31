@@ -1,0 +1,125 @@
+﻿state in memory and persistance
+                for ^qoVX45fI
+
+rquery ^o3BNYcRW
+
+zustand ^MsRRBO0M
+
+redux ^jdNCkqfI
+
+uf change name of storage
+you can loose all persisted
+data and start clean ^X40oghbM
+
+version and migrate ^TJu67A4O
+
+may need to change part of the state ^eqRTix2Z
+
+cant convert from old version
+start clean ^OzRYNP2x
+
+the flow, when version get bumped? ^VypD90iN
+
+what if have version but 
+no migrate path for it ^VpnmdePi
+
+nested persist config ^g7GZU2bG
+
+how whitelist works ^LWr66IbT
+
+version and migrate works the same ^D1WBaa7J
+
+transform ^fjoGFK3d
+
+partialize analogue ^YJfYEjcp
+
+hydrate/dehydrate options
+buster ^3CEBDmjA
+
+implement example ^04v3c1xh
+
+meta for dehydraton 
+filtering to avoid overpopulaton 
+of the store + acessing metha in queryfn ^UDanLWkF
+
+useIsRestoring ^ViWm4fZ5
+
+with maxage and buster ^yNrQ0DUy
+
+persistor,
+persistgate ^cVILlxTa
+
+rquery/zustaqnd/redux 
+mappings ^9QkndD6I
+
+synchstoragepersister vs asyncstoragepersister ^OgJR5sqb
+
+!!! ^9vGLf6IL
+
+maxage ^pLOBofON
+
+partial dehydration/whether dehydrate or not ^Tl90wsA6
+
+how buster works ^R0el9Wub
+
+why gctime >= maxage ^tO1RXY1P
+
+how maxage works in rquery
+and how to implement ttl 
+with partialize and transform
+providing new values to stored state ^VTKAZRmR
+
+ttl for zustand ^gFxxaBnB
+
+ttl for redux ^GekZrjLP
+
+!!! ^uSYS8TvK
+
+redux throttling
+flush ^0YPXJ6kQ
+
+hydration
+dehydration
+for rquey zustand redux ^QM8erZp9
+
+react query persist throttling ^3XDsluG1
+
+Zustand throttling strategies ^u1Rz9PdD
+
+to force writes like flush
+may beed some nethod ^8fMs5ege
+
+force persist ^oZgVsUfE
+
+general throttling 
+strategies ^RbkRiu0L
+
+if dont need to throttle everything
+
+with redux can have persist config for 
+specific state
+
+
+with zustand may need to create separate store ^uZAADHXF
+
+can i have throttling only for some queries not for the whole persister ^JVvpVxI0
+
+when need to store some nested shit
+but dont want to do nested persistreducers
+ ^r4unl2Zh
+
+avoid some pending throttled writes
+when you clear the state  ^l0hRkfbe
+
+statereconciler ^j1BY8zs5
+
+core fields ^UpMbDZQv
+
+less common but important ^nB05WmLk
+
+explicit zustand store.persist methods
+clearstorage
+hashydrated
+onhydrate
+onfinishgydration
+setoptions ^mkJfxibQ

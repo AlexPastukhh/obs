@@ -1,0 +1,11 @@
+﻿# Image index
+
+Source note: Canvases/new theory/lan_Ts_Js/Sheet/js iterate, index.md
+Source SVG: Canvases/new theory/lan_Ts_Js/Sheet/js iterate, index.svg
+
+Use full.svg as the visual map. Use note.md for exact Excalidraw text and Embedded Files mapping.
+
+| # | fileId | original wikilink | status | copied image | resolved path |
+|---:|---|---|---|---|---|
+| 1 | $(@{Number=1; FileId=3a39f7a24a5f4687e894d1c79e8a31f08519ee3d; WikiLink=image_7404.png; TargetName=image_7404.png; Status=COPIED; ResolvedPath=images/newimages6/image_7404.png; CopiedAs=images/001__3a39f7a24a__image_7404.png}.FileId) | $(@{Number=1; FileId=3a39f7a24a5f4687e894d1c79e8a31f08519ee3d; WikiLink=image_7404.png; TargetName=image_7404.png; Status=COPIED; ResolvedPath=images/newimages6/image_7404.png; CopiedAs=images/001__3a39f7a24a__image_7404.png}.WikiLink) | COPIED | $(@{Number=1; FileId=3a39f7a24a5f4687e894d1c79e8a31f08519ee3d; WikiLink=image_7404.png; TargetName=image_7404.png; Status=COPIED; ResolvedPath=images/newimages6/image_7404.png; CopiedAs=images/001__3a39f7a24a__image_7404.png}.CopiedAs) | $(@{Number=1; FileId=3a39f7a24a5f4687e894d1c79e8a31f08519ee3d; WikiLink=image_7404.png; TargetName=image_7404.png; Status=COPIED; ResolvedPath=images/newimages6/image_7404.png; CopiedAs=images/001__3a39f7a24a__image_7404.png}.ResolvedPath) |
+| 2 | $(@{Number=2; FileId=8b278b7949e5343823669d6dca53c52f3b4494b3; WikiLink=image_7403.png; TargetName=image_7403.png; Status=COPIED; ResolvedPath=images/newimages6/image_7403.png; CopiedAs=images/002__8b278b7949__image_7403.png}.FileId) | $(@{Number=2; FileId=8b278b7949e5343823669d6dca53c52f3b4494b3; WikiLink=image_7403.png; TargetName=image_7403.png; Status=COPIED; ResolvedPath=images/newimages6/image_7403.png; CopiedAs=images/002__8b278b7949__image_7403.png}.WikiLink) | COPIED | $(@{Number=2; FileId=8b278b7949e5343823669d6dca53c52f3b4494b3; WikiLink=image_7403.png; TargetName=image_7403.png; Status=COPIED; ResolvedPath=images/newimages6/image_7403.png; CopiedAs=images/002__8b278b7949__image_7403.png}.CopiedAs) | $(@{Number=2; FileId=8b278b7949e5343823669d6dca53c52f3b4494b3; WikiLink=image_7403.png; TargetName=image_7403.png; Status=COPIED; ResolvedPath=images/newimages6/image_7403.png; CopiedAs=images/002__8b278b7949__image_7403.png}.ResolvedPath) |

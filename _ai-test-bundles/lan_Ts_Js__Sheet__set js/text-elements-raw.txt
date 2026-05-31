@@ -1,0 +1,36 @@
+﻿function union<T>(a: Set<T>, b: Set<T>): Set<T> {
+  return new Set([...a, ...b]);
+}
+
+function intersection<T>(a: Set<T>, b: Set<T>): Set<T> {
+  return new Set([...a].filter(x => b.has(x)));
+}
+
+function difference<T>(a: Set<T>, b: Set<T>): Set<T> {
+  return new Set([...a].filter(x => !b.has(x)));
+}
+
+function symmetricDifference<T>(a: Set<T>, b: Set<T>): Set<T> {
+  return new Set([
+    ...[...a].filter(x => !b.has(x)),
+    ...[...b].filter(x => !a.has(x)),
+  ]);
+}
+
+function isSubsetOf<T>(a: Set<T>, b: Set<T>): boolean {
+  return [...a].every(x => b.has(x));
+}
+
+function isProperSubsetOf<T>(a: Set<T>, b: Set<T>): boolean {
+  return a.size < b.size && isSubsetOf(a, b);
+}
+
+function setEquals<T>(a: Set<T>, b: Set<T>): boolean {
+  return a.size === b.size && isSubsetOf(a, b);
+}
+
+function overlaps<T>(a: Set<T>, b: Set<T>): boolean {
+  return [...a].some(x => b.has(x));
+} ^EBT3Xy8k
+
+js custom set types ^SupxWFSb

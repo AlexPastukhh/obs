@@ -1,0 +1,96 @@
+﻿rtk ^07s7UEq7
+
+here we add slices(their reducers that we export from slice files) ^teQC9rj8
+
+here we define state and actions on it ^NmDdrpY9
+
+extra reducers with reaction to others slice actions ^JKd8WtK8
+
+just an api call ^91VLnOX4
+
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { pizza_order, pizza_add } from "./features/pizza/pizzaSlice";
+import { burger_orderAmount } from "./features/burger/burgerSlice";
+import { fetchProducts } from "./features/product/productThunks";
+
+import {
+  selectPizzaBase,
+  selectBurgerBuns,
+  selectProductLoading,
+  selectProductError,
+  selectProductTitles,
+} from "./features/selectors";
+
+export default function App() {
+  const dispatch = useDispatch();
+
+  // selectors keep component clean
+  const pizzaBase = useSelector(selectPizzaBase);
+  const burgerBuns = useSelector(selectBurgerBuns);
+
+  const loading = useSelector(selectProductLoading);
+  const error = useSelector(selectProductError);
+  const products = useSelector(selectProductTitles);
+
+  const [amount, setAmount] = useState(2);
+
+  useEffect(() => {
+    dispatch(fetchProducts()); // triggers pending -> fulfilled/rejected
+  }, [dispatch]);
+
+  return (
+    <div style={{ padding: 16 }}>
+      <h2>Pizza base: {pizzaBase}</h2>
+      <button onClick={() => dispatch(pizza_order())}>Order Pizza</button>
+      <button onClick={() => dispatch(pizza_add(5))}>Add +5 Pizza Base</button>
+
+      <hr />
+
+      <h2>Burger buns: {burgerBuns}</h2>
+      <input
+        type="number"
+        min={1}
+        value={amount}
+        onChange={(e) => setAmount(Number(e.target.value))}
+      />
+      <button onClick={() => dispatch(burger_orderAmount(amount))}>
+        Order {amount} Burger(s)
+      </button>
+
+      <p style={{ marginTop: 10 }}>
+        Ordering a pizza also decreases burger buns (burger listens to pizza
+        action via extraReducers).
+      </p>
+
+      <hr />
+
+      <h2>Products (Async Thunk)</h2>
+      <button onClick={() => dispatch(fetchProducts())}>Refetch</button>
+
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
+
+      {!loading && !error && (
+        <div>
+          {products.map((title) => (
+            <p key={title}>{title}</p>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+} ^MkyLgGWH
+
+actions, payload, reducers action param with 
+rtk, action param in addcase's callback ^QwaP8tnd
+
+createasyncthunk ^j4mXwcwf
+
+builder
+  .addCase(fetchProducts.pending,   (state) => { state.loading = true })
+  .addCase(fetchProducts.fulfilled, (state, action) => { state.loading = false; state.products = action.payload })
+  .addCase(fetchProducts.rejected,  (state, action) => { state.loading = false; state.error = action.error.message }) ^QAA8GlAp
+
+so action in rtk and in classic is the same thing ^X8wXHcWK

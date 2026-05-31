@@ -1,0 +1,23 @@
+﻿what if el has zindex and no position?
+what about relative? ^wVBl501d
+
+stacking context triggers ^j1lUkkiR
+
+examples ^VTNBkrVl
+
+pseudo el can reach out
+of context ^9bXhWjHo
+
+couldnt do this with my pos ^9lBVr1Ks
+
+creates new stacking context on outer, so before is on its parent
+but it can actually cross its borders, i just need to 
+specify middle containers zindex too, but i dont need it on outer container ^cdMffpR5
+
+tried to do like i have no new outer container, but i actually need it because
+with stackig context inner elements are always on some parents shit and middle
+container is not just layout shit it has some visuals, so i need outer counainer ^3E5BZQ3Z
+
+!!! can cross border
+of parent with stacking context
+but overlay its content(background) ^DMOvqyop

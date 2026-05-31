@@ -1,0 +1,7 @@
+﻿!!! you can use useref to have some state that wont cause rerenders
+so here we have such state
+
+when we create something in useeffect and we need it outside of it and we dont
+want to cause rerender - we use useref
+
+(we use ref here in sendjson outside of useeffect where the ws is being created) ^EhV5zTHm

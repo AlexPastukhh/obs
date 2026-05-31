@@ -1,0 +1,123 @@
+﻿import { useRef, useLayoutEffect } from "react";
+
+/**
+ * Shared counter across all hook instances.
+ * Prevents unlocking when another modal still needs the lock.
+ */
+let lockCount = 0;
+
+/**
+ * Saved inline body styles before the first lock.
+ * Restored when the last lock is released.
+ */
+let originalBodyStyles: {
+  position: string;
+  top: string;
+  left: string;
+  right: string;
+  width: string;
+  overflow: string;
+  paddingRight: string;
+} | null = null;
+
+/**
+ * Scroll position before any lock was applied.
+ */
+let originalScrollY = 0;
+
+/**
+ * Width of the scrollbar (0 on mobile).
+ * Used to prevent layout shift when scrollbar disappears.
+ */
+const getScrollbarWidth = (): number =>
+  window.innerWidth - document.documentElement.clientWidth;
+
+export function useLockBodyScroll(isLocked: boolean): void {
+  // Keeps the scroll value stable across renders
+  const scrollRef = useRef<number>(0);
+
+  useLayoutEffect(() => {
+    if (!isLocked) return;
+
+    // Capture current scroll before locking
+    const scrollY = window.scrollY || window.pageYOffset || 0;
+    scrollRef.current = scrollY;
+
+    // First lock only: save state and apply body lock styles
+    if (lockCount === 0) {
+      originalScrollY = scrollY;
+
+      originalBodyStyles = {
+        position: document.body.style.position || "",
+        top: document.body.style.top || "",
+        left: document.body.style.left || "",
+        right: document.body.style.right || "",
+        width: document.body.style.width || "",
+        overflow: document.body.style.overflow || "",
+        paddingRight: document.body.style.paddingRight || "",
+      };
+
+      // Compensate for scrollbar removal to avoid content shift
+      const scrollbarWidth = getScrollbarWidth();
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+
+      // Freeze the document at the current scroll position
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
+    }
+
+    lockCount += 1;
+
+    return () => {
+      // Release one lock
+      lockCount -= 1;
+
+      // Restore only when the last lock is released
+      if (lockCount === 0 && originalBodyStyles) {
+        document.body.style.position = originalBodyStyles.position;
+        document.body.style.top = originalBodyStyles.top;
+        document.body.style.left = originalBodyStyles.left;
+        document.body.style.right = originalBodyStyles.right;
+        document.body.style.width = originalBodyStyles.width;
+        document.body.style.overflow = originalBodyStyles.overflow;
+        document.body.style.paddingRight = originalBodyStyles.paddingRight;
+
+        // Return user to the exact pre-lock position
+        window.scrollTo(0, originalScrollY);
+
+        originalBodyStyles = null;
+        originalScrollY = 0;
+      }
+    };
+  }, [isLocked]);
+}
+ ^4YqdgkMy
+
+so when we want to block page scroll
+1 we need to get width of the scrollbar so there wont be 
+a flick, 
+we do it with window.innerwidth(the whole window + scrollbar width)
+-
+document.documentelement.clientwidth
+and when we set overflow hidden - we need to add 
+result scrollbar width to right padding + its computed padding
+
+
+2 and then we need to save all current styles with getcomputed styles 
+
+3 we will remove lock and return all saved styles only when there in no el
+that needs the screen block, so we need to count 
+
+so we need to have the hook in each component that needs 
+the block and when the comp unmounts  or islocked changes we 
+decr shared counter and we restore page only when there is no comp
+that needs the page frozen ^laGT5MKO
+
+blocking with compted
+not inline styles ^VG1TSTGK

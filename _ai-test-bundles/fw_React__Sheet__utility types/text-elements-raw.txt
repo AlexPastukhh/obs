@@ -1,0 +1,50 @@
+﻿Pick / Omit vs Exclude / Extract ^AYitfybH
+
+keyof produces 
+union ^8jc9QSNv
+
+type Primitive =
+  | string
+  | number
+  | boolean
+  | bigint
+  | symbol
+  | null
+  | undefined;
+
+// DeepPartial that:
+// - leaves functions as-is
+// - handles arrays/tuples
+// - handles Map/Set
+// - leaves Date as Date
+export type DeepPartial<T> =
+  T extends Primitive ? T :
+  T extends Date ? T :
+  T extends (...args: any[]) => any ? T :
+  T extends Map<infer K, infer V> ? Map<DeepPartial<K>, DeepPartial<V>> :
+  T extends Set<infer U> ? Set<DeepPartial<U>> :
+  T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>> :
+  T extends Array<infer U> ? Array<DeepPartial<U>> :
+  T extends object ? { [K in keyof T]?: DeepPartial<T[K]> } :
+  T; ^PYWo4lau
+
+!!! ^xuYYnHew
+
+prettify ^p9dVuZBh
+
+type Pretty<T> = T extends object ? { [K in keyof T]: T[K] } & {} : T; ^NsNGUCN5
+
+awaited ^f7GIKOr7
+
+instance type ^i1ioMxc7
+
+ctor type vs instance type ^v8RKD15n
+
+value of ^PJpENuTa
+
+deeppartial ^fqJVanz4
+
+xor, literals
+vs varialbes  ^OnPwsxbz
+
+without ^4DLN0NLx

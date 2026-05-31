@@ -1,0 +1,116 @@
+﻿can inspect action state using
+declarative approach too ^3i5W0oe1
+
+usenavigation ^OuS0uhQm
+
+error element userouteerror ^nQ11KsNi
+
+redirect
+redirect vs navigate ^6bwYNT9v
+
+usefetcher,
+declarative vs imperative
+checking state evene with declarative ^fk7VVbL5
+
+userouteloaderdata and usematches ^RF91Vb87
+
+array of matches for each url that mathces current ^9f8gXkCf
+
+handle ^uXlvEs6i
+
+why handle ^HULAoYih
+
+loaders for fetching, handle for static data per route
+route may not have loader but still need sttic metadata,
+plus you not always want to mix something that was fetched + 
+something that can be hardcoded and return from loader (there is no reason to mix that ) ^4GfAHTUr
+
+what is breadcrumbs ^xCJL0Pd0
+
+using matches to create breadcrumbes
+get label, ui from handle, static or dynamic from loaders data 
+and get pathname for that crumb from matches pathname ^suljxTev
+
+rhf react router zod  ^ZcswYmjb
+
+so instead of fetching manually here 
+we are submitting form in a react router way
+(running action with fetch 
+inside) ^jlXVdbom
+
+useSubmit ^LN541UQO
+
+Form,actions ^uJz6R0JA
+
+loaders ^ebyy9J0w
+
+uselocation ^H23mqNVs
+
+link va navlink ^n6wGMt8r
+
+usenavigate ^bBqmKhn4
+
+route definition, children ^GHvaIxNP
+
+useparams with route definition example ^whwrcJTW
+
+loader vs useeffect ^nGvBbxHe
+
+loaders, route state revalidation ^iaDTz0B4
+
+should revalidate ^CcPNyGfx
+
+so by default all parent loaders rerun on navigation/action,
+shouldrevalidate helps to avoid some reruns based on something ^LHXO2bM2
+
+useactiondata, map server errors from action to rfh ^gJpZdTbD
+
+isrouteerrorresponse ^fEceFdhn
+
+!!! ^0Q9TGUh4
+
+why throw response? ^dG9mL6Er
+
+!!! ^SEV07xeQ
+
+!!! ^pPtKmntY
+
+so if need to show some statuscode specific
+shit - may return some response with data
+may throw response and error
+element will show it in a consistent
+way ^cPp92cGe
+
+so if we have some spinners on page load or smth, 
+app can think that we are navigating and show it on Form 
+submition ^izQPbfo9
+
+getcher is local to component ^L0p8gv54
+
+!!! ^ACVoNJpG
+
+history ^f9Kc0cZG
+
+normal form doesnt have usenavigate ^EQbSP5tU
+
+!!! ^mkagdrd7
+
+so fetcher is like normal form with prevent default but with all route stuff like actions, loaders ^YS6FPTON
+
+and FOrm more for some global shit ^yTxNZD0U
+
+Form vs fetcher.Form ^w7zUew7G
+
+useSubmit ^nHQ7i3Eq
+
+testing ^PEVf7zYX
+
+to see router errors (by default it creates errorboundary) ^4ChxB8Cl
+
+userevalidator ^msQFtkOx
+
+has event in sec param
+so can get current target
+and submit with method ^k1JGQXkA
+
+!!! ^XuwF4Dhy
