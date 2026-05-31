@@ -1,6 +1,6 @@
-# Apply archive: React Query / rquery Stage 1 map v002
+# Apply archive: React Query conspect Stage 2 screenshot mapping
 
-Archive type: stage-1 canvas-wide map + region index.
+Archive type: stage-2 screenshot mapping update.
 
 Target branch:
 
@@ -16,29 +16,27 @@ PS C:\Users\alexa\obs>
 
 ## Files included
 
-- `_ai-conspects/react-query-rquery/MANIFEST.md`
-- `_ai-conspects/react-query-rquery/00-stage1-overview.md`
-- `_ai-conspects/react-query-rquery/01-canvas-wide-map.md`
-- `_ai-conspects/react-query-rquery/02-region-index.md`
-- `_ai-conspects/react-query-rquery/03-svg-label-inventory.md`
-- `_ai-conspects/react-query-rquery/data/svg-labels-stage1.csv`
-- `_ai-conspects/react-query-rquery/data/svg-image-uses-stage1.csv`
-- `_ai-conspects/react-query-rquery/04-stage1-and-transcription-layout.md`
-- `_ai-conspects/react-query-rquery/APPLY_ARCHIVE.md`
+This archive updates:
+
+```text
+_ai-conspects/react-query-rquery/
+```
+
+It includes Stage 1 files plus Stage 2 screenshot mapping files.
 
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage1-map-v002.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage2-screenshot-mapping-v001.zip
 ```
 
-## Apply ZIP archive
+## Apply commands
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage1-map-v002.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage2-screenshot-mapping-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
@@ -52,7 +50,12 @@ git diff -- _ai-conspects/react-query-rquery
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query conspect stage 1 map"
+git commit -m "Add React Query conspect stage 2 screenshot mapping"
+```
+
+## Push command
+
+```powershell
 git push origin ai-processed-conspects-text
 ```
 
@@ -64,10 +67,10 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive only adds/replaces files under:
+This archive does not delete files.
+
+This stage does not contain full screenshot transcription. The real source-preserving transcriptions will be created in:
 
 ```text
-_ai-conspects/react-query-rquery/
+_ai-conspects/react-query-rquery/regions/*.md
 ```
-
-It does not delete files.

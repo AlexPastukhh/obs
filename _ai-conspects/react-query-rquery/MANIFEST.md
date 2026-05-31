@@ -2,7 +2,7 @@
 
 Archive type: **stage-1 canvas-wide map + region index**.
 
-Version: `v002`.
+Version: `stage2-v001`.
 
 Target branch: `ai-processed-conspects-text`  
 Repository root: `C:\Users\alexa\obs`
@@ -91,3 +91,35 @@ Map/index files such as `01-canvas-wide-map.md` and `02-region-index.md` are nav
 ## Next recommended stage
 
 Stage 2 should map screenshots from `image-index.csv` / `image-index.md` to these regions, then pick one region for exact screenshot transcription.
+
+
+---
+
+## Stage 2 additions
+
+Stage 2 adds screenshot-use mapping files. It does **not** transcribe screenshot content.
+
+Added files:
+
+```text
+_ai-conspects/react-query-rquery/05-stage2-screenshot-mapping.md
+_ai-conspects/react-query-rquery/screenshots/inventory.md
+_ai-conspects/react-query-rquery/screenshots/by-region/*.md
+_ai-conspects/react-query-rquery/data/screenshot-inventory-stage2.csv
+_ai-conspects/react-query-rquery/data/screenshot-inventory-stage2.json
+_ai-conspects/react-query-rquery/data/screenshot-region-summary-stage2.csv
+_ai-conspects/react-query-rquery/regions/README.md
+```
+
+Counts:
+
+```text
+Total image uses mapped: 537
+Unassigned image uses: 174
+```
+
+Main future text transcription files will live in:
+
+```text
+_ai-conspects/react-query-rquery/regions/*.md
+```
