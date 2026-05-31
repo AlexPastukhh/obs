@@ -34,8 +34,8 @@ Only Work Score can close these baselines.
 
 During the day:
 
-- collect support facts only;
-- do not calculate Support Score;
+- collect support facts and/or provisional support marks;
+- do not calculate final Support Score;
 - do not let support facts become work points.
 
 At day close / next morning:
@@ -44,28 +44,59 @@ At day close / next morning:
 - calculate previous-day Support Score approximately;
 - write support breakdown and interpretation into the same day file.
 
-## Categories
+## Support marks
 
-Max Support Score = 10.
+Support Score is calculated as an average of support marks.
 
-Each category max = 2.
+Do not normalize Support Score to `/10`.
 
-Sleep is special:
+Do not calculate `Max Support Score = 10`.
 
-- Sleep max = 2;
-- Sleep min = -5.
+Do not sum categories into a 10-point total.
 
-Categories:
+Formula:
 
-| Category | Range | Meaning |
-|---|---:|---|
-| 🛌 Sleep / sleep attempt | -5..2 | sleep quality, honest attempt to sleep, sleep damage |
-| 🍽️ Food / no overload | 0..2 | eating did not overload the body / did not hurt next work |
-| 🏃 Movement / sport | 0..2 | walking, sport, physical movement |
-| 🧲⚡ Stimulus control | 0..2 | did not ignite stimulus loops; handled pull well |
-| 🔋 Recovery / readiness | 0..2 | pauses restored ability to continue work |
+`Support Score = average(support marks used for the day)`
 
-Because sleep can be negative, total Support Score may be below zero.
+Example:
+
+`(1.25 + 1.5) / 2 = 1.375`
+
+Support marks are approximate and individual.
+
+Typical positive marks often use a `0..2` feel-scale, where:
+
+| Mark | Meaning |
+|---:|---|
+| 0 | did not support continuation / neutral-to-weak |
+| 1 | partially supported continuation |
+| 2 | strongly supported continuation |
+
+Sleep can be strongly negative when it damages the day or next day.
+
+Sleep may use negative marks such as `-5` for a major sleep collapse.
+
+Because sleep can be negative, average Support Score may be below zero.
+
+## Support categories
+
+Categories help group facts and choose marks.
+
+They are not summed into a 10-point score.
+
+| Category | What it measures |
+|---|---|
+| 🛌 Sleep / sleep attempt | sleep quality, honest attempt to sleep, sleep damage |
+| 🍽️ Food / no overload | eating did not overload the body / did not hurt next work |
+| 🏃 Movement / sport | walking, sport, physical movement |
+| 🧲⚡ Stimulus control | did not ignite stimulus loops; handled pull well |
+| 🔋 Recovery / readiness | pauses restored ability to continue work |
+
+A day may have several marks from the same category.
+
+If the user gives explicit support marks, preserve them and average them unless there is an obvious contradiction.
+
+If the user gives only facts, AI may suggest approximate marks and then average the chosen marks.
 
 ## AI role
 
@@ -75,7 +106,8 @@ For Support Score, AI may participate more actively:
 
 - collect facts;
 - group facts by category;
-- suggest approximate scores;
+- suggest approximate support marks;
+- calculate the average support mark;
 - explain the score;
 - compare with previous curated examples;
 - point out sleep/food/stimulus effects.
@@ -107,16 +139,16 @@ Support Score measures stability and repeatability.
 
 Examples:
 
-Work Score 38 + Support Score 9:
+Work Score 38 + Support Score avg 1.8:
 Old baseline beaten and day support was strong.
 
-Work Score 38 + Support Score 1:
+Work Score 38 + Support Score avg 0.2:
 Old baseline beaten but the day was fragile / costly.
 
-Work Score 0 + Support Score 9:
+Work Score 0 + Support Score avg 1.8:
 Good recovery day, but work baseline not closed.
 
-Work Score 70 + Support Score Red:
+Work Score 70 + Support Score avg negative:
 Very strong work day, but next-day risk may be high.
 
 ## Calibration
