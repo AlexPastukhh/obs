@@ -1,29 +1,24 @@
 {
-  "generated": "2026-06-01 22:51:28 UTC",
-  "ledger_version": "v001-updated-by-ef01b-transcript-and-ef01a-correction",
-  "critical_rule": "Ledger is not source of truth. It records decisions after visual/semantic review.",
-  "stage3_delta": {
-    "ef01b_processed_sources": [
-      "S-037",
-      "S-038",
-      "S-039",
-      "S-040",
-      "S-041",
-      "S-042",
-      "S-043",
-      "S-044",
-      "S-045",
-      "S-046"
-    ],
-    "ef01a_correction_sources": [
-      "S-059",
-      "S-060"
-    ],
-    "checked_not_ef01b": [
-      "S-006",
+  "generated": "2026-06-01 23:19:46 UTC",
+  "ledger_version": "v001-updated-by-ef02-boundary-review",
+  "critical_rule": "Ledger is not source of truth. EF02 decisions remain provisional until transcript pass does visual/semantic review.",
+  "ef02_boundary_delta": {
+    "candidate_sources": [
       "S-029",
-      "S-030"
-    ]
+      "S-030",
+      "S-028"
+    ],
+    "checked_not_ef02": {
+      "shadow_property_query_filter": [
+        "S-006"
+      ],
+      "constructors_materialization": [
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027"
+      ]
+    }
   },
   "rows": [
     {
@@ -38,12 +33,12 @@
       "width": "818",
       "height": "482",
       "nearest_labels_for_search_only": "L-028: ctors wont run when ef materializes entities? | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-039: entities shit | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if ",
-      "coverage_status": "unreviewed",
-      "current_region_decision": "",
-      "decision_is_final": "no",
+      "coverage_status": "checked-not-ef02-pending-constructors-materialization",
+      "current_region_decision": "pending-constructors-materialization",
+      "decision_is_final": "no-pending-future-boundary-review",
       "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not yet reviewed under boundary workflow.",
-      "review_notes": "Not yet reviewed under boundary workflow."
+      "decision_basis": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates.",
+      "review_notes": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates."
     },
     {
       "source_id": "S-010",
@@ -228,12 +223,12 @@
       "width": "990",
       "height": "226",
       "nearest_labels_for_search_only": "L-006: shadow prop usage | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-046: partial init antipatter",
-      "coverage_status": "checked-not-ef01b-pending-shadow-property-area",
-      "current_region_decision": "pending-shadow-property-area",
+      "coverage_status": "checked-not-ef02-pending-shadow-property-query-filter",
+      "current_region_decision": "pending-shadow-property-query-filter",
       "decision_is_final": "no-pending-future-boundary-review",
       "must_recheck_before_region_close": "yes",
-      "decision_basis": "Shadow property filter; not EF01B loading collections.",
-      "review_notes": "Shadow property filter; not EF01B loading collections."
+      "decision_basis": "Checked during EF02 boundary review: shadow property/query filter, not Attach/disconnected updates.",
+      "review_notes": "Checked during EF02 boundary review: shadow property/query filter, not Attach/disconnected updates."
     },
     {
       "source_id": "S-032",
@@ -285,12 +280,12 @@
       "width": "820",
       "height": "289",
       "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?",
-      "coverage_status": "checked-not-ef01b-pending-attach-disconnected-update-area",
-      "current_region_decision": "pending-attach-disconnected-update-area",
-      "decision_is_final": "no-pending-future-boundary-review",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Attach/disconnected update example; not EF01B loading collections.",
-      "review_notes": "Attach/disconnected update example; not EF01B loading collections."
+      "coverage_status": "candidate-ef02-attach-disconnected-state",
+      "current_region_decision": "EF02",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-ef02-transcript",
+      "decision_basis": "EF02 boundary review candidate: Attach / disconnected update / entity state.",
+      "review_notes": "EF02 boundary review candidate: Attach / disconnected update / entity state."
     },
     {
       "source_id": "S-011",
@@ -380,12 +375,12 @@
       "width": "828",
       "height": "210",
       "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-028: ctors wont run when ef materializes entities? | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-026: nullable relationships",
-      "coverage_status": "unreviewed",
-      "current_region_decision": "",
-      "decision_is_final": "no",
+      "coverage_status": "checked-not-ef02-pending-constructors-materialization",
+      "current_region_decision": "pending-constructors-materialization",
+      "decision_is_final": "no-pending-future-boundary-review",
       "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not yet reviewed under boundary workflow.",
-      "review_notes": "Not yet reviewed under boundary workflow."
+      "decision_basis": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates.",
+      "review_notes": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates."
     },
     {
       "source_id": "S-030",
@@ -399,12 +394,12 @@
       "width": "713",
       "height": "241",
       "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?",
-      "coverage_status": "checked-not-ef01b-pending-attach-disconnected-update-area",
-      "current_region_decision": "pending-attach-disconnected-update-area",
-      "decision_is_final": "no-pending-future-boundary-review",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Attach/disconnected update example; not EF01B loading collections.",
-      "review_notes": "Attach/disconnected update example; not EF01B loading collections."
+      "coverage_status": "candidate-ef02-attach-disconnected-state",
+      "current_region_decision": "EF02",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-ef02-transcript",
+      "decision_basis": "EF02 boundary review candidate: Attach / disconnected update / entity state.",
+      "review_notes": "EF02 boundary review candidate: Attach / disconnected update / entity state."
     },
     {
       "source_id": "S-025",
@@ -418,12 +413,12 @@
       "width": "686",
       "height": "482",
       "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach",
-      "coverage_status": "unreviewed",
-      "current_region_decision": "",
-      "decision_is_final": "no",
+      "coverage_status": "checked-not-ef02-pending-constructors-materialization",
+      "current_region_decision": "pending-constructors-materialization",
+      "decision_is_final": "no-pending-future-boundary-review",
       "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not yet reviewed under boundary workflow.",
-      "review_notes": "Not yet reviewed under boundary workflow."
+      "decision_basis": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates.",
+      "review_notes": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates."
     },
     {
       "source_id": "S-049",
@@ -494,12 +489,12 @@
       "width": "717",
       "height": "861",
       "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-026: nullable relationships",
-      "coverage_status": "unreviewed",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not yet reviewed under boundary workflow.",
-      "review_notes": "Not yet reviewed under boundary workflow."
+      "coverage_status": "candidate-ef02-attach-disconnected-state",
+      "current_region_decision": "EF02",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-ef02-transcript",
+      "decision_basis": "EF02 boundary review candidate: Attach / disconnected update / entity state.",
+      "review_notes": "EF02 boundary review candidate: Attach / disconnected update / entity state."
     },
     {
       "source_id": "S-003",
@@ -532,12 +527,12 @@
       "width": "819",
       "height": "247",
       "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach",
-      "coverage_status": "unreviewed",
-      "current_region_decision": "",
-      "decision_is_final": "no",
+      "coverage_status": "checked-not-ef02-pending-constructors-materialization",
+      "current_region_decision": "pending-constructors-materialization",
+      "decision_is_final": "no-pending-future-boundary-review",
       "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not yet reviewed under boundary workflow.",
-      "review_notes": "Not yet reviewed under boundary workflow."
+      "decision_basis": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates.",
+      "review_notes": "Checked during EF02 boundary review: constructors/materialization, not Attach/disconnected updates."
     },
     {
       "source_id": "S-050",

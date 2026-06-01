@@ -1,47 +1,42 @@
-# MANIFEST - EF Core general EF01B transcript + EF01A correction
+# MANIFEST - EF Core EF02 boundary review
 
-Archive type: **verified region transcript + boundary correction**  
+Archive type: **boundary review / split plan**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 22:51:28 UTC
+Generated: 2026-06-01 23:19:46 UTC
 
 ## Done
 
-- EF01A v001 existed.
-- This archive adds EF01B transcript.
-- It also corrects EF01A by moving S-059/S-060 into EF01A continuation.
+- EF01A and EF01B are already processed.
+- EF02 boundary review created.
 
 ## Now
 
 - Apply and review diff.
-- Commit if acceptable.
+- Commit if boundary split is acceptable.
 
 ## Next
 
-- Next EF Core area boundary review, not blind transcript.
+- EF02 transcript:
+  `S-029, S-030, S-028`.
 
 ## Later
 
-- Likely areas: shadow properties, Attach/disconnected updates, entity materialization, model constraints, transactions.
+- Shadow property / query filter: `S-006`.
+- Constructors/materialization: `S-024/S-025/S-026/S-027`.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/ef-core-general/03-stage3-ef01b-transcript-and-ef01a-correction.md
+_ai-conspects/ef-core-general/04-stage4-ef02-boundary-review.md
 _ai-conspects/ef-core-general/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/ef-core-general/regions/EF01A-tracking-identity-map-no-tracking-identity-resolution.md
-_ai-conspects/ef-core-general/regions/EF01B-loading-collections-include-find-load-autoinclude.md
 _ai-conspects/ef-core-general/regions/README.md
-_ai-conspects/ef-core-general/data/EF01A-correction-sources-stage3-v002.csv
-_ai-conspects/ef-core-general/data/EF01A-correction-sources-stage3-v002.json
-_ai-conspects/ef-core-general/data/EF01B-sources-stage3-v001.csv
-_ai-conspects/ef-core-general/data/EF01B-sources-stage3-v001.json
-_ai-conspects/ef-core-general/data/EF01B-boundary-review-stage3-v001.csv
-_ai-conspects/ef-core-general/data/EF01B-boundary-review-stage3-v001.json
-_ai-conspects/ef-core-general/data/EF01B-area-understanding-stage3-v001.json
+_ai-conspects/ef-core-general/data/EF02-boundary-review-stage4-v001.csv
+_ai-conspects/ef-core-general/data/EF02-boundary-review-stage4-v001.json
 _ai-conspects/ef-core-general/data/image-review-ledger-v001.csv
 _ai-conspects/ef-core-general/data/image-review-ledger-v001.json
-_ai-conspects/ef-core-general/audit-assets/EF01B-source-images/*.png
-_ai-conspects/ef-core-general/audit-assets/EF01A-correction-source-images/*.png
+_ai-conspects/ef-core-general/audit-assets/EF02-source-images/*.png
+_ai-conspects/ef-core-general/audit-assets/EF02-checked-neighbor-images/*.png
+_ai-conspects/ef-core-general/audit-assets/EF02-*-contact-sheet.png
 _ai-conspects/ef-core-general/APPLY_ARCHIVE.md
 _ai-conspects/ef-core-general/MANIFEST.md
 ```

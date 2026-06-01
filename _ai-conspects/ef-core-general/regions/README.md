@@ -7,12 +7,24 @@ EF01A - Tracking / identity map / no tracking / identity resolution
 EF01B - Loading collections / Include / Find / Load / AutoInclude
 ```
 
-Boundary corrections:
+Boundary reviews:
 
 ```text
-S-059/S-060 moved to EF01A correction as identity-resolution examples.
-S-006 pending shadow-property/model-configuration review.
-S-029/S-030 pending Attach/disconnected-update review.
+EF02 - Attach / disconnected updates / entity state
+```
+
+Pending next:
+
+```text
+EF02 transcript:
+S-029, S-030, S-028
+```
+
+Later pending:
+
+```text
+S-006 -> shadow property / query filter
+S-024/S-025/S-026/S-027 -> constructors / materialization
 ```
 
 Each transcript must include:

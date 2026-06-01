@@ -1,0 +1,138 @@
+{
+  "generated": "2026-06-01 23:19:46 UTC",
+  "region_id": "EF02",
+  "region_name": "Attach / disconnected updates / entity state",
+  "boundary_status": "boundary-reviewed-not-transcribed",
+  "important_rule": "This is a boundary review, not final transcript. Transcript pass must still visually recheck all EF02 sources.",
+  "included_candidate_sources": [
+    "S-029",
+    "S-030",
+    "S-028"
+  ],
+  "checked_not_ef02": {
+    "shadow_property_query_filter": [
+      "S-006"
+    ],
+    "constructors_materialization": [
+      "S-024",
+      "S-025",
+      "S-026",
+      "S-027"
+    ]
+  },
+  "next_transcript_pass": {
+    "pass_id": "EF02",
+    "sources": [
+      "S-029",
+      "S-030",
+      "S-028"
+    ],
+    "meaning": "Attach, detached entities, marking properties modified, entity state, and avoiding accidental updates of nested detached entities."
+  },
+  "rows": [
+    {
+      "source_id": "S-029",
+      "image_use_id": "IU-029",
+      "fileId_short": "5e335b4ef1",
+      "x": 8761.267,
+      "y": 2461.568,
+      "width": 820,
+      "height": 289,
+      "candidate_group": "ef02-attach-disconnected-entity-state",
+      "decision": "candidate-for-EF02-transcript",
+      "reason": "Attach / disconnected entity update / entity state handling.",
+      "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?"
+    },
+    {
+      "source_id": "S-030",
+      "image_use_id": "IU-030",
+      "fileId_short": "1b74640858",
+      "x": 8762.46,
+      "y": 2823.004,
+      "width": 713,
+      "height": 241,
+      "candidate_group": "ef02-attach-disconnected-entity-state",
+      "decision": "candidate-for-EF02-transcript",
+      "reason": "Attach / disconnected entity update / entity state handling.",
+      "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?"
+    },
+    {
+      "source_id": "S-028",
+      "image_use_id": "IU-028",
+      "fileId_short": "354939e8d7",
+      "x": 8751.825,
+      "y": 3135.582,
+      "width": 717,
+      "height": 861,
+      "candidate_group": "ef02-attach-disconnected-entity-state",
+      "decision": "candidate-for-EF02-transcript",
+      "reason": "Attach / disconnected entity update / entity state handling.",
+      "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-026: nullable relationships"
+    },
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "8a232da430",
+      "x": 7542.419,
+      "y": 2284.89,
+      "width": 990,
+      "height": 226,
+      "candidate_group": "shadow-property-query-filter-pending",
+      "decision": "checked-not-EF02",
+      "reason": "Shadow property / query filter example; visually nearby but separate topic.",
+      "nearest_labels_for_search_only": "L-006: shadow prop usage | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-046: partial init antipatter"
+    },
+    {
+      "source_id": "S-024",
+      "image_use_id": "IU-024",
+      "fileId_short": "4538d60710",
+      "x": 10302.698,
+      "y": 2713.734,
+      "width": 828,
+      "height": 210,
+      "candidate_group": "constructors-materialization-pending",
+      "decision": "checked-not-EF02",
+      "reason": "Constructors / EF materialization / domain constructors; visually nearby but separate topic.",
+      "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-028: ctors wont run when ef materializes entities? | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-026: nullable relationships"
+    },
+    {
+      "source_id": "S-025",
+      "image_use_id": "IU-025",
+      "fileId_short": "bc91d60828",
+      "x": 10301.576,
+      "y": 2932.244,
+      "width": 686,
+      "height": 482,
+      "candidate_group": "constructors-materialization-pending",
+      "decision": "checked-not-EF02",
+      "reason": "Constructors / EF materialization / domain constructors; visually nearby but separate topic.",
+      "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach"
+    },
+    {
+      "source_id": "S-026",
+      "image_use_id": "IU-026",
+      "fileId_short": "e42dcdf323",
+      "x": 10295.198,
+      "y": 3437.901,
+      "width": 819,
+      "height": 247,
+      "candidate_group": "constructors-materialization-pending",
+      "decision": "checked-not-EF02",
+      "reason": "Constructors / EF materialization / domain constructors; visually nearby but separate topic.",
+      "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach"
+    },
+    {
+      "source_id": "S-027",
+      "image_use_id": "IU-027",
+      "fileId_short": "946177ff27",
+      "x": 10298.814,
+      "y": 1561.09,
+      "width": 818,
+      "height": 482,
+      "candidate_group": "constructors-materialization-pending",
+      "decision": "checked-not-EF02",
+      "reason": "Constructors / EF materialization / domain constructors; visually nearby but separate topic.",
+      "nearest_labels_for_search_only": "L-028: ctors wont run when ef materializes entities? | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-039: entities shit | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if "
+    }
+  ]
+}
