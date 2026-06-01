@@ -1,0 +1,58 @@
+﻿so when we return ienumerable without tolist 
+we get replayable generator that 
+will replay code on every enumeration
+its not collection ^V5YyrKuk
+
+Had to call tolist above to do select ^1xgzDfBp
+
+client should keep in mind 
+what linq expressions can be 
+converted into sql
+
+When you make such methods 
+that accepts expressioins ^qBwtBbh3
+
+So there is no limitation on linq expressions ^usR3vNOR
+
+When you return IEnumerable it is not 
+completely clear, did you call
+ToList() inside repository method ^gM1RHPM4
+
+When you call toList(), expression start to 
+execute, goes in memory and as enumerable
+doing things  ^38D91ys2
+
+disposing db context inside method 
+and returning ienumerable ^q7mOqqDb
+
+hidden db query outside rep boundary ^ctn1syQE
+
+sometimes partial enumeration can
+change behavior ^JsADyNKc
+
+repeated side effects ^U7iDCi0f
+
+dif results on each enumeration ^vVihZugZ
+
+so we have 2 types of scenarios
+1 it includes db - then without to list or other enumer 
+we will simply repeat db queries
+2 its just a method that produces deffered execution (just ienumerable without
+enumer inside method)
+then when we will do enumer on the thing that we got from the method - it 
+will repeat everything that it does in select or in loop before
+yield return ^77SyId8z
+
+what if we have called to list 
+and got colletciton 
+but then we enumerate the enumerable again ^N8JagyEH
+
+what about async enumerable ^QngBM2z4
+
+just not an immediate cleanup, nothing immportant ^q4QxLpPu
+
+getrnumerator
+dispose
+ninally ^xZNcFcXN
+
+!!! ^Ar1Mh6ev
