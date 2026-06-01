@@ -1,0 +1,108 @@
+﻿isolaton levels
+
+how can help to avoid inconsistency 
+with multiple queries
+with snapshot/serializable ^pntOoItE
+
+other isolaton levels, default ^Rm4UcPei
+
+why serializable ^RCmRO6Ou
+
+repeatableread vs serialized ^ueBRwDHu
+
+when reads are part of 
+transaction
+when the query runs (linq/sql api to get smth) ^y7gAvxuq
+
+you can get all applied or all rolled back(atomicity)
+with any isolation level ^0NJYGJZS
+
+dbcontext about transactions strategies ^B5QGkaXK
+
+so i have some scenarios when i may need some 
+transaction or when i may think that i need them
+
+1 when i query something from db, look at it and chose to change it
+but at the same time i may have another request that 
+changes the same thing
+
+dont need manual transaction, can configure rowversion or 
+isconcurencytoken and ef will throw exceptions
+
+2 when i have multiple queries to get data 
+
+may need transaction with isolationlevel snapshot
+
+3 when i have some possible nesting of methods that mutate 
+queried entity and each may call savechanges
+one savechanges succeds another fails and we get inconsistency
+
+need to wrap everything in one transaction with any isolatoin level but usually with default
+
+4 when i have some database.executesql  or other like dbset.executeupdate (that is
+linq based but everything else like executesql) - they all dont care about savechanges 
+so if i want them to be in a traqnsaction i need to create transaction ^MIGiYuPZ
+
+reading your own
+ uncommited changes ^ploh72it
+
+so readcommited is ok when 
+we cant have some state changes from
+other transaction
+
+like when we have some 
+e tags that will prevent 
+update with incons stae
+
+like when we change e tag on some 
+children changes ^DaHMCZe5
+
+readcommited ^4iwNX4pV
+
+repeatableread ^BT1OcILL
+
+readcommited ^d95Wm3kR
+
+readuncommited ^dsPglCo6
+
+repeatableread vs serialized ^5oC3JCfH
+
+snapshot,
+snapshot exception with code
+when you update/delete/insert
+based on old data ^1S4LAZSs
+
+when we use execute (not in transaction)
+method
+and there is some ambigous outcome of 
+the transaction
+
+by default - we will retry ^WKWzAmvE
+
+!!! ^TIyLA9Ew
+
+when both trans need to have isolation 
+serializable 
+to keep invariants ^EdLneu2D
+
+!!! ^GjnJLRmi
+
+locks with readcommited,
+rcsi,serializable ^gdiaqI77
+
+isolation level
+in manual retries from same tranaction 
+using savepoints cases ^864KvtKR
+
+when locks are acquired
+on start of transaction
+or on data touch? ^QxcNy0KJ
+
+serializable ^upUJkZfR
+
+rcsi ^ABbjTDBE
+
+read commited ^FisgXhaH
+
+serializable protects the
+range relevant to predicate ^95Ilvamy

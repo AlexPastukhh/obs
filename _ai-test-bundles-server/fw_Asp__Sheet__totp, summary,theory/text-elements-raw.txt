@@ -1,0 +1,13 @@
+﻿protecting secret
+and store to db
+then unprotect 
+to verify token using
+library ^gGRlvOtq
+
+so we are creating secret, creating uri for qr code which is urlsafe 
+and shit
+adding to db a pending enrollment, for it we need to protect the key
+if there is a pending enrollemnt - upsert
+then return the secret and uri
+then on enroll we need to get and unprotect the secret and use 
+library to create totp class and verify totp with -1 +1 ^LyyM8rmu

@@ -1,0 +1,182 @@
+﻿datetimeoffset.localdatetime ^X5QUXMkL
+
+!!! daylightsavingtime 
+can be important for displaying ^Vj6cGeEo
+
+stopwatch ^wjJ38XDr
+
+better to just recreate datetime object copying
+values 
+(dont really understand how example below works) ^NGkvj6eR
+
+datetime.specifykind ^0up6qbct
+
+what is the offset ^FxzIwYhf
+
+ticks vs unix seconds ^vaVGMNCd
+
+what do ticks represent ^kCh7dga4
+
+unix when you need to integrate 
+js frontend ^NSCI133L
+
+when to use unix time ^WUbTyUrD
+
+how its possible to 
+convert datetime to utc
+if there is no offset 
+specified ^lD2OtnvE
+
+timezoneinfo ^AAzAVk5t
+
+when need to show user his local time
+findsystemtimezonebyid ^joaS7DH9
+
+js date formatting methods
+tolocalestring
+tolocaletimestring
+tolocaledatestring ^4RTNECKk
+
+tolocalestring ^GWGaeoiJ
+
+ticks ^cyuRwzfx
+
+unix time ^yZQbXgV7
+
+adding and substructing ^CBV7E445
+
+comparing times ^acDJzREz
+
+converting ^BPBQLHHE
+
+basics
+coretypes
+what to use when ^y5MnU0xB
+
+common choices ^1SHsZnLU
+
+time zones ^WxwEIaiV
+
+json ^FGhMNM8f
+
+model binding ^m0jmcC2D
+
+expiratjion patterns ^IoJyakSP
+
+date math pitfalls ^OBN3VtQQ
+
+parsing cheat sheet ^SlHy7bJ8
+
+what we can tryto parse 
+into datetimeoffset/datetime ^JZauPSSx
+
+parse/tryparse
+parseexact/tryparseexact ^Pqc2IjxM
+
+what datetime can parse ^GUNp7Vw0
+
+standart formats 
+for parseexact ^bfdiAS43
+
+custom formats for parse exact ^txiPqWCt
+
+what datetimeoffset can parse ^r0dv1oxz
+
+is parseexact only for 
+datetimeoffset? ^JNQEokoS
+
+can we format datetime
+with standart formats? ^wPXgm4tc
+
+sortable format,
+univarsal sortable ^jutI8eqh
+
+what just tostring does with 
+datetimeoffset ^3ZtllGYb
+
+formats cheat sheet ^LgCtgHHL
+
+custom formatting cheat sheet  ^8AujzgEU
+
+gotchas
+need to remember ^4vgXIe6s
+
+some patterns ^Diut8aki
+
+quick sheet ^bwifB1TR
+
+some custom format tokens ^3lHyiQqK
+
+literal text ^siIVTL0o
+
+separators ^K2Cw2avd
+
+era ^dBFyJHJS
+
+time zone/ offset ^xPVI0SBH
+
+am/pm ^4r3JndSU
+
+fractional seconds ^UQcFKbJp
+
+Hours,minutes seconds ^rGNdhqqP
+
+year,month,day ^JOEPYDKe
+
+escaping ^jn9HB4EL
+
+12 hour format,am pm ^saCwB8VA
+
+what if i pass with specified kind? ^tZKH5Ar5
+
+when working with users local time ^1WzZRZig
+
+next day,specific/same time ^uXGjGLah
+
+everyday at specific time ^ae2TTIEu
+
+getting the exact time on users clock
+from utcnow, using users timezone ^hTD0LnPf
+
+why converting ^wctZBZQI
+
+converting the time on clock
+that we need to utc using users
+timezone, so we can store it ^SSiiUBIB
+
+methods for working 
+with invalid/ambiguous time ^O7COkmEe
+
+isinvalidtime ^mJJ1jMzb
+
+isinvalidtime ^vSf7Gn56
+
+getambiguoustimeoffsets
+and configure based on policy ^UUTkNgkp
+
+example of invalid/ambiguous time
+policies ^Ywpht3dS
+
+common invalid/ambiguous
+time policies ^HTKEjjsw
+
+invalid ^l9261qwV
+
+ambiguous ^C23Keft0
+
+manual usage of isdaylightsavingtime ^rzx6NRMb
+
+need current users clock time
+if assume that our local or utc is close enoug 
+can get basd sit at edgecases lik start/end of month ^UUphMkK8
+
+type of offsets ^TFqpJ8wu
+
+when to use 
+what format ^n03toC5B
+
+iso 8601 ^6CgWT9tS
+
+rfc 1123 ^ChpGec4X
+
+unix ^Cu8tA5xU
