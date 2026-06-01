@@ -1,0 +1,92 @@
+﻿to basics ^k2QQ1SG9
+
+public class AuthorsResourceParameters
+{
+    private const int MaxPageSize = 20;
+    private int _pageSize = 10;
+
+    public string? MainCategory { get; set; }
+    public string? SearchQuery { get; set; }
+
+    public int PageNumber { get; set; } = 1;
+    public int PageSize
+    {
+        get => _pageSize;
+        set => _pageSize = (value > MaxPageSize) ? MaxPageSize : value;
+    }
+
+    public string OrderBy { get; set; } = "Name";
+
+    // Data shaping
+    public string? Fields { get; set; }
+} ^Ac950uWL
+
+using System.Reflection;
+
+public class PropertyCheckerService : IPropertyCheckerService
+{
+    public bool TypeHasProperties<T>(string? fields)
+    {
+        if (string.IsNullOrWhiteSpace(fields))
+            return true;
+
+        var fieldsAfterSplit = fields.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+        foreach (var field in fieldsAfterSplit)
+        {
+            var propertyName = field.Trim();
+
+            var propertyInfo = typeof(T).GetProperty(
+                propertyName,
+                BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
+
+            if (propertyInfo is null)
+                return false;
+        }
+
+        return true;
+    }
+} ^avjhVA2G
+
+RELATED LOGIC IN CONTROLLER ^JLVdWqE4
+
+OR FOR SINGLE ^6UJYuAAx
+
+ADD TO EXANDOOBJECT,
+DYNAMIC PROPERTIES
+SHEET ^Sis9TQI8
+
+WE DONT 
+HAVE TYPE FOR 
+RETURN TYPE
+SO WE ARE RETURNING
+SOMETHING  ^QAN48ozh
+
+EXPANDOOBJECT PERSONAL SHEET ^QoDsrPTU
+
+RELATED TO DATA SHAPING 
+WHY THIS APPROACH WITH EXTENSION ON IENUMERABLE OR 
+OBJECT, WHY NOT FETCHING FIELDS THAT WE NEED TO,
+WHY NO PROJECTIONS ?
+ ^iK2q9I6g
+
+!!! ^1emYpt5K
+
+can mean just some variants of representations (may ask) ^EgArwl1a
+
+!!!! ^SWbTct8Y
+
+!!! ^PCkJzes9
+
+why datashaping ^YzSagvmQ
+
+cast to dict ^9TXZ0j4h
+
+can prevent shaping
+of any class ^yvQQEVis
+
+impl ^rHpAzj0n
+
+expl ^BdjjTCkv
+
+theoru ^j9om96Tz

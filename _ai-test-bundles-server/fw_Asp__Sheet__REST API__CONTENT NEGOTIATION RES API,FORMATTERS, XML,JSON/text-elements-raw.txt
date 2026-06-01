@@ -1,0 +1,107 @@
+﻿Can insert formatter at 0 index, so it will be default
+(in httpclient course did) ^ajzStQAo
+
+with this need newtonsoft json ^MGU4KdQX
+
+Can get updated object, but default output media type for our api has switched to xml
+somehow ^qsX9HxB0
+
+system.text.json is first formatter
+we have changed it to newtonsoftjson,
+so the first formatter is xml formatter ^EjEmlfEH
+
+then its being ovveriden 
+by json.net 
+so xml is the first formatter
+and the default one ^lRGyu3Wu
+
+need to do it so ^TlN3W8b7
+
+default xml serializer doesnt have 
+to support all types, this - does ^YMGabLER
+
+ADD TO CONTENT NEGOTIATIONS ALL THIS  ^JyI0d6AG
+
+ADDING FORMATTERS, 
+DEFALULT CHANGES TO XML ^xZ3yhhsv
+
+ORIGINAL ^9LHCCbTU
+
+need this ^EjWdtJTa
+
+FOR SYSTEM.TEXT.JSON ^ySEsfJHI
+
+FULL ^AS1PDk1d
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
+
+[HttpGet("{authorId}", Name = "GetAuthor")]
+public async Task<IActionResult> GetAuthor(Guid authorId, string? fields,
+    [FromHeader(Name = "Accept")] string? mediaType)
+{
+    // 1) Parse accept header
+    if (!MediaTypeHeaderValue.TryParse(mediaType, out var parsedMediaType))
+    {
+        return BadRequest("Invalid Accept header.");
+    }
+
+    // 2) Fetch
+    var authorFromRepo = await _courseLibraryRepository.GetAuthorAsync(authorId);
+    if (authorFromRepo == null) return NotFound();
+
+    var authorDto = _mapper.Map<AuthorDto>(authorFromRepo);
+
+    // 3) Representation decision
+    if (parsedMediaType.MediaType == "application/vnd.marvin.hateoas+json")
+    {
+        var links = CreateLinksForAuthor(authorId, fields);
+
+        var shaped = authorDto.ShapeData(fields) as IDictionary<string, object?>;
+        shaped!.Add("links", links);
+
+        return Ok(shaped);
+    }
+
+    // default/plain representation
+    return Ok(authorDto.ShapeData(fields));
+} ^8yG1NObz
+
+~!!!! ^3Btwt6kX
+
+!!!!!!!!!!!!!!!!!!!! ^Leo69qGT
+
+getting media type from 
+header ^DM2hxfwp
+
+checking if we can parse
+value from 
+accept header media type
+(if the string is valid for 
+any media type) ^qkFdXkfO
+
+checking  ^xaqNiRev
+
+framework ^eopDRPxk
+
+why we also need to check 
+if header has valid media type
+if framework reject
+unsupported media type output ^P3Hr1ncM
+
+!!!! ^mFeWzJ7e
+
+have problemdetailsfactory injected ^1zA5M0nd
+
++ ONLY WITH 
+CONVENTIONAL TYPES ^ZIDuxhai
+
+ADVANCED CN THINGS
+        (AND LOWER)
+SEMANTIC MEDIA TYPES ^TVn8dZ4D
+
+BETTER: ^pM6IsVnd
+
+mAY BE BETTER THAN NULLABLE FIELDS IN DTO ^8QpSeFXs
+
+!!!! ^VBXGjeIv
