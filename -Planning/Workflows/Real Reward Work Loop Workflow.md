@@ -14,23 +14,29 @@ Tampermonkey / Pattern Capture may duplicate the compact workflow and pattern UI
 
 ## Core loop summary
 
-Real reward -> separate from empty stimulation/chemistry -> attach needed stimulation -> handle chemistry/stimulation -> promise when needed -> short-distance D/F race with active pattern checks and penalty-risk check -> log session or penalty event.
+Quiet head -> docs over rethinking -> prove a good day -> treat likely drain as drain -> flying cage -> sew needed stimuli/feelings -> D/F max-vs-usual -> short deadline race -> log session or penalty event.
 
 ## Core formula
 
-Реальное удовольствие делает потраченное время не пустой тратой.
+Опора на тишину в голове, конц мышл, они мани.
 
-Пустые стимулы и химикаты могут притворяться наградой.
+Опора на доки: нет нужды заново думать всё с нуля, всё уже подумано и зафиксировано.
 
-Химию чаще надо осознать и дать догореть.
+Нужно не идеально прожить один день, а доказывать хороший день.
 
-Стимулы чаще надо перенаправить на нужный результат.
+Детали дня не важны, дней много.
 
-Короткая гонка по D/F превращает энергию в полезное действие и тренирует будущие действия.
+Если что-то похоже на слив — относиться как к сливу без самодеятельности.
 
-D отвечает за то, что делается для цели и какой полезный результат остаётся.
+Основное рабочее состояние: летящая клетка.
 
-F отвечает за то, как работа делается: фокус, рамка, темп, контроль внимания, состояние.
+Летящая клетка = я ограждён от лёгких стимулов и чувств, могу чувствовать себя неприятно или неважно, но чётко представляю реально желанный результат и реально нежеланный результат. Несмотря ни на что, я лечу к желанному результату, сшибая всё на пути, и пришиваю нужные стимулы и чувства через навязывание действия, promises и представления.
+
+D отвечает за то, что делается для цели: менеджинг полезности работы, получение желанного или видимого результата, насаживание нужных стимулов и чувств.
+
+F отвечает за то, как работа делается: менеджинг фокуса, количество полезных действий в единицу времени, насаживание нужных стимулов и чувств.
+
+Short-distance race = короткий deadline-сегмент, где я пытаюсь побить обычный результат по D и F.
 
 Penalty-risk check prevents knowingly normalized wrong drift from being hidden inside normal score.
 
@@ -38,97 +44,152 @@ Penalty-risk check prevents knowingly normalized wrong drift from being hidden i
 
 Use this version for small UI surfaces such as Tampermonkey.
 
-1. 🎯 Real reward: what makes the time not empty.
-2. 🧲⚡≠🌅 Separate empty stimulation / chemistry from real reward.
-3. 🧲⚡➡️🎯 Attach needed stimulation to the target result.
-4. 🧪🔥⏳ Handle chemistry: notice it, let it burn, redirect if useful.
-5. 🧵📜 Promise when pull / resistance is strong.
-6. 🏁📊 D/F short race + active pattern checks + penalty-risk check.
-7. 🧾 Log session / penalty event / support facts when relevant.
+1. 🧠🤫💰 Тишина в голове: конц мышл, они мани.
+2. 📚🛤️ Опора на доки: всё уже подумано; доказывать хороший день.
+3. 🚨 Если похоже на слив — считать сливом без самодеятельности.
+4. 🧲⚡🧱😣🚀 Летящая клетка: ограждён от лёгких стимулов/чувств, могу чувствовать себя неприятно, но всё равно лечу к Desired.
+5. 🧵📜🟢🔴 Пришить нужные стимулы/чувства через действие, promise и чёткое представление зелёного/красного результата.
+6. ✅D max-vs-usual: представить максимальный D и обычный D; биться за максимум и расширять его границы.
+7. ⚡F max-vs-usual: представить максимальный F и обычный F; биться за максимум и расширять его границы.
+8. 🏁⏱️📊 Deadline race: короткий deadline-сегмент, где D/F максимум навязывается действием.
+9. 🧾 Log session / penalty event / support facts when relevant.
 
 ## Core loop
 
-1. Find real reward.
+1. Опора на тишину в голове.
 
-   Ask what would make this time feel like it was not empty later.
+   Рабочая база:
 
-   Check:
+   - тишина в голове;
+   - конц мышл;
+   - они мани.
 
-   - What is Desired result?
-   - What is Undesired result / real loss?
-   - What useful target work should exist after this segment?
-
-2. Separate real reward from empty stimulation / chemistry.
-
-   Empty stimulation and chemistry can feel like reward, but they may not leave value.
-
-   Test:
-
-   - Does this move Desired / current goal?
-   - Does it leave useful value after attention ends?
-   - Does it reduce future friction?
-   - Or is it just pull / relief / process motion?
-   - What stimulation / chemistry do I notice right now?
-   - Which stimuli are empty pull?
-   - Which stimuli are actually needed?
-   - Какие стимулы из тех, что нужны для цели, я не замечаю?
-
-3. Attach needed stimulation to the real result.
-
-   Redirect valid stimulation into target-related fuel: visible progress, timer, short frame, score, self-race, useful output, clear next action.
-
-4. Handle chemistry and stimulation.
-
-   Chemistry usually needs to be noticed and allowed to burn out instead of being treated as truth.
-
-   Stimulation usually needs to be narrowed to the target.
+   Не нужно разгонять внутренний диалог. Не нужно заново решать то, что уже решено в доках. Ценность сейчас не в размышлении, а в выполнении выбранного направления.
 
    Check:
 
-   - Should I let chemistry burn out instead of treating it as truth?
-   - Is this pull asking for action, or just wanting to be fed?
-   - Am I in a low-cost stimulus cage, and can I route that energy into Desired?
+   - В голове тише или я разгоняю внутренний диалог?
+   - Я сейчас двигаю действие или покупаю мыслительный процесс?
+   - Это конц мышл, они мани, или я снова плачу вниманием за лишнее думание?
 
-5. Create or refresh promise when needed.
+2. Опора на доки и доказательство хорошего дня.
 
-   Use a promise when chemistry / stimulation / resistance is strong enough that normal reasoning will probably be overwritten.
+   Нет нужды думать с нуля: всё уже подумано и зафиксировано.
 
-   First define: current feeling / pull / resistance; analytical prediction; what truth should be sewn in; what bad purchase is refused; short segment.
+   Нужно доказывать хороший день, а не идеально проживать каждую деталь дня.
 
-6. Race yourself on the short distance with D/F and active pattern checks.
+   Детали дня не важны, дней много.
 
-   D check:
+   Если что-то похоже на слив — относиться как к сливу без самодеятельности.
 
-   - What useful target work/result did I create?
-   - Did I manage the work so it stayed useful for Desired/current goal?
-   - Did I choose or notice the stimuli/chemistry needed for the goal?
-   - What useful value remains after attention ends?
+   Check:
 
-   F check:
+   - Я сейчас опираюсь на доки или снова самодеятельно думаю?
+   - Это доказывает хороший день?
+   - Это похоже на слив?
+   - Если похоже на слив, я уже отношусь к этому как к сливу?
 
-   - How focused, framed, controlled, and clean was execution?
-   - Did stimuli/feelings support doing the work instead of stealing it?
-   - Did I use a promise/sewn truth when pull or resistance was strong?
+3. Летящая клетка.
 
-   Active pattern checks:
+   Я ограждён от лёгких стимулов и чувств.
 
-   - 🏁🥊👤↔️👤⏱️ Short-distance self-competition.
-   - 🎯💎📉 Useful result with minimal losses.
-   - 🧲⚡🧱👁️🌅➡️🎯 Low-cost stimulus cage toward Desired.
-   - ⏱️🚂🛤️➡️🎯 Session frame / visible target.
-   - 🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only.
-   - 🛤️🌅➡️🎯 Course / Desired connection.
-   - 👁️⏳➡️💎 Value left after attention ends.
-   - 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation.
-   - 🚂🛤️⚠️🎯 Automatic rails but Result forgotten.
+   Я могу чувствовать себя неприятно или неважно.
 
-   Penalty risk:
+   Но я чётко представляю:
 
-   - 👁️🚫🥊🎭➡️🕳️ No-resistance known drift.
+   - реально желанный результат;
+   - реально нежеланный результат;
+   - цену слива;
+   - что именно нужно сделать сейчас.
 
-7. Log finished session or penalty event.
+   Несмотря ни на что, я лечу к желанному результату, сшибая всё на пути.
 
-   After the segment: log D/F; log points; log Progress Signal; update Finished Sessions; update Penalty Events if needed; update Net Work Score; update support facts when relevant.
+   Нужные стимулы и чувства пришиваются через:
+
+   - навязывание действия;
+   - promises;
+   - представления;
+   - deadline;
+   - короткую гонку;
+   - видимый результат.
+
+4. Чёткое представление зелёного и красного результата.
+
+   Перед race или во время сопротивления представить:
+
+   - 🟢 зелёный результат: что реально желанно, что должно стать видимым/доказанным;
+   - 🔴 красный результат: что реально нежеланно, как выглядит слив, потеря дня, потеря направления;
+   - где я нахожусь сейчас;
+   - что нужно навязать действием прямо сейчас.
+
+   Это не фантазия вместо действия. Представление нужно, чтобы пришить правильные стимулы и чувства к действию.
+
+5. О чём думать в процессе полёта: D.
+
+   D-вопрос:
+
+   Как бы выглядел наилучший вариант для D?
+
+   Проверить:
+
+   - как лучше менеджить работу, чтобы она была полезной;
+   - какой желанный или видимый результат должен появиться;
+   - какие нужные стимулы и чувства надо насадить;
+   - как выглядит обычный D-результат;
+   - как побить обычный D-результат;
+   - как расширить границы максимального D.
+
+   Цель: стремиться к максимуму D, а не просто получить “какой-то результат”.
+
+6. О чём думать в процессе полёта: F.
+
+   F-вопрос:
+
+   Как бы выглядел наилучший вариант для F?
+
+   Проверить:
+
+   - как лучше менеджить фокус;
+   - как увеличить количество полезных действий в единицу времени;
+   - какие нужные стимулы и чувства надо насадить;
+   - как выглядит обычное F-выполнение;
+   - как побить обычное F-выполнение;
+   - как расширить границы максимального F.
+
+   Цель: стремиться к максимуму F, а не просто “присутствовать в процессе”.
+
+7. Deadline race на короткой дистанции.
+
+   Сделать короткий deadline-сегмент.
+
+   Внутри него пытаться побить обычного себя:
+
+   - по D: полезность работы, желанный/видимый результат, нужные стимулы и чувства;
+   - по F: фокус, темп, количество полезных действий в единицу времени, нужные стимулы и чувства.
+
+   Race is not panic-speed.
+
+   Race means:
+
+   - deadline виден;
+   - цель видна;
+   - обычный D/F понятен;
+   - максимальный D/F представлен;
+   - есть попытка побить обычный D/F;
+   - есть попытка расширить границы максимального D/F;
+   - сливы считаются сливами без самодеятельности.
+
+8. Log finished session or penalty event.
+
+   After the segment:
+
+   - log D/F;
+   - log points;
+   - log Progress Signal;
+   - update Finished Sessions;
+   - update Penalty Events if needed;
+   - update Net Work Score;
+   - update support facts when relevant.
 
 ## Pattern playbook
 

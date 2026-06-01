@@ -13,10 +13,14 @@ This file stores only explicit agreements. It is not a full emoji glossary.
 | 🧲⚡ | stimulus pull / easy stimulation / fast attention magnet | Use instead of `🎪` when meaning stimulation, easy stimulus, pull, or drift into stimulation |
 | 🚂🛤️ | rails / automatic rails / process on rails | Use for rails/process-on-rails meaning. Do not use bare `🛤️` for rails. |
 | 🛤️ | course / direction / relation to Desired | Use bare `🛤️` only for course / direction meaning. |
+| 😣 | unpleasant internal feeling / discomfort | Use when discomfort or unpleasant feeling may be present but should not control the action |
+| 🟢🔴 | desired vs undesired result | Green = desired/real win; red = undesired/real loss/drain |
 | 🧲⚡🧪➡️🎯 | targeted stimuli / chemistry only | Valid stimuli and chemistry are narrowed to target |
 | 🧲⚡🧱👁️🌅➡️🎯 | low-cost stimulus cage toward Desired | Low-cost stimuli/feelings are present and contained while Desired stays visible and energy is routed to target |
+| 🧲⚡🧱😣🚀 | flying cage | User is fenced off from easy stimuli/feelings, unpleasant feelings may exist, but action flies toward Desired |
 | 🧩🪜⚠️➡️🧲⚡ | complex multi-level problem -> easy stimulation | Complexity creates pull toward easier stimulation |
 | 🏁🥊👤↔️👤⏱️ | short-distance self-competition | Race current self against drifting/past self on a short segment |
+| 🏁⏱️📊 | deadline race | Short visible deadline segment where D/F maximum is forced through action |
 | 🎯💎📉 | useful result with minimal losses | Useful target result with reduced time/focus/energy/inertia losses |
 | 🚂🛤️⚠️🎯 | automatic rails but Result forgotten | Rails exist, but Desired / useful result must be reconnected |
 | ⏱️🚂🛤️➡️🎯 | session frame / visible target | Timer/frame/rails point toward target |
@@ -48,6 +52,12 @@ Bare `🛤️` means course / direction / relation to Desired.
 `🎯💎📉` means useful result with minimal reasonable losses, not just “some result”.
 
 `🧲⚡🧱👁️🌅➡️🎯` means low-cost stimuli/feelings are present and contained while Desired stays visible and energy is routed to target.
+
+`🧲⚡🧱😣🚀` means a flying cage: easy stimuli/feelings are fenced off, unpleasant feelings may exist, but action still flies toward Desired.
+
+`🟢🔴` means clear imagined contrast between desired result and undesired result.
+
+`🏁⏱️📊` means deadline race: a short visible deadline segment where D/F maximum is forced through action.
 
 `📉📈` means slip/collapse followed by quick recovery.
 

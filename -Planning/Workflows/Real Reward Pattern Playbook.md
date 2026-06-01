@@ -127,15 +127,15 @@ This table is a compact rendering of active Point-6 checks. Pattern meanings are
 
 | Score layer | Check |
 |---|---|
-| ✅D | What useful target work/result did I create?<br>Did I manage the work so it stayed useful for Desired/current goal?<br>Did I choose or notice the stimuli/chemistry needed for the goal?<br>What useful value remains after attention ends? |
-| ⚡F | How focused, framed, controlled, and clean was execution?<br>Did stimuli/feelings support doing the work instead of stealing it?<br>Did I use a promise/sewn truth when pull or resistance was strong? |
+| ✅D | What would maximum D look like for this short segment?<br>What would usual D look like?<br>Did I manage the work so it stayed useful for Desired/current goal?<br>Did I create a desired/visible useful result?<br>Did I install the needed stimuli/feelings for the goal?<br>Did I beat usual D and expand its boundary? |
+| ⚡F | What would maximum F look like for this short segment?<br>What would usual F look like?<br>Did I manage focus, frame, tempo, and execution?<br>Did I increase useful actions per unit of time?<br>Did I install the needed stimuli/feelings for execution?<br>Did I beat usual F and expand its boundary? |
 | 🧩 Active pattern checks | 🏁🥊👤↔️👤⏱️ Short-distance self-competition<br>🎯💎📉 Useful result with minimal losses<br>🧲⚡🧱👁️🌅➡️🎯 Low-cost stimulus cage toward Desired<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🛤️🌅➡️🎯 Course / Desired connection<br>👁️⏳➡️💎 Value left after attention ends<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
 | 🚨 Penalty | 👁️🚫🥊🎭➡️🕳️ No-resistance known drift |
 | 🔎 Full patterns | `/patterns` |
 
 ## Pattern format
 
-Each pattern should include Pattern ID, Emoji, Type, Default point 6 status, Core idea, Adds, Subtracts, Do instead, Promise need when relevant, and Short D/F race questions.
+Each pattern should include Pattern ID, Emoji, Type, Default point 6 status, Core idea, Adds, Subtracts, Do instead, Promise need when relevant, and Short D/F deadline race questions.
 
 Penalty patterns also include penalty condition, base penalty, time-loss penalty, and confirmation/safety rule.
 
@@ -149,18 +149,23 @@ Pattern ID: `short_distance_self_competition`
 
 Type: Fundamental score pattern. Default point 6: yes.
 
-Core idea: гонка с собой на короткой дистанции добавляет score, если я делаю отрезок лучше, чем сделал бы прошлый / дрейфующий я. Race means better useful target work and better execution, not panic-speed.
+Core idea: гонка с собой на короткой дистанции добавляет score, если я делаю deadline-сегмент лучше, чем сделал бы прошлый / обычный / дрейфующий я. Race means better useful target work and better execution, not panic-speed.
 
-Adds: short segment, visible target, tempo, attempt to beat drifting self, useful output, future habit training.
+A short-distance race requires a visible short deadline.
 
-Subtracts: no race, no attempt to do better, segment spreads, tempo dies, process presence without useful improvement.
+Deadline is not panic-speed. It is a boundary that turns the segment into a race against ordinary/drifting execution.
 
-Do instead: make the next segment short, target visible, timer/score visible, win by improving D/F.
+Adds: short segment, visible short deadline, visible target, tempo, attempt to beat ordinary/drifting self, maximum-vs-usual D comparison, maximum-vs-usual F comparison, useful output, future habit training.
 
-Short D/F race:
+Subtracts: no deadline, no race, no attempt to do better, segment spreads, tempo dies, ordinary result is accepted without pressure, process presence without useful improvement.
 
-- D: what useful target work/result did I improve versus drifting me?
-- F: did the short race improve focus, tempo, frame, and execution?
+Do instead: make the next segment short, set a visible deadline, define ordinary D/F, define best possible D/F, target visible, timer/score visible, then race by improving D/F.
+
+Short D/F deadline race:
+
+- D: what would maximum D look like for this segment, what would usual D look like, and what useful target work/result did I improve versus usual/drifting me?
+- F: what would maximum F look like for this segment, what would usual F look like, and did the deadline race improve focus, tempo, frame, useful actions per unit of time, and execution?
+- Deadline: did the visible deadline make the segment tighter without turning it into panic-speed?
 
 ---
 
