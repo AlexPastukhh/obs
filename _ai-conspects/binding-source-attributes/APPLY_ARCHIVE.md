@@ -1,6 +1,6 @@
-# Apply archive: BINDING SOURCE ATTRIBUTES stage0 source check
+# Apply archive: Binding Source Attributes Stage 1
 
-Archive type: per-conspect source-check archive.
+Archive type: stage-1 bundle map and region scaffold.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage0-source-check-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage1-bundle-map-v001.zip
 ```
 
 ## Apply commands
@@ -26,7 +26,7 @@ C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage0-source-ch
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage0-source-check-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage1-bundle-map-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
@@ -41,14 +41,14 @@ git --no-pager diff -- _ai-conspects/binding-source-attributes | Set-Clipboard
 ## Optional: save full diff to file
 
 ```powershell
-git --no-pager diff -- _ai-conspects/binding-source-attributes > C:\Users\alexa\Downloads\binding-source-attributes-last-diff.patch
+git --no-pager diff -- _ai-conspects/binding-source-attributes > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
 ```
 
 ## Commit commands
 
 ```powershell
 git add _ai-conspects/binding-source-attributes
-git commit -m "Start Binding Source Attributes conspect processing"
+git commit -m "Map Binding Source Attributes source bundle"
 ```
 
 ## Push command
@@ -65,14 +65,6 @@ git restore -- _ai-conspects/binding-source-attributes
 
 ## Notes
 
-This archive works only inside:
+This archive does not edit React Query output.
 
-```text
-_ai-conspects/binding-source-attributes/
-```
-
-It does not touch:
-
-```text
-_ai-conspects/react-query-rquery/
-```
+It does not mark screenshots as verified. The next archive should visually inspect the three copied images and add exact transcript.

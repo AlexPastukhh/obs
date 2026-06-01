@@ -1,7 +1,8 @@
-# MANIFEST - BINDING SOURCE ATTRIBUTES stage0 source check
+# MANIFEST - Binding Source Attributes Stage 1
 
-Archive type: **per-conspect source-check archive**  
-Generated: 2026-06-01 18:38:45 UTC
+Archive type: **stage-1 bundle map and region scaffold**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-01 18:44:00 UTC
 
 ## Direction check
 
@@ -9,39 +10,43 @@ Goal:
 Convert `BINDING SOURCE ATTRIBUTES` into source-preserving AI-readable text.
 
 Now:
-The raw bundle exists and contains `full.svg`, note/text metadata, image index files, and 3 copied image entries.
+Bundle source is confirmed.
 
 This step:
-Create the workspace and source-availability record under `_ai-conspects/binding-source-attributes/`.
+Create stable source map and region scaffold under `_ai-conspects/binding-source-attributes/`.
 
 Why:
-This confirms that screenshots should be read from the raw bundle instead of being requested manually.
+This moves from source availability to processing setup without pretending transcript is verified.
 
 Next:
-1. Visually inspect the 3 images.
-2. Create `regions/R01-binding-source-attributes.md`.
-3. Add evidence table and reliability notes.
+Visually inspect the 3 images and produce the first verified transcript archive.
 
 ## Files included
 
 ```text
 _ai-conspects/binding-source-attributes/00-source-check.md
 _ai-conspects/binding-source-attributes/01-processing-plan.md
+_ai-conspects/binding-source-attributes/02-bundle-map.md
 _ai-conspects/binding-source-attributes/MANIFEST.md
 _ai-conspects/binding-source-attributes/APPLY_ARCHIVE.md
 _ai-conspects/binding-source-attributes/data/source-files-stage0.json
+_ai-conspects/binding-source-attributes/data/source-state-stage1.json
 _ai-conspects/binding-source-attributes/data/image-index-stage0.csv
+_ai-conspects/binding-source-attributes/data/image-index-stage1.csv
 _ai-conspects/binding-source-attributes/regions/README.md
+_ai-conspects/binding-source-attributes/regions/R01-binding-source-attributes.md
 ```
 
-## Source status
+## Scope
+
+Only this path is touched:
 
 ```text
-bundle path: _ai-test-bundles-server/fw_Asp__Sheet__BINDING SOURCE ATTRIBUTES/
-images: 3 copied images in image-index.csv
-transcript: not started
+_ai-conspects/binding-source-attributes/
 ```
 
-## Important
+Do not edit:
 
-This archive does not modify `_ai-conspects/react-query-rquery/`.
+```text
+_ai-conspects/react-query-rquery/
+```
