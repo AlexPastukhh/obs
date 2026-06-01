@@ -1,24 +1,20 @@
 {
-  "generated": "2026-06-01 23:28:07 UTC",
-  "ledger_version": "v001-updated-by-ef03-boundary-review",
-  "critical_rule": "Ledger is not source of truth. EF03 decisions remain provisional until transcript pass does visual/semantic review.",
-  "ef03_boundary_delta": {
-    "candidate_sources": [
+  "generated": "2026-06-01 23:36:15 UTC",
+  "ledger_version": "v001-updated-by-ef03-transcript",
+  "critical_rule": "Ledger is not source of truth. It records decisions after visual/semantic review.",
+  "stage7_delta": {
+    "ef03_processed_sources": [
       "S-027",
       "S-024",
       "S-025",
       "S-026"
     ],
-    "checked_not_ef03": {
-      "shadow_property_query_filter": [
-        "S-006"
-      ],
-      "already_processed_ef02_overlap": [
-        "S-028",
-        "S-029",
-        "S-030"
-      ]
-    }
+    "checked_not_ef03": [
+      "S-006",
+      "S-028",
+      "S-029",
+      "S-030"
+    ]
   },
   "rows": [
     {
@@ -33,12 +29,12 @@
       "width": "818",
       "height": "482",
       "nearest_labels_for_search_only": "L-028: ctors wont run when ef materializes entities? | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-039: entities shit | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if ",
-      "coverage_status": "candidate-ef03-constructors-materialization",
+      "coverage_status": "processed-in-ef03-v001",
       "current_region_decision": "EF03",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef03-transcript",
-      "decision_basis": "EF03 boundary review candidate: constructors / materialization.",
-      "review_notes": "EF03 boundary review candidate: constructors / materialization."
+      "decision_is_final": "yes-for-ef03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef03-v001",
+      "decision_basis": "Included in EF03 v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF03 v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -227,8 +223,8 @@
       "current_region_decision": "pending-shadow-property-query-filter",
       "decision_is_final": "no-pending-future-boundary-review",
       "must_recheck_before_region_close": "yes",
-      "decision_basis": "Checked during EF03 boundary review: shadow property/query filter, not constructors/materialization.",
-      "review_notes": "Checked during EF03 boundary review: shadow property/query filter, not constructors/materialization."
+      "decision_basis": "Checked during EF03 transcript: shadow property/query filter, not constructors/materialization.",
+      "review_notes": "Checked during EF03 transcript: shadow property/query filter, not constructors/materialization."
     },
     {
       "source_id": "S-032",
@@ -375,12 +371,12 @@
       "width": "828",
       "height": "210",
       "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-028: ctors wont run when ef materializes entities? | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-026: nullable relationships",
-      "coverage_status": "candidate-ef03-constructors-materialization",
+      "coverage_status": "processed-in-ef03-v001",
       "current_region_decision": "EF03",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef03-transcript",
-      "decision_basis": "EF03 boundary review candidate: constructors / materialization.",
-      "review_notes": "EF03 boundary review candidate: constructors / materialization."
+      "decision_is_final": "yes-for-ef03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef03-v001",
+      "decision_basis": "Included in EF03 v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF03 v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-030",
@@ -413,12 +409,12 @@
       "width": "686",
       "height": "482",
       "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach",
-      "coverage_status": "candidate-ef03-constructors-materialization",
+      "coverage_status": "processed-in-ef03-v001",
       "current_region_decision": "EF03",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef03-transcript",
-      "decision_basis": "EF03 boundary review candidate: constructors / materialization.",
-      "review_notes": "EF03 boundary review candidate: constructors / materialization."
+      "decision_is_final": "yes-for-ef03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef03-v001",
+      "decision_basis": "Included in EF03 v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF03 v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-049",
@@ -527,12 +523,12 @@
       "width": "819",
       "height": "247",
       "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach",
-      "coverage_status": "candidate-ef03-constructors-materialization",
+      "coverage_status": "processed-in-ef03-v001",
       "current_region_decision": "EF03",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef03-transcript",
-      "decision_basis": "EF03 boundary review candidate: constructors / materialization.",
-      "review_notes": "EF03 boundary review candidate: constructors / materialization."
+      "decision_is_final": "yes-for-ef03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef03-v001",
+      "decision_basis": "Included in EF03 v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF03 v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-050",

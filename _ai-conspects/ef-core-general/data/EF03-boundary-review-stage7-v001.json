@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-01 23:36:15 UTC",
+  "region_id": "EF03",
+  "region_name": "Constructors / materialization",
+  "boundary_status": "reviewed-and-transcribed-v001",
+  "included_sources": [
+    "S-027",
+    "S-024",
+    "S-025",
+    "S-026"
+  ],
+  "included_count": 4,
+  "checked_not_ef03": [
+    {
+      "source_id": "S-006",
+      "decision": "not EF03",
+      "reason": "shadow property / query filter; pending separate review"
+    },
+    {
+      "source_id": "S-028",
+      "decision": "not EF03",
+      "reason": "already processed in EF02 Attach/disconnected update/entity state"
+    },
+    {
+      "source_id": "S-029",
+      "decision": "not EF03",
+      "reason": "already processed in EF02 Attach/disconnected update/entity state"
+    },
+    {
+      "source_id": "S-030",
+      "decision": "not EF03",
+      "reason": "already processed in EF02 Attach/disconnected update/entity state"
+    }
+  ],
+  "open_issues": [
+    "S-006 remains pending as shadow property / query filter.",
+    "The EF03 sources are visually clean and readable."
+  ]
+}

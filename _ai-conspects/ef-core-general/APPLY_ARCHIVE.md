@@ -1,6 +1,6 @@
-# Apply archive: EF Core EF03 boundary review
+# Apply archive: EF Core EF03 transcript
 
-Archive type: boundary review / split plan.
+Archive type: verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage6-ef03-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage7-ef03-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage6-ef03-boundary-revie
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage6-ef03-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage6-ef03-boundary-review.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage7-ef03-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage7-ef03.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -47,7 +47,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/ef-core-general
-git commit -m "Add EF Core EF03 boundary review"
+git commit -m "Add EF Core EF03 constructors transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -59,6 +59,6 @@ git restore -- _ai-conspects/ef-core-general
 
 ## Notes
 
-This archive does not create EF03 transcript yet.
+This archive completes EF03 only.
 
-It defines EF03 boundary and separates constructor/materialization candidates from EF02 and shadow-property candidates.
+Next work should start with a new boundary review.

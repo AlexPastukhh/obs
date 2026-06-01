@@ -6,22 +6,10 @@ Verified transcripts:
 EF01A - Tracking / identity map / no tracking / identity resolution
 EF01B - Loading collections / Include / Find / Load / AutoInclude
 EF02 - Attach / disconnected updates / entity state
-```
-
-Boundary reviews:
-
-```text
 EF03 - Constructors / materialization
 ```
 
-Pending next:
-
-```text
-EF03 transcript:
-S-027, S-024, S-025, S-026
-```
-
-Later pending:
+Pending next candidates:
 
 ```text
 S-006 -> shadow property / query filter

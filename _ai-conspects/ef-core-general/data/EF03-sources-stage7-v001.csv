@@ -1,0 +1,5 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+EF03-S001,S-027,IU-027,946177ff27,verified-from-source-image,ef03-materialization-constructors-may-run,high,no,high,"EF materialization creates instances, fills values, starts tracking; constructors may run",Full source image visually checked.
+EF03-S002,S-024,IU-024,4538d60710,verified-from-source-image,ef03-constructor-binding-rule,high,no,high,EF does not automatically prefer parameterless constructor,Full source image visually checked.
+EF03-S003,S-025,IU-025,bc91d60828,verified-from-source-image,ef03-safe-constructor-logic,high,no,high,safe constructor logic is fine,Full source image visually checked.
+EF03-S004,S-026,IU-026,e42dcdf323,verified-from-source-image,ef03-avoid-side-effectful-constructor-logic,high,no,high,what to avoid in constructors,Full source image visually checked.

@@ -1,0 +1,27 @@
+{
+  "generated": "2026-06-01 23:36:15 UTC",
+  "region_id": "EF03",
+  "what_area_is_about": [
+    "how EF Core materializes entity instances from database rows",
+    "whether constructors run during materialization",
+    "constructor binding to mapped properties/services",
+    "parameterized constructor versus parameterless constructor fallback",
+    "safe constructor logic",
+    "constructor logic to avoid because EF may call constructors while rehydrating persisted data"
+  ],
+  "key_ideas": [
+    "EF materialization is not the same as replaying business behavior.",
+    "When EF loads an entity, it creates an instance, fills fields/properties, and tracks it if the query is tracking.",
+    "Constructors may run during EF materialization.",
+    "EF may use a parameterized constructor if it can bind it to mapped properties/services.",
+    "EF may fall back to a parameterless constructor and then set members afterward.",
+    "Safe constructor logic includes assigning fields/properties, simple argument validation, and preserving consistency from passed values.",
+    "Avoid constructor side effects such as service calls, database work, publishing events, or depending on navigations being populated.",
+    "Constructor logic should make sense both for new object creation and rehydrating persisted objects if EF can call it during materialization."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [],
+    "confidence": "High for source transcript, concept grouping, and boundary decisions."
+  }
+}
