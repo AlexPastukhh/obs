@@ -1,0 +1,14 @@
+﻿so its another way in react to inclue func into eddect without triggering effect
+but this approach is needed when we cant rely on the callers code to wrap func into usecallback
+or we dont want to wrap it ^RKFQk3bo
+
+!!! ^Q8kRJbqG
+
+when onmessage changes, we add new onmessage 
+to the ref ^cfdJbDPa
+
+here we register a callback that says: read from messageref
+so we are not storing delegate into ws.onmessage using ref.current that 
+kinda points to ref no matter what it stores
+
+we just saying to read from that ref on message and onmessage change we update the ref ^bP2j9PKk

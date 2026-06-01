@@ -1,0 +1,59 @@
+﻿!!! ^diDSg78o
+
+add to cors ^UDeULRB0
+
+const res = await api.get("/report", { responseType: "blob" });
+
+const blob = res.data as Blob;
+
+// Optional: get filename from Content-Disposition
+const cd = res.headers["content-disposition"] as string | undefined;
+const fileName =
+  cd?.match(/filename\*=UTF-8''([^;]+)|filename="?([^"]+)"?/i)?.slice(1).find(Boolean)
+    ? decodeURIComponent(cd.match(/filename\*=UTF-8''([^;]+)/i)?.[1] ?? cd.match(/filename="?([^"]+)"?/i)![1])
+    : "report.pdf";
+
+const url = URL.createObjectURL(blob);
+const a = document.createElement("a");
+a.href = url;
+a.download = fileName;
+document.body.appendChild(a);
+a.click();
+a.remove();
+
+// Revoke after the click has been processed
+setTimeout(() => URL.revokeObjectURL(url), 0); ^evo8oSfU
+
+window ^fS4eKfa1
+
+blob ^8lVLNcfe
+
+showing vs donloading in blob scenarioi +
+how to open using window ^Fj5vrWuK
+
+content disposition in both cases
+blob and window ^eOZuY0yi
+
+anchor with href is the same as 
+window.location and may 
+be better ^BdqwYNpd
+
+showsavefilepicker createwritable pipeto ^Wtb3PVOs
+
+with blob we are buffering in browser memory the whole content so mb better to 
+use link or window or savepicker ^bG0BIggN
+
+createwritable options writable seek write ^HCkddRqw
+
+!!! ^zSYcHGSO
+
+anchor element
+content disposition
+download 
+
+when opening can choose target ^E1qBOP1d
+
+how can i choose target for wondow?
+does content disp matter with window.oopen? ^ysh9eH4J
+
+choosing target for opening with blob link ^EG7e9QEC
