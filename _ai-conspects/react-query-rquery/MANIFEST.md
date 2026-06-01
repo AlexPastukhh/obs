@@ -1,8 +1,8 @@
-# MANIFEST - React Query rquery / R06 transcript v001
+# MANIFEST - React Query rquery / R05 transcript v001
 
-Archive type: **stage-4c verified region transcript**  
+Archive type: **stage-4d verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 18:45:29 UTC
+Generated: 2026-06-01 20:32:46 UTC
 
 ## Direction check
 
@@ -10,36 +10,36 @@ Goal:
 Convert the React Query Excalidraw conspect into source-preserving AI-readable region files.
 
 Now:
-R10 and R07 are completed/ready for review. R06 is now added as the next completed compact region.
+R10, R07, and R06 have been completed or prepared for review. R05 is now added as the next compact region.
 
 This step:
-Add verified transcript for R06 - Query composition: useQueries / dependent / combine.
+Add verified transcript for R05 - Pagination / InfiniteQuery / keepPreviousData side area.
 
 Why:
-This region explains dependent vs parallel query composition and aggregation, which is core to understanding query behavior across the conspect.
+This region explains pagination UI behavior, `placeholderData: keepPreviousData`, `useTransition`, and `useInfiniteQuery`, connecting to R07's placeholderData/prefetch material.
 
 Next:
-1. review R06 transcript diff;
+1. review R05 transcript diff;
 2. fix transcript issues if any;
 3. continue to the next region.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/regions/R06-query-composition-usequeries-dependent-combine.md
-_ai-conspects/react-query-rquery/data/R06-sources-stage4c.csv
-_ai-conspects/react-query-rquery/data/R06-sources-stage4c.json
-_ai-conspects/react-query-rquery/data/R06-area-understanding-stage4c-v001.json
-_ai-conspects/react-query-rquery/14-stage4c-r06-region-transcript.md
+_ai-conspects/react-query-rquery/regions/R05-pagination-infinitequery-keeppreviousdata-side-area.md
+_ai-conspects/react-query-rquery/data/R05-sources-stage4d.csv
+_ai-conspects/react-query-rquery/data/R05-sources-stage4d.json
+_ai-conspects/react-query-rquery/data/R05-area-understanding-stage4d-v001.json
+_ai-conspects/react-query-rquery/15-stage4d-r05-region-transcript.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## R06 status
+## R05 status
 
 ```text
 Verified sources: 10
-Known split/cropped: S-126, S-140, S-145, S-159, S-165
+Known split/cropped: S-080, S-094, S-112
 Area understanding section: added
 Reading quality summary: added
 ```
@@ -47,6 +47,7 @@ Reading quality summary: added
 ## Current completed regions
 
 ```text
+R05 - Pagination / InfiniteQuery / keepPreviousData side area
 R06 - Query composition: useQueries / dependent / combine
 R07 - Prefetch / initialData / placeholderData / useQueryClient
 R10 - Mutations

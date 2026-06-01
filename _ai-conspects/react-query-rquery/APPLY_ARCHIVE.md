@@ -1,6 +1,6 @@
-# Apply archive: React Query R06 transcript v001
+# Apply archive: React Query R05 transcript v001
 
-Archive type: stage-4c verified region transcript.
+Archive type: stage-4d verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4c-r06-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4d-r05-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,7 +26,7 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4c-r06-transcript-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4c-r06-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4d-r05-transcript-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -51,7 +51,7 @@ git --no-pager diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloa
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query R06 query composition transcript"
+git commit -m "Add React Query R05 pagination transcript"
 ```
 
 ## Push command
@@ -74,4 +74,6 @@ This archive updates only the current conspect folder:
 _ai-conspects/react-query-rquery/
 ```
 
-It adds a full R06 region transcript with area overview, key ideas, reading quality, evidence, and question hooks.
+It adds a full R05 region transcript with area overview, key ideas, reading quality, evidence, and question hooks.
+
+If R06 is still uncommitted locally, either commit R06 first or review/stage R05 and R06 intentionally together.

@@ -1,0 +1,35 @@
+{
+  "region_id": "R05",
+  "region_name": "Pagination / InfiniteQuery / keepPreviousData side area",
+  "stage": "4d-v001",
+  "generated": "2026-06-01 20:32:46 UTC",
+  "what_area_is_about": [
+    "normal pagination with page/cursor in queryKey",
+    "why normal pagination can flicker between success and pending",
+    "placeholderData: keepPreviousData as TanStack Query lagged pagination behavior",
+    "useTransition as React scheduling behavior",
+    "isPlaceholderData versus isPending",
+    "useInfiniteQuery for load-more/infinite-scroll/cursor lists",
+    "data.pages/data.pageParams and getNextPageParam mental model"
+  ],
+  "key_ideas": [
+    "Classic pagination puts page/cursor in queryKey and fetches that page in queryFn.",
+    "Changing page changes query key, so UI may bounce while next page loads.",
+    "placeholderData: keepPreviousData keeps previous page data visible for the new key.",
+    "useTransition is about non-blocking rendering/update priority, not query data semantics.",
+    "isPlaceholderData answers whether shown data belongs to the previous query result.",
+    "useInfiniteQuery is the dedicated API for load-more/infinite-scroll/cursor lists.",
+    "Infinite query pages are stored in data.pages and parameters in data.pageParams."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high for visible code blocks",
+    "spatial_layout_understanding": "medium-high",
+    "limitations": [
+      "S-080 is bottom-cropped",
+      "S-094 and S-112 have slight bottom cropping after source chips"
+    ],
+    "confidence_summary": "High for main ideas and visible code; medium only for missing cropped continuation in S-080."
+  }
+}
