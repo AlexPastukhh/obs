@@ -1,0 +1,159 @@
+﻿symmetric/ assymetric keys ^BAgBuUgl
+
+KID ^g1CiGYXn
+
+END TO END JWT, REFRESH
+REACT ^HLBURIKw
+
+react implementation ^rtTlWINc
+
+if there is an existing promise
+we just return it ^IPuSUeK5
+
+react query  with singletone query client
+ ^i3Ufv5RB
+
+// src/auth/tokenCache.ts
+import { queryClient, TOKEN_KEY } from "../queryClient";
+
+export function getAccessToken(): string | null {
+  return (queryClient.getQueryData(TOKEN_KEY) as string | null) ?? null;
+}
+
+export function setAccessToken(token: string | null) {
+  queryClient.setQueryData(TOKEN_KEY, token);
+} ^EcHNpea5
+
+// src/auth/refresh.ts
+import { setAccessToken } from "./tokenCache";
+
+export async function refreshAccessToken(): Promise<string> {
+  const res = await fetch("/api/auth/refresh", {
+    method: "POST",
+    credentials: "include", // sends refresh cookie
+  });
+
+  if (!res.ok) throw new Error("Refresh failed");
+
+  const data = (await res.json()) as { accessToken: string };
+  setAccessToken(data.accessToken); // <-- update React Query cache
+  return data.accessToken;
+} ^i0kKa0P0
+
+// src/api/fetchWithAuth.ts
+import { getAccessToken, setAccessToken } from "../auth/tokenCache";
+import { refreshAccessToken } from "../auth/refresh";
+
+let refreshPromise: Promise<string> | null = null;
+
+async function refreshOnce(): Promise<string> {
+  if (!refreshPromise) {
+    refreshPromise = refreshAccessToken().finally(() => {
+      refreshPromise = null;
+    });
+  }
+  return refreshPromise;
+}
+
+export async function fetchWithAuth(input: RequestInfo, init: RequestInit = {}) {
+  const headers = new Headers(init.headers);
+
+  const token = getAccessToken(); // <-- read from React Query cache
+  if (token) headers.set("Authorization", `Bearer ${token}`);
+
+  const doReq = () =>
+    fetch(input, { ...init, headers, credentials: "include" });
+
+  let res = await doReq();
+  if (res.status !== 401) return res;
+
+  // 401 -> refresh -> retry once
+  try {
+    const fresh = await refreshOnce();
+    headers.set("Authorization", `Bearer ${fresh}`);
+    res = await doReq();
+    return res;
+  } catch {
+    // Refresh failed: clear token so UI switches to login
+    setAccessToken(null);
+    return res; // still 401
+  }
+} ^9uEzB1DC
+
+// src/auth/login.ts
+import { setAccessToken } from "./tokenCache";
+
+export async function login(username: string, password: string) {
+  const res = await fetch("/api/auth/login", {
+    method: "POST",
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password }),
+  });
+
+  if (!res.ok) throw new Error(await res.text());
+
+  const data = (await res.json()) as { accessToken: string };
+  setAccessToken(data.accessToken); // updates cache -> UI re-renders
+} ^zGkjMypR
+
+// src/auth/logout.ts
+import { setAccessToken } from "./tokenCache";
+import { queryClient } from "../queryClient";
+
+export async function logout() {
+  await fetch("/api/auth/logout", { method: "POST", credentials: "include" });
+  setAccessToken(null);
+  queryClient.clear(); // optional: clear all cached server data
+} ^ZCnQwFvY
+
+jwt auth and token descriptor ^e41bHPxS
+
+! ^vhLPTaQO
+
+jwtsecuritytoken ^Efg0JG7u
+
+jwt token handler ^x2Jx2Gyt
+
+jwt headers ^P2HwRu74
+
+jwt headers vs payload/claims vs signature ^okedtdkr
+
+we should refresh if 
+there is no token or
+if there is some problem
+(401) ^0GmvduSm
+
+example flows with redis ^CZ3myTdB
+
+why revoke the whole familiy ^uUAj1S4i
+
+what does the use of an old token tells us ^6QOHeTJn
+
+setnx ^iJDmbbKt
+
+refresh tokens strategies
+token family
+redis ^Mc1jcK3i
+
+how can theft happen 
+and only of the old token? ^iOiYk9l0
+
+rotation pattern
+flow ^7ZmyvNSr
+
+refresh token family ^S9V7eE9l
+
+!!!! ^f4qEaQdG
+
+!!! ^9a7yzBBU
+
+mb make sense to 
+check if token was revoked
+and store revoked tokens
+there(or at least not too old
+revoked tokens) ^xtoJN8kj
+
+return issuccesss ^MnH0RWYm
+
+the value to store ^Qw2ZOfvc
