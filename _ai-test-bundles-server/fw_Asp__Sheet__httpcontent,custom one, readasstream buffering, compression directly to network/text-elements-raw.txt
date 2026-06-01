@@ -1,0 +1,25 @@
+﻿when httpcontent.Readasstreamasync buffers
+and how, loadinbuffer, overriding methods,custom httpcontent ^pzzYlWOl
+
+some example impl wheerewe are creating bytes array
+and returning it with stream api instead of buffering it the second time ^UTbXGCy4
+
+!!! ^vezeeYlz
+
+how exactly 
+we dont buffer when 
+there is optoin set
+special httpcontent type
+setstream(respoinsebodystream) ^yAYjUvbt
+
+you can use this content to avoid buffering and 
+get compression ^4ccNKAhi
+
+you dont use this content to readasstream
+there is normal content and you apply headersread and
+read normally ^fjjOA0x9
+
+custom httpcontent to
+allow compression
+into network stream directly
+without buffering bytees to memorystream ^yXsEQxKQ
