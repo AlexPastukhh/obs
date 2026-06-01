@@ -32,20 +32,29 @@ Reusable owners:
 
 ---
 
-## 🏁📊 Point 6 — Short D/F/K/P Race
+## 🏁📊 Point 6 — Short D/F Race + Pattern Checks
 
 Pattern source of truth: `Workflows/Real Reward Pattern Playbook.md`
 
 This section stores the active compact Point-6 view for the day. Pattern meanings and Pattern IDs are owned by the playbook.
 
-| Влияет на | Active score patterns |
+Normal session = `3.5` = `D 1.75 + F 1.75` before adjustments.
+
+| Score layer | Active check |
 |---|---|
-| ✅D | 🎯💎📉 Useful result with minimal losses<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
-| ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
-| 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
-| 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ✅D | What useful target work/result did I create?<br>Did I manage the work so it stayed useful for Desired/current goal?<br>Did I choose or notice the stimuli/chemistry needed for the goal?<br>What useful value remains after attention ends? |
+| ⚡F | How focused, framed, controlled, and clean was execution?<br>Did stimuli/feelings support doing the work instead of stealing it?<br>Did I use a promise/sewn truth when pull or resistance was strong? |
+| 🧩 Active patterns | 🏁🥊👤↔️👤⏱️ Short-distance self-competition<br>🎯💎📉 Useful result with minimal losses<br>🧲⚡🧱👁️🌅➡️🎯 Low-cost stimulus cage toward Desired<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🛤️🌅➡️🎯 Course / Desired connection<br>👁️⏳➡️💎 Value left after attention ends<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
 | 🚨 Penalty | 👁️🚫🥊🎭➡️🕳️ No-resistance known drift |
 | 🔎 Full patterns | `/patterns` |
+
+Rules:
+
+- D/F are the only score dimensions.
+- Course / Desired connection and value-left checks are handled through D and pattern checks.
+- Pattern buttons / selected patterns are context for review and do not directly adjust score.
+- D/F score buttons or session review create score adjustments.
+- Penalty Events are separate from normal Finished Sessions.
 
 ---
 
@@ -59,7 +68,7 @@ This section stores the active compact Point-6 view for the day. Pattern meaning
 
 ## 🧾 Finished Sessions
 
-| # | Time | Session | D/F/K/P | Points | Progress Signal | Result |
+| # | Time | Session | D/F | Points | Progress Signal | Result |
 |---|---|---|---|---:|---|---|
 
 ---

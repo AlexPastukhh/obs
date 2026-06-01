@@ -25,24 +25,27 @@ Penalty Events are not part of default compact output unless relevant, requested
 
 If a field is missing, do not invent it.
 
-## 🏁📊 Point 6 — Short D/F/K/P Race
+## 🏁📊 Point 6 — Short D/F Race + Pattern Checks
 
 Pattern source of truth: `Workflows/Real Reward Pattern Playbook.md`
 
-This table is a compact rendering of active Point-6 pattern labels. Pattern meanings and Pattern IDs are owned by the playbook.
+This table is a compact rendering of active Point-6 checks. Pattern meanings and Pattern IDs are owned by the playbook.
 
-| Влияет на | Active score patterns |
+Normal session = `3.5` = `D 1.75 + F 1.75` before adjustments.
+
+| Score layer | Active check |
 |---|---|
-| ✅D | 🎯💎📉 Useful result with minimal losses<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
-| ⚡F | 🏁🥊👤↔️👤⏱️ Short-distance self-competition (also D/K/P + future inertia)<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
-| 🛤️K | 🛤️🌅➡️🎯 Course / Desired connection<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent) |
-| 💎P | 👁️⏳➡️💎 Value left after attention ends<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
+| ✅D | What useful target work/result did I create?<br>Did I manage the work so it stayed useful for Desired/current goal?<br>Did I choose or notice the stimuli/chemistry needed for the goal?<br>What useful value remains after attention ends? |
+| ⚡F | How focused, framed, controlled, and clean was execution?<br>Did stimuli/feelings support doing the work instead of stealing it?<br>Did I use a promise/sewn truth when pull or resistance was strong? |
+| 🧩 Active patterns | 🏁🥊👤↔️👤⏱️ Short-distance self-competition<br>🎯💎📉 Useful result with minimal losses<br>🧲⚡🧱👁️🌅➡️🎯 Low-cost stimulus cage toward Desired<br>⏱️🚂🛤️➡️🎯 Session frame / visible target<br>🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only<br>🛤️🌅➡️🎯 Course / Desired connection<br>👁️⏳➡️💎 Value left after attention ends<br>🧩🪜⚠️➡️🧲⚡ Complex multi-level problem → easy stimulation (Frequent)<br>🚂🛤️⚠️🎯 Automatic rails but Result forgotten (Frequent) |
 | 🚨 Penalty | 👁️🚫🥊🎭➡️🕳️ No-resistance known drift |
 | 🔎 Full patterns | `/patterns` |
 
 Rules:
 
-- Fundamental score patterns are always active.
+- D/F are the only score dimensions.
+- Course / Desired connection and value-left checks are handled through D and pattern checks.
+- Fundamental score patterns are always active as check lenses.
 - Fundamental penalty patterns are always active.
 - Frequent situational patterns are active while frequent.
 - Non-frequent Situational patterns are not shown by default.
@@ -64,7 +67,7 @@ If no active promises exist, use:
 
 ## 🧾 Finished Sessions
 
-| # | Time | Session | D/F/K/P | Points | Progress Signal | Result |
+| # | Time | Session | D/F | Points | Progress Signal | Result |
 |---|---|---|---|---:|---|---|
 
 ## Optional: 🚨 Penalty Events
@@ -95,6 +98,6 @@ Do not calculate Support Score during the day.
 Default Planning State Output contains only:
 
 1. 🎯 Result Tracking;
-2. 🏁📊 Point 6 — Short D/F/K/P Race;
+2. 🏁📊 Point 6 — Short D/F Race + Pattern Checks;
 3. 🧵📜>🧪 Active Promises;
 4. 🧾 Finished Sessions.

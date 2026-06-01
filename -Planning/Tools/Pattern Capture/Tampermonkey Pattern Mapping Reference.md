@@ -17,26 +17,26 @@ Each pattern object should include:
 - `full` for export/display;
 - `source` pointing back to the playbook.
 
-## Updated fundamental pattern object
+## D/F score model
 
-Replace the old object:
+Normal session = `3.5`.
+
+- `D base = 1.75`
+- `F base = 1.75`
+- `Total = D + F + adjustments`
+
+Only D/F quick buttons adjust score draft.
+
+Pattern buttons toggle selected pattern IDs. They are check lenses and export context, not score buttons.
+
+## New fundamental pattern object
 
 ```javascript
 {
-  id: "result_over_process",
-  label: "🎯📈",
-  full: "🎯📈≠🎭🔁 Result Tracking over process",
-}
-```
-
-with:
-
-```javascript
-{
-  id: "useful_result_min_losses",
-  label: "🎯💎📉",
-  full: "🎯💎📉 Useful result with minimal losses",
-  source: "Workflows/Real Reward Pattern Playbook.md#useful_result_min_losses",
+  id: "low_cost_stimulus_cage_desired",
+  label: "🧲⚡🧱👁️🌅➡️🎯",
+  full: "🧲⚡🧱👁️🌅➡️🎯 Low-cost stimulus cage toward Desired",
+  source: "Workflows/Real Reward Pattern Playbook.md#low_cost_stimulus_cage_desired",
 }
 ```
 
@@ -55,6 +55,12 @@ const fundamentalPatterns = [
     label: "🎯💎📉",
     full: "🎯💎📉 Useful result with minimal losses",
     source: "Workflows/Real Reward Pattern Playbook.md#useful_result_min_losses",
+  },
+  {
+    id: "low_cost_stimulus_cage_desired",
+    label: "🧲⚡🧱👁️🌅➡️🎯",
+    full: "🧲⚡🧱👁️🌅➡️🎯 Low-cost stimulus cage toward Desired",
+    source: "Workflows/Real Reward Pattern Playbook.md#low_cost_stimulus_cage_desired",
   },
   {
     id: "session_frame_visible_target",
@@ -90,18 +96,27 @@ const fundamentalPatterns = [
 ];
 ```
 
+## Score buttons
+
+```javascript
+const dfButtons = [
+  { label: "✅D+", dimension: "D", delta: 0.1, effect: "positive D adjustment" },
+  { label: "✅D-", dimension: "D", delta: -0.1, effect: "negative D adjustment" },
+  { label: "⚡F+", dimension: "F", delta: 0.1, effect: "positive F adjustment" },
+  { label: "⚡F-", dimension: "F", delta: -0.1, effect: "negative F adjustment" },
+];
+```
+
 ## Export implication
 
-When possible, exported pattern events should include `patternId` and may include `source`.
+When possible, exported selected patterns should include `id`, `label`, `full`, and `source`.
 
-Example:
+Score events should stay event-based, not final-number-based:
 
 ```json
 {
-  "kind": "work-pattern",
-  "patternId": "useful_result_min_losses",
-  "pattern": "🎯💎📉 Useful result with minimal losses",
-  "source": "Workflows/Real Reward Pattern Playbook.md#useful_result_min_losses",
-  "outcome": "+"
+  "kind": "df-score-adjustment",
+  "dimension": "D",
+  "delta": 0.1
 }
 ```

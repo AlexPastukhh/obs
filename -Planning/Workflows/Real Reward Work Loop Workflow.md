@@ -14,7 +14,7 @@ Tampermonkey / Pattern Capture may duplicate the compact workflow and pattern UI
 
 ## Core loop summary
 
-Real reward -> separate from empty stimulation/chemistry -> attach needed stimulation -> handle chemistry/stimulation -> promise when needed -> short-distance D/F/K/P race with active score patterns and penalty-risk check -> log session or penalty event.
+Real reward -> separate from empty stimulation/chemistry -> attach needed stimulation -> handle chemistry/stimulation -> promise when needed -> short-distance D/F race with active pattern checks and penalty-risk check -> log session or penalty event.
 
 ## Core formula
 
@@ -26,7 +26,11 @@ Real reward -> separate from empty stimulation/chemistry -> attach needed stimul
 
 Стимулы чаще надо перенаправить на нужный результат.
 
-Короткая гонка по D/F/K/P превращает энергию в полезное действие и тренирует будущие действия.
+Короткая гонка по D/F превращает энергию в полезное действие и тренирует будущие действия.
+
+D отвечает за то, что делается для цели и какой полезный результат остаётся.
+
+F отвечает за то, как работа делается: фокус, рамка, темп, контроль внимания, состояние.
 
 Penalty-risk check prevents knowingly normalized wrong drift from being hidden inside normal score.
 
@@ -39,7 +43,7 @@ Use this version for small UI surfaces such as Tampermonkey.
 3. 🧲⚡➡️🎯 Attach needed stimulation to the target result.
 4. 🧪🔥⏳ Handle chemistry: notice it, let it burn, redirect if useful.
 5. 🧵📜 Promise when pull / resistance is strong.
-6. 🏁📊 D/F/K/P short race + active score patterns + penalty-risk check.
+6. 🏁📊 D/F short race + active pattern checks + penalty-risk check.
 7. 🧾 Log session / penalty event / support facts when relevant.
 
 ## Core loop
@@ -48,7 +52,11 @@ Use this version for small UI surfaces such as Tampermonkey.
 
    Ask what would make this time feel like it was not empty later.
 
-   The answer should connect to Desired, day goal, useful result, or future value.
+   Check:
+
+   - What is Desired result?
+   - What is Undesired result / real loss?
+   - What useful target work should exist after this segment?
 
 2. Separate real reward from empty stimulation / chemistry.
 
@@ -57,22 +65,17 @@ Use this version for small UI surfaces such as Tampermonkey.
    Test:
 
    - Does this move Desired / current goal?
-   - Does it leave value after attention ends?
+   - Does it leave useful value after attention ends?
    - Does it reduce future friction?
    - Or is it just pull / relief / process motion?
+   - What stimulation / chemistry do I notice right now?
+   - Which stimuli are empty pull?
+   - Which stimuli are actually needed?
+   - Какие стимулы из тех, что нужны для цели, я не замечаю?
 
 3. Attach needed stimulation to the real result.
 
-   Do not merely remove stimulation.
-
-   Redirect valid stimulation into target-related fuel:
-
-   - visible progress;
-   - timer / short frame;
-   - score;
-   - self-race;
-   - useful output;
-   - clear next action.
+   Redirect valid stimulation into target-related fuel: visible progress, timer, short frame, score, self-race, useful output, clear next action.
 
 4. Handle chemistry and stimulation.
 
@@ -80,82 +83,52 @@ Use this version for small UI surfaces such as Tampermonkey.
 
    Stimulation usually needs to be narrowed to the target.
 
-   If the pull is not target-related, do not feed it as authority.
+   Check:
+
+   - Should I let chemistry burn out instead of treating it as truth?
+   - Is this pull asking for action, or just wanting to be fed?
+   - Am I in a low-cost stimulus cage, and can I route that energy into Desired?
 
 5. Create or refresh promise when needed.
 
    Use a promise when chemistry / stimulation / resistance is strong enough that normal reasoning will probably be overwritten.
 
-   Promise is not automatic.
+   First define: current feeling / pull / resistance; analytical prediction; what truth should be sewn in; what bad purchase is refused; short segment.
 
-   First define:
+6. Race yourself on the short distance with D/F and active pattern checks.
 
-   - current feeling / pull / resistance;
-   - analytical prediction;
-   - what truth should be sewn in;
-   - what bad purchase is refused;
-   - short segment.
+   D check:
 
-6. Race yourself on the short distance with D/F/K/P to improve further actions.
+   - What useful target work/result did I create?
+   - Did I manage the work so it stayed useful for Desired/current goal?
+   - Did I choose or notice the stimuli/chemistry needed for the goal?
+   - What useful value remains after attention ends?
 
-   Active point-6 patterns are:
+   F check:
 
-   - all Fundamental score patterns;
-   - all Fundamental penalty patterns;
-   - Situational patterns marked `Frequency: frequent`.
+   - How focused, framed, controlled, and clean was execution?
+   - Did stimuli/feelings support doing the work instead of stealing it?
+   - Did I use a promise/sewn truth when pull or resistance was strong?
 
-   Current active score-check summary:
+   Active pattern checks:
 
-   Affects D:
-
-   - 🎯💎📉 Useful result with minimal losses;
-   - 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation;
-   - 🚂🛤️⚠️🎯 Automatic rails but Result forgotten.
-
-   Affects F:
-
-   - 🏁🥊👤↔️👤⏱️ Short-distance self-competition, also affects D/K/P and future inertia;
-   - ⏱️🚂🛤️➡️🎯 Session frame / visible target;
-   - 🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only;
+   - 🏁🥊👤↔️👤⏱️ Short-distance self-competition.
+   - 🎯💎📉 Useful result with minimal losses.
+   - 🧲⚡🧱👁️🌅➡️🎯 Low-cost stimulus cage toward Desired.
+   - ⏱️🚂🛤️➡️🎯 Session frame / visible target.
+   - 🧲⚡🧪➡️🎯 Targeted stimuli / chemistry only.
+   - 🛤️🌅➡️🎯 Course / Desired connection.
+   - 👁️⏳➡️💎 Value left after attention ends.
    - 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation.
-
-   Affects K:
-
-   - 🛤️🌅➡️🎯 Course / Desired connection;
-   - 🧩🪜⚠️➡️🧲⚡ Complex multi-level problem -> easy stimulation.
-
-   Affects P:
-
-   - 👁️⏳➡️💎 Value left after attention ends;
    - 🚂🛤️⚠️🎯 Automatic rails but Result forgotten.
 
    Penalty risk:
 
    - 👁️🚫🥊🎭➡️🕳️ No-resistance known drift.
 
-   Check:
-
-   Did I knowingly continue a wrong/off-scope/damaging action without resistance?
-
-   If yes, this may be a Penalty Event, not merely F0/Koff.
-
-   Contrast:
-
-   - 📉📈 Fast recovery after slip = situational recovery pattern.
-   - 👁️🚫🥊🎭➡️🕳️ No-resistance known drift = fundamental penalty pattern.
-
 7. Log finished session or penalty event.
 
-   After the segment:
-
-   - log D/F/K/P;
-   - log points;
-   - log Progress Signal;
-   - update Finished Sessions;
-   - if a confirmed penalty happened, update Penalty Events;
-   - update Net Work Score;
-   - update support facts when relevant;
-   - decide the next short segment only if needed.
+   After the segment: log D/F; log points; log Progress Signal; update Finished Sessions; update Penalty Events if needed; update Net Work Score; update support facts when relevant.
 
 ## Pattern playbook
 

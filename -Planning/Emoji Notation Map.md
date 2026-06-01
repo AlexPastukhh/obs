@@ -12,8 +12,9 @@ This file stores only explicit agreements. It is not a full emoji glossary.
 |---|---|---|
 | 🧲⚡ | stimulus pull / easy stimulation / fast attention magnet | Use instead of `🎪` when meaning stimulation, easy stimulus, pull, or drift into stimulation |
 | 🚂🛤️ | rails / automatic rails / process on rails | Use for rails/process-on-rails meaning. Do not use bare `🛤️` for rails. |
-| 🛤️ | course / direction / relation to current course | Use bare `🛤️` only for course / K / direction meaning. |
+| 🛤️ | course / direction / relation to Desired | Use bare `🛤️` only for course / direction meaning. |
 | 🧲⚡🧪➡️🎯 | targeted stimuli / chemistry only | Valid stimuli and chemistry are narrowed to target |
+| 🧲⚡🧱👁️🌅➡️🎯 | low-cost stimulus cage toward Desired | Low-cost stimuli/feelings are present and contained while Desired stays visible and energy is routed to target |
 | 🧩🪜⚠️➡️🧲⚡ | complex multi-level problem -> easy stimulation | Complexity creates pull toward easier stimulation |
 | 🏁🥊👤↔️👤⏱️ | short-distance self-competition | Race current self against drifting/past self on a short segment |
 | 🎯💎📉 | useful result with minimal losses | Useful target result with reduced time/focus/energy/inertia losses |
@@ -42,9 +43,11 @@ Do not use `🎪` for stimulus meaning.
 
 Do not use bare `🛤️` for rails.
 
-Bare `🛤️` means course / K / direction.
+Bare `🛤️` means course / direction / relation to Desired.
 
 `🎯💎📉` means useful result with minimal reasonable losses, not just “some result”.
+
+`🧲⚡🧱👁️🌅➡️🎯` means low-cost stimuli/feelings are present and contained while Desired stays visible and energy is routed to target.
 
 `📉📈` means slip/collapse followed by quick recovery.
 
