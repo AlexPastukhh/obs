@@ -1,14 +1,33 @@
-# MANIFEST - React Query rquery / R10 completed per-region update v005
+# MANIFEST - React Query rquery / R10 cleanup checkpoint v006
 
-Archive type: **stage-3d completed region transcript correction**  
+Archive type: **stage-3d cleanup checkpoint after completed region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 15:21:17 UTC
+Generated: 2026-06-01 15:39:53 UTC
 
-## Purpose
+## Where we are on the path to the goal
 
-This archive continues after the already committed v004 state.
+Goal:
 
-It completes `R10 - Mutations` coverage by adding visually checked transcript for `MUT-S019`-`MUT-S036` from the available sheet/crop images.
+```text
+Convert the visual Excalidraw React Query conspect into source-preserving AI-readable region files.
+```
+
+Current checkpoint:
+
+```text
+R10 - Mutations is the first completed region transcript.
+```
+
+Completed for R10:
+
+```text
+MUT-S001-MUT-S018: verified from standalone/original PNGs
+MUT-S019-MUT-S036: verified from available sheet/crop images
+Partial/cut-off sources are explicitly marked
+OCR/mojibake draft text is not used as main transcript
+```
+
+This archive does not add a new transcription stage. It only cleans stale artifacts left from the older pending-verification workflow.
 
 ## Files included
 
@@ -23,14 +42,33 @@ _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## R10 status
+## Files intentionally removed by apply commands
 
 ```text
-Verified from standalone/original PNGs: MUT-S001-MUT-S018
-Verified from sheet/crop images:       MUT-S019-MUT-S036
-Partial/cut-off sources:              MUT-S020, MUT-S024, MUT-S025, MUT-S028, MUT-S030, MUT-S032, MUT-S034
+_ai-conspects/react-query-rquery/data/R10-mutations-pending-verification-v003.csv
+_ai-conspects/react-query-rquery/data/R10-mutations-pending-verification-v003.json
 ```
 
-## Important
+Reason:
 
-This is a per-region archive. It does not create one archive per small screenshot batch.
+```text
+They are stale after v005 because MUT-S019-MUT-S036 are no longer pending.
+```
+
+## Next meaningful step
+
+Do not keep iterating on R10 unless reviewing the diff reveals errors.
+
+Next useful project step:
+
+```text
+Start the next region transcript using the same per-region workflow.
+```
+
+Recommended options:
+
+```text
+R07 - QueryClient methods / filters
+R06 - Prefetch / initialData / placeholderData
+R04 - Pagination / infinite query
+```
