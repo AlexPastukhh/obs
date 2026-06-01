@@ -1,6 +1,6 @@
-# Apply archive: React Query R10 mutations consolidated correction v003
+# Apply archive: React Query R10 mutations completed update v005
 
-Archive type: stage-3c per-region consolidated transcript correction.
+Archive type: stage-3d completed region transcript correction.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3c-r10-mutations-consolidated-v003.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3d-r10-mutations-complete-v005.zip
 ```
 
 ## Apply commands
@@ -26,29 +26,29 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3c-r10-mutations-c
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3c-r10-mutations-consolidated-v003.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3d-r10-mutations-complete-v005.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
 
 git status --short
-git diff --stat
+git diff --stat -- _ai-conspects/react-query-rquery
 
-# Copy full diff to clipboard instead of printing it line-by-line
-git diff -- _ai-conspects/react-query-rquery | Set-Clipboard
+# Copy full diff to clipboard. Do not print it and do not open a pager.
+git --no-pager diff -- _ai-conspects/react-query-rquery | Set-Clipboard
 ```
 
-## Optional: save diff to file
+## Optional: save full diff to file
 
 ```powershell
-git diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
+git --no-pager diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
 ```
 
 ## Commit commands
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Clean up consolidated React Query mutations transcript"
+git commit -m "Complete React Query mutations transcript"
 ```
 
 ## Push command
@@ -65,6 +65,6 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive is a correction over v002.
+This archive continues after v004 was already committed.
 
-It removes corrupted OCR draft text from the main readable transcript and keeps `MUT-S019`-`MUT-S036` as pending visual verification.
+It updates the same region file instead of creating small screenshot-batch overlays.

@@ -31,7 +31,9 @@ Small internal batches are allowed while working, but the delivered archive shou
 
 Do not put corrupted OCR/mojibake text into the main readable region transcript.
 
-If OCR text contains mojibake such as `тАФ`, `тАУ`, `тАЩ`, `┬й`, or broken code fragments, keep it out of the main transcript and mark the source as pending visual verification.
+If OCR text contains corrupted sequences, broken quotes, broken dashes, garbled bullet characters, or visibly broken code fragments, keep it out of the main transcript and mark the source as pending visual verification.
+
+Keep exact screenshot transcript only when it is visually checked or when uncertainty is clearly marked.
 
 ## Review commands rule
 
@@ -40,14 +42,22 @@ Do not print long diffs line-by-line in the console by default.
 Use clipboard-first commands:
 
 ```powershell
-git diff --stat
-git diff -- _ai-conspects/react-query-rquery | Set-Clipboard
+git diff --stat -- _ai-conspects/react-query-rquery
+git --no-pager diff -- _ai-conspects/react-query-rquery | Set-Clipboard
 ```
 
 Optional file export:
 
 ```powershell
-git diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
+git --no-pager diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
 ```
 
 The assistant should include clipboard diff commands in future `APPLY_ARCHIVE.md` files.
+
+Do not include plain full-diff commands such as:
+
+```powershell
+git diff -- _ai-conspects/react-query-rquery
+```
+
+because they can open a pager and force the user to quit with `q`.

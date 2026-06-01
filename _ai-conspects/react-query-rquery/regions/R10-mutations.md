@@ -2,12 +2,12 @@
 
 Conspect: `react query,rquery`  
 File type: **source-preserving region transcript**  
-Stage: **3c / consolidated per-region update v003 sanitized**  
-Generated: 2026-06-01 15:08:58 UTC
+Stage: **3d / completed region verification v005**  
+Generated: 2026-06-01 15:21:17 UTC
 
 This is the main region file for `R10 - Mutations`. It follows the per-region archive scheme: no user-facing archive per 8-10 screenshots.
 
-Important correction in v003: raw OCR drafts for `MUT-S019`-`MUT-S036` were removed from the readable region transcript because the previous draft contained mojibake/OCR corruption. Pending sources are kept in the inventory and must be visually verified before exact transcript is added.
+Important note: `MUT-S019`-`MUT-S036` were verified from the available sheet/crop images. Some entries are marked partial where the crop or original image is visibly cut off.
 
 ---
 
@@ -53,9 +53,9 @@ KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH
 
 ```text
 Verified exact/visible transcript: MUT-S001-MUT-S018
-Pending visual verification:       MUT-S019-MUT-S036
-Raw OCR draft in main transcript:  removed in v003 due corruption risk
-Archive granularity:               per-region, not per screenshot batch
+Verified from sheet/crop images:  MUT-S019-MUT-S036
+Partial/cut-off sources:          MUT-S020, MUT-S024, MUT-S025, MUT-S028, MUT-S030, MUT-S032, MUT-S034
+Archive granularity:              per-region, not per screenshot batch
 ```
 
 ---
@@ -82,30 +82,30 @@ Archive granularity:               per-region, not per screenshot batch
 | MUT-S016 | 145 | `9373bdbda3.png` | `verified` | no | high | what onMutate returns |
 | MUT-S017 | 007 | `37ac0e6a45.png` | `verified` | no | high | cancellation handling in mutation callbacks |
 | MUT-S018 | 144 | `6759acc16a.png` | `verified` | no | high | onMutate signature |
-| MUT-S019 | 146 | `a6d0648cd6.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | why invalidate in onSettled |
-| MUT-S020 | 143 | `ae6ed651d2.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | variables argument |
-| MUT-S021 | 155 | `db2d4aae55.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | return invalidateQueries Promise keeps pending |
-| MUT-S022 | 156 | `e2bb07761c.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | without returning invalidation Promise |
-| MUT-S023 | 142 | `507dbfa569.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | context.client |
-| MUT-S024 | 157 | `35935e7b35.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | returning the Promise code snippet |
-| MUT-S025 | 158 | `c8aefd2cea.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | returning Promise behavior steps |
-| MUT-S026 | 141 | `5f990bee01.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | mutationFn |
-| MUT-S027 | 140 | `ed4ef609cc.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onSuccess signature and data argument |
-| MUT-S028 | 159 | `9d4d2d9cfa.png` | `pending-visual-verification` | yes | not-assessed-for-literal-transcript | why pending matters / cut off |
-| MUT-S029 | 139 | `57a7aa95ed.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | data returned from mutationFn |
-| MUT-S030 | 138 | `27b93b199a.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | variables / onMutateResult availability |
-| MUT-S031 | 137 | `c35292d43d.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onSuccess typical usage |
-| MUT-S032 | 136 | `56c5c8888e.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onError signature and arguments |
-| MUT-S033 | 135 | `82af270795.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onError rollback usage |
-| MUT-S034 | 134 | `c7dccde3bc.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onSettled signature and arguments |
-| MUT-S035 | 133 | `1cb0706b7f.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onMutateResult / context / onSettled example |
-| MUT-S036 | 132 | `af1044b3cf.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | async callbacks are awaited |
+| MUT-S019 | 146 | `a6d0648cd6.png` | `verified-from-sheet-crop` | no | high-for-visible-text | why invalidate in onSettled |
+| MUT-S020 | 143 | `ae6ed651d2.png` | `verified-from-sheet-crop` | bottom-partially-cropped-in-sheet | high-for-visible-text / medium-for-second-code-block | variables argument |
+| MUT-S021 | 155 | `db2d4aae55.png` | `verified-from-sheet-crop` | no | high | return invalidateQueries Promise keeps pending |
+| MUT-S022 | 156 | `e2bb07761c.png` | `verified-from-sheet-crop` | no | high | without returning invalidation Promise |
+| MUT-S023 | 142 | `507dbfa569.png` | `verified-from-sheet-crop` | no | high | context.client |
+| MUT-S024 | 157 | `35935e7b35.png` | `verified-from-sheet-crop` | visible-code-only | high | returning the Promise code snippet |
+| MUT-S025 | 158 | `c8aefd2cea.png` | `verified-from-sheet-crop` | top-slightly-cropped | high-for-visible-text | returning Promise behavior steps |
+| MUT-S026 | 141 | `5f990bee01.png` | `verified-from-sheet-crop` | no | high | mutationFn |
+| MUT-S027 | 140 | `ed4ef609cc.png` | `verified-from-sheet-crop` | no | high | onSuccess signature and data argument |
+| MUT-S028 | 159 | `9d4d2d9cfa.png` | `verified-visible-partial-from-original-png` | yes | high-for-visible-text / incomplete-source | why pending matters / cut off |
+| MUT-S029 | 139 | `57a7aa95ed.png` | `verified-from-sheet-crop` | no | high | data returned from mutationFn |
+| MUT-S030 | 138 | `27b93b199a.png` | `verified-from-sheet-crop` | top-context-may-be-cropped | high-for-visible-text | variables / onMutateResult availability |
+| MUT-S031 | 137 | `c35292d43d.png` | `verified-from-sheet-crop` | no | high | onSuccess typical usage |
+| MUT-S032 | 136 | `56c5c8888e.png` | `verified-from-sheet-crop` | bottom-slightly-cropped | high-for-visible-text | onError signature and arguments |
+| MUT-S033 | 135 | `82af270795.png` | `verified-from-sheet-crop` | no | high | onError rollback usage |
+| MUT-S034 | 134 | `c7dccde3bc.png` | `verified-from-sheet-crop` | bottom-cropped-after-variables | high-for-visible-text / partial-source | onSettled signature and arguments |
+| MUT-S035 | 133 | `1cb0706b7f.png` | `verified-from-sheet-crop` | no | high | onMutateResult / context / onSettled example |
+| MUT-S036 | 132 | `af1044b3cf.png` | `verified-from-sheet-crop` | no | high | async callbacks are awaited |
 
 ---
 
-## 4. Verified source transcript
+## 4. Source transcript
 
-This section contains visually verified or duplicate-verified sources only.
+This section contains verified visible text/code. Entries marked `verified-from-sheet-crop` were checked against available sheet/crop images rather than standalone original PNGs.
 
 ### MUT-S001 - image 130 - `488e3dbdf9.png`
 
@@ -763,84 +763,742 @@ Visually checked against original PNG. Source chip `TanStack` omitted from trans
 
 ---
 
-## 5. Pending visual verification
+### MUT-S019 - image 146 - `a6d0648cd6.png`
 
-The following sources are part of R10 but are not included as exact transcript yet. They must be checked against original PNGs before adding text/code.
+Metadata:
 
-| Source ID | Image | File | Theme | Note |
-|---|---:|---|---|---|
-| MUT-S019 | 146 | `a6d0648cd6.png` | why invalidate in onSettled | pending visual verification |
-| MUT-S020 | 143 | `ae6ed651d2.png` | variables argument | pending visual verification |
-| MUT-S021 | 155 | `db2d4aae55.png` | return invalidateQueries Promise keeps pending | pending visual verification |
-| MUT-S022 | 156 | `e2bb07761c.png` | without returning invalidation Promise | pending visual verification |
-| MUT-S023 | 142 | `507dbfa569.png` | context.client | pending visual verification |
-| MUT-S024 | 157 | `35935e7b35.png` | returning the Promise code snippet | pending visual verification |
-| MUT-S025 | 158 | `c8aefd2cea.png` | returning Promise behavior steps | pending visual verification |
-| MUT-S026 | 141 | `5f990bee01.png` | mutationFn | pending visual verification |
-| MUT-S027 | 140 | `ed4ef609cc.png` | onSuccess signature and data argument | pending visual verification |
-| MUT-S028 | 159 | `9d4d2d9cfa.png` | why pending matters / cut off | pending visual verification |
-| MUT-S029 | 139 | `57a7aa95ed.png` | data returned from mutationFn | pending visual verification |
-| MUT-S030 | 138 | `27b93b199a.png` | variables / onMutateResult availability | pending visual verification |
-| MUT-S031 | 137 | `c35292d43d.png` | onSuccess typical usage | pending visual verification |
-| MUT-S032 | 136 | `56c5c8888e.png` | onError signature and arguments | pending visual verification |
-| MUT-S033 | 135 | `82af270795.png` | onError rollback usage | pending visual verification |
-| MUT-S034 | 134 | `c7dccde3bc.png` | onSettled signature and arguments | pending visual verification |
-| MUT-S035 | 133 | `1cb0706b7f.png` | onMutateResult / context / onSettled example | pending visual verification |
-| MUT-S036 | 132 | `af1044b3cf.png` | async callbacks are awaited | pending visual verification |
+- status: `verified-from-sheet-crop`
+- readability: `medium-high`
+- cut off: `no`
+- confidence: `high-for-visible-text`
+- theme: why invalidate in onSettled
+
+#### Verified visible text
+
+```text
+Why do we invalidate in `onSettled`?
+
+`onSettled` runs whether the mutation succeeds or fails. TanStack defines it as the callback that fires when the mutation either succeeds or encounters an error.
+
+You invalidate there because the optimistic cache is only a temporary guess. After the mutation is done, you want the real server state to become the source of truth again. TanStack's optimistic update docs show invalidation in `onSettled`, and even note that you should return that Promise if you want the mutation to stay pending until the refetch completes.
+
+So:
+
+- if mutation succeeds, invalidation refetches and confirms the final server state
+- if mutation fails, `onError` rolls back, and invalidation can still refresh to the true server state if needed
+```
+
+#### Notes
+
+Verified from available sheet/crop image, not standalone original PNG. Source chips omitted.
 
 ---
 
-## 6. Cleaned source notes - verified subset only
+### MUT-S020 - image 143 - `ae6ed651d2.png`
 
-These cleaned notes are based only on verified sources `MUT-S001`-`MUT-S018`.
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `medium-high`
+- cut off: `bottom-partially-cropped-in-sheet`
+- confidence: `high-for-visible-text / medium-for-second-code-block`
+- theme: variables argument
+
+#### Verified visible text
+
+```text
+Arguments
+
+`variables`
+
+This is the value you passed to `mutate(...)`.
+
+Example:
+
+Then inside `onMutate`, `variables` is:
+```
+
+#### Verified visible code
+
+```ts
+mutation.mutate({ id: 5, title: 'New title' })
+
+{ id: 5, title: 'New title' }
+```
+
+#### Notes
+
+Second code block was low in the sheet crop; content is readable but kept medium confidence.
+
+---
+
+### MUT-S021 - image 155 - `db2d4aae55.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: return invalidateQueries Promise keeps pending
+
+#### Verified visible text
+
+```text
+if your `onSettled` returns the Promise from `queryClient.invalidateQueries(...)`, React Query will keep the mutation itself in the `pending` state until that invalidation-triggered refetch finishes. The official optimistic updates guide says to return that Promise "so that the mutation stays in `pending` state until the refetch is finished."
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S022 - image 156 - `e2bb07761c.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: without returning invalidation Promise
+
+#### Verified visible text
+
+```text
+Without returning the Promise
+
+What happens:
+
+1. mutation request finishes
+2. `onSettled` runs
+3. invalidation/refetch is started
+4. but `onSettled` itself finishes immediately
+5. mutation is no longer pending, even though the follow-up refetch may still be running.
+
+So your mutation state may become:
+
+- `isPending = false`
+
+while the query is still refetching in background.
+```
+
+#### Verified visible code
+
+```ts
+onSettled: () => {
+  queryClient.invalidateQueries({ queryKey: ['todos'] })
+}
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S023 - image 142 - `507dbfa569.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: context.client
+
+#### Verified visible text
+
+```text
+`context`
+
+This is a mutation function context object. In the optimistic update examples/docs, it includes `client`, which is the `QueryClient` you use for things like:
+
+- `cancelQueries`
+- `getQueryData`
+- `setQueryData`
+- `invalidateQueries`
+
+So in practice:
+```
+
+#### Verified visible code
+
+```ts
+onMutate: async (variables, context) => {
+  context.client.setQueryData(...)
+}
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S024 - image 157 - `35935e7b35.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `visible-code-only`
+- confidence: `high`
+- theme: returning the Promise code snippet
+
+#### Verified visible text
+
+```text
+Returning the Promise
+```
+
+#### Verified visible code
+
+```ts
+onSettled: () => {
+  return queryClient.invalidateQueries({ queryKey: ['todos'] })
+}
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Only the visible snippet is transcribed.
+
+---
+
+### MUT-S025 - image 158 - `c8aefd2cea.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `top-slightly-cropped`
+- confidence: `high-for-visible-text`
+- theme: returning Promise behavior steps
+
+#### Verified visible text
+
+```text
+or shorter:
+
+Now what happens:
+
+1. mutation request finishes
+2. `onSettled` runs
+3. `invalidateQueries` starts the refetch and returns a Promise
+4. React Query waits for that Promise
+5. mutation stays `pending` until that Promise resolves, meaning until the refetch work is done.
+```
+
+#### Verified visible code
+
+```ts
+onSettled: () => queryClient.invalidateQueries({ queryKey: ['todos'] })
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S026 - image 141 - `5f990bee01.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: mutationFn
+
+#### Verified visible text
+
+```text
+`mutationFn`
+
+This is the actual async function that performs the server write.
+
+Example:
+
+It receives the same `variables` you passed to `mutate`. Mutations are used to create/update/delete data or cause side-effects.
+```
+
+#### Verified visible code
+
+```ts
+mutationFn: (newTodo) => api.updateTodo(newTodo)
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S027 - image 140 - `ed4ef609cc.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: onSuccess signature and data argument
+
+#### Verified visible text
+
+```text
+`onSuccess`
+
+Signature in v5:
+
+It runs when the mutation succeeds.
+
+Arguments
+
+`data`
+
+The resolved result of `mutationFn`.
+```
+
+#### Verified visible code
+
+```ts
+onSuccess: (data, variables, onMutateResult, context) => Promise<unknown> | unknown
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S028 - image 159 - `9d4d2d9cfa.png`
+
+Metadata:
+
+- status: `verified-visible-partial-from-original-png`
+- readability: `medium / cut off`
+- cut off: `yes`
+- confidence: `high-for-visible-text / incomplete-source`
+- theme: why pending matters / cut off
+
+#### Verified visible text
+
+```text
+Why this matters
+
+Suppose you are showing an optimistic todo row while:
+```
+
+#### Verified visible code
+
+```ts
+mutation.isPending
+```
+
+#### Notes
+
+Original PNG is cut off at the bottom. A partial line `is true` is visible below the code block, but the continuation is not visible.
+
+---
+
+### MUT-S029 - image 139 - `57a7aa95ed.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: data returned from mutationFn
+
+#### Verified visible text
+
+```text
+Example:
+
+If server returns:
+
+then `data` is that returned payload.
+```
+
+#### Verified visible code
+
+```ts
+mutationFn: (todo) => api.updateTodo(todo)
+
+{ id: 5, title: 'Saved', updatedAt: '...' }
+```
+
+#### Notes
+
+Verified from available sheet/crop image.
+
+---
+
+### MUT-S030 - image 138 - `27b93b199a.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `top-context-may-be-cropped`
+- confidence: `high-for-visible-text`
+- theme: variables / onMutateResult availability
+
+#### Verified visible text
+
+```text
+The original variables passed to `mutate(...)`.
+
+`onMutateResult`
+
+Whatever `onMutate` returned.
+
+Example:
+
+then in `onSuccess`:
+```
+
+#### Verified visible code
+
+```ts
+return { previousTodos }
+
+onSuccess: (data, variables, onMutateResult, context) => {
+  // onMutateResult.previousTodos is available
+}
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Top context may be cropped.
+
+---
+
+### MUT-S031 - image 137 - `c35292d43d.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: onSuccess typical usage
+
+#### Verified visible text
+
+```text
+`context`
+
+Again, mutation function context, including `client`.
+
+Typical `onSuccess` usage:
+
+- replace optimistic item with server-confirmed item
+- invalidate related queries
+- do success side effects
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S032 - image 136 - `56c5c8888e.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `bottom-slightly-cropped`
+- confidence: `high-for-visible-text`
+- theme: onError signature and arguments
+
+#### Verified visible text
+
+```text
+`onError`
+
+Signature in v5:
+
+It runs if the mutation errors.
+
+Arguments
+
+`err`
+
+The mutation error thrown/rejected by `mutationFn`.
+
+`variables`
+
+The original mutation variables.
+
+`onMutateResult`
+
+The value returned from `onMutate`.
+
+This is why rollback data is returned from `onMutate`.
+```
+
+#### Verified visible code
+
+```ts
+onError: (err, variables, onMutateResult, context) => Promise<unknown> | unknown
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S033 - image 135 - `82af270795.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: onError rollback usage
+
+#### Verified visible text
+
+```text
+`context`
+
+Mutation context, including `client`.
+
+Typical `onError` usage:
+
+- rollback optimistic cache
+- show error toast
+- log failure
+
+Example:
+
+That is the classic rollback path.
+```
+
+#### Verified visible code
+
+```ts
+onError: (err, newTodo, onMutateResult, context) => {
+  context.client.setQueryData(['todos'], onMutateResult.previousTodos)
+}
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S034 - image 134 - `c7dccde3bc.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `bottom-cropped-after-variables`
+- confidence: `high-for-visible-text / partial-source`
+- theme: onSettled signature and arguments
+
+#### Verified visible text
+
+```text
+`onSettled`
+
+Signature in v5:
+
+It runs whether the mutation succeeded or failed.
+
+Arguments
+
+`data`
+
+Mutation result if successful, otherwise typically undefined.
+
+`error`
+
+Mutation error if failed, otherwise typically null/undefined depending on typing/runtime shape.
+
+`variables`
+
+Original mutation variables.
+```
+
+#### Verified visible code
+
+```ts
+onSettled: (data, error, variables, onMutateResult, context) => Promise<unknown> | unknown
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Bottom content after `variables` is cropped.
+
+---
+
+### MUT-S035 - image 133 - `1cb0706b7f.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: onMutateResult / context / onSettled example
+
+#### Verified visible text
+
+```text
+`onMutateResult`
+
+The value returned from `onMutate`.
+
+`context`
+
+Mutation context, including `client`.
+
+Typical `onSettled` usage:
+
+- invalidate related queries
+- do "always cleanup" logic
+- resync with server after optimistic update
+
+Example:
+
+The optimistic updates guide uses `onSettled` for invalidation so the cache is synchronized with the true server state after the mutation is done.
+```
+
+#### Verified visible code
+
+```ts
+onSettled: (_data, _error, _vars, _onMutateResult, context) => {
+  return context.client.invalidateQueries({ queryKey: ['todos'] })
+}
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+### MUT-S036 - image 132 - `af1044b3cf.png`
+
+Metadata:
+
+- status: `verified-from-sheet-crop`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: async callbacks are awaited
+
+#### Verified visible text
+
+```text
+8. One subtle detail: async callbacks are awaited
+
+The docs say if `onMutate`, `onSuccess`, `onError`, or `onSettled` return a promise, it is awaited before proceeding.
+
+That means:
+
+is not just stylistic. TanStack Query will wait for it.
+
+That is useful because in optimistic updates you usually want:
+
+- cancel old refetches first
+- then write optimistic cache
+
+In that exact order.
+```
+
+#### Verified visible code
+
+```ts
+onMutate: async (...) => {
+  await context.client.cancelQueries(...)
+  ...
+}
+```
+
+#### Notes
+
+Verified from available sheet/crop image. Source chip omitted.
+
+---
+
+## 5. Cleaned source notes
+
+These cleaned notes are based on the verified transcript above. They do not add external React Query knowledge.
 
 - `cancelQueries` is shown as part of the optimistic update flow, to prevent old in-flight refetches from overwriting optimistic cache writes.
-- `onMutate` is shown as the before-server-call callback used for optimistic state and rollback context.
-- `onError` is shown as the rollback path using data returned from `onMutate`.
-- `onSettled` is shown as the final synchronization/refetch step.
-- `mutate` is shown as callback-style / returns void.
-- `mutateAsync` is shown as Promise-style / `await` / `try-catch`.
+- `onMutate` is the before-server-call callback used for optimistic state and rollback context.
+- `mutationFn` is the async server-write function and receives the variables passed to `mutate`.
+- `onSuccess` receives `data`, `variables`, `onMutateResult`, and `context`, and is used for success-side effects or cache updates.
+- `onError` is the rollback/error path and receives `err`, `variables`, `onMutateResult`, and `context`.
+- `onSettled` runs whether the mutation succeeds or fails and is used for final synchronization/invalidation.
+- Returning the Promise from `invalidateQueries` in `onSettled` keeps the mutation pending until refetch work finishes.
+- `mutate` is callback-style / returns void.
+- `mutateAsync` is Promise-style / `await` / `try-catch`.
 - Manual `setQueryData` updates should return new objects/arrays and can get hard across many caches.
 
 ---
 
-## 7. Minimal interpretation - verified subset only
+## 6. Minimal interpretation
 
-The verified part of this region teaches the core mutation lifecycle and optimistic update pattern. The second half of the region is intentionally left as pending verification, not OCR-filled draft.
+This region teaches the mutation lifecycle and optimistic update flow in React Query: variables move through `mutate`/`mutateAsync`, `onMutate`, `mutationFn`, and later callbacks; optimistic cache updates need cancellation, snapshot, rollback, and final invalidation; and returning the invalidation Promise keeps mutation pending until refetch finishes.
 
 ---
 
-## 8. Evidence table - verified subset only
+## 7. Evidence table
 
 | Claim | Evidence | Source type | Confidence |
 |---|---|---|---|
 | `cancelQueries` matters because stale in-flight refetches can overwrite optimistic cache | MUT-S003 | screenshot text | high |
 | Standard optimistic flow is onMutate -> cancel -> snapshot -> optimistic setQueryData -> rollback -> invalidate | MUT-S005, MUT-S002 | screenshot text/code | high for visible text |
 | `onMutate` is before `mutationFn` and can return rollback context | MUT-S001, MUT-S016, MUT-S018 | screenshot text/code | high |
-| `onError` rolls back using data returned from `onMutate` | MUT-S002, MUT-S016 | screenshot code/text | high |
-| `onSettled` is for final sync/invalidation | MUT-S001, MUT-S002, MUT-S012 | screenshot text/code | high |
+| `mutationFn` is the actual server write and receives mutation variables | MUT-S026, MUT-S029 | sheet/crop transcript | high |
+| `onSuccess` receives `data`, `variables`, `onMutateResult`, `context` | MUT-S027, MUT-S030, MUT-S031 | sheet/crop transcript | high for visible text |
+| `onError` rolls back using data returned from `onMutate` | MUT-S002, MUT-S016, MUT-S032, MUT-S033 | screenshot text/code | high |
+| `onSettled` is for final sync/invalidation | MUT-S001, MUT-S002, MUT-S012, MUT-S019, MUT-S034, MUT-S035 | screenshot text/code | high |
+| Returning `invalidateQueries` Promise keeps mutation pending until refetch finishes | MUT-S021, MUT-S024, MUT-S025 | sheet/crop transcript | high |
+| Not returning the Promise lets mutation stop pending while refetch still runs | MUT-S022 | sheet/crop transcript | high |
 | `useQuery` v5 callbacks were removed, mutation callbacks remain | MUT-S014 | screenshot text | high |
 | `mutate` is callback-style and returns void | MUT-S004, MUT-S010, MUT-S015 | screenshot text/code | high |
 | `mutateAsync` returns Promise and supports await/try-catch | MUT-S007, MUT-S011, MUT-S015 | screenshot text/code | high |
 | Manual updates become hard across sorted/filtered/detail/dashboard caches | MUT-S013 | screenshot text | high |
 | `setQueryData` should use immutable updates | MUT-S008 | screenshot text/code | high |
+| Async callbacks are awaited | MUT-S036 | sheet/crop transcript | high |
 
 ---
 
-## 9. Question hooks - verified subset only
+## 8. Question hooks
 
 - Why does the optimistic update pattern cancel outgoing queries before writing optimistic cache data?
 - What can happen if an old in-flight refetch finishes after an optimistic cache write?
 - What does `onMutate` return, and which later callbacks receive that value?
 - What is the rollback path in the optimistic mutation pattern?
 - Why is `onSettled` used after both success and error?
+- What changes when `onSettled` returns the Promise from `invalidateQueries`?
+- What happens if `onSettled` starts invalidation but does not return the Promise?
 - What is the difference between `mutate` and `mutateAsync`?
 - When should `mutateAsync` be preferred over `mutate`?
 - Why should `setQueryData` return a new object or array?
 - When do manual cache updates become hard enough that invalidation is preferred?
+- Why does awaiting async callbacks matter in optimistic updates?
 
 ---
 
-## 10. Next correction/consolidation step
+## 9. Remaining open issues
 
-Next user-facing archive should visually verify `MUT-S019`-`MUT-S036` and update this same file. Do not add raw OCR text unless it has been visually checked or explicitly marked as raw corrupted data outside the main transcript.
+- `MUT-S028` is visibly cut off; only visible text/code is transcribed.
+- Some sources were verified from sheet/crop composites rather than standalone original PNG files.
+- `MUT-S034` is cropped after the `variables` argument; visible content is transcribed only.

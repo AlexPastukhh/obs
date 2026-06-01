@@ -1,18 +1,14 @@
-# MANIFEST - React Query rquery / R10 consolidated per-region update v003
+# MANIFEST - React Query rquery / R10 completed per-region update v005
 
-Archive type: **stage-3c per-region consolidated transcript correction**  
+Archive type: **stage-3d completed region transcript correction**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 15:08:58 UTC
+Generated: 2026-06-01 15:21:17 UTC
 
 ## Purpose
 
-This archive corrects the v002 approach by removing mojibake/OCR-corrupted draft text from the main readable transcript.
+This archive continues after the already committed v004 state.
 
-It updates:
-
-```text
-_ai-conspects/react-query-rquery/regions/R10-mutations.md
-```
+It completes `R10 - Mutations` coverage by adding visually checked transcript for `MUT-S019`-`MUT-S036` from the available sheet/crop images.
 
 ## Files included
 
@@ -20,8 +16,8 @@ _ai-conspects/react-query-rquery/regions/R10-mutations.md
 _ai-conspects/react-query-rquery/regions/R10-mutations.md
 _ai-conspects/react-query-rquery/data/R10-mutations-sources.csv
 _ai-conspects/react-query-rquery/data/R10-mutations-sources.json
-_ai-conspects/react-query-rquery/data/R10-mutations-pending-verification-v003.csv
-_ai-conspects/react-query-rquery/data/R10-mutations-pending-verification-v003.json
+_ai-conspects/react-query-rquery/data/R10-mutations-completion-v005.csv
+_ai-conspects/react-query-rquery/data/R10-mutations-completion-v005.json
 _ai-conspects/react-query-rquery/09-archive-granularity-rule-update.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
@@ -30,11 +26,11 @@ _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ## R10 status
 
 ```text
-Verified:                    MUT-S001-MUT-S018
-Pending visual verification: MUT-S019-MUT-S036
-Raw OCR in main transcript:  removed
+Verified from standalone/original PNGs: MUT-S001-MUT-S018
+Verified from sheet/crop images:       MUT-S019-MUT-S036
+Partial/cut-off sources:              MUT-S020, MUT-S024, MUT-S025, MUT-S028, MUT-S030, MUT-S032, MUT-S034
 ```
 
 ## Important
 
-If v002 was applied but not committed, apply this archive over it and review the diff. This v003 should replace the corrupted OCR draft section with a clean pending-verification section.
+This is a per-region archive. It does not create one archive per small screenshot batch.
