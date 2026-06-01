@@ -1,0 +1,24 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+R08B-S001,S-129,IU-129,fc2d174df6,verified-from-extracted-svg-image,r08b-getqueriesdata-example,high,no,high,getQueriesData example: read all matching todos queries,Verified from extracted SVG image.
+R08B-S002,S-134,IU-134,30bdec4695,verified-from-extracted-svg-image,r08b-fetch-prefetch,high,no,high,fetchQuery options and behavior,Verified from extracted SVG image.
+R08B-S003,S-143,IU-143,81cc0883ba,verified-from-extracted-svg-image,r08b-getqueriesdata-output,high,no,high,getQueriesData returns tuples,Verified from extracted SVG image.
+R08B-S004,S-147,IU-147,8578a757ff,verified-from-extracted-svg-image,r08b-fetch-prefetch-ensure-family,high,no,high,"fetchInfiniteQuery, prefetchQuery, ensureQueryData family",Verified from extracted SVG image.
+R08B-S005,S-153,IU-153,b9490025be,verified-from-extracted-svg-image,r08b-setqueriesdata-example,high,no,high,setQueriesData example: update all existing todos lists,Verified from extracted SVG image.
+R08B-S006,S-167,IU-167,4fc2178dca,verified-from-extracted-svg-image,r08b-write-cache-synchronously,high,no,high,setQueryData and setQueriesData write cache synchronously,Verified from extracted SVG image.
+R08B-S007,S-169,IU-169,4a083521f3,verified-visible-partial-from-extracted-svg-image,r08b-invalidate-refetchtype,high,bottom-start-of-example-cropped,high-for-visible-text,refetchType in invalidateQueries,"Bottom shows the start of an Example section, but no example content is visible."
+R08B-S008,S-175,IU-175,71e000a8c4,verified-from-extracted-svg-image,r08b-invalidatequeries-signature,high,no,high,invalidateQueries filters and refetchType,Verified from extracted SVG image.
+R08B-S009,S-178,IU-178,511b7bdef1,verified-from-extracted-svg-image,r08b-type-vs-refetchtype,high,no,high,type filter versus refetchType,Verified from extracted SVG image.
+R08B-S010,S-182,IU-182,1b495c7744,verified-from-extracted-svg-image,r08b-refetchqueries-options,high,no,high,refetchQueries options and notes,Verified from extracted SVG image.
+R08B-S011,S-190,IU-190,11e2c7d93f,verified-from-extracted-svg-image,r08b-cancel-remove-reset-clear,high,no,high,"cancelQueries, removeQueries, resetQueries, clear",Verified from extracted SVG image.
+R08B-S012,S-191,IU-191,5bec075fe3,verified-from-extracted-svg-image,r08b-cancelqueries-optimistic-why,high,no,high,why cancelQueries matters in optimistic updates,Verified from extracted SVG image.
+R08B-S013,S-193,IU-193,9625ff3c1f,verified-from-extracted-svg-image,r08b-canceloptions,high,no,high,CancelOptions silent/revert,Verified from extracted SVG image.
+R08B-S014,S-194,IU-194,6401d2ad9e,verified-from-extracted-svg-image,r08b-cancel-refetch-basic-methods,high,no,high,cancelQueries and refetchQueries basic examples,"Previously reserved as R08D/neighbor, but local R08B review shows it is direct cancel/refetch-method continuation, so it is included in R08B."
+R08B-S015,S-197,IU-197,75a0c9e06f,verified-from-extracted-svg-image,r08b-status-helpers,high,no,high,isFetching and isMutating status helpers,Verified from extracted SVG image.
+R08B-S016,S-198,IU-198,f128bccab6,verified-visible-partial-from-extracted-svg-image,r08b-optimistic-flow,high,bottom-example-cropped,high-for-visible-text,standard optimistic update flow with cancelQueries,Example content begins below the crop and is not visible here; full code example is visible in S-207.
+R08B-S017,S-200,IU-200,6ce7aeccdc,verified-from-extracted-svg-image,r08b-cancel-revert-true,high,no,high,revert true behavior and why preferred,Verified from extracted SVG image.
+R08B-S018,S-204,IU-204,a00c2c49ff,verified-from-extracted-svg-image,r08b-defaults-config,high,no,high,QueryClient defaults/config methods,Verified from extracted SVG image.
+R08B-S019,S-207,IU-207,55a51e51f4,verified-from-extracted-svg-image,r08b-optimistic-update-code-example,high,no,high,optimistic update code example with cancelQueries,Verified from extracted SVG image.
+R08B-S020,S-212,IU-212,13b08c1aea,verified-from-extracted-svg-image,r08b-low-level-cache-access-summary,high,no,high,low-level cache access and resumePausedMutations summary,Verified from extracted SVG image.
+R08B-S021,S-216,IU-216,97e37315a6,verified-from-extracted-svg-image,r08b-getquerycache-details,high,no,high,getQueryCache low-level store details,Verified from extracted SVG image.
+R08B-S022,S-219,IU-219,850109ec0c,verified-from-extracted-svg-image,r08b-v5-optimistic-update-callback-placement,high,no,high,v5 removed useQuery callbacks; cancellation handled in mutation flow,Verified from extracted SVG image.
+R08B-S023,S-221,IU-221,e79f52ad22,verified-from-extracted-svg-image,r08b-resumepausedmutations-details,high,no,high,resumePausedMutations offline workflow,"Previously reserved as R08D/neighbor, but local R08B review shows it belongs with low-level QueryClient/cache helper methods, so it is included in R08B."

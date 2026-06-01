@@ -1,9 +1,34 @@
 {
-  "generated": "2026-06-01 22:21:09 UTC",
-  "ledger_version": "v2-updated-by-r08a-transcript-stage4k-v001",
-  "critical_rule": "The ledger is still not source of truth; R08A decisions were made after local visual/semantic boundary review.",
-  "r08a_v001_delta": {
+  "generated": "2026-06-01 22:36:10 UTC",
+  "ledger_version": "v2-updated-by-r08b-transcript-stage4l-v001",
+  "critical_rule": "The ledger is still not source of truth; R08B decisions were made after local visual/semantic boundary review.",
+  "r08b_v001_delta": {
     "processed_sources": [
+      "S-129",
+      "S-134",
+      "S-143",
+      "S-147",
+      "S-153",
+      "S-167",
+      "S-169",
+      "S-175",
+      "S-178",
+      "S-182",
+      "S-190",
+      "S-191",
+      "S-193",
+      "S-194",
+      "S-197",
+      "S-198",
+      "S-200",
+      "S-204",
+      "S-207",
+      "S-212",
+      "S-216",
+      "S-219",
+      "S-221"
+    ],
+    "already_completed_R08A": [
       "S-123",
       "S-124",
       "S-125",
@@ -22,29 +47,6 @@
       "S-185",
       "S-206"
     ],
-    "reserved_for_r08b": [
-      "S-129",
-      "S-134",
-      "S-143",
-      "S-147",
-      "S-153",
-      "S-167",
-      "S-169",
-      "S-175",
-      "S-178",
-      "S-182",
-      "S-190",
-      "S-191",
-      "S-193",
-      "S-197",
-      "S-198",
-      "S-200",
-      "S-204",
-      "S-207",
-      "S-212",
-      "S-216",
-      "S-219"
-    ],
     "reserved_for_r08c": [
       "S-127",
       "S-133",
@@ -57,14 +59,11 @@
       "S-179",
       "S-187"
     ],
-    "reserved_for_r08d_or_neighbor": [
-      "S-194",
-      "S-221"
-    ],
     "excluded_overlap_already_r07": [
       "S-184",
       "S-186"
-    ]
+    ],
+    "stage4j_delta": "S-194 and S-221 moved from R08D/or-neighbor reservation into R08B after local semantic review."
   },
   "rows": [
     {
@@ -2477,8 +2476,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-128",
@@ -2511,12 +2510,12 @@
       "width": "856",
       "height": "417",
       "nearest_labels_for_search_only": "L-046: get queries | L-053: refetch type VS filters type of invalidate queries | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-130",
@@ -2591,8 +2590,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-134",
@@ -2606,12 +2605,12 @@
       "width": "932",
       "height": "464",
       "nearest_labels_for_search_only": "L-044: METHODS OF QC | L-046: get queries | L-053: refetch type VS filters type of invalidate queries",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-135",
@@ -2629,8 +2628,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-136",
@@ -2743,8 +2742,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-142",
@@ -2777,12 +2776,12 @@
       "width": "840",
       "height": "283",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-046: get queries | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-144",
@@ -2853,12 +2852,12 @@
       "width": "890",
       "height": "482",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-044: METHODS OF QC | L-046: get queries",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-148",
@@ -2895,8 +2894,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-150",
@@ -2967,12 +2966,12 @@
       "width": "741",
       "height": "482",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-046: get queries | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-154",
@@ -3009,8 +3008,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-156",
@@ -3104,8 +3103,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-161",
@@ -3233,12 +3232,12 @@
       "width": "848",
       "height": "374",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-168",
@@ -3271,12 +3270,12 @@
       "width": "758",
       "height": "482",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-058: CANCELOPTIONS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-170",
@@ -3294,8 +3293,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-171",
@@ -3385,12 +3384,12 @@
       "width": "859",
       "height": "297",
       "nearest_labels_for_search_only": "L-058: CANCELOPTIONS | L-053: refetch type VS filters type of invalidate queries | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-176",
@@ -3442,12 +3441,12 @@
       "width": "795",
       "height": "482",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-179",
@@ -3465,8 +3464,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-180",
@@ -3518,12 +3517,12 @@
       "width": "641",
       "height": "423",
       "nearest_labels_for_search_only": "L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-053: refetch type VS filters type of invalidate queries",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-183",
@@ -3561,7 +3560,7 @@
       "decision_is_final": "yes-for-r07-v004-boundary",
       "must_recheck_before_region_close": "no-for-r07-v004",
       "decision_basis": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation.",
-      "review_notes": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation. | R08 boundary review note: coordinate overlap checked; not included in R08 because already R07. | R08A exclusion: already processed in R07 v004, not R08A."
+      "review_notes": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation. | R08 boundary review note: coordinate overlap checked; not included in R08 because already R07. | R08A exclusion: already processed in R07 v004, not R08A. | R08B exclusion: already processed in R07 v004, not R08B."
     },
     {
       "source_id": "S-185",
@@ -3599,7 +3598,7 @@
       "decision_is_final": "yes-for-r07-v004-boundary",
       "must_recheck_before_region_close": "no-for-r07-v004",
       "decision_basis": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference.",
-      "review_notes": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference. | R08A exclusion: already processed in R07 v004, not R08A."
+      "review_notes": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference. | R08A exclusion: already processed in R07 v004, not R08A. | R08B exclusion: already processed in R07 v004, not R08B."
     },
     {
       "source_id": "S-187",
@@ -3617,8 +3616,8 @@
       "current_region_decision": "R08C",
       "decision_is_final": "no-until-r08c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
+      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-188",
@@ -3670,12 +3669,12 @@
       "width": "724",
       "height": "423",
       "nearest_labels_for_search_only": "L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-066: GETQUERYCACHE GET MUTATIONCACHE",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-191",
@@ -3689,12 +3688,12 @@
       "width": "730",
       "height": "430",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-192",
@@ -3727,12 +3726,12 @@
       "width": "1070",
       "height": "482",
       "nearest_labels_for_search_only": "L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-194",
@@ -3746,12 +3745,12 @@
       "width": "873",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-066: GETQUERYCACHE GET MUTATIONCACHE | L-058: CANCELOPTIONS",
-      "coverage_status": "reserved-for-r08d-or-neighbor",
-      "current_region_decision": "R08D-or-neighbor",
-      "decision_is_final": "no-until-local-boundary-review",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Reserved from R08A for later low-level cache/resume paused review.",
-      "review_notes": "Reserved from R08A for later low-level cache/resume paused review."
+      "coverage_status": "processed-in-r08b-v001",
+      "current_region_decision": "R08B",
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-195",
@@ -3803,12 +3802,12 @@
       "width": "847",
       "height": "254",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-198",
@@ -3822,12 +3821,12 @@
       "width": "740",
       "height": "308",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-066: GETQUERYCACHE GET MUTATIONCACHE",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-199",
@@ -3860,12 +3859,12 @@
       "width": "956",
       "height": "411",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-201",
@@ -3936,12 +3935,12 @@
       "width": "630",
       "height": "423",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-067: RESUMEPAUSED MUTATIONS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-205",
@@ -3993,12 +3992,12 @@
       "width": "659",
       "height": "430",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-208",
@@ -4088,12 +4087,12 @@
       "width": "809",
       "height": "317",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-067: RESUMEPAUSED MUTATIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-213",
@@ -4164,12 +4163,12 @@
       "width": "805",
       "height": "391",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-217",
@@ -4221,12 +4220,12 @@
       "width": "940",
       "height": "376",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "reserved-for-r08b",
+      "coverage_status": "processed-in-r08b-v001",
       "current_region_decision": "R08B",
-      "decision_is_final": "no-until-r08b-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08b",
-      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
-      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-220",
@@ -4259,12 +4258,12 @@
       "width": "815",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "reserved-for-r08d-or-neighbor",
-      "current_region_decision": "R08D-or-neighbor",
-      "decision_is_final": "no-until-local-boundary-review",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Reserved from R08A for later low-level cache/resume paused review.",
-      "review_notes": "Reserved from R08A for later low-level cache/resume paused review."
+      "coverage_status": "processed-in-r08b-v001",
+      "current_region_decision": "R08B",
+      "decision_is_final": "yes-for-r08b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08b-v001",
+      "decision_basis": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers.",
+      "review_notes": "Included in R08B v001 after local boundary review: refetch / cancel options / cache helpers."
     },
     {
       "source_id": "S-222",

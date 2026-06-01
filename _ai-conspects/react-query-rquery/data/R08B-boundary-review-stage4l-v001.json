@@ -1,0 +1,80 @@
+{
+  "generated": "2026-06-01 22:36:10 UTC",
+  "region_id": "R08B",
+  "region_name": "Refetch / cancel options / cache helpers",
+  "boundary_status": "reviewed-v001",
+  "included_sources": [
+    "S-129",
+    "S-134",
+    "S-143",
+    "S-147",
+    "S-153",
+    "S-167",
+    "S-169",
+    "S-175",
+    "S-178",
+    "S-182",
+    "S-190",
+    "S-191",
+    "S-193",
+    "S-194",
+    "S-197",
+    "S-198",
+    "S-200",
+    "S-204",
+    "S-207",
+    "S-212",
+    "S-216",
+    "S-219",
+    "S-221"
+  ],
+  "included_count": 23,
+  "already_completed_R08A": [
+    "S-123",
+    "S-124",
+    "S-125",
+    "S-138",
+    "S-139",
+    "S-144",
+    "S-151",
+    "S-154",
+    "S-158",
+    "S-161",
+    "S-164",
+    "S-168",
+    "S-173",
+    "S-177",
+    "S-183",
+    "S-185",
+    "S-206"
+  ],
+  "reserved_for_later_R08C": [
+    "S-127",
+    "S-133",
+    "S-135",
+    "S-141",
+    "S-149",
+    "S-155",
+    "S-160",
+    "S-170",
+    "S-179",
+    "S-187"
+  ],
+  "excluded_overlap": [
+    {
+      "source_id": "S-184",
+      "decision": "not R08B",
+      "reason": "Already R07 v004 fetchQuery/ensureQueryData continuation."
+    },
+    {
+      "source_id": "S-186",
+      "decision": "not R08B",
+      "reason": "Already R07 v004 fetchQuery/ensureQueryData difference."
+    }
+  ],
+  "boundary_delta_from_stage4j": [
+    "S-194 and S-221 were previously reserved as R08D/or-neighbor.",
+    "Local R08B review included them because S-194 is direct cancel/refetch QueryClient method content and S-221 continues low-level QueryClient helper methods with resumePausedMutations."
+  ],
+  "important_rule": "R08B transcript does not complete all R08. R08C remains pending."
+}

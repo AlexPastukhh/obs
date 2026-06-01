@@ -1,0 +1,42 @@
+{
+  "region_id": "R08B",
+  "region_name": "Refetch / cancel options / cache helpers",
+  "stage": "4l-v001",
+  "generated": "2026-06-01 22:36:10 UTC",
+  "what_area_is_about": [
+    "imperative fetch/prefetch/ensure methods on QueryClient",
+    "reading and writing multiple cached queries",
+    "invalidating, refetching, canceling, removing, resetting, and clearing queries",
+    "refetchType versus QueryFilters type",
+    "cancelQueries and CancelOptions in optimistic updates",
+    "status helper counters and default/config methods",
+    "low-level cache helpers getQueryCache/getMutationCache and resumePausedMutations"
+  ],
+  "key_ideas": [
+    "fetchQuery returns data or throws; prefetchQuery warms cache and returns void.",
+    "ensureQueryData returns cached data if present, otherwise fetches it.",
+    "getQueriesData returns [queryKey, data] tuples for matching queries.",
+    "setQueriesData updates existing matching queries but does not create missing cache entries.",
+    "invalidateQueries selects matching queries with filters, then refetchType decides which matched queries refetch immediately.",
+    "cancelQueries is important before optimistic writes so old in-flight refetches do not overwrite optimistic cache data.",
+    "CancelOptions silent controls noise; revert controls whether state rolls back to the pre-fetch state.",
+    "refetchQueries actively reruns matching queries now; invalidation only marks stale and may refetch depending on refetchType.",
+    "removeQueries removes matching cache entries; resetQueries resets to initial state; clear clears connected caches.",
+    "isFetching/isMutating return counts for current query/mutation activity.",
+    "QueryClient default/config methods can set defaults globally or per query/mutation key.",
+    "getQueryCache/getMutationCache expose low-level connected caches.",
+    "resumePausedMutations is for offline/persisted mutation workflows."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after local R08B review",
+    "limitations": [
+      "S-169 shows only the beginning of an Example section at the bottom.",
+      "S-198 starts an Example section but code is cropped; S-207 contains the full visible example.",
+      "S-194/S-221 were previously R08D candidates but were included after local semantic recheck."
+    ],
+    "confidence_summary": "High for R08B source text and boundary; R08C remains intentionally pending."
+  }
+}

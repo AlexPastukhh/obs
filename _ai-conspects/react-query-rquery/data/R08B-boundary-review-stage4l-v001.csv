@@ -1,0 +1,53 @@
+source_id,decision,candidate_type,reason
+S-129,included-in-R08B-v001,r08b-getqueriesdata-example,getQueriesData example: read all matching todos queries
+S-134,included-in-R08B-v001,r08b-fetch-prefetch,fetchQuery options and behavior
+S-143,included-in-R08B-v001,r08b-getqueriesdata-output,getQueriesData returns tuples
+S-147,included-in-R08B-v001,r08b-fetch-prefetch-ensure-family,"fetchInfiniteQuery, prefetchQuery, ensureQueryData family"
+S-153,included-in-R08B-v001,r08b-setqueriesdata-example,setQueriesData example: update all existing todos lists
+S-167,included-in-R08B-v001,r08b-write-cache-synchronously,setQueryData and setQueriesData write cache synchronously
+S-169,included-in-R08B-v001,r08b-invalidate-refetchtype,refetchType in invalidateQueries
+S-175,included-in-R08B-v001,r08b-invalidatequeries-signature,invalidateQueries filters and refetchType
+S-178,included-in-R08B-v001,r08b-type-vs-refetchtype,type filter versus refetchType
+S-182,included-in-R08B-v001,r08b-refetchqueries-options,refetchQueries options and notes
+S-190,included-in-R08B-v001,r08b-cancel-remove-reset-clear,"cancelQueries, removeQueries, resetQueries, clear"
+S-191,included-in-R08B-v001,r08b-cancelqueries-optimistic-why,why cancelQueries matters in optimistic updates
+S-193,included-in-R08B-v001,r08b-canceloptions,CancelOptions silent/revert
+S-194,included-in-R08B-v001,r08b-cancel-refetch-basic-methods,cancelQueries and refetchQueries basic examples
+S-197,included-in-R08B-v001,r08b-status-helpers,isFetching and isMutating status helpers
+S-198,included-in-R08B-v001,r08b-optimistic-flow,standard optimistic update flow with cancelQueries
+S-200,included-in-R08B-v001,r08b-cancel-revert-true,revert true behavior and why preferred
+S-204,included-in-R08B-v001,r08b-defaults-config,QueryClient defaults/config methods
+S-207,included-in-R08B-v001,r08b-optimistic-update-code-example,optimistic update code example with cancelQueries
+S-212,included-in-R08B-v001,r08b-low-level-cache-access-summary,low-level cache access and resumePausedMutations summary
+S-216,included-in-R08B-v001,r08b-getquerycache-details,getQueryCache low-level store details
+S-219,included-in-R08B-v001,r08b-v5-optimistic-update-callback-placement,v5 removed useQuery callbacks; cancellation handled in mutation flow
+S-221,included-in-R08B-v001,r08b-resumepausedmutations-details,resumePausedMutations offline workflow
+S-123,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-124,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-125,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-138,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-139,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-144,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-151,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-154,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-158,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-161,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-164,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-168,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-173,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-177,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-183,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-185,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-206,already-processed-R08A,context-only,Already completed in R08A; not part of R08B transcript.
+S-127,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-133,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-135,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-141,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-149,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-155,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-160,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-170,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-179,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-187,reserved-for-R08C,r08c-reserved,"QueryClient outside React / setQueriesData shape discipline, not R08B."
+S-184,excluded-overlap-already-R07,already-processed-overlap,Already processed in R07 v004; not R08B.
+S-186,excluded-overlap-already-R07,already-processed-overlap,Already processed in R07 v004; not R08B.
