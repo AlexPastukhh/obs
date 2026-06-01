@@ -1,6 +1,6 @@
-# Apply archive: React Query conspect Stage 3b R10 verification batch 1
+# Apply archive: React Query R10 mutations consolidated update
 
-Archive type: stage-3b region verification update.
+Archive type: stage-3c per-region consolidated transcript update.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3b-r10-mutations-verification-batch1-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3c-r10-mutations-consolidated-v001.zip
 ```
 
 ## Apply commands
@@ -26,7 +26,7 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3b-r10-mutations-v
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3b-r10-mutations-verification-batch1-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3c-r10-mutations-consolidated-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
@@ -40,7 +40,7 @@ git diff -- _ai-conspects/react-query-rquery
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Verify first React Query mutations screenshots"
+git commit -m "Consolidate React Query mutations transcript"
 ```
 
 ## Push command
@@ -57,16 +57,16 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive does not delete files.
-
-This stage verifies only the first batch of R10 screenshots:
+This archive uses the new scheme:
 
 ```text
-MUT-S001–MUT-S008
+one region = one consolidated archive
 ```
 
-Remaining R10 screenshots still need verification:
+It does not create one archive per 8–10 screenshots.
+
+This archive updates/creates the main region file:
 
 ```text
-MUT-S009–MUT-S036
+_ai-conspects/react-query-rquery/regions/R10-mutations.md
 ```
