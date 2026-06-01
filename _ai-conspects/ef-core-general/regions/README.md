@@ -8,11 +8,23 @@ EF01B - Loading collections / Include / Find / Load / AutoInclude
 EF02 - Attach / disconnected updates / entity state
 ```
 
-Pending next candidates:
+Boundary reviews:
+
+```text
+EF03 - Constructors / materialization
+```
+
+Pending next:
+
+```text
+EF03 transcript:
+S-027, S-024, S-025, S-026
+```
+
+Later pending:
 
 ```text
 S-006 -> shadow property / query filter
-S-024/S-025/S-026/S-027 -> constructors / materialization
 ```
 
 Each transcript must include:
