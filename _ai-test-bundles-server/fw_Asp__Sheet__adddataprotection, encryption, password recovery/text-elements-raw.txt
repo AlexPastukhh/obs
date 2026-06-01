@@ -1,0 +1,106 @@
+﻿public class SendResetLinkHandler : 
+    IRequestHandler<SendResetLinkCommand, UnitResult<Error>>
+{
+    private readonly IEmailService _email;
+    private readonly IDataProtectionProvider _protectionProvider;
+    private readonly IHttpContextAccessor _contextAccessor;
+    private readonly IVerificationLinkFactory _linkFactory;
+    public SendResetLinkHandler(IEmailService email,
+        IDataProtectionProvider protector,
+        IHttpContextAccessor contextAccessor,
+        IVerificationLinkFactory linkFactory)
+    {
+        _email = email;
+        _protectionProvider = protector;
+        _contextAccessor = contextAccessor;
+        _linkFactory = linkFactory;
+    }
+    public async Task<UnitResult<Error>> Handle(SendResetLinkCommand request, 
+        CancellationToken cancellationToken)
+    {
+        var emailStr = _contextAccessor.HttpContext!.User.Claims.
+                FirstOrDefault(c => c.Type == ClaimTypes.Email)!.Value;
+
+        
+        var protector = _protectionProvider.CreateProtector(
+            purpose: "Password reset");
+
+        var code = protector.Protect(emailStr);
+        var email = Email.Create(emailStr).Value;
+
+        var sendLink = await SendResetLinkAsync(email,code,cancellationToken);
+        if (sendLink.IsFailure)
+        {
+            return sendLink.Error;
+        }
+
+        return UnitResult.Success<Error>();
+
+    }
+
+    private async Task<UnitResult<Error>> SendResetLinkAsync(Email email,
+        string code,
+        CancellationToken cancellation)
+    {
+        var link = _linkFactory.CreateLink("ResetPassword","Account",code);
+
+        var message = $"To reset password click on <a href=\"{link}\">link</a>";
+
+        var sendEmail =await _email.SendEmailAsync(email,
+            "Reset password",
+            message,
+            cancellation);
+        if (sendEmail.IsFailure)
+        {
+            return sendEmail.Error;
+        }
+
+        return UnitResult.Success<Error>();
+    }
+
+} ^LC380cAf
+
+password recovery ^HR0ZZH2T
+
+newer flow ^nDHxlFXy
+
+dataprotector ^gp86oKPa
+
+so maybe better to create
+some dadaprotector interfaces
+that derive from idataprotector
+and create those separate singletons 
+and inject them without hardcoding purpose 
+everywhere ^yq04Ubk4
+
+so better to create protector services and mb implement catching inside instead of doing it everywhere ^Y4GiG8g6
+
+purpose chains ^Pu9kWysN
+
+itimellimiteddataprotector ^fIIMUEDB
+
+protector services ^SggzRCvb
+
+named protectors logic, are they weaker(not named) ^a856wa8u
+
+unprotect can throw ^jGxFs3iz
+
+hashing vs encryption/dataprotection ^0bwfPs2i
+
+when encryption/dataprot ^X5ZvCboN
+
+encryptoin,
+when need data back ^MULWgSfC
+
+when hashing ^02rb2bT1
+
+hashing,
+need to verify ^EnkbkZC0
+
+dp token design
+with data in payload ^xeo15wK4
+
+hashing style token
+design, with cols in db ^JFmy6ekr
+
+jwt signature is a hash? ^XubWyIYw

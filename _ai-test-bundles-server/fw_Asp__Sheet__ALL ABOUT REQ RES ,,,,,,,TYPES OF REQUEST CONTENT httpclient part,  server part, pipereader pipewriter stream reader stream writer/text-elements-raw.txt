@@ -1,0 +1,749 @@
+﻿HTTPCLIENT CONTENT TYPES CHEAT SHEET
+
+────────────────────────────────────────────────────────────
+1) JsonContent
+────────────────────────────────────────────────────────────
+Use when:
+- You have a .NET object (DTO) and want to send JSON
+
+Client:
+- JsonContent.Create(dto)
+
+Content-Type sent:
+- application/json
+
+Server (ASP.NET Core):
+- [FromBody] MyDto dto
+
+Why use it:
+- Cleanest for JSON APIs
+- No manual JSON serialization
+- Supports JsonSerializerOptions
+
+Good default for:
+- Most POST/PUT/PATCH JSON requests
+
+
+────────────────────────────────────────────────────────────
+2) StringContent
+────────────────────────────────────────────────────────────
+Use when:
+- You already have a string payload
+  (JSON string, XML string, plain text)
+
+Client:
+- new StringContent(payload, Encoding.UTF8, "application/json")
+- or "application/xml"
+- or "text/plain"
+
+Content-Type sent:
+- Whatever you set (important!)
+- If not set, default is text/plain (usually not what you want for JSON)
+
+Server (ASP.NET Core):
+- JSON string + application/json  -> [FromBody] MyDto
+- plain text                      -> read raw body or bind as string
+
+Why use it:
+- You already have the exact text payload
+- Simple and explicit
+
+Best for:
+- Small/medium prebuilt strings
+
+
+────────────────────────────────────────────────────────────
+3) ByteArrayContent
+────────────────────────────────────────────────────────────
+Use when:
+- You already have byte[] in memory
+
+Client:
+- new ByteArrayContent(bytes)
+
+Content-Type sent:
+- Set it manually (important)
+  e.g. application/pdf
+  e.g. application/octet-stream
+  e.g. image/png
+
+Server (ASP.NET Core):
+- Read Request.Body as raw bytes/stream
+
+Why use it:
+- You already loaded bytes into memory
+
+Best for:
+- In-memory binary payloads
+- Small/medium files already in byte[]
+
+
+────────────────────────────────────────────────────────────
+4) StreamContent
+────────────────────────────────────────────────────────────
+Use when:
+- You have a Stream (FileStream, MemoryStream, etc.)
+
+Client:
+- new StreamContent(stream)
+
+Content-Type sent:
+- Set it manually (important)
+  e.g. video/mp4
+  e.g. application/pdf
+  e.g. application/json
+
+Server (ASP.NET Core):
+- Read Request.Body stream
+
+Why use it:
+- Better for large payloads
+- Avoids loading file fully into byte[]
+
+Best for:
+- Large file uploads (raw body)
+- Streaming scenarios
+- Large JSON when serialized into a stream first
+
+
+────────────────────────────────────────────────────────────
+5) FormUrlEncodedContent
+────────────────────────────────────────────────────────────
+Use when:
+- You need simple key/value form fields (NO files)
+
+Client:
+- new FormUrlEncodedContent(dict)
+
+Content-Type sent:
+- application/x-www-form-urlencoded
+
+Server (ASP.NET Core):
+- [FromForm] LoginRequest request
+- [FromForm] string username, [FromForm] string password
+
+Why use it:
+- Matches classic HTML form posts
+- Common for OAuth/token endpoints
+
+Best for:
+- Login/token requests
+- Legacy form-style APIs
+
+Important note:
+- A normal HTML form submit (without file upload)
+  typically uses application/x-www-form-urlencoded
+
+
+────────────────────────────────────────────────────────────
+6) MultipartFormDataContent
+────────────────────────────────────────────────────────────
+Use when:
+- You need to send files
+- You may also send extra text fields with the files
+
+Client:
+- var mp = new MultipartFormDataContent()
+- mp.Add(new StreamContent(fileStream), "file", "photo.png")
+- mp.Add(new StringContent("John"), "displayName")
+
+Content-Type sent:
+- multipart/form-data (with boundary)
+
+Server (ASP.NET Core):
+- [FromForm] IFormFile file
+- [FromForm] UploadRequest request (with IFormFile + other fields)
+
+Why use it:
+- Standard format for file uploads
+- Works like browser file upload forms
+
+Best for:
+- File upload endpoints
+
+
+────────────────────────────────────────────────────────────
+7) ObjectContent (Legacy)
+────────────────────────────────────────────────────────────
+Use when:
+- Old ASP.NET Web API codebases (legacy)
+
+Modern replacement:
+- JsonContent (for object -> JSON)
+
+Note:
+- Usually not used in modern .NET / HttpClient code
+
+
+────────────────────────────────────────────────────────────
+HOW TO CHOOSE QUICKLY
+────────────────────────────────────────────────────────────
+If you have...
+- DTO object           -> JsonContent
+- JSON/XML string      -> StringContent
+- byte[]               -> ByteArrayContent
+- Stream / FileStream  -> StreamContent
+- Form fields only     -> FormUrlEncodedContent
+- Files (+ fields)     -> MultipartFormDataContent
+
+
+────────────────────────────────────────────────────────────
+SERVER BINDING QUICK MAP (ASP.NET Core)
+────────────────────────────────────────────────────────────
+application/json
+- Client: JsonContent / StringContent(json,...)
+- Server: [FromBody] MyDto
+
+application/x-www-form-urlencoded
+- Client: FormUrlEncodedContent
+- Server: [FromForm] MyFormDto
+
+multipart/form-data
+- Client: MultipartFormDataContent
+- Server: [FromForm] + IFormFile
+
+application/octet-stream (or other raw binary)
+- Client: ByteArrayContent / StreamContent
+- Server: Read Request.Body
+
+
+────────────────────────────────────────────────────────────
+LARGE PAYLOAD NOTES
+────────────────────────────────────────────────────────────
+Large object JSON:
+- JsonContent is usually fine
+- For tighter allocations:
+  SerializeAsync -> MemoryStream -> StreamContent
+  (avoids big UTF-16 JSON string)
+
+Large file on disk:
+- Prefer FileStream + StreamContent
+
+Large prebuilt string:
+- StringContent works, but:
+  string is UTF-16 in memory, then encoded to UTF-8 for HTTP ^EEkTSrdh
+
+can use jsoncontent with big object, too, if dont need compression ^aXapbU6S
+
+!!! ^lpOiIUFU
+
+types ^DkHdXKXb
+
+when reading response ^xF3mbIFo
+
+deserializing stream on headers arrive in server indpoint
+default behavior ^9rOIuuoM
+
+case 3 ^ySMZfUo2
+
+when deserializing async enumerable ^jiYm63WS
+
+downloading file ^JTS9UVjH
+
+when deserializing json ^lzfD7077
+
+SENDING FILE AS ENCODED IN BASE64 STRING/
+BINDING DTO WITH FILE FROM FORM ^TPB5P22M
+
+ADD TO REQUEST MEDIA TYPES  ^fE4YUJ0M
+
+BASE64 STRING ^CYcRdJB0
+
+sream reader ^mnpPRlGv
+
+can be useful too if you want line by line reading somewhere ^D4wUj4FL
+
+buffering ^xKQ3VXVt
+
+WHAT RESPONSEHEADERSREAD
+ GIVES US ^YMW7oJyF
+
+CAVEATS WHEN YOU DONT BUFFER ^NvQpPObL
+
+AND ALSO YOU CANT READASSTRING ON SERVER ENDPOINT,
+YOU NEED TO USE THIS ^iYHuuygP
+
+CONDITIONAL BUFFERING ^VdeixKKg
+
+new buffering  sheet 
+when you generally buffer full bytes of response using httpclient
+when you dont buffer full response and process as stream ^urddyY1A
+
+!!! ^9gzYhslA
+
+Stream Reader vs readasstring ^O3IjxVyS
+
+!!! ^12QiZGrF
+
+!!! ^GozUrUpF
+
+using delegate handler to fix streaming issues + retries ^5Qji9ToB
+
+making request with pipeline.execute ^rXvBPiZo
+
+the pipeline, not handler, you cant use handler for manual execution ^mBwbztld
+
+contenttype headers on
+content type
+not requestmessage ^8Y2jj52b
+
+need to dispose 
+readasstreamasync too ^ZQdCcZLk
+
+readfromjson need responseheadersread too ^BZxScbau
+
+but you buffer bytes in memory ^Wk92shEy
+
+sending json ^9bC3XjKN
+
+memorystream is still better 
+that seialize to string ^H0iazLqZ
+
+jsoncontent.create/content-length issue
+transfer-encoding: chuncked ^ZFrCbHCd
+
+issue, what jsoncontent can set 
+in headers ^vGdAnSjV
+
+request with content-length
+without transfer-encoding ^XCe3cJ6H
+
+request with transfer-encoding: chunked ^ww6QHy9i
+
+memorystream fits content-length ^j7YYLRX4
+
+compression and 2 flows ^5gCiOikW
+
+so what is the practical difference
+are there difference in bodystream usage? ^l6gd4cqL
+
+crlf ^UqqJB1zh
+
+memorystream + stream content
+vs
+jsoncontent.create ^UIsd5nbS
+
+!!! ^UR2JNVup
+
+httpclient part ^cLrPLZFZ
+
+server ^KmY7jLDo
+
+about new .net overload ^wE9BAvJi
+
+does it make sense to think
+about using stream for normal json read
+write ^NswENXqv
+
+trying to inprove 
+performance /memory
+through streams/pipes
+in server endpoint for 
+plain json ^0SSa1OCX
+
+writing ^vs8RhTRt
+
+reading ^8ltquRv2
+
+typed model  ^wlE90FzN
+
+pipereader
+custom delimiter/protocol
+cursor api ^tDsjvthN
+
+body/stream ^wpHpoKH3
+
+readresult ^wmWcvqSy
+
+readonlysequence ^SCkJgH1S
+
+readonlysequence ^dxRFiSx9
+
+readresult ^UdWvbwNN
+
+positionof ^SUjk6uIE
+
+slice ^bDWoskTo
+
+getposition, toarray ^eWspr8mA
+
+sequenceposition ^GHSGPJhO
+
+advanceto(consumed) ^A2ow1LkB
+
+advanceto(consumed,examined) ^tZ46Aztq
+
+complete ^urpIrPI5
+
+cancelpendingread ^5xzVa2si
+
+cancelpendingread ^yKNVMaR4
+
+copyto ^DnfcHJiN
+
+consumed vs examined ^SZLxT5Ck
+
+newline-delimited text
+example ^nT4if4LA
+
+tryread ^28Px5Aht
+
+tryread ^tndraKZu
+
+readasync ^40eJ9qJd
+
+sequenceposition ^vmGHzwi7
+
+-----------methods-------------- ^16rGk0Gu
+
+issinglesegment
+toarray ^cXHxkQ9c
+
+ways to avoid toarray ^Dp8gyrtt
+
+so we get unprocessed
+buffer for next iteration
+and we pass its start
+and end  ^AMLIBzNp
+
+when stream
+when pipereader ^gpugIftE
+
+sequencereader ^e4b8W8Cx
+
+pipereader ^4Ink9y59
+
+writing bytes ^OgWM5XDt
+
+writing text ^VfVgbAra
+
+here may need to use pooled array  ^0Zdf18ZI
+
+!!! ^wdsA5Ae6
+
+!!!! ^9hE2R2Uh
+
+!!! when send all events
+after some disconnect may 
+need to send them in one
+round istead of many events 
+to reduce everything ^S8SiyfTU
+
+!!!! ^IvHtQ0sZ
+
+can use arraypool but okay
+with writer we can 
+avoid that and write directly ^PYsUuFPz
+
+!!! ^nlLfZnqT
+
+many little writes/
+operations, especially when 
+you dont win any allocations
+can cost cpu and sometimes
+memory too,so dont see
+frequent writes as something 
+to use for optimisation,not for
+buisness rules
+(but we actually may save some
+bandwidth with it maybe) ^5rSBIVP8
+
+writers advance vs
+readers advanceto ^59Uy64cD
+
+when you ve advanced and call 
+getspan again(without flushing yet) ^g35DU4uo
+
+normal json api ^DYxH70c4
+
+raw upload,raw donwload ^j6NPuzVp
+
+plaintext response ^NYi4GRt1
+
+many text writes /n lines ^ZEi8JUN1
+
+construct custom binary
+or framed output ^271XQehs
+
+stream writer ^ihIV35rA
+
+use when
+dont use when ^adg4o9tF
+
+Buffer size ^nIaEAosJ
+
+ndjson ^2YRpFjqM
+
+sse ^ODKVpKNl
+
+write ^gQr2Zy4m
+
+writeline ^EmMzhjsW
+
+flush ^WFYTn8Hz
+
+dispose/close ^WBJMLSDk
+
+basestream ^S1ZtzQ7y
+
+autoflush ^pAnOGGzz
+
+pipewriter ^YFBc1rNU
+
+when can be valid ^zluiDIkM
+
+why pipewriter over
+streamwriter ^wIhk8u43
+
+!!!! ^dM72Gu7P
+
+flush every something
+kb ^OPZWxvMk
+
+flushresult ^Uu3sWpEu
+
+memory/span ^7SMClFXa
+
+getspan/getmemory ^ff72Skqj
+
+!!!! ^NpuWYKh4
+
+advance ^XCiD2nmH
+
+can get 
+stackalloc span ^XT045sWV
+
+flush ^Sv0luKDJ
+
+write ^nqVFJDJC
+
+complete ^glsB4eqo
+
+cancelpendingflush ^B25v0S2o
+
+example ^RbZUKMb9
+
+just plain text writes 
+with different approaches ^jEkozZcU
+
+expl json write,but high level ^QEQwtDuQ
+
+async enumerable type of 
+optimisation without some ndjson or someting
+just a very big amount of objects ^MnJwAZfY
+
+so its 
+1 avoid array alloc
+2 faster first object result (we dont materialize the huge list)
+
+not about bandwidth at all
+
+CAN COST MORE CPU ^lqA9VQlc
+
+returning async enumerable
+from endpoint to optimize 
+somethign ^2kyY2bC4
+
+can have overloads with pos
+of count of bytes form start 
+or some sequenceposition ^20iXKETT
+
+dont need sequencereader
+or something to get string from
+multisegment sequence ^PFahSk9x
+
+can getstring from sequence ^d6rIruT6
+
+!!!! ^uSvCKkeE
+
+custom protocols
+with big endian ^SRNr7POb
+
+important concepts ^6yJNtawG
+
+common constructions ^gAHjqvwv
+
+methods (use async) ^iYXfyqkh
+
+properties ^GKCztE3u
+
+readasync vs
+readblockasync ^TMwUZBE0
+
+can skip not needed 
+lines with pipereader
+(cursor api) ^e7CtBFsk
+
+stream reader ^CclG9i1R
+
+encoding ^3lXMlobE
+
+for text ^iN5iRaHy
+
+buffering ^CpoMeNwb
+
+read ^jtj9GHYa
+
+peek ^k40W8Lhi
+
+read(char buffer) ^psIBFbde
+
+readblock ^GpDHXPjr
+
+readline ^OWnO8f6g
+
+readtoend ^dIndRbK8
+
+discardbuffereddata ^Sqy8zvrn
+
+endofstream ^9ltKOSbf
+
+current encoding ^AXdkcZZk
+
+base stream ^Y2wvX9s0
+
+streamreader usecases ^9bJsimpN
+
+pipereader > ^vGXuk45j
+
+pipereader
+possible better
+for big lines ^O6mryrZr
+
+stream reader ^3gE6ogrm
+
+end ^4rVal0V4
+
+multibyte delimiter ^rER6NncX
+
+parse length prefixed protocol ^DanAHQVK
+
+check prefixes without advancing
+unless matched ^YYltmwT9
+
+look ahead without consuming ^8rZOexNV
+
+escaped delimiter (ignore del in 
+some cases) ^gmhLuOLt
+
+sequencereader ^G5Q06WE0
+
+remaining ^EwuVTahy
+
+currentspan ^i0mZDFWW
+
+unreadspan ^Knmf5sNc
+
+consumed ^a9Pg3UxY
+
+remaining ^iHrmkgva
+
+consumed ^0hhQdPHN
+
+position ^H2znOd18
+
+currentspan ^e6mZNsIF
+
+unreadspan ^oU75rGX2
+
+advance ^7U7akmp8
+
+rewind ^ByE2mGaO
+
+advancepast ^fMjEGfhk
+
+advancepastany ^x0nKXc9h
+
+reading  methods ^3eWabjpi
+
+integer reading
+methods ^QCvtJWIo
+
+tryread ^vcjyi19V
+
+trypeek ^02C69pf5
+
+trycodyto ^AqTNHxIa
+
+searching/delimiter methods ^aD4Wjacj
+
+tryfeadto ^WUeYpIrg
+
+tryreadto ^ugxldDx1
+
+tryreadto delimiterescape ^UkCNtBM8
+
+isnext ^dRtoLHI8
+
+isnext ^YfUICHgk
+
+!!!! ^yiJkGjOZ
+
+we advance sequence reader
+to just pass its position to 
+advanceto later ^l4iiAxMm
+
+adv ^MT0rrjfr
+
+adv ^8qBP63Bh
+
+adv on sucess
+no adv on failure ^vAouED33
+
+no adv at all ^MCXvswMu
+
+no adv at all ^a6RFVSOk
+
+about not contiguous 
+sequences
++ big reasons
+why sequence reader
+ ^B7BHPhSu
+
+cursor api ^6jQF2gVb
+
+decoding to string, can decode 
+sequence btw ^VA359AHZ
+
+checking prefix across segments(cant with firstspan) ^Q1gNeSQm
+
+finding positionof multybyte delimiter
+across spans ^EEwZJOMC
+
+parsing fixed size header
+but its across segments
+(can do manually with stackalloc and  sequence.copyto) ^qevoLpri
+
+reading text with some custom 
+delimiters ^Ml8lC4P0
+
+1 construct custom binary
+or framed output,may need to 
+2 write in memory and in resp
+ or test (ibuf case)
+3 use utf8writer with ability to write in
+memory for something/tests ^mLlXk19h
+
+many text writes /n lines,
+no frequent flushes ^pAQ3SVV4
+
+normal json api ^UuujctSg
+
+raw upload,raw donwload
+utf8writer ^ArXEZSqW
+
+plaintext response, response.write
+ndjson sse ^k0ZYFLiG
+
+expl json write,but high level ^SgBBv9Et
+
+just plain text writes 
+with different approaches ^fqtiKKEk
+
+stream reader ^RLg5FkkO
+
+enable buffering ^DQVSKv5v
+
+write bytes to body ^MscHtzC1
+
+first vs firstspan ^mdQc3jOW
