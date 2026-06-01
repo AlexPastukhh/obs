@@ -9,10 +9,17 @@ EF02 - Attach / disconnected updates / entity state
 EF03 - Constructors / materialization
 ```
 
-Pending next candidates:
+Boundary reviews:
 
 ```text
-S-006 -> shadow property / query filter
+EF04 - Shadow property / query filter
+```
+
+Pending next:
+
+```text
+EF04 transcript:
+S-006
 ```
 
 Each transcript must include:

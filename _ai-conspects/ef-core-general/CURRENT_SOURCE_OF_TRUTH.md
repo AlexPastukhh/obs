@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core general
 
-Generated: 2026-06-01 23:36:15 UTC
+Generated: 2026-06-01 23:39:21 UTC
 
 ## Current policy
 
@@ -25,6 +25,7 @@ Stage4: EF02 boundary review done
 Stage5: EF02 transcript done
 Stage6: EF03 boundary review done
 Stage7: EF03 transcript done
+Stage8: EF04 boundary review done
 ```
 
 ## Done
@@ -36,9 +37,16 @@ EF02: Attach / disconnected updates / entity state
 EF03: Constructors / materialization
 ```
 
-## Pending next candidates
+## Current target
 
 ```text
-S-006 -> shadow property / query filter
+EF04 transcript next:
+S-006
+Shadow property / query filter
+```
+
+## Pending after EF04 boundary review
+
+```text
 Other EF Core areas require boundary review first
 ```

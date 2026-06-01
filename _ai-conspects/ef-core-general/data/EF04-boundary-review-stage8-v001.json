@@ -1,0 +1,180 @@
+{
+  "generated": "2026-06-01 23:39:21 UTC",
+  "region_id": "EF04",
+  "region_name": "Shadow property / query filter",
+  "boundary_status": "boundary-reviewed-not-transcribed",
+  "important_rule": "This is a boundary review, not final transcript. Transcript pass must still visually recheck S-006.",
+  "included_candidate_sources": [
+    "S-006"
+  ],
+  "checked_not_ef04": {
+    "already_processed_ef02_overlap": [
+      "S-028",
+      "S-029",
+      "S-030"
+    ],
+    "already_processed_ef03_overlap": [
+      "S-024",
+      "S-025",
+      "S-026",
+      "S-027"
+    ],
+    "already_processed_ef01a_overlap": [
+      "S-031",
+      "S-032",
+      "S-033"
+    ]
+  },
+  "next_transcript_pass": {
+    "pass_id": "EF04",
+    "sources": [
+      "S-006"
+    ],
+    "meaning": "Filtering by a shadow property with EF.Property<bool>(entity, \"IsDeleted\") in a query."
+  },
+  "rows": [
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "8a232da430",
+      "x": 7542.419,
+      "y": 2284.89,
+      "width": 990,
+      "height": 226,
+      "candidate_group": "ef04-shadow-property-query-filter",
+      "decision": "candidate-for-EF04-transcript",
+      "reason": "Shadow property filter using EF.Property<bool>(..., \"IsDeleted\").",
+      "nearest_labels_for_search_only": "L-006: shadow prop usage | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-046: partial init antipatter"
+    },
+    {
+      "source_id": "S-028",
+      "image_use_id": "IU-028",
+      "fileId_short": "354939e8d7",
+      "x": 8751.825,
+      "y": 3135.582,
+      "width": 717,
+      "height": 861,
+      "candidate_group": "processed-EF02-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF02 Attach/disconnected update/entity state; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-026: nullable relationships"
+    },
+    {
+      "source_id": "S-029",
+      "image_use_id": "IU-029",
+      "fileId_short": "5e335b4ef1",
+      "x": 8761.267,
+      "y": 2461.568,
+      "width": 820,
+      "height": 289,
+      "candidate_group": "processed-EF02-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF02 Attach/disconnected update/entity state; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?"
+    },
+    {
+      "source_id": "S-030",
+      "image_use_id": "IU-030",
+      "fileId_short": "1b74640858",
+      "x": 8762.46,
+      "y": 2823.004,
+      "width": 713,
+      "height": 241,
+      "candidate_group": "processed-EF02-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF02 Attach/disconnected update/entity state; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?"
+    },
+    {
+      "source_id": "S-024",
+      "image_use_id": "IU-024",
+      "fileId_short": "4538d60710",
+      "x": 10302.698,
+      "y": 2713.734,
+      "width": 828,
+      "height": 210,
+      "candidate_group": "processed-EF03-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF03 constructors/materialization; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-028: ctors wont run when ef materializes entities? | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-026: nullable relationships"
+    },
+    {
+      "source_id": "S-025",
+      "image_use_id": "IU-025",
+      "fileId_short": "bc91d60828",
+      "x": 10301.576,
+      "y": 2932.244,
+      "width": 686,
+      "height": 482,
+      "candidate_group": "processed-EF03-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF03 constructors/materialization; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach"
+    },
+    {
+      "source_id": "S-026",
+      "image_use_id": "IU-026",
+      "fileId_short": "e42dcdf323",
+      "x": 10295.198,
+      "y": 3437.901,
+      "width": 819,
+      "height": 247,
+      "candidate_group": "processed-EF03-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF03 constructors/materialization; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-026: nullable relationships | L-028: ctors wont run when ef materializes entities? | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach"
+    },
+    {
+      "source_id": "S-027",
+      "image_use_id": "IU-027",
+      "fileId_short": "946177ff27",
+      "x": 10298.814,
+      "y": 1561.09,
+      "width": 818,
+      "height": 482,
+      "candidate_group": "processed-EF03-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF03 constructors/materialization; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-028: ctors wont run when ef materializes entities? | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-039: entities shit | L-008: Attach | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if "
+    },
+    {
+      "source_id": "S-031",
+      "image_use_id": "IU-031",
+      "fileId_short": "af19e8920a",
+      "x": 5713.487,
+      "y": 1928.146,
+      "width": 822,
+      "height": 366,
+      "candidate_group": "processed-EF01A-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF01A tracking/identity/read path; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-046: partial init antipatter | L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-030: identity map pattern | L-006: shadow prop usage | L-038: so rep shit"
+    },
+    {
+      "source_id": "S-032",
+      "image_use_id": "IU-032",
+      "fileId_short": "27e0fafb7d",
+      "x": 5666.154,
+      "y": 2335.702,
+      "width": 890,
+      "height": 302,
+      "candidate_group": "processed-EF01A-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF01A tracking/identity/read path; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-046: partial init antipatter | L-030: identity map pattern | L-006: shadow prop usage | L-038: so rep shit"
+    },
+    {
+      "source_id": "S-033",
+      "image_use_id": "IU-033",
+      "fileId_short": "31d62e0a78",
+      "x": 5636.154,
+      "y": 2708.813,
+      "width": 830,
+      "height": 338,
+      "candidate_group": "processed-EF01A-overlap",
+      "decision": "checked-not-EF04-already-processed",
+      "reason": "Already processed in EF01A tracking/identity/read path; visually nearby but not EF04 ownership.",
+      "nearest_labels_for_search_only": "L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-046: partial init antipatter | L-030: identity map pattern | L-006: shadow prop usage | L-038: so rep shit"
+    }
+  ]
+}
