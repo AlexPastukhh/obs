@@ -1,0 +1,184 @@
+﻿- EF CORE GENERAL repo shit entity shit onmodelcreat shit transactions shit dbexceptions db level invariants,protection, trigger
+"cancellation,async"
+"when need to add content type, encoding"
+abstraction and encapsulation
+account activation
+actiondescriptor,controlleractiondescriptor,endpoint,metadata, route or endpoint name, iapiendpointmetadata, ordered metadata
+adddataprotection, encryption, password recovery
+ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part, server part, pipereader pipewriter stream reader stream writer
+allocations
+alternate key
+antiforgerytoken
+apibehavioroptions
+ascii
+assplitquery
+async processing of multiple calls,parallelism
+AUTH EVENTS
+authenticaiton ticket, properties, context.User (claimsprincipal)
+authentication,, oidc, flows , handlers , forwarding auth events
+AUTHORIZATION
+authorization flow,autorization options, framework, authorizationmiddlewareresulthandler
+automatic problem details from modelstate,apicontroller filter invalidmodelstateresponsefactory
+base mvc razor views example,tempdata viewdata viewbag, cache tag helper
+basic auth
+binary primitives
+BINDING SOURCE ATTRIBUTES
+cache control header,directives, PUBLIC PRIVATE CACHE , RESPONSE CACHE TYPES , E TAG CACHE FLOWS
+cache control headers and response caching
+changetracker
+channel
+claimstransformation
+composite key
+compression,decompression,request,response
+computed columns
+content disposition header
+CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON
+conventions
+cookie auth, antiforgery
+cookies auth ON REDIRECT probmem details returning
+cookies vs tokens sheet jswt in cookies
+cookies, general theo, plain cookie options
+CORS
+cors vs anti forgery
+creating base32 secret
+CREATION REQUEST,POST REQUEST,LOCACTION HEADER,CREATED AT
+CUSTOM ROUTE CONSTRAINT
+data shaping,expando
+dbcontext interseptors savechanges , dbcommand
+dbcontextpool, queryfilter
+dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery
+decoding, bytes memory, start of x byte character
+donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable
+editor,display templates
+ef core context.database, transaction object, savechanges, dbconnection,dbtransaction
+ef core performance, diagnostics , compiled linq, batching, n + 1
+ef core retry, savepoints
+ef has conversion, value converte,comparer
+ef migrations, dotnet-counters
+encapsulating dbcontext
+encoding, utf8, chunk processing
+equality
+ETAG, e tag
+event source browser
+events,delegaates,action
+EXCEPTIONHANDLERS
+explicit interface inplementation
+FILTER,MIDDLEWARE CANCELLATION,REQUEST ABORTED
+FILTERING AND SEARCHING
+filters
+fluent validation
+FULL CONTENT NEG + VALIDATION FLOW
+google recapcha and recapchas
+hashcode
+hashing
+hateoas
+HEAD REQUEST
+headers
+hexadecimal base16 how to convert to bytes easily
+httpclient,summary,theory,base usage,jsonoptions wrapper,handlers
+httpcontent,custom one, readasstream buffering, compression directly to network
+httpcontext items and features
+hybrydcache
+identity
+idistributedcache
+imemorycache
+implicit operators explicit operators
+indexes, onmodel indexes
+injecting into razor
+interlocked,interlocked.read
+istringlocalizer iviewlocalizer
+IVALIDATABLE OBJECT, VALIDATION ATTRIBUTES
+jquery dynamic form validation
+jsonconverter
+jsondocument, jsonnode, jsonelement, utf8jsonwriter
+jwt auth
+keyless entity type
+last modified header, implementation, expirational model
+Lazy
+lazy loading
+link generator
+linq join groupjoin groupby selectmany,selectmany second callback
+linq query syntax
+linq to sql
+lock, monitor
+manual account lockout,ratelimiter middleware, idatabase vs idist cache
+MEDIA TYPES OF REQUESTS
+membernotnull attribute,NULL
+mfa
+middleware, writeasjson
+modelstate
+objectpool,arraypool,memorypool
+OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties
+onmodelcreating
+options pattern
+options requ
+outputcache layers, to use or not,locking, outputcache vs cdn
+outputcache, response cache comparison
+owned entity
+PAGING
+partially initialized antipattern and possible partial inits inside repositories
+pointers
+primary httphandler optoins, socket
+principles,practises,patterns
+problem details
+problem2
+processing data as stream in dif situations, httpclient,endpoint,browser,websockets
+produces, consumes, input output formatters 406 415, vary accept
+proxy, server, vite dev server proxy
+PUT,PATCH
+QS PREFERENCE WITH MULTIPLE ACCEPT HEADER VALUES HELPER
+query filters ef core
+randomnumbergenerator
+rawconnections,dbconnection,sqlconnection,commands
+RAZOR PARTIAL UPDATES FOR VIEWCOMPONENT HTMX,AJAX
+records
+redis, idatabase,iserver
+redis,multiplexer,redis lock
+ref in out
+REFLECTION
+REST API BASICS
+return new ()
+return url implementation razor
+returning iqueryable,problems when returning ienumerable without tolist, async enumerable problems,yield
+returning most specific passing most generic
+root document
+ROUTE NESTING
+ROUTE PARAMS,QUERY STRING BASICS
+ROUTING,ROUTE DESIGN, RESOURCES,ROUTING ALL GOOD PRACT IN GENERAL EXPLAINED
+routing,route params tech info, custom constraints,router matching
+scopes and idisposable
+searching impl, ef core, full text search,sql server
+semaphoreslim vs channel
+server browser threads,memory, webworkers , runtime vs compiler , es
+server resources,multipleinstances,microservices
+shared polly,cheat sheet,production ready verions, exceptions from pipeline and handling
+sheet dict
+sheet hashset
+SORTING,MAPPING SERVICE
+span,memory,stackalloc,stackoverflow,calculate bytes, unmanaged types
+SQL SERVER MARS
+sql syntax. sql server
+sqlserver,efcore, bulk,sqlbulkcopy
+statuscodepages
+stored procedures
+streaming
+STRINGREADER
+SYSTEM.TEXT.JSON SER SER
+tag helpers razor,partial
+time
+totp, summary,theory
+transaction, isolation
+url save base 64 for db, hex string
+usecookiepolicy
+useRef to avoid including into deps array, to avoid rerenders or bad recreations
+usesyncexternalstore
+utf8 string literal
+valuetask
+vary header
+view discovery conventions
+viewcomponent
+views, idexed views
+websockets
+windows auth
+working with bytes, streams to bytes, to array readexactly,readatleast
+xss, csp
