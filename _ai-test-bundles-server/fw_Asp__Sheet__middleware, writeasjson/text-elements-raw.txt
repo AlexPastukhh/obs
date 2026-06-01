@@ -1,0 +1,48 @@
+﻿public class RequestTimingMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<RequestTimingMiddleware> _log;
+
+    public RequestTimingMiddleware(RequestDelegate next, ILogger<RequestTimingMiddleware> log)
+    {
+        _next = next;
+        _log = log;
+    }
+
+    public async Task InvokeAsync(HttpContext context)
+    {
+        var sw = Stopwatch.StartNew();
+        await _next(context);
+        sw.Stop();
+
+        context.Response.Headers["X-Elapsed-ms"] = sw.ElapsedMilliseconds.ToString();
+        _log.LogInformation("Elapsed: {ms}ms", sw.ElapsedMilliseconds);
+    }
+}
+ ^oQfptHI4
+
+ORDER
+______
+theory ^v1hTPOqL
+
+ 1 INHERITANCE
+  2 DI GOTCHA MIDDLEWARE + SCOPED MIDDLEWARE ^pxwqhsqH
+
+1 SHORT CIRCUIT
+2 ASYNC TIPS
+3 DEBUGGING TIPS
+4 COMMON PATTERNS ^ELB7eKop
+
+all SERVICED  ^hlePs11N
+
+EXAMPLE ^mM3IHAoZ
+
+FEATURES--> ^dKPb0oYL
+
+CAN GET EXCEPTION ^OCyXWiWM
+
+what is brunch here ^zFIRHv7p
+
+to write json in non mvc land : ^vk6bEJQ4
+
+METHODS ^5hB2c4Nn

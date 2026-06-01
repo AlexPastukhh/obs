@@ -1,0 +1,307 @@
+﻿sending hashed with secret and then sending secret to
+get tokens
+needed for idp to prove that its you who initialized the flow ^A9o8k80e
+
+edpoint names + min flow ^Hddh7QfL
+
+default schemes values that are possible ^aUxWrSp9
+
+def challenge scheme how works ^jTUeSUVU
+
+code and tokens ^JKfT6lZ2
+
+what endpoint who should have ^Dd2x7aLd
+
+why ^ROmUPD3J
+
+implementation of apicaller service
+wrapper with autorefresh accessing tokens from ticket ^9xFVrvK8
+
+so authenticateasync its the auth handlers method that 
+checks cookies of the current request and if there is a cookie for 
+auth it returns auth result with decrypted authticket values
+claimsprincipal, auth properties and scheme name
+that is has set and encrypted on signinasync call ^obwXqOdq
+
+auth ticket, authhandlers methods
+authenticateasync ^ooY6inot
+
+sign out ^JrDw9Ch5
+
+!!! ^MCATMOAW
+
+jwt api/idp asymmetric keys ^JCtk0WLQ
+
+how api gets key fro idp endpoint, what is automatic
+what to do for prod ^1cH7NQIf
+
+not storing access tokens in browsers cookie auth properties ^pkMGTfa8
+
+so identity resources is what client app 
+gets in id token and what is being populated into 
+claimsprincipal by middleware, userclaims in apiresources are needed 
+for api to decide whether this user is allowed to request it(in addition to scopes) ^JACMg2lG
+
+iprofser ^LJChkAYm
+
+confidential/public clients/pkce flow/both lients types flow,bff ^Osii0WBP
+
+pkce public client spa ^vuX5ee1x
+
+what is conf/pub clients and why bff is good ^G0yqn2OU
+
+pkce confidential client, mvc,bff ^8lsQqrG6
+
+clients config ^7AKUtGRm
+
+idp config ^D1ENY8hW
+
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+
+builder.Services
+  .AddAuthentication(options =>
+  {
+      options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;      // "Cookies"
+      options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;   // "OpenIdConnect"
+  })
+  .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, cookie =>
+  {
+      cookie.Cookie.Name = "__Host-app";
+      cookie.Cookie.HttpOnly = true;
+      cookie.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+      cookie.Cookie.SameSite = SameSiteMode.Lax; // often OK for OIDC; sometimes None depending on setup
+      cookie.SlidingExpiration = true;
+      cookie.ExpireTimeSpan = TimeSpan.FromHours(8);
+  })
+  .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, oidc =>
+  {
+      oidc.Authority = "https://localhost:5001"; // IdP base URL
+      oidc.ClientId = "mvc";
+      oidc.ClientSecret = "mvc-secret";
+
+      oidc.ResponseType = "code";   // Authorization Code flow
+      oidc.UsePkce = true;
+
+      oidc.CallbackPath = "/signin-oidc";                 // default
+      oidc.SignedOutCallbackPath = "/signout-callback-oidc"; // default
+
+      // Scopes requested at login
+      oidc.Scope.Clear();
+      oidc.Scope.Add("openid");    // required for OIDC
+      oidc.Scope.Add("profile");   // basic identity claims
+      // oidc.Scope.Add("email");   // if needed
+      // oidc.Scope.Add("api.read"); // if calling APIs
+
+      oidc.SaveTokens = true; // demo-friendly (stores tokens in auth ticket). In prod BFF prefer false.
+      oidc.GetClaimsFromUserInfoEndpoint = true; // fetch additional claims from /userinfo if available
+
+      // Claim mapping (optional, depends on IdP)
+      oidc.MapInboundClaims = false; // keeps claim types as-is (e.g., "sub", "role")
+      oidc.TokenValidationParameters.NameClaimType = "name";
+      oidc.TokenValidationParameters.RoleClaimType = "role";
+  });
+
+var app = builder.Build();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapDefaultControllerRoute();
+app.Run(); ^gslh9WJG
+
+are there sec reason or just a payload? ^bZhKVjNF
+
+ACCESS TOKEN EXISTS, ITS NOT EXPIRED 
+OR WE JUST FETCHED A NEW ONE  ^H8zfglBr
+
+THE ACCESS TOKEN THAT 
+IS VALID OR THAT WE 
+JUST GOT WITH REFRESH ^kx7upsUR
+
+should we use refresh tokens in spa
+token rotation ^4j7qWb3s
+
+token rotation ^DLYoxgRw
+
+!!! ^1xoGQanp
+
+using IdentityModel.Client;
+
+public sealed class ApiClientWithBffTokens
+{
+    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly ITokenStore _tokenStore;
+
+    public ApiClientWithBffTokens(IHttpClientFactory httpClientFactory, ITokenStore tokenStore)
+    {
+        _httpClientFactory = httpClientFactory;
+        _tokenStore = tokenStore;
+    }
+
+    public async Task<string?> GetAccessTokenAsync(HttpContext http, CancellationToken ct)
+    {
+        var sid = http.User.FindFirstValue("bff_sid");
+        if (string.IsNullOrEmpty(sid)) return null;
+
+        var tokens = await _tokenStore.GetAsync(sid, ct);
+        if (tokens is null) return null;
+
+        // refresh early
+        if (tokens.ExpiresAt > DateTimeOffset.UtcNow.AddMinutes(1))
+            return tokens.AccessToken;
+
+        // refresh
+        var idp = _httpClientFactory.CreateClient("idp");
+        var disco = await idp.GetDiscoveryDocumentAsync("https://localhost:5001", ct: ct);
+        if (disco.IsError) return null;
+
+        var refreshed = await idp.RequestRefreshTokenAsync(new RefreshTokenRequest
+        {
+            Address = disco.TokenEndpoint,
+            ClientId = "mvc",
+            ClientSecret = "mvc-secret",
+            RefreshToken = tokens.RefreshToken
+        }, ct);
+
+        if (refreshed.IsError || string.IsNullOrEmpty(refreshed.AccessToken))
+            return null;
+
+        var newSet = new TokenSet
+        {
+            AccessToken = refreshed.AccessToken,
+            RefreshToken = refreshed.RefreshToken ?? tokens.RefreshToken,
+            ExpiresAt = DateTimeOffset.UtcNow.AddSeconds(refreshed.ExpiresIn)
+        };
+
+        await _tokenStore.SaveAsync(sid, newSet, ct);
+        return newSet.AccessToken;
+    }
+
+    public async Task<(int Status, string Body, bool NeedsReauth)> GetWeatherAsync(HttpContext http, CancellationToken ct)
+    {
+        var accessToken = await GetAccessTokenAsync(http, ct);
+        if (accessToken is null)
+            return (401, "", true);
+
+        var api = _httpClientFactory.CreateClient("api");
+        api.DefaultRequestHeaders.Authorization =
+            new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+
+        var resp = await api.GetAsync("weather", ct);
+        var body = await resp.Content.ReadAsStringAsync(ct);
+
+        if (resp.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+        {
+            // token could have been revoked, etc. force reauth
+            return (401, body, true);
+        }
+
+        return ((int)resp.StatusCode, body, false);
+    }
+} ^wX5dVBKI
+
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using System.Security.Claims;
+
+options.Events = new OpenIdConnectEvents
+{
+    OnTokenResponseReceived = async ctx =>
+    {
+        // Tokens are available here:
+        var accessToken = ctx.TokenEndpointResponse?.AccessToken;
+        var refreshToken = ctx.TokenEndpointResponse?.RefreshToken;
+        var expiresIn = ctx.TokenEndpointResponse?.ExpiresIn;
+
+        if (string.IsNullOrEmpty(accessToken) || string.IsNullOrEmpty(refreshToken) || expiresIn is null)
+            return;
+
+        var sid = Guid.NewGuid().ToString("N"); // our server session id
+
+        // Add sid claim to the cookie identity (small)
+        var identity = (ClaimsIdentity)ctx.Principal!.Identity!;
+        identity.AddClaim(new Claim("bff_sid", sid));
+
+        var expiresAt = DateTimeOffset.UtcNow.AddSeconds(expiresIn.Value);
+
+        var store = ctx.HttpContext.RequestServices.GetRequiredService<ITokenStore>();
+        await store.SaveAsync(sid, new TokenSet
+        {
+            AccessToken = accessToken,
+            RefreshToken = refreshToken,
+            ExpiresAt = expiresAt
+        }, ctx.HttpContext.RequestAborted);
+    }
+}; ^B15EYh3h
+
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
+
+public sealed class DistributedTokenStore : ITokenStore
+{
+    private readonly IDistributedCache _cache;
+
+    public DistributedTokenStore(IDistributedCache cache) => _cache = cache;
+
+    private static string Key(string sid) => $"bff:tokens:{sid}";
+
+    public async Task SaveAsync(string sid, TokenSet tokens, CancellationToken ct)
+    {
+        var json = JsonSerializer.Serialize(tokens);
+
+        // Set cache TTL to something >= refresh token lifetime policy
+        var options = new DistributedCacheEntryOptions
+        {
+            SlidingExpiration = TimeSpan.FromDays(14)
+        };
+
+        await _cache.SetStringAsync(Key(sid), json, options, ct);
+    }
+
+    public async Task<TokenSet?> GetAsync(string sid, CancellationToken ct)
+    {
+        var json = await _cache.GetStringAsync(Key(sid), ct);
+        return json is null ? null : JsonSerializer.Deserialize<TokenSet>(json);
+    }
+
+    public Task RemoveAsync(string sid, CancellationToken ct)
+        => _cache.RemoveAsync(Key(sid), ct);
+} ^1Bvp6TZR
+
+accessing tokens from token store
+lower ^fPYRFfqH
+
+accessing tokens from token store ^9BwLoreD
+
+custom identity resources and getting
+some claims for clients claims identity for convenient ui logic ^9yOTFaTc
+
+how to ask for scopes , how to give some 
+scopes on login and later, if we dont have some scopes in access
+token to perform some actions that need some scopes 
+try to get those scopes from id ^MMvbHsVZ
+
+setting all needed scopes ^OnxgcQuu
+
+!!! ^HNrfSVCk
+
+oidc events ^LeyiIMG1
+
+api resources ^gcDglQub
+
+should i alwats create iprofser
+for custom id resources ^a52bZgLa
+
+identity model package ^lKtlP7Ou
+
+only admins can get write
+scope ^WeHaO38V
+
+some default scopes  
++ step up rechallenge with
+additional scropes in atuh prop items ^gVC1hCEt

@@ -1,0 +1,261 @@
+﻿has sequence ^K3tR8Hby
+
+default ^yCxocDeD
+
+!!!configuring collation ^Ow7qU9iq
+
+nvarchar vs varchar 
+with utf8 collation ^J5eYOu4C
+
+varchar 
+with utf8 collation ^klSqcIOa
+
+collations ^6bzSefYD
+
+when to use nvarchar ^6fKaEL9N
+
+unicode ^NQtdlDiP
+
+when to use varchar ^d9Gl6zsn
+
+no repeated function generate calls ^GimCySyf
+
+!!! ^BsbWFd12
+
+many to many 
+join table ^DIqiEwrx
+
+ientitytypeConfiguration ^DV1IntuU
+
+configuring custom jointable name
+Fk names ^AOSqtHWw
+
+explicit many to many config
+(not needed can do auto) ^yS2Tol99
+
+many to many 
+with custom join table config ^oecBotn5
+
+with clr class
+and extra columns to
+have logic with them
+in code ^5xG8LzC6
+
+hidden vs 
+dedicated class ^S35PueGS
+
+configureConventions ^yTM47K6i
+
+Savebehavior, can we mutate 
+added entity, can we even update it? ^xlPk29T4
+
+beforsave ^nFsrNcoX
+
+aftersave ^s8GnXJpv
+
+examples ^zCBwwYLZ
+
+value generation ^v1uZI8DR
+
+default values
+computed values ^HrDg4egd
+
+ignore property ^mIeoSomL
+
+entity.Navigation ^SWDmkBu0
+
+index
+hasdatabasename ^4soCe8vq
+
+hasprecision ^IqF2PwvA
+
+IsUnicode ^KhklaMui
+
+set schema,setdefault schema ^pnl1vyFN
+
+!!!! ^tOfN85F1
+
+has dbfunction ^JzvqTeEV
+
+ondelete rules ^9S5RFgi2
+
+clientnoaction ^vCxr8rJc
+
+client setnull ^cYQ6YByL
+
+client cascade ^2Z6B9lOy
+
+noaction ^JN5PRBfk
+
+setnull ^Gm8l0ZTc
+
+cascade ^Ncet4ULj
+
+restrict ^iSnGmoEe
+
+field ^bF2IWMoD
+
+setter has buisness logic ^KbHaWFAb
+
+readonly wrapper collection ^eSCYI1cF
+
+prop ^mhOedGzh
+
+fieldDuringConstruciton ^AmJ82Efj
+
+preferfield ^cRETrjWi
+
+preferprop ^mBh8KuGz
+
+always need prop logic ^pGp5NGxG
+
+construction/normal ef access ^jYHUyFAb
+
+!!!! ^qguqa6cw
+
+so when set field, its not
+default beh dude ^sdRIV73g
+
+!!!! ^npSHJk2A
+
+!!! ^LZgQxYCy
+
+1!!! ^VqCS1lu1
+
+value generated on add
+on add or update
+never ^PyKsPjf4
+
+custom value generators ^mKtNx6PQ
+
+database trigger for last modified ^Ym9C7Ahe
+
+Hilo ^1qjSr8Jo
+
+is it internal 
+optimisation
+when is it approap ^YBqD2YVy
+
+benefits of hilo ^kQGdNPa3
+
+setup ^zi57ENjk
+
+usage ^6r5wg0Ar
+
+dont need it ^bOu1gvQO
+
+only if a key ^Zh2u3qlG
+
+value generated on add
+hasdefaultvalue
+manually set wins ^YdeQem56
+
+defaults ^9I9Rd94D
+
+can we query base type 
+and then safely cast it without loosing
+data? ^fxBQY3hj
+
+!!! ^uMvxhZPu
+
+cast - its about compiler,
+not runtime ^ne4wsyfd
+
+so tpt is kinda always bad with perf
+and we may thing about tpc over tph when 
+there is a lot of nulls with tph, really wide tables
+and we really dont need to query base type at all or a lot
+or if there are some optimisations with it ^KXkLKWzi
+
+inheritance ^gR8wSEys
+
+hasbasetype ^vCC0SLty
+
+remove inheritance ^JkMQpGgK
+
+queries cost ^fak5m88u
+
+TPH ^yU5DSNFz
+
+TPT ^ZOiFBvz8
+
+TPC ^mpxv6WXj
+
+----------------concrete queries---------------- ^FkTzozmE
+
+----------------polymorphic---------------- ^I0iVjh59
+
+strategies, pros cons
+when to use what ^RBhVC0Pr
+
+polymorphic queries ^mBJAowW5
+
+!!! ^wTcWRTMJ
+
+mapping readonly 
+collection that has backing 
+private field ^wGp3xjPR
+
+map property, can set access mode
+if cant find, can do navigation.hasfield ^8A4JeCJa
+
+conventions +
+explicit configurations ^uJSIN2Hi
+
+valuegenerated on add is needed mostly when
+you have some id mapping to shadowprop, then there wont be
+an automatic generatedonadd ^mFt7HLrv
+
+custom converters ^E6Ic2IPJ
+
+convertions ^S3ZqFVTk
+
+!!!! ^MIMU2U4U
+
+enum to string conver ^n4txyepT
+
+careful with comparisons
+when you ve converted enums ^8xuefO23
+
+when enum to string
+can be good/bad ^MLFlpkD9
+
+!!! ^EljtNwdk
+
+!!! ^6bPWqdf5
+
+what is the default behavior 
+with inheritance
+how to avoid it 
+when to use hasbasetype(type null) ^qhdVV2c7
+
+things that can map shared base class ^BdS7HqIW
+
+dbset ^v6CLgMyy
+
+rel/navigation discovery ^CdYYZ2IX
+
+has... configurations ^onMglbK5
+
+applyconfiguration ^VTngmSxk
+
+apply config from ass ^22uV6gft
+
+shared type entity config ^ED6ueWcw
+
+default tph behavior, discriminator ^ajuQDyXF
+
+how to say this entity shouldnt
+be part of inheritance ^CHDP2tnr
+
+when to use hasbasetype(type null) ^gINr12N5
+
+changing from tph to independent tables ^gzdBVJmt
+
+in c# you have some domain inheritance for 
+buisness rules, but you dont want to persist
+with this hierarchy ^1SNgGZqH
+
+persisted,
+nonpersisted 
+computed ^rKV9K7Cj
