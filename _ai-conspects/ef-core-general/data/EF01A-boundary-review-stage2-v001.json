@@ -1,0 +1,51 @@
+{
+  "generated": "2026-06-01 22:43:34 UTC",
+  "region_id": "EF01A",
+  "region_name": "Tracking / identity map / no tracking / identity resolution",
+  "boundary_status": "reviewed-and-transcribed-v001",
+  "included_sources": [
+    "S-010",
+    "S-031",
+    "S-009",
+    "S-032",
+    "S-008",
+    "S-033",
+    "S-034",
+    "S-007",
+    "S-035",
+    "S-036",
+    "S-053",
+    "S-054",
+    "S-055",
+    "S-056",
+    "S-057",
+    "S-058"
+  ],
+  "included_count": 16,
+  "pending_next": {
+    "EF01B": [
+      "S-006",
+      "S-029",
+      "S-030",
+      "S-037",
+      "S-038",
+      "S-039",
+      "S-040",
+      "S-041",
+      "S-042",
+      "S-043",
+      "S-044",
+      "S-045",
+      "S-046",
+      "S-059",
+      "S-060"
+    ],
+    "meaning": "Loading collections / Include / Find / Load / AutoInclude"
+  },
+  "checked_boundary_note": "EF01A is the tracking/read-optimization sub-block of EF01. EF01B loading-collections images remain pending and are not silently included.",
+  "limitations": [
+    "S-009, S-033, and S-058 have cropped context at top.",
+    "S-054/S-055 are split/continuation sources for the 3-mode comparison.",
+    "S-007 touches Include graphs but is included in EF01A because it supports read optimization/projection; deeper loading APIs remain EF01B."
+  ]
+}

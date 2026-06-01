@@ -1,8 +1,16 @@
 # EF Core general regions
 
-No verified transcript has been created in Stage1.
+Verified transcripts:
 
-Next transcript should be `EF01A - Tracking / identity map / no tracking / identity resolution`.
+```text
+EF01A - Tracking / identity map / no tracking / identity resolution
+```
+
+Pending next:
+
+```text
+EF01B - Loading collections / Include / Find / Load / AutoInclude
+```
 
 Each transcript must include:
 
