@@ -1,0 +1,295 @@
+﻿default, but not all message hand;ers
+are sending request though network ^4Ec8QuXQ
+
+often there is a pipeline of handlers ^aRflZqvU
+
+there can be a caching handler that instead of 
+delegating to socket handler can return cached 
+response ^jNjPcaRa
+
+quick ^fEpGMulU
+
+dispose requestmessage and especiallty response message ^eB5i5Tu1
+
+ADD ACCEPT HEADERS 
+TO WAIT FOR SOME
+SPECIFIC TYPE ^WYJPaWeQ
+
+CHECK RESPONSE CONTENT-TYPE
+SO YOU CAN DESERIALISE
+PROPERLY ^X1qc6qXO
+
+by default preference =1  ^bJVKWK5L
+
+in our case will return json even if xml is default for
+api ^frCEe2qI
+
+!!! ^zX8WIvsz
+
+!! ^v03DAcu2
+
+!! ^eVYNSeMt
+
+!! ^2Iv1C96k
+
+!! ^V026sMfY
+
+when using httpclient defaultrequestheaders need to clear
+because it is a shared option for all requests of that http client ^3nocvAlY
+
+sometheory ^lHmie6bC
+
+accept/contenttype headers, 
+preference via q,
+clearing defaultheaders/using httprequestmessage,
+disposing messages ^2XeCinLz
+
+Why not to use shortcuts all the time? ^9MjCieVa
+
+you cant set specific acept header for specific request with shortcusts, if you have different request scenario
+you cant use shortcuts ^rAV8t95C
+
+using Microsoft.AspNetCore.JsonPatch;
+using System.Text.Json; // Make sure to use System.Text.Json
+// Depending on your project setup, you might need:
+// using Microsoft.AspNetCore.JsonPatch.SystemTextJson; 
+
+// Define a simple DTO (Data Transfer Object)
+public class Employee
+{
+    public int Id { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public AddressDto Address { get; set; }
+
+    public class AddressDto
+    {
+        public string Street { get; set; }
+        public string City { get; set; }
+    }
+}
+
+// ... in your client-side code or business logic ...
+
+// Create a new JsonPatchDocument for the Employee type
+var patchDocument = new JsonPatchDocument<Employee>();
+
+// Add operations to the patch document
+// Replace the LastName property
+patchDocument.Replace(e => e.LastName, "Smith"); 
+
+// Add a new value to the address city
+patchDocument.Replace(e => e.Address.City, "Seattle");
+
+// You can add more operations as needed (Add, Remove, Move, etc.)
+// patchDocument.Add(e => e.Address.ZipCode, "98101"); 
+
+// Serialize the patch document to a JSON string using System.Text.Json
+var jsonOptions = new JsonSerializerOptions
+{
+    // Configure any specific System.Text.Json options (e.g., camelCase, indentation)
+    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+};
+
+// The serialization is handled internally by the package's integration
+var patchJson = System.Text.Json.JsonSerializer.Serialize(patchDocument, jsonOptions);
+
+// The resulting JSON string (patchJson) will look something like this:
+// [{"op":"replace","path":"/lastName","value":"Smith"},{"op":"replace","path":"/address/city","value":"Seattle"}]
+ ^IP5cnqYi
+
+Need to use Json.Net for this  ^upPzKGS4
+
+We need to return patch document of changes ^kLORO1yY
+
+can do both typed and utyped version (untyped for dynamic sys when you dont have classes
+typed helps with checks of or patch actions) ^03QwckZG
+
+patch operations ^4mmUuz4d
+
+creating request ^gg4Y18Ol
+
+setting response content and content related header ^If22pC82
+
+needed to check everything is good ^qKMhV6Jw
+
+better to check if advanced deep dive array onega is supported by the api ^PenK6GCX
+
+same api for text.json patchdocument ^YJMSmQjA
+
+shortcut ^XGS9ymPC
+
+!!!!!!! ^GQowXtVm
+
+CREATE RESOURCE
+UPDATE
+DELETE 
+PATCH
+TEXT.JSON PATCH 
+SHORTCUTS 
+(NO STREAMING ) ^jFGizvlz
+
+
+IF NEED TO SEND FILES OR MULTIPART DATA - CAN USE FILESTREAM(MB VIA FILE.OPENREAD)
+OR MULTIPARTFORMCONTENT AND ADD MULTIIPLE CONTENT TYPES THERE, STRING/FILESTREAM ETC
+ ^giy6qTXQ
+
+NEED TO BUILD SOME CLEAR STEPS FOR USING HTTPCLIENT
+
+LIKE 
+PAYLOAD
+if already has stream or small object 
++ need something with string -> create stringcontent with contenttype and charset and put 
+to body
+IF BIG OBJECT -> use jsoncontent.create and put to body
+if also need compression -> CREATE MEMORY STREAM,serialize object to memory stream,
+put stream to streamcontent
+if file -> ^8QbYtpIO
+
+IF WE WANT, WE CAN ADD READING ON HEADERS ARRIVE ^DntzPbYi
+
+CAN READ AS STRING AND SERIALIZE ^VQFEJ8yS
+
+CAN READ AS JSON
+
+CAN READ AS STREAM WHEN READING ON HEADERS OR 
+WHEN GETTING ACTUAL STREAM ^mGqeQyvj
+
+when getting objects stream
+need to read as stream too 
+and await foreach deserializeasyncenumerable ^TuK8v53D
+
+as administrator ^DOlb7KhB
+
+after http client is disposed
+the socket cant be available 
+to do requests for 240 sec,just to 
+receive packets  ^iQQqTefv
+
+when you disposing socket with 
+client, sockets just do nothing for 240 sec ^9Kmq4qTS
+
+can lead to socket exsaustion ^yQNOBQPU
+
+using one httpclient ^DMHzhxrW
+
+one connection instead of 10 ^fJBzzCUk
+
+we didnt disposed httpclient 
+and its handler ^2CYIuUOE
+
+When instantiates httpclient it takes handler(socket usually) from a pool ^yU2K23kA
+
+And it manages the lifetime of handlers (2 mins) ^lnec0Mrh
+
+For 2 mins, handlers can be reused  ^Hdb2LRFF
+
+!1 ^Bzi0p7tl
+
+need to understand with deep 
+dive to web ^ir0Jmqzh
+
+named clients ^oUTbM04f
+
+using typed client and inject it instead of factory ^wWQjIkLh
+
+need to clarify evr after computer network course ^CeJ5eLUc
+
+configuring default json options with jsonoptions wrapper ^pO3gciVq
+
+need a workaround ^uXc74DTr
+
+injecting though constructor and using   ^9ATgYUMi
+
+can potentially use different wrappers for different
+putposes as different httpclients ^CZRN1Gcz
+
+
+jsonoptionswrapper ^mYOwb66q
+
+problems without httpclient factory ^cfncLonh
+
+global httpclient config  ^TCmVwUsL
+
+Can create chain of handlers ^hTFrRzdU
+
+Can configure primary handler ^wNtgopsa
+
+configuring redirection(need to return new configured handler) ^W6veBgeR
+
+by default true, now RedirectToAction wont work ^v6wU2CSZ
+
+can i configure primaryhandler for one specific httpclinet (not named) ^pqegMDsA
+
+httpmessagehandlers ^RRfTzt9B
+
+!!! ^csFXyVES
+
+global timeout via client.timeout and 
+percall timeout via cancel after ^8LI0hq47
+
+Factory will automatocally creqate instance of httpclient ^zgtWAchr
+
+Injecting via constructor ^jlZwfi7X
+
+!!! ^XtHOv0W1
+
+IJ youve configured custom handler in program cs, you must not override it in client class - this handler 
+wont be teken from a pool anymore  ^jxEyLBPy
+
+Adding jsonoptonswrapper ^GDEQsiCG
+
+creating method of our typed client ^96hxCOIc
+
+we will create specific methods to interact with api,
+so make it private ^sSH8q6Ok
+
+can lead to calling api via uri that no 
+longer matches the correct server ^gYOLs1Nj
+
+TYPED HTTPCLINET ^25nlxLCZ
+
+TESTING ^GS2FG8da
+
+newwer ^RYdYomWk
+
+reusing connections ^uwSvLzJd
+
+flow ^Upr5qE1g
+
+basic theo ^CAKlqy5N
+
+about dns ^ULVjDJB4
+
+httpmessagehandler options 
+one connection lifetime vs
+handler lifetime
+
+sinlgetoneclient withconfigured connection
+lifetime
+ ^aed5ioSM
+
+why need rotate handlers  ^Kq4wAiCe
+
+handler rotation vs connection rotation
+why we even need handler (factory) ^lZcDFWF2
+
+contenttype headers on
+content type
+not requestmessage ^q7Y78Jpv
+
+need to dispose 
+readasstreamasync too ^3V47OLc8
+
+delegating handlers examples  ^Xp0m9F8O
+
+corridhandler example ^XkTL44pO
+
+accesstoken and logger ex ^zPEn54Kg
+
+primary message handler ^jIQAyMro
+
+primaryhandlers ^arbiJ3v2
+
+do we need to create primary mes
+handler al the time? ^1w54X6gg

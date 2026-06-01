@@ -1,0 +1,102 @@
+﻿implementing full identity ^wAvDV5OT
+
+manual hashing ^OUtvwNx9
+
+In ddd style ^RoJaE2Eu
+
+Doesnt depends on how long it takes
+to actually verify password ^bUGfYujP
+
+using System.Security.Cryptography;
+
+public static class PasswordKdf
+{
+    // tune this based on perf tests
+    private const int Iterations = 210_000;
+    private const int SaltSize = 16;     // 128-bit
+    private const int KeySize = 32;      // 256-bit
+    private const string Algo = "PBKDF2-SHA256";
+    private const int Version = 1;
+
+    public static string Hash(string password)
+    {
+        byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);
+
+        byte[] key = Rfc2898DeriveBytes.Pbkdf2(
+            password,
+            salt,
+            Iterations,
+            HashAlgorithmName.SHA256,
+            KeySize);
+
+        // Store: v:algo:iter:saltB64:hashB64
+        return $"{Version}:{Algo}:{Iterations}:{Convert.ToBase64String(salt)}:{Convert.ToBase64String(key)}";
+    }
+
+    public static bool Verify(string password, string stored)
+    {
+        var parts = stored.Split(':');
+        if (parts.Length != 5) return false;
+
+        if (!int.TryParse(parts[0], out var version) || version != Version) return false;
+        var algo = parts[1];
+        if (algo != Algo) return false;
+
+        if (!int.TryParse(parts[2], out var iterations)) return false;
+
+        byte[] salt = Convert.FromBase64String(parts[3]);
+        byte[] expected = Convert.FromBase64String(parts[4]);
+
+        byte[] actual = Rfc2898DeriveBytes.Pbkdf2(
+            password,
+            salt,
+            iterations,
+            HashAlgorithmName.SHA256,
+            expected.Length);
+
+        return CryptographicOperations.FixedTimeEquals(actual, expected);
+    }
+} ^ChuRvtGK
+
+hasging ^6TmyY6aj
+
+how key stretching works ^JbnU9h9L
+
+basically kdf is a deterministic functions, it produces same hash on each input
+and when you hash with iterations - you always will get same hash for each input
+, psw -> hash1 -> hash2 -> hash300000 ^bcoycVSP
+
+flow ^8kHwg4cG
+
+what we are storing in db
+how it looks
+why do we store it in one place
+for what salt ^9bObqQ4w
+
+different algorythms cost params ^xpWvCmS0
+
+implementations->theo ^htJMS0n2
+
+version ^SoUVOKFv
+
+cost params values ^0nRh22NV
+
+migrating to automatic versioning with password hasher ^zMT5NB18
+
+does identityhash adds literal string verion
+rehashis needed from identity hasher ^yzrIdruT
+
+fixed time equals ^VI44qw9v
+
+pbkdf ^a5hWbFoa
+
+PASSWORDHASHER ^Ix1oZHjA
+
+rehashneeded ^BdSZQxIl
+
+about user arg ^wubRicUm
+
+why is user there, what to do? ^N6576UsR
+
+can pot, create excplicit hasher class that uses the default
+hasher and doesnt need user ^jeB62anY
