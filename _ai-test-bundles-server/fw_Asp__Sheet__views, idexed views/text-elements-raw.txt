@@ -1,0 +1,70 @@
+﻿tosqlquery vs toview ^8qiEpSbf
+
+Ef core view flow ^e78nhJx0
+
+concept of views
+depend on uderl tables
+usually readonly
+not physically stored until indexed ^WCnpEym7
+
+good for view ^I6grvbRK
+
+bad for view ^UoXlKOTd
+
+multiple sources,
+aggregated into one domain ^ggkaCopJ
+
+hide ugly queries ^ZvKeloXe
+
+Security, allow to work with
+some viewed data, not with
+sources ^CHqYN6pp
+
+stable read api, sources
+can change, evolve ^NU3YSdHu
+
+legacy ^Vx6zWi32
+
+hiding bad queries ^4epepw7c
+
+overusing for simple queries ^HYZFFlUn
+
+to much buisness logic  ^OAEEfzSR
+
+expecting normal entity behav ^J92y5Fmu
+
+can views be updated? ^29ypQSJa
+
+stored or not, indexes views ^c7DnTCSg
+
+view/indexed view
+with material dependent
+ table ^jSzexUFN
+
+Indexed views ^lQrOdvoe
+
+SCHEMABINDING
+protect view from breaking ^XJAUnfjT
+
+Clustered index first ^LztUTFNx
+
+flow when source row
+changes/writes cost ^NrtfEafL
+
+indexed view cost ^sIRf6tuS
+
+why clustered index 
+at first ^02SVbZRq
+
+SCHEMABINDING
+protect view from breaking ^WgnPry7q
+
+what it prevents ^GMYPRb1l
+
+indexed views require
+it ^nVbgTaSN
+
+indexed views require
+COUNT BIG for grouping ^UB1iRIDI
+
+schemabinding rules ^OhRgLtGj

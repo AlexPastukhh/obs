@@ -1,0 +1,157 @@
+﻿!!! ^z01Z94ww
+
+message types ^7jxIuznm
+
+so its another way in react to inclue func into eddect without triggering effect
+but this approach is needed when we cant rely on the callers code to wrap func into usecallback
+or we dont want to wrap it ^LEMnlJRt
+
+!!! ^ZacYTWc2
+
+react ^m9ebnrwM
+
+js websocket ^JxKX7qi6
+
+asp websockets ^pcCgfxf1
+
+basics ^MW3nvuRq
+
+WEBSOCKET METHODS ^rjKewoP9
+
+processing different types of messages
+processing binary on server ^QYkXokVX
+
+closeasync/closeoutputasync/abort differences ^q9se5Ik7
+
+when we want to process messages that
+might be inflight when we send 
+close, we need to use closeoutputasync
+
+closeasyn for your side response
+on close or for stop receiveing
+completeley
+
+(closeoutputasync is clener for your
+side close response too) ^dDvyEpxm
+
+summary ^9lEK2jld
+
+when close received we shouldnt do that  ^kKGQEMab
+
+processing messages wit hwebsocket
+on client ^42Edvq62
+
+!!! ^7FCEtIAo
+
+sending messages 
+from browser with websocket
+closing ^c0IQgvpQ
+
+closing ^8EhPLQTK
+
+about code/reason
+how browser checks code/reason
+how server checks code/reason
+ ^oPJN8JZO
+
+available codes ^UQKKjlX1
+
+.nets websocket properties ^eRF73I2i
+
+Browser websocket properties ^MAdPAAqf
+
+buffered amount ^tWm5Nj4e
+
+browsers protocol
+.nets subprotocol ^4lbVJrbS
+
+its what server agreed to accept via  ^x2aJJbt6
+
+we can have parameter here  ^0BS3TjmD
+
+so in both browser and server ws we can check what is the current
+subprotocol now
+main protocol is websocket protocol
+subprotocol is our custom protocol ^S3l8oDgn
+
+examples without suprotocol
+and with subprotocol when processing
+text/binary ^a44TgeLH
+
+parsing headers ^260rJ423
+
+!!! ugar ^T8IP6oNU
+
+websocket props ^RIdvgovg
+
+clientwebsocket ^ckA8HWZi
+
+clientoptions ^29PZXDC6
+
+websockets one send
+one receive at a time
+can have send and receive in parallel ^GokeEaYC
+
+if have different places in app where sends can occur, need to push messages into 
+channel and have one running send loop that will send one by one with 
+option onereaderonly or smth like that  ^ziVimoV5
+
+channel example ^CRtMNPbz
+
+more like close not received ^ZpqJgfTb
+
+websocket frames vs
+http messages
+contenttype
+headers etc ^KGMkX7JL
+
+buffered amount for ui spinner?
+server ack  ^ONPNgrCU
+
+what can go wrong if
+we ignore large buffered amount ^3XCVIsJT
+
+do we have http request
+everything while using websockets
+handshake, websocket frames ^ma1FBC00
+
+browser websocket optons ^JTBE74YQ
+
+authenticated
+websockets ^f9QGL6st
+
+credentials include? ^I2fbzMTv
+
+does websocket upgr
+causes preflight?
+can it cause preflight if there are other things? ^WnuTY1V4
+
+what is origin
+is client controlled? ^wSFPsCJy
+
+cookie websockets ^6iDR57pC
+
+jwt websockets ^za4MUWZB
+
+allowed origins ^fB7DMyJN
+
+receiveing message
+in protected endpoint
+
+
+getting access token from
+qs
+
+setting token to context
+for validation ^yQ2XL72r
+
+!!! ^6nXlus6J
+
+on end of message 
+stop the loop ^QPiCqu7K
+
+can chet for 
+messagetype close
+too
+on both 
+we  close connection ^RQ2aFnNS

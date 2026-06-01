@@ -1,0 +1,35 @@
+﻿with readasync we read bytes 
+that are available
+but we can get more bytes later
+with this we get all without loop
+(implicit loooping) ^beFGGXWZ
+
+toArray and readasbytearray ^4RpUcTYx
+
+Read Exactly ^hoRBsemS
+
+When to use what for reading ^qRtLYplW
+
+readatleast ^lDMIqdJm
+
+!!! ^AQ8JFdWv
+
+but the benefit is limiter, you will 
+allocate the same size
+
+make sense when you just cant affort to read more that the buffer size/limit
+because of some logic,not some memory considerations
+
+many repeated operations can cost more ^ROOzbaKR
+
+compact methods conspect ^M9E1GP0U
+
+readasync
+can limit upper bound ^DlDGhp8C
+
+can use a slice  ^jYHEKLAJ
+
+readatleast, 
+need enough to work ^f3oNcOFf
+
+readexactly ^KpnkmS11
