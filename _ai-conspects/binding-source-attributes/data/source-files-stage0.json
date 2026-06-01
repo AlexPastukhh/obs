@@ -1,0 +1,49 @@
+{
+  "repository": "AlexPastukhh/obs",
+  "raw_source_branch": "ai-processing-excalidraw-conspects",
+  "processed_output_branch": "ai-processed-conspects-text",
+  "conspect_slug": "binding-source-attributes",
+  "bundle_path": "_ai-test-bundles-server/fw_Asp__Sheet__BINDING SOURCE ATTRIBUTES/",
+  "source_note": "Canvases/new theory/fw_Asp/Sheet/BINDING SOURCE ATTRIBUTES.md",
+  "source_svg": "Canvases/new theory/fw_Asp/Sheet/BINDING SOURCE ATTRIBUTES.svg",
+  "bundle_files_checked": [
+    {
+      "path": "full.svg",
+      "status": "accessible",
+      "evidence": "full.svg fetched from bundle; viewBox 0 0 1098 1076.7777608235483 observed"
+    },
+    {
+      "path": "note.md",
+      "status": "accessible",
+      "evidence": "note.md contains Excalidraw metadata and embedded file mappings"
+    },
+    {
+      "path": "text-elements-raw.txt",
+      "status": "accessible",
+      "evidence": "text-elements-raw lists Embedded Files"
+    },
+    {
+      "path": "image-index.md",
+      "status": "accessible",
+      "evidence": "image-index.md names source note/source SVG and lists 3 copied images"
+    },
+    {
+      "path": "image-index.csv",
+      "status": "accessible",
+      "evidence": "image-index.csv lists 3 COPIED image rows"
+    },
+    {
+      "path": "images/*.png",
+      "status": "not-opened-in-this-stage",
+      "evidence": "image-index.csv confirms copied paths for 3 images; visual image reading not done in this archive"
+    }
+  ],
+  "image_count_from_index": 3,
+  "processing_status": "source-bundle-available / ready-for-stage1-map-and-image-reading",
+  "limitations": [
+    "This archive does not visually inspect the screenshots.",
+    "Do not treat screenshot/code transcript as verified yet.",
+    "The source bundle appears small: 3 images in image-index.csv.",
+    "The next archive can likely be a full per-conspect transcript, because the bundle is small."
+  ]
+}
