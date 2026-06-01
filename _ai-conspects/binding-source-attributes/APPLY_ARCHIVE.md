@@ -1,6 +1,6 @@
-# Apply archive: Binding Source Attributes Stage 1
+# Apply archive: Binding Source Attributes compact transcript
 
-Archive type: stage-1 bundle map and region scaffold.
+Archive type: compact verified transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage1-bundle-map-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-compact-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,10 +26,41 @@ C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage1-bundle-ma
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-stage1-bundle-map-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-binding-source-attributes-compact-transcript-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
+
+# Optional cleanup of obsolete helper/scaffold artifacts from earlier attempts.
+$staleFiles = @(
+  "_ai-conspects\binding-source-attributes\03-visual-verification-workbench.md",
+  "_ai-conspects\binding-source-attributes\04-contact-sheet-export.md",
+  "_ai-conspects\binding-source-attributes\scripts\open-raw-images.ps1",
+  "_ai-conspects\binding-source-attributes\scripts\export-contact-sheet.ps1",
+  "_ai-conspects\binding-source-attributes\data\visual-verification-targets-stage2.csv",
+  "_ai-conspects\binding-source-attributes\data\visual-verification-targets-stage2.json",
+  "_ai-conspects\binding-source-attributes\data\contact-sheet-targets-stage2.json",
+  "_ai-conspects\binding-source-attributes\assets\README.md",
+  "_ai-conspects\binding-source-attributes\contact-sheet\README.md"
+)
+
+foreach ($file in $staleFiles) {
+  if (Test-Path $file) {
+    Remove-Item $file -Force
+  }
+}
+
+$staleDirs = @(
+  "_ai-conspects\binding-source-attributes\scripts",
+  "_ai-conspects\binding-source-attributes\assets",
+  "_ai-conspects\binding-source-attributes\contact-sheet"
+)
+
+foreach ($dir in $staleDirs) {
+  if ((Test-Path $dir) -and -not (Get-ChildItem $dir -Force -ErrorAction SilentlyContinue)) {
+    Remove-Item $dir -Force
+  }
+}
 
 git status --short
 git diff --stat -- _ai-conspects/binding-source-attributes
@@ -46,9 +77,11 @@ git --no-pager diff -- _ai-conspects/binding-source-attributes > C:\Users\alexa\
 
 ## Commit commands
 
+Use `git add -A` because obsolete helper files may be removed.
+
 ```powershell
-git add _ai-conspects/binding-source-attributes
-git commit -m "Map Binding Source Attributes source bundle"
+git add -A _ai-conspects/binding-source-attributes
+git commit -m "Add Binding Source Attributes compact transcript"
 ```
 
 ## Push command
@@ -61,10 +94,11 @@ git push origin ai-processed-conspects-text
 
 ```powershell
 git restore -- _ai-conspects/binding-source-attributes
+git clean -fd -- _ai-conspects/binding-source-attributes
 ```
 
 ## Notes
 
 This archive does not edit React Query output.
 
-It does not mark screenshots as verified. The next archive should visually inspect the three copied images and add exact transcript.
+The full diff is copied to clipboard instead of printed in the terminal.

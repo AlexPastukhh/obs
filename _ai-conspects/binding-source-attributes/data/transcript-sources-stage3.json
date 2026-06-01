@@ -1,0 +1,59 @@
+[
+  {
+    "source": {
+      "source_id": "BSA-S001",
+      "file_id_short": "cff6870722",
+      "layout_position": "top",
+      "image_file": "cff6870722.png / images/001__cff6870722__Pasted Image 20260213035052_419.png",
+      "status": "verified-visible",
+      "readability": "high",
+      "cut_off": "no",
+      "confidence": "high",
+      "theme": "binding source attributes list",
+      "limitations": ""
+    },
+    "transcript": {
+      "title": "Binding source attributes list",
+      "text": "Binding source attributes (what each one does)\n\n- [FromBody] - read the request body and deserialize it (JSON, XML depending on input formatters).\n  Used for complex objects in JSON APIs.\n\n- [FromForm] - read form-encoded data or multipart/form-data (good for IFormFile, form fields).\n\n- [FromHeader] - bind a parameter from an HTTP header.\n\n- [FromQuery] - bind from the query string (e.g. ?page=2).\n\n- [FromRoute] - bind from route tokens in the URL template (e.g. {id} in route).\n\n- [FromServices] - get the value from DI container (inject a service directly into an action parameter).",
+      "code": ""
+    }
+  },
+  {
+    "source": {
+      "source_id": "BSA-S003",
+      "file_id_short": "bbda8972bc",
+      "layout_position": "middle",
+      "image_file": "bbda8972bc.png / images/003__bbda8972bc__Pasted Image 20260213035115_249.png",
+      "status": "verified-visible-partial-code",
+      "readability": "high for text / medium-high for visible code",
+      "cut_off": "visible code block has hidden continuation",
+      "confidence": "high for visible text; medium-high for visible code only",
+      "theme": "explicit attributes example",
+      "limitations": "Horizontal scrollbar / hidden continuation in code block. Only visible code is transcribed."
+    },
+    "transcript": {
+      "title": "Example: explicit attributes",
+      "text": "Example (explicit attributes)\n\n- GetAuthor: authorId is read from the route.\n- CreateAuthor: author is deserialized from the request body JSON.",
+      "code": "[HttpGet(\"{authorId}\", Name = \"GetAuthor\")]\npublic async Task<ActionResult<AuthorDto>> GetAuthor([FromRoute] Guid authorId) { ... }\n\n[HttpPost]\npublic async Task<ActionResult<AuthorDto>> CreateAuthor([FromBody] AuthorForCreationDto author) {"
+    }
+  },
+  {
+    "source": {
+      "source_id": "BSA-S002",
+      "file_id_short": "b2e22dce47",
+      "layout_position": "bottom",
+      "image_file": "b2e22dce47.png / images/002__b2e22dce47__Pasted Image 20260213035055_533.png",
+      "status": "verified-visible",
+      "readability": "high",
+      "cut_off": "no",
+      "confidence": "high",
+      "theme": "ApiController binding inference rules",
+      "limitations": ""
+    },
+    "transcript": {
+      "title": "What [ApiController] changes",
+      "text": "What [ApiController] changes (the important inference rules)\n\nWhen a controller is decorated with [ApiController], ASP.NET Core applies binding inference automatically:\n\n1. Complex types (classes/DTOs) -> inferred as [FromBody] (so you don't need to add [FromBody]).\n\n2. Parameters of type IFormFile / IFormFileCollection -> inferred as [FromForm].\n\n3. Parameters whose name matches a route token -> inferred as [FromRoute].\n\n4. Any other simple/primitive parameter (string, int, bool, GUID not matching a route token, etc.) ->\n   inferred as [FromQuery].",
+      "code": ""
+    }
+  }
+]

@@ -1,8 +1,8 @@
-# MANIFEST - Binding Source Attributes Stage 1
+# MANIFEST - Binding Source Attributes Compact Transcript
 
-Archive type: **stage-1 bundle map and region scaffold**  
+Archive type: **compact verified transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 18:44:00 UTC
+Generated: 2026-06-01 20:31:14 UTC
 
 ## Direction check
 
@@ -10,31 +10,29 @@ Goal:
 Convert `BINDING SOURCE ATTRIBUTES` into source-preserving AI-readable text.
 
 Now:
-Bundle source is confirmed.
+The SVG/images have been visually read and a compact verified transcript is ready.
 
 This step:
-Create stable source map and region scaffold under `_ai-conspects/binding-source-attributes/`.
+Adds/updates the complete processed output under `_ai-conspects/binding-source-attributes/`.
 
 Why:
-This moves from source availability to processing setup without pretending transcript is verified.
+This moves the conspect from source availability into usable AI-readable notes.
 
 Next:
-Visually inspect the 3 images and produce the first verified transcript archive.
+Review the region file, then commit.
 
 ## Files included
 
 ```text
-_ai-conspects/binding-source-attributes/00-source-check.md
-_ai-conspects/binding-source-attributes/01-processing-plan.md
-_ai-conspects/binding-source-attributes/02-bundle-map.md
+_ai-conspects/binding-source-attributes/00-source-confirmation.md
+_ai-conspects/binding-source-attributes/regions/R01-binding-source-attributes.md
+_ai-conspects/binding-source-attributes/data/source-state-stage3.json
+_ai-conspects/binding-source-attributes/data/svg-image-map-stage3.csv
+_ai-conspects/binding-source-attributes/data/svg-image-map-stage3.json
+_ai-conspects/binding-source-attributes/data/transcript-sources-stage3.csv
+_ai-conspects/binding-source-attributes/data/transcript-sources-stage3.json
 _ai-conspects/binding-source-attributes/MANIFEST.md
 _ai-conspects/binding-source-attributes/APPLY_ARCHIVE.md
-_ai-conspects/binding-source-attributes/data/source-files-stage0.json
-_ai-conspects/binding-source-attributes/data/source-state-stage1.json
-_ai-conspects/binding-source-attributes/data/image-index-stage0.csv
-_ai-conspects/binding-source-attributes/data/image-index-stage1.csv
-_ai-conspects/binding-source-attributes/regions/README.md
-_ai-conspects/binding-source-attributes/regions/R01-binding-source-attributes.md
 ```
 
 ## Scope
@@ -49,4 +47,12 @@ Do not edit:
 
 ```text
 _ai-conspects/react-query-rquery/
+```
+
+## Verification status
+
+```text
+BSA-S001: verified-visible
+BSA-S003: verified-visible-partial-code
+BSA-S002: verified-visible
 ```
