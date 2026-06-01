@@ -1,0 +1,19 @@
+﻿<!-- include htmx --> ^CXipYSmZ
+
+<script src="https://unpkg.com/htmx.org@1.9.12"></script> ^uUXwwvag
+
+<div id="cartSummary" ^VoQH47pB
+
+hx-get="/widgets/cart-summary" ^UZnDBzg7
+
+hx-trigger="load, every 5s" ^H74iA2Rf
+
+hx-swap="innerHTML"> ^PGyEsKI2
+
+@await Component.InvokeAsync("CartSummary") ^ONjFvY9k
+
+</div> ^SojOHFfw
+
+AJAX ^6pZhQaDv
+
+HTMX ^2aKi4dQ5
