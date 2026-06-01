@@ -1,0 +1,252 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using System.Threading.Tasks;
+
+public class RequireAdminFilter : IAsyncAuthorizationFilter
+{
+    public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
+    {
+        var user = context.HttpContext.User;
+        if (!user.Identity?.IsAuthenticated ?? true)
+        {
+            context.Result = new UnauthorizedResult();
+            return;
+        }
+
+        if (!user.IsInRole("Admin"))
+        {
+            context.Result = new ForbidResult();
+            return;
+        }
+        await Task.CompletedTask;
+    }
+}
+ ^2ZFyZHar
+
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class SimpleCacheResourceFilter : IResourceFilter
+{
+    public void OnResourceExecuting(ResourceExecutingContext context)
+    {
+        // Example: short-circuit if cached
+        var key = context.HttpContext.Request.Path.ToString();
+        var cached = MyCache.Get(key);
+        if (cached != null)
+        {
+            context.Result = new Microsoft.AspNetCore.Mvc.ContentResult
+            {
+                Content = cached,
+                ContentType = "application/json",
+            };
+        }
+    }
+
+    public void OnResourceExecuted(ResourceExecutedContext context)
+    {
+        // maybe update cache with context.Result if success
+    }
+}
+ ^lC5zgUAI
+
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+using System.Threading.Tasks;
+
+public class TimingActionFilter : IAsyncActionFilter
+{
+    private readonly ILogger<TimingActionFilter> _log;
+    public TimingActionFilter(ILogger<TimingActionFilter> log) => _log = log;
+
+    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+    {
+        var sw = Stopwatch.StartNew();
+
+        // Example: auto-validate ModelState and short-circuit
+        if (!context.ModelState.IsValid)
+        {
+            context.Result = new Microsoft.AspNetCore.Mvc.BadRequestObjectResult(context.ModelState);
+            return;
+        }
+
+        var executedContext = await next(); // actually runs the action
+        sw.Stop();
+
+        _log.LogInformation("Action {action} took {ms}ms", context.ActionDescriptor.DisplayName, sw.ElapsedMilliseconds);
+
+        // You can inspect executedContext.Result or Exception here
+    }
+}
+ ^plDDuF9M
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class ApiExceptionFilter : IExceptionFilter
+{
+    public void OnException(ExceptionContext context)
+    {
+        var ex = context.Exception;
+        // map exception types to status codes / ProblemDetails
+        var pd = new ProblemDetails {
+            Title = "An error occurred",
+            Detail = ex.Message
+        };
+        context.Result = new ObjectResult(pd) { StatusCode = 500 };
+        context.ExceptionHandled = true;
+    }
+}
+ ^vBPgSfN0
+
+!!! ^pYofqNWI
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class WrapResultFilter : IResultFilter
+{
+    public void OnResultExecuting(ResultExecutingContext context)
+    {
+        if (context.Result is ObjectResult obj)
+        {
+            // wrap existing payload
+            var newObj = new { data = obj.Value, ok = true };
+            context.Result = new ObjectResult(newObj) { StatusCode = obj.StatusCode };
+        }
+    }
+
+    public void OnResultExecuted(ResultExecutedContext context)
+    {
+        // after result wrote to response
+    }
+}
+ ^RBDfvZoN
+
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
+using System.Threading;
+
+public class LogEndpointFilter : IEndpointFilter
+{
+    private readonly ILogger<LogEndpointFilter> _log;
+    public LogEndpointFilter(ILogger<LogEndpointFilter> log) => _log = log;
+
+    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext ctx, EndpointFilterDelegate next)
+    {
+        _log.LogInformation("Before endpoint {e}", ctx.Endpoint?.DisplayName);
+        var result = await next(ctx);
+        _log.LogInformation("After endpoint {e}", ctx.Endpoint?.DisplayName);
+        return result;
+    }
+}
+
+// Attach example:
+app.MapGet("/hi", () => "hello").AddEndpointFilter<LogEndpointFilter>();
+ ^a7oYBOF6
+
+!!! ^Et7sucuw
+
+more intuitivee ^qTVl2cLN
+
+returning cached result before model binding ^787oktQy
+
+resource filter after 
+action can cache 
+validated models ^J9ECHP4P
+
+CAN ALSO USE FILTER ATTRIBUTES
+CANT USE DI IN CTOR, NEED TO GET FROM CONTEXT
+IT IS A DEFAULT WAY TO USE FILTERS ACTUALLY ^EmZaBzER
+
+IFILTERFACTORY ^fPIF0d9A
+
+can pass shit to attr with filt fact ^FDTzUHjX
+
+filters
+_____
+filters vs middleware and 
+theor ^3yAJSPOz
+
+filters ^5IoSes8a
+
+!!!! ^yQMFbSQm
+
+middleware simply runs 
+before filters ^cYEWWU6Q
+
+can add this under main sheet which is lower ^V5YZZQp3
+
+mb better to use
+more excplicit ismthFilter or iasyncSmthFilter
+and base Attribute class ^jnP2Df7H
+
+but here you also can do async things ^yN1bPMpx
+
+<---ASYNC FILTERS ^Zp2WfAEV
+
+!!! ^e5cmHOsw
+
+DI FOR GLOBAL AND TYPEFILTER WITH SERVICEFILTER ^D9xT5xQW
+
+ordering ^EirAFqRV
+
+exception filter ^fgM2OUwB
+
+so when we are in mvc land and return object result or derived from object 
+result, we dont care about accept header, its automatically handled
+in middleware we nneed to use pdservice/factory for some content negotiations  ^7no5VPb2
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class ApiExceptionFilter : IExceptionFilter
+{
+    public void OnException(ExceptionContext context)
+    {
+        var ex = context.Exception;
+        // map exception types to status codes / ProblemDetails
+        var pd = new ProblemDetails {
+            Title = "An error occurred",
+            Detail = ex.Message
+        };
+        context.Result = new ObjectResult(pd) { StatusCode = 500 };
+        context.ExceptionHandled = true;
+    }
+}
+ ^km8kvWcH
+
+result after exec vs 
+resource after action ^zl1fMuxJ
+
+invalidmodstrespfac with 
+middleware and filter ^5efXIiN9
+
+checking if rout is from api 
+or controller ^n7WbgTCM
+
+how to get services from httpcontext ^0vjKZPr9
+
+why we cant use exc filters
+to catch exceptions from auth filters ^dgCmagTK
+
+exception middleware can ^aYacgEZD
+
+return viewresult error page ^hcsYf5DQ
+
+filter instead of 
+statuscodepages? ^QEwBEi5n
+
+always run result filter ^Cc7vWCej
+
+alwats run result filter ^ZLsXGz2R
+
+filter will run even if previous stages short circuited ^D5mKX66B
+
+example ^lz492mGl
+
+marking exception as 
+handled to stop propagation ^gYZ4regU

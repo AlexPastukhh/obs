@@ -1,0 +1,76 @@
+﻿add exception handler middleware so youll return problemdetails with 500 status code on exception
+from anywhere(where they werent handled) ^JgB8LawO
+
+ausing Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler(errorApp =>
+    {
+        errorApp.Run(async context =>
+        {
+            // If the response already started, we can't write our problem details
+            if (context.Response.HasStarted)
+            {
+                return;
+            }
+
+            var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();
+            var ex = exceptionHandlerFeature?.Error;
+
+            // Resolve ProblemDetailsFactory from DI
+            var problemDetailsFactory = context.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+
+            // You can map exception types to status codes if you want
+            var statusCode = StatusCodes.Status500InternalServerError;
+
+            // Create ProblemDetails using the factory (consistent defaults)
+            var problem = problemDetailsFactory.CreateProblemDetails(
+                context,
+                statusCode: statusCode,
+                title: "An unexpected error occurred.",
+                type: "https://httpstatuses.com/500",
+                detail: app.Environment.IsDevelopment() ? ex?.ToString() : null,
+                instance: context.Request.Path
+            );
+
+            // Optionally attach extra info (extensions)
+            problem.Extensions["traceId"] = context.TraceIdentifier;
+
+            context.Response.Clear();
+            context.Response.StatusCode = statusCode;
+            context.Response.ContentType = "application/problem+json";
+
+            await context.Response.WriteAsJsonAsync(problem);
+        });
+    });
+} ^cs7uwjjj
+
+EXCEPTIONHANDLER MIVVLEWARE ^MsN6O7m7
+
+WIHTOUT PROBLEMDETAILSFACTORY AND 
+IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE ^5LOVl98P
+
+WITH PROBLEMDETAILS SERVICE ^iV7lkAuq
+
+HASSTARTED EXPLAINATION ^4dcEcXlQ
+
+WHAT IS PROBLEMDETAILSCONTEXT ^v4O4vnRH
+
+USING PROBLEMDETAILSCONTEXT.EXCEPTION
+FOR CUSTOM WRITER TO ACCESS ^81xaLfie
+
+TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER
+FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE 
+AND MUST HAVE CALLBACK
+TO PROCESS AS TEXT ^epvKvlZn
+
+!!! ^F2Ko6cRB
+
+PLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS ^kzRvHZG2

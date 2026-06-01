@@ -1,0 +1,565 @@
+﻿<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<form asp-action="Register" method="post">
+  <input type="email" name="Email" required />
+  <input type="password" name="Password" required />
+
+  <div class="g-recaptcha" data-sitekey="@ViewBag.RecaptchaSiteKey"></div>
+
+  <button type="submit">Submit</button>
+</form> ^dKwG9OmP
+
+public sealed class RecaptchaVerifyResponse
+{
+    public bool success { get; set; }
+    public string[]? error-codes { get; set; } // google uses this name in JSON sometimes
+    public List<string>? error_codes { get; set; } // in case serializer maps differently
+    public double score { get; set; } // v3 only
+    public string? action { get; set; } // v3 only
+    public string? hostname { get; set; }
+} ^cGbM93OA
+
+using System.Net.Http;
+using System.Text.Json;
+using Microsoft.AspNetCore.WebUtilities;
+
+public interface IRecaptchaVerifier
+{
+    Task<bool> VerifyV2Async(string token, string? remoteIp = null);
+}
+
+public class GoogleRecaptchaVerifier : IRecaptchaVerifier
+{
+    private readonly HttpClient _http;
+    private readonly IConfiguration _config;
+
+    public GoogleRecaptchaVerifier(HttpClient http, IConfiguration config)
+    {
+        _http = http;
+        _config = config;
+    }
+
+    public async Task<bool> VerifyV2Async(string token, string? remoteIp = null)
+    {
+        if (string.IsNullOrWhiteSpace(token)) return false;
+
+        var secret = _config["Recaptcha:SecretKey"];
+        if (string.IsNullOrWhiteSpace(secret))
+            throw new InvalidOperationException("Recaptcha:SecretKey is not configured.");
+
+        // POST https://www.google.com/recaptcha/api/siteverify
+        // with form fields: secret, response, remoteip(optional)
+
+        var data = new Dictionary<string, string>
+        {
+            ["secret"] = secret,
+            ["response"] = token
+        };
+
+        if (!string.IsNullOrWhiteSpace(remoteIp))
+            data["remoteip"] = remoteIp;
+
+        using var content = new FormUrlEncodedContent(data);
+        using var resp = await _http.PostAsync("https://www.google.com/recaptcha/api/siteverify", content);
+        resp.EnsureSuccessStatusCode();
+
+        var json = await resp.Content.ReadAsStringAsync();
+        var result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json);
+
+        return result?.success == true;
+    }
+} ^DERt1uS2
+
+public class RegisterVm
+{
+    public string Email { get; set; } = "";
+    public string Password { get; set; } = "";
+
+    // name must match form field for model binding:
+    public string? g_recaptcha_response { get; set; } // for manual binding (see note below)
+} ^z5Y6RMRj
+
+using Microsoft.AspNetCore.Mvc;
+
+public class AccountController : Controller
+{
+    private readonly IRecaptchaVerifier _recaptcha;
+    private readonly IConfiguration _config;
+
+    public AccountController(IRecaptchaVerifier recaptcha, IConfiguration config)
+    {
+        _recaptcha = recaptcha;
+        _config = config;
+    }
+
+    [HttpGet]
+    public IActionResult Register()
+    {
+        ViewBag.RecaptchaSiteKey = _config["Recaptcha:SiteKey"];
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Register(RegisterVm vm)
+    {
+        var token = Request.Form["g-recaptcha-response"].ToString();
+        var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
+
+        var ok = await _recaptcha.VerifyV2Async(token, ip);
+        if (!ok)
+        {
+            ModelState.AddModelError("", "reCAPTCHA failed. Please try again.");
+            ViewBag.RecaptchaSiteKey = _config["Recaptcha:SiteKey"];
+            return View(vm);
+        }
+
+        // reCAPTCHA passed -> proceed with registration
+        // create user, hash password, etc.
+        return RedirectToAction("RegisterSuccess");
+    }
+} ^8w72vnoi
+
+import React, { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY; // or REACT_APP_...
+
+export default function RegisterV2() {
+  const recaptchaRef = useRef(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [status, setStatus] = useState("");
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("");
+
+    const token = recaptchaRef.current?.getValue();
+    if (!token) {
+      setStatus("Please complete reCAPTCHA.");
+      return;
+    }
+
+    const resp = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, recaptchaToken: token })
+    });
+
+    if (!resp.ok) {
+      setStatus(await resp.text());
+      recaptchaRef.current?.reset(); // token is single-use-ish; reset after failure
+      return;
+    }
+
+    setStatus("Registered!");
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+      <input type="password" value={password} onChange={e => setPassword(e.target.value)} required />
+
+      <ReCAPTCHA sitekey={SITE_KEY} ref={recaptchaRef} />
+
+      <button type="submit">Register</button>
+      <div>{status}</div>
+    </form>
+  );
+} ^aGEGcwyn
+
+import React, { useEffect, useRef, useState } from "react";
+
+const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const existing = document.querySelector(`script[src="${src}"]`);
+    if (existing) return resolve();
+
+    const s = document.createElement("script");
+    s.src = src;
+    s.async = true;
+    s.defer = true;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+export default function RegisterV2NoLib() {
+  const captchaDivRef = useRef(null);
+  const widgetIdRef = useRef(null);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    const src = "https://www.google.com/recaptcha/api.js?render=explicit";
+
+    loadScript(src).then(() => {
+      // Wait until grecaptcha is ready
+      window.grecaptcha.ready(() => {
+        if (widgetIdRef.current !== null) return; // already rendered
+
+        widgetIdRef.current = window.grecaptcha.render(captchaDivRef.current, {
+          sitekey: SITE_KEY,
+          theme: "light",
+          // callback: () => {}, // optional: called on success
+          // "expired-callback": () => {}, // optional: called on expiration
+        });
+      });
+    });
+  }, []);
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("");
+
+    const widgetId = widgetIdRef.current;
+
+    // If you rendered explicitly, prefer getResponse(widgetId)
+    const token =
+      widgetId !== null
+        ? window.grecaptcha.getResponse(widgetId)
+        : window.grecaptcha.getResponse(); // fallback
+
+    if (!token) {
+      setStatus("Please complete reCAPTCHA.");
+      return;
+    }
+
+    const resp = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, recaptchaToken: token }),
+    });
+
+    if (!resp.ok) {
+      setStatus(await resp.text());
+
+      // Let user retry (token may be consumed/expired)
+      if (widgetId !== null) window.grecaptcha.reset(widgetId);
+      else window.grecaptcha.reset();
+
+      return;
+    }
+
+    setStatus("Registered!");
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+
+      <div ref={captchaDivRef} />
+
+      <button type="submit">Register</button>
+      <div>{status}</div>
+    </form>
+  );
+} ^Jty2ecTR
+
+controller ^LerHMToM
+
+v3 must check action and score ^CSTy2CDu
+
+combined v2 and v3 ^BHjEQOCE
+
+using System.Text.Json.Serialization;
+
+public sealed class RecaptchaVerifyResponse
+{
+    [JsonPropertyName("success")]
+    public bool Success { get; set; }
+
+    [JsonPropertyName("challenge_ts")]
+    public DateTimeOffset? ChallengeTs { get; set; }
+
+    [JsonPropertyName("hostname")]
+    public string? Hostname { get; set; }
+
+    // v3 fields
+    [JsonPropertyName("score")]
+    public double? Score { get; set; }
+
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
+    [JsonPropertyName("error-codes")]
+    public string[]? ErrorCodes { get; set; }
+}
+
+public sealed record RecaptchaV3Result(bool Success, double Score, string? Action, string? Hostname, string[]? ErrorCodes);
+public sealed record RecaptchaV2Result(bool Success, string? Hostname, string[]? ErrorCodes); ^QFSvf69a
+
+using System.Net.Http;
+using System.Text.Json;
+using Microsoft.Extensions.Configuration;
+
+public sealed class GoogleRecaptchaService : IRecaptchaService
+{
+    private readonly HttpClient _http;
+    private readonly IConfiguration _config;
+
+    public GoogleRecaptchaService(HttpClient http, IConfiguration config)
+    {
+        _http = http;
+        _config = config;
+    }
+
+    public async Task<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null)
+    {
+        var resp = await VerifyCoreAsync(token, remoteIp);
+
+        // v3: must check action + score
+        var ok = resp.Success && string.Equals(resp.Action, expectedAction, StringComparison.Ordinal);
+
+        var score = resp.Score ?? 0.0;
+        return new RecaptchaV3Result(ok, score, resp.Action, resp.Hostname, resp.ErrorCodes);
+    }
+
+    public async Task<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null)
+    {
+        var resp = await VerifyCoreAsync(token, remoteIp);
+        return new RecaptchaV2Result(resp.Success, resp.Hostname, resp.ErrorCodes);
+    }
+
+    private async Task<RecaptchaVerifyResponse> VerifyCoreAsync(string token, string? remoteIp)
+    {
+        if (string.IsNullOrWhiteSpace(token))
+            return new RecaptchaVerifyResponse { Success = false, ErrorCodes = ["missing-input-response"] };
+
+        var secret = _config["Recaptcha:SecretKey"];
+        if (string.IsNullOrWhiteSpace(secret))
+            throw new InvalidOperationException("Recaptcha:SecretKey is not configured.");
+
+        var data = new Dictionary<string, string>
+        {
+            ["secret"] = secret,
+            ["response"] = token
+        };
+
+        if (!string.IsNullOrWhiteSpace(remoteIp))
+            data["remoteip"] = remoteIp;
+
+        using var content = new FormUrlEncodedContent(data);
+        using var httpResp = await _http.PostAsync("https://www.google.com/recaptcha/api/siteverify", content);
+        httpResp.EnsureSuccessStatusCode();
+
+        var json = await httpResp.Content.ReadAsStringAsync();
+
+        var result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        });
+
+        return result ?? new RecaptchaVerifyResponse { Success = false, ErrorCodes = ["invalid-json"] };
+    }
+} ^EJhbIQr2
+
+public interface IRecaptchaService
+{
+    Task<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null);
+    Task<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null);
+} ^iWoS8QDo
+
+import React, { useEffect, useState } from "react";
+
+const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
+function loadRecaptchaV3(siteKey) {
+  return new Promise((resolve, reject) => {
+    if (window.grecaptcha) return resolve(window.grecaptcha);
+
+    const script = document.createElement("script");
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => resolve(window.grecaptcha);
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
+export default function RegisterV3React() {
+  const [ready, setReady] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    loadRecaptchaV3(SITE_KEY)
+      .then((g) => g.ready(() => setReady(true)))
+      .catch(() => setReady(false));
+  }, []);
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("");
+
+    if (!ready) {
+      setStatus("reCAPTCHA not ready yet.");
+      return;
+    }
+
+    const token = await window.grecaptcha.execute(SITE_KEY, { action: "register" });
+
+    const resp = await fetch("/api/auth/register-v3", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, recaptchaToken: token }),
+    });
+
+    if (!resp.ok) {
+      setStatus(await resp.text());
+      return;
+    }
+
+    setStatus("Registered (React v3)!");
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" required />
+      <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" required />
+      <button type="submit" disabled={!ready}>Register</button>
+      <div>{status}</div>
+    </form>
+  );
+} ^TZfUmVJx
+
+@model RazorRegisterVm
+@{
+    var siteKey = (string)ViewBag.RecaptchaSiteKey;
+}
+
+<form id="registerForm" method="post" asp-action="Register">
+    @Html.AntiForgeryToken()
+
+    <input asp-for="Email" type="email" required />
+    <input asp-for="Password" type="password" required />
+
+    <input asp-for="RecaptchaToken" type="hidden" />
+
+    <button type="submit">Register</button>
+
+    <div asp-validation-summary="All"></div>
+</form>
+
+<script src="https://www.google.com/recaptcha/api.js?render=@siteKey"></script>
+<script>
+  (function () {
+    const form = document.getElementById("registerForm");
+    const tokenInput = document.querySelector('input[name="RecaptchaToken"]');
+    const siteKey = "@siteKey";
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      grecaptcha.ready(function () {
+        grecaptcha.execute(siteKey, { action: "register" }).then(function (token) {
+          tokenInput.value = token;
+          form.submit();
+        });
+      });
+    });
+  })();
+</script> ^GftXzq92
+
+without library ^fEofQA5M
+
+with library ^ECzS5b1l
+
+import React from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import RegisterV3 from "./RegisterV3";
+
+const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
+export default function App() {
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey={SITE_KEY}
+      scriptProps={{ async: true, defer: true }}
+    >
+      <RegisterV3 />
+    </GoogleReCaptchaProvider>
+  );
+} ^ZRnIsqIn
+
+import React, { useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+
+export default function RegisterV3() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [status, setStatus] = useState("");
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("");
+
+    if (!executeRecaptcha) {
+      setStatus("reCAPTCHA not ready yet.");
+      return;
+    }
+
+    // action name must match what server expects
+    const token = await executeRecaptcha("register");
+
+    const resp = await fetch("/api/auth/register-v3", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, recaptchaToken: token }),
+    });
+
+    setStatus(resp.ok ? "Registered!" : await resp.text());
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+      <button type="submit">Register</button>
+      <div>{status}</div>
+    </form>
+  );
+} ^Jsp39rLB
+
+v3 ^QAg0Jyv2
+
+what is remote ip ^22HbZZjS
+
+we also may need to verify hostname ^LmPQ9q3K
+
+so flow exp ^45wVsZqv
+
+expected action in recapcha is just a string to put inside
+ ^4y9dhzYd
+
+and to verify  ^ZjCiyxQ8
+
+so, we need to give site key to client 
+
+1 razor - from config/env variables/keystroe => viewbag
+2 react - just pass in response ^rc6Wld0U
+
+1 razor -> we are loading script
+in v3 - with our sitekey in qstring
+ and in script tag we are manually executing recapcha,
+with v3 we also need to set action "register","login"
+in v2 we just set class and sitekey to div
+ ^ZQWSVF3K
+
+so here we prevent default and add event listener on recapchas token ready 
+to execute and put token from resolved promise into the input and submit
+!!! we can do literally the same with v2  ^he17DTxA
+
+using form because v2 automatically sets it
+can do like v3 ^hEX6poIl
