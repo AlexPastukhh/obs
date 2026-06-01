@@ -1,0 +1,9 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+R02B-S001,S-026,IU-026,29e9da2f37,verified-from-extracted-svg-image,r02b-disabled-query-state-explanation,high,top-continuation-from-r02a-status-visible,high,Disabled query can be pending but not loading,Top continuation ties to R02A status explanation; the enabled/disabled meaning is visible and belongs in R02B.
+R02B-S002,S-027,IU-027,048f7ed433,verified-from-extracted-svg-image,r02b-hooks-not-conditional-wrong,high,no,high,Wrong conditional hook call,Verified from extracted SVG image.
+R02B-S003,S-032,IU-032,d812eda414,verified-visible-partial-from-extracted-svg-image,r02b-enabled-basic-example,high,top-and-bottom-continuation-cropped,high-for-visible-code,Most common enabled example with missing id,Top continuation from S-026 and bottom continuation are cropped; visible code is clear.
+R02B-S004,S-033,IU-033,796e9f55f7,verified-from-extracted-svg-image,r02b-hooks-not-conditional-correct,high,no,high,Correct enabled query pattern,Verified from extracted SVG image.
+R02B-S005,S-037,IU-037,202c0dd895,verified-from-extracted-svg-image,r02b-missing-id-disabled-state,high,no,high,Disabled query state when id is missing,Verified from extracted SVG image.
+R02B-S006,S-042,IU-042,0035fc7737,verified-from-extracted-svg-image,r02b-ui-why-disabled-query-state-matters,high,right-edge-card-crop-no-text-loss,high,Why disabled query state matters in UI,Right edge/card border crop visible; text and code are readable.
+R02B-S007,S-047,IU-047,441233c7df,verified-from-extracted-svg-image,r02b-separate-ui-for-no-input,high,no,high,Render no-input UI instead of mounting disabled query,Verified from extracted SVG image.
+R02B-S008,S-056,IU-056,7e756912a0,verified-from-extracted-svg-image,r02b-why-separate-ui-better,high,no,high,Why no-input UI is better than interpreting disabled query state,Verified from extracted SVG image.

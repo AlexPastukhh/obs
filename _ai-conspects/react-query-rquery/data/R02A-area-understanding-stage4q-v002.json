@@ -1,8 +1,8 @@
 {
   "region_id": "R02A",
   "region_name": "useQuery state / status / error / cache core",
-  "stage": "4p-v001",
-  "generated": "2026-06-01 23:21:52 UTC",
+  "stage": "4q-v002",
+  "generated": "2026-06-01 23:28:46 UTC",
   "what_area_is_about": [
     "core QueryClient setup and QueryClientProvider",
     "what useQuery does: cache lookup, queryFn execution, subscription, rerendering",
@@ -19,23 +19,23 @@
     "queryKey must uniquely identify the resource; queryFn must return a Promise.",
     "status describes result/data availability: pending, success, error.",
     "fetchStatus describes whether a request is currently running: fetching, idle, paused.",
+    "isPending means no successful result yet; isFetching means a request is running.",
     "isLoading is isPending && isFetching; pending does not always mean actively loading.",
+    "Background refetch can have isPending false and isFetching true.",
     "A query can have data, be stale, and be fetching at the same time.",
-    "Never assume data exists on first render; guard with pending/error states or optional access.",
-    "Custom hooks keep query details and error handling out of components.",
-    "Throwing in async query functions is good because React Query sees a rejected Promise.",
-    "Swallowing errors and returning fallback data hides real failures from React Query."
+    "Never assume data exists on first render; guard with pending/error states.",
+    "Throwing in async query functions is good; swallowing errors hides failures."
   ],
   "perception_quality": {
     "overall_conceptual_understanding": "high",
     "main_source_readability": "high",
     "code_readability": "high",
-    "spatial_layout_understanding": "high after R02 boundary review and local R02A check",
+    "spatial_layout_understanding": "high after correction moving S-013 into R02A",
     "limitations": [
-      "S-022 and S-030 have cropped top continuation, but visible statements are readable.",
-      "S-036 has top continuation and bottom UI overlay, but the visible warning and bad code example are readable.",
-      "R02B/R02C are intentionally pending and not covered by this transcript."
+      "S-022/S-030 have cropped top continuation.",
+      "S-036 has top continuation and bottom UI overlay.",
+      "R02C remains pending; S-062 reserved for R04."
     ],
-    "confidence_summary": "High for R02A source text and boundary; R02B/R02C remain intentionally pending."
+    "confidence_summary": "High for R02A after v002 correction; S-013 now correctly belongs to R02A."
   }
 }

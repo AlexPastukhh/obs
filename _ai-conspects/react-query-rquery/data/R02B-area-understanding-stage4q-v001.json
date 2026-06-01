@@ -1,0 +1,33 @@
+{
+  "region_id": "R02B",
+  "region_name": "enabled / disabled / conditional UI",
+  "stage": "4q-v001",
+  "generated": "2026-06-01 23:28:46 UTC",
+  "what_area_is_about": [
+    "enabled option for conditional queries",
+    "disabled query state when required input is missing",
+    "why pending does not necessarily mean loading",
+    "hooks must not be called conditionally",
+    "rendering separate no-input UI instead of interpreting disabled query state"
+  ],
+  "key_ideas": [
+    "enabled lets a hook stay mounted while preventing the query from running until a condition is true.",
+    "A disabled query with no data can be status pending but fetchStatus idle.",
+    "That disabled state means there is no data yet and no fetch is currently happening.",
+    "Hooks cannot be called conditionally, so conditional queries use enabled rather than wrapping useQuery in if.",
+    "For no-input cases, a separate UI state can be clearer than mounting a disabled query.",
+    "No user input yet is a UI state, not a server-loading state."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after local R02B review",
+    "limitations": [
+      "S-032 is a cropped continuation but its enabled code is readable.",
+      "S-026 continues R02A status explanation at top but belongs to R02B for disabled-query meaning.",
+      "S-013 moved out to R02A v002."
+    ],
+    "confidence_summary": "High for R02B source text and boundary; R02C remains intentionally pending."
+  }
+}

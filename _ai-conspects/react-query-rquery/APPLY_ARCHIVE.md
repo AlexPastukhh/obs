@@ -1,6 +1,6 @@
-# Apply archive: React Query R02A transcript v001
+# Apply archive: React Query R02A v002 + R02B transcript v001
 
-Archive type: stage-4p verified region transcript.
+Archive type: stage-4q combined correction/transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4p-r02a-usequery-state-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4q-r02a-v002-r02b-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,14 +26,29 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4p-r02a-usequery-s
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4p-r02a-usequery-state-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4p-r02a-usequery-state.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4q-r02a-v002-r02b-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4q-r02a-v002-r02b.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
+
+# Remove superseded R02A v001 data files if they exist.
+$oldR02AFiles = @(
+  "_ai-conspects\react-query-rquery\data\R02A-sources-stage4p-v001.csv",
+  "_ai-conspects\react-query-rquery\data\R02A-sources-stage4p-v001.json",
+  "_ai-conspects\react-query-rquery\data\R02A-boundary-review-stage4p-v001.csv",
+  "_ai-conspects\react-query-rquery\data\R02A-boundary-review-stage4p-v001.json",
+  "_ai-conspects\react-query-rquery\data\R02A-area-understanding-stage4p-v001.json"
+)
+
+foreach ($file in $oldR02AFiles) {
+  if (Test-Path $file) {
+    Remove-Item $file -Force
+  }
+}
 
 git status --short
 git diff --stat -- _ai-conspects/react-query-rquery
@@ -46,9 +61,11 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ## Commit commands
 
+Use `git add -A` because superseded R02A v001 data files may be removed.
+
 ```powershell
-git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query R02A useQuery state transcript"
+git add -A _ai-conspects/react-query-rquery
+git commit -m "Add React Query R02B enabled queries transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +77,4 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive completes only R02A. It intentionally leaves R02B/R02C pending and S-062 reserved for R04.
+This archive corrects R02A by adding S-013 and completes R02B. R02C remains pending.

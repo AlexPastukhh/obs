@@ -45,8 +45,23 @@
     "notes": "Bottom UI dot is visible; text is readable."
   },
   {
-    "source_id": "S-016",
+    "source_id": "S-013",
     "region_source_id": "R02A-S004",
+    "image_use_id": "IU-013",
+    "fileId_short": "768ded59fc",
+    "status": "verified-from-extracted-svg-image",
+    "candidate_type": "r02a-status-mental-model-correction",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "Example mental model for isPending and isFetching",
+    "text": "Example mental model:\n\n- First page load:\n  - `isPending: true`\n  - `isFetching: true`\n\n- Data loaded and sitting on screen:\n  - `isPending: false`\n  - `isFetching: false`\n\n- Background refetch after window focus / invalidation:\n  - `isPending: false`\n  - `isFetching: true`",
+    "code": "",
+    "notes": "Moved from R02B to R02A after local R02B review because it is a status/fetchStatus mental-model card, not enabled/disabled semantics."
+  },
+  {
+    "source_id": "S-016",
+    "region_source_id": "R02A-S005",
     "image_use_id": "IU-016",
     "fileId_short": "114f1fa612",
     "status": "verified-from-extracted-svg-image",
@@ -61,7 +76,7 @@
   },
   {
     "source_id": "S-017",
-    "region_source_id": "R02A-S005",
+    "region_source_id": "R02A-S006",
     "image_use_id": "IU-017",
     "fileId_short": "d913b80242",
     "status": "verified-from-extracted-svg-image",
@@ -76,7 +91,7 @@
   },
   {
     "source_id": "S-018",
-    "region_source_id": "R02A-S006",
+    "region_source_id": "R02A-S007",
     "image_use_id": "IU-018",
     "fileId_short": "a3d61eaf9c",
     "status": "verified-from-extracted-svg-image",
@@ -91,7 +106,7 @@
   },
   {
     "source_id": "S-020",
-    "region_source_id": "R02A-S007",
+    "region_source_id": "R02A-S008",
     "image_use_id": "IU-020",
     "fileId_short": "bbc587153e",
     "status": "verified-from-extracted-svg-image",
@@ -106,7 +121,7 @@
   },
   {
     "source_id": "S-021",
-    "region_source_id": "R02A-S008",
+    "region_source_id": "R02A-S009",
     "image_use_id": "IU-021",
     "fileId_short": "61ff65ee41",
     "status": "verified-from-extracted-svg-image",
@@ -121,7 +136,7 @@
   },
   {
     "source_id": "S-022",
-    "region_source_id": "R02A-S009",
+    "region_source_id": "R02A-S010",
     "image_use_id": "IU-022",
     "fileId_short": "2899e0756c",
     "status": "verified-visible-partial-from-extracted-svg-image",
@@ -136,7 +151,7 @@
   },
   {
     "source_id": "S-023",
-    "region_source_id": "R02A-S010",
+    "region_source_id": "R02A-S011",
     "image_use_id": "IU-023",
     "fileId_short": "03697f7b6d",
     "status": "verified-from-extracted-svg-image",
@@ -151,7 +166,7 @@
   },
   {
     "source_id": "S-024",
-    "region_source_id": "R02A-S011",
+    "region_source_id": "R02A-S012",
     "image_use_id": "IU-024",
     "fileId_short": "fe5b1db522",
     "status": "verified-from-extracted-svg-image",
@@ -166,7 +181,7 @@
   },
   {
     "source_id": "S-025",
-    "region_source_id": "R02A-S012",
+    "region_source_id": "R02A-S013",
     "image_use_id": "IU-025",
     "fileId_short": "c8b43511a0",
     "status": "verified-from-extracted-svg-image",
@@ -181,7 +196,7 @@
   },
   {
     "source_id": "S-030",
-    "region_source_id": "R02A-S013",
+    "region_source_id": "R02A-S014",
     "image_use_id": "IU-030",
     "fileId_short": "39e62ae511",
     "status": "verified-visible-partial-from-extracted-svg-image",
@@ -196,7 +211,7 @@
   },
   {
     "source_id": "S-034",
-    "region_source_id": "R02A-S014",
+    "region_source_id": "R02A-S015",
     "image_use_id": "IU-034",
     "fileId_short": "14368dd8ca",
     "status": "verified-from-extracted-svg-image",
@@ -211,7 +226,7 @@
   },
   {
     "source_id": "S-036",
-    "region_source_id": "R02A-S015",
+    "region_source_id": "R02A-S016",
     "image_use_id": "IU-036",
     "fileId_short": "4d72a0bb65",
     "status": "verified-visible-partial-from-extracted-svg-image",

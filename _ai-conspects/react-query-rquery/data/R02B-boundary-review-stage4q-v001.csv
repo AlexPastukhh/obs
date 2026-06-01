@@ -1,0 +1,22 @@
+source_id,decision,candidate_type,reason
+S-013,moved-to-R02A-v002,r02a-status-mental-model,"Status/isPending/isFetching mental model, not enabled semantics."
+S-026,included-in-R02B-v001,r02b-disabled-query-state-explanation,Disabled query can be pending but not loading
+S-027,included-in-R02B-v001,r02b-hooks-not-conditional-wrong,Wrong conditional hook call
+S-032,included-in-R02B-v001,r02b-enabled-basic-example,Most common enabled example with missing id
+S-033,included-in-R02B-v001,r02b-hooks-not-conditional-correct,Correct enabled query pattern
+S-037,included-in-R02B-v001,r02b-missing-id-disabled-state,Disabled query state when id is missing
+S-042,included-in-R02B-v001,r02b-ui-why-disabled-query-state-matters,Why disabled query state matters in UI
+S-047,included-in-R02B-v001,r02b-separate-ui-for-no-input,Render no-input UI instead of mounting disabled query
+S-056,included-in-R02B-v001,r02b-why-separate-ui-better,Why no-input UI is better than interpreting disabled query state
+S-039,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-040,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-043,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-045,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-048,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-050,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-051,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-052,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-054,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-057,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-061,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02B."
+S-062,reserved-for-R04,r04-overlap,"Static staleTime / invalidation frontier, not R02B."
