@@ -1,0 +1,18 @@
+[
+  {
+    "region_source_id": "EF04-S001",
+    "source_id": "S-006",
+    "image_use_id": "IU-006",
+    "fileId_short": "8a232da430",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef04-shadow-property-query-filter",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "filter by a shadow property using EF.Property",
+    "text": "1) Filter by a shadow property",
+    "code": "var active = await db.Orders\n    .Where(o => EF.Property<bool>(o, \"IsDeleted\") == false)\n    .ToListAsync();",
+    "extra_text": "",
+    "notes": "Full source image visually checked. Single-source block."
+  }
+]

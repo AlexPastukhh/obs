@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core general
 
-Generated: 2026-06-01 23:39:21 UTC
+Generated: 2026-06-01 23:42:56 UTC
 
 ## Current policy
 
@@ -26,6 +26,7 @@ Stage5: EF02 transcript done
 Stage6: EF03 boundary review done
 Stage7: EF03 transcript done
 Stage8: EF04 boundary review done
+Stage9: EF04 transcript done
 ```
 
 ## Done
@@ -35,18 +36,12 @@ EF01A: Tracking / identity map / no tracking / identity resolution
 EF01B: Loading collections / Include / Find / Load / AutoInclude
 EF02: Attach / disconnected updates / entity state
 EF03: Constructors / materialization
+EF04: Shadow property / query filter
 ```
 
-## Current target
+## Pending next
 
 ```text
-EF04 transcript next:
-S-006
-Shadow property / query filter
-```
-
-## Pending after EF04 boundary review
-
-```text
-Other EF Core areas require boundary review first
+Choose next EF Core area by boundary review first.
+Other EF Core areas require boundary review before transcript.
 ```

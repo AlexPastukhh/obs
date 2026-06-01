@@ -1,0 +1,22 @@
+{
+  "generated": "2026-06-01 23:42:56 UTC",
+  "region_id": "EF04",
+  "what_area_is_about": [
+    "querying a property that is not exposed as a CLR property on the entity",
+    "using EF.Property<T>(entity, propertyName) inside LINQ",
+    "filtering active rows by a shadow property such as IsDeleted",
+    "soft-delete style query predicates"
+  ],
+  "key_ideas": [
+    "A shadow property can exist in the EF model without a corresponding CLR property on the entity class.",
+    "`EF.Property<T>(entity, \"PropertyName\")` lets LINQ refer to such a mapped property.",
+    "The example filters `Orders` where `IsDeleted` is false.",
+    "This is typically useful for soft-delete or model-level metadata columns.",
+    "This region only covers the query expression; broader model configuration/global filters should be handled in a later boundary review if present."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [],
+    "confidence": "High for source transcript and boundary decision."
+  }
+}

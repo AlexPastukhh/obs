@@ -7,19 +7,13 @@ EF01A - Tracking / identity map / no tracking / identity resolution
 EF01B - Loading collections / Include / Find / Load / AutoInclude
 EF02 - Attach / disconnected updates / entity state
 EF03 - Constructors / materialization
-```
-
-Boundary reviews:
-
-```text
 EF04 - Shadow property / query filter
 ```
 
 Pending next:
 
 ```text
-EF04 transcript:
-S-006
+Choose next EF Core area by boundary review first.
 ```
 
 Each transcript must include:

@@ -1,29 +1,23 @@
 {
-  "generated": "2026-06-01 23:39:21 UTC",
-  "ledger_version": "v001-updated-by-ef04-boundary-review",
-  "critical_rule": "Ledger is not source of truth. EF04 decisions remain provisional until transcript pass does visual/semantic review.",
-  "ef04_boundary_delta": {
-    "candidate_sources": [
+  "generated": "2026-06-01 23:42:56 UTC",
+  "ledger_version": "v001-updated-by-ef04-transcript",
+  "critical_rule": "Ledger is not source of truth. It records decisions after visual/semantic review.",
+  "stage9_delta": {
+    "ef04_processed_sources": [
       "S-006"
     ],
-    "checked_not_ef04": {
-      "already_processed_ef02_overlap": [
-        "S-028",
-        "S-029",
-        "S-030"
-      ],
-      "already_processed_ef03_overlap": [
-        "S-024",
-        "S-025",
-        "S-026",
-        "S-027"
-      ],
-      "already_processed_ef01a_overlap": [
-        "S-031",
-        "S-032",
-        "S-033"
-      ]
-    }
+    "checked_not_ef04": [
+      "S-028",
+      "S-029",
+      "S-030",
+      "S-024",
+      "S-025",
+      "S-026",
+      "S-027",
+      "S-031",
+      "S-032",
+      "S-033"
+    ]
   },
   "rows": [
     {
@@ -228,12 +222,12 @@
       "width": "990",
       "height": "226",
       "nearest_labels_for_search_only": "L-006: shadow prop usage | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-046: partial init antipatter",
-      "coverage_status": "candidate-ef04-shadow-property-query-filter",
+      "coverage_status": "processed-in-ef04-v001",
       "current_region_decision": "EF04",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef04-transcript",
-      "decision_basis": "EF04 boundary review candidate: shadow property / query filter.",
-      "review_notes": "EF04 boundary review candidate: shadow property / query filter."
+      "decision_is_final": "yes-for-ef04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef04-v001",
+      "decision_basis": "Included in EF04 v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF04 v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-032",
