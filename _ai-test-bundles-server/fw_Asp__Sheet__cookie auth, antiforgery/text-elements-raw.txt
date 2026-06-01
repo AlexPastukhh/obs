@@ -1,0 +1,184 @@
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+
+public class AccountController : Controller
+{
+    [HttpGet]
+    public IActionResult Login(string? returnUrl = null)
+    {
+        ViewData["ReturnUrl"] = returnUrl ?? Url.Action("Index", "Home");
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(string username, string password, string? returnUrl)
+    {
+        // Demo auth check (replace with DB/Identity)
+        if (username != "alice" || password != "pass123")
+        {
+            ModelState.AddModelError("", "Invalid credentials");
+            ViewData["ReturnUrl"] = returnUrl;
+            return View();
+        }
+
+        var claims = new List<Claim>
+        {
+            new(ClaimTypes.Name, "alice"),
+            new(ClaimTypes.Role, "Admin"),
+            new("permission", "products.edit")
+        };
+
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var principal = new ClaimsPrincipal(identity);
+
+        await HttpContext.SignInAsync(
+            CookieAuthenticationDefaults.AuthenticationScheme,
+            principal);
+
+        if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+            return Redirect(returnUrl);
+
+        return RedirectToAction("Index", "Home");
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("Index", "Home");
+    }
+
+    public IActionResult Denied() => View();
+} ^ZVzARc4a
+
+!!! ^R4tkXglr
+
+BASIC ^9buw4sDG
+
+SPA WITH COOKIES, REACT,
+ANTIFORGERY ^PBSkCacG
+
+how setandstoretokens works, 
+2 tokens antiforgery ^zV0x8D0l
+
+may throw? ^pXhR1oxF
+
+paths on events
+what if you dont have them? ^RaSxXUzN
+
+ispersistent
+expires on setcookie ^eAuSq7uz
+
+when do we have httpcontext.user
+it depends on what? authorize attr
+or whether we have auth cookie attached that 
+has valid authticket that we can decrypt and read ^at5TRksy
+
+iticketstore ^Ks73905L
+
+usecookiepolicy ^ej7LQLmr
+
+cookie.name ^kHX3KjaV
+
+just cookie optons ^0peUTyre
+
+to add ticketstore to 
+authcookie options
+need to use options pattern ^d1c4zoxQ
+
+some little flow ^CSGm72Rd
+
+renewal occurs when we have some sliding exp and 
+framework does retrieve and decides to update expiration ^bKzwieeV
+
+!!! ^20Wghibm
+
+dbcall on every request
+that needs cookie validation
+how to avoid ^dpZebnMP
+
+onvalidateprincipal ^i8gZHqzc
+
+!!! ^a7VYsQC6
+
+what has been done before onvalidateprincipal
+ ^0BdVtkcE
+
+onvalidateprincipal and authorizatoin ^d4VvjJp8
+
+how renew async gets called
+how to change claims so 
+they will be updated in cache ^yeagkW7T
+
+some strats to avoid db call on every request
+that checks whether the user has the same claims ^4Ekk1VX5
+
+!!! ^vTP6H4IP
+
+!!! ^NACrflqm
+
+lax option
+spa vs classic mbc
+(lax is default) ^ec7cvtMR
+
+when have proxy for spa 
+confgured ^ehjLVZLp
+
+whats the visual difference 
+between a normal cookie and auth/session cookie ^8Q7EIFiR
+
+auth cookies and session cookies ^kqshBQuQ
+
+crypto valid and buisness valid ^ekmY3yVW
+
+some low(high) level cookie 
+auth/verification flow ^RuuartC6
+
+when include credentials 
+need to catch network error
+from not allowed creditials somewhere
+(cors issue) ^sBY3LlFW
+
+adding claims to authenticatied user
+iticketstore cases
+normal cases have 2 options too
+ ^FEnvEREe
+
+auth cookie options
+defaults ^UKAfmX8M
+
+iticketstore ^td5an1PI
+
+domain option ^yf06rwbJ
+
+TicketDataFormat ^QKagf3ht
+
+why usually do not set ^q8gV47li
+
+when you would customize ^CFBrMbS5
+
+domain vs host ^yfThIvGA
+
+path vs domain ^HM0qd2oA
+
+WWW ^LtP3upQh
+
+!!! ^9fXNQeQg
+
+Holding invariants (options consistency)
+with __Host and __Secure names of cookies ^5d2sF6w4
+
+forcing host cookie ^120VBW7s
+
+_Secure ^LQGiB9Df
+
+Why name prefixes ^EhlaaI9a
+
+both host and secure? ^gZ3UxOTq
+
+onvalidateprincipal
+renewal without ticketstore ^icy3cOiT

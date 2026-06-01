@@ -1,0 +1,55 @@
+﻿cookies auth probmem details returning  ^ZPm4PRKo
+
+using Microsoft.AspNetCore.Mvc;
+
+options.Events.OnRedirectToLogin = async ctx =>
+{
+    if (!ctx.Request.Path.StartsWithSegments("/api"))
+    {
+        ctx.Response.Redirect(ctx.RedirectUri);
+        return;
+    }
+
+    ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;
+
+    var http = ctx.HttpContext;
+    var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+    var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();
+
+    var pd = factory.CreateProblemDetails(
+        httpContext: http,
+        statusCode: StatusCodes.Status401Unauthorized,
+        title: "Unauthorized",
+        type: "https://httpstatuses.com/401",
+        detail: "Authentication is required to access this resource.",
+        instance: http.Request.Path);
+
+    await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });
+};
+
+options.Events.OnRedirectToAccessDenied = async ctx =>
+{
+    if (!ctx.Request.Path.StartsWithSegments("/api"))
+    {
+        ctx.Response.Redirect(ctx.RedirectUri);
+        return;
+    }
+
+    ctx.Response.StatusCode = StatusCodes.Status403Forbidden;
+
+    var http = ctx.HttpContext;
+    var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+    var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();
+
+    var pd = factory.CreateProblemDetails(
+        httpContext: http,
+        statusCode: StatusCodes.Status403Forbidden,
+        title: "Forbidden",
+        type: "https://httpstatuses.com/403",
+        detail: "You do not have permission to access this resource.",
+        instance: http.Request.Path);
+
+    await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });
+}; ^ERS87wsM
+
+WITH TRYWRITEASYNC ^0VRdKmz8
