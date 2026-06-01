@@ -1,6 +1,6 @@
-# Apply archive: React Query R02C transcript v001
+# Apply archive: React Query R02 closure audit v001
 
-Archive type: stage-4r verified region transcript.
+Archive type: stage-4s closure audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4r-r02c-query-keys-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4s-r02-closure-audit-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4r-r02c-query-keys
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4r-r02c-query-keys-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4r-r02c-query-keys.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4s-r02-closure-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4s-r02-closure-audit.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query R02C query keys transcript"
+git commit -m "Close React Query R02 processing"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive completes the planned R02 transcript split. Next archive should be R02 closure audit.
+This archive does not add a new transcript. It closes R02 after R02A/R02B/R02C.
