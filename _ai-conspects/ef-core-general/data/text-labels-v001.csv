@@ -1,0 +1,259 @@
+label_id,x,y,rotation,text,text_compact
+L-001,15890.499,3088.914,0.0,"efcore can materialise objecteven if all of its columns are null
+the fact that you have ? for  your fullname  in client can be not enough
+so its better to do the shit excplicitly",efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in client can be not enough | so its better to do the shit excplicitly
+L-002,17192.07,1550.879,0.0,hascheck constraint,hascheck constraint
+L-003,15934.889,1583.034,0.0,navigation,navigation
+L-004,16019.442,1837.419,0.0,owned isrequired,owned isrequired
+L-005,17380.26,1969.119,0.0,"need to add somewhere, to some general dbcontext mapping sheet mb","need to add somewhere, to some general dbcontext mapping sheet mb"
+L-006,7646.427,2004.929,0.0,shadow prop usage,shadow prop usage
+L-007,3973.767,1613.975,0.0,reduce cpu and everything for reads,reduce cpu and everything for reads
+L-008,8977.54,1967.854,0.0,Attach,Attach
+L-009,14278.712,1490.616,0.0,"how to save yourself
+from sit when someone make 2 parallel requests
+to create acc with same email",how to save yourself | from sit when someone make 2 parallel requests | to create acc with same email
+L-010,13305.955,5983.315,0.0,better to have isrequired false too,better to have isrequired false too
+L-011,13725.94,7612.694,0.0,complex types,complex types
+L-012,5672.949,12727.311,0.0,primary key,primary key
+L-013,5534.282,12112.645,0.0,"native declarative
+constraints",native declarative | constraints
+L-014,5687.393,13212.311,0.0,unique index,unique index
+L-015,5704.06,13762.311,0.0,alternate key,alternate key
+L-016,5675.727,14277.311,0.0,foreign key,foreign key
+L-017,5654.06,14758.978,0.0,not null,not null
+L-018,5660.727,15258.978,0.0,check constraint,check constraint
+L-019,7138.06,14973.645,0.0,indexed view,indexed view
+L-020,7203.545,14569.857,0.0,custom db error from stored proc,custom db error from stored proc
+L-021,7179.272,13773.645,0.0,trigger,trigger
+L-022,6986.731,13321.244,0.0,filtered unique index,filtered unique index
+L-023,6831.999,12850.008,0.0,unique index on comp column,unique index on comp column
+L-024,3758.559,14887.287,0.0,"how to know which
+check constraint failed",how to know which | check constraint failed
+L-025,8404.576,16399.336,0.0,is custom dberr limited to storproc,is custom dberr limited to storproc
+L-026,11190.328,4761.04,0.0,nullable relationships,nullable relationships
+L-027,10314.106,2417.781,0.0,"what to avoid in ctors,
+would ef use parameterless ctor by default?","what to avoid in ctors, | would ef use parameterless ctor by default?"
+L-028,10460.948,1383.495,0.0,ctors wont run when ef materializes entities?,ctors wont run when ef materializes entities?
+L-029,8809.216,2276.324,0.0,"1 if not default id - marks as unchanged
+2 if need to modify - attach then modify or mark modified excplicitly
+3 if adding new entity with detached in some prop - need to attach that detached
+to avoid adding existing but detached
+4 when updating entity with detached - detached will be modified need to override savexchanges or
+config so model",1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if adding new entity with detached in some prop - need to attach that detached | to avoid adding existing but detached | 4 when updating entity with detached - detached will be modified need to override savexchanges or | config so model
+L-030,5523.101,1521.677,0.0,identity map pattern,identity map pattern
+L-031,5592.773,6921.601,0.0,"so in writes we potentially can do some shit when we fetch
+something while having something that we have fetched already and
+mb have changed?
+dont think so, sounds like shit
+load and find more about explicitness and debugging
+or when you allow partial loading in writes, chat gpt forces this shit actively
+can i do this for projections in reads? hard to imagine
+it more just to know that if you have some nested/ multiple methods
+that for some reason can fetch instead of continue to modify that was already
+fetched - then you can use find everywhere","so in writes we potentially can do some shit when we fetch | something while having something that we have fetched already and | mb have changed? | dont think so, sounds like shit | load and find more about explicitness and debugging | or when you allow partial loading in writes, chat gpt forces this shit actively | can i do this for projections in reads? hard to imagine | it more just to know that if you have some nested/ multiple methods | that for some reason can fetch instead of continue to modify that was already | fetched - then you can use find everywhere"
+L-032,5547.545,7456.121,0.0,loadasyn + autoinclude,loadasyn + autoinclude
+L-033,22330.144,1573.093,0.0,"concurrency in db  commands
+isrowversion isconcurrencytoken",concurrency in db  commands | isrowversion isconcurrencytoken
+L-034,18927.019,1581.982,0.0,dbcontext about transactions strategies,dbcontext about transactions strategies
+L-035,19639.003,1865.267,0.0,"so i have some scenarios when i may need some
+transaction or when i may think that i need them
+1 when i query something from db, look at it and chose to change it
+but at the same time i may have another request that
+changes the same thing
+dont need manual transaction, can configure rowversion or
+isconcurencytoken and ef will throw exceptions
+2 when i have multiple queries to get data
+may need transaction with isolationlevel snapshot
+3 when i have some possible nesting of methods that mutate
+queried entity and each may call savechanges
+one savechanges succeds another fails and we get inconsistency
+need to wrap everything in one transaction with any isolatoin level but usually with default
+4 when i have some database.executesql  or other like dbset.executeupdate (that is
+linq based but everything else like executesql) - they all dont care about savechanges
+so if i want them to be in a traqnsaction i need to create transaction
+Retries
+5 if i have some buisness rule with automatic concurrency conflict resolution
+i need to catch exception for concurrency and then get entry, load db data
+and try again, but only for automatic shit + need to have right isolation level so i will be
+able to inspect db changes from that isolation
+6 enableautomaticretryonfailure - retry the whole delegate,isolation level doesnt matter
+need to wrap with createexecutionstrat executeasync or executeintransactionasync for
+veryfies that db has been changed when we lost conn and cant say if transaction was succ of not","so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query something from db, look at it and chose to change it | but at the same time i may have another request that | changes the same thing | dont need manual transaction, can configure rowversion or | isconcurencytoken and ef will throw exceptions | 2 when i have multiple queries to get data | may need transaction with isolationlevel snapshot | 3 when i have some possible nesting of methods that mutate | queried entity and each may call savechanges | one savechanges succeds another fails and we get inconsistency | need to wrap everything in one transaction with any isolatoin level but usually with default | 4 when i have some database.executesql  or other like dbset.executeupdate (that is | linq based but everything else like executesql) - they all dont care about savechanges | so if i want them to be in a traqnsaction i need to create transaction | Retries | 5 if i have some buisness rule with automatic concurrency conflict resolution | i need to catch exception for concurrency and then get entry, load db data | and try again, but only for automatic shit + need to have right isolation level so i will be | able to inspect db changes from that isolation | 6 enableautomaticretryonfailure - retry the whole delegate,isolation level doesnt matter | need to wrap with createexecutionstrat executeasync or executeintransactionasync for | veryfies that db has been changed when we lost conn and cant say if transaction was succ of not"
+L-036,19520.047,2734.204,0.0,about transactions isolation level for atomicity,about transactions isolation level for atomicity
+L-037,14571.761,865.957,0.0,some onmodel creat hshit,some onmodel creat hshit
+L-038,5358.344,684.663,0.0,so rep shit,so rep shit
+L-039,10304.128,697.552,0.0,entities shit,entities shit
+L-040,20498.563,881.552,0.0,transactions,transactions
+L-041,21858.562,4974.886,0.0,transaction patterns,transaction patterns
+L-042,4105.758,5689.89,0.0,use asnotrackingwithidentityresolution for ef core reads by default?,use asnotrackingwithidentityresolution for ef core reads by default?
+L-043,4194.849,6680.799,0.0,when useful,when useful
+L-044,3560.861,3899.43,0.0,asnotrackkingwithidentityresolution,asnotrackkingwithidentityresolution
+L-045,6672.022,1919.251,0.0,"can do partial inits only
+for projections for read,
+write need encapsulation,
+and invariants
+also cant return the domain model
+with partial init even for reads, because
+if will lie about yourself being valid domain model
+with all data present","can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return the domain model | with partial init even for reads, because | if will lie about yourself being valid domain model | with all data present"
+L-046,6581.927,1799.251,0.0,partial init antipatter,partial init antipatter
+L-047,17145.848,15994.878,0.0,can we have exhaust check?,can we have exhaust check?
+L-048,15394.714,11876.453,0.0,"db exceptions
+concur",db exceptions | concur
+L-049,17094.874,14633.953,0.0,retry exception,retry exception
+L-050,15605.63,13555.573,0.0,"pos concurrency automatic,
+not user view driven
+retry logic","pos concurrency automatic, | not user view driven | retry logic"
+L-051,15404.303,14548.671,0.0,"have  entries in
+dbupdateconcurex
+can getdatabasevalues
+with etag
+and then update how you needed",have  entries in | dbupdateconcurex | can getdatabasevalues | with etag | and then update how you needed
+L-052,15682.007,15374.663,0.0,!!!!,!!!!
+L-053,15663.103,15612.097,0.0,!!!!,!!!!
+L-054,15632.857,15823.066,0.0,!!!!,!!!!
+L-055,22141.198,6147.163,0.0,Executeasync,Executeasync
+L-056,22192.217,6954.815,0.0,"executeasync without transaction
+when just need to retry with some app
+logic like get current time",executeasync without transaction | when just need to retry with some app | logic like get current time
+L-057,22143.513,8099.593,0.0,"!!! executeasync without transaction is possible when we dont have multiple
+writes and the state that we need to rollback",!!! executeasync without transaction is possible when we dont have multiple | writes and the state that we need to rollback
+L-058,20486.565,7218.224,0.0,"IF THERE IS NO LOGIC
+AFTER WE CATCH AND ROLLBACK
+SO WE DONT STRICTLY NEED
+MANUAL ROLLBACK
+BECAUSE WITH USING
+THERE WILL BE A ROLLBACK
+ON DISPOSAL",IF THERE IS NO LOGIC | AFTER WE CATCH AND ROLLBACK | SO WE DONT STRICTLY NEED | MANUAL ROLLBACK | BECAUSE WITH USING | THERE WILL BE A ROLLBACK | ON DISPOSAL
+L-059,19229.128,7132.351,0.0,ABOUT ROLLBACKS,ABOUT ROLLBACKS
+L-060,26319.473,6133.876,0.0,EXECUTEINTRANSACTIONASYNC,EXECUTEINTRANSACTIONASYNC
+L-061,24087.562,5636.309,0.0,"EXECUTEASYNC
+WITH NEW CONTEXT
+PER RETRY PATTERN",EXECUTEASYNC | WITH NEW CONTEXT | PER RETRY PATTERN
+L-062,20609.095,6249.603,0.0,"PLAIN TRANSACTION WITH
+BEGINTRANSACTION",PLAIN TRANSACTION WITH | BEGINTRANSACTION
+L-063,24245.018,6153.942,0.0,"CAN WE JUST WRAP THE SAVECHANGES(FALSE) AND RETRY THE PROBLEMATIC
+PARTS WITHOUT CLEARING MODIFIED STATES?
+SO WHEN WE CANT DO EVERYTHING OUTSIDE OF RETRY,
+WE CANT JUST USE SAVECHANGES(FALSE), WE NEED SOME KIND OF
+WRAPPING THEE WHOLE UNIT OF WORK","CAN WE JUST WRAP THE SAVECHANGES(FALSE) AND RETRY THE PROBLEMATIC | PARTS WITHOUT CLEARING MODIFIED STATES? | SO WHEN WE CANT DO EVERYTHING OUTSIDE OF RETRY, | WE CANT JUST USE SAVECHANGES(FALSE), WE NEED SOME KIND OF | WRAPPING THEE WHOLE UNIT OF WORK"
+L-064,24763.009,6519.08,0.0,PROBLEMS WITH REUSING SAME DBCONTEXT,PROBLEMS WITH REUSING SAME DBCONTEXT
+L-065,24940.787,8256.857,0.0,"why not just retry delegate because
+we accepted changes after save changes",why not just retry delegate because | we accepted changes after save changes
+L-066,23788.009,6548.246,0.0,IMPLEMENTATION,IMPLEMENTATION
+L-067,19348.996,9429.446,0.0,"DO I NEED TO DISPOSE
+EXECUTION STRATEGY?",DO I NEED TO DISPOSE | EXECUTION STRATEGY?
+L-068,26376.744,6292.245,0.0,"normal executeasync will retry when it see ambiguous outcome
+so if operation is not idempotent it may be dangerous",normal executeasync will retry when it see ambiguous outcome | so if operation is not idempotent it may be dangerous
+L-069,22206.608,3109.312,0.0,reading your own uncommited changes,reading your own uncommited changes
+L-070,9244.971,22444.7,0.0,db/sql shit,db/sql shit
+L-071,8822.924,23654.562,0.0,"when we have grandchild of only one collection of parent
+we will get rows like this, so there wont be null because
+another child doesnt have collection,","when we have grandchild of only one collection of parent | we will get rows like this, so there wont be null because | another child doesnt have collection,"
+L-072,8157.499,23300.915,0.0,"how row looks like when some
+collection items have their own collection",how row looks like when some | collection items have their own collection
+L-073,10147.411,23485.118,0.0,"formula to compute
+rows count",formula to compute | rows count
+L-074,2337.475,1604.131,0.0,"ABOUT CPU/MEMORY USAGE
+FROM TRAKING",ABOUT CPU/MEMORY USAGE | FROM TRAKING
+L-075,1975.658,3802.798,0.0,"MEMORY OVERHEAD WITH IDENTITY RESOL
+COMPARED WITH ASNOTRACKING AND TRACKING",MEMORY OVERHEAD WITH IDENTITY RESOL | COMPARED WITH ASNOTRACKING AND TRACKING
+L-076,479.604,2018.467,0.0,"FULL ORIG VALUES SAVING
+VS JUST IDENTITY",FULL ORIG VALUES SAVING | VS JUST IDENTITY
+L-077,6654.674,11124.921,0.0,"db invariant handling
+strategies",db invariant handling | strategies
+L-078,10521.056,11239.303,0.0,uniqueindex on computed column,uniqueindex on computed column
+L-079,10400.8,13417.144,0.0,handle invariants with triggers,handle invariants with triggers
+L-080,2551.089,11698.926,0.0,"isolation level like
+serializable can help sometimes
+too, but like some addition and
+desing choice not replacement for
+db constraints","isolation level like | serializable can help sometimes | too, but like some addition and | desing choice not replacement for | db constraints"
+L-081,2189.126,12878.578,0.0,"when both trans need to have isolation
+serializable
+to keep invariants",when both trans need to have isolation | serializable | to keep invariants
+L-082,2049.865,14023.14,0.0,!!!,!!!
+L-083,5467.402,16631.792,0.0,!!!,!!!
+L-084,2046.7,11240.748,0.0,"about some transaction/isolation
+/repo tweaks for keeping invariants",about some transaction/isolation | /repo tweaks for keeping invariants
+L-085,2765.399,18026.427,0.0,"transaction + just returning
+error result on some db level
+error codes",transaction + just returning | error result on some db level | error codes
+L-086,4094.012,18082.837,0.0,"transaction + handling db level
+error codes with savepoints",transaction + handling db level | error codes with savepoints
+L-087,4081.46,19430.424,0.0,can know which constraint has failed,can know which constraint has failed
+L-088,1578.043,18129.46,0.0,"transaction rules + db
+level defense impl examples",transaction rules + db | level defense impl examples
+L-089,2528.367,17517.653,0.0,examples of handling db level shit,examples of handling db level shit
+L-090,19737.244,13252.095,0.0,"about code of sqlserver that are retryable by
+default or not",about code of sqlserver that are retryable by | default or not
+L-091,19949.863,13420.904,0.0,"there are a lot of transient error codes and
+if you want someting specific- you should i this",there are a lot of transient error codes and | if you want someting specific- you should i this
+L-092,19643.287,13821.104,0.0,!!!!,!!!!
+L-093,24910.158,16596.524,0.0,"when you write in snapshot transaction
+and the data that you ve read was changed
+you will get exception with 3960",when you write in snapshot transaction | and the data that you ve read was changed | you will get exception with 3960
+L-094,26267.789,14952.2,0.0,"so it can happen with
+readcommitted(on example most likey it)
+and/or with serializable",so it can happen with | readcommitted(on example most likey it) | and/or with serializable
+L-095,22136.672,22829.126,0.0,547 check constraint,547 check constraint
+L-096,22223.498,21051.729,0.0,547 foreign key,547 foreign key
+L-097,22284.45,20714.206,0.0,cases with 547,cases with 547
+L-098,20508.894,18780.872,0.0,cases with 2601,cases with 2601
+L-099,18897.379,18820.468,0.0,cases with 2627,cases with 2627
+L-100,23268.591,17720.284,0.0,"ef core/ code mapping
+547,2601, 2627","ef core/ code mapping | 547,2601, 2627"
+L-101,23290.814,18486.95,0.0,"2601 and 2627
+buisness failures",2601 and 2627 | buisness failures
+L-102,23408.591,19236.95,0.0,547 buisness failure,547 buisness failure
+L-103,20586.713,21218.029,0.0,just like with primary key but with commposite key,just like with primary key but with commposite key
+L-104,23166.267,15058.57,0.0,1205 transaction deadlock,1205 transaction deadlock
+L-105,23243.304,15562.274,0.0,1222 transaction lock timeout,1222 transaction lock timeout
+L-106,23258.415,16346.718,0.0,"3960 snapshot write,but
+state is inconsistent","3960 snapshot write,but | state is inconsistent"
+L-107,23098.49,14466.348,0.0,-2 execution timeout,-2 execution timeout
+L-108,23329.257,16899.424,0.0,"515 buisness failure, insert null
+into nonnullable","515 buisness failure, insert null | into nonnullable"
+L-109,21498.004,12098.259,0.0,"different sql server error codes, what can do with each","different sql server error codes, what can do with each"
+L-110,20530.276,19034.162,0.0,unique index,unique index
+L-111,19077.206,19089.566,0.0,"primary key
+alternate key (unique constraint)",primary key | alternate key (unique constraint)
+L-112,23282.073,13938.743,0.0,helper,helper
+L-113,23283.406,13112.077,0.0,summary,summary
+L-114,15733.326,17064.281,0.0,"do we have some specific db exception]
+for connection drop?",do we have some specific db exception] | for connection drop?
+L-115,15854.66,17414.281,0.0,"we have exception types based on the actoin , not the type of problem
+like exception during update","we have exception types based on the actoin , not the type of problem | like exception during update"
+L-116,14089.898,3147.98,0.0,alternate key sheet,alternate key sheet
+L-117,13986.565,3521.313,0.0,coposite key sheet,coposite key sheet
+L-118,17323.42,2972.775,0.0,"remove  warnings
+dbset",remove  warnings | dbset
+L-119,16717.248,14361.091,0.0,place to catch codes,place to catch codes
+L-120,631.888,5848.117,0.0,"can i select from some random table
+even if i query from customers dbset",can i select from some random table | even if i query from customers dbset
+L-121,451.046,7395.767,0.0,!!!,!!!
+L-122,15515.501,14821.255,0.0,"setting orig values
+ef will detect changes based
+on the fact that
+orig values are the values
+in db
+so if they are not changed
+then unmodified",setting orig values | ef will detect changes based | on the fact that | orig values are the values | in db | so if they are not changed | then unmodified
+L-123,11604.655,16912.35,0.0,view/indexed view,view/indexed view
+L-124,11474.655,11641.239,0.0,want unique value for table after transformation,want unique value for table after transformation
+L-125,11206.603,12266.434,0.0,sql server solution + ef core config,sql server solution + ef core config
+L-126,10429.248,13970.243,0.0,"cant have overlapping
+active bookings",cant have overlapping | active bookings
+L-127,11751.47,13859.873,0.0,"trigger is attached
+to table,runs on some
+commands","trigger is attached | to table,runs on some | commands"
+L-128,12786.137,13679.873,0.0,"triggers are statement
+level callbacks, they run
+after statement has
+succeeded,after constr","triggers are statement | level callbacks, they run | after statement has | succeeded,after constr"
+L-129,14227.419,13851.155,0.0,"iserted
+deleted",iserted | deleted
+L-130,13874.655,11534.572,0.0,"not all comp columns
+are indexable/persistable",not all comp columns | are indexable/persistable
+L-131,13548.988,12300.572,0.0,collation may already solve casing,collation may already solve casing
+L-132,13584.988,12805.905,0.0,may need more buisness rules,may need more buisness rules
