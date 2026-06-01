@@ -1,0 +1,37 @@
+{
+  "region_id": "R01",
+  "region_name": "React Query + browser/HTTP cache",
+  "stage": "4e-v002",
+  "generated": "2026-06-01 21:36:06 UTC",
+  "what_area_is_about": [
+    "separating browser HTTP cache from React Query cache",
+    "ETag, If-None-Match, If-Match, and API conditional requests",
+    "browser cache revalidation and 304 Not Modified",
+    "why React Query does not derive staleTime from browser cache headers",
+    "backend HTTP caching patterns for SPA/API responses",
+    "React Query staleTime choices by data type",
+    "fetch cache options and avoiding accidental no-store"
+  ],
+  "key_ideas": [
+    "Browser cache and React Query cache are different layers.",
+    "Browser cache optimizes transport/network; React Query optimizes UI/data lifecycle.",
+    "ETag can support cache revalidation with If-None-Match, but optimistic write concurrency uses If-Match and must be app-managed.",
+    "React Query can refetch whenever it wants; the browser may still make the request cheap through cache/revalidation.",
+    "For frequently changing API data, ETag + Cache-Control: no-cache is a good revalidation pattern.",
+    "Short max-age can be useful for semi-fresh public/read-heavy endpoints.",
+    "Long immutable cache is for versioned static assets, not normal dynamic JSON APIs.",
+    "React Query staleTime should match data behavior, while browser cache handles network efficiency.",
+    "Plain fetch lets browser caching work normally; forcing cache: no-store disables normal browser response caching benefits."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high for visible code blocks",
+    "spatial_layout_understanding": "high after v002 boundary review",
+    "limitations": [
+      "S-009 has a slightly cropped top title area, but visible content is readable.",
+      "S-053 and S-064 show bottom UI arrow overlays but no obvious text loss."
+    ],
+    "confidence_summary": "High for the two-column R01 browser/cache road; S-008 is not a nearby R01 screenshot and is excluded as a distant same-band safety check."
+  }
+}

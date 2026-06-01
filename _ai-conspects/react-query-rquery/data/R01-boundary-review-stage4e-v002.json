@@ -1,0 +1,42 @@
+{
+  "generated": "2026-06-01 21:36:06 UTC",
+  "region_id": "R01",
+  "region_name": "React Query + browser/HTTP cache",
+  "boundary_status": "reviewed-v002",
+  "included_sources": [
+    "S-001",
+    "S-002",
+    "S-003",
+    "S-004",
+    "S-005",
+    "S-006",
+    "S-007",
+    "S-009",
+    "S-010",
+    "S-014",
+    "S-015",
+    "S-019",
+    "S-028",
+    "S-031",
+    "S-038",
+    "S-044",
+    "S-049",
+    "S-053",
+    "S-060",
+    "S-064"
+  ],
+  "included_count": 20,
+  "excluded_or_reassigned_candidates": [
+    {
+      "source_id": "S-008",
+      "decision": "excluded-from-R01 / reassign-candidate-R02",
+      "candidate_type": "distant-same-band-safety-check",
+      "reason": "Distant right-side statuses/fetchStatus/isLoading/isFetching block; visually separate cluster with different heading/topic. Not a nearby R01 screenshot."
+    }
+  ],
+  "nearby_definition_used": "Nearby means local visual proximity in the same cluster/road/column or adjacent parallel column, not merely same y-band or source order.",
+  "candidate_review_note": "Candidate review is valuable for large conspects, but candidate categories must be named precisely: same-column, parallel-column, visually-close, distant same-band safety check, semantic cross-check.",
+  "open_issues": [
+    "R01 is considered complete for the current two-column browser/cache road after v002, subject to future corrections if a later region review finds a semantic continuation."
+  ]
+}

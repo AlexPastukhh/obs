@@ -1,6 +1,6 @@
-# Apply archive: React Query R05 transcript v001
+# Apply archive: React Query R01 transcript v002
 
-Archive type: stage-4d verified region transcript.
+Archive type: stage-4e verified region transcript correction.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4d-r05-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4e-r01-transcript-v002.zip
 ```
 
 ## Apply commands
@@ -26,7 +26,7 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4d-r05-transcript-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4d-r05-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4e-r01-transcript-v002.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -34,24 +34,40 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new()
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
 
+# Remove superseded R01 v001 data files if they exist.
+$oldR01Files = @(
+  "_ai-conspects\react-query-rquery\16-stage4e-r01-region-transcript.md",
+  "_ai-conspects\react-query-rquery\data\R01-sources-stage4e.csv",
+  "_ai-conspects\react-query-rquery\data\R01-sources-stage4e.json",
+  "_ai-conspects\react-query-rquery\data\R01-area-understanding-stage4e-v001.json"
+)
+
+foreach ($file in $oldR01Files) {
+  if (Test-Path $file) {
+    Remove-Item $file -Force
+  }
+}
+
 git status --short
-git diff --stat -- _ai-conspects/react-query-rquery
+git diff --stat -- _ai-conspects
 
 # Copy full diff to clipboard. Do not print it and do not open a pager.
-git --no-pager diff -- _ai-conspects/react-query-rquery | Set-Clipboard
+git --no-pager diff -- _ai-conspects | Set-Clipboard
 ```
 
 ## Optional: save full diff to file
 
 ```powershell
-git --no-pager diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
+git --no-pager diff -- _ai-conspects > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
 ```
 
 ## Commit commands
 
+Use `git add -A` because this archive removes superseded R01 v001 data files.
+
 ```powershell
-git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query R05 pagination transcript"
+git add -A _ai-conspects
+git commit -m "Expand React Query R01 browser cache transcript"
 ```
 
 ## Push command
@@ -63,17 +79,11 @@ git push origin ai-processed-conspects-text
 ## Rollback before commit
 
 ```powershell
-git restore -- _ai-conspects/react-query-rquery
+git restore -- _ai-conspects
 ```
 
 ## Notes
 
-This archive updates only the current conspect folder:
+This archive supersedes R01 v001 and updates candidate-review rules.
 
-```text
-_ai-conspects/react-query-rquery/
-```
-
-It adds a full R05 region transcript with area overview, key ideas, reading quality, evidence, and question hooks.
-
-If R06 is still uncommitted locally, either commit R06 first or review/stage R05 and R06 intentionally together.
+If R01 v001 was not committed, apply this v002 archive directly and commit only v002.

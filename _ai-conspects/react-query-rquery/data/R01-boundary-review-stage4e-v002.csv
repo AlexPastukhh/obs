@@ -1,0 +1,22 @@
+source_id,decision,candidate_type,reason
+S-001,included-in-R01-v002,right-column-seed,right column seed / practical recommendation
+S-002,included-in-R01-v002,left-column-seed,left column seed / manual ETag handling
+S-003,included-in-R01-v002,right-column-seed,right column seed / React Query does not know browser cache headers
+S-004,included-in-R01-v002,left-column-continuation,left column continuation / send ETag back later
+S-005,included-in-R01-v002,right-column-continuation,right column continuation / main idea
+S-006,included-in-R01-v002,right-column-continuation,right column continuation / browser cache layer
+S-007,included-in-R01-v002,left-column-continuation,left column continuation / HTTP cache revalidation
+S-009,included-in-R01-v002,right-column-continuation,right column continuation / React Query cache layer
+S-010,included-in-R01-v002,left-column-continuation,left column continuation / API requests treated as don't use cache
+S-014,included-in-R01-v002,left-column-continuation,left column continuation / If-Match concurrency
+S-015,included-in-R01-v002,right-column-continuation,right column continuation / practice and mental model
+S-019,included-in-R01-v002,right-column-continuation,right column continuation / backend pattern A
+S-028,included-in-R01-v002,right-column-continuation,right column continuation / pattern A implications
+S-031,included-in-R01-v002,right-column-continuation,right column continuation / pattern B short-lived freshness
+S-038,included-in-R01-v002,right-column-continuation,right column continuation / pattern C static assets
+S-044,included-in-R01-v002,right-column-continuation,right column continuation / React Query settings frequently changing data
+S-049,included-in-R01-v002,right-column-continuation,right column continuation / rarely changing data
+S-053,included-in-R01-v002,right-column-continuation,right column continuation / server-push realtime apps
+S-060,included-in-R01-v002,right-column-continuation,right column continuation / plain fetch
+S-064,included-in-R01-v002,right-column-continuation,right column continuation / no-store warning
+S-008,excluded-from-R01 / reassign-candidate-R02,distant-same-band-safety-check,"Distant right-side statuses/fetchStatus/isLoading/isFetching block; visually separate cluster, different heading, different topic. Not a nearby R01 screenshot."

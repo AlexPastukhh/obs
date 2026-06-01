@@ -1,0 +1,21 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+R01-S001,S-001,IU-001,d6b1d01150,verified-from-extracted-svg-image,right-column-seed,high,no,high,practical SPA recommendation: ETag + Cache-Control no-cache + React Query staleTime,Verified from extracted SVG image.
+R01-S002,S-002,IU-002,33ee5bc86f,verified-from-extracted-svg-image,left-column-seed,high,no,high,browser does not automatically manage ETag for API calls,Verified from extracted SVG image.
+R01-S003,S-003,IU-003,3ba9d991a7,verified-from-extracted-svg-image,right-column-seed,high,no,high,React Query does not understand browser cache headers,Verified from extracted SVG image.
+R01-S004,S-004,IU-004,6368f8adce,verified-from-extracted-svg-image,left-column-continuation,high,no,high,sending ETag back later with If-None-Match / If-Match,Verified from extracted SVG image.
+R01-S005,S-005,IU-005,cf6c2e813c,verified-from-extracted-svg-image,right-column-continuation,high,no,high,main idea: browser cache and React Query cache are different layers,Verified from extracted SVG image.
+R01-S006,S-006,IU-006,335ef6b606,verified-from-extracted-svg-image,right-column-continuation,high,no,high,browser cache layer,Verified from extracted SVG image.
+R01-S007,S-007,IU-007,a9a9655e93,verified-from-extracted-svg-image,left-column-continuation,high,no,high,HTTP cache and revalidation,Verified from extracted SVG image.
+R01-S008,S-009,IU-009,a7f13d6d3d,verified-visible-partial-from-extracted-svg-image,right-column-continuation,high,top-title-slightly-cropped,high-for-visible-text,React Query cache layer,Top is slightly cropped before the title; visible content is transcribed.
+R01-S009,S-010,IU-010,b62d140856,verified-from-extracted-svg-image,left-column-continuation,high,no,high,why many API requests are treated as not using cache,Verified from extracted SVG image.
+R01-S010,S-014,IU-014,95f917ba2d,verified-from-extracted-svg-image,left-column-continuation,high,no,high,why HTTP cache revalidation does not solve API concurrency,Verified from extracted SVG image.
+R01-S011,S-015,IU-015,ad441bf8f8,verified-from-extracted-svg-image,right-column-continuation,high,no,high,practice and default mental model,Verified from extracted SVG image.
+R01-S012,S-019,IU-019,ac0d680857,verified-from-extracted-svg-image,right-column-continuation,high,right-edge-slightly-cropped-no-text-loss,high,backend pattern A: revalidation cache,Right edge is slightly cropped but no visible text appears lost.
+R01-S013,S-028,IU-028,46476e445e,verified-from-extracted-svg-image,right-column-continuation,high,no,high,revalidation cache implications,Verified from extracted SVG image.
+R01-S014,S-031,IU-031,859a4e5afc,verified-from-extracted-svg-image,right-column-continuation,high,no,high,backend pattern B: short-lived freshness,Verified from extracted SVG image.
+R01-S015,S-038,IU-038,c764d1651a,verified-from-extracted-svg-image,right-column-continuation,high,no,high,backend pattern C: long cache for versioned static assets,Verified from extracted SVG image.
+R01-S016,S-044,IU-044,b00992d67d,verified-from-extracted-svg-image,right-column-continuation,high,no,high,React Query settings for frequently changing data,Verified from extracted SVG image.
+R01-S017,S-049,IU-049,3442b4b77e,verified-from-extracted-svg-image,right-column-continuation,high,no,high,React Query settings for rarely changing data,Verified from extracted SVG image.
+R01-S018,S-053,IU-053,a1969014c7,verified-visible-partial-from-extracted-svg-image,right-column-continuation,high,bottom-ui-arrow-visible-no-text-loss,high-for-visible-text,server-push / realtime apps and React Query cache settings,Bottom UI arrow visible; no obvious text loss.
+R01-S019,S-060,IU-060,74e165828c,verified-from-extracted-svg-image,right-column-continuation,high,no,high,do not fight browser cache accidentally: plain fetch,Verified from extracted SVG image.
+R01-S020,S-064,IU-064,662677caa9,verified-visible-partial-from-extracted-svg-image,right-column-continuation,high,bottom-ui-arrow-visible-no-text-loss,high-for-visible-text,be careful with fetch cache no-store,Bottom UI arrow visible; no obvious text loss.

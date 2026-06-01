@@ -1,54 +1,52 @@
-# MANIFEST - React Query rquery / R05 transcript v001
+# MANIFEST - React Query rquery / R01 transcript v002
 
-Archive type: **stage-4d verified region transcript**  
+Archive type: **stage-4e verified region transcript correction**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 20:32:46 UTC
+Generated: 2026-06-01 21:36:06 UTC
 
 ## Direction check
 
 Goal:
-Convert the React Query Excalidraw conspect into source-preserving AI-readable region files.
+Fix R01 after the new boundary-review rules.
 
 Now:
-R10, R07, and R06 have been completed or prepared for review. R05 is now added as the next compact region.
+R01 v001 is known partial.
 
 This step:
-Add verified transcript for R05 - Pagination / InfiniteQuery / keepPreviousData side area.
+Add R01 v002 with full two-column browser/cache transcript and updated candidate rules.
 
 Why:
-This region explains pagination UI behavior, `placeholderData: keepPreviousData`, `useTransition`, and `useInfiniteQuery`, connecting to R07's placeholderData/prefetch material.
+Candidate review is useful, but nearby must be defined precisely and R01 must include the whole browser/cache road.
 
 Next:
-1. review R05 transcript diff;
-2. fix transcript issues if any;
-3. continue to the next region.
+1. review R01 v002 diff;
+2. commit;
+3. audit R05/R06/R07/R10.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/regions/R05-pagination-infinitequery-keeppreviousdata-side-area.md
-_ai-conspects/react-query-rquery/data/R05-sources-stage4d.csv
-_ai-conspects/react-query-rquery/data/R05-sources-stage4d.json
-_ai-conspects/react-query-rquery/data/R05-area-understanding-stage4d-v001.json
-_ai-conspects/react-query-rquery/15-stage4d-r05-region-transcript.md
+_ai-conspects/NEARBY_SCREENSHOT_AND_CANDIDATE_REVIEW.md
+_ai-conspects/IMAGE_COVERAGE_AND_REGION_WORKFLOW.md
+_ai-conspects/PARALLEL_CHAT_PROMPT_NO_IMAGE_LOSS_ADDENDUM.md
+_ai-conspects/react-query-rquery/regions/R01-react-query-browser-http-cache.md
+_ai-conspects/react-query-rquery/data/R01-sources-stage4e-v002.csv
+_ai-conspects/react-query-rquery/data/R01-sources-stage4e-v002.json
+_ai-conspects/react-query-rquery/data/R01-boundary-review-stage4e-v002.csv
+_ai-conspects/react-query-rquery/data/R01-boundary-review-stage4e-v002.json
+_ai-conspects/react-query-rquery/data/R01-area-understanding-stage4e-v002.json
+_ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
+_ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
+_ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/react-query-rquery/16-stage4e-r01-region-transcript-v002.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## R05 status
+## R01 v002 status
 
 ```text
-Verified sources: 10
-Known split/cropped: S-080, S-094, S-112
-Area understanding section: added
-Reading quality summary: added
-```
-
-## Current completed regions
-
-```text
-R05 - Pagination / InfiniteQuery / keepPreviousData side area
-R06 - Query composition: useQueries / dependent / combine
-R07 - Prefetch / initialData / placeholderData / useQueryClient
-R10 - Mutations
+Included sources: 20
+Excluded from R01: S-008
+Boundary status: reviewed for current two-column browser/cache road
 ```
