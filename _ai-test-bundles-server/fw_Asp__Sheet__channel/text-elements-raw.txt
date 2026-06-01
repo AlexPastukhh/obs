@@ -1,0 +1,58 @@
+﻿about await foreach 
+and possible sync reading/writing 
+and async awaiting
+
+valuetask ^BXdKIvkt
+
+trycomplete ^75LM7mkl
+
+waitto...
+tryread/trywrite ^br9iQWn7
+
+singlereader
+singlewriter ^2VfQCf4t
+
+examples when it can make sense ^QjJQDkii
+
+1 may need to do something when you processed currently avalable chunk and 
+the stream isnt ended yet 
+2 batch processing of sync available at the moment items
+you add to batch if there is some available and dont wait automatically
+like you will do with readallasync
+3 may want to give up after some count of attempts or 
+after some time of waiting start, after losed race 
+and not wait forever ^fuIdo5hU
+
+websockets example ^E6IIo1on
+
+unbounded channel ^UxfQHJu8
+
+bounded channel ^oXMaOWNO
+
+channeltypes and their options ^HfHo6snM
+
+fullmodeoptions ^kC3cl0Th
+
+async waiting ^LTnKXaKE
+
+channelwriter/reader ^Am51zUkl
+
+readasync/writeasync/readallasync/complete
+and try versions ^GCP81V9h
+
+channelreader ^5KDc6vgb
+
+channelreader ^XC0aCkQ6
+
+create and get
+reader or writer ^bVKUTOud
+
+write ^5Ul61xOA
+
+read ^BUFdW4lK
+
+read group of items 
+until there is nothing to read
+and process the whole group ^OwLvabjF
+
+readallasync ^LzaM7Ay3

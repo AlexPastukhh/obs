@@ -1,0 +1,182 @@
+﻿.query() ^PmdlS4Ym
+
+collections navigations references properties of entry  ^kElG5jwX
+
+is entry..... query accessible only from collection? ^5khDGVXZ
+
+changetracker itself ^dIUoKc38
+
+entityentry ^YLzdldXn
+
+common tasks ^Cmkt6A1Q
+
+
+haschanges
+detectchanges
+clear
+autodetectchangesenabled
+querytrackingbehavior
+debugview ^DCrA5PC5
+
+changetracker methods explaination ^l4Zw13Uw
+
+!!! ^m3YqbYZq
+
+clear 
+after savechanges 
+entities are still tracked ^Sw2uIDv1
+
+debugview
+examples ^uBmewrfn
+
+what if we disable autodetectchanges
+we stop tracking? how we can manually detect 
+them then? ^LiwYG9yR
+
+here it make sense to do 
+like
+save
+then restore
+
+so we can avoid second detection 
+because we alreadyt have state
+changes from add ^ZOpNT2Id
+
+all methods that change state ,update,add,attach,delete ^wIlcVP7n
+
+local detection only for 
+one entry
+
+entries ,entries<entity>,haschanges,cascadechanges
+run full detection ^CzkWpoZn
+
+full detectchanges ^Ot8RSk4S
+
+avoid second full detect changes ^5IJzMevN
+
+how disabling auto detect changes 
+can help ^EWzKVjst
+
+!!! ^920vbkjM
+
+!!! ^X3K1x8DY
+
+Nodestate ^n12AgzeC
+
+trackgraph ^TIFScC6X
+
+need to modifystate by yourself
+the only thing trackgraph does auto -
+stops on tracked entries ^jpv0yCtM
+
+wont stop on already tracked entries
+you control the traversal ^sp98EJ9F
+
+trackraph, what you need to do manually
+what it does auto and when ^qxYqez59
+
+deleteorphanstiming
+and cascadechanges() ^NJQURAZq
+
+acceptallchanges, 
+somelogic with still modified entities after savechanges
+transactions retry ^B4u6Rm1q
+
+cascadedeletetiming ^1I68EZvS
+
+when does detectchanges run ^VbhQUFOu
+
+lazyloadingenabled ^lA6ig6aT
+
+disable ll for some queries ^ZHVmiIB1
+
+examples ^E5S1Fosa
+
+reloadasync ^lfYDv0Zx
+
+getdatabasevaluesasync ^H1DCcVll
+
+complexcollection ^aP568mvB
+
+member ^wWwXvMHi
+
+complexproperty ^cfVzDMbl
+
+navigation ^KMJoJKUd
+
+collection ^s65SOCEo
+
+reference ^l2rTAiSK
+
+property ^849htCUO
+
+complexcollectons ^AUk59qrJ
+
+members ^SUuW7Awm
+
+iskeyset ^h2uRxQJY
+
+context ^AUQM5kTW
+
+state ^d0vB8dRJ
+
+entity ^i3HvYq4k
+
+metadata ^IHazx5y4
+
+currentvalues,origvalues ^K2J2sDXd
+
+complexproperties ^KM4yeBLU
+
+debugview ^if5Aw0Ep
+
+detectchanges ^2eLGNxoc
+
+---methods--- ^75tkkDqN
+
+---properties--- ^XjXA1wFH
+
+internal logic of attach
+can be useful inside
+trackgraph  ^m1TlEfm9
+
+props,methods examples ^mWwX1bra
+
+what and why metadata ^dgB8njWe
+
+what and why member ^Nv30rjXY
+
+props and methods member ^Tx2cgA4e
+
+full entity entry list ^RZDoKS2y
+
+changetracker event ^SgT9cblP
+
+tracking vs tracked
+fromquery
+what is state in tracking and tracked event
+ ^ie9HoEnr
+
+enrty types ^Ay7ucHtr
+
+all navigations - references and
+collections have isloded flag ^42yIRuoZ
+
+options of 
+delete timings ^ak3N2Yyn
+
+can we jsut detectchanges 
+without cascadechanges to 
+modify state of children ^JvwJitAV
+
+querytacking
+behavior ^xhiGcNYe
+
+autodetect
+cahnges ^AvHl5KzO
+
+savechanges also
+sets current values to orig values ^NE5S6lkX
+
+will get row version + some fields that was set from
+another requirest ^UWuE6Z7T
