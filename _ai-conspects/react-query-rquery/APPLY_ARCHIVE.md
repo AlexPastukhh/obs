@@ -1,6 +1,6 @@
-# Apply archive: React Query R07 transcript v003
+# Apply archive: React Query R06 transcript v001
 
-Archive type: stage-4b region transcript cleanup.
+Archive type: stage-4c verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4b-r07-transcript-v003.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4c-r06-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,48 +26,32 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4b-r07-transcript-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4b-r07-transcript-v003.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4c-r06-transcript-v001.zip"
 
-# Make git diff text/clipboard friendlier for UTF-8/Cyrillic.
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
 
-# Remove obsolete R07 scaffold files from Stage 4a.
-$staleFiles = @(
-  "_ai-conspects\react-query-rquery\data\R07-source-set-stage4a.json",
-  "_ai-conspects\react-query-rquery\data\R07-screenshot-inventory-stage4a.csv",
-  "_ai-conspects\react-query-rquery\10-stage4a-r07-next-region-kickoff.md"
-)
-
-foreach ($file in $staleFiles) {
-  if (Test-Path $file) {
-    Remove-Item $file -Force
-  }
-}
-
 git status --short
-git diff --stat -- _ai-conspects
+git diff --stat -- _ai-conspects/react-query-rquery
 
 # Copy full diff to clipboard. Do not print it and do not open a pager.
-git --no-pager diff -- _ai-conspects | Set-Clipboard
+git --no-pager diff -- _ai-conspects/react-query-rquery | Set-Clipboard
 ```
 
 ## Optional: save full diff to file
 
 ```powershell
-git --no-pager diff -- _ai-conspects > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
+git --no-pager diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
 ```
 
 ## Commit commands
 
-Use `git add -A` because this cleanup can remove obsolete scaffold files.
-
 ```powershell
-git add -A _ai-conspects
-git commit -m "Add React Query R07 transcript and cleanup"
+git add _ai-conspects/react-query-rquery
+git commit -m "Add React Query R06 query composition transcript"
 ```
 
 ## Push command
@@ -79,11 +63,15 @@ git push origin ai-processed-conspects-text
 ## Rollback before commit
 
 ```powershell
-git restore -- _ai-conspects
+git restore -- _ai-conspects/react-query-rquery
 ```
 
 ## Notes
 
-If v001/v002 were applied but not committed, apply this v003 archive over them and commit once.
+This archive updates only the current conspect folder:
 
-This archive keeps the R07 transcript/area understanding and removes stale Stage 4a scaffold files.
+```text
+_ai-conspects/react-query-rquery/
+```
+
+It adds a full R06 region transcript with area overview, key ideas, reading quality, evidence, and question hooks.

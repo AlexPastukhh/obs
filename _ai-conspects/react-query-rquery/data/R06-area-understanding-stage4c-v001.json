@@ -1,0 +1,36 @@
+{
+  "region_id": "R06",
+  "region_name": "Query composition: useQueries / dependent / combine",
+  "stage": "4c-v001",
+  "generated": "2026-06-01 18:45:29 UTC",
+  "what_area_is_about": [
+    "dependent queries",
+    "parallel queries",
+    "multiple useQuery calls",
+    "useQueries for multiple/dynamic queries",
+    "combine for aggregating useQueries results",
+    "component readability with combined query state"
+  ],
+  "key_ideas": [
+    "Dependent queries are useful when one query needs data from another.",
+    "Dependent queries can create serial loading.",
+    "Independent resources should be fetched in parallel.",
+    "Multiple useQuery calls give each query its own cache and lifecycle.",
+    "useQueries can run multiple query configs and can be dynamic.",
+    "combine can derive one combined result from multiple query states.",
+    "A combined custom hook can make the consuming component easier to read."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high for visible code blocks",
+    "spatial_layout_understanding": "medium-high",
+    "limitations": [
+      "S-126 and S-140 are split parts of one example",
+      "S-145 has top context cropped",
+      "S-159 has top context cropped",
+      "S-165 has top context cropped"
+    ],
+    "confidence_summary": "High for main ideas and visible code; medium for missing surrounding context in cropped sources."
+  }
+}

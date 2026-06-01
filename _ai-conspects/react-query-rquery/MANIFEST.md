@@ -1,58 +1,53 @@
-# MANIFEST - React Query rquery / R07 transcript v003
+# MANIFEST - React Query rquery / R06 transcript v001
 
-Archive type: **stage-4b region transcript cleanup**  
+Archive type: **stage-4c verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 17:44:15 UTC
+Generated: 2026-06-01 18:45:29 UTC
 
 ## Direction check
 
 Goal:
-Convert the React Query Excalidraw conspect into clean source-preserving region files.
+Convert the React Query Excalidraw conspect into source-preserving AI-readable region files.
 
 Now:
-R07 transcript v002 exists with area overview / key ideas / reading quality.
+R10 and R07 are completed/ready for review. R06 is now added as the next completed compact region.
 
 This step:
-Clean up R07 after review: normalize the Cyrillic/mojibake risk and remove obsolete Stage 4a scaffold files via apply commands.
+Add verified transcript for R06 - Query composition: useQueries / dependent / combine.
 
 Why:
-The region should be committed as a clean transcript, not as transcript plus stale scaffold artifacts.
+This region explains dependent vs parallel query composition and aggregation, which is core to understanding query behavior across the conspect.
 
 Next:
-1. apply v003 over the uncommitted v002 state;
-2. review copied diff;
-3. commit once if clean.
+1. review R06 transcript diff;
+2. fix transcript issues if any;
+3. continue to the next region.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/regions/R07-prefetch-initialdata-placeholderdata-usequeryclient.md
-_ai-conspects/react-query-rquery/data/R07-sources-stage4b.csv
-_ai-conspects/react-query-rquery/data/R07-sources-stage4b.json
-_ai-conspects/react-query-rquery/data/R07-area-understanding-stage4b-v002.json
-_ai-conspects/react-query-rquery/11-stage4b-r07-region-transcript.md
-_ai-conspects/react-query-rquery/12-stage4b-r07-area-understanding-update.md
-_ai-conspects/react-query-rquery/13-stage4b-r07-cleanup-v003.md
+_ai-conspects/react-query-rquery/regions/R06-query-composition-usequeries-dependent-combine.md
+_ai-conspects/react-query-rquery/data/R06-sources-stage4c.csv
+_ai-conspects/react-query-rquery/data/R06-sources-stage4c.json
+_ai-conspects/react-query-rquery/data/R06-area-understanding-stage4c-v001.json
+_ai-conspects/react-query-rquery/14-stage4c-r06-region-transcript.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
-_ai-conspects/CONSPECT_PROCESSING_RULES.md
-_ai-conspects/PARALLEL_CHAT_PROMPT.md
 ```
 
-## Files intentionally removed by apply commands
+## R06 status
 
 ```text
-_ai-conspects/react-query-rquery/data/R07-source-set-stage4a.json
-_ai-conspects/react-query-rquery/data/R07-screenshot-inventory-stage4a.csv
-_ai-conspects/react-query-rquery/10-stage4a-r07-next-region-kickoff.md
-```
-
-## R07 status
-
-```text
-Verified sources: 11
-Known partial/cropped: S-117, S-120, S-171, S-180
+Verified sources: 10
+Known split/cropped: S-126, S-140, S-145, S-159, S-165
 Area understanding section: added
 Reading quality summary: added
-Stale scaffold cleanup: included
+```
+
+## Current completed regions
+
+```text
+R06 - Query composition: useQueries / dependent / combine
+R07 - Prefetch / initialData / placeholderData / useQueryClient
+R10 - Mutations
 ```

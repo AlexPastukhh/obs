@@ -1,0 +1,11 @@
+region_source_id,source_id,image_use_id,fileId_short,status,readability,cut_off,confidence,theme,notes
+R06-S001,S-126,IU-126,68f33d5ec1,verified-visible-partial-from-embedded-svg-image,high,yes-bottom-continuation-in-S-140,high-for-visible-text,component example without combine,Visible bottom is cut off. The component continues in S-140.
+R06-S002,S-140,IU-140,52ce7625ac,verified-visible-continuation-from-embedded-svg-image,high,yes-top-continuation-from-S-126,high-for-visible-text,component example without combine continuation,Continuation of S-126.
+R06-S003,S-128,IU-128,664984d1b2,verified-from-embedded-svg-image,high,no,high,useQueries and dynamic useQueries,Verified from embedded SVG image.
+R06-S004,S-130,IU-130,d4b221fae1,verified-from-embedded-svg-image,high,no,high,dependent queries,Verified from embedded SVG image.
+R06-S005,S-145,IU-145,bfef41b217,verified-visible-partial-from-embedded-svg-image,high,top-context-cropped,high-for-visible-text,dependent query serial loading caveat,Top context is cropped; visible code/text is transcribed.
+R06-S006,S-142,IU-142,6c191bae1e,verified-from-embedded-svg-image,high,no,high,combine option for useQueries,Verified from embedded SVG image.
+R06-S007,S-150,IU-150,3071e8a02c,verified-from-embedded-svg-image,high,no,high,combine returns object-shaped result,Verified from embedded SVG image.
+R06-S008,S-159,IU-159,36f2dd3bd7,verified-visible-partial-from-embedded-svg-image,high,top-context-cropped,high-for-visible-text,component consuming combined result,Top context is cropped; visible code/text is transcribed. This source pairs with S-150.
+R06-S009,S-157,IU-157,7897e4ffa9,verified-from-embedded-svg-image,high,no,high,parallel queries with multiple useQuery calls,Verified from embedded SVG image.
+R06-S010,S-165,IU-165,58affaa7df,verified-visible-partial-from-embedded-svg-image,high,top-context-cropped,high-for-visible-text,independent query lifecycle,Top context is cropped. This appears to continue the parallel queries explanation.
