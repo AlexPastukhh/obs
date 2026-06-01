@@ -1,0 +1,354 @@
+﻿context ^7HxCPcer
+
+!!! ^vwRylv0t
+
+!!! ^4nxmC0Ba
+
+!!! ^0xFyXCqu
+
+they impl
+iauthenticationsign in/out handler ^3hQOLyly
+
+middleware, invoke(check) ^rMKfQ736
+
+useAuthentication
+AuthenticationMiddleware ^RvDxzmaj
+
+context.AuthenticateAsync and
+Authentication Service ^2OMBTO11
+
+Auth Scheme Provider ^XimlEDnB
+
+Auth Handler provider ^uRLG9cRC
+
+forwarding ^IwZPWgJo
+
+defaultforbid scheme
+about forbid not being the
+part of authenticate
+ ^rr0XcpSE
+
+challenge ^clTBR0fZ
+
+forbid ^Fpyim3CU
+
+session handling
+sign in/out AuthneitcationHandler ^QvpfU9VS
+
+sign out ^YhJQXr1Q
+
+sign in
+ ^DPOpbwIE
+
+authenticate request once
+intended flow ^byE5P2ZM
+
+initializeasync
+multiple shemes for handler
+resolve options from monitor ^i7LwnIcb
+
+resolvetarget
+decide whether to forward
+or return null ^6LyYNLXn
+
+authenticateasync
+call handlerauthenticateonce
+(hauth is the method to implement) ^ZyV0wvE6
+
+AuthService
+decide sheme and handler
+get ticketz ^H4NBr8Qs
+
+schemeprovider ^wROdw36G
+
+handlerprovider ^0nqVK09f
+
+forward options ^xYG4BDwi
+
+valid example ^L1Tfh7xO
+
+order/priority ^UKCXtImM
+
+concrete forward  ^huR7X2E1
+
+forward default selector ^vueevIqC
+
+forward default  ^DaucxNR0
+
+middleware to
+authservice ^nWQ29FGo
+
+base authhandler ^NxEbHrE6
+
+special handlers ^M57omozv
+
+HandleRequestAsync ^TQehxGi8
+
+base shit ^GOEvvXPd
+
+cookie shit ^np8XAlqc
+
+jwt shit ^GTD5NN7E
+
+handlecahllenge
+check for failure, if error pass some info about it to challengecontext
+if handled just return
+
+if not then if no error return ww
+if error = construct some basic response ^pQbIvkez
+
+handleforbid ^p6mg22S5
+
+obsoletesecurityTokenValidators ^gyQV6O7S
+
+if app didnt set token in event - parse header ^KfBP7mFh
+
+HandleAuthenticate
+fire messagereceived to give opportunity to set 
+token to context ^m1stYt5i
+
+ontokenValidated/Succes path ^P66lNCIi
+
+Token Validation ^GdyIpFcM
+
+Auth Header lookup ^iX6Ot2jm
+
+OnMessageReceived ^mgkepVUp
+
+HandleAuthentiicate
+flow ^dcvBROO0
+
+Setup Token Validation params ^hKmjlXJv
+
+SaveToken ^z9RQowHi
+
+OnAuthenticationFailed/FailurePath ^EsbD0Hjw
+
+Key rollover logic ^Tw0GJXFk
+
+!!!! ^7boQu9eM
+
+!!! ^s6cKwx1Y
+
+a possible place for some
+problem details returning
+with pd service and all 
+configred defaults for this shit ^HuKC0DwY
+
+summary ^oxgkboJr
+
+messagereveivedctx ^uyH5pVFw
+
+tokenValidatedctx ^DSIYb3SR
+
+AuthFailedContext ^HZbZkgZq
+
+ChallengeContext ^t45p5ovs
+
+ForbiddenCOntext ^dZLQte8v
+
+OnMessageReceinved ^Jggv52Ct
+
+OnTokenValidated ^8wWlxf1c
+
+OnAuthenticationFailed ^lIvgiDaP
+
+OnChallenge ^0yRpaTVl
+
+OnForbidden ^iskMgT67
+
+jwt ^stlJCg8d
+
+cookieredirectcontext ^VVLf3NFN
+
+cookieslidingexpiration ^GOqRofBk
+
+can write to response ^aQqCtvfp
+
+OnsigningIn ^CDXLBXPI
+
+OnSignedIn ^WcjXaHNO
+
+OnRedirectToLogin (Challenge) ^8Psq2c83
+
+OnRedirectToAccDenied (Forbid) ^LZDJhfX3
+
+OnRedirectToLogOut ^wtgWqBCj
+
+OnRedirectToReturnUrl ^8aCDEWEQ
+
+OnCheckSlidingExp ^lqnyWGlP
+
+ONValidatePrincipal ^r3wFBjFE
+
+OnSignigOut ^rmqrbjQW
+
+SingingOutContext ^qQgWwaU9
+
+ValidatePrincipalContext ^3GRHh7UA
+
+signedInContext ^GtYOHHgS
+
+signingInContext ^xa59jpLM
+
+summary ^PLbECeIq
+
+Cookie ^YoExVjVD
+
+Based on real user activity ^neyB6SPX
+
+based on allowrefresh ^UgThTNK9
+
+based on ticket age/remaining tie ^moFTvbe1
+
+based on custom metadata ^xj3eMxtd
+
+based on request sensitivity ^GGehBmCZ
+
+based on remember me ^AKD2B3KP
+
+reject disabled ^cvT6OFy9
+
+Add claims ^bnXYcBsV
+
+store request local values ^PpSdir7M
+
+custom failure result ^OseqZnPc
+
+suppress failure ^CWf5GXnn
+
+Possible result outcomes ^kgqKhVCX
+
+Valid token ^4052kkaE
+
+Invalid token ^rkzqqAml
+
+No token ^kfSeD1iw
+
+Challenge ^DZf3wzid
+
+Forbid ^NnRPs2UN
+
+distinguish Challenge
+from auth failure ^4vy6ko7c
+
+!!! ^dMBOHD0X
+
+Set token manually ^Xeg051pj
+
+Stop auth early, set result ^ZPikirjR
+
+if dont use obsolete shit(always )
+then use modern Options.TokenHanlders 
+TO validate token ^4JeMRKX0
+
+setup validation params
+(possible signing key fetches) ^d8uhtQxR
+
+on happy path fire event 
+
+store token if needed
+
+pass some shit to validatedcontext
+
+call success, return result ^w1K4AYhy
+
+if failure fire event
+return failure ^rh8w1Hh6
+
+catch errors 
+if authfailed rusult
+is there return it
+
+otherwise rethrow ex ^k2VadrHg
+
+authenticate
+check who is the user ^Of5cVZ84
+
+signin with iticketstore ^9TVs0cvy
+
+authenticate with iticketstore ^9poROPBK
+
+refresh with iticketstore ^eHb6Wjky
+
+signout with iticketstore ^gK4Xd5Q0
+
+iticketstore ^BxEvIHBK
+
+sign in
+we have trusted user
+we need to write auth ticket
+to cookie or ticket  id and store 
+authticket in iticketstore  ^DXtAG8z7
+
+sign out
+we have trusted user
+we need to remove auth ticket
+from cookie or ticketid and remove
+authticket from iticketstore  ^d3gSSIZ0
+
+challenge
+need to do something 
+with the user that isnt
+authenticated ^gdE3McXN
+
+forbid
+need to do something 
+with the user that isnt
+allowed ^YLZD5q7c
+
+check for refresh ^UgBqmYRm
+
+handleauthenticate ^VdXEpf1y
+
+ensurecookieticket(read the ticket once) ^W95gFZPX
+
+readcookieticket(get the real ticket from cookie
+or get ticket from c, get id claim
+and get real ticket from store) ^BKgo8CnB
+
+handlesigninasync ^PaminVgl
+
+requestrefresh ^KmyrWD32
+
+append cookie ^X5Vf5Zod
+
+FinishResponseAsync ^iR34DRN2
+
+finishresponseAsync  ^SIoEoMCp
+
+(decide whether we should renew ticket
+if not return
+because of the sliding expiration or some explicit calls
+if have some ticketstore call to renew
+appendresponsecookie with renewed cookie) ^oURUdHmW
+
+initializehandlerasync
+set event with 
+finishresponseasync ^9LXukISa
+
+!!! here we  set 
+some that authorization
+will read when there is no
+authorization metadata
+on endpoint ^YAbbzcpd
+
+clientId, code,state ^oerqbpLw
+
+pkce confidential client, mvc,bff ^hZHqu96t
+
+oidc shit ^9dCHmpXK
+
+full flow ^5n0hz8Ku
+
+authentication failed ^1u1NtjjP
+
+challenge with oidc handler ^p9v1Etq2
+
+oidc handler validates pcke stuff ^0YFP5EL5
+
+builds claimsprincipal ^iG7wR9oD
+
+calls signinasync with that principal ^EemofJ4o
+
+compact one ^LkKrZFhK

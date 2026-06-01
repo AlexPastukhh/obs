@@ -1,0 +1,156 @@
+﻿BASIC POLICIES IN ADDAUTHORIZATION ^bsPAwk3n
+
+RESOURCE BASED AUTHORIZATION ^MNboFg09
+
+CUSTOM POLICIES WITH AUTHORIZATION
+HANDLERS WITH REQUIREMENTS ^Fab8Wmxw
+
+BASIC, 
+GLOBAL AUTHORIZATION ^v5Zvo4Lz
+
+why to not use context.fail everywhere, multiple handlers registered
+for one  requirement ^aQ1mCs4B
+
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+
+public sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)
+    {
+        if (HasScope(context.User, requirement.Scope))
+            context.Succeed(requirement);
+
+        return Task.CompletedTask; // do nothing => not satisfied
+    }
+
+    private static bool HasScope(ClaimsPrincipal user, string needed)
+    {
+        // gather all possible scope strings
+        var values = user.FindAll("scope").Select(c => c.Value)
+            .Concat(user.FindAll("scp").Select(c => c.Value));
+
+        foreach (var v in values)
+        {
+            // handle both "a b c" and single-value
+            var scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            if (scopes.Contains(needed, StringComparer.Ordinal))
+                return true;
+        }
+
+        return false;
+    }
+} ^jcqM0nwN
+
+scope claims  ^qGQXZVl4
+
+when policy might succeed when
+ one handler didnt call success ^mFXP3b51
+
+better to add fallbackpolicy 
+and mark allowanonymus where you dont have 
+it ^c7CHhuzk
+
+can edit requirement
+admincanedithandler
+scopehandler (IAuthorizaitonHandler not gen) ^gnBgCQ2D
+
+but with min apis context.resource is usually either
+httpcontext or endpoint
+so dont give a fuck about it 
+
+
+unless you are using non generic handler
+then you need to check wnat is the type of resource ^CQdsKaCb
+
+IAuthoriazationHandler
+multiple requirements (usually of one type,
+like scope requirement) ^Rwu1DvUr
+
+its requirements, not handlers
+if there was no handler tthat ve 
+called success on requirement 
+requirement is failed and policy is failed ^rhEEk9tZ
+
+IAuthorizationRequirementData ^nJVq2doO
+
+example ^dWZAlVJQ
+
+case in authoriz
+middleware ^CWkwh1S0
+
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+
+public sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)
+    {
+        if (HasScope(context.User, requirement.Scope))
+            context.Succeed(requirement);
+
+        return Task.CompletedTask; // do nothing => not satisfied
+    }
+
+    private static bool HasScope(ClaimsPrincipal user, string needed)
+    {
+        // gather all possible scope strings
+        var values = user.FindAll("scope").Select(c => c.Value)
+            .Concat(user.FindAll("scp").Select(c => c.Value));
+
+        foreach (var v in values)
+        {
+            // handle both "a b c" and single-value
+            var scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            if (scopes.Contains(needed, StringComparer.Ordinal))
+                return true;
+        }
+
+        return false;
+    }
+} ^Ur4sX110
+
+scope claims  ^91JdNj6K
+
+requirements ^WP5ytnVZ
+
+Pendingrequirements ^ub8w1KIv
+
+fail ^ehICr4yQ
+
+succeed(req) ^btgAFe8p
+
+user ^u5gIKm8m
+
+resource ^w84dsB1n
+
+requirements vs 
+pending requirements ^VXKzNo9H
+
+authorizationhandlercontext ^aNveRR4c
+
+NON Generic AuthorizationHandler ^O5bIZCkJ
+
+When non generic ^oawcOpVe
+
+even if there is some inher
+can use generic handler ^aGboekmN
+
+different requirement types
+one logical domain ^U8dhuHl4
+
+batching, when we can 
+check all permissions in
+one call to api/method ^HmzpjB6i
+
+requirements need
+to be considered 
+together ^TS6vjkEn
+
+!!!! ^OSbR8Fy5
+
+when need to succeed all
+fail all based on one thing ^RQ9LwrJ8
+
+auth rule dispatcher
+(switch inside) ^foWpj4k7
