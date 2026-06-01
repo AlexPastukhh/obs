@@ -572,3 +572,73 @@ R06 is about choosing the right query composition pattern. If one request depend
 - `S-126` and `S-140` are split parts of one component example.
 - `S-145`, `S-159`, and `S-165` have cropped top context.
 - Source chips and UI copy buttons were omitted unless content-bearing.
+
+
+---
+
+## Stage 4i correction addendum - R06 v002
+
+Generated: 2026-06-01 22:02:02 UTC
+
+### Direction check
+
+Goal: finish the audited correction for R06 under the no-image-loss boundary rules.  
+Now: R06 v001 contained the main `useQueries` / dependent / combine transcript, but audit found one missing continuation.  
+This step: add `S-176` and explicitly document neighboring R07 sources that are not R06.  
+Why: `Promise.all` inside one `queryFn` is query composition, while the adjacent prefetch/fetchQuery road belongs to R07.
+
+### 0.2 Coverage / boundary review update
+
+Included in R06 v002:
+
+```text
+S-126, S-128, S-130, S-140, S-142, S-145, S-150, S-157, S-159, S-165, S-176
+```
+
+Added in v002:
+
+```text
+S-176 -> 15.2 One query with Promise.all
+```
+
+Checked but excluded from R06:
+
+```text
+S-132, S-146, S-162, S-171, S-180 -> R07 prefetch / staleTime / fetchQuery / ensureQueryData road, not R06.
+```
+
+### R06-S011 / S-176 - `f7fe899443`
+
+Metadata:
+- status: `verified-from-extracted-svg-image`
+- candidate_type: `same-road-continuation`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: 15.2 One query with Promise.all
+
+#### Verified visible text
+
+```text
+15.2 One query with `Promise.all`
+
+This is simple, but both requests now:
+
+- fetch together
+- refetch together
+- error together
+- share one lifecycle
+```
+
+#### Verified visible code
+
+```ts
+useQuery({
+  queryKey: ['reposAndMembers'],
+  queryFn: () => Promise.all([fetchRepos(), fetchMembers()]),
+})
+```
+
+### R06 v002 interpretation update
+
+`Promise.all` inside one `queryFn` is the compact alternative where several requests are treated as one query lifecycle. This belongs to R06 because it is about query composition, not prefetching.

@@ -1,0 +1,158 @@
+region_source_id,source_id,image_use_id,image_index,file,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,text,code,notes
+R07-S001,S-117,IU-117,,,8160273b4d,verified-visible-partial-from-embedded-svg-image,r07-v003-included-source,high,yes-bottom-continuation-in-S-120,high-for-visible-text,Prefetching intro and beginning of link-hover example,"16. Prefetching
+
+Prefetching loads data into cache before the user navigates there.
+
+A common case is link hover.","import { useQueryClient } from '@tanstack/react-query'
+
+function PostLink({ post }: { post: { path: string; title: string } }) {
+  const queryClient = useQueryClient()",This screenshot is visibly cut off after `const queryClient = useQueryClient()`. The continuation is in S-120.
+R07-S002,S-120,IU-120,,,77905ae043,verified-visible-continuation-from-embedded-svg-image,r07-v003-included-source,high,yes-top-continuation-from-S-117,high-for-visible-text,Prefetching link-hover example continuation,"Prefetching helps perceived performance, but it does not guarantee zero loading UI.","return (
+  <a
+    href={`/posts/${post.path}`}
+    onMouseEnter={() => {
+      queryClient.prefetchQuery({
+        queryKey: ['posts', post.path],
+        queryFn: () => fetchPost(post.path),
+        staleTime: 5000,
+      })
+    }}
+  >
+    {post.title}
+  </a>
+)
+}",Continuation of S-117. Together S-117 and S-120 form the prefetch link-hover example.
+R07-S003,S-131,IU-131,,,436c717cfb,verified-from-embedded-svg-image,r07-v003-included-source,high,no,high,initialData vs placeholderData intro and initialData example,"17. initialData vs placeholderData
+
+These are very different.
+
+17.1 initialData
+
+Seeds the query with real starting data.
+
+Useful when you already have related data in cache.","function usePost(path: string) {
+  const queryClient = useQueryClient()
+
+  return useQuery({
+    queryKey: ['posts', path],
+    queryFn: () => fetchPost(path),
+    initialData: () =>
+      queryClient
+        .getQueryData<{ path: string; title: string }[]>(['posts'])
+        ?.find((post) => post.path === path),
+  })
+}",Verified from embedded SVG image.
+R07-S004,S-132,IU-132,,,3d2af35386,verified-from-embedded-svg-image,r07-v003-included-source,high,no,high,prefetch staleTime and second hover behavior,"1) If user hovers, prefetch fires, does not click, then hovers again later
+
+It depends on whether the prefetched cache entry is still considered fresh at the moment of the second hover.
+
+In your screenshot:
+
+that `staleTime: 5000` is used for the prefetch decision: if the cached data for that key is not invalidated and is not older than 5 seconds, `prefetchQuery` will just resolve without fetching again; otherwise it will fetch.","queryClient.prefetchQuery({
+  queryKey: ['posts', post.path],
+  queryFn: () => fetchPost(post.path),
+  staleTime: 5000,
+})",Verified from embedded SVG image.
+R07-S005,S-146,IU-146,,,5ee5757310,verified-from-embedded-svg-image,r07-v003-included-source,high,no,high,prefetch staleTime summary,"So:
+
+- hover again within 5s -> usually no new request
+- hover again after 5s -> prefetch will usually fetch again
+- if the query was invalidated in between -> it can fetch again even before 5s, because invalidation marks it stale and overrides staleTime.",,Visible source chip omitted from transcript body.
+R07-S006,S-152,IU-152,,,b67831fde6,verified-from-embedded-svg-image,r07-v003-included-source,high,no,high,initialData cache persistence and immediate refetch,"Yes, `initialData` is written into that query's cache when the query is initialized - but a refetch may still happen immediately on mount, depending on freshness settings.
+
+So the precise answer is:
+
+- Yes: `initialData` becomes the cached data for that query key. It is persisted to the cache.
+- No, not ""without any refetch"" by default: with the default `staleTime: 0`, that initial data is treated as stale, so the query will usually refetch immediately when it mounts.
+
+Example:","useQuery({
+  queryKey: ['todos'],
+  queryFn: fetchTodos,
+  initialData: initialTodos,
+})",Visible source chips omitted from transcript body.
+R07-S007,S-162,IU-162,,,7ad643e947,verified-from-embedded-svg-image,r07-v003-included-source,high,no,high,prefetch staleTime vs useQuery staleTime,"Yes. By default, the data will still be stale for `useQuery` unless you also give `useQuery` (or the client defaults for that query) a nonzero `staleTime`. The React prefetching guide states this explicitly: the `staleTime` you pass to `prefetchQuery` is only used for the prefetch, and you still need to set `staleTime` for the later `useQuery` call as well.
+
+So in your scenario:","await queryClient.prefetchQuery({
+  queryKey: ['post', id],
+  queryFn: fetchPost,
+  staleTime: 10_000,
+})",Visible source chip omitted from transcript body.
+R07-S008,S-163,IU-163,,,df3c1dacf6,verified-from-embedded-svg-image,r07-v003-included-source,high,no,high,initialData skipped when cache already exists,"so if there is data in cache for that key, then initialdata will be skipped?
+
+Думал на протяжении 5s >
+
+Yes. If that query key already has cached data, `initialData` is skipped for that query instance - it does not overwrite existing cached data. The `useQuery` reference says `initialData` is used ""as long as the query hasn't been created or cached yet,"" and the SSR guide says even fresher `initialData` will not overwrite data already in the cache.",,Verified from embedded SVG image. Mixed Russian/English source text is preserved.
+R07-S009,S-171,IU-171,,,54c1e18a5f,verified-from-embedded-svg-image,r07-v003-included-source,high,top-context-cropped,high-for-visible-text,useQuery after prefetch reads cache then may refetch,"then later:
+
+what happens is:
+
+- `useQuery` will read the prefetched data from cache immediately
+- but because `useQuery`'s own `staleTime` defaults to `0`, that data is considered stale immediately
+- so on mount, the query can refetch in the background under the normal rules for stale queries.","useQuery({
+  queryKey: ['post', id],
+  queryFn: fetchPost,
+})",Top context is cropped; visible text/code is transcribed.
+R07-S010,S-172,IU-172,,,4014246e26,verified-from-embedded-svg-image,r07-v003-included-source,high,no,high,placeholderData,"17.2 placeholderData
+
+Temporary UI data while the real query fetches.
+
+Classic use case: pagination transitions.
+
+This keeps the previous page visible while the next page loads.
+
+Mental model
+
+- `initialData` -> real initial cache value
+- `placeholderData` -> temporary visual fallback while waiting","useQuery({
+  queryKey: ['repos', sort, page],
+  queryFn: () => fetchRepos(sort, page),
+  placeholderData: (previousData) => previousData,
+})",Verified from embedded SVG image.
+R07-S011,S-180,IU-180,,,8930b327c7,verified-from-embedded-svg-image,r07-v003-included-source,high,bottom-slightly-cropped-after-code,high-for-visible-text-and-code,prefetch staleTime vs mounted useQuery staleTime distinction,"The important distinction is:
+
+- prefetch `staleTime` answers: ""When I call `prefetchQuery`, should it fetch again or reuse cached data?""
+- useQuery `staleTime` answers: ""When this observer mounts, should this cached data be treated as fresh or stale?""
+
+So if you want the mounted component to treat the prefetched data as fresh for 10 seconds too, do this:","await queryClient.prefetchQuery({
+  queryKey: ['post', id],
+  queryFn: fetchPost,
+  staleTime: 10_000,
+})
+
+const query = useQuery({
+  queryKey: ['post', id],
+  queryFn: fetchPost,
+  staleTime: 10_000,
+})",Bottom is slightly cropped after the code block; visible text/code is transcribed.
+R07-S012,S-184,IU-184,,,39529d4e6d,verified-from-extracted-svg-image,same-road-continuation,high,no,high,fetch or ensure query data imperatively,"5. Fetch or ensure query data imperatively
+
+Useful outside normal `useQuery` flow.
+
+`fetchQuery` fetches if needed and returns data or throws on error. `ensureQueryData` returns cached data if present, otherwise fetches it.","const data = await queryClient.fetchQuery({
+  queryKey: ['todo', id],
+  queryFn: () => fetchTodo(id),
+})
+
+// or
+
+const data = await queryClient.ensureQueryData({
+  queryKey: ['todo', id],
+  queryFn: () => fetchTodo(id),
+})",Added in R07 v004 after Stage4g boundary audit. Continues the fetchQuery / ensureQueryData road after S-180.
+R07-S013,S-186,IU-186,,,30ab614e5c,verified-from-extracted-svg-image,same-road-continuation,high,no,high,core difference: fetchQuery vs ensureQueryData,"Core difference
+
+`fetchQuery`
+
+Uses freshness logic:
+
+- fresh cache → return cache
+- stale/missing cache → fetch
+
+`ensureQueryData`
+
+Uses existence logic:
+
+- cache exists → return cache
+- cache missing → fetch
+
+By default, `ensureQueryData` does not care that cached data is stale. It only cares whether data exists. The docs say if the query exists in the cache, `ensureQueryData` will return it; if you want stale data to also be revalidated, use `revalidateIfStale: true`.",,Added in R07 v004 after Stage4g boundary audit. Clarifies the semantic difference between freshness logic and existence logic.

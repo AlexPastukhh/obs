@@ -1,0 +1,49 @@
+{
+  "generated": "2026-06-01 22:02:02 UTC",
+  "stage": "4i",
+  "purpose": "combined corrections for R06/R07/R10 after Stage4g audit",
+  "rows": [
+    {
+      "region": "R06",
+      "source_id": "S-176",
+      "decision": "included-in-R06-v002",
+      "candidate_type": "same-road-continuation",
+      "reason": "One query with Promise.all belongs to query composition / parallel requests."
+    },
+    {
+      "region": "R06",
+      "source_id": "S-132, S-146, S-162, S-171, S-180",
+      "decision": "excluded-from-R06 / belongs-to-R07",
+      "candidate_type": "parallel-neighbor-road",
+      "reason": "Prefetch/staleTime/fetchQuery/ensureQueryData road; not R06."
+    },
+    {
+      "region": "R07",
+      "source_id": "S-184, S-186",
+      "decision": "included-in-R07-v004",
+      "candidate_type": "same-road-continuation",
+      "reason": "Continuation of fetchQuery / ensureQueryData road."
+    },
+    {
+      "region": "R07",
+      "source_id": "S-124, S-138, S-144, S-154, S-164, S-173",
+      "decision": "not-forced-into-R07 / reserve-for-R08",
+      "candidate_type": "separate-neighbor-column",
+      "reason": "QueryClient/methods column; likely R08 boundary seed."
+    },
+    {
+      "region": "R10",
+      "source_id": "S-240, S-241",
+      "decision": "included-in-R10-v006",
+      "candidate_type": "same-area-continuation",
+      "reason": "Mutation cache/offlineFirst continuation images missed by old transcript."
+    },
+    {
+      "region": "R10",
+      "source_id": "S-237/S-246",
+      "decision": "duplicate-use-recorded",
+      "candidate_type": "duplicate-image-use",
+      "reason": "Same fileId/content; transcript already present, but both placements recorded for coverage."
+    }
+  ]
+}

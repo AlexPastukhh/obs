@@ -601,3 +601,110 @@ R07 is about the difference between having data in cache and having data conside
 - `S-171` has top context cropped.
 - `S-180` is slightly cropped after the code block.
 - Source chips such as `TanStack +1` were omitted from transcript body unless they were content-bearing.
+
+
+---
+
+## Stage 4i correction addendum - R07 v004
+
+Generated: 2026-06-01 22:02:02 UTC
+
+### Direction check
+
+Goal: finish the audited correction for R07 under the no-image-loss boundary rules.  
+Now: R07 v003 covered prefetch/initialData/placeholderData/useQueryClient, but audit found the fetchQuery/ensureQueryData road continued.  
+This step: add `S-184` and `S-186`, and reserve the separate QueryClient/methods column for R08.  
+Why: these two screenshots are direct continuation of `S-180`; the QueryClient method column is a neighboring but separate area.
+
+### 0.2 Coverage / boundary review update
+
+Included in R07 v004:
+
+```text
+S-117, S-120, S-131, S-132, S-146, S-152, S-162, S-163, S-171, S-172, S-180, S-184, S-186
+```
+
+Added in v004:
+
+```text
+S-184 -> Fetch or ensure query data imperatively
+S-186 -> Core difference: fetchQuery vs ensureQueryData
+```
+
+Checked but not forced into R07:
+
+```text
+S-124, S-138, S-144, S-154, S-164, S-173 -> likely R08 QueryClient/methods column.
+```
+
+### R07-S012 / S-184 - `39529d4e6d`
+
+Metadata:
+- status: `verified-from-extracted-svg-image`
+- candidate_type: `same-road-continuation`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: Fetch or ensure query data imperatively
+
+#### Verified visible text
+
+```text
+5. Fetch or ensure query data imperatively
+
+Useful outside normal `useQuery` flow.
+
+`fetchQuery` fetches if needed and returns data or throws on error. `ensureQueryData` returns cached data if present, otherwise fetches it.
+```
+
+#### Verified visible code
+
+```ts
+const data = await queryClient.fetchQuery({
+  queryKey: ['todo', id],
+  queryFn: () => fetchTodo(id),
+})
+
+// or
+
+const data = await queryClient.ensureQueryData({
+  queryKey: ['todo', id],
+  queryFn: () => fetchTodo(id),
+})
+```
+
+### R07-S013 / S-186 - `30ab614e5c`
+
+Metadata:
+- status: `verified-from-extracted-svg-image`
+- candidate_type: `same-road-continuation`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: Core difference between fetchQuery and ensureQueryData
+
+#### Verified visible text
+
+```text
+Core difference
+
+`fetchQuery`
+
+Uses freshness logic:
+
+- fresh cache → return cache
+- stale/missing cache → fetch
+
+`ensureQueryData`
+
+Uses existence logic:
+
+- cache exists → return cache
+- cache missing → fetch
+
+By default, `ensureQueryData` does not care that cached data is stale. It only cares whether data exists. The docs say if the query exists in the cache, `ensureQueryData` will return it; if you want stale data to also be revalidated, use `revalidateIfStale: true`.
+```
+
+### R07 v004 interpretation update
+
+`fetchQuery` is freshness-oriented; `ensureQueryData` is existence-oriented by default. This is part of the R07 imperative cache/query-client road, while the broader QueryClient methods column remains reserved for R08.

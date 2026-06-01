@@ -1,0 +1,146 @@
+region_source_id,source_id,image_use_id,image_index,file,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,text,code,notes
+R06-S001,S-126,IU-126,,,68f33d5ec1,verified-visible-partial-from-embedded-svg-image,r06-v001-included-source,high,yes-bottom-continuation-in-S-140,high-for-visible-text,component example without combine,"7. Example in a component
+
+Without `combine`:","function BookPage({ bookId }: { bookId: string }) {
+  const [bookQuery, reviewsQuery] = useQueries({
+    queries: [
+      { queryKey: ['book', bookId], queryFn: () => getBook(bookId) },
+      { queryKey: ['reviews', bookId], queryFn: () => getReviews(bookId) },
+    ],
+  })
+
+  if (bookQuery.status === 'pending' || reviewsQuery.status === 'pending') {
+    return <div>Loading...</div>
+  }",Visible bottom is cut off. The component continues in S-140.
+R06-S002,S-140,IU-140,,,52ce7625ac,verified-visible-continuation-from-embedded-svg-image,r06-v001-included-source,high,yes-top-continuation-from-S-126,high-for-visible-text,component example without combine continuation,,"  if (bookQuery.status === 'error' || reviewsQuery.status === 'error') {
+    return <div>Something went wrong</div>
+  }
+
+  return (
+    <div>
+      <h1>{bookQuery.data.title}</h1>
+      <div>{reviewsQuery.data.length} reviews</div>
+    </div>
+  )
+}",Continuation of S-126.
+R06-S003,S-128,IU-128,,,664984d1b2,verified-from-embedded-svg-image,r06-v001-included-source,high,no,high,useQueries and dynamic useQueries,"15.3 `useQueries`
+
+Best of both worlds: separate caches, parallel execution, easy aggregation.
+
+Dynamic `useQueries`","const results = useQueries({
+  queries: [
+    { queryKey: ['repos'], queryFn: fetchRepos },
+    { queryKey: ['members'], queryFn: fetchMembers },
+  ],
+})
+
+function useRepoIssues(repoNames: string[]) {
+  return useQueries({
+    queries: repoNames.map((repo) => ({
+      queryKey: ['issues', repo],
+      queryFn: () => fetchIssues(repo),
+    })),
+  })
+}",Verified from embedded SVG image.
+R06-S004,S-130,IU-130,,,d4b221fae1,verified-from-embedded-svg-image,r06-v001-included-source,high,no,high,dependent queries,"14. Dependent queries
+
+Sometimes query B needs data from query A.","function useMovie(title: string) {
+  return useQuery({
+    queryKey: ['movie', title],
+    queryFn: () => getMovie(title),
+  })
+}
+
+function useDirector(id?: string) {
+  return useQuery({
+    queryKey: ['director', id],
+    queryFn: () => getDirector(id!),
+    enabled: id !== undefined,
+  })
+}",Verified from embedded SVG image.
+R06-S005,S-145,IU-145,,,bfef41b217,verified-visible-partial-from-embedded-svg-image,r06-v001-included-source,high,top-context-cropped,high-for-visible-text,dependent query serial loading caveat,"Dependent queries are correct, but they create serial loading.
+
+If resources are independent, fetch them in parallel instead.","function useMovieWithDirectorDetails(title: string) {
+  const movie = useMovie(title)
+  const directorId = movie.data?.director
+  const director = useDirector(directorId)
+
+  return { movie, director }
+}",Top context is cropped; visible code/text is transcribed.
+R06-S006,S-142,IU-142,,,6c191bae1e,verified-from-embedded-svg-image,r06-v001-included-source,high,no,high,combine option for useQueries,"15.4 `combine`
+
+You can derive one combined result.","function useBookAndReviews(bookId: string) {
+  return useQueries({
+    queries: [
+      { queryKey: ['book', bookId], queryFn: () => getBook(bookId) },
+      { queryKey: ['reviews', bookId], queryFn: () => getReviews(bookId) },
+    ],
+    combine: (queries) => {
+      const isPending = queries.some((q) => q.status === 'pending')
+      const isError = queries.some((q) => q.status === 'error')
+      const [book, reviews] = queries.map((q) => q.data)
+
+      return { isPending, isError, book, reviews }
+    },
+  })
+}",Verified from embedded SVG image.
+R06-S007,S-150,IU-150,,,3071e8a02c,verified-from-embedded-svg-image,r06-v001-included-source,high,no,high,combine returns object-shaped result,With `combine`:,"function useBookAndReviews(bookId: string) {
+  return useQueries({
+    queries: [
+      { queryKey: ['book', bookId], queryFn: () => getBook(bookId) },
+      { queryKey: ['reviews', bookId], queryFn: () => getReviews(bookId) },
+    ],
+    combine: (queries) => {
+      return {
+        isPending: queries.some((q) => q.status === 'pending'),
+        isError: queries.some((q) => q.status === 'error'),
+        book: queries[0].data,
+        reviews: queries[1].data,
+      }
+    },
+  })
+}",Verified from embedded SVG image.
+R06-S008,S-159,IU-159,,,36f2dd3bd7,verified-visible-partial-from-embedded-svg-image,r06-v001-included-source,high,top-context-cropped,high-for-visible-text,component consuming combined result,This is easier to read because the component gets exactly what it needs.,"function BookPage({ bookId }: { bookId: string }) {
+  const { isPending, isError, book, reviews } = useBookAndReviews(bookId)
+
+  if (isPending) return <div>Loading...</div>
+  if (isError) return <div>Something went wrong</div>
+
+  return (
+    <div>
+      <h1>{book?.title}</h1>
+      <div>{reviews?.length ?? 0} reviews</div>
+    </div>
+  )
+}",Top context is cropped; visible code/text is transcribed. This source pairs with S-150.
+R06-S009,S-157,IU-157,,,7897e4ffa9,verified-from-embedded-svg-image,r06-v001-included-source,high,no,high,parallel queries with multiple useQuery calls,"15. Parallel queries
+
+15.1 Multiple `useQuery` calls
+
+Best when resources are independent.","const reposQuery = useQuery({
+  queryKey: ['repos'],
+  queryFn: fetchRepos,
+})
+
+const membersQuery = useQuery({
+  queryKey: ['members'],
+  queryFn: fetchMembers,
+})",Verified from embedded SVG image.
+R06-S010,S-165,IU-165,,,58affaa7df,verified-visible-partial-from-embedded-svg-image,r06-v001-included-source,high,top-context-cropped,high-for-visible-text,independent query lifecycle,"Each query gets its own:
+
+- cache entry
+- loading state
+- error state
+- retry logic
+- stale/fetch lifecycle",,Top context is cropped. This appears to continue the parallel queries explanation.
+R06-S011,S-176,IU-176,,,f7fe899443,verified-from-extracted-svg-image,same-road-continuation,high,no,high,15.2 One query with Promise.all,"15.2 One query with `Promise.all`
+
+This is simple, but both requests now:
+
+- fetch together
+- refetch together
+- error together
+- share one lifecycle","useQuery({
+  queryKey: ['reposAndMembers'],
+  queryFn: () => Promise.all([fetchRepos(), fetchMembers()]),
+})",Added in R06 v002 after Stage4g boundary audit. Belongs to query composition / parallel requests because it composes multiple fetches into one query lifecycle.

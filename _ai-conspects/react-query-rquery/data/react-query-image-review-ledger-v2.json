@@ -1,29 +1,71 @@
 {
-  "generated": "2026-06-01 21:50:29 UTC",
-  "ledger_version": "v2-updated-by-r05-v002",
-  "critical_rule": "The ledger is still not a source of truth. It records decisions after visual/semantic boundary review.",
-  "r05_v002_delta": {
-    "included_sources": [
-      "S-080",
-      "S-083",
-      "S-085",
-      "S-093",
-      "S-094",
-      "S-101",
-      "S-106",
-      "S-108",
-      "S-111",
-      "S-112",
-      "S-114",
-      "S-115",
-      "S-116"
+  "generated": "2026-06-01 22:09:03 UTC",
+  "ledger_version": "v2-updated-by-stage4i-combined-corrections-v002",
+  "critical_rule": "The ledger is still not source of truth; it records decisions after visual/semantic boundary review.",
+  "important_fix_from_v001": "v002 normalizes old included R06/R07 rows so they no longer say processed v001 / must recheck after the combined correction.",
+  "completed_corrections": {
+    "R01": "v002 expanded full browser/cache road",
+    "R05": "v002 expanded pagination/infinite-query road",
+    "R06": "v002 includes S-176 and confirms R07 neighbors are not R06",
+    "R07": "v004 includes S-184/S-186 and reserves QueryClient/methods column for R08",
+    "R10": "v006 includes S-240/S-241 and records S-237/S-246 duplicate use"
+  },
+  "still_pending": [
+    "R08 QueryClient/methods column boundary review",
+    "All unreviewed ledger items remain provisional until processed by region"
+  ],
+  "stage4i_delta": {
+    "r06_v002_confirmed_sources": [
+      "S-126",
+      "S-128",
+      "S-130",
+      "S-140",
+      "S-142",
+      "S-145",
+      "S-150",
+      "S-157",
+      "S-159",
+      "S-165",
+      "S-176"
     ],
-    "newly_added_sources": [
-      "S-114",
-      "S-115",
-      "S-116"
+    "r07_v004_confirmed_sources": [
+      "S-117",
+      "S-120",
+      "S-131",
+      "S-132",
+      "S-146",
+      "S-152",
+      "S-162",
+      "S-163",
+      "S-171",
+      "S-172",
+      "S-180",
+      "S-184",
+      "S-186"
     ],
-    "status": "R05 boundary corrected and transcript expanded to include infinite-query page flattening continuation."
+    "r07_checked_not_r06": [
+      "S-132",
+      "S-146",
+      "S-162",
+      "S-171",
+      "S-180"
+    ],
+    "r08_reserved_from_r07_neighbor_column": [
+      "S-124",
+      "S-138",
+      "S-144",
+      "S-154",
+      "S-164",
+      "S-173"
+    ],
+    "r10_v006_new_sources": [
+      "S-240",
+      "S-241"
+    ],
+    "r10_v006_duplicate_uses_recorded": [
+      "S-237",
+      "S-246"
+    ]
   },
   "rows": [
     {
@@ -2242,12 +2284,12 @@
       "width": "911",
       "height": "301",
       "nearest_labels_for_search_only": "L-051: init data caveats | L-038: PREFETCHING/ INITIALDATA /PLACEHOLDRDATA, USEQUERYCLIENT | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Confirmed in R07 v004 boundary correction.",
+      "review_notes": "Confirmed in R07 v004 boundary correction."
     },
     {
       "source_id": "S-118",
@@ -2299,12 +2341,12 @@
       "width": "811",
       "height": "404",
       "nearest_labels_for_search_only": "L-051: init data caveats | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY | L-038: PREFETCHING/ INITIALDATA /PLACEHOLDRDATA, USEQUERYCLIENT",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Confirmed in R07 v004 boundary correction.",
+      "review_notes": "Confirmed in R07 v004 boundary correction."
     },
     {
       "source_id": "S-121",
@@ -2375,12 +2417,12 @@
       "width": "980",
       "height": "386",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "checked-r07-neighbor-likely-r08",
+      "coverage_status": "checked-r07-neighbor-reserved-for-r08",
       "current_region_decision": "R08",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "QueryClient/methods neighbor column; likely R08, not forced into R07.",
-      "review_notes": "QueryClient/methods neighbor column; likely R08, not forced into R07."
+      "decision_is_final": "no-until-r08-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08",
+      "decision_basis": "QueryClient/methods neighbor column reserved for future R08; not forced into R07.",
+      "review_notes": "QueryClient/methods neighbor column reserved for future R08; not forced into R07."
     },
     {
       "source_id": "S-125",
@@ -2413,12 +2455,12 @@
       "width": "931",
       "height": "408",
       "nearest_labels_for_search_only": "L-045: COMBINE | L-039: use queries dependant queries | L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-127",
@@ -2451,12 +2493,12 @@
       "width": "688",
       "height": "482",
       "nearest_labels_for_search_only": "L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER | L-047: NOT PARALLEL | L-039: use queries dependant queries",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-129",
@@ -2489,12 +2531,12 @@
       "width": "864",
       "height": "482",
       "nearest_labels_for_search_only": "L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER | L-047: NOT PARALLEL | L-054: PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-131",
@@ -2508,12 +2550,12 @@
       "width": "726",
       "height": "482",
       "nearest_labels_for_search_only": "L-051: init data caveats | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY | L-055: !!! can prefetch and then fetch again because of default stale time",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Confirmed in R07 v004 boundary correction.",
+      "review_notes": "Confirmed in R07 v004 boundary correction."
     },
     {
       "source_id": "S-132",
@@ -2527,12 +2569,12 @@
       "width": "954",
       "height": "442",
       "nearest_labels_for_search_only": "L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY | L-051: init data caveats | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?",
-      "coverage_status": "checked-not-r06-belongs-r07",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 audit neighbor: prefetch staleTime; not R06.",
-      "review_notes": "R06 audit neighbor: prefetch staleTime; not R06."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06.",
+      "review_notes": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06."
     },
     {
       "source_id": "S-133",
@@ -2641,12 +2683,12 @@
       "width": "869",
       "height": "205",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "checked-r07-neighbor-likely-r08",
+      "coverage_status": "checked-r07-neighbor-reserved-for-r08",
       "current_region_decision": "R08",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "QueryClient/methods neighbor column; likely R08.",
-      "review_notes": "QueryClient/methods neighbor column; likely R08."
+      "decision_is_final": "no-until-r08-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08",
+      "decision_basis": "QueryClient/methods neighbor column reserved for future R08; not forced into R07.",
+      "review_notes": "QueryClient/methods neighbor column reserved for future R08; not forced into R07."
     },
     {
       "source_id": "S-139",
@@ -2679,12 +2721,12 @@
       "width": "778",
       "height": "276",
       "nearest_labels_for_search_only": "L-045: COMBINE | L-039: use queries dependant queries | L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-141",
@@ -2717,12 +2759,12 @@
       "width": "794",
       "height": "482",
       "nearest_labels_for_search_only": "L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER | L-047: NOT PARALLEL | L-054: PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-143",
@@ -2755,12 +2797,12 @@
       "width": "927",
       "height": "352",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "checked-r07-neighbor-likely-r08",
+      "coverage_status": "checked-r07-neighbor-reserved-for-r08",
       "current_region_decision": "R08",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "QueryClient/methods neighbor column; likely R08.",
-      "review_notes": "QueryClient/methods neighbor column; likely R08."
+      "decision_is_final": "no-until-r08-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08",
+      "decision_basis": "QueryClient/methods neighbor column reserved for future R08; not forced into R07.",
+      "review_notes": "QueryClient/methods neighbor column reserved for future R08; not forced into R07."
     },
     {
       "source_id": "S-145",
@@ -2774,12 +2816,12 @@
       "width": "774",
       "height": "284",
       "nearest_labels_for_search_only": "L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER | L-047: NOT PARALLEL | L-054: PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-146",
@@ -2793,12 +2835,12 @@
       "width": "962",
       "height": "204",
       "nearest_labels_for_search_only": "L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY? | L-051: init data caveats | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY",
-      "coverage_status": "checked-not-r06-belongs-r07",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 audit neighbor: prefetch staleTime; not R06.",
-      "review_notes": "R06 audit neighbor: prefetch staleTime; not R06."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06.",
+      "review_notes": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06."
     },
     {
       "source_id": "S-147",
@@ -2869,12 +2911,12 @@
       "width": "829",
       "height": "482",
       "nearest_labels_for_search_only": "L-045: COMBINE | L-039: use queries dependant queries | L-054: PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-151",
@@ -2907,12 +2949,12 @@
       "width": "839",
       "height": "426",
       "nearest_labels_for_search_only": "L-051: init data caveats | L-055: !!! can prefetch and then fetch again because of default stale time | L-056: fetchquery ensurequerydata",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Confirmed in R07 v004 boundary correction.",
+      "review_notes": "Confirmed in R07 v004 boundary correction."
     },
     {
       "source_id": "S-153",
@@ -2945,12 +2987,12 @@
       "width": "907",
       "height": "459",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "checked-r07-neighbor-likely-r08",
+      "coverage_status": "checked-r07-neighbor-reserved-for-r08",
       "current_region_decision": "R08",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "QueryClient/methods neighbor column; likely R08.",
-      "review_notes": "QueryClient/methods neighbor column; likely R08."
+      "decision_is_final": "no-until-r08-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08",
+      "decision_basis": "QueryClient/methods neighbor column reserved for future R08; not forced into R07.",
+      "review_notes": "QueryClient/methods neighbor column reserved for future R08; not forced into R07."
     },
     {
       "source_id": "S-155",
@@ -3002,12 +3044,12 @@
       "width": "935",
       "height": "432",
       "nearest_labels_for_search_only": "L-054: PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING | L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER | L-047: NOT PARALLEL",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-158",
@@ -3040,12 +3082,12 @@
       "width": "846",
       "height": "394",
       "nearest_labels_for_search_only": "L-045: COMBINE | L-054: PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING | L-039: use queries dependant queries",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-160",
@@ -3097,12 +3139,12 @@
       "width": "934",
       "height": "395",
       "nearest_labels_for_search_only": "L-055: !!! can prefetch and then fetch again because of default stale time | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY? | L-056: fetchquery ensurequerydata",
-      "coverage_status": "checked-not-r06-belongs-r07",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 audit neighbor: prefetch staleTime; not R06.",
-      "review_notes": "R06 audit neighbor: prefetch staleTime; not R06."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06.",
+      "review_notes": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06."
     },
     {
       "source_id": "S-163",
@@ -3116,12 +3158,12 @@
       "width": "853",
       "height": "250",
       "nearest_labels_for_search_only": "L-051: init data caveats | L-056: fetchquery ensurequerydata | L-055: !!! can prefetch and then fetch again because of default stale time",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Confirmed in R07 v004 boundary correction.",
+      "review_notes": "Confirmed in R07 v004 boundary correction."
     },
     {
       "source_id": "S-164",
@@ -3135,12 +3177,12 @@
       "width": "956",
       "height": "481",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "checked-r07-neighbor-likely-r08",
+      "coverage_status": "checked-r07-neighbor-reserved-for-r08",
       "current_region_decision": "R08",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "QueryClient/methods neighbor column; likely R08.",
-      "review_notes": "QueryClient/methods neighbor column; likely R08."
+      "decision_is_final": "no-until-r08-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08",
+      "decision_basis": "QueryClient/methods neighbor column reserved for future R08; not forced into R07.",
+      "review_notes": "QueryClient/methods neighbor column reserved for future R08; not forced into R07."
     },
     {
       "source_id": "S-165",
@@ -3154,12 +3196,12 @@
       "width": "874",
       "height": "258",
       "nearest_labels_for_search_only": "L-054: PROMISE.ALL, SHARE LIFECTCLE FETCHING , REFETCHING AND ERRORING | L-049: SERIAL EXECUTION, GETTING DATA FOR ONE QUERY THEN FOR ANOTHER | L-047: NOT PARALLEL",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R06 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Confirmed in R06 v002 boundary correction.",
+      "review_notes": "Confirmed in R06 v002 boundary correction."
     },
     {
       "source_id": "S-166",
@@ -3268,12 +3310,12 @@
       "width": "912",
       "height": "402",
       "nearest_labels_for_search_only": "L-055: !!! can prefetch and then fetch again because of default stale time | L-056: fetchquery ensurequerydata | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?",
-      "coverage_status": "checked-not-r06-belongs-r07",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 audit neighbor: useQuery with prefetched data; not R06.",
-      "review_notes": "R06 audit neighbor: useQuery with prefetched data; not R06."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06.",
+      "review_notes": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06."
     },
     {
       "source_id": "S-172",
@@ -3287,12 +3329,12 @@
       "width": "855",
       "height": "482",
       "nearest_labels_for_search_only": "L-056: fetchquery ensurequerydata | L-055: !!! can prefetch and then fetch again because of default stale time | L-051: init data caveats",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R07 transcript v003; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Confirmed in R07 v004 boundary correction.",
+      "review_notes": "Confirmed in R07 v004 boundary correction."
     },
     {
       "source_id": "S-173",
@@ -3306,12 +3348,12 @@
       "width": "845",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-041: QUERYCLIENT | L-043: QUERY FILTERS",
-      "coverage_status": "checked-r07-neighbor-likely-r08",
+      "coverage_status": "checked-r07-neighbor-reserved-for-r08",
       "current_region_decision": "R08",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "QueryClient/methods neighbor column; likely R08.",
-      "review_notes": "QueryClient/methods neighbor column; likely R08."
+      "decision_is_final": "no-until-r08-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08",
+      "decision_basis": "QueryClient/methods neighbor column reserved for future R08; not forced into R07.",
+      "review_notes": "QueryClient/methods neighbor column reserved for future R08; not forced into R07."
     },
     {
       "source_id": "S-174",
@@ -3363,12 +3405,12 @@
       "width": "652",
       "height": "415",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "needs-r06-v002-include",
+      "coverage_status": "processed-in-r06-v002",
       "current_region_decision": "R06",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed continuation: one query with Promise.all.",
-      "review_notes": "Missed continuation: one query with Promise.all."
+      "decision_is_final": "yes-for-r06-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r06-v002",
+      "decision_basis": "Included in R06 v002 after combined correction; Promise.all query composition continuation.",
+      "review_notes": "Included in R06 v002 after combined correction; Promise.all query composition continuation."
     },
     {
       "source_id": "S-177",
@@ -3439,12 +3481,12 @@
       "width": "871",
       "height": "482",
       "nearest_labels_for_search_only": "L-055: !!! can prefetch and then fetch again because of default stale time | L-056: fetchquery ensurequerydata | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?",
-      "coverage_status": "checked-not-r06-belongs-r07",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no-until-target-region-audit",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R06 audit neighbor: fetchQuery/ensureQueryData distinction; not R06.",
-      "review_notes": "R06 audit neighbor: fetchQuery/ensureQueryData distinction; not R06."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06.",
+      "review_notes": "Already R07 prefetch/fetchQuery road; explicitly checked and excluded from R06."
     },
     {
       "source_id": "S-181",
@@ -3515,12 +3557,12 @@
       "width": "795",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "needs-r07-v004-include",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed continuation: fetch or ensure query data imperatively.",
-      "review_notes": "Missed continuation: fetch or ensure query data imperatively."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation.",
+      "review_notes": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation."
     },
     {
       "source_id": "S-185",
@@ -3553,12 +3595,12 @@
       "width": "894",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "needs-r07-v004-include",
+      "coverage_status": "processed-in-r07-v004",
       "current_region_decision": "R07",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed continuation: core difference fetchQuery vs ensureQueryData.",
-      "review_notes": "Missed continuation: core difference fetchQuery vs ensureQueryData."
+      "decision_is_final": "yes-for-r07-v004-boundary",
+      "must_recheck_before_region_close": "no-for-r07-v004",
+      "decision_basis": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference.",
+      "review_notes": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference."
     },
     {
       "source_id": "S-187",
@@ -4522,12 +4564,12 @@
       "width": "659",
       "height": "430",
       "nearest_labels_for_search_only": "L-075: SETQUERYDATA RETURN FULL OBJECT LIKE PUT | L-076: CALLBACKS AND ARGS | L-071: STRUCTURE, CALLBACKS INVALIDATION IN ONSETTLED",
-      "coverage_status": "duplicate-use-needs-r10-coverage-log",
+      "coverage_status": "duplicate-use-recorded-in-r10-v006",
       "current_region_decision": "R10",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Duplicate image use of S-246 / optimistic update code example; content present but image-use coverage should mention both placements.",
-      "review_notes": "Duplicate image use of S-246 / optimistic update code example; content present but image-use coverage should mention both placements."
+      "decision_is_final": "yes-coverage-only",
+      "must_recheck_before_region_close": "no-for-r10-v006",
+      "decision_basis": "Duplicate image use recorded with its matching pair; content already transcribed.",
+      "review_notes": "Duplicate image use recorded with its matching pair; content already transcribed."
     },
     {
       "source_id": "S-238",
@@ -4579,12 +4621,12 @@
       "width": "887",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "needs-r10-v006-include",
+      "coverage_status": "processed-in-r10-v006",
       "current_region_decision": "R10",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed mutation-area source: where you may need it.",
-      "review_notes": "Missed mutation-area source: where you may need it."
+      "decision_is_final": "yes-for-r10-v006-boundary",
+      "must_recheck_before_region_close": "no-for-r10-v006",
+      "decision_basis": "Included in R10 v006 after combined correction; mutation cache advanced use cases.",
+      "review_notes": "Included in R10 v006 after combined correction; mutation cache advanced use cases."
     },
     {
       "source_id": "S-241",
@@ -4598,12 +4640,12 @@
       "width": "897",
       "height": "260",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "needs-r10-v006-include",
+      "coverage_status": "processed-in-r10-v006",
       "current_region_decision": "R10",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed mutation-area source: best mental model.",
-      "review_notes": "Missed mutation-area source: best mental model."
+      "decision_is_final": "yes-for-r10-v006-boundary",
+      "must_recheck_before_region_close": "no-for-r10-v006",
+      "decision_basis": "Included in R10 v006 after combined correction; offlineFirst mental model.",
+      "review_notes": "Included in R10 v006 after combined correction; offlineFirst mental model."
     },
     {
       "source_id": "S-242",
@@ -4693,12 +4735,12 @@
       "width": "659",
       "height": "430",
       "nearest_labels_for_search_only": "L-076: CALLBACKS AND ARGS | L-071: STRUCTURE, CALLBACKS INVALIDATION IN ONSETTLED | L-072: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "duplicate-use-recorded-in-r10-v006",
+      "current_region_decision": "R10",
+      "decision_is_final": "yes-coverage-only",
+      "must_recheck_before_region_close": "no-for-r10-v006",
+      "decision_basis": "Duplicate image use recorded with its matching pair; content already transcribed.",
+      "review_notes": "Duplicate image use recorded with its matching pair; content already transcribed."
     },
     {
       "source_id": "S-247",

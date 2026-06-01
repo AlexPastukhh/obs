@@ -1,0 +1,7 @@
+region,source_id,decision,candidate_type,reason
+R06,S-176,included-in-R06-v002,same-road-continuation,One query with Promise.all belongs to query composition / parallel requests.
+R06,"S-132, S-146, S-162, S-171, S-180",excluded-from-R06 / belongs-to-R07,parallel-neighbor-road,Prefetch/staleTime/fetchQuery/ensureQueryData road; not R06.
+R07,"S-184, S-186",included-in-R07-v004,same-road-continuation,Continuation of fetchQuery / ensureQueryData road.
+R07,"S-124, S-138, S-144, S-154, S-164, S-173",not-forced-into-R07 / reserve-for-R08,separate-neighbor-column,QueryClient/methods column; likely R08 boundary seed.
+R10,"S-240, S-241",included-in-R10-v006,same-area-continuation,Mutation cache/offlineFirst continuation images missed by old transcript.
+R10,S-237/S-246,duplicate-use-recorded,duplicate-image-use,"Same fileId/content; transcript already present, but both placements recorded for coverage."

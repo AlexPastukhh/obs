@@ -1502,3 +1502,96 @@ This region teaches the mutation lifecycle and optimistic update flow in React Q
 - `MUT-S028` is visibly cut off; only visible text/code is transcribed.
 - Some sources were verified from sheet/crop composites rather than standalone original PNG files.
 - `MUT-S034` is cropped after the `variables` argument; visible content is transcribed only.
+
+---
+
+## Stage 4i correction addendum - R10 v006
+
+Generated: 2026-06-01 22:02:02 UTC
+
+### Direction check
+
+Goal: finish the audited correction for R10 under the no-image-loss boundary rules.  
+Now: R10 mutation transcript is mostly complete, but audit found two missed mutation-area screenshots and one duplicate-use coverage issue.  
+This step: add `S-240/S-241` and explicitly record duplicate image use `S-237/S-246`.  
+Why: mutation cache/offlineFirst notes belong to the mutation area, and duplicate placements must not disappear from coverage.
+
+### 0.2 Coverage / boundary review update
+
+Added in R10 v006:
+
+```text
+S-240 -> When you may need MutationCache
+S-241 -> Best mental model for offlineFirst
+```
+
+Duplicate-use coverage note:
+
+```text
+S-237 and S-246 share the same fileId/content (`55a51e51f4`).
+The optimistic update code example is already transcribed, but both placements are now recorded so neither image use disappears.
+```
+
+### R10-S240 / S-240 - `d5efd6d469`
+
+Metadata:
+- status: `verified-from-extracted-svg-image`
+- candidate_type: `same-area-continuation`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: MutationCache - when you may need it
+
+#### Verified visible text
+
+```text
+When you may need it
+
+Mostly advanced situations:
+
+- custom mutation monitoring
+- tooling/devtools-like behavior
+- observing global mutation lifecycle
+- custom offline/persistence integrations
+
+Example idea
+
+Mental model:
+
+- `MutationCache` = low-level storage for all mutation records
+- `QueryClient` methods are the usual higher-level way to interact with them
+```
+
+#### Verified visible code
+
+```ts
+const mutationCache = queryClient.getMutationCache()
+```
+
+### R10-S241 / S-241 - `8fdcc18b67`
+
+Metadata:
+- status: `verified-from-extracted-svg-image`
+- candidate_type: `same-area-continuation`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: offlineFirst best mental model
+
+#### Verified visible text
+
+```text
+Best mental model
+
+`offlineFirst` means:
+
+“Try now, even offline, because some local/network cache might satisfy the request.”
+
+It does not mean:
+
+“The data is guaranteed current.”
+```
+
+### R10 v006 interpretation update
+
+MutationCache is a lower-level mechanism for mutation records and advanced monitoring/integration use cases. `offlineFirst` means the system tries immediately because a cache/local/offline path may satisfy the request; it does not guarantee the returned data is current.

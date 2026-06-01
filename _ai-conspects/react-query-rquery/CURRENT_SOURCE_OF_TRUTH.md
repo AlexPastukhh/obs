@@ -1,21 +1,14 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-01 21:36:06 UTC
+Generated: 2026-06-01 22:09:03 UTC
 
 ## Current policy
 
 Do not use old Stage2 as source of truth.
 
-Also do not treat the review ledger as source of truth.
+Do not treat the review ledger as source of truth.
 
-The ledger is:
-
-```text
-review checklist
-all-image work queue
-provisional coverage tracker
-decision log after visual/semantic review
-```
+The ledger is a checklist, work queue, provisional tracker, and decision log after visual/semantic review.
 
 ## Actual source of truth for a region
 
@@ -26,24 +19,34 @@ Coverage / boundary review
 included sources
 candidate types checked
 nearby candidates checked
-distant safety candidates labeled correctly
-excluded candidates with reasons
-reassigned candidates with reasons
+excluded/reassigned candidates with reasons
 remaining open issues
-verified source transcript
+verified source transcript or correction addendum
 ```
 
-## Current review ledger
+## Current correction status
 
 ```text
-_ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
-```
-
-## R01 status
-
-```text
-R01 v001: superseded partial fragment
 R01 v002: expanded full browser/cache road
+R05 v002: expanded pagination / infinite-query road
+R06 v002: corrected with S-176
+R07 v004: corrected with S-184/S-186
+R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 ```
 
-R01 v002 includes 20 sources and excludes S-008 as a distant same-band safety check, not a nearby image.
+## Ledger consistency note
+
+Stage4i v002 normalizes the old included R06/R07 rows in the ledger so they no longer say `processed v001 / must recheck` after correction.
+
+```text
+R06 old included sources -> processed-in-r06-v002
+R07 old included sources -> processed-in-r07-v004
+R08 QueryClient/methods neighbor column -> reserved for future R08, not finalized as R07
+```
+
+## Still pending after this archive
+
+```text
+R08 QueryClient/methods column should be processed as its own boundary review.
+All unreviewed ledger items remain provisional until processed by region.
+```
