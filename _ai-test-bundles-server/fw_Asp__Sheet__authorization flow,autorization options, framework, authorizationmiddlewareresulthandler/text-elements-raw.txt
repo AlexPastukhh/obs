@@ -1,0 +1,182 @@
+﻿!!! ^aJ2X3T7U
+
+AuthorizationMiddleware ^lMm4qNOl
+
+Multiple ways to
+attach authorization info
+to endpoint ^e18gmZWf
+
+IAuthorizeData ^jGLK1xEY
+
+AuthorizationPolicy ^qpmAeix6
+
+IAuthorizationRequirementData ^8yXcOtWI
+
+get endpoint and set features
+for future endpointRoutingMiddleware
+so we will know that authorization middleware
+has checked this shit ^OElBfBaM
+
+trying cache lookup
+for cacheable policies ^jGIaY80O
+
+if nothing in cache
+then getmetadata from
+endpoint and combine into
+one policy
+
+get requirements form req
+metadata
+
+and in the end combine
+combined policy with 
+requirements into
+result policy
+
+cache if cacheable ^TMD9Z42G
+
+if no policies
+just call next 
+(means that there is 
+even no fallback policy
+that is applyed when
+tehre is nothing on endpoint) ^2UjlY5wc
+
+if policy has scheme/s
+but there is the one that we ve
+authenticated already as default scheme
+during authentication middleware call ^QZVetiIf
+
+the handler is scoped and here 
+in ensure
+we set some prop on it, so it has cached result ^If838Bry
+
+Policy evaluator authenticate, run all 
+schemes, (used handler results
+are cached)
+merge principal from multiple schemes
+if there are some ^HSVs5LGP
+
+create new ticket from new
+principal and concatenation of
+schemes
+or 
+ ^Gl6IHlp2
+
+nested func ^r8n2PvXg
+
+if there is no attributes, then we get result from features/context.user ^7o0YTRXD
+
+policyevaluator, authorizeasync
+call authorizationservice.Authorize
+if failed - forbid(authorizationfailure)
+if no authentication failure - challenge ^VbP9vRP8
+
+authorizaitonserviceextensions ^k3GbYbX8
+
+defaultauthorizationservice
+
+authorizeasync ^CScj2Qw2
+
+but we can fail fast inside one specific expensive handler with context
+has failed ^mkhYFNPj
+
+!!! ^YC2BxTB5
+
+!!!WW ^4huKOQ8I
+
+!!! ^hGvQgRKI
+
+custom handler example ^joJAAZzy
+
+policyauthorizationresult ^3uQ0cP6D
+
+events wont run ^E4aFjXbj
+
+AuthorizationPolicy ^EDqgp9vQ
+
+or can pass some metadata in headers/context so your 
+forbidden even callback will know the exatc reason of forbid
+and you may pass some info to frontend
+
++
+
+its mostly safe to bypass forbid
+if you dont need events to run ^HNPOw0iU
+
+authentication result check
+not authorization ^gAKubnTj
+
+defaultpolicy ^uTbMacFM
+
+fallbackpolicy ^hQsZkG1W
+
+getPolicy ^hdkHP0dj
+
+InvokeHanldersAfterFailure ^4n5ouDJH
+
+AuthorizationMiddleware ^uEz3lNmu
+
+build or retrieve policy, ordered metadata ^Hi71uclP
+
+if there is absolutely no policy ^Y3TrK4i7
+
+run policy authentication ^m9jewuQP
+
+Policyeval.Authenticate ^w1rVu1yC
+
+respect allowanonymous
+but populate context.User ^2Bz6OBjV
+
+resource ^IXAQmYiN
+
+PolicyEvaluator.Authorize ^frtfJ71b
+
+IAuthorizationService
+default one ^h24O2aBZ
+
+InvokeHanldersAfterFailure ^jxPjLoMi
+
+defaulthandlerprovider ^zLDyTlDK
+
+defaultAuthorizationEvaluator ^OGdM0Z0Z
+
+After authorization resulot ^yoDZIQbK
+
+AuthorizationMiddlewareResHanlder ^LgqOYy7q
+
+for what ^taGuR4fh
+
+interface ^cXM6FUbG
+
+parameters ^owvqDJdh
+
+Looping over policy schemes ^7kanQeQH
+
+why to have 
+InvokeHanldersAfterFailure ^sY3Mo3Cq
+
+default implementation behavior ^cEpWutuO
+
+bypasses scheme beh ^CRRjVxLf
+
+customize only specific cases ^a90pOTgY
+
+properties ^ivlDYh1U
+
+requirements ^9FOCIXLK
+
+authSchemes ^v5bbMXvw
+
+inspect failed requirements ^IXkoCI1e
+
+result types ^kUYsR8HR
+
+succeeded ^HYkCYEbN
+
+Challenged ^pSV7Kc7R
+
+Forbidden ^hbmrEKm9
+
+Custom response for
+specific requirements ^SEanQl7J
