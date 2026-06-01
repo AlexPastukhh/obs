@@ -1,0 +1,251 @@
+﻿how to handle? ^WdDExDVJ
+
+using Polly;
+using Polly.Timeout;
+using Polly.Bulkhead;
+using Polly.CircuitBreaker;
+using Polly.Retry;
+using Polly.Wrap;
+using Polly.Extensions.Http;
+using System.Net;
+
+public static class PollyPolicies
+{
+    public static IAsyncPolicy<HttpResponseMessage> CreateHttpPolicy()
+    {
+        // 1) Per-try timeout
+        var timeout = Policy.TimeoutAsync<HttpResponseMessage>(
+            TimeSpan.FromSeconds(10),
+            TimeoutStrategy.Pessimistic);
+
+        // 2) Retry with exponential backoff + jitter
+        var jitterer = new Random();
+
+        var retry = HttpPolicyExtensions
+            .HandleTransientHttpError() // HttpRequestException, 5xx, 408
+            .Or<TimeoutRejectedException>()
+            .WaitAndRetryAsync(
+                retryCount: 3,
+                sleepDurationProvider: attempt =>
+                {
+                    // exponential backoff: 200ms, 400ms, 800ms + jitter(0-100ms)
+                    var backoff = TimeSpan.FromMilliseconds(200 * Math.Pow(2, attempt - 1));
+                    var jitter = TimeSpan.FromMilliseconds(jitterer.Next(0, 100));
+                    return backoff + jitter;
+                },
+                onRetry: (outcome, delay, attempt, ctx) =>
+                {
+                    // outcome.Exception OR outcome.Result
+                    // log attempt + delay + reason
+                });
+
+        // 3) Circuit breaker (on transient errors)
+        var breaker = HttpPolicyExtensions
+            .HandleTransientHttpError()
+            .Or<TimeoutRejectedException>()
+            .CircuitBreakerAsync(
+                exceptionsAllowedBeforeBreaking: 5,
+                durationOfBreak: TimeSpan.FromSeconds(30),
+                onBreak: (outcome, breakDelay) =>
+                {
+                    // log breaker open
+                },
+                onReset: () =>
+                {
+                    // log breaker reset
+                },
+                onHalfOpen: () =>
+                {
+                    // log half-open trial
+                });
+
+        // 4) Bulkhead (concurrency limiter)
+        var bulkhead = Policy.BulkheadAsync<HttpResponseMessage>(
+            maxParallelization: 50,
+            maxQueuingActions: 100,
+            onBulkheadRejectedAsync: ctx =>
+            {
+                // log bulkhead rejection (overload)
+                return Task.CompletedTask;
+            });
+
+        // Wrap: outer → inner
+        return Policy.WrapAsync(bulkhead, breaker, retry, timeout);
+    }
+} ^dw7r7J9a
+
+Exception handling
+                  ^nyYjJbSs
+
+theory ^uOdLtRvG
+
+mapping ^LlhpsLgs
+
+try
+{
+    var resp = await client.GetAsync(url, cancellationToken);
+
+    if (resp.StatusCode == HttpStatusCode.NotFound)
+        return /* handle 404 */;
+
+    if ((int)resp.StatusCode >= 500)
+        return /* treat as dependency error */;
+
+    resp.EnsureSuccessStatusCode();
+    return /* success */;
+}
+catch (BulkheadRejectedException)
+{
+    // overloaded
+    return /* 429 or 503 */;
+}
+catch (BrokenCircuitException)
+{
+    // dependency is down, fail fast
+    return /* 503 */;
+}
+catch (TimeoutRejectedException)
+{
+    // dependency timed out
+    return /* 504 */;
+}
+catch (HttpRequestException)
+{
+    // network/transport failure
+    return /* 503 or dependency error */;
+} ^nzG13rfL
+
+in newer ^wrmX7mxv
+
+exception bubbling ^N8KuCQ7o
+
+!!!! ^Ihm4wZOK
+
+from threading we return our limiter types  ^TJn4975w
+
+for testing ^OCVjMhmA
+
+custom ^nW25oay4
+
+classic ^G5xhHoZ9
+
+shared impl ^51eiHMsz
+
+choosing pipelines based on something ^JQIAbxVm
+
+exception bubling
+outer starts call inner one, not throw to inner ^QXs4ZxCY
+
+so cant tell inner starts to not handle ex from outer because ex
+bubble fro miner to outer and outer just call inner ones ^gr5lMHVd
+
+setting properties ^xWgbQfoR
+
+hedging priciple of work ^FLog6dE2
+
+args args in shouldhandle
+why do we need to attach request to context ^0N1ga1zW
+
+delay generator, way to fallback to defaults ^LN5dmKDP
+
+rate limiter in polly 
+concur vs addratelimiter 
+and ratelimiterstrat options ^RVaOJV6m
+
+conditional rate limiting  ^5a8VjxFj
+
+making request with pipeline.execute ^iQ2cjmZ8
+
+the pipeline, not handler, you cant use handler for manual execution ^Jas4MVVZ
+
+ratelimiterstrategy args ^Il2UYE6v
+
+so to have delegating handler that gets pipeline with pipelineprovider
+based on request properties
+
+or 
+
+creating a wrapper that runs pipeline.execute and passes context 
+
+look like the cleanest options
+
+
+for simple scenarios its better to create wrapper with manual pipeline
+and delegatinghandler if there is some complex conditional shit ^Kyw0ZfLj
+
+need to execute pipeline manually 
+OR
+pass to request options and get pipeline from provider
+and execute it manually 
+IN BOTH we pass context  ^3yB6w3A8
+
+if want to pass 
+someting into context 
+ ^Sg026Wmn
+
+manual executiong 
+custom pipeline
++
+provider ^BgxZxq5n
+
+passing context to
+classic polly
+
++
+getting pipeline from registry ^sug1dVCw
+
+nesting ^G1tNct4s
+
+need to think about nesting in polly like that 
+
+whe nsomeything has multiple retries or hedge attempts
+and we put something inside - we wrap each retry with one bulhead 
+and all retries affect bulkhead ^q0gBS8EW
+
+so we need ratelimitpartition when 
+1 we need specific ratelimiter and we need to pass
+key (ratelimiter middleware case)
+2 we need to create ratelimiter with callback that has httpcontext
+as arg
+ 3 we need to create chained rate limiter -- PARTITIONED RATE LIMITER ^nG6CR4Hs
+
+ratelimiterpartition and partitioned rate limiter 
+3 scenarios ^YzQr04cS
+
+cheat sheet ^kOynLKA0
+
+classic polly httppolicyextensions
+1what counts as  transient http failure 
+2 transient status codes (when have your own exception handling)
+3 attach around httpclient with confiigured trans errors handling
+4 registry ^RF0pGp3R
+
+!!! ^n1jirl7u
+
+!!! ^guirJz2n
+
+!!! ^gVtLpNdo
+
+examples ^iGm57kAv
+
+extensions ^JyismoDG
+
+new standart vs custom ^fq7S7ilD
+
+SETTING TRUE/FALSE 
+BASED ON REQUEST METHOD ^wQq05fMT
+
+need to use pipeline excplicitly with pipeline provider ^xnKghEL6
+
+classic polly transient failures 
+new polly 
+
+vs httprequest exception ^goA023PE
+
+manually  ^xJJ4boaU
+
+with extension ^UCaN6fD1
+
+using strategyopiton need to acquire ^zyWJXBGk
+
+!!! ^5h2JgfS1

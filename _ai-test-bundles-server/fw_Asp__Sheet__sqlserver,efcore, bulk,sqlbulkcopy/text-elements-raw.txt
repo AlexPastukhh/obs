@@ -1,0 +1,225 @@
+﻿no app
+domain
+logic,invariants ^G78x6wqD
+
+can hold invariants 
+but with some stored proc
+in db ^qbtxNox0
+
+properties ^g2YGNDO7
+
+so can include index
+ creation into stored proc ^owXuUWxU
+
+source data for sqlbulkcopy
+dbtablelike, 
+datatable,Idatareader,datarow[] ^oQLj7Buv
+
+sqlbulkcopy constructors ^ZpQ9OEfL
+
+for loading, cant update directly
+need staging table ^pMTosSE9
+
+datatable ^umN7sobB
+
+idatareader ^PMrYXSge
+
+datarow[] ^ibThjoiI
+
+prod style
+example ^l1cj9Dzn
+
+methods ^0Cvsp2Hg
+
+options ^Wh0D7y64
+
+when there are some
+default/computed cols ^hgUAJoPG
+
+error behavior,can fail everything
+or a batch, staging table can help ^IqA22Zaj
+
+including identity columns ^PUyzCDZc
+
+preseve previous identity ^5DsX2tLv
+
+c# -> sql server type 
+mappng ^Q3RskHVR
+
+nullable values handling ^JGhB9skL
+
+if mapped the part 
+of columns ^p85biTDa
+
+if didnt mapped  ^AJXtwuSN
+
+!!! ^iN8kUPzA
+
+how tablelock actually
+work,how it helps with
+performance ^dkLONhXZ
+
+tablelock example flows ^BwSO3ZNP
+
+default ^0e2jbKmL
+
+destination colname ^H2CVGeMZ
+
+table lock ^8qsHwkRR
+
+keepidentity ^4KJLcHQH
+
+keepnuls (fuck defaults) ^xGMAhhnd
+
+ckeckconstraints ^hE00cLvd
+
+firetriggers ^OYLGXPWJ
+
+useinternaltransaction ^Rngpu9U7
+
+combine options ^N6mai7qF
+
+flow ^nzkfJmcH
+
+when internal transaction
+over separate batches help? ^c2eKHMAC
+
+when to/not to use ^ZZJuWuB5
+
+column mappings ^H3yQtenP
+
+batchsize ^jLl1QJqj
+
+bulkcopytimeout ^Xm0FohfR
+
+enable streaming ^O1kVbukU
+
+notify after ^KyvaljJW
+
+for too long 
+bulks ^o1ysKSeq
+
+when datarow[] ^daNodyRa
+
+datarow[] usage ^kfc4oMhO
+
+writetoserver ^5JHmeada
+
+close/dispose ^x7BuIP6N
+
+write from 
+reader ^ImougLNS
+
+performance checklist ^xviNzYIq
+
+why sqlbulkcopy is 
+high performant ^UjwwOBxV
+
+internal optimization flow
+fewer round trips ^lm2Xh5NS
+
+internal optimization
+less command parsing,planning ^v3hSCL2B
+
+less ef core overhead ^xm7mQPgO
+
+can stream ^OaADFdPQ
+
+batches internally ^mAZrLtx4
+
+can reduce trans log overhead  ^A3LkqjbB
+
+use staging tables ^tMsDoIbf
+
+use tablelock ^Qpi89wfd
+
+tune batchsize ^JbWvzrCt
+
+avoid triggers if you can ^eiOQxDRy
+
+manage indexes ^KDzhwa7h
+
+watch trans log ^bb6qdimE
+
+stream in very large files
+cases ^TH4rxvqa
+
+heap for staging strat ^XlRKZi6F
+
+build indexes after loading ^ByCxj58N
+
+when to use staging heap +
+indexes creating
+when to use shared table with
+some indexes ^dR92eHc3
+
+idatareader
+examples ^7hxlaQ80
+
+from db to db ^HrTJIYVq
+
+custom idatareader csv  ^PGI3AttQ
+
+custom idatareader
+stream from api resp ^U5Er4lIK
+
+custom readers,one read
+another transforms ^zPDOhInt
+
+can use dbdatareader from 
+dapper or ado.net  ^Lem7uIdT
+
+why not always 
+streaming ^oDxatsTO
+
+complexity ^3jDYz0a6
+
+harder validation,error responding ^5LaoFIwD
+
+sometimes need some additional logic
+per streamed item ^7wJmM5rQ
+
+harder retry beh ^GHjWY1AD
+
+one pass processing less felxible
+(sometimes need additional things
+not only process shit) ^ruYgsq6s
+
+may be not faster for small//medium ^lBdoiDbI
+
+bulk strats ^R4smjC7m
+
+staging table ^oWZDXr9q
+
+cleanup strategies ^oAQ1YmqV
+
+shared table, delete by 
+import id ^jPSEbEOJ
+
+one improt at time,
+truncate ^eaxSxn0G
+
+drop the table ^zAs8XVtY
+
+temporary table ^1eJKWWZY
+
+keep failed rows,delete successfull ^M6djxsp7
+
+move errors to separate
+table,clean how you wish ^0H7JgkUR
+
+cleanup inside/outside transaciton ^cwyfnk6R
+
+batch cleanup ^Yl8QWOKT
+
+clean up idexes? ^VR5QqIC1
+
+getting failed rows ^aclW7GIY
+
+example with transaction
+and stored proc ^XlS90ylx
+
+recommended flow
+architecture ^zo7Ku80u
+
+when use staging ^S0e3MQTy

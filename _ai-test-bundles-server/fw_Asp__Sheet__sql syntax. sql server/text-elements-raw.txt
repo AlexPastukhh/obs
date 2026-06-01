@@ -1,0 +1,286 @@
+﻿begin end
+if ^lMos2wqg
+
+stored proc usecase
+Set of update
+set to assign value to output param ^tjCk8ZHX
+
+why not set ? ^NDtQDsxN
+
+why not assign from output directly? ^Zrgxt6YI
+
+declare ^uWcAe2B4
+
+why select ^rlPdtTT4
+
+stored proc rowsversion case
+update output,
+INSERTED.RowVersion
+Select outputparamrowversion = temptablerowwithonecolumn from temptable ^UXNyThCq
+
+create database ^bUuidkqJ
+
+on primary ^C8CWseJM
+
+primary file options ^EnjsYMXs
+
+log files options ^xwdjhMRt
+
+log on ^T7S8FtLJ
+
+After i did this on another query file, i had got same error but when i did quey on
+same file where i use model, i got result ^8ZIMG6cZ
+
+USE model;
+SELECT 
+    name,
+    physical_name,
+    size/128.0 AS CurrentSizeMB,
+    CASE max_size
+        WHEN -1 THEN 'UNLIMITED'
+        WHEN 268435456 THEN '2GB'
+        ELSE CAST(max_size/128.0 AS VARCHAR) + ' MB'
+    END AS MaxSize,
+    growth/128.0 AS GrowthMB,
+    CASE is_percent_growth
+        WHEN 1 THEN CAST(growth AS VARCHAR) + '%'
+        ELSE 'Fixed MB'
+    END AS GrowthType
+FROM sys.database_files; ^liQwcnmY
+
+Practical Demonstration:
+sql
+-- ============================================
+-- DEMONSTRATING MASTER, MODEL, and GO
+-- ============================================
+
+-- 1. Show we're in MASTER (control database)
+USE master;
+GO
+
+SELECT 'Current database: ' + DB_NAME();
+GO
+
+-- 2. Check what databases exist (info stored in MASTER)
+SELECT name, state_desc, create_date 
+FROM sys.databases 
+ORDER BY name;
+GO
+
+-- 3. Look at MODEL's current settings
+SELECT 
+    'MODEL Database Settings:',
+    name,
+    size/128.0 AS SizeMB,
+    CASE max_size 
+        WHEN -1 THEN 'UNLIMITED' 
+        ELSE CAST(max_size/128.0 AS VARCHAR) + ' MB' 
+    END AS MaxSize
+FROM sys.master_files 
+WHERE database_id = DB_ID('model');
+GO
+
+-- 4. Create a new database (uses MODEL as template)
+CREATE DATABASE DemoDB;
+GO  -- Batch separator required!
+
+-- 5. Switch to new database
+USE DemoDB;
+GO  -- Required after USE!
+
+-- 6. Check what was created (inherited from MODEL)
+SELECT 'Now in database: ' + DB_NAME();
+GO
+
+-- 7. Clean up
+USE master;
+GO
+
+DROP DATABASE DemoDB;
+GO ^hlF6sT4Q
+
+master ^c9RmPpBo
+
+purpose of master ^BwQDWyS8
+
+what it contains ^gZAXnXb1
+
+Model ^We6dl86y
+
+Go ^BjQBwrXa
+
+go usecases ^a0lpEN9j
+
+System databases ^QHYBrWaQ
+
+when required ^cJ1Dl0rQ
+
+mistakes ^y6jf8CDZ
+
+variable scope ^2Uje9obi
+
+executing multiple times ^mhOm70pt
+
+separating ddl statements ^llKZb7Pg
+
+customizing model ^uJBB9qt3
+
+model defaults ^pyeRY3WE
+
+Defalults
+is log db created by default ^6nNMHqZx
+
+check model defaults ^RlwBMpgO
+
+default max limit for
+logs 2GB ^jK28p0mL
+
+multiple windows with queries
+= multiple connections ^StXhQ3Hu
+
+login , user ^vToZSibo
+
+sql server
+sec hierarchy ^NlHlCi8h
+
+security ^mjmh7Xl3
+
+create login
+user ^pF5iDctk
+
+grant roles
+(alter role by
+adding member) ^Nwzgmq7l
+
+fixed server roles ^9LgQLoon
+
+fixed db roles ^WEroS7EI
+
+custom roles
+with granting
+ permissions ^ypSob60D
+
+common options ^vbCJ6D43
+
+windows auth account ^uW1OCC1A
+
+view/indexed view ^HQa0hEQL
+
+common 
+constraints ^wVWZRLLe
+
+!!! ^k2qMDc9k
+
+key lines, that make this
+a merge
+
+we say that we 
+merge into users table
+
+
+ON means the condition for match
+
+then we just do thigs on match
+and not match
+ ^W31IGLYM
+
+we have variables from our query
+and we built some temp source ^IcofBjz4
+
+sql server syntax ^QZIVZtXh
+
+Delete ^Bh9c5IVc
+
+Update ^zPIV7LOA
+
+Insert ^kHhyTco3
+
+Create table ^q3HlaXSo
+
+Common types ^Zg2JLcI9
+
+Guid  ^95vhbEsK
+
+Table with foreign key ^lznxVBTd
+
+foreign key with cascade  ^ao4UFVVA
+
+return created row data ^H1F9G45I
+
+what can you get from
+inserted ^GhRpCWFD
+
+INSERTED ^mkFSo62L
+
+DELETED ^yx26DhJN
+
+FOR UPDATE ^35OK1v3E
+
+DELETED VS SCOPE_IDENTITY() ^R4WZ2VEn
+
+inserted with table
+variable pattern ^Vp7cKjZL
+
+Variables ^Z5szSQsO
+
+set vs select ^HAREy2XF
+
+Try Catch ^e1vrLvwb
+
+IF  ^flwrzsXJ
+
+IF EXISTS ^x9M2iMa5
+
+@@RowCount ^pyYGL6my
+
+Upsert with
+merge
+ ^2qMOpWqj
+
+Easier path 
+with If exists ^YgGX1OAN
+
+Transactions ^QnrtkNZc
+
+Indexes ^P6lsjSA3
+
+ALTER TABLE ^IEOfKYS8
+
+adding constraints
+with alter ^Ni4XktZp
+
+add default constr ^tponYpc2
+
+add check constr ^pkiwxLfv
+
+add unique constr ^MrOQgEil
+
+add foreign key constr ^eRfJdPPn
+
+add a column and then
+add it a constraint ^Tw4jWqUA
+
+add column ^CMmoRyOb
+
+alter column ^s2FNOexS
+
+drop column ^3cupEun6
+
+add constr ^AJj9stD1
+
+Primary key ^0x4jQWwW
+
+unique constr ^ya9AfVPI
+
+Foreign key ^GoBL3Ydu
+
+unique idex ^9cOh8eCE
+
+Not null ^hwYeL6Wp
+
+Default ^uU55sxeU
+
+Check ^rcKlsA09
+
+login + user - authentication
+users roles authorization ^NQrqSBlB

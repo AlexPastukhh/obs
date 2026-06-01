@@ -1,0 +1,66 @@
+﻿span and memory 
+provide view of something without copying
+and maybe mutation if its mutable  ^KBrpJI9W
+
+memory vs span ^kJNkw3cf
+
+stackallock
+stackmemory stack overflow
+
+when to use stackalloc when heap objects better
+
+how can avoid heap allocations in loops but carefully ^ImnDl54M
+
+tackalloc in separate method ^xNEr2pWS
+
+reducing gc pressure ^qmkT3Jsz
+
+memory.span ^yiRX32il
+
+!!!! ^EXWkMfZz
+
+about stack overflow and memory ^RVfDOvDo
+
+how to calculate size of some shit ^rtzdGdyC
+
+what span and memory can 
+have inside
+stackalloc additions ^rxTfkFAv
+
+what is ordinary value type, not ref struct
+so of memory and span are structs, they are being copyed
+can i use ref with them?
+ ^FOPgN1qh
+
+16 btes for struct guideline ^9KzhVX2q
+
+padding for alignment
+how to waste less memory just by ordering
+properties properly ^B7Zxeogf
+
+producer - consumer pipeline usecase
+for memory 
+ ^8TgTUo4o
+
+if arg needs ref - your prop that you pass
+need to return ref ^edy4WdRH
+
+unmanaged types ^HqTBxspZ
+
+where T :unmanaged ^MfszpMWD
+
+stackalloc ^7A5rBqA5
+
+locals,state machine
+stackalloc for code without crossing await
+pooling for crossing await ^jLlfdosz
+
+can memory be used with stackalloc/point to something that is stack allocated?
+memory itself is stack allocated?
+why we cant cross await with stackalloc, because of stackalloc or span? ^Myj2w4aa
+
+memory with stackallocated shit ^S0937wjL
+
+cant have span in field
+but can have property
+that return new span ^YA6eI1bh
