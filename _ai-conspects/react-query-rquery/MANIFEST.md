@@ -1,57 +1,58 @@
-# MANIFEST - React Query rquery / Stage 4a next-region kickoff
+# MANIFEST - React Query rquery / R07 transcript v003
 
-Archive type: **stage-4a next-region scaffold**  
+Archive type: **stage-4b region transcript cleanup**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 16:51:22 UTC
+Generated: 2026-06-01 17:44:15 UTC
 
-## Where we are on the path to the goal
+## Direction check
 
 Goal:
+Convert the React Query Excalidraw conspect into clean source-preserving region files.
 
-```text
-Convert the visual Excalidraw React Query conspect into source-preserving AI-readable region files.
-```
+Now:
+R07 transcript v002 exists with area overview / key ideas / reading quality.
 
-Completed checkpoints:
+This step:
+Clean up R07 after review: normalize the Cyrillic/mojibake risk and remove obsolete Stage 4a scaffold files via apply commands.
 
-```text
-Stage 1: global canvas map / region index
-Stage 2: screenshot mapping
-R10 - Mutations: completed/ready for review
-```
+Why:
+The region should be committed as a clean transcript, not as transcript plus stale scaffold artifacts.
 
-Current checkpoint:
-
-```text
-R07 - Prefetch / initialData / placeholderData / useQueryClient: started as next-region scaffold
-```
-
-This archive intentionally does not continue R10.
+Next:
+1. apply v003 over the uncommitted v002 state;
+2. review copied diff;
+3. commit once if clean.
 
 ## Files included / updated
 
 ```text
 _ai-conspects/react-query-rquery/regions/R07-prefetch-initialdata-placeholderdata-usequeryclient.md
+_ai-conspects/react-query-rquery/data/R07-sources-stage4b.csv
+_ai-conspects/react-query-rquery/data/R07-sources-stage4b.json
+_ai-conspects/react-query-rquery/data/R07-area-understanding-stage4b-v002.json
+_ai-conspects/react-query-rquery/11-stage4b-r07-region-transcript.md
+_ai-conspects/react-query-rquery/12-stage4b-r07-area-understanding-update.md
+_ai-conspects/react-query-rquery/13-stage4b-r07-cleanup-v003.md
+_ai-conspects/react-query-rquery/MANIFEST.md
+_ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
+_ai-conspects/CONSPECT_PROCESSING_RULES.md
+_ai-conspects/PARALLEL_CHAT_PROMPT.md
+```
+
+## Files intentionally removed by apply commands
+
+```text
 _ai-conspects/react-query-rquery/data/R07-source-set-stage4a.json
 _ai-conspects/react-query-rquery/data/R07-screenshot-inventory-stage4a.csv
 _ai-conspects/react-query-rquery/10-stage4a-r07-next-region-kickoff.md
-_ai-conspects/react-query-rquery/MANIFEST.md
-_ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## Status
+## R07 status
 
 ```text
-R10 - Mutations: completed/ready for review
-R07 - Prefetch / initialData / placeholderData / useQueryClient: scaffold/inventory only
-```
-
-## Next meaningful step
-
-Do not produce another archive unless it moves one of these forward:
-
-```text
-1. visually verify screenshots/crops for R07;
-2. replace the scaffold with a source-preserving region transcript;
-3. review/fix specific errors found in R10.
+Verified sources: 11
+Known partial/cropped: S-117, S-120, S-171, S-180
+Area understanding section: added
+Reading quality summary: added
+Stale scaffold cleanup: included
 ```

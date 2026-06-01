@@ -1,0 +1,35 @@
+{
+  "region_id": "R07",
+  "region_name": "Prefetch / initialData / placeholderData / useQueryClient",
+  "stage": "4b-v002-area-understanding-update",
+  "generated": "2026-06-01 17:39:00 UTC",
+  "what_area_is_about": [
+    "prefetching data into cache before navigation",
+    "useQueryClient and queryClient.prefetchQuery",
+    "prefetch staleTime versus mounted useQuery staleTime",
+    "initialData as real starting cache data",
+    "placeholderData as temporary visual fallback",
+    "why cached data can still refetch on mount"
+  ],
+  "key_ideas": [
+    "Prefetching improves perceived performance but does not guarantee zero loading UI.",
+    "Prefetch staleTime controls the prefetch decision, not automatically the mounted useQuery freshness.",
+    "Mounted useQuery may refetch prefetched data if its own staleTime is 0.",
+    "initialData is cached but can be stale immediately by default.",
+    "initialData is skipped when the query key already has cached data.",
+    "placeholderData keeps UI stable while real query data is loading."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high for visible code blocks",
+    "spatial_layout_understanding": "medium-high",
+    "limitations": [
+      "S-117 and S-120 are split parts of one example",
+      "S-171 has top context cropped",
+      "S-180 is slightly cropped after the code block",
+      "S-163 includes mixed Russian/English source text"
+    ],
+    "confidence_summary": "High for main ideas and visible code; medium for missing surrounding context in cropped sources."
+  }
+}

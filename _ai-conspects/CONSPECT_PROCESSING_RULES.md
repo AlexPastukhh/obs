@@ -181,3 +181,40 @@ Optional file export:
 ```powershell
 git --no-pager diff -- _ai-conspects > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
 ```
+---
+
+## Area understanding / reading quality section
+
+When processing a region/area, add a compact section that states:
+
+```text
+what this area is about overall
+key ideas
+how well the AI perceived/understood the ideas
+how well the source was read
+known reading limitations / cropped / unclear sources
+confidence summary
+```
+
+Recommended heading inside each region file:
+
+```md
+## 0.1 Area overview / key ideas / reading quality
+```
+
+This section should be source-grounded. Do not use it to add general knowledge that is not supported by the visible source.
+
+Keep the section short enough to be useful during review and repetition.
+
+Example fields:
+
+```text
+What this area is about
+Key ideas
+How well I perceived the area
+Reading limitations
+Confidence
+```
+
+Do not claim high reading quality if the source is cropped, OCR-assisted, or visually unclear.
+

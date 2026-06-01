@@ -46,3 +46,7 @@ Next:
 
 Do not claim screenshot/code transcript is verified unless it was visually checked. Mark partial/cut-off/unclear sources explicitly.
 ```
+
+Additional region-processing rule:
+
+When you process a region, include a compact `Area overview / key ideas / reading quality` section in the region file. It must state what the area is about overall, key ideas, how well you understood/perceived those ideas, how well the sources were read, and what limitations remain.

@@ -1,0 +1,12 @@
+region_source_id,source_id,image_use_id,fileId_short,status,readability,cut_off,confidence,theme,notes
+R07-S001,S-117,IU-117,8160273b4d,verified-visible-partial-from-embedded-svg-image,high,yes-bottom-continuation-in-S-120,high-for-visible-text,Prefetching intro and beginning of link-hover example,This screenshot is visibly cut off after `const queryClient = useQueryClient()`. The continuation is in S-120.
+R07-S002,S-120,IU-120,77905ae043,verified-visible-continuation-from-embedded-svg-image,high,yes-top-continuation-from-S-117,high-for-visible-text,Prefetching link-hover example continuation,Continuation of S-117. Together S-117 and S-120 form the prefetch link-hover example.
+R07-S003,S-131,IU-131,436c717cfb,verified-from-embedded-svg-image,high,no,high,initialData vs placeholderData intro and initialData example,Verified from embedded SVG image.
+R07-S004,S-132,IU-132,3d2af35386,verified-from-embedded-svg-image,high,no,high,prefetch staleTime and second hover behavior,Verified from embedded SVG image.
+R07-S005,S-146,IU-146,5ee5757310,verified-from-embedded-svg-image,high,no,high,prefetch staleTime summary,Visible source chip omitted from transcript body.
+R07-S006,S-152,IU-152,b67831fde6,verified-from-embedded-svg-image,high,no,high,initialData cache persistence and immediate refetch,Visible source chips omitted from transcript body.
+R07-S007,S-162,IU-162,7ad643e947,verified-from-embedded-svg-image,high,no,high,prefetch staleTime vs useQuery staleTime,Visible source chip omitted from transcript body.
+R07-S008,S-163,IU-163,df3c1dacf6,verified-from-embedded-svg-image,high,no,high,initialData skipped when cache already exists,Verified from embedded SVG image. Mixed Russian/English source text is preserved.
+R07-S009,S-171,IU-171,54c1e18a5f,verified-from-embedded-svg-image,high,top-context-cropped,high-for-visible-text,useQuery after prefetch reads cache then may refetch,Top context is cropped; visible text/code is transcribed.
+R07-S010,S-172,IU-172,4014246e26,verified-from-embedded-svg-image,high,no,high,placeholderData,Verified from embedded SVG image.
+R07-S011,S-180,IU-180,8930b327c7,verified-from-embedded-svg-image,high,bottom-slightly-cropped-after-code,high-for-visible-text-and-code,prefetch staleTime vs mounted useQuery staleTime distinction,Bottom is slightly cropped after the code block; visible text/code is transcribed.
