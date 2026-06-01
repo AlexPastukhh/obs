@@ -1,11 +1,10 @@
 # Current Source of Truth - Streaming
 
-Generated: 2026-06-01 22:55:38 UTC
+Generated: 2026-06-01 23:26:17 UTC
 
 ## Policy
 
-Inventory/ledger is a checklist, not source of truth.
-
+Inventory/ledger is checklist only, not source of truth.
 A region is complete only after visual/semantic boundary review and verified transcript.
 
 ## Current status
@@ -15,13 +14,13 @@ Stage0 boundary review: done
 R01 streaming bytes / stream concept basics: transcript v001 done
 R02 reading response stream / payload bytes: transcript v001 done
 R03 streaming objects / async iteration / REST API concerns: transcript v001 done
-R04 IAsyncEnumerable / NDJSON / FlushAsync: next
+R04 IAsyncEnumerable / NDJSON / FlushAsync: transcript v001 done
+R05 SSE / EventSource / writer / heartbeat / reconnect: next
 ```
 
-## R03 note
+## R04 note
 
 ```text
-S-024/S-025/S-026/S-027 were pulled from UNSPLIT into R03 by semantic review because they continue the REST-friendly streaming endpoint concerns tail.
-S-084 was checked but left for R04 because it starts NDJSON streaming controller implementation.
-S-090/S-015 duplicate visible code snippet placements are both recorded.
+R04 includes NDJSON/JSON-array/client-streaming/ResponseHeadersRead/FlushAsync implementation material.
+S-110/S-111/S-112/S-113/S-126/S-127/S-128/S-129 were checked and reserved for R05 SSE/EventSource/reconnect road.
 ```

@@ -1,6 +1,6 @@
-# Apply archive: Streaming R03 transcript v002
+# Apply archive: Streaming R04 transcript v002
 
-Archive type: stage-3 verified region transcript / apply-format fix.
+Archive type: stage-4 verified region transcript / count fix.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-streaming-stage3-r03-transcript-v002.zip
+C:\Users\alexa\Downloads\ai-conspects-streaming-stage4-r04-transcript-v002.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-streaming-stage3-r03-transcript-v002.zip
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage3-r03-transcript-v002.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage3-r03-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage4-r04-transcript-v002.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage4-r04-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/streaming
-git commit -m "Add streaming R03 object streaming transcript"
+git commit -m "Add streaming R04 NDJSON flush transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git restore -- _ai-conspects/streaming
 
 ## Notes
 
-This v002 archive keeps the R03 transcript content from v001 and fixes `APPLY_ARCHIVE.md` formatting: the file now contains real line breaks instead of literal `\n` sequences.
+This v002 archive keeps R04 transcript content from v001 and fixes the R04 source-count wording: the actual included source count is 39.

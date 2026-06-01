@@ -1,0 +1,35 @@
+{
+  "region_id": "R04",
+  "region_name": "IAsyncEnumerable / NDJSON / FlushAsync implementation road",
+  "stage": "stage4-v001",
+  "generated": "2026-06-01 23:26:17 UTC",
+  "what_area_is_about": [
+    "server-side IAsyncEnumerable<T> object streaming",
+    "wire-format consequences: JSON array vs NDJSON vs SSE",
+    "client-side streaming read with ResponseHeadersRead and DeserializeAsyncEnumerable",
+    "manual NDJSON response writing with WriteAsync and FlushAsync",
+    "why FlushAsync matters and what response started/headers committed means",
+    "partial results, disconnects, truncation, and resume semantics"
+  ],
+  "key_ideas": [
+    "IAsyncEnumerable<T> can let server produce objects gradually, but wire format determines whether clients can consume progressively.",
+    "Default HttpClient ResponseContentRead usually waits until full content is received; ResponseHeadersRead enables true streaming consumption.",
+    "Normal JSON arrays are fragile for long-lived partial streams because early disconnect can leave invalid JSON.",
+    "NDJSON makes each line a complete JSON object, so clients can process line-by-line and keep partial results.",
+    "Manual NDJSON streaming writes each serialized JSON object plus newline and flushes after each item.",
+    "FlushAsync pushes buffered response bytes sooner, but proxies/client buffering may still affect visible delivery.",
+    "Once response headers are committed/started, status code/content type/headers should be considered locked.",
+    "For long-running JSON array streams, resumable afterId/pageToken semantics can reduce damage from disconnects."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "mostly high",
+    "code_readability": "medium-high; several code screenshots are small but readable for intent",
+    "spatial_layout_understanding": "high after R04 boundary review; SSE overlap excluded for R05",
+    "limitations": [
+      "Some code snippets are preserved as visible intent rather than every punctuation character.",
+      "R04 is broad and contains multiple columns; R05 overlap was explicitly excluded."
+    ],
+    "confidence_summary": "High for concepts/boundary; medium-high for exact code punctuation in small screenshots."
+  }
+}

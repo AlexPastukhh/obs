@@ -1,0 +1,48 @@
+source_id,decision,candidate_type,reason
+S-084,included-in-R04-v001,r04-confirmed,NDJSON streaming controller action title
+S-085,included-in-R04-v001,r04-confirmed,IAsyncEnumerable streaming encoding nuance
+S-086,included-in-R04-v001,r04-confirmed,Client consuming IAsyncEnumerable<T> from JSON
+S-186,included-in-R04-v001,r04-confirmed,Mostly yes: IAsyncEnumerable endpoint and memory use
+S-187,included-in-R04-v001,r04-confirmed,Deserializing async enumerable memory benefit
+S-188,included-in-R04-v001,r04-confirmed,ResponseContentRead nuance
+S-189,included-in-R04-v001,r04-confirmed,Without ResponseHeadersRead you usually wait
+S-190,included-in-R04-v001,r04-confirmed,Programming view without ResponseHeadersRead
+S-191,included-in-R04-v001,r04-confirmed,Flow without ResponseHeadersRead code
+S-192,included-in-R04-v001,r04-confirmed,Programming view with ResponseHeadersRead
+S-193,included-in-R04-v001,r04-confirmed,Flow with ResponseHeadersRead code
+S-194,included-in-R04-v001,r04-confirmed,ResponseHeadersRead full client code with partial result handling
+S-093,included-in-R04-v001,r04-confirmed,Why NDJSON over normal JSON array
+S-094,included-in-R04-v001,r04-confirmed,NDJSON solves JSON array streaming problem
+S-095,included-in-R04-v001,r04-confirmed,Normal JSON array mid-stream truncation
+S-096,included-in-R04-v001,r04-confirmed,Can client do something to avoid invalid JSON problems
+S-097,included-in-R04-v001,r04-confirmed,DeserializeAsyncEnumerable items before cut
+S-098,included-in-R04-v001,r04-confirmed,Client code processing items incrementally and keeping partial results
+S-099,included-in-R04-v001,r04-confirmed,Normal JSON array is still useful for typical APIs
+S-100,included-in-R04-v001,r04-confirmed,When JSON array streaming is bad fit
+S-101,included-in-R04-v001,r04-confirmed,How to make JSON array streaming practical
+S-150,included-in-R04-v001,r04-confirmed,NDJSON streaming controller action title duplicate
+S-151,included-in-R04-v001,r04-confirmed,NDJSON streaming controller code
+S-148,included-in-R04-v001,r04-confirmed,FlushAsync definition and why used
+S-147,included-in-R04-v001,r04-confirmed,FlushAsync relationship to IAsyncEnumerable return
+S-146,included-in-R04-v001,r04-confirmed,Difference between FlushAsync and returning IAsyncEnumerable
+S-157,included-in-R04-v001,r04-confirmed,NDJSON vs JSON array body looks
+S-155,included-in-R04-v001,r04-confirmed,NDJSON newline-delimited JSON
+S-164,included-in-R04-v001,r04-confirmed,Notes on JSON array format
+S-154,included-in-R04-v001,r04-confirmed,NDJSON content type
+S-149,included-in-R04-v001,r04-confirmed,NDJSON notes
+S-153,included-in-R04-v001,r04-confirmed,Why NDJSON is great
+S-152,included-in-R04-v001,r04-confirmed,Why FlushAsync matters for NDJSON
+S-159,included-in-R04-v001,r04-confirmed,FlushAsync still matters despite write async
+S-158,included-in-R04-v001,r04-confirmed,What started means in practice
+S-161,included-in-R04-v001,r04-confirmed,Headers committed once response starts
+S-160,included-in-R04-v001,r04-confirmed,Bytes may still be behind buffering layers
+S-162,included-in-R04-v001,r04-confirmed,WriteAsync commits headers and begins response
+S-156,included-in-R04-v001,r04-confirmed,NDJSON body looks like multiple objects
+S-110,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
+S-111,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
+S-112,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
+S-113,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
+S-126,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
+S-127,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
+S-128,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
+S-129,checked-not-R04-candidate-R05,overlap-reassigned-to-R05,"SSE/EventSource/reconnect/order-tracking material; belongs to R05, not R04 NDJSON/FlushAsync implementation road."
