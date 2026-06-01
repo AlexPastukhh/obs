@@ -1,0 +1,38 @@
+{
+  "region_id": "R08A",
+  "region_name": "QueryClient / QueryFilters / core methods",
+  "stage": "4k-v001",
+  "generated": "2026-06-01 22:21:09 UTC",
+  "what_area_is_about": [
+    "useQueryClient and QueryClient imperative cache access",
+    "QueryClient methods such as invalidateQueries, setQueryData, getQueryData, prefetchQuery, removeQueries, resetQueries",
+    "QueryFilters as reusable match criteria across QueryClient methods",
+    "queryKey prefix/exact matching, active/inactive/all type filtering, stale and fetchStatus filters, and predicate final filtering"
+  ],
+  "key_ideas": [
+    "useQueryClient returns the current QueryClient from the nearest QueryClientProvider.",
+    "QueryClient is used when code needs imperative cache/query operations.",
+    "QueryFilters decide which queries match; the method decides what action to perform.",
+    "queryKey matching is prefix-based unless exact: true is set.",
+    "type filters active/inactive/all queries based on observer/subscriber state.",
+    "stale and fetchStatus narrow matches by staleness/fetch state.",
+    "predicate is the final flexible filter.",
+    "invalidateQueries marks matches stale and usually refetches active matches.",
+    "setQueryData updates cache synchronously and immutably.",
+    "getQueryData/getQueriesData/getQueryState read cached data synchronously.",
+    "prefetchQuery loads data before render/navigation without returning data to the caller.",
+    "removeQueries/resetQueries clear or reset matching cached queries."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after R08 boundary review and local R08A check",
+    "limitations": [
+      "S-124 bottom continuation is cropped, but S-138 continues the useQueryClient call.",
+      "S-151 has slight top crop but visible content is readable.",
+      "S-173/S-183/S-185 have bottom UI overlays without obvious text loss."
+    ],
+    "confidence_summary": "High for R08A source text and boundary. R08B/R08C/R08D remain intentionally pending."
+  }
+}

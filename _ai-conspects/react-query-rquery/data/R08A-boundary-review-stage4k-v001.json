@@ -1,0 +1,78 @@
+{
+  "generated": "2026-06-01 22:21:09 UTC",
+  "region_id": "R08A",
+  "region_name": "QueryClient / QueryFilters / core methods",
+  "boundary_status": "reviewed-v001",
+  "included_sources": [
+    "S-123",
+    "S-124",
+    "S-125",
+    "S-138",
+    "S-139",
+    "S-144",
+    "S-151",
+    "S-154",
+    "S-158",
+    "S-161",
+    "S-164",
+    "S-168",
+    "S-173",
+    "S-177",
+    "S-183",
+    "S-185",
+    "S-206"
+  ],
+  "included_count": 17,
+  "reserved_for_later_R08B": [
+    "S-129",
+    "S-134",
+    "S-143",
+    "S-147",
+    "S-153",
+    "S-167",
+    "S-169",
+    "S-175",
+    "S-178",
+    "S-182",
+    "S-190",
+    "S-191",
+    "S-193",
+    "S-197",
+    "S-198",
+    "S-200",
+    "S-204",
+    "S-207",
+    "S-212",
+    "S-216",
+    "S-219"
+  ],
+  "reserved_for_later_R08C": [
+    "S-127",
+    "S-133",
+    "S-135",
+    "S-141",
+    "S-149",
+    "S-155",
+    "S-160",
+    "S-170",
+    "S-179",
+    "S-187"
+  ],
+  "reserved_for_later_R08D_or_neighbor": [
+    "S-194",
+    "S-221"
+  ],
+  "excluded_overlap": [
+    {
+      "source_id": "S-184",
+      "decision": "not R08A",
+      "reason": "Already R07 v004 fetchQuery/ensureQueryData continuation."
+    },
+    {
+      "source_id": "S-186",
+      "decision": "not R08A",
+      "reason": "Already R07 v004 fetchQuery/ensureQueryData difference."
+    }
+  ],
+  "important_rule": "This R08A transcript does not complete all R08. It processes one coherent sub-block and leaves R08B/R08C/R08D pending."
+}

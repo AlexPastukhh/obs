@@ -1,0 +1,53 @@
+source_id,decision,candidate_type,reason
+S-123,included-in-R08A-v001,r08a-queryfilters-core,Main QueryFilters fields: queryKey prefix matching
+S-124,included-in-R08A-v001,r08a-queryclient-intro,useQueryClient gives current QueryClient instance
+S-125,included-in-R08A-v001,r08a-queryclient-methods-heading,QueryClient methods: what they take and do
+S-138,included-in-R08A-v001,r08a-queryclient-intro-continuation,useQueryClient import and call
+S-139,included-in-R08A-v001,r08a-queryfilters-exact,QueryFilters exact matching
+S-144,included-in-R08A-v001,r08a-usequeryclient-when-needed,When useQueryClient may be needed
+S-151,included-in-R08A-v001,r08a-queryfilters-type,QueryFilters type: active/inactive/all
+S-154,included-in-R08A-v001,r08a-queryclient-method-invalidate,invalidateQueries
+S-158,included-in-R08A-v001,r08a-queryclient-read-cache-summary,Read cache synchronously: getQueryData/getQueriesData/getQueryState
+S-161,included-in-R08A-v001,r08a-queryfilters-stale,QueryFilters stale
+S-164,included-in-R08A-v001,r08a-queryclient-method-setquerydata,setQueryData update cache directly
+S-168,included-in-R08A-v001,r08a-queryfilters-fetchstatus,QueryFilters fetchStatus
+S-173,included-in-R08A-v001,r08a-queryclient-read-prefetch,getQueryData and prefetchQuery
+S-177,included-in-R08A-v001,r08a-queryfilters-predicate,QueryFilters predicate
+S-183,included-in-R08A-v001,r08a-queryfilters-important-idea,"Important idea: filters match queries, methods choose action"
+S-185,included-in-R08A-v001,r08a-queryfilters-pattern-reuse,Same filter object pattern reused across methods
+S-206,included-in-R08A-v001,r08a-queryclient-remove-reset,removeQueries and resetQueries
+S-129,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-134,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-143,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-147,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-153,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-167,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-169,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-175,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-178,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-182,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-190,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-191,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-193,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-197,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-198,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-200,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-204,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-207,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-212,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-216,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-219,reserved-for-R08B,r08b-reserved,"Refetch/cancel/options/cache helpers pass, not R08A."
+S-127,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-133,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-135,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-141,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-149,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-155,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-160,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-170,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-179,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-187,reserved-for-R08C,r08c-reserved,"QueryClient outside React / shape discipline pass, not R08A."
+S-194,reserved-for-R08D-or-neighbor,r08d-reserved,"Low-level cache/resume paused candidate, not R08A."
+S-221,reserved-for-R08D-or-neighbor,r08d-reserved,"Low-level cache/resume paused candidate, not R08A."
+S-184,excluded-overlap-already-R07,already-processed-overlap,Already processed in R07 v004; not R08A.
+S-186,excluded-overlap-already-R07,already-processed-overlap,Already processed in R07 v004; not R08A.

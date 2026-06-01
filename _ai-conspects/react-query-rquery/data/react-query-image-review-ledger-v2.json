@@ -1,18 +1,9 @@
 {
-  "generated": "2026-06-01 22:14:49 UTC",
-  "ledger_version": "v2-updated-by-r08-boundary-review-stage4j-v001",
-  "critical_rule": "The ledger is still not source of truth; R08 decisions remain provisional until each transcript pass does visual/semantic review.",
-  "r08_boundary_review_delta": {
-    "total_candidates": 51,
-    "candidate_group_counts": {
-      "r08b-refetch-cancel-options-and-cache-helpers": 21,
-      "r08a-queryclient-methods-filters-core": 17,
-      "r08c-queryclient-outside-react-and-shape-discipline": 10,
-      "r08d-low-level-cache-resume-paused-candidate": 2,
-      "already-processed-r07-overlap": 1
-    },
-    "next_transcript_pass": "R08A-queryclient-methods-filters-core",
-    "r08a_sources": [
+  "generated": "2026-06-01 22:21:09 UTC",
+  "ledger_version": "v2-updated-by-r08a-transcript-stage4k-v001",
+  "critical_rule": "The ledger is still not source of truth; R08A decisions were made after local visual/semantic boundary review.",
+  "r08a_v001_delta": {
+    "processed_sources": [
       "S-123",
       "S-124",
       "S-125",
@@ -31,7 +22,7 @@
       "S-185",
       "S-206"
     ],
-    "r08b_sources": [
+    "reserved_for_r08b": [
       "S-129",
       "S-134",
       "S-143",
@@ -54,7 +45,7 @@
       "S-216",
       "S-219"
     ],
-    "r08c_sources": [
+    "reserved_for_r08c": [
       "S-127",
       "S-133",
       "S-135",
@@ -66,7 +57,11 @@
       "S-179",
       "S-187"
     ],
-    "excluded_overlap": [
+    "reserved_for_r08d_or_neighbor": [
+      "S-194",
+      "S-221"
+    ],
+    "excluded_overlap_already_r07": [
       "S-184",
       "S-186"
     ]
@@ -2402,12 +2397,12 @@
       "width": "659",
       "height": "429",
       "nearest_labels_for_search_only": "L-043: QUERY FILTERS | L-044: METHODS OF QC | L-041: QUERYCLIENT",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-124",
@@ -2421,12 +2416,12 @@
       "width": "980",
       "height": "386",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-125",
@@ -2440,12 +2435,12 @@
       "width": "870",
       "height": "195",
       "nearest_labels_for_search_only": "L-044: METHODS OF QC | L-046: get queries | L-043: QUERY FILTERS",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-126",
@@ -2478,12 +2473,12 @@
       "width": "895",
       "height": "437",
       "nearest_labels_for_search_only": "L-042: QC OUTSIDE REACT | L-040: setqueriesdata olddatashape | L-050: may try to design some abstractions that will ensure that some keys have some specific form",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-128",
@@ -2516,12 +2511,12 @@
       "width": "856",
       "height": "417",
       "nearest_labels_for_search_only": "L-046: get queries | L-053: refetch type VS filters type of invalidate queries | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-130",
@@ -2592,12 +2587,12 @@
       "width": "945",
       "height": "445",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-134",
@@ -2611,12 +2606,12 @@
       "width": "932",
       "height": "464",
       "nearest_labels_for_search_only": "L-044: METHODS OF QC | L-046: get queries | L-053: refetch type VS filters type of invalidate queries",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-135",
@@ -2630,12 +2625,12 @@
       "width": "662",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-136",
@@ -2687,12 +2682,12 @@
       "width": "869",
       "height": "205",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-139",
@@ -2706,12 +2701,12 @@
       "width": "798",
       "height": "454",
       "nearest_labels_for_search_only": "L-043: QUERY FILTERS | L-044: METHODS OF QC | L-041: QUERYCLIENT",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-140",
@@ -2744,12 +2739,12 @@
       "width": "734",
       "height": "482",
       "nearest_labels_for_search_only": "L-042: QC OUTSIDE REACT | L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-142",
@@ -2782,12 +2777,12 @@
       "width": "840",
       "height": "283",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-046: get queries | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-144",
@@ -2801,12 +2796,12 @@
       "width": "927",
       "height": "352",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-145",
@@ -2858,12 +2853,12 @@
       "width": "890",
       "height": "482",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-044: METHODS OF QC | L-046: get queries",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-148",
@@ -2896,12 +2891,12 @@
       "width": "536",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-150",
@@ -2934,12 +2929,12 @@
       "width": "765",
       "height": "482",
       "nearest_labels_for_search_only": "L-043: QUERY FILTERS | L-044: METHODS OF QC | L-053: refetch type VS filters type of invalidate queries",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-152",
@@ -2972,12 +2967,12 @@
       "width": "741",
       "height": "482",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-046: get queries | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-154",
@@ -2991,12 +2986,12 @@
       "width": "907",
       "height": "459",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-155",
@@ -3010,12 +3005,12 @@
       "width": "893",
       "height": "464",
       "nearest_labels_for_search_only": "L-042: QC OUTSIDE REACT | L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-156",
@@ -3067,12 +3062,12 @@
       "width": "914",
       "height": "352",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-058: CANCELOPTIONS | L-044: METHODS OF QC",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-159",
@@ -3105,12 +3100,12 @@
       "width": "703",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-161",
@@ -3124,12 +3119,12 @@
       "width": "773",
       "height": "252",
       "nearest_labels_for_search_only": "L-043: QUERY FILTERS | L-044: METHODS OF QC | L-053: refetch type VS filters type of invalidate queries",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-162",
@@ -3181,12 +3176,12 @@
       "width": "956",
       "height": "481",
       "nearest_labels_for_search_only": "L-041: QUERYCLIENT | L-043: QUERY FILTERS | L-044: METHODS OF QC",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-165",
@@ -3238,12 +3233,12 @@
       "width": "848",
       "height": "374",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-168",
@@ -3257,12 +3252,12 @@
       "width": "727",
       "height": "363",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-043: QUERY FILTERS | L-058: CANCELOPTIONS",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-169",
@@ -3276,12 +3271,12 @@
       "width": "758",
       "height": "482",
       "nearest_labels_for_search_only": "L-053: refetch type VS filters type of invalidate queries | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-058: CANCELOPTIONS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-170",
@@ -3295,12 +3290,12 @@
       "width": "832",
       "height": "383",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-171",
@@ -3352,12 +3347,12 @@
       "width": "845",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-041: QUERYCLIENT | L-043: QUERY FILTERS",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-174",
@@ -3390,12 +3385,12 @@
       "width": "859",
       "height": "297",
       "nearest_labels_for_search_only": "L-058: CANCELOPTIONS | L-053: refetch type VS filters type of invalidate queries | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-176",
@@ -3428,12 +3423,12 @@
       "width": "831",
       "height": "299",
       "nearest_labels_for_search_only": "L-058: CANCELOPTIONS | L-053: refetch type VS filters type of invalidate queries | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-178",
@@ -3447,12 +3442,12 @@
       "width": "795",
       "height": "482",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-179",
@@ -3466,12 +3461,12 @@
       "width": "816",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-180",
@@ -3523,12 +3518,12 @@
       "width": "641",
       "height": "423",
       "nearest_labels_for_search_only": "L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-053: refetch type VS filters type of invalidate queries",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-183",
@@ -3542,12 +3537,12 @@
       "width": "653",
       "height": "127",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-184",
@@ -3566,7 +3561,7 @@
       "decision_is_final": "yes-for-r07-v004-boundary",
       "must_recheck_before_region_close": "no-for-r07-v004",
       "decision_basis": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation.",
-      "review_notes": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation. | R08 boundary review note: coordinate overlap checked; not included in R08 because already R07."
+      "review_notes": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation. | R08 boundary review note: coordinate overlap checked; not included in R08 because already R07. | R08A exclusion: already processed in R07 v004, not R08A."
     },
     {
       "source_id": "S-185",
@@ -3580,12 +3575,12 @@
       "width": "796",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-186",
@@ -3604,7 +3599,7 @@
       "decision_is_final": "yes-for-r07-v004-boundary",
       "must_recheck_before_region_close": "no-for-r07-v004",
       "decision_basis": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference.",
-      "review_notes": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference."
+      "review_notes": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference. | R08A exclusion: already processed in R07 v004, not R08A."
     },
     {
       "source_id": "S-187",
@@ -3618,12 +3613,12 @@
       "width": "787",
       "height": "317",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "r08c-queryclient-outside-react-and-shape-discipline",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys.",
-      "review_notes": "Candidate for later R08 pass: QueryClient outside React, setQueriesData oldData shape, centralized keys."
+      "coverage_status": "reserved-for-r08c",
+      "current_region_decision": "R08C",
+      "decision_is_final": "no-until-r08c-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08c",
+      "decision_basis": "Reserved from R08A for R08C QueryClient outside React / shape discipline.",
+      "review_notes": "Reserved from R08A for R08C QueryClient outside React / shape discipline."
     },
     {
       "source_id": "S-188",
@@ -3675,12 +3670,12 @@
       "width": "724",
       "height": "423",
       "nearest_labels_for_search_only": "L-058: CANCELOPTIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-066: GETQUERYCACHE GET MUTATIONCACHE",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-191",
@@ -3694,12 +3689,12 @@
       "width": "730",
       "height": "430",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-192",
@@ -3732,12 +3727,12 @@
       "width": "1070",
       "height": "482",
       "nearest_labels_for_search_only": "L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-194",
@@ -3751,12 +3746,12 @@
       "width": "873",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-066: GETQUERYCACHE GET MUTATIONCACHE | L-058: CANCELOPTIONS",
-      "coverage_status": "r08d-low-level-cache-resume-paused-candidate",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Possible low-level QueryClient / cache / resumePausedMutations continuation; keep pending for later R08D or nearby block review.",
-      "review_notes": "Possible low-level QueryClient / cache / resumePausedMutations continuation; keep pending for later R08D or nearby block review."
+      "coverage_status": "reserved-for-r08d-or-neighbor",
+      "current_region_decision": "R08D-or-neighbor",
+      "decision_is_final": "no-until-local-boundary-review",
+      "must_recheck_before_region_close": "yes",
+      "decision_basis": "Reserved from R08A for later low-level cache/resume paused review.",
+      "review_notes": "Reserved from R08A for later low-level cache/resume paused review."
     },
     {
       "source_id": "S-195",
@@ -3808,12 +3803,12 @@
       "width": "847",
       "height": "254",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-198",
@@ -3827,12 +3822,12 @@
       "width": "740",
       "height": "308",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-066: GETQUERYCACHE GET MUTATIONCACHE",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-199",
@@ -3865,12 +3860,12 @@
       "width": "956",
       "height": "411",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-201",
@@ -3941,12 +3936,12 @@
       "width": "630",
       "height": "423",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-067: RESUMEPAUSED MUTATIONS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-205",
@@ -3979,12 +3974,12 @@
       "width": "693",
       "height": "287",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-066: GETQUERYCACHE GET MUTATIONCACHE | L-058: CANCELOPTIONS",
-      "coverage_status": "r08a-queryclient-methods-filters-core",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics.",
-      "review_notes": "Candidate for first R08 transcript pass: QueryClient basics, QueryFilters, invalidate/set/get/remove/prefetch/refetch basics."
+      "coverage_status": "processed-in-r08a-v001",
+      "current_region_decision": "R08A",
+      "decision_is_final": "yes-for-r08a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08a-v001",
+      "decision_basis": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods.",
+      "review_notes": "Included in R08A v001 after local boundary review: QueryClient / QueryFilters / core methods."
     },
     {
       "source_id": "S-207",
@@ -3998,12 +3993,12 @@
       "width": "659",
       "height": "430",
       "nearest_labels_for_search_only": "L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-208",
@@ -4093,12 +4088,12 @@
       "width": "809",
       "height": "317",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-067: RESUMEPAUSED MUTATIONS | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-213",
@@ -4169,12 +4164,12 @@
       "width": "805",
       "height": "391",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS | L-058: CANCELOPTIONS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-217",
@@ -4226,12 +4221,12 @@
       "width": "940",
       "height": "376",
       "nearest_labels_for_search_only": "L-066: GETQUERYCACHE GET MUTATIONCACHE | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08b-refetch-cancel-options-and-cache-helpers",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache.",
-      "review_notes": "Candidate for later R08 pass: refetch filters, cancel options, optimistic update helpers, getQueryCache/getMutationCache."
+      "coverage_status": "reserved-for-r08b",
+      "current_region_decision": "R08B",
+      "decision_is_final": "no-until-r08b-boundary-review",
+      "must_recheck_before_region_close": "yes-for-r08b",
+      "decision_basis": "Reserved from R08A for R08B refetch/cancel/options/cache helpers.",
+      "review_notes": "Reserved from R08A for R08B refetch/cancel/options/cache helpers."
     },
     {
       "source_id": "S-220",
@@ -4264,12 +4259,12 @@
       "width": "815",
       "height": "482",
       "nearest_labels_for_search_only": "L-067: RESUMEPAUSED MUTATIONS | L-066: GETQUERYCACHE GET MUTATIONCACHE | L-061: JUST SET SILENT ABD REVERT TRUE ALWAYS",
-      "coverage_status": "r08d-low-level-cache-resume-paused-candidate",
-      "current_region_decision": "R08",
-      "decision_is_final": "no-r08-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r08-transcript-pass",
-      "decision_basis": "Possible low-level QueryClient / cache / resumePausedMutations continuation; keep pending for later R08D or nearby block review.",
-      "review_notes": "Possible low-level QueryClient / cache / resumePausedMutations continuation; keep pending for later R08D or nearby block review."
+      "coverage_status": "reserved-for-r08d-or-neighbor",
+      "current_region_decision": "R08D-or-neighbor",
+      "decision_is_final": "no-until-local-boundary-review",
+      "must_recheck_before_region_close": "yes",
+      "decision_basis": "Reserved from R08A for later low-level cache/resume paused review.",
+      "review_notes": "Reserved from R08A for later low-level cache/resume paused review."
     },
     {
       "source_id": "S-222",

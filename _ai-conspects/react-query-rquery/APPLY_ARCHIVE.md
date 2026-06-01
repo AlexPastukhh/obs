@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage4i combined corrections v002
+# Apply archive: React Query R08A transcript v001
 
-Archive type: combined correction archive.
+Archive type: stage-4k verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4i-combined-corrections-v002.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4k-r08a-queryclient-methods-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4i-combined-correc
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4i-combined-corrections-v002.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4i-combined-corrections.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4k-r08a-queryclient-methods-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4k-r08a-queryclient-methods.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Apply React Query R06 R07 R10 corrections"
+git commit -m "Add React Query R08A QueryClient transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,11 +60,4 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive intentionally fixes three known correction items together and normalizes ledger consistency:
-
-```text
-R06 v002: S-176 + old R06 sources normalized
-R07 v004: S-184/S-186 + old R07 sources normalized
-R10 v006: S-240/S-241 + duplicate-use S-237/S-246
-R08 QueryClient/methods candidates remain pending for future R08
-```
+This archive completes only R08A. It intentionally leaves R08B/R08C/R08D pending.

@@ -1,0 +1,18 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+R08A-S001,S-123,IU-123,89aca4f37a,verified-from-extracted-svg-image,r08a-queryfilters-core,high,no,high,Main QueryFilters fields: queryKey prefix matching,Verified from extracted SVG image.
+R08A-S002,S-124,IU-124,4f1b873c49,verified-from-extracted-svg-image,r08a-queryclient-intro,high,right-bottom-continuation-cropped,high-for-visible-text,useQueryClient gives current QueryClient instance,Bottom continuation after 'that is when you call:' is cropped; next related image S-138 gives the call.
+R08A-S003,S-125,IU-125,730d9b1236,verified-from-extracted-svg-image,r08a-queryclient-methods-heading,high,no,high,QueryClient methods: what they take and do,Verified from extracted SVG image.
+R08A-S004,S-138,IU-138,01111ee2eb,verified-from-extracted-svg-image,r08a-queryclient-intro-continuation,high,no,high,useQueryClient import and call,Continuation of S-124.
+R08A-S005,S-139,IU-139,c3f45a9f79,verified-from-extracted-svg-image,r08a-queryfilters-exact,high,no,high,QueryFilters exact matching,Verified from extracted SVG image.
+R08A-S006,S-144,IU-144,a6832a1bc1,verified-from-extracted-svg-image,r08a-usequeryclient-when-needed,high,no,high,When useQueryClient may be needed,Verified from extracted SVG image.
+R08A-S007,S-151,IU-151,3b50c6200c,verified-from-extracted-svg-image,r08a-queryfilters-type,high,slight-top-crop-title-visible,high-for-visible-text,QueryFilters type: active/inactive/all,Top is slightly cropped but title and text are readable.
+R08A-S008,S-154,IU-154,32c48060b8,verified-from-extracted-svg-image,r08a-queryclient-method-invalidate,high,no,high,invalidateQueries,Verified from extracted SVG image.
+R08A-S009,S-158,IU-158,d4dd4f4a1e,verified-from-extracted-svg-image,r08a-queryclient-read-cache-summary,high,no,high,Read cache synchronously: getQueryData/getQueriesData/getQueryState,Verified from extracted SVG image.
+R08A-S010,S-161,IU-161,53f93b6919,verified-from-extracted-svg-image,r08a-queryfilters-stale,high,no,high,QueryFilters stale,Verified from extracted SVG image.
+R08A-S011,S-164,IU-164,f514209027,verified-from-extracted-svg-image,r08a-queryclient-method-setquerydata,high,no,high,setQueryData update cache directly,Verified from extracted SVG image.
+R08A-S012,S-168,IU-168,2702832cda,verified-from-extracted-svg-image,r08a-queryfilters-fetchstatus,high,no,high,QueryFilters fetchStatus,Verified from extracted SVG image.
+R08A-S013,S-173,IU-173,8840240941,verified-visible-partial-from-extracted-svg-image,r08a-queryclient-read-prefetch,high,bottom-overlay-no-obvious-text-loss,high-for-visible-text,getQueryData and prefetchQuery,"Bottom UI overlay visible, but text is readable."
+R08A-S014,S-177,IU-177,3c56741074,verified-from-extracted-svg-image,r08a-queryfilters-predicate,high,no,high,QueryFilters predicate,Verified from extracted SVG image.
+R08A-S015,S-183,IU-183,27e50ec60e,verified-from-extracted-svg-image,r08a-queryfilters-important-idea,high,bottom-overlay-no-text-loss,high,"Important idea: filters match queries, methods choose action","Bottom UI overlay visible, no text loss."
+R08A-S016,S-185,IU-185,625ee2c8c4,verified-visible-partial-from-extracted-svg-image,r08a-queryfilters-pattern-reuse,high,bottom-overlay-no-obvious-text-loss,high-for-visible-text,Same filter object pattern reused across methods,"Bottom UI overlay visible, but content is readable."
+R08A-S017,S-206,IU-206,8ef8d853c6,verified-from-extracted-svg-image,r08a-queryclient-remove-reset,high,no,high,removeQueries and resetQueries,Verified from extracted SVG image.

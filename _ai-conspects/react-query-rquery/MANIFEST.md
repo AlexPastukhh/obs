@@ -1,55 +1,51 @@
-# MANIFEST - React Query Stage4i Combined Corrections v002
+# MANIFEST - React Query R08A Transcript v001
 
-Archive type: **combined correction archive**  
+Archive type: **stage-4k verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 22:09:03 UTC
+Generated: 2026-06-01 22:21:09 UTC
 
 ## Direction check
 
 Goal:
-Fix the remaining known misses from Stage4g audit in one archive, without leaving mixed ledger statuses.
+Process R08 after boundary review without losing images.
 
 Now:
-R01 and R05 have already been corrected separately. Stage4i v001 had the right content corrections but left old ledger statuses inconsistent.
+R08 was split into R08A/R08B/R08C/R08D.
 
 This step:
-Add R06 v002, R07 v004, and R10 v006 corrections, and normalize ledger statuses for existing included sources.
+Add R08A transcript for QueryClient / QueryFilters / core methods.
 
 Why:
-After correction, the ledger should not still say old included R06/R07 sources are `processed v001 / must recheck`.
+R08A is coherent and small enough to transcribe safely.
 
 Next:
-Review diff and commit; then continue to new regions, likely R08 QueryClient/methods.
+1. review R08A diff;
+2. commit;
+3. process R08B or R08C.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/regions/R06-query-composition-usequeries-dependent-combine.md
-_ai-conspects/react-query-rquery/regions/R07-prefetch-initialdata-placeholderdata-usequeryclient.md
-_ai-conspects/react-query-rquery/regions/R10-mutations.md
-_ai-conspects/react-query-rquery/data/R06-sources-stage4i-v002.csv
-_ai-conspects/react-query-rquery/data/R06-sources-stage4i-v002.json
-_ai-conspects/react-query-rquery/data/R07-sources-stage4i-v004.csv
-_ai-conspects/react-query-rquery/data/R07-sources-stage4i-v004.json
-_ai-conspects/react-query-rquery/data/R10-mutations-sources-stage4i-v006.csv
-_ai-conspects/react-query-rquery/data/R10-mutations-sources-stage4i-v006.json
-_ai-conspects/react-query-rquery/data/combined-corrections-boundary-review-stage4i-v001.csv
-_ai-conspects/react-query-rquery/data/combined-corrections-boundary-review-stage4i-v001.json
+_ai-conspects/react-query-rquery/regions/R08A-queryclient-queryfilters-core-methods.md
+_ai-conspects/react-query-rquery/data/R08A-sources-stage4k-v001.csv
+_ai-conspects/react-query-rquery/data/R08A-sources-stage4k-v001.json
+_ai-conspects/react-query-rquery/data/R08A-boundary-review-stage4k-v001.csv
+_ai-conspects/react-query-rquery/data/R08A-boundary-review-stage4k-v001.json
+_ai-conspects/react-query-rquery/data/R08A-area-understanding-stage4k-v001.json
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
+_ai-conspects/react-query-rquery/audit-assets/R08A-queryclient-methods-core-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R08A-source-images/*.png
+_ai-conspects/react-query-rquery/23-stage4k-r08a-queryclient-methods-transcript.md
 _ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/react-query-rquery/21-stage4i-combined-r06-r07-r10-corrections.md
-_ai-conspects/react-query-rquery/DIFF_REVIEW_STAGE4I.md
-_ai-conspects/react-query-rquery/scripts/copy-stage4i-diff.ps1
-_ai-conspects/react-query-rquery/audit-assets/*
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## v002-specific fix
+## R08A status
 
 ```text
-R06 old included sources -> processed-in-r06-v002
-R07 old included sources -> processed-in-r07-v004
-R08 QueryClient/methods candidates -> reserved for future R08
+Included sources: 17
+Reserved pending: R08B/R08C/R08D
+Excluded overlap: S-184/S-186 already R07 v004
 ```
