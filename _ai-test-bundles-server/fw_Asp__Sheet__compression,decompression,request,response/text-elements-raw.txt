@@ -1,0 +1,122 @@
+﻿some problems with implementation ^WpbntKSN
+
+about leaveopen false and ownershitp, disposal responsibility(!!!!!!!!!!!!) ^8kxLLR0L
+
+using System.IO;
+
+public interface IRequestBodyDecompressor
+{
+    string EncodingName { get; }
+
+    Stream WrapDecompressionStream(Stream input);
+} ^B1npMusl
+
+using System.IO;
+using System.IO.Compression;
+
+public sealed class GzipRequestBodyDecompressor
+    : IRequestBodyDecompressor
+{
+    public string EncodingName => "gzip";
+
+    public Stream WrapDecompressionStream(Stream input)
+    {
+        return new GZipStream(
+            input,
+            CompressionMode.Decompress,
+            leaveOpen: true);
+    }
+}
+
+public sealed class BrotliRequestBodyDecompressor
+    : IRequestBodyDecompressor
+{
+    public string EncodingName => "br";
+
+    public Stream WrapDecompressionStream(Stream input)
+    {
+        return new BrotliStream(
+            input,
+            CompressionMode.Decompress,
+            leaveOpen: true);
+    }
+}
+
+public sealed class DeflateRequestBodyDecompressor
+    : IRequestBodyDecompressor
+{
+    public string EncodingName => "deflate";
+
+    public Stream WrapDecompressionStream(Stream input)
+    {
+        return new DeflateStream(
+            input,
+            CompressionMode.Decompress,
+            leaveOpen: true);
+    }
+} ^n8uPaPnT
+
+public interface IRequestBodyDecompressorRegistry
+{
+    bool TryGet(string encoding, out IRequestBodyDecompressor decompressor);
+}
+
+public sealed class RequestBodyDecompressorRegistry
+    : IRequestBodyDecompressorRegistry
+{
+    private readonly Dictionary<string, IRequestBodyDecompressor> _map;
+
+    public RequestBodyDecompressorRegistry(
+        IEnumerable<IRequestBodyDecompressor> decompressors)
+    {
+        _map = decompressors.ToDictionary(
+            d => d.EncodingName,
+            d => d,
+            StringComparer.OrdinalIgnoreCase);
+    }
+
+    public bool TryGet(
+        string encoding,
+        out IRequestBodyDecompressor decompressor)
+    {
+        return _map.TryGetValue(encoding, out decompressor!);
+    }
+} ^EDHdGQ3v
+
+middleware ^h9TMp5Aa
+
+!!!!! ^gvqpXBYy
+
+theory ^XG4MaSAn
+
+automatic 
+decompression on
+httpclient ^VUvCzRl5
+
+compression 
+with httpclient and on server 
+ ^pIlC3b9g
+
+leaveopen, managing
+the wrapped stream ^MdyMMrSf
+
+compression level ^ZLEvOJzB
+
+wrapping with compression/decompression stream ^oJMN6Dsq
+
+decompression ^kAv6aAXm
+
+handling multiple encodings (rarely implemented) ^fQHY7IdM
+
+when to compress ^tsHqSKMC
+
+ACCEPT ENCODING
+VARY ACCEPT ENCODING ^ZTs3mA2k
+
+just explicitness ^izWJuzKv
+
+True implementation of 
+decompressoin ^4gt7KEu4
+
+do i always need to conf
+compression provider options ^RAEW825r
