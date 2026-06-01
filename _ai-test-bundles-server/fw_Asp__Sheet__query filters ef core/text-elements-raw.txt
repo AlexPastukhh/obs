@@ -1,0 +1,21 @@
+﻿include == join
+when navigation has required() then ef uses inner join (because if this
+shit is required - it must be there and we cant loose data with inner join)
+when navigation is optional then ef uses left join
+
+query filters break this shit, so when some navigation is required and 
+it has query filter - we will build inner join and we may not fetch outer
+entities whoose children was filtered (we will fetch them if navigation is a collection
+and there is so children that wasnt filtered) ^kh2N8nzY
+
+inner and left joins
+when including navigations in query
+how we can loose data with query filters ^DTaF8BHk
+
+query filters ^0eMqoYqY
+
+!!! ^5fJf0El0
+
+ignore query filters ^pwK7zeXh
+
+multiple filters ^towCQDOt

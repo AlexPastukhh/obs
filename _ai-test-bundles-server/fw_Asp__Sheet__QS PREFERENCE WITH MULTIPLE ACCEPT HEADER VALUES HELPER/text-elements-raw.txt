@@ -1,0 +1,233 @@
+﻿!!! ^uprxf7oj
+
+in controller ^bJBqvOTb
+
+using Microsoft.Net.Http.Headers;
+using Microsoft.Extensions.Primitives;
+
+public static class AcceptHeaderSelectionHelper
+{
+    // Define server preference order (first = most preferred when q ties)
+    // Put the variants you support here in the exact preference order you want.
+    private static readonly string[] SupportedByPreference =
+    {
+        "application/vnd.marvin.author.full.hateoas+json",
+        "application/vnd.marvin.author.full+json",
+        "application/vnd.marvin.author.friendly.hateoas+json",
+        "application/vnd.marvin.author.friendly+json",
+        "application/json",
+        "application/*",
+        "*/*"
+    };
+
+    public sealed record NegotiationResult(
+        string MediaType,
+        string PrimaryMediaType,  // e.g. vnd.marvin.author.full / vnd.marvin.author.friendly / application
+        bool IncludeLinks          // true if hateoas requested
+    );
+
+    /// <summary>
+    /// Picks the best matching media type from Accept header using:
+    /// 1) q weight (descending)
+    /// 2) specificity (exact > type/* > */*)
+    /// 3) server preference order (SupportedByPreference)
+    /// 4) header order as a final tie-breaker (stable by index)
+    /// </summary>
+    public static bool TrySelect(
+        StringValues acceptHeader,
+        out NegotiationResult? result)
+    {
+        result = null;
+
+        // Missing Accept => treat as */* (client accepts anything)
+        if (StringValues.IsNullOrEmpty(acceptHeader))
+        {
+            // choose your default representation here
+            var defaultMt = "application/vnd.marvin.author.friendly+json";
+            result = BuildResult(defaultMt);
+            return true;
+        }
+
+        if (!MediaTypeHeaderValue.TryParseList(acceptHeader, out var parsedList))
+        {
+            return false; // invalid syntax -> caller should return 400 ProblemDetails
+        }
+
+        // Build candidates from Accept values
+        var candidates = parsedList
+            .Select((mt, index) => new Candidate(mt, index))
+            .Where(c => c.Q > 0) // q=0 means "not acceptable"
+            .ToList();
+
+        if (candidates.Count == 0)
+        {
+            return false;
+        }
+
+        // For each Accept candidate, find best supported match based on:
+        // - exact match in SupportedByPreference
+        // - or "application/*" / "*/*" wildcard
+        var supportedMatches = new List<SupportedMatch>();
+
+        foreach (var c in candidates)
+        {
+            foreach (var supported in SupportedByPreference)
+            {
+                if (Matches(c, supported))
+                {
+                    supportedMatches.Add(new SupportedMatch(
+                        supportedMediaType: Normalize(supported),
+                        q: c.Q,
+                        specificity: c.Specificity,
+                        supportedPreferenceRank: Array.IndexOf(SupportedByPreference, supported),
+                        acceptHeaderIndex: c.Index));
+                }
+            }
+        }
+
+        if (supportedMatches.Count == 0)
+        {
+            // No overlap between Accept and what we can produce -> 406 scenario
+            return false;
+        }
+
+        var winner = supportedMatches
+            .OrderByDescending(m => m.Q)
+            .ThenByDescending(m => m.Specificity)
+            .ThenBy(m => m.SupportedPreferenceRank)
+            .ThenBy(m => m.AcceptHeaderIndex)
+            .First();
+
+        result = BuildResult(winner.SupportedMediaType);
+        return true;
+    }
+
+    private static NegotiationResult BuildResult(string mediaType)
+    {
+        // your course logic: include links if subtype ends with "hateoas"
+        var includeLinks = mediaType.Contains("hateoas", StringComparison.OrdinalIgnoreCase);
+
+        // derive "primary" type similar to course:
+        // application/vnd.marvin.author.full.hateoas+json -> vnd.marvin.author.full
+        // application/vnd.marvin.author.friendly+json -> vnd.marvin.author.friendly
+        // application/json -> application
+        var parsed = MediaTypeHeaderValue.Parse(mediaType);
+        var subType = parsed.SubTypeWithoutSuffix.Value; // e.g. vnd.marvin.author.full.hateoas or json
+        var primary = subType.EndsWith(".hateoas", StringComparison.OrdinalIgnoreCase)
+            ? subType[..^(".hateoas".Length)]
+            : subType;
+
+        return new NegotiationResult(mediaType, primary, includeLinks);
+    }
+
+    private static string Normalize(string mediaType) => mediaType.Trim();
+
+    private sealed record Candidate(MediaTypeHeaderValue Value, int Index)
+    {
+        public double Q
+        {
+            get
+            {
+                // If q is absent => 1.0
+                var qParam = Value.Parameters.FirstOrDefault(p =>
+                    string.Equals(p.Name.Value, "q", StringComparison.OrdinalIgnoreCase));
+
+                if (qParam?.Value is null) return 1.0;
+
+                // q is a StringSegment like "0.9"
+                if (double.TryParse(qParam.Value.Value, System.Globalization.NumberStyles.AllowDecimalPoint,
+                        System.Globalization.CultureInfo.InvariantCulture, out var q))
+                {
+                    return q;
+                }
+
+                // Malformed q -> treat as invalid by making it unacceptable
+                return 0;
+            }
+        }
+
+        // exact = 2, type/* = 1, */* = 0
+        public int Specificity =>
+            Value.MediaType?.Value == "*/*" ? 0 :
+            Value.SubType?.Value == "*" ? 1 :
+            2;
+    }
+
+    private sealed record SupportedMatch(
+        string SupportedMediaType,
+        double Q,
+        int Specificity,
+        int SupportedPreferenceRank,
+        int AcceptHeaderIndex);
+
+    private static bool Matches(Candidate accept, string supported)
+    {
+        supported = Normalize(supported);
+
+        // wildcard supported entries are just there for preference list;
+        // treat them as matching in the obvious way.
+        if (supported == "*/*")
+            return true;
+
+        // Parse supported into type/subtype
+        if (!MediaTypeHeaderValue.TryParse(supported, out var supportedMt))
+        {
+            // developer error; should never happen because SupportedByPreference is ours
+            return false;
+        }
+
+        // If accept is */* it matches anything
+        if (accept.Value.MediaType?.Value == "*/*")
+            return true;
+
+        // If accept is type/* it matches any subtype for that type
+        if (accept.Value.SubType?.Value == "*")
+        {
+            return string.Equals(
+                accept.Value.Type?.Value,
+                supportedMt!.Type?.Value,
+                StringComparison.OrdinalIgnoreCase);
+        }
+
+        // Otherwise exact compare by media type (ignore parameters)
+        return string.Equals(
+            accept.Value.MediaType?.Value,
+            supportedMt!.MediaType?.Value,
+            StringComparison.OrdinalIgnoreCase);
+    }
+} ^jQqqrj1W
+
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("api/authors")]
+public class AuthorsController : ControllerBase
+{
+    [HttpGet("{authorId}")]
+    public IActionResult GetAuthor(Guid authorId, [FromHeader(Name = "Accept")] string? accept)
+    {
+        if (!AcceptHeaderSelectionHelper.TrySelect(accept, out var selected))
+        {
+            // Could be invalid Accept syntax (400) OR no supported match (406).
+            // If you want to distinguish, check TryParseList separately.
+            return StatusCode(StatusCodes.Status406NotAcceptable);
+        }
+
+        // selected.IncludeLinks -> add HATEOAS
+        // selected.PrimaryMediaType -> "vnd.marvin.author.full" / "vnd.marvin.author.friendly"
+        if (string.Equals(selected!.PrimaryMediaType, "vnd.marvin.author.full", StringComparison.OrdinalIgnoreCase))
+        {
+            // build full representation
+            return Ok(new { kind = "full", links = selected.IncludeLinks });
+        }
+
+        // build friendly representation
+        return Ok(new { kind = "friendly", links = selected.IncludeLinks });
+    }
+} ^lkGXpEQZ
+
+negotiationresult biuldresult ^aoqa2yD6
+
+candidate ^COlJkxBr
+
+matches ^69jg98b3
