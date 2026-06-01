@@ -1,0 +1,30 @@
+{
+  "generated": "2026-06-01 23:23:47 UTC",
+  "region_id": "EF02",
+  "what_area_is_about": [
+    "using Attach for an entity that already exists",
+    "tracking a detached object as Unchanged instead of Added",
+    "explicitly marking specific properties as modified",
+    "disconnected update patterns",
+    "entity state issues when assigning detached nested entities to an attached entity",
+    "avoiding accidental updates of referenced/nested entities",
+    "where to put EntityState handling without leaking EF Core concerns into controllers/domain"
+  ],
+  "key_ideas": [
+    "Attach is useful when the entity already exists and should not be inserted.",
+    "After Attach, the entity is tracked as Unchanged until properties are changed or marked modified.",
+    "You can mark a single property as modified with Entry(entity).Property(...).IsModified = true.",
+    "This pattern can update only selected columns for detached input.",
+    "Assigning a detached related entity to an attached entity can make EF treat the related entity as modified.",
+    "Manually setting related entity state to Unchanged in controllers works technically but can violate separation of concerns.",
+    "Better strategies may include model-level save behavior or centralized SaveChanges handling, depending on the model and invariants."
+  ],
+  "reading_quality": {
+    "overall": "high for S-029/S-030; medium-high for S-028",
+    "limitations": [
+      "S-028 is a large composite screenshot with some small/right-edge text.",
+      "S-028 code is transcribed as visible intent, not guaranteed exact compile-ready code."
+    ],
+    "confidence": "High for conceptual ownership and main ideas; medium-high for exact character-level S-028 code."
+  }
+}

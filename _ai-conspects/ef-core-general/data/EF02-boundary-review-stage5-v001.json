@@ -1,0 +1,43 @@
+{
+  "generated": "2026-06-01 23:23:47 UTC",
+  "region_id": "EF02",
+  "region_name": "Attach / disconnected updates / entity state",
+  "boundary_status": "reviewed-and-transcribed-v001",
+  "included_sources": [
+    "S-029",
+    "S-030",
+    "S-028"
+  ],
+  "included_count": 3,
+  "checked_not_ef02": [
+    {
+      "source_id": "S-006",
+      "decision": "not EF02",
+      "reason": "shadow property / query filter; pending separate review"
+    },
+    {
+      "source_id": "S-024",
+      "decision": "not EF02",
+      "reason": "constructors / materialization; pending separate review"
+    },
+    {
+      "source_id": "S-025",
+      "decision": "not EF02",
+      "reason": "constructors / materialization; pending separate review"
+    },
+    {
+      "source_id": "S-026",
+      "decision": "not EF02",
+      "reason": "constructors / materialization; pending separate review"
+    },
+    {
+      "source_id": "S-027",
+      "decision": "not EF02",
+      "reason": "constructors / materialization; pending separate review"
+    }
+  ],
+  "open_issues": [
+    "S-028 is a large composite screenshot; code intent is clear, but some small/right-edge text is not character-perfect.",
+    "Shadow-property and constructors/materialization candidates must be handled in later boundary reviews."
+  ]
+}

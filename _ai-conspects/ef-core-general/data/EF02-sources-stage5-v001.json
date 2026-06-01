@@ -1,0 +1,50 @@
+[
+  {
+    "region_source_id": "EF02-S001",
+    "source_id": "S-029",
+    "image_use_id": "IU-029",
+    "fileId_short": "5e335b4ef1",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef02-attach-explicit-property-modified",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "Attach existing detached entity and mark a single property modified",
+    "text": "Example:",
+    "code": "var blog = new Blog { Id = 5, Name = \"New name\" };\n\ncontext.Attach(blog);\n// State = Unchanged\n\ncontext.Entry(blog).Property(x => x.Name).IsModified = true;\n// Now only Name will be updated\n\nawait context.SaveChangesAsync();",
+    "extra_text": "",
+    "notes": "Full source image visually checked."
+  },
+  {
+    "region_source_id": "EF02-S002",
+    "source_id": "S-030",
+    "image_use_id": "IU-030",
+    "fileId_short": "1b74640858",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef02-attach-mental-model",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "How Attach helps",
+    "text": "5) How Attach helps\n\nAttach is useful when you know:\n\n- the entity already exists\n- you do not want EF to insert it\n- you want it tracked as Unchanged\n- then you will either:\n  - modify some properties and let change tracking detect them, or\n  - explicitly mark certain properties as modified",
+    "code": "",
+    "extra_text": "",
+    "notes": "Full source image visually checked."
+  },
+  {
+    "region_source_id": "EF02-S003",
+    "source_id": "S-028",
+    "image_use_id": "IU-028",
+    "fileId_short": "354939e8d7",
+    "status": "verified-visible-partial-from-source-image",
+    "candidate_type": "ef02-attached-entity-with-detached-nested-entity",
+    "readability": "medium-high",
+    "cut_off": "right-edge-cropped-some-code-comments-hard-to-read",
+    "confidence": "high-for-main-visible-text-and-intent",
+    "theme": "Editing attached entity with detached nested entity; avoid accidental update of nested detached entity",
+    "text": "EDITING ATTACHED ENTITY WITH DETACHED ENTITY\n\nWhen assigning detached entity to attached ef core marks detached entity as modifies\n\nCan manually mark entity as unchanged into controller but it leads to violation of separation of concerns,\n\nCan do:\n1 mark detached entity's props as unchanged by default\n???\nIf there was more props, should mark them all\nBut entity will be marked as modified still, even if ef core doesn't do anything\n2 Override SaveChangesAsync and mark Course to be unchanged before every transaction commit",
+    "code": "public string EditPersonalInfo(\n    long studentId, string name, string email, long favoriteCourseId)\n{\n    Student student = _repository.GetById(studentId);\n    if (student == null)\n        return \"Student not found\";\n\n    Course favoriteCourse = Course.FromId(favoriteCourseId);\n    if (favoriteCourse == null)\n        return \"Course not found\";\n\n    student.Name = name;\n    student.Email = email;\n    student.FavoriteCourse = favoriteCourse;\n\n    EntityState entityState1 = _context.Entry(student).State;\n    EntityState entityState2 = _context.Entry(student.FavoriteCourse).State;\n    EntityState entityState3 = _context.Entry(student.Enrollments[0]).State;\n    EntityState entityState4 = _context.Entry(student.Enrollments[0].Course).State;\n\n    _context.SaveChanges();\n}\n\ncontext.Entry(student.FavoriteCourse).State = EntityState.Unchanged;\n\nmodelBuilder.Entity<Course>(x =>\n{\n    x.ToTable(\"Course\").HasKey(k => k.Id);\n    x.Property(p => p.Id).HasColumnName(\"CourseID\");\n    x.Property(p => p.Name)\n        .Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);\n});\n\npublic override int SaveChanges()\n{\n    foreach (EntityEntry<Course> course in ChangeTracker.Entries<Course>())\n    {\n        course.State = EntityState.Unchanged;\n    }\n\n    return base.SaveChanges();\n}",
+    "extra_text": "Visible state annotations in the screenshot show the main risk:\n\n- student entity state is Modified\n- student.FavoriteCourse entity state is Modified\n- existing collection/enrollment pieces are shown as Unchanged / Modified depending on relationship state\n\nThe important source idea is that assigning a detached object to an attached aggregate can cause EF to treat that detached object as an entity to update, so the boundary needs an explicit strategy.",
+    "notes": "Large composite screenshot. Main visible text and code intent are readable; some comments/right edge text are partially cropped or too small, so the transcription is high-confidence for intent but not perfect character-level code."
+  }
+]

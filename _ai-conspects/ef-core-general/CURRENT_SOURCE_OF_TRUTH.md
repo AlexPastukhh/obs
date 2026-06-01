@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core general
 
-Generated: 2026-06-01 23:19:46 UTC
+Generated: 2026-06-01 23:23:47 UTC
 
 ## Current policy
 
@@ -22,6 +22,7 @@ Stage1: EF01 boundary review done
 Stage2: EF01A transcript done
 Stage3: EF01B transcript done + EF01A correction for S-059/S-060
 Stage4: EF02 boundary review done
+Stage5: EF02 transcript done
 ```
 
 ## Done
@@ -29,17 +30,10 @@ Stage4: EF02 boundary review done
 ```text
 EF01A: Tracking / identity map / no tracking / identity resolution
 EF01B: Loading collections / Include / Find / Load / AutoInclude
+EF02: Attach / disconnected updates / entity state
 ```
 
-## Current target
-
-```text
-EF02 transcript next:
-S-029, S-030, S-028
-Attach / disconnected updates / entity state
-```
-
-## Pending after EF02 boundary review
+## Pending next candidates
 
 ```text
 S-006 -> shadow property / query filter
