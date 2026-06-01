@@ -1,0 +1,537 @@
+﻿some theo ^lyPP20UR
+
+flow ^IYaxWGSD
+
+using System.Security.Cryptography;
+using OtpNet;
+
+public static class TotpSecret
+{
+    // 20 bytes = 160 bits (common standard; plenty for TOTP)
+    public static string CreateBase32Secret(int byteLength = 20)
+    {
+        byte[] secretBytes = RandomNumberGenerator.GetBytes(byteLength);
+        return Base32Encoding.ToString(secretBytes); // Base32 text for QR/manual entry
+    }
+} ^5MUJYWU0
+
+using System.Security.Cryptography;
+using System.Text;
+
+public static class TotpSecretCourseStyle
+{
+    // Base32 alphabet (classic): A-Z and 2-7
+    private static readonly char[] Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".ToCharArray();
+
+    public static string CreateSecret(int length = 16)
+    {
+        // Generate plenty of random bytes so every character pick is random
+        byte[] random = RandomNumberGenerator.GetBytes(length * 4);
+
+        var sb = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++)
+        {
+            // Read 4 bytes as an unsigned int (0..2^32-1)
+            uint val = BitConverter.ToUInt32(random, i * 4);
+
+            // Convert to an index inside Alphabet
+            sb.Append(Alphabet[val % (uint)Alphabet.Length]);
+        }
+
+        return sb.ToString();
+    }
+} ^89QCi85A
+
+using System.Security.Cryptography;
+using OtpNet;
+
+public static class TotpSecretBytes
+{
+    public static byte[] CreateSecretBytes(int byteLength = 20)
+        => RandomNumberGenerator.GetBytes(byteLength);
+
+    public static string ToBase32(byte[] secretBytes)
+        => Base32Encoding.ToString(secretBytes);
+} ^n2wnkGut
+
+protecting secret
+and store to db
+then unprotect 
+to verify token using
+library ^fBNleRrn
+
+adding -1 +1 step ^aLFMKcQb
+
+here we are scanning or entering base32 code
+then app generates token
+and we enter it  ^c3BGG5Ca
+
+entropy, bitconverter unsigned int ^9CsdZecy
+
+using System.Net;
+
+public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)
+{
+    var i = WebUtility.UrlEncode(issuer);
+    var a = WebUtility.UrlEncode(account);
+
+    return $"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}";
+} ^oMaqQKkG
+
+!!! ^50bZji79
+
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OtpNet;
+
+[Authorize]
+public class MfaController : Controller
+{
+    private readonly AppDbContext _db;
+    private readonly IUserContext _userContext;
+    private readonly IDataProtector _protector;
+
+    public MfaController(AppDbContext db, IUserContext userContext, IDataProtectionProvider dp)
+    {
+        _db = db;
+        _userContext = userContext;
+        _protector = dp.CreateProtector("mfa-secret-v1");
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Enroll()
+    {
+        var user = _userContext.GetCurrentUser(); // needs Id, Email/Username
+        var issuer = "MyApp";
+
+        // 1) Create secret (your method)
+        var secret = CreateSecret();
+
+        // 2) Store pending secret in DB (upsert, single per user)
+        var now = DateTime.UtcNow;
+        var pending = await _db.PendingMfaEnrollments.SingleOrDefaultAsync(x => x.UserId == user.Id);
+
+        if (pending == null)
+        {
+            pending = new PendingMfaEnrollment
+            {
+                UserId = user.Id,
+                ProtectedSecret = _protector.Protect(secret),
+                CreatedUtc = now,
+                ExpiresUtc = now.AddMinutes(10)
+            };
+            _db.PendingMfaEnrollments.Add(pending);
+        }
+        else
+        {
+            pending.ProtectedSecret = _protector.Protect(secret);
+            pending.CreatedUtc = now;
+            pending.ExpiresUtc = now.AddMinutes(10);
+            pending.ConcurrencyStamp = Guid.NewGuid().ToString();
+        }
+
+        await _db.SaveChangesAsync();
+
+        // 3) Build otpauth uri (your method)
+        var uri = BuildOtpAuthUri(issuer, user.Email, secret);
+
+        // 4) Return view model (manual key shown, but not posted back)
+        var vm = new MfaEnrollGetVm
+        {
+            Issuer = issuer,
+            AccountName = user.Email,
+            QrCodeUri = uri,
+            ManualKey = secret
+        };
+
+        return View(vm);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Enroll(MfaEnrollPostVm vm)
+    {
+        var user = _userContext.GetCurrentUser();
+        var now = DateTime.UtcNow;
+
+        var pending = await _db.PendingMfaEnrollments.SingleOrDefaultAsync(x => x.UserId == user.Id);
+        if (pending == null || pending.ExpiresUtc <= now)
+        {
+            ModelState.AddModelError("", "Enrollment expired. Refresh the page and try again.");
+            return View("Enroll", await RebuildEnrollGetVm(user)); // helper below
+        }
+
+        var secret = _protector.Unprotect(pending.ProtectedSecret);
+
+        // verify code
+        var totp = new Totp(Base32Encoding.ToBytes(secret));
+        var ok = totp.VerifyTotp(vm.Code?.Trim() ?? "", out _, new VerificationWindow(previous: 1, future: 1));
+
+        if (!ok)
+        {
+            ModelState.AddModelError(nameof(vm.Code), "Invalid code.");
+            return View("Enroll", await RebuildEnrollGetVm(user));
+        }
+
+        // Save active secret (device)
+        _db.UserSecrets.Add(new UserSecret
+        {
+            UserId = user.Id,
+            Name = string.IsNullOrWhiteSpace(vm.DeviceName) ? "Authenticator" : vm.DeviceName.Trim(),
+            ProtectedSecret = _protector.Protect(secret),
+            IsActive = true
+        });
+
+        // Remove pending enrollment
+        _db.PendingMfaEnrollments.Remove(pending);
+
+        await _db.SaveChangesAsync();
+
+        return RedirectToAction(nameof(EnrollSuccess));
+    }
+
+    [HttpGet]
+    public IActionResult EnrollSuccess() => View();
+
+    // Rebuild the GET VM so the page can re-render after POST errors
+    // (we generate a fresh secret + overwrite pending)
+    private async Task<MfaEnrollGetVm> RebuildEnrollGetVm(CurrentUser user)
+    {
+        var issuer = "MyApp";
+        var secret = CreateSecret();
+
+        var now = DateTime.UtcNow;
+        var pending = await _db.PendingMfaEnrollments.SingleOrDefaultAsync(x => x.UserId == user.Id);
+        if (pending == null)
+        {
+            pending = new PendingMfaEnrollment
+            {
+                UserId = user.Id,
+                ProtectedSecret = _protector.Protect(secret),
+                CreatedUtc = now,
+                ExpiresUtc = now.AddMinutes(10)
+            };
+            _db.PendingMfaEnrollments.Add(pending);
+        }
+        else
+        {
+            pending.ProtectedSecret = _protector.Protect(secret);
+            pending.CreatedUtc = now;
+            pending.ExpiresUtc = now.AddMinutes(10);
+            pending.ConcurrencyStamp = Guid.NewGuid().ToString();
+        }
+
+        await _db.SaveChangesAsync();
+
+        return new MfaEnrollGetVm
+        {
+            Issuer = issuer,
+            AccountName = user.Email,
+            QrCodeUri = BuildOtpAuthUri(issuer, user.Email, secret),
+            ManualKey = secret
+        };
+    }
+
+    // placeholders to emphasize you already have them
+    private string CreateSecret() => throw new NotImplementedException();
+    private string BuildOtpAuthUri(string issuer, string account, string secret) => throw new NotImplementedException();
+} ^42zuqda9
+
+controller ^co8Ymu7Y
+
+@model MfaEnrollGetVm
+@{
+    ViewData["Title"] = "Enable MFA";
+}
+
+<h2>Enable MFA</h2>
+
+<p>Scan the QR code with your authenticator app, then enter the 6-digit code.</p>
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start;">
+    <div>
+        <div id="qrCode" style="padding:12px; border:1px solid #ccc; display:inline-block;"></div>
+        <input type="hidden" id="qrCodeUri" value="@Model.QrCodeUri" />
+    </div>
+
+    <div style="max-width:520px;">
+        <h4>Manual key</h4>
+        <p>If you can’t scan, type this key into the authenticator app:</p>
+        <pre style="padding:12px; background:#f5f5f5; border:1px solid #ddd;">@Model.ManualKey</pre>
+
+        <div><strong>Issuer:</strong> @Model.Issuer</div>
+        <div><strong>Account:</strong> @Model.AccountName</div>
+    </div>
+</div>
+
+<hr />
+
+<form asp-action="Enroll" method="post">
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label>Device name</label><br />
+        <input name="DeviceName" value="My phone" style="width:320px;" />
+    </div>
+
+    <div style="margin-top:12px;">
+        <label>6-digit code</label><br />
+        <input name="Code" inputmode="numeric" autocomplete="one-time-code"
+               style="width:180px; font-size:18px; letter-spacing:2px;" />
+        <span style="color:#b00020;">@Html.ValidationMessage("Code")</span>
+    </div>
+
+    <div style="margin-top:16px;">
+        <button type="submit">Verify & Enable</button>
+    </div>
+
+    <div asp-validation-summary="ModelOnly" style="color:#b00020; margin-top:12px;"></div>
+</form>
+
+@section Scripts {
+    <script src="~/js/qrcode.min.js"></script>
+    <script>
+        (function () {
+            const uri = document.getElementById("qrCodeUri").value;
+            const el = document.getElementById("qrCode");
+            el.innerHTML = "";
+            new QRCode(el, { text: uri, width: 160, height: 160 });
+        })();
+    </script>
+    <partial name="_ValidationScriptsPartial" />
+} ^S0vQFfp3
+
+razor ^hwG02Edr
+
+@{
+    ViewData["Title"] = "MFA Enabled";
+}
+
+<h2>MFA Enabled</h2>
+<p>Your authenticator device is now linked.</p>
+<a asp-controller="Home" asp-action="Index">Continue</a> ^mAight1s
+
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OtpNet;
+
+[Authorize]
+[ApiController]
+[Route("api/mfa")]
+public class MfaApiController : ControllerBase
+{
+    private readonly AppDbContext _db;
+    private readonly IUserContext _userContext;
+    private readonly IDataProtector _protector;
+
+    public MfaApiController(AppDbContext db, IUserContext userContext, IDataProtectionProvider dp)
+    {
+        _db = db;
+        _userContext = userContext;
+        _protector = dp.CreateProtector("mfa-secret-v1");
+    }
+
+    [HttpGet("enroll")]
+    public async Task<IActionResult> GetEnroll()
+    {
+        var user = _userContext.GetCurrentUser();
+        var issuer = "MyApp";
+
+        var secret = CreateSecret();
+        var now = DateTime.UtcNow;
+
+        var pending = await _db.PendingMfaEnrollments.SingleOrDefaultAsync(x => x.UserId == user.Id);
+        if (pending == null)
+        {
+            pending = new PendingMfaEnrollment
+            {
+                UserId = user.Id,
+                ProtectedSecret = _protector.Protect(secret),
+                CreatedUtc = now,
+                ExpiresUtc = now.AddMinutes(10)
+            };
+            _db.PendingMfaEnrollments.Add(pending);
+        }
+        else
+        {
+            pending.ProtectedSecret = _protector.Protect(secret);
+            pending.CreatedUtc = now;
+            pending.ExpiresUtc = now.AddMinutes(10);
+            pending.ConcurrencyStamp = Guid.NewGuid().ToString();
+        }
+
+        await _db.SaveChangesAsync();
+
+        // Return qr + manual key (manual key optional in UI)
+        return Ok(new
+        {
+            issuer,
+            accountName = user.Email,
+            qrCodeUri = BuildOtpAuthUri(issuer, user.Email, secret),
+            manualKey = secret
+        });
+    }
+
+    public sealed class CompleteEnrollRequest
+    {
+        public string DeviceName { get; set; } = "My phone";
+        public string Code { get; set; } = default!;
+    }
+
+    [HttpPost("enroll")]
+    public async Task<IActionResult> CompleteEnroll([FromBody] CompleteEnrollRequest req)
+    {
+        var user = _userContext.GetCurrentUser();
+        var now = DateTime.UtcNow;
+
+        var pending = await _db.PendingMfaEnrollments.SingleOrDefaultAsync(x => x.UserId == user.Id);
+        if (pending == null || pending.ExpiresUtc <= now)
+            return BadRequest(new { message = "Enrollment expired. Refresh and try again." });
+
+        var secret = _protector.Unprotect(pending.ProtectedSecret);
+
+        var totp = new Totp(Base32Encoding.ToBytes(secret));
+        var ok = totp.VerifyTotp(req.Code?.Trim() ?? "", out _, new VerificationWindow(previous: 1, future: 1));
+        if (!ok) return BadRequest(new { message = "Invalid code." });
+
+        _db.UserSecrets.Add(new UserSecret
+        {
+            UserId = user.Id,
+            Name = string.IsNullOrWhiteSpace(req.DeviceName) ? "Authenticator" : req.DeviceName.Trim(),
+            ProtectedSecret = _protector.Protect(secret),
+            IsActive = true
+        });
+
+        _db.PendingMfaEnrollments.Remove(pending);
+        await _db.SaveChangesAsync();
+
+        return Ok(new { success = true });
+    }
+
+    private string CreateSecret() => throw new NotImplementedException();
+    private string BuildOtpAuthUri(string issuer, string account, string secret) => throw new NotImplementedException();
+} ^wAwqyIf4
+
+import React, { useEffect, useState } from "react";
+import { QRCodeCanvas } from "qrcode.react";
+
+type EnrollData = {
+  issuer: string;
+  accountName: string;
+  qrCodeUri: string;
+  manualKey?: string;
+};
+
+export function MfaEnroll() {
+  const [data, setData] = useState<EnrollData | null>(null);
+  const [deviceName, setDeviceName] = useState("My phone");
+  const [code, setCode] = useState("");
+  const [err, setErr] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      setErr(null);
+      const res = await fetch("/api/mfa/enroll", { credentials: "include" });
+      if (!res.ok) {
+        setErr("Failed to load enrollment data.");
+        return;
+      }
+      setData(await res.json());
+    })();
+  }, []);
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setErr(null);
+
+    const res = await fetch("/api/mfa/enroll", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ deviceName, code: code.trim() }),
+    });
+
+    if (!res.ok) {
+      const j = await res.json().catch(() => null);
+      setErr(j?.message ?? "Invalid code.");
+      return;
+    }
+
+    setDone(true);
+  }
+
+  if (done) return <div><h2>MFA Enabled</h2><p>Device linked successfully.</p></div>;
+
+  return (
+    <div style={{ maxWidth: 720 }}>
+      <h2>Enable MFA</h2>
+      {err && <div style={{ color: "#b00020", marginBottom: 12 }}>{err}</div>}
+
+      {!data ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <p>Scan the QR code with your authenticator app.</p>
+
+          <div style={{ display: "flex", gap: 24, flexWrap: "wrap", alignItems: "flex-start" }}>
+            <div style={{ padding: 12, border: "1px solid #ccc", display: "inline-block" }}>
+              <QRCodeCanvas value={data.qrCodeUri} size={160} />
+            </div>
+
+            <div>
+              <div><strong>Issuer:</strong> {data.issuer}</div>
+              <div><strong>Account:</strong> {data.accountName}</div>
+
+              {data.manualKey && (
+                <>
+                  <h4 style={{ marginTop: 12 }}>Manual key</h4>
+                  <pre style={{ padding: 12, background: "#f5f5f5", border: "1px solid #ddd" }}>
+                    {data.manualKey}
+                  </pre>
+                </>
+              )}
+            </div>
+          </div>
+
+          <hr />
+
+          <form onSubmit={submit}>
+            <div>
+              <label>Device name</label><br />
+              <input value={deviceName} onChange={e => setDeviceName(e.target.value)} style={{ width: 320 }} />
+            </div>
+
+            <div style={{ marginTop: 12 }}>
+              <label>6-digit code</label><br />
+              <input
+                value={code}
+                onChange={e => setCode(e.target.value)}
+                inputMode="numeric"
+                autoComplete="one-time-code"
+                style={{ width: 180, fontSize: 18, letterSpacing: 2 }}
+              />
+            </div>
+
+            <div style={{ marginTop: 16 }}>
+              <button type="submit">Verify & Enable</button>
+            </div>
+          </form>
+        </>
+      )}
+    </div>
+  );
+} ^3RG3nt1S
+
+react ^TmNdblBL
+
+controller ^rD8orVJW
+
+razzor ^E7sMK57W
+
+react ^yK7uvOMO
+
+helpers secret generation ^YEP40d1y

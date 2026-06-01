@@ -1,0 +1,90 @@
+﻿ef linq translation to sql ^tFoiFT7W
+
+!!! ^R8jRKay8
+
+what doesnt translate well ^ZvnivQzR
+
+?? ^P2BiF6Kz
+
+!!! ^TEtXSXG7
+
+!!! ^kCKQuXl0
+
+!!! ^jCAgmaNw
+
+need to place info clearly so i can find some sheet with some 
+unsupported shit list quickly ^SbjrrjtI
+
+!!! ^4vMvyN1u
+
+list of unsupported ^pxPQ5qGL
+
+!!! ^ZnQOaO0s
+
+know exact sql ^v6OV6hzM
+
+so apply can be useful also
+when you need to do something
+ with inner /right side table
+
+you can join but if you need just some
+little part of data with join you will
+create wide intermediate result 
+and then you will process
+
+with apply you wont create that result
+you will just process per left/outer row ^TOHOHXzi
+
+select many to sql ^1FbYfTPH
+
+to create on expression, need to use multiple froms
+cant do it with join, with join and then where you will
+join all the shit and then filter with where ^Sufk76Yj
+
+where
+filtering out the shit ^9lmaU6ET
+
+inner / left joins
+with join in query syntax
+and with multile from ^zH5rOsyZ
+
+will translate to on syntax ^2pGGOcvF
+
+left join ^M5QtO4oM
+
+cross apply ^gz83lXP1
+
+outer apply ^fs8HCgoL
+
+inner join ^eOiZ2w9z
+
+cross join ^NDXJvDL1
+
+where filter after left join can lead to not inclu nulls 
+so need to be careful ^sn0eeWA3
+
+include == join
+when navigation has required() then ef uses inner join (because if this
+shit is required - it must be there and we cant loose data with inner join)
+when navigation is optional then ef uses left join
+
+query filters break this shit, so when some navigation is required and 
+it has query filter - we will build inner join and we may not fetch outer
+entities whoose children was filtered (we will fetch them if navigation is a collection
+and there is so children that wasnt filtered) ^9OyuOnnZ
+
+inner and left joins
+when including navigations in query
+how we can loose data with query filters ^hbi0cT9h
+
+usually
+we have 
+matched inner
+collection element
+for every outer coll
+element
+
+but if we dont 
+reference outer coll
+then its cross and 
+that it ^K6FlTQdT
