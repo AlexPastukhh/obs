@@ -1,0 +1,70 @@
+﻿using System.Security.Cryptography;
+using OtpNet;
+
+public static class TotpSecret
+{
+    // 20 bytes = 160 bits (common standard; plenty for TOTP)
+    public static string CreateBase32Secret(int byteLength = 20)
+    {
+        byte[] secretBytes = RandomNumberGenerator.GetBytes(byteLength);
+        return Base32Encoding.ToString(secretBytes); // Base32 text for QR/manual entry
+    }
+} ^kZLaeOO2
+
+using System.Security.Cryptography;
+using System.Text;
+
+public static class TotpSecretCourseStyle
+{
+    // Base32 alphabet (classic): A-Z and 2-7
+    private static readonly char[] Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".ToCharArray();
+
+    public static string CreateSecret(int length = 16)
+    {
+        // Generate plenty of random bytes so every character pick is random
+        byte[] random = RandomNumberGenerator.GetBytes(length * 4);
+
+        var sb = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++)
+        {
+            // Read 4 bytes as an unsigned int (0..2^32-1)
+            uint val = BitConverter.ToUInt32(random, i * 4);
+
+            // Convert to an index inside Alphabet
+            sb.Append(Alphabet[val % (uint)Alphabet.Length]);
+        }
+
+        return sb.ToString();
+    }
+} ^7G8dCxIy
+
+using System.Security.Cryptography;
+using OtpNet;
+
+public static class TotpSecretBytes
+{
+    public static byte[] CreateSecretBytes(int byteLength = 20)
+        => RandomNumberGenerator.GetBytes(byteLength);
+
+    public static string ToBase32(byte[] secretBytes)
+        => Base32Encoding.ToString(secretBytes);
+} ^SltasxH2
+
+entropy, bitconverter unsigned int ^hXT3l8oT
+
+using System.Net;
+
+public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)
+{
+    var i = WebUtility.UrlEncode(issuer);
+    var a = WebUtility.UrlEncode(account);
+
+    return $"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}";
+} ^9iIM53zW
+
+creating base32 secret ^jlB0Ibw8
+
+explaining bits, bytes in base32 ^CTtM1tnk
+
+why 5 bits for one base 32 ^Rw7oCLpS

@@ -1,0 +1,53 @@
+﻿pattern to enable multitenancy or 
+some dbcontext instance property based shit ^cmirp4jD
+
+so when we register pooledfactory we dont get dbcontext from di
+we get factory from di and we create context with it
+
+so we need to create wrapper that will get some request info from registered scoped service
+and set props on dbcontext
+
+and then we will return dbcontext with rep request state 
+but we wont use this wrapper manuallly 
+we will register scoped instance service - we will get wraper and we will create dbcontext with our method ^XaVWaz78
+
+about dbcontext allocatjions
+and setup pressure
+50kb vs 4kb 
+and x2 faster  ^L7DyqCKp
+
+need to dispose manually 
+the dbcontext from factory
+
+dont need the dbcontext from di  ^USWLb3Mr
+
+addpooleddbcontextfactory
+idcontextfactory<dbcontexgt> ^RHfPjsTT
+
+onmodelcreating, when it runs,
+what is better not to do there
+props for queryfilters ^9osWnMNL
+
+!!! ^YbE0f7VW
+
+!!! ^QnXGBe77
+
+so when we do shit with raw conneciton 
+1 we need to reset all connection state changes - to avoid same state for 
+    polled contexts + for polled connections on db provider level (without reset it returns connection with same session 
+state that we have set to the connection pool)
+2 and we need to close the connection so it actually returns to the connection pool,
+we can have pool exhaustion without it even if we kinda reuse the connection in case we do cleanup
+we may just not reuse that same instance that has long running(endless connection) and reuse 
+another contexts - and we will end up with some connections just being open and doing nothing ^11xytMVB
+
+what eef core resets by itself
+what and when you need to reset manually ^S2QRn3Ab
+
+di disposes disposable ^FZaX9QF4
+
+what if you exceeded pool limits ^0mLa6vNJ
+
+operating dbconnection
+with ado.net
+and context pools ^rpt8FOYi
