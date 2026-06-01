@@ -1,0 +1,174 @@
+﻿stored procedures
+ado.net usage ^fwKeQqYp
+
+scope_identity() ^LoF6hiwZ
+
+why stored procedures ^hGD0zu3M
+
+syntax ^S9O6ttxr
+
+executesqlinterpolated 
+usage ^DJ8CC7he
+
+can we read
+select from stored proc
+while using executesql
+
+reading select with fromsql
+
+ ^3tmNbAqy
+
+return ^BBnGQg3C
+
+!!! ^AW3dW6XX
+
+can we get output params with fromsql? ^BX2KXZi2
+
+database.sql query for select from sp
+for single values as value
+can it get output params?
+
+can fromsql get single value? ^HaRHjWwz
+
+
+result from select
+output params
+output param return
+when nocount actually useful ^t0Ab9ESz
+
+returning data with stored procedure
+ ^QB4tgPSO
+
+stored proc with
+dif sql api's ^5AAruIwl
+
+CUD operations ef core mapping 
+to stored procefures ^Lvxeth07
+
+ef core 
+using linq and stored procefures ^slqhFAJB
+
+sql server doesn allow composing over interm results of
+stored procedure
+asenumerable starts db call ^H4J97bwH
+
+cant buld query on top
+ of stored procedure in sql server ^hjjdpW9Q
+
+db calls with/without stored procedure ^K12HTJFm
+
+ef core and stored proc
+usage ^YAct0rNk
+
+database.sql query for single
+non entity 
+not tracked stored proc results ^bXNJP2Ol
+
+fromsql for tracked,
+entity mapped
+select results ^NynUGOtO
+
+manual queries ^MX2X5cN5
+
+conflicting params/return/results ^8dgKXMdr
+
+examples ^EjjS5xJv
+
+hasorigvalueparam ^S9tb1z0m
+
+hasparameter ^ueV1kgVS
+
+hasparameter
+.isoutput ^6NJnWpYB
+
+hasresultcolumn ^xF7sQtbE
+
+same output/input prop ^l28V0JId
+
+hasrowsaffectedresultcolumn ^vn04ndex
+
+hasrowsaffected param ^GXsOnuxH
+
+hasrowsaffected returnvalue ^WLEmKP9T
+
+input/output mapping ^1MEme3Io
+
+both output here ^pzDKeeY5
+
+!!! ^V6ek14ZR
+
+we need id here to just 
+update the needed document ^VSyKb8VQ
+
+why do we need 
+to return rows affected count
+for concurrency check 
+even if we have 
+where clause with
+rowversion chekc ^IR6QxPv5
+
+why when we return result columns - rows
+affected are unnecessary? ^85c3V4Rg
+
+so ef treats any result columns as a
+signal that the operation did somethig
+and there was no concurency failure ^Wp8oQeQ2
+
+we can return reslut column even if there was a concur issue
+but ef will treat it as concur success
+so we need to design stored proc so they return selecty only 
+if there was no issue ^jqdvY4rR
+
+ef doesnt treat output params as signal for concur success ^3mvYYiW9
+
+implementation of concur token
+origvalues / same prop as input and output ^inrvu1eZ
+
+concurrency  ^kwGVqorz
+
+ef say to use this with
+keys and rowversion
+dont know about eceptions
+if i wont use but they say to use ^2HFt3033
+
+cud operations mappig methods  for savechanges ^75bHspGT
+
+cud operations examples ^nSYPi3d0
+
+part of update syntax
+ef treats as resultcolumn value ^q1a24U9q
+
+ouput params must be declared in create proc
+and set with set, select or output into table and select(can]
+output directly only resultclumns) ^nPbxP4yv
+
+with nocount on
+can still return 
+@@ROWCOUNT 
+excplicitly ^PI8AQA34
+
+usually you just set it to on
+because ef core cant use nocount off
+for concur checks ^mZJwcJaz
+
+treacking ef core ^12j2AdDn
+
+insert ^mdnjdpUv
+
+delete ^pxHjIyuL
+
+
+update ^8RW1ppGJ
+
+!!! ^8pvwiBDH
+
+cant have multiple types of affected rows values/params
+when has result columns -rows affected not needed ^TyjbnkuY
+
+!!! ^nycL55Yx
+
+when cup oper mapping to proc ^VtIRNt82
+
+!!! ^V4vLLFK8
+
+!!! ^W4JLu3Fw

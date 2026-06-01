@@ -1,0 +1,100 @@
+﻿ADD STATUSCODEPAGES FOR 406/415 ETC  ^Te5AIBpZ
+
+OR ^fWj7c4l7
+
+CREATE SOME ENDPOINTS FOR STATUS CODES ^ie1Z8hS9
+
+can add check for status code and add more info about 
+the initial path and what client does need to do
+(406 check accept 415 check content tyep) ^4tS9ddZ4
+
+cant add the exact
+reason to problem
+but can add useful details ^Ke571I7A
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// MVC (or minimal APIs + services)
+builder.Services.AddControllers();
+
+// ProblemDetails infrastructure
+builder.Services.AddProblemDetails();
+
+var app = builder.Build();
+
+app.UseRouting();
+
+app.UseWhen(
+    ctx => ctx.Request.Path.StartsWithSegments("/api"),
+    apiApp =>
+    {
+        apiApp.UseStatusCodePages(async statusCodeContext =>
+        {
+            var http = statusCodeContext.HttpContext;
+
+            // If headers/body already started, can't write a body safely
+            if (http.Response.HasStarted)
+                return;
+
+            var code = http.Response.StatusCode;
+
+            // Only handle selected status codes
+            if (code is not (
+                StatusCodes.Status404NotFound or
+                StatusCodes.Status405MethodNotAllowed or
+                StatusCodes.Status406NotAcceptable or
+                StatusCodes.Status415UnsupportedMediaType))
+            {
+                return;
+            }
+
+            var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+            var pdService = http.RequestServices.GetRequiredService<IProblemDetailsService>();
+
+            var detail = code switch
+            {
+                StatusCodes.Status404NotFound =>
+                    "Endpoint not found.",
+                StatusCodes.Status405MethodNotAllowed =>
+                    "HTTP method not allowed for this endpoint.",
+                StatusCodes.Status406NotAcceptable =>
+                    "The requested response media type is not acceptable. Check the Accept header.",
+                StatusCodes.Status415UnsupportedMediaType =>
+                    "The request media type is unsupported. Check the Content-Type header.",
+                _ => null
+            };
+
+            var pd = factory.CreateProblemDetails(
+                httpContext: http,
+                statusCode: code,
+                title: ReasonPhrases.GetReasonPhrase(code),
+                type: $"https://httpstatuses.com/{code}",
+                detail: detail,
+                instance: http.Request.Path
+            );
+
+            // Safe writer (content-negotiates across registered ProblemDetails writers)
+            var written = await pdService.TryWriteAsync(new ProblemDetailsContext
+            {
+                HttpContext = http,
+                ProblemDetails = pd
+            });
+
+            if (!written)
+            {
+                // Fallback if no ProblemDetails writer is registered for the request
+                http.Response.ContentType = "application/problem+json; charset=utf-8";
+                await http.Response.WriteAsJsonAsync(pd);
+            }
+        });
+    });
+
+app.MapControllers();
+
+app.Run(); ^3ON8zbU8
+
+STATUSCODEPAGES WITH ADDPROBLEMDETAILS
+ ^1n8dtRaO

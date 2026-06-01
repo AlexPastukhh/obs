@@ -1,0 +1,141 @@
+﻿With await inside iteration ^6yxaNOSx
+
+With async iteration ^ELglWN5P
+
+Repository method: ^REBXC8dU
+
+Books data will appear on screen one by one(but still to fast to see difference) ^5vn4pJS3
+
+Cant use result filter because anonymous type being returned and we cant map it to dto with automapper ^3NbKzFEn
+
+i think it can be exception for 
+iqueriable return, but actually do we even need
+repo method for this?
+id do this in controller ^cHKevFlk
+
+!!! ^WhVAMHXr
+
+streaming objects ^y7RPVWBl
+
+Without streams ^B7uVHCkL
+
+doesnt need to be created in memory first ^GUtyD7cj
+
+When working with
+streams its better 
+to wrap with using 
+sendasync method,
+
+Because we are working 
+with stream content 
+and streams need to be 
+disposed
+
+(string and byte content 
+dont have to be disposed) ^RMtN6ET2
+
+accepts stream ^aUkicz48
+
+We can consider that operation is completed when response headers are arrived
+instead of full content ^kCHDa0PY
+
+Now, we will start working on content of response as soon as response heasers arrived ^4Yhw6rby
+
+Kevin advises to always use streams to read data, and when you posting large amounts of data 
+can use it too, but it mostly affect memory usage,can run performance tests  ^YAwts7ID
+
+streaming bytes ^Ki3q4kmb
+
+benefits of streaming object wwhile seniding json ^CSPG43uN
+
+different types of byte streams and usecases ^od0oLSqv
+
+reading response as stream when headers arrive ^3fX7rpUO
+
+streaming payload directly to bytes ^wWpsxJF6
+
+some rest api concerns while streaming ^h6Lf5Ftd
+
+EXPLAINATION OF PLAIN ARRAY STREAMING VS NDJSON STREAMING
+BENEFITS AND USECASES WITH PLAIN ARRAY ^YrFNRPMf
+
+!!!!? ^cTmNKyRC
+
+!!!! ^WEwVZSUq
+
+FULL IMPLEMENTATION ^paFlV8pM
+
+SSE ^OGLbSZcP
+
+SO WE SEND FIRST EVENT AFTER LAST ID AND 
+THEN, WITH SOME INTERVAL, WE DO CALLS TO DB
+AND SEND EVENTS ^4YaFZUkX
+
+SEND CONNECTED EVENT
+SO CLIENT UPDATES UI
+CONNECTED ^g2f8qkhK
+
+BATCHES  200 NEW EEVENTS AFTER LAST ID
+ ^hfqzVSq4
+
+ENDPOINTS URL ^NrOc7iTt
+
+JUST SETTING SOME UI ^SrMUuETw
+
+ON UNMOUNT OR
+ORDERID CHANGE
+(SAME THING) ^zn3alZuG
+
+SO EVERYTHING IS ON 
+GETTING EVENTS, UPDATING
+WITH NEW EVENTS (FROM CALLBACK ON NEW 
+EVENT(FROMEVENTLISTENER))
+AND ADDING NEW ELEMENT
+FROM NEW EVENT OBJECT(IN 
+REAL LIFE SCENARIO IT IS 
+A COMPONENT) ^PE5cYpw9
+
+SO EVERYTHING IS ABOUT SENDING THE RIGHT 
+CONTENT TYPE TO BROWSER WITH LAST EVENT ID 
+AND IT DOES RECONNECT WITH THIS ID
+
+AND THE EVENT NAMES CAN BE ANY NAME SENT FROM SERVER
+ ^WdF22lVF
+
+NDJSON ^TFRINfol
+
+FLUSHASYNC FOR
+STREAMING OBJECTS ^ttQQyF24
+
+!!! ^6z8yIvdh
+
+!!! ^xTXqcQkO
+
+sse examples
+body + event
+heartbeat ^IHxFnU4U
+
+ASYNCENUMERABLE, WHY  ^Ui6PFY6S
+
+deserializing async enum ^Vqu0JeXS
+
+but with reading on headers arrive ^zKQmIZtt
+
+memory with headersread and asyncenum and 
+without header read  ^c3FjS9dR
+
+better to return async enum directly because with flush and write
+we need to write the brackets of array
+
+when sending ndjson or sse need to flush objects or lines ^bmzra8wH
+
+sse writer  ^58Uq4fT2
+
+!!! when send all events
+after some disconnect may 
+need to send them in one
+round istead of many events 
+to reduce everything
+m
+
+may use streamwriter ^dXQvWfm3
