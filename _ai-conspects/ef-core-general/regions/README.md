@@ -1,10 +1,10 @@
-# Regions
+# EF Core general regions
 
-No verified region transcript has been created yet.
+No verified transcript has been created in Stage1.
 
-Next step should be a boundary review for the first EF Core area, then a transcript pass only after source images are visually checked.
+Next transcript should be `EF01A - Tracking / identity map / no tracking / identity resolution`.
 
-Each future region file must contain:
+Each transcript must include:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality
