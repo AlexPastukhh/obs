@@ -1,0 +1,328 @@
+{
+  "generated": "2026-06-01 22:31:21 UTC",
+  "source_svg": "source/streaming.svg",
+  "labels": [
+    {
+      "label_id": "L-001",
+      "x": 7356.253,
+      "y": 4308.523,
+      "font_size": 20.0,
+      "text": "With await inside iteration"
+    },
+    {
+      "label_id": "L-002",
+      "x": 7378.476,
+      "y": 4805.56,
+      "font_size": 20.0,
+      "text": "With async iteration"
+    },
+    {
+      "label_id": "L-003",
+      "x": 7458.253,
+      "y": 8072.138,
+      "font_size": 20.0,
+      "text": "Repository method:"
+    },
+    {
+      "label_id": "L-004",
+      "x": 7269.117,
+      "y": 8819.792,
+      "font_size": 20.0,
+      "text": "Books data will appear on screen one by one(but still to fast to see difference)"
+    },
+    {
+      "label_id": "L-005",
+      "x": 7157.367,
+      "y": 8944.567,
+      "font_size": 20.0,
+      "text": "Cant use result filter because anonymous type being returned and we cant map it to dto with automapper"
+    },
+    {
+      "label_id": "L-006",
+      "x": 8072.453,
+      "y": 10144.934,
+      "font_size": 20.0,
+      "text": "i think it can be exception for"
+    },
+    {
+      "label_id": "L-007",
+      "x": 8630.434,
+      "y": 3376.594,
+      "font_size": 245.044,
+      "text": "!!!"
+    },
+    {
+      "label_id": "L-008",
+      "x": 7276.115,
+      "y": 1862.643,
+      "font_size": 121.333,
+      "text": "streaming objects"
+    },
+    {
+      "label_id": "L-009",
+      "x": 2769.645,
+      "y": 6087.586,
+      "font_size": 20.0,
+      "text": "Without streams"
+    },
+    {
+      "label_id": "L-010",
+      "x": 3136.96,
+      "y": 6583.419,
+      "font_size": 20.0,
+      "text": "doesnt need to be created in memory first"
+    },
+    {
+      "label_id": "L-011",
+      "x": 2355.196,
+      "y": 7529.812,
+      "font_size": 20.0,
+      "text": "When working with"
+    },
+    {
+      "label_id": "L-012",
+      "x": 3182.565,
+      "y": 7911.215,
+      "font_size": 20.0,
+      "text": "accepts stream"
+    },
+    {
+      "label_id": "L-013",
+      "x": 2622.485,
+      "y": 8036.533,
+      "font_size": 20.0,
+      "text": "We can consider that operation is completed when response headers are arrived"
+    },
+    {
+      "label_id": "L-014",
+      "x": 2518.411,
+      "y": 9257.511,
+      "font_size": 20.0,
+      "text": "Now, we will start working on content of response as soon as response heasers arrived"
+    },
+    {
+      "label_id": "L-015",
+      "x": 2470.108,
+      "y": 14733.452,
+      "font_size": 20.0,
+      "text": "Kevin advises to always use streams to read data, and when you posting large amounts of data"
+    },
+    {
+      "label_id": "L-016",
+      "x": 2675.521,
+      "y": 1436.255,
+      "font_size": 158.667,
+      "text": "streaming bytes"
+    },
+    {
+      "label_id": "L-017",
+      "x": 1433.605,
+      "y": 13549.391,
+      "font_size": 147.965,
+      "text": "benefits of streaming object wwhile seniding json"
+    },
+    {
+      "label_id": "L-018",
+      "x": 10.0,
+      "y": 4936.02,
+      "font_size": 91.584,
+      "text": "different types of byte streams and usecases"
+    },
+    {
+      "label_id": "L-019",
+      "x": 1754.124,
+      "y": 8547.648,
+      "font_size": 112.029,
+      "text": "reading response as stream when headers arrive"
+    },
+    {
+      "label_id": "L-020",
+      "x": 2163.134,
+      "y": 10456.506,
+      "font_size": 126.567,
+      "text": "streaming payload directly to bytes"
+    },
+    {
+      "label_id": "L-021",
+      "x": 6410.028,
+      "y": 9462.383,
+      "font_size": 151.32,
+      "text": "some rest api concerns while streaming"
+    },
+    {
+      "label_id": "L-022",
+      "x": 12297.304,
+      "y": 1842.53,
+      "font_size": 68.0,
+      "text": "EXPLAINATION OF PLAIN ARRAY STREAMING VS NDJSON STREAMING"
+    },
+    {
+      "label_id": "L-023",
+      "x": 19694.136,
+      "y": 13291.223,
+      "font_size": 235.273,
+      "text": "!!!!?"
+    },
+    {
+      "label_id": "L-024",
+      "x": 19980.859,
+      "y": 8605.432,
+      "font_size": 235.273,
+      "text": "!!!!"
+    },
+    {
+      "label_id": "L-025",
+      "x": 18981.398,
+      "y": 8419.267,
+      "font_size": 20.0,
+      "text": "FULL IMPLEMENTATION"
+    },
+    {
+      "label_id": "L-026",
+      "x": 18296.951,
+      "y": 1809.81,
+      "font_size": 150.667,
+      "text": "SSE"
+    },
+    {
+      "label_id": "L-027",
+      "x": 20471.005,
+      "y": 6212.418,
+      "font_size": 20.0,
+      "text": "SO WE SEND FIRST EVENT AFTER LAST ID AND"
+    },
+    {
+      "label_id": "L-028",
+      "x": 19854.827,
+      "y": 7034.81,
+      "font_size": 20.0,
+      "text": "SEND CONNECTED EVENT"
+    },
+    {
+      "label_id": "L-029",
+      "x": 21110.686,
+      "y": 7950.459,
+      "font_size": 20.0,
+      "text": "BATCHES  200 NEW EEVENTS AFTER LAST ID"
+    },
+    {
+      "label_id": "L-030",
+      "x": 21037.306,
+      "y": 9387.322,
+      "font_size": 20.0,
+      "text": "ENDPOINTS URL"
+    },
+    {
+      "label_id": "L-031",
+      "x": 21079.98,
+      "y": 9575.712,
+      "font_size": 20.0,
+      "text": "JUST SETTING SOME UI"
+    },
+    {
+      "label_id": "L-032",
+      "x": 19966.238,
+      "y": 9915.161,
+      "font_size": 20.0,
+      "text": "ON UNMOUNT OR"
+    },
+    {
+      "label_id": "L-033",
+      "x": 20939.008,
+      "y": 10447.741,
+      "font_size": 20.0,
+      "text": "SO EVERYTHING IS ON"
+    },
+    {
+      "label_id": "L-034",
+      "x": 20303.196,
+      "y": 10851.631,
+      "font_size": 20.0,
+      "text": "SO EVERYTHING IS ABOUT SENDING THE RIGHT"
+    },
+    {
+      "label_id": "L-035",
+      "x": 16591.277,
+      "y": 1637.084,
+      "font_size": 113.333,
+      "text": "NDJSON"
+    },
+    {
+      "label_id": "L-036",
+      "x": 15298.239,
+      "y": 2034.595,
+      "font_size": 58.4,
+      "text": "FLUSHASYNC FOR"
+    },
+    {
+      "label_id": "L-037",
+      "x": 14971.994,
+      "y": 5608.397,
+      "font_size": 94.667,
+      "text": "!!!"
+    },
+    {
+      "label_id": "L-038",
+      "x": 25900.022,
+      "y": 4530.882,
+      "font_size": 94.667,
+      "text": "!!!"
+    },
+    {
+      "label_id": "L-039",
+      "x": 19578.915,
+      "y": 1658.451,
+      "font_size": 108.781,
+      "text": "sse examples"
+    },
+    {
+      "label_id": "L-040",
+      "x": 10039.175,
+      "y": 2011.165,
+      "font_size": 71.809,
+      "text": "ASYNCENUMERABLE, WHY"
+    },
+    {
+      "label_id": "L-041",
+      "x": 11664.841,
+      "y": 2102.371,
+      "font_size": 61.143,
+      "text": "deserializing async enum"
+    },
+    {
+      "label_id": "L-042",
+      "x": 11734.026,
+      "y": 2687.518,
+      "font_size": 20.0,
+      "text": "but with reading on headers arrive"
+    },
+    {
+      "label_id": "L-043",
+      "x": 11395.087,
+      "y": 3125.953,
+      "font_size": 65.714,
+      "text": "memory with headersread and asyncenum and"
+    },
+    {
+      "label_id": "L-044",
+      "x": 11896.394,
+      "y": 6715.635,
+      "font_size": 20.0,
+      "text": "better to return async enum directly because with flush and write"
+    },
+    {
+      "label_id": "L-045",
+      "x": 21622.01,
+      "y": 5832.741,
+      "font_size": 124.0,
+      "text": "sse writer"
+    },
+    {
+      "label_id": "L-046",
+      "x": 22728.116,
+      "y": 7987.665,
+      "font_size": 38.133,
+      "text": "!!! when send all events"
+    }
+  ]
+}

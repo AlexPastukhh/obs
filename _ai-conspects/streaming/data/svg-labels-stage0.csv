@@ -1,0 +1,47 @@
+label_id,x,y,font_size,text
+L-001,7356.253,4308.523,20.0,With await inside iteration
+L-002,7378.476,4805.56,20.0,With async iteration
+L-003,7458.253,8072.138,20.0,Repository method:
+L-004,7269.117,8819.792,20.0,Books data will appear on screen one by one(but still to fast to see difference)
+L-005,7157.367,8944.567,20.0,Cant use result filter because anonymous type being returned and we cant map it to dto with automapper
+L-006,8072.453,10144.934,20.0,i think it can be exception for
+L-007,8630.434,3376.594,245.044,!!!
+L-008,7276.115,1862.643,121.333,streaming objects
+L-009,2769.645,6087.586,20.0,Without streams
+L-010,3136.96,6583.419,20.0,doesnt need to be created in memory first
+L-011,2355.196,7529.812,20.0,When working with
+L-012,3182.565,7911.215,20.0,accepts stream
+L-013,2622.485,8036.533,20.0,We can consider that operation is completed when response headers are arrived
+L-014,2518.411,9257.511,20.0,"Now, we will start working on content of response as soon as response heasers arrived"
+L-015,2470.108,14733.452,20.0,"Kevin advises to always use streams to read data, and when you posting large amounts of data"
+L-016,2675.521,1436.255,158.667,streaming bytes
+L-017,1433.605,13549.391,147.965,benefits of streaming object wwhile seniding json
+L-018,10.0,4936.02,91.584,different types of byte streams and usecases
+L-019,1754.124,8547.648,112.029,reading response as stream when headers arrive
+L-020,2163.134,10456.506,126.567,streaming payload directly to bytes
+L-021,6410.028,9462.383,151.32,some rest api concerns while streaming
+L-022,12297.304,1842.53,68.0,EXPLAINATION OF PLAIN ARRAY STREAMING VS NDJSON STREAMING
+L-023,19694.136,13291.223,235.273,!!!!?
+L-024,19980.859,8605.432,235.273,!!!!
+L-025,18981.398,8419.267,20.0,FULL IMPLEMENTATION
+L-026,18296.951,1809.81,150.667,SSE
+L-027,20471.005,6212.418,20.0,SO WE SEND FIRST EVENT AFTER LAST ID AND
+L-028,19854.827,7034.81,20.0,SEND CONNECTED EVENT
+L-029,21110.686,7950.459,20.0,BATCHES  200 NEW EEVENTS AFTER LAST ID
+L-030,21037.306,9387.322,20.0,ENDPOINTS URL
+L-031,21079.98,9575.712,20.0,JUST SETTING SOME UI
+L-032,19966.238,9915.161,20.0,ON UNMOUNT OR
+L-033,20939.008,10447.741,20.0,SO EVERYTHING IS ON
+L-034,20303.196,10851.631,20.0,SO EVERYTHING IS ABOUT SENDING THE RIGHT
+L-035,16591.277,1637.084,113.333,NDJSON
+L-036,15298.239,2034.595,58.4,FLUSHASYNC FOR
+L-037,14971.994,5608.397,94.667,!!!
+L-038,25900.022,4530.882,94.667,!!!
+L-039,19578.915,1658.451,108.781,sse examples
+L-040,10039.175,2011.165,71.809,"ASYNCENUMERABLE, WHY"
+L-041,11664.841,2102.371,61.143,deserializing async enum
+L-042,11734.026,2687.518,20.0,but with reading on headers arrive
+L-043,11395.087,3125.953,65.714,memory with headersread and asyncenum and
+L-044,11896.394,6715.635,20.0,better to return async enum directly because with flush and write
+L-045,21622.01,5832.741,124.0,sse writer
+L-046,22728.116,7987.665,38.133,!!! when send all events
