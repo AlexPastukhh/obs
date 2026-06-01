@@ -1,16 +1,16 @@
 {
   "region_id": "R05",
   "region_name": "Pagination / InfiniteQuery / keepPreviousData side area",
-  "stage": "4d-v001",
-  "generated": "2026-06-01 20:32:46 UTC",
+  "stage": "4h-v002",
+  "generated": "2026-06-01 21:50:29 UTC",
   "what_area_is_about": [
     "normal pagination with page/cursor in queryKey",
-    "why normal pagination can flicker between success and pending",
-    "placeholderData: keepPreviousData as TanStack Query lagged pagination behavior",
+    "placeholderData: keepPreviousData as lagged pagination behavior",
     "useTransition as React scheduling behavior",
     "isPlaceholderData versus isPending",
     "useInfiniteQuery for load-more/infinite-scroll/cursor lists",
-    "data.pages/data.pageParams and getNextPageParam mental model"
+    "data.pages/data.pageParams and getNextPageParam mental model",
+    "flattening infinite-query pages before rendering UI lists"
   ],
   "key_ideas": [
     "Classic pagination puts page/cursor in queryKey and fetches that page in queryFn.",
@@ -19,17 +19,20 @@
     "useTransition is about non-blocking rendering/update priority, not query data semantics.",
     "isPlaceholderData answers whether shown data belongs to the previous query result.",
     "useInfiniteQuery is the dedicated API for load-more/infinite-scroll/cursor lists.",
-    "Infinite query pages are stored in data.pages and parameters in data.pageParams."
+    "Infinite queries collect pages in data.pages and params in data.pageParams.",
+    "useInfiniteQuery does not return one flat array; UI often flattens data.pages before rendering.",
+    "fetchNextPage/hasNextPage/isFetchingNextPage support a Load more style UI."
   ],
   "perception_quality": {
     "overall_conceptual_understanding": "high",
     "main_source_readability": "high",
     "code_readability": "high for visible code blocks",
-    "spatial_layout_understanding": "medium-high",
+    "spatial_layout_understanding": "high after R05 v002 boundary audit",
     "limitations": [
-      "S-080 is bottom-cropped",
-      "S-094 and S-112 have slight bottom cropping after source chips"
+      "S-080 is bottom-cropped.",
+      "S-094 and S-112 have slight bottom cropping after source chips.",
+      "S-115 bottom is cropped after the visible `items` line."
     ],
-    "confidence_summary": "High for main ideas and visible code; medium only for missing cropped continuation in S-080."
+    "confidence_summary": "High for main pagination/infinite-query ideas; medium only for cropped continuations in S-080/S-115."
   }
 }

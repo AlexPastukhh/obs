@@ -11,7 +11,9 @@
     "theme": "normal pagination with useQuery intro",
     "text": "1) Normal pagination with `useQuery`\n\nFor classic pagination like \"page 1 / page 2 / page 3\", the built-in pattern is:\n\n- put the page number or cursor into the `queryKey`\n- fetch that page in `queryFn`",
     "code": "",
-    "notes": "Bottom continuation is cropped. Visible text is transcribed."
+    "notes": "Bottom continuation is cropped. Visible text is transcribed.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-083",
@@ -25,7 +27,9 @@
     "theme": "docs pattern for paginated useQuery",
     "text": "Example from the docs pattern:\n\nTanStack says paginated data \"just works\" by including the page info in the query key. Each page is treated as its own cached query entry.\n\nWhy this can feel awkward\n\nIf you do only that, moving from page 1 to page 2 means React Query sees a new query key, so the UI can bounce between success and pending states while the next page loads. The pagination guide calls this out directly.",
     "code": "const { data } = useQuery({\n  queryKey: ['projects', page],\n  queryFn: () => fetchProjects(page),\n})",
-    "notes": "Source chips omitted from transcript body."
+    "notes": "Source chips omitted from transcript body.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-085",
@@ -39,7 +43,9 @@
     "theme": "placeholderData keepPreviousData vs useTransition",
     "text": "Yes - you can still get re-renders with `placeholderData: keepPreviousData`. The key difference is:\n\n- `placeholderData: keepPreviousData` is a TanStack Query data behavior: when the query key changes, React Query immediately gives the new query observer the previous result as placeholder data, so the UI keeps showing the old page while the new page fetches in the background. TanStack Query marks this state with `isPlaceholderData`. In v5, this is the replacement for the old `keepPreviousData` option.\n\n- `useTransition` is a React scheduling behavior: it marks an update as non-blocking, lets React keep the current UI visible while preparing the next render, and gives you `isPending` for pending UI like a spinner.\n\nSo they solve related but different problems.",
     "code": "",
-    "notes": "Verified from extracted SVG image."
+    "notes": "Verified from extracted SVG image.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-093",
@@ -53,7 +59,9 @@
     "theme": "biggest difference between useTransition and keepPreviousData",
     "text": "The biggest difference\n\nWith `useTransition`, React is preserving the previous rendered tree while a transition is pending.\nWith `placeholderData: keepPreviousData`, TanStack Query is providing previous query data to the new query instance.\n\nThat means `useTransition` is more about:\n\n- update priority\n- keeping typing/clicking responsive\n- avoiding janky synchronous renders\n- showing a pending indicator with `isPending`\n\nWhile `keepPreviousData` is more about:\n\n- pagination/data fetching semantics\n- avoiding \"empty/loading/new data\" flicker on query-key changes\n- telling you explicitly that the shown data is stale placeholder data via `isPlaceholderData`",
     "code": "",
-    "notes": "Verified from extracted SVG image."
+    "notes": "Verified from extracted SVG image.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-094",
@@ -67,7 +75,9 @@
     "theme": "built-in fix with placeholderData keepPreviousData",
     "text": "Built-in fix for that\n\nIn v5, the docs recommend `placeholderData: keepPreviousData` for paginated queries so the previous page stays visible while the next page is loading, which avoids the jumpy UI.\n\nTypical shape:\n\nThat is the built-in \"lagged pagination\" experience in v5.",
     "code": "import { keepPreviousData, useQuery } from '@tanstack/react-query'\n\nconst { data, isPlaceholderData } = useQuery({\n  queryKey: ['projects', page],\n  queryFn: () => fetchProjects(page),\n  placeholderData: keepPreviousData,\n})",
-    "notes": "Bottom is slightly cropped after the final source chip; visible content is transcribed."
+    "notes": "Bottom is slightly cropped after the final source chip; visible content is transcribed.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-101",
@@ -81,7 +91,9 @@
     "theme": "why use both keepPreviousData and useTransition",
     "text": "Why use both?\n\nBecause sometimes you want both guarantees:\n\n1. Keep previous data visible for the new query key\n   That is Query's job.\n2. Make the state update low priority so the UI stays responsive during expensive rendering\n   That is React's job.\n\nA good example is a paginated page where the next page:\n\n- triggers a fetch\n- also causes a heavy table/grid/chart subtree to render\n- maybe recomputes filters/sorting/layout\n- maybe suspends in some nested part\n\nIn that case:\n\n- `keepPreviousData` keeps old rows on screen\n- `useTransition` makes the page switch non-blocking and gives you `isPending` for UI polish",
     "code": "",
-    "notes": "Verified from extracted SVG image."
+    "notes": "Verified from extracted SVG image.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-106",
@@ -95,7 +107,9 @@
     "theme": "infinite pagination with useInfiniteQuery",
     "text": "2) Infinite pagination with `useInfiniteQuery`\n\nIf you want:\n\n- \"Load more\"\n- infinite scroll\n- cursor-based endless list\n\nthen the built-in API is `useInfiniteQuery`. It is specifically designed for this. The docs say infinite queries provide `data.pages`, `data.pageParams`, `fetchNextPage`, `fetchPreviousPage`, `hasNextPage`, and `hasPreviousPage`.",
     "code": "",
-    "notes": "Verified from extracted SVG image."
+    "notes": "Verified from extracted SVG image.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-108",
@@ -109,7 +123,9 @@
     "theme": "isPlaceholderData vs manual isPending",
     "text": "Why `isPlaceholderData` can be better than a manual `isPending`\n\nBecause it answers a more specific question:\n\n- `isPending`: \"React is currently processing a transition.\"\n- `isPlaceholderData`: \"The data currently shown belongs to the previous query result, not the final data for the current key.\"\n\nThat distinction matters.\n\nFor example, with pagination you may want to:\n\n- disable \"Next\" while you are still showing previous data for the current page key\n- dim the table only when the displayed rows are placeholder rows\n- avoid double-advancing pages until real data lands\n\n`isPlaceholderData` is tailor-made for that. `isPending` is broader and does not specifically mean \"the data on screen is old query data.\" ",
     "code": "",
-    "notes": "Verified from extracted SVG image."
+    "notes": "Verified from extracted SVG image.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-111",
@@ -123,7 +139,9 @@
     "theme": "infinite query mental model",
     "text": "6) Full mental model\n\nThink of it like this:\n\n- `queryFn({ pageParam })` fetches one page\n- returned page is pushed into `data.pages`\n- used param is pushed into `data.pageParams`\n- `getNextPageParam(...)` looks at the latest data and decides the next param\n- if it returns a param, `hasNextPage` is true\n- if it returns `undefined`/`null`, `hasNextPage` is false",
     "code": "",
-    "notes": "Verified from extracted SVG image."
+    "notes": "Verified from extracted SVG image.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
   },
   {
     "source_id": "S-112",
@@ -137,6 +155,54 @@
     "theme": "useInfiniteQuery example shape",
     "text": "Example shape:\n\nImportant built-in pieces:\n\n- `initialPageParam` is required in v5\n- `getNextPageParam` tells React Query what the next cursor/page should be\n- fetched pages are stored in `data.pages`",
     "code": "const {\n  data,\n  fetchNextPage,\n  hasNextPage,\n  isFetchingNextPage,\n} = useInfiniteQuery({\n  queryKey: ['projects'],\n  queryFn: ({ pageParam }) => fetchProjects(pageParam),\n  initialPageParam: 0,\n  getNextPageParam: (lastPage) => lastPage.nextCursor,\n})",
-    "notes": "Bottom is slightly cropped after source chip; visible text/code is transcribed."
+    "notes": "Bottom is slightly cropped after source chip; visible text/code is transcribed.",
+    "candidate_type": "stage4d-included-source",
+    "extra_text": ""
+  },
+  {
+    "source_id": "S-114",
+    "region_source_id": "R05-S011",
+    "image_use_id": "IU-114",
+    "fileId_short": "38adfee555",
+    "status": "verified-from-extracted-svg-image",
+    "candidate_type": "same-road-continuation",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "useInfiniteQuery data shape: pages and pageParams",
+    "text": "`useInfiniteQuery` does not return one flat array. Its `data` shape is:",
+    "code": "{\n  pages: [...],\n  pageParams: [...],\n}",
+    "extra_text": "- `pages` = array of each page result returned by your API\n- `pageParams` = array of the page params React Query used to fetch those pages",
+    "notes": "Verified from extracted SVG image. Continues the R05 infinite-query road after S-111/S-112."
+  },
+  {
+    "source_id": "S-115",
+    "region_source_id": "R05-S012",
+    "image_use_id": "IU-115",
+    "fileId_short": "1f0e98522e",
+    "status": "verified-visible-partial-from-extracted-svg-image",
+    "candidate_type": "same-road-continuation",
+    "readability": "high",
+    "cut_off": "bottom-cropped-code-continues",
+    "confidence": "high-for-visible-code",
+    "theme": "19.2 Load more button",
+    "text": "19.2 Load more button",
+    "code": "function PostList() {\n  const {\n    data,\n    fetchNextPage,\n    hasNextPage,\n    isFetchingNextPage,\n  } = usePosts()\n\n  const items = data?.pages.flatMap((page) => page.items) ?? []",
+    "notes": "Bottom is cropped after the visible `items` line; visible code is transcribed. Continues R05 infinite-query UI example."
+  },
+  {
+    "source_id": "S-116",
+    "region_source_id": "R05-S013",
+    "image_use_id": "IU-116",
+    "fileId_short": "69bfa97f82",
+    "status": "verified-from-extracted-svg-image",
+    "candidate_type": "same-road-continuation",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "flatten data.pages before rendering",
+    "text": "So if your API returned 3 pages, `data.pages` might look like:\n\nThat is why the screenshot says to flatten before rendering:\n\nBecause usually your UI wants one flat list of items, while React Query stores the data grouped by page.",
+    "code": "[\n  { items: [{ id: 1 }, { id: 2 }], nextCursor: 2 },\n  { items: [{ id: 3 }, { id: 4 }], nextCursor: 4 },\n  { items: [{ id: 5 }, { id: 6 }], nextCursor: null },\n]\n\nconst items = data?.pages.flatMap((page) => page.items) ?? []",
+    "notes": "Verified from extracted SVG image."
   }
 ]

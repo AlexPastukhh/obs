@@ -1,0 +1,34 @@
+{
+  "generated": "2026-06-01 21:50:29 UTC",
+  "region_id": "R05",
+  "region_name": "Pagination / InfiniteQuery / keepPreviousData side area",
+  "boundary_status": "corrected-v002",
+  "included_sources": [
+    "S-080",
+    "S-083",
+    "S-085",
+    "S-093",
+    "S-094",
+    "S-101",
+    "S-106",
+    "S-108",
+    "S-111",
+    "S-112",
+    "S-114",
+    "S-115",
+    "S-116"
+  ],
+  "included_count": 13,
+  "newly_added_sources": [
+    "S-114",
+    "S-115",
+    "S-116"
+  ],
+  "audit_finding": "R05 v001 missed continuation images after S-111/S-112.",
+  "decision": "R05 v002 includes the missing infinite-query continuation: data.pages/pageParams shape, Load more button, and flattening pages before rendering.",
+  "checked_excluded_candidates": [],
+  "open_issues": [
+    "S-115 bottom is cropped after the visible items line; only visible code is transcribed.",
+    "R05 v002 is complete for the reviewed pagination / infinite-query road, subject to future corrections if a later audit finds a continuation."
+  ]
+}

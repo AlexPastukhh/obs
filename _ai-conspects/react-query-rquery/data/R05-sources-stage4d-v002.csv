@@ -1,0 +1,14 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+R05-S001,S-080,IU-080,0871bd898b,verified-visible-partial-from-extracted-svg-image,stage4d-included-source,high,yes-bottom-cropped,high-for-visible-text,normal pagination with useQuery intro,Bottom continuation is cropped. Visible text is transcribed.
+R05-S002,S-083,IU-083,e3c0a532d3,verified-from-extracted-svg-image,stage4d-included-source,high,no,high,docs pattern for paginated useQuery,Source chips omitted from transcript body.
+R05-S003,S-085,IU-085,bc3e0aa237,verified-from-extracted-svg-image,stage4d-included-source,high,no,high,placeholderData keepPreviousData vs useTransition,Verified from extracted SVG image.
+R05-S004,S-093,IU-093,c8cc88b3af,verified-from-extracted-svg-image,stage4d-included-source,high,no,high,biggest difference between useTransition and keepPreviousData,Verified from extracted SVG image.
+R05-S005,S-094,IU-094,975b593423,verified-from-extracted-svg-image,stage4d-included-source,high,bottom-slightly-cropped-after-source-chip,high-for-visible-text-and-code,built-in fix with placeholderData keepPreviousData,Bottom is slightly cropped after the final source chip; visible content is transcribed.
+R05-S006,S-101,IU-101,4c44fb1d2a,verified-from-extracted-svg-image,stage4d-included-source,high,no,high,why use both keepPreviousData and useTransition,Verified from extracted SVG image.
+R05-S007,S-106,IU-106,fc61dcb8e6,verified-from-extracted-svg-image,stage4d-included-source,high,no,high,infinite pagination with useInfiniteQuery,Verified from extracted SVG image.
+R05-S008,S-108,IU-108,728900c573,verified-from-extracted-svg-image,stage4d-included-source,high,no,high,isPlaceholderData vs manual isPending,Verified from extracted SVG image.
+R05-S009,S-111,IU-111,b643ae1bee,verified-from-extracted-svg-image,stage4d-included-source,high,no,high,infinite query mental model,Verified from extracted SVG image.
+R05-S010,S-112,IU-112,41cc77d4c3,verified-from-extracted-svg-image,stage4d-included-source,high,bottom-slightly-cropped-after-source-chip,high-for-visible-text-and-code,useInfiniteQuery example shape,Bottom is slightly cropped after source chip; visible text/code is transcribed.
+R05-S011,S-114,IU-114,38adfee555,verified-from-extracted-svg-image,same-road-continuation,high,no,high,useInfiniteQuery data shape: pages and pageParams,Verified from extracted SVG image. Continues the R05 infinite-query road after S-111/S-112.
+R05-S012,S-115,IU-115,1f0e98522e,verified-visible-partial-from-extracted-svg-image,same-road-continuation,high,bottom-cropped-code-continues,high-for-visible-code,19.2 Load more button,Bottom is cropped after the visible `items` line; visible code is transcribed. Continues R05 infinite-query UI example.
+R05-S013,S-116,IU-116,69bfa97f82,verified-from-extracted-svg-image,same-road-continuation,high,no,high,flatten data.pages before rendering,Verified from extracted SVG image.

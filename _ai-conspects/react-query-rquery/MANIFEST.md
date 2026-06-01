@@ -1,52 +1,49 @@
-# MANIFEST - React Query rquery / R01 transcript v002
+# MANIFEST - React Query rquery / R05 transcript v002
 
-Archive type: **stage-4e verified region transcript correction**  
+Archive type: **stage-4h verified region transcript correction**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 21:36:06 UTC
+Generated: 2026-06-01 21:50:29 UTC
 
 ## Direction check
 
 Goal:
-Fix R01 after the new boundary-review rules.
+Correct R05 after Stage4g boundary audit.
 
 Now:
-R01 v001 is known partial.
+R05 v001 is known boundary-incomplete.
 
 This step:
-Add R01 v002 with full two-column browser/cache transcript and updated candidate rules.
+Add missed sources `S-114/S-115/S-116` and update R05 coverage.
 
 Why:
-Candidate review is useful, but nearby must be defined precisely and R01 must include the whole browser/cache road.
+These screenshots continue the infinite-query road.
 
 Next:
-1. review R01 v002 diff;
+1. review R05 v002 diff;
 2. commit;
-3. audit R05/R06/R07/R10.
+3. create R06 v002 correction.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/NEARBY_SCREENSHOT_AND_CANDIDATE_REVIEW.md
-_ai-conspects/IMAGE_COVERAGE_AND_REGION_WORKFLOW.md
-_ai-conspects/PARALLEL_CHAT_PROMPT_NO_IMAGE_LOSS_ADDENDUM.md
-_ai-conspects/react-query-rquery/regions/R01-react-query-browser-http-cache.md
-_ai-conspects/react-query-rquery/data/R01-sources-stage4e-v002.csv
-_ai-conspects/react-query-rquery/data/R01-sources-stage4e-v002.json
-_ai-conspects/react-query-rquery/data/R01-boundary-review-stage4e-v002.csv
-_ai-conspects/react-query-rquery/data/R01-boundary-review-stage4e-v002.json
-_ai-conspects/react-query-rquery/data/R01-area-understanding-stage4e-v002.json
+_ai-conspects/react-query-rquery/regions/R05-pagination-infinitequery-keeppreviousdata-side-area.md
+_ai-conspects/react-query-rquery/data/R05-sources-stage4d-v002.csv
+_ai-conspects/react-query-rquery/data/R05-sources-stage4d-v002.json
+_ai-conspects/react-query-rquery/data/R05-boundary-review-stage4h-v002.csv
+_ai-conspects/react-query-rquery/data/R05-boundary-review-stage4h-v002.json
+_ai-conspects/react-query-rquery/data/R05-area-understanding-stage4h-v002.json
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
-_ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/react-query-rquery/16-stage4e-r01-region-transcript-v002.md
+_ai-conspects/react-query-rquery/audit-assets/R05-audit-candidates-contact-sheet.png
+_ai-conspects/react-query-rquery/20-stage4h-r05-region-transcript-v002.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## R01 v002 status
+## R05 v002 status
 
 ```text
-Included sources: 20
-Excluded from R01: S-008
-Boundary status: reviewed for current two-column browser/cache road
+Included sources: 13
+Added in v002: S-114, S-115, S-116
+Boundary status: corrected for reviewed pagination / infinite-query road
 ```

@@ -1,112 +1,29 @@
 {
-  "generated": "2026-06-01 21:46:15 UTC",
-  "ledger_version": "v2-updated-by-stage4g-audit",
-  "critical_rule": "The ledger is not source of truth. These audit statuses identify required correction transcripts and checked boundaries.",
-  "stage4g_audit_delta": {
-    "needs_correction": {
-      "S-114": [
-        "needs-r05-v002-include",
-        "R05",
-        "Missed continuation: data.pages/pageParams / useInfiniteQuery array shape."
-      ],
-      "S-115": [
-        "needs-r05-v002-include",
-        "R05",
-        "Missed continuation: Load more button."
-      ],
-      "S-116": [
-        "needs-r05-v002-include",
-        "R05",
-        "Missed continuation: flatten data.pages before rendering."
-      ],
-      "S-176": [
-        "needs-r06-v002-include",
-        "R06",
-        "Missed continuation: one query with Promise.all."
-      ],
-      "S-184": [
-        "needs-r07-v004-include",
-        "R07",
-        "Missed continuation: fetch or ensure query data imperatively."
-      ],
-      "S-186": [
-        "needs-r07-v004-include",
-        "R07",
-        "Missed continuation: core difference fetchQuery vs ensureQueryData."
-      ],
-      "S-240": [
-        "needs-r10-v006-include",
-        "R10",
-        "Missed mutation-area source: where you may need it."
-      ],
-      "S-241": [
-        "needs-r10-v006-include",
-        "R10",
-        "Missed mutation-area source: best mental model."
-      ],
-      "S-237": [
-        "duplicate-use-needs-r10-coverage-log",
-        "R10",
-        "Duplicate image use of S-246 / optimistic update code example; content present but image-use coverage should mention both placements."
-      ]
-    },
-    "checked_exclusions_or_reassignments": {
-      "S-132": [
-        "checked-not-r06-belongs-r07",
-        "R07",
-        "R06 audit neighbor: prefetch staleTime; not R06."
-      ],
-      "S-146": [
-        "checked-not-r06-belongs-r07",
-        "R07",
-        "R06 audit neighbor: prefetch staleTime; not R06."
-      ],
-      "S-162": [
-        "checked-not-r06-belongs-r07",
-        "R07",
-        "R06 audit neighbor: prefetch staleTime; not R06."
-      ],
-      "S-171": [
-        "checked-not-r06-belongs-r07",
-        "R07",
-        "R06 audit neighbor: useQuery with prefetched data; not R06."
-      ],
-      "S-180": [
-        "checked-not-r06-belongs-r07",
-        "R07",
-        "R06 audit neighbor: fetchQuery/ensureQueryData distinction; not R06."
-      ],
-      "S-124": [
-        "checked-r07-neighbor-likely-r08",
-        "R08",
-        "QueryClient/methods neighbor column; likely R08, not forced into R07."
-      ],
-      "S-138": [
-        "checked-r07-neighbor-likely-r08",
-        "R08",
-        "QueryClient/methods neighbor column; likely R08."
-      ],
-      "S-144": [
-        "checked-r07-neighbor-likely-r08",
-        "R08",
-        "QueryClient/methods neighbor column; likely R08."
-      ],
-      "S-154": [
-        "checked-r07-neighbor-likely-r08",
-        "R08",
-        "QueryClient/methods neighbor column; likely R08."
-      ],
-      "S-164": [
-        "checked-r07-neighbor-likely-r08",
-        "R08",
-        "QueryClient/methods neighbor column; likely R08."
-      ],
-      "S-173": [
-        "checked-r07-neighbor-likely-r08",
-        "R08",
-        "QueryClient/methods neighbor column; likely R08."
-      ]
-    }
+  "generated": "2026-06-01 21:50:29 UTC",
+  "ledger_version": "v2-updated-by-r05-v002",
+  "critical_rule": "The ledger is still not a source of truth. It records decisions after visual/semantic boundary review.",
+  "r05_v002_delta": {
+    "included_sources": [
+      "S-080",
+      "S-083",
+      "S-085",
+      "S-093",
+      "S-094",
+      "S-101",
+      "S-106",
+      "S-108",
+      "S-111",
+      "S-112",
+      "S-114",
+      "S-115",
+      "S-116"
+    ],
+    "newly_added_sources": [
+      "S-114",
+      "S-115",
+      "S-116"
+    ],
+    "status": "R05 boundary corrected and transcript expanded to include infinite-query page flattening continuation."
   },
   "rows": [
     {
@@ -1622,12 +1539,12 @@
       "width": "732",
       "height": "177",
       "nearest_labels_for_search_only": "L-028: PAGINATION | L-036: INFINITEQUERY | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-081",
@@ -1679,12 +1596,12 @@
       "width": "914",
       "height": "459",
       "nearest_labels_for_search_only": "L-028: PAGINATION | L-036: INFINITEQUERY | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-084",
@@ -1717,12 +1634,12 @@
       "width": "849",
       "height": "308",
       "nearest_labels_for_search_only": "L-031: usetransition vs placeholderdata:keeppreviousdata | L-037: !!! | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-086",
@@ -1869,12 +1786,12 @@
       "width": "815",
       "height": "435",
       "nearest_labels_for_search_only": "L-037: !!! | L-031: usetransition vs placeholderdata:keeppreviousdata | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-094",
@@ -1888,12 +1805,12 @@
       "width": "952",
       "height": "471",
       "nearest_labels_for_search_only": "L-036: INFINITEQUERY | L-028: PAGINATION | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-095",
@@ -2021,12 +1938,12 @@
       "width": "844",
       "height": "420",
       "nearest_labels_for_search_only": "L-037: !!! | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE | L-031: usetransition vs placeholderdata:keeppreviousdata",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-102",
@@ -2116,12 +2033,12 @@
       "width": "927",
       "height": "298",
       "nearest_labels_for_search_only": "L-036: INFINITEQUERY | L-028: PAGINATION | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-107",
@@ -2154,12 +2071,12 @@
       "width": "858",
       "height": "412",
       "nearest_labels_for_search_only": "L-037: !!! | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE | L-031: usetransition vs placeholderdata:keeppreviousdata",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-109",
@@ -2211,12 +2128,12 @@
       "width": "762",
       "height": "311",
       "nearest_labels_for_search_only": "L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE | L-036: INFINITEQUERY | L-037: !!!",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-112",
@@ -2230,12 +2147,12 @@
       "width": "840",
       "height": "482",
       "nearest_labels_for_search_only": "L-036: INFINITEQUERY | L-034: INFINITESCROLL OPTIONS  WHAT DOES USEINFINITEQUERY RETURNS  HOW GETNEXTPAGEPARAM WORKS  HOW DOES IT COMPUTES HASNEXTPAGE | L-028: PAGINATION",
-      "coverage_status": "processed",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear.",
-      "review_notes": "R05 transcript v001; still subject to future neighbor/frontier recheck if nearby candidates appear."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Confirmed in R05 v002 boundary audit.",
+      "review_notes": "Confirmed in R05 v002 boundary audit."
     },
     {
       "source_id": "S-113",
@@ -2268,12 +2185,12 @@
       "width": "936",
       "height": "299",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "needs-r05-v002-include",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed continuation: data.pages/pageParams / useInfiniteQuery array shape.",
-      "review_notes": "Missed continuation: data.pages/pageParams / useInfiniteQuery array shape."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Included in R05 v002 after boundary audit; missing infinite-query continuation.",
+      "review_notes": "Included in R05 v002 after boundary audit; missing infinite-query continuation."
     },
     {
       "source_id": "S-115",
@@ -2287,12 +2204,12 @@
       "width": "902",
       "height": "329",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "needs-r05-v002-include",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed continuation: Load more button.",
-      "review_notes": "Missed continuation: Load more button."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Included in R05 v002 after boundary audit; missing infinite-query continuation.",
+      "review_notes": "Included in R05 v002 after boundary audit; missing infinite-query continuation."
     },
     {
       "source_id": "S-116",
@@ -2306,12 +2223,12 @@
       "width": "932",
       "height": "423",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "needs-r05-v002-include",
+      "coverage_status": "processed-in-r05-v002",
       "current_region_decision": "R05",
-      "decision_is_final": "no-needs-correction-transcript",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Missed continuation: flatten data.pages before rendering.",
-      "review_notes": "Missed continuation: flatten data.pages before rendering."
+      "decision_is_final": "yes-for-r05-v002-boundary",
+      "must_recheck_before_region_close": "no-for-r05-v002",
+      "decision_basis": "Included in R05 v002 after boundary audit; missing infinite-query continuation.",
+      "review_notes": "Included in R05 v002 after boundary audit; missing infinite-query continuation."
     },
     {
       "source_id": "S-117",
