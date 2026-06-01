@@ -1,0 +1,13 @@
+source_id,decision,candidate_type,reason
+S-034,included-in-R01-v001,seed-slide,definition of stream
+S-035,included-in-R01-v001,same-column-continuation,Stream hides OS/device details
+S-036,included-in-R01-v001,same-column-continuation,memory/performance benefits
+S-038,included-in-R01-v001,same-column-section-title,stream as coding concept
+S-037,included-in-R01-v001,same-column-continuation,stream can be used at different code levels
+S-039,included-in-R01-v001,same-column-section-title,stream as data transfer concept
+S-040,included-in-R01-v001,same-column-continuation,bytes over HTTP/TCP arrive in chunks
+S-031,included-in-R01-v001,semantic-cross-check / explanatory-neighbor,what is a Stream and why it matters
+S-032,included-in-R01-v001,semantic-cross-check / explanatory-neighbor,two meanings of stream: code concept vs transfer concept
+S-033,checked-excluded-from-R01 / candidate-R02,adjacent-next-road-candidate,Checked neighbor; belongs to R02 because it starts HttpCompletionOption.ResponseHeadersRead / reading response body stream after headers.
+S-041,checked-excluded-from-R01 / candidate-R02,adjacent-next-road-candidate,Checked same-column continuation; belongs to R02 because it begins API response parts over wire / streaming payload flow.
+S-042,checked-excluded-from-R01 / candidate-R02,adjacent-next-road-candidate,"Checked same-column continuation; belongs to R02 because it starts concrete Using Streams When Reading Data diagram, not the conceptual intro."

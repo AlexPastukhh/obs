@@ -1,31 +1,34 @@
-# MANIFEST - Streaming stage0 source/boundary review v001
+# MANIFEST - Streaming R01 transcript v001
 
-Archive type: **source check / boundary review**  
-Generated: 2026-06-01 22:31:21 UTC
+Archive type: **stage-1 verified region transcript**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-01 22:41:02 UTC
 
-## Files included
+## Done
+
+- R01 transcript created.
+- 9 sources included.
+- 3 adjacent candidates checked and reserved for R02.
+
+## Files included / updated
 
 ```text
-_ai-conspects/streaming/00-source-check-and-boundary-review.md
+_ai-conspects/streaming/regions/R01-streaming-bytes-and-stream-concepts.md
+_ai-conspects/streaming/data/R01-sources-stage1-v001.csv
+_ai-conspects/streaming/data/R01-sources-stage1-v001.json
+_ai-conspects/streaming/data/R01-boundary-review-stage1-v001.csv
+_ai-conspects/streaming/data/R01-boundary-review-stage1-v001.json
+_ai-conspects/streaming/data/R01-area-understanding-stage1-v001.json
+_ai-conspects/streaming/data/image-review-ledger-v001.csv
+_ai-conspects/streaming/data/image-review-ledger-v001.json
+_ai-conspects/streaming/audit-assets/R01-streaming-bytes-transcript-contact-sheet.png
+_ai-conspects/streaming/audit-assets/R01-source-images/*.png
+_ai-conspects/streaming/01-stage1-r01-streaming-bytes-transcript.md
 _ai-conspects/streaming/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/streaming/RESPONSE_PROGRESS_FORMAT.md
-_ai-conspects/streaming/source/streaming.svg
-_ai-conspects/streaming/source/images/*.png
-_ai-conspects/streaming/data/svg-labels-stage0.csv
-_ai-conspects/streaming/data/svg-labels-stage0.json
-_ai-conspects/streaming/data/image-uses-stage0.csv
-_ai-conspects/streaming/data/image-uses-stage0.json
-_ai-conspects/streaming/data/region-split-plan-stage0.csv
-_ai-conspects/streaming/data/region-split-plan-stage0.json
-_ai-conspects/streaming/audit-assets/*.png
+_ai-conspects/streaming/MANIFEST.md
 _ai-conspects/streaming/APPLY_ARCHIVE.md
 ```
 
-## Status
+## Next
 
-```text
-Transcript: not started
-Boundary review: started
-Image inventory: created as checklist, not source of truth
-Next recommended pass: R01 streaming bytes / byte stream types
-```
+R02 transcript after local boundary review.

@@ -1,35 +1,21 @@
-# Current Source of Truth - Streaming conspect
+# Current Source of Truth - Streaming
 
-Generated: 2026-06-01 22:31:21 UTC
+Generated: 2026-06-01 22:41:02 UTC
 
-## Source status
+## Policy
 
-The current source is the uploaded SVG snapshot:
+Inventory/ledger is a checklist, not source of truth.
 
-```text
-source/streaming.svg
-```
+A region is complete only after visual/semantic boundary review and verified transcript.
 
-No GitHub/raw bundle path has been confirmed in this branch yet.
-
-## Authoritative for this stage
+## Current status
 
 ```text
-uploaded SVG snapshot
-embedded image data extracted from the SVG
-visual/contact-sheet review done from the SVG images
+Stage0 boundary review: done
+R01 streaming bytes / stream concept basics: transcript v001 done
+R02 reading response stream / payload bytes: next
 ```
 
-## Non-authoritative
+## R01 note
 
-```text
-initial candidate bands
-nearest-label matches
-data/image-uses-stage0.csv
-```
-
-Those files are checklists, not final region boundaries.
-
-## Rule
-
-A region can be transcribed only after local visual/semantic boundary review.
+S-031/S-032 were pulled into R01 by semantic review even though the coordinate band initially suggested R02. This is intentional and demonstrates that inventory is not final authority.

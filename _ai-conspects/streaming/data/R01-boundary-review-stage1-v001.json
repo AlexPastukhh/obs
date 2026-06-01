@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-01 22:41:02 UTC",
+  "region_id": "R01",
+  "region_name": "Streaming bytes / stream concept basics",
+  "boundary_status": "reviewed-v001",
+  "included_sources": [
+    "S-034",
+    "S-035",
+    "S-036",
+    "S-038",
+    "S-037",
+    "S-039",
+    "S-040",
+    "S-031",
+    "S-032"
+  ],
+  "included_count": 9,
+  "checked_excluded_candidates": [
+    {
+      "source_id": "S-033",
+      "decision": "candidate-R02",
+      "reason": "Checked neighbor; belongs to R02 because it starts HttpCompletionOption.ResponseHeadersRead / reading response body stream after headers."
+    },
+    {
+      "source_id": "S-041",
+      "decision": "candidate-R02",
+      "reason": "Checked same-column continuation; belongs to R02 because it begins API response parts over wire / streaming payload flow."
+    },
+    {
+      "source_id": "S-042",
+      "decision": "candidate-R02",
+      "reason": "Checked same-column continuation; belongs to R02 because it starts concrete Using Streams When Reading Data diagram, not the conceptual intro."
+    }
+  ],
+  "important_note": "Stage0 inventory initially put S-031/S-032 in R02 by coordinate band, but R01 visual/semantic review includes them because they summarize stream definition and two stream meanings. Inventory remains checklist, not source of truth.",
+  "open_issues": [
+    "R02 must start from S-033/S-041/S-042 and recheck its own neighbors before transcript."
+  ]
+}

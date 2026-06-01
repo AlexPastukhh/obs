@@ -1,6 +1,6 @@
-# Apply archive: Streaming stage0 source/boundary review v001
+# Apply archive: Streaming R01 transcript v001
 
-Archive type: source check / boundary review.
+Archive type: stage-1 verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-streaming-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-streaming-stage1-r01-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-streaming-stage0-boundary-review-v001.zip
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage0-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage0-boundary-review.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage1-r01-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage1-r01-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -38,6 +38,7 @@ Expand-Archive -Path $zip -DestinationPath . -Force
 git status --short
 git diff --stat -- _ai-conspects/streaming
 
+# Save full diff to file and copy to clipboard. Do not print it and do not open a pager.
 git --no-pager diff -- _ai-conspects/streaming > $diffPath
 Get-Content $diffPath -Raw | Set-Clipboard
 Write-Host "Full diff saved to $diffPath and copied to clipboard."
@@ -47,20 +48,12 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/streaming
-git commit -m "Start streaming conspect boundary review"
+git commit -m "Add streaming R01 stream basics transcript"
 git push origin ai-processed-conspects-text
 ```
 
-## Notes
+## Rollback before commit
 
-This archive does not touch:
-
-```text
-_ai-conspects/react-query-rquery/
-```
-
-It starts a new conspect workspace only:
-
-```text
-_ai-conspects/streaming/
+```powershell
+git restore -- _ai-conspects/streaming
 ```

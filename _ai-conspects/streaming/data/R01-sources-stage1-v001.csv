@@ -1,0 +1,10 @@
+region_source_id,source_id,fileId_short,candidate_type,status,readability,cut_off,confidence,theme,notes
+R01-S001,S-034,31777beb72,seed-slide,verified-from-extracted-svg-image,high,no,high,definition of stream,Top seed slide for the streaming-bytes intro.
+R01-S002,S-035,c2fdc95577,same-column-continuation,verified-from-extracted-svg-image,high,no,high,Stream hides OS/device details,Explains stream as an abstraction over operating-system/device details.
+R01-S003,S-036,e7f3793b60,same-column-continuation,verified-from-extracted-svg-image,high,no,high,memory/performance benefits,Shows why streams can be beneficial for large intermediate data.
+R01-S004,S-038,15c932a99a,same-column-section-title,verified-from-extracted-svg-image,high,no,high,stream as coding concept,Section separator in the R01 introductory stream concept block.
+R01-S005,S-037,48547bba82,same-column-continuation,verified-from-extracted-svg-image,high,no,high,stream can be used at different code levels,Clarifies that using Stream internally and exposing streaming to a client are separate decisions.
+R01-S006,S-039,8502f557c6,same-column-section-title,verified-from-extracted-svg-image,high,no,high,stream as data transfer concept,Second conceptual meaning: streaming over network/transport.
+R01-S007,S-040,721c475522,same-column-continuation,verified-from-extracted-svg-image,high,no,high,bytes over HTTP/TCP arrive in chunks,"The screenshot says package by package. This is transcribed as visible text, even though packet/chunk terminology may be expected elsewhere."
+R01-S008,S-031,edb28c03ed,semantic-cross-check / explanatory-neighbor,verified-from-extracted-svg-image,high,no,high,what is a Stream and why it matters,"This was originally in the R02 coordinate band, but visual/semantic review shows it summarizes the R01 stream definition/benefits, so it is included in R01."
+R01-S009,S-032,331a763a98,semantic-cross-check / explanatory-neighbor,verified-from-extracted-svg-image,high,no,high,two meanings of stream: code concept vs transfer concept,This image is included in R01 because it explicitly ties together the two R01 meanings: coding abstraction and data transfer concept.
