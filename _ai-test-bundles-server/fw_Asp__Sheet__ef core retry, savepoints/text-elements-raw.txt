@@ -1,0 +1,84 @@
+﻿createexecutionstrategy ^Zq9PHeO8
+
+sqlserver dbcontext
+retries ^WlSPjIU4
+
+configure retiries ^NjilTfwT
+
+defaults, what start retrying after we 
+configure ^q5GBsdLy
+
+what can retry without create execution strategy 
+when exactly we need it
+ ^p0yfgxPx
+
+pattern with createexecutionstrategy ^O83PEWmY
+
+flows ^tZJv7cJ4
+
+quick ^H5o5rLnl
+
+executeintransaction ^Isrb74dq
+
+savechanges(false) ^itEouEpL
+
+savepoints of savechanges
+you decide what to do on failed savechanges
+and failed savechanges doesnt call acceptallchanges ^TMiVK290
+
+ef core buffering
+ from retries ^kHwg7I58
+
+is it app memory 
+or db meory buffering ^7x8nRVeU
+
+what exaycly buffers?
+do we buffer the sql result?
+example of anyasync with retries ^DROtkSGA
+
+so what if i dont want to have
+retries for specific query? ^qEw7XCPa
+
+pooling ^Wfzw7bK9
+
+multiple dbcontexs
+pooling ^mUKp7qGR
+
+multiple db contexts
+and you want one transaction
+usetransaction ^lEnHsoUp
+
+Executeasync ^tJBfMPM3
+
+executeasync without transaction
+when just need to retry with some app
+logic like get current time ^Ezow1ux4
+
+!!! executeasync without transaction is possible when we dont have multiple 
+writes and the state that we need to rollback ^vpG5CoJv
+
+savepoints are for transactions, not for just 
+savechanges ^8Lms7M2I
+
+useful execution stratefy properties ^XdsbWvhQ
+
+when we use execute (not in transaction)
+method
+and there is some ambigous outcome of 
+the transaction
+
+by default - we will retry ^8jSGE4qN
+
+!!! ^r175O85I
+
+isolation level
+in manual retries from same tranaction 
+using savepoints cases ^t4ANHFAd
+
+in gen ef core have 
+db error codes of sql server
+and about retries ^LmV8plm6
+
+saveponts ^k0Ir0Ayn
+
+remember about automatic atomic retries ^9zJVmgpZ

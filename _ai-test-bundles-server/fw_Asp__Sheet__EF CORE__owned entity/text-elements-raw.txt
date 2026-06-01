@@ -1,0 +1,35 @@
+﻿efcore can materialise objecteven if all of its columns are null
+the fact that you have ? for  your fullname  in client can be not enough 
+so its better to do the shit excplicitly  ^2dp535YV
+
+OWNED COLLECTIONS(COLLECTIONS OF VALUE OBJECTS) ^6GMM1nLT
+
+we have this as 
+owned entity so 
+ef can map owners 
+id to this shadow 
+orderid ^0mpVi6kp
+
+LOADING<- OWNED ENTITY --> COLLECTIONS ^NQ63oFJJ
+
+better to set isrequired manually 
+because we can have owned type with all nulls 
+potentially ^msDuY1Fa
+
+nested owned types ^NtF42bn8
+
+outer optional
+but inner required ^pnTGekiQ
+
+ef needs some indication
+to know if outer exists ^6zrfYP6M
+
+add required prop to outer ^6CEEG3cN
+
+map outer to a table ^CFbqemup
+
+about is required
+
+inside owned or complex ^r5V3NeOk
+
+can add check constraint ^m9xc3kK5
