@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-01 22:09:03 UTC
+Generated: 2026-06-01 22:14:49 UTC
 
 ## Current policy
 
@@ -34,19 +34,17 @@ R07 v004: corrected with S-184/S-186
 R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 ```
 
-## Ledger consistency note
-
-Stage4i v002 normalizes the old included R06/R07 rows in the ledger so they no longer say `processed v001 / must recheck` after correction.
+## Current processing target
 
 ```text
-R06 old included sources -> processed-in-r06-v002
-R07 old included sources -> processed-in-r07-v004
-R08 QueryClient/methods neighbor column -> reserved for future R08, not finalized as R07
+R08 boundary review started.
+Next transcript pass: R08A QueryClient / QueryFilters / core methods.
 ```
 
-## Still pending after this archive
+## R08 caution
 
 ```text
-R08 QueryClient/methods column should be processed as its own boundary review.
-All unreviewed ledger items remain provisional until processed by region.
+R08 has 51 coordinate candidates and must be split.
+R08 boundary review is a candidate checklist, not a final source of truth.
+Each R08 transcript pass must still recheck local candidates visually and semantically.
 ```
