@@ -1,0 +1,100 @@
+{
+  "generated": "2026-06-01 21:46:15 UTC",
+  "audit_scope": [
+    "R05",
+    "R06",
+    "R07",
+    "R10"
+  ],
+  "audit_type": "boundary / ownership / missed-image audit",
+  "important_context": [
+    "R01 was already corrected by R01 v002 and is not audited here.",
+    "This audit is not a transcript correction; it identifies what correction archives are needed.",
+    "Existing transcripts remain useful for included sources, but are not boundary-complete under the new rules until corrected/audited."
+  ],
+  "findings": [
+    {
+      "region": "R05",
+      "current_transcript": "R05-pagination-infinitequery-keeppreviousdata-side-area.md",
+      "current_status": "verified-included-sources-but-boundary-incomplete",
+      "finding_type": "missed-images",
+      "source_ids": "S-114, S-115, S-116",
+      "decision": "needs R05 v002 include",
+      "reason": "These screenshots continue the infinite-query road after S-111/S-112: data.pages/pageParams, Load more button, and flattening pages before rendering.",
+      "severity": "high",
+      "next_action": "Create R05 v002 correction transcript adding S-114/S-115/S-116 and boundary review section."
+    },
+    {
+      "region": "R06",
+      "current_transcript": "R06-query-composition-usequeries-dependent-combine.md",
+      "current_status": "verified-included-sources-but-boundary-incomplete",
+      "finding_type": "missed-image",
+      "source_ids": "S-176",
+      "decision": "needs R06 v002 include",
+      "reason": "S-176 is '15.2 One query with Promise.all', which belongs to query composition / parallel queries and continues the R06 topic.",
+      "severity": "high",
+      "next_action": "Create R06 v002 correction transcript adding S-176."
+    },
+    {
+      "region": "R06",
+      "current_transcript": "R06-query-composition-usequeries-dependent-combine.md",
+      "current_status": "boundary-neighbor-checked",
+      "finding_type": "checked-excluded/reassigned-neighbors",
+      "source_ids": "S-132, S-146, S-162, S-171, S-180",
+      "decision": "not R06; keep/reassign to R07",
+      "reason": "These are prefetch/staleTime/initialData/fetchQuery/ensureQueryData screenshots, visually adjacent on the right but semantically R07.",
+      "severity": "info",
+      "next_action": "Document as excluded candidates in R06 v002 boundary review."
+    },
+    {
+      "region": "R07",
+      "current_transcript": "R07-prefetch-initialdata-placeholderdata-usequeryclient.md",
+      "current_status": "verified-included-sources-but-boundary-incomplete",
+      "finding_type": "missed-images",
+      "source_ids": "S-184, S-186",
+      "decision": "needs R07 v004 include",
+      "reason": "S-184 and S-186 continue the fetchQuery/ensureQueryData road: imperative fetch/ensure query data and core fetchQuery vs ensureQueryData difference.",
+      "severity": "high",
+      "next_action": "Create R07 v004 correction transcript adding S-184/S-186."
+    },
+    {
+      "region": "R07/R08 boundary",
+      "current_transcript": "R07-prefetch-initialdata-placeholderdata-usequeryclient.md",
+      "current_status": "boundary-neighbor-checked",
+      "finding_type": "separate-neighbor-column",
+      "source_ids": "S-124, S-138, S-144, S-154, S-164, S-173",
+      "decision": "likely R08 QueryClient/methods, not R07",
+      "reason": "These screenshots form a separate QueryClient/methods column: useQueryClient, manual cache changes, invalidateQueries, setQueryData, getQueryData/prefetchQuery. They should be handled in the R08 QueryClient boundary review.",
+      "severity": "medium",
+      "next_action": "Do not force into R07; use as seed/candidates for R08."
+    },
+    {
+      "region": "R10",
+      "current_transcript": "R10-mutations.md",
+      "current_status": "verified-included-sources-but-boundary-incomplete",
+      "finding_type": "missed-images",
+      "source_ids": "S-240, S-241",
+      "decision": "needs R10 v006 include",
+      "reason": "S-240 ('Where you may need it') and S-241 ('Best mental model') are mutation-area screenshots missed by the old mutation transcript pipeline.",
+      "severity": "high",
+      "next_action": "Create R10 v006 correction transcript adding S-240/S-241."
+    },
+    {
+      "region": "R10",
+      "current_transcript": "R10-mutations.md",
+      "current_status": "duplicate-use-needs-coverage-log",
+      "finding_type": "duplicate-image-use",
+      "source_ids": "S-237 / S-246",
+      "decision": "same fileId/image content; content already transcribed but image-use coverage should mention both placements",
+      "reason": "S-237 and S-246 use the same fileId/content (optimistic update code example). The transcript content is present, but coverage should record both image uses or explicitly mark one duplicate.",
+      "severity": "medium",
+      "next_action": "In R10 v006, add duplicate-use note so S-237 is not invisible."
+    }
+  ],
+  "recommended_order": [
+    "R05 v002 correction: add S-114/S-115/S-116",
+    "R06 v002 correction: add S-176 and document R07 exclusions",
+    "R07 v004 correction: add S-184/S-186 and reserve QueryClient column for R08",
+    "R10 v006 correction: add S-240/S-241 and duplicate-use note S-237/S-246"
+  ]
+}
