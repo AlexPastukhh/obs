@@ -1,48 +1,52 @@
-# MANIFEST - React Query R08 Closure Audit v001
+# MANIFEST - React Query R02A Transcript v001
 
-Archive type: **stage-4n closure audit**  
+Archive type: **stage-4p verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 22:44:55 UTC
+Generated: 2026-06-01 23:21:52 UTC
 
 ## Direction check
 
 Goal:
-Close R08 after R08A/R08B/R08C.
+Process the first R02 sub-block after boundary review.
 
 Done:
-All planned R08 sub-pass transcripts are completed.
+R02 boundary review was created.
 
 This step:
-Add R08 closure audit.
+Add R02A transcript for core useQuery state/status/error/cache model.
 
 Why:
-This verifies the full Stage4j R08 checklist against final R08A/R08B/R08C/R07 statuses.
+R02A closes the root useQuery mental model before moving to enabled/query-key subblocks.
 
 Next:
-Commit this audit, then move to the next area with boundary review first.
+1. review R02A diff;
+2. commit;
+3. process R02B.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/26-stage4n-r08-closure-audit.md
-_ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/react-query-rquery/data/R08-closure-audit-stage4n-v001.csv
-_ai-conspects/react-query-rquery/data/R08-closure-audit-stage4n-v001.json
-_ai-conspects/react-query-rquery/data/R08-boundary-review-stage4j-v001.csv
-_ai-conspects/react-query-rquery/data/R08-boundary-review-stage4j-v001.json
+_ai-conspects/react-query-rquery/regions/R02A-usequery-state-status-error-cache-core.md
+_ai-conspects/react-query-rquery/data/R02A-sources-stage4p-v001.csv
+_ai-conspects/react-query-rquery/data/R02A-sources-stage4p-v001.json
+_ai-conspects/react-query-rquery/data/R02A-boundary-review-stage4p-v001.csv
+_ai-conspects/react-query-rquery/data/R02A-boundary-review-stage4p-v001.json
+_ai-conspects/react-query-rquery/data/R02A-area-understanding-stage4p-v001.json
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
-_ai-conspects/react-query-rquery/audit-assets/R08-all-candidates-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R08A-queryclient-methods-core-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R08B-refetch-cancel-options-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R08C-qc-outside-react-shapes-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R02A-usequery-state-error-core-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R02A-source-images/*.png
+_ai-conspects/react-query-rquery/28-stage4p-r02a-usequery-state-transcript.md
+_ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## Closure status
+## R02A status
 
 ```text
-R08 planned split closed.
-No formal R08 checklist item remains reserved/unreviewed for R08.
+Included sources: 15
+R02B pending: 9
+R02C pending: 11
+R04 overlap reserved: S-062
 ```

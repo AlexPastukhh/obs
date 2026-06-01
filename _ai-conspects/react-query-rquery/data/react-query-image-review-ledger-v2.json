@@ -1,17 +1,9 @@
 {
-  "generated": "2026-06-01 22:54:07 UTC",
-  "ledger_version": "v2-updated-by-r02-boundary-review-stage4o-v001",
-  "critical_rule": "The ledger is still not source of truth; R02 decisions remain provisional until each transcript pass does visual/semantic review.",
-  "r02_boundary_review_delta": {
-    "formal_candidate_count": 36,
-    "candidate_group_counts": {
-      "r02a-usequery-state-error-core-candidate": 15,
-      "r02c-query-keys-manual-refetch-declarative-candidate": 11,
-      "r02b-enabled-disabled-conditional-ui-candidate": 9,
-      "r04-overlap-static-staleness-candidate": 1
-    },
-    "next_transcript_pass": "R02A-usequery-state-error-core",
-    "r02a_sources": [
+  "generated": "2026-06-01 23:21:52 UTC",
+  "ledger_version": "v2-updated-by-r02a-transcript-stage4p-v001",
+  "critical_rule": "The ledger is still not source of truth; R02A decisions were made after local visual/semantic boundary review.",
+  "r02a_v001_delta": {
+    "processed_sources": [
       "S-008",
       "S-011",
       "S-012",
@@ -28,7 +20,7 @@
       "S-034",
       "S-036"
     ],
-    "r02b_sources": [
+    "reserved_for_r02b": [
       "S-013",
       "S-026",
       "S-027",
@@ -39,7 +31,7 @@
       "S-047",
       "S-056"
     ],
-    "r02c_sources": [
+    "reserved_for_r02c": [
       "S-039",
       "S-040",
       "S-043",
@@ -52,9 +44,10 @@
       "S-057",
       "S-061"
     ],
-    "r04_overlap_sources": [
+    "reserved_for_r04": [
       "S-062"
-    ]
+    ],
+    "next_step": "R02B enabled/disabled/conditional UI transcript"
   },
   "rows": [
     {
@@ -202,12 +195,12 @@
       "width": "710",
       "height": "482",
       "nearest_labels_for_search_only": "L-004: statuses | L-005: examples | L-008: Isloading and when there is no data and no fetching",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-009",
@@ -259,12 +252,12 @@
       "width": "824",
       "height": "482",
       "nearest_labels_for_search_only": "L-006: fund | L-004: statuses | L-011: throwing/swallowing errors",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-012",
@@ -278,12 +271,12 @@
       "width": "907",
       "height": "475",
       "nearest_labels_for_search_only": "L-008: Isloading and when there is no data and no fetching | L-004: statuses | L-005: examples",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-013",
@@ -297,12 +290,12 @@
       "width": "979",
       "height": "425",
       "nearest_labels_for_search_only": "L-005: examples | L-008: Isloading and when there is no data and no fetching | L-007: enabled",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-014",
@@ -354,12 +347,12 @@
       "width": "934",
       "height": "364",
       "nearest_labels_for_search_only": "L-006: fund | L-011: throwing/swallowing errors | L-004: statuses",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-017",
@@ -373,12 +366,12 @@
       "width": "686",
       "height": "377",
       "nearest_labels_for_search_only": "L-006: fund | L-012: keys | L-015: so when returning usequey we get like a query but dor our specific resource",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-018",
@@ -392,12 +385,12 @@
       "width": "550",
       "height": "352",
       "nearest_labels_for_search_only": "L-011: throwing/swallowing errors | L-008: Isloading and when there is no data and no fetching | L-005: examples",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-019",
@@ -430,12 +423,12 @@
       "width": "552",
       "height": "244",
       "nearest_labels_for_search_only": "L-006: fund | L-011: throwing/swallowing errors | L-015: so when returning usequey we get like a query but dor our specific resource",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-021",
@@ -449,12 +442,12 @@
       "width": "628",
       "height": "153",
       "nearest_labels_for_search_only": "L-006: fund | L-012: keys | L-015: so when returning usequey we get like a query but dor our specific resource",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-022",
@@ -468,12 +461,12 @@
       "width": "689",
       "height": "169",
       "nearest_labels_for_search_only": "L-008: Isloading and when there is no data and no fetching | L-005: examples | L-009: conditional queries",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-023",
@@ -487,12 +480,12 @@
       "width": "919",
       "height": "449",
       "nearest_labels_for_search_only": "L-011: throwing/swallowing errors | L-008: Isloading and when there is no data and no fetching | L-005: examples",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-024",
@@ -506,12 +499,12 @@
       "width": "761",
       "height": "464",
       "nearest_labels_for_search_only": "L-011: throwing/swallowing errors | L-015: so when returning usequey we get like a query but dor our specific resource | L-006: fund",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-025",
@@ -525,12 +518,12 @@
       "width": "735",
       "height": "482",
       "nearest_labels_for_search_only": "L-015: so when returning usequey we get like a query but dor our specific resource | L-006: fund | L-012: keys",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-026",
@@ -544,12 +537,12 @@
       "width": "865",
       "height": "482",
       "nearest_labels_for_search_only": "L-008: Isloading and when there is no data and no fetching | L-013: dont try to interpret disabled quey state in ui | L-009: conditional queries",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-027",
@@ -563,12 +556,12 @@
       "width": "922",
       "height": "427",
       "nearest_labels_for_search_only": "L-009: conditional queries | L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount... | L-007: enabled",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-028",
@@ -620,12 +613,12 @@
       "width": "408",
       "height": "201",
       "nearest_labels_for_search_only": "L-011: throwing/swallowing errors | L-008: Isloading and when there is no data and no fetching | L-015: so when returning usequey we get like a query but dor our specific resource",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-031",
@@ -658,12 +651,12 @@
       "width": "930",
       "height": "285",
       "nearest_labels_for_search_only": "L-013: dont try to interpret disabled quey state in ui | L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount... | L-008: Isloading and when there is no data and no fetching",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-033",
@@ -677,12 +670,12 @@
       "width": "914",
       "height": "348",
       "nearest_labels_for_search_only": "L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount... | L-013: dont try to interpret disabled quey state in ui | L-009: conditional queries",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-034",
@@ -696,12 +689,12 @@
       "width": "924",
       "height": "462",
       "nearest_labels_for_search_only": "L-015: so when returning usequey we get like a query but dor our specific resource | L-011: throwing/swallowing errors | L-017: manual refetch and using state to make new queries on that state change for a new key",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-035",
@@ -734,12 +727,12 @@
       "width": "865",
       "height": "482",
       "nearest_labels_for_search_only": "L-011: throwing/swallowing errors | L-015: so when returning usequey we get like a query but dor our specific resource | L-008: Isloading and when there is no data and no fetching",
-      "coverage_status": "r02a-usequery-state-error-core-candidate",
+      "coverage_status": "processed-in-r02a-v001",
       "current_region_decision": "R02A",
-      "decision_is_final": "no-r02-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r02a",
-      "decision_basis": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics.",
-      "review_notes": "Candidate for R02A: useQuery status/fetchStatus/isPending/isLoading/isFetching, query cache basics, queryFn Promise/error basics."
+      "decision_is_final": "yes-for-r02a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02a-v001",
+      "decision_basis": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core.",
+      "review_notes": "Included in R02A v001 after local boundary review: useQuery state/status/error/cache core."
     },
     {
       "source_id": "S-037",
@@ -753,12 +746,12 @@
       "width": "926",
       "height": "307",
       "nearest_labels_for_search_only": "L-013: dont try to interpret disabled quey state in ui | L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount... | L-008: Isloading and when there is no data and no fetching",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-038",
@@ -791,12 +784,12 @@
       "width": "888",
       "height": "464",
       "nearest_labels_for_search_only": "L-012: keys | L-015: so when returning usequey we get like a query but dor our specific resource | L-017: manual refetch and using state to make new queries on that state change for a new key",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-040",
@@ -810,12 +803,12 @@
       "width": "944",
       "height": "333",
       "nearest_labels_for_search_only": "L-015: so when returning usequey we get like a query but dor our specific resource | L-017: manual refetch and using state to make new queries on that state change for a new key | L-011: throwing/swallowing errors",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-041",
@@ -848,12 +841,12 @@
       "width": "483",
       "height": "482",
       "nearest_labels_for_search_only": "L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount... | L-013: dont try to interpret disabled quey state in ui | L-020: RETRY",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-043",
@@ -867,12 +860,12 @@
       "width": "856",
       "height": "259",
       "nearest_labels_for_search_only": "L-011: throwing/swallowing errors | L-017: manual refetch and using state to make new queries on that state change for a new key | L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-044",
@@ -905,12 +898,12 @@
       "width": "918",
       "height": "318",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-012: keys",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-046",
@@ -943,12 +936,12 @@
       "width": "753",
       "height": "482",
       "nearest_labels_for_search_only": "L-020: RETRY | L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount... | L-013: dont try to interpret disabled quey state in ui",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-048",
@@ -962,12 +955,12 @@
       "width": "906",
       "height": "246",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-012: keys",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-049",
@@ -1000,12 +993,12 @@
       "width": "915",
       "height": "375",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-011: throwing/swallowing errors",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-051",
@@ -1019,12 +1012,12 @@
       "width": "925",
       "height": "482",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-011: throwing/swallowing errors | L-020: RETRY",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-052",
@@ -1038,12 +1031,12 @@
       "width": "967",
       "height": "287",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-012: keys",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-053",
@@ -1076,12 +1069,12 @@
       "width": "935",
       "height": "333",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-011: throwing/swallowing errors",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-055",
@@ -1114,12 +1107,12 @@
       "width": "762",
       "height": "391",
       "nearest_labels_for_search_only": "L-020: RETRY | L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount... | L-013: dont try to interpret disabled quey state in ui",
-      "coverage_status": "r02b-enabled-disabled-conditional-ui-candidate",
+      "coverage_status": "reserved-for-r02b",
       "current_region_decision": "R02B",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02b-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02b",
-      "decision_basis": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state.",
-      "review_notes": "Candidate for R02B: enabled/disabled queries, conditional rendering, no-input UI state, disabled query state."
+      "decision_basis": "Reserved from R02A for R02B enabled/disabled/conditional UI.",
+      "review_notes": "Reserved from R02A for R02B enabled/disabled/conditional UI."
     },
     {
       "source_id": "S-057",
@@ -1133,12 +1126,12 @@
       "width": "899",
       "height": "365",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-020: RETRY | L-011: throwing/swallowing errors",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-058",
@@ -1209,12 +1202,12 @@
       "width": "460",
       "height": "301",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-020: RETRY | L-011: throwing/swallowing errors",
-      "coverage_status": "r02c-query-keys-manual-refetch-declarative-candidate",
+      "coverage_status": "reserved-for-r02c",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-r02-boundary-review-only",
+      "decision_is_final": "no-until-r02c-boundary-review",
       "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects.",
-      "review_notes": "Candidate for R02C: query keys, manual refetch, declarative key dependencies, key arrays/objects."
+      "decision_basis": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Reserved from R02A for R02C query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-062",
@@ -1228,12 +1221,12 @@
       "width": "876",
       "height": "310",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-020: RETRY | L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount...",
-      "coverage_status": "checked-r02-formal-overlap-reserved-for-r04",
+      "coverage_status": "reserved-for-r04-from-r02",
       "current_region_decision": "R04",
       "decision_is_final": "no-until-r04-boundary-review",
       "must_recheck_before_region_close": "yes-for-r04",
-      "decision_basis": "Formal R02 coordinate candidate but semantically staleness/static staleTime; reserve for R04 boundary review, not R02 transcript.",
-      "review_notes": "Formal R02 coordinate candidate but semantically staleness/static staleTime; reserve for R04 boundary review, not R02 transcript."
+      "decision_basis": "R02 formal overlap reserved for R04 staleness/static staleTime review.",
+      "review_notes": "R02 formal overlap reserved for R04 staleness/static staleTime review."
     },
     {
       "source_id": "S-063",

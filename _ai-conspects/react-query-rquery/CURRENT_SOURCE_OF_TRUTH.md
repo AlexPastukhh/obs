@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-01 22:54:07 UTC
+Generated: 2026-06-01 23:21:52 UTC
 
 ## Current policy
 
@@ -41,17 +41,18 @@ R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 
 ```text
 R02 boundary review started.
-Next transcript pass: R02A useQuery state / status / error / cache core.
+R02A v001: useQuery state / status / error / cache core transcript completed.
+Next transcript pass: R02B enabled / disabled / conditional UI.
 ```
 
 ## R02 split status
 
 ```text
 R02 formal candidate count: 36
-R02A candidates: 15
-R02B candidates: 9
-R02C candidates: 11
+R02A processed: 15
+R02B pending: 9
+R02C pending: 11
 R04 overlap reserved: 1
 ```
 
-R02 is not completed yet. The next step is R02A transcript with local boundary review.
+R02 is not completed yet. The next step is R02B transcript with local boundary review.

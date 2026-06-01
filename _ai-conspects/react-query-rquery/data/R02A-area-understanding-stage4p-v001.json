@@ -1,0 +1,41 @@
+{
+  "region_id": "R02A",
+  "region_name": "useQuery state / status / error / cache core",
+  "stage": "4p-v001",
+  "generated": "2026-06-01 23:21:52 UTC",
+  "what_area_is_about": [
+    "core QueryClient setup and QueryClientProvider",
+    "what useQuery does: cache lookup, queryFn execution, subscription, rerendering",
+    "query cache fundamentals and queryKey identity",
+    "status vs fetchStatus, isPending/isLoading/isFetching",
+    "safe rendering when data may be undefined",
+    "custom query hooks and queryFn Promise/error behavior",
+    "do not swallow errors inside queryFn"
+  ],
+  "key_ideas": [
+    "Create QueryClient outside render scope so the cache stays stable.",
+    "QueryClientProvider injects the client into the React tree via context.",
+    "useQuery looks up cache by queryKey, runs queryFn when needed, subscribes to changes, and rerenders on relevant changes.",
+    "queryKey must uniquely identify the resource; queryFn must return a Promise.",
+    "status describes result/data availability: pending, success, error.",
+    "fetchStatus describes whether a request is currently running: fetching, idle, paused.",
+    "isLoading is isPending && isFetching; pending does not always mean actively loading.",
+    "A query can have data, be stale, and be fetching at the same time.",
+    "Never assume data exists on first render; guard with pending/error states or optional access.",
+    "Custom hooks keep query details and error handling out of components.",
+    "Throwing in async query functions is good because React Query sees a rejected Promise.",
+    "Swallowing errors and returning fallback data hides real failures from React Query."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after R02 boundary review and local R02A check",
+    "limitations": [
+      "S-022 and S-030 have cropped top continuation, but visible statements are readable.",
+      "S-036 has top continuation and bottom UI overlay, but the visible warning and bad code example are readable.",
+      "R02B/R02C are intentionally pending and not covered by this transcript."
+    ],
+    "confidence_summary": "High for R02A source text and boundary; R02B/R02C remain intentionally pending."
+  }
+}

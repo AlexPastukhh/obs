@@ -1,0 +1,37 @@
+source_id,decision,candidate_type,reason
+S-008,included-in-R02A-v001,r02a-status-fetchstatus-core,status vs fetchStatus core distinction
+S-011,included-in-R02A-v001,r02a-queryclient-core-setup,Create one QueryClient outside render scope
+S-012,included-in-R02A-v001,r02a-isloading-specificity,isLoading is more specific than pending
+S-016,included-in-R02A-v001,r02a-queryclientprovider,QueryClientProvider gives the client to the component tree
+S-017,included-in-R02A-v001,r02a-query-cache-fundamentals,Query cache identified by key
+S-018,included-in-R02A-v001,r02a-isfetching-and-pending-vs-loading,isFetching and isPending vs isLoading mental model
+S-020,included-in-R02A-v001,r02a-what-usequery-does,What useQuery does
+S-021,included-in-R02A-v001,r02a-two-query-rules,"Two core rules: queryKey identifies, queryFn returns Promise"
+S-022,included-in-R02A-v001,r02a-isloading-formula,isLoading formula in modern TanStack Query
+S-023,included-in-R02A-v001,r02a-isstale-isfetching-rich-ui,isStale and isFetching for richer UI
+S-024,included-in-R02A-v001,r02a-safe-rendering-correct,Safe rendering pattern with isPending/isError before data.map
+S-025,included-in-R02A-v001,r02a-safe-rendering-wrong,Unsafe rendering when assuming data exists on first render
+S-030,included-in-R02A-v001,r02a-query-data-stale-fetching-same-time,"A query can have data, be stale, and be fetching at the same time"
+S-034,included-in-R02A-v001,r02a-custom-hooks-for-queries,Custom hooks for queries and throwing errors
+S-036,included-in-R02A-v001,r02a-do-not-swallow-errors,Do not swallow errors in queryFn
+S-013,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-026,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-027,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-032,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-033,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-037,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-042,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-047,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-056,reserved-for-R02B,r02b-reserved,"Enabled/disabled/conditional UI pass, not R02A."
+S-039,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-040,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-043,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-045,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-048,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-050,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-051,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-052,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-054,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-057,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-061,reserved-for-R02C,r02c-reserved,"Query keys/manual refetch/declarative dependencies pass, not R02A."
+S-062,reserved-for-R04,r04-overlap,"Static staleTime / invalidation frontier, not R02A."
