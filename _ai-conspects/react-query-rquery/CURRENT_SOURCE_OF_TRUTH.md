@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-01 22:36:10 UTC
+Generated: 2026-06-01 22:41:48 UTC
 
 ## Current policy
 
@@ -40,13 +40,13 @@ R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 R08 boundary review: started
 R08A v001: QueryClient / QueryFilters / core methods transcript completed
 R08B v001: refetch / cancel options / cache helpers transcript completed
-R08C: reserved / pending
+R08C v001: QueryClient outside React / shape discipline transcript completed
 ```
 
 ## R08 caution
 
 ```text
-R08 has 51 coordinate candidates and is intentionally split.
-R08A and R08B do not complete all R08.
-Each later R08 transcript pass must still recheck local candidates visually and semantically.
+R08 has 51 coordinate candidates and was intentionally split.
+R08A/R08B/R08C now cover the planned R08 split.
+Next step is R08 closure audit against the full candidate checklist.
 ```

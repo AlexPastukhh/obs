@@ -1,0 +1,40 @@
+{
+  "region_id": "R08C",
+  "region_name": "QueryClient outside React / setQueriesData shape discipline",
+  "stage": "4m-v001",
+  "generated": "2026-06-01 22:41:48 UTC",
+  "what_area_is_about": [
+    "creating one shared QueryClient instance and using it both inside and outside React",
+    "why external code must use the same QueryClient instance as the React app",
+    "setQueriesData updater semantics: oldData is per matching cache entry",
+    "why oldData shape comes from query design, not automatic runtime inference",
+    "risks of bulk-updating mixed-shaped query keys",
+    "query-key discipline, key factories, and safer invalidation when shapes differ"
+  ],
+  "key_ideas": [
+    "Create one shared QueryClient file and pass that instance to QueryClientProvider.",
+    "Outside React, import and use the same QueryClient instance; do not create a second client accidentally.",
+    "setQueriesData runs the updater once per matching cached query entry.",
+    "For each matching query, oldData is that one entry's cached data.",
+    "TanStack Query does not validate runtime data shape from query keys.",
+    "Generic typing helps TypeScript model the shape, but runtime still trusts the app.",
+    "setQueriesData is safe only when all matching queries share a compatible data shape.",
+    "Mixed shapes under the same prefix can cause wrong type assumptions, runtime errors, or corrupted cache data.",
+    "Use clearer keys and key factories to separate list data from count/stats/summary data.",
+    "Use getQueriesData to inspect matches before bulk updates when unsure.",
+    "Prefer setQueryData for exact known entries and invalidateQueries for the rest when shapes differ."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after local R08C review",
+    "limitations": [
+      "S-127 continues into S-141.",
+      "S-133 bottom continuation is cropped, but the core per-entry updater semantics are visible.",
+      "S-170/S-179 have slight top continuation from the previous card, but their main content is readable.",
+      "S-187 top continuation is cropped, but points 3 and 4 are readable."
+    ],
+    "confidence_summary": "High for R08C source text and boundary. R08A/R08B/R08C now cover the planned R08 split; next step should be closure audit."
+  }
+}

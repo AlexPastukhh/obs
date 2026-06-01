@@ -1,6 +1,6 @@
-# Apply archive: React Query R08B transcript v001
+# Apply archive: React Query R08C transcript v001
 
-Archive type: stage-4l verified region transcript.
+Archive type: stage-4m verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4l-r08b-refetch-cancel-cache-helpers-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4m-r08c-outside-react-shape-discipline-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4l-r08b-refetch-ca
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4l-r08b-refetch-cancel-cache-helpers-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4l-r08b-refetch-cancel-cache-helpers.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4m-r08c-outside-react-shape-discipline-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4m-r08c-outside-react-shape-discipline.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query R08B cache helpers transcript"
+git commit -m "Add React Query R08C shape discipline transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive completes only R08B. It intentionally leaves R08C pending.
+This archive completes R08C and the planned R08 split. Next step should be R08 closure audit.

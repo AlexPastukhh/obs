@@ -1,9 +1,40 @@
 {
-  "generated": "2026-06-01 22:36:10 UTC",
-  "ledger_version": "v2-updated-by-r08b-transcript-stage4l-v001",
-  "critical_rule": "The ledger is still not source of truth; R08B decisions were made after local visual/semantic boundary review.",
-  "r08b_v001_delta": {
+  "generated": "2026-06-01 22:41:48 UTC",
+  "ledger_version": "v2-updated-by-r08c-transcript-stage4m-v001",
+  "critical_rule": "The ledger is still not source of truth; R08C decisions were made after local visual/semantic boundary review.",
+  "r08c_v001_delta": {
     "processed_sources": [
+      "S-127",
+      "S-133",
+      "S-135",
+      "S-141",
+      "S-149",
+      "S-155",
+      "S-160",
+      "S-170",
+      "S-179",
+      "S-187"
+    ],
+    "already_completed_R08A": [
+      "S-123",
+      "S-124",
+      "S-125",
+      "S-138",
+      "S-139",
+      "S-144",
+      "S-151",
+      "S-154",
+      "S-158",
+      "S-161",
+      "S-164",
+      "S-168",
+      "S-173",
+      "S-177",
+      "S-183",
+      "S-185",
+      "S-206"
+    ],
+    "already_completed_R08B": [
       "S-129",
       "S-134",
       "S-143",
@@ -28,42 +59,11 @@
       "S-219",
       "S-221"
     ],
-    "already_completed_R08A": [
-      "S-123",
-      "S-124",
-      "S-125",
-      "S-138",
-      "S-139",
-      "S-144",
-      "S-151",
-      "S-154",
-      "S-158",
-      "S-161",
-      "S-164",
-      "S-168",
-      "S-173",
-      "S-177",
-      "S-183",
-      "S-185",
-      "S-206"
-    ],
-    "reserved_for_r08c": [
-      "S-127",
-      "S-133",
-      "S-135",
-      "S-141",
-      "S-149",
-      "S-155",
-      "S-160",
-      "S-170",
-      "S-179",
-      "S-187"
-    ],
     "excluded_overlap_already_r07": [
       "S-184",
       "S-186"
     ],
-    "stage4j_delta": "S-194 and S-221 moved from R08D/or-neighbor reservation into R08B after local semantic review."
+    "next_step": "R08 closure audit against R08-boundary-review-stage4j-v001"
   },
   "rows": [
     {
@@ -2472,12 +2472,12 @@
       "width": "895",
       "height": "437",
       "nearest_labels_for_search_only": "L-042: QC OUTSIDE REACT | L-040: setqueriesdata olddatashape | L-050: may try to design some abstractions that will ensure that some keys have some specific form",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-128",
@@ -2586,12 +2586,12 @@
       "width": "945",
       "height": "445",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-134",
@@ -2624,12 +2624,12 @@
       "width": "662",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-136",
@@ -2738,12 +2738,12 @@
       "width": "734",
       "height": "482",
       "nearest_labels_for_search_only": "L-042: QC OUTSIDE REACT | L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-142",
@@ -2890,12 +2890,12 @@
       "width": "536",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-150",
@@ -3004,12 +3004,12 @@
       "width": "893",
       "height": "464",
       "nearest_labels_for_search_only": "L-042: QC OUTSIDE REACT | L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-156",
@@ -3099,12 +3099,12 @@
       "width": "703",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-161",
@@ -3289,12 +3289,12 @@
       "width": "832",
       "height": "383",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-171",
@@ -3460,12 +3460,12 @@
       "width": "816",
       "height": "463",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-042: QC OUTSIDE REACT",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-180",
@@ -3560,7 +3560,7 @@
       "decision_is_final": "yes-for-r07-v004-boundary",
       "must_recheck_before_region_close": "no-for-r07-v004",
       "decision_basis": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation.",
-      "review_notes": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation. | R08 boundary review note: coordinate overlap checked; not included in R08 because already R07. | R08A exclusion: already processed in R07 v004, not R08A. | R08B exclusion: already processed in R07 v004, not R08B."
+      "review_notes": "Included in R07 v004 after combined correction; imperative fetchQuery/ensureQueryData continuation. | R08 boundary review note: coordinate overlap checked; not included in R08 because already R07. | R08A exclusion: already processed in R07 v004, not R08A. | R08B exclusion: already processed in R07 v004, not R08B. | R08C exclusion: already processed in R07 v004, not R08C."
     },
     {
       "source_id": "S-185",
@@ -3598,7 +3598,7 @@
       "decision_is_final": "yes-for-r07-v004-boundary",
       "must_recheck_before_region_close": "no-for-r07-v004",
       "decision_basis": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference.",
-      "review_notes": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference. | R08A exclusion: already processed in R07 v004, not R08A. | R08B exclusion: already processed in R07 v004, not R08B."
+      "review_notes": "Included in R07 v004 after combined correction; fetchQuery vs ensureQueryData core difference. | R08A exclusion: already processed in R07 v004, not R08A. | R08B exclusion: already processed in R07 v004, not R08B. | R08C exclusion: already processed in R07 v004, not R08C."
     },
     {
       "source_id": "S-187",
@@ -3612,12 +3612,12 @@
       "width": "787",
       "height": "317",
       "nearest_labels_for_search_only": "L-050: may try to design some abstractions that will ensure that some keys have some specific form | L-040: setqueriesdata olddatashape | L-057: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "reserved-for-r08c",
+      "coverage_status": "processed-in-r08c-v001",
       "current_region_decision": "R08C",
-      "decision_is_final": "no-until-r08c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r08c",
-      "decision_basis": "Reserved from R08B for R08C QueryClient outside React / shape discipline.",
-      "review_notes": "Reserved from R08B for R08C QueryClient outside React / shape discipline."
+      "decision_is_final": "yes-for-r08c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r08c-v001",
+      "decision_basis": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline.",
+      "review_notes": "Included in R08C v001 after local boundary review: QueryClient outside React / setQueriesData shape discipline."
     },
     {
       "source_id": "S-188",

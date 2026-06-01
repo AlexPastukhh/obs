@@ -1,51 +1,51 @@
-# MANIFEST - React Query R08B Transcript v001
+# MANIFEST - React Query R08C Transcript v001
 
-Archive type: **stage-4l verified region transcript**  
+Archive type: **stage-4m verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 22:36:10 UTC
+Generated: 2026-06-01 22:41:48 UTC
 
 ## Direction check
 
 Goal:
-Continue R08 after R08A without losing images.
+Complete the planned R08 sub-passes.
 
 Done:
-R08A completed QueryClient / QueryFilters / core methods.
+R08A and R08B completed.
 
 This step:
-Add R08B transcript for refetch / cancel options / cache helpers.
+Add R08C transcript for QueryClient outside React and `setQueriesData` shape discipline.
 
 Why:
-R08B is the next coherent sub-block in the QueryClient methods area.
+R08C is the last planned R08 sub-block from the boundary split.
 
 Next:
-1. review R08B diff;
+1. review R08C diff;
 2. commit;
-3. process R08C.
+3. run R08 closure audit.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/regions/R08B-refetch-cancel-options-cache-helpers.md
-_ai-conspects/react-query-rquery/data/R08B-sources-stage4l-v001.csv
-_ai-conspects/react-query-rquery/data/R08B-sources-stage4l-v001.json
-_ai-conspects/react-query-rquery/data/R08B-boundary-review-stage4l-v001.csv
-_ai-conspects/react-query-rquery/data/R08B-boundary-review-stage4l-v001.json
-_ai-conspects/react-query-rquery/data/R08B-area-understanding-stage4l-v001.json
+_ai-conspects/react-query-rquery/regions/R08C-queryclient-outside-react-shape-discipline.md
+_ai-conspects/react-query-rquery/data/R08C-sources-stage4m-v001.csv
+_ai-conspects/react-query-rquery/data/R08C-sources-stage4m-v001.json
+_ai-conspects/react-query-rquery/data/R08C-boundary-review-stage4m-v001.csv
+_ai-conspects/react-query-rquery/data/R08C-boundary-review-stage4m-v001.json
+_ai-conspects/react-query-rquery/data/R08C-area-understanding-stage4m-v001.json
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
-_ai-conspects/react-query-rquery/audit-assets/R08B-refetch-cancel-options-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R08B-source-images/*.png
-_ai-conspects/react-query-rquery/24-stage4l-r08b-refetch-cancel-cache-helpers-transcript.md
+_ai-conspects/react-query-rquery/audit-assets/R08C-qc-outside-react-shapes-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R08C-source-images/*.png
+_ai-conspects/react-query-rquery/25-stage4m-r08c-outside-react-shape-discipline-transcript.md
 _ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## R08B status
+## R08C status
 
 ```text
-Included sources: 23
-R08C pending: 10
-R08D candidates S-194/S-221 were merged into R08B after local semantic review
+Included sources: 10
+R08 planned split status: R08A/R08B/R08C completed
+Next: R08 closure audit
 ```
