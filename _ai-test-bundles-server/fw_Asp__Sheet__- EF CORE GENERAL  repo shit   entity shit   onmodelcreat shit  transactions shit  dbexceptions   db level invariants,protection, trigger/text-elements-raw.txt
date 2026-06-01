@@ -1,0 +1,415 @@
+﻿efcore can materialise objecteven if all of its columns are null
+the fact that you have ? for  your fullname  in client can be not enough 
+so its better to do the shit excplicitly  ^c0kjjFkq
+
+hascheck constraint ^4gF6J8uJ
+
+navigation ^OxyaPTDJ
+
+owned isrequired ^v67LJYwZ
+
+need to add somewhere, to some general dbcontext mapping sheet mb ^0WpCJGfm
+
+shadow prop usage ^SXfHzoG7
+
+reduce cpu and everything for reads ^S0xpbk7p
+
+Attach ^VTYOQ7Ui
+
+how to save yourself 
+from sit when someone make 2 parallel requests
+to create acc with same email  ^gVEFcpkI
+
+better to have isrequired false too ^TEtEzY36
+
+complex types ^W52zn9Il
+
+nullable relationships ^Jx36p6kt
+
+what to avoid in ctors,
+would ef use parameterless ctor by default? ^K9K0J6sJ
+
+ctors wont run when ef materializes entities? ^z4GnbSIA
+
+1 if not default id - marks as unchanged 
+2 if need to modify - attach then modify or mark modified excplicitly
+3 if adding new entity with detached in some prop - need to attach that detached 
+to avoid adding existing but detached 
+4 when updating entity with detached - detached will be modified need to override savexchanges or 
+config so model  ^lUmZsTqo
+
+identity map pattern ^BfunBqZt
+
+so in writes we potentially can do some shit when we fetch 
+something while having something that we have fetched already and 
+mb have changed?
+
+dont think so, sounds like shit
+
+
+load and find more about explicitness and debugging
+
+or when you allow partial loading in writes, chat gpt forces this shit actively
+
+can i do this for projections in reads? hard to imagine
+
+it more just to know that if you have some nested/ multiple methods
+that for some reason can fetch instead of continue to modify that was already
+fetched - then you can use find everywhere ^YlFQcxkI
+
+loadasyn + autoinclude ^rhyurbOi
+
+concurrency in db  commands
+isrowversion isconcurrencytoken ^ooM3u4HQ
+
+dbcontext about transactions strategies ^w3jMSOTi
+
+so i have some scenarios when i may need some 
+transaction or when i may think that i need them
+
+1 when i query something from db, look at it and chose to change it
+but at the same time i may have another request that 
+changes the same thing
+
+dont need manual transaction, can configure rowversion or 
+isconcurencytoken and ef will throw exceptions
+
+2 when i have multiple queries to get data 
+
+may need transaction with isolationlevel snapshot
+
+3 when i have some possible nesting of methods that mutate 
+queried entity and each may call savechanges
+one savechanges succeds another fails and we get inconsistency
+
+need to wrap everything in one transaction with any isolatoin level but usually with default
+
+4 when i have some database.executesql  or other like dbset.executeupdate (that is
+linq based but everything else like executesql) - they all dont care about savechanges 
+so if i want them to be in a traqnsaction i need to create transaction
+
+Retries
+
+5 if i have some buisness rule with automatic concurrency conflict resolution
+i need to catch exception for concurrency and then get entry, load db data 
+and try again, but only for automatic shit + need to have right isolation level so i will be 
+able to inspect db changes from that isolation 
+
+6 enableautomaticretryonfailure - retry the whole delegate,isolation level doesnt matter
+need to wrap with createexecutionstrat executeasync or executeintransactionasync for 
+veryfies that db has been changed when we lost conn and cant say if transaction was succ of not ^zPBLIRBY
+
+about transactions isolation level for atomicity ^767Jqpov
+
+some onmodel creat hshit ^fNPUYpng
+
+so rep shit ^P5nXf5Nx
+
+entities shit ^YWI9XZ0W
+
+transactions ^goV10KNR
+
+use asnotrackingwithidentityresolution for ef core reads by default? ^nIeGtS1h
+
+when useful ^07T9ZtwP
+
+asnotrackkingwithidentityresolution ^9bm9GDrb
+
+can do partial inits only 
+for projections for read, 
+write need encapsulation, 
+and invariants
+
+also cant return the domain model 
+with partial init even for reads, because
+if will lie about yourself being valid domain model
+with all data present ^M64cxYDu
+
+partial init antipatter ^pQvyTUwT
+
+can we have exhaust check? ^wX0JJeqW
+
+db exceptions
+concur ^TTZ4n8gw
+
+retry exception ^28I2qJHC
+
+pos concurrency automatic,
+not user view driven 
+retry logic ^MnL5l3L1
+
+have  entries in 
+dbupdateconcurex
+
+can getdatabasevalues
+with etag
+
+and then update how you needed ^B44QZ4g3
+
+!!!! ^MVOgVvwC
+
+!!!! ^cUQLEwfJ
+
+!!!! ^R9JJU8NQ
+
+Executeasync ^HTjTqocs
+
+executeasync without transaction
+when just need to retry with some app
+logic like get current time ^SKXSZmHR
+
+!!! executeasync without transaction is possible when we dont have multiple 
+writes and the state that we need to rollback ^ds6uhh4b
+
+IF THERE IS NO LOGIC
+AFTER WE CATCH AND ROLLBACK
+
+SO WE DONT STRICTLY NEED
+MANUAL ROLLBACK
+
+BECAUSE WITH USING
+
+THERE WILL BE A ROLLBACK
+ON DISPOSAL ^JKsOyTCy
+
+ABOUT ROLLBACKS ^snSPmt6j
+
+EXECUTEINTRANSACTIONASYNC ^WfVKEXKS
+
+EXECUTEASYNC
+WITH NEW CONTEXT
+PER RETRY PATTERN ^FnxnOuIX
+
+PLAIN TRANSACTION WITH 
+BEGINTRANSACTION ^H2w9u5DB
+
+CAN WE JUST WRAP THE SAVECHANGES(FALSE) AND RETRY THE PROBLEMATIC 
+PARTS WITHOUT CLEARING MODIFIED STATES?
+
+SO WHEN WE CANT DO EVERYTHING OUTSIDE OF RETRY, 
+WE CANT JUST USE SAVECHANGES(FALSE), WE NEED SOME KIND OF
+WRAPPING THEE WHOLE UNIT OF WORK ^8gFVLT0p
+
+PROBLEMS WITH REUSING SAME DBCONTEXT ^7gzrEDF0
+
+IMPLEMENTATION ^vxUhp2L1
+
+DO I NEED TO DISPOSE
+EXECUTION STRATEGY? ^ZpYlyxjE
+
+transaction patterns ^vZeimrf6
+
+normal executeasync will retry when it see ambiguous outcome
+so if operation is not idempotent it may be dangerous ^1RNd7QFT
+
+reading your own uncommited changes ^dRMdYpma
+
+db/sql shit ^5SciPPvL
+
+when we have grandchild of only one collection of parent
+we will get rows like this, so there wont be null because 
+another child doesnt have collection,
+ ^dVcZasl8
+
+how row looks like when some
+collection items have their own collection ^x2mWzr17
+
+formula to compute
+rows count ^vGpnlwWR
+
+ABOUT CPU/MEMORY USAGE 
+FROM TRAKING ^GEbiwZ0T
+
+MEMORY OVERHEAD WITH IDENTITY RESOL
+COMPARED WITH ASNOTRACKING AND TRACKING ^6k9ct6Qu
+
+FULL ORIG VALUES SAVING
+VS JUST IDENTITY ^OujJJ150
+
+db invariant handling
+strategies ^mbY8FD54
+
+isolation level like
+serializable can help sometimes
+too, but like some addition and
+desing choice not replacement for
+db constraints ^mp9qwpEY
+
+when both trans need to have isolation 
+serializable 
+to keep invariants ^QTJvaQpL
+
+!!! ^UhLq8GEV
+
+!!! ^O0yvNIzT
+
+primary key ^5OXpuUZe
+
+unique index ^qqPq5nYT
+
+alternate key ^aDZAr0VF
+
+foreign key ^VbsSPGfA
+
+not null ^wHAxId89
+
+check constraint ^pvZpJX7o
+
+indexed view ^PXN5cPU0
+
+custom db error from stored proc ^CRMPq4qQ
+
+trigger ^SaPzwJQN
+
+filtered unique index ^8rO4KvZb
+
+unique index on comp column ^NfBdGRLa
+
+how to know which
+check constraint failed ^KLPxdsTS
+
+is custom dberr limited to storproc ^o1m3ZGq5
+
+native declarative
+constraints ^evHn08vC
+
+about some transaction/isolation
+/repo tweaks for keeping invariants ^ErDRDrt1
+
+transaction + just returning
+error result on some db level 
+error codes ^07LNrp1X
+
+transaction + handling db level
+error codes with savepoints ^xkpNz6ac
+
+can know which constraint has failed ^kChVrcDh
+
+transaction rules + db 
+level defense impl examples ^F2vrNWou
+
+examples of handling db level shit ^2KG3DGlc
+
+about code of sqlserver that are retryable by 
+default or not ^DIrmVOiC
+
+there are a lot of transient error codes and 
+if you want someting specific- you should i this  ^jDGTRAig
+
+!!!! ^kJfAhs8c
+
+when you write in snapshot transaction
+and the data that you ve read was changed
+you will get exception with 3960 ^caSMTG1G
+
+so it can happen with 
+readcommitted(on example most likey it)
+and/or with serializable ^VoOjjjZK
+
+547 check constraint ^VE3Yo1aV
+
+547 foreign key ^cNUKUGr3
+
+cases with 547 ^BahApA5Z
+
+cases with 2601 ^e3gvGFNp
+
+cases with 2627 ^G2VsN5SY
+
+ef core/ code mapping
+547,2601, 2627 ^G0wMdCeS
+
+just like with primary key but with commposite key ^Lpun3ERM
+
+1205 transaction deadlock ^gY4h6ymI
+
+1222 transaction lock timeout ^t8UDEhFg
+
+3960 snapshot write,but 
+state is inconsistent ^NgSJ2jec
+
+-2 execution timeout ^1HuybwbB
+
+515 buisness failure, insert null
+into nonnullable ^z80crFxv
+
+different sql server error codes, what can do with each ^0but83Rw
+
+2601 and 2627
+buisness failures ^iUIN1MQT
+
+unique index
+ ^XirLcJBV
+
+primary key
+alternate key (unique constraint) ^EDrFU9ka
+
+547 buisness failure ^eKlPyeJh
+
+helper ^t0Khhl2X
+
+summary ^2bxkX3li
+
+do we have some specific db exception]
+for connection drop? ^dOAqKOcD
+
+we have exception types based on the actoin , not the type of problem
+like exception during update ^jBJGD30S
+
+alternate key sheet ^voYMUkTp
+
+coposite key sheet ^Ssojl8j4
+
+place to catch codes ^4zLmg8rV
+
+can i select from some random table
+ even if i query from customers dbset  ^M0HK4N0s
+
+!!! ^8xNa5gnr
+
+setting orig values 
+ef will detect changes based
+on the fact that 
+orig values are the values 
+in db 
+
+so if they are not changed
+then unmodified ^4E4xyiom
+
+remove  warnings
+dbset ^p8X3enaW
+
+why not just retry delegate because
+we accepted changes after save changes ^2efTcmxm
+
+view/indexed view ^R2ORR38T
+
+uniqueindex on computed column ^JNmmXd9Q
+
+handle invariants with triggers ^Id8gk16G
+
+want unique value for table after transformation ^3icXAydo
+
+not all comp columns 
+are indexable/persistable ^o3Bsenqh
+
+collation may already solve casing ^VSBSZs2j
+
+may need more buisness rules ^GRnmiUSL
+
+sql server solution + ef core config ^fD9KIPyN
+
+cant have overlapping 
+active bookings ^LTPcnjWk
+
+trigger is attached
+to table,runs on some 
+commands ^HbXhGbxA
+
+triggers are statement
+level callbacks, they run
+after statement has
+succeeded,after constr ^m0xgngWF
+
+iserted
+deleted ^v1mJKYWh

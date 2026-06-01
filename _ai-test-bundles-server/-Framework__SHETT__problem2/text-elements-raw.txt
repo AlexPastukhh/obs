@@ -1,0 +1,112 @@
+﻿recursion smell ^nG5oPYAC
+
+need : give true if there is all combinations
+of 1 and 0 of the length k as substring 
+of the inputted string ^zLiqEH8N
+
+bf 
+
+ok if k > string length = false ^xb7KeSYj
+
+problem : get all comb
+we build string 
+
+func(built,nextadd)
+if(built.length == k){
+    combs.add(built)
+}
+funcadd 0
+bt 
+funcadd 1
+
+ ^a0TBHnzc
+
+how to check? ^klP9YW79
+
+get all combs ^8GB9r2Tb
+
+11 10 01 00 ^GkjLAB5u
+
+sliding window?
+1 check all windows for presence of not finded combs?
+w: iterate whole input with sw, check each window for 
+each comb in not founded combs, discard founded combs
+
+2 process the input and put it 
+into hashtable with el length of k and check for all 
+not founded combs?  
+work: iterate whole input with s w, iterate combs and check for each 
+
+ ^LwJI4g9G
+
+need to find sit when we dont need to check ^H03lrfA1
+
+1  ^l50YZiGM
+
+01002 ^qutWnX5T
+
+010 100 002  ^LvvLdCHL
+
+hs400  10 400 no discard if not found ->false
+hs1000 400 max1000 no discard -> if not found false
+hs400 10 maxx5 with discard -> if found hs5remove
+hs1000 400 maxx1000 with discard v-> if found hs1000remove  ^r4L11WQ2
+
+00 01 11 10  ^77jyDkDh
+
+need to downgrade implementation to fucking ground suka
+Ask: what can cause any issue/resources being wasted?
+Can you get rid of it completely and leave just a number or count or anything? ^MEMRU5sP
+
+so here we can avoid 
+further processing  ^E3JeOobN
+
+pattern : if there is a situation when we can have all needed combinations 
+or their count and can collect distinct combinations in hashtable - we can just compare 
+numbers ^8EbPQs47
+
+could have come to this solution here ^pWeT7OoN
+
+what is inside of hashset ^fxiAH6w6
+
+WITH BITS ^MxEFCsuf
+
+SHIFT BY ONE TO << ^tuvYLu9K
+
+001 << 1
+010 ^4NxkOddl
+
+ADD BIT 
+010 | S[I] WHERE S[I]==1
+011 ^h3O79UA8
+
+1101 & 0111 (111)
+101 ^97ynKCZ8
+
+SO WE HAVE SLIDING WINDOW ^4ApRQbKa
+
+WE DO THIS BECAUSE WE HAVE ARRAY OF CHARS HERE (STRING) ^tW6hDFxK
+
+array of bools vs hashset
+to check occurencies ^e39ytTaa
+
+mask explaination
+how we can limit window ^Xqh89tH1
+
+need mask need -1 so we can add
+new bit and get needed length ^ElEwWXul
+
+classic convertion to int from char ^eZxQaaHp
+
+so when we need to keep 3 bits window
+
+we put 1 3 times and then we do -1
+so 111 will be 011
+
+and its true for every count of pushes
+
+
+with 4 1111 -1 = 0111 
+with 5 11111 -1 = 01111 ^CK240XLe
+
+1 << 0 by the way is 01 ^QEqkKBk6
