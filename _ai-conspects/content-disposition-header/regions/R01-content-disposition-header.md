@@ -1,88 +1,231 @@
-# R01 - Content Disposition Header
+# R01 - Content-Disposition Header
 
-File type: **source-preserving region transcript scaffold**  
-Status: `source-confirmed / transcript-pending-visual-verification`
+File type: **source-preserving AI-readable transcript**  
+Source: uploaded SVG `content disposition header.svg`  
+Status: `completed from visually read embedded screenshots`
 
 ## Direction check
 
 Goal:
-Create source-preserving AI-readable text for the `content disposition header` conspect.
+Convert the uploaded Excalidraw SVG into source-preserving text.
 
 Now:
-The raw bundle is confirmed and complete: 2/2 images copied, 0 problems.
+The SVG was parsed and its two embedded screenshots were visually read.
 
 This step:
-Create a transcript scaffold and inventory, without claiming unverified image text.
+Provide verified visible screenshot transcript, cleaned source notes, evidence table, question hooks, and reading-quality notes.
 
 Why:
-The conspect is tiny, so the next pass can replace this scaffold with a completed transcript after opening two screenshots.
+The SVG contains no standalone text labels; the screenshots are the primary knowledge source.
 
 Next:
-1. Visually open/read image 1.
-2. Visually open/read image 2.
-3. Fill transcript, cleaned notes, evidence table, and questions.
+1. Review the transcript against the source SVG.
+2. Correct any wording if a screenshot was read differently.
+3. Use the question hooks for repetition.
 
 ---
 
-## 0. Source files
+## 0.1 Area overview / key ideas / reading quality
 
-Source bundle:
+What the area is about overall:
+This small conspect explains the HTTP `Content-Disposition` response header and how it relates to download vs inline browser display, suggested filenames, non-ASCII filenames, and ASP.NET Core file responses.
 
-```text
-_ai-test-bundles-server/fw_Asp__Sheet__content disposition header/
-```
+Key ideas:
+- `Content-Disposition` tells the browser how to handle the response body.
+- `attachment` is used for a download prompt.
+- `inline` is used for browser display if supported.
+- `filename` suggests a file name.
+- `filename*` is shown as an encoding-safe form for non-ASCII names.
+- For file download endpoints, setting the header on the server is usually the standard approach.
+- In ASP.NET Core, returning `File(...)` with a download name usually sets an attachment-style `Content-Disposition`.
+- For preview-in-browser behavior, the conspect points to `inline` plus correct `Content-Type`.
 
-Source note:
+How well the AI perceived/understood the ideas:
+High. The conspect is small, has two large screenshots, and the visible text/code is readable.
 
-```text
-Canvases/new theory/fw_Asp/Sheet/content disposition header.md
-```
+How well the source was read:
+High for `CDH-S001`. High for visible text in `CDH-S002`.
 
-## 1. Excalidraw text / embedded files
+Known reading limitations:
+- The uploaded SVG has no standalone SVG text labels; all meaningful text is inside embedded screenshots.
+- `CDH-S002` is close to the bottom edge. The final visible bullet was transcribed, but any content beyond the screenshot boundary would not be visible.
+- No extra general HTTP knowledge was inserted into the source transcript.
 
-Visible raw text inventory from `text-elements-raw.txt` only lists embedded files:
+Confidence summary:
+- Layout confidence: high.
+- Visible screenshot transcript confidence: high.
+- Completeness confidence: medium-high because one screenshot has a tight bottom edge.
 
-```text
-e3310012f76f0c4edde6b476369865c404deff94: [[Pasted Image 20260307022622_317.png]]
-b426241c72be59de4e261598f93dbc7b4b48ec04: [[Pasted Image 20260307022624_686.png]]
-```
+---
 
-No standalone text labels were confirmed from `text-elements-raw.txt` in this pass.
+## 1. Source layout
 
-## 2. Screenshot inventory
-
-| Source ID | Image # | copied image | transcript status |
-|---|---:|---|---|
-| CDH-S001 | 1 | `images/001__e3310012f7__Pasted Image 20260307022622_317.png` | pending visual verification |
-| CDH-S002 | 2 | `images/002__b426241c72__Pasted Image 20260307022624_686.png` | pending visual verification |
-
-## 3. Source transcript
-
-```text
-Pending visual verification.
-```
-
-Do not fill this section from memory or general HTTP knowledge.
-
-## 4. Cleaned source notes
+SVG canvas:
 
 ```text
-Pending verified source transcript.
+viewBox="0 0 911.936059397163 1008.9339944345047"
 ```
 
-## 5. Minimal interpretation
+Standalone Excalidraw text elements:
 
 ```text
-Pending verified source transcript.
+None detected in the SVG.
 ```
 
-## 6. Evidence table
+Embedded screenshots:
 
-| Claim | Evidence | Source type | Confidence |
+| Source ID | Location | Size | Topic | Reading status |
+|---|---|---:|---|---|
+| CDH-S001 | top area, x=10, y=10 | 892x482 | what `Content-Disposition` is | visually verified |
+| CDH-S002 | lower area, x=38, y=517 | 797x482 | server-side use / ASP.NET Core `File(...)` | visually verified for visible text |
+
+The conspect is essentially a vertical two-screenshot note.
+
+---
+
+## 2. Source transcript
+
+### CDH-S001 - What is `Content-Disposition`?
+
+Metadata:
+
+```text
+status: visually-verified-from-uploaded-svg-embedded-png
+readability: high
+cut_off: no
+confidence: high
+```
+
+#### Verified visible text
+
+```text
+1) What is Content-Disposition?
+
+Content-Disposition is an HTTP response header that tells the browser how to handle the response body
+(show inline vs download) and what filename to suggest.
+
+Common values:
+
+- Download prompt
+
+Content-Disposition: attachment; filename="report.pdf"
+
+- Show in browser (if supported)
+
+Content-Disposition: inline; filename="report.pdf"
+
+There's also an encoding-safe form for non-ASCII filenames:
+
+Content-Disposition: attachment; filename*=UTF-8''r%C3%A9port.pdf
+```
+
+---
+
+### CDH-S002 - Should you set `Content-Disposition` on the server?
+
+Metadata:
+
+```text
+status: visually-verified-from-uploaded-svg-embedded-png
+readability: high
+cut_off: bottom-edge-tight / possible continuation not visible
+confidence: high-for-visible-text
+```
+
+#### Verified visible text
+
+```text
+3) Should you set Content-Disposition on the server?
+
+Usually yes, for file download endpoints. It's the standard way to:
+
+- force "download" behavior (attachment)
+- provide the filename consistently
+- support Pattern A and let Pattern B pick up the same filename
+
+ASP.NET Core: returning a File(...) result usually sets it for you if you pass a download name:
+
+return File(bytes, "application/pdf", "report.pdf");
+
+That produces a Content-Disposition: attachment; filename="report.pdf"-style header.
+
+If you want the browser to open it instead of download, you'd typically use inline (ASP.NET Core doesn't
+have a single flag on File() for inline; you can set the header yourself when you need that behavior).
+
+So:
+
+- download endpoint -> set Content-Disposition: attachment; filename=...
+- preview-in-browser endpoint -> inline (optional) + correct Content-Type
+```
+
+#### Verified visible code
+
+```csharp
+return File(bytes, "application/pdf", "report.pdf");
+```
+
+---
+
+## 3. Cleaned source notes
+
+- `Content-Disposition` is presented as an HTTP response header controlling how the browser handles a response body.
+- The conspect contrasts two common values:
+  - `attachment` for prompting download.
+  - `inline` for showing in the browser when supported.
+- The header can include a suggested filename.
+- The conspect shows `filename*` as an encoding-safe form for non-ASCII filenames.
+- For file download endpoints, the conspect says server-side `Content-Disposition` is usually appropriate.
+- In ASP.NET Core, passing a download name to `File(...)` usually creates an attachment-style header.
+- For preview-in-browser behavior, the conspect points to using `inline` and the correct `Content-Type`.
+
+---
+
+## 4. Minimal interpretation
+
+The conspect teaches when and why to set `Content-Disposition` for file responses. The main distinction is:
+
+```text
+download endpoint -> attachment + filename
+preview endpoint  -> inline + correct Content-Type
+```
+
+It also connects this to ASP.NET Core's `File(...)` result: when a download filename is passed, the framework usually produces an attachment-style `Content-Disposition` header.
+
+This interpretation is based on the visible screenshots only.
+
+---
+
+## 5. Evidence table
+
+| Claim | Evidence source | Source type | Confidence |
 |---|---|---|---|
-| Raw bundle exists and has 2 copied images | image-index.csv / bundle metadata | source metadata | high |
-| Screenshot transcript is not yet verified in this archive | processing note | workflow status | high |
+| `Content-Disposition` tells the browser how to handle the response body | CDH-S001 | screenshot text | high |
+| `attachment` is used for download prompt | CDH-S001 | screenshot text/code | high |
+| `inline` is used for showing in browser if supported | CDH-S001 | screenshot text/code | high |
+| `filename` suggests a file name | CDH-S001 | screenshot text/code | high |
+| `filename*` is shown as encoding-safe for non-ASCII filenames | CDH-S001 | screenshot text/code | high |
+| Server-side `Content-Disposition` is usually yes for file download endpoints | CDH-S002 | screenshot text | high |
+| ASP.NET Core `File(bytes, "application/pdf", "report.pdf")` usually sets an attachment-style header | CDH-S002 | screenshot text/code | high |
+| Browser preview behavior uses `inline` and correct `Content-Type` | CDH-S002 | screenshot text | high-for-visible-text |
+| The conspect has only embedded screenshots and no standalone SVG labels | SVG structure | layout/source metadata | high |
 
-## 7. Question hooks
+---
 
-Do not generate questions yet. Generate questions after the two screenshots are visually transcribed.
+## 6. Question hooks
+
+- What does the `Content-Disposition` response header tell the browser?
+- What is the difference between `attachment` and `inline`?
+- What does the `filename` parameter suggest?
+- Why does the conspect show `filename*` for non-ASCII filenames?
+- For a file download endpoint, why is server-side `Content-Disposition` usually appropriate?
+- What header style does `File(bytes, "application/pdf", "report.pdf")` usually produce in ASP.NET Core?
+- When would a preview-in-browser endpoint use `inline`?
+- Why does the preview-in-browser endpoint also need the correct `Content-Type`?
+
+---
+
+## 7. Open issues / limitations
+
+- The SVG contains screenshots numbered `1)` and `3)`. A `2)` section is not visible in this uploaded SVG.
+- `CDH-S002` is close to the bottom edge. If the original screenshot had additional content below the visible area, it is not included here.
+- This transcript does not add unsupported general HTTP knowledge beyond the visible source content.

@@ -1,6 +1,6 @@
-# Apply archive: content disposition header v001
+# Apply archive: content disposition header completed v001
 
-Archive type: per-conspect source-confirmed scaffold.
+Archive type: per-conspect completed transcript from uploaded SVG.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-content-disposition-header-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-content-disposition-header-completed-v001.zip
 ```
 
 ## Apply commands
@@ -26,7 +26,7 @@ C:\Users\alexa\Downloads\ai-conspects-content-disposition-header-v001.zip
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-content-disposition-header-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-content-disposition-header-completed-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
@@ -48,7 +48,7 @@ git --no-pager diff -- _ai-conspects/content-disposition-header > C:\Users\alexa
 
 ```powershell
 git add _ai-conspects/content-disposition-header
-git commit -m "Start content disposition header conspect"
+git commit -m "Add content disposition header transcript"
 ```
 
 ## Push command
@@ -67,4 +67,4 @@ git restore -- _ai-conspects/content-disposition-header
 
 This archive does not edit `_ai-conspects/react-query-rquery/`.
 
-It confirms source availability and creates a transcript scaffold. It does not claim screenshot transcript is verified.
+The transcript is based on the uploaded SVG and its visually read embedded screenshots.

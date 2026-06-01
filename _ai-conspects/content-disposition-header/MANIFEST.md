@@ -1,36 +1,26 @@
-# MANIFEST - Content Disposition Header v001
+# MANIFEST - Content-Disposition Header completed v001
 
-Archive type: **per-conspect source-confirmed scaffold**  
-Generated: 2026-06-01 18:41:59 UTC
+Archive type: **per-conspect completed transcript from uploaded SVG**  
+Generated: 2026-06-01 20:29:48 UTC
 
 ## Direction check
 
 Goal:
-Process the `content disposition header` Excalidraw conspect in its own folder.
+Process the uploaded `content disposition header` Excalidraw SVG into source-preserving AI-readable text.
 
 Now:
-Bundle is confirmed complete, but screenshot content has not been visually verified in this archive.
+Two embedded screenshots were visually read; no standalone SVG text labels were found.
 
 This step:
-Create source-status, image inventory, and transcript scaffold.
+Create a completed transcript with area overview, source transcript, cleaned notes, evidence table, and question hooks.
 
 Why:
-It prepares the correct processed folder and prevents accidental edits to React Query.
+This moves the conspect from raw SVG to usable AI-readable notes without touching other conspect folders.
 
 Next:
-1. Visually read the two copied images from the raw bundle.
-2. Complete `regions/R01-content-disposition-header.md`.
-3. Add cleaned notes/evidence/questions if requested.
-
-## Source status
-
-```text
-source-confirmed
-bundle-confirmed
-images-complete: 2/2
-problems: 0
-size: tiny
-```
+1. Apply archive.
+2. Review diff.
+3. Commit if transcript is acceptable.
 
 ## Files included
 

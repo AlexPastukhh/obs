@@ -1,45 +1,54 @@
 {
   "conspect_slug": "content-disposition-header",
-  "raw_branch": "ai-processing-excalidraw-conspects",
-  "processed_branch": "ai-processed-conspects-text",
-  "working_folder": "_ai-conspects/content-disposition-header/",
-  "source_bundle": "_ai-test-bundles-server/fw_Asp__Sheet__content disposition header/",
-  "source_note": "Canvases/new theory/fw_Asp/Sheet/content disposition header.md",
-  "status": {
-    "source_confirmed": true,
-    "bundle_confirmed": true,
-    "has_ai_prompt": true,
-    "has_note": true,
-    "has_full_svg": true,
-    "has_text_elements": true,
-    "has_image_index_csv": true,
-    "has_image_index_md": true,
-    "has_images_dir": true,
-    "images_complete": "2/2",
-    "problems": 0,
-    "size": "tiny"
-  },
-  "important_limitation": "Images are confirmed present, but screenshot content is not marked verified in this archive because the current connector returned PNG content as base64 rather than visual rendering.",
-  "images": [
+  "source": "uploaded SVG file",
+  "uploaded_file": "content disposition header.svg",
+  "svg_viewbox": "0 0 911.936059397163 1008.9339944345047",
+  "embedded_images_count": 2,
+  "standalone_svg_text_elements_count": 0,
+  "status": "completed-from-uploaded-svg",
+  "transcript_status": "visually-verified-for-visible-embedded-image-content",
+  "known_limitations": [
+    "SVG contains no standalone <text> elements; all meaningful content is inside two embedded screenshots.",
+    "CDH-S002 bottom edge is tight; if source screenshot continued below, that continuation is not visible in uploaded SVG.",
+    "No unsupported general HTTP knowledge was added to source transcript."
+  ],
+  "sources": [
     {
       "source_id": "CDH-S001",
-      "number": 1,
-      "file_id": "e3310012f76f0c4edde6b476369865c404deff94",
-      "wikilink": "Pasted Image 20260307022622_317.png",
-      "resolved_path": "Canvases/-repeat notes/03.26/attachments/Pasted Image 20260307022622_317.png",
-      "copied_as": "images/001__e3310012f7__Pasted Image 20260307022622_317.png",
-      "status": "COPIED",
-      "transcript_status": "pending_visual_verification"
+      "file_id": "b426241c72be59de4e261598f93dbc7b4b48ec04",
+      "svg_symbol": "image-b426241c72be59de4e261598f93dbc7b4b48ec04",
+      "position": {
+        "x": 10,
+        "y": 10,
+        "width": 892,
+        "height": 482
+      },
+      "status": "visually-verified-from-uploaded-svg-embedded-png",
+      "readability": "high",
+      "cut_off": "no",
+      "confidence": "high",
+      "topic": "what Content-Disposition is and common values",
+      "visible_text": "1) What is Content-Disposition?\n\nContent-Disposition is an HTTP response header that tells the browser how to handle the response body\n(show inline vs download) and what filename to suggest.\n\nCommon values:\n\n- Download prompt\n\nContent-Disposition: attachment; filename=\"report.pdf\"\n\n- Show in browser (if supported)\n\nContent-Disposition: inline; filename=\"report.pdf\"\n\nThere's also an encoding-safe form for non-ASCII filenames:\n\nContent-Disposition: attachment; filename*=UTF-8''r%C3%A9port.pdf",
+      "notes": "Top screenshot. No visible standalone Excalidraw labels around it; all content is inside the embedded image."
     },
     {
       "source_id": "CDH-S002",
-      "number": 2,
-      "file_id": "b426241c72be59de4e261598f93dbc7b4b48ec04",
-      "wikilink": "Pasted Image 20260307022624_686.png",
-      "resolved_path": "Canvases/-repeat notes/03.26/attachments/Pasted Image 20260307022624_686.png",
-      "copied_as": "images/002__b426241c72__Pasted Image 20260307022624_686.png",
-      "status": "COPIED",
-      "transcript_status": "pending_visual_verification"
+      "file_id": "e3310012f76f0c4edde6b476369865c404deff94",
+      "svg_symbol": "image-e3310012f76f0c4edde6b476369865c404deff94",
+      "position": {
+        "x": 38,
+        "y": 517,
+        "width": 797,
+        "height": 482
+      },
+      "status": "visually-verified-from-uploaded-svg-embedded-png",
+      "readability": "high",
+      "cut_off": "bottom-edge-tight / possible continuation not visible",
+      "confidence": "high-for-visible-text",
+      "topic": "whether to set Content-Disposition on the server / ASP.NET Core File result",
+      "visible_text": "3) Should you set Content-Disposition on the server?\n\nUsually yes, for file download endpoints. It's the standard way to:\n\n- force \"download\" behavior (attachment)\n- provide the filename consistently\n- support Pattern A and let Pattern B pick up the same filename\n\nASP.NET Core: returning a File(...) result usually sets it for you if you pass a download name:\n\nreturn File(bytes, \"application/pdf\", \"report.pdf\");\n\nThat produces a Content-Disposition: attachment; filename=\"report.pdf\"-style header.\n\nIf you want the browser to open it instead of download, you'd typically use inline (ASP.NET Core doesn't\nhave a single flag on File() for inline; you can set the header yourself when you need that behavior).\n\nSo:\n\n- download endpoint -> set Content-Disposition: attachment; filename=...\n- preview-in-browser endpoint -> inline (optional) + correct Content-Type",
+      "visible_code": "return File(bytes, \"application/pdf\", \"report.pdf\");",
+      "notes": "Bottom screenshot. The final visible bullet is close to the image bottom; only visible content is transcribed."
     }
   ]
 }
