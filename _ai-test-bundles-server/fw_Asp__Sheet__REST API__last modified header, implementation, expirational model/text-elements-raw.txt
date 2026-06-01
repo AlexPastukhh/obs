@@ -1,0 +1,67 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+[ApiController]
+[Route("api/authors")]
+public class AuthorsController : ControllerBase
+{
+    private readonly AppDbContext _db;
+    public AuthorsController(AppDbContext db) => _db = db;
+
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> Get(Guid id, CancellationToken ct)
+    {
+        var data = await _db.Authors.AsNoTracking()
+            .Where(a => a.Id == id)
+            .Select(a => new
+            {
+                a.Id,
+                a.Name,
+                LastModified = EF.Property<DateTimeOffset>(a, "LastModified")
+            })
+            .SingleOrDefaultAsync(ct);
+
+        if (data is null) return NotFound();
+
+        Response.Headers.LastModified = data.LastModified.UtcDateTime.ToString("R");
+
+        // Basic If-Modified-Since check (seconds precision)
+        if (Request.Headers.IfModifiedSince.Count > 0 &&
+            DateTimeOffset.TryParse(Request.Headers.IfModifiedSince.ToString(), out var ims))
+        {
+            var lmSeconds = new DateTimeOffset(
+                data.LastModified.UtcDateTime.AddTicks(-(data.LastModified.UtcDateTime.Ticks % TimeSpan.TicksPerSecond)),
+                TimeSpan.Zero);
+
+            if (lmSeconds <= ims.ToUniversalTime())
+                return StatusCode(StatusCodes.Status304NotModified);
+        }
+
+        return Ok(new { data.Id, data.Name });
+    }
+} ^vEJEHqwU
+
+managing expirational model with last modified ^1yc7Tuv1
+
+why lastmodified and if modified since dont use unix time
+about rfc 1123 format ^iS0jcNmF
+
+some flow clarifications
++
+formats of last modified
+if modified since ^hvO0iITy
+
+just in case ^BD6UI334
+
+just in case ^x7ICChuB
+
+rfc 1123 format ^PWKDpRDo
+
+why do we include lastmodified for both paths
+browser cant use the old cached lastmodified? (it can) ^nqVd35Z7
+
+304 can return new resource metadata too, its a valid reponse
+so its better to design such things, so there is no shit branching,
+because the metadata path should be the same for both 200 and 304  ^ndzbT75C
+
+need to reat metadata addition to request as shared path for all status codes ^ktJJAGjv

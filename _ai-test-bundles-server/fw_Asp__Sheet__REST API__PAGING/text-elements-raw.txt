@@ -1,0 +1,50 @@
+﻿to some basics ^fY2hkC4S
+
+count of resource 
+entities ^hKpXROrE
+
+will round to bigger ^26YKtNOO
+
+method of list class ^hEZyBxCD
+
+pagination/pagination metadata ^Im2HUscF
+
+prev and next page should be sorted too ^OPJmVbNQ
+
+private string? CreateAuthorsResourceUri(
+    AuthorsResourceParameters p,
+    ResourceUriType type)
+{
+    return type switch
+    {
+        ResourceUriType.PreviousPage => Url.Link("GetAuthors", new
+        {
+            fields = p.Fields,
+            orderBy = p.OrderBy,
+            pageNumber = p.PageNumber - 1,
+            pageSize = p.PageSize,
+            mainCategory = p.MainCategory,
+            searchQuery = p.SearchQuery
+        }),
+        ResourceUriType.NextPage => Url.Link("GetAuthors", new
+        {
+            fields = p.Fields,
+            orderBy = p.OrderBy,
+            pageNumber = p.PageNumber + 1,
+            pageSize = p.PageSize,
+            mainCategory = p.MainCategory,
+            searchQuery = p.SearchQuery
+        }),
+        _ => Url.Link("GetAuthors", new
+        {
+            fields = p.Fields,
+            orderBy = p.OrderBy,
+            pageNumber = p.PageNumber,
+            pageSize = p.PageSize,
+            mainCategory = p.MainCategory,
+            searchQuery = p.SearchQuery
+        })
+    };
+} ^iDhf1jnF
+
+implementation ^DBpdh6n1

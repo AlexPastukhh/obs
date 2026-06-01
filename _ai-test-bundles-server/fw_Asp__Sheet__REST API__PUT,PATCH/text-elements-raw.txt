@@ -1,0 +1,146 @@
+﻿doesnt wokr with 
+typed things ^wuEcnaPS
+
+put/patch ^QmpAeiF5
+
+upsert ^kZIzoHlo
+
+status codes for put and patch ^wn1OVEtz
+
+put ^s96Mjjsa
+
+jsonel<--patch via jsonpatch document newtonsoft
+
+.net 10 text.json<-- lower ^H3PCc2Ko
+
+put and patch idempotency ^c7EFbPUi
+
+with this need newtonsoft json ^3JjIYei6
+
+but framework will
+set null to this ^i60HboIt
+
+about formats and theory in general ^rEJPMC5v
+
+patch with convetion of optional ^IPOY3vDR
+
+public sealed class OptionalJsonConverterFactory : JsonConverterFactory
+{
+    public override bool CanConvert(Type typeToConvert) =>
+        typeToConvert.IsGenericType && typeToConvert.GetGenericTypeDefinition() == typeof(Optional<>);
+
+    public override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
+    {
+        var innerType = typeToConvert.GetGenericArguments()[0];
+        var converterType = typeof(OptionalJsonConverter<>).MakeGenericType(innerType);
+        return (JsonConverter)Activator.CreateInstance(converterType)!;
+    }
+
+    private sealed class OptionalJsonConverter<T> : JsonConverter<Optional<T>>
+    {
+        public override Optional<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            // Called only if the JSON property is PRESENT. If property is absent, Optional<T> remains default (IsSet=false).
+            if (reader.TokenType == JsonTokenType.Null)
+                return new Optional<T>(default);
+
+            var value = JsonSerializer.Deserialize<T>(ref reader, options);
+            return new Optional<T>(value);
+        }
+
+        public override void Write(Utf8JsonWriter writer, Optional<T> value, JsonSerializerOptions options)
+        {
+            // Not typically needed for request DTOs. Implemented for completeness.
+            if (!value.IsSet)
+            {
+                writer.WriteNullValue();
+                return;
+            }
+
+            JsonSerializer.Serialize(writer, value.Value, options);
+        }
+    }
+} ^0cesKlgP
+
+public readonly struct Optional<T>
+{
+    public bool IsSet { get; }
+    public T? Value { get; }
+
+    public Optional(T? value)
+    {
+        IsSet = true;
+        Value = value;
+    }
+
+    public override string ToString() => IsSet ? $"Set({Value})" : "Unset";
+} ^sfxpoYAO
+
+via json manipulations ^kQUbiO6z
+
+                           MANUAL PATCH
+JSONEL                   JSONDOC              OPTIONAL WITH JSONCONVERTER ^a2j46yy1
+
+Can get updated object, but default output media type for our api has switched to xml
+somehow ^3Wkd4IC5
+
+system.text.json is first formatter
+we have changed it to newtonsoftjson,
+so the first formatter is xml formatter ^ryAsH84r
+
+then its being ovveriden 
+by json.net 
+so xml is the first formatter
+and the default one ^0r9cBP8i
+
+need to do it so ^GRY2k947
+
+default xml serializer doesnt have 
+to support all types, this - does ^5sSpz5gr
+
+just have coursedto
+from returned from repo ^diugaMZg
+
+now this dto has 
+partially updated 
+values  ^lDYVTSGY
+
+mapping updated dto 
+to entity model ^uMLHqyDg
+
+We changing dto, because its outer layer model, consumer shouldnt know about real
+resources structure ^ec81Uorm
+
+client cant know what id will be assigned to resource, then it cant do put request with id of resource
+that doesnt exist and create resource with the id the client provided , because the client doesnt provide id here  ^xSYQH4NH
+
+some additional notes  ^exo1nVA7
+
+dotnet add package Microsoft.AspNetCore.JsonPatch.SystemTextJson --prerelease ^l9BMyczi
+
+ADD TO CONTENT NEGOTIATIONS ALL THIS  ^nyA4lKjb
+
+!!! ^f0r2Jhlp
+
+IF CLIENT CREATES IDS AND API ALLOWS UPSERT
+THERE IS A POSSIBLE SITUATION WHEN  CLIENT SEND PUT REQUEST
+BUT HE DOESNT WANT TO  OVERWRITE EXISTING ID, SO HE SENDS WITH 
+IF-NONE-MATCH:* SO IF THE RESOURCE EXISTS IN ANY VERSION - THERE WOULD BE 
+NO UPDATE ^y9WzM4JT
+
+VALIDATOIN ^Km71bsuk
+
+with upsert ^FVWAoA9U
+
+create flow IF  id missing ^vxUEt2yw
+
+and then update flow as normal patch ^HoDGfD7g
+
+need to check if 
+jsonpatchdoc valid first ^DDJ6vfu4
+
+for system.text.json patch
+(we write modelstate errors manually) ^BUEPDtrv
+
+validation problem
+with reusing invalidmodelstate factory ^khtIIL6l

@@ -1,0 +1,121 @@
+﻿All necessary state is contained within the request itself ^3VxiKSSw
+
+request should contain all info to service the request ^BmhgMtVT
+
+headers, body ect ^tddohWO7
+
+it knows only the single outer layer ^A4X5CXyX
+
+more about web applications, not apis
+when server can give some js to the client 
+to extend its functionality ^WkSwsClc
+
+using different dtos/shapes to accept data and to return data ^AHJhSZRo
+
+method safety/ idempotency ^aJlgTa1r
+
+can expose all couses via api/courses ^3jfmRFlF
+
+should return number, not 
+list of resources ^0z6XcOwr
+
+what id? what will be returned? ^Wp00xXVm
+
+some basic things ^wvhQzqIg
+
+FULL OVERVIEW OF METHODS ^USZAhwZf
+
+some general base things ^L93Men4g
+
+PATCH VALIDATION
+PROBLEM DET LOWER ^lEpMsdcK
+
+Validation ^dQE2xfmr
+
+FILTERING SEARCHING ^0vog72SR
+
+you filter by existing things
+search is wider as was told ^YAyJZjHd
+
+simple search/ filtering can be impl with 
+simple params,
+but when there ar a lot of them 
+it is better to use some objects and bind from query  ^yge4H29r
+
+sorting applyed to outter facing model, we cant expose entity model,
+so we need to apply sorting to entity model manually ^IOM2AcAk
+
+basics ^1v3KLrKV
+
+to basics ^05LN1OJi
+
+can mean just some variants of representations (may ask) ^Snr0UG2f
+
+if logic changes, server may not show some link to consumer ^Pwb5uawL
+
+ADD TO BASICS , TO HATEOAS THEORY ^6rxnO5ox
+
+returning links for consumer to start interaction with our api ^TbjidDeP
+
+When have hateoas, better to include prev and next page to links,not to metadata
+like  ^rWqLOsYZ
+
+!!! ^DFP5Dft6
+
+there are a lot of ways to impl hateoas ^MbjaoGOU
+
+Expired ^7hGuElFz
+
+goes way beyond hateoas ^4fiYxZJD
+
+ORIGINAL ^Gbj13NW1
+
+PROBLEM DETAILS ^pOVc6crp
+
+ALL TITLE AND DETAILS 
+AND REFERENCES TO 
+A DOCUMENTATION
+CAN RELATE 
+TO YOUR API AND YOUR API'S DOCUMENTATION
+NOT JUST SOME DOCS WITH EXPL
+WHAT IS THIS STATUS CODE ^Sxdmg4Qf
+
+!!!! ^Kdz8lnbl
+
+TRACE ID ^0tCmJVx3
+
+!!! ^faeBRbgi
+
+Cant be applied to all apps so we 
+can do the following: ^XnlsFPMx
+
+version 1 still supported ^GKroqkzE
+
+VERSIONING ^ZCYiBIkG
+
+If cache is private, and the same request is send by another client, then 
+it will stiil hit the api ^EXKcsJoI
+
+Better to use both etags and last-modified
+
+but response caching attr doesnt support etags
+need to do something ^AJpgsMkF
+
+responce wont be stale for specified time in seconds ^Fsekx368
+
+age is not greater than 
+spec time in sec ^38qtwD7W
+
+is stale for specified max time in sec ^EBODjgZv
+
+cache will be revalidated
+on every request ^jngeXe3H
+
+will revalidated only 
+if cache is stale
+ ^Qy871BW0
+
+usually used when there is a very poor network
+connection ^oECe3Rmc
+
+some original shit ^htqx2LJe
