@@ -1,6 +1,6 @@
-# Apply archive: React Query R10 cleanup checkpoint v006
+# Apply archive: React Query next-region kickoff R07
 
-Archive type: stage-3d cleanup checkpoint after completed region transcript.
+Archive type: stage-4a next-region scaffold.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3d-r10-cleanup-checkpoint-v006.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4a-r07-next-region-kickoff-v001.zip
 ```
 
 ## Apply commands
@@ -26,22 +26,10 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3d-r10-cleanup-che
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage3d-r10-cleanup-checkpoint-v006.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4a-r07-next-region-kickoff-v001.zip"
 
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
-
-# Remove stale files from the old pending-verification workflow.
-$staleFiles = @(
-  "_ai-conspects\react-query-rquery\data\R10-mutations-pending-verification-v003.csv",
-  "_ai-conspects\react-query-rquery\data\R10-mutations-pending-verification-v003.json"
-)
-
-foreach ($file in $staleFiles) {
-  if (Test-Path $file) {
-    Remove-Item $file -Force
-  }
-}
 
 git status --short
 git diff --stat -- _ai-conspects/react-query-rquery
@@ -58,11 +46,9 @@ git --no-pager diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloa
 
 ## Commit commands
 
-Use `git add -A` because this cleanup removes stale files.
-
 ```powershell
-git add -A _ai-conspects/react-query-rquery
-git commit -m "Clean up completed React Query mutations transcript"
+git add _ai-conspects/react-query-rquery
+git commit -m "Start React Query QueryClient region transcript"
 ```
 
 ## Push command
@@ -79,10 +65,6 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive is not a new transcription batch.
+This archive starts the next region after R10.
 
-It is a checkpoint cleanup after v005. It removes stale pending-verification files and keeps the repo aligned with the current R10 status:
-
-```text
-R10 - Mutations completed/ready for review
-```
+It is not a new mutation cleanup archive, and it does not perform screenshot transcription yet.

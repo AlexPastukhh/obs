@@ -1,0 +1,213 @@
+{
+  "region_id": "R07",
+  "region_name": "Prefetch / initialData / placeholderData / useQueryClient",
+  "stage": "4a-next-region-kickoff",
+  "where_we_are": {
+    "completed": [
+      "Stage 1 global map/index",
+      "Stage 2 screenshot mapping",
+      "R10 - Mutations completed/ready for review"
+    ],
+    "current": "R07 - Prefetch / initialData / placeholderData / useQueryClient scaffold/inventory",
+    "next": "visually verify screenshots/crops for this region and create source transcript"
+  },
+  "labels": [
+    {
+      "label_id": "L-038",
+      "x": "8655.330079315223",
+      "y": "10060.093910067313",
+      "text": "PREFETCHING/ INITIALDATA /PLACEHOLDRDATA, USEQUERYCLIENT"
+    },
+    {
+      "label_id": "L-048",
+      "x": "8257.150597877526",
+      "y": "11173.64387075285",
+      "text": "PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY"
+    },
+    {
+      "label_id": "L-051",
+      "x": "9485.684627805638",
+      "y": "11890.024239072267",
+      "text": "init data caveats"
+    },
+    {
+      "label_id": "L-052",
+      "x": "7991.375992144136",
+      "y": "12268.577014924951",
+      "text": "DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?"
+    },
+    {
+      "label_id": "L-055",
+      "x": "8911.272451611121",
+      "y": "13181.193776345996",
+      "text": "!!! can prefetch and then fetch again because of default stale time"
+    },
+    {
+      "label_id": "L-056",
+      "x": "9466.200779034925",
+      "y": "13543.126935022497",
+      "text": "fetchquery ensurequerydata"
+    }
+  ],
+  "screenshots": [
+    {
+      "source_id": "S-117",
+      "image_use_id": "IU-117",
+      "fileId": "8160273b4d08df708bd978e863a8449b3ccbaaaa",
+      "fileId_short": "8160273b4d",
+      "x": "9433.330568893727",
+      "y": "10598.507116696876",
+      "width": "911.0",
+      "height": "301.0",
+      "nearest_label_ids": "L-051,L-038,L-048",
+      "nearest_labels": "L-051: init data caveats | L-038: PREFETCHING/ INITIALDATA /PLACEHOLDRDATA, USEQUERYCLIENT | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-120",
+      "image_use_id": "IU-120",
+      "fileId": "77905ae043ec69700fc3b16f6a5b4ec492e7e300",
+      "fileId_short": "77905ae043",
+      "x": "9445.4969049533",
+      "y": "10938.85639510148",
+      "width": "811.0",
+      "height": "404.0",
+      "nearest_label_ids": "L-051,L-048,L-038",
+      "nearest_labels": "L-051: init data caveats | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY | L-038: PREFETCHING/ INITIALDATA /PLACEHOLDRDATA, USEQUERYCLIENT",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-131",
+      "image_use_id": "IU-131",
+      "fileId": "436c717cfb34564f8161400b86c6cd70df948e55",
+      "fileId_short": "436c717cfb",
+      "x": "9451.2573799643",
+      "y": "11399.92489677074",
+      "width": "726.0",
+      "height": "482.0",
+      "nearest_label_ids": "L-051,L-048,L-055",
+      "nearest_labels": "L-051: init data caveats | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY | L-055: !!! can prefetch and then fetch again because of default stale time",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-132",
+      "image_use_id": "IU-132",
+      "fileId": "3d2af35386f5a1702b6e11ea1683581f82b05961",
+      "fileId_short": "3d2af35386",
+      "x": "8200.893423180742",
+      "y": "11404.627618201914",
+      "width": "954.0",
+      "height": "442.0",
+      "nearest_label_ids": "L-048,L-051,L-052",
+      "nearest_labels": "L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY | L-051: init data caveats | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-146",
+      "image_use_id": "IU-146",
+      "fileId": "5ee57573106cb4ddaf5d43e12b943cfb0982dee2",
+      "fileId_short": "5ee5757310",
+      "x": "8190.964969219478",
+      "y": "11887.630229940003",
+      "width": "962.0",
+      "height": "204.0",
+      "nearest_label_ids": "L-052,L-051,L-048",
+      "nearest_labels": "L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY? | L-051: init data caveats | L-048: PREFETCH STALETIME AND REFETCHING ON MOUNT ISSUE EVEN WITH PREFETCH QUERY",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-152",
+      "image_use_id": "IU-152",
+      "fileId": "b67831fde6547da53dc9ec4b894607f6db24c9ce",
+      "fileId_short": "b67831fde6",
+      "x": "9446.917125247974",
+      "y": "12092.188240052696",
+      "width": "839.0",
+      "height": "426.0",
+      "nearest_label_ids": "L-051,L-055,L-056",
+      "nearest_labels": "L-051: init data caveats | L-055: !!! can prefetch and then fetch again because of default stale time | L-056: fetchquery ensurequerydata",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-162",
+      "image_use_id": "IU-162",
+      "fileId": "7ad643e9477079f1ab69fc034fc26521c89b85e2",
+      "fileId_short": "7ad643e947",
+      "x": "8207.877377038118",
+      "y": "12549.892518630317",
+      "width": "934.0",
+      "height": "395.0",
+      "nearest_label_ids": "L-055,L-052,L-056",
+      "nearest_labels": "L-055: !!! can prefetch and then fetch again because of default stale time | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY? | L-056: fetchquery ensurequerydata",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-163",
+      "image_use_id": "IU-163",
+      "fileId": "df3c1dacf60abb6757f8ade1b3eed1a047a06738",
+      "fileId_short": "df3c1dacf6",
+      "x": "9455.15533674351",
+      "y": "12591.934266954677",
+      "width": "853.0",
+      "height": "250.0",
+      "nearest_label_ids": "L-051,L-056,L-055",
+      "nearest_labels": "L-051: init data caveats | L-056: fetchquery ensurequerydata | L-055: !!! can prefetch and then fetch again because of default stale time",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-171",
+      "image_use_id": "IU-171",
+      "fileId": "54c1e18a5f6656e5ea310132a2f26206a12effae",
+      "fileId_short": "54c1e18a5f",
+      "x": "8207.92704143231",
+      "y": "12967.165051124364",
+      "width": "912.0",
+      "height": "402.0",
+      "nearest_label_ids": "L-055,L-056,L-052",
+      "nearest_labels": "L-055: !!! can prefetch and then fetch again because of default stale time | L-056: fetchquery ensurequerydata | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-172",
+      "image_use_id": "IU-172",
+      "fileId": "4014246e26977a9a3e070c78a6ec96050a023fec",
+      "fileId_short": "4014246e26",
+      "x": "9386.146194827215",
+      "y": "12978.823810461328",
+      "width": "855.0",
+      "height": "482.0",
+      "nearest_label_ids": "L-056,L-055,L-051",
+      "nearest_labels": "L-056: fetchquery ensurequerydata | L-055: !!! can prefetch and then fetch again because of default stale time | L-051: init data caveats",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    },
+    {
+      "source_id": "S-180",
+      "image_use_id": "IU-180",
+      "fileId": "8930b327c7e2b0945a130b23206191b2caafdd43",
+      "fileId_short": "8930b327c7",
+      "x": "8215.232879038422",
+      "y": "13389.00743951829",
+      "width": "871.0",
+      "height": "482.0",
+      "nearest_label_ids": "L-055,L-056,L-052",
+      "nearest_labels": "L-055: !!! can prefetch and then fetch again because of default stale time | L-056: fetchquery ensurequerydata | L-052: DOES PREFETCH STALETIME BELONGS TO BOTH PREFETCH AND NORMAL QUEY?",
+      "status": "not-transcribed",
+      "read_status": "not-opened-in-this-stage"
+    }
+  ],
+  "limitations": [
+    "This archive is a region kickoff/scaffold, not a verified screenshot transcript.",
+    "No original PNGs for this region were visually opened in this step.",
+    "Exact screenshot text/code must be added in a future per-region transcript archive after original screenshots/crops are available."
+  ]
+}
