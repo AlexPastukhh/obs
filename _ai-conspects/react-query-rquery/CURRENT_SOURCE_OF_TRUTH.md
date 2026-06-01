@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-01 22:44:55 UTC
+Generated: 2026-06-01 22:54:07 UTC
 
 ## Current policy
 
@@ -33,27 +33,25 @@ R01 v002: expanded full browser/cache road
 R05 v002: expanded pagination / infinite-query road
 R06 v002: corrected with S-176
 R07 v004: corrected with S-184/S-186
+R08 closure audit v001: completed
 R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 ```
 
-## Current processing status
+## Current processing target
 
 ```text
-R08A v001: QueryClient / QueryFilters / core methods transcript completed
-R08B v001: refetch / cancel options / cache helpers transcript completed
-R08C v001: QueryClient outside React / shape discipline transcript completed
-R08 closure audit v001: completed
+R02 boundary review started.
+Next transcript pass: R02A useQuery state / status / error / cache core.
 ```
 
-## R08 closure status
+## R02 split status
 
 ```text
-Formal R08 checklist count: 51
-R08A processed: 17
-R08B processed: 23
-R08C processed: 10
-R07 overlap excluded: 1
-Side-check S-186: already R07 v004, not R08
+R02 formal candidate count: 36
+R02A candidates: 15
+R02B candidates: 9
+R02C candidates: 11
+R04 overlap reserved: 1
 ```
 
-R08 planned split is closed. Next new area must start with boundary review first.
+R02 is not completed yet. The next step is R02A transcript with local boundary review.
