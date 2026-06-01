@@ -1,9 +1,9 @@
 {
-  "generated": "2026-06-01 23:28:46 UTC",
-  "ledger_version": "v2-updated-by-r02a-v002-r02b-v001-stage4q",
-  "critical_rule": "The ledger is still not source of truth; R02A/R02B decisions were made after local visual/semantic boundary review.",
-  "stage4q_delta": {
-    "r02a_v002_processed_sources": [
+  "generated": "2026-06-01 23:39:24 UTC",
+  "ledger_version": "v2-updated-by-r02c-transcript-stage4r-v001",
+  "critical_rule": "The ledger is still not source of truth; R02C decisions were made after local visual/semantic boundary review.",
+  "stage4r_delta": {
+    "r02a_completed": [
       "S-008",
       "S-011",
       "S-012",
@@ -21,10 +21,7 @@
       "S-034",
       "S-036"
     ],
-    "r02a_v002_added": [
-      "S-013"
-    ],
-    "r02b_v001_processed_sources": [
+    "r02b_completed": [
       "S-026",
       "S-027",
       "S-032",
@@ -34,7 +31,7 @@
       "S-047",
       "S-056"
     ],
-    "reserved_for_r02c": [
+    "r02c_v001_processed_sources": [
       "S-039",
       "S-040",
       "S-043",
@@ -50,7 +47,7 @@
     "reserved_for_r04": [
       "S-062"
     ],
-    "next_step": "R02C query keys/manual refetch/declarative dependencies transcript"
+    "next_step": "R02 closure audit against R02-boundary-review-stage4o-v001"
   },
   "rows": [
     {
@@ -787,12 +784,12 @@
       "width": "888",
       "height": "464",
       "nearest_labels_for_search_only": "L-012: keys | L-015: so when returning usequey we get like a query but dor our specific resource | L-017: manual refetch and using state to make new queries on that state change for a new key",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-040",
@@ -806,12 +803,12 @@
       "width": "944",
       "height": "333",
       "nearest_labels_for_search_only": "L-015: so when returning usequey we get like a query but dor our specific resource | L-017: manual refetch and using state to make new queries on that state change for a new key | L-011: throwing/swallowing errors",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-041",
@@ -863,12 +860,12 @@
       "width": "856",
       "height": "259",
       "nearest_labels_for_search_only": "L-011: throwing/swallowing errors | L-017: manual refetch and using state to make new queries on that state change for a new key | L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-044",
@@ -901,12 +898,12 @@
       "width": "918",
       "height": "318",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-012: keys",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-046",
@@ -958,12 +955,12 @@
       "width": "906",
       "height": "246",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-012: keys",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-049",
@@ -996,12 +993,12 @@
       "width": "915",
       "height": "375",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-011: throwing/swallowing errors",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-051",
@@ -1015,12 +1012,12 @@
       "width": "925",
       "height": "482",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-011: throwing/swallowing errors | L-020: RETRY",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-052",
@@ -1034,12 +1031,12 @@
       "width": "967",
       "height": "287",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-012: keys",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-053",
@@ -1072,12 +1069,12 @@
       "width": "935",
       "height": "333",
       "nearest_labels_for_search_only": "L-017: manual refetch and using state to make new queries on that state change for a new key | L-015: so when returning usequey we get like a query but dor our specific resource | L-011: throwing/swallowing errors",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-055",
@@ -1129,12 +1126,12 @@
       "width": "899",
       "height": "365",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-020: RETRY | L-011: throwing/swallowing errors",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-058",
@@ -1205,12 +1202,12 @@
       "width": "460",
       "height": "301",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-020: RETRY | L-011: throwing/swallowing errors",
-      "coverage_status": "reserved-for-r02c",
+      "coverage_status": "processed-in-r02c-v001",
       "current_region_decision": "R02C",
-      "decision_is_final": "no-until-r02c-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r02c",
-      "decision_basis": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies.",
-      "review_notes": "Reserved from R02B for R02C query keys/manual refetch/declarative dependencies."
+      "decision_is_final": "yes-for-r02c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r02c-v001",
+      "decision_basis": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies.",
+      "review_notes": "Included in R02C v001 after local boundary review: query keys/manual refetch/declarative dependencies."
     },
     {
       "source_id": "S-062",

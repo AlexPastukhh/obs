@@ -1,0 +1,12 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+R02C-S001,S-039,IU-039,913cfdb055,verified-from-extracted-svg-image,r02c-query-key-missing-dependency-bad,high,no,high,Query keys must include every value used by queryFn,Verified from extracted SVG image.
+R02C-S002,S-040,IU-040,5b76d4c5fc,verified-visible-partial-from-extracted-svg-image,r02c-usebook-usage,high,top-continuation-cropped,high-for-visible-code,useBook usage with pending/error guards,Top continuation is cropped; visible usage code is readable.
+R02C-S003,S-043,IU-043,7c40b916d5,verified-visible-partial-from-extracted-svg-image,r02c-better-queryfn-error,high,surrounding-context-cropped,high-for-visible-code,Better queryFn throws on failed fetch,This is a visible nearby code card reinforcing queryFn error behavior; included in R02C because it is in the formal R02C row and local review kept it as queryFn/key-adjacent support.
+R02C-S004,S-045,IU-045,7aca1a90bf,verified-from-extracted-svg-image,r02c-query-key-good,high,no,high,Good query key includes bookId,Verified from extracted SVG image.
+R02C-S005,S-048,IU-048,bafb8949f1,verified-from-extracted-svg-image,r02c-eslint-plugin,high,no,high,ESLint plugin catches missing key dependencies,Verified from extracted SVG image.
+R02C-S006,S-050,IU-050,33f7c75961,verified-from-extracted-svg-image,r02c-manual-refetch-imperative-bad,high,no,high,Avoid manual refetch when changing variable belongs in key,Verified from extracted SVG image.
+R02C-S007,S-051,IU-051,0e0d2b0487,verified-from-extracted-svg-image,r02c-sort-state-flow,high,no,high,Sort state causes rerender and new queryKey on next render,Verified from extracted SVG image.
+R02C-S008,S-052,IU-052,26863f1800,verified-from-extracted-svg-image,r02c-query-key-arrays-objects,high,no,high,Keys can contain arrays and objects,Verified from extracted SVG image.
+R02C-S009,S-054,IU-054,2cdf7b8634,verified-from-extracted-svg-image,r02c-declarative-approach-good,high,no,high,Better declarative key includes sort,Verified from extracted SVG image.
+R02C-S010,S-057,IU-057,2fc52e535e,verified-from-extracted-svg-image,r02c-new-key-cache-nuance,high,no,high,"New key may use cache, refetch, or fetch",Verified from extracted SVG image.
+R02C-S011,S-061,IU-061,3ec1269c3e,verified-from-extracted-svg-image,r02c-why-declarative,high,no,high,Why query keys make fetching declarative,Verified from extracted SVG image.

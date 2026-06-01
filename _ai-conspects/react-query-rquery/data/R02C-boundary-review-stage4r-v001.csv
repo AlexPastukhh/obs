@@ -1,0 +1,37 @@
+source_id,decision,candidate_type,reason
+S-039,included-in-R02C-v001,r02c-query-key-missing-dependency-bad,Query keys must include every value used by queryFn
+S-040,included-in-R02C-v001,r02c-usebook-usage,useBook usage with pending/error guards
+S-043,included-in-R02C-v001,r02c-better-queryfn-error,Better queryFn throws on failed fetch
+S-045,included-in-R02C-v001,r02c-query-key-good,Good query key includes bookId
+S-048,included-in-R02C-v001,r02c-eslint-plugin,ESLint plugin catches missing key dependencies
+S-050,included-in-R02C-v001,r02c-manual-refetch-imperative-bad,Avoid manual refetch when changing variable belongs in key
+S-051,included-in-R02C-v001,r02c-sort-state-flow,Sort state causes rerender and new queryKey on next render
+S-052,included-in-R02C-v001,r02c-query-key-arrays-objects,Keys can contain arrays and objects
+S-054,included-in-R02C-v001,r02c-declarative-approach-good,Better declarative key includes sort
+S-057,included-in-R02C-v001,r02c-new-key-cache-nuance,"New key may use cache, refetch, or fetch"
+S-061,included-in-R02C-v001,r02c-why-declarative,Why query keys make fetching declarative
+S-008,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-011,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-012,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-013,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-016,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-017,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-018,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-020,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-021,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-022,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-023,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-024,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-025,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-030,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-034,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-036,already-processed-R02A,context-only,Already completed in R02A v002; not part of R02C transcript.
+S-026,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-027,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-032,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-033,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-037,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-042,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-047,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-056,already-processed-R02B,context-only,Already completed in R02B v001; not part of R02C transcript.
+S-062,reserved-for-R04,r04-overlap,"Static staleTime / invalidation frontier, not R02C."

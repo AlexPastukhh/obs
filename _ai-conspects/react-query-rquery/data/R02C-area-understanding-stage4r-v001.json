@@ -1,0 +1,38 @@
+{
+  "region_id": "R02C",
+  "region_name": "query keys / manual refetch / declarative dependencies",
+  "stage": "4r-v001",
+  "generated": "2026-06-01 23:39:24 UTC",
+  "what_area_is_about": [
+    "query keys as the identity and dependency model for queries",
+    "include every value used by queryFn in the queryKey",
+    "manual refetch versus declarative key-driven refetching",
+    "React state changes rerender components, then useQuery sees the new key",
+    "keys can contain arrays and objects and are hashed deterministically",
+    "ESLint plugin support for missing query-key dependencies"
+  ],
+  "key_ideas": [
+    "If queryFn depends on a value, that value belongs in queryKey.",
+    "Leaving bookId out of ['book'] wrongly reuses one cache entry for many books.",
+    "Including bookId in ['book', bookId] creates distinct cache entries.",
+    "Avoid manual refetch when a changing variable should be part of the key.",
+    "setSort does not instantly fetch; it triggers a rerender, then useQuery runs with the new key.",
+    "Changing a key means TanStack Query looks up that key and decides whether to use cache, refetch, or fetch.",
+    "Keys can contain arrays and objects; TanStack Query hashes them deterministically.",
+    "Key arrays/objects do not need React dependency-array style referential stability.",
+    "Declarative fetching means saying what data depends on, not imperatively saying 'refetch now'.",
+    "The TanStack ESLint plugin can help catch missing query-key dependencies."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after R02 boundary review and local R02C check",
+    "limitations": [
+      "S-040 has cropped top continuation but visible usage code is readable.",
+      "S-043 has surrounding context cropped and is included as queryFn/error-support context.",
+      "S-062 remains reserved for R04, not included in R02C."
+    ],
+    "confidence_summary": "High for R02C source text and boundary. R02A/R02B/R02C now cover the planned R02 split; next step should be closure audit."
+  }
+}
