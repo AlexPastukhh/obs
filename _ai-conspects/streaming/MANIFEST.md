@@ -1,31 +1,33 @@
-# MANIFEST - Streaming R02 transcript v001
+# MANIFEST - Streaming R03 transcript v002
 
-Archive type: **stage-2 verified region transcript**  
+Archive type: **stage-3 verified region transcript / apply-format fix**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 22:47:08 UTC
+Generated: 2026-06-01 22:55:38 UTC
 
 ## Done
 
-- R02 transcript created.
-- 33 sources included.
-- S-057/S-058 pulled from initial R06 candidate after semantic review.
-- S-069-S078/S-083 checked and left for R06.
+- R03 transcript created.
+- v002 fixes APPLY_ARCHIVE.md line-break formatting from v001.
+- 36 sources included.
+- S-024/S-025/S-026/S-027 pulled from UNSPLIT after semantic review.
+- S-084 checked and left for R04.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/streaming/regions/R02-reading-response-stream-and-payload-bytes.md
-_ai-conspects/streaming/data/R02-sources-stage2-v001.csv
-_ai-conspects/streaming/data/R02-sources-stage2-v001.json
-_ai-conspects/streaming/data/R02-boundary-review-stage2-v001.csv
-_ai-conspects/streaming/data/R02-boundary-review-stage2-v001.json
-_ai-conspects/streaming/data/R02-area-understanding-stage2-v001.json
+_ai-conspects/streaming/regions/R03-streaming-objects-async-iteration-rest-api-concerns.md
+_ai-conspects/streaming/data/R03-sources-stage3-v001.csv
+_ai-conspects/streaming/data/R03-sources-stage3-v001.json
+_ai-conspects/streaming/data/R03-boundary-review-stage3-v001.csv
+_ai-conspects/streaming/data/R03-boundary-review-stage3-v001.json
+_ai-conspects/streaming/data/R03-area-understanding-stage3-v001.json
 _ai-conspects/streaming/data/image-review-ledger-v001.csv
 _ai-conspects/streaming/data/image-review-ledger-v001.json
-_ai-conspects/streaming/audit-assets/R02-reading-response-stream-transcript-contact-sheet.png
-_ai-conspects/streaming/audit-assets/R02-stage0-candidate-contact-sheet.png
-_ai-conspects/streaming/audit-assets/R02-source-images/*.png
-_ai-conspects/streaming/02-stage2-r02-reading-response-stream-transcript.md
+_ai-conspects/streaming/audit-assets/R03-streaming-objects-transcript-contact-sheet.png
+_ai-conspects/streaming/audit-assets/R03-stage0-candidate-contact-sheet.png
+_ai-conspects/streaming/audit-assets/R03-unsplit-candidates-contact-sheet.png
+_ai-conspects/streaming/audit-assets/R03-source-images/*.png
+_ai-conspects/streaming/03-stage3-r03-streaming-objects-transcript.md
 _ai-conspects/streaming/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/streaming/MANIFEST.md
 _ai-conspects/streaming/APPLY_ARCHIVE.md
@@ -33,4 +35,4 @@ _ai-conspects/streaming/APPLY_ARCHIVE.md
 
 ## Next
 
-R03 transcript after local boundary review.
+R04 transcript after local boundary review.

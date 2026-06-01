@@ -1,67 +1,58 @@
 {
-  "generated": "2026-06-01 22:47:08 UTC",
-  "ledger_version": "v001-updated-by-r02-v001",
-  "critical_rule": "Ledger is still a checklist/decision log, not source of truth. R02 decisions were made after visual/semantic boundary review.",
-  "r02_delta": {
+  "generated": "2026-06-01 22:55:38 UTC",
+  "ledger_version": "v001-updated-by-r03-v001",
+  "critical_rule": "Ledger is still a checklist/decision log, not source of truth. R03 decisions were made after visual/semantic boundary review.",
+  "r03_delta": {
     "included_sources": [
-      "S-033",
-      "S-041",
-      "S-042",
-      "S-043",
-      "S-044",
-      "S-045",
-      "S-046",
-      "S-047",
-      "S-048",
-      "S-049",
-      "S-050",
-      "S-051",
-      "S-052",
-      "S-053",
-      "S-054",
-      "S-055",
-      "S-056",
-      "S-057",
-      "S-058",
-      "S-059",
-      "S-060",
-      "S-061",
-      "S-062",
-      "S-063",
-      "S-064",
-      "S-065",
-      "S-066",
-      "S-067",
-      "S-068",
-      "S-079",
-      "S-080",
-      "S-081",
-      "S-082"
+      "S-004",
+      "S-005",
+      "S-006",
+      "S-007",
+      "S-029",
+      "S-008",
+      "S-030",
+      "S-028",
+      "S-009",
+      "S-010",
+      "S-091",
+      "S-001",
+      "S-002",
+      "S-090",
+      "S-003",
+      "S-087",
+      "S-011",
+      "S-088",
+      "S-012",
+      "S-089",
+      "S-092",
+      "S-013",
+      "S-014",
+      "S-015",
+      "S-016",
+      "S-017",
+      "S-018",
+      "S-019",
+      "S-020",
+      "S-021",
+      "S-022",
+      "S-023",
+      "S-024",
+      "S-025",
+      "S-026",
+      "S-027"
     ],
-    "pulled_from_initial_R06": [
-      "S-057",
-      "S-058"
-    ],
-    "checked_not_R02_candidate_R06": [
-      "S-069",
-      "S-070",
-      "S-071",
-      "S-072",
-      "S-073",
-      "S-074",
-      "S-075",
-      "S-076",
-      "S-077",
-      "S-078",
-      "S-083"
-    ],
-    "excluded_already_R01": [
-      "S-031",
-      "S-032"
+    "pulled_from_unsplit_after_review": [
+      "S-024",
+      "S-025",
+      "S-026",
+      "S-027"
     ],
     "duplicate_uses_recorded": [
-      "S-048",
-      "S-049"
+      "S-090",
+      "S-015"
+    ],
+    "checked_not_R03_candidate_R04": [
+      "S-084"
     ]
   },
   "rows": [
@@ -74,12 +65,12 @@
       "width": "961.0",
       "height": "378.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-002",
@@ -90,12 +81,12 @@
       "width": "768.0",
       "height": "387.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-003",
@@ -106,12 +97,12 @@
       "width": "888.0",
       "height": "345.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-004",
@@ -122,12 +113,12 @@
       "width": "1270.0",
       "height": "356.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-005",
@@ -138,12 +129,12 @@
       "width": "1409.0",
       "height": "332.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-006",
@@ -154,12 +145,12 @@
       "width": "1290.0",
       "height": "280.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-007",
@@ -170,12 +161,12 @@
       "width": "809.0",
       "height": "369.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-008",
@@ -186,12 +177,12 @@
       "width": "786.0",
       "height": "369.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-009",
@@ -202,12 +193,12 @@
       "width": "758.0",
       "height": "427.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-010",
@@ -218,12 +209,12 @@
       "width": "1038.0",
       "height": "369.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-011",
@@ -234,12 +225,12 @@
       "width": "851.0",
       "height": "482.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-012",
@@ -250,12 +241,12 @@
       "width": "886.0",
       "height": "482.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-013",
@@ -266,12 +257,12 @@
       "width": "935.0",
       "height": "191.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-014",
@@ -282,12 +273,12 @@
       "width": "917.0",
       "height": "292.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-015",
@@ -298,12 +289,12 @@
       "width": "930.0",
       "height": "369.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001; duplicate visible StreamBooks mapping snippet placement recorded.",
+      "review_notes": "Included in R03 v001; duplicate visible StreamBooks mapping snippet placement recorded."
     },
     {
       "source_id": "S-016",
@@ -314,12 +305,12 @@
       "width": "901.0",
       "height": "464.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-017",
@@ -330,12 +321,12 @@
       "width": "782.0",
       "height": "177.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-018",
@@ -346,12 +337,12 @@
       "width": "763.0",
       "height": "431.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-019",
@@ -362,12 +353,12 @@
       "width": "828.0",
       "height": "469.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-020",
@@ -378,12 +369,12 @@
       "width": "587.0",
       "height": "433.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-021",
@@ -394,12 +385,12 @@
       "width": "641.0",
       "height": "374.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-022",
@@ -410,12 +401,12 @@
       "width": "815.0",
       "height": "307.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-023",
@@ -426,12 +417,12 @@
       "width": "911.0",
       "height": "447.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-024",
@@ -442,12 +433,12 @@
       "width": "586.0",
       "height": "482.0",
       "initial_candidate_band": "UNSPLIT-candidate-needs-boundary-review",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail.",
+      "review_notes": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail."
     },
     {
       "source_id": "S-025",
@@ -458,12 +449,12 @@
       "width": "837.0",
       "height": "143.0",
       "initial_candidate_band": "UNSPLIT-candidate-needs-boundary-review",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail.",
+      "review_notes": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail."
     },
     {
       "source_id": "S-026",
@@ -474,12 +465,12 @@
       "width": "892.0",
       "height": "348.0",
       "initial_candidate_band": "UNSPLIT-candidate-needs-boundary-review",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail.",
+      "review_notes": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail."
     },
     {
       "source_id": "S-027",
@@ -490,12 +481,12 @@
       "width": "908.0",
       "height": "387.0",
       "initial_candidate_band": "UNSPLIT-candidate-needs-boundary-review",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail.",
+      "review_notes": "Pulled from UNSPLIT into R03 after visual/semantic boundary review; REST-friendly streaming endpoint tail."
     },
     {
       "source_id": "S-028",
@@ -506,12 +497,12 @@
       "width": "698.0",
       "height": "482.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-029",
@@ -522,12 +513,12 @@
       "width": "799.0",
       "height": "213.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-030",
@@ -538,12 +529,12 @@
       "width": "850.0",
       "height": "206.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-031",
@@ -1402,12 +1393,12 @@
       "width": "731.0",
       "height": "325.0",
       "initial_candidate_band": "R04-candidate-asyncenumerable-ndjson-flushasync",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "checked-not-r03-candidate-r04",
+      "current_region_decision": "R04",
+      "decision_is_final": "yes-for-r03-exclusion-only",
+      "must_recheck_before_region_close": "yes-for-r04",
+      "decision_basis": "Checked during R03 boundary review; belongs to R04 NDJSON/IAsyncEnumerable implementation road.",
+      "review_notes": "Checked during R03 boundary review; belongs to R04 NDJSON/IAsyncEnumerable implementation road."
     },
     {
       "source_id": "S-085",
@@ -1450,12 +1441,12 @@
       "width": "809.0",
       "height": "482.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-088",
@@ -1466,12 +1457,12 @@
       "width": "971.0",
       "height": "463.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-089",
@@ -1482,12 +1473,12 @@
       "width": "438.0",
       "height": "89.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-090",
@@ -1498,12 +1489,12 @@
       "width": "930.0",
       "height": "369.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001; duplicate visible StreamBooks mapping snippet placement recorded.",
+      "review_notes": "Included in R03 v001; duplicate visible StreamBooks mapping snippet placement recorded."
     },
     {
       "source_id": "S-091",
@@ -1514,12 +1505,12 @@
       "width": "739.0",
       "height": "482.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-092",
@@ -1530,12 +1521,12 @@
       "width": "853.0",
       "height": "116.0",
       "initial_candidate_band": "R03-candidate-streaming-objects-async-iteration-rest-concerns",
-      "coverage_status": "unreviewed-needs-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Not reviewed in transcript pass yet.",
-      "review_notes": "Coordinate/label candidate only; must be visually and semantically reviewed before transcript."
+      "coverage_status": "processed-in-r03-v001",
+      "current_region_decision": "R03",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after visual/semantic boundary review.",
+      "review_notes": "Included in R03 v001 after visual/semantic boundary review."
     },
     {
       "source_id": "S-093",

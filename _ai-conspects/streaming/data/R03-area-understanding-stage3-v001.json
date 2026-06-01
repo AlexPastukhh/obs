@@ -1,0 +1,35 @@
+{
+  "region_id": "R03",
+  "region_name": "Streaming objects / async iteration / REST API concerns",
+  "stage": "stage-3-v001",
+  "generated": "2026-06-01 22:55:38 UTC",
+  "what_area_is_about": [
+    "streaming as continuous network flow",
+    "synchronous vs asynchronous iteration",
+    "IAsyncEnumerable<T> and await foreach",
+    "single query/result stream, not parallel DB calls",
+    "ASP.NET Core + EF Core object streaming",
+    "REST API concerns for streaming endpoints: filtering, sorting, pagination, HATEOAS, content negotiation, caching, resilience"
+  ],
+  "key_ideas": [
+    "Streaming sends/receives data progressively instead of buffering the whole payload first.",
+    "Async iteration frees threads during I/O wait and only needs a thread while executing code for each item.",
+    "IAsyncEnumerable<T> can let ASP.NET Core/System.Text.Json stream objects to the consumer.",
+    "Object streaming is usually one query and sequential async row reads, not one DB query per element.",
+    "For EF Core, avoid ToListAsync if you want streaming; keep DbContext alive and support cancellation.",
+    "REST-friendly streaming endpoints still need filters/sorting at the data source, stable order, cursor pagination, content negotiation, and careful caching/resilience choices."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "mostly high",
+    "code_readability": "medium-high to high; some dark/code screenshots are small",
+    "spatial_layout_understanding": "high after local R03 boundary review",
+    "limitations": [
+      "S-007/S-008/S-009 are diagram-only and exact tiny spacing is not important.",
+      "S-014 dark/code screenshot is small; code is transcribed to visible intent.",
+      "S-087/S-091 dark Q&A screenshots contain some browser/UI noise; main answer text is readable.",
+      "S-028 bottom of non-streaming timeline is slightly cropped after visible portion."
+    ],
+    "confidence_summary": "High for concepts and boundary; medium-high for exact punctuation in small code screenshots."
+  }
+}

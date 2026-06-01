@@ -1,0 +1,63 @@
+{
+  "generated": "2026-06-01 22:55:38 UTC",
+  "region_id": "R03",
+  "region_name": "Streaming objects / async iteration / REST API concerns",
+  "boundary_status": "reviewed-v001",
+  "included_sources": [
+    "S-004",
+    "S-005",
+    "S-006",
+    "S-007",
+    "S-029",
+    "S-008",
+    "S-030",
+    "S-028",
+    "S-009",
+    "S-010",
+    "S-091",
+    "S-001",
+    "S-002",
+    "S-090",
+    "S-003",
+    "S-087",
+    "S-011",
+    "S-088",
+    "S-012",
+    "S-089",
+    "S-092",
+    "S-013",
+    "S-014",
+    "S-015",
+    "S-016",
+    "S-017",
+    "S-018",
+    "S-019",
+    "S-020",
+    "S-021",
+    "S-022",
+    "S-023",
+    "S-024",
+    "S-025",
+    "S-026",
+    "S-027"
+  ],
+  "included_count": 36,
+  "pulled_from_unsplit_after_review": [
+    "S-024",
+    "S-025",
+    "S-026",
+    "S-027"
+  ],
+  "duplicate_uses_recorded": [
+    "S-090",
+    "S-015"
+  ],
+  "checked_not_included": [
+    {
+      "source_id": "S-084",
+      "decision": "checked-not-r03-candidate-r04",
+      "reason": "Starts NDJSON streaming controller action implementation; belongs to R04 IAsyncEnumerable/NDJSON/FlushAsync road."
+    }
+  ],
+  "decision": "R03 includes the right-top object streaming/async iteration road plus the unsplit REST endpoint contract tail; R04 starts at NDJSON implementation."
+}

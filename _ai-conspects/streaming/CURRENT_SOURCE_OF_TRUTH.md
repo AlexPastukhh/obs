@@ -1,6 +1,6 @@
 # Current Source of Truth - Streaming
 
-Generated: 2026-06-01 22:47:08 UTC
+Generated: 2026-06-01 22:55:38 UTC
 
 ## Policy
 
@@ -14,12 +14,14 @@ A region is complete only after visual/semantic boundary review and verified tra
 Stage0 boundary review: done
 R01 streaming bytes / stream concept basics: transcript v001 done
 R02 reading response stream / payload bytes: transcript v001 done
-R03 streaming objects / async iteration / REST API concerns: next
+R03 streaming objects / async iteration / REST API concerns: transcript v001 done
+R04 IAsyncEnumerable / NDJSON / FlushAsync: next
 ```
 
-## R02 note
+## R03 note
 
 ```text
-S-057/S-058 were pulled from initial R06 candidate into R02 by semantic review because they continue the MemoryStream / send-data road.
-S-069-S078/S-083 remain checked-not-R02 and reserved for R06 lower-tail benefits/mental-model review.
+S-024/S-025/S-026/S-027 were pulled from UNSPLIT into R03 by semantic review because they continue the REST-friendly streaming endpoint concerns tail.
+S-084 was checked but left for R04 because it starts NDJSON streaming controller implementation.
+S-090/S-015 duplicate visible code snippet placements are both recorded.
 ```
