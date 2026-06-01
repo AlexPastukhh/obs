@@ -1,0 +1,86 @@
+﻿if logic changes, server may not show some link to consumer ^Dn9FhTKy
+
+theory ^8MpTwlwh
+
+basic implementation ^KbUSln0p
+
+shaping 
+dto the same 
+way, but with 
+convertation to 
+IDict ^ledgIVPx
+
+Creating link to the resource itself ^ntMw9yjP
+
+We are now fully driving the app state
+deciding on fucntionality of the 
+consumer ^PjCzrGuN
+
+need to cast to expando object with 
+this ^GRTBIzN1
+
+Creating new uri link type  ^JNwsXnSW
+
+previous default link ^HUDSVxbE
+
+And thats it , author resource collection cannot be deleted or updated in 
+current impl ^XUuNiucS
+
+end ^94yRKzQA
+
+at this point of course only have one 
+link for getauthors collection 
+selft ---> pagination hateoas links with all sorting
+filtering and shaping shit ^JVZi3n9Z
+
+page links ^mGxhcsI2
+
+!!! ^euqeBVCf
+
+When have hateoas, better to include prev and next page to links,not to metadata
+like  ^Nfgx4pSs
+
+!!! ^d8Qx7LYL
+
+CONTROLLER ^eyDW2pFr
+
+!!! ^i0Xhp0oo
+
+USING ANON OBJ HERE ^A6YyTWcH
+
+ADDING HATEOAS TO EVERY AUTHOR
+IN THE COLLECTION WITH CASTING EXPANDO 
+TO IDICT INTERFACE ^BMFcsgIr
+
+!!! ^f68eUuOT
+
+!!! ^bM0yupy5
+
+rel, method ^I4CEcFpS
+
+whats the goal ^Gqe3DMOg
+
+practical diff ^c1ITm8Z0
+
+what problems
+is it solving ^Lv9mIg9g
+
+is it for humans 
+or machines? ^t9uweXqV
+
+need to have 
+some basic contract 
+with client, that it 
+can understand without 
+need to know exact implementation
+that yoiu put into returned links from
+server ^9zzt42yD
+
+url chagnes break clients ^oVx9iMv8
+
+workflow changes require
+client changes ^zkSybf4S
+
+clients duplicate buisness rules ^z9d70gks
+
+apis less discoverable ^IJWteWp6

@@ -1,0 +1,56 @@
+﻿e-tag basics ^a0qE5cZ6
+
+here we first get rowversion from db
+but better to check if there is a none match header first  ^qrLxCKeu
+
+helpers ^LFlEFCuD
+
+ef core ^0ON7G4PW
+
+excplicit with onmodelcreating ^4sLf4csR
+
+automatic row version with attribute ^Bbwy9OMG
+
+FLOW ^rSJ8okGh
+
+IF CLIENT CREATES IDS AND API ALLOWS UPSERT
+THERE IS A POSSIBLE SITUATION WHEN  CLIENT SEND PUT REQUEST
+BUT HE DOESNT WANT TO  OVERWRITE EXISTING ID, SO HE SENDS WITH 
+IF-NONE-MATCH:* SO IF THE RESOURCE EXISTS IN ANY VERSION - THERE WOULD BE 
+NO UPDATE ^pX2z5L5n
+
+you need to do calls with if-match yourself
+browser does nothing with it 
+you are handlinkg concurrency  ^OoSPW1SS
+
+if match at client ^cGHtXYud
+
+e tag for aggregate ^PwFqGs3f
+
+getting modified child entities aggregate id 
++ modified aggregate id
+(need to have some list of child entities  types and aggregates ffor this) ^YhtBceUO
+
+so need to wrap and act  ^kQmUwJF9
+
+!!!! ^O3ClEPRf
+
+etag flow, can browser store for later use
+or it needs to get etag on each response from server? ^5igtXfRU
+
+so the e tag flow is 
+from response to request 
+without storing for later requests? ^RztQUSjS
+
+with spa and not api's you usually get e tag from the 
+response and store it to do a fetch with it ^7ULX0d8a
+
+if match, client ^w1tfTjN7
+
+so in situation with aggregate cuncurrency token 
+ifs better to have some dedicated interseptor for
+some aggregate and some type of child entity
+and we check if some changed entity is of this type 
+and we get its aggregate and bump its token ^A9TR5PCh
+
+e-tag with outputcache ^d39rktOU

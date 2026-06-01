@@ -1,0 +1,694 @@
+﻿configure formatters  ^WQRzuBsh
+
+configure supported media types(will return 406) ^DtlWYRiw
+
+for  ^Fa5Qx77G
+
+full content negotiation basics flow
++ validation problem details (can name sheet like this) ^NxN7nrze
+
+add exception handler middleware so youll return problemdetails with 500 status code on exception
+from anywhere(where they werent handled) ^BhE5qv2m
+
+create action filter for trying to parse value from accept header 
+and return 400 with proper problem details                                  or                 do this in every controller action
+
+                                                    
+
+ ^YR0onGvD
+
+you can check if accept headers value is valid
+and return proper problemdetails
+if you wont - framework will return just status code ^PV06DSpk
+
+in controller return badrequest with  ^NNHmnCgA
+
+use consumes  ^46NrS8pv
+
+ausing Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler(errorApp =>
+    {
+        errorApp.Run(async context =>
+        {
+            // If the response already started, we can't write our problem details
+            if (context.Response.HasStarted)
+            {
+                return;
+            }
+
+            var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();
+            var ex = exceptionHandlerFeature?.Error;
+
+            // Resolve ProblemDetailsFactory from DI
+            var problemDetailsFactory = context.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+
+            // You can map exception types to status codes if you want
+            var statusCode = StatusCodes.Status500InternalServerError;
+
+            // Create ProblemDetails using the factory (consistent defaults)
+            var problem = problemDetailsFactory.CreateProblemDetails(
+                context,
+                statusCode: statusCode,
+                title: "An unexpected error occurred.",
+                type: "https://httpstatuses.com/500",
+                detail: app.Environment.IsDevelopment() ? ex?.ToString() : null,
+                instance: context.Request.Path
+            );
+
+            // Optionally attach extra info (extensions)
+            problem.Extensions["traceId"] = context.TraceIdentifier;
+
+            context.Response.Clear();
+            context.Response.StatusCode = statusCode;
+            context.Response.ContentType = "application/problem+json";
+
+            await context.Response.WriteAsJsonAsync(problem);
+        });
+    });
+} ^DSVegGat
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Net.Http.Headers;
+
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
+public sealed class ValidateAcceptHeaderAttribute : Attribute, IAsyncActionFilter
+{
+    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+    {
+        // No Accept header => treat as */* (valid). Let MVC pick default output.
+        if (!context.HttpContext.Request.Headers.TryGetValue(HeaderNames.Accept, out var acceptValues) ||
+            string.IsNullOrWhiteSpace(acceptValues.ToString()))
+        {
+            await next();
+            return;
+        }
+
+        // Accept can be a comma-separated list; TryParseList handles typical Accept syntax.
+        // If it's malformed (cannot be parsed), return 400 ProblemDetails.
+        if (!MediaTypeHeaderValue.TryParseList(acceptValues, out var parsed))
+        {
+            // Use ProblemDetailsFactory for consistent API error responses
+            var pdf = context.HttpContext.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+
+            var problem = pdf.CreateProblemDetails(
+                context.HttpContext,
+                statusCode: StatusCodes.Status400BadRequest,
+                title: "Invalid Accept header.",
+                detail: $"The '{HeaderNames.Accept}' header value is not a valid media type list.",
+                type: "https://httpstatuses.com/400",
+                instance: context.HttpContext.Request.Path
+            );
+
+            context.Result = new BadRequestObjectResult(problem)
+            {
+                ContentTypes = { "application/problem+json" }
+            };
+            return;
+        }
+
+        await next();
+    }
+} ^8tjX6qHp
+
+OR ^olaEaqWI
+
+IACTIONCONSTRAINT ^Y8IbyfNB
+
+FROM COURSE WITH PLAIN IACTIONCONSTAINT ATTR ^QBvwDWG1
+
+NEED TO VALIDATE 
+INPUTTED BY DEVELOPER
+VALUES ^pexHVOCG
+
+BUT NOT ONLY HEADERS MB ^nXlSfjlu
+
+WITH VALIDATION OF DEVELOPERS INPUT AND MULTIPLE CTORS ^1mMlvJ7q
+
+using Microsoft.AspNetCore.Mvc.ActionConstraints;
+using Microsoft.Net.Http.Headers;
+using Microsoft.Extensions.Primitives;
+
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
+public sealed class RequestMatchesAttribute : Attribute, IActionConstraintFactory
+{
+    // Lower runs earlier
+    public int Order { get; set; } = 0;
+
+    public bool IsReusable => true;
+
+    // Optional: match method
+    public string? HttpMethod { get; }
+
+    // Optional: match a single header against allowed media types
+    // (Typical for Content-Type selection)
+    public string? HeaderToMatch { get; }
+    private readonly MediaTypeHeaderValue[]? _allowedHeaderMediaTypes;
+
+    // Optional: query string rules (presence or exact match)
+    public string? RequiredQueryKey { get; }
+    public string? RequiredQueryValue { get; }
+
+    // Optional: route value rules
+    public string? RequiredRouteKey { get; }
+    public string? RequiredRouteValue { get; }
+
+    // Example ctor: match by Content-Type list
+    public RequestMatchesAttribute(
+        string headerToMatch,
+        string mediaType,
+        params string[] otherMediaTypes)
+    {
+        if (string.IsNullOrWhiteSpace(headerToMatch))
+            throw new ArgumentNullException(nameof(headerToMatch));
+
+        HeaderToMatch = headerToMatch;
+
+        var all = new List<string> { mediaType };
+        if (otherMediaTypes is { Length: > 0 })
+            all.AddRange(otherMediaTypes);
+
+        _allowedHeaderMediaTypes = all.Select(mt =>
+        {
+            // Validate DEV-provided media type strings
+            if (!MediaTypeHeaderValue.TryParse(mt, out var parsed))
+                throw new ArgumentException($"Invalid media type configured: '{mt}'", nameof(mediaType));
+            return parsed!;
+        }).ToArray();
+    }
+
+    // Example ctor: match by query (presence or exact)
+    public RequestMatchesAttribute(string requiredQueryKey, string? requiredQueryValue = null, bool query = true)
+    {
+        if (!query) throw new ArgumentException("Use the query ctor overload.", nameof(query));
+        if (string.IsNullOrWhiteSpace(requiredQueryKey))
+            throw new ArgumentNullException(nameof(requiredQueryKey));
+
+        RequiredQueryKey = requiredQueryKey;
+        RequiredQueryValue = requiredQueryValue;
+    }
+
+    // Example ctor: match by route value
+    public RequestMatchesAttribute(string requiredRouteKey, string requiredRouteValue, bool route = true)
+    {
+        if (!route) throw new ArgumentException("Use the route ctor overload.", nameof(route));
+        if (string.IsNullOrWhiteSpace(requiredRouteKey))
+            throw new ArgumentNullException(nameof(requiredRouteKey));
+        if (string.IsNullOrWhiteSpace(requiredRouteValue))
+            throw new ArgumentNullException(nameof(requiredRouteValue));
+
+        RequiredRouteKey = requiredRouteKey;
+        RequiredRouteValue = requiredRouteValue;
+    }
+
+    public IActionConstraint CreateInstance(IServiceProvider services)
+        => new RequestMatchesConstraint(
+            order: Order,
+            httpMethod: HttpMethod,
+            headerToMatch: HeaderToMatch,
+            allowedHeaderMediaTypes: _allowedHeaderMediaTypes,
+            requiredQueryKey: RequiredQueryKey,
+            requiredQueryValue: RequiredQueryValue,
+            requiredRouteKey: RequiredRouteKey,
+            requiredRouteValue: RequiredRouteValue);
+
+    private sealed class RequestMatchesConstraint : IActionConstraint
+    {
+        private readonly int _order;
+        private readonly string? _httpMethod;
+
+        private readonly string? _headerToMatch;
+        private readonly MediaTypeHeaderValue[]? _allowedHeaderMediaTypes;
+
+        private readonly string? _requiredQueryKey;
+        private readonly string? _requiredQueryValue;
+
+        private readonly string? _requiredRouteKey;
+        private readonly string? _requiredRouteValue;
+
+        public RequestMatchesConstraint(
+            int order,
+            string? httpMethod,
+            string? headerToMatch,
+            MediaTypeHeaderValue[]? allowedHeaderMediaTypes,
+            string? requiredQueryKey,
+            string? requiredQueryValue,
+            string? requiredRouteKey,
+            string? requiredRouteValue)
+        {
+            _order = order;
+            _httpMethod = httpMethod;
+            _headerToMatch = headerToMatch;
+            _allowedHeaderMediaTypes = allowedHeaderMediaTypes;
+            _requiredQueryKey = requiredQueryKey;
+            _requiredQueryValue = requiredQueryValue;
+            _requiredRouteKey = requiredRouteKey;
+            _requiredRouteValue = requiredRouteValue;
+        }
+
+        public int Order => _order;
+
+        public bool Accept(ActionConstraintContext context)
+        {
+            var http = context.RouteContext.HttpContext;
+            var req = http.Request;
+
+            // Method (optional)
+            if (!string.IsNullOrWhiteSpace(_httpMethod) &&
+                !HttpMethods.IsMethod(req.Method, _httpMethod))
+            {
+                return false;
+            }
+
+            // Route rule (optional)
+            if (_requiredRouteKey != null)
+            {
+                if (!context.RouteContext.RouteData.Values.TryGetValue(_requiredRouteKey, out var obj))
+                    return false;
+
+                var actual = Convert.ToString(obj);
+                if (!string.Equals(actual, _requiredRouteValue, StringComparison.OrdinalIgnoreCase))
+                    return false;
+            }
+
+            // Query rule (optional)
+            if (_requiredQueryKey != null)
+            {
+                if (!req.Query.TryGetValue(_requiredQueryKey, out var values))
+                    return false;
+
+                if (_requiredQueryValue != null && !AnyEquals(values, _requiredQueryValue))
+                    return false;
+            }
+
+            // Header media type rule (optional)
+            if (_headerToMatch != null && _allowedHeaderMediaTypes != null)
+            {
+                if (!req.Headers.TryGetValue(_headerToMatch, out var raw))
+                    return false;
+
+                // IMPORTANT: client header might be malformed -> don't throw
+                if (!MediaTypeHeaderValue.TryParse(raw.ToString(), out var parsedRequest))
+                    return false;
+
+                var requestMediaType = parsedRequest!.MediaType?.Value;
+                if (string.IsNullOrWhiteSpace(requestMediaType))
+                    return false;
+
+                foreach (var allowed in _allowedHeaderMediaTypes)
+                {
+                    if (string.Equals(requestMediaType, allowed.MediaType?.Value, StringComparison.OrdinalIgnoreCase))
+                        return true;
+                }
+
+                return false;
+            }
+
+            // If no header rule configured, and other configured rules passed, accept.
+            return true;
+        }
+
+        private static bool AnyEquals(StringValues values, string expected)
+        {
+            foreach (var v in values)
+            {
+                if (string.Equals(v, expected, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            return false;
+        }
+    }
+} ^rlfcaqgJ
+
+CAN SPLIT OUR ACTION THAT PRODUCES 4 DIFFERENT VARIANTS(APPJSON/HATEMARVIN 
+= FRENDLYJSON/FRENDLYHATE) ^p4YiPGMY
+
+CAN CHECK REQUESTS FOR INVALID CONTENT-TYPE HEADER WITH MIDDLEWARE ^ZKvtZlm0
+
+BETTER:MULTIPLE ACCEPT HEADER VALUES WITH 
+QS PREFERENCE ^QVQt2O1X
+
+CONSUMES ^Re7CKJxm
+
+CONTENT TYPE CHECK MIDDLEWARE ^OYVtj3ra
+
+ACCEPT HEADER CHECK ^u7o8atjL
+
+EXCEPTIONHANDLER MIVVLEWARE ^WRg5HSmo
+
+!!! ^vKADNAsG
+
+in controller ^TQC84FSA
+
+using Microsoft.Net.Http.Headers;
+using Microsoft.Extensions.Primitives;
+
+public static class AcceptHeaderSelectionHelper
+{
+    // Define server preference order (first = most preferred when q ties)
+    // Put the variants you support here in the exact preference order you want.
+    private static readonly string[] SupportedByPreference =
+    {
+        "application/vnd.marvin.author.full.hateoas+json",
+        "application/vnd.marvin.author.full+json",
+        "application/vnd.marvin.author.friendly.hateoas+json",
+        "application/vnd.marvin.author.friendly+json",
+        "application/json",
+        "application/*",
+        "*/*"
+    };
+
+    public sealed record NegotiationResult(
+        string MediaType,
+        string PrimaryMediaType,  // e.g. vnd.marvin.author.full / vnd.marvin.author.friendly / application
+        bool IncludeLinks          // true if hateoas requested
+    );
+
+    /// <summary>
+    /// Picks the best matching media type from Accept header using:
+    /// 1) q weight (descending)
+    /// 2) specificity (exact > type/* > */*)
+    /// 3) server preference order (SupportedByPreference)
+    /// 4) header order as a final tie-breaker (stable by index)
+    /// </summary>
+    public static bool TrySelect(
+        StringValues acceptHeader,
+        out NegotiationResult? result)
+    {
+        result = null;
+
+        // Missing Accept => treat as */* (client accepts anything)
+        if (StringValues.IsNullOrEmpty(acceptHeader))
+        {
+            // choose your default representation here
+            var defaultMt = "application/vnd.marvin.author.friendly+json";
+            result = BuildResult(defaultMt);
+            return true;
+        }
+
+        if (!MediaTypeHeaderValue.TryParseList(acceptHeader, out var parsedList))
+        {
+            return false; // invalid syntax -> caller should return 400 ProblemDetails
+        }
+
+        // Build candidates from Accept values
+        var candidates = parsedList
+            .Select((mt, index) => new Candidate(mt, index))
+            .Where(c => c.Q > 0) // q=0 means "not acceptable"
+            .ToList();
+
+        if (candidates.Count == 0)
+        {
+            return false;
+        }
+
+        // For each Accept candidate, find best supported match based on:
+        // - exact match in SupportedByPreference
+        // - or "application/*" / "*/*" wildcard
+        var supportedMatches = new List<SupportedMatch>();
+
+        foreach (var c in candidates)
+        {
+            foreach (var supported in SupportedByPreference)
+            {
+                if (Matches(c, supported))
+                {
+                    supportedMatches.Add(new SupportedMatch(
+                        supportedMediaType: Normalize(supported),
+                        q: c.Q,
+                        specificity: c.Specificity,
+                        supportedPreferenceRank: Array.IndexOf(SupportedByPreference, supported),
+                        acceptHeaderIndex: c.Index));
+                }
+            }
+        }
+
+        if (supportedMatches.Count == 0)
+        {
+            // No overlap between Accept and what we can produce -> 406 scenario
+            return false;
+        }
+
+        var winner = supportedMatches
+            .OrderByDescending(m => m.Q)
+            .ThenByDescending(m => m.Specificity)
+            .ThenBy(m => m.SupportedPreferenceRank)
+            .ThenBy(m => m.AcceptHeaderIndex)
+            .First();
+
+        result = BuildResult(winner.SupportedMediaType);
+        return true;
+    }
+
+    private static NegotiationResult BuildResult(string mediaType)
+    {
+        // your course logic: include links if subtype ends with "hateoas"
+        var includeLinks = mediaType.Contains("hateoas", StringComparison.OrdinalIgnoreCase);
+
+        // derive "primary" type similar to course:
+        // application/vnd.marvin.author.full.hateoas+json -> vnd.marvin.author.full
+        // application/vnd.marvin.author.friendly+json -> vnd.marvin.author.friendly
+        // application/json -> application
+        var parsed = MediaTypeHeaderValue.Parse(mediaType);
+        var subType = parsed.SubTypeWithoutSuffix.Value; // e.g. vnd.marvin.author.full.hateoas or json
+        var primary = subType.EndsWith(".hateoas", StringComparison.OrdinalIgnoreCase)
+            ? subType[..^(".hateoas".Length)]
+            : subType;
+
+        return new NegotiationResult(mediaType, primary, includeLinks);
+    }
+
+    private static string Normalize(string mediaType) => mediaType.Trim();
+
+    private sealed record Candidate(MediaTypeHeaderValue Value, int Index)
+    {
+        public double Q
+        {
+            get
+            {
+                // If q is absent => 1.0
+                var qParam = Value.Parameters.FirstOrDefault(p =>
+                    string.Equals(p.Name.Value, "q", StringComparison.OrdinalIgnoreCase));
+
+                if (qParam?.Value is null) return 1.0;
+
+                // q is a StringSegment like "0.9"
+                if (double.TryParse(qParam.Value.Value, System.Globalization.NumberStyles.AllowDecimalPoint,
+                        System.Globalization.CultureInfo.InvariantCulture, out var q))
+                {
+                    return q;
+                }
+
+                // Malformed q -> treat as invalid by making it unacceptable
+                return 0;
+            }
+        }
+
+        // exact = 2, type/* = 1, */* = 0
+        public int Specificity =>
+            Value.MediaType?.Value == "*/*" ? 0 :
+            Value.SubType?.Value == "*" ? 1 :
+            2;
+    }
+
+    private sealed record SupportedMatch(
+        string SupportedMediaType,
+        double Q,
+        int Specificity,
+        int SupportedPreferenceRank,
+        int AcceptHeaderIndex);
+
+    private static bool Matches(Candidate accept, string supported)
+    {
+        supported = Normalize(supported);
+
+        // wildcard supported entries are just there for preference list;
+        // treat them as matching in the obvious way.
+        if (supported == "*/*")
+            return true;
+
+        // Parse supported into type/subtype
+        if (!MediaTypeHeaderValue.TryParse(supported, out var supportedMt))
+        {
+            // developer error; should never happen because SupportedByPreference is ours
+            return false;
+        }
+
+        // If accept is */* it matches anything
+        if (accept.Value.MediaType?.Value == "*/*")
+            return true;
+
+        // If accept is type/* it matches any subtype for that type
+        if (accept.Value.SubType?.Value == "*")
+        {
+            return string.Equals(
+                accept.Value.Type?.Value,
+                supportedMt!.Type?.Value,
+                StringComparison.OrdinalIgnoreCase);
+        }
+
+        // Otherwise exact compare by media type (ignore parameters)
+        return string.Equals(
+            accept.Value.MediaType?.Value,
+            supportedMt!.MediaType?.Value,
+            StringComparison.OrdinalIgnoreCase);
+    }
+} ^dpNZ5tgv
+
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("api/authors")]
+public class AuthorsController : ControllerBase
+{
+    [HttpGet("{authorId}")]
+    public IActionResult GetAuthor(Guid authorId, [FromHeader(Name = "Accept")] string? accept)
+    {
+        if (!AcceptHeaderSelectionHelper.TrySelect(accept, out var selected))
+        {
+            // Could be invalid Accept syntax (400) OR no supported match (406).
+            // If you want to distinguish, check TryParseList separately.
+            return StatusCode(StatusCodes.Status406NotAcceptable);
+        }
+
+        // selected.IncludeLinks -> add HATEOAS
+        // selected.PrimaryMediaType -> "vnd.marvin.author.full" / "vnd.marvin.author.friendly"
+        if (string.Equals(selected!.PrimaryMediaType, "vnd.marvin.author.full", StringComparison.OrdinalIgnoreCase))
+        {
+            // build full representation
+            return Ok(new { kind = "full", links = selected.IncludeLinks });
+        }
+
+        // build friendly representation
+        return Ok(new { kind = "friendly", links = selected.IncludeLinks });
+    }
+} ^PqNeGNfG
+
+better ^od7V9gXR
+
+ADD STATUSCODEPAGES FOR 406/415 ETC  ^tW9na4tQ
+
+OR ^PMNlUALx
+
+CREATE SOME ENDPOINTS FOR STATUS CODES ^U2qCLq04
+
+can add check for status code and add more info about 
+the initial path and what client does need to do
+(406 check accept 415 check content tyep) ^rUHxyrku
+
+cant add the exact
+reason to problem
+but can add useful details ^7aacjHQM
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// MVC (or minimal APIs + services)
+builder.Services.AddControllers();
+
+// ProblemDetails infrastructure
+builder.Services.AddProblemDetails();
+
+var app = builder.Build();
+
+app.UseRouting();
+
+app.UseWhen(
+    ctx => ctx.Request.Path.StartsWithSegments("/api"),
+    apiApp =>
+    {
+        apiApp.UseStatusCodePages(async statusCodeContext =>
+        {
+            var http = statusCodeContext.HttpContext;
+
+            // If headers/body already started, can't write a body safely
+            if (http.Response.HasStarted)
+                return;
+
+            var code = http.Response.StatusCode;
+
+            // Only handle selected status codes
+            if (code is not (
+                StatusCodes.Status404NotFound or
+                StatusCodes.Status405MethodNotAllowed or
+                StatusCodes.Status406NotAcceptable or
+                StatusCodes.Status415UnsupportedMediaType))
+            {
+                return;
+            }
+
+            var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+            var pdService = http.RequestServices.GetRequiredService<IProblemDetailsService>();
+
+            var detail = code switch
+            {
+                StatusCodes.Status404NotFound =>
+                    "Endpoint not found.",
+                StatusCodes.Status405MethodNotAllowed =>
+                    "HTTP method not allowed for this endpoint.",
+                StatusCodes.Status406NotAcceptable =>
+                    "The requested response media type is not acceptable. Check the Accept header.",
+                StatusCodes.Status415UnsupportedMediaType =>
+                    "The request media type is unsupported. Check the Content-Type header.",
+                _ => null
+            };
+
+            var pd = factory.CreateProblemDetails(
+                httpContext: http,
+                statusCode: code,
+                title: ReasonPhrases.GetReasonPhrase(code),
+                type: $"https://httpstatuses.com/{code}",
+                detail: detail,
+                instance: http.Request.Path
+            );
+
+            // Safe writer (content-negotiates across registered ProblemDetails writers)
+            var written = await pdService.TryWriteAsync(new ProblemDetailsContext
+            {
+                HttpContext = http,
+                ProblemDetails = pd
+            });
+
+            if (!written)
+            {
+                // Fallback if no ProblemDetails writer is registered for the request
+                http.Response.ContentType = "application/problem+json; charset=utf-8";
+                await http.Response.WriteAsJsonAsync(pd);
+            }
+        });
+    });
+
+app.MapControllers();
+
+app.Run(); ^Q5NrHekT
+
+configure system.text.json options  ^2wsUHs6n
+
+produces attribute ^umn598z3
+
+helper to check accept 
+values with q ^CouT4Og1
+
+input/output formatters
+supported media types
+configure 406 ^gtVrQNhu
+
+can framework handle this by itslef? ^QrluSd0F
+
+checking that there is a
+body
+transfer encoding with chunked
+transfer ^lbPb0AJl
+
+middleware ^F66OLfDg
