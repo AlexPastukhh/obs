@@ -1,0 +1,187 @@
+﻿sorting applyed to outter facing model, we cant expose entity model,
+so we need to apply sorting to entity model manually ^YAGY2wj8
+
+basics ^f7kYC3ES
+
+ if (string.IsNullOrWhiteSpace(orderBy))
+            return query.OrderBy(a => a.LastName).ThenBy(a => a.FirstName);
+
+        // split: "age desc,name"
+        var clauses = orderBy.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+        IOrderedQueryable<Author>? ordered = null;
+
+        foreach (var clause in clauses)
+        {
+            var parts = clause.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            var field = parts[0].ToLowerInvariant();
+            var desc = parts.Length > 1 && parts[1].Equals("desc", StringComparison.OrdinalIgnoreCase);
+
+            // whitelist fields
+            Func<Author, object> keySelector = field switch
+            {
+                "name" => a => a.LastName, // could be combined name; see note below
+                "age" => a => a.DateOfBirth, // example if you sort by DOB instead of computed age
+                "maincategory" => a => a.MainCategory!,
+                _ => throw new ArgumentException($"Sorting by '{field}' is not supported.")
+            };
+
+            if (ordered is null)
+            {
+                ordered = desc ? query.OrderByDescending(keySelector) : query.OrderBy(keySelector);
+            }
+            else
+            {
+                ordered = desc ? ordered.ThenByDescending(keySelector) : ordered.ThenBy(keySelector);
+            }
+        } ^aHH0JpVQ
+
+public class AuthorsResourceParameters
+{
+    public string? MainCategory { get; set; }
+    public string? SearchQuery { get; set; }
+
+    // Sorting
+    public string? OrderBy { get; set; } = "name";
+
+    // Paging (often present with sorting)
+    public int PageNumber { get; set; } = 1;
+    public int PageSize { get; set; } = 10;
+} ^baZDjCPK
+
+these are in foreach loop too ^2my6nTUh
+
+using dynamic sorting helper (System.Linq.Dynamic.Core) ^YzR8OVyd
+
+controller behavior ^Q9oWmeEX
+
+repository ^2AxMpqQT
+
+iqueryable extension ^EpgRA0O9
+
+public static IQueryable<T> ApplySort<T>(
+        this IQueryable<T> source,
+        string? orderBy,
+        Dictionary<string, PropertyMappingValue> mappingDictionary)
+    {
+        if (source is null) throw new ArgumentNullException(nameof(source));
+        if (mappingDictionary is null) throw new ArgumentNullException(nameof(mappingDictionary));
+        if (string.IsNullOrWhiteSpace(orderBy)) return source;
+
+        var orderByString = new StringBuilder();
+        var clauses = orderBy.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+        foreach (var clause in clauses)
+        {
+            var trimmed = clause.Trim();
+            var descending = trimmed.EndsWith(" desc", StringComparison.OrdinalIgnoreCase);
+
+            var propertyName = trimmed.Split(' ', StringSplitOptions.RemoveEmptyEntries)[0];
+
+            if (!mappingDictionary.TryGetValue(propertyName, out var mappingValue))
+                throw new ArgumentException($"No mapping exists for '{propertyName}'.");
+
+            var effectiveDescending = mappingValue.Revert ? !descending : descending;
+
+            foreach (var destinationProperty in mappingValue.DestinationProperties.Reverse())
+            {
+                orderByString.Append(destinationProperty);
+                orderByString.Append(effectiveDescending ? " descending," : " ascending,");
+            }
+        }
+
+        var finalOrder = orderByString.ToString().TrimEnd(',');
+        return source.OrderBy(finalOrder);
+    } ^rChjJ1ba
+
+propertymappingservice ^BIOrWzbf
+
+public class PropertyMappingValue
+{
+    public IEnumerable<string> DestinationProperties { get; }
+    public bool Revert { get; }
+
+    public PropertyMappingValue(IEnumerable<string> destinationProperties, bool revert = false)
+    {
+        DestinationProperties = destinationProperties
+            ?? throw new ArgumentNullException(nameof(destinationProperties));
+
+        Revert = revert;
+    }
+} ^CtSkM2nU
+
+public class PropertyMapping<TSource, TDestination> : IPropertyMapping
+{
+    public Dictionary<string, PropertyMappingValue> MappingDictionary { get; }
+
+    public PropertyMapping(Dictionary<string, PropertyMappingValue> mappingDictionary)
+    {
+        MappingDictionary = mappingDictionary
+            ?? throw new ArgumentNullException(nameof(mappingDictionary));
+    }
+} ^oUF6uwyk
+
+public interface IPropertyMappingService
+{
+    Dictionary<string, PropertyMappingValue> GetPropertyMapping<TSource, TDestination>();
+    bool ValidMappingExistsFor<TSource, TDestination>(string? fields);
+} ^Dy16CNPo
+
+public class PropertyMappingService : IPropertyMappingService
+{
+    private readonly IList<IPropertyMapping> _propertyMappings = new List<IPropertyMapping>();
+
+    public PropertyMappingService()
+    {
+        var authorMapping = new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
+        {
+            ["Id"] = new PropertyMappingValue(new[] { "Id" }),
+            ["MainCategory"] = new PropertyMappingValue(new[] { "MainCategory" }),
+            ["Name"] = new PropertyMappingValue(new[] { "LastName", "FirstName" }),
+            ["Age"] = new PropertyMappingValue(new[] { "DateOfBirth" }, revert: true)
+        };
+
+        _propertyMappings.Add(new PropertyMapping<AuthorDto, Author>(authorMapping));
+    }
+
+    public Dictionary<string, PropertyMappingValue> GetPropertyMapping<TSource, TDestination>()
+    {
+        var matchingMappings = _propertyMappings.OfType<PropertyMapping<TSource, TDestination>>().ToList();
+        if (matchingMappings.Count == 1)
+            return matchingMappings.First().MappingDictionary;
+
+        throw new Exception($"Cannot find property mapping for <{typeof(TSource)}, {typeof(TDestination)}>");
+    }
+
+    public bool ValidMappingExistsFor<TSource, TDestination>(string? fields)
+    {
+        var mappingDictionary = GetPropertyMapping<TSource, TDestination>();
+
+        if (string.IsNullOrWhiteSpace(fields))
+            return true;
+
+        var clauses = fields.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        foreach (var clause in clauses)
+        {
+            var propertyName = clause.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries)[0];
+            if (!mappingDictionary.ContainsKey(propertyName))
+                return false;
+        }
+
+        return true;
+    }
+} ^LSXneDYY
+
+NO REVERSE() ^8SIYM2jZ
+
+TRANSLATE DTOS
+DESCENDING
+INTO ENTITYS
+DESC
+(BY REVERT FLAG) ^VyrF58FI
+
+mappingservice ^iEUaGxzm
+
+dynamic linq ^nkZPRA00
+
+whitelist sorting ^JBqODc0C
