@@ -1,0 +1,40 @@
+{
+  "generated": "2026-06-01 22:51:28 UTC",
+  "stage": "3",
+  "region": "EF01B",
+  "included_sources": [
+    "S-037",
+    "S-038",
+    "S-039",
+    "S-040",
+    "S-041",
+    "S-042",
+    "S-043",
+    "S-044",
+    "S-045",
+    "S-046"
+  ],
+  "ef01a_correction_sources": [
+    "S-059",
+    "S-060"
+  ],
+  "checked_not_ef01b": [
+    {
+      "source_id": "S-006",
+      "decision": "not EF01B",
+      "reason": "shadow property filter; should be handled by shadow properties / model configuration area"
+    },
+    {
+      "source_id": "S-029",
+      "decision": "not EF01B",
+      "reason": "Attach + explicit modified property example; should be handled by Attach/disconnected update area"
+    },
+    {
+      "source_id": "S-030",
+      "decision": "not EF01B",
+      "reason": "Attach helps example; should be handled by Attach/disconnected update area"
+    }
+  ],
+  "boundary_status": "EF01B transcribed; EF01A corrected for S-059/S-060",
+  "important_fix": "S-059/S-060 are identity-resolution examples and are moved to EF01A correction, not EF01B."
+}

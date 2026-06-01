@@ -1,0 +1,34 @@
+[
+  {
+    "region_source_id": "EF01A-S017",
+    "source_id": "S-059",
+    "image_use_id": "IU-059",
+    "fileId_short": "f79556b4d7",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef01a-identity-resolution-projection-example",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "queries that project entities multiple times",
+    "text": "2. Queries that project entities multiple times\n\nExample:",
+    "code": "var data = await context.Posts\n    .Select(p => new\n    {\n        Post = p,\n        Blog = p.Blog\n    })\n    .AsNoTrackingWithIdentityResolution()\n    .ToListAsync();",
+    "extra_text": "Why useful:\n\n- same Blog may be referenced by many posts\n- identity resolution can ensure repeated appearances of the same blog row map to the same Blog object instance in this result materialization\n\nThis matters when you care that equal-key entities are literally the same reference in memory within one query result.",
+    "notes": "Boundary correction: this belongs to EF01A identity-resolution continuation, not EF01B loading collections."
+  },
+  {
+    "region_source_id": "EF01A-S018",
+    "source_id": "S-060",
+    "image_use_id": "IU-060",
+    "fileId_short": "a42c0c4aad",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef01a-identity-resolution-graph-like-data",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "self-referencing / graph-like data",
+    "text": "3. Self-referencing or graph-like data\n\nExample:",
+    "code": "var employees = await context.Employees\n    .Include(e => e.Manager)\n    .Include(e => e.DirectReports)\n    .AsNoTrackingWithIdentityResolution()\n    .ToListAsync();",
+    "extra_text": "Why useful:\n\n- the same employee may appear in multiple places in the graph\n- once as a root item\n- once as someone's manager\n- once as someone else's direct report\n\nIdentity resolution helps avoid getting several separate Employee objects representing the same row.",
+    "notes": "Boundary correction: this belongs to EF01A identity-resolution continuation, not EF01B loading collections."
+  }
+]

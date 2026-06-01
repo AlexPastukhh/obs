@@ -1,30 +1,9 @@
 {
-  "generated": "2026-06-01 22:43:34 UTC",
-  "ledger_version": "v001-updated-by-ef01a-transcript",
+  "generated": "2026-06-01 22:51:28 UTC",
+  "ledger_version": "v001-updated-by-ef01b-transcript-and-ef01a-correction",
   "critical_rule": "Ledger is not source of truth. It records decisions after visual/semantic review.",
-  "ef01a_delta": {
-    "processed_sources": [
-      "S-010",
-      "S-031",
-      "S-009",
-      "S-032",
-      "S-008",
-      "S-033",
-      "S-034",
-      "S-007",
-      "S-035",
-      "S-036",
-      "S-053",
-      "S-054",
-      "S-055",
-      "S-056",
-      "S-057",
-      "S-058"
-    ],
-    "pending_ef01b": [
-      "S-006",
-      "S-029",
-      "S-030",
+  "stage3_delta": {
+    "ef01b_processed_sources": [
       "S-037",
       "S-038",
       "S-039",
@@ -34,9 +13,16 @@
       "S-043",
       "S-044",
       "S-045",
-      "S-046",
+      "S-046"
+    ],
+    "ef01a_correction_sources": [
       "S-059",
       "S-060"
+    ],
+    "checked_not_ef01b": [
+      "S-006",
+      "S-029",
+      "S-030"
     ]
   },
   "rows": [
@@ -242,12 +228,12 @@
       "width": "990",
       "height": "226",
       "nearest_labels_for_search_only": "L-006: shadow prop usage | L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-045: can do partial inits only | for projections for read, | write need encapsulation, | and invariants | also cant return th | L-046: partial init antipatter",
-      "coverage_status": "pending-ef01b-loading-collections",
-      "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "coverage_status": "checked-not-ef01b-pending-shadow-property-area",
+      "current_region_decision": "pending-shadow-property-area",
+      "decision_is_final": "no-pending-future-boundary-review",
+      "must_recheck_before_region_close": "yes",
+      "decision_basis": "Shadow property filter; not EF01B loading collections.",
+      "review_notes": "Shadow property filter; not EF01B loading collections."
     },
     {
       "source_id": "S-032",
@@ -299,12 +285,12 @@
       "width": "820",
       "height": "289",
       "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?",
-      "coverage_status": "pending-ef01b-loading-collections",
-      "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "coverage_status": "checked-not-ef01b-pending-attach-disconnected-update-area",
+      "current_region_decision": "pending-attach-disconnected-update-area",
+      "decision_is_final": "no-pending-future-boundary-review",
+      "must_recheck_before_region_close": "yes",
+      "decision_basis": "Attach/disconnected update example; not EF01B loading collections.",
+      "review_notes": "Attach/disconnected update example; not EF01B loading collections."
     },
     {
       "source_id": "S-011",
@@ -413,12 +399,12 @@
       "width": "713",
       "height": "241",
       "nearest_labels_for_search_only": "L-029: 1 if not default id - marks as unchanged | 2 if need to modify - attach then modify or mark modified excplicitly | 3 if  | L-008: Attach | L-027: what to avoid in ctors, | would ef use parameterless ctor by default? | L-006: shadow prop usage | L-028: ctors wont run when ef materializes entities?",
-      "coverage_status": "pending-ef01b-loading-collections",
-      "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "coverage_status": "checked-not-ef01b-pending-attach-disconnected-update-area",
+      "current_region_decision": "pending-attach-disconnected-update-area",
+      "decision_is_final": "no-pending-future-boundary-review",
+      "must_recheck_before_region_close": "yes",
+      "decision_basis": "Attach/disconnected update example; not EF01B loading collections.",
+      "review_notes": "Attach/disconnected update example; not EF01B loading collections."
     },
     {
       "source_id": "S-025",
@@ -698,12 +684,12 @@
       "width": "855",
       "height": "478",
       "nearest_labels_for_search_only": "L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-044: asnotrackkingwithidentityresolution | L-043: when useful | L-032: loadasyn + autoinclude",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-055",
@@ -736,12 +722,12 @@
       "width": "647",
       "height": "482",
       "nearest_labels_for_search_only": "L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-043: when useful | L-032: loadasyn + autoinclude | L-044: asnotrackkingwithidentityresolution",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-056",
@@ -793,12 +779,12 @@
       "width": "842",
       "height": "445",
       "nearest_labels_for_search_only": "L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-032: loadasyn + autoinclude | L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-043: when useful | L-044: asnotrackkingwithidentityresolution",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -850,12 +836,12 @@
       "width": "837",
       "height": "431",
       "nearest_labels_for_search_only": "L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-032: loadasyn + autoinclude | L-043: when useful | L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-044: asnotrackkingwithidentityresolution",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-058",
@@ -926,12 +912,12 @@
       "width": "518",
       "height": "341",
       "nearest_labels_for_search_only": "L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-032: loadasyn + autoinclude | L-043: when useful | L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-044: asnotrackkingwithidentityresolution",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -964,12 +950,12 @@
       "width": "765",
       "height": "482",
       "nearest_labels_for_search_only": "L-043: when useful | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-032: loadasyn + autoinclude | L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-044: asnotrackkingwithidentityresolution",
-      "coverage_status": "pending-ef01b-loading-collections",
-      "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "coverage_status": "processed-in-ef01a-v002-correction",
+      "current_region_decision": "EF01A",
+      "decision_is_final": "yes-for-ef01a-v002-correction",
+      "must_recheck_before_region_close": "no-for-ef01a-v002",
+      "decision_basis": "Moved from pending EF01B to EF01A correction: identity-resolution example.",
+      "review_notes": "Moved from pending EF01B to EF01A correction: identity-resolution example."
     },
     {
       "source_id": "S-018",
@@ -1002,12 +988,12 @@
       "width": "875",
       "height": "474",
       "nearest_labels_for_search_only": "L-043: when useful | L-032: loadasyn + autoinclude | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-044: asnotrackkingwithidentityresolution",
-      "coverage_status": "pending-ef01b-loading-collections",
-      "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "coverage_status": "processed-in-ef01a-v002-correction",
+      "current_region_decision": "EF01A",
+      "decision_is_final": "yes-for-ef01a-v002-correction",
+      "must_recheck_before_region_close": "no-for-ef01a-v002",
+      "decision_basis": "Moved from pending EF01B to EF01A correction: identity-resolution example.",
+      "review_notes": "Moved from pending EF01B to EF01A correction: identity-resolution example."
     },
     {
       "source_id": "S-042",
@@ -1021,12 +1007,12 @@
       "width": "833",
       "height": "417",
       "nearest_labels_for_search_only": "L-032: loadasyn + autoinclude | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-043: when useful | L-042: use asnotrackingwithidentityresolution for ef core reads by default? | L-077: db invariant handling | strategies",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -1059,12 +1045,12 @@
       "width": "804",
       "height": "398",
       "nearest_labels_for_search_only": "L-032: loadasyn + autoinclude | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-043: when useful | L-077: db invariant handling | strategies | L-042: use asnotrackingwithidentityresolution for ef core reads by default?",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -1097,12 +1083,12 @@
       "width": "608",
       "height": "482",
       "nearest_labels_for_search_only": "L-032: loadasyn + autoinclude | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-077: db invariant handling | strategies | L-043: when useful | L-013: native declarative | constraints",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -1135,12 +1121,12 @@
       "width": "687",
       "height": "197",
       "nearest_labels_for_search_only": "L-032: loadasyn + autoinclude | L-077: db invariant handling | strategies | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-013: native declarative | constraints | L-043: when useful",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-020",
@@ -1173,12 +1159,12 @@
       "width": "805",
       "height": "271",
       "nearest_labels_for_search_only": "L-077: db invariant handling | strategies | L-032: loadasyn + autoinclude | L-031: so in writes we potentially can do some shit when we fetch | something while having something that we have fetched alrea | L-013: native declarative | constraints | L-043: when useful",
-      "coverage_status": "pending-ef01b-loading-collections",
+      "coverage_status": "processed-in-ef01b-v001",
       "current_region_decision": "EF01B",
-      "decision_is_final": "no-pending-ef01b",
-      "must_recheck_before_region_close": "yes-for-ef01b",
-      "decision_basis": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude.",
-      "review_notes": "Not included in EF01A; reserved for EF01B loading collections / Include / Find / Load / AutoInclude."
+      "decision_is_final": "yes-for-ef01b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef01b-v001",
+      "decision_basis": "Included in EF01B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF01B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-062",

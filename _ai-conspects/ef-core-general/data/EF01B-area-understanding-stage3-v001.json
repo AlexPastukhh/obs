@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-01 22:51:28 UTC",
+  "region_id": "EF01B",
+  "what_area_is_about": [
+    "loading related collections in EF Core",
+    "explicit loading with Entry(...).Collection(...).Load/LoadAsync",
+    "eager loading with Include",
+    "roundtrip and cartesian explosion tradeoffs",
+    "Find + Load versus Include",
+    "why AutoInclude does not replace explicit collection loading after Find",
+    "hybrid pattern: use tracked root if available, otherwise Include"
+  ],
+  "key_ideas": [
+    "Each explicit Load() call is usually a separate database query.",
+    "Include can load related data in one query/roundtrip, but multiple collection Includes can create heavy joined results.",
+    "Use Include when you know the full related-data shape up front and are loading a fresh entity.",
+    "Use Find + Load when the entity may already be tracked and you want explicit/conditional loading.",
+    "Find is a primary-key lookup that checks the change tracker; it is not the same as a general Include query pipeline.",
+    "AutoInclude applies to queries and should not be expected to replace Find + Load for collections.",
+    "A hybrid pattern can check the change tracker first, use explicit Load if warm, and Include if cold.",
+    "Do not use the hybrid pattern by default unless the optimization matters."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "S-037/S-038/S-042 have slight bottom crop/UI overlay after visible text.",
+      "S-044 has UI overlay after the code block, but visible code is readable."
+    ],
+    "confidence": "High for visible source transcript and boundary decisions."
+  }
+}

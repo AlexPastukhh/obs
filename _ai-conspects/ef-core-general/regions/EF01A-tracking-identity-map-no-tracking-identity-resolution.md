@@ -828,3 +828,97 @@ EF01A explains how EF Core tracking should be treated as a deliberate cost. Trac
 - EF01B loading-collections sources are pending and intentionally not included here.
 - S-009, S-033, and S-058 have cropped context; only visible content is treated as verified.
 - If EF01B reveals that S-007 belongs better as a bridge note, keep it in EF01A but reference it from EF01B rather than duplicating transcript.
+
+
+---
+
+## Stage 3 correction addendum - EF01A v002
+
+Generated: 2026-06-01 22:51:28 UTC
+
+### Boundary correction
+
+During EF01B transcript review, two sources previously left pending were reclassified:
+
+```text
+S-059 -> EF01A identity-resolution continuation
+S-060 -> EF01A identity-resolution continuation
+```
+
+They are not EF01B loading-collections sources. They show where `AsNoTrackingWithIdentityResolution()` is useful.
+
+### EF01A-S017 / S-059 - `f79556b4d7`
+
+#### Visible text
+
+```text
+2. Queries that project entities multiple times
+
+Example:
+```
+
+#### Visible code
+
+```csharp
+var data = await context.Posts
+    .Select(p => new
+    {
+        Post = p,
+        Blog = p.Blog
+    })
+    .AsNoTrackingWithIdentityResolution()
+    .ToListAsync();
+```
+
+#### Additional visible text
+
+```text
+Why useful:
+
+- same Blog may be referenced by many posts
+- identity resolution can ensure repeated appearances of the same blog row map to the same Blog object instance in this result materialization
+
+This matters when you care that equal-key entities are literally the same reference in memory within one query result.
+```
+
+### EF01A-S018 / S-060 - `a42c0c4aad`
+
+#### Visible text
+
+```text
+3. Self-referencing or graph-like data
+
+Example:
+```
+
+#### Visible code
+
+```csharp
+var employees = await context.Employees
+    .Include(e => e.Manager)
+    .Include(e => e.DirectReports)
+    .AsNoTrackingWithIdentityResolution()
+    .ToListAsync();
+```
+
+#### Additional visible text
+
+```text
+Why useful:
+
+- the same employee may appear in multiple places in the graph
+- once as a root item
+- once as someone's manager
+- once as someone else's direct report
+
+Identity resolution helps avoid getting several separate Employee objects representing the same row.
+```
+
+### Correction summary
+
+```text
+EF01A now includes 18 sources:
+S-010, S-031, S-009, S-032, S-008, S-033, S-034, S-007,
+S-035, S-036, S-053, S-054, S-055, S-056, S-057, S-058,
+S-059, S-060
+```

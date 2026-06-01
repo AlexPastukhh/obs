@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core general
 
-Generated: 2026-06-01 22:43:34 UTC
+Generated: 2026-06-01 22:51:28 UTC
 
 ## Current policy
 
@@ -20,17 +20,27 @@ included/excluded/pending source decisions
 Stage0: source materialized
 Stage1: EF01 boundary review done
 Stage2: EF01A transcript done
+Stage3: EF01B transcript done + EF01A correction for S-059/S-060
 ```
 
 ## Done
 
 ```text
 EF01A: Tracking / identity map / no tracking / identity resolution
+EF01B: Loading collections / Include / Find / Load / AutoInclude
+```
+
+## Important correction
+
+```text
+S-059/S-060 are EF01A identity-resolution examples.
+S-006 is not EF01B; pending shadow-property/model-configuration review.
+S-029/S-030 are not EF01B; pending Attach/disconnected-update review.
 ```
 
 ## Pending
 
 ```text
-EF01B: Loading collections / Include / Find / Load / AutoInclude
-Other EF Core areas: require boundary review first
+Next EF Core area: requires boundary review first.
+Likely candidates: shadow properties / Attach-disconnected updates / entity constructors / model constraints.
 ```
