@@ -1,0 +1,193 @@
+﻿When getting cors even when using proxi and it tels that it is 
+from redirect  ^5dFLcHaS
+
+!!! ^x4UKaUTT
+
+What to do IN ASP
+MANUALLY ^dKo2NiUa
+
+iif you want to include credentials in your fetchs from spa ^lcRRqWJx
+
+And you probably cant do put or other non get post requests when you
+allow credentials and this need to be specified ^OqX4jfQO
+
+PROXY FOR CORS ^yAnCXmOV
+
+USECASES
+____________
+THEORY ^JLeCBjCe
+
+Preflight requests give information to server about requests about to happen ^YeQljVg3
+
+How cors middleware works ^GwJbUiiz
+
+if request is preflight, you specify what are allowed in responce on that request ^8dCwOOME
+
+How works ^lo3vGa9Z
+
+why cors ^9JyPZLuS
+
+!!! ^W6PuMvrb
+
+add to cors ^AwDd0W6R
+
+content diisposition ^tAkIMmvz
+
+what is origin for cors configuration
+scheme + host + port
+defaults may be dropped ^sFa3gddn
+
+WithOrigins ^9BP9RgaG
+
+AllowAnyOrigin ^OkeyYm6T
+
+SetIsOriginAllowed ^VvVLkxrr
+
+SetOriginAllowedToAllowWildcardSubdomain ^CzhozBdM
+
+WithHeaders ^lRMMz4Rn
+
+AllowAnyMethod ^Ue6xMBlJ
+
+WithMethods ^HtKbz3yA
+
+AllowCredentials ^Qkr0NJ7Z
+
+DisallowCredentials ^kqQLQIWy
+
+SetPreflightMaxAge ^vqWE4ZTH
+
+withExposedHeaders ^rH7NhcUR
+
+AllowAnyHeader ^Swz8utzc
+
+1 For not simple requests Patch,Put,Delete - Browser sends ACCESS-CONTROL-REQUEST headers
+
+2 Server checks that headers and respond without body, just with ACCESS-CONTROL-ALLOW headers
+and 
+
+3 that headers must match the headers that browser has sent, if not - no request happen 
+
+
+1 So for simple requests with simple methods/headers - we get no preflight
+request - and browser sends the request rightaway with ACCESS-CONTROL-REQUEST headers
+
+It means that that request may reach the server and server may act
+
+2 But server must include ACCESS-CONTROL-ALLOW headers
+
+3 Browser compares headers and if there is a mismatch - js cant read the response ^rvDGLQkz
+
+about csrf - so if the request is simple enough 
+cors may not help against csrf, but we usually deal with json
+which is not a simple content type and causes preflight,
+even if cookies and cred included by itself dont cause preflight ^9jU6bZWk
+
+what can cause preflight ^763pS5T9
+
+without preflight,
+but cant read response ^kj4dEi6L
+
+successful preflight ^8JyaqQJw
+
+if preflight is successful - js will read respoinse
+because we have checked for everything at preflight ^EMabcY2q
+
+must be exact value,
+just presence of the header is not
+enough ^x7szK0xc
+
+preflight rejected,
+header is not allowed ^F9SpOiz7
+
+!!! credentials
+preflight rejected
+cred not allowed ^lQyzGBCX
+
+simple request
+but cant read because
+cred not allowed ^Fmy4fh2a
+
+preflight rejected
+origin is not allowed ^plrp9k38
+
+Policy builder ^wiVpv54u
+
+access-control Headers ^fvLYzbDG
+
+safelisted request vs safelisted response
+headers in cors ^tQ36bjKU
+
+Access-Control-Max-Age ^rW1pxB7y
+
+Access-Control-Allow-Credentials ^qTnKynZ8
+
+Access-Control-Expose-Headers ^zveI0q68
+
+Access-Control-Allow-Headers ^uYGT60ni
+
+Access-Control-Allow-Methods ^69X7HWgV
+
+Access-Control-Allow-Origin ^uVUTpD8S
+
+Vary:Origin ^6cSANLAS
+
+Access-Control-Request-Method ^cqtlUxHb
+
+Origin ^qTqelutH
+
+Access-Control-Request-Headers ^FwyOue4A
+
+we cache preflight response for 
+same cross origin requeest shape ^zSKdUaKN
+
+no info whether browser will store cookies from 
+response that has no allow credentials header (in simple request scenario) ^W6qj6qdk
+
+no request when server sends response on preflight
+without allow credentials
+and no ability to read for simple request case after server returns full response without allow cred header ^xYmC7fVy
+
+no info whether browser would store cookies from server response or not ^C3lgMG2w
+
+components of url ^29WOuu6j
+
+What is the host ^t22mAuSh
+
+what is origin ^wJAgACMf
+
+is preflight guaranteed ^7XQ2HrEh
+
+what by itslef doenst cause ^PbogW0bZ
+
+in most cases we just include some alloc-headers and the 
+behavior was described in flows
+we dont include something if there is no method call ^KACLGVwh
+
+access-control-allow-cred
+behavior ^tN8qevxL
+
+credentialed request ^JU0csM87
+
+network error from 
+no allowed credentials
+catch it? ^r6sJ9J4K
+
+in asp project file ^j5EWZW9K
+
+server includes allow headers
+not onlt in preflight
+
+so browser can dissalow from reading ^nIENrCD3
+
+what can go wrong?
+ ^6RPVgjoY
+
+Vary:Origin ^ncOcoBLL
+
+what does 
+server trturn in 
+case of multiple allowed origins ^NQmzfZEG
+
+## Element Links
+4Qk1ERoO: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
