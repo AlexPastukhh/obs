@@ -1,0 +1,230 @@
+﻿canconnect ^upCwqK5F
+
+ensurecreated ^ecXoctaP
+
+ensuredeleted ^9tBYawzs
+
+canconnect usage ^gBhSwUV0
+
+TRANSACTION OBJECT
+IDbContextTransaction ^hIaUuN4E
+
+CURRENT TRANSACTION ^QC8xgLuI
+
+!!! ^JlhhGmPd
+
+GETDBTRANSACTION ^Sqi4dj6X
+
+WHY GETDBTRANSACTION IS 
+HELPFUL ^dhp5i05O
+
+EF CORE + ADO.NET COMMANDS
+USETRANSACTION
+LIBRARIES THAT NEED ADO.NET TRANSACTION
+PROVIDER SPECIFIC TRANSACTION FEATURES ^BK6tvyRN
+
+DB TRANSACTION
+PROVIDER SPEC TRANSACTION, 
+DO WE NEED TO CAST? ^NfzKtzIj
+
+WHAT DO WE GET FROM GETDBTRANSACTION ^fByaS27J
+
+autotransactionbehavior ^8tE68cPD
+
+when and why never ^PeLnSgXI
+
+never ^CugBRxWg
+
+always ^Wgn3UhQg
+
+whenneeded ^6f9dehui
+
+autosavepointsenabled ^69p0naPe
+
+!!! ^XBHEP6dZ
+
+!!! ^MBJskNvR
+
+when we can have disabled autosavepoints
+and some manual savepoints logic through
+transaction methods ^kBLHfmOz
+
+is there some overhead from savepoint creation? ^jJr4aWHe
+
+migrations
+migrate() ^8eF1Ti7V
+
+getpendingmig/getappliedmigr/getmigr ^6Cu6rSXM
+
+migration ^hFhcmNvP
+
+can control whether context owns the disposal of the 
+connection ^QlQq9orB
+
+haspendingmodelchanges ^M4uJ0Jqe
+
+ensure created/deleted ^epEVY8bS
+
+getdbconnection ^N0CzrW8B
+
+usage without openconnection
+with connecttion managed by ef ^r1cYEW6k
+
+openconnection ^WiKBcvXE
+
+get/set connectionstring ^PhrODG3Y
+
+ (with dbcontextoptoins and 
+manual creation of context) ^ruhSl9ZT
+
+get/set commandtimeout ^N2FVMCTL
+
+setdbconnection ^gls8cz7A
+
+generatecreatescript ^md6TiYbe
+
+isrelational/issqlserver/issqlite ^UqMFHsGz
+
+enlisttransaction/getenlistedtransaction ^WCE5Q37S
+
+why to use one connection
+for multiple operations ^khwqTeuO
+
+what if we wont
+use one connection per one transaction ^NAJzBR6e
+
+requirements to share local
+transaction ^n3xCkTnO
+
+can we merge two ef transactions ^jaS6JMaL
+
+usetransaction
+2 contexts ^MTi14oEQ
+
+usetransaction
+context + ado.net ^RaO6PXfZ
+
+usetransaction
+getdbtransaction
+
+same conection ^GuoJ2nX8
+
+database methods ^Mos0dKyZ
+
+here we add just an id
+mb dont have nav prop,so
+ef cant handle it, idk ^R0sH7SkP
+
+what we can get after 
+we call savechanges 
+and from where ^eAAK4VGu
+
+performance ^lYgVQlpi
+
+from clearing too ^O1Dla1ig
+
+many savechanges
+flushes,multiple queries
+bulk ^HFe1lv9c
+
+why/when do many
+ savechanges calls ^kqvlNVI0
+
+2 large import in chunks ^ybyt5mvu
+
+1 you need db generated 
+values before the next step ^A5N4zE3c
+
+generated ids ^0pcXNYtW
+
+db generated ^1GBCR3tL
+
+INSERTED ^4WqxQX9o
+
+2 types of generated ^EwF3Ckg4
+
+ef/provider generated ^nRBFG2sJ
+
+identity ^UFTXVwtO
+
+sequence ^o5rK1Jth
+
+default constant ^OXlKbReU
+
+computed column ^p0WcgHmA
+
+onaddorupdate col
+default sql after insert
+trigger handles update ^kC3wHGqD
+
+trigger generated
+value on insert ^MteNhrb1
+
+computed column ^nxkO18Cn
+
+guid with gen on add ^NfkQzP3t
+
+performance exact reasons ^aJDc6MoE
+
+set up better batches ^xA3kMOZu
+
+specific chunk failure recovery ^slRqoDmX
+
+release memory sooner ^G8SRWChg
+
+avoid extra cpu cost from 
+tracking after memory release ^ktRKlNFf
+
+ChangeTracker.Clear
+better patterns ^oTECAOI0
+
+cler/disposable 
+short lived dbcontexts ^j46wH4W3
+
+short lived dbcontext 
+traidoff,
+better maintainability,reasoning ^wd5J4y9W
+
+short lived context 
+pattern ^yP6Kb3Dq
+
+separate context for bulk
+work pattern ^TQ3CqXDN
+
+minuses of many save
+changes ^2TjDcJfY
+
+PRACTICAL PATTERN ^2TFvMSUy
+
+3 flush/send query before
+another phase ^uawXTqb1
+
+4 dont want to rollback
+everything,savepoints ^KuSahN3T
+
+why disable auto savepoints ^MLP82n6g
+
+what is flush 
+of savechanges ^TDJS81q5
+
+one savech, at least one
+query ^GZGhy06I
+
+where transaction
+lives,rollback after write to db ^aUBHpUiw
+
+query for each savechangs ^OClVRe8r
+
+inside long transaction, early
+savechanges may acquire locks
+and hold them until the end ^1V57IJUm
+
+2 differenct 
+contexts getting options
+creating contexts manually ^2ApJVtNv
+
+example ^q9Gnkpv7
+
+context should accept optoins ^MYjU9WPd
+
+di ^lDQz5zKv
