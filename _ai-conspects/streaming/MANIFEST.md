@@ -1,31 +1,28 @@
-# MANIFEST - Streaming R04 transcript v002
+# MANIFEST - Streaming R04 overlap coverage correction v003
 
-Archive type: **stage-4 verified region transcript / count fix**  
+Archive type: **stage-5 R04 coverage correction found during R05 precheck**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 23:26:17 UTC
+Generated: 2026-06-01 23:36:11 UTC
 
 ## Done
 
-- R04 transcript created.
-- v002 fixes source-count wording from 38 to 39; source data and boundary review already had 39.
-- 39 sources included.
-- 8 overlap sources checked and reserved for R05.
+- R05 boundary precheck started.
+- R04-owned overlap was found in the R05 coordinate band.
+- `S-163/S-165` added as unique R04 transcript sources.
+- `S-166-S176` recorded as duplicate image uses of already-transcribed R04 material.
+- R05 remains next.
 
 ## Files included / updated
 
 ```text
 _ai-conspects/streaming/regions/R04-iasyncenumerable-ndjson-flushasync.md
-_ai-conspects/streaming/data/R04-sources-stage4-v001.csv
-_ai-conspects/streaming/data/R04-sources-stage4-v001.json
-_ai-conspects/streaming/data/R04-boundary-review-stage4-v001.csv
-_ai-conspects/streaming/data/R04-boundary-review-stage4-v001.json
-_ai-conspects/streaming/data/R04-area-understanding-stage4-v001.json
+_ai-conspects/streaming/data/R04-overlap-coverage-correction-stage5-v003.csv
+_ai-conspects/streaming/data/R04-overlap-coverage-correction-stage5-v003.json
 _ai-conspects/streaming/data/image-review-ledger-v001.csv
 _ai-conspects/streaming/data/image-review-ledger-v001.json
-_ai-conspects/streaming/audit-assets/R04-ndjson-flushasync-transcript-contact-sheet.png
-_ai-conspects/streaming/audit-assets/R04-stage0-candidate-contact-sheet.png
-_ai-conspects/streaming/audit-assets/R04-source-images/*.png
-_ai-conspects/streaming/04-stage4-r04-iasyncenumerable-ndjson-flushasync-transcript.md
+_ai-conspects/streaming/audit-assets/R04-v003-overlap-found-during-R05-boundary-contact-sheet.png
+_ai-conspects/streaming/audit-assets/R04-v003-overlap-source-images/*.png
+_ai-conspects/streaming/05-stage5-r04-overlap-coverage-correction-v003.md
 _ai-conspects/streaming/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/streaming/MANIFEST.md
 _ai-conspects/streaming/APPLY_ARCHIVE.md
@@ -33,4 +30,4 @@ _ai-conspects/streaming/APPLY_ARCHIVE.md
 
 ## Next
 
-R05 transcript after local boundary review.
+R05 transcript after local boundary review, now excluding the R04 v003 tail.

@@ -1,6 +1,6 @@
-# Apply archive: Streaming R04 transcript v002
+# Apply archive: Streaming R04 overlap coverage correction v003
 
-Archive type: stage-4 verified region transcript / count fix.
+Archive type: stage-5 R04 coverage correction found during R05 precheck.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-streaming-stage4-r04-transcript-v002.zip
+C:\Users\alexa\Downloads\ai-conspects-streaming-stage5-r04-overlap-coverage-correction-v003.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-streaming-stage4-r04-transcript-v002.zip
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage4-r04-transcript-v002.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage4-r04-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage5-r04-overlap-coverage-correction-v003.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage5-r04-overlap-coverage-correction.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/streaming
-git commit -m "Add streaming R04 NDJSON flush transcript"
+git commit -m "Correct streaming R04 overlap coverage"
 git push origin ai-processed-conspects-text
 ```
 
@@ -57,7 +57,3 @@ git push origin ai-processed-conspects-text
 ```powershell
 git restore -- _ai-conspects/streaming
 ```
-
-## Notes
-
-This v002 archive keeps R04 transcript content from v001 and fixes the R04 source-count wording: the actual included source count is 39.

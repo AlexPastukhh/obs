@@ -1,6 +1,6 @@
 # Current Source of Truth - Streaming
 
-Generated: 2026-06-01 23:26:17 UTC
+Generated: 2026-06-01 23:36:11 UTC
 
 ## Policy
 
@@ -14,13 +14,15 @@ Stage0 boundary review: done
 R01 streaming bytes / stream concept basics: transcript v001 done
 R02 reading response stream / payload bytes: transcript v001 done
 R03 streaming objects / async iteration / REST API concerns: transcript v001 done
-R04 IAsyncEnumerable / NDJSON / FlushAsync: transcript v001 done
+R04 IAsyncEnumerable / NDJSON / FlushAsync: transcript v003 coverage correction done
 R05 SSE / EventSource / writer / heartbeat / reconnect: next
 ```
 
-## R04 note
+## R04 v003 note
 
 ```text
-R04 includes NDJSON/JSON-array/client-streaming/ResponseHeadersRead/FlushAsync implementation material.
-S-110/S-111/S-112/S-113/S-126/S-127/S-128/S-129 were checked and reserved for R05 SSE/EventSource/reconnect road.
+R05 boundary precheck found an R04-owned manual-writing/FlushAsync tail in the R05 coordinate band.
+S-163/S-165 were added to R04.
+S-166-S176 were recorded as duplicate image uses of already-transcribed R04 material.
+R05 should now continue with SSE/EventSource-specific sources only.
 ```

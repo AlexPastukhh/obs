@@ -2,7 +2,7 @@
 
 Conspect: `streaming`  
 File type: **source-preserving region transcript**  
-Stage: **stage-4 / verified region transcript v001**  
+Stage: **stage-4 / verified region transcript v003 - overlap coverage correction**  
 Generated: 2026-06-01 23:26:17 UTC
 
 ---
@@ -16,7 +16,7 @@ Now:
 R01/R02/R03 are done. R04 processes concrete implementation of `IAsyncEnumerable`, NDJSON, client streaming reads, and `FlushAsync`.
 
 This step:
-Create R04 transcript from 38 included sources after local boundary review; exclude SSE/EventSource overlap to R05.
+Create R04 transcript from 39 included sources after local boundary review; v003 additionally records an R04-owned manual-writing/FlushAsync tail found during R05 boundary precheck.
 
 Why:
 R04 bridges high-level object streaming from R03 to practical server/client code: response format, progressive parsing, partial results, and flush behavior.
@@ -30,7 +30,7 @@ R05 SSE / EventSource / writer / heartbeat / reconnect.
 
 Current region: `R04 - IAsyncEnumerable / NDJSON / FlushAsync implementation road`  
 Status: `verified transcript from extracted SVG images`  
-Source count: `39`  
+Source count: `41 unique transcript sources + 11 duplicate image-use records`  
 Known limitations: several code screenshots are small; code blocks preserve visible intent and key lines.
 
 ---
@@ -81,6 +81,103 @@ Boundary decision:
 R04 includes the NDJSON / JSON array / client streaming / ResponseHeadersRead / FlushAsync implementation material.
 R04 explicitly excludes the SSE/EventSource/reconnect/order-tracking material that appeared in the initial R04 coordinate band.
 ```
+
+---
+## 0.3 Stage5/R04 v003 overlap correction
+
+During the R05 boundary precheck, a visually separate tail in the R05 coordinate band was reclassified as R04 material.
+
+Why this is R04, not R05:
+```text
+The tail explains manual WriteAsync + FlushAsync, NDJSON vs JSON-array streaming, response-start/header-commit behavior, and when manual writing is preferable to IAsyncEnumerable<T>.
+That is R04 implementation/flush semantics, not SSE/EventSource reconnect semantics.
+```
+
+Unique sources added to R04 v003:
+```text
+S-163 -> why use FlushAsync + manual writing instead of just returning IAsyncEnumerable<T>
+S-165 -> when IAsyncEnumerable<T> is enough vs when WriteAsync + FlushAsync is better
+```
+
+Already included but confirmed during the R05 precheck:
+```text
+S-164 -> manual WriteAsync + FlushAsync low-level streaming
+```
+
+Duplicate image uses recorded for coverage only:
+```text
+S-166 -> duplicate of S-158
+S-167 -> duplicate of S-159
+S-168 -> duplicate of S-160
+S-169 -> duplicate of S-161
+S-170 -> duplicate of S-162
+S-171 -> duplicate of S-152
+S-172 -> duplicate of S-153
+S-173 -> duplicate of S-154
+S-174 -> duplicate of S-155
+S-175 -> duplicate of S-156
+S-176 -> duplicate of S-157
+```
+
+### R04-S040 / S-163 - `59bf477f6a`
+
+Metadata:
+- status: `verified-from-extracted-svg-image`
+- candidate_type: `r04-unique-overlap-found-during-r05-boundary-review`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: why use FlushAsync + manual writing instead of just returning IAsyncEnumerable<T>
+
+#### Verified visible text
+```text
+1) Why use FlushAsync + manual writing instead of just returning IAsyncEnumerable<T>?
+
+Returning IAsyncEnumerable<T> (high-level streaming)
+
+When you return IAsyncEnumerable<T> from a controller:
+- you stream objects
+- ASP.NET Core + JSON formatter decide how to serialize/write
+- you usually do not control exactly when bytes are flushed
+- you usually do not control chunk boundaries
+
+So it's a nice "stream these items" signal, but lower control.
+```
+
+### R04-S041 / S-165 - `1480b4187e`
+
+Metadata:
+- status: `verified-from-extracted-svg-image`
+- candidate_type: `r04-unique-overlap-found-during-r05-boundary-review`
+- readability: `high`
+- cut off: `no`
+- confidence: `high`
+- theme: when IAsyncEnumerable<T> is enough vs manual WriteAsync + FlushAsync
+
+#### Verified visible text
+```text
+So which is "better"?
+
+Not universally better — just better when you need control.
+
+Use IAsyncEnumerable<T> when:
+- normal JSON API streaming is enough
+- you don't care about exact flush timing
+- you want simpler code
+
+Use WriteAsync + FlushAsync when:
+- you need NDJSON
+- you need SSE
+- you need precise push behavior
+- you need custom formatting
+```
+
+### Cleaned correction notes
+
+- Returning `IAsyncEnumerable<T>` is a high-level "stream these items" signal; ASP.NET Core and the JSON formatter still decide serialization/write details.
+- Manual `WriteAsync` + `FlushAsync` gives lower-level control over output format, chunk boundaries, and push behavior.
+- Manual writing is especially relevant for NDJSON, SSE, custom formatting, and precise low-latency push behavior.
+- Several screenshots in the R05 coordinate band duplicate R04 material; v003 records those duplicate image uses so they are not left unreviewed.
 
 ---
 ## 1. Original Excalidraw labels
