@@ -1,0 +1,12 @@
+﻿This will create logs with sql queries including parameters of queries
+(sensitive information) ^MQRPL1l4
+
+Program cs is a client cose now and it contains details of configuration
+of db context
+It is better to move those details to dbcontext itself, so the program
+can just pass some parameters depending in what env dbcontext is
+being used at the moment ^9N6NAHlY
+
+Try your best to reduce api serfice area ^xghb5vXR
+
+we are configuring options ^aIRzAcES

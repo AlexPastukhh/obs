@@ -1,0 +1,70 @@
+﻿chunk processing with encoding.utf8.getdecoder ^3eXJYB7O
+
+basics ^VsLutIpL
+
+getstring /getbytes overloads ^ctE01f0a
+
+can we decode here like this when we process in chunks
+and bytes can be incomplete ^z9w9Fmca
+
+they can, bettter to use decoder ^Khqm5pp7
+
+decoder.convert vs decoder.getchars ^oDelJcc9
+
+decoder  mthods ^qEOCKWO5
+
+encoding.utf8.getdecoder
+convert vs getchars
+decoder methods ^JMyIvbKM
+
+we use do while here because we get final chunk with
+result.endofmessage = true ^IRIfZE7o
+
+!!! ^iTPnTdw7
+
+typical convert loop
+when char buffer may  be 
+to little , but with convert we 
+can process it ^100S0M4K
+
+when index of the start(incl)
+changes and we need do spec
+count == count - byteindex 
+or final index(incl) +1 - start index  
+or final index(not incl) (wich is the same
+as count if from 0 ) - start index incl
+ ^XqyvICwm
+
+getchars can throw ^LO8SHbke
+
+if flush doesnt affect memory
+and just needed to "put a sign that 
+w ecant produce the last char"
+why is it important ^OIijN359
+
+flush ^h5VZTN7Q
+
+!!! ^AbYgNIdo
+
+decoder getchars vs decoder.convert
+decoder methods ^0fgGdMUG
+
+getmaxcharcount vs
+decode.getcharcount ^QfCqLrtm
+
+!!! ^smOh7ebH
+
+so we have getstring that allocates a new string 
+and we have getchars
+
+we can pass spans as both src and dest
+so we dont need to specify source count  ^tyiWTn3V
+
+when dont know byte count/
+when my buffer may be smaller ^WXtZ4VKF
+
+getbytecount
+trygetbytes
+getencoder ^IUYfnWGN
+
+!!! ^FZ4bNYwL
