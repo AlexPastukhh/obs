@@ -1,0 +1,166 @@
+﻿general shit
+type
+assembly ^p7WD7EAT
+
+interfaces ^NIpNqYVr
+
+nested types ^jrEbAmKv
+
+methods ^T0YAkg5C
+
+constructors
+activator.createinstance ^HXX0NUUj
+
+properties ^fP5w93W5
+
+fields ^cOtQt5bh
+
+member info
+getmemberinfo
+getmembers ^3dQtiIeY
+
+attributes ^9IVZvakM
+
+eventinfo ^QeexDWlK
+
+parameterinfo ^aGOQEpiH
+
+generic types and methods ^mXyyKO6q
+
+binding flags ^7RgKRzyy
+
+declaring type 
+reflected type ^UrTe1uJ1
+
+isdefined ^3C9f7zEn
+
+getmethod
+setmethod ^p6Ah9yZ0
+
+declaredonly 
+flattenhierarchy ^O3WMs02A
+
+generictypedefinition ^Z7zRDJNa
+
+makegenericmethod 
+invoking  ^qAwbAWcl
+
+makegenerictype ^AL9JLOMA
+
+not type
+real instance ^1hjeZe2s
+
+??? about safety ^FSWtlc5W
+
+to get type  === so typeof() or gettype()
+
+to get memberinfo == type.getmembers
+
+to get ctor == type.getconstructor or getconstructors
+or Activator.createinstance(typeof(),new obj[])
+
+to get method  === type.getmethods().where() or t.getmethod("name")
+
+invoke method minfo.invoke(instance,new object[]{})
+
+to get parameters ===ctor.getparameters or method.getparameters
+
+to get props  === type.getproperty() or getproperties
+
+to get fileds === type.getfileds or getfield
+
+to get events === type.getevents or getevent(name)
+
+to get interfaces === type.getinterfaces or get interface
+
+to get nested types == type.getnestedtypes or getnestedtype
+
+
+ATTRIBUTES
+
+to get attributes === type/method/prop etc .getcustomattributes() or
+getcustomattribute
+
+
+
+GENERICS 
+
+isgenerictypedefinition isgenericmethoddefinition
+
+getgenerictype definition getgenericmethoddefinition
+
+getgenericarguments - both
+
+TO INVOKE METHOD OR CREATE INSTANCE NEED 
+
+get methodinfo
+
+method.makegenericmethod(gentypearg1,gentypearg2)
+
+method.invoke
+
+___
+getgenerictypedefinitoin
+
+gentypedef.makegenerictype(gentypearg)
+
+activator.createinstance(gentype)
+
+
+
+
+
+ ^8NufTaJC
+
+some general yapping ^DNEURWaj
+
+!!!! ^4wqi93Pz
+
+safety?? ^kBOGmVZh
+
+inherit ^apsyr4gd
+
+static attribute shit 
+that others doent have ^FKWPUger
+
+!!! ^wdYotj5Q
+
+generic ^UwbjPcXU
+
+member ^9xnyLfIM
+
+using gen method
+and gen type that 
+we ve just created ^ZjqzDWEb
+
+getcustomattribute and
+no attributes - throws ^WWotzXDj
+
+type checking
+inheritance checking ^Ty7iQd7P
+
+isassignablefrom
+is/isinstanceeoftype
+obj.gettype == typeof ^bEJMRKg4
+
+getelement type ^9GGhVXco
+
+nullable.getunderlyingtype ^wVW2ZFPF
+
+pointers ^i2Kvjvfy
+
+byref types ^3C718Ugf
+
+is   isinstance of  ^z3n0M37j
+
+example outputs ^BCIYzopv
+
+when is in may be enough ^3lFgV4yG
+
+when you may need required custom modifiers ^ncuzAGta
+
+almost never seen in c# ^tv1BfB8l
+
+props/methods ^oWPHE4su
+
+byref types ^aBrJ4IPA
