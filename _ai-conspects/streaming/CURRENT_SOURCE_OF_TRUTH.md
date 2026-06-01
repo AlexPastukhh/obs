@@ -1,6 +1,6 @@
 # Current Source of Truth - Streaming
 
-Generated: 2026-06-01 22:41:02 UTC
+Generated: 2026-06-01 22:47:08 UTC
 
 ## Policy
 
@@ -13,9 +13,13 @@ A region is complete only after visual/semantic boundary review and verified tra
 ```text
 Stage0 boundary review: done
 R01 streaming bytes / stream concept basics: transcript v001 done
-R02 reading response stream / payload bytes: next
+R02 reading response stream / payload bytes: transcript v001 done
+R03 streaming objects / async iteration / REST API concerns: next
 ```
 
-## R01 note
+## R02 note
 
-S-031/S-032 were pulled into R01 by semantic review even though the coordinate band initially suggested R02. This is intentional and demonstrates that inventory is not final authority.
+```text
+S-057/S-058 were pulled from initial R06 candidate into R02 by semantic review because they continue the MemoryStream / send-data road.
+S-069-S078/S-083 remain checked-not-R02 and reserved for R06 lower-tail benefits/mental-model review.
+```

@@ -1,0 +1,345 @@
+{
+  "generated": "2026-06-01 22:47:08 UTC",
+  "region_id": "R02",
+  "region_name": "reading response as stream / payload bytes / send-data stream choices",
+  "boundary_status": "reviewed-v001",
+  "included_sources": [
+    "S-033",
+    "S-041",
+    "S-042",
+    "S-043",
+    "S-044",
+    "S-045",
+    "S-046",
+    "S-047",
+    "S-048",
+    "S-049",
+    "S-050",
+    "S-051",
+    "S-052",
+    "S-053",
+    "S-054",
+    "S-055",
+    "S-056",
+    "S-057",
+    "S-058",
+    "S-059",
+    "S-060",
+    "S-061",
+    "S-062",
+    "S-063",
+    "S-064",
+    "S-065",
+    "S-066",
+    "S-067",
+    "S-068",
+    "S-079",
+    "S-080",
+    "S-081",
+    "S-082"
+  ],
+  "included_count": 33,
+  "pulled_from_initial_R06": [
+    "S-057",
+    "S-058"
+  ],
+  "excluded_already_R01": [
+    "S-031",
+    "S-032"
+  ],
+  "checked_not_R02_candidate_R06": [
+    "S-069",
+    "S-070",
+    "S-071",
+    "S-072",
+    "S-073",
+    "S-074",
+    "S-075",
+    "S-076",
+    "S-077",
+    "S-078",
+    "S-083"
+  ],
+  "duplicate_image_uses_recorded": [
+    "S-048",
+    "S-049"
+  ],
+  "rows": [
+    {
+      "source_id": "S-033",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-041",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-042",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-043",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-044",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-045",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-046",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-047",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-048",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Duplicate image content appears in two canvas placements; both image uses are recorded."
+    },
+    {
+      "source_id": "S-049",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Duplicate image content appears in two canvas placements; both image uses are recorded."
+    },
+    {
+      "source_id": "S-050",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-051",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-052",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-053",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-054",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-055",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-056",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-057",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Pulled from initial R06 lower-tail candidate because it continues the R02 MemoryStream / send-data road."
+    },
+    {
+      "source_id": "S-058",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Pulled from initial R06 lower-tail candidate because it continues the R02 MemoryStream / send-data road."
+    },
+    {
+      "source_id": "S-059",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-060",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-061",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-062",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-063",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-064",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-065",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-066",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-067",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-068",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-079",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-080",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-081",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-082",
+      "decision": "included-in-R02-v001",
+      "candidate_type": "same-road-continuation",
+      "reason": "Included after local visual/semantic boundary review."
+    },
+    {
+      "source_id": "S-031",
+      "decision": "excluded-from-R02-already-R01",
+      "candidate_type": "already-processed-overlap",
+      "reason": "Semantically pulled into R01: stream concept / two meanings intro."
+    },
+    {
+      "source_id": "S-032",
+      "decision": "excluded-from-R02-already-R01",
+      "candidate_type": "already-processed-overlap",
+      "reason": "Semantically pulled into R01: stream concept / two meanings intro."
+    },
+    {
+      "source_id": "S-069",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-070",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-071",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-072",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-073",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-074",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-075",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-076",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-077",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-078",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    },
+    {
+      "source_id": "S-083",
+      "decision": "checked-not-R02-candidate-R06",
+      "candidate_type": "lower-tail-neighbor",
+      "reason": "Benefits/mental-model/lower-tail material; keep for R06 or later boundary review."
+    }
+  ]
+}

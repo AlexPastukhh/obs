@@ -1,0 +1,35 @@
+{
+  "region_id": "R02",
+  "region_name": "reading response as stream / payload bytes",
+  "stage": "stage2-v001",
+  "generated": "2026-06-01 22:47:08 UTC",
+  "what_area_is_about": [
+    "HttpClient ResponseHeadersRead and starting body processing after headers arrive",
+    "ReadAsStreamAsync and avoiding buffering/full in-memory strings",
+    "Stream types: MemoryStream, FileStream, NetworkStream, HTTP content streams, wrapper streams",
+    "Implementation patterns for downloading files, streaming JSON deserialization, processing large JSON arrays, and uploading files",
+    "Send-data choices: MemoryStream + StreamContent vs true streaming vs JsonContent.Create",
+    "Content-Type describes payload format, not the fact that code uses streams"
+  ],
+  "key_ideas": [
+    "ResponseHeadersRead is client-side behavior: GetAsync completes when headers arrive so the body stream can be read immediately.",
+    "Streaming response reading reduces memory and allows earlier processing; it does not force the server to return a special stream type.",
+    "HTTP content streams can be piped to files or fed directly into JsonSerializer to avoid ReadAsStringAsync.",
+    "MemoryStream + StreamContent can reduce string allocations but is still buffered in RAM; it is not true streaming end-to-end.",
+    "For real request streaming, use non-buffering streams such as FileStream, custom generated streams, or advanced pipelines.",
+    "Content-Type should name the document format: application/json, application/x-ndjson, application/octet-stream, multipart/form-data, etc."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "mostly high",
+    "code_readability": "high for main examples; some code snippets are cropped/tiny and marked",
+    "spatial_layout_understanding": "high after local R02 boundary review",
+    "limitations": [
+      "S-042/S-043/S-046 diagrams have small labels; main flow is readable but not every tiny label is perfect.",
+      "S-047 is a cropped demo-title slide.",
+      "S-048/S-049 are tiny duplicate snippets.",
+      "S-079 bottom is cropped after visible content."
+    ],
+    "confidence_summary": "High for R02 key concepts and included/checked boundary decisions; medium-high for exact tiny diagram labels."
+  }
+}

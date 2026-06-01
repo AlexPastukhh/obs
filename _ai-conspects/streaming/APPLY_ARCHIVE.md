@@ -1,6 +1,6 @@
-# Apply archive: Streaming R01 transcript v001
+# Apply archive: Streaming R02 transcript v001
 
-Archive type: stage-1 verified region transcript.
+Archive type: stage-2 verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-streaming-stage1-r01-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-streaming-stage2-r02-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-streaming-stage1-r01-transcript-v001.zip
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage1-r01-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage1-r01-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage2-r02-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage2-r02-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/streaming
-git commit -m "Add streaming R01 stream basics transcript"
+git commit -m "Add streaming R02 response stream transcript"
 git push origin ai-processed-conspects-text
 ```
 

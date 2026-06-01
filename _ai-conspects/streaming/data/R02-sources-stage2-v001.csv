@@ -1,0 +1,34 @@
+region_source_id,source_id,image_use_id,fileId_short,x,y,status,readability,cut_off,confidence,theme,notes
+R02-S001,S-033,IU-033,7c10083920,1057.518,6323.898,verified-from-extracted-svg-image,high,no,high,HttpCompletionOption.ResponseHeadersRead completes after headers,Starts the concrete R02 road; was checked/excluded from R01 and now included in R02.
+R02-S002,S-041,IU-041,357cb7b336,2709.671,5471.193,verified-from-extracted-svg-image,high,no,high,API can stream response parts over wire,Large slide/caption introducing streaming response payload flow.
+R02-S003,S-042,IU-042,bda88c621b,2669.631,6171.193,verified-from-extracted-svg-image,medium,no,medium-high,Using Streams When Reading Data diagram: buffered path,Diagram text is partially small; main labels and flow are visible.
+R02-S004,S-043,IU-043,8ad8cf7b1e,2671.542,6669.248,verified-from-extracted-svg-image,medium,no,medium-high,Using Streams When Reading Data diagram: stream path,Second diagram version; shows stream path instead of in-memory string.
+R02-S005,S-044,IU-044,15002d00b2,2647.895,7151.656,verified-from-extracted-svg-image,high,no,high,Demo marker: using streams when reading data,Transition/demo slide.
+R02-S006,S-045,IU-045,1c1305bd64,2652.226,7494.116,verified-from-extracted-svg-image,high,bottom-cropped-after-visible-code,high-for-visible-code,GetPosterWithStreamAsync using ReadAsStreamAsync + DeserializeAsync,Visible code transcribed with endpoint GUID shortened where small/irrelevant.
+R02-S007,S-046,IU-046,7d7d42a23e,2610.281,8108.901,verified-from-extracted-svg-image,medium,no,medium-high,Improving memory/performance with HttpCompletionMode diagram,Diagram shows ResponseHeadersRead lets code manipulate stream before full content is buffered.
+R02-S008,S-047,IU-047,8bbb8e6a55,2288.003,8811.059,verified-from-extracted-svg-image,high,right-title-truncated-by-slide-crop,high-for-visible-text,Demo marker: improving memory use and performance with HttpComplete...,Visible title is cropped/truncated at right edge.
+R02-S009,S-048,IU-048,31f052a655,2435.896,9311.39,verified-from-extracted-svg-image,high,tiny-snippet-only,high,ResponseHeadersRead SendAsync snippet,Same file/image content also appears as S-049 at another canvas placement.
+R02-S010,S-049,IU-049,31f052a655,3497.597,7517.671,duplicate-visible-image-use,high,tiny-snippet-only,high,Duplicate placement of ResponseHeadersRead SendAsync snippet,Duplicate image use of S-048 content; both canvas placements are recorded for coverage.
+R02-S011,S-050,IU-050,e871da238b,989.443,7042.501,verified-from-extracted-svg-image,high,no,high,Different Stream types: in-memory/file/network streams,Good readable source.
+R02-S012,S-051,IU-051,bbeaa557d8,954.726,7568.657,verified-from-extracted-svg-image,high,no,high,HTTP content streams and wrapper streams,Good readable source.
+R02-S013,S-052,IU-052,570007e957,2571.596,11179.174,verified-from-extracted-svg-image,high,no,high,PostJsonStreamingAsync using MemoryStream + StreamContent,Code transcribed from visible screenshot; exact formatting normalized.
+R02-S014,S-053,IU-053,cc55097c13,2328.679,10720.316,verified-from-extracted-svg-image,high,no,high,Demo marker: using streams when sending data,Transition/demo slide for send-data examples.
+R02-S015,S-054,IU-054,2e2431e942,3824.897,11299.833,verified-from-extracted-svg-image,high,no,high,Why MemoryStream is used before StreamContent,Good readable source.
+R02-S016,S-055,IU-055,076facc973,3844.599,11785.065,verified-from-extracted-svg-image,high,bottom-continues-to-next-source,high,MemoryStream vs Serialize + StringContent,Continues into S-056/S-057/S-058.
+R02-S017,S-056,IU-056,b9b5cd531f,3800.508,12323.333,verified-from-extracted-svg-image,high,no,high,More cases for using MemoryStream,Same MemoryStream decision road as S-055 and S-057/S-058.
+R02-S018,S-057,IU-057,eb17542c30,3834.004,12711.732,verified-from-extracted-svg-image,high,bottom-ui-overlay-no-text-loss,high,When not to use MemoryStream,Pulled from initial R06 candidate into R02 because it is a direct continuation of the MemoryStream/send-data road.
+R02-S019,S-058,IU-058,8593886b5d,3788.508,13266.777,verified-from-extracted-svg-image,high,no,high,Small payloads: MemoryStream adds complexity,Pulled from initial R06 candidate into R02 as continuation of S-057.
+R02-S020,S-059,IU-059,ee9451d578,1007.601,10351.622,verified-from-extracted-svg-image,high,no,high,Quick what-to-use-when summary,Summary connects read/download/upload choices.
+R02-S021,S-060,IU-060,59dfe65d31,1031.323,10253.289,verified-from-extracted-svg-image,high,no,high,Use case D: sending large files,Tiny continuation label for file upload example.
+R02-S022,S-061,IU-061,bfdcc15553,963.823,9931.052,verified-from-extracted-svg-image,high,no,high,UploadFileAsync with FileStream + StreamContent,Good readable source.
+R02-S023,S-062,IU-062,6739585158,948.595,9774.461,verified-from-extracted-svg-image,high,no,high,Use case D: upload a file from disk,Transition label between processing JSON arrays and file upload.
+R02-S024,S-063,IU-063,d7aba4eab8,956.942,9272.744,verified-from-extracted-svg-image,high,no,high,ProcessMoviesAsync with DeserializeAsyncEnumerable,Good readable source.
+R02-S025,S-064,IU-064,9a4ac18e46,896.08,9047.976,verified-from-extracted-svg-image,high,no,high,Stream-process huge JSON array,Intro to S-063 code example.
+R02-S026,S-065,IU-065,c439bebf2b,900.284,8727.363,verified-from-extracted-svg-image,high,no,high,DeserializeAsync<T> directly from stream,Good readable source.
+R02-S027,S-066,IU-066,de363afc01,889.535,8514.734,verified-from-extracted-svg-image,high,no,high,Use case B: stream JSON deserialization,This slide bridges binary response example and JSON deserialization example.
+R02-S028,S-067,IU-067,468de6109b,865.323,8217.249,verified-from-extracted-svg-image,high,no,high,DownloadFileAsync with CopyToAsync,Good readable source.
+R02-S029,S-068,IU-068,61bbb6d5bb,827.005,8044.325,verified-from-extracted-svg-image,high,no,high,Use case A: download big file to disk,Intro to S-067 code example.
+R02-S030,S-079,IU-079,5223201541,2536.835,9478.98,verified-from-extracted-svg-image,high,bottom-cropped-after-visible-content,high-for-visible-text,ResponseHeadersRead + ReadAsStreamAsync: what it means,Bottom is cropped but the visible bullets are clear.
+R02-S031,S-080,IU-080,04d45d7399,2509.169,9940.257,verified-from-extracted-svg-image,high,no,high,ResponseHeadersRead does not change server response type,Important conceptual distinction for R02.
+R02-S032,S-081,IU-081,75528f39da,2603.338,11710.05,verified-from-extracted-svg-image,high,no,high,Streaming a request: StreamContent versus streaming formats,This belongs to R02 because it clarifies request-body streaming vs payload format.
+R02-S033,S-082,IU-082,ac19d1b12b,2595.367,12208.781,verified-from-extracted-svg-image,high,no,high,"Content-Type should describe format, not streaming",Good readable source.
