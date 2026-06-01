@@ -1,0 +1,125 @@
+﻿CAN SPLIT OUR ACTION THAT PRODUCES 4 DIFFERENT VARIANTS(APPJSON/HATEMARVIN 
+= FRENDLYJSON/FRENDLYHATE) ^0dMNp2aK
+
+produces attribute ^qi00qa4f
+
+what if there is no matching consumes, even
+if there is a configured supported type in input formatter ^HL8rJKPZ
+
+!!! ^fmkF2aLc
+
+ADD STATUSCODEPAGES FOR 406/415 ETC  ^19oUrlIv
+
+OR ^9wnLrAWM
+
+CREATE SOME ENDPOINTS FOR STATUS CODES ^GKUZzPaK
+
+can add check for status code and add more info about 
+the initial path and what client does need to do
+(406 check accept 415 check content tyep) ^5u37AaXO
+
+cant add the exact
+reason to problem
+but can add useful details ^gvdvb38l
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// MVC (or minimal APIs + services)
+builder.Services.AddControllers();
+
+// ProblemDetails infrastructure
+builder.Services.AddProblemDetails();
+
+var app = builder.Build();
+
+app.UseRouting();
+
+app.UseWhen(
+    ctx => ctx.Request.Path.StartsWithSegments("/api"),
+    apiApp =>
+    {
+        apiApp.UseStatusCodePages(async statusCodeContext =>
+        {
+            var http = statusCodeContext.HttpContext;
+
+            // If headers/body already started, can't write a body safely
+            if (http.Response.HasStarted)
+                return;
+
+            var code = http.Response.StatusCode;
+
+            // Only handle selected status codes
+            if (code is not (
+                StatusCodes.Status404NotFound or
+                StatusCodes.Status405MethodNotAllowed or
+                StatusCodes.Status406NotAcceptable or
+                StatusCodes.Status415UnsupportedMediaType))
+            {
+                return;
+            }
+
+            var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+            var pdService = http.RequestServices.GetRequiredService<IProblemDetailsService>();
+
+            var detail = code switch
+            {
+                StatusCodes.Status404NotFound =>
+                    "Endpoint not found.",
+                StatusCodes.Status405MethodNotAllowed =>
+                    "HTTP method not allowed for this endpoint.",
+                StatusCodes.Status406NotAcceptable =>
+                    "The requested response media type is not acceptable. Check the Accept header.",
+                StatusCodes.Status415UnsupportedMediaType =>
+                    "The request media type is unsupported. Check the Content-Type header.",
+                _ => null
+            };
+
+            var pd = factory.CreateProblemDetails(
+                httpContext: http,
+                statusCode: code,
+                title: ReasonPhrases.GetReasonPhrase(code),
+                type: $"https://httpstatuses.com/{code}",
+                detail: detail,
+                instance: http.Request.Path
+            );
+
+            // Safe writer (content-negotiates across registered ProblemDetails writers)
+            var written = await pdService.TryWriteAsync(new ProblemDetailsContext
+            {
+                HttpContext = http,
+                ProblemDetails = pd
+            });
+
+            if (!written)
+            {
+                // Fallback if no ProblemDetails writer is registered for the request
+                http.Response.ContentType = "application/problem+json; charset=utf-8";
+                await http.Response.WriteAsJsonAsync(pd);
+            }
+        });
+    });
+
+app.MapControllers();
+
+app.Run(); ^lOoY5F65
+
+IACTIONCONSTRAINT ^Q01UGIUW
+
+use consumes  ^GiW3eTBX
+
+OR ^oR7dMWgu
+
+CONSUMES ^jlLbOJi4
+
+when we need to 
+set varry accept ^YC7rrzTj
+
+broad accept header
+from browser ^EK51TEhp
+
+respect browser accept header ^ckFDSrxg
+
+when have endpoint distinction with produces, need to vary  ^CgOZvVZT

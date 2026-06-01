@@ -1,0 +1,82 @@
+﻿ssloptions ?? later ^ppX1c6nw
+
+expect100continuetimeout ^PNl5gSkK
+
+maxconnectionsperserver ^8RIatoTG
+
+pooledconnectionidletimeout ^YIG6prs6
+
+pooledconnectionlifetime ^NBcLaLXY
+
+connecttimeout ^8hCIvZ3n
+
+proxy ^3nvMasb2
+
+useproxy ^IQqcuskI
+
+preauthenticate ^2v4n2vPK
+
+credentials  ^o6ppAQ8S
+
+usecookies ^UUJfD7Jz
+
+automaticdecompressoin ^9XmmZAwt
+
+maxautomaticredirections ^KT9jK4bX
+
+allowautoredirect ^jjEipI1E
+
+!!! ^5Tjs3pNL
+
+flow examples ^kGCYtCxL
+
+credentials overview ^P7q1PvGW
+
+networkcredentials (user,pass)
+networkcred(user,pass,domain) ^1QtmL8ES
+
+credentialcache ^bRW4O8BV
+
+defaultcredentials ^08LzszId
+
+and we are using ntlm,kerberos,basic usually to authenticate our app, not end user ^aL9SY7IJ
+
+cookie flow, 
+actually just a normal cookie flow ^kaY88FHa
+
+how to use this shit then ^My6lxf3d
+
+socketshttphandleroptions ^cIlohAW6
+
+practical patterns ^RfvwKBr7
+
+http/1.1 vs http/2 
+one connection per request
+vs
+multiple connections ^eePG8zmP
+
+expect 100 continue
+save bandwidth ^iWSN1TsF
+
+cookiecontainer ^LGRw0pPE
+
+adding manually to the container ^cctp3tcK
+
+floww ^STiFTakM
+
+problems with shared cookiecontainer 
+when you do poolint with httpclientfactory ^QaHMzPk9
+
+who is being authenticated with credentials
+and preauthenticate ^oVedt2Vi
+
+what is uri in credcache.add(uri....) ^hMIRwN2W
+
+credentials sending with httpclinet
+vs 
+jwt sending ^9qsQ1XWR
+
+default system proxy
+when proxy = null ^zskTuk3q
+
+visual flow ^y8GNQh8z

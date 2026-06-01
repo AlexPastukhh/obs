@@ -1,0 +1,173 @@
+﻿PROBLEM DETAILS
+ ^Ih9FWrcd
+
+ALL TITLE AND DETAILS 
+AND REFERENCES TO 
+A DOCUMENTATION
+CAN RELATE 
+TO YOUR API AND YOUR API'S DOCUMENTATION
+NOT JUST SOME DOCS WITH EXPL
+WHAT IS THIS STATUS CODE ^acmuqamn
+
+!!!! ^0HdeamZc
+
+TRACE ID ^sKo6d50C
+
+!!! ^WhtZiYqv
+
+PROBLEM DETAILS config ^2BzRtODx
+
+PROBLEM DETAILS Factory ^JH7p8PYI
+
+PROBLEM DETAILS SERVICE
+WHAT ISSUES WITHOUT IT
+WHEN TO USE  ^WGI2i43O
+
+whats wrong with this implementation? ^EAwQPzeo
+
+problemdetailsservice will do everything can being done in controller 
+automatically, so you need to use it everywhere in middlewares,
+non mvc land ^yrxnxPcB
+
+BUT WHY PROBLEMDETAILS FACTORY ^8r5sPDXU
+
+configuring problem details ^WiiGkfCj
+
+like that you force xml
+on all pd that is produced via
+problemdetails frwrks pipeline
+auto in controllers or via iproblemdetailsservice ^4jeBmzHn
+
+last action (callback) in pipeline
+before response ^Dsl1PE31
+
+cookies auth ON REDIRECT 
+probmem details returning  ^AjRzMwGY
+
+using Microsoft.AspNetCore.Mvc;
+
+options.Events.OnRedirectToLogin = async ctx =>
+{
+    if (!ctx.Request.Path.StartsWithSegments("/api"))
+    {
+        ctx.Response.Redirect(ctx.RedirectUri);
+        return;
+    }
+
+    ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;
+
+    var http = ctx.HttpContext;
+    var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+    var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();
+
+    var pd = factory.CreateProblemDetails(
+        httpContext: http,
+        statusCode: StatusCodes.Status401Unauthorized,
+        title: "Unauthorized",
+        type: "https://httpstatuses.com/401",
+        detail: "Authentication is required to access this resource.",
+        instance: http.Request.Path);
+
+    await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });
+};
+
+options.Events.OnRedirectToAccessDenied = async ctx =>
+{
+    if (!ctx.Request.Path.StartsWithSegments("/api"))
+    {
+        ctx.Response.Redirect(ctx.RedirectUri);
+        return;
+    }
+
+    ctx.Response.StatusCode = StatusCodes.Status403Forbidden;
+
+    var http = ctx.HttpContext;
+    var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+    var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();
+
+    var pd = factory.CreateProblemDetails(
+        httpContext: http,
+        statusCode: StatusCodes.Status403Forbidden,
+        title: "Forbidden",
+        type: "https://httpstatuses.com/403",
+        detail: "You do not have permission to access this resource.",
+        instance: http.Request.Path);
+
+    await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });
+}; ^yIqx1mF6
+
+a ^TOtsbG2u
+
+ADDITON TO PD SERVICE,
+TRYWRITEASYNC
+PROBLEMDETAILS WRITERS ^WLuxtM5r
+
+EXAMPLE WITH EXPL ^cxvzt3Ke
+
+WHAT IS PROBLEMDETAILSCONTEXT ^KfzW0ZqA
+
+USING PROBLEMDETAILSCONTEXT.EXCEPTION
+FOR CUSTOM WRITER TO ACCESS ^fhfKLTUi
+
+TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER
+FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE 
+AND MUST HAVE CALLBACK
+TO PROCESS AS TEXT ^Vg3bLQyq
+
+!!! ^VFA6oSpD
+
+T ^MDa2urLO
+
+PROBLEMDETAILS 
+WRITERS CHAIN,CONTENT NEG ^EpDo4mUM
+
+WITH TRYWRITE(CAN RETURN PALIN TEXT IN THIS CASE TOO) ^7dg2gkzA
+
+ISSUES WITH XML WRITER AND XML PROBLEM DETAILS ^dlVECfVO
+
+WHERE NOT TO USE THE SERVICE/
+ IMPLICIT PROBLEMDETAILS PIPELINE ^9nePiHEO
+
+NO DEFAULT WRITING BEHAVIOR
+IF NO MATCHING WRITER
+THEN NEED TO ADD 
+CALLBACK ON !WRITTEN ^RcY5iSU0
+
+THE DEFAULT WRITER = ADDPROBLEMDETAL
+JSON WRITER ^A9CkNf0X
+
+WHAT IS PROBLEMDETAILSCONTEXT ^jiMEOmqN
+
+XML WRITER (CAN WRITE CALLBACK AND MANUALLY 
+SER TO XML IF DONT WANT WRITER) ^AtrWvkMN
+
+CUSTOMIZE PROBLEMDETAILS ^z2N21pSf
+
+!! ^hybdDhzV
+
+WHEN DOES CUST PD RUNS/ ^d5sesSp7
+
+WHAT IF NEED TO HAVE SOME PD OPTIONS CONFIGURATION FOR 
+ALL PROBLEMDETAILS? ^9yoNuuWI
+
+APIBEH OPTIONS PD CONFIGURATIONS ^VsYzDIa6
+
+JUST CONFIGURE CUSTOMIZEPROBLEMDETAILS AND USE FACTORY ^Uz8cUZPW
+
+CUTOMIZEPROBLEMDETAILS ^9A3VkUb4
+
+CONFIGURE<PROBLEMDETAILSOPTIONS> ^hfaCaJI1
+
+!! ^hYGqWkaY
+
+ex order of pd writer and customize pd ^86gTI4f2
+
+the main issue ^ZpqPO9qS
+
+so the writer wont see context too
+but controller uses default writer
+so its not the issue ^B4XrFXmn
+
+controller issue
+customize pd can see pdcontext
+but in controller path it cant ^YTULHIx9

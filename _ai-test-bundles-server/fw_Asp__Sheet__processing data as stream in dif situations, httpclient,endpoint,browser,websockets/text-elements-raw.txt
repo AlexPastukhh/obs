@@ -1,0 +1,80 @@
+﻿!!! processingn stream ^CsIRnNDS
+
+so how do we process bytes in loops in different situations? ^jK5p4FVJ
+
+fetch get reader
+
+!!! processing until done that reader.read 
+returns ^70b6Xh8R
+
+websocket asp receiveasync
+result.endoofmessage
+
+we are using buffer to write into and to specify number of bytes that we
+need to write into a chunk, so we can achieve readexactly or readatleast behavior
+
+using close async for gracefull handshake without receiveing and processing messages that are inflight
+closeoutputasync to stop sending but with possiblity to process all messages from peer
+abourt to just kill everything ^P4nnSP9Q
+
+in controller endp 
+readasync, when returns 0 - the end of request 
+if  there is some network error abort request will be fired
+
+or can use readexactly/readatleast for some special behavior, we 
+need buffer here to write available or specified number of bytes ^5SsLtq6U
+
+in client we cant process messages as stream, we are buffering the full message and the we
+process it with code ^0dcwm6W2
+
+processing chunk by chunk with httpclient ^6Xs9wHf2
+
+need to use text decoder to decode text from bytes without loosing data
+because bytes are arrriving ^CrFH2oAP
+
+do while because we get result.endofmessage
+with the last message chunk ^gkWl9GG7
+
+wrong, need to use encoding.utf8.getdecoder
+and 
+decoder.getchars if we have char buffer that will always be 
+not smaller than the space we need for a chunk
+
+or we can use decoder.convert that wont throw if the buffer is small
+and has out args like bytesused charsused completed
+
+so we can prosecc the byte buffer in loop 
+
+flush when some chars cant be decoded and we want to say that there is some char should be ^2f37SiTm
+
+need to catch ioexception too
+to get it from steram failure
+when using streams ^ev2mENS7
+
+controller asp ^iu0DNM0V
+
+fetch ^4QciSuUw
+
+websockets asp endp ^KEjjyNmj
+
+browser websockets ^wLfqpytY
+
+stream, reading bytes ^PnrT4ste
+
+so we get unprocessed
+buffer for next iteration
+and we pass its start
+and end  ^DLk4kDDf
+
+can have overloads with pos
+of count of bytes form start 
+or some sequenceposition ^FBgRNdRv
+
+pipereader ^W6xv87xS
+
+make sense the most with sequence reader that provides cursor api ^wdTz9VEE
+
+writing
+pipewriter ^nHhlKN1B
+
+pipereader ^6X9JF0Hm
