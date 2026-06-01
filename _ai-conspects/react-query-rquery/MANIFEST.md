@@ -1,14 +1,14 @@
-# MANIFEST — React Query rquery / R10 consolidated per-region update
+# MANIFEST - React Query rquery / R10 consolidated per-region update v003
 
-Archive type: **stage-3c per-region consolidated transcript update**  
+Archive type: **stage-3c per-region consolidated transcript correction**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-05-31 23:53:36 UTC
+Generated: 2026-06-01 15:08:58 UTC
 
 ## Purpose
 
-This archive switches the mutation workflow away from small screenshot-batch archives.
+This archive corrects the v002 approach by removing mojibake/OCR-corrupted draft text from the main readable transcript.
 
-It creates the main consolidated region file:
+It updates:
 
 ```text
 _ai-conspects/react-query-rquery/regions/R10-mutations.md
@@ -20,6 +20,8 @@ _ai-conspects/react-query-rquery/regions/R10-mutations.md
 _ai-conspects/react-query-rquery/regions/R10-mutations.md
 _ai-conspects/react-query-rquery/data/R10-mutations-sources.csv
 _ai-conspects/react-query-rquery/data/R10-mutations-sources.json
+_ai-conspects/react-query-rquery/data/R10-mutations-pending-verification-v003.csv
+_ai-conspects/react-query-rquery/data/R10-mutations-pending-verification-v003.json
 _ai-conspects/react-query-rquery/09-archive-granularity-rule-update.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
@@ -28,17 +30,11 @@ _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ## R10 status
 
 ```text
-Verified: MUT-S001–MUT-S018
-Pending:  MUT-S019–MUT-S036
+Verified:                    MUT-S001-MUT-S018
+Pending visual verification: MUT-S019-MUT-S036
+Raw OCR in main transcript:  removed
 ```
 
 ## Important
 
-This archive intentionally does **not** create:
-
-```text
-07-stage3b-r10-mutations-verification-batch1.md
-08-stage3b-r10-mutations-verification-batch2.md
-```
-
-Those small overlay files were part of the old batch approach and should not be the default user-facing workflow.
+If v002 was applied but not committed, apply this archive over it and review the diff. This v003 should replace the corrupted OCR draft section with a clean pending-verification section.

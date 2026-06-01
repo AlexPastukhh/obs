@@ -1,22 +1,4 @@
 source_id,image_index,file,status,readability,cut_off,confidence,theme,notes
-MUT-S001,130,488e3dbdf9.png,verified,high,no,high,mutation variable flow and optimistic update overview,Source chips like `TanStack +1` are visible but omitted from transcript body.
-MUT-S002,005,55a51e51f4.png,verified,high,no,high,optimistic update code example,This image appears twice in the mutation region; also used by MUT-S009.
-MUT-S003,003,5bec075fe3.png,verified,high,no,high,cancelQueries / optimistic update race,Visually checked against original PNG.
-MUT-S004,150,73b5e8fd66.png,verified,high,no,high,mutate vs mutateAsync / mutate,Visually checked against original PNG.
-MUT-S005,004,f128bccab6.png,verified-visible-partial,high,yes,high-for-visible-text,standard optimistic update flow,The screenshot is cut off below `Example:`. Do not infer the missing example from this screenshot; the example is visible in MUT-S002/MUT-S009.
-MUT-S006,149,7de4e030ee.png,verified,high,no,high,mutate UI example,Code-only screenshot. Visually checked against original PNG.
-MUT-S007,151,a7ac382dd0.png,verified,high,no,high,mutateAsync,Visually checked against original PNG.
-MUT-S008,148,8641ca8bc2.png,verified,high,no,high,immutable updates only,Original screenshot has separate Good/Bad TypeScript blocks; transcript keeps them together while preserving content.
-MUT-S009,005,55a51e51f4.png,verified-duplicate-of-MUT-S002,high,no,high,optimistic update code example,Same underlying PNG as MUT-S002.
-MUT-S010,152,e7fe1b2b60.png,verified,high,no,high,when to use mutate,Visually checked against original PNG.
-MUT-S011,153,7ec1a778b8.png,verified,high,no,high,when to use mutateAsync,Visually checked against original PNG.
-MUT-S012,131,69bab5a10b.png,verified,high,no,high,best mental model for lifecycle callbacks,Visible source chip `TanStack +1` omitted from transcript body.
-MUT-S013,147,c11c8e7392.png,verified,high,no,high,manual updates get hard,Visually checked against original PNG.
-MUT-S014,006,850109ec0c.png,verified,high,no,high,useQuery v5 callbacks removed / mutation callbacks remain,Visible source chips `tanstack.com +1` and `tanstack.com +2` omitted from transcript body.
-MUT-S015,154,4b9ba54f93.png,verified,high,no,high,mutate vs mutateAsync example,Visually checked against original PNG. Source chip `TanStack +1` omitted from transcript body.
-MUT-S016,145,9373bdbda3.png,verified,high,no,high,what onMutate returns,Visually checked against original PNG.
-MUT-S017,007,37ac0e6a45.png,verified,high,no,high,cancellation handling in mutation callbacks,Visible source chip `tanstack.com +2` omitted from transcript body.
-MUT-S018,144,6759acc16a.png,verified,high,no,high,onMutate signature,Visually checked against original PNG. Source chip `TanStack` omitted from transcript body.
 MUT-S019,146,a6d0648cd6.png,pending-visual-verification,unknown,unknown,not-assessed-for-literal-transcript,why invalidate in onSettled,Raw OCR draft was intentionally removed from the main region file because it contained encoding/OCR corruption. Verify against original PNG before adding exact transcript.
 MUT-S020,143,ae6ed651d2.png,pending-visual-verification,unknown,unknown,not-assessed-for-literal-transcript,variables argument,Raw OCR draft was intentionally removed from the main region file because it contained encoding/OCR corruption. Verify against original PNG before adding exact transcript.
 MUT-S021,155,db2d4aae55.png,pending-visual-verification,unknown,unknown,not-assessed-for-literal-transcript,return invalidateQueries Promise keeps pending,Raw OCR draft was intentionally removed from the main region file because it contained encoding/OCR corruption. Verify against original PNG before adding exact transcript.

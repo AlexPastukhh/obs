@@ -1,20 +1,20 @@
-# R10 — Mutations
+# R10 - Mutations
 
 Conspect: `react query,rquery`  
 File type: **source-preserving region transcript**  
-Stage: **3c / consolidated per-region update**  
-Generated: 2026-05-31 23:53:36 UTC
+Stage: **3c / consolidated per-region update v003 sanitized**  
+Generated: 2026-06-01 15:08:58 UTC
 
-This file is the main region file for `R10 — Mutations`.
+This is the main region file for `R10 - Mutations`. It follows the per-region archive scheme: no user-facing archive per 8-10 screenshots.
 
-It follows the new archive granularity rule: **do not create one archive per 10 screenshots**. User-facing archives should be per-region draft/consolidation/correction archives.
+Important correction in v003: raw OCR drafts for `MUT-S019`-`MUT-S036` were removed from the readable region transcript because the previous draft contained mojibake/OCR corruption. Pending sources are kept in the inventory and must be visually verified before exact transcript is added.
 
 ---
 
 ## 0. You are here
 
 Conspect: `react query,rquery`  
-Current region: `R10 — Mutations`  
+Current region: `R10 - Mutations`  
 Canvas position: middle-lower part of the full React Query sheet.
 
 Previous nearby regions:
@@ -52,12 +52,11 @@ KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH
 ## 2. Consolidation status
 
 ```text
-Verified in this consolidated file: MUT-S001–MUT-S018
-Not verified yet: MUT-S019–MUT-S036
-No per-10 screenshot overlay files are created in this archive.
+Verified exact/visible transcript: MUT-S001-MUT-S018
+Pending visual verification:       MUT-S019-MUT-S036
+Raw OCR draft in main transcript:  removed in v003 due corruption risk
+Archive granularity:               per-region, not per screenshot batch
 ```
-
-The next user-facing archive for this region should be another **per-region consolidation/correction archive**, not a small screenshot-batch archive.
 
 ---
 
@@ -83,32 +82,32 @@ The next user-facing archive for this region should be another **per-region cons
 | MUT-S016 | 145 | `9373bdbda3.png` | `verified` | no | high | what onMutate returns |
 | MUT-S017 | 007 | `37ac0e6a45.png` | `verified` | no | high | cancellation handling in mutation callbacks |
 | MUT-S018 | 144 | `6759acc16a.png` | `verified` | no | high | onMutate signature |
-| MUT-S019 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S020 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S021 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S022 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S023 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S024 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S025 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S026 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S027 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S028 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S029 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S030 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S031 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S032 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S033 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S034 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S035 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
-| MUT-S036 |  | `` | `not-verified-yet` | unknown | not-assessed | pending visual verification |
+| MUT-S019 | 146 | `a6d0648cd6.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | why invalidate in onSettled |
+| MUT-S020 | 143 | `ae6ed651d2.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | variables argument |
+| MUT-S021 | 155 | `db2d4aae55.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | return invalidateQueries Promise keeps pending |
+| MUT-S022 | 156 | `e2bb07761c.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | without returning invalidation Promise |
+| MUT-S023 | 142 | `507dbfa569.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | context.client |
+| MUT-S024 | 157 | `35935e7b35.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | returning the Promise code snippet |
+| MUT-S025 | 158 | `c8aefd2cea.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | returning Promise behavior steps |
+| MUT-S026 | 141 | `5f990bee01.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | mutationFn |
+| MUT-S027 | 140 | `ed4ef609cc.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onSuccess signature and data argument |
+| MUT-S028 | 159 | `9d4d2d9cfa.png` | `pending-visual-verification` | yes | not-assessed-for-literal-transcript | why pending matters / cut off |
+| MUT-S029 | 139 | `57a7aa95ed.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | data returned from mutationFn |
+| MUT-S030 | 138 | `27b93b199a.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | variables / onMutateResult availability |
+| MUT-S031 | 137 | `c35292d43d.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onSuccess typical usage |
+| MUT-S032 | 136 | `56c5c8888e.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onError signature and arguments |
+| MUT-S033 | 135 | `82af270795.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onError rollback usage |
+| MUT-S034 | 134 | `c7dccde3bc.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onSettled signature and arguments |
+| MUT-S035 | 133 | `1cb0706b7f.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | onMutateResult / context / onSettled example |
+| MUT-S036 | 132 | `af1044b3cf.png` | `pending-visual-verification` | unknown | not-assessed-for-literal-transcript | async callbacks are awaited |
 
 ---
 
 ## 4. Verified source transcript
 
-This section contains only visually verified or explicitly duplicate-verified sources. Unverified screenshots are listed later as pending.
+This section contains visually verified or duplicate-verified sources only.
 
-### MUT-S001 — image 130 — `488e3dbdf9.png`
+### MUT-S001 - image 130 - `488e3dbdf9.png`
 
 Metadata:
 
@@ -121,7 +120,7 @@ Metadata:
 #### Verified visible text
 
 ```text
-`mutate(variables)` and `mutateAsync(variables)` both pass those variables into `onMutate`, `mutationFn`, `onSuccess`, `onError`, and `onSettled`. `onMutate` runs before the mutation function, which is why it’s the right place to do the optimistic cache update and return rollback info for later callbacks.
+`mutate(variables)` and `mutateAsync(variables)` both pass those variables into `onMutate`, `mutationFn`, `onSuccess`, `onError`, and `onSettled`. `onMutate` runs before the mutation function, which is why it's the right place to do the optimistic cache update and return rollback info for later callbacks.
 
 So the flow you described is right:
 
@@ -139,7 +138,7 @@ Source chips like `TanStack +1` are visible but omitted from transcript body.
 
 ---
 
-### MUT-S002 — image 005 — `55a51e51f4.png`
+### MUT-S002 - image 005 - `55a51e51f4.png`
 
 Metadata:
 
@@ -186,7 +185,7 @@ This image appears twice in the mutation region; also used by MUT-S009.
 
 ---
 
-### MUT-S003 — image 003 — `5bec075fe3.png`
+### MUT-S003 - image 003 - `5bec075fe3.png`
 
 Metadata:
 
@@ -201,7 +200,7 @@ Metadata:
 ```text
 2) Why `cancelQueries` matters in optimistic updates
 
-TanStack’s optimistic update guide literally says to cancel outgoing refetches so they don’t overwrite your optimistic update.
+TanStack's optimistic update guide literally says to cancel outgoing refetches so they don't overwrite your optimistic update.
 
 The problem without cancellation
 
@@ -227,7 +226,7 @@ Visually checked against original PNG.
 
 ---
 
-### MUT-S004 — image 150 — `73b5e8fd66.png`
+### MUT-S004 - image 150 - `73b5e8fd66.png`
 
 Metadata:
 
@@ -267,7 +266,7 @@ Visually checked against original PNG.
 
 ---
 
-### MUT-S005 — image 004 — `f128bccab6.png`
+### MUT-S005 - image 004 - `f128bccab6.png`
 
 Metadata:
 
@@ -282,7 +281,7 @@ Metadata:
 ```text
 3) Standard optimistic update flow with `cancelQueries`
 
-TanStack’s documented flow is:
+TanStack's documented flow is:
 
 1. `onMutate`
 2. cancel outgoing refetches
@@ -300,7 +299,7 @@ The screenshot is cut off below `Example:`. Do not infer the missing example fro
 
 ---
 
-### MUT-S006 — image 149 — `7de4e030ee.png`
+### MUT-S006 - image 149 - `7de4e030ee.png`
 
 Metadata:
 
@@ -335,7 +334,7 @@ Code-only screenshot. Visually checked against original PNG.
 
 ---
 
-### MUT-S007 — image 151 — `a7ac382dd0.png`
+### MUT-S007 - image 151 - `a7ac382dd0.png`
 
 Metadata:
 
@@ -371,7 +370,7 @@ Visually checked against original PNG.
 
 ---
 
-### MUT-S008 — image 148 — `8641ca8bc2.png`
+### MUT-S008 - image 148 - `8641ca8bc2.png`
 
 Metadata:
 
@@ -416,7 +415,7 @@ Original screenshot has separate Good/Bad TypeScript blocks; transcript keeps th
 
 ---
 
-### MUT-S009 — image 005 — `55a51e51f4.png`
+### MUT-S009 - image 005 - `55a51e51f4.png`
 
 Metadata:
 
@@ -463,7 +462,7 @@ Same underlying PNG as MUT-S002.
 
 ---
 
-### MUT-S010 — image 152 — `e7fe1b2b60.png`
+### MUT-S010 - image 152 - `e7fe1b2b60.png`
 
 Metadata:
 
@@ -491,7 +490,7 @@ Visually checked against original PNG.
 
 ---
 
-### MUT-S011 — image 153 — `7ec1a778b8.png`
+### MUT-S011 - image 153 - `7ec1a778b8.png`
 
 Metadata:
 
@@ -527,7 +526,7 @@ Visually checked against original PNG.
 
 ---
 
-### MUT-S012 — image 131 — `69bab5a10b.png`
+### MUT-S012 - image 131 - `69bab5a10b.png`
 
 Metadata:
 
@@ -555,7 +554,7 @@ Visible source chip `TanStack +1` omitted from transcript body.
 
 ---
 
-### MUT-S013 — image 147 — `c11c8e7392.png`
+### MUT-S013 - image 147 - `c11c8e7392.png`
 
 Metadata:
 
@@ -589,7 +588,7 @@ Visually checked against original PNG.
 
 ---
 
-### MUT-S014 — image 006 — `850109ec0c.png`
+### MUT-S014 - image 006 - `850109ec0c.png`
 
 Metadata:
 
@@ -604,7 +603,7 @@ Metadata:
 ```text
 In v5, `useQuery` does not have `onError`, `onSuccess`, or `onSettled`. Those query callbacks were removed in v5; they still exist for mutations, not queries.
 
-So for optimistic updates, you usually do not “handle cancellation in `useQuery onError`”, because there is no such callback in v5. Instead, you handle it by:
+So for optimistic updates, you usually do not "handle cancellation in `useQuery onError`", because there is no such callback in v5. Instead, you handle it by:
 
 - canceling the relevant queries before your optimistic write,
 - optionally making that cancellation silent,
@@ -620,7 +619,7 @@ Visible source chips `tanstack.com +1` and `tanstack.com +2` omitted from transc
 
 ---
 
-### MUT-S015 — image 154 — `4b9ba54f93.png`
+### MUT-S015 - image 154 - `4b9ba54f93.png`
 
 Metadata:
 
@@ -635,7 +634,7 @@ Metadata:
 ```text
 Example:
 
-That’s the cleanest difference:
+That's the cleanest difference:
 
 - `mutate` = fire and let callbacks handle lifecycle
 - `mutateAsync` = await the mutation like a normal Promise.
@@ -660,7 +659,7 @@ Visually checked against original PNG. Source chip `TanStack +1` omitted from tr
 
 ---
 
-### MUT-S016 — image 145 — `9373bdbda3.png`
+### MUT-S016 - image 145 - `9373bdbda3.png`
 
 Metadata:
 
@@ -699,7 +698,7 @@ Visually checked against original PNG.
 
 ---
 
-### MUT-S017 — image 007 — `37ac0e6a45.png`
+### MUT-S017 - image 007 - `37ac0e6a45.png`
 
 Metadata:
 
@@ -720,7 +719,7 @@ For optimistic updates, the recommended handling is:
 
 - call `cancelQueries` in `onMutate`
 - prefer `{ silent: true }`
-- rollback in the mutation’s `onError`
+- rollback in the mutation's `onError`
 - refetch/invalidate in `onSettled`
 ```
 
@@ -730,7 +729,7 @@ Visible source chip `tanstack.com +2` omitted from transcript body.
 
 ---
 
-### MUT-S018 — image 144 — `6759acc16a.png`
+### MUT-S018 - image 144 - `6759acc16a.png`
 
 Metadata:
 
@@ -764,21 +763,36 @@ Visually checked against original PNG. Source chip `TanStack` omitted from trans
 
 ---
 
-## 5. Pending source transcript work
+## 5. Pending visual verification
 
-The following sources are part of the mutation region but are not verified in this consolidated file yet:
+The following sources are part of R10 but are not included as exact transcript yet. They must be checked against original PNGs before adding text/code.
 
-```text
-MUT-S019, MUT-S020, MUT-S021, MUT-S022, MUT-S023, MUT-S024, MUT-S025, MUT-S026, MUT-S027, MUT-S028, MUT-S029, MUT-S030, MUT-S031, MUT-S032, MUT-S033, MUT-S034, MUT-S035, MUT-S036
-```
-
-They should be processed in the next **per-region consolidation/correction archive**.
+| Source ID | Image | File | Theme | Note |
+|---|---:|---|---|---|
+| MUT-S019 | 146 | `a6d0648cd6.png` | why invalidate in onSettled | pending visual verification |
+| MUT-S020 | 143 | `ae6ed651d2.png` | variables argument | pending visual verification |
+| MUT-S021 | 155 | `db2d4aae55.png` | return invalidateQueries Promise keeps pending | pending visual verification |
+| MUT-S022 | 156 | `e2bb07761c.png` | without returning invalidation Promise | pending visual verification |
+| MUT-S023 | 142 | `507dbfa569.png` | context.client | pending visual verification |
+| MUT-S024 | 157 | `35935e7b35.png` | returning the Promise code snippet | pending visual verification |
+| MUT-S025 | 158 | `c8aefd2cea.png` | returning Promise behavior steps | pending visual verification |
+| MUT-S026 | 141 | `5f990bee01.png` | mutationFn | pending visual verification |
+| MUT-S027 | 140 | `ed4ef609cc.png` | onSuccess signature and data argument | pending visual verification |
+| MUT-S028 | 159 | `9d4d2d9cfa.png` | why pending matters / cut off | pending visual verification |
+| MUT-S029 | 139 | `57a7aa95ed.png` | data returned from mutationFn | pending visual verification |
+| MUT-S030 | 138 | `27b93b199a.png` | variables / onMutateResult availability | pending visual verification |
+| MUT-S031 | 137 | `c35292d43d.png` | onSuccess typical usage | pending visual verification |
+| MUT-S032 | 136 | `56c5c8888e.png` | onError signature and arguments | pending visual verification |
+| MUT-S033 | 135 | `82af270795.png` | onError rollback usage | pending visual verification |
+| MUT-S034 | 134 | `c7dccde3bc.png` | onSettled signature and arguments | pending visual verification |
+| MUT-S035 | 133 | `1cb0706b7f.png` | onMutateResult / context / onSettled example | pending visual verification |
+| MUT-S036 | 132 | `af1044b3cf.png` | async callbacks are awaited | pending visual verification |
 
 ---
 
-## 6. Cleaned source notes — partial
+## 6. Cleaned source notes - verified subset only
 
-This is a cleaned layer based only on verified sources `MUT-S001–MUT-S018`. It should not be treated as complete for all of R10 yet.
+These cleaned notes are based only on verified sources `MUT-S001`-`MUT-S018`.
 
 - `cancelQueries` is shown as part of the optimistic update flow, to prevent old in-flight refetches from overwriting optimistic cache writes.
 - `onMutate` is shown as the before-server-call callback used for optimistic state and rollback context.
@@ -790,18 +804,18 @@ This is a cleaned layer based only on verified sources `MUT-S001–MUT-S018`. It
 
 ---
 
-## 7. Minimal interpretation — partial
+## 7. Minimal interpretation - verified subset only
 
-The verified part of this region teaches the core mutation lifecycle and optimistic update pattern. This interpretation is partial because `MUT-S019–MUT-S036` are still pending visual verification.
+The verified part of this region teaches the core mutation lifecycle and optimistic update pattern. The second half of the region is intentionally left as pending verification, not OCR-filled draft.
 
 ---
 
-## 8. Evidence table — partial
+## 8. Evidence table - verified subset only
 
 | Claim | Evidence | Source type | Confidence |
 |---|---|---|---|
 | `cancelQueries` matters because stale in-flight refetches can overwrite optimistic cache | MUT-S003 | screenshot text | high |
-| Standard optimistic flow is onMutate → cancel → snapshot → optimistic setQueryData → rollback → invalidate | MUT-S005, MUT-S002 | screenshot text/code | high for visible text |
+| Standard optimistic flow is onMutate -> cancel -> snapshot -> optimistic setQueryData -> rollback -> invalidate | MUT-S005, MUT-S002 | screenshot text/code | high for visible text |
 | `onMutate` is before `mutationFn` and can return rollback context | MUT-S001, MUT-S016, MUT-S018 | screenshot text/code | high |
 | `onError` rolls back using data returned from `onMutate` | MUT-S002, MUT-S016 | screenshot code/text | high |
 | `onSettled` is for final sync/invalidation | MUT-S001, MUT-S002, MUT-S012 | screenshot text/code | high |
@@ -813,7 +827,7 @@ The verified part of this region teaches the core mutation lifecycle and optimis
 
 ---
 
-## 9. Question hooks — partial
+## 9. Question hooks - verified subset only
 
 - Why does the optimistic update pattern cancel outgoing queries before writing optimistic cache data?
 - What can happen if an old in-flight refetch finishes after an optimistic cache write?
@@ -827,12 +841,6 @@ The verified part of this region teaches the core mutation lifecycle and optimis
 
 ---
 
-## 10. Archive granularity note
+## 10. Next correction/consolidation step
 
-This file replaces the small-batch overlay approach for mutation verification. Future updates should deliver either:
-
-- a full-region transcript draft archive;
-- a full-region consolidation/correction archive;
-- a whole-conspect assembly archive.
-
-Do not create a user-facing archive for every 8–10 screenshots unless the user explicitly asks.
+Next user-facing archive should visually verify `MUT-S019`-`MUT-S036` and update this same file. Do not add raw OCR text unless it has been visually checked or explicitly marked as raw corrupted data outside the main transcript.

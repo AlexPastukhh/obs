@@ -1,4 +1,4 @@
-# Archive Granularity Rule Update
+# Archive Granularity and Review Commands Rule Update
 
 This project should not use one user-facing archive per small screenshot batch.
 
@@ -20,31 +20,34 @@ whole-conspect final assembly: one archive
 Do not default to:
 
 ```text
-one archive per 8–10 screenshots
+one archive per 8-10 screenshots
 one archive per tiny verification batch
 one archive per minor overlay
 ```
 
 Small internal batches are allowed while working, but the delivered archive should normally be per region.
 
-## Current region
+## OCR draft quality rule
 
-For `R10 — Mutations`, this archive creates the consolidated per-region file:
+Do not put corrupted OCR/mojibake text into the main readable region transcript.
 
-```text
-_ai-conspects/react-query-rquery/regions/R10-mutations.md
+If OCR text contains mojibake such as `тАФ`, `тАУ`, `тАЩ`, `┬й`, or broken code fragments, keep it out of the main transcript and mark the source as pending visual verification.
+
+## Review commands rule
+
+Do not print long diffs line-by-line in the console by default.
+
+Use clipboard-first commands:
+
+```powershell
+git diff --stat
+git diff -- _ai-conspects/react-query-rquery | Set-Clipboard
 ```
 
-Verified so far:
+Optional file export:
 
-```text
-MUT-S001–MUT-S018
+```powershell
+git diff -- _ai-conspects/react-query-rquery > C:\Users\alexa\Downloads\ai-conspects-last-diff.patch
 ```
 
-Pending:
-
-```text
-MUT-S019–MUT-S036
-```
-
-Next update should be another per-region consolidation/correction archive that completes the pending sources.
+The assistant should include clipboard diff commands in future `APPLY_ARCHIVE.md` files.
