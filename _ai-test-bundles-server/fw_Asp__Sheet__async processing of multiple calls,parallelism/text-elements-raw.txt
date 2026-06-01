@@ -1,0 +1,43 @@
+﻿For demo purposes reverse results order(performing some operations with when all operations completed) ^OWYFIxGt
+
+Can be used on a client but cant be used on a server ^zOVFarsm
+
+PARALLEL.FOREACH NEED FOR MULTIPLE THREADS WORKING, 
+IN I/O CALLS THERE IS NO WORK, SO THREADS ARE BEING BLOCKED  ^tesonE4i
+
+NEED TO USE SEMAPHORESLIM + WHENALL                        NEED TO USE PARALLEL.FOREACHASYNC ^vaKlm3eq
+
+1 IF YOU NEED TO PRESERVE TASK ORDER 
+2 IF YOU NEED SIMPLE COLLECTION OF RESULTS OF PAR TASKS
+3 IF YOU WANT BEST EFFORT(NO CANCELLATOIN OF FURTHER TASKS ON
+FAIL)
+4 IF THE NUMBER OF TASKS NOT TOO LARGE(ALLOCATES EACH TASK) ^DdhYDtDF
+
+1 IF YOU DONT NEED TO PRESERVE ORDER
+2 IF YOU DONT NEED COLLECTION OF RESULTS
+(YOU MIGHT NEED THREAD SAFE COLLECTION OF RESULTS IF YOU NEED )
+3 IF YOU NEED TO RUN A LOT OF TASKS
+4 IF YOU NEED CANCEL FURTHER TASKS ON FIRST FAIL ^1liXPOOm
+
+Sumary ^RC9t8zfV
+
+TaskWailtAll
+THread is being blocked ^mcnme2qS
+
+Parallel.Foreach
+for parallel work,
+not parallel lack of work in case
+of db calls ^Cz6HFgW4
+
+Parallel.Foreachasync ^TJqXDvCr
+
+Sepaphoreslim 
+parallel calls ^LE80vCBW
+
+when does the work
+for tasks start? ^N2bKw5E7
+
+create collection with 
+some async code inside (Task inside) ^yFerPEYu
+
+started in foreach ^7bbiBTSa

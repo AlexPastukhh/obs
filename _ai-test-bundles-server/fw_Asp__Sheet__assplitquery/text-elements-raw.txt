@@ -1,0 +1,67 @@
+﻿If you are loading a lot of one to many relationships,
+rows will be multiplied and this can lead to cartesian
+explosion, to awoid this there are two options:
+1 Splitted queries(ugly sql queries and some warnings from
+microsoft about data consistency) ^DFJiRJgw
+
+a) remove autoincludes
+b) ^o0fc1UNf
+
+2) explicit loading of related collections
+a) if you need some related collections of related collectons
+(thenincludes) you may need to turn on autoincludes for them=)
+b) ^WiePSxXn
+
+Above and splitting will end up with 3 calls to db ^P4t9Ybe9
+
+assplitqueries ^dafyyIpZ
+
+includes joins without split query ^lNRhNsFu
+
+with split query ^pSF4jjy2
+
+assplitqueries vs findasync + load ^RSpZ252n
+
+assplitqueries and findasync + load issue
+with consistency  ^Yy5m8UI5
+
+what is per query overhead
+cartesian explosion problem ^j3iYxm38
+
+!!! ^OVRTc9GD
+
+how to avoid consistency issues with multiple 
+sql queries ^qUOgF1E5
+
+some nested collecitons rows counts
+assinglequery vs assplitquery ^MgOV85uz
+
+!!! ^tmxSdMnK
+
+!!! ^SjvpSSgd
+
+when we fetch with splitquery
+we fetch collection (row count
+just the count of the elements)
+with foreighkeys ^fNOVB9GR
+
+so when we need to get rows count we just multiply items, not matter what is the deep level of the collection ^L9YWmV1t
+
+the shit is that splitqueries helpful in muiltiple sibling collection cases
+its not about sibling collections being more dangrous than deep collections when 
+there is no siblings but every collection item has its own collection ^fcl6dmYY
+
+split query just cant help in the deep nesting without siblings scenario ^3QWYvV9n
+
+assplit query buffering ^axIKMrWG
+
+when we have grandchild of only one collection of parent
+we will get rows like this, so there wont be null because 
+another child doesnt have collection,
+ ^Cutl1Kz4
+
+how row looks like when some
+collection items have their own collection ^wGzKLDx8
+
+formula to compute
+rows count ^rGeaz4ZW
