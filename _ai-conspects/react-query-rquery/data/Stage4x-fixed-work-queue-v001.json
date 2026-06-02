@@ -1,0 +1,957 @@
+{
+  "generated": "2026-06-02 02:35:57 UTC",
+  "queue_id": "stage4x-fixed-work-queue-v001",
+  "total_sources": 71,
+  "purpose": "Prepare corrected Stage4w2 scope for large-batch processing without marking sources as processed.",
+  "groups": {
+    "R03-v002-correction": {
+      "region": "R03",
+      "sources": [
+        "S-065",
+        "S-066"
+      ],
+      "meaning": "notifyOnChangeProps/select correction addendum",
+      "next_file": "regions/R03-v002-notify-select-correction.md",
+      "batch": "correction-mini-or-batch-a"
+    },
+    "R04A-v002-correction": {
+      "region": "R04A",
+      "sources": [
+        "S-109",
+        "S-110"
+      ],
+      "meaning": "static/staleness correction addendum",
+      "next_file": "regions/R04A-v002-static-staleness-correction.md",
+      "batch": "correction-mini-or-batch-a"
+    },
+    "R04B-v002-correction": {
+      "region": "R04B",
+      "sources": [
+        "S-113"
+      ],
+      "meaning": "functional refetchInterval correction addendum",
+      "next_file": "regions/R04B-v002-functional-refetchinterval-correction.md",
+      "batch": "correction-mini-or-batch-a"
+    },
+    "R05-v003-correction": {
+      "region": "R05",
+      "sources": [
+        "S-118",
+        "S-119",
+        "S-121",
+        "S-122",
+        "S-136",
+        "S-137",
+        "S-148",
+        "S-156",
+        "S-166",
+        "S-174",
+        "S-181",
+        "S-188",
+        "S-192"
+      ],
+      "meaning": "infinite-query correction addendum",
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "batch": "batch-a"
+    },
+    "R07-v005-correction": {
+      "region": "R07",
+      "sources": [
+        "S-189",
+        "S-195"
+      ],
+      "meaning": "prefetch/fetchQuery/ensureQueryData correction addendum",
+      "next_file": "regions/R07-v005-prefetch-ensurequerydata-correction.md",
+      "batch": "correction-mini-or-batch-a"
+    },
+    "R09A-cache-remove-reset": {
+      "region": "R09A",
+      "sources": [
+        "S-211",
+        "S-213",
+        "S-223",
+        "S-229"
+      ],
+      "meaning": "removeQueries/resetQueries/cache removal and reset",
+      "next_file": "regions/R09A-cache-remove-reset.md",
+      "batch": "batch-a"
+    },
+    "R09B-network-offline": {
+      "region": "R09B",
+      "sources": [
+        "S-202",
+        "S-203",
+        "S-205",
+        "S-208",
+        "S-214",
+        "S-217",
+        "S-225",
+        "S-228",
+        "S-230",
+        "S-231",
+        "S-232",
+        "S-234",
+        "S-235"
+      ],
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "next_file": "regions/R09B-network-offline.md",
+      "batch": "batch-a"
+    },
+    "R09C-validation-resumePaused": {
+      "region": "R09C",
+      "sources": [
+        "S-196",
+        "S-199",
+        "S-201",
+        "S-209",
+        "S-210",
+        "S-215",
+        "S-218",
+        "S-220",
+        "S-222",
+        "S-226",
+        "S-227"
+      ],
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "batch": "batch-b"
+    },
+    "R11-mutations": {
+      "region": "R11",
+      "sources": [
+        "S-224",
+        "S-233",
+        "S-236",
+        "S-238",
+        "S-239",
+        "S-242",
+        "S-243",
+        "S-244",
+        "S-245",
+        "S-247",
+        "S-248",
+        "S-249",
+        "S-250",
+        "S-251",
+        "S-252",
+        "S-253",
+        "S-254",
+        "S-255",
+        "S-256",
+        "S-257",
+        "S-258",
+        "S-259",
+        "S-260"
+      ],
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "batch": "batch-b"
+    }
+  },
+  "recommended_batches": {
+    "batch-a": {
+      "description": "R05 correction + R09A + R09B, optionally correction minis if readable",
+      "sources_count": 30,
+      "primary_files": [
+        "regions/R05-v003-infinite-query-correction.md",
+        "regions/R09A-cache-remove-reset.md",
+        "regions/R09B-network-offline.md"
+      ]
+    },
+    "batch-b": {
+      "description": "R09C + R11",
+      "sources_count": 34,
+      "primary_files": [
+        "regions/R09C-validation-resumePaused.md",
+        "regions/R11-mutations-callbacks-optimistic.md"
+      ]
+    },
+    "correction-mini-or-batch-a": {
+      "description": "R03/R04/R07 small correction files; can go with batch-a if clearly readable",
+      "sources_count": 7
+    }
+  },
+  "rows": [
+    {
+      "batch": "correction-mini-or-batch-a",
+      "group_key": "R03-v002-correction",
+      "region": "R03",
+      "source_id": "S-065",
+      "order_in_group": 1,
+      "next_file": "regions/R03-v002-notify-select-correction.md",
+      "meaning": "notifyOnChangeProps/select correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "correction-mini-or-batch-a",
+      "group_key": "R03-v002-correction",
+      "region": "R03",
+      "source_id": "S-066",
+      "order_in_group": 2,
+      "next_file": "regions/R03-v002-notify-select-correction.md",
+      "meaning": "notifyOnChangeProps/select correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "correction-mini-or-batch-a",
+      "group_key": "R04A-v002-correction",
+      "region": "R04A",
+      "source_id": "S-109",
+      "order_in_group": 1,
+      "next_file": "regions/R04A-v002-static-staleness-correction.md",
+      "meaning": "static/staleness correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "correction-mini-or-batch-a",
+      "group_key": "R04A-v002-correction",
+      "region": "R04A",
+      "source_id": "S-110",
+      "order_in_group": 2,
+      "next_file": "regions/R04A-v002-static-staleness-correction.md",
+      "meaning": "static/staleness correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "correction-mini-or-batch-a",
+      "group_key": "R04B-v002-correction",
+      "region": "R04B",
+      "source_id": "S-113",
+      "order_in_group": 1,
+      "next_file": "regions/R04B-v002-functional-refetchinterval-correction.md",
+      "meaning": "functional refetchInterval correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-118",
+      "order_in_group": 1,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-119",
+      "order_in_group": 2,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-121",
+      "order_in_group": 3,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-122",
+      "order_in_group": 4,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-136",
+      "order_in_group": 5,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-137",
+      "order_in_group": 6,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-148",
+      "order_in_group": 7,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-156",
+      "order_in_group": 8,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-166",
+      "order_in_group": 9,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-174",
+      "order_in_group": 10,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-181",
+      "order_in_group": 11,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-188",
+      "order_in_group": 12,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R05-v003-correction",
+      "region": "R05",
+      "source_id": "S-192",
+      "order_in_group": 13,
+      "next_file": "regions/R05-v003-infinite-query-correction.md",
+      "meaning": "infinite-query correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "correction-mini-or-batch-a",
+      "group_key": "R07-v005-correction",
+      "region": "R07",
+      "source_id": "S-189",
+      "order_in_group": 1,
+      "next_file": "regions/R07-v005-prefetch-ensurequerydata-correction.md",
+      "meaning": "prefetch/fetchQuery/ensureQueryData correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "correction-mini-or-batch-a",
+      "group_key": "R07-v005-correction",
+      "region": "R07",
+      "source_id": "S-195",
+      "order_in_group": 2,
+      "next_file": "regions/R07-v005-prefetch-ensurequerydata-correction.md",
+      "meaning": "prefetch/fetchQuery/ensureQueryData correction addendum",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09A-cache-remove-reset",
+      "region": "R09A",
+      "source_id": "S-211",
+      "order_in_group": 1,
+      "next_file": "regions/R09A-cache-remove-reset.md",
+      "meaning": "removeQueries/resetQueries/cache removal and reset",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09A-cache-remove-reset",
+      "region": "R09A",
+      "source_id": "S-213",
+      "order_in_group": 2,
+      "next_file": "regions/R09A-cache-remove-reset.md",
+      "meaning": "removeQueries/resetQueries/cache removal and reset",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09A-cache-remove-reset",
+      "region": "R09A",
+      "source_id": "S-223",
+      "order_in_group": 3,
+      "next_file": "regions/R09A-cache-remove-reset.md",
+      "meaning": "removeQueries/resetQueries/cache removal and reset",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09A-cache-remove-reset",
+      "region": "R09A",
+      "source_id": "S-229",
+      "order_in_group": 4,
+      "next_file": "regions/R09A-cache-remove-reset.md",
+      "meaning": "removeQueries/resetQueries/cache removal and reset",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-202",
+      "order_in_group": 1,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-203",
+      "order_in_group": 2,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-205",
+      "order_in_group": 3,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-208",
+      "order_in_group": 4,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-214",
+      "order_in_group": 5,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-217",
+      "order_in_group": 6,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-225",
+      "order_in_group": 7,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-228",
+      "order_in_group": 8,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-230",
+      "order_in_group": 9,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-231",
+      "order_in_group": 10,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-232",
+      "order_in_group": 11,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-234",
+      "order_in_group": 12,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-a",
+      "group_key": "R09B-network-offline",
+      "region": "R09B",
+      "source_id": "S-235",
+      "order_in_group": 13,
+      "next_file": "regions/R09B-network-offline.md",
+      "meaning": "networkMode/offline/offlineFirst/fetchStatus paused",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-196",
+      "order_in_group": 1,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-199",
+      "order_in_group": 2,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-201",
+      "order_in_group": 3,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-209",
+      "order_in_group": 4,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-210",
+      "order_in_group": 5,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-215",
+      "order_in_group": 6,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-218",
+      "order_in_group": 7,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-220",
+      "order_in_group": 8,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-222",
+      "order_in_group": 9,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-226",
+      "order_in_group": 10,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R09C-validation-resumePaused",
+      "region": "R09C",
+      "source_id": "S-227",
+      "order_in_group": 11,
+      "next_file": "regions/R09C-validation-resumePaused.md",
+      "meaning": "validation/Zod and resumePausedMutations/offline mutation support",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-224",
+      "order_in_group": 1,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-233",
+      "order_in_group": 2,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-236",
+      "order_in_group": 3,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-238",
+      "order_in_group": 4,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-239",
+      "order_in_group": 5,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-242",
+      "order_in_group": 6,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-243",
+      "order_in_group": 7,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-244",
+      "order_in_group": 8,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-245",
+      "order_in_group": 9,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-247",
+      "order_in_group": 10,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-248",
+      "order_in_group": 11,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-249",
+      "order_in_group": 12,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-250",
+      "order_in_group": 13,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-251",
+      "order_in_group": 14,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-252",
+      "order_in_group": 15,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-253",
+      "order_in_group": 16,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-254",
+      "order_in_group": 17,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-255",
+      "order_in_group": 18,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-256",
+      "order_in_group": 19,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-257",
+      "order_in_group": 20,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-258",
+      "order_in_group": 21,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-259",
+      "order_in_group": 22,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    },
+    {
+      "batch": "batch-b",
+      "group_key": "R11-mutations",
+      "region": "R11",
+      "source_id": "S-260",
+      "order_in_group": 23,
+      "next_file": "regions/R11-mutations-callbacks-optimistic.md",
+      "meaning": "mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch",
+      "status": "pending-visible-transcript",
+      "may_mark_processed_only_if": "visible text is read; no OCR timeout/error placeholder; no image missing placeholder"
+    }
+  ]
+}

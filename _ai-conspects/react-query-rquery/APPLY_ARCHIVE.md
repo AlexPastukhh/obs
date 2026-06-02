@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage4w2 mega-boundary correction
+# Apply archive: React Query Stage4x-fixed preflight
 
-Archive type: boundary correction.
+Archive type: preflight / invalidated archive guard.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4w2-mega-boundary-correction-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4x-fixed-preflight-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4w2-mega-boundary-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4w2-mega-boundary-correction-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4w2-mega-boundary-correction.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4x-fixed-preflight-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4x-fixed-preflight.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Correct React Query mega boundary review"
+git commit -m "Add React Query Stage4x fixed preflight"
 git push origin ai-processed-conspects-text
 ```
 
@@ -56,8 +56,9 @@ git push origin ai-processed-conspects-text
 
 ```powershell
 git restore -- _ai-conspects/react-query-rquery
+git clean -fd -- _ai-conspects/react-query-rquery
 ```
 
 ## Notes
 
-This archive does not add transcript. It corrects Stage4w boundary before the next large transcript batch.
+This archive intentionally does not add transcripts and does not mark the 71 queued sources as processed.

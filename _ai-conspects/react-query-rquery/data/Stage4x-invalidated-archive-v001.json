@@ -1,0 +1,11 @@
+{
+  "generated": "2026-06-02 02:35:57 UTC",
+  "invalid_archive": "ai-conspects-react-query-rquery-stage4x-large-corrected-scope-transcripts-v001.zip",
+  "invalid_reason": [
+    "The archive was emitted after OCR timeout/interruption.",
+    "It marked sources as processed before verified visible transcript existed.",
+    "Region files contained OCR timeout/error or placeholder-style text risk."
+  ],
+  "required_action": "Do not commit old Stage4x. Use Stage4x-fixed preflight and rebuild transcripts from pending queue.",
+  "hard_rule": "Any transcript source with OCR timeout/error, image missing, or empty visible text must remain pending and cannot be marked processed."
+}
