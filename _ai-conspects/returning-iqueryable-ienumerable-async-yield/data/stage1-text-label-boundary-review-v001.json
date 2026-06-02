@@ -1,0 +1,176 @@
+{
+  "generated": "2026-06-02 15:50:10 UTC",
+  "stage": "1",
+  "text_labels": [
+    {
+      "text_id": "T-001",
+      "text": "so when we return ienumerable without tolist",
+      "x": "3160.882370760506",
+      "y": "103.29743355620113",
+      "candidate_region": "RIQ02",
+      "candidate_region_name": "Returning IEnumerable without ToList / materialization boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-002",
+      "text": "Had to call tolist above to do select",
+      "x": "212.59652850331622",
+      "y": "1456.2866811156941",
+      "candidate_region": "RIQ01",
+      "candidate_region_name": "IQueryable as public API / leaky abstraction / repository boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-003",
+      "text": "client should keep in mind",
+      "x": "157.81647884870563",
+      "y": "1946.9143828858519",
+      "candidate_region": "RIQ01",
+      "candidate_region_name": "IQueryable as public API / leaky abstraction / repository boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-004",
+      "text": "So there is no limitation on linq expressions",
+      "x": "53.55946679644239",
+      "y": "2883.1523428823216",
+      "candidate_region": "RIQ01",
+      "candidate_region_name": "IQueryable as public API / leaky abstraction / repository boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-005",
+      "text": "When you return IEnumerable it is not",
+      "x": "10.0",
+      "y": "4129.220977093389",
+      "candidate_region": "RIQ02",
+      "candidate_region_name": "Returning IEnumerable without ToList / materialization boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-006",
+      "text": "When you call toList(), expression start to",
+      "x": "19.00748216583179",
+      "y": "4262.903763974527",
+      "candidate_region": "RIQ02",
+      "candidate_region_name": "Returning IEnumerable without ToList / materialization boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-007",
+      "text": "disposing db context inside method",
+      "x": "3730.098159696326",
+      "y": "3157.549746534703",
+      "candidate_region": "RIQ03",
+      "candidate_region_name": "Multiple enumeration hazards for IEnumerable",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-008",
+      "text": "hidden db query outside rep boundary",
+      "x": "3677.93924580371",
+      "y": "4325.863874844676",
+      "candidate_region": "RIQ03",
+      "candidate_region_name": "Multiple enumeration hazards for IEnumerable",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-009",
+      "text": "sometimes partial enumeration can",
+      "x": "3789.2434767976497",
+      "y": "5037.178936533479",
+      "candidate_region": "RIQ03",
+      "candidate_region_name": "Multiple enumeration hazards for IEnumerable",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-010",
+      "text": "repeated side effects",
+      "x": "3860.255566879505",
+      "y": "6027.172693291694",
+      "candidate_region": "RIQ03",
+      "candidate_region_name": "Multiple enumeration hazards for IEnumerable",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-011",
+      "text": "dif results on each enumeration",
+      "x": "3748.527960607394",
+      "y": "2560.475701634087",
+      "candidate_region": "RIQ03",
+      "candidate_region_name": "Multiple enumeration hazards for IEnumerable",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-012",
+      "text": "so we have 2 types of scenarios",
+      "x": "3717.032575887123",
+      "y": "626.7608297995295",
+      "candidate_region": "RIQ02",
+      "candidate_region_name": "Returning IEnumerable without ToList / materialization boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-013",
+      "text": "what if we have called to list",
+      "x": "7462.324611828084",
+      "y": "648.2107477484725",
+      "candidate_region": "RIQ02",
+      "candidate_region_name": "Returning IEnumerable without ToList / materialization boundary",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-014",
+      "text": "what about async enumerable",
+      "x": "9149.770266759093",
+      "y": "495.40464222687785",
+      "candidate_region": "RIQ04",
+      "candidate_region_name": "Async enumerable repeated enumeration / caching / single-use streams",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-015",
+      "text": "just not an immediate cleanup, nothing immportant",
+      "x": "8067.27192756317",
+      "y": "6284.105987152698",
+      "candidate_region": "RIQ05",
+      "candidate_region_name": "Yield / iterator cleanup / finally restrictions",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-016",
+      "text": "getrnumerator",
+      "x": "8143.862024530388",
+      "y": "3894.071258565581",
+      "candidate_region": "RIQ05",
+      "candidate_region_name": "Yield / iterator cleanup / finally restrictions",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-017",
+      "text": "!!!",
+      "x": "7677.591993373393",
+      "y": "5483.836190378535",
+      "candidate_region": "RIQ05",
+      "candidate_region_name": "Yield / iterator cleanup / finally restrictions",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    }
+  ]
+}

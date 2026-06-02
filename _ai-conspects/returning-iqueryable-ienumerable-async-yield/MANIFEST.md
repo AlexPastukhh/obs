@@ -1,39 +1,36 @@
-# MANIFEST - Stage0 source check
+# MANIFEST - Stage1 boundary review
 
-Archive type: **source check / materialization**  
+Archive type: **boundary review / split plan**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 15:23:45 UTC
+Generated: 2026-06-02 15:50:10 UTC
 
 ## Done
 
-- Materialized `returning iqueryable,problems when returning ienumerable without tolist, async enumerable problems,yield.svg`.
-- Extracted 44 image uses.
-- Extracted 17 text labels.
-- Created inventory/contact sheets.
+- Stage1 assigns all 44 image uses to candidate regions.
+- Stage1 assigns all 17 text labels to candidate regions.
+- This archive intentionally does not duplicate Stage0 source PNGs.
 
 ## Now
 
 - Apply and inspect cached diff.
-- Commit if source materialization looks correct.
+- Commit if boundary split is acceptable.
 
 ## Next
 
-- Stage1 large boundary review.
+- NEXT01 full transcript: 44 image uses.
 
-## Files included
+## Files included / updated
 
 ```text
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/00-stage0-source-check.md
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/01-stage1-boundary-review.md
 _ai-conspects/returning-iqueryable-ienumerable-async-yield/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/MANIFEST.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/APPLY_ARCHIVE.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/assets/raw/full.svg
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/assets/raw/text-elements-raw.txt
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/assets/source-images/*.png
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/assets/contact-sheets/*.png
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/image-inventory-v001.csv
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/image-inventory-v001.json
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/text-elements-raw-v001.csv
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/text-elements-raw-v001.json
 _ai-conspects/returning-iqueryable-ienumerable-async-yield/regions/README.md
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/stage1-boundary-review-v001.csv
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/stage1-boundary-review-v001.json
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/stage1-text-label-boundary-review-v001.csv
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/stage1-text-label-boundary-review-v001.json
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/image-review-ledger-v001.csv
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/image-review-ledger-v001.json
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/APPLY_ARCHIVE.md
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/MANIFEST.md
 ```

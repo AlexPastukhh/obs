@@ -1,0 +1,18 @@
+text_id,text,x,y,candidate_region,candidate_region_name,status,notes
+T-001,so when we return ienumerable without tolist,3160.882370760506,103.29743355620113,RIQ02,Returning IEnumerable without ToList / materialization boundary,region-context-label,Text label is canvas context; not an image source.
+T-002,Had to call tolist above to do select,212.59652850331622,1456.2866811156941,RIQ01,IQueryable as public API / leaky abstraction / repository boundary,region-context-label,Text label is canvas context; not an image source.
+T-003,client should keep in mind,157.81647884870563,1946.9143828858519,RIQ01,IQueryable as public API / leaky abstraction / repository boundary,region-context-label,Text label is canvas context; not an image source.
+T-004,So there is no limitation on linq expressions,53.55946679644239,2883.1523428823216,RIQ01,IQueryable as public API / leaky abstraction / repository boundary,region-context-label,Text label is canvas context; not an image source.
+T-005,When you return IEnumerable it is not,10.0,4129.220977093389,RIQ02,Returning IEnumerable without ToList / materialization boundary,region-context-label,Text label is canvas context; not an image source.
+T-006,"When you call toList(), expression start to",19.00748216583179,4262.903763974527,RIQ02,Returning IEnumerable without ToList / materialization boundary,region-context-label,Text label is canvas context; not an image source.
+T-007,disposing db context inside method,3730.098159696326,3157.549746534703,RIQ03,Multiple enumeration hazards for IEnumerable,region-context-label,Text label is canvas context; not an image source.
+T-008,hidden db query outside rep boundary,3677.93924580371,4325.863874844676,RIQ03,Multiple enumeration hazards for IEnumerable,region-context-label,Text label is canvas context; not an image source.
+T-009,sometimes partial enumeration can,3789.2434767976497,5037.178936533479,RIQ03,Multiple enumeration hazards for IEnumerable,region-context-label,Text label is canvas context; not an image source.
+T-010,repeated side effects,3860.255566879505,6027.172693291694,RIQ03,Multiple enumeration hazards for IEnumerable,region-context-label,Text label is canvas context; not an image source.
+T-011,dif results on each enumeration,3748.527960607394,2560.475701634087,RIQ03,Multiple enumeration hazards for IEnumerable,region-context-label,Text label is canvas context; not an image source.
+T-012,so we have 2 types of scenarios,3717.032575887123,626.7608297995295,RIQ02,Returning IEnumerable without ToList / materialization boundary,region-context-label,Text label is canvas context; not an image source.
+T-013,what if we have called to list,7462.324611828084,648.2107477484725,RIQ02,Returning IEnumerable without ToList / materialization boundary,region-context-label,Text label is canvas context; not an image source.
+T-014,what about async enumerable,9149.770266759093,495.40464222687785,RIQ04,Async enumerable repeated enumeration / caching / single-use streams,region-context-label,Text label is canvas context; not an image source.
+T-015,"just not an immediate cleanup, nothing immportant",8067.27192756317,6284.105987152698,RIQ05,Yield / iterator cleanup / finally restrictions,region-context-label,Text label is canvas context; not an image source.
+T-016,getrnumerator,8143.862024530388,3894.071258565581,RIQ05,Yield / iterator cleanup / finally restrictions,region-context-label,Text label is canvas context; not an image source.
+T-017,!!!,7677.591993373393,5483.836190378535,RIQ05,Yield / iterator cleanup / finally restrictions,region-context-label,Text label is canvas context; not an image source.

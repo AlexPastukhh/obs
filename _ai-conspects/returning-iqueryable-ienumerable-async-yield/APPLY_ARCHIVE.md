@@ -1,6 +1,6 @@
-# Apply archive: returning-iqueryable-ienumerable-async-yield Stage0 source check
+# Apply archive: returning-iqueryable-ienumerable-async-yield Stage1 boundary review
 
-Archive type: source check / materialization.
+Archive type: boundary review / split plan.
 
 Target branch:
 
@@ -13,7 +13,7 @@ Use `tar.exe -xf` instead of PowerShell `Expand-Archive`.
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-returning-iqueryable-ienumerable-async-yield-stage0-source-check-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-returning-iqueryable-ienumerable-async-yield-stage1-boundary-review-v001.zip
 ```
 
 ## Apply commands
@@ -23,8 +23,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\returning-iqueryable-ienumerable-async-yield"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-returning-iqueryable-ienumerable-async-yield-stage0-source-check-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\returning-iqueryable-ienumerable-async-yield-stage0-source-check-cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-returning-iqueryable-ienumerable-async-yield-stage1-boundary-review-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\returning-iqueryable-ienumerable-async-yield-stage1-boundary-review-cached.diff"
 
 git status --short
 
@@ -46,7 +46,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Start returning IQueryable IEnumerable async yield conspect source check"
+git commit -m "Add returning IQueryable IEnumerable async yield conspect boundary review"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,6 +60,6 @@ git clean -fd -- "$target"
 
 ## Notes
 
-This archive does not create transcript content.
+This archive does not create transcript content and does not duplicate Stage0 source images.
 
-Next step should be Stage1 large boundary review.
+Next step should be NEXT01 full transcript.
