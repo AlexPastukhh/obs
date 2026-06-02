@@ -1,0 +1,34 @@
+{
+  "generated": "2026-06-02 02:05:14 UTC",
+  "audit_version": "stage4-final-coverage-audit-v001",
+  "conspect": "authentication-oidc-flows-handlers-forwarding-auth-events",
+  "verdict": "coverage-complete",
+  "total_image_uses": 325,
+  "covered_image_uses": 325,
+  "problem_image_uses": 0,
+  "coverage_status_counts": {
+    "processed-in-r02-v001": 100,
+    "processed-in-r01-v001": 81,
+    "processed-in-r03a-v001": 74,
+    "processed-in-r03b-v001": 43,
+    "processed-in-r04-v001": 27
+  },
+  "region_counts": {
+    "R02": 100,
+    "R01": 81,
+    "R03A": 74,
+    "R03B": 43,
+    "R04": 27
+  },
+  "default_future_pass_size_rule": {
+    "default": "50-80 image uses",
+    "allowed_bigger": "80-120 image uses when the road is visually/semantically cohesive",
+    "exception": "120+ only when user explicitly asks or when a single coherent road would be harmed by splitting; keep internal subregions"
+  },
+  "notes": [
+    "Stage3 was intentionally larger than the new default because the user requested a bigger pass.",
+    "The final audit checks ledger state after R01/R02/R03A/R03B/R04 transcripts.",
+    "Inventory/ledger remains a checklist, but this audit verifies that every known image use now has a processed region decision."
+  ],
+  "problem_rows": []
+}

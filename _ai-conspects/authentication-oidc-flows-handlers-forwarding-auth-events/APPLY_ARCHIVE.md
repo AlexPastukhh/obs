@@ -1,6 +1,6 @@
-# Apply archive: Auth/OIDC/Auth Events P03/P04 combined transcript v001
+# Apply archive: Auth/OIDC/Auth Events final coverage audit v001
 
-Archive type: stage-3 large combined verified transcript.
+Archive type: stage-4 final coverage audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage3-p03p04-combined-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage4-final-coverage-audit-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forward
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage3-p03p04-combined-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage3-p03p04-combined-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage4-final-coverage-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage4-final-coverage-audit.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events
-git commit -m "Add auth OIDC JWT and OIDC transcripts"
+git commit -m "Finalize auth OIDC conspect coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This is a larger combined pass. It processes P03 and P04 in one archive, but keeps separate R03A/R03B/R04 region files so the semantic boundaries remain clear.
+This archive does not add new transcript text. It records final coverage completeness.

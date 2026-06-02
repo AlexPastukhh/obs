@@ -1,6 +1,6 @@
 # Current Source of Truth - Authentication / OIDC / Flows / Handlers / Forwarding / Auth Events
 
-Generated: 2026-06-02 01:53:55 UTC
+Generated: 2026-06-02 02:05:14 UTC
 
 ## Policy
 
@@ -17,13 +17,28 @@ R02 cookie auth core / ticket store / events / sliding expiration / redirects: t
 R03A JWT bearer handler pipeline: transcript v001 done
 R03B JWT outcomes / failure / challenge / forbid: transcript v001 done
 R04 OIDC / PKCE / sign-in bridge: transcript v001 done
-Final coverage audit: next
+Final coverage audit: done
 ```
 
-## Stage3 note
+## Final audit verdict
 
 ```text
-User requested a larger pass.
-P03 and P04 were processed together as one large archive, but internally split into R03A/R03B/R04 region files.
-Total Stage3 processed image uses: 144.
+total image uses: 325
+covered image uses: 325
+problem image uses: 0
+verdict: coverage-complete
+```
+
+## Pass-size rule going forward
+
+```text
+Default: 50-80 images.
+Can be bigger: 80-120 if the road is coherent.
+Exception: 120+ only on explicit request or one very cohesive road, with internal subregions preserved.
+```
+
+## Closure note
+
+```text
+This conspect is complete unless a later manual review finds a concrete transcript-quality issue or a specific misassigned image.
 ```
