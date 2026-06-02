@@ -1,0 +1,47 @@
+{
+  "generated": "2026-06-02 09:06:34 UTC",
+  "region": "R01-core-types-offset-ticks-unix-js",
+  "included_image_uses": 58,
+  "initial_p01_candidate_count": 59,
+  "pulled_into_r01": [
+    "S-063",
+    "S-064",
+    "S-065",
+    "S-066",
+    "S-067"
+  ],
+  "reserved_for_p02_r03": [
+    "S-201",
+    "S-202",
+    "S-203",
+    "S-204",
+    "S-205",
+    "S-206"
+  ],
+  "checked_not_r01_reserved_for_r04": [
+    "S-068",
+    "S-069",
+    "S-070",
+    "S-071",
+    "S-072"
+  ],
+  "area_overview": "Core time representation and transport/display basics for ASP.NET/Core and JS frontends.",
+  "key_ideas": [
+    "Use DateTimeOffset for API/database timestamps and store/compare instants in UTC.",
+    "Plain DateTime depends on Kind and is ambiguous when Kind is Unspecified.",
+    "DateOnly, TimeOnly, and TimeSpan represent non-instant domain values and durations.",
+    "DateTimeOffset offset means UTC = local clock time - offset.",
+    "Ticks are .NET-specific 100 ns units since year 0001; Unix time is seconds/milliseconds since 1970-01-01 UTC.",
+    "For frontend interop, ISO strings are readable and Unix milliseconds are convenient for JS Date/arithmetic/timers.",
+    "JS locale formatting methods are display-only and should match the user's locale/timezone."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "Contact sheet plus individual source images were inspected for representative/ambiguous screenshots.",
+    "limitations": [
+      "Some screenshots are continuation fragments; transcript groups them by semantic road rather than preserving every scroll boundary as prose.",
+      "S201-S206 were visible in the initial P01 coordinate band but were intentionally excluded because they belong to the formatting/cheat-sheet pass.",
+      "S063-S067 were pulled into R01 because they complete the DateTime.Kind / ToUniversalTime / machine-local explanation."
+    ]
+  }
+}

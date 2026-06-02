@@ -1,6 +1,6 @@
-# Apply archive: Time Stage0 boundary review v001
+# Apply archive: Time R01 transcript v001
 
-Archive type: stage0 boundary review / split plan.
+Archive type: stage-1 verified transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-time-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-time-stage1-r01-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-time-stage0-boundary-review-v001.zip
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-time-stage0-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-time-stage0-boundary-review.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-time-stage1-r01-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-time-stage1-r01-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/time
-git commit -m "Start time conspect boundary review"
+git commit -m "Add time R01 core types transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This is not a transcript archive. It prepares a safe workflow and first split plan.
+This archive includes a local boundary correction. Stage0 split remains checklist only.
