@@ -1,0 +1,108 @@
+label_id,x,y,font_size,text
+L-001,6649.624,3311.418,90.564,datetimeoffset.localdatetime
+L-002,9166.605,13684.188,84.19,!!! daylightsavingtime
+L-003,9166.605,13789.426,84.19,can be important for displaying
+L-004,4182.424,14373.099,186.095,stopwatch
+L-005,7132.809,15724.337,78.904,better to just recreate datetime object copying
+L-006,7132.809,15822.966,78.904,values
+L-007,7132.809,15921.596,78.904,(dont really understand how example below works)
+L-008,4385.063,1490.492,75.795,datetime.specifykind
+L-009,7025.45,1570.225,74.222,what is the offset
+L-010,3963.022,5877.085,50.704,ticks vs unix seconds
+L-011,2512.771,5830.803,91.762,what do ticks represent
+L-012,2280.375,7613.466,93.061,unix when you need to integrate
+L-013,2280.375,7729.792,93.061,js frontend
+L-014,4262.746,7740.079,54.596,when to use unix time
+L-015,4233.428,10567.585,67.333,how its possible to
+L-016,4233.428,10651.752,67.333,convert datetime to utc
+L-017,4233.428,10735.919,67.333,if there is no offset
+L-018,4233.428,10820.085,67.333,specified
+L-019,8322.401,11324.781,187.619,timezoneinfo
+L-020,6724.029,11338.218,77.0,when need to show user his local time
+L-021,6724.029,11434.468,77.0,findsystemtimezonebyid
+L-022,84.242,10615.748,51.0,js date formatting methods
+L-023,84.242,10679.498,51.0,tolocalestring
+L-024,84.242,10743.248,51.0,tolocaletimestring
+L-025,84.242,10806.998,51.0,tolocaledatestring
+L-026,1489.242,10746.568,97.333,tolocalestring
+L-027,3796.484,4502.719,123.619,ticks
+L-028,5616.885,6218.32,169.333,unix time
+L-029,8265.978,913.55,98.222,adding and substructing
+L-030,8490.486,2107.994,120.103,comparing times
+L-031,5398.468,10251.751,119.556,converting
+L-032,5686.795,606.044,79.733,basics
+L-033,5686.795,705.711,79.733,coretypes
+L-034,5686.795,805.378,79.733,what to use when
+L-035,7059.642,95.751,97.333,common choices
+L-036,5608.975,11607.684,112.8,time zones
+L-037,5685.356,12977.353,229.067,json
+L-038,5585.533,13756.488,105.333,model binding
+L-039,8455.512,3020.435,119.282,expiratjion patterns
+L-040,5431.134,15749.002,141.6,date math pitfalls
+L-041,11869.535,2834.585,217.333,parsing cheat sheet
+L-042,13095.757,3125.567,56.923,what we can tryto parse
+L-043,13095.757,3196.72,56.923,into datetimeoffset/datetime
+L-044,11834.49,3196.176,64.444,parse/tryparse
+L-045,11834.49,3276.732,64.444,parseexact/tryparseexact
+L-046,12834.453,4059.986,76.242,what datetime can parse
+L-047,11700.303,4938.36,51.515,standart formats
+L-048,11700.303,5002.754,51.515,for parseexact
+L-049,10128.424,5005.861,85.778,custom formats for parse exact
+L-050,14160.488,4051.804,55.048,what datetimeoffset can parse
+L-051,10551.599,6010.715,64.949,is parseexact only for
+L-052,10551.599,6091.901,64.949,datetimeoffset?
+L-053,11653.256,6089.299,79.127,can we format datetime
+L-054,11653.256,6188.208,79.127,with standart formats?
+L-055,11329.562,8360.387,53.778,"sortable format,"
+L-056,11329.562,8427.609,53.778,univarsal sortable
+L-057,10206.055,8117.563,45.538,what just tostring does with
+L-058,10206.055,8174.485,45.538,datetimeoffset
+L-059,10759.386,7065.038,223.502,formats cheat sheet
+L-060,13708.699,7610.162,340.0,custom formatting cheat sheet
+L-061,14841.093,8148.568,46.667,gotchas
+L-062,14841.093,8206.901,46.667,need to remember
+L-063,15975.259,8172.633,85.333,some patterns
+L-064,16945.822,8272.912,44.533,quick sheet
+L-065,15519.452,10170.342,112.952,some custom format tokens
+L-066,15770.507,16899.266,55.879,literal text
+L-067,15824.446,16357.032,47.152,separators
+L-068,15818.992,15943.318,64.606,era
+L-069,15767.477,15284.304,47.152,time zone/ offset
+L-070,15851.719,14666.735,68.485,am/pm
+L-071,15815.355,13494.198,59.758,fractional seconds
+L-072,15718.992,12415.191,63.636,"Hours,minutes seconds"
+L-073,15906.264,10782.113,85.939,"year,month,day"
+L-074,17083.073,16821.646,20.0,escaping
+L-075,14108.311,14690.03,84.0,"12 hour format,am pm"
+L-076,8749.235,18365.242,68.485,what if i pass with specified kind?
+L-077,9973.465,16188.794,156.0,when working with users local time
+L-078,10625.423,16578.415,73.333,"next day,specific/same time"
+L-079,11961.076,16580.783,102.489,everyday at specific time
+L-080,9933.971,16695.434,28.205,getting the exact time on users clock
+L-081,9933.971,16730.691,28.205,"from utcnow, using users timezone"
+L-082,8777.749,16504.263,95.378,why converting
+L-083,8778.724,17152.788,57.926,converting the time on clock
+L-084,8778.724,17225.195,57.926,that we need to utc using users
+L-085,8778.724,17297.603,57.926,"timezone, so we can store it"
+L-086,11351.207,20963.553,62.222,methods for working
+L-087,11351.207,21041.33,62.222,with invalid/ambiguous time
+L-088,11361.207,21289.477,151.556,isinvalidtime
+L-089,11326.762,21778.366,151.556,isinvalidtime
+L-090,11304.54,22230.619,133.131,getambiguoustimeoffsets
+L-091,11304.54,22397.034,133.131,and configure based on policy
+L-092,8805.848,20919.341,51.619,example of invalid/ambiguous time
+L-093,8805.848,20983.865,51.619,policies
+L-094,9580.573,20432.716,155.619,common invalid/ambiguous
+L-095,9580.573,20627.24,155.619,time policies
+L-096,10148.748,20887.77,233.333,invalid
+L-097,10208.748,23387.77,233.333,ambiguous
+L-098,10590.038,17927.386,86.667,manual usage of isdaylightsavingtime
+L-099,8915.177,16572.453,20.0,need current users clock time
+L-100,8915.177,16597.453,20.0,if assume that our local or utc is close enoug
+L-101,8915.177,16622.453,20.0,can get basd sit at edgecases lik start/end of month
+L-102,13540.08,22142.264,152.571,type of offsets
+L-103,7335.286,7580.715,208.444,when to use
+L-104,7335.286,7841.271,208.444,what format
+L-105,8751.583,7955.926,76.889,iso 8601
+L-106,8699.731,8587.037,76.889,rfc 1123
+L-107,8707.138,9151.482,76.889,unix
