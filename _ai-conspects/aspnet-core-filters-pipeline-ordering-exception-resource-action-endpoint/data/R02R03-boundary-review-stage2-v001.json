@@ -1,0 +1,66 @@
+{
+  "generated": "2026-06-02 13:31:40 UTC",
+  "region_id": "R02R03",
+  "region_name": "Concrete MVC filter examples + lower addendum / middleware-before-filters reminder",
+  "included_sources_by_region": {
+    "R02": [
+      "S-094",
+      "S-095",
+      "S-096",
+      "S-097",
+      "S-098",
+      "S-099",
+      "S-100",
+      "S-101",
+      "S-102",
+      "S-103",
+      "S-104",
+      "S-105",
+      "S-106",
+      "S-107",
+      "S-108",
+      "S-109",
+      "S-110",
+      "S-111",
+      "S-112",
+      "S-113",
+      "S-114",
+      "S-115",
+      "S-116",
+      "S-117",
+      "S-118",
+      "S-119",
+      "S-120"
+    ],
+    "R03": [
+      "S-121",
+      "S-122",
+      "S-123",
+      "S-124",
+      "S-125",
+      "S-126",
+      "S-127",
+      "S-128",
+      "S-129",
+      "S-130",
+      "S-131"
+    ]
+  },
+  "included_counts_by_region": {
+    "R02": 27,
+    "R03": 11
+  },
+  "included_count": 38,
+  "decision": "R02 and R03 are coherent enough for the final pass: R02 closes concrete filter type examples and R03 closes the lower addendum that summarizes when middleware, MVC filters, controller/action filters, and endpoint filters run.",
+  "previously_processed": {
+    "R01": 93
+  },
+  "duplicate_image_use_handling": {
+    "S-001/S-111": "S-001 was closed in R01; S-111 is closed here as the R02 concrete example placement.",
+    "S-006/S-112": "S-006 was closed in R01; S-112 is closed here as the R02 concrete example placement.",
+    "S-009/S-131": "S-009 was closed in R01; S-131 is closed here as the R03 lower-addendum placement.",
+    "S-002/S-010": "Both placements were R01 and were already closed in stage1."
+  },
+  "remaining_after_this": 0,
+  "final_coverage_added": true
+}

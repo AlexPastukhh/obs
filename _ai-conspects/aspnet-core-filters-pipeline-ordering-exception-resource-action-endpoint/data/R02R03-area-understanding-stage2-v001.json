@@ -1,0 +1,32 @@
+{
+  "generated": "2026-06-02 13:31:40 UTC",
+  "region_id": "R02R03",
+  "area_title": "Concrete filter examples plus lower addendum / middleware-before-filters reminder",
+  "what_area_is_about": [
+    "concrete ASP.NET Core MVC filter examples: authorization, resource, action, exception, result and endpoint filters",
+    "where each filter type can short-circuit, access context, run before/after next, or shape results",
+    "resource-filter caching and the important fact that it can run before model binding/action execution",
+    "always-run result filters and result-wrapping behavior",
+    "endpoint filters for minimal APIs / endpoint routing and their per-endpoint argument/result pipeline",
+    "lower addendum that contrasts middleware, global MVC filters, controller/action filters and endpoint filters"
+  ],
+  "key_ideas": [
+    "Authorization filters are for early request gating and should not be treated as catch-all exception/result handlers.",
+    "Resource filters can short-circuit before model binding and action invocation, which makes them useful for cached responses and broad MVC wrapping.",
+    "Action filters wrap action execution and are a natural place for timing/logging around an action method.",
+    "Exception filters can convert handled MVC exceptions into results, but the earlier R01 caveats still apply.",
+    "Result filters wrap result execution; always-run result filters exist for cases where normal result filters may be skipped by earlier short-circuiting.",
+    "Endpoint filters are endpoint/minimal-API focused and can inspect arguments/results around `next`, while MVC filters apply inside MVC action/result execution.",
+    "Middleware runs before MVC filters; non-MVC requests may never enter MVC filters at all."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: contact sheets are readable but code screenshots are small; preserved PNGs are required for exact code punctuation",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Exact C# punctuation and package namespaces should be corrected from preserved PNGs if needed.",
+      "The final pass closes image-use coverage; it is not claiming every code screenshot is a verbatim authoritative transcript."
+    ],
+    "confidence_summary": "High for region ownership and conceptual content; medium-high for exact code transcription."
+  }
+}

@@ -1,6 +1,6 @@
-# Apply archive: ASP.NET Core filters R01 main theory transcript v001
+# Apply archive: ASP.NET Core filters R02/R03 final coverage transcript v001
 
-Archive type: stage-1 verified region transcript.
+Archive type: stage-2 final coverage transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage1-r01-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage2-r02r03-final-coverage-v001.zip
 ```
 
 ## Apply + staged diff review commands
@@ -26,9 +26,9 @@ C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exce
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage1-r01-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage2-r02r03-final-coverage-v001.zip"
 $target = "_ai-conspects\aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-filters-stage1-r01-transcript.cached.diff"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-filters-stage2-r02r03-final-coverage.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -36,7 +36,6 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new()
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
 
-# Stage ONLY this conspect folder, then review cached diff.
 git add -A -- $target
 
 git status --short -- $target
@@ -52,7 +51,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands after review
 
 ```powershell
-git commit -m "Add ASP.NET Core filters R01 main theory transcript"
+git commit -m "Complete ASP.NET Core filters conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 
