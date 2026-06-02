@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 01:12:25 UTC",
+  "region_id": "R03R04",
+  "what_area_is_about": [
+    "typed HttpClient instances and type-scoped configuration",
+    "HttpClient request/response/message-handler theory",
+    "wrapping HttpClient in API-specific client classes",
+    "JsonSerializerOptions wrapper as a canonical options source",
+    "using the wrapper in manual deserialization and typed-client methods",
+    "why MVC JSON configuration is not enough for HttpClient/manual JsonSerializer calls"
+  ],
+  "key_ideas": [
+    "A typed client wraps HttpClient and API-specific operations behind a domain-specific class.",
+    "AddHttpClient<TClient> creates/configures HttpClient instances through DI for that typed client.",
+    "HttpClient works with HttpRequestMessage/HttpResponseMessage and a handler pipeline.",
+    "Not every handler sends data over the network; handlers can log, cache, filter, add headers, or short-circuit.",
+    "Typed clients become more useful when they expose specific methods such as GetMoviesAsync instead of exposing raw Client everywhere.",
+    "A JsonSerializerOptionsWrapper keeps manual serialization/deserialization consistent across integration code.",
+    "MVC/AddJsonOptions config does not automatically apply to manual JsonSerializer or ReadFromJsonAsync calls unless options are passed."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_readability": "mostly high; some code screenshots are small",
+    "limitations": [
+      "Code blocks are preserved as visible intent/key lines, not guaranteed punctuation-perfect in every tiny screenshot.",
+      "Several images are theory diagrams/text notes rather than full code.",
+      "S-074/S-099/S-128/S-136 were visually/semantically checked and excluded to R05A."
+    ],
+    "confidence_summary": "High for region ownership and concepts; medium-high for exact code punctuation in small screenshots."
+  }
+}

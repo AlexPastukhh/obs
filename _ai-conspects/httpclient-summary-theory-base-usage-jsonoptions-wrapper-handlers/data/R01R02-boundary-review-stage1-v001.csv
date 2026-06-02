@@ -1,0 +1,110 @@
+source_id,decision,candidate_type,assigned_region,reason
+S-001,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Demo title: Creating a resource
+S-002,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,HttpMessageHandler vs DelegatingHandler mental model for testing/custom handlers
+S-003,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Custom StubHttpMessageHandler for unit testing
+S-005,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Why call response.EnsureSuccessStatusCode()
+S-009,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,StringContent for string payloads
+S-010,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,DelegatingHandler as outgoing middleware wrapper
+S-011,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,"CreateMovieAsync: serialize DTO, POST, StringContent, EnsureSuccessStatusCode, deserialize response"
+S-012,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Fake handler in tests: header controls stub behavior
+S-013,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,JsonContent as often-best JSON content helper
+S-017,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,When not to use StringContent manually
+S-020,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,"Key differences: purpose, position in chain, use cases for handlers"
+S-021,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Test setup using factory client with fake handler / test scenario header
+S-022,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Demo title: Updating a resource
+S-032,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Update resource with PUT using serialized content and response handling
+S-036,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Typed client update method with request message and response handling
+S-050,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Demo title: Deleting a resource
+S-060,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Delete method: send DELETE and ensure success / return no content
+S-073,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Demo title: Using shortcuts
+S-089,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,PostAsync shortcut example using StringContent
+S-094,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,PutAsync shortcut example using StringContent
+S-102,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,PatchAsync shortcut example / media-type issue for JSON Patch
+S-112,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Demo title: Partially updating resources
+S-120,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,JsonPatchDocument + operations / package setup
+S-129,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,JSON Patch NuGet/package reference
+S-131,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Patch typed client method skeleton / PatchAsync
+S-137,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Build JsonPatchDocument operations in code
+S-143,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,JSON Patch request content and content-type headers
+S-147,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,JSON Patch document example and add operation
+S-150,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Demo title: Partially updating resources with PatchAsync
+S-152,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,PATCH request content type: application/json-patch+json
+S-156,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,PatchResourceShortcutAsync with PatchAsync and Json.NET serialization
+S-165,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Advanced patch scenario example: JSON Patch operations
+S-169,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Advanced Patch Scenarios / API support caveat
+S-174,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R01,Summary: PATCH preferred over PUT for partial updates
+S-006,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Content negotiation concept
+S-008,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Use HttpRequestMessage per request instead of shared default headers
+S-019,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Getting a resource demo: why JsonSerializerOptions needed
+S-026,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Serialize directly to bytes / stream positioning note
+S-029,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Default Accept behavior and content negotiation
+S-031,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Use request.Headers.Accept and media type quality values
+S-034,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Example DTO and deserialization setup
+S-039,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,HttpClient GET + response content + manual deserialize flow
+S-040,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Read response as string and deserialize / EnsureSuccessStatusCode
+S-044,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Input/output formatter fallback and 406 / content negotiation notes
+S-053,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,ResponseHeadersRead / headers arrive / reading content later note
+S-056,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,"The trash endpoint / if content exists, deserialize; otherwise no body"
+S-062,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,ReadAsStreamAsync / stream response content
+S-065,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Main difference: ReadAsStringAsync vs ReadAsStreamAsync
+S-067,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Download file / best streaming example
+S-068,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Server-side strictness / client should specify Accept
+S-078,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,GET flow with Accept headers and response checks
+S-081,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Content-Type header on request content
+S-085,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Server-side strictness optional / 406 Not Acceptable
+S-088,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Use HttpRequestMessage when request-specific content/headers are needed
+S-096,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Accept quality parameter and explicit preference
+S-107,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Accept header and q quality parameter
+S-114,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Example code: add Accept headers with quality values
+S-116,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Indicating preference / Accept header examples
+S-121,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Code sample with multiple Accept headers
+S-125,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,What q value means
+S-133,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Demo title: indicating preference with relative quality parameter
+S-139,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,DefaultRequestHeaders.Accept examples / quality values
+S-144,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Demo using HttpClient.DefaultRequestHeaders and why it is shared
+S-146,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Content negotiation/client code duplicate placement
+S-151,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Why default request headers can be risky and should be cleared
+S-157,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Better approach: HttpRequestMessage per request duplicate placement
+S-158,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Why not use HttpRequestMessage for every request / disposal basics
+S-160,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,SendAsync with request message / headers and response
+S-161,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Do you always need using? dispose safely when needed
+S-162,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Why dispose matters: connection/resource cleanup
+S-166,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Convenience APIs handle disposal for you
+S-167,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,HttpResponseMessage should also be disposed
+S-170,included-in-R01R02-v001,same-road-or-combined-adjacent-road,R02,Disposing response returns connection to pool / releases stream
+S-008,duplicate-fileId-recorded,duplicate-image-use,R01R02,"Same fileId_short c4bcad034a appears as image uses S-008, S-157."
+S-157,duplicate-fileId-recorded,duplicate-image-use,R01R02,"Same fileId_short c4bcad034a appears as image uses S-008, S-157."
+S-039,duplicate-fileId-recorded,duplicate-image-use,R01R02,"Same fileId_short e3c87ff97f appears as image uses S-039, S-146."
+S-146,duplicate-fileId-recorded,duplicate-image-use,R01R02,"Same fileId_short e3c87ff97f appears as image uses S-039, S-146."
+S-004,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-007,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-014,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-018,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-025,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-028,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-041,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-043,checked-not-R01R02,neighbor-safety-check,R03-theory-typed-client-jsonoptions-part1,Different road from current combined pass; keep for later region after local boundary review.
+S-015,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-016,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-023,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-024,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-030,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-033,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-046,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-047,checked-not-R01R02,neighbor-safety-check,R04-jsonoptions-wrapper-typed-client-methods,Different road from current combined pass; keep for later region after local boundary review.
+S-035,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-037,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-038,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-045,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-048,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-049,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-052,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-055,checked-not-R01R02,neighbor-safety-check,R05A-factory-lifetime-reuse-dns-upper,Different road from current combined pass; keep for later region after local boundary review.
+S-027,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.
+S-042,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.
+S-071,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.
+S-083,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.
+S-091,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.
+S-097,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.
+S-104,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.
+S-113,checked-not-R01R02,neighbor-safety-check,R06-global-config-primary-handler-basics,Different road from current combined pass; keep for later region after local boundary review.

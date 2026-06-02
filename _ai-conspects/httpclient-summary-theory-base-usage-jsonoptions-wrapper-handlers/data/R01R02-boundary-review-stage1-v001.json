@@ -1,0 +1,289 @@
+{
+  "generated": "2026-06-02 00:20:00 UTC",
+  "region_id": "R01R02",
+  "region_name": "HttpClient testing/create/jsonpatch/shortcuts + base usage/headers/dispose",
+  "boundary_status": "reviewed-v001",
+  "included_sources": [
+    "S-001",
+    "S-002",
+    "S-003",
+    "S-005",
+    "S-009",
+    "S-010",
+    "S-011",
+    "S-012",
+    "S-013",
+    "S-017",
+    "S-020",
+    "S-021",
+    "S-022",
+    "S-032",
+    "S-036",
+    "S-050",
+    "S-060",
+    "S-073",
+    "S-089",
+    "S-094",
+    "S-102",
+    "S-112",
+    "S-120",
+    "S-129",
+    "S-131",
+    "S-137",
+    "S-143",
+    "S-147",
+    "S-150",
+    "S-152",
+    "S-156",
+    "S-165",
+    "S-169",
+    "S-174",
+    "S-006",
+    "S-008",
+    "S-019",
+    "S-026",
+    "S-029",
+    "S-031",
+    "S-034",
+    "S-039",
+    "S-040",
+    "S-044",
+    "S-053",
+    "S-056",
+    "S-062",
+    "S-065",
+    "S-067",
+    "S-068",
+    "S-078",
+    "S-081",
+    "S-085",
+    "S-088",
+    "S-096",
+    "S-107",
+    "S-114",
+    "S-116",
+    "S-121",
+    "S-125",
+    "S-133",
+    "S-139",
+    "S-144",
+    "S-146",
+    "S-151",
+    "S-157",
+    "S-158",
+    "S-160",
+    "S-161",
+    "S-162",
+    "S-166",
+    "S-167",
+    "S-170"
+  ],
+  "included_count": 73,
+  "r01_count": 34,
+  "r02_count": 39,
+  "checked_neighbor_samples": [
+    {
+      "source_id": "S-004",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-007",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-014",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-018",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-025",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-028",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-041",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-043",
+      "candidate_band": "R03-theory-typed-client-jsonoptions-part1",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-015",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-016",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-023",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-024",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-030",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-033",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-046",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-047",
+      "candidate_band": "R04-jsonoptions-wrapper-typed-client-methods",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-035",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-037",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-038",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-045",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-048",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-049",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-052",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-055",
+      "candidate_band": "R05A-factory-lifetime-reuse-dns-upper",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-027",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-042",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-071",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-083",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-091",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-097",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-104",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    },
+    {
+      "source_id": "S-113",
+      "candidate_band": "R06-global-config-primary-handler-basics",
+      "decision": "checked-not-R01R02",
+      "reason": "Different road from current combined pass; keep for later region after local boundary review."
+    }
+  ],
+  "duplicate_fileIds": {
+    "c4bcad034a": [
+      "S-008",
+      "S-157"
+    ],
+    "e3c87ff97f": [
+      "S-039",
+      "S-146"
+    ]
+  },
+  "note": "Combined pass is allowed because the user permitted larger passes and R01/R02 are adjacent base-usage roads; R03/R04/R05/R06 samples were checked but kept for later."
+}

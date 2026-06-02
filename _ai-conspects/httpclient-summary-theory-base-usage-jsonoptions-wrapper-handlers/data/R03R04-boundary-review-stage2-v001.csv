@@ -1,0 +1,35 @@
+source_id,decision,candidate_type,assigned_region,reason
+S-004,included-in-R03R04-v001,r03r04-confirmed,R03,Demo: using typed HttpClient instances
+S-007,included-in-R03R04-v001,r03r04-confirmed,R03,Basic HttpClient call flow
+S-014,included-in-R03R04-v001,r03r04-confirmed,R03,MoviesAPIClient stores HttpClient
+S-018,included-in-R03R04-v001,r03r04-confirmed,R03,HttpClient integration message flow
+S-025,included-in-R03R04-v001,r03r04-confirmed,R03,Register typed client and configure base address/timeout
+S-028,included-in-R03R04-v001,r03r04-confirmed,R03,Default handler under HttpClient
+S-041,included-in-R03R04-v001,r03r04-confirmed,R03,Typed client registration with JsonSerializerOptionsWrapper
+S-043,included-in-R03R04-v001,r03r04-confirmed,R03,Handler pipeline can contain multiple handlers
+S-054,included-in-R03R04-v001,r03r04-confirmed,R03,Using typed client client property in service code
+S-058,included-in-R03R04-v001,r03r04-confirmed,R03,Basic usage recap
+S-066,included-in-R03R04-v001,r03r04-confirmed,R03,Demo: type-scoped configuration for typed client
+S-075,included-in-R03R04-v001,r03r04-confirmed,R03,What is a message handler
+S-080,included-in-R03R04-v001,r03r04-confirmed,R03,MoviesAPIClient with BaseAddress and Timeout
+S-084,included-in-R03R04-v001,r03r04-confirmed,R03,Not all handlers send through the network
+S-093,included-in-R03R04-v001,r03r04-confirmed,R03,Pipeline of handlers
+S-095,included-in-R03R04-v001,r03r04-confirmed,R03,Demo: extending typed HttpClient instances
+S-106,included-in-R03R04-v001,r03r04-confirmed,R03,Typed client with JsonOptionsWrapper fields
+S-115,included-in-R03R04-v001,r03r04-confirmed,R03,GetMoviesAsync method on typed client
+S-124,included-in-R03R04-v001,r03r04-confirmed,R03,Calling typed client method
+S-015,included-in-R03R04-v001,r03r04-confirmed,R04,Why a canonical JsonSerializerOptions wrapper is needed
+S-016,included-in-R03R04-v001,r03r04-confirmed,R04,JsonSerializerOptionsWrapper class
+S-023,included-in-R03R04-v001,r03r04-confirmed,R04,Common global JSON options: naming/casing
+S-024,included-in-R03R04-v001,r03r04-confirmed,R04,Register JsonSerializerOptionsWrapper in DI
+S-030,included-in-R03R04-v001,r03r04-confirmed,R04,Enum/null/number options
+S-033,included-in-R03R04-v001,r03r04-confirmed,R04,Service class injects factory and options wrapper
+S-046,included-in-R03R04-v001,r03r04-confirmed,R04,"Date/time, reference handling, performance knobs"
+S-047,included-in-R03R04-v001,r03r04-confirmed,R04,Deserialize List<Movie> with wrapper options
+S-051,included-in-R03R04-v001,r03r04-confirmed,R04,Deserialize IEnumerable<Movie> with wrapper options
+S-064,included-in-R03R04-v001,r03r04-confirmed,R04,Why MVC configuration is not enough
+S-076,included-in-R03R04-v001,r03r04-confirmed,R04,Manual serialization does not automatically use MVC options
+S-074,checked-not-R03R04-candidate-R05,network-lifetime-summary-neighbor,R05A,Network/TLS/TCP/HttpClientFactory lifetime or problem-summary material; keep for factory/lifetime/DNS pass.
+S-099,checked-not-R03R04-candidate-R05,network-lifetime-summary-neighbor,R05A,Network/TLS/TCP/HttpClientFactory lifetime or problem-summary material; keep for factory/lifetime/DNS pass.
+S-128,checked-not-R03R04-candidate-R05,network-lifetime-summary-neighbor,R05A,Network/TLS/TCP/HttpClientFactory lifetime or problem-summary material; keep for factory/lifetime/DNS pass.
+S-136,checked-not-R03R04-candidate-R05,network-lifetime-summary-neighbor,R05A,Network/TLS/TCP/HttpClientFactory lifetime or problem-summary material; keep for factory/lifetime/DNS pass.
