@@ -1353,9 +1353,9 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-003: can be important for displaying | L-002: !!! daylightsavingtime | L-077: when working with users local time | L-082: why converting | L-099: need current users clock time",
-    "coverage_status": "checked-not-r01-reserved-for-r04",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to timezone/DST/date-math pass.",
+    "coverage_status": "checked-not-r03-reserved-for-r04",
+    "decision_is_final": "yes-not-r03",
+    "review_notes": "Checked during R03; belongs to timezone/DST/user-local-time pass.",
     "current_region_decision": "candidate-R04",
     "must_recheck_before_region_close": "yes-for-r04"
   },
@@ -1373,9 +1373,9 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-003: can be important for displaying | L-002: !!! daylightsavingtime | L-077: when working with users local time | L-082: why converting | L-099: need current users clock time",
-    "coverage_status": "checked-not-r01-reserved-for-r04",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to timezone/DST/date-math pass.",
+    "coverage_status": "checked-not-r03-reserved-for-r04",
+    "decision_is_final": "yes-not-r03",
+    "review_notes": "Checked during R03; belongs to timezone/DST/user-local-time pass.",
     "current_region_decision": "candidate-R04",
     "must_recheck_before_region_close": "yes-for-r04"
   },
@@ -2073,11 +2073,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-043: into datetimeoffset/datetime | L-042: what we can tryto parse | L-046: what datetime can parse | L-050: what datetimeoffset can parse | L-045: parseexact/tryparseexact",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-105",
@@ -2093,11 +2093,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-045: parseexact/tryparseexact | L-044: parse/tryparse | L-046: what datetime can parse | L-041: parsing cheat sheet | L-043: into datetimeoffset/datetime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-106",
@@ -2113,11 +2113,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-046: what datetime can parse | L-045: parseexact/tryparseexact | L-044: parse/tryparse | L-047: standart formats | L-048: for parseexact",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-107",
@@ -2133,11 +2133,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-046: what datetime can parse | L-047: standart formats | L-048: for parseexact | L-045: parseexact/tryparseexact | L-044: parse/tryparse",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-108",
@@ -2153,11 +2153,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-047: standart formats | L-048: for parseexact | L-046: what datetime can parse | L-053: can we format datetime | L-045: parseexact/tryparseexact",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-109",
@@ -2173,11 +2173,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-051: is parseexact only for | L-052: datetimeoffset? | L-049: custom formats for parse exact | L-048: for parseexact | L-047: standart formats",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-110",
@@ -2193,11 +2193,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-043: into datetimeoffset/datetime | L-046: what datetime can parse | L-042: what we can tryto parse | L-050: what datetimeoffset can parse | L-045: parseexact/tryparseexact",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-111",
@@ -2213,11 +2213,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-046: what datetime can parse | L-050: what datetimeoffset can parse | L-043: into datetimeoffset/datetime | L-042: what we can tryto parse | L-047: standart formats",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-112",
@@ -2233,11 +2233,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-046: what datetime can parse | L-050: what datetimeoffset can parse | L-043: into datetimeoffset/datetime | L-047: standart formats | L-048: for parseexact",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-113",
@@ -2253,11 +2253,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-050: what datetimeoffset can parse | L-046: what datetime can parse | L-043: into datetimeoffset/datetime | L-042: what we can tryto parse | L-047: standart formats",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-114",
@@ -2273,11 +2273,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-048: for parseexact | L-047: standart formats | L-053: can we format datetime | L-054: with standart formats? | L-046: what datetime can parse",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-115",
@@ -2293,11 +2293,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-053: can we format datetime | L-048: for parseexact | L-047: standart formats | L-054: with standart formats? | L-051: is parseexact only for",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-116",
@@ -2313,11 +2313,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-052: datetimeoffset? | L-051: is parseexact only for | L-059: formats cheat sheet | L-054: with standart formats? | L-053: can we format datetime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-117",
@@ -2333,11 +2333,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-054: with standart formats? | L-053: can we format datetime | L-059: formats cheat sheet | L-052: datetimeoffset? | L-051: is parseexact only for",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-118",
@@ -2353,11 +2353,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-059: formats cheat sheet | L-057: what just tostring does with | L-058: datetimeoffset | L-055: sortable format, | L-056: univarsal sortable",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-119",
@@ -2373,11 +2373,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-060: custom formatting cheat sheet | L-055: sortable format, | L-054: with standart formats? | L-056: univarsal sortable | L-053: can we format datetime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-120",
@@ -2393,11 +2393,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-059: formats cheat sheet | L-055: sortable format, | L-056: univarsal sortable | L-054: with standart formats? | L-053: can we format datetime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-121",
@@ -2413,11 +2413,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-055: sortable format, | L-056: univarsal sortable | L-059: formats cheat sheet | L-054: with standart formats? | L-057: what just tostring does with",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-122",
@@ -2433,11 +2433,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-056: univarsal sortable | L-055: sortable format, | L-058: datetimeoffset | L-057: what just tostring does with | L-059: formats cheat sheet",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-123",
@@ -2453,11 +2453,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-056: univarsal sortable | L-055: sortable format, | L-058: datetimeoffset | L-057: what just tostring does with | L-059: formats cheat sheet",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-124",
@@ -2473,11 +2473,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-056: univarsal sortable | L-055: sortable format, | L-058: datetimeoffset | L-057: what just tostring does with | L-059: formats cheat sheet",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-125",
@@ -2493,11 +2493,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-056: univarsal sortable | L-055: sortable format, | L-058: datetimeoffset | L-057: what just tostring does with | L-107: unix",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-126",
@@ -2513,11 +2513,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-056: univarsal sortable | L-055: sortable format, | L-058: datetimeoffset | L-057: what just tostring does with | L-107: unix",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-127",
@@ -2533,11 +2533,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-056: univarsal sortable | L-055: sortable format, | L-058: datetimeoffset | L-057: what just tostring does with | L-107: unix",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-128",
@@ -2553,11 +2553,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-058: datetimeoffset | L-057: what just tostring does with | L-056: univarsal sortable | L-055: sortable format, | L-059: formats cheat sheet",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-129",
@@ -2573,11 +2573,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-058: datetimeoffset | L-057: what just tostring does with | L-056: univarsal sortable | L-055: sortable format, | L-059: formats cheat sheet",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-130",
@@ -2593,11 +2593,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-064: quick sheet | L-063: some patterns | L-065: some custom format tokens | L-062: need to remember | L-061: gotchas",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-131",
@@ -2613,11 +2613,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-064: quick sheet | L-063: some patterns | L-065: some custom format tokens | L-073: year,month,day | L-062: need to remember",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-132",
@@ -2633,11 +2633,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-062: need to remember | L-061: gotchas | L-063: some patterns | L-060: custom formatting cheat sheet | L-065: some custom format tokens",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-133",
@@ -2653,11 +2653,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-062: need to remember | L-061: gotchas | L-063: some patterns | L-065: some custom format tokens | L-060: custom formatting cheat sheet",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-134",
@@ -2673,11 +2673,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-063: some patterns | L-064: quick sheet | L-062: need to remember | L-061: gotchas | L-065: some custom format tokens",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-135",
@@ -2693,11 +2693,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-063: some patterns | L-064: quick sheet | L-062: need to remember | L-061: gotchas | L-065: some custom format tokens",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-136",
@@ -2713,11 +2713,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-063: some patterns | L-064: quick sheet | L-065: some custom format tokens | L-073: year,month,day | L-062: need to remember",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-137",
@@ -2733,11 +2733,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-065: some custom format tokens | L-073: year,month,day | L-064: quick sheet | L-063: some patterns | L-062: need to remember",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-138",
@@ -2753,11 +2753,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-073: year,month,day | L-065: some custom format tokens | L-072: Hours,minutes seconds | L-063: some patterns | L-064: quick sheet",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-139",
@@ -2773,11 +2773,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-073: year,month,day | L-065: some custom format tokens | L-072: Hours,minutes seconds | L-071: fractional seconds | L-063: some patterns",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-140",
@@ -2793,11 +2793,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-073: year,month,day | L-072: Hours,minutes seconds | L-065: some custom format tokens | L-071: fractional seconds | L-070: am/pm",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-141",
@@ -2813,11 +2813,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-072: Hours,minutes seconds | L-073: year,month,day | L-071: fractional seconds | L-065: some custom format tokens | L-070: am/pm",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-142",
@@ -2833,11 +2833,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-072: Hours,minutes seconds | L-071: fractional seconds | L-070: am/pm | L-073: year,month,day | L-069: time zone/ offset",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-143",
@@ -2853,11 +2853,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-071: fractional seconds | L-072: Hours,minutes seconds | L-070: am/pm | L-069: time zone/ offset | L-073: year,month,day",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-144",
@@ -2873,11 +2873,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-071: fractional seconds | L-070: am/pm | L-072: Hours,minutes seconds | L-069: time zone/ offset | L-075: 12 hour format,am pm",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-145",
@@ -2893,11 +2893,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-070: am/pm | L-071: fractional seconds | L-069: time zone/ offset | L-068: era | L-072: Hours,minutes seconds",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-146",
@@ -2913,11 +2913,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-070: am/pm | L-069: time zone/ offset | L-068: era | L-071: fractional seconds | L-067: separators",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-147",
@@ -2933,11 +2933,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-068: era | L-069: time zone/ offset | L-067: separators | L-070: am/pm | L-066: literal text",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-148",
@@ -2953,11 +2953,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-068: era | L-067: separators | L-066: literal text | L-069: time zone/ offset | L-074: escaping",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-149",
@@ -2973,11 +2973,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-067: separators | L-066: literal text | L-068: era | L-074: escaping | L-069: time zone/ offset",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-150",
@@ -2993,11 +2993,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-066: literal text | L-067: separators | L-074: escaping | L-068: era | L-069: time zone/ offset",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-151",
@@ -3013,11 +3013,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-071: fractional seconds | L-070: am/pm | L-072: Hours,minutes seconds | L-069: time zone/ offset | L-068: era",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-152",
@@ -3033,11 +3033,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-071: fractional seconds | L-070: am/pm | L-069: time zone/ offset | L-072: Hours,minutes seconds | L-068: era",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-153",
@@ -3053,11 +3053,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-070: am/pm | L-071: fractional seconds | L-069: time zone/ offset | L-068: era | L-074: escaping",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-154",
@@ -3073,11 +3073,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-070: am/pm | L-069: time zone/ offset | L-071: fractional seconds | L-068: era | L-074: escaping",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-155",
@@ -3093,11 +3093,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-070: am/pm | L-069: time zone/ offset | L-074: escaping | L-068: era | L-071: fractional seconds",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-156",
@@ -3113,11 +3113,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-074: escaping | L-066: literal text | L-067: separators | L-068: era | L-069: time zone/ offset",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-157",
@@ -3133,11 +3133,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-074: escaping | L-066: literal text | L-067: separators | L-068: era | L-069: time zone/ offset",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-158",
@@ -3173,11 +3173,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-069: time zone/ offset | L-075: 12 hour format,am pm | L-068: era | L-067: separators | L-070: am/pm",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-160",
@@ -3193,11 +3193,11 @@
     "combined_pass": "P02-R03-parsing-formatting-cheat-sheets",
     "initial_meaning": "Parsing/ParseExact/TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets.",
     "nearest_labels_for_search_only": "L-075: 12 hour format,am pm | L-069: time zone/ offset | L-070: am/pm | L-068: era | L-067: separators",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-parsing-formatting-cheat-sheets",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-161",
@@ -4013,11 +4013,11 @@
     "combined_pass": "P01-R01-core-types-offset-ticks-unix-js",
     "initial_meaning": "Core DateTime/DateTimeOffset choices, Kind/offset basics, comparing, ticks, Unix time, JS local formatting.",
     "nearest_labels_for_search_only": "L-105: iso 8601 | L-106: rfc 1123 | L-057: what just tostring does with | L-058: datetimeoffset | L-107: unix",
-    "coverage_status": "checked-not-r01-reserved-for-p02-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to parsing/formatting, not core time types.",
-    "current_region_decision": "candidate-P02-R03",
-    "must_recheck_before_region_close": "yes-for-p02-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-202",
@@ -4033,11 +4033,11 @@
     "combined_pass": "P01-R01-core-types-offset-ticks-unix-js",
     "initial_meaning": "Core DateTime/DateTimeOffset choices, Kind/offset basics, comparing, ticks, Unix time, JS local formatting.",
     "nearest_labels_for_search_only": "L-105: iso 8601 | L-106: rfc 1123 | L-107: unix | L-058: datetimeoffset | L-057: what just tostring does with",
-    "coverage_status": "checked-not-r01-reserved-for-p02-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to parsing/formatting, not core time types.",
-    "current_region_decision": "candidate-P02-R03",
-    "must_recheck_before_region_close": "yes-for-p02-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-203",
@@ -4053,11 +4053,11 @@
     "combined_pass": "P01-R01-core-types-offset-ticks-unix-js",
     "initial_meaning": "Core DateTime/DateTimeOffset choices, Kind/offset basics, comparing, ticks, Unix time, JS local formatting.",
     "nearest_labels_for_search_only": "L-106: rfc 1123 | L-107: unix | L-105: iso 8601 | L-058: datetimeoffset | L-057: what just tostring does with",
-    "coverage_status": "checked-not-r01-reserved-for-p02-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to parsing/formatting, not core time types.",
-    "current_region_decision": "candidate-P02-R03",
-    "must_recheck_before_region_close": "yes-for-p02-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-204",
@@ -4073,11 +4073,11 @@
     "combined_pass": "P01-R01-core-types-offset-ticks-unix-js",
     "initial_meaning": "Core DateTime/DateTimeOffset choices, Kind/offset basics, comparing, ticks, Unix time, JS local formatting.",
     "nearest_labels_for_search_only": "L-107: unix | L-106: rfc 1123 | L-105: iso 8601 | L-058: datetimeoffset | L-057: what just tostring does with",
-    "coverage_status": "checked-not-r01-reserved-for-p02-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to parsing/formatting, not core time types.",
-    "current_region_decision": "candidate-P02-R03",
-    "must_recheck_before_region_close": "yes-for-p02-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-205",
@@ -4093,11 +4093,11 @@
     "combined_pass": "P01-R01-core-types-offset-ticks-unix-js",
     "initial_meaning": "Core DateTime/DateTimeOffset choices, Kind/offset basics, comparing, ticks, Unix time, JS local formatting.",
     "nearest_labels_for_search_only": "L-107: unix | L-106: rfc 1123 | L-105: iso 8601 | L-104: what format | L-019: timezoneinfo",
-    "coverage_status": "checked-not-r01-reserved-for-p02-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to parsing/formatting, not core time types.",
-    "current_region_decision": "candidate-P02-R03",
-    "must_recheck_before_region_close": "yes-for-p02-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-206",
@@ -4113,10 +4113,10 @@
     "combined_pass": "P01-R01-core-types-offset-ticks-unix-js",
     "initial_meaning": "Core DateTime/DateTimeOffset choices, Kind/offset basics, comparing, ticks, Unix time, JS local formatting.",
     "nearest_labels_for_search_only": "L-107: unix | L-106: rfc 1123 | L-019: timezoneinfo | L-105: iso 8601 | L-020: when need to show user his local time",
-    "coverage_status": "checked-not-r01-reserved-for-p02-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to parsing/formatting, not core time types.",
-    "current_region_decision": "candidate-P02-R03",
-    "must_recheck_before_region_close": "yes-for-p02-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   }
 ]

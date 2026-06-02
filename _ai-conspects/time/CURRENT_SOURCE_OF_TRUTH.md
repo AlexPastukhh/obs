@@ -1,6 +1,6 @@
 # Current Source of Truth - Time
 
-Generated: 2026-06-02 09:06:34 UTC
+Generated: 2026-06-02 09:24:19 UTC
 
 ## Policy
 
@@ -13,20 +13,18 @@ A region is complete only after visual/semantic boundary review and verified tra
 ```text
 Stage0 boundary review: done
 R01 core DateTime / DateTimeOffset / Kind / ticks / Unix / JS local display: transcript v001 done
-P02/R03 parsing and formatting cheat sheets: next
+R03 parsing / formatting / standard and custom formats: transcript v001 done
+P03/R04 timezone conversion / JSON / model binding / date math / DST: next
 ```
 
-## R01 boundary corrections
+## R03 boundary decisions
 
 ```text
-Pulled into R01 from initial R04 candidates:
-S-063, S-064, S-065, S-066, S-067
-
-Reserved from initial P01 into P02/R03:
+Pulled into R03 from R01 reserved bucket:
 S-201, S-202, S-203, S-204, S-205, S-206
 
-Checked-not-R01, reserved for R04:
-S-068, S-069, S-070, S-071, S-072
+Checked-not-R03, reserved for R04:
+S-068, S-069
 ```
 
 ## Current split policy
@@ -40,6 +38,6 @@ Exception: 120+ only on explicit request or one very cohesive road.
 ## Next pass
 
 ```text
-P02 / R03:
-parsing / ParseExact / TryParse, standard/custom formats, ISO/RFC/Unix/string formatting cheat sheets
+P03 / R04:
+TimeZoneInfo, UTC/local conversion, JSON/model binding, date math pitfalls, user local time, DST
 ```

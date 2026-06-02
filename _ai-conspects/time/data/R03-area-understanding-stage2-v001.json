@@ -1,0 +1,35 @@
+{
+  "generated": "2026-06-02 09:24:19 UTC",
+  "region": "R03-parsing-formatting-cheat-sheets",
+  "included_image_uses": 62,
+  "pulled_from_r01_reserve": [
+    "S-201",
+    "S-202",
+    "S-203",
+    "S-204",
+    "S-205",
+    "S-206"
+  ],
+  "checked_not_r03_reserved_for_r04": [
+    "S-068",
+    "S-069"
+  ],
+  "area_overview": "Parsing and formatting DateTime/DateTimeOffset values safely: flexible parse, exact parse, standard format specifiers, custom format tokens, ISO 8601, RFC 1123, and Unix time.",
+  "key_ideas": [
+    "Parse/TryParse are flexible and culture-sensitive; TryParse is safer for invalid input.",
+    "ParseExact/TryParseExact should be used when the input must match a known format.",
+    "DateTimeOffset.Parse is better when the input can contain an offset and that offset should be preserved.",
+    "Standard formats like O/o, s, u, and R have specific API/log/header uses.",
+    "Plain ToString() without a format is culture-dependent and should not be used for APIs, persistence, logs, or sorting.",
+    "Custom format tokens are case-sensitive: M vs m, H vs h, f vs F matter.",
+    "ISO 8601 is the default for JSON/public API textual timestamps; RFC 1123 is for HTTP headers; Unix time is for compact numeric timestamps."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "P02/R03 contact sheet and larger generated reading sheets were inspected; S201-S206 were also read from the R01 excluded bucket.",
+    "limitations": [
+      "Some code examples are cropped, but the format specifier names and examples are readable enough to preserve the concept.",
+      "S068-S069 were in the initial P02 coordinate band but excluded because they start user-local/DST conversion material."
+    ]
+  }
+}
