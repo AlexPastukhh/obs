@@ -1,0 +1,30 @@
+{
+  "generated": "2026-06-02 13:06:29 UTC",
+  "region": "R02-entityentry-properties-methods-query-and-values",
+  "included_image_uses": 67,
+  "r01_correction": [
+    "S-001",
+    "S-002",
+    "S-003"
+  ],
+  "area_overview": "EntityEntry as the per-entity control surface: state, entity object, metadata, current/original/database values, property/member APIs, navigation APIs, Query(), Reload, and GetDatabaseValues.",
+  "key_ideas": [
+    "ChangeTracker.Entries returns EntityEntry objects; R02 focuses on what each EntityEntry exposes.",
+    "EntityEntry.State is the per-entity state EF will use for SaveChanges.",
+    "EntityEntry.Entity is the actual CLR object; Metadata describes the EF model type.",
+    "CurrentValues are the in-memory values EF will save; OriginalValues are the snapshot EF uses for change detection and concurrency.",
+    "Property/Properties give per-scalar-property value and IsModified control.",
+    "Reference/Collection/Navigation APIs expose navigation entries, Load/LoadAsync, IsLoaded, and Query().",
+    "Entry.Query() on collection/reference navigations gives a query for the related data before loading it.",
+    "Reload refreshes the entity from the database; GetDatabaseValues fetches database values without blindly overwriting current values.",
+    "SetValues can copy values from DTOs, objects, dictionaries, or database values into CurrentValues/OriginalValues."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "P02 contact sheet plus representative individual images were inspected. Boundary recheck found S001-S003 as R01 correction.",
+    "limitations": [
+      "Some examples are cropped, so long snippets are normalized while preserving the visible API and purpose.",
+      "R02 intentionally avoids repeating ChangeTracker-level HasChanges/DetectChanges/Clear material after correcting S001-S003 into R01."
+    ]
+  }
+}

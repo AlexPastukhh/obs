@@ -1,6 +1,6 @@
-# Apply archive: ChangeTracker R01 transcript v001
+# Apply archive: ChangeTracker R02 EntityEntry transcript v001
 
-Archive type: stage-1 verified transcript.
+Archive type: stage-2 verified transcript + R01 correction.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-changetracker-stage1-r01-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-changetracker-stage2-r02-entityentry-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-changetracker-stage1-r01-transcript-v001.z
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-changetracker-stage1-r01-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-changetracker-stage1-r01-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-changetracker-stage2-r02-entityentry-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-changetracker-stage2-r02-entityentry-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/changetracker
-git commit -m "Add changetracker R01 core transcript"
+git commit -m "Add changetracker R02 entity entry transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This archive includes a local boundary correction: S081/S082 belong to R01, not TrackGraph.
+This archive includes one correction to the previous R01 transcript: S001-S003 belong to ChangeTracker overview/core members.

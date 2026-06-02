@@ -77,6 +77,31 @@ S-083, S-084
 
 Reason: `TrackGraph` and disconnected graph traversal belong to R03.
 
+### Stage2 correction: opening ChangeTracker overview and `Entries()`
+
+During R02 boundary review, `S-001`, `S-002`, and `S-003` were found to belong to R01, not R02.
+
+They add the opening mental model:
+
+```text
+DbContext.ChangeTracker is EF Core's in-memory state manager for entities tracked by the current DbContext.
+Tracked entities drive INSERT / UPDATE / DELETE decisions during SaveChanges.
+Tracked state is per EntityEntry: Detached, Unchanged, Added, Modified, Deleted.
+```
+
+They also add the core scanner API:
+
+```csharp
+var allEntries = context.ChangeTracker.Entries();
+
+var changedOrders = context.ChangeTracker
+    .Entries<Order>()
+    .Where(e => e.State == EntityState.Modified);
+```
+
+`Entries()` returns `EntityEntry` objects. R01 owns the fact that `ChangeTracker` exposes this scanner as a core member. R02 owns the detailed `EntityEntry` API surface after the scanner returns those entries.
+
+
 ## 1. `HasChanges()`
 
 `HasChanges()` checks whether the `DbContext` currently knows about tracked changes that would matter to `SaveChanges()`.
@@ -700,7 +725,7 @@ Use this when you need tighter control over when EF considers the unit of work f
 
 | Source group | What it supports |
 |---|---|
-| S-037/S-038 | `HasChanges()` meaning, typical cases, conditional save, dependency on up-to-date detection. |
+| S-001-S003/S-037/S-038 | ChangeTracker overview, core members, `Entries()`, `HasChanges()` meaning, typical cases, conditional save, dependency on up-to-date detection. |
 | S-039/S-041/S-063-S067 | `DetectChanges()` meaning, in-memory snapshot detection, manual mode, tracked-only limitation. |
 | S-068-S072/S-047-S049 | Why/when to disable `AutoDetectChangesEnabled`, safe try/finally pattern, batch work, avoiding redundant detection. |
 | S-042-S046/S-056-S058 | `Clear()` detaches tracked state, chunk processing, warning that it does not save. |

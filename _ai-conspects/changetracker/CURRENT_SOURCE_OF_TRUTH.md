@@ -1,6 +1,6 @@
 # Current Source of Truth - ChangeTracker
 
-Generated: 2026-06-02 12:47:24 UTC
+Generated: 2026-06-02 13:06:29 UTC
 
 ## Policy
 
@@ -13,20 +13,19 @@ A region is complete only after visual/semantic boundary review and verified tra
 ```text
 Stage0 boundary review: done
 R01 ChangeTracker core methods/properties/detection/cascade/debug behavior: transcript v001 done
-P02/R02 EntityEntry properties/methods/query/navigation/value APIs: next
+R01 correction: S001-S003 ChangeTracker overview/core members v002 done
+R02 EntityEntry properties/methods/query/navigation/value APIs: transcript v001 done
+P03/R03R04 TrackGraph / NodeState / member API + ChangeTracker events tail: next
 ```
 
-## R01 boundary corrections
+## R02 boundary decisions
 
 ```text
-Pulled into R01 from initial P03 candidate:
-S-081, S-082
+Included in R02:
+67 image uses
 
-Checked-not-R01, reserved for R02:
-S-001, S-036
-
-Checked-not-R01, reserved for R03:
-S-083, S-084
+Corrected into R01 v002:
+S-001, S-002, S-003
 ```
 
 ## Current split policy
@@ -40,6 +39,6 @@ Exception: 120+ only on explicit request or one very cohesive road.
 ## Next pass
 
 ```text
-P02 / R02:
-EntityEntry State, Entity, Metadata, CurrentValues/OriginalValues, IsKeySet, Context, Entry.Query, navigations/references/collections/properties, Reload/GetDatabaseValues.
+P03 / R03R04:
+TrackGraph, NodeState, graph traversal, member/property API helpers, ChangeTracker events.
 ```
