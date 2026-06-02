@@ -1,0 +1,139 @@
+L-001 x=22603.097 y=961.115 :: canconnect usage
+L-002 x=21116.781 y=1112.634 :: canconnect
+L-003 x=14168.741 y=1165.333 :: autotransactionbehavior
+L-004 x=16129.86 y=1374.841 :: CURRENT TRANSACTION
+L-005 x=17715.511 y=1442.955 :: autosavepointsenabled
+L-006 x=14667.287 y=1818.251 :: whenneeded
+L-007 x=21086.524 y=1860.327 :: ensurecreated
+L-008 x=21038.576 y=2705.455 :: ensuredeleted
+L-009 x=17744.854 y=3016.292 :: !!!
+L-010 x=15785.369 y=3072.99 :: !!!
+L-011 x=14649.953 y=3307.584 :: always
+L-012 x=22924.906 y=3677.668 :: database methods
+L-013 x=17711.521 y=4035.339 :: !!!
+L-014 x=22900.548 y=4097.407 :: migrations
+L-015 x=22900.548 y=4242.962 :: migrate()
+L-016 x=14651.287 y=4252.917 :: never
+L-017 x=5030.947 y=4536.559 :: what we can get after
+L-018 x=15939.207 y=4597.14 :: when we can have disabled autosavepoints
+L-019 x=15939.207 y=4711.769 :: and some manual savepoints logic through
+L-020 x=5030.947 y=4760.911 :: we call savechanges
+L-021 x=15939.207 y=4826.399 :: transaction methods
+L-022 x=5030.947 y=4985.262 :: and from where
+L-023 x=14584.62 y=5017.07 :: when and why never
+L-024 x=21428.802 y=5309.765 :: migration
+L-025 x=22444.992 y=5322.655 :: getpendingmig/getappliedmigr/getmigr
+L-026 x=4177.205 y=5332.952 :: identity
+L-027 x=4189.135 y=5663.478 :: sequence
+L-028 x=8865.811 y=5883.979 :: why/when do many
+L-029 x=6694.324 y=5888.542 :: 2 types of generated
+L-030 x=4097.907 y=5925.934 :: default constant
+L-031 x=18452.493 y=5935.469 :: TRANSACTION OBJECT
+L-032 x=8865.811 y=6084.146 :: savechanges calls
+L-033 x=18452.493 y=6094.495 :: IDbContextTransaction
+L-034 x=5453.562 y=6236.161 :: INSERTED
+L-035 x=22629.278 y=6272.791 :: haspendingmodelchanges
+L-036 x=15950.155 y=6280.233 :: is there some overhead from savepoint creation?
+L-037 x=6656.228 y=6389.495 :: db generated
+L-038 x=4070.539 y=6424.882 :: computed column
+L-039 x=7987.339 y=6455.05 :: generated ids
+L-040 x=3158.079 y=6489.655 :: trigger generated
+L-041 x=10794.15 y=6541.488 :: many savechanges
+L-042 x=9022.34 y=6551.717 :: 1 you need db generated
+L-043 x=3158.079 y=6614.267 :: value on insert
+L-044 x=4030.719 y=6646.266 :: onaddorupdate col
+L-045 x=9022.34 y=6676.329 :: values before the next step
+L-046 x=4030.719 y=6729.396 :: default sql after insert
+L-047 x=4030.719 y=6812.527 :: trigger handles update
+L-048 x=8807.657 y=6901.467 :: here we add just an id
+L-049 x=8807.657 y=6926.467 :: mb dont have nav prop,so
+L-050 x=10794.15 y=6936.07 :: flushes,multiple queries
+L-051 x=8807.657 y=6951.467 :: ef cant handle it, idk
+L-052 x=6601.683 y=6989.495 :: ef/provider generated
+L-053 x=22575.915 y=7006.053 :: ensure created/deleted
+L-054 x=4057.205 y=7136.882 :: computed column
+L-055 x=10794.15 y=7330.652 :: bulk
+L-056 x=4019.872 y=7342.215 :: guid with gen on add
+L-057 x=6510.481 y=7623.009 :: performance exact reasons
+L-058 x=5565.692 y=7655.028 :: minuses of many save
+L-059 x=4465.838 y=7671.951 :: PRACTICAL PATTERN
+L-060 x=9060.118 y=7703.939 :: 2 large import in chunks
+L-061 x=8106.037 y=7747.453 :: performance
+L-062 x=5565.692 y=7758.815 :: changes
+L-063 x=6786.157 y=7783.103 :: set up better batches
+L-064 x=25014.947 y=7965.003 :: usage without openconnection
+L-065 x=25014.947 y=8065.558 :: with connecttion managed by ef
+L-066 x=22767.026 y=8071.044 :: getdbconnection
+L-067 x=16613.639 y=8163.665 :: WHY GETDBTRANSACTION IS
+L-068 x=5564.358 y=8220.361 :: query for each savechangs
+L-069 x=15343.82 y=8229.938 :: DB TRANSACTION
+L-070 x=6723.776 y=8254.77 :: specific chunk failure recovery
+L-071 x=16613.639 y=8255.887 :: HELPFUL
+L-072 x=15343.82 y=8292.963 :: PROVIDER SPEC TRANSACTION,
+L-073 x=15343.82 y=8355.988 :: DO WE NEED TO CAST?
+L-074 x=16700.306 y=8389.24 :: EF CORE + ADO.NET COMMANDS
+L-075 x=16700.306 y=8433.406 :: USETRANSACTION
+L-076 x=16700.306 y=8477.573 :: LIBRARIES THAT NEED ADO.NET TRANSACTION
+L-077 x=16700.306 y=8521.74 :: PROVIDER SPECIFIC TRANSACTION FEATURES
+L-078 x=18676.222 y=8753.026 :: GETDBTRANSACTION
+L-079 x=6787.434 y=8835.203 :: release memory sooner
+L-080 x=5568.358 y=8926.243 :: inside long transaction, early
+L-081 x=5568.358 y=9030.031 :: savechanges may acquire locks
+L-082 x=22735.619 y=9104.322 :: openconnection
+L-083 x=5568.358 y=9133.819 :: and hold them until the end
+L-084 x=15529.861 y=9156.176 :: WHAT DO WE GET FROM GETDBTRANSACTION
+L-085 x=8956.996 y=9322.087 :: 3 flush/send query before
+L-086 x=12540.326 y=9402.948 :: where transaction
+L-087 x=11254.231 y=9423.139 :: one savech, at least one
+L-088 x=8956.996 y=9446.699 :: another phase
+L-089 x=10286.39 y=9448.263 :: what is flush
+L-090 x=12540.326 y=9508.893 :: lives,rollback after write to db
+L-091 x=11254.231 y=9529.084 :: query
+L-092 x=10286.39 y=9572.875 :: of savechanges
+L-093 x=3061.347 y=9614.086 :: short lived dbcontext
+L-094 x=5488.013 y=9691.662 :: ChangeTracker.Clear
+L-095 x=3061.347 y=9717.874 :: traidoff,
+L-096 x=4432.256 y=9732.874 :: cler/disposable
+L-097 x=5488.013 y=9795.45 :: better patterns
+L-098 x=3061.347 y=9821.662 :: better maintainability,reasoning
+L-099 x=4432.256 y=9836.662 :: short lived dbcontexts
+L-100 x=6752.472 y=10169.721 :: avoid extra cpu cost from
+L-101 x=8981.44 y=10248.754 :: 4 dont want to rollback
+L-102 x=6752.472 y=10273.509 :: tracking after memory release
+L-103 x=6952.146 y=10334.893 :: from clearing too
+L-104 x=22540.884 y=10363.665 :: get/set connectionstring
+L-105 x=8981.44 y=10373.366 :: everything,savepoints
+L-106 x=5385.589 y=10702.874 :: separate context for bulk
+L-107 x=20181.191 y=10725.171 :: why to use one connection
+L-108 x=4268.922 y=10726.207 :: short lived context
+L-109 x=5385.589 y=10806.662 :: work pattern
+L-110 x=4268.922 y=10829.995 :: pattern
+L-111 x=20181.191 y=10857.949 :: for multiple operations
+L-112 x=22603.106 y=11336.999 :: setdbconnection
+L-113 x=24020.112 y=11401.008 :: can control whether context owns the disposal of the
+L-114 x=8904.773 y=11422.087 :: why disable auto savepoints
+L-115 x=24020.112 y=11439.341 :: connection
+L-116 x=22729.55 y=11542.856 :: (with dbcontextoptoins and
+L-117 x=22729.55 y=11643.411 :: manual creation of context)
+L-118 x=15782.683 y=11912.23 :: usetransaction
+L-119 x=15782.683 y=12065.563 :: getdbtransaction
+L-120 x=15782.683 y=12372.23 :: same conection
+L-121 x=17698.487 y=12722.893 :: requirements to share local
+L-122 x=22519.423 y=12735.336 :: get/set commandtimeout
+L-123 x=16050.183 y=12747.234 :: what if we wont
+L-124 x=17698.487 y=12831.893 :: transaction
+L-125 x=16050.183 y=12833.901 :: use one connection per one transaction
+L-126 x=19154.033 y=12872.85 :: can we merge two ef transactions
+L-127 x=22577.201 y=13859.781 :: enlisttransaction/getenlistedtransaction
+L-128 x=18287.278 y=14396.127 :: usetransaction
+L-129 x=17157.022 y=14399.203 :: usetransaction
+L-130 x=18287.278 y=14507.793 :: context + ado.net
+L-131 x=17157.022 y=14510.87 :: 2 contexts
+L-132 x=22108.313 y=14805.337 :: isrelational/issqlserver/issqlite
+L-133 x=22534.979 y=15752.003 :: generatecreatescript
+L-134 x=17088.133 y=16528.092 :: 2 differenct
+L-135 x=17088.133 y=16639.759 :: contexts getting options
+L-136 x=17088.133 y=16751.426 :: creating contexts manually
+L-137 x=17118.133 y=17478.092 :: example
+L-138 x=19284.8 y=17531.425 :: context should accept optoins
+L-139 x=18471.466 y=17544.759 :: di
