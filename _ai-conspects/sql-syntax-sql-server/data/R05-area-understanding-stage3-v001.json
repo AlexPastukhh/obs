@@ -1,0 +1,25 @@
+{
+  "generated": "2026-06-02 16:03:30 UTC",
+  "region": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
+  "included_image_uses": 31,
+  "area_overview": "Final SQL Server syntax block: upsert strategies, MERGE, transactions, indexes, ALTER TABLE, constraints, views and indexed views.",
+  "key_ideas": [
+    "Upsert means insert if missing, update if existing.",
+    "IF EXISTS + UPDATE ELSE INSERT is often simpler and easier to reason about than MERGE.",
+    "MERGE can express insert/update/delete in one statement using source and target matching.",
+    "Transactions group multiple statements into one atomic unit; use TRY/CATCH with rollback for error safety.",
+    "Indexes speed reads but cost writes and storage; create them for query patterns, not blindly.",
+    "ALTER TABLE changes table schema: add/drop/alter columns and add/drop constraints.",
+    "Constraints encode rules: primary key, foreign key, unique, default, check, not null.",
+    "Views are saved SELECT definitions; indexed views physically materialize the view result under strict rules.",
+    "DDL changes should be deliberate because they affect data, dependencies, and application code."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "P03 contact sheet was inspected; P02/R04 neighbors were checked and left processed in R04.",
+    "limitations": [
+      "Some MERGE/transaction/index examples are small; transcript normalizes syntax while preserving the visible API and intent.",
+      "The block is compact but covers multiple DDL/DML-adjacent topics, so sections are kept explicit."
+    ]
+  }
+}

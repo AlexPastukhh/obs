@@ -1486,7 +1486,7 @@
     "nearest_labels_for_search_only": "L-011: Table with foreign key | L-039: Create table | L-038: Insert | L-012: foreign key with cascade | L-013: return created row data",
     "coverage_status": "processed-in-r04-v001",
     "decision_is_final": "yes-for-r04-v001-boundary",
-    "review_notes": "R04 processed after local boundary review.",
+    "review_notes": "R04 processed after local boundary review. Checked again during P03 boundary review; not reprocessed.",
     "current_region_decision": "R04",
     "must_recheck_before_region_close": "no-for-r04-v001"
   },
@@ -1696,7 +1696,7 @@
     "nearest_labels_for_search_only": "L-036: Delete | L-037: Update | L-042: IF | L-043: IF EXISTS | L-178: !!!",
     "coverage_status": "processed-in-r04-v001",
     "decision_is_final": "yes-for-r04-v001-boundary",
-    "review_notes": "R04 processed after local boundary review.",
+    "review_notes": "R04 processed after local boundary review. Checked again during P03 boundary review; not reprocessed.",
     "current_region_decision": "R04",
     "must_recheck_before_region_close": "no-for-r04-v001"
   },
@@ -1715,11 +1715,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-049:  | L-048: merge | L-047: Upsert with | L-051: with If exists | L-050: Easier path",
-    "coverage_status": "checked-not-p02-reserved-for-p03-r05",
-    "decision_is_final": "yes-not-p02",
-    "review_notes": "Checked during P02; belongs to MERGE/upsert/DDL-object pass.",
-    "current_region_decision": "candidate-P03-R05",
-    "must_recheck_before_region_close": "yes-for-p03-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-083",
@@ -1736,11 +1736,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-049:  | L-048: merge | L-047: Upsert with | L-051: with If exists | L-050: Easier path",
-    "coverage_status": "checked-not-p02-reserved-for-p03-r05",
-    "decision_is_final": "yes-not-p02",
-    "review_notes": "Checked during P02; belongs to MERGE/upsert/DDL-object pass.",
-    "current_region_decision": "candidate-P03-R05",
-    "must_recheck_before_region_close": "yes-for-p03-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-084",
@@ -1757,11 +1757,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-051: with If exists | L-050: Easier path | L-052: Transactions | L-049:  | L-048: merge",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-085",
@@ -1778,11 +1778,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-011: Table with foreign key | L-012: foreign key with cascade | L-039: Create table | L-013: return created row data | L-038: Insert",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-086",
@@ -1799,11 +1799,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-012: foreign key with cascade | L-011: Table with foreign key | L-033: inserted with table | L-034: variable pattern | L-013: return created row data",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-087",
@@ -1820,11 +1820,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-052: Transactions | L-053: Indexes | L-051: with If exists | L-050: Easier path | L-029: add column",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-088",
@@ -1841,11 +1841,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-052: Transactions | L-053: Indexes | L-051: with If exists | L-050: Easier path | L-030: alter column",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-089",
@@ -1862,11 +1862,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-053: Indexes | L-030: alter column | L-029: add column | L-031: drop column | L-054: ALTER TABLE",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-090",
@@ -1883,11 +1883,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-032: add constr | L-031: drop column | L-053: Indexes | L-030: alter column | L-029: add column",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-091",
@@ -1904,11 +1904,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-029: add column | L-030: alter column | L-054: ALTER TABLE | L-031: drop column | L-016: add default constr",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-092",
@@ -1925,11 +1925,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-030: alter column | L-031: drop column | L-029: add column | L-032: add constr | L-054: ALTER TABLE",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-093",
@@ -1946,11 +1946,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-031: drop column | L-032: add constr | L-030: alter column | L-024: add check constr | L-029: add column",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-094",
@@ -1967,11 +1967,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-032: add constr | L-031: drop column | L-027: add a column and then | L-028: add it a constraint | L-025: add unique constr",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-095",
@@ -1988,11 +1988,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-175: view/indexed view | L-020: unique idex | L-018: Foreign key | L-177: constraints | L-017: Primary key",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-096",
@@ -2009,11 +2009,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-175: view/indexed view | L-020: unique idex | L-018: Foreign key | L-017: Primary key | L-177: constraints",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-097",
@@ -2030,11 +2030,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-016: add default constr | L-024: add check constr | L-056: with alter | L-017: Primary key | L-018: Foreign key",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-098",
@@ -2051,11 +2051,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-020: unique idex | L-018: Foreign key | L-017: Primary key | L-175: view/indexed view | L-177: constraints",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-099",
@@ -2072,11 +2072,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-024: add check constr | L-025: add unique constr | L-019: unique constr | L-018: Foreign key | L-016: add default constr",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-100",
@@ -2093,11 +2093,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-025: add unique constr | L-026: add foreign key constr | L-021: Not null | L-019: unique constr | L-022: Default",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-101",
@@ -2114,11 +2114,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-026: add foreign key constr | L-022: Default | L-021: Not null | L-023: Check | L-025: add unique constr",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-102",
@@ -2135,11 +2135,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-028: add it a constraint | L-027: add a column and then | L-026: add foreign key constr | L-025: add unique constr | L-032: add constr",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-103",
@@ -2156,11 +2156,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-018: Foreign key | L-017: Primary key | L-177: constraints | L-176: common | L-019: unique constr",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-104",
@@ -2177,11 +2177,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-018: Foreign key | L-019: unique constr | L-020: unique idex | L-021: Not null | L-017: Primary key",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-105",
@@ -2198,11 +2198,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-021: Not null | L-019: unique constr | L-020: unique idex | L-022: Default | L-018: Foreign key",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-106",
@@ -2219,11 +2219,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-021: Not null | L-022: Default | L-019: unique constr | L-020: unique idex | L-023: Check",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-107",
@@ -2240,11 +2240,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-023: Check | L-022: Default | L-021: Not null | L-019: unique constr | L-020: unique idex",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-108",
@@ -2261,11 +2261,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-023: Check | L-022: Default | L-021: Not null | L-019: unique constr | L-020: unique idex",
-    "coverage_status": "checked-not-p02-reserved-for-p03-r05",
-    "decision_is_final": "yes-not-p02",
-    "review_notes": "Checked during P02; belongs to MERGE/upsert/DDL-object pass.",
-    "current_region_decision": "candidate-P03-R05",
-    "must_recheck_before_region_close": "yes-for-p03-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-109",
@@ -2284,7 +2284,7 @@
     "nearest_labels_for_search_only": "L-034: variable pattern | L-033: inserted with table | L-041: Variables | L-035: set vs select | L-015: inserted",
     "coverage_status": "processed-in-r04-v001",
     "decision_is_final": "yes-for-r04-v001-boundary",
-    "review_notes": "R04 processed after local boundary review.",
+    "review_notes": "R04 processed after local boundary review. Checked again during P03 boundary review; not reprocessed.",
     "current_region_decision": "R04",
     "must_recheck_before_region_close": "no-for-r04-v001"
   },
@@ -2704,7 +2704,7 @@
     "nearest_labels_for_search_only": "L-045: Try Catch | L-044: @@RowCount | L-178: !!! | L-043: IF EXISTS | L-175: view/indexed view",
     "coverage_status": "processed-in-r04-v001",
     "decision_is_final": "yes-for-r04-v001-boundary",
-    "review_notes": "R04 processed after local boundary review.",
+    "review_notes": "R04 processed after local boundary review. Checked again during P03 boundary review; not reprocessed.",
     "current_region_decision": "R04",
     "must_recheck_before_region_close": "no-for-r04-v001"
   },
@@ -2723,11 +2723,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-185:  | L-184:  | L-183: merge into users table | L-182: we say that we | L-192: and we built some temp source",
-    "coverage_status": "checked-not-p02-reserved-for-p03-r05",
-    "decision_is_final": "yes-not-p02",
-    "review_notes": "Checked during P02; belongs to MERGE/upsert/DDL-object pass.",
-    "current_region_decision": "candidate-P03-R05",
-    "must_recheck_before_region_close": "yes-for-p03-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-131",
@@ -2744,11 +2744,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-185:  | L-184:  | L-192: and we built some temp source | L-183: merge into users table | L-191: we have variables from our query",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-132",
@@ -2765,11 +2765,11 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-192: and we built some temp source | L-185:  | L-191: we have variables from our query | L-184:  | L-183: merge into users table",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-133",
@@ -2786,10 +2786,10 @@
     "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
     "initial_meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
     "nearest_labels_for_search_only": "L-020: unique idex | L-021: Not null | L-019: unique constr | L-022: Default | L-018: Foreign key",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   }
 ]
