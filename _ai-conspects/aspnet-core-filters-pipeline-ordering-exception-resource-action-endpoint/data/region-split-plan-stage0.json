@@ -1,0 +1,23 @@
+[
+  {
+    "region": "R01",
+    "candidate_images": 93,
+    "source_range": "S-001..S-093",
+    "meaning": "upper/main theory map: filters vs middleware, async filters, pipeline ordering, exception filters, exception handled propagation, DI/global filters/TypeFilter/ServiceFilter, IFilterFactory, InvalidModelStateResponseFactory, status-code/content-negotiation notes",
+    "candidate_pass": "Pass 1: R01 alone, 93 images, within the 60-100 target"
+  },
+  {
+    "region": "R02",
+    "candidate_images": 27,
+    "source_range": "S-094..S-120",
+    "meaning": "concrete MVC filter-type examples: authorization filter, resource filter/cached result before model binding, action timing filter, exception filter, result wrapper filter, endpoint filter",
+    "candidate_pass": "Pass 2 candidate together with R03 as final lower pass, if coherent"
+  },
+  {
+    "region": "R03",
+    "candidate_images": 11,
+    "source_range": "S-121..S-131",
+    "meaning": "lower addendum/main-sheet tail: filters continuation and middleware-before-filters reminder",
+    "candidate_pass": "Pass 2 candidate together with R02 as final coverage pass"
+  }
+]

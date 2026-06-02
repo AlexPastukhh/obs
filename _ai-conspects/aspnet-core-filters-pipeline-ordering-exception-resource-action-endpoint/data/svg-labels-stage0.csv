@@ -1,0 +1,213 @@
+label_id,x,y,line_count,text
+T-001,7451.292637247841,162.38677569365427,1,exception filter
+T-002,12947.451103998254,467.72153395899113,2,"result after exec vs 
+resource after action"
+T-003,10562.927311913061,507.62343942968437,1,example
+T-004,4979.673081002492,520.2598937763414,1,ordering
+T-005,6965.981564348469,596.3196239383924,2,"marking exception as 
+handled to stop propagation"
+T-006,1962.5138848666088,881.5016032640015,4,"filters
+_____
+filters vs middleware and 
+theor"
+T-007,1352.5457640223028,933.2850392346463,1,<---ASYNC FILTERS
+T-008,11507.758051519739,1213.3751887103954,18,"using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class ApiExceptionFilter : IExceptionFilter
+{
+    public void OnException(ExceptionContext context)
+    {
+        var ex = context.Exception;
+        // map exception types to status codes / ProblemDetails
+        var pd = new ProblemDetails {
+            Title = ""An error occurred"",
+            Detail = ex.Message
+        };
+        context.Result = new ObjectResult(pd) { StatusCode = 500 };
+        context.ExceptionHandled = true;
+    }
+}
+"
+T-009,9156.180743842704,2136.8380321156583,2,"why we cant use exc filters
+to catch exceptions from auth filters"
+T-010,9720.76010623921,2816.097336586139,1,exception middleware can
+T-011,1683.8886319973117,3066.385531675265,1,DI FOR GLOBAL AND TYPEFILTER WITH SERVICEFILTER
+T-012,3059.810403251383,3178.7034955183462,1,how to get services from httpcontext
+T-013,1691.8485788017629,3246.7988600276785,1,!!!
+T-014,2086.3113673835014,3504.618123750728,3,"CAN ALSO USE FILTER ATTRIBUTES
+CANT USE DI IN CTOR, NEED TO GET FROM CONTEXT
+IT IS A DEFAULT WAY TO USE FILTERS ACTUALLY"
+T-015,2867.5938515135795,3590.97396248734,3,"mb better to use
+more excplicit ismthFilter or iasyncSmthFilter
+and base Attribute class"
+T-016,3714.8288487530667,3635.2169499184247,1,but here you also can do async things
+T-017,11011.995621019927,3705.9838946829022,2,"checking if rout is from api 
+or controller"
+T-018,6469.238454375971,3775.2326243534317,2,"invalidmodstrespfac with 
+middleware and filter"
+T-019,7850.19398836491,3838.7644434431522,1,return viewresult error page
+T-020,2111.3990061891645,4973.055294202963,1,IFILTERFACTORY
+T-021,9874.827764087888,5869.785204618349,3,"so when we are in mvc land and return object result or derived from object 
+result, we dont care about accept header, its automatically handled
+in middleware we nneed to use pdservice/factory for some content negotiations "
+T-022,8317.55352814136,7853.511509218901,2,"filter instead of 
+statuscodepages?"
+T-023,2145.2060611555526,8111.51214824636,1,can pass shit to attr with filt fact
+T-024,3000.7675990138823,9724.814812443956,24,"using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using System.Threading.Tasks;
+
+public class RequireAdminFilter : IAsyncAuthorizationFilter
+{
+    public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
+    {
+        var user = context.HttpContext.User;
+        if (!user.Identity?.IsAuthenticated ?? true)
+        {
+            context.Result = new UnauthorizedResult();
+            return;
+        }
+
+        if (!user.IsInRole(""Admin""))
+        {
+            context.Result = new ForbidResult();
+            return;
+        }
+        await Task.CompletedTask;
+    }
+}
+"
+T-025,6689.45116503341,10152.591648105978,1,always run result filter
+T-026,7226.421615675083,10523.305248976183,1,filter will run even if previous stages short circuited
+T-027,6487.617974115441,10739.841831211446,1,alwats run result filter
+T-028,2128.9421443769897,10767.972705925322,1,returning cached result before model binding
+T-029,3177.4341639552886,10768.148171208604,25,"using Microsoft.AspNetCore.Mvc.Filters;
+
+public class SimpleCacheResourceFilter : IResourceFilter
+{
+    public void OnResourceExecuting(ResourceExecutingContext context)
+    {
+        // Example: short-circuit if cached
+        var key = context.HttpContext.Request.Path.ToString();
+        var cached = MyCache.Get(key);
+        if (cached != null)
+        {
+            context.Result = new Microsoft.AspNetCore.Mvc.ContentResult
+            {
+                Content = cached,
+                ContentType = ""application/json"",
+            };
+        }
+    }
+
+    public void OnResourceExecuted(ResourceExecutedContext context)
+    {
+        // maybe update cache with context.Result if success
+    }
+}
+"
+T-030,1810.633094486735,11293.889890093133,1,more intuitivee
+T-031,1814.5851727417266,13080.345538187941,3,"resource filter after 
+action can cache 
+validated models"
+T-032,3182.1009120021636,13631.315193913682,30,"using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+using System.Threading.Tasks;
+
+public class TimingActionFilter : IAsyncActionFilter
+{
+    private readonly ILogger<TimingActionFilter> _log;
+    public TimingActionFilter(ILogger<TimingActionFilter> log) => _log = log;
+
+    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+    {
+        var sw = Stopwatch.StartNew();
+
+        // Example: auto-validate ModelState and short-circuit
+        if (!context.ModelState.IsValid)
+        {
+            context.Result = new Microsoft.AspNetCore.Mvc.BadRequestObjectResult(context.ModelState);
+            return;
+        }
+
+        var executedContext = await next(); // actually runs the action
+        sw.Stop();
+
+        _log.LogInformation(""Action {action} took {ms}ms"", context.ActionDescriptor.DisplayName, sw.ElapsedMilliseconds);
+
+        // You can inspect executedContext.Result or Exception here
+    }
+}
+"
+T-033,3242.1009120021636,15055.48191144298,18,"using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class ApiExceptionFilter : IExceptionFilter
+{
+    public void OnException(ExceptionContext context)
+    {
+        var ex = context.Exception;
+        // map exception types to status codes / ProblemDetails
+        var pd = new ProblemDetails {
+            Title = ""An error occurred"",
+            Detail = ex.Message
+        };
+        context.Result = new ObjectResult(pd) { StatusCode = 500 };
+        context.ExceptionHandled = true;
+    }
+}
+"
+T-034,1841.2674769435698,15700.48191144298,1,!!!
+T-035,3271.26747694357,16336.315270207628,21,"using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class WrapResultFilter : IResultFilter
+{
+    public void OnResultExecuting(ResultExecutingContext context)
+    {
+        if (context.Result is ObjectResult obj)
+        {
+            // wrap existing payload
+            var newObj = new { data = obj.Value, ok = true };
+            context.Result = new ObjectResult(newObj) { StatusCode = obj.StatusCode };
+        }
+    }
+
+    public void OnResultExecuted(ResultExecutedContext context)
+    {
+        // after result wrote to response
+    }
+}
+"
+T-036,3303.76747694357,17349.64855267833,24,"using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
+using System.Threading;
+
+public class LogEndpointFilter : IEndpointFilter
+{
+    private readonly ILogger<LogEndpointFilter> _log;
+    public LogEndpointFilter(ILogger<LogEndpointFilter> log) => _log = log;
+
+    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext ctx, EndpointFilterDelegate next)
+    {
+        _log.LogInformation(""Before endpoint {e}"", ctx.Endpoint?.DisplayName);
+        var result = await next(ctx);
+        _log.LogInformation(""After endpoint {e}"", ctx.Endpoint?.DisplayName);
+        return result;
+    }
+}
+
+// Attach example:
+app.MapGet(""/hi"", () => ""hello"").AddEndpointFilter<LogEndpointFilter>();
+"
+T-037,1922.934041884976,19158.815270207626,1,!!!
+T-038,2739.498140025486,22140.239999797894,1,filters
+T-039,2735.1641204848434,22274.720328646734,1,can add this under main sheet which is lower
+T-040,2379.034966112864,26178.780824842965,1,!!!!
+T-041,2350.5501916100234,27771.508042083748,2,"middleware simply runs 
+before filters"

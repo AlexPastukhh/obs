@@ -1,0 +1,289 @@
+[
+  {
+    "label_id": "T-001",
+    "x": 7451.292637247841,
+    "y": 162.38677569365427,
+    "line_count": 1,
+    "text": "exception filter"
+  },
+  {
+    "label_id": "T-002",
+    "x": 12947.451103998254,
+    "y": 467.72153395899113,
+    "line_count": 2,
+    "text": "result after exec vs \nresource after action"
+  },
+  {
+    "label_id": "T-003",
+    "x": 10562.927311913061,
+    "y": 507.62343942968437,
+    "line_count": 1,
+    "text": "example"
+  },
+  {
+    "label_id": "T-004",
+    "x": 4979.673081002492,
+    "y": 520.2598937763414,
+    "line_count": 1,
+    "text": "ordering"
+  },
+  {
+    "label_id": "T-005",
+    "x": 6965.981564348469,
+    "y": 596.3196239383924,
+    "line_count": 2,
+    "text": "marking exception as \nhandled to stop propagation"
+  },
+  {
+    "label_id": "T-006",
+    "x": 1962.5138848666088,
+    "y": 881.5016032640015,
+    "line_count": 4,
+    "text": "filters\n_____\nfilters vs middleware and \ntheor"
+  },
+  {
+    "label_id": "T-007",
+    "x": 1352.5457640223028,
+    "y": 933.2850392346463,
+    "line_count": 1,
+    "text": "<---ASYNC FILTERS"
+  },
+  {
+    "label_id": "T-008",
+    "x": 11507.758051519739,
+    "y": 1213.3751887103954,
+    "line_count": 18,
+    "text": "using Microsoft.AspNetCore.Mvc;\nusing Microsoft.AspNetCore.Mvc.Filters;\n\npublic class ApiExceptionFilter : IExceptionFilter\n{\n    public void OnException(ExceptionContext context)\n    {\n        var ex = context.Exception;\n        // map exception types to status codes / ProblemDetails\n        var pd = new ProblemDetails {\n            Title = \"An error occurred\",\n            Detail = ex.Message\n        };\n        context.Result = new ObjectResult(pd) { StatusCode = 500 };\n        context.ExceptionHandled = true;\n    }\n}\n"
+  },
+  {
+    "label_id": "T-009",
+    "x": 9156.180743842704,
+    "y": 2136.8380321156583,
+    "line_count": 2,
+    "text": "why we cant use exc filters\nto catch exceptions from auth filters"
+  },
+  {
+    "label_id": "T-010",
+    "x": 9720.76010623921,
+    "y": 2816.097336586139,
+    "line_count": 1,
+    "text": "exception middleware can"
+  },
+  {
+    "label_id": "T-011",
+    "x": 1683.8886319973117,
+    "y": 3066.385531675265,
+    "line_count": 1,
+    "text": "DI FOR GLOBAL AND TYPEFILTER WITH SERVICEFILTER"
+  },
+  {
+    "label_id": "T-012",
+    "x": 3059.810403251383,
+    "y": 3178.7034955183462,
+    "line_count": 1,
+    "text": "how to get services from httpcontext"
+  },
+  {
+    "label_id": "T-013",
+    "x": 1691.8485788017629,
+    "y": 3246.7988600276785,
+    "line_count": 1,
+    "text": "!!!"
+  },
+  {
+    "label_id": "T-014",
+    "x": 2086.3113673835014,
+    "y": 3504.618123750728,
+    "line_count": 3,
+    "text": "CAN ALSO USE FILTER ATTRIBUTES\nCANT USE DI IN CTOR, NEED TO GET FROM CONTEXT\nIT IS A DEFAULT WAY TO USE FILTERS ACTUALLY"
+  },
+  {
+    "label_id": "T-015",
+    "x": 2867.5938515135795,
+    "y": 3590.97396248734,
+    "line_count": 3,
+    "text": "mb better to use\nmore excplicit ismthFilter or iasyncSmthFilter\nand base Attribute class"
+  },
+  {
+    "label_id": "T-016",
+    "x": 3714.8288487530667,
+    "y": 3635.2169499184247,
+    "line_count": 1,
+    "text": "but here you also can do async things"
+  },
+  {
+    "label_id": "T-017",
+    "x": 11011.995621019927,
+    "y": 3705.9838946829022,
+    "line_count": 2,
+    "text": "checking if rout is from api \nor controller"
+  },
+  {
+    "label_id": "T-018",
+    "x": 6469.238454375971,
+    "y": 3775.2326243534317,
+    "line_count": 2,
+    "text": "invalidmodstrespfac with \nmiddleware and filter"
+  },
+  {
+    "label_id": "T-019",
+    "x": 7850.19398836491,
+    "y": 3838.7644434431522,
+    "line_count": 1,
+    "text": "return viewresult error page"
+  },
+  {
+    "label_id": "T-020",
+    "x": 2111.3990061891645,
+    "y": 4973.055294202963,
+    "line_count": 1,
+    "text": "IFILTERFACTORY"
+  },
+  {
+    "label_id": "T-021",
+    "x": 9874.827764087888,
+    "y": 5869.785204618349,
+    "line_count": 3,
+    "text": "so when we are in mvc land and return object result or derived from object \nresult, we dont care about accept header, its automatically handled\nin middleware we nneed to use pdservice/factory for some content negotiations "
+  },
+  {
+    "label_id": "T-022",
+    "x": 8317.55352814136,
+    "y": 7853.511509218901,
+    "line_count": 2,
+    "text": "filter instead of \nstatuscodepages?"
+  },
+  {
+    "label_id": "T-023",
+    "x": 2145.2060611555526,
+    "y": 8111.51214824636,
+    "line_count": 1,
+    "text": "can pass shit to attr with filt fact"
+  },
+  {
+    "label_id": "T-024",
+    "x": 3000.7675990138823,
+    "y": 9724.814812443956,
+    "line_count": 24,
+    "text": "using Microsoft.AspNetCore.Mvc;\nusing Microsoft.AspNetCore.Mvc.Filters;\nusing System.Threading.Tasks;\n\npublic class RequireAdminFilter : IAsyncAuthorizationFilter\n{\n    public async Task OnAuthorizationAsync(AuthorizationFilterContext context)\n    {\n        var user = context.HttpContext.User;\n        if (!user.Identity?.IsAuthenticated ?? true)\n        {\n            context.Result = new UnauthorizedResult();\n            return;\n        }\n\n        if (!user.IsInRole(\"Admin\"))\n        {\n            context.Result = new ForbidResult();\n            return;\n        }\n        await Task.CompletedTask;\n    }\n}\n"
+  },
+  {
+    "label_id": "T-025",
+    "x": 6689.45116503341,
+    "y": 10152.591648105978,
+    "line_count": 1,
+    "text": "always run result filter"
+  },
+  {
+    "label_id": "T-026",
+    "x": 7226.421615675083,
+    "y": 10523.305248976183,
+    "line_count": 1,
+    "text": "filter will run even if previous stages short circuited"
+  },
+  {
+    "label_id": "T-027",
+    "x": 6487.617974115441,
+    "y": 10739.841831211446,
+    "line_count": 1,
+    "text": "alwats run result filter"
+  },
+  {
+    "label_id": "T-028",
+    "x": 2128.9421443769897,
+    "y": 10767.972705925322,
+    "line_count": 1,
+    "text": "returning cached result before model binding"
+  },
+  {
+    "label_id": "T-029",
+    "x": 3177.4341639552886,
+    "y": 10768.148171208604,
+    "line_count": 25,
+    "text": "using Microsoft.AspNetCore.Mvc.Filters;\n\npublic class SimpleCacheResourceFilter : IResourceFilter\n{\n    public void OnResourceExecuting(ResourceExecutingContext context)\n    {\n        // Example: short-circuit if cached\n        var key = context.HttpContext.Request.Path.ToString();\n        var cached = MyCache.Get(key);\n        if (cached != null)\n        {\n            context.Result = new Microsoft.AspNetCore.Mvc.ContentResult\n            {\n                Content = cached,\n                ContentType = \"application/json\",\n            };\n        }\n    }\n\n    public void OnResourceExecuted(ResourceExecutedContext context)\n    {\n        // maybe update cache with context.Result if success\n    }\n}\n"
+  },
+  {
+    "label_id": "T-030",
+    "x": 1810.633094486735,
+    "y": 11293.889890093133,
+    "line_count": 1,
+    "text": "more intuitivee"
+  },
+  {
+    "label_id": "T-031",
+    "x": 1814.5851727417266,
+    "y": 13080.345538187941,
+    "line_count": 3,
+    "text": "resource filter after \naction can cache \nvalidated models"
+  },
+  {
+    "label_id": "T-032",
+    "x": 3182.1009120021636,
+    "y": 13631.315193913682,
+    "line_count": 30,
+    "text": "using Microsoft.AspNetCore.Mvc.Filters;\nusing Microsoft.Extensions.Logging;\nusing System.Diagnostics;\nusing System.Threading.Tasks;\n\npublic class TimingActionFilter : IAsyncActionFilter\n{\n    private readonly ILogger<TimingActionFilter> _log;\n    public TimingActionFilter(ILogger<TimingActionFilter> log) => _log = log;\n\n    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)\n    {\n        var sw = Stopwatch.StartNew();\n\n        // Example: auto-validate ModelState and short-circuit\n        if (!context.ModelState.IsValid)\n        {\n            context.Result = new Microsoft.AspNetCore.Mvc.BadRequestObjectResult(context.ModelState);\n            return;\n        }\n\n        var executedContext = await next(); // actually runs the action\n        sw.Stop();\n\n        _log.LogInformation(\"Action {action} took {ms}ms\", context.ActionDescriptor.DisplayName, sw.ElapsedMilliseconds);\n\n        // You can inspect executedContext.Result or Exception here\n    }\n}\n"
+  },
+  {
+    "label_id": "T-033",
+    "x": 3242.1009120021636,
+    "y": 15055.48191144298,
+    "line_count": 18,
+    "text": "using Microsoft.AspNetCore.Mvc;\nusing Microsoft.AspNetCore.Mvc.Filters;\n\npublic class ApiExceptionFilter : IExceptionFilter\n{\n    public void OnException(ExceptionContext context)\n    {\n        var ex = context.Exception;\n        // map exception types to status codes / ProblemDetails\n        var pd = new ProblemDetails {\n            Title = \"An error occurred\",\n            Detail = ex.Message\n        };\n        context.Result = new ObjectResult(pd) { StatusCode = 500 };\n        context.ExceptionHandled = true;\n    }\n}\n"
+  },
+  {
+    "label_id": "T-034",
+    "x": 1841.2674769435698,
+    "y": 15700.48191144298,
+    "line_count": 1,
+    "text": "!!!"
+  },
+  {
+    "label_id": "T-035",
+    "x": 3271.26747694357,
+    "y": 16336.315270207628,
+    "line_count": 21,
+    "text": "using Microsoft.AspNetCore.Mvc;\nusing Microsoft.AspNetCore.Mvc.Filters;\n\npublic class WrapResultFilter : IResultFilter\n{\n    public void OnResultExecuting(ResultExecutingContext context)\n    {\n        if (context.Result is ObjectResult obj)\n        {\n            // wrap existing payload\n            var newObj = new { data = obj.Value, ok = true };\n            context.Result = new ObjectResult(newObj) { StatusCode = obj.StatusCode };\n        }\n    }\n\n    public void OnResultExecuted(ResultExecutedContext context)\n    {\n        // after result wrote to response\n    }\n}\n"
+  },
+  {
+    "label_id": "T-036",
+    "x": 3303.76747694357,
+    "y": 17349.64855267833,
+    "line_count": 24,
+    "text": "using Microsoft.AspNetCore.Http;\nusing Microsoft.AspNetCore.Routing;\nusing Microsoft.AspNetCore.Builder;\nusing Microsoft.Extensions.Logging;\nusing System.Threading.Tasks;\nusing System.Threading;\n\npublic class LogEndpointFilter : IEndpointFilter\n{\n    private readonly ILogger<LogEndpointFilter> _log;\n    public LogEndpointFilter(ILogger<LogEndpointFilter> log) => _log = log;\n\n    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext ctx, EndpointFilterDelegate next)\n    {\n        _log.LogInformation(\"Before endpoint {e}\", ctx.Endpoint?.DisplayName);\n        var result = await next(ctx);\n        _log.LogInformation(\"After endpoint {e}\", ctx.Endpoint?.DisplayName);\n        return result;\n    }\n}\n\n// Attach example:\napp.MapGet(\"/hi\", () => \"hello\").AddEndpointFilter<LogEndpointFilter>();\n"
+  },
+  {
+    "label_id": "T-037",
+    "x": 1922.934041884976,
+    "y": 19158.815270207626,
+    "line_count": 1,
+    "text": "!!!"
+  },
+  {
+    "label_id": "T-038",
+    "x": 2739.498140025486,
+    "y": 22140.239999797894,
+    "line_count": 1,
+    "text": "filters"
+  },
+  {
+    "label_id": "T-039",
+    "x": 2735.1641204848434,
+    "y": 22274.720328646734,
+    "line_count": 1,
+    "text": "can add this under main sheet which is lower"
+  },
+  {
+    "label_id": "T-040",
+    "x": 2379.034966112864,
+    "y": 26178.780824842965,
+    "line_count": 1,
+    "text": "!!!!"
+  },
+  {
+    "label_id": "T-041",
+    "x": 2350.5501916100234,
+    "y": 27771.508042083748,
+    "line_count": 2,
+    "text": "middleware simply runs \nbefore filters"
+  }
+]
