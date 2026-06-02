@@ -1,0 +1,156 @@
+{
+  "generated": "2026-06-02 11:35:23 UTC",
+  "stage": "5",
+  "batch_id": "NEXT04",
+  "regions": {
+    "CTXDB06": {
+      "name": "DbConnection / open connection / SetDbConnection / command timeout / provider helpers",
+      "processed_sources": [
+        "S-074",
+        "S-082",
+        "S-091",
+        "S-092",
+        "S-093",
+        "S-100",
+        "S-101",
+        "S-104",
+        "S-106",
+        "S-110",
+        "S-113",
+        "S-114",
+        "S-116",
+        "S-126",
+        "S-140",
+        "S-144",
+        "S-148",
+        "S-151",
+        "S-152",
+        "S-154",
+        "S-155",
+        "S-157",
+        "S-159",
+        "S-160",
+        "S-163",
+        "S-169",
+        "S-176",
+        "S-178",
+        "S-182",
+        "S-185",
+        "S-189",
+        "S-191"
+      ],
+      "subregions": {
+        "CTXDB06A": {
+          "sources": [
+            "S-074",
+            "S-082",
+            "S-091",
+            "S-092",
+            "S-093",
+            "S-100",
+            "S-101",
+            "S-104",
+            "S-106",
+            "S-110",
+            "S-113",
+            "S-114",
+            "S-116",
+            "S-126",
+            "S-140",
+            "S-144",
+            "S-148",
+            "S-151",
+            "S-152",
+            "S-154",
+            "S-155",
+            "S-157",
+            "S-159",
+            "S-160"
+          ],
+          "meaning": "GetDbConnection, OpenConnection, CloseConnection, connection string, SetDbConnection, connection lifetime and sharing reasons."
+        },
+        "CTXDB06B": {
+          "sources": [
+            "S-163",
+            "S-169",
+            "S-176",
+            "S-178",
+            "S-182",
+            "S-185",
+            "S-189",
+            "S-191"
+          ],
+          "meaning": "Command timeout, System.Transactions enlistment, provider checks, and GenerateCreateScript."
+        }
+      },
+      "key_ideas": [
+        "GetDbConnection returns the underlying ADO.NET connection object; it does not guarantee that the connection is open.",
+        "OpenConnection/OpenConnectionAsync make the open scope explicit for manual ADO.NET plus EF work.",
+        "If EF created the connection from a connection string, do not dispose it yourself; if you supplied the connection, you own disposal.",
+        "Connection strings should be changed before database work starts and treated as sensitive configuration.",
+        "Sharing one local transaction requires the same connection and same DbTransaction.",
+        "Command timeout should be raised only for operations that truly need it.",
+        "System.Transactions enlistment is for ambient transaction scenarios; normal EF code usually uses BeginTransaction.",
+        "Provider helpers are useful for provider-specific branches but should not be overused.",
+        "GenerateCreateScript generates schema SQL for inspection/export; it does not apply the schema."
+      ]
+    },
+    "CTXDB07": {
+      "name": "Manual DbContext creation / options / DI / multiple contexts",
+      "processed_sources": [
+        "S-186",
+        "S-187",
+        "S-188",
+        "S-190",
+        "S-192",
+        "S-193",
+        "S-194",
+        "S-195",
+        "S-196",
+        "S-197",
+        "S-198"
+      ],
+      "subregions": {
+        "CTXDB07A": {
+          "sources": [
+            "S-186",
+            "S-188",
+            "S-192",
+            "S-195",
+            "S-197"
+          ],
+          "meaning": "Correct manual options/shared connection/shared transaction patterns."
+        },
+        "CTXDB07B": {
+          "sources": [
+            "S-187",
+            "S-190",
+            "S-193",
+            "S-194",
+            "S-196",
+            "S-198"
+          ],
+          "meaning": "DI defaults, externally provided options constructor, and why resolving two DI contexts does not guarantee shared connection."
+        }
+      },
+      "key_ideas": [
+        "UseTransaction works only when the context uses the same connection that owns the transaction.",
+        "Same DbContext instance only needs BeginTransaction, but multiple DbContext instances must share connection and transaction.",
+        "Different databases cannot share one local DbTransaction.",
+        "DbContext classes should accept DbContextOptions<TContext> to allow externally built options.",
+        "Default DI AddDbContext is fine for normal use but does not automatically make two contexts share one connection/transaction.",
+        "For multiple contexts in one local transaction, manually build options around one shared DbConnection, start one transaction, and attach the other contexts with UseTransaction."
+      ]
+    }
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Several source images are visible continuations/crops; these are marked in source metadata.",
+      "S-195/S-197 form one longer multiple-context transaction example.",
+      "S-187 is a continuation of the existing ADO.NET transaction example.",
+      "S-074, S-091, S-100, S-106, S-116, S-140, S-155, S-163, S-176, S-182 are partially cropped but their visible contents are clear."
+    ],
+    "confidence": "High for concepts and boundary decisions; high-to-medium-high for exact code in cropped continuation snippets."
+  }
+}

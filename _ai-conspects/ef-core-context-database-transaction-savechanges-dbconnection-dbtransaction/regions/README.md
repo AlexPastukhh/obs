@@ -8,22 +8,19 @@ CTXDB02 - Automatic transactions / CurrentTransaction / AutoSavepointsEnabled
 CTXDB03 - SaveChanges value generation / batching / performance / ChangeTracker.Clear / short-lived DbContext
 CTXDB04 - SaveChanges transaction lifecycle / flush / rollback scope
 CTXDB05 - IDbContextTransaction / GetDbTransaction / UseTransaction / ADO.NET / shared local transaction
-```
-
-Boundary-reviewed candidate regions still pending transcript:
-
-```text
 CTXDB06 - DbConnection / open connection / SetDbConnection / command timeout / provider helpers
 CTXDB07 - Manual DbContext creation / options / DI / multiple contexts
 ```
 
-Recommended transcript order:
+All Stage1 candidate transcript regions are now processed.
+
+Next step:
 
 ```text
-NEXT04: CTXDB06 + CTXDB07
+Final closure/audit
 ```
 
-Each transcript must include:
+Each transcript includes:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality

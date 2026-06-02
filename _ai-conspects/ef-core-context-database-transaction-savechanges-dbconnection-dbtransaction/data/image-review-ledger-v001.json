@@ -1,71 +1,59 @@
 {
-  "generated": "2026-06-02 11:25:47 UTC",
-  "ledger_version": "v001-updated-by-stage4-next03-ctxdb04-ctxdb05-transcript",
+  "generated": "2026-06-02 11:35:23 UTC",
+  "ledger_version": "v001-updated-by-stage5-next04-ctxdb06-ctxdb07-transcript",
   "critical_rule": "Ledger records decisions after visual/semantic review; it is not source of truth by itself.",
-  "stage4_delta": {
+  "stage5_delta": {
     "processed_regions": {
-      "CTXDB04": [
-        "S-118",
-        "S-120",
-        "S-121",
-        "S-122",
-        "S-132",
-        "S-134",
-        "S-136",
-        "S-137",
-        "S-143",
-        "S-149"
+      "CTXDB06": [
+        "S-074",
+        "S-082",
+        "S-091",
+        "S-092",
+        "S-093",
+        "S-100",
+        "S-101",
+        "S-104",
+        "S-106",
+        "S-110",
+        "S-113",
+        "S-114",
+        "S-116",
+        "S-126",
+        "S-140",
+        "S-144",
+        "S-148",
+        "S-151",
+        "S-152",
+        "S-154",
+        "S-155",
+        "S-157",
+        "S-159",
+        "S-160",
+        "S-163",
+        "S-169",
+        "S-176",
+        "S-178",
+        "S-182",
+        "S-185",
+        "S-189",
+        "S-191"
       ],
-      "CTXDB05": [
-        "S-056",
-        "S-060",
-        "S-063",
-        "S-065",
-        "S-069",
-        "S-070",
-        "S-075",
-        "S-080",
-        "S-083",
-        "S-090",
-        "S-097",
-        "S-099",
-        "S-102",
-        "S-105",
-        "S-108",
-        "S-112",
-        "S-115",
-        "S-123",
-        "S-124",
-        "S-133",
-        "S-135",
-        "S-142",
-        "S-158",
-        "S-161",
-        "S-162",
-        "S-164",
-        "S-165",
-        "S-166",
-        "S-167",
-        "S-168",
-        "S-170",
-        "S-171",
-        "S-172",
-        "S-173",
-        "S-174",
-        "S-175",
-        "S-177",
-        "S-179",
-        "S-180",
-        "S-181",
-        "S-183",
-        "S-184"
+      "CTXDB07": [
+        "S-186",
+        "S-187",
+        "S-188",
+        "S-190",
+        "S-192",
+        "S-193",
+        "S-194",
+        "S-195",
+        "S-196",
+        "S-197",
+        "S-198"
       ]
     },
-    "processed_count": 52,
-    "pending_regions": [
-      "CTXDB06",
-      "CTXDB07"
-    ]
+    "processed_count": 43,
+    "pending_regions": []
   },
   "rows": [
     {
@@ -1318,13 +1306,13 @@
       "width": "846",
       "height": "482",
       "nearest_labels_for_search_only": "L-053: ensure created/deleted | L-066: getdbconnection | L-035: haspendingmodelchanges | L-082: openconnection | L-064: usage without openconnection | L-065: with connecttion managed by ef | L-025: getpendingmig/getappliedmigr/getmigr | L-024: migration",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-075",
@@ -1454,13 +1442,13 @@
       "width": "980",
       "height": "338",
       "nearest_labels_for_search_only": "L-066: getdbconnection | L-053: ensure created/deleted | L-082: openconnection | L-035: haspendingmodelchanges | L-064: usage without openconnection | L-065: with connecttion managed by ef | L-025: getpendingmig/getappliedmigr/getmigr | L-104: get/set connectionstring",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-083",
@@ -1607,13 +1595,13 @@
       "width": "986",
       "height": "450",
       "nearest_labels_for_search_only": "L-066: getdbconnection | L-082: openconnection | L-053: ensure created/deleted | L-065: with connecttion managed by ef | L-064: usage without openconnection | L-104: get/set connectionstring | L-035: haspendingmodelchanges | L-112: setdbconnection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-092",
@@ -1624,13 +1612,13 @@
       "width": "1011",
       "height": "356",
       "nearest_labels_for_search_only": "L-065: with connecttion managed by ef | L-064: usage without openconnection | L-066: getdbconnection | L-082: openconnection | L-053: ensure created/deleted | L-035: haspendingmodelchanges | L-104: get/set connectionstring | L-113: can control whether context owns the disposal of the",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-093",
@@ -1641,13 +1629,13 @@
       "width": "971",
       "height": "352",
       "nearest_labels_for_search_only": "L-065: with connecttion managed by ef | L-064: usage without openconnection | L-066: getdbconnection | L-082: openconnection | L-053: ensure created/deleted | L-113: can control whether context owns the disposal of the | L-115: connection | L-035: haspendingmodelchanges",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-094",
@@ -1760,13 +1748,13 @@
       "width": "953",
       "height": "303",
       "nearest_labels_for_search_only": "L-065: with connecttion managed by ef | L-064: usage without openconnection | L-082: openconnection | L-066: getdbconnection | L-113: can control whether context owns the disposal of the | L-115: connection | L-104: get/set connectionstring | L-053: ensure created/deleted",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-101",
@@ -1777,13 +1765,13 @@
       "width": "906",
       "height": "391",
       "nearest_labels_for_search_only": "L-082: openconnection | L-066: getdbconnection | L-104: get/set connectionstring | L-065: with connecttion managed by ef | L-053: ensure created/deleted | L-064: usage without openconnection | L-035: haspendingmodelchanges | L-112: setdbconnection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-102",
@@ -1828,13 +1816,13 @@
       "width": "869",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: with connecttion managed by ef | L-064: usage without openconnection | L-082: openconnection | L-066: getdbconnection | L-104: get/set connectionstring | L-113: can control whether context owns the disposal of the | L-115: connection | L-053: ensure created/deleted",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-105",
@@ -1862,13 +1850,13 @@
       "width": "827",
       "height": "369",
       "nearest_labels_for_search_only": "L-065: with connecttion managed by ef | L-064: usage without openconnection | L-113: can control whether context owns the disposal of the | L-115: connection | L-082: openconnection | L-066: getdbconnection | L-104: get/set connectionstring | L-053: ensure created/deleted",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-107",
@@ -1930,13 +1918,13 @@
       "width": "941",
       "height": "302",
       "nearest_labels_for_search_only": "L-082: openconnection | L-104: get/set connectionstring | L-066: getdbconnection | L-112: setdbconnection | L-065: with connecttion managed by ef | L-113: can control whether context owns the disposal of the | L-064: usage without openconnection | L-115: connection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-111",
@@ -1981,13 +1969,13 @@
       "width": "978",
       "height": "304",
       "nearest_labels_for_search_only": "L-065: with connecttion managed by ef | L-064: usage without openconnection | L-113: can control whether context owns the disposal of the | L-115: connection | L-082: openconnection | L-066: getdbconnection | L-104: get/set connectionstring | L-112: setdbconnection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-114",
@@ -1998,13 +1986,13 @@
       "width": "987",
       "height": "235",
       "nearest_labels_for_search_only": "L-065: with connecttion managed by ef | L-064: usage without openconnection | L-082: openconnection | L-113: can control whether context owns the disposal of the | L-115: connection | L-104: get/set connectionstring | L-066: getdbconnection | L-112: setdbconnection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-115",
@@ -2032,13 +2020,13 @@
       "width": "921",
       "height": "384",
       "nearest_labels_for_search_only": "L-082: openconnection | L-104: get/set connectionstring | L-066: getdbconnection | L-112: setdbconnection | L-113: can control whether context owns the disposal of the | L-116: (with dbcontextoptoins and | L-115: connection | L-117: manual creation of context)",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-117",
@@ -2202,13 +2190,13 @@
       "width": "883",
       "height": "350",
       "nearest_labels_for_search_only": "L-104: get/set connectionstring | L-082: openconnection | L-112: setdbconnection | L-116: (with dbcontextoptoins and | L-113: can control whether context owns the disposal of the | L-115: connection | L-117: manual creation of context) | L-066: getdbconnection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-127",
@@ -2440,13 +2428,13 @@
       "width": "932",
       "height": "406",
       "nearest_labels_for_search_only": "L-104: get/set connectionstring | L-112: setdbconnection | L-116: (with dbcontextoptoins and | L-117: manual creation of context) | L-113: can control whether context owns the disposal of the | L-115: connection | L-082: openconnection | L-122: get/set commandtimeout",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-141",
@@ -2508,13 +2496,13 @@
       "width": "983",
       "height": "293",
       "nearest_labels_for_search_only": "L-112: setdbconnection | L-116: (with dbcontextoptoins and | L-117: manual creation of context) | L-104: get/set connectionstring | L-113: can control whether context owns the disposal of the | L-115: connection | L-082: openconnection | L-122: get/set commandtimeout",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-145",
@@ -2576,13 +2564,13 @@
       "width": "967",
       "height": "383",
       "nearest_labels_for_search_only": "L-111: for multiple operations | L-107: why to use one connection | L-112: setdbconnection | L-104: get/set connectionstring | L-116: (with dbcontextoptoins and | L-117: manual creation of context) | L-122: get/set commandtimeout | L-126: can we merge two ef transactions",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-149",
@@ -2627,13 +2615,13 @@
       "width": "347",
       "height": "46",
       "nearest_labels_for_search_only": "L-111: for multiple operations | L-107: why to use one connection | L-126: can we merge two ef transactions | L-112: setdbconnection | L-116: (with dbcontextoptoins and | L-117: manual creation of context) | L-104: get/set connectionstring | L-122: get/set commandtimeout",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-152",
@@ -2644,13 +2632,13 @@
       "width": "969",
       "height": "332",
       "nearest_labels_for_search_only": "L-111: for multiple operations | L-107: why to use one connection | L-112: setdbconnection | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-122: get/set commandtimeout | L-126: can we merge two ef transactions | L-104: get/set connectionstring",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-153",
@@ -2678,13 +2666,13 @@
       "width": "979",
       "height": "349",
       "nearest_labels_for_search_only": "L-115: connection | L-113: can control whether context owns the disposal of the | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-112: setdbconnection | L-122: get/set commandtimeout | L-104: get/set connectionstring | L-127: enlisttransaction/getenlistedtransaction",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-155",
@@ -2695,13 +2683,13 @@
       "width": "944",
       "height": "467",
       "nearest_labels_for_search_only": "L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-112: setdbconnection | L-115: connection | L-113: can control whether context owns the disposal of the | L-122: get/set commandtimeout | L-104: get/set connectionstring | L-127: enlisttransaction/getenlistedtransaction",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-156",
@@ -2729,13 +2717,13 @@
       "width": "913",
       "height": "226",
       "nearest_labels_for_search_only": "L-111: for multiple operations | L-107: why to use one connection | L-112: setdbconnection | L-122: get/set commandtimeout | L-126: can we merge two ef transactions | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-104: get/set connectionstring",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-158",
@@ -2763,13 +2751,13 @@
       "width": "925",
       "height": "182",
       "nearest_labels_for_search_only": "L-111: for multiple operations | L-107: why to use one connection | L-122: get/set commandtimeout | L-126: can we merge two ef transactions | L-112: setdbconnection | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-127: enlisttransaction/getenlistedtransaction",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-160",
@@ -2780,13 +2768,13 @@
       "width": "978",
       "height": "394",
       "nearest_labels_for_search_only": "L-122: get/set commandtimeout | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-112: setdbconnection | L-115: connection | L-113: can control whether context owns the disposal of the | L-127: enlisttransaction/getenlistedtransaction | L-104: get/set connectionstring",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-161",
@@ -2831,13 +2819,13 @@
       "width": "862",
       "height": "482",
       "nearest_labels_for_search_only": "L-122: get/set commandtimeout | L-127: enlisttransaction/getenlistedtransaction | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-115: connection | L-112: setdbconnection | L-113: can control whether context owns the disposal of the | L-132: isrelational/issqlserver/issqlite",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-164",
@@ -2933,13 +2921,13 @@
       "width": "972",
       "height": "153",
       "nearest_labels_for_search_only": "L-127: enlisttransaction/getenlistedtransaction | L-122: get/set commandtimeout | L-132: isrelational/issqlserver/issqlite | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-115: connection | L-113: can control whether context owns the disposal of the | L-112: setdbconnection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-170",
@@ -3052,13 +3040,13 @@
       "width": "775",
       "height": "482",
       "nearest_labels_for_search_only": "L-127: enlisttransaction/getenlistedtransaction | L-132: isrelational/issqlserver/issqlite | L-122: get/set commandtimeout | L-133: generatecreatescript | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-115: connection | L-113: can control whether context owns the disposal of the",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-177",
@@ -3086,13 +3074,13 @@
       "width": "947",
       "height": "160",
       "nearest_labels_for_search_only": "L-127: enlisttransaction/getenlistedtransaction | L-132: isrelational/issqlserver/issqlite | L-133: generatecreatescript | L-122: get/set commandtimeout | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-115: connection | L-113: can control whether context owns the disposal of the",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-179",
@@ -3154,13 +3142,13 @@
       "width": "908",
       "height": "482",
       "nearest_labels_for_search_only": "L-133: generatecreatescript | L-132: isrelational/issqlserver/issqlite | L-127: enlisttransaction/getenlistedtransaction | L-122: get/set commandtimeout | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-115: connection | L-113: can control whether context owns the disposal of the",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-183",
@@ -3205,13 +3193,13 @@
       "width": "950",
       "height": "284",
       "nearest_labels_for_search_only": "L-133: generatecreatescript | L-132: isrelational/issqlserver/issqlite | L-127: enlisttransaction/getenlistedtransaction | L-122: get/set commandtimeout | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-115: connection | L-113: can control whether context owns the disposal of the",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-186",
@@ -3222,13 +3210,13 @@
       "width": "966",
       "height": "334",
       "nearest_labels_for_search_only": "L-134: 2 differenct | L-135: contexts getting options | L-136: creating contexts manually | L-131: 2 contexts | L-129: usetransaction | L-130: context + ado.net | L-128: usetransaction | L-137: example",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-187",
@@ -3239,13 +3227,13 @@
       "width": "921",
       "height": "331",
       "nearest_labels_for_search_only": "L-130: context + ado.net | L-128: usetransaction | L-139: di | L-138: context should accept optoins | L-134: 2 differenct | L-135: contexts getting options | L-136: creating contexts manually | L-131: 2 contexts",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-188",
@@ -3256,13 +3244,13 @@
       "width": "1035",
       "height": "388",
       "nearest_labels_for_search_only": "L-134: 2 differenct | L-135: contexts getting options | L-136: creating contexts manually | L-131: 2 contexts | L-129: usetransaction | L-137: example | L-130: context + ado.net | L-128: usetransaction",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-189",
@@ -3273,13 +3261,13 @@
       "width": "937",
       "height": "192",
       "nearest_labels_for_search_only": "L-133: generatecreatescript | L-132: isrelational/issqlserver/issqlite | L-127: enlisttransaction/getenlistedtransaction | L-122: get/set commandtimeout | L-117: manual creation of context) | L-138: context should accept optoins | L-116: (with dbcontextoptoins and | L-115: connection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-190",
@@ -3290,13 +3278,13 @@
       "width": "944",
       "height": "289",
       "nearest_labels_for_search_only": "L-139: di | L-138: context should accept optoins | L-130: context + ado.net | L-134: 2 differenct | L-128: usetransaction | L-135: contexts getting options | L-136: creating contexts manually | L-137: example",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-191",
@@ -3307,13 +3295,13 @@
       "width": "1003",
       "height": "419",
       "nearest_labels_for_search_only": "L-133: generatecreatescript | L-132: isrelational/issqlserver/issqlite | L-127: enlisttransaction/getenlistedtransaction | L-122: get/set commandtimeout | L-138: context should accept optoins | L-117: manual creation of context) | L-116: (with dbcontextoptoins and | L-115: connection",
-      "coverage_status": "candidate-ctxdb06",
+      "coverage_status": "processed-in-ctxdb06-v001",
       "current_region_decision": "CTXDB06",
       "current_subregion_decision": "CTXDB06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "GetDbConnection, OpenConnection, EF-managed connection, Get/SetConnectionString, SetDbConnection, context ownership of connection disposal, command timeout, EnlistTransaction, provider checks, GenerateCreateScript.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB06 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-192",
@@ -3324,13 +3312,13 @@
       "width": "980",
       "height": "468",
       "nearest_labels_for_search_only": "L-137: example | L-136: creating contexts manually | L-135: contexts getting options | L-134: 2 differenct | L-139: di | L-138: context should accept optoins | L-131: 2 contexts | L-129: usetransaction",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-193",
@@ -3341,13 +3329,13 @@
       "width": "935",
       "height": "326",
       "nearest_labels_for_search_only": "L-139: di | L-138: context should accept optoins | L-137: example | L-136: creating contexts manually | L-135: contexts getting options | L-134: 2 differenct | L-130: context + ado.net | L-128: usetransaction",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-194",
@@ -3358,13 +3346,13 @@
       "width": "967",
       "height": "452",
       "nearest_labels_for_search_only": "L-138: context should accept optoins | L-139: di | L-137: example | L-136: creating contexts manually | L-135: contexts getting options | L-134: 2 differenct | L-133: generatecreatescript | L-130: context + ado.net",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-195",
@@ -3375,13 +3363,13 @@
       "width": "898",
       "height": "450",
       "nearest_labels_for_search_only": "L-137: example | L-139: di | L-136: creating contexts manually | L-135: contexts getting options | L-134: 2 differenct | L-138: context should accept optoins | L-131: 2 contexts | L-130: context + ado.net",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-196",
@@ -3392,13 +3380,13 @@
       "width": "914",
       "height": "297",
       "nearest_labels_for_search_only": "L-139: di | L-138: context should accept optoins | L-137: example | L-136: creating contexts manually | L-135: contexts getting options | L-134: 2 differenct | L-130: context + ado.net | L-128: usetransaction",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-197",
@@ -3409,13 +3397,13 @@
       "width": "892",
       "height": "468",
       "nearest_labels_for_search_only": "L-137: example | L-139: di | L-136: creating contexts manually | L-135: contexts getting options | L-134: 2 differenct | L-138: context should accept optoins | L-131: 2 contexts | L-130: context + ado.net",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     },
     {
       "source_id": "S-198",
@@ -3426,13 +3414,13 @@
       "width": "963",
       "height": "393",
       "nearest_labels_for_search_only": "L-139: di | L-138: context should accept optoins | L-137: example | L-136: creating contexts manually | L-135: contexts getting options | L-134: 2 differenct | L-130: context + ado.net | L-128: usetransaction",
-      "coverage_status": "candidate-ctxdb07",
+      "coverage_status": "processed-in-ctxdb07-v001",
       "current_region_decision": "CTXDB07",
       "current_subregion_decision": "CTXDB07B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Creating contexts manually, contexts getting DbContextOptions, two different contexts, DI, context should accept options.",
-      "review_notes": "Stage1 large boundary review only; not processed yet."
+      "decision_is_final": "yes-for-ctxdb07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage5",
+      "decision_basis": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass.",
+      "review_notes": "Included in CTXDB07 v001 after NEXT04 visual/semantic transcript pass."
     }
   ]
 }

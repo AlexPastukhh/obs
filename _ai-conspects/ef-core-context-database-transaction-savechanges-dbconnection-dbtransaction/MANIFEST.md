@@ -1,13 +1,13 @@
-# MANIFEST - Stage4 NEXT03 CTXDB04 + CTXDB05 transcript
+# MANIFEST - Stage5 NEXT04 CTXDB06 + CTXDB07 transcript
 
 Archive type: **verified transcript / large batch**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 11:25:47 UTC
+Generated: 2026-06-02 11:35:23 UTC
 
 ## Done
 
-- NEXT03 transcript created for CTXDB04 + CTXDB05.
-- Processed source count: 52.
+- NEXT04 transcript created for CTXDB06 + CTXDB07.
+- Processed source count: 43.
 
 ## Now
 
@@ -16,25 +16,25 @@ Generated: 2026-06-02 11:25:47 UTC
 
 ## Next
 
-- NEXT04 transcript: `CTXDB06 + CTXDB07` — 43 images.
+- Final closure/audit.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/04-stage4-next03-ctxdb04-ctxdb05-transcript.md
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/05-stage5-next04-ctxdb06-ctxdb07-transcript.md
 _ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/regions/CTXDB04-savechanges-transaction-lifecycle-flush-rollback.md
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/regions/CTXDB05-transaction-object-dbtransaction-usetransaction.md
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/regions/CTXDB06-dbconnection-open-set-timeout-provider-helpers.md
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/regions/CTXDB07-manual-dbcontext-options-di-multiple-contexts.md
 _ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/regions/README.md
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT03-sources-stage4-v001.csv
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT03-sources-stage4-v001.json
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT03-boundary-review-stage4-v001.csv
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT03-boundary-review-stage4-v001.json
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT03-area-understanding-stage4-v001.json
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT04-sources-stage5-v001.csv
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT04-sources-stage5-v001.json
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT04-boundary-review-stage5-v001.csv
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT04-boundary-review-stage5-v001.json
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/NEXT04-area-understanding-stage5-v001.json
 _ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/image-review-ledger-v001.csv
 _ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/data/image-review-ledger-v001.json
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/audit-assets/NEXT03-source-images/*.png
-_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/audit-assets/NEXT03-contact-sheets/*.png
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/audit-assets/NEXT04-source-images/*.png
+_ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/audit-assets/NEXT04-contact-sheets/*.png
 _ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/APPLY_ARCHIVE.md
 _ai-conspects/ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction/MANIFEST.md
 ```
