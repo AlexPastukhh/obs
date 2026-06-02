@@ -1,0 +1,71 @@
+{
+  "generated": "2026-06-02 12:10:41 UTC",
+  "corrections": [
+    {
+      "source_id": "S-288",
+      "from_stage5a": "R09D",
+      "stage5c_decision": "R12",
+      "reason": "useSuspenseQuery / Suspense API card"
+    },
+    {
+      "source_id": "S-295",
+      "from_stage5a": "R09D",
+      "stage5c_decision": "R12",
+      "reason": "useSuspenseQuery limitations / enabled card"
+    },
+    {
+      "source_id": "S-300",
+      "from_stage5a": "R09D",
+      "stage5c_decision": "R12",
+      "reason": "serial Suspense behavior card"
+    },
+    {
+      "source_id": "S-284",
+      "from_stage5a": "R14",
+      "stage5c_decision": "R09D",
+      "reason": "mutation networkMode / paused offline mutations"
+    },
+    {
+      "source_id": "S-290",
+      "from_stage5a": "R14",
+      "stage5c_decision": "R09D",
+      "reason": "networkMode always"
+    },
+    {
+      "source_id": "S-303",
+      "from_stage5a": "R14",
+      "stage5c_decision": "R09D",
+      "reason": "computed async value with networkMode always"
+    },
+    {
+      "source_id": "S-309",
+      "from_stage5a": "R14",
+      "stage5c_decision": "R09D",
+      "reason": "offlineFirst option example"
+    },
+    {
+      "source_id": "S-311",
+      "from_stage5a": "R14",
+      "stage5c_decision": "R09D",
+      "reason": "offlineFirst cache/storage backed cases"
+    },
+    {
+      "source_id": "S-320",
+      "from_stage5a": "R14",
+      "stage5c_decision": "R09D",
+      "reason": "fetch served from cache / offlineFirst"
+    },
+    {
+      "source_id": "S-326",
+      "from_stage5a": "R14",
+      "stage5c_decision": "R09D",
+      "reason": "service worker / HTTP cache offlineFirst reasoning"
+    },
+    {
+      "source_id": "S-374",
+      "from_stage5a": "R09D",
+      "stage5c_decision": "R14",
+      "reason": "query.state.dataUpdatedAt / persistence pruning by age"
+    }
+  ]
+}

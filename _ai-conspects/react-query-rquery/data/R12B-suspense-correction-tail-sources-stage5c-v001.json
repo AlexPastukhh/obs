@@ -1,0 +1,48 @@
+{
+  "generated": "2026-06-02 12:10:41 UTC",
+  "group": "R12B-suspense-correction-tail",
+  "region": "R12",
+  "source_count": 3,
+  "reading_rule": "Every included source has visible text. OCR-timeout/image-missing/empty placeholder sources are not marked processed.",
+  "sources": [
+    {
+      "source_id": "S-288",
+      "image_use_id": "IU-288",
+      "fileId_short": "a08d07bb82",
+      "x": "6953.183",
+      "y": "26152.859",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "image_file": "S-288__a08d07bb82.png",
+      "visible_text": "35.1 useSuspenseQuery\n“ TypeScript O\nimport { useSuspenseQuery } from ‘@tanstack/react-query*\nfunction Repos() {\nconst { data } = useSuspenseQuery({\nqueryKey: ['‘repos'],\nqueryFn: fetchRepos,\n})\nreturn (\n<ul>\n{data.map((repo) => (\n<li key={repo.id}>{repo.name}</1i>\n))}\n</ul>\n)\nt",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "35.1 useSuspenseQuery",
+      "notes": "Visible text present; no OCR timeout/error placeholder is used."
+    },
+    {
+      "source_id": "S-295",
+      "image_use_id": "IU-295",
+      "fileId_short": "4052f751bb",
+      "x": "6934.046",
+      "y": "26682.848",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "image_file": "S-295__4052f751bb.png",
+      "visible_text": "35.2 Important limitations\nuseSuspenseQuery does not support enabled .\nThat means conditional query patterns need different component boundaries or composition.",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "35.2 Important limitations",
+      "notes": "Visible text present; no OCR timeout/error placeholder is used."
+    },
+    {
+      "source_id": "S-300",
+      "image_use_id": "IU-300",
+      "fileId_short": "8f00091879",
+      "x": "6939.046",
+      "y": "26896.182",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "image_file": "S-300__8f00091879.png",
+      "visible_text": "35.3 Serial behavior in one component\n\nIf multiple suspense queries are called in one component, they often run serially because the first unresolved\none suspends before the next hook runs.\n\nTo get better parallelism, split into child components or use different composition patterns.\n\n35.4 Transitions\n\nDuring a transition, React can keep showing previous data instead of falling back immediately.\n\nThis can create smoother Suspense pagination/filtering experiences.",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "35.3 Serial behavior in one component",
+      "notes": "Visible text present; no OCR timeout/error placeholder is used."
+    }
+  ]
+}

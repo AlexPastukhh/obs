@@ -1,0 +1,32 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,visible_text,notes
+S-288,IU-288,a08d07bb82,S-288__a08d07bb82.png,verified-visible-ocr-assisted,35.1 useSuspenseQuery,"35.1 useSuspenseQuery
+“ TypeScript O
+import { useSuspenseQuery } from ‘@tanstack/react-query*
+function Repos() {
+const { data } = useSuspenseQuery({
+queryKey: ['‘repos'],
+queryFn: fetchRepos,
+})
+return (
+<ul>
+{data.map((repo) => (
+<li key={repo.id}>{repo.name}</1i>
+))}
+</ul>
+)
+t",Visible text present; no OCR timeout/error placeholder is used.
+S-295,IU-295,4052f751bb,S-295__4052f751bb.png,verified-visible-ocr-assisted,35.2 Important limitations,"35.2 Important limitations
+useSuspenseQuery does not support enabled .
+That means conditional query patterns need different component boundaries or composition.",Visible text present; no OCR timeout/error placeholder is used.
+S-300,IU-300,8f00091879,S-300__8f00091879.png,verified-visible-ocr-assisted,35.3 Serial behavior in one component,"35.3 Serial behavior in one component
+
+If multiple suspense queries are called in one component, they often run serially because the first unresolved
+one suspends before the next hook runs.
+
+To get better parallelism, split into child components or use different composition patterns.
+
+35.4 Transitions
+
+During a transition, React can keep showing previous data instead of falling back immediately.
+
+This can create smoother Suspense pagination/filtering experiences.",Visible text present; no OCR timeout/error placeholder is used.

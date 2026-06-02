@@ -1,0 +1,226 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,visible_text,notes
+S-275,IU-275,5e844a74b1,S-275__5e844a74b1.png,verified-visible-ocr-assisted,32. Offline mutations,"32. Offline mutations
+networkMode also matters for mutations.
+Offline mutations can be queued and resumed later.
+That means several queued writes may replay on reconnect, so plan invalidation and side effects carefully.",Visible text present; no OCR timeout/error placeholder is used.
+S-280,IU-280,c078f2032f,S-280__c078f2032f.png,verified-visible-ocr-assisted,1) Default: networkMode: ‘online’,"1) Default: networkMode: ‘online’
+
+This is the default mode. It assumes your query normally depends on network access. The docs say it pauses
+network-dependent queries when offline, and if a query was already running when you go offline, the retry
+mechanism is paused and continues when connection returns. — tanstack +1",Visible text present; no OCR timeout/error placeholder is used.
+S-281,IU-281,17f9a3bf92,S-281__17f9a3bf92.png,verified-visible-ocr-assisted,DOES ONLINE OPTION PAUSES QUERY WHEN IT HAS DATA IN REQCTQ,"DOES ONLINE OPTION PAUSES QUERY WHEN IT HAS DATA IN REQCTQ
+CACHE?
+Zlyman Ha npotsxKeHun 11s >
+Not automatically.
+With default networkMode: ‘online’ , a query is paused only when it wants to fetch but cannot because
+there is no network connection. TanStack defines fetchStatus: ‘paused’ as “the query wanted to fetch, but
+has been paused.”  tanstackcom = 1
+So if the query already has cached data:
+¢ it can still show that cached data
+¢ and it is only paused if a fetch/refetch should happen at that moment and offline prevents it.
+tanstack.com +1",Visible text present; no OCR timeout/error placeholder is used.
+S-282,IU-282,c6a05bb126,S-282__c6a05bb126.png,verified-visible-ocr-assisted,31. Offline behavior and networkMode,"31. Offline behavior and networkMode
+31.1 Paused queries
+When offline, queries may become paused instead of fetching.
+Possible state:
+
+“) TypeScript
+
+status: ‘pending’
+
+fetchStatus: ""paused""
+
+data: undefined
+This is why isLoading is not the same as status === ‘pending’ .
+A paused query is not actively loading.",Visible text present; no OCR timeout/error placeholder is used.
+S-286,IU-286,635b0dd4d8,S-286__635b0dd4d8.png,verified-visible-ocr-assisted,Example: network-dependent,"Example: network-dependent
+“) TypeScript a.)
+useQuery({
+queryKey: ['‘todos'],
+queryFn: async () => {
+const res = await fetch('/api/todos')
+return res.json()
+}
+))
+This query is network-dependent because:
+¢ it calls a remote API
+* no internet usually means no successful fetch
+How it works in online mode:
+¢ online — it fetches normally
+¢ offline before it starts > it can be paused instead of actively fetching
+¢ offline during retries — retries pause and continue later when back online. —tanstack +:",Visible text present; no OCR timeout/error placeholder is used.
+S-291,IU-291,d894c9608c,S-291__d894c9608c.png,verified-visible-ocr-assisted,31.2 Offline-aware UI,"31.2 Offline-aware UI
+«> TypeScript 6
+function Repos() {
+const { data, status, fetchStatus } = useQuery({
+querykey: [‘repos'],
+queryFn: fetchRepos,
+»
+if (status === 'pending' && fetchStatus === 'paused') {
+return <div>Offline</div>
+3
+if (status === 'pending' && fetchStatus === 'fetching') {
+return <div>Loading. ..</div>
+3
+return (
+<div>
+{fetchStatus === ‘paused’ && <div>Offline</div>}
+<ul>
+{data?.map((repo) => (
+<li key={repo.id}>{repo.name}</1i>
+))}
+</ul>
+</div>
+) v
++",Visible text present; no OCR timeout/error placeholder is used.
+S-294,IU-294,73d84c25d2,S-294__73d84c25d2.png,verified-visible-ocr-assisted,2) networkMode: ‘always*,"2) networkMode: ‘always*
+This mode tells TanStack Query to ignore online/offline state and always run the query. The docs say queries
+are never paused because of connectivity in this mode, and retries also do not pause. test
+Use this when the query function does not really need a network.
+Example: local storage / IndexedDB / AsyncStorage
+«> TypeScript oO
+useQuery({
+querykey: ['draftSettings'],
+queryFn: async () => {
+const raw = localStorage.getItem('draftSettings')
+return raw ? JSON.parse(raw) : { theme: ‘dark’ }
+Lb
+networkMode: 'always"",
+3)
+Why this is not network-dependent:
+* it reads from browser storage
+* internet connection is irrelevant Vv",Visible text present; no OCR timeout/error placeholder is used.
+S-296,IU-296,810e074c35,S-296__810e074c35.png,verified-visible-ocr-assisted,networkMode: ‘offlineFirst’,"networkMode: ‘offlineFirst’
+This is the middle ground. TanStack says it will run once, but then pause retries if needed. That mode is
+mainly useful when some cache/storage layer might satisfy the request first. tanstackcom +1",Visible text present; no OCR timeout/error placeholder is used.
+S-301,IU-301,805253d94b,S-301__805253d94b.png,verified-visible-ocr-assisted,31.3 networkMode,"31.3 networkMode
+
+Default: ‘online’
+
+Pauses network-dependent queries when offline.
+
+*always*
+Use when the query does not actually need network.
+«> TypeScript oO
+useQuery({
+queryKey: ['localValue'],
+queryfn: () => Promise.resolve(7),
+networkMode: 'always"",
+
+»",Visible text present; no OCR timeout/error placeholder is used.
+S-302,IU-302,819762c974,S-302__819762c974.png,verified-visible-ocr-assisted,So when does resumePausedMutations() matter?,"So when does resumePausedMutations() matter?
+It matters when you actually have paused mutations — typically with offline behavior under the default
+online mode, especially if you persist them across app reloads. The docs show calling
+queryClient.resumePausedMutations() after hydration/restore for that case.  tanstaccom -
+Best mental model:
+
+* online — offline can pause/queue mutations; resumePausedMutations() is relevant. tanstacccom ~
+
+* (always — don’t pause because of offline; usually nothing to “resume.” tansackcom
+
+© offlineFirst — try once, then pause retries if network is needed. tanstckcom +",Visible text present; no OCR timeout/error placeholder is used.
+S-312,IU-312,79a4777b2f,S-312__79a4777b2f.png,verified-visible-ocr-assisted,"Usually no, not in the normal “same app session reconnects” case.","Usually no, not in the normal “same app session reconnects” case.
+With networkMode: ‘offlineFirst’ , TanStack Query will run the mutation once, and if retries are needed it
+can pause those retries when there is no network. For paused work, TanStack Query’s network mode
+behavior is that it can continue once connectivity returns; that “continue when back online” behavior is built
+into the paused/retry mechanism.  tansactcom -
+
+resumePausedMutations() is mainly needed when you have paused mutations that were persisted and then
+restored, such as after a page reload or app restart. The mutations guide shows the pattern: dehydrate state,
+hydrate it later, then call queryClient .resumePausedMutations() . It also notes that if you persist offline
+mutations, they cannot be resumed after reload unless you provide a default mutation function. tantactcom",Visible text present; no OCR timeout/error placeholder is used.
+S-314,IU-314,ad15f92387,S-314__ad15f92387.png,verified-visible-ocr-assisted,Mixed / cache-backed fetches,"Mixed / cache-backed fetches
+Use offlineFirst when:
+* query may still succeed due to cache
+* but real retries should wait for connectivity
+Example:
+> TypeScript
+useQuery({
+querykey: ['catalog'],
+queryFn: () => fetch('/api/catalog').then(r => r.json()),
+networkMode: 'offlineFirst',
+3)",Visible text present; no OCR timeout/error placeholder is used.
+S-327,IU-327,40b7d5950d,S-327__40b7d5950d.png,verified-visible-ocr-assisted,The key point is that offlineFirst is about whether the query is allowed to try running wh,"The key point is that offlineFirst is about whether the query is allowed to try running while offline, not
+a guarantee that the data is up to date. TanStack describes offlineFirst as useful when “cached data or
+data storage mechanisms” can make the request succeed, while retries wait for connectivity.
+
+So there are two different freshness layers here:
+
+1. Browser / service worker / HTTP cache freshness
+
+If your fetch() is satisfied from some cache while offline, that cached response may be old. offlineFirst
+does not make it fresh. It just allows the request attempt to happen even when offline, which is useful if
+some cache layer can answer it.",Visible text present; no OCR timeout/error placeholder is used.
+S-334,IU-334,8fdcc18b67,S-334__8fdcc18b67.png,verified-visible-ocr-assisted,Best mental model,"Best mental model
+
+offlineFirst means:
+
+“Try now, even offline, because some local/network cache might satisfy the request.”
+It does not mean:
+
+“The data is guaranteed current”",Visible text present; no OCR timeout/error placeholder is used.
+S-284,IU-284,bf62b2d61c,S-284__bf62b2d61c.png,verified-visible-ocr-assisted,"Yes — mutations do have a networkMode option. On useMutation, itcan be ‘online’ | ‘always'","Yes — mutations do have a networkMode option. On useMutation, itcan be ‘online’ | ‘always' |
+*offlineFirst’ , and it defaults to ‘online’ . tontacecom
+The important part:
+
+networkMode: ‘online’ for mutations
+This is the default. In this mode, queries and mutations will not fire unless there is network connection.
+When offline, they can be paused instead, nstckcom
+
+So this is the mode where offline mutations can end up paused/queued and later resumed. The mutations
+guide shows exactly that flow: a mutation can be paused while offline, dehydrated/hydrated, and then
+continued with queryClient.resumePausedMutations() . tanstackcom +",Visible text present; no OCR timeout/error placeholder is used.
+S-290,IU-290,dfc5091fca,S-290__dfc5091fca.png,verified-visible-ocr-assisted,networkmode: ‘always*,"networkmode: ‘always*
+This means “ignore online/offline state.” TanStack says in always mode, queries and mutations always run
+and are not paused because of missing network. Retries also do not pause. ackcom
+So for your question:
+when they are being queued while offline, always, we just choose to run resumePausedMutations) or not?
+No.
+With always , they generally are not paused/queued because of offline state in the first place. They try to
+run immediately; if they truly need network, they can just fail rather than sit paused waiting for resume.
+==",Visible text present; no OCR timeout/error placeholder is used.
+S-303,IU-303,af413353f2,S-303__af413353f2.png,verified-visible-ocr-assisted,Example: computed async value,"Example: computed async value
+«> TypeScript oO
+useQuery({
+querykey: ['localValue'],
+queryFn: () => Promise.resolve(7),
+networkMode: always"",
+3)
+Again, no network is needed. TanStack’s docs use this kind of example directly. trstct
+What would be weird here?
+If you left this as default ‘online , then going offline could pause something that actually could have run just
+fine without internet. That is why always exists. This is an inference from the documented behavior of the
+modes. _ tanstack Vv",Visible text present; no OCR timeout/error placeholder is used.
+S-309,IU-309,33ec33e3f6,S-309__33ec33e3f6.png,verified-visible-ocr-assisted,"“‘offlineFirst""","“‘offlineFirst""
+Useful when cached/storage-backed work should continue gracefully and retries should wait for
+connectivity.
+” TypeScript
+useQuery({
+queryKey: [‘data'],
+queryFn: fetchData,
+networkMode: 'offlineFirst',
+»",Visible text present; no OCR timeout/error placeholder is used.
+S-311,IU-311,80e917c63d,S-311__80e917c63d.png,verified-visible-ocr-assisted,3) networkMode: ‘offlineFirst',"3) networkMode: ‘offlineFirst'
+This is for cases where work may still succeed offline-ish because of a cache/storage layer, like:
+* service worker cache
+* HTTP cache
+* persistent local cache backing some fetch path
+The docs describe it as useful when cached/storage-backed work should continue gracefully and retries
+should wait for connectivity. tense",Visible text present; no OCR timeout/error placeholder is used.
+S-320,IU-320,921a92e2c6,S-320__921a92e2c6.png,verified-visible-ocr-assisted,Example: fetch that may be served from cache,"Example: fetch that may be served from cache
+> TypeScript
+useQuery({
+queryKey: ['article', id],
+queryFn: async () => {
+const res = await fetch(~ /api/articles/${id} )
+return res.json()
+Lb
+networkMode: 'offlineFirst',
+3)",Visible text present; no OCR timeout/error placeholder is used.
+S-326,IU-326,8fb60bf0f8,S-326__8fb60bf0f8.png,verified-visible-ocr-assisted,Why this can make sense:,"Why this can make sense:
+* maybe a service worker or HTTP cache serves the request even while offline
+«if the fetch fails and retries are needed, TanStack can wait for connectivity instead of behaving like pure
+always mode
+So offlineFirst is like:
+© “go ahead and try”
+* “but if retries are needed, connectivity matters” tarsi -",Visible text present; no OCR timeout/error placeholder is used.

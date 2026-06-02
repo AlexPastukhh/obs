@@ -1,0 +1,139 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,visible_text,notes
+S-261,IU-261,35935e7b35,S-261__35935e7b35.png,verified-visible-ocr-assisted,Returning the Promise,"Returning the Promise
+“) TypeScript (
+onSettled: () = {
+return queryClient.invalidateQueries({ queryKey: [‘todos'] })
+t
+|.",Visible text present; no OCR timeout/error placeholder is used.
+S-262,IU-262,c8aefd2cea,S-262__c8aefd2cea.png,verified-visible-ocr-assisted,or shorter:,"or shorter:
+“) TypeScript O
+onSettled: () => queryClient.invalidateQueries({ queryKey: [‘todos'] })
+Now what happens:
+1. mutation request finishes
+2. onSettled runs
+3. invalidateQueries starts the refetch and returns a Promise
+4. React Query waits for that Promise
+5. mutation stays pending until that Promise resolves, meaning until the refetch work is done. — tanstack -:",Visible text present; no OCR timeout/error placeholder is used.
+S-263,IU-263,5f990bee01,S-263__5f990bee01.png,verified-visible-ocr-assisted,mutationFn,"mutationFn
+This is the actual async function that performs the server write.
+Example:
+“) TypeScript O
+mutationFn: (newlodo) => api.updateTodo(newTodo)
+It receives the same variables you passed to mutate . Mutations are used to create/update/delete data or
+cause side-effects. tanstac ~1",Visible text present; no OCR timeout/error placeholder is used.
+S-264,IU-264,ed4ef609cc,S-264__ed4ef609cc.png,verified-visible-ocr-assisted,onSuccess,"onSuccess
+
+Signature in v5:
+“) TypeScript O
+onSuccess: (data, variables, onMutateResult, context) => Promise<unknown> | unknown
+
+It runs when the mutation succeeds. _ tanstack
+
+Arguments
+
+data
+
+The resolved result of mutationFn .",Visible text present; no OCR timeout/error placeholder is used.
+S-265,IU-265,9d4d2d9cfa,S-265__9d4d2d9cfa.png,verified-visible-ocr-assisted,Why this matters,"Why this matters
+
+Suppose you are showing an optimistic todo row while:
+“) TypeScript O
+mutation. isPending
+
+te train",Visible text present; no OCR timeout/error placeholder is used.
+S-266,IU-266,57a7aa95ed,S-266__57a7aa95ed.png,verified-visible-ocr-assisted,Example:,"Example:
+«> TypeScript oO
+mutationFn: (todo) => api.updateTodo(todo)
+
+If server returns:
+“) TypeScript O
+{ id: 5, title: ‘Saved', updatedAt: *..."" }
+
+then data is that returned payload.",Visible text present; no OCR timeout/error placeholder is used.
+S-267,IU-267,27b93b199a,S-267__27b93b199a.png,verified-visible-ocr-assisted,variables,"variables
+The original variables passed to mutate(...) .
+onMutateResult
+Whatever onMutate returned.
+Example:
+«> TypeScript oO
+return { previousTodos }
+then in onSuccess :
+«> TypeScript 0
+onSuccess: (data, variables, onMutateResult, context) => {
+// onMutateResult.previousTodos is available
+3",Visible text present; no OCR timeout/error placeholder is used.
+S-268,IU-268,c35292d43d,S-268__c35292d43d.png,verified-visible-ocr-assisted,context,"context
+Again, mutation function context, including client . tnstac
+Typical onSuccess usage:
+
+¢ replace optimistic item with server-confirmed item
+
+¢ invalidate related queries
+
+¢ do success side effects",Visible text present; no OCR timeout/error placeholder is used.
+S-269,IU-269,56c5c8888e,S-269__56c5c8888e.png,verified-visible-ocr-assisted,onError,"onError
+Signature in v5:
+«> TypeScript 0
+onError: (err, variables, onMutateResult, context) => Promise<unknown> | unknown
+It runs if the mutation errors. —tanstace
+Arguments
+err
+The mutation error thrown/rejected by mutationFn .
+variables
+The original mutation variables.
+onMutateResult
+The value returned from onMutate .
+This is why rollback data is returned from onMutate .
+1",Visible text present; no OCR timeout/error placeholder is used.
+S-270,IU-270,82af270795,S-270__82af270795.png,verified-visible-ocr-assisted,context,"context
+Mutation context, including client. tnstac
+Typical onError usage:
+e rollback optimistic cache
+e show error toast
+¢ log failure
+Example:
+“) TypeScript a)
+onError: (err, newlodo, onMutateResult, context) => {
+context .client.setQueryData([‘todos'], onMutateResult.previousTodos)
+t
+That is the classic rollback path. — tanstack ~:",Visible text present; no OCR timeout/error placeholder is used.
+S-271,IU-271,c7dccde3bc,S-271__c7dccde3bc.png,verified-visible-ocr-assisted,onSettled,"onSettled
+Signature in v5:
+«> TypeScript ay)
+onSettled: (data, error, variables, onMutateResult, context) => Promise<unknown> | unknown
+It runs whether the mutation succeeded or failed. _tnsace
+Arguments
+data
+Mutation result if successful, otherwise typically undefined.
+error
+Mutation error if failed, otherwise typically null/undefined depending on typing/runtime shape.
+variables
+Original mutation variables. Vv",Visible text present; no OCR timeout/error placeholder is used.
+S-272,IU-272,1cb0706b7f,S-272__1cb0706b7f.png,verified-visible-ocr-assisted,onMutateResult,"onMutateResult
+The value returned from onMutate .
+context
+Mutation context, including client. tnstc
+Typical onSettled usage:
+* invalidate related queries
+do “always cleanup” logic
+© resync with server after optimistic update
+Example:
+«> TypeScript oO
+onSettled: (_data, _error, _vars, _onMutateResult, context) => {
+return context.client.invalidateQueries({ queryKey: [""todos'] })
+3
+The optimistic updates guide uses [onSettled for inv {tation so the cache is synchronized with the true
+server state after the mutation is done. tenstax -",Visible text present; no OCR timeout/error placeholder is used.
+S-273,IU-273,af1044b3cf,S-273__af1044b3cf.png,verified-visible-ocr-assisted,8. One subtle detail: async callbacks are awaited,"8. One subtle detail: async callbacks are awaited
+The docs say if onMutate , onSuccess, onError , Of onSettled return a promise, it is awaited before
+proceeding. tsace
+That means:
+«> TypeScript ia)
+onMutate: async (...) => {
+await context .client.cancelQueries(...)
+3
+is not just stylistic. TanStack Query will wait for it.
+That is useful because in optimistic updates you usually want:
+* cancel old refetches first
+«then write optimistic cache
+in that exact order. tnsact -",Visible text present; no OCR timeout/error placeholder is used.
