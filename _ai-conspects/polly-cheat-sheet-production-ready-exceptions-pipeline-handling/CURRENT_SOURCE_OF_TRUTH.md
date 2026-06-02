@@ -1,6 +1,6 @@
 # Current Source of Truth - polly-cheat-sheet-production-ready-exceptions-pipeline-handling
 
-Generated: 2026-06-02 08:43:38 UTC
+Generated: 2026-06-02 09:26:01 UTC
 
 ## Policy
 
@@ -11,7 +11,11 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R03 Pipeline.Execute / provider / RateLimiter / partitions: transcript v001 done
+R01/R02 option mechanics / standard-custom / hedging: pending
+R04/R05/R06 manual execution / classic extensions / exception bubbling: next candidate
+R07 production-ready cheat sheet / exception mapping: pending
+Final coverage audit: pending
 ```
 
 ## Counts
@@ -19,13 +23,11 @@ Normal transcript regions: not started
 ```text
 unique embedded images: 176
 image uses on canvas: 186
-text labels parsed: 183
+R03 processed image uses: 62
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after boundary review.
-Target size: 60-100 images, or larger if coherent.
-Suggested first candidate: R03 pipeline/rate-limiter road (62 images), or R01+R02 if you want a smaller warm-up pass.
+R04+R05+R06 combined boundary review, target 60-100 images if coherent.
 ```

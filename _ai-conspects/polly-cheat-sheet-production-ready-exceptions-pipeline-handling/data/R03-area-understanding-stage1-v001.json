@@ -1,0 +1,33 @@
+{
+  "generated": "2026-06-02 09:26:01 UTC",
+  "region_id": "R03",
+  "area_title": "Pipeline.Execute / provider / RateLimiter / partitions road",
+  "what_area_is_about": [
+    "manual execution of Polly v8 ResiliencePipeline instead of relying on HttpMessageHandler",
+    "creating a fresh request/content stream per retry attempt",
+    "ResilienceContext and context properties for per-request metadata",
+    "RateLimiterStrategy options and Acquire/WaitAsync semantics",
+    "System.Threading.RateLimiting limiter types and how Polly can wrap them",
+    "RateLimitPartition / partitioned limiter scenarios and chained/conditional limiting",
+    "testing/extension-style examples around conditional rate limiting"
+  ],
+  "key_ideas": [
+    "A pipeline is not an HTTP handler; ExecuteAsync runs a delegate through configured resilience strategies.",
+    "For retrying upload/request bodies, a new stream and a new HttpRequestMessage per attempt is the safer pattern.",
+    "Polly v8 ResilienceContext can carry per-execution properties, but context must be returned to the pool.",
+    "Rate limiter strategies need a limiter acquisition model; strategy callbacks return limiter/lease semantics from System.Threading.RateLimiting.",
+    "RateLimitPartition is useful when key-based or request-dependent limiter selection is needed.",
+    "Conditional rate limiting can select limiter/no-limiter behavior based on request metadata or context."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: contact sheet is large but coherent; code screenshots are readable enough for concepts, exact punctuation should be checked in preserved PNGs",
+    "transcript_method": "visual/contact-sheet review plus OCR-assisted excerpts from extracted source images",
+    "limitations": [
+      "Some code punctuation and generic angle brackets may be OCR-noisy.",
+      "This pass preserves source images and records OCR-assisted text so future correction can target exact screenshots.",
+      "Stage0 split remains checklist only; R04/R05/R06/R07 still need own boundary review."
+    ],
+    "confidence_summary": "High for region ownership and conceptual notes; medium-high for exact code line transcription."
+  }
+}

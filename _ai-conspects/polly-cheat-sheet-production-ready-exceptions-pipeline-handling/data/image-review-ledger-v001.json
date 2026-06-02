@@ -1,6 +1,74 @@
 {
-  "generated": "2026-06-02 08:43:38 UTC",
-  "critical_rule": "Ledger is a checklist/decision log, not source of truth. Boundary review must be done before transcript.",
+  "generated": "2026-06-02 09:26:01 UTC",
+  "ledger_version": "v001-updated-by-r03-v001",
+  "critical_rule": "Ledger is checklist/decision log only, not source of truth. R03 decisions made after boundary review.",
+  "r03_delta": {
+    "processed_sources": [
+      "S-013",
+      "S-023",
+      "S-026",
+      "S-032",
+      "S-033",
+      "S-035",
+      "S-040",
+      "S-042",
+      "S-048",
+      "S-051",
+      "S-055",
+      "S-057",
+      "S-060",
+      "S-065",
+      "S-067",
+      "S-070",
+      "S-076",
+      "S-080",
+      "S-084",
+      "S-089",
+      "S-093",
+      "S-095",
+      "S-102",
+      "S-103",
+      "S-105",
+      "S-109",
+      "S-112",
+      "S-113",
+      "S-121",
+      "S-122",
+      "S-124",
+      "S-128",
+      "S-131",
+      "S-133",
+      "S-135",
+      "S-137",
+      "S-140",
+      "S-143",
+      "S-145",
+      "S-146",
+      "S-148",
+      "S-149",
+      "S-152",
+      "S-153",
+      "S-154",
+      "S-158",
+      "S-159",
+      "S-162",
+      "S-164",
+      "S-166",
+      "S-168",
+      "S-169",
+      "S-171",
+      "S-173",
+      "S-176",
+      "S-179",
+      "S-181",
+      "S-182",
+      "S-183",
+      "S-184",
+      "S-185",
+      "S-186"
+    ],
+    "processed_count": 62
+  },
   "rows": [
     {
       "source_id": "S-001",
@@ -19,7 +87,7 @@
       "nearest_labels": "manual executiong | custom pipeline | + | provider | passing context to | classic polly",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-001,S-033",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-002",
@@ -37,8 +105,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "passing context to | classic polly | + | getting pipeline from registry | classic | manual executiong",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-003",
@@ -56,8 +124,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "classic | passing context to | classic polly | + | getting pipeline from registry | manual executiong",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-004",
@@ -75,14 +143,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "setting properties | args args in shouldhandle | why do we need to attach request to context | new standart vs custom | SETTING TRUE/FALSE | BASED ON REQUEST METHOD",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-005",
       "image_use_id": "IU-005",
       "fileId_short": "267483ed5e",
-      "x": 1346.5792829432103,
+      "x": 1346.5792829432105,
       "y": 1004.4612065164029,
       "width": 873.0,
       "height": 559.0,
@@ -94,8 +162,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "args args in shouldhandle | why do we need to attach request to context | delay generator, way to fallback to defaults | setting properties | nesting | new standart vs custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-006",
@@ -113,8 +181,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "new standart vs custom | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | custom | need to use pipeline excplicitly with pipeline provider | setting properties",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-007",
@@ -132,15 +200,15 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "delay generator, way to fallback to defaults | args args in shouldhandle | why do we need to attach request to context | setting properties | nesting | new standart vs custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-008",
       "image_use_id": "IU-008",
       "fileId_short": "b018717e5c",
       "x": 5394.398639227085,
-      "y": 1214.3212720730025,
+      "y": 1214.3212720730023,
       "width": 823.0,
       "height": 482.0,
       "initial_candidate_region": "R01",
@@ -152,7 +220,7 @@
       "nearest_labels": "setting properties | new standart vs custom | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | need to use pipeline excplicitly with pipeline provider | args args in shouldhandle",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-008,S-068",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-009",
@@ -170,14 +238,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "classic | passing context to | classic polly | + | getting pipeline from registry | cheat sheet",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-010",
       "image_use_id": "IU-010",
       "fileId_short": "a9fb8b8fe5",
-      "x": 19713.024856674634,
+      "x": 19713.024856674638,
       "y": 1282.0512807669274,
       "width": 936.0,
       "height": 285.0,
@@ -189,8 +257,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "classic | cheat sheet | passing context to | classic polly | + | getting pipeline from registry",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-011",
@@ -209,7 +277,7 @@
       "nearest_labels": "so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or | creating a wrapper that runs pipeline.execute and passes context | look like the cleanest options | for simple scenarios its better to create wrapper with manual pipeline",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-011,S-155",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-012",
@@ -227,8 +295,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "examples | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling) | 3 attach around httpclient with confiigured trans errors handling",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-013",
@@ -239,15 +307,15 @@
       "width": 858.0,
       "height": 464.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "the pipeline, not handler, you cant use handler for manual execution | making request with pipeline.execute | ratelimiterstrategy args | so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-014",
@@ -265,14 +333,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry; | using Polly.Wrap;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-015",
       "image_use_id": "IU-015",
       "fileId_short": "764dcc83ea",
-      "x": 22913.779021184237,
+      "x": 22913.77902118424,
       "y": 1401.5346805602803,
       "width": 1020.0,
       "height": 479.0,
@@ -284,14 +352,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling) | 3 attach around httpclient with confiigured trans errors handling | 4 registry | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-016",
       "image_use_id": "IU-016",
       "fileId_short": "812d9d362b",
-      "x": 4042.2104192668794,
+      "x": 4042.21041926688,
       "y": 1413.4315090610617,
       "width": 921.0,
       "height": 452.0,
@@ -303,8 +371,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "setting properties | args args in shouldhandle | why do we need to attach request to context | new standart vs custom | SETTING TRUE/FALSE | BASED ON REQUEST METHOD",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-017",
@@ -322,8 +390,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "shared impl | using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-018",
@@ -341,8 +409,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "cheat sheet | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling) | 3 attach around httpclient with confiigured trans errors handling | 4 registry",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-019",
@@ -360,14 +428,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "SETTING TRUE/FALSE | BASED ON REQUEST METHOD | new standart vs custom | need to use pipeline excplicitly with pipeline provider | hedging priciple of work | custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-020",
       "image_use_id": "IU-020",
       "fileId_short": "00817539fe",
-      "x": 18682.662928847778,
+      "x": 18682.662928847774,
       "y": 1537.7824884188549,
       "width": 833.0,
       "height": 368.0,
@@ -379,8 +447,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "classic | passing context to | classic polly | + | getting pipeline from registry | cheat sheet",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-021",
@@ -399,7 +467,7 @@
       "nearest_labels": "setting properties | new standart vs custom | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | need to use pipeline excplicitly with pipeline provider | args args in shouldhandle",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-021,S-079",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-022",
@@ -418,26 +486,26 @@
       "nearest_labels": "delay generator, way to fallback to defaults | args args in shouldhandle | why do we need to attach request to context | setting properties | nesting | need to think about nesting in polly like that",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-022,S-092",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-023",
       "image_use_id": "IU-023",
       "fileId_short": "4d72e66e10",
       "x": 15279.528147004134,
-      "y": 1571.9455832815443,
+      "y": 1571.9455832815445,
       "width": 944.0,
       "height": 284.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or | creating a wrapper that runs pipeline.execute and passes context | look like the cleanest options | for simple scenarios its better to create wrapper with manual pipeline",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-024",
@@ -455,8 +523,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "classic | cheat sheet | !!! | passing context to | classic polly | +",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-025",
@@ -474,8 +542,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "args args in shouldhandle | why do we need to attach request to context | delay generator, way to fallback to defaults | setting properties | nesting | new standart vs custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-026",
@@ -486,15 +554,15 @@
       "width": 777.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "the pipeline, not handler, you cant use handler for manual execution | making request with pipeline.execute | ratelimiterstrategy args | custom | hedging priciple of work | so to have delegating handler that gets pipeline with pipelineprovider",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-027",
@@ -513,14 +581,14 @@
       "nearest_labels": "using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry; | using Polly.Wrap;",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-027,S-100",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-028",
       "image_use_id": "IU-028",
       "fileId_short": "3bd3aa517f",
-      "x": 28766.914303267953,
-      "y": 1746.0516902277723,
+      "x": 28766.914303267957,
+      "y": 1746.0516902277725,
       "width": 924.0,
       "height": 469.0,
       "initial_candidate_region": "R06",
@@ -531,15 +599,15 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "shared impl | using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-029",
       "image_use_id": "IU-029",
       "fileId_short": "346be9b86f",
       "x": 24322.54174886805,
-      "y": 1754.3142372259517,
+      "y": 1754.3142372259515,
       "width": 849.0,
       "height": 482.0,
       "initial_candidate_region": "R05",
@@ -550,15 +618,15 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | examples | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-030",
       "image_use_id": "IU-030",
       "fileId_short": "4b4ce425a3",
-      "x": 30394.454282748517,
-      "y": 1807.6840263144531,
+      "x": 30394.45428274852,
+      "y": 1807.6840263144527,
       "width": 928.0,
       "height": 398.0,
       "initial_candidate_region": "R07",
@@ -569,8 +637,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry; | using Polly.Wrap;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-031",
@@ -589,52 +657,52 @@
       "nearest_labels": "setting properties | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | new standart vs custom | need to use pipeline excplicitly with pipeline provider | args args in shouldhandle",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-031,S-083",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-032",
       "image_use_id": "IU-032",
       "fileId_short": "5bd0dfe740",
       "x": 13302.620719475057,
-      "y": 1820.6125096624946,
+      "y": 1820.6125096624944,
       "width": 961.0,
       "height": 370.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | the pipeline, not handler, you cant use handler for manual execution | making request with pipeline.execute | so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-033",
       "image_use_id": "IU-033",
       "fileId_short": "4aec986325",
-      "x": 15263.883572463143,
+      "x": 15263.883572463144,
       "y": 1857.7894095754896,
       "width": 770.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or | creating a wrapper that runs pipeline.execute and passes context | look like the cleanest options | for simple scenarios its better to create wrapper with manual pipeline",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-001,S-033",
-      "review_notes": ""
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-034",
       "image_use_id": "IU-034",
       "fileId_short": "cf4aba673c",
       "x": 4106.771443480191,
-      "y": 1883.8733289114753,
+      "y": 1883.8733289114757,
       "width": 604.0,
       "height": 349.0,
       "initial_candidate_region": "R01",
@@ -645,27 +713,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "setting properties | args args in shouldhandle | why do we need to attach request to context | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | new standart vs custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-035",
       "image_use_id": "IU-035",
       "fileId_short": "af54ccdfe5",
-      "x": 12284.200614259535,
+      "x": 12284.200614259536,
       "y": 1890.0955645086124,
       "width": 854.0,
       "height": 444.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | the pipeline, not handler, you cant use handler for manual execution | making request with pipeline.execute | custom | so to have delegating handler that gets pipeline with pipelineprovider | based on request properties",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-036",
@@ -683,8 +751,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling) | 3 attach around httpclient with confiigured trans errors handling",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-037",
@@ -702,15 +770,15 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | cheat sheet | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling) | 3 attach around httpclient with confiigured trans errors handling",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-038",
       "image_use_id": "IU-038",
       "fileId_short": "4756a372c9",
-      "x": 19717.949284053895,
-      "y": 1964.2633834834833,
+      "x": 19717.94928405389,
+      "y": 1964.2633834834835,
       "width": 931.0,
       "height": 283.0,
       "initial_candidate_region": "R04",
@@ -721,15 +789,15 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "cheat sheet | classic | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-039",
       "image_use_id": "IU-039",
       "fileId_short": "d623048952",
       "x": 7988.109148279222,
-      "y": 2013.0222092236381,
+      "y": 2013.022209223638,
       "width": 842.0,
       "height": 79.0,
       "initial_candidate_region": "R02",
@@ -740,27 +808,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "SETTING TRUE/FALSE | BASED ON REQUEST METHOD | need to use pipeline excplicitly with pipeline provider | new standart vs custom | hedging priciple of work | custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-040",
       "image_use_id": "IU-040",
       "fileId_short": "82fc2acfb5",
       "x": 11406.125176559482,
-      "y": 2094.5146948668953,
+      "y": 2094.5146948668958,
       "width": 930.0,
       "height": 481.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "the pipeline, not handler, you cant use handler for manual execution | ratelimiterstrategy args | making request with pipeline.execute | custom | hedging priciple of work | rate limiter in polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-041",
@@ -778,8 +846,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "SETTING TRUE/FALSE | BASED ON REQUEST METHOD | need to use pipeline excplicitly with pipeline provider | hedging priciple of work | new standart vs custom | custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-042",
@@ -790,15 +858,15 @@
       "width": 891.0,
       "height": 291.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | the pipeline, not handler, you cant use handler for manual execution | making request with pipeline.execute | so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-043",
@@ -816,14 +884,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry; | using Polly.Wrap;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-044",
       "image_use_id": "IU-044",
       "fileId_short": "fdb5e44e62",
-      "x": 30413.518591870426,
+      "x": 30413.518591870423,
       "y": 2234.8610893027344,
       "width": 741.0,
       "height": 482.0,
@@ -836,7 +904,7 @@
       "nearest_labels": "using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry; | using Polly.Wrap;",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-044,S-178",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-045",
@@ -854,14 +922,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "cheat sheet | classic | !!! | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-046",
       "image_use_id": "IU-046",
       "fileId_short": "5b7c0cfb1e",
-      "x": 24317.010860692797,
+      "x": 24317.0108606928,
       "y": 2270.795604549092,
       "width": 789.0,
       "height": 482.0,
@@ -873,15 +941,15 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | examples | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-047",
       "image_use_id": "IU-047",
       "fileId_short": "377ad8734c",
-      "x": 3993.4760924271814,
-      "y": 2294.5721883562946,
+      "x": 3993.476092427181,
+      "y": 2294.572188356294,
       "width": 950.0,
       "height": 139.0,
       "initial_candidate_region": "R01",
@@ -892,27 +960,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "setting properties | args args in shouldhandle | why do we need to attach request to context | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | nesting",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-048",
       "image_use_id": "IU-048",
       "fileId_short": "892310b650",
-      "x": 15249.909106651177,
+      "x": 15249.909106651176,
       "y": 2356.4455832815443,
       "width": 808.0,
       "height": 425.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or | creating a wrapper that runs pipeline.execute and passes context | look like the cleanest options | for simple scenarios its better to create wrapper with manual pipeline",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-049",
@@ -930,8 +998,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | cheat sheet | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-050",
@@ -949,8 +1017,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-051",
@@ -961,21 +1029,21 @@
       "width": 707.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | the pipeline, not handler, you cant use handler for manual execution | making request with pipeline.execute | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-052",
       "image_use_id": "IU-052",
       "fileId_short": "39f128b4d5",
-      "x": 3999.9335805539286,
+      "x": 3999.933580553929,
       "y": 2479.718000723791,
       "width": 911.0,
       "height": 473.0,
@@ -987,8 +1055,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "setting properties | nesting | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | args args in shouldhandle | why do we need to attach request to context",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-053",
@@ -1006,8 +1074,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "SETTING TRUE/FALSE | BASED ON REQUEST METHOD | need to use pipeline excplicitly with pipeline provider | hedging priciple of work | new standart vs custom | custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-054",
@@ -1026,26 +1094,26 @@
       "nearest_labels": "Exception handling | theory | mapping | using Polly; | using Polly.Timeout; | using Polly.Bulkhead;",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-054,S-177",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-055",
       "image_use_id": "IU-055",
       "fileId_short": "84367ac66e",
-      "x": 11459.809735757843,
+      "x": 11459.809735757844,
       "y": 2581.131172139616,
       "width": 667.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | the pipeline, not handler, you cant use handler for manual execution | hedging priciple of work | making request with pipeline.execute | rate limiter in polly | concur vs addratelimiter",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-056",
@@ -1063,33 +1131,33 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "need to use pipeline excplicitly with pipeline provider | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | hedging priciple of work | new standart vs custom | custom",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-057",
       "image_use_id": "IU-057",
       "fileId_short": "42f54ebe49",
-      "x": 13473.734942844705,
-      "y": 2636.8761513399277,
+      "x": 13473.734942844703,
+      "y": 2636.876151339928,
       "width": 1058.0,
       "height": 375.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | so to have delegating handler that gets pipeline with pipelineprovider | based on request properties",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-058",
       "image_use_id": "IU-058",
       "fileId_short": "63b5a940f4",
-      "x": 19712.267299412557,
+      "x": 19712.26729941256,
       "y": 2733.1876444032805,
       "width": 986.0,
       "height": 270.0,
@@ -1101,8 +1169,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "cheat sheet | !!! | !!! | classic | classic polly httppolicyextensions | 1what counts as  transient http failure",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-059",
@@ -1120,27 +1188,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry; | using Polly.Wrap;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-060",
       "image_use_id": "IU-060",
       "fileId_short": "e23ed23608",
-      "x": 15236.495090378987,
+      "x": 15236.495090378989,
       "y": 2786.1226920461927,
       "width": 785.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | so to have delegating handler that gets pipeline with pipelineprovider | based on request properties | or | creating a wrapper that runs pipeline.execute and passes context | look like the cleanest options",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-061",
@@ -1158,8 +1226,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | !!! | cheat sheet | classic polly httppolicyextensions | 1what counts as  transient http failure",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-062",
@@ -1178,7 +1246,7 @@
       "nearest_labels": "Exception handling | theory | mapping | exception bubbling | using Polly; | using Polly.Timeout;",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-062,S-180",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-063",
@@ -1196,8 +1264,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-064",
@@ -1215,34 +1283,34 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "nesting | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | setting properties | need to use pipeline excplicitly with pipeline provider | need to think about nesting in polly like that",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-065",
       "image_use_id": "IU-065",
       "fileId_short": "c6da91c1d0",
-      "x": 13616.828677383297,
+      "x": 13616.828677383295,
       "y": 3031.7047868157733,
       "width": 745.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | ratelimiterpartition and partitioned rate limiter | 3 scenarios",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-066",
       "image_use_id": "IU-066",
       "fileId_short": "19b9f83a9f",
       "x": 19761.172100105032,
-      "y": 3035.5162798791116,
+      "y": 3035.516279879112,
       "width": 748.0,
       "height": 482.0,
       "initial_candidate_region": "R04",
@@ -1253,8 +1321,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | cheat sheet | classic | classic polly httppolicyextensions | 1what counts as  transient http failure",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-067",
@@ -1265,15 +1333,15 @@
       "width": 770.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterstrategy args | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | hedging priciple of work | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-068",
@@ -1292,7 +1360,7 @@
       "nearest_labels": "need to use pipeline excplicitly with pipeline provider | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | hedging priciple of work | new standart vs custom | custom",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-008,S-068",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-069",
@@ -1310,8 +1378,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "mapping | Exception handling | using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-070",
@@ -1322,15 +1390,15 @@
       "width": 685.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterpartition and partitioned rate limiter | 3 scenarios | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-071",
@@ -1348,15 +1416,15 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "Exception handling | theory | mapping | exception bubbling | try | {",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-072",
       "image_use_id": "IU-072",
       "fileId_short": "ad86b967da",
       "x": 22979.74485031442,
-      "y": 3391.6476722845455,
+      "y": 3391.647672284545,
       "width": 902.0,
       "height": 482.0,
       "initial_candidate_region": "R05",
@@ -1367,8 +1435,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-073",
@@ -1386,8 +1454,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "nesting | need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead | SETTING TRUE/FALSE",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-074",
@@ -1405,8 +1473,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "nesting | need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead | args args in shouldhandle",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-075",
@@ -1424,33 +1492,33 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "Exception handling | theory | mapping | exception bubbling | try | {",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-076",
       "image_use_id": "IU-076",
       "fileId_short": "2f10c18e17",
-      "x": 13593.833489556755,
+      "x": 13593.833489556757,
       "y": 3505.6441067731703,
       "width": 764.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | ratelimiterpartition and partitioned rate limiter | 3 scenarios | ratelimiterstrategy args",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-077",
       "image_use_id": "IU-077",
       "fileId_short": "6342b0e96a",
-      "x": 9745.281560504245,
+      "x": 9745.281560504243,
       "y": 3508.8102232855786,
       "width": 982.0,
       "height": 192.0,
@@ -1462,8 +1530,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "hedging priciple of work | need to use pipeline excplicitly with pipeline provider | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | !!! | using strategyopiton need to acquire",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-078",
@@ -1481,8 +1549,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | cheat sheet | classic | classic polly httppolicyextensions | 1what counts as  transient http failure",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-079",
@@ -1501,33 +1569,33 @@
       "nearest_labels": "hedging priciple of work | need to use pipeline excplicitly with pipeline provider | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | new standart vs custom | !!!",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-021,S-079",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-080",
       "image_use_id": "IU-080",
       "fileId_short": "25e6ed724e",
-      "x": 11486.557405078665,
-      "y": 3576.2827057866198,
+      "x": 11486.557405078664,
+      "y": 3576.28270578662,
       "width": 774.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "!!! | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | using strategyopiton need to acquire | hedging priciple of work",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-081",
       "image_use_id": "IU-081",
       "fileId_short": "dcd85fd548",
       "x": 30412.287778842267,
-      "y": 3636.8508353964844,
+      "y": 3636.850835396485,
       "width": 887.0,
       "height": 201.0,
       "initial_candidate_region": "R07",
@@ -1538,8 +1606,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "mapping | Exception handling | try | { | var resp = await client.GetAsync(url, cancellationToken); | if (resp.StatusCode == HttpStatusCode.NotFound)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-082",
@@ -1557,8 +1625,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "hedging priciple of work | need to use pipeline excplicitly with pipeline provider | !!! | using strategyopiton need to acquire | SETTING TRUE/FALSE | BASED ON REQUEST METHOD",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-083",
@@ -1577,7 +1645,7 @@
       "nearest_labels": "need to use pipeline excplicitly with pipeline provider | hedging priciple of work | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | using strategyopiton need to acquire | !!!",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-031,S-083",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-084",
@@ -1588,21 +1656,21 @@
       "width": 916.0,
       "height": 325.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterpartition and partitioned rate limiter | 3 scenarios | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-085",
       "image_use_id": "IU-085",
       "fileId_short": "043ea65a3f",
-      "x": 30396.767620485956,
+      "x": 30396.76762048596,
       "y": 3858.9563106859696,
       "width": 818.0,
       "height": 482.0,
@@ -1614,8 +1682,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "mapping | try | { | var resp = await client.GetAsync(url, cancellationToken); | if (resp.StatusCode == HttpStatusCode.NotFound) | return /* handle 404 */;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-086",
@@ -1633,8 +1701,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | !!! | exception bubbling | classic polly httppolicyextensions | 1what counts as  transient http failure",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-087",
@@ -1652,8 +1720,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | cheat sheet | how to handle? | !!! | classic polly httppolicyextensions",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-088",
@@ -1671,8 +1739,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "hedging priciple of work | need to use pipeline excplicitly with pipeline provider | !!! | using strategyopiton need to acquire | SETTING TRUE/FALSE | BASED ON REQUEST METHOD",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-089",
@@ -1683,15 +1751,15 @@
       "width": 961.0,
       "height": 406.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "!!! | using strategyopiton need to acquire | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | from threading we return our limiter types",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-090",
@@ -1709,8 +1777,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | how to handle? | cheat sheet | !!! | so we need ratelimitpartition when",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-091",
@@ -1728,8 +1796,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | !!! | exception bubbling | !!!! | classic polly httppolicyextensions",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-092",
@@ -1748,7 +1816,7 @@
       "nearest_labels": "hedging priciple of work | using strategyopiton need to acquire | !!! | need to use pipeline excplicitly with pipeline provider | from threading we return our limiter types | rate limiter in polly",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-022,S-092",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-093",
@@ -1759,15 +1827,15 @@
       "width": 932.0,
       "height": 430.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "!!! | using strategyopiton need to acquire | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | from threading we return our limiter types",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-094",
@@ -1785,8 +1853,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "need to use pipeline excplicitly with pipeline provider | hedging priciple of work | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | using strategyopiton need to acquire | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-095",
@@ -1797,15 +1865,15 @@
       "width": 785.0,
       "height": 348.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterpartition and partitioned rate limiter | 3 scenarios | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | so we need ratelimitpartition when",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-096",
@@ -1823,8 +1891,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "theory | Exception handling | mapping | in newer | try | {",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-097",
@@ -1842,8 +1910,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "try | { | var resp = await client.GetAsync(url, cancellationToken); | if (resp.StatusCode == HttpStatusCode.NotFound) | return /* handle 404 */; | if ((int)resp.StatusCode >= 500)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-098",
@@ -1861,14 +1929,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | !!! | !!! | exception bubbling | !!!! | how to handle?",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-099",
       "image_use_id": "IU-099",
       "fileId_short": "bc0bef8a0c",
-      "x": 19866.661119802953,
+      "x": 19866.661119802957,
       "y": 4773.92140049915,
       "width": 917.0,
       "height": 309.0,
@@ -1880,14 +1948,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | how to handle? | !!! | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-100",
       "image_use_id": "IU-100",
       "fileId_short": "347d669f32",
-      "x": 27279.217632909236,
+      "x": 27279.21763290924,
       "y": 4830.801197564853,
       "width": 915.0,
       "height": 482.0,
@@ -1900,7 +1968,7 @@
       "nearest_labels": "exception bubbling | !!!! | theory | Exception handling | mapping | in newer",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-027,S-100",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-101",
@@ -1918,27 +1986,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "need to use pipeline excplicitly with pipeline provider | hedging priciple of work | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | using strategyopiton need to acquire | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-102",
       "image_use_id": "IU-102",
       "fileId_short": "b408541b04",
-      "x": 16114.250273698477,
+      "x": 16114.250273698475,
       "y": 4998.678239163732,
       "width": 709.0,
       "height": 355.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext | as arg | 3 we need to create chained rate limiter -- PARTITIONED RATE LIMITER",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-103",
@@ -1949,15 +2017,15 @@
       "width": 778.0,
       "height": 430.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "using strategyopiton need to acquire | !!! | from threading we return our limiter types | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-104",
@@ -1975,27 +2043,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | !!! | !!! | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case)",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-105",
       "image_use_id": "IU-105",
       "fileId_short": "8660f1d742",
-      "x": 13720.152887980143,
+      "x": 13720.152887980144,
       "y": 5071.907212495423,
       "width": 679.0,
       "height": 357.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "ratelimiterpartition and partitioned rate limiter | 3 scenarios | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-106",
@@ -2013,14 +2081,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "theory | in newer | mapping | Exception handling | try | {",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-107",
       "image_use_id": "IU-107",
       "fileId_short": "a92f6fd8d2",
-      "x": 22999.841102885242,
+      "x": 22999.84110288524,
       "y": 5134.3144203314205,
       "width": 761.0,
       "height": 482.0,
@@ -2032,8 +2100,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!! | how to handle? | !!!! | !!! | !!! | exception bubbling",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-108",
@@ -2051,8 +2119,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "in newer | try | { | var resp = await client.GetAsync(url, cancellationToken); | if (resp.StatusCode == HttpStatusCode.NotFound) | return /* handle 404 */;",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-109",
@@ -2063,21 +2131,21 @@
       "width": 794.0,
       "height": 546.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext | as arg | 3 we need to create chained rate limiter -- PARTITIONED RATE LIMITER",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-110",
       "image_use_id": "IU-110",
       "fileId_short": "400b773a1d",
-      "x": 27295.504673214982,
+      "x": 27295.504673214986,
       "y": 5317.021123218217,
       "width": 921.0,
       "height": 456.0,
@@ -2089,8 +2157,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!!! | exception bubbling | theory | Exception handling | in newer | mapping",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-111",
@@ -2108,27 +2176,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | !!! | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-112",
       "image_use_id": "IU-112",
       "fileId_short": "3f0264fc42",
-      "x": 11499.721130606793,
+      "x": 11499.721130606791,
       "y": 5460.8067076772095,
       "width": 957.0,
       "height": 408.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "using strategyopiton need to acquire | from threading we return our limiter types | !!! | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-113",
@@ -2139,15 +2207,15 @@
       "width": 918.0,
       "height": 317.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext | as arg | 3 we need to create chained rate limiter -- PARTITIONED RATE LIMITER",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-114",
@@ -2165,8 +2233,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "hedging priciple of work | need to use pipeline excplicitly with pipeline provider | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | using strategyopiton need to acquire | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-115",
@@ -2184,8 +2252,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "in newer | theory | mapping | Exception handling | try | {",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-116",
@@ -2203,8 +2271,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead | nesting | need to use pipeline excplicitly with pipeline provider",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-117",
@@ -2222,8 +2290,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | !!! | !!!! | choosing pipelines based on something | exception bubbling | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-118",
@@ -2241,8 +2309,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "hedging priciple of work | need to use pipeline excplicitly with pipeline provider | using strategyopiton need to acquire | need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-119",
@@ -2260,8 +2328,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | !!! | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-120",
@@ -2279,8 +2347,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!!! | exception bubbling | choosing pipelines based on something | in newer | theory | exception bubling",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-121",
@@ -2291,15 +2359,15 @@
       "width": 799.0,
       "height": 350.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext | as arg",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-122",
@@ -2310,21 +2378,21 @@
       "width": 837.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | using strategyopiton need to acquire | !!! | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-123",
       "image_use_id": "IU-123",
       "fileId_short": "471abbd4f5",
-      "x": 28980.454282748517,
+      "x": 28980.45428274852,
       "y": 5885.184026314453,
       "width": 940.0,
       "height": 419.0,
@@ -2336,8 +2404,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "in newer | exception bubling | outer starts call inner one, not throw to inner | theory | mapping | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-124",
@@ -2348,21 +2416,21 @@
       "width": 717.0,
       "height": 430.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext | as arg | 3 we need to create chained rate limiter -- PARTITIONED RATE LIMITER",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-125",
       "image_use_id": "IU-125",
       "fileId_short": "7ee20c322a",
-      "x": 23018.225805014477,
+      "x": 23018.22580501448,
       "y": 6092.980985272827,
       "width": 849.0,
       "height": 482.0,
@@ -2374,14 +2442,14 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | !!!! | choosing pipelines based on something | !!! | exception bubbling | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-126",
       "image_use_id": "IU-126",
       "fileId_short": "714b86f673",
-      "x": 27335.769210683695,
+      "x": 27335.76921068369,
       "y": 6169.134781578292,
       "width": 694.0,
       "height": 482.0,
@@ -2393,8 +2461,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "!!!! | choosing pipelines based on something | exception bubling | outer starts call inner one, not throw to inner | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-127",
@@ -2412,8 +2480,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead | nesting | need to use pipeline excplicitly with pipeline provider",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-128",
@@ -2424,15 +2492,15 @@
       "width": 959.0,
       "height": 398.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext | as arg",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-129",
@@ -2450,8 +2518,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | !!! | classic polly transient failures | new polly | vs httprequest exception | so we need ratelimitpartition when",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-130",
@@ -2469,27 +2537,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "in newer | exception bubling | outer starts call inner one, not throw to inner | try | { | var resp = await client.GetAsync(url, cancellationToken);",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-131",
       "image_use_id": "IU-131",
       "fileId_short": "0e9d048ae7",
-      "x": 15133.488493913317,
+      "x": 15133.488493913315,
       "y": 6346.771965350104,
       "width": 945.0,
       "height": 302.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext | as arg | 3 we need to create chained rate limiter -- PARTITIONED RATE LIMITER",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-132",
@@ -2507,27 +2575,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "in newer | exception bubling | outer starts call inner one, not throw to inner | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-133",
       "image_use_id": "IU-133",
       "fileId_short": "7f89e92900",
-      "x": 11517.152316858963,
+      "x": 11517.152316858965,
       "y": 6357.437315235609,
       "width": 916.0,
       "height": 101.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | using strategyopiton need to acquire | !!! | conditional rate limiting | rate limiter in polly | concur vs addratelimiter",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-134",
@@ -2545,33 +2613,33 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead | from threading we return our limiter types | using strategyopiton need to acquire",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-135",
       "image_use_id": "IU-135",
       "fileId_short": "a03ec19432",
-      "x": 11530.245090296463,
+      "x": 11530.245090296465,
       "y": 6448.937383052453,
       "width": 955.0,
       "height": 318.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | using strategyopiton need to acquire | !!! | conditional rate limiting | rate limiter in polly | concur vs addratelimiter",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-136",
       "image_use_id": "IU-136",
       "fileId_short": "26d2f62a54",
-      "x": 19950.015366664014,
+      "x": 19950.01536666401,
       "y": 6556.170312830216,
       "width": 920.0,
       "height": 320.0,
@@ -2583,8 +2651,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | classic polly transient failures | new polly | vs httprequest exception | manually | !!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-137",
@@ -2595,15 +2663,15 @@
       "width": 858.0,
       "height": 343.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | conditional rate limiting | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-138",
@@ -2621,8 +2689,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead | nesting | need to use pipeline excplicitly with pipeline provider",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-139",
@@ -2640,8 +2708,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "in newer | exception bubling | outer starts call inner one, not throw to inner | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | try",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-140",
@@ -2652,15 +2720,15 @@
       "width": 605.0,
       "height": 227.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | using strategyopiton need to acquire | conditional rate limiting | !!! | for testing | rate limiter in polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-141",
@@ -2678,8 +2746,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | classic polly transient failures | new polly | vs httprequest exception | manually | with extension",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-142",
@@ -2697,8 +2765,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "exception bubling | outer starts call inner one, not throw to inner | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | in newer | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-143",
@@ -2709,15 +2777,15 @@
       "width": 936.0,
       "height": 318.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | from threading we return our limiter types | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-144",
@@ -2735,52 +2803,52 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "for testing | from threading we return our limiter types | need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-145",
       "image_use_id": "IU-145",
       "fileId_short": "fb3dd4c559",
-      "x": 11544.485650192295,
+      "x": 11544.485650192297,
       "y": 7039.048426346722,
       "width": 728.0,
       "height": 320.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "from threading we return our limiter types | conditional rate limiting | using strategyopiton need to acquire | !!! | for testing | ratelimiterpartition and partitioned rate limiter",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-146",
       "image_use_id": "IU-146",
       "fileId_short": "f77ba847a1",
       "x": 13675.319452921549,
-      "y": 7335.4071362014765,
+      "y": 7335.407136201476,
       "width": 922.0,
       "height": 430.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | from threading we return our limiter types | so we need ratelimitpartition when | 1 we need specific ratelimiter and we need to pass | key (ratelimiter middleware case) | 2 we need to create ratelimiter with callback that has httpcontext",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-147",
       "image_use_id": "IU-147",
       "fileId_short": "b81bec3438",
-      "x": 20033.358730108026,
+      "x": 20033.358730108022,
       "y": 7384.064404812028,
       "width": 622.0,
       "height": 263.0,
@@ -2792,8 +2860,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "how to handle? | classic polly transient failures | new polly | vs httprequest exception | manually | with extension",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-148",
@@ -2804,15 +2872,15 @@
       "width": 925.0,
       "height": 363.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | from threading we return our limiter types | for testing | using strategyopiton need to acquire | !!! | so we need ratelimitpartition when",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-149",
@@ -2823,15 +2891,15 @@
       "width": 881.0,
       "height": 421.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | from threading we return our limiter types | for testing | using strategyopiton need to acquire | !!! | ratelimiterpartition and partitioned rate limiter",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-150",
@@ -2849,8 +2917,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "for testing | from threading we return our limiter types | need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-151",
@@ -2868,8 +2936,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "for testing | conditional rate limiting | from threading we return our limiter types | using strategyopiton need to acquire | !!! | rate limiter in polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-152",
@@ -2880,15 +2948,15 @@
       "width": 915.0,
       "height": 319.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | from threading we return our limiter types | classic polly transient failures | new polly | vs httprequest exception | for testing",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-153",
@@ -2899,15 +2967,15 @@
       "width": 954.0,
       "height": 373.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | from threading we return our limiter types | for testing | using strategyopiton need to acquire | !!! | so we need ratelimitpartition when",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-154",
@@ -2918,15 +2986,15 @@
       "width": 930.0,
       "height": 291.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | for testing | from threading we return our limiter types | using strategyopiton need to acquire | !!! | so we need ratelimitpartition when",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-155",
@@ -2945,7 +3013,7 @@
       "nearest_labels": "choosing pipelines based on something | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | exception bubling | outer starts call inner one, not throw to inner | !!!!",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-011,S-155",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-156",
@@ -2963,8 +3031,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "for testing | conditional rate limiting | from threading we return our limiter types | using strategyopiton need to acquire | !!! | rate limiter in polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-157",
@@ -2982,8 +3050,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | exception bubling | outer starts call inner one, not throw to inner | choosing pipelines based on something | in newer",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-158",
@@ -2994,15 +3062,15 @@
       "width": 928.0,
       "height": 324.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | for testing | from threading we return our limiter types | using strategyopiton need to acquire | !!! | so we need ratelimitpartition when",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-159",
@@ -3013,15 +3081,15 @@
       "width": 866.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | for testing | from threading we return our limiter types | using strategyopiton need to acquire | classic polly transient failures | new polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-160",
@@ -3039,8 +3107,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "choosing pipelines based on something | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | exception bubling | outer starts call inner one, not throw to inner | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-161",
@@ -3058,8 +3126,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "for testing | conditional rate limiting | from threading we return our limiter types | using strategyopiton need to acquire | !!! | rate limiter in polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-162",
@@ -3070,15 +3138,15 @@
       "width": 856.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | conditional rate limiting | from threading we return our limiter types | using strategyopiton need to acquire | !!! | classic polly transient failures",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-163",
@@ -3096,8 +3164,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | exception bubling | outer starts call inner one, not throw to inner | choosing pipelines based on something | in newer",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-164",
@@ -3108,21 +3176,21 @@
       "width": 992.0,
       "height": 317.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | classic polly transient failures | new polly | vs httprequest exception | for testing | with extension",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-165",
       "image_use_id": "IU-165",
       "fileId_short": "c6ca94f069",
-      "x": 27125.555534929066,
+      "x": 27125.555534929063,
       "y": 8696.932579049868,
       "width": 888.0,
       "height": 482.0,
@@ -3134,8 +3202,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "choosing pipelines based on something | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | exception bubling | outer starts call inner one, not throw to inner | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-166",
@@ -3146,21 +3214,21 @@
       "width": 932.0,
       "height": 241.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | for testing | from threading we return our limiter types | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-167",
       "image_use_id": "IU-167",
       "fileId_short": "a494e5fbbc",
-      "x": 9957.266573078627,
+      "x": 9957.266573078628,
       "y": 8968.978723994944,
       "width": 938.0,
       "height": 450.0,
@@ -3172,8 +3240,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "for testing | conditional rate limiting | from threading we return our limiter types | using strategyopiton need to acquire | !!! | classic polly transient failures",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-168",
@@ -3184,34 +3252,34 @@
       "width": 914.0,
       "height": 301.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | for testing | classic polly transient failures | new polly | vs httprequest exception | with extension",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-169",
       "image_use_id": "IU-169",
       "fileId_short": "5277e820bd",
-      "x": 14735.400765555245,
+      "x": 14735.400765555243,
       "y": 9174.620592491592,
       "width": 825.0,
       "height": 402.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "classic polly transient failures | new polly | vs httprequest exception | conditional rate limiting | with extension | manually",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-170",
@@ -3229,27 +3297,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "choosing pipelines based on something | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | exception bubling | outer starts call inner one, not throw to inner | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-171",
       "image_use_id": "IU-171",
       "fileId_short": "60fce52ec2",
-      "x": 13723.567147391183,
+      "x": 13723.567147391184,
       "y": 9406.620592491592,
       "width": 950.0,
       "height": 250.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | for testing | classic polly transient failures | new polly | vs httprequest exception | with extension",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-172",
@@ -3267,8 +3335,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | choosing pipelines based on something | exception bubling | outer starts call inner one, not throw to inner | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-173",
@@ -3279,22 +3347,22 @@
       "width": 898.0,
       "height": 161.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "conditional rate limiting | for testing | with extension | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-174",
       "image_use_id": "IU-174",
       "fileId_short": "38c992b66d",
       "x": 27262.79338686898,
-      "y": 10022.496191246055,
+      "y": 10022.496191246057,
       "width": 634.0,
       "height": 246.0,
       "initial_candidate_region": "R06",
@@ -3305,8 +3373,8 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones | choosing pipelines based on something | exception bubling | outer starts call inner one, not throw to inner | !!!!",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-175",
@@ -3324,27 +3392,27 @@
       "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
       "nearest_labels": "manually | with extension | classic polly transient failures | new polly | vs httprequest exception | how to handle?",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": NaN
     },
     {
       "source_id": "S-176",
       "image_use_id": "IU-176",
       "fileId_short": "d6527f34a1",
       "x": 11542.40657626392,
-      "y": 10178.731417292307,
+      "y": 10178.731417292309,
       "width": 959.0,
       "height": 397.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | conditional rate limiting | with extension | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-177",
@@ -3363,7 +3431,7 @@
       "nearest_labels": "manually | with extension | classic polly transient failures | new polly | vs httprequest exception | how to handle?",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-054,S-177",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-178",
@@ -3382,26 +3450,26 @@
       "nearest_labels": "with extension | manually | classic polly transient failures | new polly | vs httprequest exception | conditional rate limiting",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-044,S-178",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-179",
       "image_use_id": "IU-179",
       "fileId_short": "8b2be0bfe0",
       "x": 11602.306701748565,
-      "y": 10604.519584586575,
+      "y": 10604.519584586576,
       "width": 798.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | conditional rate limiting | with extension | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-180",
@@ -3420,64 +3488,64 @@
       "nearest_labels": "manually | with extension | classic polly transient failures | new polly | vs httprequest exception | how to handle?",
       "duplicate_use_count": 2,
       "duplicate_source_ids": "S-062,S-180",
-      "review_notes": ""
+      "review_notes": NaN
     },
     {
       "source_id": "S-181",
       "image_use_id": "IU-181",
       "fileId_short": "efdc6fb257",
       "x": 11524.739706146733,
-      "y": 11115.731417292307,
+      "y": 11115.731417292309,
       "width": 925.0,
       "height": 283.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | conditional rate limiting | with extension | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-182",
       "image_use_id": "IU-182",
       "fileId_short": "4f604be090",
-      "x": 11485.573202240483,
-      "y": 11496.397982233713,
+      "x": 11485.573202240485,
+      "y": 11496.397982233711,
       "width": 934.0,
       "height": 463.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | conditional rate limiting | with extension | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-183",
       "image_use_id": "IU-183",
       "fileId_short": "19f68a61d8",
-      "x": 11542.539115596803,
+      "x": 11542.539115596805,
       "y": 11986.741762751291,
       "width": 705.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | conditional rate limiting | with extension | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-184",
@@ -3488,53 +3556,53 @@
       "width": 884.0,
       "height": 391.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | conditional rate limiting | with extension | classic polly transient failures | new polly | vs httprequest exception",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-185",
       "image_use_id": "IU-185",
       "fileId_short": "29c65452de",
       "x": 11574.895882164725,
-      "y": 12936.075258845041,
+      "y": 12936.07525884504,
       "width": 851.0,
       "height": 482.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | with extension | conditional rate limiting | manually | classic polly transient failures | new polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     },
     {
       "source_id": "S-186",
       "image_use_id": "IU-186",
       "fileId_short": "6b18c2f35f",
-      "x": 11562.739828217045,
+      "x": 11562.739828217043,
       "y": 13512.564669245432,
       "width": 817.0,
       "height": 284.0,
       "initial_candidate_region": "R03",
-      "coverage_status": "unprocessed-stage0-candidate",
+      "coverage_status": "processed-in-r03-v001",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage0-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Initial x-band split plus nearby labels. Checklist only, not source of truth.",
+      "decision_is_final": "yes-for-r03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-r03-v001",
+      "decision_basis": "Included in R03 v001 after boundary review: pipeline execution / rate limiter / partition road.",
       "nearest_labels": "for testing | with extension | conditional rate limiting | manually | classic polly transient failures | new polly",
       "duplicate_use_count": 1,
-      "duplicate_source_ids": "",
-      "review_notes": ""
+      "duplicate_source_ids": NaN,
+      "review_notes": "Processed in R03 v001; source image preserved in audit-assets/R03-source-images."
     }
   ]
 }

@@ -1,43 +1,35 @@
-# MANIFEST - Polly cheat sheet / production-ready exceptions pipeline handling stage0
+# MANIFEST - Polly R03 Pipeline.Execute / RateLimiter transcript v001
 
-Archive type: **source check / boundary review**  
+Archive type: **stage-1 verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 08:43:38 UTC
+Generated: 2026-06-02 09:26:01 UTC
 
 ## Done
 
-- Started new conspect folder: `_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/`.
-- Parsed source SVG.
-- Extracted embedded images.
-- Created image-use inventory, labels, duplicate-use list, ledger, region split plan, contact sheets, and canvas map.
-
-## Counts
-
-```text
-unique embedded images: 176
-image uses on canvas: 186
-text labels parsed: 183
-duplicate embedded images reused on canvas: 10
-```
+- R03 transcript created.
+- 62 source images included.
+- Ledger updated for R03.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/00-source-check-and-boundary-review.md
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/regions/R03-pipeline-execute-provider-ratelimiter-partitions.md
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R03-sources-stage1-v001.csv
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R03-sources-stage1-v001.json
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R03-boundary-review-stage1-v001.csv
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R03-boundary-review-stage1-v001.json
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R03-area-understanding-stage1-v001.json
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/image-review-ledger-v001.csv
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/image-review-ledger-v001.json
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/contact-sheet-R03-pipeline-execute-rate-limiter-partitions.png
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/contact-sheet-R03-transcript-v001.png
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/R03-source-images/*.png
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/01-stage1-r03-pipeline-execute-ratelimiter-transcript.md
 _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/source/polly-cheat-sheet-production-ready-exceptions-pipeline-handling.svg
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/source/images/*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/image-uses-stage0.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/svg-labels-stage0.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/duplicate-image-uses-stage0.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/region-split-plan-stage0.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/image-review-ledger-v001.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/contact-sheet-*.png
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/canvas-map-labels-and-image-boxes.png
 _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/MANIFEST.md
 _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/APPLY_ARCHIVE.md
 ```
 
 ## Next
 
-Transcript pass after boundary review. Default target size: 60-100 images; can be larger if coherent.
+R04+R05+R06 combined boundary review, if coherent.

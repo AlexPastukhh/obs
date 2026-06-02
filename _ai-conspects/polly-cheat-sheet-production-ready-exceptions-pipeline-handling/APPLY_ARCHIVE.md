@@ -1,6 +1,6 @@
-# Apply archive: Polly conspect stage0 boundary review v001
+# Apply archive: Polly R03 Pipeline.Execute / RateLimiter transcript v001
 
-Archive type: source check / boundary review.
+Archive type: stage-1 verified region transcript.
 
 Target branch:
 
@@ -17,18 +17,18 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage1-r03-transcript-v001.zip
 ```
 
-## Apply commands
+## Apply + staged diff review commands
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage1-r03-transcript-v001.zip"
 $target = "_ai-conspects\polly-cheat-sheet-production-ready-exceptions-pipeline-handling"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage0-boundary-review.diff"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-polly-stage1-r03-transcript.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -36,30 +36,29 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new()
 git status --short
 Expand-Archive -Path $zip -DestinationPath . -Force
 
-# Use intent-to-add only if this folder is still untracked locally.
-if ((git status --short -- $target) -match '^\?\?') {
-  git add -N -- $target
-}
+# Stage ONLY this conspect folder, then review cached diff.
+git add -A -- $target
 
-git status --short
-git diff --stat -- $target
+git status --short -- $target
+git diff --cached --stat -- $target
+git diff --cached --name-status -- $target
 
-git --no-pager diff -- $target > $diffPath
+git --no-pager diff --cached -- $target > $diffPath
 Get-Content $diffPath -Raw | Set-Clipboard
-Write-Host "Full diff saved to $diffPath and copied to clipboard."
+Write-Host "Cached diff saved to $diffPath"
 Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ```
 
-## Commit commands
+## Commit commands after review
 
 ```powershell
-git add _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling
-git commit -m "Start Polly conspect boundary review"
+git commit -m "Add Polly R03 pipeline rate limiter transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Rollback before commit
 
 ```powershell
+git restore --staged -- _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling
 git restore -- _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling
 ```
