@@ -1,0 +1,171 @@
+{
+  "generated": "2026-06-02 11:25:47 UTC",
+  "stage": "4",
+  "batch_id": "NEXT03",
+  "regions": {
+    "CTXDB04": {
+      "name": "SaveChanges transaction lifecycle / flush / rollback scope",
+      "processed_sources": [
+        "S-118",
+        "S-120",
+        "S-121",
+        "S-122",
+        "S-132",
+        "S-134",
+        "S-136",
+        "S-137",
+        "S-143",
+        "S-149"
+      ],
+      "subregions": {
+        "CTXDB04A": {
+          "sources": [
+            "S-118",
+            "S-120",
+            "S-122",
+            "S-132",
+            "S-134",
+            "S-136"
+          ],
+          "meaning": "SaveChanges flush, batching, and database transaction handle/lifecycle."
+        },
+        "CTXDB04B": {
+          "sources": [
+            "S-121",
+            "S-137",
+            "S-143",
+            "S-149"
+          ],
+          "meaning": "Outer transaction visibility, rollback, and Add/SaveChanges/Commit/Rollback distinction."
+        }
+      },
+      "key_ideas": [
+        "Add/AddRange only changes EF's in-memory ChangeTracker.",
+        "SaveChanges is an EF flush operation; it can send many SQL commands and multiple batches.",
+        "The transaction state lives in the database engine on a specific connection/session; EF holds a transaction handle.",
+        "Inside an outer transaction, SaveChanges sends real database commands, but the changes are uncommitted until commit.",
+        "Rollback can undo changes already flushed by SaveChanges because they are inside the uncommitted transaction."
+      ]
+    },
+    "CTXDB05": {
+      "name": "IDbContextTransaction / GetDbTransaction / UseTransaction / ADO.NET / shared local transaction",
+      "processed_sources": [
+        "S-056",
+        "S-060",
+        "S-063",
+        "S-065",
+        "S-069",
+        "S-070",
+        "S-075",
+        "S-080",
+        "S-083",
+        "S-090",
+        "S-097",
+        "S-099",
+        "S-102",
+        "S-105",
+        "S-108",
+        "S-112",
+        "S-115",
+        "S-123",
+        "S-124",
+        "S-133",
+        "S-135",
+        "S-142",
+        "S-158",
+        "S-161",
+        "S-162",
+        "S-164",
+        "S-165",
+        "S-166",
+        "S-167",
+        "S-168",
+        "S-170",
+        "S-171",
+        "S-172",
+        "S-173",
+        "S-174",
+        "S-175",
+        "S-177",
+        "S-179",
+        "S-180",
+        "S-181",
+        "S-183",
+        "S-184"
+      ],
+      "subregions": {
+        "CTXDB05A": {
+          "sources": [
+            "S-056",
+            "S-060",
+            "S-063",
+            "S-065",
+            "S-069",
+            "S-070",
+            "S-075",
+            "S-080",
+            "S-083",
+            "S-090",
+            "S-097",
+            "S-099",
+            "S-102",
+            "S-105",
+            "S-108",
+            "S-112",
+            "S-115",
+            "S-123",
+            "S-124",
+            "S-133",
+            "S-135",
+            "S-142"
+          ],
+          "meaning": "IDbContextTransaction API, commit/rollback/savepoints/TransactionId, GetDbTransaction and raw transaction interop."
+        },
+        "CTXDB05B": {
+          "sources": [
+            "S-158",
+            "S-161",
+            "S-162",
+            "S-164",
+            "S-165",
+            "S-166",
+            "S-167",
+            "S-168",
+            "S-170",
+            "S-171",
+            "S-172",
+            "S-173",
+            "S-174",
+            "S-175",
+            "S-177",
+            "S-179",
+            "S-180",
+            "S-181",
+            "S-183",
+            "S-184"
+          ],
+          "meaning": "No outer transaction behavior, savepoints, sharing a local transaction across ADO.NET and EF contexts, UseTransaction limits."
+        }
+      },
+      "key_ideas": [
+        "IDbContextTransaction is EF's transaction control wrapper for commit, rollback, savepoints, and transaction metadata.",
+        "Automatic savepoints can add overhead in large chunked transactions; disable them only with a deliberate savepoint/failure policy.",
+        "GetDbTransaction exposes the underlying ADO.NET DbTransaction for raw commands, stored procedures, bulk APIs, or another context.",
+        "Use IDbContextTransaction to manage EF transactions; use DbTransaction when another API needs the raw ADO.NET transaction.",
+        "Without an outer transaction, separate SaveChanges calls normally commit independently.",
+        "To share one local transaction, participants must share the same connection and the same transaction.",
+        "UseTransaction does not merge two existing transactions; it tells EF to use one existing DbTransaction.",
+        "A single local connection should not be designed to host two separate active local transactions for different participants."
+      ]
+    }
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Some source images are visible continuations/crops; these are marked in source metadata.",
+      "S-180/S-183 and S-181/S-184 are paired continuation examples.",
+      "S-070, S-115, S-123, S-124, S-167, S-168 have top/bottom continuation context but visible content is clear."
+    ],
+    "confidence": "High for concepts and boundary decisions; high-to-medium-high for exact code where screenshots are partial continuations."
+  }
+}

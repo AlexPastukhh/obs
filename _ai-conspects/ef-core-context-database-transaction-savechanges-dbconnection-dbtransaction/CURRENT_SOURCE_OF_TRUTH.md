@@ -1,6 +1,6 @@
 # Current Source of Truth - ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction
 
-Generated: 2026-06-02 09:27:07 UTC
+Generated: 2026-06-02 11:25:47 UTC
 
 ## Current status
 
@@ -9,6 +9,7 @@ Stage0: source materialized
 Stage1: large boundary review done
 Stage2: NEXT01 transcript done
 Stage3: NEXT02 / CTXDB03 transcript done
+Stage4: NEXT03 / CTXDB04 + CTXDB05 transcript done
 ```
 
 ## Verified transcripts
@@ -17,13 +18,13 @@ Stage3: NEXT02 / CTXDB03 transcript done
 CTXDB01: DatabaseFacade methods / connectivity / ensure-created-deleted / migrations
 CTXDB02: Automatic transactions / CurrentTransaction / AutoSavepointsEnabled
 CTXDB03: SaveChanges value generation / batching / performance / ChangeTracker.Clear / short-lived DbContext
+CTXDB04: SaveChanges transaction lifecycle / flush / rollback scope
+CTXDB05: IDbContextTransaction / GetDbTransaction / UseTransaction / ADO.NET / shared local transaction
 ```
 
 ## Current candidate regions
 
 ```text
-CTXDB04: SaveChanges transaction lifecycle / flush / rollback scope
-CTXDB05: IDbContextTransaction / GetDbTransaction / UseTransaction / ADO.NET / shared local transaction
 CTXDB06: DbConnection / open connection / SetDbConnection / command timeout / provider helpers
 CTXDB07: Manual DbContext creation / options / DI / multiple contexts
 ```
@@ -31,9 +32,9 @@ CTXDB07: Manual DbContext creation / options / DI / multiple contexts
 ## Current next step
 
 ```text
-NEXT03 transcript:
-CTXDB04 + CTXDB05
-52 images
+NEXT04 transcript:
+CTXDB06 + CTXDB07
+43 images
 ```
 
 ## Rules

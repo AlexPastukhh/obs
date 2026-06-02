@@ -1,4 +1,4 @@
-# Apply archive: Stage3 NEXT02 CTXDB03 transcript
+# Apply archive: Stage4 NEXT03 CTXDB04 + CTXDB05 transcript
 
 Archive type: verified transcript / large batch.
 
@@ -13,7 +13,7 @@ Use `tar.exe -xf` instead of PowerShell `Expand-Archive`.
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage3-next02-ctxdb03-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage4-next03-ctxdb04-ctxdb05-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -23,8 +23,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage3-next02-ctxdb03-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\efcore-context-dbtx-stage3-next02-ctxdb03-cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage4-next03-ctxdb04-ctxdb05-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\efcore-context-dbtx-stage4-next03-ctxdb04-ctxdb05-cached.diff"
 
 git status --short
 
@@ -46,7 +46,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add EF Core context database transaction CTXDB03 transcript"
+git commit -m "Add EF Core context database transaction CTXDB04 CTXDB05 transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,6 +60,6 @@ git clean -fd -- "$target"
 
 ## Notes
 
-This archive completes CTXDB03 only.
+This archive completes CTXDB04 and CTXDB05.
 
-NEXT03 should process CTXDB04 + CTXDB05.
+NEXT04 should process CTXDB06 + CTXDB07.
