@@ -2,7 +2,7 @@
 
 Status: active
 
-Day file source of truth: this file owns the concrete state, sessions, support facts, penalty events, and final review for this date.
+Day file source of truth: this file owns the concrete state, sessions, support facts, penalty events, carryover, and final review for this date.
 
 AI must not infer current day automatically.
 
@@ -17,6 +17,7 @@ Reusable owners:
 - Support score review layout: `Templates/Support Score Review Template.md`
 - Support score rules: `Support Score Guide.md`
 - Pattern meanings and IDs: `Workflows/Real Reward Pattern Playbook.md`
+- Main workflow: `Workflows/Real Reward Work Loop Workflow.md`
 - Emoji notation: `Emoji Notation Map.md`
 
 ---
@@ -36,9 +37,15 @@ Reusable owners:
 
 Pattern source of truth: `Workflows/Real Reward Pattern Playbook.md`
 
+Workflow source of truth: `Workflows/Real Reward Work Loop Workflow.md`
+
 This section stores the active compact Point-6 view for the day. Pattern meanings and Pattern IDs are owned by the playbook.
 
 Normal session = `3.5` = `D 1.75 + F 1.75` before adjustments.
+
+Compact flying-cage workflow:
+
+`🧠🤫💰 → 📚🛤️ → 🚨 → 🧲⚡🧱😣🚀 → 🧵📜🟢🔴 → ✅D max-vs-usual → ⚡F max-vs-usual → 🏁⏱️📊 → 🧾`
 
 | Score layer | Active check |
 |---|---|
@@ -94,24 +101,31 @@ Rules:
 | Work Points | 0 |
 | Penalties | 0 |
 | Net Work Score | 0 |
+| Previous-day carryover debt | 0 |
+| Net score after carryover | 0 |
 | Old baseline | 0 / 35 |
 | Full closure | 0 / 70 |
+| Carryover status | — |
 | Main course movement | — |
 | Progress | — |
 
 Notes:
 
-35 points = close old 4y2m baseline.
+35 points = close old 4y2m baseline / previous-score bucket.
 
-70 points = close old baseline + current day.
+70 points = close old baseline + current day / previous + current score buckets.
 
-Work Points are counted only from Finished Sessions.
+Work Points are counted only from Finished Sessions or explicit user-defined manual closure entries.
 
-Penalties come only from Penalty Events.
+Penalties come from Penalty Events.
+
+Carryover debt is separate from normal Penalty Events unless explicitly recorded as a penalty/carryover by the user.
 
 Net Work Score = Work Points + Penalties.
 
-Baseline closure is evaluated from Net Work Score when penalties exist.
+Net score after carryover = Net Work Score - Previous-day carryover debt.
+
+Baseline closure is evaluated from the score basis explicitly chosen for the day: raw Work Points, Net Work Score, or net after carryover.
 
 Support Score never closes 35/70 work baselines.
 
@@ -206,15 +220,30 @@ Status: not closed.
 | Work Points | 0 |
 | Penalties | 0 |
 | Net Work Score | 0 |
+| Previous-day carryover debt | 0 |
+| Net score after carryover | 0 |
 | Support Score | not calculated |
 | Support Penalty | not calculated |
 | Final Day Score | not calculated |
 | Old baseline | not closed |
 | Full closure | not closed |
 | Day class | active |
+| Carryover to next day | 0 |
 | Main result | — |
 | Main risk / lesson | — |
 | Next-day note | — |
+
+---
+
+## Carryover
+
+| Field | Value |
+|---|---:|
+| Carryover type | — |
+| Carryover amount | 0 |
+| From | — |
+| To | — |
+| Reason | — |
 
 ---
 
