@@ -1,6 +1,6 @@
 # Current Source of Truth - aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint
 
-Generated: 2026-06-02 12:45:00 UTC
+Generated: 2026-06-02 13:12:24 UTC
 
 ## Policy
 
@@ -11,7 +11,10 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 overview / filter pipeline / ordering / exception filters / DI / IFilterFactory / status-code/content negotiation: transcript v001 done
+R02 concrete MVC filter type examples: pending
+R03 lower addendum / middleware-before-filters reminder: pending
+Final coverage audit: pending
 ```
 
 ## Counts
@@ -19,15 +22,13 @@ Normal transcript regions: not started
 ```text
 unique embedded images: 127
 image uses on canvas: 131
-text labels parsed: 41
-duplicate image uses: 4
+R01 processed image uses: 93
+remaining planned image uses: 38
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after boundary review.
-Target size: 60-100 images, or larger if coherent.
-Suggested first candidate: R01 upper/main filters overview and ordering road (93 images).
-Then R02+R03 concrete examples/lower addendum final pass (38 images), if coherent.
+R02+R03 combined boundary review if coherent; otherwise split examples and lower addendum.
+Expected remaining: R02 27 + R03 11 = 38 image uses.
 ```

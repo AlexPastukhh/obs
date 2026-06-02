@@ -1,6 +1,6 @@
-# Apply archive: ASP.NET Core filters stage0 boundary review v001
+# Apply archive: ASP.NET Core filters R01 main theory transcript v001
 
-Archive type: source check / boundary review.
+Archive type: stage-1 verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage1-r01-transcript-v001.zip
 ```
 
 ## Apply + staged diff review commands
@@ -26,9 +26,9 @@ C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exce
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage0-boundary-review-v001.zip"
-$target = "_ai-conspects\\aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-filters-stage0-boundary-review.cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint-stage1-r01-transcript-v001.zip"
+$target = "_ai-conspects\aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-filters-stage1-r01-transcript.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -52,13 +52,13 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands after review
 
 ```powershell
-git commit -m "Start ASP.NET Core filters conspect boundary review"
+git commit -m "Add ASP.NET Core filters R01 main theory transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Rollback before commit
 
 ```powershell
-git restore --staged -- _ai-conspects\\aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint
-git clean -fd -- _ai-conspects\\aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint
+git restore --staged -- _ai-conspects\aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint
+git restore -- _ai-conspects\aspnet-core-filters-pipeline-ordering-exception-resource-action-endpoint
 ```

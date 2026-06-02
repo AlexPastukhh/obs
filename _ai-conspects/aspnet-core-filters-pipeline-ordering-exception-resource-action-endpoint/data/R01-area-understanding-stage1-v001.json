@@ -1,0 +1,33 @@
+{
+  "generated": "2026-06-02 13:12:24 UTC",
+  "region_id": "R01",
+  "area_title": "ASP.NET Core filters main theory: pipeline, ordering, exception handling, DI, factories, result/status behavior",
+  "what_area_is_about": [
+    "where MVC filters sit relative to middleware and endpoint/action execution",
+    "sync vs async filter forms and before/after execution nesting",
+    "filter ordering and how ordered filters wrap each other",
+    "exception filters, handled exception propagation, and why they cannot catch earlier authorization/resource failures",
+    "dependency injection for filters: global filters, TypeFilter, ServiceFilter, filter attributes, services from HttpContext",
+    "IFilterFactory and passing values from attributes while still constructing service-backed filters",
+    "status-code pages vs MVC/result filters, ObjectResult/content negotiation, ViewResult error pages, invalid model-state response customization"
+  ],
+  "key_ideas": [
+    "Middleware is the outer pipeline; MVC filters run inside endpoint/MVC execution and can reason about actions, models, results, and MVC context.",
+    "Async filters are usually preferred when a filter performs asynchronous work; they wrap the next delegate and can run before and after it.",
+    "Filter ordering matters because each filter wraps later stages; after-code runs on unwind, so mental model should be nested rather than flat.",
+    "Exception filters can mark an exception handled and stop propagation, but they do not catch exceptions thrown before their stage, such as authorization-filter failures.",
+    "Plain attributes are metadata and should not be treated as normal DI-created services; TypeFilter/ServiceFilter/global filters/IFilterFactory solve different DI and argument-passing cases.",
+    "Result filters are useful when handling MVC results and content negotiation; generic status-code pages are lower-level and may not have enough MVC/action context.",
+    "The region is theory-heavy and intentionally leaves concrete filter-type examples for R02 and lower middleware reminder/addendum for R03."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: contact sheet is large but readable by rows; several code screenshots are small and should be checked against preserved PNGs for exact punctuation",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Exact code punctuation and some generic type names should be corrected against preserved PNGs if needed.",
+      "R01 closes image-use coverage for the main theory road, not the concrete examples in R02/R03."
+    ],
+    "confidence_summary": "High for boundary/ownership and conceptual notes; medium-high for exact code transcription."
+  }
+}
