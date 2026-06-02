@@ -1,0 +1,569 @@
+{
+  "generated": "2026-06-02 14:05:28 UTC",
+  "corrections": [
+    {
+      "source_id": "S-386",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
+    },
+    {
+      "source_id": "S-389",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
+    },
+    {
+      "source_id": "S-393",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
+    },
+    {
+      "source_id": "S-396",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
+    },
+    {
+      "source_id": "S-401",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
+    },
+    {
+      "source_id": "S-403",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-414",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-420",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-423",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-424",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-425",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-429",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-433",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-436",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-438",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-446",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-447",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-486",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-490",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-493",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-496",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-498",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-499",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-501",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-416",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-422",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-428",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-437",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-444",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-454",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-457",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-464",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-469",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-507",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-528",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-533",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-448",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-452",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-455",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-461",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-463",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-467",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-470",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-473",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-476",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-480",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-484",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-488",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-492",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-495",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-497",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-500",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-502",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-512",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-513",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-516",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-524",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-535",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-477",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-478",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-481",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-483",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-487",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-491",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-494",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-508",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-531",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-485",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-489",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-503",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-504",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-505",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-506",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-509",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-510",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-511",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-514",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-515",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-517",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-518",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-519",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-520",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-521",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-522",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-523",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-525",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-526",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-527",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-529",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-530",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-532",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-534",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-536",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-537",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    }
+  ]
+}

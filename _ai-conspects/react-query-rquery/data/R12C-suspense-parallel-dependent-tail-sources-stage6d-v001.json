@@ -1,0 +1,79 @@
+{
+  "generated": "2026-06-02 14:05:28 UTC",
+  "group": "R12C-suspense-parallel-dependent-tail",
+  "region": "R12",
+  "source_count": 5,
+  "reading_rule": "Every included source has visible text. No OCR-timeout/image-missing/empty placeholder source is marked processed.",
+  "sources": [
+    {
+      "source_id": "S-386",
+      "image_use_id": "IU-386",
+      "fileId_short": "6ff5da2ed3",
+      "x": "5755.552",
+      "y": "34787.22",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "stage6a_group": "R21",
+      "image_file": "S-386__6ff5da2ed3.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "9. How to make Suspense queries parallel",
+      "visible_text": "9. How to make Suspense queries parallel\nYou usually split them into separate components under the same boundary.\nBetter pattern\n«” TypeScript oO\nfunction UserSection() {\nconst { data } = useSuspenseQuery({\nquerykey: ['user'],\nqueryFn: fetchUser,\nD>)\nreturn <h1>{data.name}</h1>\n}\nfunction RepoSection() {\nconst { data } = useSuspenseQuery({\nquerykey: [‘repos'],\nqueryFn: fetchRepos,\nD>)\nreturn <div>{data. length} repos</div>\n}",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-389",
+      "image_use_id": "IU-389",
+      "fileId_short": "b6379df317",
+      "x": "5748.895",
+      "y": "35275.852",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "stage6a_group": "R21",
+      "image_file": "S-389__b6379df317.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "export default function Dashboard() {",
+      "visible_text": "export default function Dashboard() {\nreturn (\n<Suspense fallback={<div>Loading dashboard. ..</div>}>\n<UserSection />\n<RepoSection />\n</Suspense>\n)\n+\nThis is often a better structure because sibling components can participate more naturally in concurrent\nrendering behavior.",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-393",
+      "image_use_id": "IU-393",
+      "fileId_short": "e91d3c5a46",
+      "x": "5749.343",
+      "y": "35600.553",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "stage6a_group": "R21",
+      "image_file": "S-393__e91d3c5a46.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "Even better with separate boundaries",
+      "visible_text": "Even better with separate boundaries\n«” TypeScript\nexport default function Dashboard() {\nreturn (\n°\n<Suspense fallback={<div>Loading user... .</div>}>\n<UserSection />\n</Suspense>\n<Suspense fallback={<div>Loading repos. ..</div>}>\n<RepoSection />\n</Suspense>\n<P\n)\n+\nNow each section can resolve independently.\nThis often feels much nicer in the UI.",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-396",
+      "image_use_id": "IU-396",
+      "fileId_short": "ab518b8fb7",
+      "x": "5751.252",
+      "y": "36103.329",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "stage6a_group": "R21",
+      "image_file": "S-396__ab518b8fb7.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "10. Suspense with dependent queries",
+      "visible_text": "10. Suspense with dependent queries\nSuspense makes dependent queries more obvious.\nExample\n«> TypeScript\nfunction MovieAndDirector({ title }: { title: string }) {\nconst { data: movie } = useSuspenseQuery({\nqueryKey: ['movie', title],\nqueryFn: () => fetchMovie(title),\n>)\nconst { data: director } = useSuspenseQuery({\nqueryKey: [‘director', movie.directorId],\nqueryFn: () => fetchDirector(movie.directorId),\n>)",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-401",
+      "image_use_id": "IU-401",
+      "fileId_short": "ed1ff3c24e",
+      "x": "5759.514",
+      "y": "36545.519",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
+      "stage6a_group": "R21",
+      "image_file": "S-401__ed1ff3c24e.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "return (",
+      "visible_text": "return (\n<div>\n<h1>{movie.title}</h1>\n<p>{director.name}</p>\n</div>\n)\n}\nThis is truly serial by nature because query 2 needs result of query 1.\nThat is fine. This is a real dependency.\nThe important thing is not to accidentally create serial behavior for queries that are actually independent.",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    }
+  ]
+}

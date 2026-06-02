@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 13:00:55 UTC
+Generated: 2026-06-02 14:05:28 UTC
 
 ## Current policy
 
@@ -45,6 +45,7 @@ Stage5d S261-S383 closure audit v001: completed
 Stage6a S384-S537 boundary review: active candidate split
 Stage6b top technical transcript v001: completed
 Stage6c R20/R17B transcript v001: completed
+Stage6d remaining dense transcript v001: completed
 ```
 
 ## Current processing target
@@ -52,6 +53,7 @@ Stage6c R20/R17B transcript v001: completed
 ```text
 Stage6b processed: 35
 Stage6c processed: 25
-Stage6a remaining candidates: 94
-Next transcript attempt: Stage6d = R21 + R23
+Stage6d processed: 94
+Stage6a remaining candidates: 0
+Next: Stage6 closure audit for S-384..S-537
 ```

@@ -1,92 +1,707 @@
 {
-  "generated": "2026-06-02 13:00:55 UTC",
-  "ledger_version": "v2-updated-by-stage6c-r20-r17b-transcripts",
-  "critical_rule": "Only Stage6c sources are marked processed. R21/R23 remain candidates.",
-  "stage6c_processed": {
-    "R20-select-performance-structural-sharing": {
-      "region": "R20",
-      "count": 18,
+  "generated": "2026-06-02 14:05:28 UTC",
+  "ledger_version": "v2-updated-by-stage6d-remaining-dense-transcripts",
+  "critical_rule": "Stage6d processes all remaining Stage6a candidates with visible text. No OCR-placeholder source is marked processed.",
+  "stage6d_processed": {
+    "R12C-suspense-parallel-dependent-tail": {
+      "region": "R12",
+      "count": 5,
       "sources": [
-        "S-427",
-        "S-432",
-        "S-434",
-        "S-435",
-        "S-439",
-        "S-440",
-        "S-442",
-        "S-449",
-        "S-450",
-        "S-451",
-        "S-453",
-        "S-456",
-        "S-459",
-        "S-460",
-        "S-462",
-        "S-466",
-        "S-468",
-        "S-474"
+        "S-386",
+        "S-389",
+        "S-393",
+        "S-396",
+        "S-401"
       ]
     },
-    "R17B-useTransition-step-comparison": {
+    "R17C-transition-suspense-placeholder-tail": {
       "region": "R17",
-      "count": 7,
+      "count": 19,
       "sources": [
-        "S-458",
-        "S-465",
-        "S-471",
-        "S-472",
-        "S-475",
-        "S-479",
-        "S-482"
+        "S-403",
+        "S-414",
+        "S-420",
+        "S-423",
+        "S-424",
+        "S-425",
+        "S-429",
+        "S-433",
+        "S-436",
+        "S-438",
+        "S-446",
+        "S-447",
+        "S-486",
+        "S-490",
+        "S-493",
+        "S-496",
+        "S-498",
+        "S-499",
+        "S-501"
+      ]
+    },
+    "R16B-error-boundary-reset-flow": {
+      "region": "R16",
+      "count": 12,
+      "sources": [
+        "S-416",
+        "S-422",
+        "S-428",
+        "S-437",
+        "S-444",
+        "S-454",
+        "S-457",
+        "S-464",
+        "S-469",
+        "S-507",
+        "S-528",
+        "S-533"
+      ]
+    },
+    "R19B-testing-msw-cache-seeding": {
+      "region": "R19",
+      "count": 22,
+      "sources": [
+        "S-448",
+        "S-452",
+        "S-455",
+        "S-461",
+        "S-463",
+        "S-467",
+        "S-470",
+        "S-473",
+        "S-476",
+        "S-480",
+        "S-484",
+        "S-488",
+        "S-492",
+        "S-495",
+        "S-497",
+        "S-500",
+        "S-502",
+        "S-512",
+        "S-513",
+        "S-516",
+        "S-524",
+        "S-535"
+      ]
+    },
+    "R20C-selector-purity-memoization-tail": {
+      "region": "R20",
+      "count": 9,
+      "sources": [
+        "S-477",
+        "S-478",
+        "S-481",
+        "S-483",
+        "S-487",
+        "S-491",
+        "S-494",
+        "S-508",
+        "S-531"
+      ]
+    },
+    "R24-cheat-sheet-summary-core-patterns": {
+      "region": "R24",
+      "count": 27,
+      "sources": [
+        "S-485",
+        "S-489",
+        "S-503",
+        "S-504",
+        "S-505",
+        "S-506",
+        "S-509",
+        "S-510",
+        "S-511",
+        "S-514",
+        "S-515",
+        "S-517",
+        "S-518",
+        "S-519",
+        "S-520",
+        "S-521",
+        "S-522",
+        "S-523",
+        "S-525",
+        "S-526",
+        "S-527",
+        "S-529",
+        "S-530",
+        "S-532",
+        "S-534",
+        "S-536",
+        "S-537"
       ]
     }
   },
   "local_boundary_corrections": [
     {
-      "source_id": "S-458",
-      "from_stage6a": "R22",
-      "stage6c_decision": "R17",
-      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
+      "source_id": "S-386",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
     },
     {
-      "source_id": "S-465",
-      "from_stage6a": "R22",
-      "stage6c_decision": "R17",
-      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
+      "source_id": "S-389",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
     },
     {
-      "source_id": "S-471",
-      "from_stage6a": "R22",
-      "stage6c_decision": "R17",
-      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
+      "source_id": "S-393",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
     },
     {
-      "source_id": "S-472",
-      "from_stage6a": "R22",
-      "stage6c_decision": "R17",
-      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
+      "source_id": "S-396",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
     },
     {
-      "source_id": "S-475",
-      "from_stage6a": "R22",
-      "stage6c_decision": "R17",
-      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
+      "source_id": "S-401",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R12",
+      "reason": "Suspense tail: parallel Suspense queries, separate boundaries, dependent queries, and continued rendering after data is ready."
     },
     {
-      "source_id": "S-479",
-      "from_stage6a": "R22",
-      "stage6c_decision": "R17",
-      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
+      "source_id": "S-403",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
     },
     {
-      "source_id": "S-482",
-      "from_stage6a": "R22",
-      "stage6c_decision": "R17",
-      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
+      "source_id": "S-414",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-420",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-423",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-424",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-425",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-429",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-433",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-436",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-438",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-446",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-447",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-486",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-490",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-493",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-496",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-498",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-499",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-501",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R17",
+      "reason": "useTransition continuation: startTransition, previous UI visibility, Suspense vs placeholderData, and transition UX caveats."
+    },
+    {
+      "source_id": "S-416",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-422",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-428",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-437",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-444",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-454",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-457",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-464",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-469",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-507",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-528",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-533",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R16",
+      "reason": "ErrorBoundary / QueryErrorResetBoundary flow: query error, render throw, fallback, Try Again, reset both React and query layers."
+    },
+    {
+      "source_id": "S-448",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-452",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-455",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-461",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-463",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-467",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-470",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-473",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-476",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-480",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-484",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-488",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-492",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-495",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-497",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-500",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-502",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-512",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-513",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-516",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-524",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-535",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R19",
+      "reason": "Testing continuation: MSW setup, handlers/server, cache seeding, render helper, loading/error tests, and why not to mock useQuery."
+    },
+    {
+      "source_id": "S-477",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-478",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-481",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-483",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-487",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-491",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-494",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-508",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-531",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R20",
+      "reason": "select continuation: pure selectors, stable selector references, inline selector recomputation, access to data argument, and observer mental model."
+    },
+    {
+      "source_id": "S-485",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-489",
+      "from_stage6a": "R21",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-503",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-504",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-505",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-506",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-509",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-510",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-511",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-514",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-515",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-517",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-518",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-519",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-520",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-521",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-522",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-523",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-525",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-526",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-527",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-529",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-530",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-532",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-534",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-536",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
+    },
+    {
+      "source_id": "S-537",
+      "from_stage6a": "R23",
+      "stage6d_decision": "R24",
+      "reason": "Final cheat-sheet summary cards: core ideas, setup, query rules/states, invalidation, infinite queries, mutations, networkMode, persistence, testing basics, and good practical patterns."
     }
   ],
-  "remaining_stage6a_candidates": 94,
-  "next_step": "Stage6d: R21 + R23.",
+  "remaining_stage6a_candidates_after_stage6d": 0,
+  "next_step": "Stage6 closure audit for S-384..S-537.",
   "rows": [
     {
       "source_id": "S-001",
@@ -7415,12 +8030,12 @@
       "width": "715",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r12-v003-tail",
+      "current_region_decision": "R12",
+      "decision_is_final": "yes-for-r12-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-387",
@@ -7472,12 +8087,12 @@
       "width": "888",
       "height": "286",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r12-v003-tail",
+      "current_region_decision": "R12",
+      "decision_is_final": "yes-for-r12-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-390",
@@ -7548,12 +8163,12 @@
       "width": "788",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r12-v003-tail",
+      "current_region_decision": "R12",
+      "decision_is_final": "yes-for-r12-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-394",
@@ -7605,12 +8220,12 @@
       "width": "689",
       "height": "452",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r12-v003-tail",
+      "current_region_decision": "R12",
+      "decision_is_final": "yes-for-r12-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-397",
@@ -7700,12 +8315,12 @@
       "width": "882",
       "height": "360",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r12-v003-tail",
+      "current_region_decision": "R12",
+      "decision_is_final": "yes-for-r12-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R12 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-402",
@@ -7738,12 +8353,12 @@
       "width": "750",
       "height": "480",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-404",
@@ -7947,12 +8562,12 @@
       "width": "950",
       "height": "412",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-415",
@@ -7985,12 +8600,12 @@
       "width": "721",
       "height": "470",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-417",
@@ -8061,12 +8676,12 @@
       "width": "652",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-421",
@@ -8099,12 +8714,12 @@
       "width": "827",
       "height": "424",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-423",
@@ -8118,12 +8733,12 @@
       "width": "769",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-424",
@@ -8137,12 +8752,12 @@
       "width": "911",
       "height": "365",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-425",
@@ -8156,12 +8771,12 @@
       "width": "627",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-426",
@@ -8213,12 +8828,12 @@
       "width": "718",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-429",
@@ -8232,12 +8847,12 @@
       "width": "373",
       "height": "322",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-430",
@@ -8308,12 +8923,12 @@
       "width": "562",
       "height": "254",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-434",
@@ -8365,12 +8980,12 @@
       "width": "523",
       "height": "469",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-437",
@@ -8384,12 +8999,12 @@
       "width": "675",
       "height": "388",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-438",
@@ -8403,12 +9018,12 @@
       "width": "868",
       "height": "409",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-439",
@@ -8517,12 +9132,12 @@
       "width": "668",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-445",
@@ -8555,12 +9170,12 @@
       "width": "927",
       "height": "264",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-447",
@@ -8574,12 +9189,12 @@
       "width": "530",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-448",
@@ -8593,12 +9208,12 @@
       "width": "853",
       "height": "430",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-449",
@@ -8669,12 +9284,12 @@
       "width": "710",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-453",
@@ -8707,12 +9322,12 @@
       "width": "883",
       "height": "218",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-455",
@@ -8726,12 +9341,12 @@
       "width": "676",
       "height": "461",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-456",
@@ -8764,12 +9379,12 @@
       "width": "898",
       "height": "405",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-458",
@@ -8840,12 +9455,12 @@
       "width": "933",
       "height": "363",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-462",
@@ -8878,12 +9493,12 @@
       "width": "413",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-464",
@@ -8897,12 +9512,12 @@
       "width": "959",
       "height": "409",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-465",
@@ -8954,12 +9569,12 @@
       "width": "891",
       "height": "295",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-468",
@@ -8992,12 +9607,12 @@
       "width": "682",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-470",
@@ -9011,12 +9626,12 @@
       "width": "529",
       "height": "470",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-471",
@@ -9068,12 +9683,12 @@
       "width": "464",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-474",
@@ -9125,12 +9740,12 @@
       "width": "538",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-477",
@@ -9144,12 +9759,12 @@
       "width": "830",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-478",
@@ -9163,12 +9778,12 @@
       "width": "899",
       "height": "467",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-479",
@@ -9201,12 +9816,12 @@
       "width": "601",
       "height": "416",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-481",
@@ -9220,12 +9835,12 @@
       "width": "965",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-482",
@@ -9258,12 +9873,12 @@
       "width": "883",
       "height": "408",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-484",
@@ -9277,12 +9892,12 @@
       "width": "546",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-485",
@@ -9296,12 +9911,12 @@
       "width": "714",
       "height": "445",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-486",
@@ -9315,12 +9930,12 @@
       "width": "737",
       "height": "366",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-487",
@@ -9334,12 +9949,12 @@
       "width": "808",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-488",
@@ -9353,12 +9968,12 @@
       "width": "732",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-489",
@@ -9372,12 +9987,12 @@
       "width": "641",
       "height": "423",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-490",
@@ -9391,12 +10006,12 @@
       "width": "717",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-491",
@@ -9410,12 +10025,12 @@
       "width": "843",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-492",
@@ -9429,12 +10044,12 @@
       "width": "630",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-493",
@@ -9448,12 +10063,12 @@
       "width": "777",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-494",
@@ -9467,12 +10082,12 @@
       "width": "750",
       "height": "430",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-495",
@@ -9486,12 +10101,12 @@
       "width": "699",
       "height": "422",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-496",
@@ -9505,12 +10120,12 @@
       "width": "674",
       "height": "326",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-497",
@@ -9524,12 +10139,12 @@
       "width": "606",
       "height": "459",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-498",
@@ -9543,12 +10158,12 @@
       "width": "745",
       "height": "285",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-499",
@@ -9562,12 +10177,12 @@
       "width": "823",
       "height": "287",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-500",
@@ -9581,12 +10196,12 @@
       "width": "885",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-501",
@@ -9600,12 +10215,12 @@
       "width": "906",
       "height": "448",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v003-tail",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-502",
@@ -9619,12 +10234,12 @@
       "width": "547",
       "height": "423",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r21-offline-cache-tail-candidate-stage6a",
-      "current_region_decision": "R21",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r21",
-      "decision_basis": "Stage6a boundary candidate only: Offline/cache tail around offlineFirst, retry queues, cache reads, removeQueries/resetQueries-nearby cards; needs visual transcript before final split..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-503",
@@ -9638,12 +10253,12 @@
       "width": "323",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-504",
@@ -9657,12 +10272,12 @@
       "width": "469",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-505",
@@ -9676,12 +10291,12 @@
       "width": "418",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-506",
@@ -9695,12 +10310,12 @@
       "width": "417",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-507",
@@ -9714,12 +10329,12 @@
       "width": "401",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-508",
@@ -9733,12 +10348,12 @@
       "width": "477",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-509",
@@ -9752,12 +10367,12 @@
       "width": "396",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-510",
@@ -9771,12 +10386,12 @@
       "width": "483",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-511",
@@ -9790,12 +10405,12 @@
       "width": "791",
       "height": "361",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-512",
@@ -9809,12 +10424,12 @@
       "width": "734",
       "height": "423",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-513",
@@ -9828,12 +10443,12 @@
       "width": "482",
       "height": "351",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-514",
@@ -9847,12 +10462,12 @@
       "width": "565",
       "height": "464",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-515",
@@ -9866,12 +10481,12 @@
       "width": "534",
       "height": "463",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-516",
@@ -9885,12 +10500,12 @@
       "width": "536",
       "height": "400",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-517",
@@ -9904,12 +10519,12 @@
       "width": "382",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-518",
@@ -9923,12 +10538,12 @@
       "width": "327",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-519",
@@ -9942,12 +10557,12 @@
       "width": "514",
       "height": "472",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-520",
@@ -9961,12 +10576,12 @@
       "width": "391",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-521",
@@ -9980,12 +10595,12 @@
       "width": "353",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-522",
@@ -9999,12 +10614,12 @@
       "width": "413",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-523",
@@ -10018,12 +10633,12 @@
       "width": "317",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-524",
@@ -10037,12 +10652,12 @@
       "width": "381",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-525",
@@ -10056,12 +10671,12 @@
       "width": "550",
       "height": "373",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-526",
@@ -10075,12 +10690,12 @@
       "width": "492",
       "height": "348",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-527",
@@ -10094,12 +10709,12 @@
       "width": "517",
       "height": "213",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-528",
@@ -10113,12 +10728,12 @@
       "width": "416",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-529",
@@ -10132,12 +10747,12 @@
       "width": "395",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-530",
@@ -10151,12 +10766,12 @@
       "width": "362",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-531",
@@ -10170,12 +10785,12 @@
       "width": "383",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v003-selector-tail",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-532",
@@ -10189,12 +10804,12 @@
       "width": "465",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-533",
@@ -10208,12 +10823,12 @@
       "width": "418",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v002-reset-flow",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-534",
@@ -10227,12 +10842,12 @@
       "width": "442",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-535",
@@ -10246,12 +10861,12 @@
       "width": "516",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r19-v002-testing-msw",
+      "current_region_decision": "R19",
+      "decision_is_final": "yes-for-r19-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-536",
@@ -10265,12 +10880,12 @@
       "width": "474",
       "height": "419",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-537",
@@ -10284,12 +10899,12 @@
       "width": "552",
       "height": "375",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "current_region_decision": "R23",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r23",
-      "decision_basis": "Stage6a boundary candidate only: Dense lower-grid cluster around offline/cache topic; too close/spread to finalize from labels alone, must be visually split before transcript..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r24-v001-cheat-sheet-summary",
+      "current_region_decision": "R24",
+      "decision_is_final": "yes-for-r24-stage6d",
+      "must_recheck_before_region_close": "no-for-stage6d-transcript",
+      "decision_basis": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6d R24 transcript; visible text present, no OCR-placeholder."
     }
   ]
 }

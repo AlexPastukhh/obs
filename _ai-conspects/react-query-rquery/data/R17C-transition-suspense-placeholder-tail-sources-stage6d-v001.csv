@@ -1,0 +1,241 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-403,IU-403,4d034f9fe0,S-403__4d034f9fe0.png,verified-visible-ocr-assisted,R21,11. Transitions: keeping previous data visible,"11. Transitions: keeping previous data visible
+This part is about making Suspense feel smoother during changes like:
+* pagination
+* filtering
+* changing tabs
+* changing selected item
+Without a transition, changing input may immediately suspend and show fallback.
+That can cause a flash:
+* old content disappears
+© spinner appears
+* new content appears
+Sometimes that feels too jumpy.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-414,IU-414,86c00bd7de,S-414__86c00bd7de.png,verified-visible-ocr-assisted,R21,startTransition,"startTransition
+React lets you mark an update as a transition.
+During that transition, React may keep showing previous UI while the new suspended UI is preparing.
+Example
+«> TypeScript 0
+import * as React from 'react""
+import { Suspense } from 'react'
+function ProductsPage() {
+const [page, setPage] = React .useState(1)
+const [isPending, startTransition] = React.useTransition()","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-420,IU-420,95c0e9bb43,S-420__95c0e9bb43.png,verified-visible-ocr-assisted,R21,return (,"return (
+<div>
+<button
+onClick={() => {
+startTransition(() => {
+setPage((p) => p - 1)
+vn
+hb
+disabled={page === 1}
+>
+Prev
+</button>
+<button
+onClick={() => {
+startTransition(() => {
+setPage((p) => p + 1)
+vn
+hb
+>
+Next
+</button>
+{isPending && <small>Updating. . .</small>}
+1","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-423,IU-423,5d5a0ccf6e,S-423__5d5a0ccf6e.png,verified-visible-ocr-assisted,R21,startTransition(fn),"startTransition(fn)
+Wrap state updates inside it.
+> TypeScript oO
+startTransition(() => {
+setPage(2)
+vn
+Those updates become transition updates.
+isPending
+Boolean that becomes [##ué) while the transition is still in progress.
+You can use it for small feedback like:
+> TypeScript ia)
+{isPending && <small>Updating. ..</smal1>}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-424,IU-424,3be0fe3997,S-424__3be0fe3997.png,verified-visible-ocr-assisted,R21,Good:,"Good:
+> TypeScript oO
+{isPending && <small>Updating. . .</smal1>}
+
+Usually less good:
+«> TypeScript ia’)
+{isPending ? <BigSpinner /> : <FullUI />}
+
+because that often defeats the point of keeping previous UI visible.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-425,IU-425,04afe6e8fc,S-425__04afe6e8fc.png,verified-visible-ocr-assisted,R21,<Suspense tallback={<div>Loading page.. .</div>}>,"<Suspense tallback={<div>Loading page.. .</div>}>
+<ProductsPageContent page={page} />
+</Suspense>
+</div>
+)
++
+function ProductsPageContent({ page }: { page: number }) {
+const { data } = useSuspenseQuery({
+querykey: ['products', page],
+queryFn: () => fetchProducts(page),
+n
+return (
+<ul
+{data.items.map((item: any) => (
+<li key={item.id}>{item.name}</1i>
+»}
+</ul>
+)
++","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-429,IU-429,64ae29536d,S-429__64ae29536d.png,verified-visible-ocr-assisted,R21,2. Why React needs this,"2. Why React needs this
+Not all state updates feel equally urgent.
+Urgent updates
+Things the user expects immediately:
+
+© typing in an input
+
+* licking a button
+
+* opening a menu
+
++ checkbox toggle feedback","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-433,IU-433,0ff4794c70,S-433__0ff4794c70.png,verified-visible-ocr-assisted,R21,What this improves,"What this improves
+
+When page changes:
+* React can keep showing previous page briefly
+* instead of instantly switching to fallback
++ then swap to the new page when ready
+
+This makes navigation feel smoother.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-436,IU-436,5b31422c36,S-436__5b31422c36.png,verified-visible-ocr-assisted,R21,Non-urgent updates,"Non-urgent updates
+Things that may take a bit more work:
+* rendering a huge filtered list
+* changing a page of results
+* navigating to data that suspends
+* expensive search result updates
+Without transitions, React often treats them the same way.
+That can cause:
+* input lag
+* flashing spinners/fallbacks
+old Ul disappearing too soon
+*  janky rendering","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-438,IU-438,8298e740e1,S-438__8298e740e1.png,verified-visible-ocr-assisted,R21,12. Suspense vs placeholderData,"12. Suspense vs placeholderData
+
+These solve similar UX problems in different ways.
+
+placeholderData
+
+Lets {useQuery show temporary previous data while new data loads.
+
+Suspense + transitions
+
+Lets React keep old rendered UI visible while the new suspended UI prepares.
+
+Rough rule
+* Ifyou want classic query control and explicit states, use useQuery + placeholderData
+«If your app uses Suspense architecture, use Suspense + transitions","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-446,IU-446,6901482439,S-446__6901482439.png,verified-visible-ocr-assisted,R21,3. Mental model,"3. Mental model
+useTransition Says:
+“Update the important interactive state now, but let the heavier UI update happen in the background.”
+It does not make code faster by itself.
+It changes priority and behavior.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-447,IU-447,561c21b24d,S-447__561c21b24d.png,verified-visible-ocr-assisted,R21,13. When Suspense is a good fit,"13. When Suspense is a good fit
+Suspense is a strong fit when:
+* your app already uses React Suspense patterns
+* you want loading boundaries higher in the tree
+* you want simpler success-only components
+* you are okay structuring Ul around boundaries
+* you are using SSR/streaming/server-component-oriented architecture
+14. When Suspense is a bad fit
+It may be a poor fit when:
+* you rely heavily on enabled
+* you want highly explicit loading flags in each component
+* your team is less comfortable with Suspense control flow
+* you have many conditional/dependent branches in one component
+* you want very fine manual loading behavior without boundaries
+In those cases, standard useQuery) is often easier. |","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-486,IU-486,1925501b08,S-486__1925501b08.png,verified-visible-ocr-assisted,R21,What happens step by step with transition,"What happens step by step with transition
+User clicks Next.
+Step 1
+React receives a transition update:
+
+«> TypeScript
+
+startTransition(() => {
+
+setPage(2)
+vn","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-490,IU-490,8a89987039,S-490__8a89987039.png,verified-visible-ocr-assisted,R21,Step 2,"Step 2
+
+React knows this update is non-urgent.
+
+Step 3
+
+React keeps the current visible UI if possible while preparing the next state.
+So page 1 can remain on screen.
+
+Step 4
+
+React starts rendering the new tree in the background with (page!22)-
+Step 5
+
+ProductsList asks for query |[ ""products"", 2] -
+
+Step 6
+
+It suspends because data is not ready.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-493,IU-493,e94b5eb363,S-493__e94b5eb363.png,verified-visible-ocr-assisted,R21,Step7,"Step7
+
+Because this is happening inside a transition, React prefers to keep showing the previous UI instead of
+
+immediately replacing it with fallback.
+
+Step 8
+
+isPending becomes true.
+
+You can show a subtle hint like:
+> TypeScript ia’)
+<small>Updating. . .</smal1>
+
+Step 9
+
+When page 2 data is ready, React swaps page 1 UI for page 2 UI.
+
+Step 10
+
+isPending becomes false .","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-496,IU-496,643f602633,S-496__643f602633.png,verified-visible-ocr-assisted,R21,User-visible behavior with transition,"User-visible behavior with transition
+The user sees:
+1. page 1 content
+2. dick Next
+3. page 1 stays visible
+4. maybe a small “Updating...” indicator appears
+5. page 2 appears when ready
+This usually feels much smoother than flashing a loading fallback.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-498,IU-498,796a1b979e,S-498__796a1b979e.png,verified-visible-ocr-assisted,R21,6. Key difference in one sentence,"6. Key difference in one sentence
+Without transition:
+React tends to switch to loading/fallback immediately.
+With transition:
+React tries to keep the previous UI visible while the new UI prepares.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-499,IU-499,f004c25ab3,S-499__f004c25ab3.png,verified-visible-ocr-assisted,R21,7. Very important: it does not delay the state forever,"7. Very important: it does not delay the state forever
+startTransition does not mean “ignore this update”.
+It means:
+* schedule it at lower priority
+© let urgent updates win first
+* keep UI responsive while it is being prepared
+The update still happens.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-501,IU-501,c4d203ec2e,S-501__c4d203ec2e.png,verified-visible-ocr-assisted,R21,12. What it does not do,"12. What it does not do
+
+It does not make network requests faster
+
+If fetch takes 2 seconds, it still takes 2 seconds.
+
+It does not replace loading states completely
+
+You may still want indicators like isPending .
+
+It does not mean “run later with setTimeout”
+
+Itis not a timer. It is priority scheduling.
+
+It does not fix bad architecture automatically
+
+If rendering is extremely expensive, transitions help perception, but optimization may still be needed.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

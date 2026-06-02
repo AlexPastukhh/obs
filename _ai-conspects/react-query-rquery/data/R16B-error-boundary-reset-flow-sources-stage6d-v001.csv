@@ -1,0 +1,166 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-416,IU-416,3a4b17c0bd,S-416__3a4b17c0bd.png,verified-visible-ocr-assisted,R21,Step 3,"Step 3
+React Query looks for [*todos*] in the cache.
+Assume:
+* no successful data yet
+© request starts
+Step 4
+At some point the request fails.
+So query state becomes roughly:
+* status = error
+* error = some Error( ‘Failed to load todos’)","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-422,IU-422,551b3e7039,S-422__551b3e7039.png,verified-visible-ocr-assisted,R21,FLOW 2 — Error gets thrown into render,"FLOW 2 — Error gets thrown into render
+Step 5
+React tries to render (Tedes) again.
+Because query is now errored and [throwOnError? true), React Query throws the error during render.
+So conceptually:
+«” TypeScript
+throw error
+happens from inside {useQuery .","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-428,IU-428,57b6c5e673,S-428__57b6c5e673.png,verified-visible-ocr-assisted,R21,Step 6,"Step 6
+That thrown error travels upward in the render tree.
+ErrorBoundary catches it.
+Step 7
+Because |ErrorBoundary caught it, React does not render <Todos />-
+Instead it renders the fallback
+«” TypeScript
+<div>
+<p>{error.message}</p>
+<button onClick={resetErrorBoundary}>Try again</button>
+</div>
+So now the user sees:
+* error message
+Try again button
+1","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-437,IU-437,05397c5c1b,S-437__05397c5c1b.png,verified-visible-ocr-assisted,R21,What is the state right now?,"What is the state right now?
+
+At this moment:
+
+ErrorBoundary state
+
+“An error happened in my child subtree, so | am showing fallback.”
+React Query state
+
+“The [*todos*] query is errored.”
+
+Both are now in an error-related state.
+
+That is why recovery needs to reset both layers.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-444,IU-444,183e59182f,S-444__183e59182f.png,verified-visible-ocr-assisted,R21,FLOW 3 — User clicks “Try again”,"FLOW 3 — User clicks “Try again”
+User clicks:
+«> TypeScript
+<button onClick={resetErrorBoundary}>Try again</button>
+Let's go step by step.
+Step 8
+resetErrorBoundary() is called.
+This function belongs to the |ErrorBoundary .
+Its job is:
+* dear the boundary's internal “I caught an error” state
+© try rendering children again
+But there is more.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-454,IU-454,b5e8b40ff4,S-454__b5e8b40ff4.png,verified-visible-ocr-assisted,R21,FLOW 4 — ErrorBoundary reset triggers React Query reset,"FLOW 4 — ErrorBoundary reset triggers React Query reset
+
+Remember this line:
+> TypeScript oO
+onReset={reset}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-457,IU-457,a7257b2fb8,S-457__a7257b2fb8.png,verified-visible-ocr-assisted,R21,The reset here comes from QueryErrorResetBoundary .,"The reset here comes from QueryErrorResetBoundary .
+
+So when |ReSetERFenBaundary() resets the boundary, the boundary also calls:
+«> TypeScript oO
+onReset()
+
+which means:
+«> TypeScript oO
+reset()
+
+from QueryErrorResetBoundary -","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-464,IU-464,60fc4df97e,S-464__60fc4df97e.png,verified-visible-ocr-assisted,R21,Step 9,"Step 9
+
+So now two things happen together:
+
+A. ErrorBoundary resets
+
+It stops showing fallback and is ready to render children again.
+
+B. QueryErrorResetBoundary resets query error recovery state
+
+It tells React Query something like:
+“Okay, this boundary was reset. Queries inside it are allowed to retry/recover instead of just rethrowing
+the previous error state immediately.”
+
+This is the key bridge.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-469,IU-469,bf76afefe1,S-469__bf76afefe1.png,verified-visible-ocr-assisted,R21,FLOW 5 — React tries to render Todos again,"FLOW 5 — React tries to render Todos again
+Step 10
+After reset, React renders the children of the boundary again.
+So it renders (<Tedos />) again.
+Step 11
+Todos runs useQuery(...) again.
+React Query sees:
+* same query key: [""todos*]
+* the boundary reset has happened
+* this query is now allowed to attempt recovery/refetch instead of staying stuck in the previous thrown-
+error cycle
+Step 12
+The query gets another chance to run.
+Possible outcomes: v","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-507,IU-507,e4cef97c4a,S-507__e4cef97c4a.png,verified-visible-ocr-assisted,R23,50. Global error strategy,"50. Global error strategy
+© dient defaults for | throwOnError
+© query cache level (onError
+© toast/global notifications
+«keep stale data visible on background refetch failure
+51. Response validation
+* validate API shape
+* Zod as example
+«throw invalid data into query error path
+* tradeoff: runtime cost
+© useful for unreliable/third-party APIs
+52. Offline support
+* paused queries
+*° fetchStatus: ""paused""
+* offline Ul vs loading UI
+* resume on reconnect
+a Lb","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-528,IU-528,40bed35fff,S-528__40bed35fff.png,verified-visible-ocr-assisted,R23,47. Error Boundaries,"47. Error Boundaries
++ render-time error handling
+© throwOnError
+© boundary fallback Ul
+© retry/recovery flow
+48. throwOnError
+* boolean form
+© callback form
+* throw only when no cached data exists
+* throw only for some error types
++ retries happen before final throw behavior matters
+49. QueryErrorResetBoundary
+* connects query error recovery with Error Boundary reset
+© [reset
+© [onReset
+© resetErrorBoundary
+* reset boundary + retry query flow V","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-533,IU-533,d36e67e421,S-533__d36e67e421.png,verified-visible-ocr-assisted,R23,66. Suspense + ErrorBoundary,"66. Suspense + ErrorBoundary
+
+* Suspense for loading
+
+«©  ErrorBoundary for errors
+
+* paired boundary pattern
+67. Transitions
+
+*  useTransition
+
+©  startTransition
+
+° isPending
+
+* old UI stays visible while new UI prepares
+
++ smoother pagination/filter changes with Suspense
+68. Transition mental model
+
+* urgent vs non-urgent updates
+
+* background preparation
+
+«delayed commit of transition result
+
+* pending marker while old Ul remains visible","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

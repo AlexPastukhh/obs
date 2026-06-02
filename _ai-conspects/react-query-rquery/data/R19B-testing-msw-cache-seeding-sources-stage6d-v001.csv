@@ -1,0 +1,296 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-448,IU-448,97fc0cac7a,S-448__97fc0cac7a.png,verified-visible-ocr-assisted,R21,2. What is MSW,"2. What is MSW
+MSW means Mock Service Worker.
+Itis a tool for mocking HTTP/network requests in tests and development.
+Instead of mocking your query hook directly, you let the component make a real fetch call, but MSW
+intercepts it and returns fake data.
+So from the component's point of view:
+© it really called | /api/todos
+* it really got a response
+* React Query behaves normally
+But no real backend is used.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-452,IU-452,c0d79a464d,S-452__c0d79a464d.png,verified-visible-ocr-assisted,R21,36.3 MSW example,"36.3 MSW example
+«> TypeScript ia’)
+import { http, HttpResponse } from 'msw'
+import { setupServer } from ‘msw/node*
+const server = setupServer(
+http.get(‘/api/posts', () > {
+return HttpResponse.json([{ id: '1', title: ‘Hello’ }])
+vn
+)
+beforeAll(() => server. listen())
+afterEach(() => server.resetHandlers())
+afterAll(() => server.close())
+Override per test:
+«> TypeScript ia’)
+server.use(
+http.get(‘/api/posts', () > {
+return new HttpResponse(null, { status: 500 })
+vn
+) Vv","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-455,IU-455,9f0168a4d5,S-455__9f0168a4d5.png,verified-visible-ocr-assisted,R21,Why MSW is so useful,"Why MSW is so useful
+Because it tests the app closer to how it really works.
+Your actual flow remains:
+
+* component renders
+
+© (useQuery runs
+
+© queryFn runs
+
+* fetch request happens
+
+* response arrives
+
+* cache updates
+
+© loading/success/error states happen naturally
+That is much better than faking the hook result manually.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-461,IU-461,43d3cbe592,S-461__43d3cbe592.png,verified-visible-ocr-assisted,R21,36.4 Seed cache in tests,"36.4 Seed cache in tests
+Useful for specific state setups.
+«> TypeScript ia’)
+const client = createTestQueryClient()
+client .setQueryData(['posts'], [{ id: '1', title: 'Prefilled' }])
+Good for controlled scenarios, but if you constantly need huge cache seeding, your abstraction may need
+deanup.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-463,IU-463,90c5d6a45a,S-463__90c5d6a45a.png,verified-visible-ocr-assisted,R21,2. Do you need to install it?,"2. Do you need to install it?
+Yes.
+Usually:
+
+«” Bash
+
+npm install -D msw
+or
+
+«” Bash
+
+yarn add -D msw
+or
+
+«” Bash
+
+pnpm add -D msw","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-467,IU-467,3eb24d26dd,S-467__3eb24d26dd.png,verified-visible-ocr-assisted,R21,36.5 Testing mutations,"36.5 Testing mutations
+Same principles as queries:
+* render with real query client
+* mock network
+* trigger Ul action
+© assert final Ul/cache behavior
+If a mutation invalidates and refetches, make sure your mocked server returns the updated state.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-470,IU-470,17b1958ff6,S-470__17b1958ff6.png,verified-visible-ocr-assisted,R21,Step 1: your real query function exists,"Step 1: your real query function exists
+Example:
+«” TypeScript
+export async function fetchTodos() {
+const response = await fetch('/api/todos')
+if (!response.ok) {
+throw new Error('Failed to fetch todos')
+t
+return response.json()
++
+This is real application code.
+No mocking inside it.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-473,IU-473,7af4c6f67b,S-473__7af4c6f67b.png,verified-visible-ocr-assisted,R21,Step 2: your component uses useQuery,"Step 2: your component uses useQuery
+«> TypeScript
+import { useQuery } from '@tanstack/react-query’
+import { fetchTodos } from './api'
+export function Todos() {
+const { data, isPending, isError } = useQuery({
+querykey: ['todos'],
+queryFn: fetchTodos,
+vn
+if (isPending) return <div>Loading. ..</div>
+if (isError) return <div>Error loading todos</div>
+return (
+<ul>
+{data.map((todo: any) => (
+<li key={todo.id}>{todo.text}</li>
+)t
+</ul>
+)
++
+Still real application code.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-476,IU-476,26768fa11d,S-476__26768fa11d.png,verified-visible-ocr-assisted,R21,Step 3: create MSW handlers,"Step 3: create MSW handlers
+Handlers describe fake API responses.
+Example file: mocks/handlers.ts
+«” TypeScript
+import { http, HttpResponse } from 'msw'
+export const handlers = [
+http.get(‘/api/todos', () => {
+return HttpResponse.json([
+{ id: 1, text: ‘Buy milk’ },
+{ id: 2, text: ‘Read book"" },
+1D)
+n,
+1
+This says:
+* if code makes |GET /api/todos
+* MSW should return this fake JSON","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-480,IU-480,57ccecac25,S-480__57ccecac25.png,verified-visible-ocr-assisted,R21,Step 4: create MSW server for tests,"Step 4: create MSW server for tests
+Example file: (mocks/sepver lis
+
+«> TypeScript
+
+import { setupServer } from 'msw/node'
+
+import { handlers } from './handlers'
+
+export const server = setupServer(..-handlers)
+This creates the test server that will intercept requests.
+Step 5: connect MSW to test lifecycle","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-484,IU-484,9908e75ea8,S-484__9908e75ea8.png,verified-visible-ocr-assisted,R21,"In your test setup file, for example |setupTests.ts or |vitest_setup_ts :","In your test setup file, for example |setupTests.ts or |vitest_setup_ts :
+” TypeScript
+import { beforeAll, afterAll, afterEach } from 'vitest'
+import { server } from './mocks/server'
+beforeAll(() => server. listen())
+afterEach(() => server.resetHandlers())
+afterAll(() => server.close())
+What this means:
+beforeAll(() => server.listen())
+Start intercepting requests before tests run.
+afterEach(() => server.resetHandlers())
+After each test, restore handlers to default state.
+This prevents one test’s custom override from leaking into another.
+afterall(() => server.close())
+Stop interception after all tests finish.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-488,IU-488,4c176eaa61,S-488__4c176eaa61.png,verified-visible-ocr-assisted,R21,Step 6: create a test QueryClient,"Step 6: create a test QueryClient
+Because React Query needs a provider.
+«> TypeScript
+import { QueryClient } from '@tanstack/react-query'
+export function createTestQueryClient() {
+return new QueryClient({
+defaultOptions: {
+queries: {
+retry: false,
+Lb
+Lb
+vn
++
+Retries are often disabled in tests to make them faster and more predictable.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-492,IU-492,9e681381b1,S-492__9e681381b1.png,verified-visible-ocr-assisted,R21,Step 7: create render helper,"Step 7: create render helper
+«> TypeScript
+import { QueryClientProvider } from '@tanstack/react-query'
+import { render } from '@testing-library/react'
+import { createTestQueryClient } from './testQueryClient'
+export function renderWithClient(ui: React.ReactElement) {
+const queryClient = createTestQueryClient()
+return render(
+<QueryClientProvider client={queryClient}>
+{ui}
+</QueryClientProvider>
+)
++
+This gives every test a fresh QueryClient.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-495,IU-495,49f8026ec0,S-495__49f8026ec0.png,verified-visible-ocr-assisted,R21,Step 8: write the actual test,"Step 8: write the actual test
+
+«> TypeScript
+
+import { screen } from '@testing-library/react'
+
+import { Todos } from './Todos'
+
+import { renderWithClient } from './test-utils'
+
+test(‘renders todos from API', async () => {
+renderWithClient(<Todos />)
+expect (screen.getByText( ‘Loading. ..')).toBeInTheDocument()
+expect(await screen. findByText('Buy milk'))-toBeInTheDocument()
+expect(await screen. findByText('Read book"" )).toBeInTheDocument()
+
+vn","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-497,IU-497,541ce1e192,S-497__541ce1e192.png,verified-visible-ocr-assisted,R21,5. Why this is better than mocking useQuery,"5. Why this is better than mocking useQuery
+Because the whole real chain is preserved:
+* component render
+* useQuery
+© query function
+*° fetch
+© response parsing
+* loading state
+* success/error state
+* rerender
+Only the network layer is fake.
+That is much more realistic.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-500,IU-500,f5131ef58a,S-500__f5131ef58a.png,verified-visible-ocr-assisted,R21,6. How to test an error case,"6. How to test an error case
+You can override handlers in a single test.
+> TypeScript oO
+import { http, HttpResponse } from ‘msw’
+import { server } from './mocks/server""
+test(‘shows error when API fails', async () => {
+server.use(
+http.get('/api/todos', () => {
+return new HttpResponse(null, { status: 500 })
+D)
+)
+renderwithClient(<Todos />)
+expect(await screen.findByText(‘Error loading todos')).toBeInTheDocument()
+»","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-502,IU-502,33dba8ec9f,S-502__33dba8ec9f.png,verified-visible-ocr-assisted,R21,Flow:,"Flow:
+default handler is temporarily replaced for this test
+request now gets 500
+© | fetchTodos throws
+React Query goes to error state
+© component shows error UI
+After test ends:
+« TypeScript
+afterEach(() => server.resetHandlers())
+restores defaults.
+v","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-512,IU-512,38e6e187bc,S-512__38e6e187bc.png,verified-visible-ocr-assisted,R23,7. How to test loading state more clearly,"7. How to test loading state more clearly
+You can add delay.
+«> TypeScript
+server .use(
+http.get('/api/todos', async () => {
+await new Promise((resolve) => setTimeout(resolve, 300))
+return HttpResponse.json([{ id: 1, text: ‘Delayed todo’ }])
+>)
+)
+Now loading UI stays visible long enough to assert more clearly.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-513,IU-513,a01d3c2b86,S-513__a01d3c2b86.png,verified-visible-ocr-assisted,R23,69. Testing basics,"69. Testing basics
+* fresh QueryClient per test
+do not reuse query cache across tests
+© disable retries in tests
+* isolate query state
+70. Test render utilities
+*  createTestQueryClient
+© renderWithClient
+* wrap with QueryClientProvider","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-516,IU-516,2ceec70ba6,S-516__2ceec70ba6.png,verified-visible-ocr-assisted,R23,8. Browser mode vs test mode,"8. Browser mode vs test mode
+This is important.
+In tests
+You usually use:
+
+«” TypeScript
+
+import { setupServer } from 'msw/node'
+This is Node test interception.
+No browser Service Worker registration needed.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-524,IU-524,38a80c8868,S-524__38a80c8868.png,verified-visible-ocr-assisted,R23,71. MSW,"71. MSW
+* network-layer mocking
+* request interception
+* handlers
+*  setupServer
+* success/error/loading simulation
++ keeps real React Query behavior
+72. MSW test lifecycle
+© server. listen()
+*  server.resetHandlers()
+«| server.close()
+* override handlers per test
+73. What to mock
+* best: network layer with MSW
+* okay: mock API/query function
+* avoid: mocking useQuery","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-535,IU-535,41a015d3af,S-535__41a015d3af.png,verified-visible-ocr-assisted,R23,74. Why avoid mocking useQuery,"74. Why avoid mocking useQuery
+«bypasses real query lifecycle
+* bypasses cache behavior
+* brittle fake hook objects
+*  implementation-coupled tests
+75. Seeding cache in tests
+* setQueryData before render
+* test cached states
+* test stale/prefetched states
+* useful but can signal over-coupling if overused
+76. Testing mutations
+* real interaction
+* mock network
+* invalidation/refetch-aware assertions
+* fresh client per test L","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

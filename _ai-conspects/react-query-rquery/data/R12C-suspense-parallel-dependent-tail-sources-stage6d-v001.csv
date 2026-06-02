@@ -1,0 +1,68 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-386,IU-386,6ff5da2ed3,S-386__6ff5da2ed3.png,verified-visible-ocr-assisted,R21,9. How to make Suspense queries parallel,"9. How to make Suspense queries parallel
+You usually split them into separate components under the same boundary.
+Better pattern
+«” TypeScript oO
+function UserSection() {
+const { data } = useSuspenseQuery({
+querykey: ['user'],
+queryFn: fetchUser,
+D>)
+return <h1>{data.name}</h1>
+}
+function RepoSection() {
+const { data } = useSuspenseQuery({
+querykey: [‘repos'],
+queryFn: fetchRepos,
+D>)
+return <div>{data. length} repos</div>
+}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-389,IU-389,b6379df317,S-389__b6379df317.png,verified-visible-ocr-assisted,R21,export default function Dashboard() {,"export default function Dashboard() {
+return (
+<Suspense fallback={<div>Loading dashboard. ..</div>}>
+<UserSection />
+<RepoSection />
+</Suspense>
+)
++
+This is often a better structure because sibling components can participate more naturally in concurrent
+rendering behavior.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-393,IU-393,e91d3c5a46,S-393__e91d3c5a46.png,verified-visible-ocr-assisted,R21,Even better with separate boundaries,"Even better with separate boundaries
+«” TypeScript
+export default function Dashboard() {
+return (
+°
+<Suspense fallback={<div>Loading user... .</div>}>
+<UserSection />
+</Suspense>
+<Suspense fallback={<div>Loading repos. ..</div>}>
+<RepoSection />
+</Suspense>
+<P
+)
++
+Now each section can resolve independently.
+This often feels much nicer in the UI.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-396,IU-396,ab518b8fb7,S-396__ab518b8fb7.png,verified-visible-ocr-assisted,R21,10. Suspense with dependent queries,"10. Suspense with dependent queries
+Suspense makes dependent queries more obvious.
+Example
+«> TypeScript
+function MovieAndDirector({ title }: { title: string }) {
+const { data: movie } = useSuspenseQuery({
+queryKey: ['movie', title],
+queryFn: () => fetchMovie(title),
+>)
+const { data: director } = useSuspenseQuery({
+queryKey: [‘director', movie.directorId],
+queryFn: () => fetchDirector(movie.directorId),
+>)","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-401,IU-401,ed1ff3c24e,S-401__ed1ff3c24e.png,verified-visible-ocr-assisted,R21,return (,"return (
+<div>
+<h1>{movie.title}</h1>
+<p>{director.name}</p>
+</div>
+)
+}
+This is truly serial by nature because query 2 needs result of query 1.
+That is fine. This is a real dependency.
+The important thing is not to accidentally create serial behavior for queries that are actually independent.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

@@ -1,0 +1,486 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-485,IU-485,8551008f16,S-485__8551008f16.png,verified-visible-ocr-assisted,R21,39. Best practices summary,"39. Best practices summary
+Always do these
+* cteate one stable QueryClient
+© put every query input into the queryKey
+© treat staleTime and gcTime as different concepts
+* handle loading/error states safely
+* use custom hooks for reusable queries
+* prefer declarative key changes over manual (refetch
+* use invalidation after writes unless manual cache updates are clearly simpler
+* keep cache updates immutable
+* use query key factories in medium/large apps
+* prefer network mocking over mocking {useQuery) in tests","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-489,IU-489,2a8a82cfff,S-489__2a8a82cfff.png,verified-visible-ocr-assisted,R21,Be careful with these,"Be careful with these
+
+* creating QueryClient inside a component
+
+* forgetting dynamic values in the key
+
+* accessing (data.map(...) before data exists
+
+© using queries for server writes
+
+© mutating cached objects in place
+
+© overusing manual |etQuérybata) for complex list scenarios
+* confusing isPending, isLoading, and isFetching
+* confusing staleTime with gcTime
+
+© mocking [useQuery) directly in tests
+
+«  destructuring query results with the rest operator
+
+* assuming Suspense queries support ‘enabled","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-503,IU-503,e6431cdcfb,S-503__e6431cdcfb.png,verified-visible-ocr-assisted,R23,27. Infinite queries,"27. Infinite queries
+*  useInfiniteQuery
+* one long logical cache entry
+*° data.pages
+* = data_pageParams
+© initialPageParam
+*  getNextPageParam
+*©  fetchNextPage
+*  hasNextPage
+©  isFetchingNextPage
+* flatten pages
+* bidirectional infinite queries
+* intersection observer for load-more
+* consistency on refetch
+28. Query purity
+* queries for reading only
+query functions should be idempotent
+* no server side effects in queries
+* writes belong to mutations","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-504,IU-504,8f84323643,S-504__8f84323643.png,verified-visible-ocr-assisted,R23,11. Refetch triggers,"11. Refetch triggers
+«key changes
+* mount/new observer
+* window focus
+* reconnect
+*  refetchOnMount
+© refetchOnWindowFocus
+* — refetchOnReconnect
+12. Cache lifetime
+* active query
+* inactive query
+© observer count = 0
+© gcTime
+«default garbage collection idea
+* freshness vs retention
+* fresh data can still be garbage-collected if inactive","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-505,IU-505,4501984f59,S-505__4501984f59.png,verified-visible-ocr-assisted,R23,33. Optimistic updates,"33. Optimistic updates
+
+* instant Ul updates before server confirms
+* cancel in-flight queries
+
+«snapshot previous cache
+
+* optimistic [SetQueryData
+
+© rollback on error
+
+invalidate on settle
+
+* useful for predictable UI changes
+
+34. Defaults and configuration
+
+© global defaults in (QueryClignt
+
+*  defaultOptions
+
+* queries
+
+© mutations
+
+© per-key defaults with setQueryDefaults
+© per-query override in useQuery","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-506,IU-506,aff7a63b67,S-506__aff7a63b67.png,verified-visible-ocr-assisted,R23,18. ESLint support,"18. ESLint support
+
+© @tanstack/eslint-plugin-query
+
+* exhaustive key dependency checking
+19. Parallel queries
+
+© multiple (useQuery) calls
+
+* separate lifecycle per query
+
+* parallel fetching for independent resources
+20. Multiple requests in one query
+
+© one (querykn
+
+© Promise.all
+
+* one cache entry
+
+* one loading state
+
+* one error state
+
+* one retry lifecycle
+
+* no separate deduplication","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-509,IU-509,18e061539b,S-509__18e061539b.png,verified-visible-ocr-assisted,R23,5. Query states,"5. Query states
+*° status
+*°  fetchStatus
+* isPending
+* isLoading
+© isFetching
+© isError
+*  isSuccess
+* isStale
+6. Safe rendering
+© guard against data being undefined
+* loading branch
+© error branch
+* success branch
+«render order of async states","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-510,IU-510,cbf6a625d3,S-510__cbf6a625d3.png,verified-visible-ocr-assisted,R23,59. Persisted mutations,"59. Persisted mutations
+© mutation defaults for restore
+* replay persisted writes
+* resume in original order
+* side effects after restore
+60. Real-time / WebSockets
+© push-based updates
+* invalidate on server message
+* direct setQueryData from server message
+* real-time app strategy
+* event-driven freshness
+61. On-demand app strategy
+© staleTime: Infinity
+* rely on server push
+* invalidate from events
+© direct cache writes from events
+* no time-based freshness checks","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-511,IU-511,ebb15590fa,S-511__ebb15590fa.png,verified-visible-ocr-assisted,R23,React Query / TanStack Query Cheat Sheet Topics,"React Query / TanStack Query Cheat Sheet Topics
+1. Core idea
+
+© server-state manager
+
+* async, promise-based state
+
+* caching
+
+* background refetching
+
+* loading/error/success states
+
+* query vs mutation
+
+* server state vs client state","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-514,IU-514,410db3d5df,S-514__410db3d5df.png,verified-visible-ocr-assisted,R23,77. Core architecture mental model,"77. Core architecture mental model
+© observers
+* cache
+* subscriptions
+* Ulupdates triggered from cache changes
+* adapters built on query core
+78. Performance philosophy
+* render cheaper rather than only render less
+© React.memo
+°  useMemo
+© useCallback
+© query structural sharing
+* small subscriptions via (select","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-515,IU-515,064a1ad368,S-515__064a1ad368.png,verified-visible-ocr-assisted,R23,2. Setup,"2. Setup
+
+*  QueryClient
+
+* create client outside render
+
+© QueryClientProvider
+
+* one stable client
+
+* shared cache through provider
+
+* context used for client injection
+3. useQuery basics
+
+*  queryKey
+
+© queryFn
+
+* subscription to cache
+
++ rerenders on relevant state/data change
+
+* custom query hooks","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-517,IU-517,a1b7bbb50b,S-517__a1b7bbb50b.png,verified-visible-ocr-assisted,R23,29. Mutations,"29. Mutations
+* useMutation
+© = mutationFn
+° mutate
+© mutation variables
+* mutation lifecycle states
+*  onMutate
+* ~ onSuccess
+*  onError
+* ~ onSettled
+30. Cache updates after mutation
+* queryClient.setQueryData
+«immutable updates only
+« do not mutate cached objects in place
+* return new references
+* manual detail cache updates
+© manual list cache updates","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-518,IU-518,22618c5d8b,S-518__22618c5d8b.png,verified-visible-ocr-assisted,R23,53. networkMode,"53. networkMode
+* online
+° always
+*  offlineFirst
+* queries that do not require network
+© offline-aware retries/resume
+54. Offline mutations
+© queue writes while offline
+«replay on reconnect
+* mutation ordering on restore
+* invalidation/refetch bursts after reconnect
+55. Persistence
+«in-memory cache by default
+* cache lost on reload/tab close/navigation
++ persisters
+* sync persister
+* async persister
+*  PersistQueryClientProvider","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-519,IU-519,dd54fb38a9,S-519__dd54fb38a9.png,verified-visible-ocr-assisted,R23,13. Conditional queries,"13. Conditional queries
+
+* hooks must not be conditional
+
+© (enabled
+
+* disabled query states
+
+* status: ""pending' with fetchStatus: ‘idle""
+
+* separate “no input yet” UI
+
+* conditional component mounting as alternative
+14. Polling
+
+© (refetchInterval
+
+* fixed interval polling
+
+¢ function form of refetchInterval
+
+* stop polling with false
+
+* polling until condition is met","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-520,IU-520,c85b8a0c7c,S-520__c85b8a0c7c.png,verified-visible-ocr-assisted,R23,44. Request cancellation,"44. Request cancellation
+
+* ~AbortSignal
+
+* pass signal to fetch
+
+* cancel obsolete in-flight requests
+
+* useful for search and navigation
+45. Retry behavior
+
+© retry
+
+* retryDelay
+
+* retry function form
+
+* retries before final error state
+
+*  pending/fetching during retries
+46. Error handling
+
+* local isError) rendering
+
+© query final error state
+
+«local error UI vs global error handling","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-521,IU-521,27be4eaafb,S-521__27be4eaafb.png,verified-visible-ocr-assisted,R23,21. Dependent queries,"21. Dependent queries
+* second query depends on first
+* enabled with derived ID
+* serial loading
+* composed hooks for dependencies
+22. useQueries
+© array of query configs
+* parallel queries with separate caches
+© dynamic query arrays
+* combine results
+«derive aggregate flags
+© combine
+23. Prefetching
+* queryClient.prefetchQuery
+* prefetch on hover
+* prefetch likely next route
+«prefetch likely next page
+* prefetch does not guarantee no loading UI","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-522,IU-522,6a97b2c3f6,S-522__6a97b2c3f6.png,verified-visible-ocr-assisted,R23,62. Suspense basics,"62. Suspense basics
+* Suspense moves loading handling up the tree
+© boundary fallback
+* success-only query components
+63. useSuspenseQuery
+*  Suspense-oriented query hook
+* no manual loading branch
+«data assumed ready in render
+* wrap with Suspense
+64. Suspense limitations
+* no enabled
+* conditional mounting instead of enabled
+* composition patterns instead of conditional hooks
+65. Suspense serial behavior
+«multiple suspense queries in one component can run serially
+© split into siblings/components for better parallelism
+* separate boundaries per section
+7","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-523,IU-523,dc849d0bfb,S-523__dc849d0bfb.png,verified-visible-ocr-assisted,R23,35. Query key factories,"35. Query key factories
+* central key helpers
+© one factory per feature
+«shared prefix per feature
+¢  list/detail/all variants
+* safer invalidation
+° safer reuse
+36. Query option factories
+* reusable query config builders
+* return queryKey
+* retum queryFn
+« retum shared options
+«merge per-use overrides
+37. Structural sharing
+* unchanged nested references preserved
+© helps React.memo
+«helps dependency arrays
+* content matters, not wrapper identity","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-525,IU-525,50c2040d0f,S-525__50c2040d0f.png,verified-visible-ocr-assisted,R23,7. Query functions,"7. Query functions
+© async/await
+* response.ok checks
+«throw on bad responses
+«thrown async errors become rejected promises
+© do not swallow errors
+8. Declarative refetching
+* use queryKey changes instead of manual refetch
+* avoid imperative refetch when input belongs in key
+© (refetch() as manual override only","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-526,IU-526,59c3bada86,S-526__59c3bada86.png,verified-visible-ocr-assisted,R23,79. Practical anti-patterns,"79. Practical anti-patterns
+© creating QueryClient inside component
+* forgetting dynamic values in querykey
+* conditionally calling query hooks
+mutating cached data
+* using queries for writes
+* swallowing query errors
+«mocking [useQuery in tests
+«rest destructuring query result
+* giant app-wide suspense fallback for everything","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-527,IU-527,c97e56b4c7,S-527__c97e56b4c7.png,verified-visible-ocr-assisted,R23,4. Query rules,"4. Query rules
+© (querykey must uniquely identify data
+© queryFn must return a Promise
+include every value used by queryfn in queryKey
+© query keys can contain arrays and objects
+«deterministic key hashing","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-529,IU-529,1ab0020f75,S-529__1ab0020f75.png,verified-visible-ocr-assisted,R23,56. Persisted hydration flow,"56. Persisted hydration flow
+
+* restoration before queries run
+
+* restoration fallback/loading UI
+
+* avoid fresh queries before restore completes
+57. Selective persistence
+
+«do not persist everything
+
+*  metadata-based persistence flags
+
+* persist only successful queries
+
+© dehydrate filters
+
+*  sensitive/large data filtering
+58. Persistence storage limits
+
+* localStorage quota
+
+* pruning
+
+* remove oldest query strategy
+
+* selective persistence to avoid quota issues","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-530,IU-530,5632bffbe4,S-530__5632bffbe4.png,verified-visible-ocr-assisted,R23,24. initialData,"24. initialData
+* seed query from existing cache
+© hydrate detail from list cache
+* synchronous initial value
+25. placeholderData
+temporary visual data while real fetch runs
+* keep previous page visible
+* smooth transitions
+* not the same as final data
+26. Pagination
+* page in queryKkey
+* one cache entry per page
+© prev/next page logic
+* placeholder while switching
+* prefetch next page
+* unknown total pages handling","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-532,IU-532,796c21f006,S-532__796c21f006.png,verified-visible-ocr-assisted,R23,15. Derived query UI flags,"15. Derived query UI flags
+© isFetching for background activity
+© isStale for outdated cache
+* stale indicator
+* background refresh indicator
+16. Custom hooks
+© wrap [useQuery, in reusable hooks
+*  deaner components
+* parameterized query hooks
+* composition of hooks
+17. Dynamic query keys
+* ~ [""book"", bookId]
+°  ['repos"", sort]
+*  [‘repos*, sort, page]
+* key must change when data source changes J,","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-534,IU-534,7ad6555434,S-534__7ad6555434.png,verified-visible-ocr-assisted,R23,31. Invalidation,"31. Invalidation
+
+© queryClient.invalidateQueries
+
+* refetch active queries
+
+* mark inactive queries stale
+
+* safer than manual updates in many cases
+
+* verify cache after server change
+32. Invalidation matching
+
+© fuzzy query key matching
+
+* prefix matching
+
+* invalidate subsets by prefix
+
+*° stale: true
+
+© type: ‘active’
+
+* predicate
+
+* refetchType: ‘all’","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-536,IU-536,bf8890fd14,S-536__bf8890fd14.png,verified-visible-ocr-assisted,R23,9. Shared cache and observers,"9. Shared cache and observers
+«shared cache through same provider
+* multiple components observing same query
+© observer count
+* updates fan out to subscribers
+
+10. Freshness and staleness
+*°  staleTime
+© default staleTime: @
+
+* stale vs fresh
+
+* stale data still usable
+
+* stale data better than no data
+
+* background refetch on stale queries","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-537,IU-537,704b310795,S-537__704b310795.png,verified-visible-ocr-assisted,R23,80. Good practical patterns,"80. Good practical patterns
+* one stable client
+* custom hooks
+© query key factories
+*  per-feature query factories
+* invalidate after mutations
+* optimistic update + rollback + invalidate
+* use select for narrow subscriptions
+* use stale cached data while background fetching
+* use ErrorBoundary + QueryErrorResetBoundary
+* use MSW + fresh QueryClient in tests","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
