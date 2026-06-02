@@ -1,0 +1,40 @@
+{
+  "region_id": "R04A",
+  "region_name": "staleness / static staleTime / refetch triggers / retry",
+  "stage": "4u-v001",
+  "generated": "2026-06-02 00:13:59 UTC",
+  "what_area_is_about": [
+    "freshness versus retention",
+    "staleTime, Infinity, and static staleTime",
+    "manual invalidation and how it interacts with staleTime",
+    "automatic refetch triggers for stale queries",
+    "what can still fetch with staleTime: 'static'",
+    "query and mutation retry options, retryDelay, and retryOnMount",
+    "QueryErrorResetBoundary with retryOnMount false"
+  ],
+  "key_ideas": [
+    "staleTime controls how long data is considered fresh; default staleTime is 0.",
+    "Stale data remains in cache and can be shown immediately.",
+    "Invalidation marks matching queries stale and overrides finite/Infinity staleTime.",
+    "staleTime: Infinity prevents time-based staleness but manual invalidation can still mark stale.",
+    "staleTime: 'static' prevents normal automatic stale-driven refetching even after invalidation.",
+    "static does not mean no API can ever fetch; explicit fetch/refetch APIs and refetchInterval can still fetch.",
+    "Stale queries may refetch when key changes, observer mounts, focus returns, or reconnect occurs, unless configured otherwise.",
+    "Queries retry by default on the client; mutations default to no automatic retry.",
+    "retry controls whether/how many attempts; retryDelay controls delay between attempts.",
+    "retryOnMount controls whether an errored query automatically retries when mounted again."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after local R04A check",
+    "limitations": [
+      "S-063/S-068 are continuation pair around retry example.",
+      "S-103 bottom tiny example is cropped, but visible rule of thumb is readable.",
+      "S-104 has UI overlays, but core retryDelay examples are readable.",
+      "S-069 moved out to R04B after local review."
+    ],
+    "confidence_summary": "High for R04A transcript and boundary; R04B remains pending."
+  }
+}

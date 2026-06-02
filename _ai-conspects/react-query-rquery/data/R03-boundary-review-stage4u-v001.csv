@@ -1,0 +1,8 @@
+source_id,decision,candidate_type,reason
+S-029,included-in-R03-v001,r03-notifyonchangeprops-default-tracked,notifyOnChangeProps and default tracked properties
+S-035,included-in-R03-v001,r03-notifyonchangeprops-explicit,Explicit notifyOnChangeProps restricts re-render fields
+S-041,included-in-R03-v001,r03-select-reduces-observed-data-shape,select subscribes observer to selected result
+S-046,included-in-R03-v001,r03-select-vs-notifyonchangeprops,select and notifyOnChangeProps solve different problems
+S-055,included-in-R03-v001,r03-when-notifyonchangeprops-useful-fixed-list,notifyOnChangeProps useful for explicit fixed observer fields
+S-058,included-in-R03-v001,r03-notifyonchangeprops-empty-prefetch-like,notifyOnChangeProps empty list for prefetch-like hook observer
+S-059,included-in-R03-v001,r03-prefetchquery-vs-usequery-empty-notify,prefetchQuery versus useQuery with notifyOnChangeProps empty

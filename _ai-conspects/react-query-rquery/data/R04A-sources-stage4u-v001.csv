@@ -1,0 +1,25 @@
+region_source_id,source_id,image_use_id,fileId_short,status,candidate_type,readability,cut_off,confidence,theme,notes
+R04A-S001,S-062,IU-062,976499b4dc,verified-from-extracted-svg-image,r04a-static-stale-word-meaning,high,no,high,staleTime static: not stale by time but can be invalidated,Inbound from R02 reserved overlap; verified as R04A.
+R04A-S002,S-063,IU-063,603893e98b,verified-visible-partial-from-extracted-svg-image,r04a-query-retry-options,high,bottom-example-start-cropped,high-for-visible-text,Query retry options and defaults,Bottom starts an Example section; code is continued by S-068.
+R04A-S003,S-067,IU-067,ecd69b961a,verified-from-extracted-svg-image,r04a-time-based-staleness-vs-static,high,no,high,Time-based staleness versus static,Verified from R04A source image.
+R04A-S004,S-068,IU-068,3d947e5f86,verified-visible-partial-from-extracted-svg-image,r04a-query-retry-example,high,top-continuation-cropped,high-for-visible-text,retry: 3 example,Continuation from S-063; top tail is cropped.
+R04A-S005,S-070,IU-070,8d3fd0a7f7,verified-from-extracted-svg-image,r04a-manual-invalidation-static,high,no,high,Manual invalidation with static,Verified from R04A source image.
+R04A-S006,S-071,IU-071,9eb932564a,verified-from-extracted-svg-image,r04a-retry-delay-default-and-retryonmount,high,no,high,retryDelay default and retryOnMount,Verified from R04A source image.
+R04A-S007,S-073,IU-073,bba33258c2,verified-from-extracted-svg-image,r04a-refetch-triggers-stale-queries,high,bottom-ui-overlay-no-obvious-text-loss,high,Refetch triggers for stale queries,Bottom UI overlay visible; no obvious content loss.
+R04A-S008,S-074,IU-074,577412eb23,verified-from-extracted-svg-image,r04a-static-mental-model,high,no,high,Static disables automatic refetch logic even after invalidation,Verified from R04A source image.
+R04A-S009,S-075,IU-075,62d845b921,verified-from-extracted-svg-image,r04a-query-error-reset-boundary-retryonmount-false,high,no,high,QueryErrorResetBoundary with retryOnMount false,Verified from R04A source image.
+R04A-S010,S-076,IU-076,4e4df28c03,verified-from-extracted-svg-image,r04a-mutation-retry-default,high,no,high,Mutation retry exists but defaults to 0,Verified from R04A source image.
+R04A-S011,S-077,IU-077,2e326e9966,verified-from-extracted-svg-image,r04a-become-stale-after-staletime,high,no,high,A query becomes stale after staleTime expires,Verified from R04A source image.
+R04A-S012,S-079,IU-079,ac6478b204,verified-from-extracted-svg-image,r04a-freshness-vs-retention-staletime,high,no,high,"Freshness vs retention, staleTime default",Verified from R04A source image.
+R04A-S013,S-082,IU-082,a75c02ceb1,verified-from-extracted-svg-image,r04a-invalidate-overrides-staletime-infinity,high,no,high,Invalidation marks stale and overrides staleTime,Verified from R04A source image.
+R04A-S014,S-084,IU-084,68a664c2d5,verified-from-extracted-svg-image,r04a-throwonerror-retryonmount-false-flow,high,no,high,throwOnError + retryOnMount false boundary flow,Verified from R04A source image.
+R04A-S015,S-087,IU-087,6674e4d2e9,verified-from-extracted-svg-image,r04a-staletime-example-infinity,high,no,high,staleTime example and Infinity,Verified from R04A source image.
+R04A-S016,S-088,IU-088,e48ab34495,verified-from-extracted-svg-image,r04a-retrydelay-option,high,no,high,retryDelay option can be number or function,Verified from R04A source image.
+R04A-S017,S-090,IU-090,ba574a8024,verified-from-extracted-svg-image,r04a-static-never-considered-stale,high,no,high,static prevents being considered stale,Verified from R04A source image.
+R04A-S018,S-091,IU-091,1c6a61c9e4,verified-from-extracted-svg-image,r04a-static-refetch-paths-shut-off,high,no,high,static shuts off normal automatic refetch paths,Verified from R04A source image.
+R04A-S019,S-095,IU-095,ff5a3dac41,verified-from-extracted-svg-image,r04a-staletime-variants,high,no,high,"Differences between 0, finite, Infinity, and static",Verified from R04A source image.
+R04A-S020,S-097,IU-097,4e38da6f7c,verified-from-extracted-svg-image,r04a-what-happens-when-stale,high,no,high,What happens when a query becomes stale,Verified from R04A source image.
+R04A-S021,S-098,IU-098,27679ed8ee,verified-from-extracted-svg-image,r04a-static-manual-fetch-and-refetchinterval,high,no,high,What can still fetch with static,Verified from R04A source image.
+R04A-S022,S-099,IU-099,1314fac193,verified-from-extracted-svg-image,r04a-retrydelay-function-linear-backoff,high,no,high,retryDelay function linear backoff,Verified from R04A source image.
+R04A-S023,S-103,IU-103,4e59a80541,verified-visible-partial-from-extracted-svg-image,r04a-how-to-think-about-static,high,bottom-tiny-example-cropped,high-for-visible-text,When to use static and rule of thumb,"Bottom starts a tiny example, continued/cropped; core text is visible."
+R04A-S024,S-104,IU-104,50eadf70df,verified-visible-partial-from-extracted-svg-image,r04a-retrydelay-exponential-and-mutations,high,top-and-bottom-ui-overlay,high-for-visible-text,retryDelay exponential backoff example and mutation retryDelay,Top and bottom UI overlays visible; core code/text readable.

@@ -1,0 +1,47 @@
+source_id,decision,candidate_type,reason
+S-062,included-in-R04A-v001,r04a-static-stale-word-meaning,staleTime static: not stale by time but can be invalidated
+S-063,included-in-R04A-v001,r04a-query-retry-options,Query retry options and defaults
+S-067,included-in-R04A-v001,r04a-time-based-staleness-vs-static,Time-based staleness versus static
+S-068,included-in-R04A-v001,r04a-query-retry-example,retry: 3 example
+S-070,included-in-R04A-v001,r04a-manual-invalidation-static,Manual invalidation with static
+S-071,included-in-R04A-v001,r04a-retry-delay-default-and-retryonmount,retryDelay default and retryOnMount
+S-073,included-in-R04A-v001,r04a-refetch-triggers-stale-queries,Refetch triggers for stale queries
+S-074,included-in-R04A-v001,r04a-static-mental-model,Static disables automatic refetch logic even after invalidation
+S-075,included-in-R04A-v001,r04a-query-error-reset-boundary-retryonmount-false,QueryErrorResetBoundary with retryOnMount false
+S-076,included-in-R04A-v001,r04a-mutation-retry-default,Mutation retry exists but defaults to 0
+S-077,included-in-R04A-v001,r04a-become-stale-after-staletime,A query becomes stale after staleTime expires
+S-079,included-in-R04A-v001,r04a-freshness-vs-retention-staletime,"Freshness vs retention, staleTime default"
+S-082,included-in-R04A-v001,r04a-invalidate-overrides-staletime-infinity,Invalidation marks stale and overrides staleTime
+S-084,included-in-R04A-v001,r04a-throwonerror-retryonmount-false-flow,throwOnError + retryOnMount false boundary flow
+S-087,included-in-R04A-v001,r04a-staletime-example-infinity,staleTime example and Infinity
+S-088,included-in-R04A-v001,r04a-retrydelay-option,retryDelay option can be number or function
+S-090,included-in-R04A-v001,r04a-static-never-considered-stale,static prevents being considered stale
+S-091,included-in-R04A-v001,r04a-static-refetch-paths-shut-off,static shuts off normal automatic refetch paths
+S-095,included-in-R04A-v001,r04a-staletime-variants,"Differences between 0, finite, Infinity, and static"
+S-097,included-in-R04A-v001,r04a-what-happens-when-stale,What happens when a query becomes stale
+S-098,included-in-R04A-v001,r04a-static-manual-fetch-and-refetchinterval,What can still fetch with static
+S-099,included-in-R04A-v001,r04a-retrydelay-function-linear-backoff,retryDelay function linear backoff
+S-103,included-in-R04A-v001,r04a-how-to-think-about-static,When to use static and rule of thumb
+S-104,included-in-R04A-v001,r04a-retrydelay-exponential-and-mutations,retryDelay exponential backoff example and mutation retryDelay
+S-069,reserved-for-R04B,r04b-active-inactive-gctime,"Active/inactive queries and gcTime, not R04A stale/refetch/retry."
+S-072,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-078,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-081,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-086,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-089,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-092,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-096,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-100,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-102,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-105,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-107,reserved-for-R04B,r04b-reserved,"Observer/rerender/structural sharing/gcTime/refetchInterval, not R04A."
+S-080,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-083,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-085,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-093,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-094,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-101,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-106,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-108,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-111,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.
+S-112,already-processed-R05-neighbor,r05-context-only,Pagination/infinite-query neighbor already processed in R05.

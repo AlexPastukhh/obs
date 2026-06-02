@@ -1,0 +1,32 @@
+{
+  "region_id": "R03",
+  "region_name": "notifyOnChangeProps / select / structural sharing",
+  "stage": "4u-v001",
+  "generated": "2026-06-02 00:13:59 UTC",
+  "what_area_is_about": [
+    "how useQuery result tracking affects component rerenders",
+    "default tracked properties and when a component rerenders",
+    "select as data-shape narrowing for an observer",
+    "notifyOnChangeProps as explicit allowed result fields",
+    "prefetchQuery versus useQuery with notifyOnChangeProps: []"
+  ],
+  "key_ideas": [
+    "By default, TanStack Query tracks which result fields a component reads and rerenders only when those fields change.",
+    "notifyOnChangeProps can explicitly restrict which query result fields may trigger a rerender.",
+    "select changes the data value seen by the observer, not the whole query result object.",
+    "select and notifyOnChangeProps solve different problems.",
+    "Most code does not need notifyOnChangeProps because default tracked-property behavior is already optimized.",
+    "notifyOnChangeProps can be useful for a fixed field list or prefetch-like hook usage.",
+    "prefetchQuery fetches/caches without subscribing a component; useQuery with notifyOnChangeProps: [] still creates an observer but suppresses notifications."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after R03/R04 boundary review and local R03 check",
+    "limitations": [
+      "No known text loss in R03 sources."
+    ],
+    "confidence_summary": "High for R03 transcript and boundary."
+  }
+}
