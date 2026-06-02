@@ -1,6 +1,6 @@
-# Apply archive: SQL Server / EF Core / SqlBulkCopy stage0 boundary review v001
+# Apply archive: SQL Server / EF Core / SqlBulkCopy R01 core API transcript v001
 
-Archive type: source check / boundary review.
+Archive type: stage-1 verified region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader-stage1-r01-transcript-v001.zip
 ```
 
 ## Apply + staged diff review commands
@@ -26,9 +26,9 @@ C:\Users\alexa\Downloads\ai-conspects-sqlserver-efcore-bulk-sqlbulkcopy-staging-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader-stage1-r01-transcript-v001.zip"
 $target = "_ai-conspects\sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sqlbulk-stage0-boundary-review.cached.diff"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sqlbulk-stage1-r01-transcript.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -51,7 +51,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands after review
 
 ```powershell
-git commit -m "Start SQL Server bulk copy conspect boundary review"
+git commit -m "Add SQL Server bulk copy R01 core API transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -59,5 +59,5 @@ git push origin ai-processed-conspects-text
 
 ```powershell
 git restore --staged -- _ai-conspects\sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader
-git clean -fd -- _ai-conspects\sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader
+git restore -- _ai-conspects\sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader
 ```

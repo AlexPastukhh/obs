@@ -1,6 +1,6 @@
 # Current Source of Truth - sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader
 
-Generated: 2026-06-02 13:45:00 UTC
+Generated: 2026-06-02 15:35:09 UTC
 
 ## Policy
 
@@ -11,7 +11,10 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 core SqlBulkCopy API/options/source-data/type-mapping/internal transaction: transcript v001 done
+R02 staging/performance/cleanup/transaction-log/failed-row handling: pending
+R03 IDataReader/custom reader/validation/retry/tradeoff: pending
+Final coverage audit: pending
 ```
 
 ## Counts
@@ -19,15 +22,13 @@ Normal transcript regions: not started
 ```text
 unique embedded images: 138
 image uses on canvas: 138
-text labels parsed: 94
-duplicate image uses: 0
+R01 processed image uses: 74
+remaining planned image uses: 64
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after boundary review.
-Target size: 60-100 images, or larger if coherent.
-Suggested first candidate: R01 core SqlBulkCopy API/options/type-mapping road (74 images).
-Then R02+R03 staging/performance/custom-reader final pass (46 + 18 = 64 images), if coherent.
+R02+R03 combined boundary review if coherent; otherwise split staging/performance and custom-reader tail.
+Expected remaining: R02 46 + R03 18 = 64 image uses.
 ```

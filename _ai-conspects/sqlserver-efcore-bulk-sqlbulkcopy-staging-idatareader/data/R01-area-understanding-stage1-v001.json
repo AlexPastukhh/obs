@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 15:35:09 UTC",
+  "region_id": "R01",
+  "area_title": "Core SqlBulkCopy API / options / source data / type mapping / internal transaction road",
+  "what_area_is_about": [
+    "why SqlBulkCopy exists as a direct SQL Server bulk-insert path instead of EF Core row-by-row SaveChanges",
+    "SqlBulkCopy constructors and lifecycle: destination table, WriteToServer overloads, Close/Dispose",
+    "supported source data shapes: DataTable, DataRow arrays, IDataReader, DbDataReader-style sources",
+    "ColumnMappings by source/destination names or ordinals, and behavior when mappings are partial or omitted",
+    "SqlBulkCopyOptions such as TableLock, KeepIdentity, KeepNulls, CheckConstraints, FireTriggers and internal transaction behavior",
+    "C# to SQL Server type compatibility, nullable/default value behavior, identity columns, and failure/error caveats"
+  ],
+  "key_ideas": [
+    "SqlBulkCopy is a fast load API; it bypasses EF change tracking and does not perform update/merge semantics by itself.",
+    "Source shape and destination table shape must be intentionally aligned; explicit column mappings are safer than relying on positional defaults.",
+    "Bulk options are operational switches, not magic safety: TableLock can improve throughput but affects concurrency; KeepIdentity/KeepNulls change inserted values; constraints/triggers may or may not run depending on flags.",
+    "Type conversion, nullability, defaults, identity values and constraint failures should be validated before the bulk call when possible.",
+    "Transactions can be caller-managed or internal; this area introduces the option, while staging/retry/failed-row isolation is left for the later R02/R03 pass.",
+    "Error behavior can be coarse: a bad mapping/type/row can fail the operation, so production-grade handling usually needs staging, validation or chunking."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: contact sheet is readable but many code/API screenshots are small",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Exact C# punctuation, namespace details and overload signatures should be corrected against preserved PNGs if needed.",
+      "This pass closes the R01 image-use set but does not claim every code screenshot is a verbatim authoritative transcript."
+    ],
+    "confidence_summary": "High for boundary and conceptual ownership; medium-high for exact code line transcription."
+  }
+}

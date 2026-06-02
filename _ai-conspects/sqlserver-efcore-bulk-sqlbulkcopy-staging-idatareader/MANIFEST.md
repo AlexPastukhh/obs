@@ -1,53 +1,42 @@
-# MANIFEST - SQL Server / EF Core / SqlBulkCopy stage0 boundary review v001
+# MANIFEST - SQL Server / EF Core / SqlBulkCopy R01 core API transcript v001
 
-Archive type: **source check / boundary review**  
+Archive type: **stage-1 verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 13:45:00 UTC
+Generated: 2026-06-02 15:35:09 UTC
 
 ## Done
 
-- Started new conspect folder: `_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/`.
-- Parsed uploaded `sqlserver,efcore, bulk,sqlbulkcopy.svg`.
-- Extracted embedded images.
-- Created image-use inventory, labels, duplicate-use list, ledger, region split plan, contact sheets, and canvas map.
+- R01 transcript created.
+- 74 source image uses included.
+- Ledger updated for R01.
+- Boundary with R02/R03 recorded.
+- R02/R03 left pending for final pass.
 
 ## Counts
 
 ```text
-unique embedded images: 138
-image uses on canvas: 138
-text labels parsed: 94
-duplicate image uses by extracted file/content: 0
-```
-
-## Candidate regions
-
-```text
-R01: 74 images -> core SqlBulkCopy API/options/source-data/type-mapping/internal transaction road
-R02: 46 images -> staging/performance/cleanup/transaction-log/failed-row handling road
-R03: 18 images -> IDataReader/custom reader/validation/retry/tradeoff road
+R01 sources: 74
+Remaining planned image uses: 64
+R02 pending: 46
+R03 pending: 18
 ```
 
 ## Files included / updated
 
 ```text
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/00-source-check-and-boundary-review.md
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/source/sqlserver-efcore-bulk-sqlbulkcopy.svg
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/source/images/*.png
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/embedded-images-stage0.json
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/image-uses-stage0.*
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/svg-labels-stage0.*
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/duplicate-image-uses-stage0.*
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/region-split-plan-stage0.*
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/source-summary-stage0.json
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/regions/R01-core-sqlbulkcopy-api-options-type-mapping.md
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/R01-sources-stage1-v001.*
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/R01-boundary-review-stage1-v001.*
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/R01-area-understanding-stage1-v001.json
 _ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/data/image-review-ledger-v001.*
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/audit-assets/contact-sheet-*.png
-_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/audit-assets/canvas-map-labels-and-image-boxes-stage0.png
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/audit-assets/contact-sheet-R01-core-sqlbulkcopy-api-options-type-mapping-transcript-v001.png
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/audit-assets/R01-source-images/*.png
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/01-stage1-r01-core-sqlbulkcopy-transcript.md
+_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/MANIFEST.md
 _ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy-staging-idatareader/APPLY_ARCHIVE.md
 ```
 
 ## Next
 
-Transcript pass after boundary review. Suggested: R01 first, then R02+R03 with final coverage audit if coherent.
+R02+R03 combined boundary review if coherent, with final coverage audit.
