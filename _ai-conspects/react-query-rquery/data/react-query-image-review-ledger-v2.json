@@ -1,53 +1,70 @@
 {
-  "generated": "2026-06-01 23:39:24 UTC",
-  "ledger_version": "v2-updated-by-r02c-transcript-stage4r-v001",
-  "critical_rule": "The ledger is still not source of truth; R02C decisions were made after local visual/semantic boundary review.",
-  "stage4r_delta": {
-    "r02a_completed": [
-      "S-008",
-      "S-011",
-      "S-012",
-      "S-013",
-      "S-016",
-      "S-017",
-      "S-018",
-      "S-020",
-      "S-021",
-      "S-022",
-      "S-023",
-      "S-024",
-      "S-025",
-      "S-030",
-      "S-034",
-      "S-036"
+  "generated": "2026-06-01 23:54:56 UTC",
+  "ledger_version": "v2-updated-by-r03-r04-boundary-review-stage4t-v001",
+  "critical_rule": "The ledger is still not source of truth; R03/R04 decisions remain provisional until transcript passes do visual/semantic review.",
+  "stage4t_delta": {
+    "r03_candidates": [
+      "S-029",
+      "S-035",
+      "S-041",
+      "S-046",
+      "S-055",
+      "S-058",
+      "S-059"
     ],
-    "r02b_completed": [
-      "S-026",
-      "S-027",
-      "S-032",
-      "S-033",
-      "S-037",
-      "S-042",
-      "S-047",
-      "S-056"
+    "r04a_candidates_including_s062": [
+      "S-062",
+      "S-063",
+      "S-067",
+      "S-068",
+      "S-069",
+      "S-070",
+      "S-071",
+      "S-073",
+      "S-074",
+      "S-075",
+      "S-076",
+      "S-077",
+      "S-079",
+      "S-082",
+      "S-084",
+      "S-087",
+      "S-088",
+      "S-090",
+      "S-091",
+      "S-095",
+      "S-097",
+      "S-098",
+      "S-099",
+      "S-103",
+      "S-104"
     ],
-    "r02c_v001_processed_sources": [
-      "S-039",
-      "S-040",
-      "S-043",
-      "S-045",
-      "S-048",
-      "S-050",
-      "S-051",
-      "S-052",
-      "S-054",
-      "S-057",
-      "S-061"
+    "r04b_candidates": [
+      "S-072",
+      "S-078",
+      "S-081",
+      "S-086",
+      "S-089",
+      "S-092",
+      "S-096",
+      "S-100",
+      "S-102",
+      "S-105",
+      "S-107"
     ],
-    "reserved_for_r04": [
-      "S-062"
+    "r05_already_processed_neighbor": [
+      "S-080",
+      "S-083",
+      "S-085",
+      "S-093",
+      "S-094",
+      "S-101",
+      "S-106",
+      "S-108",
+      "S-111",
+      "S-112"
     ],
-    "next_step": "R02 closure audit against R02-boundary-review-stage4o-v001"
+    "next_step": "combined transcript attempt for R03 + R04A, with separate region files"
   },
   "rows": [
     {
@@ -594,12 +611,12 @@
       "width": "782",
       "height": "357",
       "nearest_labels_for_search_only": "L-010: notifyonchangeprops | L-014: notifyonchangeproops vs select vs structural sharing | L-018: when notifyonchanges is useful",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r03-notify-select-structural-sharing-candidate",
+      "current_region_decision": "R03",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r03",
+      "decision_basis": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing.",
+      "review_notes": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing."
     },
     {
       "source_id": "S-030",
@@ -708,12 +725,12 @@
       "width": "834",
       "height": "298",
       "nearest_labels_for_search_only": "L-014: notifyonchangeproops vs select vs structural sharing | L-010: notifyonchangeprops | L-018: when notifyonchanges is useful",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r03-notify-select-structural-sharing-candidate",
+      "current_region_decision": "R03",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r03",
+      "decision_basis": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing.",
+      "review_notes": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing."
     },
     {
       "source_id": "S-036",
@@ -822,12 +839,12 @@
       "width": "851",
       "height": "482",
       "nearest_labels_for_search_only": "L-014: notifyonchangeproops vs select vs structural sharing | L-018: when notifyonchanges is useful | L-010: notifyonchangeprops",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r03-notify-select-structural-sharing-candidate",
+      "current_region_decision": "R03",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r03",
+      "decision_basis": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing.",
+      "review_notes": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing."
     },
     {
       "source_id": "S-042",
@@ -917,12 +934,12 @@
       "width": "866",
       "height": "429",
       "nearest_labels_for_search_only": "L-018: when notifyonchanges is useful | L-014: notifyonchangeproops vs select vs structural sharing | L-019: why not qc.prefetchquery ?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r03-notify-select-structural-sharing-candidate",
+      "current_region_decision": "R03",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r03",
+      "decision_basis": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing.",
+      "review_notes": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing."
     },
     {
       "source_id": "S-047",
@@ -1088,12 +1105,12 @@
       "width": "826",
       "height": "337",
       "nearest_labels_for_search_only": "L-018: when notifyonchanges is useful | L-019: why not qc.prefetchquery ? | L-014: notifyonchangeproops vs select vs structural sharing",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r03-notify-select-structural-sharing-candidate",
+      "current_region_decision": "R03",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r03",
+      "decision_basis": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing.",
+      "review_notes": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing."
     },
     {
       "source_id": "S-056",
@@ -1145,12 +1162,12 @@
       "width": "898",
       "height": "425",
       "nearest_labels_for_search_only": "L-018: when notifyonchanges is useful | L-019: why not qc.prefetchquery ? | L-014: notifyonchangeproops vs select vs structural sharing",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r03-notify-select-structural-sharing-candidate",
+      "current_region_decision": "R03",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r03",
+      "decision_basis": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing.",
+      "review_notes": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing."
     },
     {
       "source_id": "S-059",
@@ -1164,12 +1181,12 @@
       "width": "860",
       "height": "479",
       "nearest_labels_for_search_only": "L-019: why not qc.prefetchquery ? | L-018: when notifyonchanges is useful | L-014: notifyonchangeproops vs select vs structural sharing",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r03-notify-select-structural-sharing-candidate",
+      "current_region_decision": "R03",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r03",
+      "decision_basis": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing.",
+      "review_notes": "R03 boundary candidate: notifyOnChangeProps/select/structural sharing."
     },
     {
       "source_id": "S-060",
@@ -1221,12 +1238,12 @@
       "width": "876",
       "height": "310",
       "nearest_labels_for_search_only": "L-021: with static it can be stale but it wont be refetched automatically on some refetch trigger | L-020: RETRY | L-016: move disabled quey to a separate component and mount it only when the condition for queryu is met,  so you wont mount...",
-      "coverage_status": "reserved-for-r04-from-r02",
-      "current_region_decision": "R04",
-      "decision_is_final": "no-until-r04-boundary-review",
-      "must_recheck_before_region_close": "yes-for-r04",
-      "decision_basis": "R02 formal overlap reserved for R04 staleness/static staleTime review.",
-      "review_notes": "R02 formal overlap reserved for R04 staleness/static staleTime review."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-063",
@@ -1240,12 +1257,12 @@
       "width": "892",
       "height": "326",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-064",
@@ -1316,12 +1333,12 @@
       "width": "803",
       "height": "482",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-029: so no error thrown bu without auto retry on mount",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-068",
@@ -1335,12 +1352,12 @@
       "width": "641",
       "height": "412",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-069",
@@ -1354,12 +1371,12 @@
       "width": "658",
       "height": "270",
       "nearest_labels_for_search_only": "L-025: Refetch triggers | L-023: Staleness when refetch occurs | L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-070",
@@ -1373,12 +1390,12 @@
       "width": "850",
       "height": "368",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-029: so no error thrown bu without auto retry on mount",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-071",
@@ -1392,12 +1409,12 @@
       "width": "939",
       "height": "459",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-072",
@@ -1411,12 +1428,12 @@
       "width": "891",
       "height": "364",
       "nearest_labels_for_search_only": "L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r... | L-022: rereders | L-032: removing cache that is not being used not active queries gctime",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-073",
@@ -1430,12 +1447,12 @@
       "width": "878",
       "height": "482",
       "nearest_labels_for_search_only": "L-025: Refetch triggers | L-032: removing cache that is not being used not active queries gctime | L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-074",
@@ -1449,12 +1466,12 @@
       "width": "591",
       "height": "482",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-029: so no error thrown bu without auto retry on mount",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-075",
@@ -1468,12 +1485,12 @@
       "width": "885",
       "height": "318",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-076",
@@ -1487,12 +1504,12 @@
       "width": "876",
       "height": "482",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-077",
@@ -1506,12 +1523,12 @@
       "width": "907",
       "height": "241",
       "nearest_labels_for_search_only": "L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-078",
@@ -1525,12 +1542,12 @@
       "width": "887",
       "height": "373",
       "nearest_labels_for_search_only": "L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r... | L-022: rereders | L-032: removing cache that is not being used not active queries gctime",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-079",
@@ -1544,12 +1561,12 @@
       "width": "918",
       "height": "391",
       "nearest_labels_for_search_only": "L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default... | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-023: Staleness when refetch occurs",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-080",
@@ -1568,7 +1585,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-081",
@@ -1582,12 +1599,12 @@
       "width": "933",
       "height": "482",
       "nearest_labels_for_search_only": "L-030: structural  sharing, use from query only the data that will cause rerender on change  acts just like a store | L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r... | L-022: rereders",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-082",
@@ -1601,12 +1618,12 @@
       "width": "901",
       "height": "404",
       "nearest_labels_for_search_only": "L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-083",
@@ -1625,7 +1642,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-084",
@@ -1639,12 +1656,12 @@
       "width": "885",
       "height": "390",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-085",
@@ -1663,7 +1680,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-086",
@@ -1677,12 +1694,12 @@
       "width": "838",
       "height": "482",
       "nearest_labels_for_search_only": "L-035: refetch interval | L-032: removing cache that is not being used not active queries gctime | L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-087",
@@ -1696,12 +1713,12 @@
       "width": "881",
       "height": "469",
       "nearest_labels_for_search_only": "L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default... | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-032: removing cache that is not being used not active queries gctime",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-088",
@@ -1715,12 +1732,12 @@
       "width": "990",
       "height": "439",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-089",
@@ -1734,12 +1751,12 @@
       "width": "609",
       "height": "482",
       "nearest_labels_for_search_only": "L-032: removing cache that is not being used not active queries gctime | L-035: refetch interval | L-025: Refetch triggers",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-090",
@@ -1753,12 +1770,12 @@
       "width": "889",
       "height": "226",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-091",
@@ -1772,12 +1789,12 @@
       "width": "904",
       "height": "320",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-029: so no error thrown bu without auto retry on mount",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-092",
@@ -1791,12 +1808,12 @@
       "width": "917",
       "height": "302",
       "nearest_labels_for_search_only": "L-030: structural  sharing, use from query only the data that will cause rerender on change  acts just like a store | L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r... | L-022: rereders",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-093",
@@ -1815,7 +1832,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-094",
@@ -1834,7 +1851,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-095",
@@ -1848,12 +1865,12 @@
       "width": "960",
       "height": "452",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-096",
@@ -1867,12 +1884,12 @@
       "width": "935",
       "height": "257",
       "nearest_labels_for_search_only": "L-035: refetch interval | L-032: removing cache that is not being used not active queries gctime | L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-097",
@@ -1886,12 +1903,12 @@
       "width": "880",
       "height": "337",
       "nearest_labels_for_search_only": "L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default... | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-032: removing cache that is not being used not active queries gctime",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-098",
@@ -1905,12 +1922,12 @@
       "width": "924",
       "height": "392",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-029: so no error thrown bu without auto retry on mount",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-099",
@@ -1924,12 +1941,12 @@
       "width": "925",
       "height": "422",
       "nearest_labels_for_search_only": "L-029: so no error thrown bu without auto retry on mount | L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-100",
@@ -1943,12 +1960,12 @@
       "width": "860",
       "height": "411",
       "nearest_labels_for_search_only": "L-030: structural  sharing, use from query only the data that will cause rerender on change  acts just like a store | L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r... | L-035: refetch interval",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-101",
@@ -1967,7 +1984,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-102",
@@ -1981,12 +1998,12 @@
       "width": "919",
       "height": "449",
       "nearest_labels_for_search_only": "L-027: so if staletime has passed or if we marked as stale with invalidate queries or if we didnt set staletime - by default... | L-035: refetch interval | L-032: removing cache that is not being used not active queries gctime",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-103",
@@ -2000,12 +2017,12 @@
       "width": "930",
       "height": "437",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC | L-029: so no error thrown bu without auto retry on mount",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-104",
@@ -2019,12 +2036,12 @@
       "width": "689",
       "height": "482",
       "nearest_labels_for_search_only": "L-033: when refetch can happen with STATIC refetchontrigger: always vs staletime:static | L-029: so no error thrown bu without auto retry on mount | L-026: when a query can become stale stale time vs invalidat queires staletime STATIC",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04a-staleness-static-refetch-retry-candidate",
+      "current_region_decision": "R04A",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04a",
+      "decision_basis": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02.",
+      "review_notes": "R04A boundary candidate: staleness/static/refetch/retry; includes S-062 inbound from R02."
     },
     {
       "source_id": "S-105",
@@ -2038,12 +2055,12 @@
       "width": "913",
       "height": "228",
       "nearest_labels_for_search_only": "L-030: structural  sharing, use from query only the data that will cause rerender on change  acts just like a store | L-035: refetch interval | L-024: if after some manipulations the data that is used by so,e component from query has changed - then observer notifies r...",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-106",
@@ -2062,7 +2079,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-107",
@@ -2076,12 +2093,12 @@
       "width": "910",
       "height": "390",
       "nearest_labels_for_search_only": "L-035: refetch interval | L-032: removing cache that is not being used not active queries gctime | L-025: Refetch triggers",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r04b-observer-cache-gctime-refetchinterval-candidate",
+      "current_region_decision": "R04B",
+      "decision_is_final": "no-r03-r04-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r04b",
+      "decision_basis": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval.",
+      "review_notes": "R04B boundary candidate: observer/rerenders/structural sharing/gcTime/refetchInterval."
     },
     {
       "source_id": "S-108",
@@ -2100,7 +2117,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-109",
@@ -2157,7 +2174,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-112",
@@ -2176,7 +2193,7 @@
       "decision_is_final": "yes-for-r05-v002-boundary",
       "must_recheck_before_region_close": "no-for-r05-v002",
       "decision_basis": "Confirmed in R05 v002 boundary audit.",
-      "review_notes": "Confirmed in R05 v002 boundary audit."
+      "review_notes": "Confirmed in R05 v002 boundary audit. | R03/R04 boundary side-check: neighboring pagination/infinite-query area already R05, not R04."
     },
     {
       "source_id": "S-113",

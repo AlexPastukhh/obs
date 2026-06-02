@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-01 23:45:48 UTC
+Generated: 2026-06-01 23:54:56 UTC
 
 ## Current policy
 
@@ -26,7 +26,7 @@ verified source transcript or correction addendum
 
 For large split regions, add a closure audit after the last sub-pass.
 
-## Current correction status
+## Current correction / closure status
 
 ```text
 R01 v002: expanded full browser/cache road
@@ -38,23 +38,18 @@ R08 closure audit v001: completed
 R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 ```
 
-## Current processing status
+## Current processing target
 
 ```text
-R02A v002: useQuery state / status / error / cache core transcript completed
-R02B v001: enabled / disabled / conditional UI transcript completed
-R02C v001: query keys / manual refetch / declarative dependencies transcript completed
-R02 closure audit v001: completed
+R03 + R04 combined boundary review started.
+R03 candidates: 7
+R04A candidates including S-062 inbound: 25
+R04B candidates: 11
 ```
 
-## R02 closure status
+## Next transcript attempt
 
 ```text
-Formal R02 checklist count: 36
-R02A processed: 16
-R02B processed: 8
-R02C processed: 11
-R04 overlap reserved: 1
+Try combined archive for R03 + R04A, but keep separate region files.
+R04B remains pending.
 ```
-
-R02 planned split is closed. Next new area must start with boundary review first.
