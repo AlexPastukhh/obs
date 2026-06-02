@@ -1,13 +1,60 @@
 {
-  "generated": "2026-06-02 12:24:37 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 40,
-    "assigned_to_candidate_regions": 40,
-    "missing": [],
-    "duplicates": [],
-    "extra": []
+  "generated": "2026-06-02 12:46:38 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-full-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "OPT01": [
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030"
+      ],
+      "OPT02": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011"
+      ],
+      "OPT03": [
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024"
+      ],
+      "OPT04": [
+        "S-031",
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040"
+      ]
+    },
+    "processed_count": 40,
+    "pending_regions": []
   },
   "rows": [
     {
@@ -19,13 +66,13 @@
       "width": "1022.0",
       "height": "246.0",
       "nearest_labels_for_search_only": "T-001:High convensionavle options class | T-017:using Ipostconfigureoptions | T-005:options validation | T-010:optionspattern, when need to | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -36,13 +83,13 @@
       "width": "799.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-001:High convensionavle options class | T-017:using Ipostconfigureoptions | T-005:options validation | T-010:optionspattern, when need to | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -53,13 +100,13 @@
       "width": "842.0",
       "height": "274.0",
       "nearest_labels_for_search_only": "T-001:High convensionavle options class | T-017:using Ipostconfigureoptions | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -70,13 +117,13 @@
       "width": "835.0",
       "height": "129.0",
       "nearest_labels_for_search_only": "T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -87,13 +134,13 @@
       "width": "580.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -104,13 +151,13 @@
       "width": "622.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -121,13 +168,13 @@
       "width": "689.0",
       "height": "266.0",
       "nearest_labels_for_search_only": "T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-001:High convensionavle options class | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -138,13 +185,13 @@
       "width": "835.0",
       "height": "355.0",
       "nearest_labels_for_search_only": "T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-001:High convensionavle options class | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -155,13 +202,13 @@
       "width": "343.0",
       "height": "149.0",
       "nearest_labels_for_search_only": "T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-001:High convensionavle options class | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -172,13 +219,13 @@
       "width": "858.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-001:High convensionavle options class | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -189,13 +236,13 @@
       "width": "793.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-001:High convensionavle options class | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt02",
+      "coverage_status": "processed-in-opt02-v001",
       "current_region_decision": "OPT02",
       "current_subregion_decision": "OPT02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options pattern overview, options classes, strongly typed configuration, binding configuration sections, named configuration snippets and basic appsettings mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -206,13 +253,13 @@
       "width": "686.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-004:Snapshot provide access to different named sections | T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-001:High convensionavle options class | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -223,13 +270,13 @@
       "width": "919.0",
       "height": "443.0",
       "nearest_labels_for_search_only": "T-004:Snapshot provide access to different named sections | T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-001:High convensionavle options class | T-017:using Ipostconfigureoptions",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",
@@ -240,13 +287,13 @@
       "width": "735.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-004:Snapshot provide access to different named sections | T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-018:options clases | T-019:like when we use name or",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -257,13 +304,13 @@
       "width": "725.0",
       "height": "194.0",
       "nearest_labels_for_search_only": "T-004:Snapshot provide access to different named sections | T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-018:options clases | T-019:like when we use name or",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -274,13 +321,13 @@
       "width": "847.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-004:Snapshot provide access to different named sections | T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-018:options clases | T-019:like when we use name or",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -291,13 +338,13 @@
       "width": "759.0",
       "height": "185.0",
       "nearest_labels_for_search_only": "T-004:Snapshot provide access to different named sections | T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-018:options clases | T-019:like when we use name or",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -308,13 +355,13 @@
       "width": "820.0",
       "height": "423.0",
       "nearest_labels_for_search_only": "T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-019:like when we use name or | T-018:options clases",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -325,13 +372,13 @@
       "width": "963.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-004:Snapshot provide access to different named sections | T-018:options clases | T-019:like when we use name or",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-020",
@@ -342,13 +389,13 @@
       "width": "816.0",
       "height": "207.0",
       "nearest_labels_for_search_only": "T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-004:Snapshot provide access to different named sections | T-018:options clases | T-019:like when we use name or",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -359,13 +406,13 @@
       "width": "851.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-003:IOptions 1 to 1 with config | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-004:Snapshot provide access to different named sections | T-001:High convensionavle options class | T-018:options clases",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -376,13 +423,13 @@
       "width": "863.0",
       "height": "368.0",
       "nearest_labels_for_search_only": "T-019:like when we use name or | T-018:options clases | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -393,13 +440,13 @@
       "width": "773.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-019:like when we use name or | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-018:options clases",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-024",
@@ -410,13 +457,13 @@
       "width": "605.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-019:like when we use name or | T-018:options clases",
-      "coverage_status": "candidate-opt03",
+      "coverage_status": "processed-in-opt03-v001",
       "current_region_decision": "OPT03",
       "current_subregion_decision": "OPT03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Named options and option-access models: IOptions vs IOptionsSnapshot, named sections, using Get(name), options classes/names and mental model around named registrations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-025",
@@ -427,13 +474,13 @@
       "width": "870.0",
       "height": "479.0",
       "nearest_labels_for_search_only": "T-005:options validation | T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections",
-      "coverage_status": "candidate-opt01",
+      "coverage_status": "processed-in-opt01-v001",
       "current_region_decision": "OPT01",
-      "current_subregion_decision": "OPT01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options validation setup and validation-on-start patterns: validation attributes/custom rules, named options validation, validate on start / source generator style warnings.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "OPT01B",
+      "decision_is_final": "yes-for-opt01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-026",
@@ -444,13 +491,13 @@
       "width": "797.0",
       "height": "433.0",
       "nearest_labels_for_search_only": "T-005:options validation | T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections",
-      "coverage_status": "candidate-opt01",
+      "coverage_status": "processed-in-opt01-v001",
       "current_region_decision": "OPT01",
       "current_subregion_decision": "OPT01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options validation setup and validation-on-start patterns: validation attributes/custom rules, named options validation, validate on start / source generator style warnings.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-027",
@@ -461,13 +508,13 @@
       "width": "914.0",
       "height": "338.0",
       "nearest_labels_for_search_only": "T-005:options validation | T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections",
-      "coverage_status": "candidate-opt01",
+      "coverage_status": "processed-in-opt01-v001",
       "current_region_decision": "OPT01",
       "current_subregion_decision": "OPT01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options validation setup and validation-on-start patterns: validation attributes/custom rules, named options validation, validate on start / source generator style warnings.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-028",
@@ -478,13 +525,13 @@
       "width": "716.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-005:options validation | T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections",
-      "coverage_status": "candidate-opt01",
+      "coverage_status": "processed-in-opt01-v001",
       "current_region_decision": "OPT01",
       "current_subregion_decision": "OPT01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options validation setup and validation-on-start patterns: validation attributes/custom rules, named options validation, validate on start / source generator style warnings.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-029",
@@ -495,13 +542,13 @@
       "width": "851.0",
       "height": "469.0",
       "nearest_labels_for_search_only": "T-005:options validation | T-001:High convensionavle options class | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-004:Snapshot provide access to different named sections",
-      "coverage_status": "candidate-opt01",
+      "coverage_status": "processed-in-opt01-v001",
       "current_region_decision": "OPT01",
       "current_subregion_decision": "OPT01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options validation setup and validation-on-start patterns: validation attributes/custom rules, named options validation, validate on start / source generator style warnings.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-030",
@@ -512,13 +559,13 @@
       "width": "769.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-005:options validation | T-002:Using scoped IOptionsSnapshot, because IOptions doesnt have config name | T-003:IOptions 1 to 1 with config | T-001:High convensionavle options class | T-004:Snapshot provide access to different named sections",
-      "coverage_status": "candidate-opt01",
+      "coverage_status": "processed-in-opt01-v001",
       "current_region_decision": "OPT01",
       "current_subregion_decision": "OPT01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options validation setup and validation-on-start patterns: validation attributes/custom rules, named options validation, validate on start / source generator style warnings.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-031",
@@ -529,13 +576,13 @@
       "width": "1152.0",
       "height": "291.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-015:about excplicit way to | T-014:why addoptions.configure | T-016:di aware overloads | T-007:Options impl",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-032",
@@ -546,13 +593,13 @@
       "width": "686.0",
       "height": "552.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-015:about excplicit way to | T-014:why addoptions.configure | T-007:Options impl | T-016:di aware overloads",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-033",
@@ -563,13 +610,13 @@
       "width": "627.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-007:Options impl | T-015:about excplicit way to | T-014:why addoptions.configure | T-016:di aware overloads",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-034",
@@ -580,13 +627,13 @@
       "width": "624.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-007:Options impl | T-015:about excplicit way to | T-016:di aware overloads | T-014:why addoptions.configure",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-035",
@@ -597,13 +644,13 @@
       "width": "559.0",
       "height": "367.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-007:Options impl | T-016:di aware overloads | T-015:about excplicit way to | T-014:why addoptions.configure",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-036",
@@ -614,13 +661,13 @@
       "width": "913.0",
       "height": "246.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-007:Options impl | T-016:di aware overloads | T-015:about excplicit way to | T-014:why addoptions.configure",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-037",
@@ -631,13 +678,13 @@
       "width": "718.0",
       "height": "423.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-007:Options impl | T-016:di aware overloads | T-015:about excplicit way to | T-014:why addoptions.configure",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-038",
@@ -648,13 +695,13 @@
       "width": "900.0",
       "height": "363.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-007:Options impl | T-016:di aware overloads | T-015:about excplicit way to | T-014:why addoptions.configure",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-039",
@@ -665,13 +712,13 @@
       "width": "558.0",
       "height": "221.0",
       "nearest_labels_for_search_only": "T-006:OnChange of OptionsMonitor returns disposable | T-007:Options impl | T-016:di aware overloads | T-015:about excplicit way to | T-014:why addoptions.configure",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-040",
@@ -682,13 +729,13 @@
       "width": "663.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-007:Options impl | T-006:OnChange of OptionsMonitor returns disposable | T-016:di aware overloads | T-015:about excplicit way to | T-008:Changing",
-      "coverage_status": "candidate-opt04",
+      "coverage_status": "processed-in-opt04-v001",
       "current_region_decision": "OPT04",
       "current_subregion_decision": "OPT04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Options monitoring, service lifetime reminders, IOptionsMonitor.OnChange returning IDisposable, background/sensor service patterns and options implementation details.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-opt04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in OPT04 v001 after NEXT01 visual/semantic transcript pass."
     }
   ]
 }

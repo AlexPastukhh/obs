@@ -1,0 +1,41 @@
+source_id,decision,region,subregion,reason
+S-025,processed-in-opt01-v001,OPT01,OPT01B,ValidateOnStart versus validation on first use
+S-026,processed-in-opt01-v001,OPT01,OPT01A,Named options validation
+S-027,processed-in-opt01-v001,OPT01,OPT01A,Custom validation with predicates
+S-028,processed-in-opt01-v001,OPT01,OPT01A,DataAnnotations registration and behavior
+S-029,processed-in-opt01-v001,OPT01,OPT01B,DataAnnotations options class
+S-030,processed-in-opt01-v001,OPT01,OPT01B,Source-generated validation
+S-001,processed-in-opt02-v001,OPT02,OPT02A,Title
+S-002,processed-in-opt02-v001,OPT02,OPT02A,LoggingOptions conventional options class
+S-003,processed-in-opt02-v001,OPT02,OPT02A,LogLevelOptions dictionary options class
+S-004,processed-in-opt02-v001,OPT02,OPT02A,Register LoggingOptions from configuration section
+S-005,processed-in-opt02-v001,OPT02,OPT02A,FeatureOptions class first half
+S-006,processed-in-opt02-v001,OPT02,OPT02A,FeatureOptions class second half
+S-007,processed-in-opt02-v001,OPT02,OPT02B,Named configuration options collapsed call
+S-008,processed-in-opt02-v001,OPT02,OPT02B,Named AddOptions registrations
+S-009,processed-in-opt02-v001,OPT02,OPT02B,Appsettings features skeleton
+S-010,processed-in-opt02-v001,OPT02,OPT02B,TodoApi appsettings example
+S-011,processed-in-opt02-v001,OPT02,OPT02B,Endpoint reads named options with IOptionsSnapshot
+S-012,processed-in-opt03-v001,OPT03,OPT03A,IOptionsSnapshot scoped view
+S-013,processed-in-opt03-v001,OPT03,OPT03A,IOptions singleton view
+S-014,processed-in-opt03-v001,OPT03,OPT03A,IOptionsMonitor live view and OnChange
+S-015,processed-in-opt03-v001,OPT03,OPT03A,When to use IOptionsMonitor
+S-016,processed-in-opt03-v001,OPT03,OPT03A,Copy monitor value to own field when needed
+S-017,processed-in-opt03-v001,OPT03,OPT03A,Read current or cached options in work method
+S-018,processed-in-opt03-v001,OPT03,OPT03B,Binder options: ErrorOnUnknownConfiguration and BindNonPublicProperties
+S-019,processed-in-opt03-v001,OPT03,OPT03B,Configure binder options
+S-020,processed-in-opt03-v001,OPT03,OPT03B,Why named options
+S-021,processed-in-opt03-v001,OPT03,OPT03B,Configure named options and retrieve by name
+S-022,processed-in-opt03-v001,OPT03,OPT03B,Configure/PostConfigure order mental model
+S-023,processed-in-opt03-v001,OPT03,OPT03B,PostConfigureAll
+S-024,processed-in-opt03-v001,OPT03,OPT03B,PostConfigure named options
+S-031,processed-in-opt04-v001,OPT04,OPT04A,Options Monitoring title
+S-032,processed-in-opt04-v001,OPT04,OPT04A,Service lifetimes and options interfaces
+S-033,processed-in-opt04-v001,OPT04,OPT04A,Sensor monitoring flow diagram
+S-034,processed-in-opt04-v001,OPT04,OPT04B,SensorFactory creates sensor services
+S-035,processed-in-opt04-v001,OPT04,OPT04B,FakeSensorService gradual temperature changes
+S-036,processed-in-opt04-v001,OPT04,OPT04B,Register sensor monitor service and validated options
+S-037,processed-in-opt04-v001,OPT04,OPT04B,SensorMonitorService constructor subscribes to OnChange
+S-038,processed-in-opt04-v001,OPT04,OPT04B,OnOptionsChanged logs latest options
+S-039,processed-in-opt04-v001,OPT04,OPT04B,Dispose OnChange subscription
+S-040,processed-in-opt04-v001,OPT04,OPT04B,Background loop reads CurrentValue repeatedly

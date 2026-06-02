@@ -1,0 +1,148 @@
+{
+  "generated": "2026-06-02 12:46:38 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 40,
+  "regions": {
+    "OPT01": {
+      "name": "Options validation",
+      "processed_sources": [
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030"
+      ],
+      "key_ideas": [
+        "ValidateOnStart moves validation from first options use to host startup.",
+        "Named options must be validated per named instance.",
+        "DataAnnotations is simple; custom Validate predicates handle cross-field/custom rules.",
+        "Source-generated validation is mainly for perf/trim/AOT scenarios."
+      ]
+    },
+    "OPT02": {
+      "name": "Options pattern basics / conventional options class / binding",
+      "processed_sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011"
+      ],
+      "key_ideas": [
+        "Options classes provide strongly typed access to configuration.",
+        "Section-name constants avoid string duplication.",
+        "AddOptions<T>().Bind(section) maps configuration into an options class.",
+        "Named options register multiple instances of the same options type for different config sections.",
+        "IOptionsSnapshot<T>.Get(name) retrieves named options in a scoped/request context."
+      ]
+    },
+    "OPT03": {
+      "name": "Named options / IOptionsSnapshot / options classes",
+      "processed_sources": [
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024"
+      ],
+      "key_ideas": [
+        "IOptions<T> is a singleton/static view.",
+        "IOptionsSnapshot<T> is scoped and recalculated per scope/request.",
+        "IOptionsMonitor<T> is singleton/live and supports CurrentValue plus OnChange.",
+        "Binder options can fail unknown config keys and avoid binding non-public setters.",
+        "Configure/Bind runs first; PostConfigure patches a named instance; PostConfigureAll patches all names."
+      ]
+    },
+    "OPT04": {
+      "name": "OptionsMonitor / service lifetimes / OnChange / implementation",
+      "processed_sources": [
+        "S-031",
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040"
+      ],
+      "key_ideas": [
+        "IOptionsMonitor is appropriate for singleton/background services that need changing config.",
+        "OnChange returns IDisposable and should be disposed.",
+        "A background loop can read CurrentValue each cycle to observe changed options.",
+        "The sensor example models threshold checks and periodic polling driven by options."
+      ]
+    },
+    "OPTTXT01": {
+      "name": "Configure/PostConfigure and DI-aware overload text-only notes",
+      "text_labels": [
+        {
+          "text_id": "T-011",
+          "text": "!!!",
+          "region": "OPTTXT01",
+          "theme": "emphasis marker"
+        },
+        {
+          "text_id": "T-012",
+          "text": "can configure service from di without ipostconfigure",
+          "region": "OPTTXT01",
+          "theme": "DI-aware configure note"
+        },
+        {
+          "text_id": "T-013",
+          "text": "dont i overwrite options",
+          "region": "OPTTXT01",
+          "theme": "overwrite/options order question"
+        },
+        {
+          "text_id": "T-014",
+          "text": "why addoptions.configure",
+          "region": "OPTTXT01",
+          "theme": "why AddOptions.Configure"
+        },
+        {
+          "text_id": "T-015",
+          "text": "about excplicit way to",
+          "region": "OPTTXT01",
+          "theme": "explicit way to configure options"
+        },
+        {
+          "text_id": "T-017",
+          "text": "using Ipostconfigureoptions",
+          "region": "OPTTXT01",
+          "theme": "IPostConfigureOptions note"
+        }
+      ],
+      "key_ideas": [
+        "Canvas text-only notes point to DI-aware Configure overloads and IPostConfigureOptions.",
+        "These notes are context hints and not separate image sources."
+      ]
+    }
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Some IDE screenshots have cropped or obscured edges; those source items are marked partial.",
+      "No source PNGs are duplicated in this archive; transcript refers to Stage0 source-images by source_id/fileId_short."
+    ],
+    "confidence": "High for concepts and visible text/code; medium-high where screenshots are cropped/collapsed."
+  }
+}
