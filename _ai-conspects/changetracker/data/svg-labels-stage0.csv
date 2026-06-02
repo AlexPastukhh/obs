@@ -1,0 +1,114 @@
+label_id,x,y,font_size,text
+L-001,14066.264,5238.556,128.606,.query()
+L-002,11663.061,1044.086,112.995,collections navigations references properties of entry
+L-003,15103.777,5154.482,112.283,is entry..... query accessible only from collection?
+L-004,7226.884,295.474,276.0,changetracker itself
+L-005,8759.178,2518.865,176.0,entityentry
+L-006,7705.325,2579.763,130.947,common tasks
+L-007,5139.43,470.43,62.93,
+L-008,5139.43,549.092,62.93,haschanges
+L-009,5139.43,627.755,62.93,detectchanges
+L-010,5139.43,706.417,62.93,clear
+L-011,5139.43,785.079,62.93,autodetectchangesenabled
+L-012,5139.43,863.741,62.93,querytrackingbehavior
+L-013,0.0,527.415,62.93,debugview
+L-014,3963.723,168.58,180.0,changetracker methods explaination
+L-015,5187.873,2050.704,67.686,!!!
+L-016,3567.513,3351.396,92.296,clear
+L-017,3567.513,3466.766,92.296,after savechanges
+L-018,3567.513,3582.136,92.296,entities are still tracked
+L-019,4104.973,8108.563,152.741,debugview
+L-020,4104.973,8299.488,152.741,examples
+L-021,4193.307,6917.451,152.741,querytacking
+L-022,4193.307,7108.377,152.741,behavior
+L-023,4104.489,5551.334,152.741,autodetect
+L-024,4104.489,5742.26,152.741,cahnges
+L-025,1099.077,855.069,108.889,what if we disable autodetectchanges
+L-026,1099.077,991.18,108.889,we stop tracking? how we can manually detect
+L-027,1099.077,1127.291,108.889,them then?
+L-028,1536.59,5051.421,20.0,here it make sense to do
+L-029,1536.59,5076.421,20.0,like
+L-030,1536.59,5101.421,20.0,save
+L-031,1536.59,5126.421,20.0,then restore
+L-032,1536.59,5151.421,20.0,
+L-033,1536.59,5176.421,20.0,so we can avoid second detection
+L-034,1536.59,5201.421,20.0,because we alreadyt have state
+L-035,0.0,192.62,20.0,changes from add
+L-036,1129.316,4777.459,20.0,"all methods that change state ,update,add,attach,delete"
+L-037,1177.314,2655.802,20.0,local detection only for
+L-038,1177.314,2680.802,20.0,one entry
+L-039,1177.314,2705.802,20.0,
+L-040,1177.314,2730.802,20.0,"entries ,entries<entity>,haschanges,cascadechanges"
+L-041,1177.314,2755.802,20.0,run full detection
+L-042,1409.56,4061.577,20.0,full detectchanges
+L-043,1552.209,4358.862,20.0,avoid second full detect changes
+L-044,1820.837,3245.483,69.641,how disabling auto detect changes
+L-045,1820.837,3332.534,69.641,can help
+L-046,2158.796,10419.067,79.556,!!!
+L-047,2157.684,10184.623,79.556,!!!
+L-048,894.632,13653.929,120.0,Nodestate
+L-049,2250.313,11229.444,95.429,trackgraph
+L-050,740.551,11788.221,47.556,need to modifystate by yourself
+L-051,740.551,11847.665,47.556,the only thing trackgraph does auto -
+L-052,740.551,11907.109,47.556,stops on tracked entries
+L-053,1569.178,13283.254,20.0,wont stop on already tracked entries
+L-054,1569.178,13308.254,20.0,you control the traversal
+L-055,573.108,11052.683,59.467,"trackraph, what you need to do manually"
+L-056,573.108,11127.017,59.467,what it does auto and when
+L-057,2053.83,5713.347,114.359,deleteorphanstiming
+L-058,2053.83,5856.295,114.359,and cascadechanges()
+L-059,2218.399,9037.338,43.596,"acceptallchanges,"
+L-060,2218.399,9091.833,43.596,somelogic with still modified entities after savechanges
+L-061,2218.399,9146.328,43.596,transactions retry
+L-062,2138.732,7070.448,149.684,cascadedeletetiming
+L-063,10.0,3506.212,109.212,when does detectchanges run
+L-064,2181.197,8178.464,120.741,lazyloadingenabled
+L-065,2293.789,8352.674,20.0,disable ll for some queries
+L-066,7890.969,13795.162,94.667,examples
+L-067,8469.223,12846.591,94.667,reloadasync
+L-068,7068.111,12797.702,94.667,getdatabasevaluesasync
+L-069,7055.889,12328.813,94.667,complexcollection
+L-070,7151.445,11913.998,94.667,member
+L-071,8317.0,11885.48,94.667,complexproperty
+L-072,8294.778,11411.035,94.667,navigation
+L-073,7158.111,11414.739,94.667,collection
+L-074,8331.445,10813.257,94.667,reference
+L-075,7193.667,10814.739,94.667,property
+L-076,7244.778,9916.961,94.667,complexcollectons
+L-077,7262.555,9456.961,94.667,members
+L-078,7300.333,8794.739,94.667,iskeyset
+L-079,7318.111,8255.85,94.667,context
+L-080,7244.778,7774.739,94.667,state
+L-081,8482.555,7776.961,94.667,entity
+L-082,8513.667,8234.739,94.667,metadata
+L-083,8515.889,8828.072,94.667,"currentvalues,origvalues"
+L-084,8469.222,9476.961,94.667,complexproperties
+L-085,8487.0,9908.072,94.667,debugview
+L-086,8442.556,12275.48,94.667,detectchanges
+L-087,7402.846,10607.31,232.0,---methods---
+L-088,7389.513,7613.977,232.0,---properties---
+L-089,6902.68,8894.914,20.0,internal logic of attach
+L-090,6902.68,8919.914,20.0,can be useful inside
+L-091,6902.68,8944.914,20.0,trackgraph
+L-092,13064.453,7721.054,78.667,"props,methods examples"
+L-093,11455.565,7749.742,82.222,what and why metadata
+L-094,4858.002,11913.714,91.822,what and why member
+L-095,3625.113,11904.435,71.2,props and methods member
+L-096,7540.061,6906.007,206.667,full entity entry list
+L-097,6392.417,16013.99,292.0,changetracker event
+L-098,6290.769,16579.355,46.667,tracking vs tracked
+L-099,6290.769,16637.689,46.667,fromquery
+L-100,6290.769,16696.022,46.667,what is state in tracking and tracked event
+L-101,6290.769,16754.355,46.667,
+L-102,11706.562,1246.024,95.487,enrty types
+L-103,10468.639,1220.416,71.394,all navigations - references and
+L-104,10468.639,1309.658,71.394,collections have isloded flag
+L-105,720.93,5632.799,97.156,options of
+L-106,720.93,5754.243,97.156,delete timings
+L-107,571.93,7230.458,63.852,can we jsut detectchanges
+L-108,571.93,7310.273,63.852,without cascadechanges to
+L-109,571.93,7390.088,63.852,modify state of children
+L-110,10206.309,9756.601,20.0,will get row version + some fields that was set from
+L-111,10206.309,9781.601,20.0,another requirest
+L-112,10229.61,9578.434,20.0,savechanges also
+L-113,10229.61,9603.434,20.0,sets current values to orig values

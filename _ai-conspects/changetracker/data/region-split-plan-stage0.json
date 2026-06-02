@@ -1,0 +1,38 @@
+[
+  {
+    "combined_pass": "P01-R01-changetracker-core-methods-detection-cascade-debugview",
+    "image_use_count": 49,
+    "subregions": "R01-changetracker-core-methods-detection-cascade-debugview",
+    "meaning": "ChangeTracker itself: HasChanges, DetectChanges, Clear, AutoDetectChangesEnabled, QueryTrackingBehavior, cascade/delete timings, AcceptAllChanges, DebugView.",
+    "bbox_x_min": 444.06,
+    "bbox_y_min": 1089.43,
+    "bbox_x_max": 6168.991,
+    "bbox_y_max": 9959.091,
+    "recommended_action": "Transcript pass after local boundary recheck.",
+    "is_source_of_truth": "no"
+  },
+  {
+    "combined_pass": "P02-R02-entityentry-properties-methods-query-and-values",
+    "image_use_count": 70,
+    "subregions": "R02-entityentry-properties-methods-query-and-values",
+    "meaning": "EntityEntry: State, Entity, Metadata, CurrentValues/OriginalValues, IsKeySet, Context, Entry.Query, navigations/references/collections/properties, Reload/GetDatabaseValues examples.",
+    "bbox_x_min": 7098.016,
+    "bbox_y_min": 541.304,
+    "bbox_x_max": 16251.981,
+    "bbox_y_max": 14835.938,
+    "recommended_action": "Transcript pass after local boundary recheck.",
+    "is_source_of_truth": "no"
+  },
+  {
+    "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
+    "image_use_count": 45,
+    "subregions": "R03-trackgraph-nodestate-and-member-api; R04-changetracker-events-tracking-tracked-state",
+    "meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples. / TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
+    "bbox_x_min": 613.384,
+    "bbox_y_min": 9992.09,
+    "bbox_x_max": 8582.278,
+    "bbox_y_max": 22105.445,
+    "recommended_action": "Transcript pass after local boundary recheck.",
+    "is_source_of_truth": "no"
+  }
+]
