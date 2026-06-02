@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage5c large remaining transcripts
+# Apply archive: React Query Stage5d closure audit
 
-Archive type: large verified transcript batch.
+Archive type: closure audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5c-large-remaining-transcripts-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5d-s261-s383-closure-audit-v001.zip
 ```
 
 ## Apply commands with cached diff review
@@ -27,8 +27,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\react-query-rquery"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5c-large-remaining-transcripts-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage5c-large-remaining-transcripts.cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5d-s261-s383-closure-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage5d-s261-s383-closure-audit.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -55,7 +55,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add React Query Stage5c remaining transcripts"
+git commit -m "Close React Query Stage5 S261 S383"
 git push origin ai-processed-conspects-text
 ```
 
@@ -69,4 +69,4 @@ git clean -fd -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive marks all remaining Stage5a candidates as processed. Next step is closure audit.
+This archive does not add new transcripts. It closes the Stage5 S-261..S-383 block after Stage5b and Stage5c.

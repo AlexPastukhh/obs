@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 12:10:41 UTC
+Generated: 2026-06-02 12:21:03 UTC
 
 ## Current policy
 
@@ -23,7 +23,7 @@ Never use git add . when unrelated files are modified.
 ## Batch-size rule
 
 ```text
-Default transcript batch: 60-160 images.
+Default transcript batch: 80-160 images.
 Can be larger if one logical block requires it.
 Use one archive with multiple region files when themes differ.
 Do not mix different regions into one region file.
@@ -42,16 +42,18 @@ the source stays pending and must not be marked processed.
 ```text
 Stage4x corrected queue closure audit v001: completed
 Stage4x bad archive: invalidated / do not use
-Stage5a S261-S383 boundary review: active split
+Stage5a S261-S383 boundary review: completed
 Stage5b R12/R13/R15 transcript v001: completed
 Stage5c large remaining transcript v001: completed
+Stage5d S261-S383 closure audit v001: completed
 ```
 
 ## Current processing target
 
 ```text
+Stage5 S-261..S-383: closed
 Stage5b processed: 37
 Stage5c processed: 86
-Stage5a remaining candidates: 0
-Next: Stage5 closure audit for S-261..S-383
+Total audited: 123
+Next: next large logical block, boundary review first.
 ```

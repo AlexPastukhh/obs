@@ -1,0 +1,12 @@
+source_id,from_stage5a,stage5c_decision,reason,ledger_region,ledger_status,correction_ok
+S-288,R09D,R12,useSuspenseQuery / Suspense API card,R12,processed-in-r12-v002-correction,yes
+S-295,R09D,R12,useSuspenseQuery limitations / enabled card,R12,processed-in-r12-v002-correction,yes
+S-300,R09D,R12,serial Suspense behavior card,R12,processed-in-r12-v002-correction,yes
+S-284,R14,R09D,mutation networkMode / paused offline mutations,R09D,processed-in-r09d-v001,yes
+S-290,R14,R09D,networkMode always,R09D,processed-in-r09d-v001,yes
+S-303,R14,R09D,computed async value with networkMode always,R09D,processed-in-r09d-v001,yes
+S-309,R14,R09D,offlineFirst option example,R09D,processed-in-r09d-v001,yes
+S-311,R14,R09D,offlineFirst cache/storage backed cases,R09D,processed-in-r09d-v001,yes
+S-320,R14,R09D,fetch served from cache / offlineFirst,R09D,processed-in-r09d-v001,yes
+S-326,R14,R09D,service worker / HTTP cache offlineFirst reasoning,R09D,processed-in-r09d-v001,yes
+S-374,R09D,R14,query.state.dataUpdatedAt / persistence pruning by age,R14,processed-in-r14-v001,yes
