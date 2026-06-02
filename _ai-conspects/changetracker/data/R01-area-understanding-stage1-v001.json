@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-02 12:47:24 UTC",
+  "region": "R01-changetracker-core-methods-detection-cascade-debugview",
+  "included_image_uses": 51,
+  "initial_p01_candidate_count": 49,
+  "pulled_into_r01": [
+    "S-081",
+    "S-082"
+  ],
+  "checked_not_r01_reserved_for_r02": [
+    "S-001",
+    "S-036"
+  ],
+  "checked_not_r01_reserved_for_r03": [
+    "S-083",
+    "S-084"
+  ],
+  "area_overview": "ChangeTracker itself: pending changes, manual/automatic detection, clearing tracking state, query tracking defaults, cascade/orphan timing, lazy loading toggle, AcceptAllChanges, and DebugView.",
+  "key_ideas": [
+    "HasChanges answers whether EF currently sees pending tracked changes that matter for SaveChanges.",
+    "DetectChanges refreshes EF's in-memory tracked state by comparing current values to snapshots; it is local and does not query the database.",
+    "AutoDetectChangesEnabled=false does not stop tracking; it only stops EF from calling DetectChanges automatically in common paths.",
+    "Clear detaches all tracked entities and does not save anything.",
+    "QueryTrackingBehavior sets default LINQ query tracking behavior for the context, but explicit AsTracking/AsNoTracking can override per query.",
+    "CascadeDeleteTiming and DeleteOrphansTiming control when EF applies client-side cascade/orphan delete state transitions.",
+    "CascadeChanges forces cascade/orphan state transitions when timings are set to Never or when explicit control is required.",
+    "AcceptAllChanges marks successful changes as accepted, usually after SaveChanges; acceptAllChangesOnSuccess=false lets code delay that reset.",
+    "DebugView helps inspect tracked state, changed properties, FK values, and navigation relationships."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "P01 contact sheet plus key individual source images were inspected. Boundary recheck pulled S081/S082 into R01.",
+    "limitations": [
+      "Some screenshots are continuation fragments; transcript groups by conceptual road rather than treating every crop as standalone.",
+      "Long code blocks are normalized to preserve the important API calls and control-flow meaning.",
+      "S001/S036 and S083/S084 are recorded as checked neighbors, not R01."
+    ]
+  }
+}
