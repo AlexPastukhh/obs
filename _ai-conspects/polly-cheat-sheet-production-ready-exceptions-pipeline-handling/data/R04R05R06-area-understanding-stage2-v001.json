@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 11:22:40 UTC",
+  "region_id": "R04R05R06",
+  "area_title": "Manual execution / classic extensions / exception bubbling combined road",
+  "what_area_is_about": [
+    "manual execution of Polly pipelines and custom pipeline provider patterns",
+    "classic Polly policy examples: retry, timeout, circuit breaker, fallback, bulkhead, wrap",
+    "classic HttpPolicyExtensions helpers around transient HTTP failures",
+    "AddPolicyHandler / registry integration and choosing policies based on request",
+    "exception bubbling through outer/inner strategies and newer Polly handling decisions",
+    "how policy selection differs from handling exceptions inside nested strategies"
+  ],
+  "key_ideas": [
+    "Classic Polly policies are often composed as Retry + CircuitBreaker + Timeout, but order matters because outer policies see failures from inner policies.",
+    "HttpPolicyExtensions.HandleTransientHttpError() is an opinionated shortcut: it handles HttpRequestException, HTTP 5xx, and HTTP 408, not every status code you might treat as transient.",
+    "Classic AddPolicyHandler/AddPolicyHandlerFromRegistry attaches policies around HttpClient and can choose policies based on request.",
+    "Exception bubbling is central: inner strategies cannot know whether an outer strategy will retry or swallow an exception.",
+    "Newer Polly makes exception handling more explicit through ShouldHandle predicates and exception/status mapping.",
+    "For dynamic policy/pipeline choice, select the policy/pipeline before execution based on request/context rather than expecting inner strategies to see outer decisions."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: contact sheets are broad but connected; exact code punctuation should be checked in preserved PNGs",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Some code screenshots are small; this transcript captures meaning/source ownership more confidently than exact punctuation.",
+      "R07 production-ready full code sheet remains pending and may duplicate/expand some concepts."
+    ],
+    "confidence_summary": "High for boundary and conceptual notes; medium-high for exact code line transcription."
+  }
+}
