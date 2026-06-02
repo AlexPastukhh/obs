@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage5d closure audit
+# Apply archive: React Query Stage6a S384-S537 boundary review
 
-Archive type: closure audit.
+Archive type: boundary review.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5d-s261-s383-closure-audit-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage6a-s384-s537-boundary-review-v001.zip
 ```
 
 ## Apply commands with cached diff review
@@ -27,8 +27,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\react-query-rquery"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5d-s261-s383-closure-audit-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage5d-s261-s383-closure-audit.cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage6a-s384-s537-boundary-review-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage6a-s384-s537-boundary-review.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -55,7 +55,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Close React Query Stage5 S261 S383"
+git commit -m "Add React Query Stage6a boundary review"
 git push origin ai-processed-conspects-text
 ```
 
@@ -69,4 +69,4 @@ git clean -fd -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive does not add new transcripts. It closes the Stage5 S-261..S-383 block after Stage5b and Stage5c.
+This archive is boundary review only. It does not add transcript and does not mark S-384..S-537 as processed.

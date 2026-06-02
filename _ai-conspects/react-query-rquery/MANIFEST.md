@@ -1,38 +1,39 @@
-# MANIFEST - React Query Stage5d Closure Audit
+# MANIFEST - React Query Stage6a S384-S537 Boundary Review
 
-Archive type: **closure audit**  
+Archive type: **boundary review**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 12:21:03 UTC
+Generated: 2026-06-02 12:26:47 UTC
 
 ## Direction check
 
 Goal:
-Close Stage5 S-261..S-383.
+Start next large logical block after Stage5d closure.
 
 Done:
-Stage5b and Stage5c processed all 123 sources.
+Stage5 S-261..S-383 closed.
 
 This step:
-Add Stage5d closure audit.
+Add boundary review for S-384..S-537.
 
 Why:
-The 86-image Stage5c pass must be closed with a full audit before the next block.
+This is a mixed 154-image section and must be split before transcript.
 
 Next:
 1. review staged/cached diff;
 2. commit;
-3. start next large logical block with boundary review first.
+3. process Stage6b transcript group.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/44-stage5d-s261-s383-closure-audit.md
+_ai-conspects/react-query-rquery/45-stage6a-s384-s537-boundary-review.md
 _ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/react-query-rquery/data/Stage5-S261-S383-closure-audit-stage5d-v001.csv
-_ai-conspects/react-query-rquery/data/Stage5-S261-S383-closure-audit-stage5d-v001.json
-_ai-conspects/react-query-rquery/data/Stage5-local-boundary-corrections-audit-stage5d-v001.csv
+_ai-conspects/react-query-rquery/data/Stage6a-S384-S537-boundary-review-v001.csv
+_ai-conspects/react-query-rquery/data/Stage6a-S384-S537-boundary-review-v001.json
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
+_ai-conspects/react-query-rquery/audit-assets/Stage6a-*-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/stage6a-s384-s537-source-images/*.png
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
@@ -40,8 +41,7 @@ _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage5 sources audited: 123 / 123
-Pending Stage5a candidates: 0
-Local boundary corrections OK: yes
-Next: next boundary review
+Boundary candidates: 154
+Processed by this archive: 0
+Next: Stage6b transcript
 ```
