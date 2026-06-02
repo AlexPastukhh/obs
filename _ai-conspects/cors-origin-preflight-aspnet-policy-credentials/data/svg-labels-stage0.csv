@@ -1,0 +1,72 @@
+label_id,x,y,rotation,text
+L-001,11799.448216139925,6673.886052114187,0.0,When getting cors even when using proxi and it tels that it is from redirect
+L-002,11493.993670685379,6652.067870296005,0.0,!!!
+L-003,11773.296127139047,5431.893824416336,0.0,What to do IN ASP MANUALLY
+L-004,11759.115197137653,6058.131439187429,0.0,iif you want to include credentials in your fetchs from spa
+L-005,11756.70012874449,6504.14509917609,0.0,And you probably cant do put or other non get post requests when you allow credentials and this need to be specified
+L-006,11333.049461821647,3708.628183892383,0.0,PROXY FOR CORS
+L-007,11876.786418712009,3552.545242546757,0.0,USECASES ____________ THEORY
+L-008,11684.062809721414,11463.638411378957,0.0,Preflight requests give information to server about requests about to happen
+L-009,11687.013034741605,12599.899242364056,0.0,How cors middleware works
+L-010,11709.203450865738,13165.859197798905,0.0,"if request is preflight, you specify what are allowed in responce on that request"
+L-011,11248.933164916909,9192.26114855769,0.0,How works
+L-012,13684.191279801968,3596.6218988760174,0.0,why cors
+L-013,14732.599161309772,3873.7054560899246,0.0,!!!
+L-014,14745.02434155713,3752.2275241804723,0.0,add to cors
+L-015,15047.789727504045,3475.264760862934,0.0,content diisposition
+L-016,4827.338107183954,566.1674065042989,0.0,what is origin for cors configuration scheme + host + port defaults may be dropped
+L-017,1855.7975240868582,9717.164045223135,0.0,WithOrigins
+L-018,1850.7975240868582,10802.719579585928,0.0,AllowAnyOrigin
+L-019,1825.7975240868582,11802.164083370108,0.0,SetIsOriginAllowed
+L-020,571.9878404233532,12853.672094960979,0.0,SetOriginAllowedToAllowWildcardSubdomain
+L-021,3150.7973714989675,10897.164083370108,0.0,WithHeaders
+L-022,3144.1308065575613,12050.497518428701,0.0,AllowAnyMethod
+L-023,3165.797524086858,13047.164159664053,0.0,WithMethods
+L-024,3172.464241616155,13783.830915340322,0.0,AllowCredentials
+L-025,3110.797524086858,14774.386513281404,0.0,DisallowCredentials
+L-026,1718.4164554484632,14839.719834988993,0.0,SetPreflightMaxAge
+L-027,1632.6862264794363,13699.830772924963,0.0,withExposedHeaders
+L-028,3204.130959145452,9682.164045223135,0.0,AllowAnyHeader
+L-029,4843.478254517613,1898.2659899666087,0.0,"1 For not simple requests Patch,Put,Delete - Browser sends ACCESS-CONTROL-REQUEST headers 2 Server checks that headers and respond without body, just with ACCESS-CONTROL-ALLOW headers and 3 that headers must match the headers that browser has sent, if not - no request happen 1 So for simple requests with simple methods/headers - we get no preflight request - and browser sends the request rightaway with ACCESS-CONTROL-REQUEST headers It means that that request may reach the server and server may act 2 But server must include ACCESS-CONTROL-ALLOW headers 3 Browser compares headers and if there is a mismatch - js cant read the response"
+L-030,5114.75175477948,2651.1504144656847,0.0,"about csrf - so if the request is simple enough cors may not help against csrf, but we usually deal with json which is not a simple content type and causes preflight, even if cookies and cred included by itself dont cause preflight"
+L-031,4586.245320142345,3101.948946080911,0.0,what can cause preflight
+L-032,2626.332302990493,6261.102315802827,0.0,"without preflight, but cant read response"
+L-033,3991.807828377241,6339.610545838781,0.0,successful preflight
+L-034,5170.139534106407,2986.2774159559685,0.0,if preflight is successful - js will read respoinse because we have checked for everything at preflight
+L-035,7244.699830631578,7807.320429491492,0.0,"must be exact value, just presence of the header is not enough"
+L-036,6333.588787337307,6408.431523648398,0.0,"preflight rejected, header is not allowed"
+L-037,7962.160390294897,6511.288753698622,0.0,!!! credentials preflight rejected cred not allowed
+L-038,9116.446104580611,6492.241076522283,0.0,simple request but cant read because cred not allowed
+L-039,5208.033163964912,6386.209335334597,0.0,preflight rejected origin is not allowed
+L-040,1822.1111317599207,8954.569913727819,0.0,Policy builder
+L-041,5482.1112334851805,8976.236783845006,0.0,access-control Headers
+L-042,3287.2604664170976,4165.818236723555,0.0,safelisted request vs safelisted response headers in cors
+L-043,5433.7213713941455,13550.96078080125,0.0,Access-Control-Max-Age
+L-044,5350.388088923442,12694.627391519023,0.0,Access-Control-Allow-Credentials
+L-045,6958.721523982036,12697.627345742656,0.0,Access-Control-Expose-Headers
+L-046,6952.054653864849,11870.960628213359,0.0,Access-Control-Allow-Headers
+L-047,5342.054577570903,11939.293910684062,0.0,Access-Control-Allow-Methods
+L-048,5352.054577570903,10805.960590066386,0.0,Access-Control-Allow-Origin
+L-049,7028.7212951002,10775.960590066386,0.0,Vary:Origin
+L-050,8884.952777031127,10731.516111713521,0.0,Vary:Origin
+L-051,5325.388012629497,9934.29387253709,0.0,Access-Control-Request-Method
+L-052,5352.054730158794,9245.960590066386,0.0,Origin
+L-053,6758.7216002759815,9255.960590066386,0.0,Access-Control-Request-Headers
+L-054,6984.86833115791,13489.464159969519,0.0,we cache preflight response for same cross origin requeest shape
+L-055,5462.883239650295,16205.778562471549,0.0,no info whether browser will store cookies from response that has no allow credentials header (in simple request scenario)
+L-056,5484.037978974284,15533.159596111607,0.0,no request when server sends response on preflight without allow credentials and no ability to read for simple request case after server returns full response without allow cred header
+L-057,9178.535676917752,8464.658409554015,0.0,no info whether browser would store cookies from server response or not
+L-058,7635.643171274471,1126.4055357920915,0.0,components of url
+L-059,9239.933874813287,935.4629091641673,0.0,What is the host
+L-060,9210.929508817953,1677.1772892055133,0.0,what is origin
+L-061,6433.894664152802,3328.3614789950834,0.0,is preflight guaranteed
+L-062,4110.561330819465,3390.583718171516,0.0,what by itslef doenst cause
+L-063,1951.2137908878904,9402.83662361416,0.0,in most cases we just include some alloc-headers and the behavior was described in flows we dont include something if there is no method call
+L-064,4469.051225131215,14653.993282285048,0.0,access-control-allow-cred behavior
+L-065,5379.967835848988,14624.854386614476,0.0,credentialed request
+L-066,7092.603414183238,15386.591284091694,0.0,network error from no allowed credentials catch it?
+L-067,11305.17381479784,4661.358864125315,0.0,in asp project file
+L-068,10.0,6792.178674020296,0.0,server includes allow headers not onlt in preflight so browser can dissalow from reading
+L-069,9064.37581563879,11988.673387742972,0.0,what can go wrong?
+L-070,9128.467476949749,13555.211930758036,0.0,what does server trturn in case of multiple allowed origins
+L-071,10678.872121754766,10091.799544886186,0.0,https://developer.mozilla.org/en- US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
