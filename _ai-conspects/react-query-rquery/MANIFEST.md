@@ -1,51 +1,53 @@
-# MANIFEST - React Query R04B Transcript v001
+# MANIFEST - React Query Stage4w R03/R04 Closure + Mega Boundary
 
-Archive type: **stage-4v verified region transcript**  
+Archive type: **closure audit + mega boundary review**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 01:13:31 UTC
+Generated: 2026-06-02 01:52:36 UTC
 
 ## Direction check
 
 Goal:
-Finish the planned R04 transcript split.
+Take a larger step while keeping audit discipline.
 
 Done:
-R03 and R04A transcripts are completed.
+R03/R04 transcripts are complete.
 
 This step:
-Add R04B transcript.
+Close R03/R04 and create a larger next boundary review for R09/R11.
 
 Why:
-R04B covers observer/rerender mechanics, structural sharing, gcTime, inactive cache lifecycle, richer UI state, and refetchInterval.
+This lets us increase throughput without beginning a huge transcript blindly.
 
 Next:
 1. review diff;
 2. commit;
-3. run R03/R04 closure audit.
+3. try combined R09A + R09B transcript.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/regions/R04B-observer-cache-lifecycle-gctime-refetchinterval.md
-_ai-conspects/react-query-rquery/data/R04B-sources-stage4v-v001.csv
-_ai-conspects/react-query-rquery/data/R04B-sources-stage4v-v001.json
-_ai-conspects/react-query-rquery/data/R04B-boundary-review-stage4v-v001.csv
-_ai-conspects/react-query-rquery/data/R04B-boundary-review-stage4v-v001.json
-_ai-conspects/react-query-rquery/data/R04B-area-understanding-stage4v-v001.json
+_ai-conspects/react-query-rquery/35-stage4w-r03r04-closure-and-r09-r11-mega-boundary.md
+_ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/react-query-rquery/data/R03-R04-closure-audit-stage4w-v001.csv
+_ai-conspects/react-query-rquery/data/R03-R04-closure-audit-stage4w-v001.json
+_ai-conspects/react-query-rquery/data/R09-R11-mega-boundary-review-stage4w-v001.csv
+_ai-conspects/react-query-rquery/data/R09-R11-mega-boundary-review-stage4w-v001.json
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
-_ai-conspects/react-query-rquery/audit-assets/R04B-source-images/*.png
-_ai-conspects/react-query-rquery/34-stage4v-r04b-transcript.md
-_ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/react-query-rquery/audit-assets/R09-R11-mega-boundary-all-candidates-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09A-cache-remove-reset-offlinefirst-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09B-network-modes-fetchstatus-paused-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09C-validation-resumepaused-offline-mutations-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R11-mutations-callbacks-optimistic-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09-R11-source-images/*.png
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
 
-## Status
+## Status after apply
 
 ```text
-R03 processed: 7
-R04A processed: 24
-R04B processed: 12
-Next: R03/R04 closure audit
+R03/R04 closure audit completed.
+R09A/R09B/R09C/R11 are provisional boundary candidates only.
+R10 overlaps remain R10, not reassigned.
 ```

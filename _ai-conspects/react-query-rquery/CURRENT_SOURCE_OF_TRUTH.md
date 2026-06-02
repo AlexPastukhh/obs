@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 01:13:31 UTC
+Generated: 2026-06-02 01:52:36 UTC
 
 ## Current policy
 
@@ -31,9 +31,7 @@ For large split regions, add a closure audit after the last sub-pass.
 ```text
 R01 v002: expanded full browser/cache road
 R02 closure audit v001: completed
-R03 v001: notifyOnChangeProps / select / structural sharing transcript completed
-R04A v001: staleness / static staleTime / refetch / retry transcript completed
-R04B v001: observer / cache lifecycle / gcTime / refetchInterval transcript completed
+R03/R04 closure audit v001: completed
 R05 v002: expanded pagination / infinite-query road
 R06 v002: corrected with S-176
 R07 v004: corrected with S-184/S-186
@@ -44,15 +42,16 @@ R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 ## Current processing target
 
 ```text
-R03 processed: 7
-R04A processed: 24
-R04B processed: 12
-Next step: R03/R04 closure audit.
+R09/R11 mega-boundary review started.
+R09A candidates: 35
+R09B candidates: 7
+R09C candidates: 9
+R11 candidates: 20
 ```
 
-## Neighbor caution
+## Next transcript attempt
 
 ```text
-R05 neighbors remain R05, not R04.
-S-065/S-066 remain unreviewed and must surface in a later boundary review.
+Try combined archive for R09A + R09B, but keep separate region files.
+R09C and R11 remain pending.
 ```

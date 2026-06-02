@@ -1,6 +1,6 @@
-# Apply archive: React Query R04B transcript v001
+# Apply archive: React Query Stage4w R03/R04 closure + mega boundary
 
-Archive type: stage-4v verified region transcript.
+Archive type: closure audit + mega boundary review.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4v-r04b-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4w-r03r04-closure-r09r11-mega-boundary-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4v-r04b-transcript
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4v-r04b-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4v-r04b-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4w-r03r04-closure-r09r11-mega-boundary-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4w-r03r04-closure-r09r11-mega-boundary.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query R04B cache lifecycle transcript"
+git commit -m "Close R03 R04 and add R09 R11 boundary review"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git restore -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive completes R04B. Next archive should be R03/R04 closure audit.
+This archive does not add new transcripts. It closes R03/R04 and prepares a larger next split.
