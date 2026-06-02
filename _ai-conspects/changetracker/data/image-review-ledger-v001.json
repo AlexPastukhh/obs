@@ -1696,7 +1696,7 @@
     "nearest_labels_for_search_only": "L-047: !!! | L-046: !!! | L-061: transactions retry | L-060: somelogic with still modified entities after savechanges | L-049: trackgraph",
     "coverage_status": "processed-in-r01-v001",
     "decision_is_final": "yes-for-r01-v001-boundary",
-    "review_notes": "R01 processed after local boundary review.",
+    "review_notes": "R01 processed after local boundary review. Checked again during R03R04; not reprocessed.",
     "current_region_decision": "R01",
     "must_recheck_before_region_close": "no-for-r01-v001"
   },
@@ -1717,7 +1717,7 @@
     "nearest_labels_for_search_only": "L-046: !!! | L-047: !!! | L-049: trackgraph | L-061: transactions retry | L-060: somelogic with still modified entities after savechanges",
     "coverage_status": "processed-in-r01-v001",
     "decision_is_final": "yes-for-r01-v001-boundary",
-    "review_notes": "R01 processed after local boundary review.",
+    "review_notes": "R01 processed after local boundary review. Checked again during R03R04; not reprocessed.",
     "current_region_decision": "R01",
     "must_recheck_before_region_close": "no-for-r01-v001"
   },
@@ -1736,11 +1736,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-049: trackgraph | L-095: props and methods member | L-046: !!! | L-047: !!! | L-050: need to modifystate by yourself",
-    "coverage_status": "checked-not-r01-reserved-for-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to TrackGraph/disconnected graph pass.",
-    "current_region_decision": "candidate-R03",
-    "must_recheck_before_region_close": "yes-for-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-084",
@@ -1757,11 +1757,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-049: trackgraph | L-095: props and methods member | L-053: wont stop on already tracked entries | L-054: you control the traversal | L-046: !!!",
-    "coverage_status": "checked-not-r01-reserved-for-r03",
-    "decision_is_final": "yes-not-r01",
-    "review_notes": "Checked during R01; belongs to TrackGraph/disconnected graph pass.",
-    "current_region_decision": "candidate-R03",
-    "must_recheck_before_region_close": "yes-for-r03"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-085",
@@ -1778,11 +1778,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-053: wont stop on already tracked entries | L-054: you control the traversal | L-095: props and methods member | L-049: trackgraph | L-052: stops on tracked entries",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-086",
@@ -1799,11 +1799,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-053: wont stop on already tracked entries | L-054: you control the traversal | L-095: props and methods member | L-049: trackgraph | L-048: Nodestate",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-087",
@@ -1820,11 +1820,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-054: you control the traversal | L-053: wont stop on already tracked entries | L-048: Nodestate | L-095: props and methods member | L-049: trackgraph",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-088",
@@ -1841,11 +1841,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-054: you control the traversal | L-053: wont stop on already tracked entries | L-048: Nodestate | L-095: props and methods member | L-052: stops on tracked entries",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-089",
@@ -1862,11 +1862,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-054: you control the traversal | L-053: wont stop on already tracked entries | L-048: Nodestate | L-095: props and methods member | L-052: stops on tracked entries",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-090",
@@ -1883,11 +1883,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-048: Nodestate | L-054: you control the traversal | L-053: wont stop on already tracked entries | L-052: stops on tracked entries | L-051: the only thing trackgraph does auto -",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-091",
@@ -1904,11 +1904,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-048: Nodestate | L-054: you control the traversal | L-053: wont stop on already tracked entries | L-052: stops on tracked entries | L-051: the only thing trackgraph does auto -",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-092",
@@ -1925,11 +1925,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-048: Nodestate | L-054: you control the traversal | L-053: wont stop on already tracked entries | L-052: stops on tracked entries | L-051: the only thing trackgraph does auto -",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-093",
@@ -1946,11 +1946,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-050: need to modifystate by yourself | L-056: what it does auto and when | L-051: the only thing trackgraph does auto - | L-055: trackraph, what you need to do manually | L-052: stops on tracked entries",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-094",
@@ -1967,11 +1967,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-050: need to modifystate by yourself | L-051: the only thing trackgraph does auto - | L-052: stops on tracked entries | L-056: what it does auto and when | L-055: trackraph, what you need to do manually",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-095",
@@ -1988,11 +1988,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-052: stops on tracked entries | L-051: the only thing trackgraph does auto - | L-050: need to modifystate by yourself | L-053: wont stop on already tracked entries | L-056: what it does auto and when",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-096",
@@ -2009,11 +2009,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-052: stops on tracked entries | L-051: the only thing trackgraph does auto - | L-050: need to modifystate by yourself | L-053: wont stop on already tracked entries | L-054: you control the traversal",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-097",
@@ -2030,11 +2030,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-053: wont stop on already tracked entries | L-054: you control the traversal | L-048: Nodestate | L-052: stops on tracked entries | L-051: the only thing trackgraph does auto -",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-098",
@@ -2681,11 +2681,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-094: what and why member | L-095: props and methods member | L-069: complexcollection | L-068: getdatabasevaluesasync | L-070: member",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-129",
@@ -2702,11 +2702,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-094: what and why member | L-068: getdatabasevaluesasync | L-069: complexcollection | L-095: props and methods member | L-070: member",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-130",
@@ -2723,11 +2723,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-094: what and why member | L-068: getdatabasevaluesasync | L-069: complexcollection | L-095: props and methods member | L-070: member",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-131",
@@ -2744,11 +2744,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-095: props and methods member | L-094: what and why member | L-049: trackgraph | L-046: !!! | L-047: !!!",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-132",
@@ -2765,11 +2765,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-095: props and methods member | L-094: what and why member | L-049: trackgraph | L-053: wont stop on already tracked entries | L-054: you control the traversal",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-133",
@@ -2786,11 +2786,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-095: props and methods member | L-094: what and why member | L-049: trackgraph | L-053: wont stop on already tracked entries | L-054: you control the traversal",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-134",
@@ -2807,11 +2807,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-095: props and methods member | L-094: what and why member | L-053: wont stop on already tracked entries | L-054: you control the traversal | L-049: trackgraph",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-135",
@@ -2828,11 +2828,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "TrackGraph and graph traversal: NodeState, manual state assignment, TrackGraph stopping behavior, member/property API helpers.",
     "nearest_labels_for_search_only": "L-095: props and methods member | L-094: what and why member | L-054: you control the traversal | L-053: wont stop on already tracked entries | L-068: getdatabasevaluesasync",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R03-trackgraph-nodestate-and-member-api",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after local boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-136",
@@ -2849,11 +2849,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-099: fromquery | L-100: what is state in tracking and tracked event | L-098: tracking vs tracked | L-101:  | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-137",
@@ -2870,11 +2870,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-138",
@@ -2891,11 +2891,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-139",
@@ -2912,11 +2912,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-140",
@@ -2933,11 +2933,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-141",
@@ -2954,11 +2954,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-142",
@@ -2975,11 +2975,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-143",
@@ -2996,11 +2996,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-144",
@@ -3017,11 +3017,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-145",
@@ -3038,11 +3038,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-146",
@@ -3059,11 +3059,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-147",
@@ -3080,11 +3080,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-148",
@@ -3101,11 +3101,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-149",
@@ -3122,11 +3122,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-150",
@@ -3143,11 +3143,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-151",
@@ -3164,11 +3164,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-152",
@@ -3185,11 +3185,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-153",
@@ -3206,11 +3206,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-154",
@@ -3227,11 +3227,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-155",
@@ -3248,11 +3248,11 @@
     "combined_pass": "P03-R03R04-trackgraph-member-api-and-events",
     "initial_meaning": "ChangeTracker events: Tracking vs Tracked, state during events, query/materialization hooks, event examples.",
     "nearest_labels_for_search_only": "L-101:  | L-100: what is state in tracking and tracked event | L-099: fromquery | L-098: tracking vs tracked | L-097: changetracker event",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate/source-order candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R04-changetracker-events-tracking-tracked-state",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after local boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-156",

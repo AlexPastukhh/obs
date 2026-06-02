@@ -1,0 +1,21 @@
+{
+  "generated": "2026-06-02 14:38:25 UTC",
+  "region": "R04-changetracker-events-tracking-tracked-state",
+  "included_image_uses": 20,
+  "area_overview": "ChangeTracker events around tracking and state changes.",
+  "key_ideas": [
+    "Tracking fires before an entity is tracked.",
+    "Tracked fires after an entity is tracked.",
+    "StateChanging fires before an entity state changes.",
+    "StateChanged fires after an entity state changes.",
+    "Event args expose the entry/entity and information such as FromQuery, OldState, and NewState depending on event type.",
+    "Events are useful for diagnostics, audit hooks, debugging, or enforcing local context policies, but should not replace SaveChanges/interceptors for durable audit."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "Events tail is compact and cohesive; all event screenshots in the P03/R03R04 candidate sheet were included.",
+    "limitations": [
+      "Some examples are tiny continuation snippets, so the transcript keeps the event ordering and handler semantics rather than every exact variable name."
+    ]
+  }
+}

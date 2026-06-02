@@ -1,0 +1,21 @@
+{
+  "generated": "2026-06-02 14:38:25 UTC",
+  "region": "R03-trackgraph-nodestate-and-member-api",
+  "included_image_uses": 23,
+  "area_overview": "TrackGraph/disconnected graph traversal plus member/property helper APIs.",
+  "key_ideas": [
+    "TrackGraph is for disconnected graphs where EF must decide Added/Modified/Unchanged/Deleted per node.",
+    "The callback receives a node with Entry and optional NodeState.",
+    "Tracking traversal can stop for a branch when the callback leaves the node Detached.",
+    "TrackGraph is the public shape behind EF's internal graph traversal used by Add/Attach/Update style operations.",
+    "Member/property helper APIs provide generic traversal over scalar properties and navigations."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "P03 contact sheet and reserved S083/S084 were checked. S081/S082 stayed in R01.",
+    "limitations": [
+      "Some TrackGraph code screenshots are compressed; transcript preserves the visible API shape and conceptual behavior.",
+      "R03 and R04 are packaged together but kept as separate region documents."
+    ]
+  }
+}
