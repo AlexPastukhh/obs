@@ -1,6 +1,6 @@
-# Apply archive: SQL Syntax / SQL Server Stage0 boundary review v001
+# Apply archive: SQL Syntax / SQL Server P01 database/admin and security transcript v001
 
-Archive type: stage0 boundary review / split plan.
+Archive type: stage-1 verified combined transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage1-p01-database-admin-security-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage0-boundary-revi
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage0-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage0-boundary-review.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage1-p01-database-admin-security-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage1-p01-database-admin-security-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/sql-syntax-sql-server
-git commit -m "Start sql syntax sql server conspect boundary review"
+git commit -m "Add sql server P01 database admin security transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This is not a transcript archive. It prepares a safe workflow and first split plan.
+This archive closes P01 and reserves procedural/DML screenshots for P02.

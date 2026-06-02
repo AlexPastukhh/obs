@@ -1,0 +1,24 @@
+{
+  "generated": "2026-06-02 15:29:50 UTC",
+  "region": "R01-database-creation-master-model-go-files",
+  "included_image_uses": 36,
+  "area_overview": "SQL Server database creation and server/database admin basics: CREATE DATABASE syntax, data/log files, master/model/system databases, GO batches, and multi-window/connection behavior.",
+  "key_ideas": [
+    "CREATE DATABASE can define primary data files with ON PRIMARY and log files with LOG ON.",
+    "File options include NAME, FILENAME, SIZE, MAXSIZE, and FILEGROWTH.",
+    "If a log file is not explicitly specified, SQL Server creates one by default.",
+    "master stores instance-level metadata, logins, server configuration, endpoints, and database metadata.",
+    "model is the template for newly created databases; customizations in model affect future databases.",
+    "GO is a client/tool batch separator, not a T-SQL command sent to SQL Server.",
+    "GO separates DDL batches, resets variable scope, and can repeat a batch with GO n.",
+    "Different query windows/connections can have different database context and transaction/session state."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "P01 contact sheet was inspected. Database/admin screenshots form a clear top-left/top-middle road.",
+    "limitations": [
+      "Some screenshots are small code blocks; transcript normalizes syntax while preserving the visible options and concepts.",
+      "Security road is stored as separate R02 region inside the same P01 archive."
+    ]
+  }
+}

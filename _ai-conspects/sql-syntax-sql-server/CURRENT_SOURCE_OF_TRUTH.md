@@ -1,6 +1,6 @@
 # Current Source of Truth - SQL Syntax / SQL Server
 
-Generated: 2026-06-02 15:17:16 UTC
+Generated: 2026-06-02 15:29:50 UTC
 
 ## Policy
 
@@ -12,7 +12,22 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-Next: P01/R01R02 transcript after local boundary recheck
+R01 database creation / master / model / GO / files: transcript v001 done
+R02 login / user / roles / permissions: transcript v001 done
+P02/R03R04 procedural SQL + DML/output/error handling: next
+```
+
+## P01 boundary decisions
+
+```text
+R01 included:
+36 image uses
+
+R02 included:
+11 image uses
+
+Checked-not-P01, reserved for P02/R03R04:
+S-001, S-002, S-003, S-071, S-072
 ```
 
 ## Current split policy
@@ -23,26 +38,10 @@ Can be bigger: 80-120 if the road is coherent.
 Exception: 120+ only on explicit request or one very cohesive road.
 ```
 
-## Proposed movement map
-
-```text
-P01/R01R02:
-Server/database admin and security:
-CREATE DATABASE, master/model/GO/system databases/file options + login/user/roles/permissions.
-
-P02/R03R04:
-Procedural SQL + DML/output/error handling:
-stored procedures, BEGIN/END, IF, DECLARE, SET/SELECT, output params, rowversion,
-CREATE TABLE, INSERT/UPDATE/DELETE, INSERTED/DELETED, variables, @@ROWCOUNT, TRY/CATCH.
-
-P03/R05:
-Upsert/merge + DDL objects:
-MERGE/upsert, transactions, indexes, ALTER TABLE, constraints, views/indexed views.
-```
-
 ## Next pass
 
 ```text
-P01 / R01R02:
-database creation/master/model/GO/file options + security/login/user/roles/permissions.
+P02 / R03R04:
+stored procedures, BEGIN/END, IF, DECLARE, SET/SELECT, output params, rowversion,
+CREATE TABLE, INSERT/UPDATE/DELETE, INSERTED/DELETED, variables, @@ROWCOUNT, TRY/CATCH.
 ```

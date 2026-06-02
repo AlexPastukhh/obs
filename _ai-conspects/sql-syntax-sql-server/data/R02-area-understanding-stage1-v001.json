@@ -1,0 +1,22 @@
+{
+  "generated": "2026-06-02 15:29:50 UTC",
+  "region": "R02-login-user-roles-permissions",
+  "included_image_uses": 11,
+  "area_overview": "SQL Server security hierarchy and permission model: server login vs database user, authentication vs authorization, fixed server/database roles, custom database roles, GRANT, and role membership.",
+  "key_ideas": [
+    "A login is server-level identity/authentication; a user is database-level identity/authorization.",
+    "A login can be mapped to a database user.",
+    "Fixed server roles are server-wide; fixed database roles are scoped to a database.",
+    "Custom database roles group permissions for application-specific access.",
+    "ALTER ROLE ... ADD MEMBER adds a user to a role.",
+    "GRANT gives permissions such as SELECT/INSERT/UPDATE/DELETE/EXECUTE to users or roles.",
+    "Security should be read as a hierarchy: server login -> database user -> role membership -> object permissions."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "Security screenshots form a compact right-side road. The login/user/roles distinction is readable.",
+    "limitations": [
+      "Some role/permission code snippets are compressed; transcript preserves the hierarchy and common commands."
+    ]
+  }
+}
