@@ -1,0 +1,5 @@
+combined_pass,source_count,subregions,recommended_action,size_policy_note
+P01-R01-base-auth-and-forwarding,81,R01A-base-middleware-auth-service-handlers; R01B-forwarding-challenge-forbid-basics,transcript-after-local-boundary-recheck,Intentionally larger than previous single-area workflow; still requires local candidate recheck before transcript.
+P02-R02-cookie-core-and-events,104,R02A-cookie-core-ticketstore-refresh-signinout; R02B-cookie-events-sliding-redirects,transcript-after-local-boundary-recheck,Intentionally larger than previous single-area workflow; still requires local candidate recheck before transcript.
+P03-R03A-jwt-handler-pipeline,70,R03A-jwt-handler-pipeline-events,transcript-after-local-boundary-recheck,Intentionally larger than previous single-area workflow; still requires local candidate recheck before transcript.
+P04-R03B-R04-oidc-and-outcomes-tail,70,R03B-jwt-outcomes-failure-challenge-forbid; R04-oidc-flow-pkce-signin-challenge,transcript-after-local-boundary-recheck,Intentionally larger than previous single-area workflow; still requires local candidate recheck before transcript.

@@ -1,0 +1,854 @@
+[
+  {
+    "label_id": "L-001",
+    "x": 3284.599,
+    "y": 4218.906,
+    "text": "context"
+  },
+  {
+    "label_id": "L-002",
+    "x": 1690.713,
+    "y": 4579.158,
+    "text": "schemeprovider"
+  },
+  {
+    "label_id": "L-003",
+    "x": 1537.819,
+    "y": 5441.308,
+    "text": "handlerprovider"
+  },
+  {
+    "label_id": "L-004",
+    "x": 3302.035,
+    "y": 2885.573,
+    "text": "middleware, invoke(check)"
+  },
+  {
+    "label_id": "L-005",
+    "x": 5940.852,
+    "y": 11811.187,
+    "text": "!!!"
+  },
+  {
+    "label_id": "L-006",
+    "x": 6039.773,
+    "y": 10031.972,
+    "text": "!!!"
+  },
+  {
+    "label_id": "L-007",
+    "x": 7758.255,
+    "y": 11714.842,
+    "text": "!!!"
+  },
+  {
+    "label_id": "L-008",
+    "x": 5497.062,
+    "y": 19222.179,
+    "text": "they impliauthenticationsign in/out handler"
+  },
+  {
+    "label_id": "L-009",
+    "x": 5923.588,
+    "y": 2843.796,
+    "text": "useAuthenticationAuthenticationMiddleware"
+  },
+  {
+    "label_id": "L-010",
+    "x": 1083.588,
+    "y": 3050.463,
+    "text": "middleware toauthservice"
+  },
+  {
+    "label_id": "L-011",
+    "x": 4516.921,
+    "y": 270.462,
+    "text": "base shit"
+  },
+  {
+    "label_id": "L-012",
+    "x": 4950.254,
+    "y": 23157.129,
+    "text": "oidc shit"
+  },
+  {
+    "label_id": "L-013",
+    "x": 13530.254,
+    "y": 677.129,
+    "text": "cookie shit"
+  },
+  {
+    "label_id": "L-014",
+    "x": 15490.253,
+    "y": 15830.463,
+    "text": "jwt shit"
+  },
+  {
+    "label_id": "L-015",
+    "x": 770.254,
+    "y": 8937.129,
+    "text": "base authhandler"
+  },
+  {
+    "label_id": "L-016",
+    "x": 5803.372,
+    "y": 4912.419,
+    "text": "context.AuthenticateAsync andAuthentication Service"
+  },
+  {
+    "label_id": "L-017",
+    "x": 5857.372,
+    "y": 6425.419,
+    "text": "Auth Scheme Provider"
+  },
+  {
+    "label_id": "L-018",
+    "x": 5848.269,
+    "y": 7736.759,
+    "text": "Auth Handler provider"
+  },
+  {
+    "label_id": "L-019",
+    "x": 4654.677,
+    "y": 11454.436,
+    "text": "forwarding"
+  },
+  {
+    "label_id": "L-020",
+    "x": 3221.418,
+    "y": 10006.473,
+    "text": "resolvetargetdecide whether to forwardor return null"
+  },
+  {
+    "label_id": "L-021",
+    "x": 2937.813,
+    "y": 10656.359,
+    "text": "authenticateasynccall handlerauthenticateonce(hauth is the method to implement)"
+  },
+  {
+    "label_id": "L-022",
+    "x": 5988.01,
+    "y": 13734.436,
+    "text": "challenge"
+  },
+  {
+    "label_id": "L-023",
+    "x": 5521.343,
+    "y": 18673.325,
+    "text": "session handlingsign in/out AuthneitcationHandler"
+  },
+  {
+    "label_id": "L-024",
+    "x": 6094.677,
+    "y": 16401.103,
+    "text": "forbid"
+  },
+  {
+    "label_id": "L-025",
+    "x": 6752.72,
+    "y": 19439.251,
+    "text": "sign out"
+  },
+  {
+    "label_id": "L-026",
+    "x": 5604.571,
+    "y": 19451.103,
+    "text": "sign in"
+  },
+  {
+    "label_id": "L-027",
+    "x": 4278.534,
+    "y": 16295.891,
+    "text": "defaultforbid schemeabout forbid not being thepart of authenticate"
+  },
+  {
+    "label_id": "L-028",
+    "x": 7876.649,
+    "y": 10511.387,
+    "text": "authenticate request onceintended flow"
+  },
+  {
+    "label_id": "L-029",
+    "x": 3137.273,
+    "y": 8920.829,
+    "text": "initializeasyncmultiple shemes for handlerresolve options from monitor"
+  },
+  {
+    "label_id": "L-030",
+    "x": 3346.971,
+    "y": 4766.426,
+    "text": "AuthServicedecide sheme and handlerget ticketz"
+  },
+  {
+    "label_id": "L-031",
+    "x": 3053.833,
+    "y": 11962.243,
+    "text": "forward options"
+  },
+  {
+    "label_id": "L-032",
+    "x": 2924.881,
+    "y": 12763.2,
+    "text": "concrete forward"
+  },
+  {
+    "label_id": "L-033",
+    "x": 2983.402,
+    "y": 14263.025,
+    "text": "forward default selector"
+  },
+  {
+    "label_id": "L-034",
+    "x": 2985.996,
+    "y": 16346.261,
+    "text": "forward default"
+  },
+  {
+    "label_id": "L-035",
+    "x": 1893.063,
+    "y": 11946.311,
+    "text": "order/priority"
+  },
+  {
+    "label_id": "L-036",
+    "x": 768.255,
+    "y": 11975.054,
+    "text": "valid example"
+  },
+  {
+    "label_id": "L-037",
+    "x": 8390.473,
+    "y": 2795.356,
+    "text": "special handlers"
+  },
+  {
+    "label_id": "L-038",
+    "x": 9166.063,
+    "y": 3332.42,
+    "text": "HandleRequestAsync"
+  },
+  {
+    "label_id": "L-039",
+    "x": 14245.417,
+    "y": 24270.373,
+    "text": "handlecahllengecheck for failure, if error pass some info about it to challengecontextif handled just returnif not then if no error return wwif error = construct some basic response"
+  },
+  {
+    "label_id": "L-040",
+    "x": 14430.179,
+    "y": 26624.659,
+    "text": "handleforbid"
+  },
+  {
+    "label_id": "L-041",
+    "x": 13382.475,
+    "y": 21669.02,
+    "text": "obsoletesecurityTokenValidators"
+  },
+  {
+    "label_id": "L-042",
+    "x": 13492.475,
+    "y": 22153.465,
+    "text": "on happy path fire event store token if neededpass some shit to validatedcontextcall success, return result"
+  },
+  {
+    "label_id": "L-043",
+    "x": 13507.86,
+    "y": 22861.157,
+    "text": "if failure fire eventreturn failure"
+  },
+  {
+    "label_id": "L-044",
+    "x": 13666.688,
+    "y": 23449.728,
+    "text": "catch errors if authfailed rusultis there return itotherwise rethrow ex"
+  },
+  {
+    "label_id": "L-045",
+    "x": 13656.549,
+    "y": 20944.576,
+    "text": "if dont use obsolete shit(always )then use modern Options.TokenHanlders TO validate token"
+  },
+  {
+    "label_id": "L-046",
+    "x": 13659.512,
+    "y": 20629.02,
+    "text": "setup validation params(possible signing key fetches)"
+  },
+  {
+    "label_id": "L-047",
+    "x": 14466.476,
+    "y": 20054.23,
+    "text": "if app didnt set token in event - parse header"
+  },
+  {
+    "label_id": "L-048",
+    "x": 14455.58,
+    "y": 19360.12,
+    "text": "HandleAuthenticatefire messagereceived to give opportunity to set token to context"
+  },
+  {
+    "label_id": "L-049",
+    "x": 17868.17,
+    "y": 27017.694,
+    "text": "ontokenValidated/Succes path"
+  },
+  {
+    "label_id": "L-050",
+    "x": 16866.688,
+    "y": 27814.731,
+    "text": "reject disabled"
+  },
+  {
+    "label_id": "L-051",
+    "x": 16934.188,
+    "y": 28973.064,
+    "text": "Add claims"
+  },
+  {
+    "label_id": "L-052",
+    "x": 16975.855,
+    "y": 30089.731,
+    "text": "store request local values"
+  },
+  {
+    "label_id": "L-053",
+    "x": 16873.818,
+    "y": 33368.071,
+    "text": "custom failure result"
+  },
+  {
+    "label_id": "L-054",
+    "x": 16879.972,
+    "y": 34021.404,
+    "text": "suppress failure"
+  },
+  {
+    "label_id": "L-055",
+    "x": 18000.346,
+    "y": 31176.877,
+    "text": "SaveToken"
+  },
+  {
+    "label_id": "L-056",
+    "x": 17552.013,
+    "y": 32398.544,
+    "text": "OnAuthenticationFailed/FailurePath"
+  },
+  {
+    "label_id": "L-057",
+    "x": 17802.68,
+    "y": 34870.544,
+    "text": "Key rollover logic"
+  },
+  {
+    "label_id": "L-058",
+    "x": 18807.865,
+    "y": 37057.211,
+    "text": "Challenge"
+  },
+  {
+    "label_id": "L-059",
+    "x": 16383.103,
+    "y": 37104.83,
+    "text": "distinguish Challengefrom auth failure"
+  },
+  {
+    "label_id": "L-060",
+    "x": 19080.458,
+    "y": 40725.359,
+    "text": "Forbid"
+  },
+  {
+    "label_id": "L-061",
+    "x": 20446.214,
+    "y": 34045.544,
+    "text": "No token"
+  },
+  {
+    "label_id": "L-062",
+    "x": 20476.983,
+    "y": 34646.57,
+    "text": "Invalid token"
+  },
+  {
+    "label_id": "L-063",
+    "x": 20434.932,
+    "y": 35218.877,
+    "text": "Valid token"
+  },
+  {
+    "label_id": "L-064",
+    "x": 20308.014,
+    "y": 33742.544,
+    "text": "Possible result outcomes"
+  },
+  {
+    "label_id": "L-065",
+    "x": 17871.504,
+    "y": 25477.031,
+    "text": "Token Validation"
+  },
+  {
+    "label_id": "L-066",
+    "x": 17812.088,
+    "y": 23702.93,
+    "text": "Setup Token Validation params"
+  },
+  {
+    "label_id": "L-067",
+    "x": 17866.502,
+    "y": 22181.741,
+    "text": "Auth Header lookup"
+  },
+  {
+    "label_id": "L-068",
+    "x": 16733.169,
+    "y": 21178.963,
+    "text": "Stop auth early, set result"
+  },
+  {
+    "label_id": "L-069",
+    "x": 16738.017,
+    "y": 20052.902,
+    "text": "Set token manually"
+  },
+  {
+    "label_id": "L-070",
+    "x": 16777.701,
+    "y": 19444.437,
+    "text": "OnMessageReceived"
+  },
+  {
+    "label_id": "L-071",
+    "x": 17747.641,
+    "y": 19421.327,
+    "text": "HandleAuthentiicateflow"
+  },
+  {
+    "label_id": "L-072",
+    "x": 23399.375,
+    "y": 25720.458,
+    "text": "!!!!"
+  },
+  {
+    "label_id": "L-073",
+    "x": 23403.535,
+    "y": 27863.343,
+    "text": "!!!"
+  },
+  {
+    "label_id": "L-074",
+    "x": 20263.091,
+    "y": 27205.035,
+    "text": "a possible place for someproblem details returningwith pd service and all configred defaults for this shit"
+  },
+  {
+    "label_id": "L-075",
+    "x": 22189.425,
+    "y": 20966.815,
+    "text": "summary"
+  },
+  {
+    "label_id": "L-076",
+    "x": 21916.833,
+    "y": 21675.704,
+    "text": "messagereveivedctx"
+  },
+  {
+    "label_id": "L-077",
+    "x": 21903.5,
+    "y": 23057.927,
+    "text": "tokenValidatedctx"
+  },
+  {
+    "label_id": "L-078",
+    "x": 22014.611,
+    "y": 24929.038,
+    "text": "AuthFailedContext"
+  },
+  {
+    "label_id": "L-079",
+    "x": 21849.769,
+    "y": 26242.101,
+    "text": "ChallengeContext"
+  },
+  {
+    "label_id": "L-080",
+    "x": 21987.547,
+    "y": 27653.213,
+    "text": "ForbiddenCOntext"
+  },
+  {
+    "label_id": "L-081",
+    "x": 23608.685,
+    "y": 21571.26,
+    "text": "OnMessageReceinved"
+  },
+  {
+    "label_id": "L-082",
+    "x": 23635.082,
+    "y": 23106.815,
+    "text": "OnTokenValidated"
+  },
+  {
+    "label_id": "L-083",
+    "x": 23577.304,
+    "y": 24970.063,
+    "text": "OnAuthenticationFailed"
+  },
+  {
+    "label_id": "L-084",
+    "x": 23620.638,
+    "y": 26390.063,
+    "text": "OnChallenge"
+  },
+  {
+    "label_id": "L-085",
+    "x": 23603.971,
+    "y": 27706.73,
+    "text": "OnForbidden"
+  },
+  {
+    "label_id": "L-086",
+    "x": 23760.537,
+    "y": 20809.037,
+    "text": "jwt"
+  },
+  {
+    "label_id": "L-087",
+    "x": 24068.223,
+    "y": 7020.181,
+    "text": "cookieredirectcontext"
+  },
+  {
+    "label_id": "L-088",
+    "x": 23408.223,
+    "y": 9558.848,
+    "text": "cookieslidingexpiration"
+  },
+  {
+    "label_id": "L-089",
+    "x": 21912.413,
+    "y": 9988.656,
+    "text": "Based on real user activity"
+  },
+  {
+    "label_id": "L-090",
+    "x": 22003.914,
+    "y": 11144.449,
+    "text": "based on allowrefresh"
+  },
+  {
+    "label_id": "L-091",
+    "x": 22077.247,
+    "y": 11730.283,
+    "text": "based on ticket age/remaining tie"
+  },
+  {
+    "label_id": "L-092",
+    "x": 22053.005,
+    "y": 12731.495,
+    "text": "based on custom metadata"
+  },
+  {
+    "label_id": "L-093",
+    "x": 22100.277,
+    "y": 13874.525,
+    "text": "based on request sensitivity"
+  },
+  {
+    "label_id": "L-094",
+    "x": 22080.883,
+    "y": 14493.919,
+    "text": "based on remember me"
+  },
+  {
+    "label_id": "L-095",
+    "x": 24447.778,
+    "y": 8974.108,
+    "text": "can write to response"
+  },
+  {
+    "label_id": "L-096",
+    "x": 25814.539,
+    "y": 2067.607,
+    "text": "OnsigningIn"
+  },
+  {
+    "label_id": "L-097",
+    "x": 25820.464,
+    "y": 3221.682,
+    "text": "OnSignedIn"
+  },
+  {
+    "label_id": "L-098",
+    "x": 25757.502,
+    "y": 7057.506,
+    "text": "OnRedirectToLogin (Challenge)"
+  },
+  {
+    "label_id": "L-099",
+    "x": 25751.787,
+    "y": 7981.316,
+    "text": "OnRedirectToAccDenied (Forbid)"
+  },
+  {
+    "label_id": "L-100",
+    "x": 25756.787,
+    "y": 8814.649,
+    "text": "OnRedirectToLogOut"
+  },
+  {
+    "label_id": "L-101",
+    "x": 25759.212,
+    "y": 9339.498,
+    "text": "OnRedirectToReturnUrl"
+  },
+  {
+    "label_id": "L-102",
+    "x": 25753.151,
+    "y": 9764.952,
+    "text": "OnCheckSlidingExp"
+  },
+  {
+    "label_id": "L-103",
+    "x": 25784.909,
+    "y": 4260.2,
+    "text": "ONValidatePrincipal"
+  },
+  {
+    "label_id": "L-104",
+    "x": 25792.316,
+    "y": 6094.274,
+    "text": "OnSignigOut"
+  },
+  {
+    "label_id": "L-105",
+    "x": 24411.575,
+    "y": 5995.607,
+    "text": "SingingOutContext"
+  },
+  {
+    "label_id": "L-106",
+    "x": 24343.427,
+    "y": 4190.57,
+    "text": "ValidatePrincipalContext"
+  },
+  {
+    "label_id": "L-107",
+    "x": 24402.687,
+    "y": 3197.978,
+    "text": "signedInContext"
+  },
+  {
+    "label_id": "L-108",
+    "x": 24381.946,
+    "y": 2012.793,
+    "text": "signingInContext"
+  },
+  {
+    "label_id": "L-109",
+    "x": 24467.131,
+    "y": 1078.422,
+    "text": "summary"
+  },
+  {
+    "label_id": "L-110",
+    "x": 25618.242,
+    "y": 718.422,
+    "text": "Cookie"
+  },
+  {
+    "label_id": "L-111",
+    "x": 16112.704,
+    "y": 38720.524,
+    "text": "!!!"
+  },
+  {
+    "label_id": "L-112",
+    "x": 17353.179,
+    "y": 4810.994,
+    "text": "authenticatecheck who is the user"
+  },
+  {
+    "label_id": "L-113",
+    "x": 15555.846,
+    "y": 5114.994,
+    "text": "signin with iticketstore"
+  },
+  {
+    "label_id": "L-114",
+    "x": 15414.216,
+    "y": 6085.66,
+    "text": "authenticate with iticketstore"
+  },
+  {
+    "label_id": "L-115",
+    "x": 15440.883,
+    "y": 6975.184,
+    "text": "refresh with iticketstore"
+  },
+  {
+    "label_id": "L-116",
+    "x": 15522.788,
+    "y": 7855.357,
+    "text": "signout with iticketstore"
+  },
+  {
+    "label_id": "L-117",
+    "x": 15739.846,
+    "y": 4453.66,
+    "text": "iticketstore"
+  },
+  {
+    "label_id": "L-118",
+    "x": 17988.735,
+    "y": 7996.772,
+    "text": "sign inwe have trusted userwe need to write auth ticketto cookie or ticket  id and store authticket in iticketstore"
+  },
+  {
+    "label_id": "L-119",
+    "x": 19842.068,
+    "y": 8014.549,
+    "text": "sign outwe have trusted userwe need to remove auth ticketfrom cookie or ticketid and removeauthticket from iticketstore"
+  },
+  {
+    "label_id": "L-120",
+    "x": 18699.846,
+    "y": 4663.502,
+    "text": "challengeneed to do something with the user that isntauthenticated"
+  },
+  {
+    "label_id": "L-121",
+    "x": 20014.846,
+    "y": 4610.169,
+    "text": "forbidneed to do something with the user that isntallowed"
+  },
+  {
+    "label_id": "L-122",
+    "x": 12470.271,
+    "y": 5252.863,
+    "text": "check for refresh"
+  },
+  {
+    "label_id": "L-123",
+    "x": 13532.868,
+    "y": 5271.25,
+    "text": "handleauthenticate"
+  },
+  {
+    "label_id": "L-124",
+    "x": 13456.816,
+    "y": 6117.886,
+    "text": "ensurecookieticket(read the ticket once)"
+  },
+  {
+    "label_id": "L-125",
+    "x": 13368.402,
+    "y": 6633.856,
+    "text": "readcookieticket(get the real ticket from cookieor get ticket from c, get id claimand get real ticket from store)"
+  },
+  {
+    "label_id": "L-126",
+    "x": 13530.463,
+    "y": 8648.394,
+    "text": "handlesigninasync"
+  },
+  {
+    "label_id": "L-127",
+    "x": 12024.238,
+    "y": 5834.812,
+    "text": "requestrefresh"
+  },
+  {
+    "label_id": "L-128",
+    "x": 13128.948,
+    "y": 10438.696,
+    "text": "append cookie"
+  },
+  {
+    "label_id": "L-129",
+    "x": 18820.878,
+    "y": 6346.728,
+    "text": "FinishResponseAsync"
+  },
+  {
+    "label_id": "L-130",
+    "x": 13657.416,
+    "y": 3584.706,
+    "text": "finishresponseAsync"
+  },
+  {
+    "label_id": "L-131",
+    "x": 13693.966,
+    "y": 3861.779,
+    "text": "(decide whether we should renew ticketif not returnbecause of the sliding expiration or some explicit callsif have some ticketstore call to renewappendresponsecookie with renewed cookie)"
+  },
+  {
+    "label_id": "L-132",
+    "x": 12316.877,
+    "y": 3876.934,
+    "text": "initializehandlerasyncset event with finishresponseasync"
+  },
+  {
+    "label_id": "L-133",
+    "x": 2970.178,
+    "y": 3946.145,
+    "text": "!!! here we  set some that authorizationwill read when there is noauthorization metadataon endpoint"
+  },
+  {
+    "label_id": "L-134",
+    "x": 8398.355,
+    "y": 26088.612,
+    "text": "clientId, code,state"
+  },
+  {
+    "label_id": "L-135",
+    "x": 5343.565,
+    "y": 24517.53,
+    "text": "pkce confidential client, mvc,bff"
+  },
+  {
+    "label_id": "L-136",
+    "x": 7864.676,
+    "y": 24393.085,
+    "text": "full flow"
+  },
+  {
+    "label_id": "L-137",
+    "x": 6506.581,
+    "y": 24385.466,
+    "text": "compact one"
+  },
+  {
+    "label_id": "L-138",
+    "x": 7722.454,
+    "y": 25091.507,
+    "text": "authentication failed"
+  },
+  {
+    "label_id": "L-139",
+    "x": 8542.549,
+    "y": 25635.17,
+    "text": "challenge with oidc handler"
+  },
+  {
+    "label_id": "L-140",
+    "x": 8672.347,
+    "y": 27080.068,
+    "text": "oidc handler validates pcke stuff"
+  },
+  {
+    "label_id": "L-141",
+    "x": 8622.569,
+    "y": 27421.401,
+    "text": "builds claimsprincipal"
+  },
+  {
+    "label_id": "L-142",
+    "x": 8611.287,
+    "y": 27648.068,
+    "text": "calls signinasync with that principal"
+  }
+]
