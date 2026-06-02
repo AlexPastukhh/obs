@@ -10,10 +10,18 @@ EF03 - Constructors / materialization
 EF04 - Shadow property / query filter
 ```
 
-Pending next:
+Boundary reviews:
 
 ```text
-Choose next EF Core area by boundary review first.
+EF05 - Model mapping / constraints / owned and complex types
+EF06 - Transactions / concurrency / db exceptions / retry
+```
+
+Recommended next transcript:
+
+```text
+EF05A - Race protection with UNIQUE constraint/index
+S-012, S-013, S-011
 ```
 
 Each transcript must include:

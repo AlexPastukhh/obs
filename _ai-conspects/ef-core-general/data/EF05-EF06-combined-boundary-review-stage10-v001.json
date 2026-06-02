@@ -1,0 +1,520 @@
+{
+  "generated": "2026-06-01 23:58:11 UTC",
+  "stage": "10",
+  "boundary_status": "combined-boundary-reviewed-not-transcribed",
+  "strategy_note": "Bigger step by request: two major regions are boundary-reviewed at once, but transcripts are still split into smaller subpasses.",
+  "critical_rule": "This is a boundary review, not final transcript. Each EF05/EF06 transcript pass must still visually recheck its own sources.",
+  "regions": {
+    "EF05": {
+      "name": "Model mapping / constraints / owned and complex types",
+      "candidate_sources": [
+        "S-012",
+        "S-013",
+        "S-011",
+        "S-004",
+        "S-005",
+        "S-002",
+        "S-003",
+        "S-019",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023"
+      ],
+      "subpasses": {
+        "EF05A": {
+          "sources": [
+            "S-012",
+            "S-013",
+            "S-011"
+          ],
+          "meaning": "race protection with unique constraint/index"
+        },
+        "EF05B": {
+          "sources": [
+            "S-004",
+            "S-005",
+            "S-002",
+            "S-003",
+            "S-019"
+          ],
+          "meaning": "owned FullName optional mapping and CHECK constraint"
+        },
+        "EF05C": {
+          "sources": [
+            "S-014",
+            "S-015",
+            "S-016",
+            "S-017",
+            "S-018",
+            "S-020",
+            "S-021",
+            "S-022",
+            "S-023"
+          ],
+          "meaning": "optional value objects, child entities, complex type mapping"
+        }
+      }
+    },
+    "EF06": {
+      "name": "Transactions / concurrency / db exceptions / retry",
+      "candidate_sources": [
+        "S-047",
+        "S-048",
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052",
+        "S-062",
+        "S-063",
+        "S-064",
+        "S-065",
+        "S-061"
+      ],
+      "subpasses": {
+        "EF06A": {
+          "sources": [
+            "S-047",
+            "S-048"
+          ],
+          "meaning": "optimistic concurrency and check-then-add race"
+        },
+        "EF06B": {
+          "sources": [
+            "S-049",
+            "S-050",
+            "S-051",
+            "S-052"
+          ],
+          "meaning": "transactions and isolation levels"
+        },
+        "EF06C": {
+          "sources": [
+            "S-062",
+            "S-063",
+            "S-064",
+            "S-065",
+            "S-061"
+          ],
+          "meaning": "exception guide, retry exhausted, catch order"
+        }
+      }
+    }
+  },
+  "checked_not_current": {
+    "S-001": "ASP/Vite/CORS/proxy material; not EF Core mapping/transaction material."
+  },
+  "rows": [
+    {
+      "source_id": "S-012",
+      "image_use_id": "IU-012",
+      "fileId_short": "62853cad31",
+      "x": 14368.322,
+      "y": 1821.009,
+      "width": 766,
+      "height": 261,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05a-unique-constraint-race-protection",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection.",
+      "nearest_labels_for_search_only": "L-009: how to save yourself | from sit when someone make 2 parallel requests | to create acc with same email | L-037: some onmodel creat hshit | L-003: navigation | L-004: owned isrequired | L-116: alternate key sheet"
+    },
+    {
+      "source_id": "S-013",
+      "image_use_id": "IU-013",
+      "fileId_short": "0f7c82eb0b",
+      "x": 14205.169,
+      "y": 2119.656,
+      "width": 1027,
+      "height": 295,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05a-unique-constraint-race-protection",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection.",
+      "nearest_labels_for_search_only": "L-009: how to save yourself | from sit when someone make 2 parallel requests | to create acc with same email | L-116: alternate key sheet | L-004: owned isrequired | L-003: navigation | L-037: some onmodel creat hshit"
+    },
+    {
+      "source_id": "S-011",
+      "image_use_id": "IU-011",
+      "fileId_short": "3dc7a29628",
+      "x": 14410.101,
+      "y": 2512.601,
+      "width": 611,
+      "height": 361,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05a-unique-constraint-race-protection",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection.",
+      "nearest_labels_for_search_only": "L-116: alternate key sheet | L-117: coposite key sheet | L-001: efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in clien | L-009: how to save yourself | from sit when someone make 2 parallel requests | to create acc with same email | L-004: owned isrequired"
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "55ea344509",
+      "x": 17274.453,
+      "y": 2033.746,
+      "width": 726,
+      "height": 192,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05b-owned-fullname-optional-check-constraint",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
+      "nearest_labels_for_search_only": "L-005: need to add somewhere, to some general dbcontext mapping sheet mb | L-002: hascheck constraint | L-118: remove  warnings | dbset | L-034: dbcontext about transactions strategies | L-004: owned isrequired"
+    },
+    {
+      "source_id": "S-005",
+      "image_use_id": "IU-005",
+      "fileId_short": "1e229933ef",
+      "x": 17232.257,
+      "y": 2280.497,
+      "width": 1000,
+      "height": 465,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05b-owned-fullname-optional-check-constraint",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
+      "nearest_labels_for_search_only": "L-118: remove  warnings | dbset | L-005: need to add somewhere, to some general dbcontext mapping sheet mb | L-002: hascheck constraint | L-034: dbcontext about transactions strategies | L-036: about transactions isolation level for atomicity"
+    },
+    {
+      "source_id": "S-002",
+      "image_use_id": "IU-002",
+      "fileId_short": "5152f87def",
+      "x": 15947.515,
+      "y": 2566.929,
+      "width": 458,
+      "height": 391,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05b-owned-fullname-optional-check-constraint",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
+      "nearest_labels_for_search_only": "L-001: efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in clien | L-004: owned isrequired | L-118: remove  warnings | dbset | L-003: navigation | L-005: need to add somewhere, to some general dbcontext mapping sheet mb"
+    },
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "3945d0f1d7",
+      "x": 15777.344,
+      "y": 3287.175,
+      "width": 1049,
+      "height": 482,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05b-owned-fullname-optional-check-constraint",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
+      "nearest_labels_for_search_only": "L-001: efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in clien | L-118: remove  warnings | dbset | L-004: owned isrequired | L-005: need to add somewhere, to some general dbcontext mapping sheet mb | L-003: navigation"
+    },
+    {
+      "source_id": "S-019",
+      "image_use_id": "IU-019",
+      "fileId_short": "3945d0f1d7",
+      "x": 12335.771,
+      "y": 6064.037,
+      "width": 1049,
+      "height": 482,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05b-owned-fullname-optional-check-constraint",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
+      "nearest_labels_for_search_only": "L-010: better to have isrequired false too | L-011: complex types | L-026: nullable relationships | L-117: coposite key sheet | L-116: alternate key sheet"
+    },
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "9f752fd7b7",
+      "x": 13678.144,
+      "y": 5293.284,
+      "width": 837,
+      "height": 431,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-010: better to have isrequired false too | L-117: coposite key sheet | L-011: complex types | L-116: alternate key sheet | L-026: nullable relationships"
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "9be28189df",
+      "x": 13680.406,
+      "y": 5763.355,
+      "width": 842,
+      "height": 308,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-010: better to have isrequired false too | L-011: complex types | L-117: coposite key sheet | L-116: alternate key sheet | L-026: nullable relationships"
+    },
+    {
+      "source_id": "S-016",
+      "image_use_id": "IU-016",
+      "fileId_short": "dfe76f5f7c",
+      "x": 13658.369,
+      "y": 6177.797,
+      "width": 893,
+      "height": 296,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-010: better to have isrequired false too | L-011: complex types | L-117: coposite key sheet | L-116: alternate key sheet | L-026: nullable relationships"
+    },
+    {
+      "source_id": "S-017",
+      "image_use_id": "IU-017",
+      "fileId_short": "8d6946160e",
+      "x": 13650.793,
+      "y": 6453.661,
+      "width": 913,
+      "height": 457,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-011: complex types | L-010: better to have isrequired false too | L-117: coposite key sheet | L-026: nullable relationships | L-116: alternate key sheet"
+    },
+    {
+      "source_id": "S-018",
+      "image_use_id": "IU-018",
+      "fileId_short": "deb7e62c3f",
+      "x": 13635.914,
+      "y": 6955.059,
+      "width": 681,
+      "height": 441,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-011: complex types | L-010: better to have isrequired false too | L-117: coposite key sheet | L-026: nullable relationships | L-116: alternate key sheet"
+    },
+    {
+      "source_id": "S-020",
+      "image_use_id": "IU-020",
+      "fileId_short": "685f8e9fda",
+      "x": 13674.44,
+      "y": 9202.36,
+      "width": 798,
+      "height": 179,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-011: complex types | L-130: not all comp columns | are indexable/persistable | L-048: db exceptions | concur | L-131: collation may already solve casing | L-010: better to have isrequired false too"
+    },
+    {
+      "source_id": "S-021",
+      "image_use_id": "IU-021",
+      "fileId_short": "548433edd7",
+      "x": 13628.106,
+      "y": 8828.861,
+      "width": 814,
+      "height": 376,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-011: complex types | L-130: not all comp columns | are indexable/persistable | L-010: better to have isrequired false too | L-048: db exceptions | concur | L-131: collation may already solve casing"
+    },
+    {
+      "source_id": "S-022",
+      "image_use_id": "IU-022",
+      "fileId_short": "064840baae",
+      "x": 13648.067,
+      "y": 8323.253,
+      "width": 634,
+      "height": 482,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-011: complex types | L-010: better to have isrequired false too | L-130: not all comp columns | are indexable/persistable | L-048: db exceptions | concur | L-131: collation may already solve casing"
+    },
+    {
+      "source_id": "S-023",
+      "image_use_id": "IU-023",
+      "fileId_short": "2e1caff84a",
+      "x": 13634.013,
+      "y": 7822.371,
+      "width": 606,
+      "height": 482,
+      "candidate_region": "EF05",
+      "candidate_group": "ef05c-optional-value-object-complex-type",
+      "decision": "candidate-for-EF05-transcript",
+      "reason": "Optional value object / child entity / complex type mapping and EF handling of null owned/complex objects.",
+      "nearest_labels_for_search_only": "L-011: complex types | L-010: better to have isrequired false too | L-130: not all comp columns | are indexable/persistable | L-048: db exceptions | concur | L-131: collation may already solve casing"
+    },
+    {
+      "source_id": "S-047",
+      "image_use_id": "IU-047",
+      "fileId_short": "0dc3625229",
+      "x": 22437.901,
+      "y": 1887.015,
+      "width": 847,
+      "height": 422,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06a-optimistic-concurrency-and-db-constraints",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "Optimistic concurrency token / check-then-add race / constraints or isolation as protection.",
+      "nearest_labels_for_search_only": "L-033: concurrency in db  commands | isrowversion isconcurrencytoken | L-069: reading your own uncommited changes | L-040: transactions | L-041: transaction patterns | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth"
+    },
+    {
+      "source_id": "S-048",
+      "image_use_id": "IU-048",
+      "fileId_short": "119679e20c",
+      "x": 22457.508,
+      "y": 2341.303,
+      "width": 823,
+      "height": 482,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06a-optimistic-concurrency-and-db-constraints",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "Optimistic concurrency token / check-then-add race / constraints or isolation as protection.",
+      "nearest_labels_for_search_only": "L-069: reading your own uncommited changes | L-033: concurrency in db  commands | isrowversion isconcurrencytoken | L-041: transaction patterns | L-040: transactions | L-061: EXECUTEASYNC | WITH NEW CONTEXT | PER RETRY PATTERN"
+    },
+    {
+      "source_id": "S-049",
+      "image_use_id": "IU-049",
+      "fileId_short": "3710ca8272",
+      "x": 20055.974,
+      "y": 2978.029,
+      "width": 805,
+      "height": 447,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06b-transactions-and-isolation-levels",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
+      "nearest_labels_for_search_only": "L-036: about transactions isolation level for atomicity | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth | L-069: reading your own uncommited changes | L-034: dbcontext about transactions strategies | L-041: transaction patterns"
+    },
+    {
+      "source_id": "S-050",
+      "image_use_id": "IU-050",
+      "fileId_short": "4e35b1cbc9",
+      "x": 20027.726,
+      "y": 3457.15,
+      "width": 787,
+      "height": 395,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06b-transactions-and-isolation-levels",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
+      "nearest_labels_for_search_only": "L-036: about transactions isolation level for atomicity | L-069: reading your own uncommited changes | L-041: transaction patterns | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth | L-034: dbcontext about transactions strategies"
+    },
+    {
+      "source_id": "S-051",
+      "image_use_id": "IU-051",
+      "fileId_short": "b7164244ce",
+      "x": 20005.988,
+      "y": 3882.198,
+      "width": 800,
+      "height": 223,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06b-transactions-and-isolation-levels",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
+      "nearest_labels_for_search_only": "L-036: about transactions isolation level for atomicity | L-041: transaction patterns | L-069: reading your own uncommited changes | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth | L-062: PLAIN TRANSACTION WITH | BEGINTRANSACTION"
+    },
+    {
+      "source_id": "S-052",
+      "image_use_id": "IU-052",
+      "fileId_short": "a9bd2293fc",
+      "x": 20017.107,
+      "y": 4150.603,
+      "width": 897,
+      "height": 482,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06b-transactions-and-isolation-levels",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
+      "nearest_labels_for_search_only": "L-041: transaction patterns | L-062: PLAIN TRANSACTION WITH | BEGINTRANSACTION | L-036: about transactions isolation level for atomicity | L-069: reading your own uncommited changes | L-055: Executeasync"
+    },
+    {
+      "source_id": "S-062",
+      "image_use_id": "IU-062",
+      "fileId_short": "ea9b1ba7b6",
+      "x": 16923.253,
+      "y": 12451.13,
+      "width": 833,
+      "height": 482,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06c-db-exceptions-and-retry-strategy",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
+      "nearest_labels_for_search_only": "L-119: place to catch codes | L-050: pos concurrency automatic, | not user view driven | retry logic | L-049: retry exception | L-048: db exceptions | concur | L-090: about code of sqlserver that are retryable by | default or not"
+    },
+    {
+      "source_id": "S-063",
+      "image_use_id": "IU-063",
+      "fileId_short": "5310695bc8",
+      "x": 16905.54,
+      "y": 12991.786,
+      "width": 912,
+      "height": 391,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06c-db-exceptions-and-retry-strategy",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
+      "nearest_labels_for_search_only": "L-119: place to catch codes | L-049: retry exception | L-050: pos concurrency automatic, | not user view driven | retry logic | L-048: db exceptions | concur | L-092: !!!!"
+    },
+    {
+      "source_id": "S-064",
+      "image_use_id": "IU-064",
+      "fileId_short": "bb49429aea",
+      "x": 16939.584,
+      "y": 13409.463,
+      "width": 777,
+      "height": 482,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06c-db-exceptions-and-retry-strategy",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
+      "nearest_labels_for_search_only": "L-119: place to catch codes | L-049: retry exception | L-050: pos concurrency automatic, | not user view driven | retry logic | L-051: have  entries in | dbupdateconcurex | can getdatabasevalues | with etag | and then update how you needed | L-122: setting orig values | ef will detect changes based | on the fact that | orig values are the values | in db | so if they "
+    },
+    {
+      "source_id": "S-065",
+      "image_use_id": "IU-065",
+      "fileId_short": "601cdc59fb",
+      "x": 16931.628,
+      "y": 13921.13,
+      "width": 700,
+      "height": 482,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06c-db-exceptions-and-retry-strategy",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
+      "nearest_labels_for_search_only": "L-049: retry exception | L-119: place to catch codes | L-050: pos concurrency automatic, | not user view driven | retry logic | L-047: can we have exhaust check? | L-122: setting orig values | ef will detect changes based | on the fact that | orig values are the values | in db | so if they "
+    },
+    {
+      "source_id": "S-061",
+      "image_use_id": "IU-061",
+      "fileId_short": "bf9f234ad6",
+      "x": 16966.041,
+      "y": 14788.12,
+      "width": 961,
+      "height": 465,
+      "candidate_region": "EF06",
+      "candidate_group": "ef06c-db-exceptions-and-retry-strategy",
+      "decision": "candidate-for-EF06-transcript",
+      "reason": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
+      "nearest_labels_for_search_only": "L-049: retry exception | L-119: place to catch codes | L-047: can we have exhaust check? | L-052: !!!! | L-053: !!!!"
+    },
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "7e221f7688",
+      "x": 15933.099,
+      "y": 1997.074,
+      "width": 740,
+      "height": 482,
+      "candidate_region": "not-current-efcore-region",
+      "candidate_group": "checked-not-current-efcore-material",
+      "decision": "checked-not-EF05-EF06",
+      "reason": "Looks like ASP/Vite/CORS/proxy material, not EF Core mapping/transaction material. Keep unprocessed unless a separate ASP/auth/CORS conspect is started.",
+      "nearest_labels_for_search_only": "L-004: owned isrequired | L-003: navigation | L-001: efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in clien | L-005: need to add somewhere, to some general dbcontext mapping sheet mb | L-002: hascheck constraint"
+    }
+  ]
+}

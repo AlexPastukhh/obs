@@ -1,6 +1,6 @@
-# Apply archive: EF Core EF04 transcript
+# Apply archive: EF Core EF05/EF06 combined boundary review
 
-Archive type: verified region transcript.
+Archive type: combined boundary review / split plan.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage9-ef04-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage10-ef05-ef06-boundary-review-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage9-ef04-transcript-v00
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage9-ef04-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage9-ef04.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage10-ef05-ef06-boundary-review-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage10-ef05-ef06-boundary-review.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -47,7 +47,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/ef-core-general
-git commit -m "Add EF Core EF04 shadow property transcript"
+git commit -m "Add EF Core EF05 EF06 boundary review"
 git push origin ai-processed-conspects-text
 ```
 
@@ -59,6 +59,6 @@ git restore -- _ai-conspects/ef-core-general
 
 ## Notes
 
-This archive completes EF04 only.
+This archive does not create EF05/EF06 transcripts yet.
 
-Next work should start with a new boundary review over remaining unreviewed inventory.
+It creates a larger combined boundary review and then splits future transcript passes.

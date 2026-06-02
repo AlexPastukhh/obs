@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core general
 
-Generated: 2026-06-01 23:42:56 UTC
+Generated: 2026-06-01 23:58:11 UTC
 
 ## Current policy
 
@@ -27,6 +27,7 @@ Stage6: EF03 boundary review done
 Stage7: EF03 transcript done
 Stage8: EF04 boundary review done
 Stage9: EF04 transcript done
+Stage10: EF05/EF06 combined boundary review done
 ```
 
 ## Done
@@ -39,9 +40,23 @@ EF03: Constructors / materialization
 EF04: Shadow property / query filter
 ```
 
-## Pending next
+## Current candidate regions
 
 ```text
-Choose next EF Core area by boundary review first.
-Other EF Core areas require boundary review before transcript.
+EF05: Model mapping / constraints / owned and complex types
+EF06: Transactions / concurrency / db exceptions / retry
+```
+
+## Recommended next transcript
+
+```text
+EF05A:
+S-012, S-013, S-011
+Race protection with UNIQUE constraint/index
+```
+
+## Still unreviewed after Stage10
+
+```text
+none
 ```
