@@ -1,0 +1,308 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-274,IU-274,93a0d0d3e4,S-274__93a0d0d3e4.png,verified-visible,Suspense fallback maps closest to initial isLoading / no data available,"So which one maps best?
+
+If you want the closest plain-English mapping:
+
+- Suspense fallback ≈ initial `isLoading`
+- broader underlying condition: there is no data available yet (`isPending`) and the component suspends.
+
+So not “both” in the sense of two separate triggers.
+It is basically the first load with no data case.
+
+Example:
+
+`<Suspense fallback={<Spinner />}>`
+`  <UserPage />`
+`</Suspense>`","<Suspense fallback={<Spinner />}>
+  <UserPage />
+</Suspense>","Fully readable; explains first no-data load, not every refetch."
+S-277,IU-277,c56ec7fd55,S-277__c56ec7fd55.png,verified-visible,Suspense moves loading handling to nearest boundary,"Suspense changes where loading is handled.
+
+Instead of every component doing:
+
+`if (isPending) return <Loading />`
+`if (isError) return <Error />`
+`return <DataView />`
+
+a Suspense-enabled query can pause rendering until data is ready, and React shows the nearest Suspense fallback.","if (isPending) return <Loading />
+if (isError) return <Error />
+return <DataView />",Readable.
+S-278,IU-278,a865458f88,S-278__a865458f88.png,verified-visible,useSuspenseQuery keeps component visible during later refetch with existing data,"Behavior:
+
+- first mount, no cached data → fallback shows
+- later refetch with existing data → component stays visible, `isFetching` can be true.","function UserPage() {
+  const { data, isFetching } = useSuspenseQuery({
+    queryKey: ['user', 1],
+    queryFn: fetchUser,
+  })
+
+  return (
+    <>
+      {isFetching && <small>Refreshing...</small>}
+      <div>{data.name}</div>
+    </>
+  )
+}",Readable.
+S-279,IU-279,6ea27df25b,S-279__6ea27df25b.png,verified-visible,Suspense lets loading handling move higher in tree,"35. Suspense
+
+Suspense lets you move loading handling higher in the tree.
+
+With Suspense-based query hooks, components can often skip manual loading checks.","<Suspense fallback={<Loading />}>
+  <Repos />
+</Suspense>",Readable.
+S-283,IU-283,b8fa03d9e2,S-283__b8fa03d9e2.png,verified-visible,normal useQuery component handles loading and error itself,"1. Normal query vs Suspense query
+
+Normal `useQuery`
+
+The component itself handles loading and error UI.","function Repos() {
+  const { data, isPending, isError } = useQuery({
+    queryKey: ['repos'],
+    queryFn: fetchRepos,
+  })
+
+  if (isPending) return <div>Loading...</div>
+  if (isError) return <div>Error</div>
+
+  return (
+    <ul>
+      {data.map((repo) => (
+        <li key={repo.id}>{repo.name}</li>
+      ))}
+    </ul>
+  )
+}",Readable.
+S-287,IU-287,4f7fbb9957,S-287__4f7fbb9957.png,verified-visible,manual cache removal vs invalidation and Suspense fallback,"Question: Suspense fallback is being shown on first no data + fetching state; will it be shown when cache is removed manually or invalidated?
+
+Answer:
+
+Yes for manual cache removal; usually no for invalidation alone.",,Readable prompt/answer card.
+S-292,IU-292,676060fc01,S-292__676060fc01.png,verified-visible-partial,Suspense version starts with useSuspenseQuery,Suspense version,"import { Suspense } from 'react'
+import { useSuspenseQuery } from '@tanstack/react-query'
+
+function Repos() {
+  const { data } = useSuspenseQuery({
+    queryKey: ['repos'],
+    queryFn: fetchRepos,
+  })
+  // render follows in continuation
+}",Top of code card; continuation is S-298.
+S-298,IU-298,094d84e79b,S-298__094d84e79b.png,verified-visible,Suspense version moves loading UI to boundary,"Here:
+
+- `Repos` does not check `isPending`
+- if data is not ready, React suspends that subtree
+- `<Suspense fallback={...}>` is shown instead","return (
+  <ul>
+    {data.map((repo) => (
+      <li key={repo.id}>{repo.name}</li>
+    ))}
+  </ul>
+)
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading repos...</div>}>
+      <Repos />
+    </Suspense>
+  )
+}",Continuation of S-292; readable.
+S-308,IU-308,3076481cd7,S-308__3076481cd7.png,verified-visible,what suspend means,"2. What “suspend” actually means
+
+It does not mean “return loading UI from the component”.
+
+It means:
+
+- component starts rendering
+- query sees data is not ready
+- query throws a special Promise internally
+- React catches it through Suspense
+- React renders fallback until Promise resolves
+- then React retries rendering the component
+
+So Suspense is render control flow, not just a loading boolean.",,Readable.
+S-318,IU-318,57fab47856,S-318__57fab47856.png,verified-visible,why people like Suspense,"3. Why people like Suspense
+
+It can make components cleaner.
+
+Instead of mixing data fetching and loading UI in every component, you can put loading state handling higher up.
+
+Without Suspense, every component often has:
+
+- loading logic
+- error logic
+- empty state logic",,Readable.
+S-329,IU-329,74ba77c711,S-329__74ba77c711.png,verified-visible,with Suspense component focuses on successful render,"With Suspense
+
+The component can focus more on successful render.
+
+That is simpler, but only because loading is moved to the boundary.","function UserProfile() {
+  const { data } = useSuspenseQuery({
+    queryKey: ['user'],
+    queryFn: fetchUser,
+  })
+
+  return <h1>{data.name}</h1>
+}",Readable.
+S-340,IU-340,752c806f65,S-340__752c806f65.png,verified-visible,Suspense boundary controls loading UI,"4. The boundary controls the loading UI
+
+This means:
+
+- if `Repos` suspends, show `<Spinner />`
+- when `Repos` is ready, show actual content
+
+You can wrap small or large parts of the tree.","<Suspense fallback={<Spinner />}>
+  <Repos />
+</Suspense>",Readable.
+S-345,IU-345,180dcf4b32,S-345__180dcf4b32.png,verified-visible,small Suspense boundary,"Small boundary
+
+Only `Repos` area shows loading.","<PageLayout>
+  <Header />
+  <Suspense fallback={<div>Loading repos...</div>}>
+    <Repos />
+  </Suspense>
+</PageLayout>",Readable.
+S-350,IU-350,c68e2a8d43,S-350__c68e2a8d43.png,verified-visible,large Suspense boundary,"Large boundary
+
+Whole dashboard waits together.
+
+Small boundaries usually feel better because they preserve more UI.","<Suspense fallback={<FullPageLoader />}>
+  <Dashboard />
+</Suspense>",Readable.
+S-354,IU-354,0a82c038b6,S-354__0a82c038b6.png,verified-visible,Suspense does not replace error handling,"5. Suspense does not replace error handling by itself
+
+Suspense handles loading, not normal error UI.
+
+For query errors, use an Error Boundary.","import { ErrorBoundary } from 'react-error-boundary'
+import { Suspense } from 'react'
+
+function Repos() {
+  const { data } = useSuspenseQuery({
+    queryKey: ['repos'],
+    queryFn: fetchRepos,
+  })
+
+  return (
+    <ul>
+      {data.map((repo) => (
+        <li key={repo.id}>{repo.name}</li>
+      ))}
+    </ul>
+  )
+}",Top part readable; continuation in S-358.
+S-358,IU-358,e1ac560b26,S-358__e1ac560b26.png,verified-visible,ErrorBoundary plus Suspense pair,"Typical pair:
+
+- Suspense → loading
+- ErrorBoundary → errors","export default function Page() {
+  return (
+    <ErrorBoundary fallback={<div>Could not load repos</div>}>
+      <Suspense fallback={<div>Loading repos...</div>}>
+        <Repos />
+      </Suspense>
+    </ErrorBoundary>
+  )
+}",Continuation of S-354; lower bullet partly cropped but meaning readable.
+S-363,IU-363,283c1bb2a3,S-363__283c1bb2a3.png,verified-visible,useSuspenseQuery does not support enabled,"6. Why `useSuspenseQuery` does not support `enabled`
+
+With normal `useQuery`, you can say:
+
+This means: define the query, but do not run it until `id` exists.","useQuery({
+  queryKey: ['user', id],
+  queryFn: () => fetchUser(id),
+  enabled: !!id,
+})",Readable.
+S-366,IU-366,c74ee8553b,S-366__c74ee8553b.png,verified-visible,disabled-but-not-running suspense query does not fit Suspense state model,"With `useSuspenseQuery`, that pattern does not fit well, because Suspense expects the hook either to:
+
+- have data
+- suspend
+- throw an error
+
+A disabled-but-not-running suspense query would create an awkward state: it is neither ready nor really loading in the Suspense sense.
+
+So `useSuspenseQuery` simply does not support `enabled`.",,Readable.
+S-370,IU-370,d3572dccdb,S-370__d3572dccdb.png,verified-visible,instead of enabled move condition outside Suspense hook,"7. What to do instead of `enabled`
+
+You usually move the condition outside the suspense hook.
+
+Example: conditional rendering
+
+Instead of this","function User({ id }: { id?: string }) {
+  const { data } = useSuspenseQuery({
+    queryKey: ['user', id],
+    queryFn: () => fetchUser(id!),
+    // enabled: !!id  ❌ not supported
+  })
+
+  return <div>{data.name}</div>
+}",Readable.
+S-373,IU-373,7f5fd03cda,S-373__7f5fd03cda.png,verified-visible,conditional render wrapper around Suspense child,Do this,"function User({ id }: { id?: string }) {
+  if (!id) return <div>Select a user</div>
+
+  return (
+    <Suspense fallback={<div>Loading user...</div>}>
+      <UserContent id={id} />
+    </Suspense>
+  )
+}",Readable.
+S-375,IU-375,a5b18d2c3b,S-375__a5b18d2c3b.png,verified-visible,condition decides whether suspense-query component exists,"The condition decides whether the suspense-query component exists at all.
+
+That is the main replacement for `enabled`.","function UserContent({ id }: { id: string }) {
+  const { data } = useSuspenseQuery({
+    queryKey: ['user', id],
+    queryFn: () => fetchUser(id),
+  })
+
+  return <div>{data.name}</div>
+}",Continuation of S-373; readable.
+S-377,IU-377,5f7ffd16a1,S-377__5f7ffd16a1.png,verified-visible,serial behavior in one component,"8. Serial behavior in one component
+
+This is one of the biggest Suspense gotchas.
+
+Example.
+
+This looks like two queries in one component.","function Dashboard() {
+  const { data: user } = useSuspenseQuery({
+    queryKey: ['user'],
+    queryFn: fetchUser,
+  })
+
+  const { data: repos } = useSuspenseQuery({
+    queryKey: ['repos'],
+    queryFn: fetchRepos,
+  })
+
+  return (
+    <>
+      <h1>{user.name}</h1>
+      <div>{repos.length} repos</div>
+    </>
+  )
+}",Readable.
+S-380,IU-380,11664458c2,S-380__11664458c2.png,verified-visible,two Suspense queries in one component often behave serially,"But what usually happens is:
+
+1. render starts
+2. first query (`user`) suspends
+3. render stops there
+4. second query (`repos`) is not reached yet
+5. when `user` resolves, React retries render
+6. now it reaches `repos`
+7. `repos` suspends
+8. another wait happens
+
+So they often behave serially.
+
+That is slower than normal parallel fetching.",,Readable.
+S-382,IU-382,9b1e04f8ba,S-382__9b1e04f8ba.png,verified-visible,timeline: Suspense serial vs parallel non-suspense queries,"Timeline
+
+In one component with Suspense
+
+- start render
+- user query suspends
+- wait
+- rerender
+- repos query suspends
+- wait
+- rerender
+- final UI
+
+With parallel non-suspense queries
+
+Both requests can start in the same render cycle.",,Readable.

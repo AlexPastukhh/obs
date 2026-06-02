@@ -1,0 +1,95 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-376,IU-376,2e53933f4d,S-376__2e53933f4d.png,verified-visible,Suspense hooks and cancellation limitation,"This does not work with `useSuspenseQuery`; TanStack Query documents that cancellation does not work for Suspense hooks.
+
+Full example begins with imports, `QueryClient`, `QueryClientProvider`, `useQuery`, and `useQueryClient`; then defines a `Product` type.","import * as React from 'react'
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+  useQueryClient,
+} from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
+
+type Product = {
+  id: number
+  name: string
+}",Top of full cancellation example; continuation in S-378 and S-381/S-383.
+S-378,IU-378,ff1f13ba3a,S-378__ff1f13ba3a.png,verified-visible,fetch with AbortSignal and useQuery receives signal,"Continuation of the full request-cancellation example. The API function accepts `AbortSignal`, passes it to `fetch`, and `useQuery` passes the query `signal` into that function.","type ProductsResponse = {
+  page: number
+  items: Product[]
+  hasMore: boolean
+}
+
+// Simulated API call using fetch + AbortSignal
+async function fetchProducts(page: number, signal?: AbortSignal): Promise<ProductsResponse> {
+  const res = await fetch(`/api/products?page=${page}`, { signal })
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch page ${page}`)
+  }
+
+  return res.json()
+}
+
+function ProductsPage() {
+  const [page, setPage] = React.useState(1)
+  const [isPending, startTransition] = React.useTransition()
+  const queryClient = useQueryClient()
+
+  const query = useQuery({
+    queryKey: ['products', page],
+    queryFn: ({ signal }) => fetchProducts(page, signal),
+    staleTime: 0,
+  })
+}",Readable top/central part; later page handlers continue in S-381/S-383.
+S-379,IU-379,3183b42852,S-379__3183b42852.png,verified-visible,query functions can receive AbortSignal,"27. Request cancellation
+
+Query functions can receive an `AbortSignal`.
+
+If the query becomes obsolete, React Query can cancel the request.
+
+Useful for:
+
+- fast-changing search input
+- navigation away
+- outdated request replacement","useQuery({
+  queryKey: ['todos', search],
+  queryFn: ({ signal }) =>
+    fetch(`/api/todos?q=${search}`, { signal }).then((r) => r.json()),
+})",Readable.
+S-381,IU-381,a0ea9f6a34,S-381__a0ea9f6a34.png,verified-visible,explicitly cancel older product-page requests before navigation,The example explicitly cancels older product-page requests before moving to the next or previous page. This is useful when users click quickly and older pages are no longer interesting.,"const goToNextPage = () => {
+  const nextPage = page + 1
+
+  // Optional: explicitly cancel older product-page requests.
+  // This is useful when user clicks quickly and you know
+  // older pages are no longer interesting.
+  queryClient.cancelQueries({
+    queryKey: ['products'],
+  })
+
+  startTransition(() => {
+    setPage(nextPage)
+  })
+}
+
+const goToPrevPage = () => {
+  if (page === 1) return
+
+  const prevPage = page - 1
+
+  queryClient.cancelQueries({
+    queryKey: ['products'],
+  })
+
+  startTransition(() => {
+    setPage(prevPage)
+  })
+}",Readable; duplicated by S-383.
+S-383,IU-383,a0ea9f6a34,S-383__a0ea9f6a34.png,verified-visible-duplicate,duplicate source: explicit cancelQueries page navigation,Duplicate visual source of S-381: explicit `queryClient.cancelQueries({ queryKey: ['products'] })` before page transitions.,"queryClient.cancelQueries({
+  queryKey: ['products'],
+})
+
+startTransition(() => {
+  setPage(nextPage)
+})",S-383 has the same image/fileId as S-381; kept as duplicate-source evidence so the source is not lost.

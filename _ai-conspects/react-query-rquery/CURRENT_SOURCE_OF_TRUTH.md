@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 09:26:17 UTC
+Generated: 2026-06-02 11:29:24 UTC
 
 ## Current policy
 
@@ -42,12 +42,14 @@ the source stays pending and must not be marked processed.
 ```text
 Stage4x corrected queue closure audit v001: completed
 Stage4x bad archive: invalidated / do not use
-Stage5a S261-S383 boundary review: active candidate split, not processed
+Stage5a S261-S383 boundary review: active split
+Stage5b R12/R13/R15 transcript v001: completed
 ```
 
 ## Current processing target
 
 ```text
-Stage5a boundary candidates: 123
-Next transcript attempt: Stage5b = R12 + R13 + R15
+Stage5b processed: 37
+Stage5a remaining candidates: 86
+Next transcript attempt: Stage5c = R14 persistence / hydration / pruning
 ```

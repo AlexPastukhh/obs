@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage5a S261-S383 boundary review
+# Apply archive: React Query Stage5b R12 R13 R15 transcripts
 
-Archive type: boundary review.
+Archive type: verified transcript batch.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5a-s261-s383-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5b-r12-r13-r15-transcripts-v001.zip
 ```
 
 ## Apply commands with cached diff review
@@ -27,8 +27,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\react-query-rquery"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5a-s261-s383-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage5a-s261-s383-boundary-review.cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5b-r12-r13-r15-transcripts-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage5b-r12-r13-r15-transcripts.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -55,7 +55,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add React Query Stage5a boundary review"
+git commit -m "Add React Query Stage5b transcripts"
 git push origin ai-processed-conspects-text
 ```
 
@@ -69,4 +69,4 @@ git clean -fd -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive is boundary review only. It does not add transcript and does not mark S-261..S-383 as processed.
+This archive marks only R12/R13/R15 Stage5b sources as processed. R14/R11B/R09D remain pending candidates.

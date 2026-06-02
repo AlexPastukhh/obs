@@ -1,0 +1,79 @@
+{
+  "generated": "2026-06-02 11:29:24 UTC",
+  "group": "R15-query-cancellation",
+  "region": "R15",
+  "source_count": 5,
+  "reading_rule": "Every included source has visible text; no OCR-placeholder or image-missing source is marked processed.",
+  "sources": [
+    {
+      "source_id": "S-376",
+      "image_use_id": "IU-376",
+      "fileId_short": "2e53933f4d",
+      "x": "7224.843",
+      "y": "33102.811",
+      "nearest_labels_for_search_only": "L-100: cancelling queries | L-102: Request cancellation | L-104: or better excplicitly cancel queries when you need cancellation on some aciton",
+      "image_file": "S-376__2e53933f4d.png",
+      "theme": "Suspense hooks and cancellation limitation",
+      "status": "verified-visible",
+      "text": "This does not work with `useSuspenseQuery`; TanStack Query documents that cancellation does not work for Suspense hooks.\n\nFull example begins with imports, `QueryClient`, `QueryClientProvider`, `useQuery`, and `useQueryClient`; then defines a `Product` type.",
+      "code": "import * as React from 'react'\nimport {\n  QueryClient,\n  QueryClientProvider,\n  useQuery,\n  useQueryClient,\n} from '@tanstack/react-query'\n\nconst queryClient = new QueryClient()\n\ntype Product = {\n  id: number\n  name: string\n}",
+      "notes": "Top of full cancellation example; continuation in S-378 and S-381/S-383."
+    },
+    {
+      "source_id": "S-378",
+      "image_use_id": "IU-378",
+      "fileId_short": "ff1f13ba3a",
+      "x": "7232.418",
+      "y": "33552.135",
+      "nearest_labels_for_search_only": "L-100: cancelling queries | L-102: Request cancellation | L-104: or better excplicitly cancel queries when you need cancellation on some aciton",
+      "image_file": "S-378__ff1f13ba3a.png",
+      "theme": "fetch with AbortSignal and useQuery receives signal",
+      "status": "verified-visible",
+      "text": "Continuation of the full request-cancellation example. The API function accepts `AbortSignal`, passes it to `fetch`, and `useQuery` passes the query `signal` into that function.",
+      "code": "type ProductsResponse = {\n  page: number\n  items: Product[]\n  hasMore: boolean\n}\n\n// Simulated API call using fetch + AbortSignal\nasync function fetchProducts(page: number, signal?: AbortSignal): Promise<ProductsResponse> {\n  const res = await fetch(`/api/products?page=${page}`, { signal })\n\n  if (!res.ok) {\n    throw new Error(`Failed to fetch page ${page}`)\n  }\n\n  return res.json()\n}\n\nfunction ProductsPage() {\n  const [page, setPage] = React.useState(1)\n  const [isPending, startTransition] = React.useTransition()\n  const queryClient = useQueryClient()\n\n  const query = useQuery({\n    queryKey: ['products', page],\n    queryFn: ({ signal }) => fetchProducts(page, signal),\n    staleTime: 0,\n  })\n}",
+      "notes": "Readable top/central part; later page handlers continue in S-381/S-383."
+    },
+    {
+      "source_id": "S-379",
+      "image_use_id": "IU-379",
+      "fileId_short": "3183b42852",
+      "x": "9648.744",
+      "y": "33744.998",
+      "nearest_labels_for_search_only": "L-104: or better excplicitly cancel queries when you need cancellation on some aciton | L-102: Request cancellation | L-105: Error handling error boundary",
+      "image_file": "S-379__3183b42852.png",
+      "theme": "query functions can receive AbortSignal",
+      "status": "verified-visible",
+      "text": "27. Request cancellation\n\nQuery functions can receive an `AbortSignal`.\n\nIf the query becomes obsolete, React Query can cancel the request.\n\nUseful for:\n\n- fast-changing search input\n- navigation away\n- outdated request replacement",
+      "code": "useQuery({\n  queryKey: ['todos', search],\n  queryFn: ({ signal }) =>\n    fetch(`/api/todos?q=${search}`, { signal }).then((r) => r.json()),\n})",
+      "notes": "Readable."
+    },
+    {
+      "source_id": "S-381",
+      "image_use_id": "IU-381",
+      "fileId_short": "a0ea9f6a34",
+      "x": "7209.055",
+      "y": "34050.711",
+      "nearest_labels_for_search_only": "L-100: cancelling queries | L-105: Error handling error boundary | L-104: or better excplicitly cancel queries when you need cancellation on some aciton",
+      "image_file": "S-381__a0ea9f6a34.png",
+      "theme": "explicitly cancel older product-page requests before navigation",
+      "status": "verified-visible",
+      "text": "The example explicitly cancels older product-page requests before moving to the next or previous page. This is useful when users click quickly and older pages are no longer interesting.",
+      "code": "const goToNextPage = () => {\n  const nextPage = page + 1\n\n  // Optional: explicitly cancel older product-page requests.\n  // This is useful when user clicks quickly and you know\n  // older pages are no longer interesting.\n  queryClient.cancelQueries({\n    queryKey: ['products'],\n  })\n\n  startTransition(() => {\n    setPage(nextPage)\n  })\n}\n\nconst goToPrevPage = () => {\n  if (page === 1) return\n\n  const prevPage = page - 1\n\n  queryClient.cancelQueries({\n    queryKey: ['products'],\n  })\n\n  startTransition(() => {\n    setPage(prevPage)\n  })\n}",
+      "notes": "Readable; duplicated by S-383."
+    },
+    {
+      "source_id": "S-383",
+      "image_use_id": "IU-383",
+      "fileId_short": "a0ea9f6a34",
+      "x": "9762.833",
+      "y": "34455.334",
+      "nearest_labels_for_search_only": "L-104: or better excplicitly cancel queries when you need cancellation on some aciton | L-105: Error handling error boundary | L-106: throw on error",
+      "image_file": "S-383__a0ea9f6a34.png",
+      "theme": "duplicate source: explicit cancelQueries page navigation",
+      "status": "verified-visible-duplicate",
+      "text": "Duplicate visual source of S-381: explicit `queryClient.cancelQueries({ queryKey: ['products'] })` before page transitions.",
+      "code": "queryClient.cancelQueries({\n  queryKey: ['products'],\n})\n\nstartTransition(() => {\n  setPage(nextPage)\n})",
+      "notes": "S-383 has the same image/fileId as S-381; kept as duplicate-source evidence so the source is not lost."
+    }
+  ]
+}
