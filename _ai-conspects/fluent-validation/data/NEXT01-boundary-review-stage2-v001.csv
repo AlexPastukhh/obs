@@ -1,0 +1,42 @@
+source_id,decision,region,subregion,reason
+S-001,processed-in-fv02-v001,FV02,FV02A,Recap: validating collections
+S-002,processed-in-fv02-v001,FV02,FV02A,Cascade stop before collection validations
+S-003,processed-in-fv02-v001,FV02,FV02A,Validate collection length only when collection exists
+S-004,processed-in-fv02-v001,FV02,FV02A,ForEach does not run on null collection
+S-005,processed-in-fv02-v001,FV02,FV02A,Null addresses bug example
+S-006,processed-in-fv02-v001,FV02,FV02A,When applies to all previous validators by default
+S-007,processed-in-fv03-v001,FV03,FV03A,Conditional validation concept
+S-008,processed-in-fv03-v001,FV03,FV03A,Conditional email/phone rules
+S-009,processed-in-fv03-v001,FV03,FV03A,Phone present but not valid can still pass in weak conditional approach
+S-010,processed-in-fv03-v001,FV03,FV03A,Otherwise pattern for either email or phone
+S-011,processed-in-fv03-v001,FV03,FV03A,Separate presence and format rules
+S-012,processed-in-fv03-v001,FV03,FV03B,Cascade mode recap
+S-013,processed-in-fv02-v001,FV02,FV02B,ApplyConditionTo.CurrentValidator for collection length
+S-014,processed-in-fv02-v001,FV02,FV02B,DependentRules alternative for collection validation
+S-015,processed-in-fv01-v001,FV01,FV01A,NotEmpty does not cover whitespace-only strings
+S-016,processed-in-fv01-v001,FV01,FV01A,NotEmpty behavior depends on property type
+S-017,processed-in-fv01-v001,FV01,FV01B,ApplyConditionTo.CurrentValidator
+S-018,processed-in-fv01-v001,FV01,FV01B,Use Matches instead of Must Regex.IsMatch
+S-019,processed-in-fv04-v001,FV04,FV04A,Inject dependencies into validators via constructor DI
+S-020,processed-in-fv04-v001,FV04,FV04A,Validator using reusable value-object extension rules
+S-021,processed-in-fv04-v001,FV04,FV04A,Mapping address error codes to field names
+S-022,processed-in-fv04-v001,FV04,FV04B,Custom rule with context.AddFailure for null address
+S-023,processed-in-fv04-v001,FV04,FV04B,Custom rule creates domain Address and maps failures
+S-024,processed-in-fv04-v001,FV04,FV04B,Reusable MustBeValueObject extension
+S-025,processed-in-fv04-v001,FV04,FV04B,Reusable MustBeFullName extension
+S-026,processed-in-fv05-v001,FV05,FV05A,Demo: inheritance validation
+S-027,processed-in-fv05-v001,FV05,FV05A,Base and derived phone DTO types
+S-028,processed-in-fv06-v001,FV06,FV06A,Demo: rule sets
+S-029,processed-in-fv06-v001,FV06,FV06A,StudentValidator with RuleSet Create and Update
+S-030,processed-in-fv06-v001,FV06,FV06A,IncludeRuleSets with default
+S-031,processed-in-fv06-v001,FV06,FV06A,IncludeRuleSets plus IncludeRulesNotInRuleSet
+S-032,processed-in-fv05-v001,FV05,FV05B,Recap: SetInheritanceValidator
+S-033,processed-in-fv06-v001,FV06,FV06B,Recap: default rule set
+S-034,processed-in-fv06-v001,FV06,FV06B,"Recap: validating default, named, and combined rule sets"
+S-035,processed-in-fv06-v001,FV06,FV06B,Caution: reusing validators and data contracts
+S-036,processed-in-fv07-v001,FV07,FV07A,Demo: throwing exceptions
+S-037,processed-in-fv07-v001,FV07,FV07A,ValidateAndThrow
+S-038,processed-in-fv07-v001,FV07,FV07A,ThrowOnFailures option
+S-039,processed-in-fv07-v001,FV07,FV07A,Do not use exceptions for validation
+S-040,processed-in-fv07-v001,FV07,FV07B,Final summary
+S-041,processed-in-fv02-v001,FV02,FV02B,Duplicate image use of DependentRules alternative

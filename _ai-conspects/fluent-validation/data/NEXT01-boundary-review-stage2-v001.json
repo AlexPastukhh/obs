@@ -1,0 +1,84 @@
+{
+  "generated": "2026-06-02 15:10:00 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_regions": {
+    "FV01": [
+      "S-015",
+      "S-016",
+      "S-017",
+      "S-018"
+    ],
+    "FV02": [
+      "S-001",
+      "S-002",
+      "S-003",
+      "S-004",
+      "S-005",
+      "S-006",
+      "S-013",
+      "S-014",
+      "S-041"
+    ],
+    "FV03": [
+      "S-007",
+      "S-008",
+      "S-009",
+      "S-010",
+      "S-011",
+      "S-012"
+    ],
+    "FV04": [
+      "S-019",
+      "S-020",
+      "S-021",
+      "S-022",
+      "S-023",
+      "S-024",
+      "S-025"
+    ],
+    "FV05": [
+      "S-026",
+      "S-027",
+      "S-032"
+    ],
+    "FV06": [
+      "S-028",
+      "S-029",
+      "S-030",
+      "S-031",
+      "S-033",
+      "S-034",
+      "S-035"
+    ],
+    "FV07": [
+      "S-036",
+      "S-037",
+      "S-038",
+      "S-039",
+      "S-040"
+    ]
+  },
+  "processed_count": 41,
+  "pending_regions": {},
+  "boundary_corrections": [
+    {
+      "source_id": "S-019",
+      "from_stage1_candidate_region": "FV01",
+      "to_verified_region": "FV04",
+      "reason": "Visual recheck shows this image is about validator dependency injection/repository vs IServiceProvider, not regex/basic validators."
+    }
+  ],
+  "duplicate_embedded_image_uses": {
+    "c76db004b8": [
+      "S-014",
+      "S-041"
+    ]
+  },
+  "notes": [
+    "All Stage1 candidate image uses were processed in this single transcript pass.",
+    "S-019 was moved from candidate FV01 to verified FV04 after visual recheck.",
+    "Stage0 source-images were visually rechecked in the working sandbox; this archive intentionally does not duplicate those PNGs."
+  ]
+}

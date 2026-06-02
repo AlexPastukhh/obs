@@ -1,14 +1,76 @@
 {
-  "generated": "2026-06-02 14:12:18 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 41,
-    "assigned_to_candidate_regions": 41,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
-    "duplicate_embedded_image_use_by_fileId_short": {
+  "generated": "2026-06-02 15:10:00 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-full-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "FV01": [
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018"
+      ],
+      "FV02": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-013",
+        "S-014",
+        "S-041"
+      ],
+      "FV03": [
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012"
+      ],
+      "FV04": [
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025"
+      ],
+      "FV05": [
+        "S-026",
+        "S-027",
+        "S-032"
+      ],
+      "FV06": [
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-033",
+        "S-034",
+        "S-035"
+      ],
+      "FV07": [
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040"
+      ]
+    },
+    "processed_count": 41,
+    "pending_regions": [],
+    "boundary_corrections": [
+      {
+        "source_id": "S-019",
+        "from_stage1_candidate_region": "FV01",
+        "to_verified_region": "FV04",
+        "reason": "Visual recheck shows this image is about validator dependency injection/repository vs IServiceProvider, not regex/basic validators."
+      }
+    ],
+    "duplicate_embedded_image_uses": {
       "c76db004b8": [
         "S-014",
         "S-041"
@@ -25,13 +87,13 @@
       "width": "495.0",
       "height": "334.0",
       "nearest_labels_for_search_only": "T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit | T-010:TO ALL PREVIOUS | T-025:!!! | T-001:!!! | T-012:NOT EMPTY NULL OR WHITESPACE",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -42,13 +104,13 @@
       "width": "1585.0",
       "height": "309.0",
       "nearest_labels_for_search_only": "T-010:TO ALL PREVIOUS | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit | T-001:!!! | T-025:!!! | T-012:NOT EMPTY NULL OR WHITESPACE",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -59,13 +121,13 @@
       "width": "1392.0",
       "height": "330.0",
       "nearest_labels_for_search_only": "T-010:TO ALL PREVIOUS | T-001:!!! | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit | T-025:!!! | T-002:When to use rule sheet module",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -76,13 +138,13 @@
       "width": "1101.0",
       "height": "60.0",
       "nearest_labels_for_search_only": "T-001:!!! | T-010:TO ALL PREVIOUS | T-002:When to use rule sheet module | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit | T-003:Conditional validation sheet module",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -93,13 +155,13 @@
       "width": "928.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-001:!!! | T-010:TO ALL PREVIOUS | T-002:When to use rule sheet module | T-003:Conditional validation sheet module | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -110,13 +172,13 @@
       "width": "984.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-002:When to use rule sheet module | T-003:Conditional validation sheet module | T-001:!!! | T-010:TO ALL PREVIOUS | T-004:Can think about something like this:",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -127,13 +189,13 @@
       "width": "555.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-003:Conditional validation sheet module | T-002:When to use rule sheet module | T-004:Can think about something like this: | T-005:But phone being checked only when email is null, and we can pass invalid phone | T-006:This would work if we need to provide only phone or email",
-      "coverage_status": "candidate-fv03",
+      "coverage_status": "processed-in-fv03-v001",
       "current_region_decision": "FV03",
       "current_subregion_decision": "FV03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Conditional validation patterns around email/phone, When/Otherwise/DependentRules style examples, and cascade mode behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -144,13 +206,13 @@
       "width": "557.0",
       "height": "241.0",
       "nearest_labels_for_search_only": "T-004:Can think about something like this: | T-005:But phone being checked only when email is null, and we can pass invalid phone | T-003:Conditional validation sheet module | T-002:When to use rule sheet module | T-006:This would work if we need to provide only phone or email",
-      "coverage_status": "candidate-fv03",
+      "coverage_status": "processed-in-fv03-v001",
       "current_region_decision": "FV03",
       "current_subregion_decision": "FV03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Conditional validation patterns around email/phone, When/Otherwise/DependentRules style examples, and cascade mode behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -161,13 +223,13 @@
       "width": "722.0",
       "height": "268.0",
       "nearest_labels_for_search_only": "T-005:But phone being checked only when email is null, and we can pass invalid phone | T-006:This would work if we need to provide only phone or email | T-004:Can think about something like this: | T-007:Solution for out big problem | T-003:Conditional validation sheet module",
-      "coverage_status": "candidate-fv03",
+      "coverage_status": "processed-in-fv03-v001",
       "current_region_decision": "FV03",
       "current_subregion_decision": "FV03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Conditional validation patterns around email/phone, When/Otherwise/DependentRules style examples, and cascade mode behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -178,13 +240,13 @@
       "width": "585.0",
       "height": "369.0",
       "nearest_labels_for_search_only": "T-006:This would work if we need to provide only phone or email | T-005:But phone being checked only when email is null, and we can pass invalid phone | T-007:Solution for out big problem | T-004:Can think about something like this: | T-008:cascade mode",
-      "coverage_status": "candidate-fv03",
+      "coverage_status": "processed-in-fv03-v001",
       "current_region_decision": "FV03",
       "current_subregion_decision": "FV03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Conditional validation patterns around email/phone, When/Otherwise/DependentRules style examples, and cascade mode behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -195,13 +257,13 @@
       "width": "741.0",
       "height": "544.0",
       "nearest_labels_for_search_only": "T-007:Solution for out big problem | T-006:This would work if we need to provide only phone or email | T-008:cascade mode | T-005:But phone being checked only when email is null, and we can pass invalid phone | T-004:Can think about something like this:",
-      "coverage_status": "candidate-fv03",
+      "coverage_status": "processed-in-fv03-v001",
       "current_region_decision": "FV03",
       "current_subregion_decision": "FV03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Conditional validation patterns around email/phone, When/Otherwise/DependentRules style examples, and cascade mode behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -212,13 +274,13 @@
       "width": "1044.0",
       "height": "570.0",
       "nearest_labels_for_search_only": "T-008:cascade mode | T-007:Solution for out big problem | T-006:This would work if we need to provide only phone or email | T-005:But phone being checked only when email is null, and we can pass invalid phone | T-004:Can think about something like this:",
-      "coverage_status": "candidate-fv03",
+      "coverage_status": "processed-in-fv03-v001",
       "current_region_decision": "FV03",
       "current_subregion_decision": "FV03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Conditional validation patterns around email/phone, When/Otherwise/DependentRules style examples, and cascade mode behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -229,13 +291,13 @@
       "width": "1441.0",
       "height": "305.0",
       "nearest_labels_for_search_only": "T-023:!!! | T-022:BETTER TO USE IT | T-024:BETTER TO USE IT | T-021:!!! | T-025:!!!",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",
@@ -246,13 +308,13 @@
       "width": "1701.0",
       "height": "438.0",
       "nearest_labels_for_search_only": "T-022:BETTER TO USE IT | T-021:!!! | T-023:!!! | T-024:BETTER TO USE IT | T-014:can add to regex sheet moduel",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -263,13 +325,13 @@
       "width": "998.0",
       "height": "281.0",
       "nearest_labels_for_search_only": "T-012:NOT EMPTY NULL OR WHITESPACE | T-001:!!! | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit | T-010:TO ALL PREVIOUS | T-002:When to use rule sheet module",
-      "coverage_status": "candidate-fv01",
+      "coverage_status": "processed-in-fv01-v001",
       "current_region_decision": "FV01",
-      "current_subregion_decision": "FV01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Regex sheet module and built-in string/basic validators such as NotEmpty/Null/Whitespace plus regex-related examples.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV01A",
+      "decision_is_final": "yes-for-fv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -280,13 +342,13 @@
       "width": "1410.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-012:NOT EMPTY NULL OR WHITESPACE | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit | T-010:TO ALL PREVIOUS | T-001:!!! | T-025:!!!",
-      "coverage_status": "candidate-fv01",
+      "coverage_status": "processed-in-fv01-v001",
       "current_region_decision": "FV01",
-      "current_subregion_decision": "FV01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Regex sheet module and built-in string/basic validators such as NotEmpty/Null/Whitespace plus regex-related examples.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV01A",
+      "decision_is_final": "yes-for-fv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -297,13 +359,13 @@
       "width": "1348.0",
       "height": "427.0",
       "nearest_labels_for_search_only": "T-014:can add to regex sheet moduel | T-013:!!! | T-024:BETTER TO USE IT | T-023:!!! | T-022:BETTER TO USE IT",
-      "coverage_status": "candidate-fv01",
+      "coverage_status": "processed-in-fv01-v001",
       "current_region_decision": "FV01",
-      "current_subregion_decision": "FV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Regex sheet module and built-in string/basic validators such as NotEmpty/Null/Whitespace plus regex-related examples.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV01B",
+      "decision_is_final": "yes-for-fv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -314,13 +376,13 @@
       "width": "1224.0",
       "height": "397.0",
       "nearest_labels_for_search_only": "T-013:!!! | T-014:can add to regex sheet moduel | T-024:BETTER TO USE IT | T-023:!!! | T-022:BETTER TO USE IT",
-      "coverage_status": "candidate-fv01",
+      "coverage_status": "processed-in-fv01-v001",
       "current_region_decision": "FV01",
-      "current_subregion_decision": "FV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Regex sheet module and built-in string/basic validators such as NotEmpty/Null/Whitespace plus regex-related examples.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV01B",
+      "decision_is_final": "yes-for-fv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -331,13 +393,13 @@
       "width": "1668.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-025:!!! | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit | T-010:TO ALL PREVIOUS | T-024:BETTER TO USE IT | T-023:!!!",
-      "coverage_status": "candidate-fv01",
-      "current_region_decision": "FV01",
-      "current_subregion_decision": "FV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Regex sheet module and built-in string/basic validators such as NotEmpty/Null/Whitespace plus regex-related examples.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "coverage_status": "processed-in-fv04-v001",
+      "current_region_decision": "FV04",
+      "current_subregion_decision": "FV04A",
+      "decision_is_final": "yes-for-fv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass. Boundary corrected from Stage1 candidate FV01 to FV04.",
+      "review_notes": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass. Boundary corrected from Stage1 candidate FV01 to FV04."
     },
     {
       "source_id": "S-020",
@@ -348,13 +410,13 @@
       "width": "1438.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-015:SOME CUSTOM FLUENT VAL SHIT | T-012:NOT EMPTY NULL OR WHITESPACE | T-017:Tells that should avoid | T-016:! | T-002:When to use rule sheet module",
-      "coverage_status": "candidate-fv04",
+      "coverage_status": "processed-in-fv04-v001",
       "current_region_decision": "FV04",
-      "current_subregion_decision": "FV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Custom FluentValidation extension/validator patterns, reusable validation helpers, and warnings around custom validation approaches.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV04A",
+      "decision_is_final": "yes-for-fv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -365,13 +427,13 @@
       "width": "1255.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-015:SOME CUSTOM FLUENT VAL SHIT | T-016:! | T-017:Tells that should avoid | T-012:NOT EMPTY NULL OR WHITESPACE | T-019:You can use one student validator  for different endponts",
-      "coverage_status": "candidate-fv04",
+      "coverage_status": "processed-in-fv04-v001",
       "current_region_decision": "FV04",
-      "current_subregion_decision": "FV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Custom FluentValidation extension/validator patterns, reusable validation helpers, and warnings around custom validation approaches.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV04A",
+      "decision_is_final": "yes-for-fv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -382,13 +444,13 @@
       "width": "1488.0",
       "height": "423.0",
       "nearest_labels_for_search_only": "T-016:! | T-017:Tells that should avoid | T-015:SOME CUSTOM FLUENT VAL SHIT | T-019:You can use one student validator  for different endponts | T-012:NOT EMPTY NULL OR WHITESPACE",
-      "coverage_status": "candidate-fv04",
+      "coverage_status": "processed-in-fv04-v001",
       "current_region_decision": "FV04",
       "current_subregion_decision": "FV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Custom FluentValidation extension/validator patterns, reusable validation helpers, and warnings around custom validation approaches.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -399,13 +461,13 @@
       "width": "912.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-016:! | T-017:Tells that should avoid | T-019:You can use one student validator  for different endponts | T-015:SOME CUSTOM FLUENT VAL SHIT | T-018:Or",
-      "coverage_status": "candidate-fv04",
+      "coverage_status": "processed-in-fv04-v001",
       "current_region_decision": "FV04",
       "current_subregion_decision": "FV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Custom FluentValidation extension/validator patterns, reusable validation helpers, and warnings around custom validation approaches.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-024",
@@ -416,13 +478,13 @@
       "width": "1003.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-015:SOME CUSTOM FLUENT VAL SHIT | T-012:NOT EMPTY NULL OR WHITESPACE | T-017:Tells that should avoid | T-016:! | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit",
-      "coverage_status": "candidate-fv04",
+      "coverage_status": "processed-in-fv04-v001",
       "current_region_decision": "FV04",
-      "current_subregion_decision": "FV04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Custom FluentValidation extension/validator patterns, reusable validation helpers, and warnings around custom validation approaches.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV04B",
+      "decision_is_final": "yes-for-fv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-025",
@@ -433,13 +495,13 @@
       "width": "971.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-015:SOME CUSTOM FLUENT VAL SHIT | T-012:NOT EMPTY NULL OR WHITESPACE | T-017:Tells that should avoid | T-016:! | T-009:REGEX  <---  MODULE VALIDATING COLLECTIONS + conditional validation       ----> custom shit  + some bad shit underit",
-      "coverage_status": "candidate-fv04",
+      "coverage_status": "processed-in-fv04-v001",
       "current_region_decision": "FV04",
-      "current_subregion_decision": "FV04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Custom FluentValidation extension/validator patterns, reusable validation helpers, and warnings around custom validation approaches.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "current_subregion_decision": "FV04B",
+      "decision_is_final": "yes-for-fv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-026",
@@ -450,13 +512,13 @@
       "width": "772.0",
       "height": "314.0",
       "nearest_labels_for_search_only": "T-016:! | T-017:Tells that should avoid | T-019:You can use one student validator  for different endponts | T-018:Or | T-020:Dont use it, it is a strong sighn of crud based interface, not task based",
-      "coverage_status": "candidate-fv05",
+      "coverage_status": "processed-in-fv05-v001",
       "current_region_decision": "FV05",
       "current_subregion_decision": "FV05A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Inheritance validation demo and recap: polymorphic validators, SetInheritanceValidator, base/domain classes and derived validators.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV05 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV05 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-027",
@@ -467,13 +529,13 @@
       "width": "591.0",
       "height": "367.0",
       "nearest_labels_for_search_only": "T-016:! | T-017:Tells that should avoid | T-019:You can use one student validator  for different endponts | T-018:Or | T-020:Dont use it, it is a strong sighn of crud based interface, not task based",
-      "coverage_status": "candidate-fv05",
+      "coverage_status": "processed-in-fv05-v001",
       "current_region_decision": "FV05",
       "current_subregion_decision": "FV05A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Inheritance validation demo and recap: polymorphic validators, SetInheritanceValidator, base/domain classes and derived validators.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV05 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV05 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-028",
@@ -484,13 +546,13 @@
       "width": "692.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-019:You can use one student validator  for different endponts | T-018:Or | T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv06",
+      "coverage_status": "processed-in-fv06-v001",
       "current_region_decision": "FV06",
       "current_subregion_decision": "FV06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "RuleSet examples, IncludeRuleSets/IncludeRulesNotInRuleSet calls, default rule set, and cautions about validator reuse/data contracts.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-029",
@@ -501,13 +563,13 @@
       "width": "703.0",
       "height": "266.0",
       "nearest_labels_for_search_only": "T-019:You can use one student validator  for different endponts | T-018:Or | T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv06",
+      "coverage_status": "processed-in-fv06-v001",
       "current_region_decision": "FV06",
       "current_subregion_decision": "FV06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "RuleSet examples, IncludeRuleSets/IncludeRulesNotInRuleSet calls, default rule set, and cautions about validator reuse/data contracts.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-030",
@@ -518,13 +580,13 @@
       "width": "860.0",
       "height": "47.0",
       "nearest_labels_for_search_only": "T-018:Or | T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv06",
+      "coverage_status": "processed-in-fv06-v001",
       "current_region_decision": "FV06",
       "current_subregion_decision": "FV06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "RuleSet examples, IncludeRuleSets/IncludeRulesNotInRuleSet calls, default rule set, and cautions about validator reuse/data contracts.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-031",
@@ -535,13 +597,13 @@
       "width": "600.0",
       "height": "57.0",
       "nearest_labels_for_search_only": "T-018:Or | T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv06",
+      "coverage_status": "processed-in-fv06-v001",
       "current_region_decision": "FV06",
       "current_subregion_decision": "FV06A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "RuleSet examples, IncludeRuleSets/IncludeRulesNotInRuleSet calls, default rule set, and cautions about validator reuse/data contracts.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-032",
@@ -552,13 +614,13 @@
       "width": "518.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv05",
+      "coverage_status": "processed-in-fv05-v001",
       "current_region_decision": "FV05",
       "current_subregion_decision": "FV05B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Inheritance validation demo and recap: polymorphic validators, SetInheritanceValidator, base/domain classes and derived validators.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV05 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV05 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-033",
@@ -569,13 +631,13 @@
       "width": "606.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv06",
+      "coverage_status": "processed-in-fv06-v001",
       "current_region_decision": "FV06",
       "current_subregion_decision": "FV06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "RuleSet examples, IncludeRuleSets/IncludeRulesNotInRuleSet calls, default rule set, and cautions about validator reuse/data contracts.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-034",
@@ -586,13 +648,13 @@
       "width": "561.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv06",
+      "coverage_status": "processed-in-fv06-v001",
       "current_region_decision": "FV06",
       "current_subregion_decision": "FV06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "RuleSet examples, IncludeRuleSets/IncludeRulesNotInRuleSet calls, default rule set, and cautions about validator reuse/data contracts.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-035",
@@ -603,13 +665,13 @@
       "width": "500.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv06",
+      "coverage_status": "processed-in-fv06-v001",
       "current_region_decision": "FV06",
       "current_subregion_decision": "FV06B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "RuleSet examples, IncludeRuleSets/IncludeRulesNotInRuleSet calls, default rule set, and cautions about validator reuse/data contracts.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv06-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV06 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-036",
@@ -620,13 +682,13 @@
       "width": "686.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv07",
+      "coverage_status": "processed-in-fv07-v001",
       "current_region_decision": "FV07",
       "current_subregion_decision": "FV07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ValidateAndThrow / ThrowOnFailures, why not to use exceptions for validation, and final FluentValidation summary slide.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-037",
@@ -637,13 +699,13 @@
       "width": "608.0",
       "height": "95.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-011:NEED TO ADD MODULE BAD SHIT FROM CONSPECT WITH BAD FEATURES | T-016:!",
-      "coverage_status": "candidate-fv07",
+      "coverage_status": "processed-in-fv07-v001",
       "current_region_decision": "FV07",
       "current_subregion_decision": "FV07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ValidateAndThrow / ThrowOnFailures, why not to use exceptions for validation, and final FluentValidation summary slide.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-038",
@@ -654,13 +716,13 @@
       "width": "531.0",
       "height": "174.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-016:! | T-017:Tells that should avoid",
-      "coverage_status": "candidate-fv07",
+      "coverage_status": "processed-in-fv07-v001",
       "current_region_decision": "FV07",
       "current_subregion_decision": "FV07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ValidateAndThrow / ThrowOnFailures, why not to use exceptions for validation, and final FluentValidation summary slide.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-039",
@@ -671,13 +733,13 @@
       "width": "417.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-011:NEED TO ADD MODULE BAD SHIT FROM CONSPECT WITH BAD FEATURES | T-016:!",
-      "coverage_status": "candidate-fv07",
+      "coverage_status": "processed-in-fv07-v001",
       "current_region_decision": "FV07",
       "current_subregion_decision": "FV07A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ValidateAndThrow / ThrowOnFailures, why not to use exceptions for validation, and final FluentValidation summary slide.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-040",
@@ -688,13 +750,13 @@
       "width": "593.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-020:Dont use it, it is a strong sighn of crud based interface, not task based | T-018:Or | T-019:You can use one student validator  for different endponts | T-011:NEED TO ADD MODULE BAD SHIT FROM CONSPECT WITH BAD FEATURES | T-016:!",
-      "coverage_status": "candidate-fv07",
+      "coverage_status": "processed-in-fv07-v001",
       "current_region_decision": "FV07",
       "current_subregion_decision": "FV07B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ValidateAndThrow / ThrowOnFailures, why not to use exceptions for validation, and final FluentValidation summary slide.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv07-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV07 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-041",
@@ -705,13 +767,13 @@
       "width": "1701.0",
       "height": "438.0",
       "nearest_labels_for_search_only": "T-024:BETTER TO USE IT | T-023:!!! | T-025:!!! | T-022:BETTER TO USE IT | T-014:can add to regex sheet moduel",
-      "coverage_status": "candidate-fv02",
+      "coverage_status": "processed-in-fv02-v001",
       "current_region_decision": "FV02",
       "current_subregion_decision": "FV02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Collection validation, RuleForEach, child collection items, extracting item validators and complex/nested property validation.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-fv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in FV02 v001 after NEXT01 visual/semantic transcript pass."
     }
   ]
 }
