@@ -1,0 +1,195 @@
+label_id,x,y,font_size,text
+L-001,2348.355,6250.64,98.222,begin end
+L-002,2348.355,6373.417,98.222,if
+L-003,3922.567,6202.258,67.148,stored proc usecase
+L-004,3922.567,6286.193,67.148,Set of update
+L-005,3922.567,6370.128,67.148,set to assign value to output param
+L-006,6580.046,7154.86,72.267,why not set ?
+L-007,6450.046,7697.158,55.2,why not assign from output directly?
+L-008,9038.734,7201.122,81.63,declare
+L-009,7878.734,7170.011,81.63,why select
+L-010,1403.846,11464.535,81.63,Guid
+L-011,2471.846,11416.535,81.63,Table with foreign key
+L-012,2457.623,11930.313,81.63,foreign key with cascade
+L-013,3942.483,11405.771,81.63,return created row data
+L-014,2114.696,13216.374,81.63,what can you get from
+L-015,2114.696,13318.411,81.63,inserted
+L-016,7217.43,17275.861,81.63,add default constr
+L-017,8319.703,17263.423,81.63,Primary key
+L-018,8377.363,17738.921,81.63,Foreign key
+L-019,8353.906,18314.391,81.63,unique constr
+L-020,9453.815,18273.743,81.63,unique idex
+L-021,8419.24,18757.548,81.63,Not null
+L-022,8351.284,19265.486,81.63,Default
+L-023,8393.522,19826.891,81.63,Check
+L-024,7220.507,17817.399,81.63,add check constr
+L-025,7221.248,18449.992,81.63,add unique constr
+L-026,7226.433,18974.436,81.63,add foreign key constr
+L-027,6015.396,18783.378,81.63,add a column and then
+L-028,6015.396,18885.415,81.63,add it a constraint
+L-029,6004.513,17266.004,81.63,add column
+L-030,5995.366,17558.718,81.63,alter column
+L-031,5992.621,17851.432,81.63,drop column
+L-032,5976.156,18109.386,81.63,add constr
+L-033,3282.696,13136.374,81.63,inserted with table
+L-034,3282.696,13238.411,81.63,variable pattern
+L-035,4800.791,14166.85,81.63,set vs select
+L-036,6875.45,10775.553,116.296,Delete
+L-037,5685.45,10838.886,116.296,Update
+L-038,3596.165,10855.769,116.296,Insert
+L-039,2437.175,10867.486,116.296,Create table
+L-040,1044.73,13177.709,116.296,INSERTED
+L-041,4784.326,13267.81,116.296,Variables
+L-042,7157.659,13299.81,116.296,IF
+L-043,8093.659,13310.476,116.296,IF EXISTS
+L-044,9289.898,13392.698,116.296,@@RowCount
+L-045,10361.437,13403.809,116.296,Try Catch
+L-046,1015.397,14595.042,116.296,DELETED
+L-047,1688.709,17039.764,116.296,Upsert with
+L-048,1688.709,17185.134,116.296,merge
+L-049,1688.709,17330.504,116.296,
+L-050,2646.777,17082.129,116.296,Easier path
+L-051,2646.777,17227.499,116.296,with If exists
+L-052,3617.448,17176.068,116.296,Transactions
+L-053,4760.478,17196.674,116.296,Indexes
+L-054,5991.68,17084.044,116.296,ALTER TABLE
+L-055,7196.669,16928.817,116.296,adding constraints
+L-056,7196.669,17074.187,116.296,with alter
+L-057,2156.349,14558.852,116.296,FOR UPDATE
+L-058,634.444,15266.557,116.296,DELETED VS SCOPE_IDENTITY()
+L-059,1322.508,10846.153,116.296,Common types
+L-060,6185.115,5517.903,102.667,stored proc rowsversion case
+L-061,6185.115,5646.236,102.667,"update output,"
+L-062,6185.115,5774.569,102.667,INSERTED.RowVersion
+L-063,6185.115,5902.903,102.667,Select outputparamrowversion = temptablerowwithonecolumn from temptable
+L-064,2180.802,493.709,89.197,create database
+L-065,3091.659,500.816,89.197,on primary
+L-066,2958.731,933.918,89.197,primary file options
+L-067,3846.874,974.936,89.197,log files options
+L-068,3839.957,495.252,89.197,log on
+L-069,4898.051,2572.929,20.0,"After i did this on another query file, i had got same error but when i did quey on"
+L-070,4898.051,2597.929,20.0,"same file where i use model, i got result"
+L-071,7619.24,2252.64,20.0,USE model;
+L-072,7619.24,2277.64,20.0,SELECT
+L-073,7619.24,2302.64,20.0,"name,"
+L-074,7619.24,2327.64,20.0,"physical_name,"
+L-075,7619.24,2352.64,20.0,"size/128.0 AS CurrentSizeMB,"
+L-076,7619.24,2377.64,20.0,CASE max_size
+L-077,7619.24,2402.64,20.0,WHEN -1 THEN 'UNLIMITED'
+L-078,0.0,192.62,20.0,WHEN 268435456 THEN '2GB'
+L-079,0.0,217.62,20.0,ELSE CAST(max_size/128.0 AS VARCHAR) + ' MB'
+L-080,0.0,242.62,20.0,"END AS MaxSize,"
+L-081,0.0,267.62,20.0,"growth/128.0 AS GrowthMB,"
+L-082,0.0,292.62,20.0,CASE is_percent_growth
+L-083,0.0,317.62,20.0,WHEN 1 THEN CAST(growth AS VARCHAR) + '%'
+L-084,0.0,342.62,20.0,ELSE 'Fixed MB'
+L-085,0.0,367.62,20.0,END AS GrowthType
+L-086,0.0,392.62,20.0,FROM sys.database_files;
+L-087,11227.384,2184.424,20.0,Practical Demonstration:
+L-088,11227.384,2209.424,20.0,sql
+L-089,11227.384,2234.424,20.0,-- ============================================
+L-090,11227.384,2259.424,20.0,"-- DEMONSTRATING MASTER, MODEL, and GO"
+L-091,11227.384,2284.424,20.0,-- ============================================
+L-092,11227.384,2309.424,20.0,
+L-093,0.0,167.62,20.0,-- 1. Show we're in MASTER (control database)
+L-094,0.0,192.62,20.0,USE master;
+L-095,0.0,217.62,20.0,GO
+L-096,0.0,242.62,20.0,
+L-097,0.0,267.62,20.0,SELECT 'Current database: ' + DB_NAME();
+L-098,0.0,292.62,20.0,GO
+L-099,0.0,317.62,20.0,
+L-100,0.0,342.62,20.0,-- 2. Check what databases exist (info stored in MASTER)
+L-101,0.0,367.62,20.0,"SELECT name, state_desc, create_date"
+L-102,0.0,392.62,20.0,FROM sys.databases
+L-103,0.0,417.62,20.0,ORDER BY name;
+L-104,0.0,442.62,20.0,GO
+L-105,0.0,467.62,20.0,
+L-106,0.0,492.62,20.0,-- 3. Look at MODEL's current settings
+L-107,0.0,517.62,20.0,SELECT
+L-108,0.0,542.62,20.0,"'MODEL Database Settings:',"
+L-109,0.0,567.62,20.0,"name,"
+L-110,0.0,592.62,20.0,"size/128.0 AS SizeMB,"
+L-111,0.0,617.62,20.0,CASE max_size
+L-112,0.0,642.62,20.0,WHEN -1 THEN 'UNLIMITED'
+L-113,0.0,667.62,20.0,ELSE CAST(max_size/128.0 AS VARCHAR) + ' MB'
+L-114,0.0,692.62,20.0,END AS MaxSize
+L-115,0.0,717.62,20.0,FROM sys.master_files
+L-116,0.0,742.62,20.0,WHERE database_id = DB_ID('model');
+L-117,0.0,767.62,20.0,GO
+L-118,0.0,792.62,20.0,
+L-119,0.0,817.62,20.0,-- 4. Create a new database (uses MODEL as template)
+L-120,0.0,842.62,20.0,CREATE DATABASE DemoDB;
+L-121,0.0,867.62,20.0,GO  -- Batch separator required!
+L-122,0.0,892.62,20.0,
+L-123,0.0,917.62,20.0,-- 5. Switch to new database
+L-124,0.0,942.62,20.0,USE DemoDB;
+L-125,0.0,967.62,20.0,GO  -- Required after USE!
+L-126,0.0,992.62,20.0,
+L-127,0.0,1017.62,20.0,-- 6. Check what was created (inherited from MODEL)
+L-128,0.0,1042.62,20.0,SELECT 'Now in database: ' + DB_NAME();
+L-129,0.0,1067.62,20.0,GO
+L-130,0.0,1092.62,20.0,
+L-131,0.0,1117.62,20.0,-- 7. Clean up
+L-132,0.0,1142.62,20.0,USE master;
+L-133,0.0,1167.62,20.0,GO
+L-134,0.0,1192.62,20.0,
+L-135,0.0,1217.62,20.0,DROP DATABASE DemoDB;
+L-136,0.0,1242.62,20.0,GO
+L-137,6804.296,267.849,112.952,master
+L-138,5399.241,374.266,112.952,purpose of master
+L-139,6461.599,834.2,112.952,what it contains
+L-140,7754.772,342.135,112.952,Model
+L-141,8813.819,296.421,112.952,Go
+L-142,9672.988,364.699,112.952,go usecases
+L-143,11090.686,406.439,112.952,System databases
+L-144,8731.146,1099.885,112.952,when required
+L-145,8825.674,1759.167,78.25,mistakes
+L-146,9671.27,1522.479,78.25,variable scope
+L-147,9685.02,1080.53,78.25,executing multiple times
+L-148,9684.037,596.35,78.25,separating ddl statements
+L-149,7716.264,1411.246,78.25,customizing model
+L-150,7717.905,991.114,78.25,model defaults
+L-151,1541.876,2017.778,122.196,Defalults
+L-152,1541.876,2170.523,122.196,is log db created by default
+L-153,7336.055,2119.635,122.196,check model defaults
+L-154,3409.121,1871.213,122.196,default max limit for
+L-155,3409.121,2023.958,122.196,logs 2GB
+L-156,4858.753,1795.044,90.619,multiple windows with queries
+L-157,4858.753,1908.318,90.619,= multiple connections
+L-158,13189.848,5189.777,169.333,"login , user"
+L-159,14427.16,5199.502,121.675,create login
+L-160,14427.16,5351.596,121.675,user
+L-161,15560.067,5701.853,121.675,fixed server roles
+L-162,15626.11,6377.067,121.675,fixed db roles
+L-163,14367.429,6167.287,121.675,common options
+L-164,14248.138,6561.682,121.675,windows auth account
+L-165,15535.85,7005.948,121.675,custom roles
+L-166,15535.85,7158.042,121.675,with granting
+L-167,15535.85,7310.136,121.675,permissions
+L-168,15641.961,4974.333,125.51,grant roles
+L-169,15641.961,5131.22,125.51,(alter role by
+L-170,15641.961,5288.107,125.51,adding member)
+L-171,11874.293,5085.332,169.333,sql server
+L-172,11874.293,5296.999,169.333,sec hierarchy
+L-173,11794.293,7410.548,372.0,security
+L-174,10014.293,10917.215,372.0,sql server syntax
+L-175,11009.115,16954.194,94.667,view/indexed view
+L-176,8337.963,16847.337,186.222,common
+L-177,8337.963,17080.114,186.222,constraints
+L-178,9108.027,13413.763,67.111,!!!
+L-179,1044.124,17247.385,20.0,"key lines, that make this"
+L-180,1044.124,17272.385,20.0,a merge
+L-181,1044.124,17297.385,20.0,
+L-182,1044.124,17322.385,20.0,we say that we
+L-183,1044.124,17347.385,20.0,merge into users table
+L-184,1044.124,17372.385,20.0,
+L-185,1044.124,17397.385,20.0,
+L-186,0.0,192.62,20.0,ON means the condition for match
+L-187,0.0,217.62,20.0,
+L-188,0.0,242.62,20.0,then we just do thigs on match
+L-189,0.0,267.62,20.0,and not match
+L-190,0.0,292.62,20.0,
+L-191,524.685,17534.145,20.0,we have variables from our query
+L-192,524.685,17559.145,20.0,and we built some temp source
+L-193,12895.977,5612.782,20.0,login + user - authentication
+L-194,12895.977,5637.782,20.0,users roles authorization

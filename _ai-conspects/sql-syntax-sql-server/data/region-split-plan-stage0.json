@@ -1,0 +1,38 @@
+[
+  {
+    "combined_pass": "P01-R01R02-server-database-admin-and-security",
+    "image_use_count": 47,
+    "subregions": "R01-database-creation-master-model-go-files; R02-login-user-roles-permissions",
+    "meaning": "CREATE DATABASE, ON PRIMARY, LOG ON, file options, master/model/system DBs, GO, model defaults, multi-window/batch behavior. / SQL Server security hierarchy: login vs user, authentication vs authorization, fixed server/db roles, custom roles, GRANT/permissions.",
+    "bbox_x_min": 1957.489,
+    "bbox_y_min": 433.626,
+    "bbox_x_max": 16422.632,
+    "bbox_y_max": 7927.05,
+    "recommended_action": "Transcript pass after local boundary recheck; keep internal subregions separate when combined.",
+    "is_source_of_truth": "no"
+  },
+  {
+    "combined_pass": "P02-R03R04-procedural-dml-output-and-error-handling",
+    "image_use_count": 55,
+    "subregions": "R03-stored-proc-output-params-control-flow-rowversion; R04-core-table-dml-output-variables-if-trycatch",
+    "meaning": "Common SQL types, CREATE TABLE, GUID, FK/cascade, INSERT/UPDATE/DELETE, INSERTED/DELETED, variables, IF/IF EXISTS, @@ROWCOUNT, TRY/CATCH. / Stored procedures, BEGIN/END, IF, DECLARE, SET/SELECT assignment, output params, rowversion return patterns.",
+    "bbox_x_min": 959.764,
+    "bbox_y_min": 6090.175,
+    "bbox_x_max": 11252.392,
+    "bbox_y_max": 15883.127,
+    "recommended_action": "Transcript pass after local boundary recheck; keep internal subregions separate when combined.",
+    "is_source_of_truth": "no"
+  },
+  {
+    "combined_pass": "P03-R05-upsert-merge-alter-indexes-constraints-views",
+    "image_use_count": 31,
+    "subregions": "R05-upsert-merge-transactions-indexes-alter-constraints-views",
+    "meaning": "UPSERT/MERGE, IF EXISTS easier path, transactions, indexes, ALTER TABLE, add/drop/alter columns, constraints, primary/foreign/unique/default/check, views/indexed views.",
+    "bbox_x_min": 494.048,
+    "bbox_y_min": 11469.058,
+    "bbox_x_max": 11858.967,
+    "bbox_y_max": 20170.288,
+    "recommended_action": "Transcript pass after local boundary recheck; keep internal subregions separate when combined.",
+    "is_source_of_truth": "no"
+  }
+]
