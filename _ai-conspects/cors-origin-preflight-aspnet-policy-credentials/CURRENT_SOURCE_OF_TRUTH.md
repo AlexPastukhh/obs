@@ -1,6 +1,6 @@
 # Current Source of Truth - cors-origin-preflight-aspnet-policy-credentials
 
-Generated: 2026-06-02 12:00:10 UTC
+Generated: 2026-06-02 12:18:34 UTC
 
 ## Policy
 
@@ -11,7 +11,9 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01/R02 origin / preflight / ASP.NET CORS use-cases: transcript v001 done
+R03/R04/R05 policy builder / headers / middleware behavior: next candidate
+Final coverage audit: pending
 ```
 
 ## Counts
@@ -19,15 +21,12 @@ Normal transcript regions: not started
 ```text
 unique embedded images: 126
 image uses on canvas: 126
-text labels parsed: 71
-duplicate image uses: 0
+R01/R02 processed image uses: 56
+remaining planned image uses: 70
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after boundary review.
-Target size: 60-100 images, or larger if coherent.
-Suggested first candidate: R01+R02 upper-half CORS origin/preflight/ASP config road (56 images).
-Then R03+R04+R05 lower-half policy-builder/headers/middleware road (70 images).
+R03+R04+R05 combined boundary review, target 70 images if coherent.
 ```

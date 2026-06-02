@@ -1,0 +1,32 @@
+{
+  "generated": "2026-06-02 12:18:34 UTC",
+  "region_id": "R01R02",
+  "area_title": "Origin / preflight basics / ASP.NET CORS use-cases",
+  "what_area_is_about": [
+    "what a browser origin is: scheme + host + port, and how that differs from path/query/fragment",
+    "when the browser sends CORS preflight and what Access-Control-Request-Method / Access-Control-Request-Headers mean",
+    "difference between safelisted request headers and response headers JavaScript is allowed to read",
+    "what successful vs rejected preflight looks like from the browser perspective",
+    "credentialed CORS and why exact server approval is needed",
+    "ASP.NET development patterns: proxy to keep one visible origin, manual CORS policy setup, exposing Content-Disposition, and avoiding login redirects for API calls"
+  ],
+  "key_ideas": [
+    "CORS is enforced by browsers to protect user data; it does not protect servers from non-browser clients or malicious servers.",
+    "Origin is scheme + host + port; path and query are not part of the origin comparison.",
+    "Preflight asks permission before the real request when method/headers/content type are not safelisted.",
+    "A successful preflight does not return application data; it only permits the browser to send/read the subsequent actual request under the approved CORS constraints.",
+    "For credentialed requests, both client and server must opt in; wildcard-style permissive CORS is not enough for cookies/auth credentials.",
+    "In ASP.NET SPA development, using one browser-visible origin through proxying avoids many accidental CORS/redirect problems.",
+    "If an API request is redirected to a login page, the browser may report a CORS-like failure; API paths should usually return 401/403 instead of page redirects."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: contact sheets are readable and the pass is visually coherent; exact code punctuation should be checked against preserved PNGs",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Some ASP.NET code snippets are small; code punctuation is summarized rather than treated as authoritative exact transcription.",
+      "Stage0 split remains checklist only; R03/R04/R05 still need their own boundary review."
+    ],
+    "confidence_summary": "High for region ownership and conceptual notes; medium-high for exact code line transcription."
+  }
+}
