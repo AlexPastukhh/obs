@@ -1,0 +1,34 @@
+{
+  "generated": "2026-06-02 12:09:04 UTC",
+  "audit_version": "stage5-final-coverage-audit-v001",
+  "conspect": "time",
+  "verdict": "coverage-complete",
+  "total_image_uses": 206,
+  "covered_image_uses": 206,
+  "problem_image_uses": 0,
+  "coverage_status_counts": {
+    "processed-in-r03-v001": 62,
+    "processed-in-r01-v001": 58,
+    "processed-in-r04-v001": 53,
+    "processed-in-r05-v001": 32,
+    "processed-in-r03-v002-correction": 1
+  },
+  "region_counts": {
+    "R03": 63,
+    "R01": 58,
+    "R04": 53,
+    "R05": 32
+  },
+  "expected_region_shape": {
+    "R01": "core DateTime / DateTimeOffset / Kind / ticks / Unix / JS display",
+    "R03": "parsing / formatting / standard and custom formats plus S158 correction",
+    "R04": "timezone conversion / JSON / model binding / date math / DST",
+    "R05": "invalid / ambiguous local-time policies"
+  },
+  "notes": [
+    "Inventory/ledger is a checklist, not source of truth; transcript ownership was determined by boundary review.",
+    "The final audit verifies that every known image use is now processed by a region or correction.",
+    "No candidate/reserved/pending image uses remain if problem_image_uses is 0."
+  ],
+  "problem_rows": []
+}

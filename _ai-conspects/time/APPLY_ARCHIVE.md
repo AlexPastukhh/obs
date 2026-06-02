@@ -1,6 +1,6 @@
-# Apply archive: Time R05 invalid / ambiguous local-time policies transcript v001
+# Apply archive: Time final coverage audit v001
 
-Archive type: stage-4 verified transcript.
+Archive type: stage-5 final coverage audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-time-stage4-r05-invalid-ambiguous-time-policies-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-time-stage5-final-coverage-audit-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-time-stage4-r05-invalid-ambiguous-time-pol
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-time-stage4-r05-invalid-ambiguous-time-policies-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-time-stage4-r05-invalid-ambiguous-time-policies-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-time-stage5-final-coverage-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-time-stage5-final-coverage-audit.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/time
-git commit -m "Add time R05 invalid ambiguous time transcript"
+git commit -m "Finalize time conspect coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This is the last transcript region before final coverage audit.
+This archive does not add a new transcript. It records final coverage completeness.
