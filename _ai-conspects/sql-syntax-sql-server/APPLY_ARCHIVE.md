@@ -1,6 +1,6 @@
-# Apply archive: SQL Syntax / SQL Server P03 upsert MERGE DDL transcript v001
+# Apply archive: SQL Syntax / SQL Server final coverage audit v001
 
-Archive type: stage-3 verified transcript.
+Archive type: stage-4 final coverage audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage3-p03-upsert-merge-ddl-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage4-final-coverage-audit-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage3-p03-upsert-me
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage3-p03-upsert-merge-ddl-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage3-p03-upsert-merge-ddl-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage4-final-coverage-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage4-final-coverage-audit.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/sql-syntax-sql-server
-git commit -m "Add sql server P03 upsert merge ddl transcript"
+git commit -m "Finalize sql server syntax conspect coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This is the final transcript region before coverage audit.
+This archive does not add a new transcript. It records final coverage completeness.

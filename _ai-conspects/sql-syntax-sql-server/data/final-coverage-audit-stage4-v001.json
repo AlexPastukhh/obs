@@ -1,0 +1,36 @@
+{
+  "generated": "2026-06-02 16:13:44 UTC",
+  "audit_version": "stage4-final-coverage-audit-v001",
+  "conspect": "sql-syntax-sql-server",
+  "verdict": "coverage-complete",
+  "total_image_uses": 133,
+  "covered_image_uses": 133,
+  "problem_image_uses": 0,
+  "coverage_status_counts": {
+    "processed-in-r03-v001": 23,
+    "processed-in-r02-v001": 11,
+    "processed-in-r01-v001": 36,
+    "processed-in-r04-v001": 32,
+    "processed-in-r05-v001": 31
+  },
+  "region_counts": {
+    "R03": 23,
+    "R02": 11,
+    "R01": 36,
+    "R04": 32,
+    "R05": 31
+  },
+  "expected_region_shape": {
+    "R01": "database creation / master / model / GO / files",
+    "R02": "login / user / roles / permissions",
+    "R03": "stored procedures / output params / control flow / rowversion",
+    "R04": "core table / DML / OUTPUT / variables / TRY-CATCH",
+    "R05": "upsert / MERGE / transactions / indexes / ALTER / constraints / views"
+  },
+  "notes": [
+    "Inventory/ledger is a checklist, not source of truth; transcript ownership was determined by boundary review.",
+    "The final audit verifies that every known image use is now processed by a region.",
+    "No candidate/reserved/pending image uses remain if problem_image_uses is 0."
+  ],
+  "problem_rows": []
+}
