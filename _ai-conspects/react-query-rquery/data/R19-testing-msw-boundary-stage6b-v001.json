@@ -1,0 +1,13 @@
+{
+  "generated": "2026-06-02 12:49:41 UTC",
+  "group": "R19-testing-msw",
+  "region": "R19",
+  "source_count": 3,
+  "included_sources": [
+    "S-430",
+    "S-441",
+    "S-445"
+  ],
+  "boundary_decision": "processed-after-stage6a-boundary-review-and-stage6b-local-visual-semantic-recheck",
+  "meaning": "Testing setup with a fresh QueryClient per test, renderWithClient helper, disabled retries, and network-layer mocking with MSW."
+}

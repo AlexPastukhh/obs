@@ -1,0 +1,65 @@
+{
+  "generated": "2026-06-02 12:49:41 UTC",
+  "group": "R15B-query-cancellation-transition-tail",
+  "region": "R15",
+  "source_count": 4,
+  "reading_rule": "Every included source has visible text. No OCR-timeout/image-missing/empty placeholder source is marked processed.",
+  "sources": [
+    {
+      "source_id": "S-384",
+      "image_use_id": "IU-384",
+      "fileId_short": "bbfaf9d502",
+      "x": "7206.015",
+      "y": "34544.044",
+      "nearest_labels_for_search_only": "L-105: Error handling error boundary | L-111: will it retry with throwonerror? | L-100: cancelling queries",
+      "stage6a_group": "R16",
+      "image_file": "S-384__bbfaf9d502.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "4\nreturn (\n<div>\n<h2>Products</h2>\n<div style={{ display: ‘flex’, gap: 8, marginBottom: 12 }}>\n<button onClick={goToPrevPage} disabled={page === 1}>\nPrev\n</button>\n<button onClick={goToNextPage}>\nNext\n</button>\n<button\nonClick={() => {\nqueryClient.cancelQueries({ queryKey: [“products*] })\n}}\n>\nCancel request\n</button>\n</div>\n<div style={{ marginBottom: 12 }}>\n<strong>Current page state:</strong> {page}\n</div>\nNY",
+      "theme": "4",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-388",
+      "image_use_id": "IU-388",
+      "fileId_short": "26a09fc19d",
+      "x": "7205.877",
+      "y": "35041.822",
+      "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-105: Error handling error boundary",
+      "stage6a_group": "R16",
+      "image_file": "S-388__26a09fc19d.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "{isPending && <div>Transition pending. ..</div>}\n{query.isFetching && <div>Fetching...</div>}\n{query.isPending ? (\n<div>Initial loading. ..</div>\n) : query.isError ? (\n<div>{(query.error as Error) .message}</div>\n»: ¢\n<ul>\n{query .data.items.map((item) => (\n<li key={item.id}>{item.name}</1i>\n))}\n</ul>\n)}\n</div>\n)\n}\nexport default function App() {\nreturn (\n<QueryClientProvider client={queryClient}>\n<ProductsPage />\n</QueryClientProvider>\n)\n}\nsast a a fii a rr gs",
+      "theme": "{isPending && <div>Transition pending. ..</div>}",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-392",
+      "image_use_id": "IU-392",
+      "fileId_short": "bd24fb8749",
+      "x": "7127.509",
+      "y": "35547.145",
+      "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-105: Error handling error boundary",
+      "stage6a_group": "R16",
+      "image_file": "S-392__bd24fb8749.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "A slightly better version for many rapid clicks\nInstead of closing over page , compute next page from the updater and cancel before setting:\n“> TypeScript 0)\nconst goToNextPage = () => {\nqueryClient.cancelQueries({ queryKey: [‘products*] })\nstartTransition(() => {\nsetPage((p) => p + 1)\n+)\n}\nThat is safer for repeated fast clicks because it avoids scale page reads.",
+      "theme": "A slightly better version for many rapid clicks",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-395",
+      "image_use_id": "IU-395",
+      "fileId_short": "79093152e5",
+      "x": "7156.454",
+      "y": "35934.478",
+      "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-105: Error handling error boundary",
+      "stage6a_group": "R16",
+      "image_file": "S-395__79093152e5.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "Minimal version\nIf you want the smallest working pattern, it is this:\n“> TypeScript 0)\nconst query = useQuery({\nqueryKey: [‘products’, page],\nqueryFn: async ({ signal }) => {\nconst res = await fetch( /api/products?page=${page}, { signal })\nreturn res.json()\n}5\n})\nconst onNext = () => {\nqueryClient.cancelQueries({ queryKey: [‘products*] })\nsetPage((p) => p + 1)\n}\nThat is the core idea.",
+      "theme": "Minimal version",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    }
+  ]
+}

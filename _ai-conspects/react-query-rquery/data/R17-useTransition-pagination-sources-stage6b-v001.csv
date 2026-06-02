@@ -1,0 +1,93 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-399,IU-399,77f3392f85,S-399__77f3392f85.png,verified-visible-ocr-assisted,R17,14. Practical rule for when to use it,"14. Practical rule for when to use it
+Use useTransition when:
+* anupdate may suspend
+* an update causes heavy rerendering
+e you want to keep current UI visible while the next UI is prepared
+* one user action triggers both urgent and non-urgent updates
+Do not use it for every state update.
+For simple updates like:
+e checkbox toggle
+* modal open
+¢ button hover
+¢ small local state
+it is usually unnecessary.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-402,IU-402,ae1e6f231c,S-402__ae1e6f231c.png,verified-visible-ocr-assisted,R17,"1. Your sentence, translated into React terms","1. Your sentence, translated into React terms
+You said:
+react can understand what state change causes specific rerender and delay that specific rerender when
+we do change with starttransition and pass all other rerender while the transition rerender prepares, so
+the transitoin rerender will finally replace everything?
+That is basically yes, with these corrections:
+Better version
+React can:
+e mark updates inside startTransition as low priority
+e start rendering the UI for those updates in the background
+e allow other urgent updates/renders to happen meanwhile
+e keep the currently committed UI visible while transition work is unfinished
+e finally commit the transition result when it is ready
+So yes, the transition render can eventually become the new visible UI.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-404,IU-404,8e0c011793,S-404__8e0c011793.png,verified-visible-ocr-assisted,R17,13. Without vs with: timeline comparison,"13. Without vs with: timeline comparison
+Case: page change with Suspense
+Without useTransition
+
+1. user clicks Next
+
+2. setPage(2) runs
+
+3. React renders new page
+
+4. query suspends
+
+5. fallback replaces old content
+
+6. data resolves
+
+7. new content appears","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-410,IU-410,c8f2acd497,S-410__c8f2acd497.png,verified-visible-ocr-assisted,R17,2. What is being “delayed”?,"2. What is being “delayed”?
+Not exactly:
+e the state value itself in some magical storage
+e or “this rerender object”
+What is mainly being delayed/deprioritized is:
+e the rendering/commit of UI based on that transition update
+* especially the replacement of already visible content
+So React is not saying:
+“| will ignore this state update for now.”
+It is more like:
+“| know this update matters, but | can prepare it at lower priority and avoid immediately replacing the
+current screen.”","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-413,IU-413,5e8f804ee4,S-413__5e8f804ee4.png,verified-visible-ocr-assisted,R17,With useTransition,"With useTransition
+1. user clicks Next
+2. startTransition(() => setPage(2))
+3. React keeps old UI visible
+4. React prepares new page in background
+5. query suspends while preparing
+6. isPending is true
+7. data resolves
+8. React swaps old content for new content
+9. isPending becomes false","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-417,IU-417,0aad523474,S-417__0aad523474.png,verified-visible-ocr-assisted,R17,3. Can other renders pass while transition is preparing?,"3. Can other renders pass while transition is preparing?
+Yes.
+
+This is one of the main points.
+
+While transition work is in progress, React can still process more urgent updates.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-418,IU-418,3bdb1b257a,S-418__3bdb1b257a.png,verified-visible-ocr-assisted,R17,useTransition lets you mark a state update as non-urgent.,"useTransition lets you mark a state update as non-urgent.
+That tells React:
+e “this update is important, but not as important as keeping the UI responsive right now”
+e “keep the current UI visible if possible while preparing the next one”
+It is mostly about smoother UI during expensive or suspending updates.
+1. What it returns
+‘> TypeScript O
+const [isPending, startTransition] = React.useTransition()
+You get two things:","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-421,IU-421,84844e7d4b,S-421__84844e7d4b.png,verified-visible-ocr-assisted,R17,10. What isPending really means,"10. What isPending really means
+
+isPending becomes true while React is still working on the transition.
+That may include:
+
+e rendering work
+
+¢ waiting for a suspended subtree to resolve
+
+* preparing the next screen/list/page
+It is often used for subtle status, not full replacement loading UI.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

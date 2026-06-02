@@ -1,0 +1,73 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-384,IU-384,bbfaf9d502,S-384__bbfaf9d502.png,verified-visible-ocr-assisted,R16,4,"4
+return (
+<div>
+<h2>Products</h2>
+<div style={{ display: ‘flex’, gap: 8, marginBottom: 12 }}>
+<button onClick={goToPrevPage} disabled={page === 1}>
+Prev
+</button>
+<button onClick={goToNextPage}>
+Next
+</button>
+<button
+onClick={() => {
+queryClient.cancelQueries({ queryKey: [“products*] })
+}}
+>
+Cancel request
+</button>
+</div>
+<div style={{ marginBottom: 12 }}>
+<strong>Current page state:</strong> {page}
+</div>
+NY","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-388,IU-388,26a09fc19d,S-388__26a09fc19d.png,verified-visible-ocr-assisted,R16,{isPending && <div>Transition pending. ..</div>},"{isPending && <div>Transition pending. ..</div>}
+{query.isFetching && <div>Fetching...</div>}
+{query.isPending ? (
+<div>Initial loading. ..</div>
+) : query.isError ? (
+<div>{(query.error as Error) .message}</div>
+»: ¢
+<ul>
+{query .data.items.map((item) => (
+<li key={item.id}>{item.name}</1i>
+))}
+</ul>
+)}
+</div>
+)
+}
+export default function App() {
+return (
+<QueryClientProvider client={queryClient}>
+<ProductsPage />
+</QueryClientProvider>
+)
+}
+sast a a fii a rr gs","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-392,IU-392,bd24fb8749,S-392__bd24fb8749.png,verified-visible-ocr-assisted,R16,A slightly better version for many rapid clicks,"A slightly better version for many rapid clicks
+Instead of closing over page , compute next page from the updater and cancel before setting:
+“> TypeScript 0)
+const goToNextPage = () => {
+queryClient.cancelQueries({ queryKey: [‘products*] })
+startTransition(() => {
+setPage((p) => p + 1)
++)
+}
+That is safer for repeated fast clicks because it avoids scale page reads.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-395,IU-395,79093152e5,S-395__79093152e5.png,verified-visible-ocr-assisted,R16,Minimal version,"Minimal version
+If you want the smallest working pattern, it is this:
+“> TypeScript 0)
+const query = useQuery({
+queryKey: [‘products’, page],
+queryFn: async ({ signal }) => {
+const res = await fetch( /api/products?page=${page}, { signal })
+return res.json()
+}5
+})
+const onNext = () => {
+queryClient.cancelQueries({ queryKey: [‘products*] })
+setPage((p) => p + 1)
+}
+That is the core idea.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

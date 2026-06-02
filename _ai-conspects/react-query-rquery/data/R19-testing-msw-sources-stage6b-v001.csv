@@ -1,0 +1,29 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-430,IU-430,05b7498309,S-430__05b7498309.png,verified-visible-ocr-assisted,R19,36. Testing,"36. Testing
+36.1 Fresh client per test
+Do not share one client across all tests unless you reset it carefully.
+‘> TypeScript ‘eo
+import { QueryClient, QueryClientProvider } from ‘@tanstack/react-query'
+import { render } from ‘@testing-library/react'
+function createTestQueryClient() {
+return new QueryClient({
+defaultOptions: {
+queries: {
+retry: false,
+ts
+ts
+3) NY
+}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-441,IU-441,d086ba0a5e,S-441__d086ba0a5e.png,verified-visible-ocr-assisted,R19,function renderWithClient(ui: React.ReactElement) {,"function renderWithClient(ui: React.ReactElement) {
+const testClient = createTestQueryClient()
+return render(
+<QueryClientProvider client={testClient}>{ui}</QueryClientProvider>
+)
+}
+Retries are usually disabled in tests.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-445,IU-445,a3a53e14ef,S-445__a3a53e14ef.png,verified-visible-ocr-assisted,R19,"36.2 Mock the network layer, not useQuery","36.2 Mock the network layer, not useQuery
+Preferred:
+e MSW
+e mocked API module / query function
+e seeded cache
+Avoid mocking useQuery directly because it is brittle and easy to fake incorrectly.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

@@ -1,0 +1,51 @@
+{
+  "generated": "2026-06-02 12:49:41 UTC",
+  "group": "R20B-performance-select-correction",
+  "region": "R20",
+  "source_count": 3,
+  "reading_rule": "Every included source has visible text. No OCR-timeout/image-missing/empty placeholder source is marked processed.",
+  "sources": [
+    {
+      "source_id": "S-426",
+      "image_use_id": "IU-426",
+      "fileId_short": "0798cdbadb",
+      "x": "11941.329",
+      "y": "38324.409",
+      "nearest_labels_for_search_only": "L-115: performance structural sharing observers SELECT | L-121: msw | L-118: Testing",
+      "stage6a_group": "R19",
+      "image_file": "S-426__0798cdbadb.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "26. Performance: structural sharing, observers, select\n26.1 Structural sharing\nIf only part of the data changes, unchanged parts can keep the same references.\nBenefits:\ne plays nicely with React .memo\ne works better in dependency arrays\ne helps prevent unnecessary rerenders\nThe important thing is whether the content changed, not whether every object is freshly recreated.",
+      "theme": "26. Performance: structural sharing, observers, select",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-431",
+      "image_use_id": "IU-431",
+      "fileId_short": "c327c603e8",
+      "x": "11947.834",
+      "y": "38716.92",
+      "nearest_labels_for_search_only": "L-115: performance structural sharing observers SELECT | L-121: msw | L-118: Testing",
+      "stage6a_group": "R19",
+      "image_file": "S-431__c327c603e8.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "26.2 Observers\nObservers connect the query cache to React components.\nThey live outside the component tree and determine when subscribed components should update.\n26.3 select\nUse select when a component only needs part of the data.\n‘> TypeScript ‘eo\nconst { data } = useQuery({\nqueryKey: [‘user'],\nqueryFn: fetchUser,\nselect: (data) => ({ name: data-.name }),\n})\nThis lets the component subscribe to a smaller slice.\nIf unrelated fields change, the component may avoid rerendering.\nv",
+      "theme": "26.2 Observers",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-443",
+      "image_use_id": "IU-443",
+      "fileId_short": "0e6acb8429",
+      "x": "11952.17",
+      "y": "39225.808",
+      "nearest_labels_for_search_only": "L-121: msw | L-115: performance structural sharing observers SELECT | L-118: Testing",
+      "stage6a_group": "R19",
+      "image_file": "S-443__0e6acb8429.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "26.4 Memoize expensive selectors\n‘> TypeScript ‘eo\nconst selectName = React.useCallback((data: User) => data.name, [])\nconst { data: name } = useQuery({\nqueryKey: [‘user'],\nqueryFn: fetchUser,\nselect: selectName,\n})\n26.5 Tracked properties\nReact Query tracks which fields of the query result are actually accessed during render.\nThat means a component does not have to rerender just because some unused field changed.",
+      "theme": "26.4 Memoize expensive selectors",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    }
+  ]
+}

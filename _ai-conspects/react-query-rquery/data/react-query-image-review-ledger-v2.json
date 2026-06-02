@@ -1,30 +1,37 @@
 {
-  "generated": "2026-06-02 12:26:47 UTC",
-  "ledger_version": "v2-updated-by-stage6a-s384-s537-boundary-review",
-  "critical_rule": "Stage6a is boundary review only. S-384..S-537 are candidates, not processed.",
-  "stage6a_delta": {
-    "R16-error-boundary-throwonerror-reset": {
-      "region": "R16",
-      "candidate_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+  "generated": "2026-06-02 12:49:41 UTC",
+  "ledger_version": "v2-updated-by-stage6b-top-technical-transcripts",
+  "critical_rule": "Only Stage6b sources are marked processed. Remaining Stage6a groups stay candidates.",
+  "stage6b_processed": {
+    "R15B-query-cancellation-transition-tail": {
+      "region": "R15",
+      "count": 4,
       "sources": [
         "S-384",
         "S-388",
-        "S-390",
         "S-392",
+        "S-395"
+      ]
+    },
+    "R16-error-boundary-throwonerror-reset": {
+      "region": "R16",
+      "count": 10,
+      "sources": [
+        "S-390",
         "S-394",
-        "S-395",
         "S-398",
         "S-405",
         "S-407",
         "S-408",
         "S-409",
         "S-411",
-        "S-412"
+        "S-412",
+        "S-419"
       ]
     },
-    "R17-useTransition-urgent-nonurgent-pagination": {
+    "R17-useTransition-pagination": {
       "region": "R17",
-      "candidate_status": "r17-usetransition-pagination-candidate-stage6a",
+      "count": 8,
       "sources": [
         "S-399",
         "S-402",
@@ -36,176 +43,102 @@
         "S-421"
       ]
     },
-    "R18-query-key-factories-global-config": {
+    "R18-query-defaults-key-factories": {
       "region": "R18",
-      "candidate_status": "r18-query-key-factories-global-config-candidate-stage6a",
+      "count": 7,
       "sources": [
         "S-385",
         "S-387",
         "S-391",
         "S-397",
-        "S-400"
+        "S-400",
+        "S-406",
+        "S-415"
       ]
     },
     "R19-testing-msw": {
       "region": "R19",
-      "candidate_status": "r19-testing-msw-candidate-stage6a",
+      "count": 3,
       "sources": [
-        "S-406",
-        "S-415",
-        "S-419",
-        "S-426",
         "S-430",
-        "S-431",
         "S-441",
-        "S-443",
         "S-445"
       ]
     },
-    "R20-select-performance-structural-sharing": {
+    "R20B-performance-select-correction": {
       "region": "R20",
-      "candidate_status": "r20-select-performance-candidate-stage6a",
+      "count": 3,
       "sources": [
-        "S-427",
-        "S-432",
-        "S-434",
-        "S-435",
-        "S-439",
-        "S-440",
-        "S-442",
-        "S-449",
-        "S-450",
-        "S-451",
-        "S-453",
-        "S-456",
-        "S-459",
-        "S-460",
-        "S-462",
-        "S-466",
-        "S-468",
-        "S-474"
-      ]
-    },
-    "R21-offline-cache-tail": {
-      "region": "R21",
-      "candidate_status": "r21-offline-cache-tail-candidate-stage6a",
-      "sources": [
-        "S-386",
-        "S-389",
-        "S-393",
-        "S-396",
-        "S-401",
-        "S-403",
-        "S-414",
-        "S-416",
-        "S-420",
-        "S-422",
-        "S-423",
-        "S-424",
-        "S-425",
-        "S-428",
-        "S-429",
-        "S-433",
-        "S-436",
-        "S-437",
-        "S-438",
-        "S-444",
-        "S-446",
-        "S-447",
-        "S-448",
-        "S-452",
-        "S-454",
-        "S-455",
-        "S-457",
-        "S-461",
-        "S-463",
-        "S-464",
-        "S-467",
-        "S-469",
-        "S-470",
-        "S-473",
-        "S-476",
-        "S-477",
-        "S-478",
-        "S-480",
-        "S-481",
-        "S-483",
-        "S-484",
-        "S-485",
-        "S-486",
-        "S-487",
-        "S-488",
-        "S-489",
-        "S-490",
-        "S-491",
-        "S-492",
-        "S-493",
-        "S-494",
-        "S-495",
-        "S-496",
-        "S-497",
-        "S-498",
-        "S-499",
-        "S-500",
-        "S-501",
-        "S-502"
-      ]
-    },
-    "R22-step-comparison-best-practices": {
-      "region": "R22",
-      "candidate_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "sources": [
-        "S-458",
-        "S-465",
-        "S-471",
-        "S-472",
-        "S-475",
-        "S-479",
-        "S-482"
-      ]
-    },
-    "R23-dense-lower-grid-needs-visual-split": {
-      "region": "R23",
-      "candidate_status": "r23-dense-lower-grid-needs-visual-split-candidate-stage6a",
-      "sources": [
-        "S-503",
-        "S-504",
-        "S-505",
-        "S-506",
-        "S-507",
-        "S-508",
-        "S-509",
-        "S-510",
-        "S-511",
-        "S-512",
-        "S-513",
-        "S-514",
-        "S-515",
-        "S-516",
-        "S-517",
-        "S-518",
-        "S-519",
-        "S-520",
-        "S-521",
-        "S-522",
-        "S-523",
-        "S-524",
-        "S-525",
-        "S-526",
-        "S-527",
-        "S-528",
-        "S-529",
-        "S-530",
-        "S-531",
-        "S-532",
-        "S-533",
-        "S-534",
-        "S-535",
-        "S-536",
-        "S-537"
+        "S-426",
+        "S-431",
+        "S-443"
       ]
     }
   },
+  "local_boundary_corrections": [
+    {
+      "source_id": "S-384",
+      "from_stage6a": "R16",
+      "stage6b_decision": "R15",
+      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+    },
+    {
+      "source_id": "S-388",
+      "from_stage6a": "R16",
+      "stage6b_decision": "R15",
+      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+    },
+    {
+      "source_id": "S-392",
+      "from_stage6a": "R16",
+      "stage6b_decision": "R15",
+      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+    },
+    {
+      "source_id": "S-395",
+      "from_stage6a": "R16",
+      "stage6b_decision": "R15",
+      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+    },
+    {
+      "source_id": "S-419",
+      "from_stage6a": "R19",
+      "stage6b_decision": "R16",
+      "reason": "Local error UI, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retry ordering, and reset/retry flow."
+    },
+    {
+      "source_id": "S-406",
+      "from_stage6a": "R19",
+      "stage6b_decision": "R18",
+      "reason": "Global query defaults, per-key defaults, per-query overrides, query key factories, and query option factories."
+    },
+    {
+      "source_id": "S-415",
+      "from_stage6a": "R19",
+      "stage6b_decision": "R18",
+      "reason": "Global query defaults, per-key defaults, per-query overrides, query key factories, and query option factories."
+    },
+    {
+      "source_id": "S-426",
+      "from_stage6a": "R19",
+      "stage6b_decision": "R20",
+      "reason": "Early performance/select cards that Stage6a put near testing but visual reading shows belong to R20."
+    },
+    {
+      "source_id": "S-431",
+      "from_stage6a": "R19",
+      "stage6b_decision": "R20",
+      "reason": "Early performance/select cards that Stage6a put near testing but visual reading shows belong to R20."
+    },
+    {
+      "source_id": "S-443",
+      "from_stage6a": "R19",
+      "stage6b_decision": "R20",
+      "reason": "Early performance/select cards that Stage6a put near testing but visual reading shows belong to R20."
+    }
+  ],
+  "remaining_stage6a_candidates": 119,
+  "next_step": "Stage6c: R20 + R22.",
   "rows": [
     {
       "source_id": "S-001",
@@ -7496,12 +7429,12 @@
       "width": "640",
       "height": "482",
       "nearest_labels_for_search_only": "L-105: Error handling error boundary | L-111: will it retry with throwonerror? | L-100: cancelling queries",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
-      "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r15-v002-correction",
+      "current_region_decision": "R15",
+      "decision_is_final": "yes-for-r15-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-385",
@@ -7515,12 +7448,12 @@
       "width": "329",
       "height": "76",
       "nearest_labels_for_search_only": "L-103: global/default config | L-107: Query key factories | L-115: performance structural sharing observers SELECT",
-      "coverage_status": "r18-query-key-factories-global-config-candidate-stage6a",
+      "coverage_status": "processed-in-r18-v001",
       "current_region_decision": "R18",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r18",
-      "decision_basis": "Stage6a boundary candidate only: Global/default config and query key factory cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r18-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-386",
@@ -7553,12 +7486,12 @@
       "width": "790",
       "height": "482",
       "nearest_labels_for_search_only": "L-107: Query key factories | L-103: global/default config | L-115: performance structural sharing observers SELECT",
-      "coverage_status": "r18-query-key-factories-global-config-candidate-stage6a",
+      "coverage_status": "processed-in-r18-v001",
       "current_region_decision": "R18",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r18",
-      "decision_basis": "Stage6a boundary candidate only: Global/default config and query key factory cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r18-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-388",
@@ -7572,12 +7505,12 @@
       "width": "712",
       "height": "482",
       "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-105: Error handling error boundary",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
-      "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r15-v002-correction",
+      "current_region_decision": "R15",
+      "decision_is_final": "yes-for-r15-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-389",
@@ -7610,12 +7543,12 @@
       "width": "844",
       "height": "386",
       "nearest_labels_for_search_only": "L-106: throw on error | L-105: Error handling error boundary | L-104: or better excplicitly cancel queries when you need cancellation on some aciton",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-391",
@@ -7629,12 +7562,12 @@
       "width": "928",
       "height": "296",
       "nearest_labels_for_search_only": "L-107: Query key factories | L-103: global/default config | L-115: performance structural sharing observers SELECT",
-      "coverage_status": "r18-query-key-factories-global-config-candidate-stage6a",
+      "coverage_status": "processed-in-r18-v001",
       "current_region_decision": "R18",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r18",
-      "decision_basis": "Stage6a boundary candidate only: Global/default config and query key factory cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r18-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-392",
@@ -7648,12 +7581,12 @@
       "width": "913",
       "height": "325",
       "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-105: Error handling error boundary",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
-      "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r15-v002-correction",
+      "current_region_decision": "R15",
+      "decision_is_final": "yes-for-r15-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-393",
@@ -7686,12 +7619,12 @@
       "width": "920",
       "height": "425",
       "nearest_labels_for_search_only": "L-106: throw on error | L-113: queryerrorresetboundary | L-105: Error handling error boundary",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-395",
@@ -7705,12 +7638,12 @@
       "width": "784",
       "height": "417",
       "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-105: Error handling error boundary",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
-      "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r15-v002-correction",
+      "current_region_decision": "R15",
+      "decision_is_final": "yes-for-r15-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R15 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-396",
@@ -7743,12 +7676,12 @@
       "width": "880",
       "height": "332",
       "nearest_labels_for_search_only": "L-107: Query key factories | L-115: performance structural sharing observers SELECT | L-103: global/default config",
-      "coverage_status": "r18-query-key-factories-global-config-candidate-stage6a",
+      "coverage_status": "processed-in-r18-v001",
       "current_region_decision": "R18",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r18",
-      "decision_basis": "Stage6a boundary candidate only: Global/default config and query key factory cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r18-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-398",
@@ -7762,12 +7695,12 @@
       "width": "963",
       "height": "443",
       "nearest_labels_for_search_only": "L-113: queryerrorresetboundary | L-114: need retryonmount  true (default) | L-106: throw on error",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-399",
@@ -7781,12 +7714,12 @@
       "width": "550",
       "height": "482",
       "nearest_labels_for_search_only": "L-109: usetransition | L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-108: urgent/non urgent updates/rerenders",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-400",
@@ -7800,12 +7733,12 @@
       "width": "558",
       "height": "482",
       "nearest_labels_for_search_only": "L-107: Query key factories | L-115: performance structural sharing observers SELECT | L-103: global/default config",
-      "coverage_status": "r18-query-key-factories-global-config-candidate-stage6a",
+      "coverage_status": "processed-in-r18-v001",
       "current_region_decision": "R18",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r18",
-      "decision_basis": "Stage6a boundary candidate only: Global/default config and query key factory cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r18-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-401",
@@ -7838,12 +7771,12 @@
       "width": "842",
       "height": "482",
       "nearest_labels_for_search_only": "L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-109: usetransition | L-108: urgent/non urgent updates/rerenders",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-403",
@@ -7876,12 +7809,12 @@
       "width": "543",
       "height": "389",
       "nearest_labels_for_search_only": "L-109: usetransition | L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-116: use to show that new page is loading while the old page is still on the screen",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-405",
@@ -7895,12 +7828,12 @@
       "width": "768",
       "height": "272",
       "nearest_labels_for_search_only": "L-113: queryerrorresetboundary | L-114: need retryonmount  true (default) | L-106: throw on error",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-406",
@@ -7914,12 +7847,12 @@
       "width": "869",
       "height": "482",
       "nearest_labels_for_search_only": "L-115: performance structural sharing observers SELECT | L-107: Query key factories | L-121: msw",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
-      "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r18-v001",
+      "current_region_decision": "R18",
+      "decision_is_final": "yes-for-r18-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-407",
@@ -7933,12 +7866,12 @@
       "width": "903",
       "height": "180",
       "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-114: need retryonmount  true (default)",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-408",
@@ -7952,12 +7885,12 @@
       "width": "537",
       "height": "98",
       "nearest_labels_for_search_only": "L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-114: need retryonmount  true (default) | L-113: queryerrorresetboundary",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-409",
@@ -7971,12 +7904,12 @@
       "width": "692",
       "height": "482",
       "nearest_labels_for_search_only": "L-114: need retryonmount  true (default) | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-113: queryerrorresetboundary",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-410",
@@ -7990,12 +7923,12 @@
       "width": "887",
       "height": "478",
       "nearest_labels_for_search_only": "L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-116: use to show that new page is loading while the old page is still on the screen | L-109: usetransition",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-411",
@@ -8009,12 +7942,12 @@
       "width": "884",
       "height": "308",
       "nearest_labels_for_search_only": "L-111: will it retry with throwonerror? | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error... | L-114: need retryonmount  true (default)",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-412",
@@ -8028,12 +7961,12 @@
       "width": "797",
       "height": "482",
       "nearest_labels_for_search_only": "L-114: need retryonmount  true (default) | L-113: queryerrorresetboundary | L-112: flow with catching error in booundary and trying rerender with refetching the query instead of rerendering with error...",
-      "coverage_status": "r16-error-boundary-throwonerror-reset-candidate-stage6a",
+      "coverage_status": "processed-in-r16-v001",
       "current_region_decision": "R16",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r16",
-      "decision_basis": "Stage6a boundary candidate only: Error handling, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retryOnMount/reset flow..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-413",
@@ -8047,12 +7980,12 @@
       "width": "532",
       "height": "374",
       "nearest_labels_for_search_only": "L-109: usetransition | L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-116: use to show that new page is loading while the old page is still on the screen",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-414",
@@ -8085,12 +8018,12 @@
       "width": "905",
       "height": "426",
       "nearest_labels_for_search_only": "L-115: performance structural sharing observers SELECT | L-107: Query key factories | L-121: msw",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
-      "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r18-v001",
+      "current_region_decision": "R18",
+      "decision_is_final": "yes-for-r18-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R18 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-416",
@@ -8123,12 +8056,12 @@
       "width": "732",
       "height": "208",
       "nearest_labels_for_search_only": "L-116: use to show that new page is loading while the old page is still on the screen | L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-109: usetransition",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-418",
@@ -8142,12 +8075,12 @@
       "width": "912",
       "height": "479",
       "nearest_labels_for_search_only": "L-109: usetransition | L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-116: use to show that new page is loading while the old page is still on the screen",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-419",
@@ -8161,12 +8094,12 @@
       "width": "832",
       "height": "482",
       "nearest_labels_for_search_only": "L-118: Testing | L-121: msw | L-115: performance structural sharing observers SELECT",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
-      "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r16-v001",
+      "current_region_decision": "R16",
+      "decision_is_final": "yes-for-r16-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R16 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-420",
@@ -8199,12 +8132,12 @@
       "width": "705",
       "height": "323",
       "nearest_labels_for_search_only": "L-116: use to show that new page is loading while the old page is still on the screen | L-110: react marksstate updates and rerenders that they cause as urgent and non urgent so we can have urgent updates while w... | L-109: usetransition",
-      "coverage_status": "r17-usetransition-pagination-candidate-stage6a",
+      "coverage_status": "processed-in-r17-v001",
       "current_region_decision": "R17",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r17",
-      "decision_basis": "Stage6a boundary candidate only: React useTransition, urgent/non-urgent updates, keeping old page visible while new page is loading..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r17-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-422",
@@ -8294,12 +8227,12 @@
       "width": "844",
       "height": "374",
       "nearest_labels_for_search_only": "L-115: performance structural sharing observers SELECT | L-121: msw | L-118: Testing",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
-      "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v002-correction",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-427",
@@ -8370,12 +8303,12 @@
       "width": "925",
       "height": "482",
       "nearest_labels_for_search_only": "L-118: Testing | L-121: msw | L-115: performance structural sharing observers SELECT",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
+      "coverage_status": "processed-in-r19-v001",
       "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r19-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-431",
@@ -8389,12 +8322,12 @@
       "width": "733",
       "height": "482",
       "nearest_labels_for_search_only": "L-115: performance structural sharing observers SELECT | L-121: msw | L-118: Testing",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
-      "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v002-correction",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-432",
@@ -8579,12 +8512,12 @@
       "width": "743",
       "height": "240",
       "nearest_labels_for_search_only": "L-121: msw | L-118: Testing | L-115: performance structural sharing observers SELECT",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
+      "coverage_status": "processed-in-r19-v001",
       "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r19-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-442",
@@ -8617,12 +8550,12 @@
       "width": "880",
       "height": "482",
       "nearest_labels_for_search_only": "L-121: msw | L-115: performance structural sharing observers SELECT | L-118: Testing",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
-      "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r20-v002-correction",
+      "current_region_decision": "R20",
+      "decision_is_final": "yes-for-r20-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-444",
@@ -8655,12 +8588,12 @@
       "width": "819",
       "height": "257",
       "nearest_labels_for_search_only": "L-121: msw | L-118: Testing | L-115: performance structural sharing observers SELECT",
-      "coverage_status": "r19-testing-msw-candidate-stage6a",
+      "coverage_status": "processed-in-r19-v001",
       "current_region_decision": "R19",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r19",
-      "decision_basis": "Stage6a boundary candidate only: Testing, MSW, test helpers, and nearby performance/testing cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r19-stage6b",
+      "must_recheck_before_region_close": "no-for-stage6b-transcript",
+      "decision_basis": "Included in Stage6b R19 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6b R19 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-446",

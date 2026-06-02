@@ -1,0 +1,107 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-390,IU-390,47947570b6,S-390__47947570b6.png,verified-visible-ocr-assisted,R16,29. Error handling,"29. Error handling
+29.1 Local error Ul
+‘> TypeScript
+const { isError, error } = useQuery({
+queryKey: ['‘repos'],
+queryFn: fetchRepos,
+})
+if (isError) {
+return <div>{(error as Error) .message}</div>
+}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-394,IU-394,b3351d14fd,S-394__b3351d14fd.png,verified-visible-ocr-assisted,R16,29.2 Error boundaries with throwOnError,"29.2 Error boundaries with throwOnError
+
+Error boundaries catch render-time errors.
+
+To let query errors surface into render, use throwOnError .
+‘> TypeScript ‘eo
+function useTodos() {
+
+return useQuery({
+queryKey: [‘todos'’, ‘list'],
+queryFn: fetchTodos,
+throwOnError: true,
+})
+}
+Then wrap with an error boundary.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-398,IU-398,bfb1da8007,S-398__bfb1da8007.png,verified-visible-ocr-assisted,R16,29.3 Conditional throwOnError,"29.3 Conditional throwOnError
+Often you want to throw only when there is no cached data.
+‘> TypeScript oO
+useQuery({
+queryKey: [‘todos', ‘list'],
+queryFn: fetchTodos,
+throwOnError: (_error, query) => typeof query.state.data === ‘undefined’,
+})
+This is a great pattern:
+¢ initial load failure — throw to boundary
+e background refetch failure while old data exists - keep showing stale data","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-405,IU-405,913168d66e,S-405__913168d66e.png,verified-visible-ocr-assisted,R16,29.4 QueryErrorResetBoundary,"29.4 QueryErrorResetBoundary
+Use this to integrate error boundaries with query retries.
+‘> TypeScript
+import { QueryErrorResetBoundary } from ‘@tanstack/react-query'
+import { ErrorBoundary } from ‘react-error-boundary'
+fon etinn TrandancDaanl) FF","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-407,IU-407,750efbd479,S-407__750efbd479.png,verified-visible-ocr-assisted,R16,Not immediately.,"Not immediately.
+
+lf retries are configured, React Query usually does not throw to the Error Boundary on the first failed
+attempt.
+
+lt first uses its retry logic.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-408,IU-408,b3e6794ae9,S-408__b3e6794ae9.png,verified-visible-ocr-assisted,R16,"FLOW 1 — First render, query starts","FLOW 1 — First render, query starts","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-409,IU-409,80a0e0aac1,S-409__80a0e0aac1.png,verified-visible-ocr-assisted,R16,Step 1,"Step 1
+React renders TodosPage .
+Inside it, React renders:
+® QueryErrorResetBoundary
+e then ErrorBoundary
+e then Todos
+Step 2
+Todos runs.
+Inside Todos , useQuery(...) runs with:
+‘> TypeScript
+queryKey: [‘todos' ]
+queryFn: fetchTodos
+throwOnError: true","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-411,IU-411,e55cc5a5e6,S-411__e55cc5a5e6.png,verified-visible-ocr-assisted,R16,Only after the query ends up in its final error state does throwOnError matter for render.,"Only after the query ends up in its final error state does throwOnError matter for render.
+So the rough order is:
+1. query runs
+2. request fails
+3. React Query retries if allowed
+4. if aretry later succeeds — no thrown render error
+5. if all retries fail and query ends in error state — then throwOnError can throw during render","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-412,IU-412,c1bdab56fb,S-412__c1bdab56fb.png,verified-visible-ocr-assisted,R16,function TodosPage() {,"function TodosPage() {
+return (
+<QueryErrorResetBoundary>
+{({ reset }) => (
+<ErrorBoundary
+onReset={reset}
+fallbackRender={({ error, resetErrorBoundary }) => (
+<div>
+<p>{error .message}</p>
+<button onClick={resetErrorBoundary}>Try again</button>
+</div>
+)}
+>
+<Todos />
+</ErrorBoundary>
+)}
+</QueryErrorResetBoundary>
+)
+}
+Recovery flow:
+1. reset boundary
+2. refetch query A];","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-419,IU-419,2736adf8b0,S-419__2736adf8b0.png,verified-visible-ocr-assisted,R19,29.5 Global error handling,"29.5 Global error handling
+You can configure defaults in the client.
+‘> TypeScript ‘eo
+const queryClient = new QueryClient({
+defaultOptions: {
+queries: {
+throwOnError: (_error, query) => typeof query.state.data === ‘undefined’,
+hs
+}>
+})
+And surface non-boundary errors through:
+e toast
+¢ global notification
+e logging
+* query-cache callbacks","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

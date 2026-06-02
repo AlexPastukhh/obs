@@ -1,0 +1,51 @@
+{
+  "generated": "2026-06-02 12:49:41 UTC",
+  "group": "R19-testing-msw",
+  "region": "R19",
+  "source_count": 3,
+  "reading_rule": "Every included source has visible text. No OCR-timeout/image-missing/empty placeholder source is marked processed.",
+  "sources": [
+    {
+      "source_id": "S-430",
+      "image_use_id": "IU-430",
+      "fileId_short": "05b7498309",
+      "x": "9654.395",
+      "y": "38688.745",
+      "nearest_labels_for_search_only": "L-118: Testing | L-121: msw | L-115: performance structural sharing observers SELECT",
+      "stage6a_group": "R19",
+      "image_file": "S-430__05b7498309.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "36. Testing\n36.1 Fresh client per test\nDo not share one client across all tests unless you reset it carefully.\n‘> TypeScript ‘eo\nimport { QueryClient, QueryClientProvider } from ‘@tanstack/react-query'\nimport { render } from ‘@testing-library/react'\nfunction createTestQueryClient() {\nreturn new QueryClient({\ndefaultOptions: {\nqueries: {\nretry: false,\nts\nts\n3) NY\n}",
+      "theme": "36. Testing",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-441",
+      "image_use_id": "IU-441",
+      "fileId_short": "d086ba0a5e",
+      "x": "9662.067",
+      "y": "39176.568",
+      "nearest_labels_for_search_only": "L-121: msw | L-118: Testing | L-115: performance structural sharing observers SELECT",
+      "stage6a_group": "R19",
+      "image_file": "S-441__d086ba0a5e.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "function renderWithClient(ui: React.ReactElement) {\nconst testClient = createTestQueryClient()\nreturn render(\n<QueryClientProvider client={testClient}>{ui}</QueryClientProvider>\n)\n}\nRetries are usually disabled in tests.",
+      "theme": "function renderWithClient(ui: React.ReactElement) {",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-445",
+      "image_use_id": "IU-445",
+      "fileId_short": "a3a53e14ef",
+      "x": "9627.4",
+      "y": "39443.068",
+      "nearest_labels_for_search_only": "L-121: msw | L-118: Testing | L-115: performance structural sharing observers SELECT",
+      "stage6a_group": "R19",
+      "image_file": "S-445__a3a53e14ef.png",
+      "status": "verified-visible-ocr-assisted",
+      "visible_text": "36.2 Mock the network layer, not useQuery\nPreferred:\ne MSW\ne mocked API module / query function\ne seeded cache\nAvoid mocking useQuery directly because it is brittle and easy to fake incorrectly.",
+      "theme": "36.2 Mock the network layer, not useQuery",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    }
+  ]
+}

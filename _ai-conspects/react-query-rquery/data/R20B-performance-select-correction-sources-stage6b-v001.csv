@@ -1,0 +1,34 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-426,IU-426,0798cdbadb,S-426__0798cdbadb.png,verified-visible-ocr-assisted,R19,"26. Performance: structural sharing, observers, select","26. Performance: structural sharing, observers, select
+26.1 Structural sharing
+If only part of the data changes, unchanged parts can keep the same references.
+Benefits:
+e plays nicely with React .memo
+e works better in dependency arrays
+e helps prevent unnecessary rerenders
+The important thing is whether the content changed, not whether every object is freshly recreated.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-431,IU-431,c327c603e8,S-431__c327c603e8.png,verified-visible-ocr-assisted,R19,26.2 Observers,"26.2 Observers
+Observers connect the query cache to React components.
+They live outside the component tree and determine when subscribed components should update.
+26.3 select
+Use select when a component only needs part of the data.
+‘> TypeScript ‘eo
+const { data } = useQuery({
+queryKey: [‘user'],
+queryFn: fetchUser,
+select: (data) => ({ name: data-.name }),
+})
+This lets the component subscribe to a smaller slice.
+If unrelated fields change, the component may avoid rerendering.
+v","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-443,IU-443,0e6acb8429,S-443__0e6acb8429.png,verified-visible-ocr-assisted,R19,26.4 Memoize expensive selectors,"26.4 Memoize expensive selectors
+‘> TypeScript ‘eo
+const selectName = React.useCallback((data: User) => data.name, [])
+const { data: name } = useQuery({
+queryKey: [‘user'],
+queryFn: fetchUser,
+select: selectName,
+})
+26.5 Tracked properties
+React Query tracks which fields of the query result are actually accessed during render.
+That means a component does not have to rerender just because some unused field changed.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
