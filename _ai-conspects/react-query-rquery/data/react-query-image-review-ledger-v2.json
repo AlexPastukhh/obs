@@ -1,8 +1,95 @@
 {
-  "generated": "2026-06-02 02:35:57 UTC",
-  "ledger_version": "v2-stage4x-fixed-preflight-no-processed",
-  "critical_rule": "Stage4x-fixed preflight does not mark any of the 71 sources as processed.",
-  "invalidated_previous_archive": "ai-conspects-react-query-rquery-stage4x-large-corrected-scope-transcripts-v001.zip",
+  "generated": "2026-06-02 08:43:05 UTC",
+  "ledger_version": "v2-updated-by-stage4x-rebuild-a",
+  "critical_rule": "Only Batch A sources are marked processed. Remaining Stage4x-fixed sources stay pending.",
+  "batch_a_processed": {
+    "R05": [
+      "S-118",
+      "S-119",
+      "S-121",
+      "S-122",
+      "S-136",
+      "S-137",
+      "S-148",
+      "S-156",
+      "S-166",
+      "S-174",
+      "S-181",
+      "S-188",
+      "S-192"
+    ],
+    "R09A": [
+      "S-211",
+      "S-213",
+      "S-223",
+      "S-229"
+    ],
+    "R09B": [
+      "S-202",
+      "S-203",
+      "S-205",
+      "S-208",
+      "S-214",
+      "S-217",
+      "S-225",
+      "S-228",
+      "S-230",
+      "S-231",
+      "S-232",
+      "S-234",
+      "S-235"
+    ],
+    "total": 30
+  },
+  "pending_after_batch_a": {
+    "R03_R04_R07_small_corrections": [
+      "S-065",
+      "S-066",
+      "S-109",
+      "S-110",
+      "S-113",
+      "S-189",
+      "S-195"
+    ],
+    "R09C": [
+      "S-196",
+      "S-199",
+      "S-201",
+      "S-209",
+      "S-210",
+      "S-215",
+      "S-218",
+      "S-220",
+      "S-222",
+      "S-226",
+      "S-227"
+    ],
+    "R11": [
+      "S-224",
+      "S-233",
+      "S-236",
+      "S-238",
+      "S-239",
+      "S-242",
+      "S-243",
+      "S-244",
+      "S-245",
+      "S-247",
+      "S-248",
+      "S-249",
+      "S-250",
+      "S-251",
+      "S-252",
+      "S-253",
+      "S-254",
+      "S-255",
+      "S-256",
+      "S-257",
+      "S-258",
+      "S-259",
+      "S-260"
+    ]
+  },
   "rows": [
     {
       "source_id": "S-001",
@@ -2239,12 +2326,12 @@
       "width": "919",
       "height": "406",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-119",
@@ -2258,12 +2345,12 @@
       "width": "704",
       "height": "121",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-120",
@@ -2296,12 +2383,12 @@
       "width": "752",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-122",
@@ -2315,12 +2402,12 @@
       "width": "830",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-123",
@@ -2581,12 +2668,12 @@
       "width": "884",
       "height": "433",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-137",
@@ -2600,12 +2687,12 @@
       "width": "792",
       "height": "373",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-138",
@@ -2809,12 +2896,12 @@
       "width": "830",
       "height": "246",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-149",
@@ -2961,12 +3048,12 @@
       "width": "719",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-157",
@@ -3151,12 +3238,12 @@
       "width": "921",
       "height": "420",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-167",
@@ -3303,12 +3390,12 @@
       "width": "693",
       "height": "254",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-175",
@@ -3436,12 +3523,12 @@
       "width": "883",
       "height": "462",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-182",
@@ -3569,12 +3656,12 @@
       "width": "814",
       "height": "125",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-189",
@@ -3645,12 +3732,12 @@
       "width": "881",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r05",
+      "coverage_status": "processed-in-r05-v003-correction",
       "current_region_decision": "R05",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r05-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: infinite-query correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r05-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R05-v003-correction Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-193",
@@ -3835,12 +3922,12 @@
       "width": "881",
       "height": "146",
       "nearest_labels_for_search_only": "L-064: fetchstatus paused | L-062: network modes | L-059: OFFLINE network mode",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-203",
@@ -3854,12 +3941,12 @@
       "width": "911",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-204",
@@ -3892,12 +3979,12 @@
       "width": "732",
       "height": "471",
       "nearest_labels_for_search_only": "L-064: fetchstatus paused | L-068: !!! | L-059: OFFLINE network mode",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-206",
@@ -3949,12 +4036,12 @@
       "width": "788",
       "height": "482",
       "nearest_labels_for_search_only": "L-064: fetchstatus paused | L-062: network modes | L-059: OFFLINE network mode",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-209",
@@ -4006,12 +4093,12 @@
       "width": "885",
       "height": "97",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09a",
+      "coverage_status": "processed-in-r09a-v001",
       "current_region_decision": "R09A",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09a-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09a-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-212",
@@ -4044,12 +4131,12 @@
       "width": "931",
       "height": "421",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09a",
+      "coverage_status": "processed-in-r09a-v001",
       "current_region_decision": "R09A",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09a-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09a-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-214",
@@ -4063,12 +4150,12 @@
       "width": "594",
       "height": "482",
       "nearest_labels_for_search_only": "L-068: !!! | L-064: fetchstatus paused | L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-215",
@@ -4120,12 +4207,12 @@
       "width": "749",
       "height": "482",
       "nearest_labels_for_search_only": "L-064: fetchstatus paused | L-062: network modes | L-059: OFFLINE network mode",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-218",
@@ -4234,12 +4321,12 @@
       "width": "931",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09a",
+      "coverage_status": "processed-in-r09a-v001",
       "current_region_decision": "R09A",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09a-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09a-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-224",
@@ -4272,12 +4359,12 @@
       "width": "944",
       "height": "438",
       "nearest_labels_for_search_only": "L-064: fetchstatus paused | L-062: network modes | L-068: !!!",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-226",
@@ -4329,12 +4416,12 @@
       "width": "837",
       "height": "341",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-229",
@@ -4348,12 +4435,12 @@
       "width": "892",
       "height": "395",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09a",
+      "coverage_status": "processed-in-r09a-v001",
       "current_region_decision": "R09A",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09a-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: removeQueries/resetQueries/cache removal and reset. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09a-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09A-cache-remove-reset Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-230",
@@ -4367,12 +4454,12 @@
       "width": "901",
       "height": "280",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-231",
@@ -4386,12 +4473,12 @@
       "width": "689",
       "height": "426",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-232",
@@ -4405,12 +4492,12 @@
       "width": "770",
       "height": "315",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-233",
@@ -4443,12 +4530,12 @@
       "width": "914",
       "height": "312",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-235",
@@ -4462,12 +4549,12 @@
       "width": "1007",
       "height": "331",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09b",
+      "coverage_status": "processed-in-r09b-v001",
       "current_region_decision": "R09B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: networkMode/offline/offlineFirst/fetchStatus paused. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09b-stage4x-rebuild-a",
+      "must_recheck_before_region_close": "no-for-stage4x-rebuild-a",
+      "decision_basis": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09B-network-offline Batch A rebuild transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-236",

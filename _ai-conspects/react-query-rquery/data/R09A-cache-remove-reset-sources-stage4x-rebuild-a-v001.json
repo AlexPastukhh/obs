@@ -1,0 +1,65 @@
+{
+  "generated": "2026-06-02 08:43:05 UTC",
+  "group": "R09A-cache-remove-reset",
+  "region": "R09A",
+  "source_count": 4,
+  "reading_rule": "No OCR-placeholder sources are marked processed. Every included source has manually prepared visible text from contact sheets/source images.",
+  "sources": [
+    {
+      "source_id": "S-211",
+      "theme": "removeQueries deletes matching queries from cache",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "`removeQueries` deletes matching queries from the cache. After that, the cached entry is just gone. It does not refetch, and it does not return anything.",
+      "code": "",
+      "notes": "Fully readable.",
+      "image_file": "S-211__ed216f6b30.png",
+      "image_use_id": "IU-211",
+      "fileId_short": "ed216f6b30",
+      "x": "9302.852",
+      "y": "14990.627",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    },
+    {
+      "source_id": "S-213",
+      "theme": "resetQueries resets query entry and can refetch active queries",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "`resetQueries` keeps the query entry but resets it back to its initial/pre-loaded state. It notifies subscribers, resets data to `initialData` if there was any, and if the query is active it will refetch. It returns a promise that resolves after active queries have been refetched.\n\nA good mental model is:\n\n- `removeQueries` = “forget this query ever existed”\n- `resetQueries` = “put this query back to its starting state”\n\nSo if a component is mounted and using that query:\n\n- after `resetQueries`, it stays subscribed to the query, sees the reset, and active queries refetch.\n- after `removeQueries`, the cache entry is removed; there is no “reset and refetch” behavior described for it. The next time the query is needed, it will behave like a query with no cached entry.",
+      "code": "",
+      "notes": "Readable.",
+      "image_file": "S-213__66a439f157.png",
+      "image_use_id": "IU-213",
+      "fileId_short": "66a439f157",
+      "x": "9301.67",
+      "y": "15111.051",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    },
+    {
+      "source_id": "S-223",
+      "theme": "direct QueryCache API is advanced; high-level QueryClient methods usually enough",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "Usually you do not need it for normal app code, because higher-level methods like:\n\n- `getQueryData`\n- `setQueryData`\n- `invalidateQueries`\n- `removeQueries`\n\nare easier and safer. Those are the normal API surface.\n\nWhen you may need it:\n\nMostly advanced cases:\n\n- inspecting all queries\n- subscribing to cache-level changes\n- building tooling\n- custom debugging/instrumentation\n- very custom integrations",
+      "code": "",
+      "notes": "Top continuation is cropped, but main list is readable.",
+      "image_file": "S-223__4f209f3728.png",
+      "image_use_id": "IU-223",
+      "fileId_short": "4f209f3728",
+      "x": "13491.324",
+      "y": "15650.322",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    },
+    {
+      "source_id": "S-229",
+      "theme": "queryClient.getQueryCache gives lower-level QueryCache object",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "Example idea\n\nThen you can work at the lower level with the cache object instead of only the higher-level `QueryClient` helpers.\n\nMental model:\n\n- `QueryClient` = control panel\n- `QueryCache` = actual storage for queries",
+      "code": "const queryCache = queryClient.getQueryCache()",
+      "notes": "Readable.",
+      "image_file": "S-229__20e12516b1.png",
+      "image_use_id": "IU-229",
+      "fileId_short": "20e12516b1",
+      "x": "13497.432",
+      "y": "16165.645",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-211,IU-211,ed216f6b30,S-211__ed216f6b30.png,verified-visible-from-contact-sheet,removeQueries deletes matching queries from cache,"`removeQueries` deletes matching queries from the cache. After that, the cached entry is just gone. It does not refetch, and it does not return anything.",,Fully readable.
+S-213,IU-213,66a439f157,S-213__66a439f157.png,verified-visible-from-contact-sheet,resetQueries resets query entry and can refetch active queries,"`resetQueries` keeps the query entry but resets it back to its initial/pre-loaded state. It notifies subscribers, resets data to `initialData` if there was any, and if the query is active it will refetch. It returns a promise that resolves after active queries have been refetched.
+
+A good mental model is:
+
+- `removeQueries` = “forget this query ever existed”
+- `resetQueries` = “put this query back to its starting state”
+
+So if a component is mounted and using that query:
+
+- after `resetQueries`, it stays subscribed to the query, sees the reset, and active queries refetch.
+- after `removeQueries`, the cache entry is removed; there is no “reset and refetch” behavior described for it. The next time the query is needed, it will behave like a query with no cached entry.",,Readable.
+S-223,IU-223,4f209f3728,S-223__4f209f3728.png,verified-visible-from-contact-sheet,direct QueryCache API is advanced; high-level QueryClient methods usually enough,"Usually you do not need it for normal app code, because higher-level methods like:
+
+- `getQueryData`
+- `setQueryData`
+- `invalidateQueries`
+- `removeQueries`
+
+are easier and safer. Those are the normal API surface.
+
+When you may need it:
+
+Mostly advanced cases:
+
+- inspecting all queries
+- subscribing to cache-level changes
+- building tooling
+- custom debugging/instrumentation
+- very custom integrations",,"Top continuation is cropped, but main list is readable."
+S-229,IU-229,20e12516b1,S-229__20e12516b1.png,verified-visible-from-contact-sheet,queryClient.getQueryCache gives lower-level QueryCache object,"Example idea
+
+Then you can work at the lower level with the cache object instead of only the higher-level `QueryClient` helpers.
+
+Mental model:
+
+- `QueryClient` = control panel
+- `QueryCache` = actual storage for queries",const queryCache = queryClient.getQueryCache(),Readable.

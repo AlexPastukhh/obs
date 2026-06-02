@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage4x-fixed preflight
+# Apply archive: React Query Stage4x Rebuild A
 
-Archive type: preflight / invalidated archive guard.
+Archive type: validated transcript rebuild batch.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4x-fixed-preflight-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4x-rebuild-a-r05-r09a-r09b-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4x-fixed-preflight
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4x-fixed-preflight-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4x-fixed-preflight.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4x-rebuild-a-r05-r09a-r09b-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4x-rebuild-a-r05-r09a-r09b.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/react-query-rquery
-git commit -m "Add React Query Stage4x fixed preflight"
+git commit -m "Add React Query Stage4x rebuild A transcripts"
 git push origin ai-processed-conspects-text
 ```
 
@@ -61,4 +61,4 @@ git clean -fd -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive intentionally does not add transcripts and does not mark the 71 queued sources as processed.
+This archive marks only Batch A processed. Remaining Stage4x-fixed queue sources stay pending.

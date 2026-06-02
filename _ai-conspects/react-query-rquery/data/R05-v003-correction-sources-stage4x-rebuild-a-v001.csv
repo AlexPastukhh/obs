@@ -1,0 +1,162 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-118,IU-118,5230e3ed40,S-118__5230e3ed40.png,verified-visible-from-contact-sheet,fetchNextPage button and flattened pages render,"Visible code continues an infinite-query component render:
+
+- render a list from `data.map((post) => ...)`;
+- render a button;
+- `onClick={() => fetchNextPage()}`;
+- `disabled={!hasNextPage || isFetchingNextPage}`;
+- button text uses `isFetchingNextPage ? 'Loading...' : 'More'`.
+
+The core point is that the UI triggers `fetchNextPage()` and disables the button when there is no next page or a next page is already being fetched.","return (
+  <div>
+    {items.map((post) => (
+      <div key={post.id}>{post.title}</div>
+    ))}
+
+    <button
+      onClick={() => fetchNextPage()}
+      disabled={!hasNextPage || isFetchingNextPage}
+    >
+      {isFetchingNextPage ? 'Loading...' : 'More'}
+    </button>
+  </div>
+)",Continuation card; lower part visible enough for button/fetchNextPage logic.
+S-119,IU-119,2ced60a702,S-119__2ced60a702.png,verified-visible-from-contact-sheet,useInfiniteQuery does not require special API response shape,"2) Does `useInfiniteQuery` expect a special API response shape?
+
+No — not really.",,Small card; fully readable.
+S-121,IU-121,70259fd00d,S-121__70259fd00d.png,verified-visible-from-contact-sheet,infinite scroll with IntersectionObserver,19.3 Infinite scroll with intersection observer,"function InfinitePosts() {
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+  } = usePosts()
+
+  const loadMoreRef = React.useRef<HTMLDivElement | null>(null)
+
+  React.useEffect(() => {
+    const el = loadMoreRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver((entries) => {
+      const first = entries[0]
+      if (first.isIntersecting && hasNextPage && !isFetchingNextPage) {
+        fetchNextPage()
+      }
+    })",Top/central code readable; continuation is S-137.
+S-122,IU-122,c74a0b5ca9,S-122__c74a0b5ca9.png,verified-visible-from-contact-sheet,API response shape is arbitrary; lastPage is raw returned page,"React Query does not require your API to return fields with special names like `nextCursor`, `items`, `data`, etc.
+
+`lastPage` is just whatever your query function returned for that page.
+
+So this is valid:
+
+If `fetchUsers` returns:
+
+then in `getNextPageParam`, `lastPage` will be:","queryFn: async ({ pageParam }) => {
+  return fetchUsers(pageParam)
+}
+
+// if fetchUsers returns:
+{
+  results: [...],
+  next: 42
+}",Bottom continuation goes into S-136.
+S-136,IU-136,90f673f1e8,S-136__90f673f1e8.png,verified-visible-from-contact-sheet,lastPage raw shape and choosing next page param,"then in `getNextPageParam`, `lastPage` will be:
+
+You choose how to read it.
+
+So yes:
+
+- `lastPage` = raw page data from your API
+- you decide how to compute the next page param from it
+- then `fetchNextPage()` uses that computed next param for the next query call","{
+  results: [...],
+  next: 42
+}",Continuation from S-122.
+S-137,IU-137,cf6de009a3,S-137__cf6de009a3.png,verified-visible-from-contact-sheet,IntersectionObserver cleanup and flattened items render,Continuation of the intersection-observer infinite-scroll example.,"observer.observe(el)
+return () => observer.disconnect()
+}, [fetchNextPage, hasNextPage, isFetchingNextPage])
+
+const items = data?.pages.flatMap((page) => page.items) ?? []
+
+return (
+  <>
+    {items.map((post) => (
+      <div key={post.id}>{post.title}</div>
+    ))}
+    <div ref={loadMoreRef} />
+  </>
+)",Continuation from S-121; visible enough for cleanup and render.
+S-148,IU-148,ade73b8922,S-148__ade73b8922.png,verified-visible-from-contact-sheet,getNextPageParam signature in v5,"3) How `getNextPageParam` works
+
+In v5, its signature is:","getNextPageParam: (lastPage, allPages, lastPageParam, allPageParams) =>
+  pageParam | undefined | null",Card readable.
+S-156,IU-156,8f1063ec18,S-156__8f1063ec18.png,verified-visible-from-contact-sheet,getNextPageParam arguments and return values,"Arguments:
+
+- `lastPage` = the most recently fetched page data
+- `allPages` = array of all fetched page data
+- `lastPageParam` = the page param used for that last page
+- `allPageParams` = array of all page params used so far
+
+You return:
+
+- the next page param to use
+- or `undefined` / `null` if there is no next page
+
+Example:
+
+If your API returns:
+
+then the next fetch will use `pageParam = 30`.","getNextPageParam: (lastPage) => lastPage.nextCursor ?? undefined
+
+{
+  items: [...],
+  nextCursor: 30
+}",Readable with visible example.
+S-166,IU-166,9b8c6d0493,S-166__9b8c6d0493.png,verified-visible-from-contact-sheet,null nextCursor means no next page,"If your API returns:
+
+then the next fetch will use `pageParam = 30`.
+
+If later the API returns:
+
+then `getNextPageParam` returns `undefined`, and React Query knows there is no next page.","{ items: [...], nextCursor: 30 }
+
+{ items: [...], nextCursor: null }",Readable continuation of S-156.
+S-174,IU-174,cc89bc8d71,S-174__cc89bc8d71.png,verified-visible-partial-from-contact-sheet,how fetchNextPage uses current last page and getNextPageParam,"4) How `fetchNextPage()` uses it
+
+Yes, exactly:
+
+1. current last page is in `data.pages[data.pages.length - 1]`
+2. React Query calls `getNextPageParam(...)`
+3. if it gets a value back, that value becomes the next `pageParam`
+4. `queryFn` runs again with that `pageParam` in its context",,"Lower edge is cropped, but numbered logic is readable."
+S-181,IU-181,37105501d1,S-181__37105501d1.png,verified-visible-from-contact-sheet,typical useInfiniteQuery function,"Typical query function:
+
+Here:
+
+- first fetch uses `initialPageParam: 0`
+- next fetches use whatever `getNextPageParam` returns","const result = useInfiniteQuery({
+  queryKey: ['projects'],
+  queryFn: async ({ pageParam }) => {
+    const res = await fetch(`/api/projects?cursor=${pageParam}`)
+    return res.json()
+  },
+  initialPageParam: 0,
+  getNextPageParam: (lastPage) => lastPage.nextCursor ?? undefined,
+})",Readable code and notes.
+S-188,IU-188,a0d3c07634,S-188__a0d3c07634.png,verified-visible-from-contact-sheet,hasNextPage source,"5) How does it know whether there is a next page?
+
+Through `getNextPageParam`.",,Small card; fully readable.
+S-192,IU-192,fc6e30d164,S-192__fc6e30d164.png,verified-visible-from-contact-sheet,hasNextPage true if getNextPageParam returns non-nullish,"The docs say `hasNextPage` is true if `getNextPageParam` returns something other than `null` or `undefined`.
+
+So:
+
+means:
+
+- if `lastPage.nextCursor` is `123` -> `hasNextPage === true`
+- if `lastPage.nextCursor` is `undefined` or `null` -> `hasNextPage === false`
+
+So React Query does not magically inspect your API response schema. It relies on your `getNextPageParam` return value to know both:
+
+- what to fetch next
+- whether a next page exists at all",getNextPageParam: (lastPage) => lastPage.nextCursor,Readable.

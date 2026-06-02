@@ -1,0 +1,152 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-202,IU-202,c078f2032f,S-202__c078f2032f.png,verified-visible-from-contact-sheet,default networkMode online,"1) Default: `networkMode: 'online'`
+
+This is the default mode. It assumes your query normally depends on network access. The docs say it pauses network-dependent queries when offline, and if a query was already running when you go offline, the retry mechanism is paused and continues when connection returns.",,Readable.
+S-203,IU-203,17f9a3bf92,S-203__17f9a3bf92.png,verified-visible-from-contact-sheet,online mode pauses only when a fetch wants to happen offline,"Does online option pause query when it has data in React Query cache?
+
+No, not automatically.
+
+With default `networkMode: 'online'`, a query is paused only when it wants to fetch but cannot because there is no network connection. TanStack defines `fetchStatus: 'paused'` as “the query wanted to fetch, but has been paused.”
+
+So if the query already has cached data:
+
+- it can still show that cached data
+- and it is only paused if a fetch/refetch should happen at that moment and offline prevents it",,Prompt bubble visible; answer readable.
+S-205,IU-205,c6a05bb126,S-205__c6a05bb126.png,verified-visible-from-contact-sheet,offline paused queries can be pending and paused,"31. Offline behavior and `networkMode`
+
+31.1 Paused queries
+
+When offline, queries maybe paused instead of fetching.
+
+Possible state:
+
+This is why `isLoading` is not the same as `status === 'pending'`.
+
+A paused query is not actively loading.","status: 'pending'
+fetchStatus: 'paused'
+data: undefined",Readable.
+S-208,IU-208,635b0dd4d8,S-208__635b0dd4d8.png,verified-visible-from-contact-sheet,network-dependent query example,"Example: network-dependent
+
+This query is network-dependent because:
+
+- it calls a remote API
+- no internet usually means no successful fetch
+
+How it works in `online` mode:
+
+- online -> it fetches normally
+- offline before it starts -> it can be paused instead of actively fetching
+- offline during retries -> retries pause and continue later when back online","useQuery({
+  queryKey: ['todos'],
+  queryFn: async () => {
+    const res = await fetch('/api/todos')
+    return res.json()
+  },
+})",Readable.
+S-214,IU-214,d894c9608c,S-214__d894c9608c.png,verified-visible-from-contact-sheet,offline-aware UI using status and fetchStatus,31.2 Offline-aware UI,"function Repos() {
+  const { data, status, fetchStatus } = useQuery({
+    queryKey: ['repos'],
+    queryFn: fetchRepos,
+  })
+
+  if (status === 'pending' && fetchStatus === 'paused') {
+    return <div>Offline...</div>
+  }
+
+  if (status === 'pending' && fetchStatus === 'fetching') {
+    return <div>Loading...</div>
+  }
+
+  return (
+    <div>
+      {fetchStatus === 'paused' && <div>Offline</div>}
+      <ul>
+        {data?.map((repo) => (
+          <li key={repo.id}>{repo.name}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}",Readable code card.
+S-217,IU-217,73d84c25d2,S-217__73d84c25d2.png,verified-visible-from-contact-sheet,networkMode always for non-network query functions,"2) `networkMode: 'always'`
+
+This mode tells TanStack Query to ignore online/offline state and always run the query. The docs say queries are never paused because of connectivity in this mode, and retries also do not pause.
+
+Use this when the query function does not really need a network.
+
+Example: local storage / IndexedDB / AsyncStorage
+
+Why this is not network-dependent:
+
+- it reads from browser storage
+- internet connection is irrelevant","useQuery({
+  queryKey: ['draftSettings'],
+  queryFn: async () => {
+    const raw = localStorage.getItem('draftSettings')
+    return raw ? JSON.parse(raw) : { theme: 'dark' }
+  },
+  networkMode: 'always',
+})",Readable.
+S-225,IU-225,af413353f2,S-225__af413353f2.png,verified-visible-from-contact-sheet,always mode for computed async value,"Example: computed async value
+
+Again, no network is needed. TanStack's docs use this kind of example directly.
+
+What would we need here?
+
+If you left this as default `online`, then going offline could pause something that actually could have run just fine without internet. That is why `always` exists. This is an inference from the documented behavior of the modes.","useQuery({
+  queryKey: ['localValue'],
+  queryFn: () => Promise.resolve(1),
+  networkMode: 'always',
+})",Readable.
+S-228,IU-228,33ec33e3f6,S-228__33ec33e3f6.png,verified-visible-from-contact-sheet,offlineFirst basic option,"`offlineFirst`
+
+Useful when cached/storage-backed work should continue gracefully and retries should wait for connectivity.","useQuery({
+  queryKey: ['data'],
+  queryFn: fetchData,
+  networkMode: 'offlineFirst',
+})",Readable.
+S-230,IU-230,80e917c63d,S-230__80e917c63d.png,verified-visible-from-contact-sheet,offlineFirst for cache/storage-backed fetch paths,"3) `networkMode: 'offlineFirst'`
+
+This is for cases where work may still succeed offline-ish because of a cache/storage layer, like:
+
+- service worker cache
+- HTTP cache
+- persistent local cache backing some fetch path
+
+The docs describe it as useful when cached/storage-backed work should continue gracefully and retries should wait for connectivity.",,Readable.
+S-231,IU-231,ad15f92387,S-231__ad15f92387.png,verified-visible-from-contact-sheet,mixed/cache-backed fetches with offlineFirst,"Mixed / cache-backed fetches
+
+Use `offlineFirst` when:
+
+- query may still succeed due to cache
+- but real retries should wait for connectivity
+
+Example:","useQuery({
+  queryKey: ['catalog'],
+  queryFn: () => fetch('/api/catalog').then(r => r.json()),
+  networkMode: 'offlineFirst',
+})",Readable.
+S-232,IU-232,921a92e2c6,S-232__921a92e2c6.png,verified-visible-from-contact-sheet,offlineFirst article fetch example,Example: fetch that may be served from cache,"useQuery({
+  queryKey: ['article', id],
+  queryFn: async () => {
+    const res = await fetch(`/api/articles/${id}`)
+    return res.json()
+  },
+  networkMode: 'offlineFirst',
+})",Readable.
+S-234,IU-234,8fb60bf0f8,S-234__8fb60bf0f8.png,verified-visible-from-contact-sheet,why offlineFirst can make sense,"Why this can make sense:
+
+- maybe a service worker or HTTP cache serves the request even while offline
+- if the fetch fails and retries are needed, TanStack can wait for connectivity instead of behaving like pure `always` mode
+
+So `offlineFirst` is like:
+
+- “go ahead and try”
+- “but if retries are needed, connectivity matters”",,Readable.
+S-235,IU-235,40b7d5950d,S-235__40b7d5950d.png,verified-visible-from-contact-sheet,"offlineFirst is permission to try, not a freshness guarantee","The key point is that `offlineFirst` is about whether the query is allowed to try running while offline, not a guarantee that the data is up to date. TanStack describes `offlineFirst` as useful when “cached data or data storage mechanisms” can make the request succeed, while retries wait for connectivity.
+
+So there are two different freshness layers here:
+
+1. Browser / service worker / HTTP cache freshness
+
+If your `fetch()` is satisfied from some cache while offline, that cached response may be old. `offlineFirst` does not make it fresh. It just allows the request attempt to happen even when offline, which is useful if some cache layer can answer it.",,"Readable; bottom may continue elsewhere, but visible core idea is complete."
