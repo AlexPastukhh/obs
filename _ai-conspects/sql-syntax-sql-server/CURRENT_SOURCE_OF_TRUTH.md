@@ -1,6 +1,6 @@
 # Current Source of Truth - SQL Syntax / SQL Server
 
-Generated: 2026-06-02 15:29:50 UTC
+Generated: 2026-06-02 15:45:53 UTC
 
 ## Policy
 
@@ -14,20 +14,22 @@ A region is complete only after visual/semantic boundary review and verified tra
 Stage0 boundary review: done
 R01 database creation / master / model / GO / files: transcript v001 done
 R02 login / user / roles / permissions: transcript v001 done
-P02/R03R04 procedural SQL + DML/output/error handling: next
+R03 stored procedures / output params / control flow / rowversion: transcript v001 done
+R04 core table / DML / OUTPUT / variables / TRY-CATCH: transcript v001 done
+P03/R05 upsert/merge + transactions/indexes/ALTER/constraints/views: next
 ```
 
-## P01 boundary decisions
+## P02 boundary decisions
 
 ```text
-R01 included:
-36 image uses
+R03 included:
+23 image uses
 
-R02 included:
-11 image uses
+R04 included:
+32 image uses
 
-Checked-not-P01, reserved for P02/R03R04:
-S-001, S-002, S-003, S-071, S-072
+Checked-not-P02:
+S-024, S-033, S-034, S-070, S-082, S-083, S-108, S-130
 ```
 
 ## Current split policy
@@ -41,7 +43,8 @@ Exception: 120+ only on explicit request or one very cohesive road.
 ## Next pass
 
 ```text
-P02 / R03R04:
-stored procedures, BEGIN/END, IF, DECLARE, SET/SELECT, output params, rowversion,
-CREATE TABLE, INSERT/UPDATE/DELETE, INSERTED/DELETED, variables, @@ROWCOUNT, TRY/CATCH.
+P03 / R05:
+MERGE/upsert, IF EXISTS easier path, transactions, indexes, ALTER TABLE,
+add/drop/alter columns, constraints, primary/foreign/unique/default/check,
+views and indexed views.
 ```

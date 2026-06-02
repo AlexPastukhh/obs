@@ -1,0 +1,24 @@
+{
+  "generated": "2026-06-02 15:45:53 UTC",
+  "region": "R03-stored-proc-output-params-control-flow-rowversion",
+  "included_image_uses": 23,
+  "area_overview": "Procedural T-SQL and stored procedures: BEGIN/END, IF, variables, SET/SELECT assignment, CREATE/ALTER PROCEDURE, parameters, OUTPUT parameters, rowversion/return patterns.",
+  "key_ideas": [
+    "BEGIN/END groups multiple statements into one block for IF/procedure bodies.",
+    "Stored procedures encapsulate reusable T-SQL with parameters and result sets.",
+    "Parameters can be input or OUTPUT; OUTPUT must be marked in both procedure definition and call site.",
+    "DECLARE creates variables; SET and SELECT can assign values, with different behavior when a query returns multiple rows.",
+    "IF/ELSE drives procedural branching; IF EXISTS is often used for existence checks.",
+    "rowversion is a binary concurrency token, not a date/time value.",
+    "Procedures can communicate results through SELECT result sets, OUTPUT parameters, return codes, and rows affected.",
+    "When returning newly changed values, SQL Server's OUTPUT clause and stored procedure OUTPUT parameters solve different problems."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "P02 contact sheet plus P01 checked-excluded images were considered; stored-procedure road is compact and clearly separate from R04 DML.",
+    "limitations": [
+      "Some procedure screenshots are small/cropped; code is normalized to preserve visible syntax and intent.",
+      "R04 owns common table/DML/output/TRY-CATCH material, so this R03 keeps procedural/stored-procedure focus."
+    ]
+  }
+}

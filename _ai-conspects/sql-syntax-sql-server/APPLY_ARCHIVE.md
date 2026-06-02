@@ -1,6 +1,6 @@
-# Apply archive: SQL Syntax / SQL Server P01 database/admin and security transcript v001
+# Apply archive: SQL Syntax / SQL Server P02 procedural SQL and DML transcript v001
 
-Archive type: stage-1 verified combined transcript.
+Archive type: stage-2 verified combined transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage1-p01-database-admin-security-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage2-p02-procedural-dml-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage1-p01-database-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage1-p01-database-admin-security-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage1-p01-database-admin-security-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage2-p02-procedural-dml-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-sql-syntax-sql-server-stage2-p02-procedural-dml-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/sql-syntax-sql-server
-git commit -m "Add sql server P01 database admin security transcript"
+git commit -m "Add sql server P02 procedural dml transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This archive closes P01 and reserves procedural/DML screenshots for P02.
+This archive closes P02 and reserves MERGE/upsert/DDL-object screenshots for P03.

@@ -1,0 +1,26 @@
+{
+  "generated": "2026-06-02 15:45:53 UTC",
+  "region": "R04-core-table-dml-output-variables-if-trycatch",
+  "included_image_uses": 32,
+  "area_overview": "Core SQL Server table and DML syntax: data types, CREATE TABLE, GUIDs, foreign keys/cascade, INSERT/UPDATE/DELETE, OUTPUT with INSERTED/DELETED, variables, IF/IF EXISTS, @@ROWCOUNT, and TRY/CATCH.",
+  "key_ideas": [
+    "CREATE TABLE defines columns, data types, nullability, identity, keys, and relationships.",
+    "SQL Server types include int/bigint/decimal/bit/date/time/datetime2/nvarchar/uniqueidentifier/rowversion and binary types.",
+    "uniqueidentifier stores GUID values; NEWID and NEWSEQUENTIALID generate them differently.",
+    "Foreign keys can enforce relationships and can define cascade behavior.",
+    "INSERT/UPDATE/DELETE can use the OUTPUT clause to return changed rows.",
+    "INSERTED and DELETED are logical rowsets available in OUTPUT and trigger contexts.",
+    "Variables are batch-scoped and declared with DECLARE; assignment can use SET or SELECT.",
+    "@@ROWCOUNT reports rows affected by the previous statement and should be captured immediately if needed.",
+    "TRY...CATCH handles T-SQL errors; ERROR_* functions expose details inside CATCH.",
+    "THROW is the modern way to rethrow or raise an error after catch/handling."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "R04 screenshots are a mixed but coherent core syntax road; P03 MERGE/index/ALTER neighbors were checked and reserved.",
+    "limitations": [
+      "Some screenshots are small code fragments; transcript groups them by syntax family.",
+      "P03/R05 will handle MERGE/upsert, transactions, indexes, ALTER TABLE, constraints, and views."
+    ]
+  }
+}
