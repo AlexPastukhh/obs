@@ -1,0 +1,19 @@
+{
+  "generated": "2026-06-02 01:38:16 UTC",
+  "region_id": "R02",
+  "region_name": "Cookie authentication core, ticket store, events, sliding expiration, redirects",
+  "overall_meaning": "This region explains cookie authentication as the handler that turns a cookie value into an authentication ticket/principal, writes or removes that ticket during sign-in/sign-out, can store the full ticket in an ITicketStore, refreshes/renews tickets during response finalization, and exposes cookie event hooks for login/logout/validation/redirect behavior.",
+  "key_ideas": [
+    "Cookie auth stores an authentication ticket either directly in the protected cookie or indirectly via a ticket/session store key.",
+    "Authenticate reads the cookie once, unprotects/loads the ticket, validates it, and may request refresh depending on expiration/sliding-expiration policy.",
+    "Sign-in creates a ticket, optionally stores it, and appends the cookie; sign-out deletes the cookie and removes store entry.",
+    "FinishResponseAsync is the late hook that actually emits renewal/delete cookie changes to the response.",
+    "Cookie events wrap lifecycle points: OnSigningIn, OnSignedIn, OnValidatePrincipal, OnSigningOut, redirect-to-login/access-denied/logout/return-url, and sliding expiration checks.",
+    "Sliding expiration is a renewal decision based on real user activity, AllowRefresh, ticket age/remaining time, and custom event decisions."
+  ],
+  "reading_quality": "Good for architecture and API-level flow. Code snippets were mostly readable from the contact sheet and source images; exact line-by-line implementation details should remain source-backed rather than over-expanded.",
+  "limitations": [
+    "Some small code text is too small to preserve as exact verbatim; transcript records mechanics and key APIs rather than pretending perfect line copy.",
+    "JWT images S-304-S-307 appear near the R02 coordinate band but were excluded and reserved for R03A after boundary recheck."
+  ]
+}

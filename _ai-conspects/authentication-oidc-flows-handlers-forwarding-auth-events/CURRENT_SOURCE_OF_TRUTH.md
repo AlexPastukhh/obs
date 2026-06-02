@@ -1,6 +1,6 @@
 # Current Source of Truth - Authentication / OIDC / Flows / Handlers / Forwarding / Auth Events
 
-Generated: 2026-06-02 01:15:16 UTC
+Generated: 2026-06-02 01:38:16 UTC
 
 ## Policy
 
@@ -13,13 +13,14 @@ A region is complete only after visual/semantic boundary review and verified tra
 ```text
 Stage0 boundary review: done
 R01 base auth middleware / AuthenticationService / forwarding basics: transcript v001 done
-P02/R02 cookie auth core + events: next
+R02 cookie auth core / ticket store / events / sliding expiration / redirects: transcript v001 done
+P03/R03A JWT bearer handler pipeline: next
 ```
 
-## R01 note
+## R02 note
 
 ```text
-R01 used a larger combined pass: 81 image uses.
-It covers base authentication middleware, AuthenticationService, scheme/handler providers, forwarding, challenge, forbid, sign-in/sign-out basics.
-S-077-S087/S-091 and S-092-S100 were checked as neighboring OIDC/JWT outcome material and reserved for later P04/R03B-R04.
+R02 used a larger combined pass: 100 included image uses.
+It covers cookie ticket read/write, ITicketStore, refresh/sliding expiration, sign-in/sign-out, FinishResponseAsync, cookie events, and redirect events.
+S-304-S307 were checked as neighboring JWT bearer material and reserved for P03/R03A.
 ```

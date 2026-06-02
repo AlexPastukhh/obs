@@ -1,6 +1,6 @@
-# Apply archive: Auth/OIDC/Auth Events R01 transcript v001
+# Apply archive: Auth/OIDC/Auth Events R02 transcript v001
 
-Archive type: stage-1 verified combined transcript.
+Archive type: stage-2 verified combined transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage1-r01-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage2-r02-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forward
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage1-r01-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage1-r01-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage2-r02-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage2-r02-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -55,10 +55,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events
-git commit -m "Add auth OIDC R01 base auth transcript"
+git commit -m "Add auth OIDC R02 cookie auth transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This is a larger combined transcript pass. Inventory/ledger remains checklist only; R01 includes local boundary review.
+This is a larger combined transcript pass. Inventory/ledger remains checklist only; R02 includes local boundary review.
