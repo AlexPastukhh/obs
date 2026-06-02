@@ -1,0 +1,43 @@
+# Stage 2 - NEXT01 CTXDB01 + CTXDB02 Transcript
+
+Generated: 2026-06-02 09:21:18 UTC
+
+## Done
+
+- Stage1 large boundary review existed.
+- NEXT01 transcript completed.
+- Processed 46 images:
+  - CTXDB01: 17 images
+  - CTXDB02: 29 images
+
+## Now
+
+- Apply and review this archive.
+- Commit if transcript and boundary decisions look correct.
+
+## Next
+
+- NEXT02 transcript: CTXDB03.
+- Meaning: SaveChanges value generation / batching / performance / ChangeTracker.Clear / short-lived DbContext.
+- Size: 57 images.
+
+## Later
+
+- NEXT03: CTXDB04 + CTXDB05 — 52 images.
+- NEXT04: CTXDB06 + CTXDB07 — 43 images.
+- Final closure/audit.
+
+## Processed sources
+
+```text
+CTXDB01 -> S-001, S-003, S-005, S-010, S-014, S-016, S-019, S-024, S-034, S-038, S-044, S-046, S-048, S-049, S-051, S-058, S-059
+CTXDB02 -> S-002, S-004, S-006, S-007, S-008, S-009, S-011, S-012, S-013, S-015, S-017, S-018, S-020, S-021, S-022, S-023, S-025, S-026, S-027, S-028, S-029, S-030, S-033, S-035, S-039, S-041, S-043, S-047, S-052
+```
+
+## Reading quality
+
+```text
+Overall: high.
+Continuation/partial fragments are explicitly marked in source metadata.
+Stage1 ledger was used as a checklist only; sources were visually rechecked for transcript.
+```
