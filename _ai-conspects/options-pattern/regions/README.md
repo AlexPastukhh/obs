@@ -1,5 +1,7 @@
 # Regions - options-pattern
 
+Status: **complete**
+
 Verified transcripts:
 
 ```text
@@ -10,17 +12,15 @@ OPT04 - OptionsMonitor / service lifetimes / OnChange / background service imple
 OPTTXT01 - Configure/PostConfigure and DI-aware overload text-only notes
 ```
 
-All Stage1 candidate transcript regions are now processed.
-
-Next step:
+Final closure audit:
 
 ```text
-Final closure/audit
+Expected image uses: 40
+Processed image uses: 40
+Missing: 0
+Duplicates: 0
+Unreviewed: 0
+Candidate-only: 0
 ```
 
-Each transcript includes:
-
-```text
-## 0.1 Area overview / key ideas / reading quality
-## 0.2 Coverage / boundary review
-```
+No pending transcript regions remain.

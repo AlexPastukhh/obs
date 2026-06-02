@@ -1,13 +1,32 @@
 # Current Source of Truth - options-pattern
 
-Generated: 2026-06-02 12:46:38 UTC
+Generated: 2026-06-02 13:00:36 UTC
 
 ## Current status
 
 ```text
+Status: complete
+
 Stage0: source materialized
 Stage1: boundary review done
 Stage2: NEXT01 full transcript done
+Stage3: final closure/audit done
+```
+
+## Final coverage
+
+```text
+Expected image uses: 40
+Processed image uses: 40
+Missing: 0
+Duplicates: 0
+Extra: 0
+Unreviewed: 0
+Candidate-only: 0
+Region mismatches: 0
+Subregion mismatches: 0
+Text-only context missing: 0
+Required transcript files missing: 0
 ```
 
 ## Verified transcripts
@@ -29,16 +48,7 @@ none
 ## Current next step
 
 ```text
-Final closure/audit
-```
-
-## Counts
-
-```text
-Image uses: 40
-Processed image uses: 40
-Text labels: 19
-Text-only context labels: 6
+none for this conspect
 ```
 
 ## Rules
