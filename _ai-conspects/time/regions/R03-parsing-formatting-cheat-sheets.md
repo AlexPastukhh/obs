@@ -554,6 +554,33 @@ dt.ToString("yyyy-MM-dd'T'HH:mm:ss")
 
 The quoted `T` is literal text, not a format token.
 
+### Stage3 correction: escaping one character with backslash
+
+During R04 boundary review, `S-158` was found to be a formatting screenshot, not timezone material.
+It completes the custom-format escaping road.
+
+Backslash escaping can make one normally meaningful format character literal:
+
+```csharp
+dt.ToString("HH\\h mm\\m ss\\s")
+```
+
+Output shape:
+
+```text
+14h 05m 06s
+```
+
+Without escaping, `h`, `m`, and `s` would be interpreted as formatting tokens.
+Another example escapes literal colons:
+
+```csharp
+dt.ToString("yyyy-MM-ddTHH\\:mm\\:ss")
+```
+
+Meaning: `\\:` means literal colon.
+
+
 ## 16. Evidence table
 
 | Source group | What it supports |
@@ -563,7 +590,7 @@ The quoted `T` is literal text, not a format token.
 | S-118-S128 | ToString formatting, ISO/O/s/u/R, sortable/universal sortable, why plain ToString is unsafe. |
 | S-129-S133 | Useful tokens overview and quick examples. |
 | S-134-S145 | Custom tokens: date parts, month/day, hour/minute/second, fractional seconds, AM/PM. |
-| S-146-S157/S159-S160 | Offset, era, separators, literal text, escaping, 12-hour AM/PM pitfalls. |
+| S-146-S160 | Offset, era, separators, literal text, escaping, backslash escaping, 12-hour AM/PM pitfalls. |
 | S-201-S206 | ISO 8601, RFC 1123, Unix time format choice and when to use each. |
 
 ## 17. Open questions / follow-up hooks

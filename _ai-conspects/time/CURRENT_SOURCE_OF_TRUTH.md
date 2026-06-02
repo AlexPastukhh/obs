@@ -1,6 +1,6 @@
 # Current Source of Truth - Time
 
-Generated: 2026-06-02 09:24:19 UTC
+Generated: 2026-06-02 11:27:57 UTC
 
 ## Policy
 
@@ -14,17 +14,25 @@ A region is complete only after visual/semantic boundary review and verified tra
 Stage0 boundary review: done
 R01 core DateTime / DateTimeOffset / Kind / ticks / Unix / JS local display: transcript v001 done
 R03 parsing / formatting / standard and custom formats: transcript v001 done
-P03/R04 timezone conversion / JSON / model binding / date math / DST: next
+R03 correction: S158 custom-format escaping v002 done
+R04 timezone conversion / JSON / model binding / date math / DST: transcript v001 done
+R05 invalid / ambiguous local-time policies: next
 ```
 
-## R03 boundary decisions
+## R04 boundary decisions
 
 ```text
-Pulled into R03 from R01 reserved bucket:
-S-201, S-202, S-203, S-204, S-205, S-206
+Included in R04:
+53 image uses
 
-Checked-not-R03, reserved for R04:
+Pulled into R04 from R03 checked-excluded:
 S-068, S-069
+
+Corrected into R03 v002:
+S-158
+
+Checked-not-R04, reserved for R05:
+S-019, S-020, S-095, S-166, S-167
 ```
 
 ## Current split policy
@@ -38,6 +46,6 @@ Exception: 120+ only on explicit request or one very cohesive road.
 ## Next pass
 
 ```text
-P03 / R04:
-TimeZoneInfo, UTC/local conversion, JSON/model binding, date math pitfalls, user local time, DST
+R05:
+invalid/ambiguous local times, DST gaps/folds, IsInvalidTime, GetAmbiguousTimeOffsets, policy decisions
 ```

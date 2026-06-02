@@ -1,6 +1,6 @@
-# Apply archive: Time R03 parsing / formatting transcript v001
+# Apply archive: Time R04 timezone transcript v001
 
-Archive type: stage-2 verified transcript.
+Archive type: stage-3 verified transcript + R03 correction.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-time-stage2-r03-parsing-formatting-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-time-stage3-r04-timezone-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-time-stage2-r03-parsing-formatting-transcr
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-time-stage2-r03-parsing-formatting-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-time-stage2-r03-parsing-formatting-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-time-stage3-r04-timezone-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-time-stage3-r04-timezone-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/time
-git commit -m "Add time R03 parsing formatting transcript"
+git commit -m "Add time R04 timezone transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This archive includes boundary correction from the R01 reserved bucket. Stage0 split remains checklist only.
+This archive includes one small correction to the previous R03 transcript: S158 belongs to custom-format escaping.

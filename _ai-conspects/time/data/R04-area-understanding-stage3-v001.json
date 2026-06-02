@@ -1,0 +1,40 @@
+{
+  "generated": "2026-06-02 11:27:57 UTC",
+  "region": "R04-timezones-conversion-json-model-binding-dst",
+  "included_image_uses": 53,
+  "pulled_from_r03_checked_excluded": [
+    "S-068",
+    "S-069"
+  ],
+  "r03_correction": [
+    "S-158"
+  ],
+  "checked_not_r04_reserved_for_r05": [
+    "S-019",
+    "S-020",
+    "S-095",
+    "S-166",
+    "S-167"
+  ],
+  "area_overview": "Timezone-aware conversion and user-local time handling: machine local vs user local, TimeZoneInfo, JSON/model binding, date math, DST, and scheduling by wall-clock time.",
+  "key_ideas": [
+    "DateTime.ToLocalTime and ToUniversalTime depend on DateTime.Kind and the machine/OS local timezone.",
+    "DateTimeOffset.ToOffset changes the displayed offset representation of the same instant.",
+    "An offset is not a full timezone; a real timezone has country/region identity and DST rules.",
+    "For real timezone conversion use TimeZoneInfo and keep UTC in storage.",
+    "ASP.NET Core JSON/model binding handles ISO 8601 DateTimeOffset/DateOnly/TimeOnly values, but APIs should keep payload conventions explicit.",
+    "AddDays/AddMonths on instants and 'same local wall-clock time tomorrow/next month' are different requirements.",
+    "For user-local scheduling, convert the current instant into the user's timezone, build an Unspecified local wall-clock DateTime, then ConvertTimeToUtc with that user's TimeZoneInfo.",
+    "DateTimeKind.Local with a non-machine timezone can throw or misrepresent intent; use Unspecified for local wall-clock values to be interpreted in an explicit timezone.",
+    "IsDaylightSavingTime is useful for inspecting whether a specific local time is in DST, but not for implementing all scheduling policies by hand."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "R04 contact sheet plus representative source images were inspected. Boundary recheck found S-158 as a missed R03 formatting fragment.",
+    "limitations": [
+      "Some screenshots are continuation fragments; transcript groups them by concept rather than treating every crop as a standalone section.",
+      "S019/S020/S095/S166/S167 were checked but kept for the next invalid/ambiguous local-time policy pass.",
+      "The exact APIs are preserved where visible; some long example code is normalized into compact equivalent snippets."
+    ]
+  }
+}

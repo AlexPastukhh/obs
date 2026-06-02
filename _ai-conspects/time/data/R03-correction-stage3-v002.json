@@ -1,0 +1,30 @@
+{
+  "generated": "2026-06-02 11:27:57 UTC",
+  "correction": "R03 formatting correction discovered during R04 boundary review",
+  "sources": [
+    {
+      "source_id": "S-158",
+      "fileId": "abb5a4d2031c84ec8d22ba09b484a4d830849a5d",
+      "fileId_short": "abb5a4d203",
+      "x": 16947.772,
+      "y": 17640.203,
+      "width": 748.0,
+      "height": 482.0,
+      "rotation": 0.0,
+      "opacity": 1,
+      "initial_subregion": "R04-timezones-converting-date-math-dst",
+      "combined_pass": "P03-R04-timezones-conversion-json-model-binding-dst",
+      "initial_meaning": "TimeZoneInfo, UTC/local conversion, JSON/model binding, date math pitfalls, user local time, DST.",
+      "nearest_labels_for_search_only": "L-074: escaping | L-066: literal text | L-067: separators | L-068: era | L-069: time zone/ offset",
+      "coverage_status": "candidate-needs-boundary-review",
+      "decision_is_final": "no",
+      "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
+      "current_region_decision": "R04-timezones-converting-date-math-dst",
+      "must_recheck_before_region_close": "yes",
+      "source_num": 158,
+      "r03_correction_decision": "processed-in-r03-v002",
+      "r03_correction_note": "Missed custom-format escaping fragment. Backslash escaping belongs to R03 formatting, not R04 timezone."
+    }
+  ],
+  "reason": "S-158 is about escaping one character with backslash in custom date/time formats, not timezone conversion."
+}
