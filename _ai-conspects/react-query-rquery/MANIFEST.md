@@ -1,43 +1,39 @@
-# MANIFEST - React Query Stage6b Top Technical Transcripts
+# MANIFEST - React Query Stage6c R20 R17B Transcripts
 
 Archive type: **verified transcript batch**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 12:49:41 UTC
+Generated: 2026-06-02 13:00:55 UTC
 
 ## Direction check
 
 Goal:
-Process first transcript batch after Stage6a boundary review.
+Process the next Stage6 transcript batch after Stage6b.
 
 Done:
-Stage6a created candidate split for S-384..S-537.
+Stage6b processed 35 images.
 
 This step:
-Add Stage6b transcripts with local boundary corrections.
+Add Stage6c transcripts for R20 and R17B.
 
 Why:
-Every included source has visible text. No OCR-placeholder source is marked processed.
+Every included source has visible text. Stage6a R22 is corrected into R17B because it continues useTransition step-by-step comparison.
 
 Next:
 1. review staged/cached diff;
 2. commit;
-3. process Stage6c R20 + R22.
+3. process Stage6d R21 + R23.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/46-stage6b-top-technical-transcripts.md
-_ai-conspects/react-query-rquery/regions/R15-v002-query-cancellation-transition-tail.md
-_ai-conspects/react-query-rquery/regions/R16-error-boundary-throwonerror-reset.md
-_ai-conspects/react-query-rquery/regions/R17-useTransition-pagination-pending-ui.md
-_ai-conspects/react-query-rquery/regions/R18-query-defaults-key-factories.md
-_ai-conspects/react-query-rquery/regions/R19-testing-msw.md
-_ai-conspects/react-query-rquery/regions/R20-v002-performance-select-correction.md
-_ai-conspects/react-query-rquery/data/*stage6b-v001.*
-_ai-conspects/react-query-rquery/data/Stage6b-local-boundary-corrections-v001.*
+_ai-conspects/react-query-rquery/47-stage6c-r20-r17b-transcripts.md
+_ai-conspects/react-query-rquery/regions/R20-select-tracked-props-performance.md
+_ai-conspects/react-query-rquery/regions/R17-v002-useTransition-step-comparison.md
+_ai-conspects/react-query-rquery/data/*stage6c-v001.*
+_ai-conspects/react-query-rquery/data/Stage6c-local-boundary-corrections-v001.*
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
-_ai-conspects/react-query-rquery/audit-assets/stage6b-top-technical-source-images/*.png
+_ai-conspects/react-query-rquery/audit-assets/stage6c-r20-r17b-source-images/*.png
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
@@ -45,7 +41,7 @@ _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage6b processed: 35
-Stage6a remaining candidates: 119
-Next: Stage6c
+Stage6c processed: 25
+Stage6a remaining candidates: 94
+Next: Stage6d
 ```

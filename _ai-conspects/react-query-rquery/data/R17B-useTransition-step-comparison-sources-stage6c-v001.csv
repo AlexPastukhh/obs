@@ -1,0 +1,89 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-458,IU-458,6417d8eeec,S-458__6417d8eeec.png,verified-visible-ocr-assisted,R22,4. Step by step: without useTransition,"4. Step by step: without useTransition
+Let’s use a common example: pagination with Suspense.
+Example without transition
+</> TypeScript
+function ProductsPage() {
+const [page, setPage] = React.useState(1)
+return (
+<>
+<button onClick={() => setPage((p) => p + 1)}>Next</button>
+<React.Suspense fallback={<div>Loading. ..</div>}>
+<ProductsList page={page} />
+</React.Suspense>
+</>
+)
+}
+And: NY","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-465,IU-465,5500f63476,S-465__5500f63476.png,verified-visible-ocr-assisted,R22,And:,"And:
+> TypeScript
+function ProductsList({ page }: { page: number }) {
+const { data } = useSuspenseQuery({
+queryKey: [‘products', page],
+queryFn: () => fetchProducts(page),
+})
+return (
+<ul>
+{data.items.map((item: any) => (
+<li key={item.id}>{item.name}</1i>
+))}
+</ul>
+)
+}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-471,IU-471,db04f35502,S-471__db04f35502.png,verified-visible-ocr-assisted,R22,What happens step by step without transition,"What happens step by step without transition
+User clicks Next.
+Step 1
+React receives:
+<> TypeScript
+setPage(2)
+Step 2
+React starts rendering with page = 2.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-472,IU-472,6dfbaf8577,S-472__6dfbaf8577.png,verified-visible-ocr-assisted,R22,Step 3,"Step 3
+ProductsList now asks for query [‘products"", 2].
+Step 4
+That data is not ready yet, so useSuspenseQuery suspends.
+Step 5
+React immediately shows the Suspense fallback:
+</> TypeScript
+<div>Loading. ..</div>
+Step 6
+Old page content disappears.
+Step 7
+When new data finishes loading, React renders page 2.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-475,IU-475,6f877c2651,S-475__6f877c2651.png,verified-visible-ocr-assisted,R22,User-visible behavior without transition,"User-visible behavior without transition
+The user sees:
+1. page 1 content
+2. click Next
+3. page 1 disappears immediately
+4. loading fallback appears
+5. page 2 appears
+That can feel abrupt.
+Especially if:
+e data is slightly slow
+e fallback flashes often
+e user is navigating quickly","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-479,IU-479,8e9a7a7ae4,S-479__8e9a7a7ae4.png,verified-visible-ocr-assisted,R22,5. Step by step: with useTransition,"5. Step by step: with useTransition
+Now same example with transition.
+</> TypeScript
+function ProductsPage() {
+const [page, setPage] = React.useState(1)
+const [isPending, startTransition] = React.useTransition()","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-482,IU-482,f6e6efb55f,S-482__f6e6efb55f.png,verified-visible-ocr-assisted,R22,return (,"return (
+<>
+<button
+onClick={() => {
+startTransition(() => {
+setPage((p) => p + 1)
+})
+tt
+>
+Next
+</button>
+{isPending && <small>Updating. ..</small>}
+<React.Suspense fallback={<div>Loading. ..</div>}>
+<ProductsList page={page} />
+</React.Suspense>
+</>
+)
+}
+NY","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

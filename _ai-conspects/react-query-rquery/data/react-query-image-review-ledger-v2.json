@@ -1,144 +1,92 @@
 {
-  "generated": "2026-06-02 12:49:41 UTC",
-  "ledger_version": "v2-updated-by-stage6b-top-technical-transcripts",
-  "critical_rule": "Only Stage6b sources are marked processed. Remaining Stage6a groups stay candidates.",
-  "stage6b_processed": {
-    "R15B-query-cancellation-transition-tail": {
-      "region": "R15",
-      "count": 4,
+  "generated": "2026-06-02 13:00:55 UTC",
+  "ledger_version": "v2-updated-by-stage6c-r20-r17b-transcripts",
+  "critical_rule": "Only Stage6c sources are marked processed. R21/R23 remain candidates.",
+  "stage6c_processed": {
+    "R20-select-performance-structural-sharing": {
+      "region": "R20",
+      "count": 18,
       "sources": [
-        "S-384",
-        "S-388",
-        "S-392",
-        "S-395"
+        "S-427",
+        "S-432",
+        "S-434",
+        "S-435",
+        "S-439",
+        "S-440",
+        "S-442",
+        "S-449",
+        "S-450",
+        "S-451",
+        "S-453",
+        "S-456",
+        "S-459",
+        "S-460",
+        "S-462",
+        "S-466",
+        "S-468",
+        "S-474"
       ]
     },
-    "R16-error-boundary-throwonerror-reset": {
-      "region": "R16",
-      "count": 10,
-      "sources": [
-        "S-390",
-        "S-394",
-        "S-398",
-        "S-405",
-        "S-407",
-        "S-408",
-        "S-409",
-        "S-411",
-        "S-412",
-        "S-419"
-      ]
-    },
-    "R17-useTransition-pagination": {
+    "R17B-useTransition-step-comparison": {
       "region": "R17",
-      "count": 8,
-      "sources": [
-        "S-399",
-        "S-402",
-        "S-404",
-        "S-410",
-        "S-413",
-        "S-417",
-        "S-418",
-        "S-421"
-      ]
-    },
-    "R18-query-defaults-key-factories": {
-      "region": "R18",
       "count": 7,
       "sources": [
-        "S-385",
-        "S-387",
-        "S-391",
-        "S-397",
-        "S-400",
-        "S-406",
-        "S-415"
-      ]
-    },
-    "R19-testing-msw": {
-      "region": "R19",
-      "count": 3,
-      "sources": [
-        "S-430",
-        "S-441",
-        "S-445"
-      ]
-    },
-    "R20B-performance-select-correction": {
-      "region": "R20",
-      "count": 3,
-      "sources": [
-        "S-426",
-        "S-431",
-        "S-443"
+        "S-458",
+        "S-465",
+        "S-471",
+        "S-472",
+        "S-475",
+        "S-479",
+        "S-482"
       ]
     }
   },
   "local_boundary_corrections": [
     {
-      "source_id": "S-384",
-      "from_stage6a": "R16",
-      "stage6b_decision": "R15",
-      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+      "source_id": "S-458",
+      "from_stage6a": "R22",
+      "stage6c_decision": "R17",
+      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
     },
     {
-      "source_id": "S-388",
-      "from_stage6a": "R16",
-      "stage6b_decision": "R15",
-      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+      "source_id": "S-465",
+      "from_stage6a": "R22",
+      "stage6c_decision": "R17",
+      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
     },
     {
-      "source_id": "S-392",
-      "from_stage6a": "R16",
-      "stage6b_decision": "R15",
-      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+      "source_id": "S-471",
+      "from_stage6a": "R22",
+      "stage6c_decision": "R17",
+      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
     },
     {
-      "source_id": "S-395",
-      "from_stage6a": "R16",
-      "stage6b_decision": "R15",
-      "reason": "Continuation of query cancellation examples: cancelQueries with pagination, startTransition, and rapid-click safety."
+      "source_id": "S-472",
+      "from_stage6a": "R22",
+      "stage6c_decision": "R17",
+      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
     },
     {
-      "source_id": "S-419",
-      "from_stage6a": "R19",
-      "stage6b_decision": "R16",
-      "reason": "Local error UI, throwOnError, ErrorBoundary / QueryErrorResetBoundary, retry ordering, and reset/retry flow."
+      "source_id": "S-475",
+      "from_stage6a": "R22",
+      "stage6c_decision": "R17",
+      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
     },
     {
-      "source_id": "S-406",
-      "from_stage6a": "R19",
-      "stage6b_decision": "R18",
-      "reason": "Global query defaults, per-key defaults, per-query overrides, query key factories, and query option factories."
+      "source_id": "S-479",
+      "from_stage6a": "R22",
+      "stage6c_decision": "R17",
+      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
     },
     {
-      "source_id": "S-415",
-      "from_stage6a": "R19",
-      "stage6b_decision": "R18",
-      "reason": "Global query defaults, per-key defaults, per-query overrides, query key factories, and query option factories."
-    },
-    {
-      "source_id": "S-426",
-      "from_stage6a": "R19",
-      "stage6b_decision": "R20",
-      "reason": "Early performance/select cards that Stage6a put near testing but visual reading shows belong to R20."
-    },
-    {
-      "source_id": "S-431",
-      "from_stage6a": "R19",
-      "stage6b_decision": "R20",
-      "reason": "Early performance/select cards that Stage6a put near testing but visual reading shows belong to R20."
-    },
-    {
-      "source_id": "S-443",
-      "from_stage6a": "R19",
-      "stage6b_decision": "R20",
-      "reason": "Early performance/select cards that Stage6a put near testing but visual reading shows belong to R20."
+      "source_id": "S-482",
+      "from_stage6a": "R22",
+      "stage6c_decision": "R17",
+      "reason": "Step-by-step comparison of pagination with Suspense without and with useTransition."
     }
   ],
-  "remaining_stage6a_candidates": 119,
-  "next_step": "Stage6c: R20 + R22.",
+  "remaining_stage6a_candidates": 94,
+  "next_step": "Stage6d: R21 + R23.",
   "rows": [
     {
       "source_id": "S-001",
@@ -8246,12 +8194,12 @@
       "width": "501",
       "height": "272",
       "nearest_labels_for_search_only": "L-117: select | L-119: rerendering with/without select | L-120: select usage examples",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-428",
@@ -8341,12 +8289,12 @@
       "width": "613",
       "height": "360",
       "nearest_labels_for_search_only": "L-119: rerendering with/without select | L-117: select | L-120: select usage examples",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-433",
@@ -8379,12 +8327,12 @@
       "width": "408",
       "height": "360",
       "nearest_labels_for_search_only": "L-119: rerendering with/without select | L-120: select usage examples | L-117: select",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-435",
@@ -8398,12 +8346,12 @@
       "width": "931",
       "height": "325",
       "nearest_labels_for_search_only": "L-120: select usage examples | L-123: !!! | L-119: rerendering with/without select",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-436",
@@ -8474,12 +8422,12 @@
       "width": "902",
       "height": "471",
       "nearest_labels_for_search_only": "L-120: select usage examples | L-123: !!! | L-119: rerendering with/without select",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-440",
@@ -8493,12 +8441,12 @@
       "width": "901",
       "height": "463",
       "nearest_labels_for_search_only": "L-119: rerendering with/without select | L-117: select | L-124: memoizing selectors to avoid recomputation of select on every rerender",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-441",
@@ -8531,12 +8479,12 @@
       "width": "600",
       "height": "364",
       "nearest_labels_for_search_only": "L-119: rerendering with/without select | L-120: select usage examples | L-117: select",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-443",
@@ -8664,12 +8612,12 @@
       "width": "421",
       "height": "349",
       "nearest_labels_for_search_only": "L-119: rerendering with/without select | L-124: memoizing selectors to avoid recomputation of select on every rerender | L-117: select",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-450",
@@ -8683,12 +8631,12 @@
       "width": "527",
       "height": "463",
       "nearest_labels_for_search_only": "L-119: rerendering with/without select | L-120: select usage examples | L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use...",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-451",
@@ -8702,12 +8650,12 @@
       "width": "923",
       "height": "445",
       "nearest_labels_for_search_only": "L-123: !!! | L-120: select usage examples | L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use...",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-452",
@@ -8740,12 +8688,12 @@
       "width": "923",
       "height": "451",
       "nearest_labels_for_search_only": "L-124: memoizing selectors to avoid recomputation of select on every rerender | L-117: select | L-126: pure selectors",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-454",
@@ -8797,12 +8745,12 @@
       "width": "923",
       "height": "405",
       "nearest_labels_for_search_only": "L-124: memoizing selectors to avoid recomputation of select on every rerender | L-119: rerendering with/without select | L-126: pure selectors",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-457",
@@ -8835,12 +8783,12 @@
       "width": "617",
       "height": "482",
       "nearest_labels_for_search_only": "L-122: step by step comparison | L-127: best practises summmary key points",
-      "coverage_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "current_region_decision": "R22",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r22",
-      "decision_basis": "Stage6a boundary candidate only: Step-by-step comparison and best-practices summary cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v002-comparison",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-459",
@@ -8854,12 +8802,12 @@
       "width": "899",
       "height": "463",
       "nearest_labels_for_search_only": "L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use... | L-123: !!! | L-124: memoizing selectors to avoid recomputation of select on every rerender",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-460",
@@ -8873,12 +8821,12 @@
       "width": "525",
       "height": "482",
       "nearest_labels_for_search_only": "L-123: !!! | L-120: select usage examples | L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use...",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-461",
@@ -8911,12 +8859,12 @@
       "width": "566",
       "height": "334",
       "nearest_labels_for_search_only": "L-124: memoizing selectors to avoid recomputation of select on every rerender | L-126: pure selectors | L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use...",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-463",
@@ -8968,12 +8916,12 @@
       "width": "818",
       "height": "441",
       "nearest_labels_for_search_only": "L-122: step by step comparison | L-127: best practises summmary key points",
-      "coverage_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "current_region_decision": "R22",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r22",
-      "decision_basis": "Stage6a boundary candidate only: Step-by-step comparison and best-practices summary cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v002-comparison",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-466",
@@ -8987,12 +8935,12 @@
       "width": "497",
       "height": "258",
       "nearest_labels_for_search_only": "L-123: !!! | L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use... | L-120: select usage examples",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-467",
@@ -9025,12 +8973,12 @@
       "width": "685",
       "height": "463",
       "nearest_labels_for_search_only": "L-124: memoizing selectors to avoid recomputation of select on every rerender | L-126: pure selectors | L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use...",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-469",
@@ -9082,12 +9030,12 @@
       "width": "657",
       "height": "404",
       "nearest_labels_for_search_only": "L-122: step by step comparison | L-127: best practises summmary key points",
-      "coverage_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "current_region_decision": "R22",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r22",
-      "decision_basis": "Stage6a boundary candidate only: Step-by-step comparison and best-practices summary cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v002-comparison",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-472",
@@ -9101,12 +9049,12 @@
       "width": "738",
       "height": "482",
       "nearest_labels_for_search_only": "L-122: step by step comparison | L-127: best practises summmary key points",
-      "coverage_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "current_region_decision": "R22",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r22",
-      "decision_basis": "Stage6a boundary candidate only: Step-by-step comparison and best-practices summary cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v002-comparison",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-473",
@@ -9139,12 +9087,12 @@
       "width": "789",
       "height": "482",
       "nearest_labels_for_search_only": "L-125: so we dont memooize result with usecallback, we memoize the reference of the function, we can memoize result with use... | L-126: pure selectors | L-124: memoizing selectors to avoid recomputation of select on every rerender",
-      "coverage_status": "r20-select-performance-candidate-stage6a",
+      "coverage_status": "processed-in-r20-v001",
       "current_region_decision": "R20",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r20",
-      "decision_basis": "Stage6a boundary candidate only: select, rerendering with/without select, selector memoization, pure selectors, structural sharing/performance..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "decision_is_final": "yes-for-r20-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R20 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-475",
@@ -9158,12 +9106,12 @@
       "width": "594",
       "height": "476",
       "nearest_labels_for_search_only": "L-122: step by step comparison | L-127: best practises summmary key points",
-      "coverage_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "current_region_decision": "R22",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r22",
-      "decision_basis": "Stage6a boundary candidate only: Step-by-step comparison and best-practices summary cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v002-comparison",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-476",
@@ -9234,12 +9182,12 @@
       "width": "603",
       "height": "272",
       "nearest_labels_for_search_only": "L-122: step by step comparison | L-127: best practises summmary key points",
-      "coverage_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "current_region_decision": "R22",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r22",
-      "decision_basis": "Stage6a boundary candidate only: Step-by-step comparison and best-practices summary cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v002-comparison",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-480",
@@ -9291,12 +9239,12 @@
       "width": "691",
       "height": "482",
       "nearest_labels_for_search_only": "L-127: best practises summmary key points | L-122: step by step comparison",
-      "coverage_status": "r22-step-comparison-best-practices-candidate-stage6a",
-      "current_region_decision": "R22",
-      "decision_is_final": "no-stage6a-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-r22",
-      "decision_basis": "Stage6a boundary candidate only: Step-by-step comparison and best-practices summary cards..",
-      "review_notes": "Stage6a boundary candidate only. Do not mark processed until visible transcript exists."
+      "coverage_status": "processed-in-r17-v002-comparison",
+      "current_region_decision": "R17",
+      "decision_is_final": "yes-for-r17-stage6c",
+      "must_recheck_before_region_close": "no-for-stage6c-transcript",
+      "decision_basis": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in Stage6c R17 transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-483",

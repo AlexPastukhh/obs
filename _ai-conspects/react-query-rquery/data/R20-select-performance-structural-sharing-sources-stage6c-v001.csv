@@ -1,0 +1,197 @@
+source_id,image_use_id,fileId_short,image_file,status,stage6a_group,theme,visible_text,notes
+S-427,IU-427,f300d1e3f8,S-427__f300d1e3f8.png,verified-visible-ocr-assisted,R20,7. Best mental model,"7. Best mental model
+Destructure less
+
+Optimizes query result field tracking
+select
+
+Optimizes data subscription granularity","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-432,IU-432,f9d115e85c,S-432__f9d115e85c.png,verified-visible-ocr-assisted,R20,1. Two different things are being tracked,"1. Two different things are being tracked
+When you call useQuery , there are really two layers:
+Layer A — the query result object
+Things like:
+° data
+° isFetching
+°  isError
+° status
+- error","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-434,IU-434,7af8af0e27,S-434__7af8af0e27.png,verified-visible-ocr-assisted,R20,4. Concrete comparison,"4. Concrete comparison
+Without select
+</> TypeScript
+function UserName() {
+const { data } = useQuery({
+queryKey: [‘user’],
+queryFn: fetchUser,
+})
+return <div>{data?.name}</div>
+}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-435,IU-435,2ff8c1ed2c,S-435__2ff8c1ed2c.png,verified-visible-ocr-assisted,R20,8. Example where select is very useful,"8. Example where select is very useful
+Imagine query returns whole cart:
+<> TypeScript O
+type Cart = {
+items: { id: string; price: number; qty: number }[]
+couponCode: string | null
+shippingAddress: string
+}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-439,IU-439,f85216609d,S-439__f85216609d.png,verified-visible-ocr-assisted,R20,Component A only needs total count,"Component A only needs total count
+</> TypeScript oO
+function CartBadge() {
+const { data: itemCount } = useQuery({
+queryKey: [‘cart'],
+queryFn: fetchCart,
+select: (cart) => cart.items.reduce((sum, item) => sum + item.qty, 9),
+})
+return <span>{itemCount}</span>
+t
+If shipping address changes, but item count stays the same, badge may avoid rerender.
+Without select , component would receive whole cart object and rerender more often.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-440,IU-440,f45203256b,S-440__f45203256b.png,verified-visible-ocr-assisted,R20,Example:,"Example:
+</> TypeScript O
+const query = useQuery(...)
+React Query can track which of these properties you used during render.
+So if you only read:
+<> TypeScript O
+const { data } = useQuery(...)
+and never read isFetching, then changes to isFetching may not force your component to rerender.
+That is what tracked properties is about.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-442,IU-442,9d94722eb4,S-442__9d94722eb4.png,verified-visible-ocr-assisted,R20,If server response changes from:,"If server response changes from:
+<> TypeScript
+{ name: ‘Alice’, email: ‘a@mail.com’ }
+to
+<> TypeScript
+{ name: ‘Alice’, email: ‘new@mail.com' }
+your component may rerender because data changed.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-449,IU-449,c34c30d1ff,S-449__c34c30d1ff.png,verified-visible-ocr-assisted,R20,Layer B — the data value itself,"Layer B — the data value itself
+Inside data , maybe you have:
+</> TypeScript
+sf
+id: ‘1’,
+name: ‘Alice’,
+email: ‘a@mail.com’,
+settings: {..-},
+posts: [...]
+}","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-450,IU-450,354cfa90ec,S-450__354cfa90ec.png,verified-visible-ocr-assisted,R20,With select,"With select
+</> TypeScript
+function UserName() {
+const { data: name } = useQuery({
+queryKey: [‘user’],
+queryFn: fetchUser,
+select: (user) => user.name,
+})
+return <div>{name}</div>
+}
+Same backend change:
+</> TypeScript
+{ name: ‘Alice’, email: ‘a@mail.com' }","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-451,IU-451,118de21a71,S-451__118de21a71.png,verified-visible-ocr-assisted,R20,15. Another useful pattern: select for IDs only,"15. Another useful pattern: select for IDs only
+If full list objects change often, but IDs stay stable, you can subscribe to IDs.
+</> TypeScript oO
+function TodolIds() {
+const { data: ids } = useQuery({
+queryKey: [‘todos'],
+queryFn: fetchTodos,
+select: (todos) => todos.map((t) => t-.id),
+})
+return <div>{ids?.join(', ')}</div>
+t
+This can reduce rerenders if object content changes but list membership/order stays same.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-453,IU-453,69361022f8,S-453__69361022f8.png,verified-visible-ocr-assisted,R20,Important rule,"Important rule
+
+Avoid rest destructuring:
+</> TypeScript OD
+const { data, ...rest } = useQuery(...)
+
+This can defeat tracked-property optimization because it touches many fields.
+
+Prefer:
+</> TypeScript O
+const query = useQuery(...)
+const { data, isFetching } = query
+
+or destructure only what you need.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-456,IU-456,8c2777d94e,S-456__8c2777d94e.png,verified-visible-ocr-assisted,R20,"If your component only cares about name , destructuring like this:","If your component only cares about name , destructuring like this:
+</> TypeScript O
+const { data } = useQuery(...)
+const name = data?-.name
+does not automatically mean React Query can subscribe only to name .
+From React Query’s point of view, your component still subscribed to data.
+So if email changes, or posts changes, the data object may change, and your component can rerender.
+That is where select matters.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-459,IU-459,ec416766ce,S-459__ec416766ce.png,verified-visible-ocr-assisted,R20,to,"to
+‘) TypeScript O
+{ name: ‘Alice’, email: ‘new@mail.com' }
+Selected result is still:
+‘) TypeScript OD
+""Alice’
+So React Query can say:
+e selected value did not change
+* no need to rerender this component
+That is the real benefit.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-460,IU-460,d773e1a9ce,S-460__d773e1a9ce.png,verified-visible-ocr-assisted,R20,16. select + child components,"16. select + child components
+A powerful pattern is:
+e parent subscribes to IDs
+e children subscribe to details separately
+</> TypeScript
+function TodoList() {
+const { data: todoIds } = useQuery({
+queryKey: [‘todos'],
+queryFn: fetchTodos,
+select: (todos) => todos.map((t) => t-.id),
+})
+return (
+<ul>
+{todoIds?.map((id) => (
+<TodoItem key={id} id={id} />
+))}
+</ul>
+)
+}
+NY","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-462,IU-462,18fbb6e056,S-462__18fbb6e056.png,verified-visible-ocr-assisted,R20,2. Why destructuring is not enough,"2. Why destructuring is not enough
+Let’s say query returns:
+</> TypeScript
+type User = {
+id: string
+name: string
+email: string
+notifications: number
+t","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-466,IU-466,dca612dbc2,S-466__dca612dbc2.png,verified-visible-ocr-assisted,R20,function TodoItem({ id }: { id: string }) {,"function TodoItem({ id }: { id: string }) {
+const { data: todo } = useQuery({
+queryKey: [‘todo', id],
+queryFn: () => fetchTodo(id),
+})
+return <1li>{todo?.text}</1li>
+}
+This makes updates more local.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-468,IU-468,572bca185e,S-468__572bca185e.png,verified-visible-ocr-assisted,R20,and component does:,"and component does:
+<) TypeScript OD
+function UserName() {
+const { data } = useQuery({
+queryKey: [‘user’],
+queryFn: fetchUser,
+})
+return <div>{data?.name}</div>
+}
+You might think:
+“| only use name , so why rerender if email changes?”
+Because React Query gave you the whole data object.
+Your component is subscribed to the query result containing that data.
+If the fetched data changes, React Query may deliver anew data reference, and your component
+rerenders.
+Even though your JSX only displays name .","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-474,IU-474,78182e8040,S-474__78182e8040.png,verified-visible-ocr-assisted,R20,Example,"Example
+Inline selector
+<> TypeScript O
+function UserName() {
+const { data } = useQuery({
+queryKey: [‘user'],
+queryFn: fetchUser,
+select: (user) => user.name,
+})
+return <div>{data}</div>
+t
+If UserName rerenders because its parent rerendered, this inline function is created again.
+So even if cached user data is unchanged, React Query now sees a new selector reference.
+That can cause the selection step to run again.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

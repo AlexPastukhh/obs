@@ -1,4 +1,4 @@
-# Apply archive: React Query Stage6b top technical transcripts
+# Apply archive: React Query Stage6c R20 R17B transcripts
 
 Archive type: verified transcript batch.
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage6b-top-technical-transcripts-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage6c-r20-r17b-transcripts-v001.zip
 ```
 
 ## Apply commands with cached diff review
@@ -27,8 +27,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\react-query-rquery"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage6b-top-technical-transcripts-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage6b-top-technical-transcripts.cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage6c-r20-r17b-transcripts-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage6c-r20-r17b-transcripts.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -55,7 +55,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add React Query Stage6b transcripts"
+git commit -m "Add React Query Stage6c transcripts"
 git push origin ai-processed-conspects-text
 ```
 
@@ -69,4 +69,4 @@ git clean -fd -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive marks only Stage6b sources as processed. Main R20/R22 and R21/R23 remain pending candidates.
+This archive marks only Stage6c sources as processed. R21/R23 remain pending candidates.

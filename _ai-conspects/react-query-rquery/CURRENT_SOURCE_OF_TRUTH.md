@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 12:49:41 UTC
+Generated: 2026-06-02 13:00:55 UTC
 
 ## Current policy
 
@@ -44,12 +44,14 @@ Stage4x bad archive: invalidated / do not use
 Stage5d S261-S383 closure audit v001: completed
 Stage6a S384-S537 boundary review: active candidate split
 Stage6b top technical transcript v001: completed
+Stage6c R20/R17B transcript v001: completed
 ```
 
 ## Current processing target
 
 ```text
 Stage6b processed: 35
-Stage6a remaining candidates: 119
-Next transcript attempt: Stage6c = R20 + R22
+Stage6c processed: 25
+Stage6a remaining candidates: 94
+Next transcript attempt: Stage6d = R21 + R23
 ```
