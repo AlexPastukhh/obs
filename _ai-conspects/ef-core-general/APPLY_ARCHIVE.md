@@ -1,6 +1,6 @@
-# Apply archive: EF Core EF05C transcript
+# Apply archive: EF Core EF06 combined transcript
 
-Archive type: verified region transcript.
+Archive type: verified combined region transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage13-ef05c-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage14-ef06-combined-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage13-ef05c-transcript-v
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage13-ef05c-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage13-ef05c.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage14-ef06-combined-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage14-ef06-combined.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -47,7 +47,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/ef-core-general
-git commit -m "Add EF Core EF05C optional value objects transcript"
+git commit -m "Add EF Core EF06 combined transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -59,6 +59,6 @@ git restore -- _ai-conspects/ef-core-general
 
 ## Notes
 
-This archive completes EF05C and closes parent EF05.
+This archive completes EF06A/EF06B/EF06C in one combined transcript.
 
-EF06 remains pending from Stage10 combined boundary review.
+Next step should be a final closure/audit pass for ef-core-general.

@@ -1,38 +1,27 @@
 {
-  "generated": "2026-06-02 01:12:54 UTC",
-  "ledger_version": "v001-updated-by-ef05c-transcript",
+  "generated": "2026-06-02 01:52:06 UTC",
+  "ledger_version": "v001-updated-by-ef06-combined-transcript",
   "critical_rule": "Ledger is not source of truth. It records decisions after visual/semantic review.",
-  "stage13_delta": {
-    "ef05c_processed_sources": [
-      "S-014",
-      "S-015",
-      "S-016",
-      "S-017",
-      "S-018",
-      "S-020",
-      "S-021",
-      "S-022",
-      "S-023"
+  "stage14_delta": {
+    "ef06a_processed_sources": [
+      "S-047",
+      "S-048"
     ],
-    "ef06_pending": {
-      "EF06A": [
-        "S-047",
-        "S-048"
-      ],
-      "EF06B": [
-        "S-049",
-        "S-050",
-        "S-051",
-        "S-052"
-      ],
-      "EF06C": [
-        "S-062",
-        "S-063",
-        "S-064",
-        "S-065",
-        "S-061"
-      ]
-    }
+    "ef06b_processed_sources": [
+      "S-049",
+      "S-050",
+      "S-051",
+      "S-052"
+    ],
+    "ef06c_processed_sources": [
+      "S-062",
+      "S-063",
+      "S-064",
+      "S-065",
+      "S-061"
+    ],
+    "combined_transcript": true,
+    "unprocessed_after_stage14": []
   },
   "rows": [
     {
@@ -104,12 +93,12 @@
       "width": "847",
       "height": "422",
       "nearest_labels_for_search_only": "L-033: concurrency in db  commands | isrowversion isconcurrencytoken | L-069: reading your own uncommited changes | L-040: transactions | L-041: transaction patterns | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth",
-      "coverage_status": "ef06a-optimistic-concurrency-and-db-constraints",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "Optimistic concurrency token / check-then-add race / constraints or isolation as protection.",
-      "review_notes": "Optimistic concurrency token / check-then-add race / constraints or isolation as protection."
+      "coverage_status": "processed-in-ef06a-v001",
+      "current_region_decision": "EF06A",
+      "decision_is_final": "yes-for-ef06a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06a-v001",
+      "decision_basis": "Included in EF06A v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06A v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-031",
@@ -275,12 +264,12 @@
       "width": "823",
       "height": "482",
       "nearest_labels_for_search_only": "L-069: reading your own uncommited changes | L-033: concurrency in db  commands | isrowversion isconcurrencytoken | L-041: transaction patterns | L-040: transactions | L-061: EXECUTEASYNC | WITH NEW CONTEXT | PER RETRY PATTERN",
-      "coverage_status": "ef06a-optimistic-concurrency-and-db-constraints",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "Optimistic concurrency token / check-then-add race / constraints or isolation as protection.",
-      "review_notes": "Optimistic concurrency token / check-then-add race / constraints or isolation as protection."
+      "coverage_status": "processed-in-ef06a-v001",
+      "current_region_decision": "EF06A",
+      "decision_is_final": "yes-for-ef06a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06a-v001",
+      "decision_basis": "Included in EF06A v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06A v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-029",
@@ -446,12 +435,12 @@
       "width": "805",
       "height": "447",
       "nearest_labels_for_search_only": "L-036: about transactions isolation level for atomicity | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth | L-069: reading your own uncommited changes | L-034: dbcontext about transactions strategies | L-041: transaction patterns",
-      "coverage_status": "ef06b-transactions-and-isolation-levels",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
-      "review_notes": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted."
+      "coverage_status": "processed-in-ef06b-v001",
+      "current_region_decision": "EF06B",
+      "decision_is_final": "yes-for-ef06b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06b-v001",
+      "decision_basis": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-034",
@@ -560,12 +549,12 @@
       "width": "787",
       "height": "395",
       "nearest_labels_for_search_only": "L-036: about transactions isolation level for atomicity | L-069: reading your own uncommited changes | L-041: transaction patterns | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth | L-034: dbcontext about transactions strategies",
-      "coverage_status": "ef06b-transactions-and-isolation-levels",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
-      "review_notes": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted."
+      "coverage_status": "processed-in-ef06b-v001",
+      "current_region_decision": "EF06B",
+      "decision_is_final": "yes-for-ef06b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06b-v001",
+      "decision_basis": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-035",
@@ -598,12 +587,12 @@
       "width": "800",
       "height": "223",
       "nearest_labels_for_search_only": "L-036: about transactions isolation level for atomicity | L-041: transaction patterns | L-069: reading your own uncommited changes | L-035: so i have some scenarios when i may need some | transaction or when i may think that i need them | 1 when i query someth | L-062: PLAIN TRANSACTION WITH | BEGINTRANSACTION",
-      "coverage_status": "ef06b-transactions-and-isolation-levels",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
-      "review_notes": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted."
+      "coverage_status": "processed-in-ef06b-v001",
+      "current_region_decision": "EF06B",
+      "decision_is_final": "yes-for-ef06b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06b-v001",
+      "decision_basis": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-036",
@@ -636,12 +625,12 @@
       "width": "897",
       "height": "482",
       "nearest_labels_for_search_only": "L-041: transaction patterns | L-062: PLAIN TRANSACTION WITH | BEGINTRANSACTION | L-036: about transactions isolation level for atomicity | L-069: reading your own uncommited changes | L-055: Executeasync",
-      "coverage_status": "ef06b-transactions-and-isolation-levels",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted.",
-      "review_notes": "Explicit transactions, multiple SaveChanges, atomicity vs isolation, ReadCommitted/Snapshot/ReadUncommitted."
+      "coverage_status": "processed-in-ef06b-v001",
+      "current_region_decision": "EF06B",
+      "decision_is_final": "yes-for-ef06b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06b-v001",
+      "decision_basis": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06B v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-053",
@@ -1187,12 +1176,12 @@
       "width": "833",
       "height": "482",
       "nearest_labels_for_search_only": "L-119: place to catch codes | L-050: pos concurrency automatic, | not user view driven | retry logic | L-049: retry exception | L-048: db exceptions | concur | L-090: about code of sqlserver that are retryable by | default or not",
-      "coverage_status": "ef06c-db-exceptions-and-retry-strategy",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
-      "review_notes": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order."
+      "coverage_status": "processed-in-ef06c-v001",
+      "current_region_decision": "EF06C",
+      "decision_is_final": "yes-for-ef06c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06c-v001",
+      "decision_basis": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-063",
@@ -1206,12 +1195,12 @@
       "width": "912",
       "height": "391",
       "nearest_labels_for_search_only": "L-119: place to catch codes | L-049: retry exception | L-050: pos concurrency automatic, | not user view driven | retry logic | L-048: db exceptions | concur | L-092: !!!!",
-      "coverage_status": "ef06c-db-exceptions-and-retry-strategy",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
-      "review_notes": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order."
+      "coverage_status": "processed-in-ef06c-v001",
+      "current_region_decision": "EF06C",
+      "decision_is_final": "yes-for-ef06c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06c-v001",
+      "decision_basis": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-064",
@@ -1225,12 +1214,12 @@
       "width": "777",
       "height": "482",
       "nearest_labels_for_search_only": "L-119: place to catch codes | L-049: retry exception | L-050: pos concurrency automatic, | not user view driven | retry logic | L-051: have  entries in | dbupdateconcurex | can getdatabasevalues | with etag | and then update how you needed | L-122: setting orig values | ef will detect changes based | on the fact that | orig values are the values | in db | so if they ",
-      "coverage_status": "ef06c-db-exceptions-and-retry-strategy",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
-      "review_notes": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order."
+      "coverage_status": "processed-in-ef06c-v001",
+      "current_region_decision": "EF06C",
+      "decision_is_final": "yes-for-ef06c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06c-v001",
+      "decision_basis": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-065",
@@ -1244,12 +1233,12 @@
       "width": "700",
       "height": "482",
       "nearest_labels_for_search_only": "L-049: retry exception | L-119: place to catch codes | L-050: pos concurrency automatic, | not user view driven | retry logic | L-047: can we have exhaust check? | L-122: setting orig values | ef will detect changes based | on the fact that | orig values are the values | in db | so if they ",
-      "coverage_status": "ef06c-db-exceptions-and-retry-strategy",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
-      "review_notes": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order."
+      "coverage_status": "processed-in-ef06c-v001",
+      "current_region_decision": "EF06C",
+      "decision_is_final": "yes-for-ef06c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06c-v001",
+      "decision_basis": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript."
     },
     {
       "source_id": "S-061",
@@ -1263,12 +1252,12 @@
       "width": "961",
       "height": "465",
       "nearest_labels_for_search_only": "L-049: retry exception | L-119: place to catch codes | L-047: can we have exhaust check? | L-052: !!!! | L-053: !!!!",
-      "coverage_status": "ef06c-db-exceptions-and-retry-strategy",
-      "current_region_decision": "EF06",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef06-transcript",
-      "decision_basis": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order.",
-      "review_notes": "SaveChanges failures, transaction commit failures, RetryLimitExceededException, catch order."
+      "coverage_status": "processed-in-ef06c-v001",
+      "current_region_decision": "EF06C",
+      "decision_is_final": "yes-for-ef06c-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef06c-v001",
+      "decision_basis": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript.",
+      "review_notes": "Included in EF06C v001 after visual/semantic transcript pass inside combined EF06 transcript."
     }
   ]
 }

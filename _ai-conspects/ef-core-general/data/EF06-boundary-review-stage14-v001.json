@@ -1,0 +1,54 @@
+{
+  "generated": "2026-06-02 01:52:06 UTC",
+  "region_id": "EF06",
+  "region_name": "Transactions / concurrency / db exceptions / retry",
+  "boundary_status": "reviewed-and-transcribed-v001",
+  "combined_transcript_note": "Bigger step by request: EF06A/EF06B/EF06C are processed in one combined transcript file while preserving subregion boundaries.",
+  "included_sources": [
+    "S-047",
+    "S-048",
+    "S-049",
+    "S-050",
+    "S-051",
+    "S-052",
+    "S-062",
+    "S-063",
+    "S-064",
+    "S-065",
+    "S-061"
+  ],
+  "included_count": 11,
+  "subregions": {
+    "EF06A": {
+      "sources": [
+        "S-047",
+        "S-048"
+      ],
+      "meaning": "optimistic concurrency and check-then-add race"
+    },
+    "EF06B": {
+      "sources": [
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052"
+      ],
+      "meaning": "transactions, atomicity, isolation levels, ReadUncommitted"
+    },
+    "EF06C": {
+      "sources": [
+        "S-062",
+        "S-063",
+        "S-064",
+        "S-065",
+        "S-061"
+      ],
+      "meaning": "SaveChanges/commit/retry exceptions and catch order"
+    }
+  },
+  "open_issues": [
+    "S-048 has visible bottom continuation after the question, but visible answer is clear.",
+    "S-051/S-063/S-064/S-065 have small top crop/continuation or UI overlay; visible content is clear.",
+    "S-001 remains out-of-current-EFCore-scope from Stage10."
+  ]
+}

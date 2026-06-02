@@ -1,0 +1,35 @@
+{
+  "generated": "2026-06-02 01:52:06 UTC",
+  "region_id": "EF06",
+  "what_area_is_about": [
+    "optimistic concurrency and row-version/concurrency-token behavior",
+    "check-then-add races where parent concurrency only helps if the parent row is updated",
+    "using database constraints, transaction isolation, locking, or versioned parent updates to protect races",
+    "explicit transactions for grouping multiple SaveChanges calls atomically",
+    "difference between atomicity and isolation level",
+    "ReadCommitted, Snapshot, and ReadUncommitted semantics",
+    "SaveChanges exceptions, transaction commit failures, retry-limit exhaustion, and practical catch order"
+  ],
+  "key_ideas": [
+    "Without a configured concurrency token, EF usually does not throw a concurrency exception just because a row changed after it was read.",
+    "With a concurrency token, EF compares original and current token at SaveChanges and can throw DbUpdateConcurrencyException when row count is zero.",
+    "For check-then-add, parent-row concurrency only helps if the parent row participates in the update/version check.",
+    "Database constraints or explicit transaction/isolation/locking strategies often protect insert-child race scenarios.",
+    "Multiple SaveChanges calls need an explicit transaction to succeed/fail together.",
+    "Atomicity and isolation are separate concerns: transaction gives all-or-nothing, isolation controls visibility/concurrency semantics.",
+    "ReadCommitted is usually the default; Snapshot is a stronger design choice; ReadUncommitted allows dirty database reads and is not about EF in-memory changes.",
+    "Before SaveChanges, tracked changes exist only in EF memory, not in the database.",
+    "SaveChanges failures usually surface DbUpdateException or DbUpdateConcurrencyException, often with inner provider exceptions.",
+    "CommitAsync failures are often provider-level DbException/SqlException, not usually DbUpdateException.",
+    "RetryLimitExceededException represents execution strategy retry exhaustion; non-transient failures may surface the underlying exception instead."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "S-048 bottom continues after visible answer.",
+      "S-051/S-063/S-064 have top continuation crop.",
+      "S-065 has small top UI overlay but code is readable."
+    ],
+    "confidence": "High for source transcript, subregion boundaries, and combined EF06 closure."
+  }
+}

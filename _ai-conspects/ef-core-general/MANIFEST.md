@@ -1,15 +1,14 @@
-# MANIFEST - EF Core EF05C transcript
+# MANIFEST - EF Core EF06 combined transcript
 
-Archive type: **verified region transcript**  
+Archive type: **verified combined region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 01:12:54 UTC
+Generated: 2026-06-02 01:52:06 UTC
 
 ## Done
 
-- EF05B transcript existed.
-- This archive adds EF05C transcript.
-- Status: EF05C processed.
-- Parent EF05 is now closed.
+- EF05C transcript existed.
+- This archive adds combined EF06 transcript.
+- Status: EF06A/EF06B/EF06C processed.
 
 ## Now
 
@@ -18,29 +17,24 @@ Generated: 2026-06-02 01:12:54 UTC
 
 ## Next
 
-- EF06A transcript:
-  `S-047, S-048`.
-
-## Later
-
-- EF06B, EF06C.
+- Final closure/audit pass for `ef-core-general`.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/ef-core-general/13-stage13-ef05c-region-transcript.md
+_ai-conspects/ef-core-general/14-stage14-ef06-combined-transcript.md
 _ai-conspects/ef-core-general/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/ef-core-general/regions/EF05C-optional-value-objects-complex-types.md
+_ai-conspects/ef-core-general/regions/EF06-concurrency-transactions-exceptions-retry.md
 _ai-conspects/ef-core-general/regions/README.md
-_ai-conspects/ef-core-general/data/EF05C-sources-stage13-v001.csv
-_ai-conspects/ef-core-general/data/EF05C-sources-stage13-v001.json
-_ai-conspects/ef-core-general/data/EF05C-boundary-review-stage13-v001.csv
-_ai-conspects/ef-core-general/data/EF05C-boundary-review-stage13-v001.json
-_ai-conspects/ef-core-general/data/EF05C-area-understanding-stage13-v001.json
+_ai-conspects/ef-core-general/data/EF06-sources-stage14-v001.csv
+_ai-conspects/ef-core-general/data/EF06-sources-stage14-v001.json
+_ai-conspects/ef-core-general/data/EF06-boundary-review-stage14-v001.csv
+_ai-conspects/ef-core-general/data/EF06-boundary-review-stage14-v001.json
+_ai-conspects/ef-core-general/data/EF06-area-understanding-stage14-v001.json
 _ai-conspects/ef-core-general/data/image-review-ledger-v001.csv
 _ai-conspects/ef-core-general/data/image-review-ledger-v001.json
-_ai-conspects/ef-core-general/audit-assets/EF05C-source-images/*.png
-_ai-conspects/ef-core-general/audit-assets/EF05C-optional-value-object-complex-type-candidates-contact-sheet.png
+_ai-conspects/ef-core-general/audit-assets/EF06-source-images/*.png
+_ai-conspects/ef-core-general/audit-assets/EF06*.png
 _ai-conspects/ef-core-general/APPLY_ARCHIVE.md
 _ai-conspects/ef-core-general/MANIFEST.md
 ```
