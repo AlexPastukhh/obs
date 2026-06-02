@@ -1,50 +1,42 @@
-# MANIFEST - Stage2 NEXT01 full transcript
+# MANIFEST - Stage3 final closure audit
 
-Archive type: **verified transcript / full conspect batch**  
+Archive type: **final closure / audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 15:10:00 UTC
+Generated: 2026-06-02 15:16:08 UTC
 
 ## Done
 
-- NEXT01 full transcript created.
-- Processed source count: 41.
-- Processed regions: FV01, FV02, FV03, FV04, FV05, FV06, FV07.
-- Included text/context labels.
-- Boundary correction recorded: S-019 FV01 -> FV04.
-- Duplicate embedded-image use recorded: c76db004b8 = S-014 + S-041.
-- This archive intentionally does not duplicate Stage0 source PNGs.
+- Final closure audit created.
+- Status: `complete`.
+- Expected image uses: 41.
+- Processed image uses: 41.
+- Missing: 0.
+- Duplicates: 0.
+- Unreviewed: 0.
+- Candidate-only: 0.
+- Region mismatches: 0.
+- Subregion mismatches: 0.
+- Boundary correction S-019 verified: true.
+- Duplicate embedded-image use mismatch: false.
 
 ## Now
 
 - Apply and inspect cached diff.
-- Commit if transcript and boundary decisions are acceptable.
+- Commit if audit summary is acceptable.
 
 ## Next
 
-- Final closure/audit.
+- No next step inside this conspect.
+- Move to another conspect.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/fluent-validation/02-stage2-next01-full-transcript.md
+_ai-conspects/fluent-validation/03-stage3-final-closure-audit.md
 _ai-conspects/fluent-validation/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/fluent-validation/regions/FV01-regex-basic-validators.md
-_ai-conspects/fluent-validation/regions/FV02-collections-complex-properties.md
-_ai-conspects/fluent-validation/regions/FV03-conditional-validation-cascade-mode.md
-_ai-conspects/fluent-validation/regions/FV04-custom-validators-reusable-logic.md
-_ai-conspects/fluent-validation/regions/FV05-inheritance-validation.md
-_ai-conspects/fluent-validation/regions/FV06-rulesets-reuse-cautions.md
-_ai-conspects/fluent-validation/regions/FV07-throwing-exceptions-summary.md
 _ai-conspects/fluent-validation/regions/README.md
-_ai-conspects/fluent-validation/data/NEXT01-sources-stage2-v001.csv
-_ai-conspects/fluent-validation/data/NEXT01-sources-stage2-v001.json
-_ai-conspects/fluent-validation/data/NEXT01-text-context-stage2-v001.csv
-_ai-conspects/fluent-validation/data/NEXT01-text-context-stage2-v001.json
-_ai-conspects/fluent-validation/data/NEXT01-boundary-review-stage2-v001.csv
-_ai-conspects/fluent-validation/data/NEXT01-boundary-review-stage2-v001.json
-_ai-conspects/fluent-validation/data/NEXT01-area-understanding-stage2-v001.json
-_ai-conspects/fluent-validation/data/image-review-ledger-v001.csv
-_ai-conspects/fluent-validation/data/image-review-ledger-v001.json
+_ai-conspects/fluent-validation/data/final-coverage-audit-stage3-v001.csv
+_ai-conspects/fluent-validation/data/final-coverage-audit-stage3-v001.json
 _ai-conspects/fluent-validation/APPLY_ARCHIVE.md
 _ai-conspects/fluent-validation/MANIFEST.md
 ```

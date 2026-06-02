@@ -1,6 +1,6 @@
-# Apply archive: fluent-validation Stage2 NEXT01 full transcript
+# Apply archive: fluent-validation Stage3 final closure audit
 
-Archive type: verified transcript / full conspect batch.
+Archive type: final closure / audit.
 
 Target branch:
 
@@ -13,7 +13,7 @@ Use `tar.exe -xf` instead of PowerShell `Expand-Archive`.
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-fluent-validation-stage2-next01-full-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-fluent-validation-stage3-final-closure-audit-v001.zip
 ```
 
 ## Apply commands
@@ -23,8 +23,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\fluent-validation"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-fluent-validation-stage2-next01-full-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\fluent-validation-stage2-next01-full-transcript-cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-fluent-validation-stage3-final-closure-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\fluent-validation-stage3-final-closure-audit-cached.diff"
 
 git status --short
 
@@ -46,7 +46,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add fluent validation conspect NEXT01 transcript"
+git commit -m "Finalize fluent validation conspect audit"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,6 +60,4 @@ git clean -fd -- "$target"
 
 ## Notes
 
-This archive completes all image transcript regions for fluent-validation and does not duplicate Stage0 source images.
-
-Next step should be final closure/audit.
+This archive marks the fluent-validation conspect complete if the cached diff matches the audit summary.

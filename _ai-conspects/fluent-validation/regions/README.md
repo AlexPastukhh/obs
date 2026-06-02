@@ -1,5 +1,7 @@
 # Regions - fluent-validation
 
+Status: **complete**
+
 Verified transcripts:
 
 ```text
@@ -13,29 +15,17 @@ FV07 - Throwing exceptions and final summary
 FVTXT01 - Canvas-level module/reminder notes
 ```
 
-All Stage1 candidate image uses are now processed.
-
-Boundary correction from Stage1 candidate review:
+Final closure audit:
 
 ```text
-S-019: FV01 -> FV04
+Expected image uses: 41
+Processed image uses: 41
+Missing: 0
+Duplicates: 0
+Unreviewed: 0
+Candidate-only: 0
+Boundary correction S-019 verified: true
+Duplicate embedded-image use mismatch: false
 ```
 
-Duplicate embedded-image use:
-
-```text
-c76db004b8: S-014, S-041
-```
-
-Next step:
-
-```text
-Final closure/audit
-```
-
-Each transcript includes:
-
-```text
-## 0.1 Area overview / key ideas / reading quality
-## 0.2 Coverage / boundary review
-```
+No pending transcript regions remain.

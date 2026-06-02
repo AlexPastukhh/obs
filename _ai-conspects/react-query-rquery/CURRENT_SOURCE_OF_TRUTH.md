@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 15:14:15 UTC
+Generated: 2026-06-02 15:20:17 UTC
 
 ## Current policy
 
@@ -41,21 +41,20 @@ the source stays pending and must not be marked processed.
 
 ```text
 Stage4x bad archive: invalidated / do not use
+Stage4z corrected queue closure audit v001: completed
 Stage5d S261-S383 closure audit v001: completed
-Stage6a S384-S537 boundary review: completed
-Stage6b top technical transcript v001: completed
-Stage6c R20/R17B transcript v001: completed
-Stage6d remaining dense transcript v001: completed
 Stage6e S384-S537 closure audit v001: completed
+React Query final coverage audit v001: completed
 ```
 
 ## Current processing target
 
 ```text
-Stage6 S-384..S-537: closed
-Stage6b processed: 35
-Stage6c processed: 25
-Stage6d processed: 94
-Total audited: 154
-Next: next large logical block, boundary review first.
+React Query / rquery: closed
+Expected source records: 537
+Processed rows: 535
+Duplicate-use rows: 2
+Pending-like rows: 0
+Bad placeholder/OCR-error processed rows: 0
+Next: no further React Query transcript work unless precision patch is requested.
 ```

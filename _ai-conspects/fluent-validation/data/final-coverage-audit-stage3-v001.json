@@ -1,0 +1,295 @@
+{
+  "generated": "2026-06-02 15:16:08 UTC",
+  "stage": "3",
+  "audit_type": "final-closure-audit",
+  "status": "complete",
+  "coverage": {
+    "expected_image_uses": 41,
+    "ledger_rows": 41,
+    "processed_rows": 41,
+    "missing": [],
+    "duplicates": [],
+    "extra": [],
+    "unreviewed": [],
+    "candidate_only": []
+  },
+  "regions": {
+    "FV01": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018"
+      ]
+    },
+    "FV02": {
+      "expected": 9,
+      "actual": 9,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-013",
+        "S-014",
+        "S-041"
+      ]
+    },
+    "FV03": {
+      "expected": 6,
+      "actual": 6,
+      "sources": [
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012"
+      ]
+    },
+    "FV04": {
+      "expected": 7,
+      "actual": 7,
+      "sources": [
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025"
+      ]
+    },
+    "FV05": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-026",
+        "S-027",
+        "S-032"
+      ]
+    },
+    "FV06": {
+      "expected": 7,
+      "actual": 7,
+      "sources": [
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-033",
+        "S-034",
+        "S-035"
+      ]
+    },
+    "FV07": {
+      "expected": 5,
+      "actual": 5,
+      "sources": [
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040"
+      ]
+    }
+  },
+  "subregions": {
+    "FV01A": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-015",
+        "S-016"
+      ]
+    },
+    "FV01B": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-017",
+        "S-018"
+      ]
+    },
+    "FV02A": {
+      "expected": 6,
+      "actual": 6,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006"
+      ]
+    },
+    "FV02B": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-013",
+        "S-014",
+        "S-041"
+      ]
+    },
+    "FV03A": {
+      "expected": 5,
+      "actual": 5,
+      "sources": [
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011"
+      ]
+    },
+    "FV03B": {
+      "expected": 1,
+      "actual": 1,
+      "sources": [
+        "S-012"
+      ]
+    },
+    "FV04A": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-019",
+        "S-020",
+        "S-021"
+      ]
+    },
+    "FV04B": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025"
+      ]
+    },
+    "FV05A": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-026",
+        "S-027"
+      ]
+    },
+    "FV05B": {
+      "expected": 1,
+      "actual": 1,
+      "sources": [
+        "S-032"
+      ]
+    },
+    "FV06A": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031"
+      ]
+    },
+    "FV06B": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-033",
+        "S-034",
+        "S-035"
+      ]
+    },
+    "FV07A": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039"
+      ]
+    },
+    "FV07B": {
+      "expected": 1,
+      "actual": 1,
+      "sources": [
+        "S-040"
+      ]
+    }
+  },
+  "region_mismatches": {},
+  "subregion_mismatches": {},
+  "boundary_corrections": {
+    "expected": [
+      {
+        "source_id": "S-019",
+        "from": "FV01",
+        "to": "FV04"
+      }
+    ],
+    "s019_verified": true
+  },
+  "duplicate_embedded_image_uses": {
+    "expected": {
+      "c76db004b8": [
+        "S-014",
+        "S-041"
+      ]
+    },
+    "actual": {
+      "c76db004b8": [
+        "S-014",
+        "S-041"
+      ]
+    },
+    "mismatch": false
+  },
+  "text_context": {
+    "expected_text_labels": 25,
+    "actual_text_labels": 25,
+    "missing": [],
+    "duplicates": [],
+    "extra": []
+  },
+  "required_transcript_files": {
+    "checked": [
+      "02-stage2-next01-full-transcript.md",
+      "regions/FV01-regex-basic-validators.md",
+      "regions/FV02-collections-complex-properties.md",
+      "regions/FV03-conditional-validation-cascade-mode.md",
+      "regions/FV04-custom-validators-reusable-logic.md",
+      "regions/FV05-inheritance-validation.md",
+      "regions/FV06-rulesets-reuse-cautions.md",
+      "regions/FV07-throwing-exceptions-summary.md",
+      "data/NEXT01-sources-stage2-v001.csv",
+      "data/NEXT01-sources-stage2-v001.json",
+      "data/NEXT01-boundary-review-stage2-v001.csv",
+      "data/NEXT01-boundary-review-stage2-v001.json",
+      "data/NEXT01-area-understanding-stage2-v001.json",
+      "data/NEXT01-text-context-stage2-v001.csv",
+      "data/NEXT01-text-context-stage2-v001.json",
+      "data/image-review-ledger-v001.csv",
+      "data/image-review-ledger-v001.json"
+    ],
+    "missing": []
+  },
+  "verified_transcripts": {
+    "FV01": "Regex and built-in string/basic validators",
+    "FV02": "Validating collections and complex child properties",
+    "FV03": "Conditional validation, dependent rules and cascade mode",
+    "FV04": "Custom validators, reusable validation logic and validator dependencies",
+    "FV05": "Inheritance validation",
+    "FV06": "Rule sets and validator reuse/data-contract cautions",
+    "FV07": "Throwing exceptions and final summary",
+    "FVTXT01": "Canvas-level module/reminder notes"
+  },
+  "conclusion": "All image uses are processed and the conspect can be marked complete."
+}

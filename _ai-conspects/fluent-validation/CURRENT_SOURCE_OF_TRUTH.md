@@ -1,13 +1,34 @@
 # Current Source of Truth - fluent-validation
 
-Generated: 2026-06-02 15:10:00 UTC
+Generated: 2026-06-02 15:16:08 UTC
 
 ## Current status
 
 ```text
+Status: complete
+
 Stage0: source materialized
 Stage1: boundary review done
 Stage2: NEXT01 full transcript done
+Stage3: final closure/audit done
+```
+
+## Final coverage
+
+```text
+Expected image uses: 41
+Processed image uses: 41
+Missing: 0
+Duplicates: 0
+Extra: 0
+Unreviewed: 0
+Candidate-only: 0
+Region mismatches: 0
+Subregion mismatches: 0
+Boundary correction S-019 verified: true
+Duplicate embedded-image use mismatch: false
+Text labels missing: 0
+Required transcript files missing: 0
 ```
 
 ## Verified transcripts
@@ -23,12 +44,6 @@ FV07: Throwing exceptions and final summary
 FVTXT01: Canvas-level module/reminder notes
 ```
 
-## Current candidate regions
-
-```text
-none
-```
-
 ## Boundary corrections
 
 ```text
@@ -41,18 +56,16 @@ S-019: Stage1 candidate FV01 -> Stage2 verified FV04
 c76db004b8: S-014, S-041
 ```
 
+## Current candidate regions
+
+```text
+none
+```
+
 ## Current next step
 
 ```text
-Final closure/audit
-```
-
-## Counts
-
-```text
-Image uses: 41
-Processed image uses: 41
-Text labels: 25
+none for this conspect
 ```
 
 ## Rules

@@ -1,36 +1,37 @@
-# MANIFEST - React Query Stage6e Closure Audit
+# MANIFEST - React Query Final Coverage Audit
 
-Archive type: **closure audit**  
+Archive type: **final coverage audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 15:14:15 UTC
+Generated: 2026-06-02 15:20:17 UTC
 
 ## Direction check
 
 Goal:
-Close Stage6 S-384..S-537.
+Close React Query / rquery after all stage-level closure audits.
 
 Done:
-Stage6b, Stage6c, and Stage6d processed all 154 sources.
+Stage4z, Stage5d, and Stage6e closure audits are complete.
 
 This step:
-Add Stage6e closure audit.
+Add final coverage audit for the full ledger.
 
 Why:
-The 94-image Stage6d pass must be closed with a full audit before the next block.
+The full source range must be checked once at project level before the conspect is considered closed.
 
 Next:
 1. review staged/cached diff;
 2. commit;
-3. start next large logical block with boundary review first.
+3. stop React Query transcription work unless a precision patch is needed.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/49-stage6e-s384-s537-closure-audit.md
+_ai-conspects/react-query-rquery/50-final-react-query-coverage-audit.md
 _ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/react-query-rquery/data/Stage6-S384-S537-closure-audit-stage6e-v001.csv
-_ai-conspects/react-query-rquery/data/Stage6-S384-S537-closure-audit-stage6e-v001.json
-_ai-conspects/react-query-rquery/data/Stage6-local-boundary-corrections-audit-stage6e-v001.csv
+_ai-conspects/react-query-rquery/data/ReactQuery-final-coverage-audit-v001.csv
+_ai-conspects/react-query-rquery/data/ReactQuery-final-coverage-audit-v001.json
+_ai-conspects/react-query-rquery/data/ReactQuery-final-closure-chain-check-v001.csv
+_ai-conspects/react-query-rquery/data/ReactQuery-final-guard-files-check-v001.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
 _ai-conspects/react-query-rquery/MANIFEST.md
@@ -40,8 +41,10 @@ _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage6 sources audited: 154 / 154
-Pending Stage6a candidates: 0
-Local boundary corrections OK: yes
-Next: next boundary review
+Final verdict: React Query transcription coverage is complete
+Expected source records: 537
+Processed rows: 535
+Duplicate-use rows: 2
+Pending-like rows: 0
+Bad placeholder/OCR-error processed rows: 0
 ```
