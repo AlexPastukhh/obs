@@ -1,6 +1,6 @@
 # Current Source of Truth - ChangeTracker
 
-Generated: 2026-06-02 14:38:25 UTC
+Generated: 2026-06-02 15:02:40 UTC
 
 ## Policy
 
@@ -17,33 +17,28 @@ R01 correction: S001-S003 ChangeTracker overview/core members v002 done
 R02 EntityEntry properties/methods/query/navigation/value APIs: transcript v001 done
 R03 TrackGraph / NodeState / member API helpers: transcript v001 done
 R04 ChangeTracker events / Tracking / Tracked / state changes: transcript v001 done
-Final coverage audit: next
+Final coverage audit: done
 ```
 
-## Stage3 boundary decisions
+## Final audit verdict
 
 ```text
-R03 included:
-23 image uses
-
-R04 included:
-20 image uses
-
-Checked-not-reprocessed:
-S-081, S-082
+total image uses: 164
+covered image uses: 164
+problem image uses: 0
+verdict: coverage-complete
 ```
 
-## Current split policy
+## Closure note
+
+```text
+The changetracker conspect is complete unless later manual review finds a concrete transcript-quality issue or a specific misassigned image.
+```
+
+## Current split policy for future conspects
 
 ```text
 Default: 50-80 images.
 Can be bigger: 80-120 if the road is coherent.
 Exception: 120+ only on explicit request or one very cohesive road.
-```
-
-## Next pass
-
-```text
-Final coverage audit:
-verify every known image use is processed/corrected/recorded and no candidate-needs-boundary-review remains.
 ```

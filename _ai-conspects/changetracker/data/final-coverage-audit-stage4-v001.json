@@ -1,0 +1,34 @@
+{
+  "generated": "2026-06-02 15:02:40 UTC",
+  "audit_version": "stage4-final-coverage-audit-v001",
+  "conspect": "changetracker",
+  "verdict": "coverage-complete",
+  "total_image_uses": 164,
+  "covered_image_uses": 164,
+  "problem_image_uses": 0,
+  "coverage_status_counts": {
+    "processed-in-r02-v001": 67,
+    "processed-in-r01-v001": 51,
+    "processed-in-r03-v001": 23,
+    "processed-in-r04-v001": 20,
+    "processed-in-r01-v002-correction": 3
+  },
+  "region_counts": {
+    "R02": 67,
+    "R01": 54,
+    "R03": 23,
+    "R04": 20
+  },
+  "expected_region_shape": {
+    "R01": "ChangeTracker core methods / detection / cascade / debug behavior plus S001-S003 correction",
+    "R02": "EntityEntry properties / methods / query / navigation / value APIs",
+    "R03": "TrackGraph / NodeState / member API helpers",
+    "R04": "ChangeTracker events / Tracking / Tracked / StateChanging / StateChanged"
+  },
+  "notes": [
+    "Inventory/ledger is a checklist, not source of truth; transcript ownership was determined by boundary review.",
+    "The final audit verifies that every known image use is now processed by a region or correction.",
+    "No candidate/reserved/pending image uses remain if problem_image_uses is 0."
+  ],
+  "problem_rows": []
+}
