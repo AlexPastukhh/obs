@@ -1,0 +1,91 @@
+{
+  "generated": "2026-06-02 08:43:38 UTC",
+  "policy": "This split plan is a checklist for transcript planning, not source of truth. Each region still needs boundary review before transcript.",
+  "default_batching": "60-100 images per transcript pass; larger passes allowed only if coherent and readable.",
+  "rows": [
+    {
+      "region_id": "R01",
+      "region_slug": "shouldhandle-delay-generator-context-properties-nesting-left",
+      "title": "ShouldHandle / delay generator / request context / nesting left road",
+      "x_min": "",
+      "x_max": 6500,
+      "image_use_count": 16,
+      "label_count": 9,
+      "source_id_range": "S-004..S-116",
+      "sample_labels": "nesting | setting properties | args args in shouldhandle | why do we need to attach request to context | delay generator, way to fallback to defaults | need to think about nesting in polly like that | whe nsomeything has multiple retries or hedge attempts | and we put something inside - we wrap each retry with one bulhead | and all retries affect bulkhead",
+      "notes": "Left-side policy option mechanics: ShouldHandle args, delay generator fallback, request context attachment, setting properties, nesting notes."
+    },
+    {
+      "region_id": "R02",
+      "region_slug": "new-standard-custom-hedging-testing",
+      "title": "New standard vs custom / hedging / testing road",
+      "x_min": 6500,
+      "x_max": 11000,
+      "image_use_count": 26,
+      "label_count": 6,
+      "source_id_range": "S-006..S-167",
+      "sample_labels": "custom | new standart vs custom | hedging priciple of work | SETTING TRUE/FALSE | BASED ON REQUEST METHOD | need to use pipeline excplicitly with pipeline provider",
+      "notes": "New Polly standard/custom choices, hedging principle of work, testing-oriented examples."
+    },
+    {
+      "region_id": "R03",
+      "region_slug": "pipeline-execute-rate-limiter-partitions",
+      "title": "Pipeline.Execute / provider / RateLimiter / partitions road",
+      "x_min": 11000,
+      "x_max": 16500,
+      "image_use_count": 62,
+      "label_count": 33,
+      "source_id_range": "S-013..S-186",
+      "sample_labels": "for testing | !!! | conditional rate limiting | making request with pipeline.execute | if want to pass | someting into context | ratelimiterstrategy args | rate limiter in polly | concur vs addratelimiter | and ratelimiterstrat options | ratelimiterpartition and partitioned rate limiter | 3 scenarios",
+      "notes": "Manual pipeline execution, context passing, rate limiter strategy args, RateLimitPartition, partitioned/chained limiters, conditional rate limiting."
+    },
+    {
+      "region_id": "R04",
+      "region_slug": "manual-execution-provider-classic-vs-new-polly",
+      "title": "Manual execution / custom pipeline provider / classic-vs-new Polly road",
+      "x_min": 16500,
+      "x_max": 21100,
+      "image_use_count": 27,
+      "label_count": 15,
+      "source_id_range": "S-001..S-180",
+      "sample_labels": "classic | classic polly transient failures | new polly | vs httprequest exception | manual executiong | custom pipeline | + | provider | passing context to | classic polly | getting pipeline from registry",
+      "notes": "Custom pipeline + provider, manual execution, passing context, choosing pipelines based on request/options, classic vs new Polly transient failure mapping."
+    },
+    {
+      "region_id": "R05",
+      "region_slug": "classic-extensions-cheatsheet-examples",
+      "title": "Classic Polly extensions / HttpPolicyExtensions / examples road",
+      "x_min": 21100,
+      "x_max": 25500,
+      "image_use_count": 18,
+      "label_count": 11,
+      "source_id_range": "S-012..S-125",
+      "sample_labels": "extensions | examples | cheat sheet | !!! | classic polly httppolicyextensions | 1what counts as  transient http failure | 2 transient status codes (when have your own exception handling) | 3 attach around httpclient with confiigured trans errors handling | 4 registry",
+      "notes": "Classic Polly HttpPolicyExtensions, transient HTTP failures, registry/examples, cheat sheet notes."
+    },
+    {
+      "region_id": "R06",
+      "region_slug": "exceptions-bubbling-newer-handling",
+      "title": "Exception bubbling / newer Polly exception handling road",
+      "x_min": 25500,
+      "x_max": 29600,
+      "image_use_count": 25,
+      "label_count": 8,
+      "source_id_range": "S-017..S-174",
+      "sample_labels": "!!!! | exception bubbling | choosing pipelines based on something | theory | exception bubling | outer starts call inner one, not throw to inner | so cant tell inner starts to not handle ex from outer because ex | bubble fro miner to outer and outer just call inner ones",
+      "notes": "Exception bubbling between strategies, newer exception handling, how pipeline exceptions propagate."
+    },
+    {
+      "region_id": "R07",
+      "region_slug": "production-ready-full-cheatsheet-exception-mapping",
+      "title": "Production-ready full cheat sheet / exception mapping road",
+      "x_min": 29600,
+      "x_max": "",
+      "image_use_count": 12,
+      "label_count": 101,
+      "source_id_range": "S-014..S-139",
+      "sample_labels": "shared impl | mapping | in newer | Exception handling | using Polly; | using Polly.Timeout; | using Polly.Bulkhead; | using Polly.CircuitBreaker; | using Polly.Retry; | using Polly.Wrap; | using Polly.Extensions.Http; | using System.Net;",
+      "notes": "Large code cheat sheet, production-ready policy wrap, exception handling mapping and code snippets."
+    }
+  ]
+}
