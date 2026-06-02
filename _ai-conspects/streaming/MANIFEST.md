@@ -1,28 +1,32 @@
-# MANIFEST - Streaming R04 overlap coverage correction v003
+# MANIFEST - Streaming R06 transcript v001
 
-Archive type: **stage-5 R04 coverage correction found during R05 precheck**  
+Archive type: **stage-7 verified region transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-01 23:36:11 UTC
+Generated: 2026-06-01 23:52:39 UTC
 
 ## Done
 
-- R05 boundary precheck started.
-- R04-owned overlap was found in the R05 coordinate band.
-- `S-163/S-165` added as unique R04 transcript sources.
-- `S-166-S176` recorded as duplicate image uses of already-transcribed R04 material.
-- R05 remains next.
+- R06 transcript created.
+- 10 unique sources included.
+- 1 duplicate/fragment source recorded: `S-083`.
+- `S-057/S-058` checked and confirmed as R02-owned.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/streaming/regions/R04-iasyncenumerable-ndjson-flushasync.md
-_ai-conspects/streaming/data/R04-overlap-coverage-correction-stage5-v003.csv
-_ai-conspects/streaming/data/R04-overlap-coverage-correction-stage5-v003.json
+_ai-conspects/streaming/regions/R06-streaming-benefits-memory-mental-model.md
+_ai-conspects/streaming/data/R06-sources-stage7-v001.csv
+_ai-conspects/streaming/data/R06-sources-stage7-v001.json
+_ai-conspects/streaming/data/R06-boundary-review-stage7-v001.csv
+_ai-conspects/streaming/data/R06-boundary-review-stage7-v001.json
+_ai-conspects/streaming/data/R06-area-understanding-stage7-v001.json
 _ai-conspects/streaming/data/image-review-ledger-v001.csv
 _ai-conspects/streaming/data/image-review-ledger-v001.json
-_ai-conspects/streaming/audit-assets/R04-v003-overlap-found-during-R05-boundary-contact-sheet.png
-_ai-conspects/streaming/audit-assets/R04-v003-overlap-source-images/*.png
-_ai-conspects/streaming/05-stage5-r04-overlap-coverage-correction-v003.md
+_ai-conspects/streaming/audit-assets/R06-stage0-candidate-contact-sheet.png
+_ai-conspects/streaming/audit-assets/R06-transcript-included-contact-sheet.png
+_ai-conspects/streaming/audit-assets/R06-source-images/*.png
+_ai-conspects/streaming/audit-assets/R06-checked-excluded-source-images/*.png
+_ai-conspects/streaming/07-stage7-r06-streaming-benefits-transcript.md
 _ai-conspects/streaming/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/streaming/MANIFEST.md
 _ai-conspects/streaming/APPLY_ARCHIVE.md
@@ -30,4 +34,4 @@ _ai-conspects/streaming/APPLY_ARCHIVE.md
 
 ## Next
 
-R05 transcript after local boundary review, now excluding the R04 v003 tail.
+Final streaming coverage audit.

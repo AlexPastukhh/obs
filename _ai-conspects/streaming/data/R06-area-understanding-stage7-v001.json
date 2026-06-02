@@ -1,0 +1,33 @@
+{
+  "region_id": "R06",
+  "region_name": "streaming benefits / memory / mental model",
+  "stage": "7-v001",
+  "generated": "2026-06-01 23:52:39 UTC",
+  "what_area_is_about": [
+    "when streaming helps or hurts performance",
+    "stream creation/disposal overhead",
+    "memory stability and avoiding large buffers/intermediates",
+    "garbage collection and LOH/Gen2 pressure",
+    "rules of thumb for when streaming is worth it",
+    "mental model separating Stream, IAsyncEnumerable<T>, and StreamContent"
+  ],
+  "key_ideas": [
+    "Streaming is not automatically faster; streams allocate, wrap layers, and disposal can do work.",
+    "Streaming is useful when it prevents large memory buffers, memory spikes, and GC pressure.",
+    "Large payloads, high concurrency, and incremental processing are strong streaming use cases.",
+    "Small CRUD JSON and cases where the full object graph is needed usually do not benefit enough.",
+    "ResponseHeadersRead + ReadAsStreamAsync is byte-level response streaming.",
+    "IAsyncEnumerable<T> is object-level async item production/consumption.",
+    "StreamContent is request-body byte streaming for uploads.",
+    "These can be combined, but they are not the same concept."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_readability": "high, except S-083 partial duplicate fragment",
+    "spatial_layout_understanding": "high after R01-R05 completion and R06 boundary recheck",
+    "limitations": [
+      "S-083 is a cropped duplicate/fragment of S-076, recorded for coverage."
+    ],
+    "confidence_summary": "High for R06 benefits/performance/mental model content."
+  }
+}

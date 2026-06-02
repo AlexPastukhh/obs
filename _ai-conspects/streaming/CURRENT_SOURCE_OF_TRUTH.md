@@ -1,6 +1,6 @@
 # Current Source of Truth - Streaming
 
-Generated: 2026-06-01 23:36:11 UTC
+Generated: 2026-06-01 23:52:39 UTC
 
 ## Policy
 
@@ -15,14 +15,15 @@ R01 streaming bytes / stream concept basics: transcript v001 done
 R02 reading response stream / payload bytes: transcript v001 done
 R03 streaming objects / async iteration / REST API concerns: transcript v001 done
 R04 IAsyncEnumerable / NDJSON / FlushAsync: transcript v003 coverage correction done
-R05 SSE / EventSource / writer / heartbeat / reconnect: next
+R05 SSE / EventSource / writer / heartbeat / reconnect: transcript v001 done
+R06 streaming benefits / memory / mental model: transcript v001 done
+Final streaming coverage audit: next
 ```
 
-## R04 v003 note
+## R06 note
 
 ```text
-R05 boundary precheck found an R04-owned manual-writing/FlushAsync tail in the R05 coordinate band.
-S-163/S-165 were added to R04.
-S-166-S176 were recorded as duplicate image uses of already-transcribed R04 material.
-R05 should now continue with SSE/EventSource-specific sources only.
+R06 closes lower-tail benefits, memory/GC tradeoffs, when streaming is worth it, and concrete mental model distinctions.
+S-083 is a duplicate/fragment image use of S-076 and is recorded for coverage.
+S-057/S-058 were checked and remain R02-owned.
 ```

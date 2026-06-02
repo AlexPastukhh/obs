@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-01 23:52:39 UTC",
+  "region_id": "R06",
+  "region_name": "streaming benefits / memory / mental model / lower-tail questions",
+  "boundary_status": "complete-v001",
+  "included_or_recorded_sources": [
+    "S-069",
+    "S-070",
+    "S-071",
+    "S-073",
+    "S-072",
+    "S-074",
+    "S-075",
+    "S-076",
+    "S-083",
+    "S-077",
+    "S-078"
+  ],
+  "unique_sources_count": 10,
+  "duplicate_fragment_recorded": [
+    "S-083"
+  ],
+  "checked_excluded_or_previously_processed": [
+    {
+      "source_id": "S-057",
+      "decision": "not-r06-owned",
+      "target_region": "R02",
+      "reason": "Already processed in R02 v001; MemoryStream/send payload guidance belongs to response/payload/request-body stream road, not lower-tail benefits."
+    },
+    {
+      "source_id": "S-058",
+      "decision": "not-r06-owned",
+      "target_region": "R02",
+      "reason": "Already processed in R02 v001; small-payload MemoryStream warning belongs with payload/body stream guidance."
+    }
+  ],
+  "important_note": "S-083 is a partial duplicate fragment of S-076; it is recorded for coverage rather than treated as new unique content. S-057/S-058 were already handled by R02.",
+  "next_after_r06": "final streaming coverage audit"
+}

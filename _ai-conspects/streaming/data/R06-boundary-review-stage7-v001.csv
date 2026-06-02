@@ -1,0 +1,14 @@
+source_id,decision,target_region,reason
+S-069,included-or-recorded-in-r06-v001,R06,Heading/slide opener for R06 lower-tail benefits and performance tradeoffs.
+S-070,included-or-recorded-in-r06-v001,R06,Second opener slide: balancing stream overhead against lower memory/GC pressure.
+S-071,included-or-recorded-in-r06-v001,R06,Explains negative side: streaming has allocation/layer/disposal costs.
+S-073,included-or-recorded-in-r06-v001,R06,Explains main positive side: streaming avoids large buffers/intermediates.
+S-072,included-or-recorded-in-r06-v001,R06,Connects memory reduction to GC and throughput/latency benefits.
+S-074,included-or-recorded-in-r06-v001,R06,R06 decision heuristic: large/high-concurrency/incremental vs small/simple/need-whole-object.
+S-075,included-or-recorded-in-r06-v001,R06,Bridging/source-of-confusion slide that ties together R02/R03/R04/R05 concepts.
+S-076,included-or-recorded-in-r06-v001,R06,"Answers questions about differences between response body stream, object stream, and request upload stream."
+S-083,included-or-recorded-in-r06-v001,R06,Partial duplicate/fragment of R06-S008. Recorded so this image use is not lost.
+S-077,included-or-recorded-in-r06-v001,R06,Completes the direct Q&A with distinction between request body byte stream and object enumeration.
+S-078,included-or-recorded-in-r06-v001,R06,Final R06 conceptual synthesis.
+S-057,not-r06-owned,R02,"Already processed in R02 v001; MemoryStream/send payload guidance belongs to response/payload/request-body stream road, not lower-tail benefits."
+S-058,not-r06-owned,R02,Already processed in R02 v001; small-payload MemoryStream warning belongs with payload/body stream guidance.
