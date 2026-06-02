@@ -1,35 +1,37 @@
-# MANIFEST - Auth/OIDC/Auth Events Stage0 Boundary Review v001
+# MANIFEST - Auth/OIDC/Auth Events R01 Transcript v001
 
-Archive type: **stage0 boundary review / split plan**  
+Archive type: **stage-1 verified combined transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 00:10:40 UTC
+Generated: 2026-06-02 01:15:16 UTC
 
 ## Done
 
-- Parsed uploaded SVG.
-- Extracted 324 unique embedded images.
-- Recorded 325 image uses.
-- Parsed 142 labels.
-- Created combined-pass split plan.
+- R01 combined transcript created.
+- 81 image uses included.
+- Checked neighboring OIDC/JWT outcome images and reserved them for later pass.
 
-## Files included
+## Files included / updated
 
 ```text
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/00-stage0-boundary-review-and-split-plan.md
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/regions/R01-base-auth-middleware-service-forwarding.md
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/R01-sources-stage1-v001.csv
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/R01-sources-stage1-v001.json
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/R01-boundary-review-stage1-v001.csv
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/R01-boundary-review-stage1-v001.json
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/R01-area-understanding-stage1-v001.json
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/image-review-ledger-v001.csv
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/image-review-ledger-v001.json
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/audit-assets/contact-sheet-P01-R01-base-auth-and-forwarding.png
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/audit-assets/contact-sheet-R01A-base-middleware-auth-service-handlers.png
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/audit-assets/contact-sheet-R01B-forwarding-challenge-forbid-basics.png
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/audit-assets/R01-source-images/*.png
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/audit-assets/R01-checked-excluded-images/*.png
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/01-stage1-r01-base-auth-forwarding-transcript.md
 _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/image-uses-stage0.csv
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/image-uses-stage0.json
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/svg-labels-stage0.csv
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/svg-labels-stage0.json
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/region-split-plan-stage0.csv
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/data/region-split-plan-stage0.json
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/source/full.svg
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/source/images/*.png
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/audit-assets/*.png
-_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/APPLY_ARCHIVE.md
 _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/MANIFEST.md
+_ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events/APPLY_ARCHIVE.md
 ```
 
 ## Next
 
-R01 combined transcript after local boundary review.
+P02/R02 cookie auth core + events.

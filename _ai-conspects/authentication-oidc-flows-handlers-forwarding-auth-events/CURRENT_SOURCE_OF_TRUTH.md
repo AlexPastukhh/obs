@@ -1,6 +1,6 @@
 # Current Source of Truth - Authentication / OIDC / Flows / Handlers / Forwarding / Auth Events
 
-Generated: 2026-06-02 00:10:40 UTC
+Generated: 2026-06-02 01:15:16 UTC
 
 ## Policy
 
@@ -12,20 +12,14 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-Next: R01 combined transcript after local boundary recheck
+R01 base auth middleware / AuthenticationService / forwarding basics: transcript v001 done
+P02/R02 cookie auth core + events: next
 ```
 
-## Current split policy
+## R01 note
 
 ```text
-This conspect is larger than streaming.
-We can process multiple adjacent subareas per archive, target ~70-105 image uses.
-Do not process a large pass if contact sheet shows mixed unrelated roads.
-```
-
-## Next pass
-
-```text
-P01 / R01:
-base auth middleware + AuthenticationService + scheme/handler providers + forwarding/challenge/forbid basics
+R01 used a larger combined pass: 81 image uses.
+It covers base authentication middleware, AuthenticationService, scheme/handler providers, forwarding, challenge, forbid, sign-in/sign-out basics.
+S-077-S087/S-091 and S-092-S100 were checked as neighboring OIDC/JWT outcome material and reserved for later P04/R03B-R04.
 ```

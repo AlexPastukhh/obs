@@ -1,0 +1,932 @@
+{
+  "generated": "2026-06-02 01:15:16 UTC",
+  "region_id": "R01",
+  "pass_id": "P01-R01-base-auth-and-forwarding",
+  "status": "completed-with-local-boundary-review",
+  "included_count": 81,
+  "included_sources": [
+    "S-299",
+    "S-300",
+    "S-020",
+    "S-001",
+    "S-021",
+    "S-037",
+    "S-039",
+    "S-035",
+    "S-022",
+    "S-002",
+    "S-038",
+    "S-036",
+    "S-003",
+    "S-031",
+    "S-030",
+    "S-004",
+    "S-032",
+    "S-034",
+    "S-029",
+    "S-033",
+    "S-005",
+    "S-026",
+    "S-024",
+    "S-006",
+    "S-027",
+    "S-023",
+    "S-025",
+    "S-028",
+    "S-007",
+    "S-008",
+    "S-009",
+    "S-010",
+    "S-011",
+    "S-012",
+    "S-013",
+    "S-014",
+    "S-043",
+    "S-015",
+    "S-044",
+    "S-016",
+    "S-042",
+    "S-017",
+    "S-045",
+    "S-065",
+    "S-041",
+    "S-018",
+    "S-046",
+    "S-040",
+    "S-066",
+    "S-019",
+    "S-047",
+    "S-067",
+    "S-048",
+    "S-064",
+    "S-053",
+    "S-050",
+    "S-049",
+    "S-051",
+    "S-054",
+    "S-052",
+    "S-055",
+    "S-056",
+    "S-068",
+    "S-059",
+    "S-069",
+    "S-060",
+    "S-070",
+    "S-061",
+    "S-071",
+    "S-062",
+    "S-072",
+    "S-063",
+    "S-057",
+    "S-088",
+    "S-073",
+    "S-089",
+    "S-058",
+    "S-074",
+    "S-075",
+    "S-090",
+    "S-076"
+  ],
+  "checked_exclusions": [
+    "S-077",
+    "S-078",
+    "S-079",
+    "S-080",
+    "S-081",
+    "S-082",
+    "S-083",
+    "S-084",
+    "S-085",
+    "S-086",
+    "S-087",
+    "S-091",
+    "S-092",
+    "S-093",
+    "S-094",
+    "S-095",
+    "S-096",
+    "S-097",
+    "S-098",
+    "S-099",
+    "S-100"
+  ],
+  "rule": "Stage0 inventory is checklist only; R01 ownership was decided by visual/semantic boundary review.",
+  "rows": [
+    {
+      "source_id": "S-299",
+      "fileId_short": "d395b86f3c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "UseAuthentication / AuthenticationMiddleware entry point",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-300",
+      "fileId_short": "a82a739377",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "UseAuthentication / AuthenticationMiddleware entry point",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-020",
+      "fileId_short": "17852964fb",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationMiddleware context and default-auth flow sketch",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-001",
+      "fileId_short": "66dd53e7f8",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "UseAuthentication / AuthenticationMiddleware entry point",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-021",
+      "fileId_short": "1a94998582",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationMiddleware context and default-auth flow sketch",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-037",
+      "fileId_short": "9860304323",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "special/request handlers and HandleRequestAsync short-circuit",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-039",
+      "fileId_short": "7d74582b40",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "special/request handlers and HandleRequestAsync short-circuit",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-035",
+      "fileId_short": "98308754b2",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "special/request handlers and HandleRequestAsync short-circuit",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-022",
+      "fileId_short": "6b9e77f242",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationMiddleware context and default-auth flow sketch",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-002",
+      "fileId_short": "89edc9a877",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "UseAuthentication / AuthenticationMiddleware entry point",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-038",
+      "fileId_short": "00c04ce2d4",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "special/request handlers and HandleRequestAsync short-circuit",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-036",
+      "fileId_short": "dc7d9b7c5b",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "special/request handlers and HandleRequestAsync short-circuit",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-003",
+      "fileId_short": "e4a50dea2a",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "UseAuthentication / AuthenticationMiddleware entry point",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-031",
+      "fileId_short": "37383f13b0",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationMiddleware context and default-auth flow sketch",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-030",
+      "fileId_short": "6a9f996bc0",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationMiddleware context and default-auth flow sketch",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-004",
+      "fileId_short": "58d7299b32",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "UseAuthentication / AuthenticationMiddleware entry point",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-032",
+      "fileId_short": "b59d4d01b3",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-034",
+      "fileId_short": "891f8b55ef",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-029",
+      "fileId_short": "22eac6fec2",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationMiddleware context and default-auth flow sketch",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-033",
+      "fileId_short": "fbf77db651",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-005",
+      "fileId_short": "280eabcaea",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationService.AuthenticateAsync and operation service methods",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-026",
+      "fileId_short": "13f376afbf",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-024",
+      "fileId_short": "9e4acf2aa3",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-006",
+      "fileId_short": "b66210c4a8",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationService.AuthenticateAsync and operation service methods",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-027",
+      "fileId_short": "812189a7c5",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-023",
+      "fileId_short": "62f8e8d3d8",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-025",
+      "fileId_short": "00de58172e",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-028",
+      "fileId_short": "2033d2b11d",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Auth service, scheme provider, handler provider flow diagram/code",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-007",
+      "fileId_short": "93a6709164",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationService.AuthenticateAsync and operation service methods",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-008",
+      "fileId_short": "17926e5788",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationSchemeProvider defaults and fallback scheme resolution",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-009",
+      "fileId_short": "a0fbfd24c7",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationSchemeProvider defaults and fallback scheme resolution",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-010",
+      "fileId_short": "5b3dd95c3d",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationSchemeProvider defaults and fallback scheme resolution",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-011",
+      "fileId_short": "5aef5dde78",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationHandlerProvider and handler initialization/cache",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-012",
+      "fileId_short": "e4cb6f9991",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationHandlerProvider and handler initialization/cache",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-013",
+      "fileId_short": "85c44f86bd",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "AuthenticationHandlerProvider and handler initialization/cache",
+      "initial_subregion": "R01A-base-middleware-auth-service-handlers"
+    },
+    {
+      "source_id": "S-014",
+      "fileId_short": "bc639a8620",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "forwarding/challenge/forbid basics",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-043",
+      "fileId_short": "6d3e5555d8",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding internals: ResolveTarget, InitializeAsync, ForwardAuthenticate",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-015",
+      "fileId_short": "032da4b0a7",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "forwarding/challenge/forbid basics",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-044",
+      "fileId_short": "dbbe2cc3d5",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding internals: ResolveTarget, InitializeAsync, ForwardAuthenticate",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-016",
+      "fileId_short": "01b1ddd76c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "forwarding/challenge/forbid basics",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-042",
+      "fileId_short": "e4b5c4c722",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding internals: ResolveTarget, InitializeAsync, ForwardAuthenticate",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-017",
+      "fileId_short": "b26255cf0c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "forwarding/challenge/forbid basics",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-045",
+      "fileId_short": "e9282024a0",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding internals: ResolveTarget, InitializeAsync, ForwardAuthenticate",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-065",
+      "fileId_short": "f73a2ce705",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-041",
+      "fileId_short": "1a2da7a93a",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding internals: ResolveTarget, InitializeAsync, ForwardAuthenticate",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-018",
+      "fileId_short": "b0f809d46d",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "forwarding/challenge/forbid basics",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-046",
+      "fileId_short": "7bf4e4f0ed",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding internals: ResolveTarget, InitializeAsync, ForwardAuthenticate",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-040",
+      "fileId_short": "0f9ebbfa70",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding internals: ResolveTarget, InitializeAsync, ForwardAuthenticate",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-066",
+      "fileId_short": "c81cdbac8c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-019",
+      "fileId_short": "6a5fb74ed6",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "forwarding/challenge/forbid basics",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-047",
+      "fileId_short": "26bd56b543",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding concept and policy scheme motivation",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-067",
+      "fileId_short": "316ddefb1c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-048",
+      "fileId_short": "83fa587b79",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding concept and policy scheme motivation",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-064",
+      "fileId_short": "01e496352b",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-053",
+      "fileId_short": "2c8374473c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forward options examples: cookies, OIDC challenge, selector/default priority",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-050",
+      "fileId_short": "e1e147a2c9",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forward options examples: cookies, OIDC challenge, selector/default priority",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-049",
+      "fileId_short": "9ad22b4441",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forwarding concept and policy scheme motivation",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-051",
+      "fileId_short": "235b87f544",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forward options examples: cookies, OIDC challenge, selector/default priority",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-054",
+      "fileId_short": "122657f18c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forward options examples: cookies, OIDC challenge, selector/default priority",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-052",
+      "fileId_short": "fa53e80e0f",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forward options examples: cookies, OIDC challenge, selector/default priority",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-055",
+      "fileId_short": "7fa89ef5e5",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "Forward options examples: cookies, OIDC challenge, selector/default priority",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-056",
+      "fileId_short": "c5dcceefc7",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-068",
+      "fileId_short": "6c318526f7",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-059",
+      "fileId_short": "a7573207ec",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-069",
+      "fileId_short": "8a3581cd7a",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-060",
+      "fileId_short": "3ea97a6f06",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-070",
+      "fileId_short": "2242ba256c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-061",
+      "fileId_short": "a6b0f6dd9c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-071",
+      "fileId_short": "2419f879a6",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-062",
+      "fileId_short": "def20ab986",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-072",
+      "fileId_short": "4b6e014024",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-063",
+      "fileId_short": "1e0669cc32",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-057",
+      "fileId_short": "d5d0ee5b62",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-088",
+      "fileId_short": "03eff36184",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "default forbid scheme and sign-in/out handler tail",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-073",
+      "fileId_short": "19593eecf4",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-089",
+      "fileId_short": "92c830f8b1",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "default forbid scheme and sign-in/out handler tail",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-058",
+      "fileId_short": "76f00eca1a",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "ForwardDefault / ForwardDefaultSelector / challenge/forbid/sign-in/out routing",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-074",
+      "fileId_short": "40a8739342",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-075",
+      "fileId_short": "9ba12d337f",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-090",
+      "fileId_short": "5dbfd3f21c",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "default forbid scheme and sign-in/out handler tail",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-076",
+      "fileId_short": "b4143ba0b2",
+      "decision": "included-in-r01-v001",
+      "target_region": "R01",
+      "reason": "challenge/forbid/sign-in/sign-out basics and handler interfaces",
+      "initial_subregion": "R01B-forwarding-challenge-forbid-basics"
+    },
+    {
+      "source_id": "S-077",
+      "fileId_short": "dcbb9c9d0a",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-078",
+      "fileId_short": "075bb93c1e",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-079",
+      "fileId_short": "0a0f66784a",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-080",
+      "fileId_short": "6cd9a6b2b3",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-081",
+      "fileId_short": "d2741d4082",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-082",
+      "fileId_short": "d651c3f7a8",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-083",
+      "fileId_short": "ffd0aac27c",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-084",
+      "fileId_short": "831c21e779",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-085",
+      "fileId_short": "5d4e81cec5",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-086",
+      "fileId_short": "32140d5d93",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-087",
+      "fileId_short": "36fea9c9cf",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-091",
+      "fileId_short": "88f9a48ba2",
+      "decision": "checked-not-r01",
+      "target_region": "R04",
+      "initial_subregion": "R04-oidc-flow-pkce-signin-challenge",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-092",
+      "fileId_short": "bf90b85d46",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-093",
+      "fileId_short": "ee6cdebfd8",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-094",
+      "fileId_short": "6990b98636",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-095",
+      "fileId_short": "ff5142b08e",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-096",
+      "fileId_short": "43e80ec808",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-097",
+      "fileId_short": "458f844a60",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-098",
+      "fileId_short": "58179930a8",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-099",
+      "fileId_short": "70882727e4",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    },
+    {
+      "source_id": "S-100",
+      "fileId_short": "b0d16ee473",
+      "decision": "checked-not-r01",
+      "target_region": "R03",
+      "initial_subregion": "R03B-jwt-outcomes-failure-challenge-forbid",
+      "reason": "Neighbor/continuation checked during R01 pass; belongs to later OIDC/JWT outcomes pass, not base auth/forwarding R01."
+    }
+  ]
+}

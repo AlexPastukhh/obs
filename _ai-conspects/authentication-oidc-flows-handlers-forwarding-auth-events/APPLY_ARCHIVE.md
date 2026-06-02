@@ -1,6 +1,6 @@
-# Apply archive: Auth/OIDC/Auth Events Stage0 boundary review v001
+# Apply archive: Auth/OIDC/Auth Events R01 transcript v001
 
-Archive type: stage0 boundary review / split plan.
+Archive type: stage-1 verified combined transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage1-r01-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forward
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage0-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage0-boundary-review.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage1-r01-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-authentication-oidc-flows-handlers-forwarding-auth-events-stage1-r01-transcript.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -38,19 +38,27 @@ Expand-Archive -Path $zip -DestinationPath . -Force
 git status --short
 git diff --stat -- _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events
 
+# If this archive is still untracked, use git add -N before copying diff.
+git add -N _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events
+
 git --no-pager diff -- _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events > $diffPath
-Get-Content $diffPath -Raw | Set-Clipboard
-Write-Host "Full diff saved to $diffPath and copied to clipboard."
+$text = Get-Content $diffPath -Raw
+if ([string]::IsNullOrWhiteSpace($text)) {
+  Write-Host "Diff is empty. Check whether files are already committed."
+} else {
+  Set-Clipboard -Value $text
+  Write-Host "Full diff saved and copied: $diffPath"
+}
 ```
 
 ## Commit commands
 
 ```powershell
 git add _ai-conspects/authentication-oidc-flows-handlers-forwarding-auth-events
-git commit -m "Start auth OIDC conspect boundary review"
+git commit -m "Add auth OIDC R01 base auth transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This is not a transcript archive. It prepares a safe larger-pass workflow.
+This is a larger combined transcript pass. Inventory/ledger remains checklist only; R01 includes local boundary review.

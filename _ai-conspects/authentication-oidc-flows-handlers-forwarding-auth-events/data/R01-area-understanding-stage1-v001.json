@@ -1,0 +1,33 @@
+{
+  "generated": "2026-06-02 01:15:16 UTC",
+  "region_id": "R01",
+  "pass_id": "P01-R01-base-auth-and-forwarding",
+  "what_area_is_about": [
+    "How ASP.NET Core authentication enters the pipeline through UseAuthentication and AuthenticationMiddleware.",
+    "How AuthenticationMiddleware uses request-handler schemes, default authenticate scheme, and context.AuthenticateAsync.",
+    "How AuthenticationService delegates to scheme provider, handler provider, handlers, and claims transformation.",
+    "How AuthenticationSchemeProvider owns scheme metadata and default scheme fallback rules.",
+    "How AuthenticationHandlerProvider creates/caches per-request handler instances and calls InitializeAsync.",
+    "How forwarding works through ResolveTarget, operation-specific Forward* options, ForwardDefaultSelector, and ForwardDefault.",
+    "How Challenge/Forbid/SignIn/SignOut are separate operations and may be routed to different schemes."
+  ],
+  "key_ideas": [
+    "UseAuthentication only inserts middleware; the core decisions happen in AuthenticationMiddleware, AuthenticationService, scheme provider, and handlers.",
+    "AuthenticationMiddleware first gives IAuthenticationRequestHandler schemes a chance to handle/short-circuit special endpoints.",
+    "Default authentication populates HttpContext.User only if a default authenticate scheme is resolved and succeeds.",
+    "Scheme names are metadata that connect a name to a handler type and named options.",
+    "The handler provider creates one handler instance per scheme per request and initializes it with scheme, context, options, events, and handler-specific initialization.",
+    "Forwarding lets one logical scheme route Authenticate/Challenge/Forbid/SignIn/SignOut to different real schemes.",
+    "Forwarding resolution priority is operation-specific Forward* setting, then ForwardDefaultSelector, then ForwardDefault, while avoiding self-targeting loops.",
+    "Challenge and forbid are not “authenticate again”; they are separate response operations with their own default scheme resolution and handler methods.",
+    "Sign-in and sign-out require handlers that implement sign-in/sign-out interfaces; not every handler supports these operations."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_readability": "mixed: screenshots are mostly readable, with some code-heavy low-OCR fragments",
+    "transcript_quality": "OCR-assisted + semantic verification; good for concept preservation, not guaranteed for exact punctuation in every code line",
+    "known_limitations": [
+      "S-023/S-028/S-034 are tiny snippets or weak OCR fragments; they are included for coverage/context but not relied on as standalone claims."
+    ]
+  }
+}
