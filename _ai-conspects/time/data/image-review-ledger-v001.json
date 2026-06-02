@@ -373,11 +373,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-076: what if i pass with specified kind? | L-092: example of invalid/ambiguous time | L-093: policies | L-085: timezone, so we can store it | L-040: date math pitfalls",
-    "coverage_status": "checked-not-r04-reserved-for-r05",
-    "decision_is_final": "yes-not-r04",
-    "review_notes": "Checked during R04; belongs to invalid/ambiguous local-time policy pass.",
-    "current_region_decision": "candidate-R05",
-    "must_recheck_before_region_close": "yes-for-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-020",
@@ -393,11 +393,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-092: example of invalid/ambiguous time | L-093: policies | L-076: what if i pass with specified kind? | L-094: common invalid/ambiguous | L-095: time policies",
-    "coverage_status": "checked-not-r04-reserved-for-r05",
-    "decision_is_final": "yes-not-r04",
-    "review_notes": "Checked during R04; belongs to invalid/ambiguous local-time policy pass.",
-    "current_region_decision": "candidate-R05",
-    "must_recheck_before_region_close": "yes-for-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-021",
@@ -1893,11 +1893,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-076: what if i pass with specified kind? | L-092: example of invalid/ambiguous time | L-093: policies | L-085: timezone, so we can store it | L-084: that we need to utc using users",
-    "coverage_status": "checked-not-r04-reserved-for-r05",
-    "decision_is_final": "yes-not-r04",
-    "review_notes": "Checked during R04; belongs to invalid/ambiguous local-time policy pass.",
-    "current_region_decision": "candidate-R05",
-    "must_recheck_before_region_close": "yes-for-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-096",
@@ -3313,11 +3313,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-098: manual usage of isdaylightsavingtime | L-086: methods for working | L-096: invalid | L-087: with invalid/ambiguous time | L-094: common invalid/ambiguous",
-    "coverage_status": "checked-not-r04-reserved-for-r05",
-    "decision_is_final": "yes-not-r04",
-    "review_notes": "Checked during R04; belongs to invalid/ambiguous local-time policy pass.",
-    "current_region_decision": "candidate-R05",
-    "must_recheck_before_region_close": "yes-for-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-167",
@@ -3333,11 +3333,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-086: methods for working | L-087: with invalid/ambiguous time | L-096: invalid | L-094: common invalid/ambiguous | L-088: isinvalidtime",
-    "coverage_status": "checked-not-r04-reserved-for-r05",
-    "decision_is_final": "yes-not-r04",
-    "review_notes": "Checked during R04; belongs to invalid/ambiguous local-time policy pass.",
-    "current_region_decision": "candidate-R05",
-    "must_recheck_before_region_close": "yes-for-r05"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-168",
@@ -3473,11 +3473,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-093: policies | L-092: example of invalid/ambiguous time | L-095: time policies | L-094: common invalid/ambiguous | L-096: invalid",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-175",
@@ -3493,11 +3493,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-093: policies | L-092: example of invalid/ambiguous time | L-095: time policies | L-096: invalid | L-094: common invalid/ambiguous",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-176",
@@ -3513,11 +3513,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-088: isinvalidtime | L-089: isinvalidtime | L-087: with invalid/ambiguous time | L-086: methods for working | L-090: getambiguoustimeoffsets",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-177",
@@ -3533,11 +3533,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-089: isinvalidtime | L-090: getambiguoustimeoffsets | L-091: and configure based on policy | L-088: isinvalidtime | L-087: with invalid/ambiguous time",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-178",
@@ -3553,11 +3553,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime | L-087: with invalid/ambiguous time",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-179",
@@ -3573,11 +3573,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime | L-102: type of offsets",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-180",
@@ -3593,11 +3593,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-097: ambiguous | L-102: type of offsets",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-181",
@@ -3613,11 +3613,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-097: ambiguous | L-089: isinvalidtime | L-102: type of offsets",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-182",
@@ -3633,11 +3633,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-102: type of offsets",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-183",
@@ -3653,11 +3653,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-102: type of offsets",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-184",
@@ -3673,11 +3673,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-102: type of offsets",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-185",
@@ -3693,11 +3693,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-096: invalid | L-087: with invalid/ambiguous time | L-086: methods for working | L-088: isinvalidtime | L-095: time policies",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-186",
@@ -3713,11 +3713,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-096: invalid | L-089: isinvalidtime | L-088: isinvalidtime | L-090: getambiguoustimeoffsets | L-087: with invalid/ambiguous time",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-187",
@@ -3733,11 +3733,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-091: and configure based on policy | L-096: invalid | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-188",
@@ -3753,11 +3753,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-090: getambiguoustimeoffsets | L-091: and configure based on policy | L-089: isinvalidtime | L-097: ambiguous | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-189",
@@ -3773,11 +3773,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-097: ambiguous | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-190",
@@ -3793,11 +3793,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-191",
@@ -3813,11 +3813,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-192",
@@ -3833,11 +3833,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-193",
@@ -3853,11 +3853,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-194",
@@ -3873,11 +3873,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-195",
@@ -3893,11 +3893,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-196",
@@ -3913,11 +3913,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-197",
@@ -3933,11 +3933,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-097: ambiguous | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-198",
@@ -3953,11 +3953,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-102: type of offsets | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-199",
@@ -3973,11 +3973,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-102: type of offsets | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-200",
@@ -3993,11 +3993,11 @@
     "combined_pass": "P04-R05-invalid-ambiguous-time-policies",
     "initial_meaning": "Invalid/ambiguous local times, DST gaps/folds, timezone policy helpers.",
     "nearest_labels_for_search_only": "L-102: type of offsets | L-091: and configure based on policy | L-090: getambiguoustimeoffsets | L-089: isinvalidtime | L-088: isinvalidtime",
-    "coverage_status": "candidate-needs-boundary-review",
-    "decision_is_final": "no",
-    "review_notes": "Coordinate candidate only; must be visually/semantically checked before transcript.",
-    "current_region_decision": "R05-invalid-ambiguous-time-policies",
-    "must_recheck_before_region_close": "yes"
+    "coverage_status": "processed-in-r05-v001",
+    "decision_is_final": "yes-for-r05-v001-boundary",
+    "review_notes": "R05 processed after local boundary review.",
+    "current_region_decision": "R05",
+    "must_recheck_before_region_close": "no-for-r05-v001"
   },
   {
     "source_id": "S-201",

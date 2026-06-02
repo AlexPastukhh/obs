@@ -1,0 +1,32 @@
+{
+  "generated": "2026-06-02 11:59:00 UTC",
+  "region": "R05-invalid-ambiguous-time-policies",
+  "included_image_uses": 32,
+  "pulled_from_r04_checked_excluded": [
+    "S-019",
+    "S-020",
+    "S-095",
+    "S-166",
+    "S-167"
+  ],
+  "area_overview": "Invalid/ambiguous local times caused by DST transitions and how to choose business policies for scheduling, display, audit, and automation.",
+  "key_ideas": [
+    "Some local wall-clock times do not exist in a timezone because the clock jumps forward.",
+    "Some local wall-clock times occur twice because the clock falls back.",
+    "TimeZoneInfo.IsInvalidTime can detect nonexistent local times.",
+    "TimeZoneInfo.IsAmbiguousTime and GetAmbiguousTimeOffsets can detect and inspect repeated local times.",
+    "There is no universal correct rule for invalid/ambiguous times; the system must choose a business policy.",
+    "Common invalid-time policies are: move forward to the next valid local time, skip the occurrence, move backward, or reject as invalid.",
+    "Common ambiguous-time policies are: choose earlier occurrence, choose later occurrence, run only once by a fixed rule, or run twice.",
+    "Use clear names in code and APIs: earlier/later occurrence, invalid local time, ambiguous local time, offset choice.",
+    "Use TimeSpan for scheduling delays/timeouts after a concrete instant has been chosen."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "visual_reading": "R05 contact sheet plus R04 checked-excluded images were inspected. The area is compact and cohesive.",
+    "limitations": [
+      "Some long code examples are cropped; transcript preserves the visible policy branches and the important TimeZoneInfo API usage.",
+      "Exact sample dates are less important than the policy choices, so the transcript normalizes examples around local wall-clock intent and offset choices."
+    ]
+  }
+}
