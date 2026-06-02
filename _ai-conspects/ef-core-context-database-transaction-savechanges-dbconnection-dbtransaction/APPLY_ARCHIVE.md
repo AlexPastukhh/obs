@@ -1,6 +1,6 @@
-# Apply archive: Stage5 NEXT04 CTXDB06 + CTXDB07 transcript
+# Apply archive: Stage6 final closure audit
 
-Archive type: verified transcript / large batch.
+Archive type: final closure / audit.
 
 Target branch:
 
@@ -13,7 +13,7 @@ Use `tar.exe -xf` instead of PowerShell `Expand-Archive`.
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage5-next04-ctxdb06-ctxdb07-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage6-final-closure-audit-v001.zip
 ```
 
 ## Apply commands
@@ -23,8 +23,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage5-next04-ctxdb06-ctxdb07-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\efcore-context-dbtx-stage5-next04-ctxdb06-ctxdb07-cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-context-database-transaction-savechanges-dbconnection-dbtransaction-stage6-final-closure-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\efcore-context-dbtx-stage6-final-closure-audit-cached.diff"
 
 git status --short
 
@@ -46,7 +46,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add EF Core context database transaction CTXDB06 CTXDB07 transcript"
+git commit -m "Finalize EF Core context database transaction conspect audit"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,6 +60,4 @@ git clean -fd -- "$target"
 
 ## Notes
 
-This archive completes CTXDB06 and CTXDB07.
-
-Next step should be final closure/audit.
+This archive marks the conspect complete if the cached diff matches the audit summary.

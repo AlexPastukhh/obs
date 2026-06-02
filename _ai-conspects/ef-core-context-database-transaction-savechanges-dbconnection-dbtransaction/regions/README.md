@@ -1,5 +1,7 @@
 # Regions - EF Core context/database/transactions
 
+Status: **complete**
+
 Verified transcripts:
 
 ```text
@@ -12,17 +14,15 @@ CTXDB06 - DbConnection / open connection / SetDbConnection / command timeout / p
 CTXDB07 - Manual DbContext creation / options / DI / multiple contexts
 ```
 
-All Stage1 candidate transcript regions are now processed.
-
-Next step:
+Final closure audit:
 
 ```text
-Final closure/audit
+Expected image uses: 198
+Processed image uses: 198
+Missing: 0
+Duplicates: 0
+Unreviewed: 0
+Candidate-only: 0
 ```
 
-Each transcript includes:
-
-```text
-## 0.1 Area overview / key ideas / reading quality
-## 0.2 Coverage / boundary review
-```
+No pending transcript regions remain.
