@@ -1,0 +1,19 @@
+{
+  "generated": "2026-06-02 01:53:55 UTC",
+  "pass_id": "P03P04-large-combined-jwt-oidc",
+  "coverage": {
+    "R03A": 74,
+    "R03B": 43,
+    "R04": 27,
+    "total_unique_image_uses": 144
+  },
+  "why_combined": "User requested larger passes. The remaining material is coherent enough to close in one archive if split internally into R03A/R03B/R04 sections.",
+  "reading_quality": "Good for control flow, method/event names, and mental model. Dense code screenshots are summarized semantically rather than copied line-for-line where tiny text is not fully readable.",
+  "key_ideas": [
+    "JwtBearerHandler authentication starts by giving OnMessageReceived a chance to supply a token, then usually reads Authorization: Bearer from the header.",
+    "Token validation creates ClaimsPrincipal on success and AuthenticationFailed on failure.",
+    "JWT events let app code hook MessageReceived, TokenValidated, AuthenticationFailed, Challenge, and Forbidden behavior.",
+    "Challenge means no valid authenticated result and asks the client to authenticate; Forbid means authenticated/known user cannot access.",
+    "OIDC sign-in bridge uses challenge to external provider, authorization code + PKCE, callback, token exchange, and cookie sign-in to establish local session."
+  ]
+}

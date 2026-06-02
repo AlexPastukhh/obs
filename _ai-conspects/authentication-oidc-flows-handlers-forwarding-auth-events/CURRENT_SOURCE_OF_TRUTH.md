@@ -1,6 +1,6 @@
 # Current Source of Truth - Authentication / OIDC / Flows / Handlers / Forwarding / Auth Events
 
-Generated: 2026-06-02 01:38:16 UTC
+Generated: 2026-06-02 01:53:55 UTC
 
 ## Policy
 
@@ -14,13 +14,16 @@ A region is complete only after visual/semantic boundary review and verified tra
 Stage0 boundary review: done
 R01 base auth middleware / AuthenticationService / forwarding basics: transcript v001 done
 R02 cookie auth core / ticket store / events / sliding expiration / redirects: transcript v001 done
-P03/R03A JWT bearer handler pipeline: next
+R03A JWT bearer handler pipeline: transcript v001 done
+R03B JWT outcomes / failure / challenge / forbid: transcript v001 done
+R04 OIDC / PKCE / sign-in bridge: transcript v001 done
+Final coverage audit: next
 ```
 
-## R02 note
+## Stage3 note
 
 ```text
-R02 used a larger combined pass: 100 included image uses.
-It covers cookie ticket read/write, ITicketStore, refresh/sliding expiration, sign-in/sign-out, FinishResponseAsync, cookie events, and redirect events.
-S-304-S307 were checked as neighboring JWT bearer material and reserved for P03/R03A.
+User requested a larger pass.
+P03 and P04 were processed together as one large archive, but internally split into R03A/R03B/R04 region files.
+Total Stage3 processed image uses: 144.
 ```
