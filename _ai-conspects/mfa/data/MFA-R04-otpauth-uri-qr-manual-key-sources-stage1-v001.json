@@ -1,0 +1,93 @@
+{
+  "generated": "2026-06-02 16:01:53 UTC",
+  "group": "MFA-R04-otpauth-uri-qr-manual-key",
+  "region": "MFA-R04",
+  "source_count": 6,
+  "reading_rule": "Every included source has visible text. No OCR-timeout/image-missing/empty placeholder source is marked processed.",
+  "sources": [
+    {
+      "source_id": "S-048",
+      "image_use_id": "IU-048",
+      "fileId_short": "1f864166f4",
+      "x": "3613.334",
+      "y": "12076.051",
+      "nearest_labels_for_search_only": "using System.Net; | public static string BuildOtpAuthUri(string issuer, string account, string base32Secret) | { | var i = WebUtility.UrlEncode(issuer); | var a = WebUtility.UrlEncode(account); | return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";",
+      "stage0_group": "MFA-R04",
+      "image_file": "S-048__1f864166f4.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "Build the otpauth URI",
+      "visible_text": "Build the otpauth URI\no cH (ay\npublic static string BuildOtpAuthUri(string issuer, string account, string secret)\n{\n// Important: URL encode issuer & label pieces\nvar encIssuer = WebUtility.UrlEncode(issuer);\nvar encAccount = WebUtilityUrlEncode(account) ;\nreturn $\"otpauth: //totp/{encIssuer}: {encAccount}?issuer={encIssuer}&secret={secret}\";\n+",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-049",
+      "image_use_id": "IU-049",
+      "fileId_short": "67413bcad1",
+      "x": "1598.478",
+      "y": "12123.974",
+      "nearest_labels_for_search_only": "using System.Net; | public static string BuildOtpAuthUri(string issuer, string account, string base32Secret) | { | var i = WebUtility.UrlEncode(issuer); | var a = WebUtility.UrlEncode(account); | return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";",
+      "stage0_group": "MFA-R04",
+      "image_file": "S-049__67413bcad1.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "Why 64 bytes?",
+      "visible_text": "Why 64 bytes?\n* Because you want 16 characters\n* and for each character you consume 4 bytes\n* 16 x 4= 64 bytes",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-050",
+      "image_use_id": "IU-050",
+      "fileId_short": "ef3ce43858",
+      "x": "1592.621",
+      "y": "12288.243",
+      "nearest_labels_for_search_only": "var a = WebUtility.UrlEncode(account); | return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\"; | var i = WebUtility.UrlEncode(issuer); | } | { | public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)",
+      "stage0_group": "MFA-R04",
+      "image_file": "S-050__ef3ce43858.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "2) Loop “one character at a time”",
+      "visible_text": "2) Loop “one character at a time”\no cH (ay\nfor (int i = 0; i < 16; i++)\n{\nuint rnd = BitConverter.ToUInt32(tokenData, i * 4);\n+\nThis means:\n* i=0-startIndex = 0\n* i=1-startIndex = 4\n* i=2-—startIndex = 8\n* i= 15 — startindex = 60\nSo yes: you take 4 bytes at a time, sequentially. v",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-051",
+      "image_use_id": "IU-051",
+      "fileId_short": "ae61d75d45",
+      "x": "3619.909",
+      "y": "12419.647",
+      "nearest_labels_for_search_only": "} | return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\"; | var a = WebUtility.UrlEncode(account); | var i = WebUtility.UrlEncode(issuer); | { | public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)",
+      "stage0_group": "MFA-R04",
+      "image_file": "S-051__ae61d75d45.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "3) BuildotpAuthUri screenshot: what WebUtility / WebUtils is doing",
+      "visible_text": "3) BuildotpAuthUri screenshot: what WebUtility / WebUtils is doing\nYour screenshot shows something like:\nwo CH ia’)\nvar i = WebUtility-UrlEncode(issuer);\nvar a = WebUtility.UrlEncode(account) ;\nreturn $\"otpauth: //totp/{i}:{a}?secret={base32Secret }&issuer={i}\"5\nWhat Webutility.Urlencode does\nIt URL-encodes text so it is safe inside a URL.\nExample:\n* space “My App\" becomes “My+App\" (or %20 depending on encoder)\n* @ inanemail becomes %40\n* = becomes %3A, etc.",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-052",
+      "image_use_id": "IU-052",
+      "fileId_short": "a23deb8e93",
+      "x": "1576.163",
+      "y": "12842.585",
+      "nearest_labels_for_search_only": "razzor | react | } | return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\"; | var a = WebUtility.UrlEncode(account); | var i = WebUtility.UrlEncode(issuer);",
+      "stage0_group": "MFA-R04",
+      "image_file": "S-052__a23deb8e93.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "3) How do 4 bytes become a random number?",
+      "visible_text": "3) How do 4 bytes become a random number?\nBitConverter.ToUInt32(tokenData, startIndex) does:\n* reads 4 bytes starting at startIndex\n* interprets them as a 32-bit unsigned integer\nExample for i = 0\nBytes used:\ntokenData[@], tokenData[1], tokenData[2], tokenData[3] ia)\n= Al, 3F, 00, 7C (hex)",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-053",
+      "image_use_id": "IU-053",
+      "fileId_short": "6a7d386cbf",
+      "x": "3619.313",
+      "y": "12902.682",
+      "nearest_labels_for_search_only": "react | razzor | } | return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\"; | var a = WebUtility.UrlEncode(account); | var i = WebUtility.UrlEncode(issuer);",
+      "stage0_group": "MFA-R04",
+      "image_file": "S-053__6a7d386cbf.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "This is important because the label part of otpauth includes:",
+      "visible_text": "This is important because the label part of otpauth includes:\n© issuer:account\nand account is often an email, which contains special characters.\nSo why do it here?\nBecause your otpauth string is essentially a URL.\nIf you don't encode, some values can break parsing in QR scanners / apps.\nWebUtility vs WebUtils\n© WebUtility is the .NET class in System.Net .\n* Some projects also use WebUtility indirectly or use WebUtilities (plural) from ASP.NET Core\npackages.\n* Conceptually, the job is the same: encode text for use in URLs.",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    }
+  ]
+}

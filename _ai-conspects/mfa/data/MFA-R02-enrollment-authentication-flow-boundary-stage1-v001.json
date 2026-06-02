@@ -1,0 +1,23 @@
+{
+  "generated": "2026-06-02 16:01:53 UTC",
+  "group": "MFA-R02-enrollment-authentication-flow",
+  "region": "MFA-R02",
+  "source_count": 13,
+  "included_sources": [
+    "S-002",
+    "S-006",
+    "S-008",
+    "S-009",
+    "S-011",
+    "S-013",
+    "S-015",
+    "S-017",
+    "S-019",
+    "S-020",
+    "S-023",
+    "S-025",
+    "S-026"
+  ],
+  "boundary_decision": "processed-after-stage0-boundary-review-and-stage1-local-visual-semantic-recheck",
+  "meaning": "MFA enrollment/login flow: server-generated pending secret, QR scan, confirmation code, permanent protected secret, MFA challenge, trusted device, and recovery/reset."
+}

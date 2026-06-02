@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-02 16:01:53 UTC",
+  "group": "MFA-R00-foreign-zod-stray",
+  "region": "MFA-R00",
+  "source_count": 2,
+  "reading_rule": "Every included source has visible text. No OCR-timeout/image-missing/empty placeholder source is marked processed.",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "85d11c0ea2",
+      "x": "9635.21",
+      "y": "10.0",
+      "nearest_labels_for_search_only": "flow | some theo | using System.Security.Cryptography; | using OtpNet; | public static class TotpSecretBytes | {",
+      "stage0_group": "MFA-R02",
+      "image_file": "S-001__85d11c0ea2.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "2) union error (tries both, then reports union failure)",
+      "visible_text": "2) union error (tries both, then reports union failure)\n<“) TypeScript O\nShapeUnion. safeParse(badType) .error.issues\nTypical:\n«) JavaScript a.)\n[\n{\ncode: “invalid_union\",\npath: [],\nmessage: “Invalid input\",\nunionErrors: [\n// Circle branch fails because type isn't “circle”\nZodError([{ code: “invalid literal\", path: [\"type\"], --- }]),\n// Square branch fails because type isn't “square” and missing size, etc.\nZodError([{ code: “invalid_literal\", path: [\"type\"], --- }, { ---maybe size... }]),\n]\n+\n] v",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "ca9f8fd4bc",
+      "x": "9638.896",
+      "y": "525.611",
+      "nearest_labels_for_search_only": "flow | some theo | using System.Security.Cryptography; | using OtpNet; | public static class TotpSecretBytes | {",
+      "stage0_group": "MFA-R02",
+      "image_file": "S-004__ca9f8fd4bc.png",
+      "status": "verified-visible-ocr-assisted",
+      "theme": "Again: discriminated union gives one clean error (“type invalid”), union gives a bundle of errors from each",
+      "visible_text": "Again: discriminated union gives one clean error (“type invalid”), union gives a bundle of errors from each\nattempt.\nOne-line takeaway\n© discriminatedUnion errors usually point to the one correct branch (or the discriminator itself).\n© union errors often bundle multiple branch failures under invalid_union , which is noisier and harder\nto map to fields.",
+      "notes": "Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+    }
+  ]
+}

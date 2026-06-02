@@ -1,39 +1,42 @@
-# MANIFEST - MFA Stage0 Boundary Review
+# MANIFEST - MFA Stage1 R00-R04 Transcripts
 
-Archive type: **boundary review**  
+Archive type: **verified transcript batch**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 15:29:14 UTC
+Generated: 2026-06-02 16:01:53 UTC
 
 ## Direction check
 
 Goal:
-Start MFA conspect after React Query closure.
+Process first transcript batch after MFA Stage0.
 
 Done:
-Uploaded `mfa.svg` was inventoried.
+MFA Stage0 created image inventory and candidate groups.
 
 This step:
-Add Stage0 boundary review for all MFA source images.
+Add Stage1 transcripts for R00/R01/R02/R03/R04.
 
 Why:
-New conspect must start with source inventory, stable source IDs, rough groups, and contact sheets.
+Every included source has visible text. S-001/S-004 are corrected into a foreign/stray region because they are not MFA cards.
 
 Next:
 1. review staged/cached diff;
 2. commit;
-3. process MFA-stage1 transcript.
+3. process MFA Stage2 R05 + R06 + R07.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/mfa/01-stage0-boundary-review.md
-_ai-conspects/mfa/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/mfa/data/MFA-stage0-boundary-review-v001.csv
-_ai-conspects/mfa/data/MFA-stage0-boundary-review-v001.json
+_ai-conspects/mfa/02-stage1-r00-r04-transcripts.md
+_ai-conspects/mfa/regions/MFA-R00-foreign-zod-stray-cards.md
+_ai-conspects/mfa/regions/MFA-R01-totp-mfa-theory.md
+_ai-conspects/mfa/regions/MFA-R02-enrollment-authentication-flow.md
+_ai-conspects/mfa/regions/MFA-R03-secret-generation-helpers.md
+_ai-conspects/mfa/regions/MFA-R04-otpauth-uri-qr-manual-key.md
+_ai-conspects/mfa/data/*stage1-v001.*
+_ai-conspects/mfa/data/MFA-stage1-local-boundary-corrections-v001.*
 _ai-conspects/mfa/data/mfa-image-review-ledger-v1.csv
 _ai-conspects/mfa/data/mfa-image-review-ledger-v1.json
-_ai-conspects/mfa/audit-assets/MFA-stage0-*-contact-sheet.png
-_ai-conspects/mfa/audit-assets/stage0-source-images/*.png
+_ai-conspects/mfa/audit-assets/stage1-r00-r04-source-images/*.png
 _ai-conspects/mfa/MANIFEST.md
 _ai-conspects/mfa/APPLY_ARCHIVE.md
 ```
@@ -41,7 +44,7 @@ _ai-conspects/mfa/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Boundary candidates: 91
-Processed by this archive: 0
-Next: MFA-stage1 transcript
+Stage1 processed: 53
+Stage0 remaining candidates: 38
+Next: MFA Stage2
 ```

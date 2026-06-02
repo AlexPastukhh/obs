@@ -1,6 +1,6 @@
-# Apply archive: MFA Stage0 boundary review
+# Apply archive: MFA Stage1 R00-R04 transcripts
 
-Archive type: boundary review.
+Archive type: verified transcript batch.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-mfa-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-mfa-stage1-r00-r04-transcripts-v001.zip
 ```
 
 ## Apply commands with cached diff review
@@ -27,8 +27,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\mfa"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-mfa-stage0-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-mfa-stage0-boundary-review.cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-mfa-stage1-r00-r04-transcripts-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-mfa-stage1-r00-r04-transcripts.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -55,7 +55,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add MFA Stage0 boundary review"
+git commit -m "Add MFA Stage1 transcripts"
 git push origin ai-processed-conspects-text
 ```
 
@@ -69,4 +69,4 @@ git clean -fd -- _ai-conspects/mfa
 
 ## Notes
 
-This archive is boundary review only. It does not add transcript and does not mark MFA sources as processed.
+This archive marks only MFA Stage1 sources as processed. R05/R06/R07 remain pending candidates.

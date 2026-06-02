@@ -1,0 +1,25 @@
+source_id,image_use_id,fileId_short,image_file,status,stage0_group,theme,visible_text,notes
+S-001,IU-001,85d11c0ea2,S-001__85d11c0ea2.png,verified-visible-ocr-assisted,MFA-R02,"2) union error (tries both, then reports union failure)","2) union error (tries both, then reports union failure)
+<“) TypeScript O
+ShapeUnion. safeParse(badType) .error.issues
+Typical:
+«) JavaScript a.)
+[
+{
+code: “invalid_union"",
+path: [],
+message: “Invalid input"",
+unionErrors: [
+// Circle branch fails because type isn't “circle”
+ZodError([{ code: “invalid literal"", path: [""type""], --- }]),
+// Square branch fails because type isn't “square” and missing size, etc.
+ZodError([{ code: “invalid_literal"", path: [""type""], --- }, { ---maybe size... }]),
+]
++
+] v","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-004,IU-004,ca9f8fd4bc,S-004__ca9f8fd4bc.png,verified-visible-ocr-assisted,MFA-R02,"Again: discriminated union gives one clean error (“type invalid”), union gives a bundle of errors from each","Again: discriminated union gives one clean error (“type invalid”), union gives a bundle of errors from each
+attempt.
+One-line takeaway
+© discriminatedUnion errors usually point to the one correct branch (or the discriminator itself).
+© union errors often bundle multiple branch failures under invalid_union , which is noisier and harder
+to map to fields.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."

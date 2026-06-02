@@ -1,0 +1,161 @@
+source_id,image_use_id,fileId_short,image_file,status,stage0_group,theme,visible_text,notes
+S-002,IU-002,a95d6719c0,S-002__a95d6719c0.png,verified-visible-ocr-assisted,MFA-R02,Complete “story” in one timeline,"Complete “story” in one timeline
+1. User logs in > wants to enable MFA.
+2. Server generates secret — stores pending secret — returns QR.
+3. User scans QR — app generates codes.
+4. User types code — server verifies using pending secret — stores protected secret in DB.
+5. Next login:
+* password check passes — server sees UserSecrets exists > requires MFA.
+6. User types TOTP code — server verifies against stored secrets — signs in.
+7. Optional: server remembers device — skips MFA next time on that machine.
+8. If phone lost — user uses recovery code or resets MFA and re-enrolls.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-006,IU-006,e6d3a7cced,S-006__e6d3a7cced.png,verified-visible-ocr-assisted,MFA-R02,5) Important security controls in the full flow,"5) Important security controls in the full flow
+Enrollment security
+
+¢ Never trust the secret from the client.
+
+* Keep pending secret server-side.
+
+¢ Expire pending secrets quickly (e.g., 5-10 min).
+
+¢ Use HTTPS; never log QR URI or secrets.
+Verification security
+
+¢ Allow slight time drift (+1 step).
+
+e Add rate limiting (per user + per IP).
+
+¢ Consider lockout after repeated failures.
+
+¢ Don't reveal too much (“Invalid code” is fine; don’t confirm if user exists).
+Secret storage security
+
+¢ Store secrets protected/encrypted.
+
+¢ Restrict DB access; treat secrets like passwords.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-008,IU-008,29ad9707bc,S-008__29ad9707bc.png,verified-visible-ocr-assisted,MFA-R02,6) Multiple-device support (why UserSecret table is useful),"6) Multiple-device support (why UserSecret table is useful)
+e User can enroll phone + backup phone.
+© Verification checks can iterate through all secrets until one matches.
+¢ User can revoke a specific device by deleting its UserSecret row (or marking it disabled).","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-009,IU-009,708db6e44f,S-009__708db6e44f.png,verified-visible-ocr-assisted,MFA-R02,1) Enrollment flow (link authenticator app),"1) Enrollment flow (link authenticator app)
+This is the setup flow the user runs once (or when adding a new device).
+Step 1— User opens enrollment page
+Request: GET /mfa/enroll
+Server does
+1. Identify current user (must be authenticated).
+2. Generate a random TOTP secret (high entropy, Base32-ish).
+3. Save it server-side as a pending secret (Session / temporary DB record / cache).
+¢ This is the security-critical change: the browser must not be trusted to keep/return the secret.
+4. Build an otpauth:// URI:","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-011,IU-011,bf2ac35bcf,S-011__bf2ac35bcf.png,verified-visible-ocr-assisted,MFA-R02,otpauth: //totp/{issuer}: {account }?secret={secret }&issuer={issuer},"otpauth: //totp/{issuer}: {account }?secret={secret }&issuer={issuer}
+5. Send to the view:
+
+© = QrCodeUri
+
+e Issuer
+
+° ~=AccountName
+
+* (optionally show manual key, but do NOT accept it back from client)
+
+Browser does
+
+¢ Renders the QR code using qrcode.js (Razor) or a React QR library (SPA).","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-013,IU-013,0fe6755d8e,S-013__0fe6755d8e.png,verified-visible-ocr-assisted,MFA-R02,Step 2 — User scans QR in Authenticator app,"Step 2 — User scans QR in Authenticator app
+User action
+
+© Opens Authenticator app > “Add account” — scans QR.
+Authenticator app does
+
+¢ Parses the URI.
+
+¢ Stores the secret locally.
+
+¢ Immediately starts generating a 6-digit code every ~30 seconds.
+Step 3 — User confirms by typing a code
+Request: POST /mfa/enroll with:
+
+© DeviceName (e.g., “My phone’)
+
+© Code (6-digit TOTP code)","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-015,IU-015,0dd1f86013,S-015__0dd1f86013.png,verified-visible-ocr-assisted,MFA-R02,Server does,"Server does
+1. Read the pending secret from server-side store (Session/DB).
+* If missing — enrollment expired > user must restart.
+2. Verify the submitted TOTP code:
+¢ Convert secret Base32 — bytes
+¢ Compute current expected code (with allowed drift)
+* Typical verification window: allow previous and next time step (+1) to handle clock skew.
+3. If code is invalid:
+¢ return the same page with “Invalid code”.
+4. If code is valid:
+* Store the secret permanently in DB ( UserSecrets table).
+¢ Protect the secret at rest (Data Protection encryption).
+¢ Clear the pending secret (so it can’t be reused).
+5. Redirect to success page.
+Result
+e User now has one registered authenticator device.
+e User can have multiple devices by repeating enrollment, creating multiple UserSecret rows.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-017,IU-017,2d4e253db5,S-017__2d4e253db5.png,verified-visible-ocr-assisted,MFA-R02,2) Login flow with MFA (password + code),"2) Login flow with MFA (password + code)
+This runs every time the user signs in (unless you implement “remember device’).
+Step 1— User submits username/password
+Request: POST /account/login
+Server does
+1. Find user by username/email.
+2. Verify password (and apply lockout rules if enabled).
+3. Decide whether MFA is required:
+* [fuser has no UserSecrets — sign in normally.
+* [fuser has at least one UserSecret — require MFA challenge.
+If MFA not required
+* Issue auth cookie/session and redirect to app.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-019,IU-019,eccec5902a,S-019__eccec5902a.png,verified-visible-ocr-assisted,MFA-R02,If MFA required,"If MFA required
+* Do notissue the final auth cookie yet.
+* Create a short-lived MFA session state, e.g.:
+* store mfa_userId and rememberMe in Session
+*  orissue a temporary MFA cookie
+* Redirect to MFA challenge page.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-020,IU-020,67fcfdd331,S-020__67fcfdd331.png,verified-visible-ocr-assisted,MFA-R02,Step 2 — Show MFA challenge screen,"Step 2 — Show MFA challenge screen
+Request: GET /account/mfachallenge
+Server returns
+* A page/form to enter the 6-digit code (and optional “remember this device’).
+Step 3 — User enters authenticator code
+Request: POST /account/mfachallenge with:
+* Code
+* optionally RememberMachine","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-023,IU-023,21e8f8ff95,S-023__21e8f8ff95.png,verified-visible-ocr-assisted,MFA-R02,Server does,"Server does
+1. Read MFA session state (who is trying to complete MFA).
+* If missing + MFA session expired — user must login again.
+2. Load stored secrets for that user:
+¢ SELECT * FROM UserSecrets WHERE UserId = ...
+3. For each secret:
+© unprotect (decrypt) it
+* verify the code with drift window (#1 step)
+4. If no secret matches:
+* reject with “Invalid code”
+* optionally increase failure counters / rate-limit
+5. Ifa secret matches:
+* nowissue the real authentication cookie (Signin)
++ clear MFA session state
+* optionally mark device as trusted (“remember machine”)
+* redirect to app
+Result
+* Users fully authenticated only after passing password + MFA.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-025,IU-025,e145f76eac,S-025__e145f76eac.png,verified-visible-ocr-assisted,MFA-R02,3) Trusted device (“Remember this machine”) flow (optional),"3) Trusted device (“Remember this machine”) flow (optional)
+Goal: user doesn't need MFA every time on the same device.
+How it typically works
+* After successful MFA, server issues a long-lived “trusted device” token/cookie.
++ Onlater logins:
+* if password is correct and device is trusted — skip MFA challenge.
+* You should allow revocation:
++ lear trusted devices on password reset
++ allow user to remove trusted devices
+* expire tokens after N days","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
+S-026,IU-026,8fa8b125a9,S-026__8fa8b125a9.png,verified-visible-ocr-assisted,MFA-R02,4) Recovery and reset flows (recommended),"4) Recovery and reset flows (recommended)
+People lose phones; MFA must have recovery.
+Recovery codes
+* Generate N one-time recovery codes at MFA setup.
+* Store hashed versions in DB.
++ Ifuser can't access authenticator, they use a recovery code once.
+MFA reset
+* Require strong proof (password + email verification or support process).
+* Delete UserSecrets rows to disable MFA.
+© Reenroll.","Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder."
