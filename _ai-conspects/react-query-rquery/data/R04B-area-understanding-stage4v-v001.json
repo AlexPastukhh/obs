@@ -1,0 +1,42 @@
+{
+  "region_id": "R04B",
+  "region_name": "observer/rerender mechanics, structural sharing, gcTime, refetchInterval",
+  "stage": "4v-v001",
+  "generated": "2026-06-02 01:13:31 UTC",
+  "what_area_is_about": [
+    "active versus inactive queries and observer count",
+    "how query state changes become observer result changes and component rerenders",
+    "tracked result properties and notifyOnChangeProps boundaries",
+    "structural sharing and reference reuse for unchanged data",
+    "gcTime as inactive-cache retention, distinct from staleTime freshness",
+    "isStale/isFetching for richer UI",
+    "polling with refetchInterval"
+  ],
+  "key_ideas": [
+    "A query is active when it has at least one mounted observer; inactive when it has no observers.",
+    "Inactive queries are eligible for garbage collection after gcTime.",
+    "A cache/query state change makes the observer recompute the hook result.",
+    "React rerenders only when a tracked or allowed result property changed.",
+    "Changes to isFetching can rerender components that read isFetching even if data did not meaningfully change.",
+    "If a component reads only data, isFetching changes usually do not rerender it.",
+    "Structural sharing reuses references from previous data for unchanged parts.",
+    "Structural sharing helps avoid unnecessary rerenders and makes memoization/child props comparisons behave better.",
+    "staleTime means freshness; gcTime means how long inactive cache is retained.",
+    "Fresh data can still be garbage-collected if it is inactive long enough.",
+    "isStale and isFetching are useful for showing richer UI like background-update labels and refresh buttons.",
+    "refetchInterval is polling; it keeps cache updated when data changes often, and normal refetches can reset the timer."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "main_source_readability": "high",
+    "code_readability": "high",
+    "spatial_layout_understanding": "high after R04B local review",
+    "limitations": [
+      "S-081 and S-092 are continuation cards for one structural-sharing example.",
+      "S-096 has top continuation cropped, but the visible tracked-props point is readable.",
+      "S-102 duplicates a previously seen code card but is kept because it belongs to the local R04B richer-UI/state road.",
+      "S-065/S-066 remain unreviewed neighbors outside the R03/R04 split."
+    ],
+    "confidence_summary": "High for R04B source text and boundary. R03/R04 planned split is now ready for closure audit."
+  }
+}

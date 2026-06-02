@@ -1,0 +1,56 @@
+source_id,decision,candidate_type,reason
+S-069,included-in-R04B-v001,r04b-active-inactive-gctime,Active vs inactive queries and gcTime eligibility
+S-072,included-in-R04B-v001,r04b-observer-result-flow,Query state change -> observer result -> rerender if tracked/allowed prop changed
+S-078,included-in-R04B-v001,r04b-not-every-cache-update-rerenders,Not every cache update causes every subscriber to rerender
+S-081,included-in-R04B-v001,r04b-structural-sharing-old-data,Structural sharing reuses references from previous data
+S-086,included-in-R04B-v001,r04b-observer-notification-example,Observer notices state change and schedules notification for changed tracked prop
+S-089,included-in-R04B-v001,r04b-gctime,gcTime controls how long inactive queries stay in cache
+S-092,included-in-R04B-v001,r04b-structural-sharing-new-data,New server response example for structural sharing
+S-096,included-in-R04B-v001,r04b-only-data-read-no-isfetching-rerender,"If component only reads data, isFetching changes usually do not rerender it"
+S-100,included-in-R04B-v001,r04b-structural-sharing-result,Structural sharing result keeps unchanged references
+S-102,included-in-R04B-v001,r04b-isstale-isfetching-ui,isStale and isFetching for richer UI
+S-105,included-in-R04B-v001,r04b-why-structural-sharing-useful,Why structural sharing is useful
+S-107,included-in-R04B-v001,r04b-refetchinterval-polling,Polling with refetchInterval
+S-029,already-processed-R03,context-only,Already completed in R03 v001; not part of R04B transcript.
+S-035,already-processed-R03,context-only,Already completed in R03 v001; not part of R04B transcript.
+S-041,already-processed-R03,context-only,Already completed in R03 v001; not part of R04B transcript.
+S-046,already-processed-R03,context-only,Already completed in R03 v001; not part of R04B transcript.
+S-055,already-processed-R03,context-only,Already completed in R03 v001; not part of R04B transcript.
+S-058,already-processed-R03,context-only,Already completed in R03 v001; not part of R04B transcript.
+S-059,already-processed-R03,context-only,Already completed in R03 v001; not part of R04B transcript.
+S-062,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-063,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-067,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-068,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-070,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-071,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-073,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-074,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-075,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-076,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-077,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-079,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-082,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-084,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-087,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-088,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-090,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-091,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-095,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-097,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-098,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-099,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-103,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-104,already-processed-R04A,context-only,Already completed in R04A v001; not part of R04B transcript.
+S-080,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-083,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-085,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-093,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-094,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-101,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-106,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-108,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-111,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-112,already-processed-R05-neighbor,context-only,Pagination/infinite-query neighbor already processed in R05.
+S-065,still-unreviewed-neighbor,future-boundary-review,Not part of R03/R04 split; must surface in later boundary review.
+S-066,still-unreviewed-neighbor,future-boundary-review,Not part of R03/R04 split; must surface in later boundary review.
