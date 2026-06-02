@@ -9,20 +9,20 @@ S-007,R01,processed-in-r01-v001,3328ecbb59,15637.153363719019,2107.0802953763723
 S-008,R01,processed-in-r01-v001,b57dc1f47b,14244.421267104019,2148.534240643412,1002.0,278.0,if didnt mapped | if mapped the part | !!! | c# -> sql server type,R01 transcript v001 closed this image use.
 S-009,R01,processed-in-r01-v001,e006c65b55,12967.018782319341,2228.407113320942,932.0,362.0,table lock | default | if didnt mapped | options | !!!,R01 transcript v001 closed this image use.
 S-010,R01,processed-in-r01-v001,21d4883a98,11921.883405422464,2300.49168697584,834.0,482.0,column mappings | destination colname | table lock | properties | default,R01 transcript v001 closed this image use.
-S-011,R02,pending-transcript,8defa316f7,4710.16499140069,2337.000978299775,461.0,69.0,use staging tables | use tablelock,Pending after R01; boundary must be rechecked before final transcript.
+S-011,R02,processed-in-r02r03-final-v001,8defa316f7,4710.16499140069,2337.000978299775,461.0,69.0,use staging tables | use tablelock,Closed by stage2 R02/R03 final coverage transcript.
 S-012,R01,processed-in-r01-v001,cc8fcc373c,11068.301143062305,2344.481121728646,682.0,405.0,close/dispose | column mappings | writetoserver | destination colname | methods,R01 transcript v001 closed this image use.
 S-013,R01,processed-in-r01-v001,d2c18b0b6d,10157.682869704253,2381.1613548113764,828.0,482.0,close/dispose | writetoserver | prod style | write from,R01 transcript v001 closed this image use.
 S-014,R01,processed-in-r01-v001,9ee8dbcaa7,6100.728860311725,2413.7028272075277,940.0,424.0,internal optimization | internal optimization flow,R01 transcript v001 closed this image use.
 S-015,R01,processed-in-r01-v001,22d1f6fea0,8970.287382628094,2444.737887260877,785.0,482.0,datatable,R01 transcript v001 closed this image use.
 S-016,R01,processed-in-r01-v001,856c5e4f6f,7621.66389623853,2451.3198678681456,752.0,482.0,"for loading, cant update directly | sqlbulkcopy constructors",R01 transcript v001 closed this image use.
-S-017,R02,pending-transcript,269a5767c3,4706.823229738282,2497.998632386718,867.0,223.0,use tablelock | use staging tables,Pending after R01; boundary must be rechecked before final transcript.
+S-017,R02,processed-in-r02r03-final-v001,269a5767c3,4706.823229738282,2497.998632386718,867.0,223.0,use tablelock | use staging tables,Closed by stage2 R02/R03 final coverage transcript.
 S-018,R01,processed-in-r01-v001,b1edeb219a,14242.874731970722,2523.4150389832594,878.0,482.0,how tablelock actually | !!! | if didnt mapped | nullable values handling,R01 transcript v001 closed this image use.
 S-019,R01,processed-in-r01-v001,f096444ba9,16917.119773218266,2608.8311926080733,951.0,412.0,"preseve previous identity | error behavior,can fail everything",R01 transcript v001 closed this image use.
 S-020,R01,processed-in-r01-v001,6814cdd85c,15608.249222002989,2635.3684104900185,988.0,233.0,nullable values handling | preseve previous identity,R01 transcript v001 closed this image use.
 S-021,R01,processed-in-r01-v001,68ac7b5c21,12973.670935697784,2694.5709106967206,1031.0,403.0,table lock | !!! | how tablelock actually | if didnt mapped | keepidentity,R01 transcript v001 closed this image use.
 S-022,R01,processed-in-r01-v001,b0b0622250,18224.654595995624,2823.3047169136316,838.0,482.0,"error behavior,can fail everything",R01 transcript v001 closed this image use.
 S-023,R01,processed-in-r01-v001,306ad40dd7,10163.254897771178,2861.6374072318595,764.0,482.0,write from | close/dispose,R01 transcript v001 closed this image use.
-S-024,R02,pending-transcript,d61b6202b2,4677.494589691692,2863.8087302732474,940.0,463.0,tune batchsize | use tablelock | use staging tables,Pending after R01; boundary must be rechecked before final transcript.
+S-024,R02,processed-in-r02r03-final-v001,d61b6202b2,4677.494589691692,2863.8087302732474,940.0,463.0,tune batchsize | use tablelock | use staging tables,Closed by stage2 R02/R03 final coverage transcript.
 S-025,R01,processed-in-r01-v001,03449dda81,11834.80655114706,2912.577170719529,1010.0,428.0,column mappings | keepidentity | table lock | batchsize,R01 transcript v001 closed this image use.
 S-026,R01,processed-in-r01-v001,d1b869bf7d,11062.981934689567,2936.295333956312,712.0,298.0,write from | close/dispose | column mappings | batchsize,R01 transcript v001 closed this image use.
 S-027,R01,processed-in-r01-v001,8873927098,8935.40829994829,2940.5051803787155,944.0,413.0,datatable,R01 transcript v001 closed this image use.
@@ -33,7 +33,7 @@ S-031,R01,processed-in-r01-v001,29fe7fd23a,7599.614482430903,3184.7427534271374,
 S-032,R01,processed-in-r01-v001,ea89e14a59,7608.441813118412,3314.7531294037,821.0,482.0,"for loading, cant update directly",R01 transcript v001 closed this image use.
 S-033,R01,processed-in-r01-v001,e8214541cf,10166.178584273477,3344.6552057175522,745.0,220.0,write from | close/dispose,R01 transcript v001 closed this image use.
 S-034,R01,processed-in-r01-v001,ecf04f716c,11812.897404751462,3353.8347834681063,1032.0,217.0,batchsize | keepidentity | column mappings,R01 transcript v001 closed this image use.
-S-035,R02,pending-transcript,5c4eb472d7,4665.426481099581,3440.3447664467476,770.0,482.0,avoid triggers if you can | tune batchsize | manage indexes,Pending after R01; boundary must be rechecked before final transcript.
+S-035,R02,processed-in-r02r03-final-v001,5c4eb472d7,4665.426481099581,3440.3447664467476,770.0,482.0,avoid triggers if you can | tune batchsize | manage indexes,Closed by stage2 R02/R03 final coverage transcript.
 S-036,R01,processed-in-r01-v001,6d80b8ab42,9009.522491950427,3539.3957654880523,735.0,482.0,idatareader | datatable,R01 transcript v001 closed this image use.
 S-037,R01,processed-in-r01-v001,f501841688,10162.784718861545,3550.5014890728653,843.0,349.0,write from,R01 transcript v001 closed this image use.
 S-038,R01,processed-in-r01-v001,ffdf411f8e,11806.139902975894,3578.258988901349,934.0,253.0,batchsize | keepidentity,R01 transcript v001 closed this image use.
@@ -45,36 +45,36 @@ S-043,R01,processed-in-r01-v001,11299593cf,12996.004370756378,3697.0709106967206
 S-044,R01,processed-in-r01-v001,57c83befb1,15333.069273360172,3890.370111473947,932.0,482.0,tablelock example flows,R01 transcript v001 closed this image use.
 S-045,R01,processed-in-r01-v001,ebfd2e8cdf,11806.001854713264,3943.6027943878526,820.0,482.0,batchsize | bulkcopytimeout,R01 transcript v001 closed this image use.
 S-046,R01,processed-in-r01-v001,b09fefb393,14289.555280116525,3996.1022415824136,984.0,436.0,tablelock example flows | how tablelock actually | nullable values handling,R01 transcript v001 closed this image use.
-S-047,R02,pending-transcript,ec3fbcf0cb,4645.310499697598,4043.262921208652,976.0,316.0,manage indexes | avoid triggers if you can | watch trans log,Pending after R01; boundary must be rechecked before final transcript.
+S-047,R02,processed-in-r02r03-final-v001,ec3fbcf0cb,4645.310499697598,4043.262921208652,976.0,316.0,manage indexes | avoid triggers if you can | watch trans log,Closed by stage2 R02/R03 final coverage transcript.
 S-048,R01,processed-in-r01-v001,3bfa0a30a4,6141.652725028009,4084.7229619901464,970.0,375.0,can stream | batches internally | less ef core overhead,R01 transcript v001 closed this image use.
 S-049,R01,processed-in-r01-v001,96e481ad3d,9005.393666396174,4132.067745343325,885.0,463.0,datarow[] | idatareader,R01 transcript v001 closed this image use.
 S-050,R01,processed-in-r01-v001,32cbd02d89,12983.218690379083,4165.832951092305,984.0,316.0,keepnuls (fuck defaults),R01 transcript v001 closed this image use.
 S-051,R01,processed-in-r01-v001,408bb4ccae,15377.135986489686,4437.036829003244,904.0,482.0,tablelock example flows | nullable values handling | how tablelock actually,R01 transcript v001 closed this image use.
 S-052,R01,processed-in-r01-v001,3c0c07723b,11762.382068281291,4439.668232398328,950.0,332.0,bulkcopytimeout | keepnuls (fuck defaults) | enable streaming | batchsize,R01 transcript v001 closed this image use.
-S-053,R02,pending-transcript,43a153fd33,3213.0505206073685,4440.461891725021,957.0,436.0,heap for staging strat,Pending after R01; boundary must be rechecked before final transcript.
+S-053,R02,processed-in-r02r03-final-v001,43a153fd33,3213.0505206073685,4440.461891725021,957.0,436.0,heap for staging strat,Closed by stage2 R02/R03 final coverage transcript.
 S-054,R01,processed-in-r01-v001,7188aed67d,14287.483895141635,4446.713259445367,1031.0,327.0,tablelock example flows | how tablelock actually | nullable values handling,R01 transcript v001 closed this image use.
-S-055,R02,pending-transcript,3b7514ccbe,2136.853796995423,4452.062578158135,970.0,406.0,build indexes after loading | heap for staging strat,Pending after R01; boundary must be rechecked before final transcript.
-S-056,R02,pending-transcript,dd46dddf57,4635.088277475374,4464.003616738168,952.0,316.0,watch trans log | manage indexes | stream in very large files | avoid triggers if you can,Pending after R01; boundary must be rechecked before final transcript.
-S-057,R02,pending-transcript,cbe9bf6bc9,1060.3632883978826,4477.731296176664,962.0,482.0,build indexes after loading,Pending after R01; boundary must be rechecked before final transcript.
+S-055,R02,processed-in-r02r03-final-v001,3b7514ccbe,2136.853796995423,4452.062578158135,970.0,406.0,build indexes after loading | heap for staging strat,Closed by stage2 R02/R03 final coverage transcript.
+S-056,R02,processed-in-r02r03-final-v001,dd46dddf57,4635.088277475374,4464.003616738168,952.0,316.0,watch trans log | manage indexes | stream in very large files | avoid triggers if you can,Closed by stage2 R02/R03 final coverage transcript.
+S-057,R02,processed-in-r02r03-final-v001,cbe9bf6bc9,1060.3632883978826,4477.731296176664,962.0,482.0,build indexes after loading,Closed by stage2 R02/R03 final coverage transcript.
 S-058,R01,processed-in-r01-v001,812eac0048,12983.255636993666,4507.88843883102,978.0,343.0,keepnuls (fuck defaults),R01 transcript v001 closed this image use.
 S-059,R01,processed-in-r01-v001,86910a0b1c,6149.511668086903,4613.915363582697,983.0,412.0,batches internally | can stream,R01 transcript v001 closed this image use.
 S-060,R01,processed-in-r01-v001,48dc73fef9,9009.763933003387,4732.952348990411,916.0,289.0,datarow[] | when datarow[] | datarow[] usage,R01 transcript v001 closed this image use.
 S-061,R01,processed-in-r01-v001,a4461e403f,10693.287605822756,4854.820138817782,903.0,482.0,for too long | enable streaming | bulkcopytimeout,R01 transcript v001 closed this image use.
 S-062,R01,processed-in-r01-v001,eee9746906,11746.899933228844,4865.118006013387,814.0,482.0,enable streaming | bulkcopytimeout | notify after | keepnuls (fuck defaults),R01 transcript v001 closed this image use.
-S-063,R02,pending-transcript,0e613e8032,2102.2013353484544,4883.07827723499,986.0,418.0,so can include index,Pending after R01; boundary must be rechecked before final transcript.
-S-064,R02,pending-transcript,aa2cce4e9a,3208.2085736924346,4902.496112829236,928.0,482.0,heap for staging strat | stream in very large files | watch trans log,Pending after R01; boundary must be rechecked before final transcript.
-S-065,R02,pending-transcript,1884a5ec61,4606.948185321977,4960.485253633242,1055.0,286.0,watch trans log | stream in very large files | manage indexes,Pending after R01; boundary must be rechecked before final transcript.
+S-063,R02,processed-in-r02r03-final-v001,0e613e8032,2102.2013353484544,4883.07827723499,986.0,418.0,so can include index,Closed by stage2 R02/R03 final coverage transcript.
+S-064,R02,processed-in-r02r03-final-v001,aa2cce4e9a,3208.2085736924346,4902.496112829236,928.0,482.0,heap for staging strat | stream in very large files | watch trans log,Closed by stage2 R02/R03 final coverage transcript.
+S-065,R02,processed-in-r02r03-final-v001,1884a5ec61,4606.948185321977,4960.485253633242,1055.0,286.0,watch trans log | stream in very large files | manage indexes,Closed by stage2 R02/R03 final coverage transcript.
 S-066,R01,processed-in-r01-v001,2f6131a62d,12983.311192549223,4977.406979955153,969.0,441.0,keepnuls (fuck defaults) | ckeckconstraints,R01 transcript v001 closed this image use.
 S-067,R01,processed-in-r01-v001,97f37137ce,6147.4858009907875,5136.0691627864235,962.0,463.0,can reduce trans log overhead | batches internally,R01 transcript v001 closed this image use.
 S-068,R01,processed-in-r01-v001,dcdb7da0ae,9825.13888337917,5269.750275580662,757.0,247.0,when datarow[],R01 transcript v001 closed this image use.
 S-069,R01,processed-in-r01-v001,363b34b422,8782.47204377956,5270.916993109955,927.0,196.0,datarow[] usage | when datarow[] | datarow[],R01 transcript v001 closed this image use.
 S-070,R01,processed-in-r01-v001,8ce86d4ebf,10698.02683038293,5339.2727060242705,857.0,110.0,enable streaming | notify after | for too long,R01 transcript v001 closed this image use.
-S-071,R02,pending-transcript,bdaced3ab2,2107.923557570677,5365.930151692455,939.0,196.0,so can include index,Pending after R01; boundary must be rechecked before final transcript.
+S-071,R02,processed-in-r02r03-final-v001,bdaced3ab2,2107.923557570677,5365.930151692455,939.0,196.0,so can include index,Closed by stage2 R02/R03 final coverage transcript.
 S-072,R01,processed-in-r01-v001,705ff5827b,12989.552023712416,5412.610728870082,918.0,258.0,ckeckconstraints | keepnuls (fuck defaults),R01 transcript v001 closed this image use.
 S-073,R01,processed-in-r01-v001,ad11901e67,11732.003206420497,5447.668232398328,955.0,396.0,notify after | enable streaming | ckeckconstraints,R01 transcript v001 closed this image use.
 S-074,R01,processed-in-r01-v001,28011f50d9,10711.865368526645,5483.486803789028,791.0,482.0,notify after | enable streaming,R01 transcript v001 closed this image use.
 S-075,R01,processed-in-r01-v001,74bbd18efc,8784.805478838154,5495.250313727631,989.0,164.0,datarow[] usage | when datarow[],R01 transcript v001 closed this image use.
-S-076,R02,pending-transcript,3e50f7f6f9,4605.7578253889415,5548.413825061815,985.0,333.0,stream in very large files,Pending after R01; boundary must be rechecked before final transcript.
+S-076,R02,processed-in-r02r03-final-v001,3e50f7f6f9,4605.7578253889415,5548.413825061815,985.0,333.0,stream in very large files,Closed by stage2 R02/R03 final coverage transcript.
 S-077,R01,processed-in-r01-v001,b34923193e,9801.472064124613,5555.083697923599,883.0,291.0,when datarow[],R01 transcript v001 closed this image use.
 S-078,R01,processed-in-r01-v001,989ec03a95,8771.576966384488,5689.427460639252,789.0,482.0,datarow[] usage,R01 transcript v001 closed this image use.
 S-079,R01,processed-in-r01-v001,16054aaae6,6122.678303453489,5716.543537410822,1010.0,377.0,can reduce trans log overhead,R01 transcript v001 closed this image use.
@@ -86,54 +86,54 @@ S-084,R01,processed-in-r01-v001,8c1bb2b8d8,13015.996555762878,6755.269271079285,
 S-085,R01,processed-in-r01-v001,320053a5e5,15522.414184128225,7249.59702542402,998.0,442.0,when internal transaction,R01 transcript v001 closed this image use.
 S-086,R01,processed-in-r01-v001,21f35ebba1,14449.626615685384,7287.045712072659,1005.0,363.0,flow | when to/not to use | when internal transaction,R01 transcript v001 closed this image use.
 S-087,R01,processed-in-r01-v001,8631f2b2ff,13003.29271924193,7358.869965523734,1012.0,404.0,combine options | useinternaltransaction | when to/not to use,R01 transcript v001 closed this image use.
-S-088,R02,pending-transcript,76995a0336,5051.899464324724,7501.088017179693,855.0,482.0,"shared table, delete by | cleanup strategies",Pending after R01; boundary must be rechecked before final transcript.
+S-088,R02,processed-in-r02r03-final-v001,76995a0336,5051.899464324724,7501.088017179693,855.0,482.0,"shared table, delete by | cleanup strategies",Closed by stage2 R02/R03 final coverage transcript.
 S-089,R01,processed-in-r01-v001,f72d633221,5991.488589013778,7512.503503833338,949.0,418.0,"shared table, delete by | cleanup strategies | one improt at time,",R01 transcript v001 closed this image use.
-S-090,R02,pending-transcript,7695a5f004,3587.6259465561034,7552.729381186054,925.0,383.0,getting failed rows,Pending after R01; boundary must be rechecked before final transcript.
-S-091,R02,pending-transcript,42ebeede78,2496.724857714049,7568.116446862624,890.0,341.0,example with transaction | getting failed rows,Pending after R01; boundary must be rechecked before final transcript.
-S-092,R02,pending-transcript,8f5e5d003e,1635.7573150389271,7598.008807116709,778.0,376.0,recommended flow | example with transaction,Pending after R01; boundary must be rechecked before final transcript.
-S-093,R02,pending-transcript,747c480672,778.8742075164573,7634.216932043678,705.0,482.0,when use staging | recommended flow,Pending after R01; boundary must be rechecked before final transcript.
-S-094,R03,pending-transcript,125d7a3b8a,12999.200081438112,7872.721839981199,955.0,280.0,combine options,Pending after R01; boundary must be rechecked before final transcript.
-S-095,R03,pending-transcript,a47067b4f0,14460.38578452219,7906.027272673788,982.0,248.0,when to/not to use,Pending after R01; boundary must be rechecked before final transcript.
-S-096,R02,pending-transcript,63bc43c92f,2498.558353807799,7907.783194909499,931.0,357.0,example with transaction,Pending after R01; boundary must be rechecked before final transcript.
-S-097,R02,pending-transcript,d278736aa2,3588.705586778078,7964.186888122748,875.0,376.0,getting failed rows,Pending after R01; boundary must be rechecked before final transcript.
-S-098,R02,pending-transcript,b5b07a470d,5045.192337928709,8035.299754918408,969.0,445.0,"one improt at time,",Pending after R01; boundary must be rechecked before final transcript.
-S-099,R02,pending-transcript,5193256a39,756.8813380491029,8161.878903241865,958.0,297.0,when use staging | recommended flow | example with transaction,Pending after R01; boundary must be rechecked before final transcript.
-S-100,R03,pending-transcript,57aa7629d7,13010.631697073943,8164.158227785019,920.0,482.0,combine options,Pending after R01; boundary must be rechecked before final transcript.
-S-101,R03,pending-transcript,f76a69e26d,14484.18217124094,8216.897823889065,1047.0,287.0,when to/not to use | flow | when internal transaction,Pending after R01; boundary must be rechecked before final transcript.
-S-102,R02,pending-transcript,cce8a9edaa,2478.637746740509,8262.428764725966,951.0,397.0,example with transaction | cleanup inside/outside transaciton | getting failed rows,Pending after R01; boundary must be rechecked before final transcript.
-S-103,R02,pending-transcript,6a89ebd4ca,3595.597075958385,8337.66073019864,890.0,439.0,"one improt at time, | cleanup inside/outside transaciton | getting failed rows",Pending after R01; boundary must be rechecked before final transcript.
-S-104,R03,pending-transcript,8a378b1ab5,10045.759070077238,8422.82292851195,982.0,114.0,"complexity | why not always | harder validation,error responding",Pending after R01; boundary must be rechecked before final transcript.
-S-105,R03,pending-transcript,f3977eb60e,8714.147596168317,8456.256984781614,1001.0,482.0,from db to db | idatareader | complexity,Pending after R01; boundary must be rechecked before final transcript.
-S-106,R03,pending-transcript,fdd4cd350f,10049.135132684165,8609.142868988138,690.0,482.0,"harder validation,error responding | complexity | why not always | sometimes need some additional logic",Pending after R01; boundary must be rechecked before final transcript.
-S-107,R02,pending-transcript,5817b5d378,3613.652612137701,8785.859159851265,805.0,248.0,"cleanup inside/outside transaciton | one improt at time, | getting failed rows",Pending after R01; boundary must be rechecked before final transcript.
-S-108,R02,pending-transcript,ae64155b22,5055.321786713432,9050.50350383334,1008.0,222.0,"one improt at time,",Pending after R01; boundary must be rechecked before final transcript.
-S-109,R02,pending-transcript,f88832b74d,6151.247757850584,9054.466489401915,828.0,380.0,"one improt at time, | drop the table | from db to db",Pending after R01; boundary must be rechecked before final transcript.
-S-110,R03,pending-transcript,42fc89fcf3,8742.938723756892,9072.743768424405,975.0,464.0,"from db to db | harder validation,error responding",Pending after R01; boundary must be rechecked before final transcript.
-S-111,R03,pending-transcript,261fafe2bc,10071.263697415472,9166.920680674337,767.0,482.0,"sometimes need some additional logic | harder validation,error responding",Pending after R01; boundary must be rechecked before final transcript.
-S-112,R02,pending-transcript,e541906740,5045.5793833204825,9292.199128290806,1036.0,482.0,"one improt at time, | drop the table",Pending after R01; boundary must be rechecked before final transcript.
-S-113,R02,pending-transcript,93140451d7,6164.653692157144,9488.222928705945,913.0,193.0,"drop the table | one improt at time, | custom idatareader csv",Pending after R01; boundary must be rechecked before final transcript.
-S-114,R03,pending-transcript,747baff093,8760.759215399037,9535.49773755911,912.0,355.0,custom idatareader csv | sometimes need some additional logic,Pending after R01; boundary must be rechecked before final transcript.
-S-115,R02,pending-transcript,6259b3095b,3414.810563318757,9733.265216343647,839.0,482.0,cleanup inside/outside transaciton | batch cleanup,Pending after R01; boundary must be rechecked before final transcript.
-S-116,R02,pending-transcript,448c5efde8,5052.986975025756,9789.976838251743,915.0,482.0,drop the table,Pending after R01; boundary must be rechecked before final transcript.
-S-117,R03,pending-transcript,9f6c4e7db3,10072.007044819778,9936.475968353372,942.0,403.0,harder retry beh | sometimes need some additional logic | one pass processing less felxible,Pending after R01; boundary must be rechecked before final transcript.
-S-118,R03,pending-transcript,099c411517,8723.378292082445,10163.669643561092,962.0,374.0,custom idatareader csv | custom idatareader | harder retry beh,Pending after R01; boundary must be rechecked before final transcript.
-S-119,R02,pending-transcript,8eb0b0ec30,3430.3444452818057,10223.921466343647,976.0,197.0,batch cleanup | cleanup inside/outside transaciton,Pending after R01; boundary must be rechecked before final transcript.
-S-120,R02,pending-transcript,7a05901695,6116.534164742032,10384.841069277943,909.0,204.0,drop the table | temporary table | custom idatareader,Pending after R01; boundary must be rechecked before final transcript.
-S-121,R02,pending-transcript,523785c2a9,5062.157904226155,10388.810209722731,982.0,475.0,temporary table | drop the table,Pending after R01; boundary must be rechecked before final transcript.
-S-122,R03,pending-transcript,cc0ab4adc6,10075.673813211706,10478.253780039571,968.0,355.0,one pass processing less felxible | harder retry beh,Pending after R01; boundary must be rechecked before final transcript.
-S-123,R02,pending-transcript,5c7def034b,3442.6779413755557,10536.42140530849,986.0,468.0,batch cleanup | clean up idexes?,Pending after R01; boundary must be rechecked before final transcript.
-S-124,R03,pending-transcript,1625d8fe57,8673.03680716491,10785.275416518061,947.0,323.0,"custom readers,one read | custom idatareader",Pending after R01; boundary must be rechecked before final transcript.
-S-125,R02,pending-transcript,37e5cb1e54,5073.2685973880125,11003.931964390522,839.0,482.0,temporary table,Pending after R01; boundary must be rechecked before final transcript.
-S-126,R02,pending-transcript,bd2882a17e,3456.025750782097,11015.93184232021,722.0,482.0,clean up idexes?,Pending after R01; boundary must be rechecked before final transcript.
-S-127,R02,pending-transcript,0c4ef2bbd1,5985.344323211493,11020.254840367084,778.0,167.0,"temporary table | drop the table | keep failed rows,delete successfull",Pending after R01; boundary must be rechecked before final transcript.
-S-128,R03,pending-transcript,8e065c81b5,10070.22951796431,11230.531673105977,946.0,454.0,may be not faster for small//medium | one pass processing less felxible,Pending after R01; boundary must be rechecked before final transcript.
-S-129,R03,pending-transcript,87c78b16e7,8693.464847860652,11336.321116437173,983.0,339.0,"can use dbdatareader from | custom readers,one read | may be not faster for small//medium",Pending after R01; boundary must be rechecked before final transcript.
-S-130,R02,pending-transcript,528ee15b43,5074.177331023993,11490.088214390522,923.0,390.0,"keep failed rows,delete successfull | temporary table",Pending after R01; boundary must be rechecked before final transcript.
-S-131,R02,pending-transcript,99b4269a3c,3477.0556911812746,11597.629771702534,637.0,376.0,clean up idexes?,Pending after R01; boundary must be rechecked before final transcript.
-S-132,R03,pending-transcript,0242aa72d7,10072.143668104534,11810.597611419778,895.0,482.0,may be not faster for small//medium,Pending after R01; boundary must be rechecked before final transcript.
-S-133,R02,pending-transcript,3ee6c29c3e,5080.677453094306,11873.75490140224,862.0,324.0,"keep failed rows,delete successfull",Pending after R01; boundary must be rechecked before final transcript.
-S-134,R03,pending-transcript,b89b112e3a,8675.492550599536,12012.57393488744,1014.0,478.0,"can use dbdatareader from | may be not faster for small//medium | custom readers,one read",Pending after R01; boundary must be rechecked before final transcript.
-S-135,R02,pending-transcript,0d7e2d93ad,3471.01120858747,12013.34542509594,765.0,223.0,clean up idexes?,Pending after R01; boundary must be rechecked before final transcript.
-S-136,R02,pending-transcript,1d2f9bdb95,5086.398484257053,12283.931964390522,797.0,482.0,"move errors to separate | keep failed rows,delete successfull",Pending after R01; boundary must be rechecked before final transcript.
-S-137,R02,pending-transcript,fa674607c2,5118.510827117743,13031.254840367084,989.0,105.0,move errors to separate,Pending after R01; boundary must be rechecked before final transcript.
-S-138,R02,pending-transcript,daf5d6cd3b,5115.773916845152,13166.598590367084,813.0,482.0,move errors to separate,Pending after R01; boundary must be rechecked before final transcript.
+S-090,R02,processed-in-r02r03-final-v001,7695a5f004,3587.6259465561034,7552.729381186054,925.0,383.0,getting failed rows,Closed by stage2 R02/R03 final coverage transcript.
+S-091,R02,processed-in-r02r03-final-v001,42ebeede78,2496.724857714049,7568.116446862624,890.0,341.0,example with transaction | getting failed rows,Closed by stage2 R02/R03 final coverage transcript.
+S-092,R02,processed-in-r02r03-final-v001,8f5e5d003e,1635.7573150389271,7598.008807116709,778.0,376.0,recommended flow | example with transaction,Closed by stage2 R02/R03 final coverage transcript.
+S-093,R02,processed-in-r02r03-final-v001,747c480672,778.8742075164573,7634.216932043678,705.0,482.0,when use staging | recommended flow,Closed by stage2 R02/R03 final coverage transcript.
+S-094,R03,processed-in-r02r03-final-v001,125d7a3b8a,12999.200081438112,7872.721839981199,955.0,280.0,combine options,Closed by stage2 R02/R03 final coverage transcript.
+S-095,R03,processed-in-r02r03-final-v001,a47067b4f0,14460.38578452219,7906.027272673788,982.0,248.0,when to/not to use,Closed by stage2 R02/R03 final coverage transcript.
+S-096,R02,processed-in-r02r03-final-v001,63bc43c92f,2498.558353807799,7907.783194909499,931.0,357.0,example with transaction,Closed by stage2 R02/R03 final coverage transcript.
+S-097,R02,processed-in-r02r03-final-v001,d278736aa2,3588.705586778078,7964.186888122748,875.0,376.0,getting failed rows,Closed by stage2 R02/R03 final coverage transcript.
+S-098,R02,processed-in-r02r03-final-v001,b5b07a470d,5045.192337928709,8035.299754918408,969.0,445.0,"one improt at time,",Closed by stage2 R02/R03 final coverage transcript.
+S-099,R02,processed-in-r02r03-final-v001,5193256a39,756.8813380491029,8161.878903241865,958.0,297.0,when use staging | recommended flow | example with transaction,Closed by stage2 R02/R03 final coverage transcript.
+S-100,R03,processed-in-r02r03-final-v001,57aa7629d7,13010.631697073943,8164.158227785019,920.0,482.0,combine options,Closed by stage2 R02/R03 final coverage transcript.
+S-101,R03,processed-in-r02r03-final-v001,f76a69e26d,14484.18217124094,8216.897823889065,1047.0,287.0,when to/not to use | flow | when internal transaction,Closed by stage2 R02/R03 final coverage transcript.
+S-102,R02,processed-in-r02r03-final-v001,cce8a9edaa,2478.637746740509,8262.428764725966,951.0,397.0,example with transaction | cleanup inside/outside transaciton | getting failed rows,Closed by stage2 R02/R03 final coverage transcript.
+S-103,R02,processed-in-r02r03-final-v001,6a89ebd4ca,3595.597075958385,8337.66073019864,890.0,439.0,"one improt at time, | cleanup inside/outside transaciton | getting failed rows",Closed by stage2 R02/R03 final coverage transcript.
+S-104,R03,processed-in-r02r03-final-v001,8a378b1ab5,10045.759070077238,8422.82292851195,982.0,114.0,"complexity | why not always | harder validation,error responding",Closed by stage2 R02/R03 final coverage transcript.
+S-105,R03,processed-in-r02r03-final-v001,f3977eb60e,8714.147596168317,8456.256984781614,1001.0,482.0,from db to db | idatareader | complexity,Closed by stage2 R02/R03 final coverage transcript.
+S-106,R03,processed-in-r02r03-final-v001,fdd4cd350f,10049.135132684165,8609.142868988138,690.0,482.0,"harder validation,error responding | complexity | why not always | sometimes need some additional logic",Closed by stage2 R02/R03 final coverage transcript.
+S-107,R02,processed-in-r02r03-final-v001,5817b5d378,3613.652612137701,8785.859159851265,805.0,248.0,"cleanup inside/outside transaciton | one improt at time, | getting failed rows",Closed by stage2 R02/R03 final coverage transcript.
+S-108,R02,processed-in-r02r03-final-v001,ae64155b22,5055.321786713432,9050.50350383334,1008.0,222.0,"one improt at time,",Closed by stage2 R02/R03 final coverage transcript.
+S-109,R02,processed-in-r02r03-final-v001,f88832b74d,6151.247757850584,9054.466489401915,828.0,380.0,"one improt at time, | drop the table | from db to db",Closed by stage2 R02/R03 final coverage transcript.
+S-110,R03,processed-in-r02r03-final-v001,42fc89fcf3,8742.938723756892,9072.743768424405,975.0,464.0,"from db to db | harder validation,error responding",Closed by stage2 R02/R03 final coverage transcript.
+S-111,R03,processed-in-r02r03-final-v001,261fafe2bc,10071.263697415472,9166.920680674337,767.0,482.0,"sometimes need some additional logic | harder validation,error responding",Closed by stage2 R02/R03 final coverage transcript.
+S-112,R02,processed-in-r02r03-final-v001,e541906740,5045.5793833204825,9292.199128290806,1036.0,482.0,"one improt at time, | drop the table",Closed by stage2 R02/R03 final coverage transcript.
+S-113,R02,processed-in-r02r03-final-v001,93140451d7,6164.653692157144,9488.222928705945,913.0,193.0,"drop the table | one improt at time, | custom idatareader csv",Closed by stage2 R02/R03 final coverage transcript.
+S-114,R03,processed-in-r02r03-final-v001,747baff093,8760.759215399037,9535.49773755911,912.0,355.0,custom idatareader csv | sometimes need some additional logic,Closed by stage2 R02/R03 final coverage transcript.
+S-115,R02,processed-in-r02r03-final-v001,6259b3095b,3414.810563318757,9733.265216343647,839.0,482.0,cleanup inside/outside transaciton | batch cleanup,Closed by stage2 R02/R03 final coverage transcript.
+S-116,R02,processed-in-r02r03-final-v001,448c5efde8,5052.986975025756,9789.976838251743,915.0,482.0,drop the table,Closed by stage2 R02/R03 final coverage transcript.
+S-117,R03,processed-in-r02r03-final-v001,9f6c4e7db3,10072.007044819778,9936.475968353372,942.0,403.0,harder retry beh | sometimes need some additional logic | one pass processing less felxible,Closed by stage2 R02/R03 final coverage transcript.
+S-118,R03,processed-in-r02r03-final-v001,099c411517,8723.378292082445,10163.669643561092,962.0,374.0,custom idatareader csv | custom idatareader | harder retry beh,Closed by stage2 R02/R03 final coverage transcript.
+S-119,R02,processed-in-r02r03-final-v001,8eb0b0ec30,3430.3444452818057,10223.921466343647,976.0,197.0,batch cleanup | cleanup inside/outside transaciton,Closed by stage2 R02/R03 final coverage transcript.
+S-120,R02,processed-in-r02r03-final-v001,7a05901695,6116.534164742032,10384.841069277943,909.0,204.0,drop the table | temporary table | custom idatareader,Closed by stage2 R02/R03 final coverage transcript.
+S-121,R02,processed-in-r02r03-final-v001,523785c2a9,5062.157904226155,10388.810209722731,982.0,475.0,temporary table | drop the table,Closed by stage2 R02/R03 final coverage transcript.
+S-122,R03,processed-in-r02r03-final-v001,cc0ab4adc6,10075.673813211706,10478.253780039571,968.0,355.0,one pass processing less felxible | harder retry beh,Closed by stage2 R02/R03 final coverage transcript.
+S-123,R02,processed-in-r02r03-final-v001,5c7def034b,3442.6779413755557,10536.42140530849,986.0,468.0,batch cleanup | clean up idexes?,Closed by stage2 R02/R03 final coverage transcript.
+S-124,R03,processed-in-r02r03-final-v001,1625d8fe57,8673.03680716491,10785.275416518061,947.0,323.0,"custom readers,one read | custom idatareader",Closed by stage2 R02/R03 final coverage transcript.
+S-125,R02,processed-in-r02r03-final-v001,37e5cb1e54,5073.2685973880125,11003.931964390522,839.0,482.0,temporary table,Closed by stage2 R02/R03 final coverage transcript.
+S-126,R02,processed-in-r02r03-final-v001,bd2882a17e,3456.025750782097,11015.93184232021,722.0,482.0,clean up idexes?,Closed by stage2 R02/R03 final coverage transcript.
+S-127,R02,processed-in-r02r03-final-v001,0c4ef2bbd1,5985.344323211493,11020.254840367084,778.0,167.0,"temporary table | drop the table | keep failed rows,delete successfull",Closed by stage2 R02/R03 final coverage transcript.
+S-128,R03,processed-in-r02r03-final-v001,8e065c81b5,10070.22951796431,11230.531673105977,946.0,454.0,may be not faster for small//medium | one pass processing less felxible,Closed by stage2 R02/R03 final coverage transcript.
+S-129,R03,processed-in-r02r03-final-v001,87c78b16e7,8693.464847860652,11336.321116437173,983.0,339.0,"can use dbdatareader from | custom readers,one read | may be not faster for small//medium",Closed by stage2 R02/R03 final coverage transcript.
+S-130,R02,processed-in-r02r03-final-v001,528ee15b43,5074.177331023993,11490.088214390522,923.0,390.0,"keep failed rows,delete successfull | temporary table",Closed by stage2 R02/R03 final coverage transcript.
+S-131,R02,processed-in-r02r03-final-v001,99b4269a3c,3477.0556911812746,11597.629771702534,637.0,376.0,clean up idexes?,Closed by stage2 R02/R03 final coverage transcript.
+S-132,R03,processed-in-r02r03-final-v001,0242aa72d7,10072.143668104534,11810.597611419778,895.0,482.0,may be not faster for small//medium,Closed by stage2 R02/R03 final coverage transcript.
+S-133,R02,processed-in-r02r03-final-v001,3ee6c29c3e,5080.677453094306,11873.75490140224,862.0,324.0,"keep failed rows,delete successfull",Closed by stage2 R02/R03 final coverage transcript.
+S-134,R03,processed-in-r02r03-final-v001,b89b112e3a,8675.492550599536,12012.57393488744,1014.0,478.0,"can use dbdatareader from | may be not faster for small//medium | custom readers,one read",Closed by stage2 R02/R03 final coverage transcript.
+S-135,R02,processed-in-r02r03-final-v001,0d7e2d93ad,3471.01120858747,12013.34542509594,765.0,223.0,clean up idexes?,Closed by stage2 R02/R03 final coverage transcript.
+S-136,R02,processed-in-r02r03-final-v001,1d2f9bdb95,5086.398484257053,12283.931964390522,797.0,482.0,"move errors to separate | keep failed rows,delete successfull",Closed by stage2 R02/R03 final coverage transcript.
+S-137,R02,processed-in-r02r03-final-v001,fa674607c2,5118.510827117743,13031.254840367084,989.0,105.0,move errors to separate,Closed by stage2 R02/R03 final coverage transcript.
+S-138,R02,processed-in-r02r03-final-v001,daf5d6cd3b,5115.773916845152,13166.598590367084,813.0,482.0,move errors to separate,Closed by stage2 R02/R03 final coverage transcript.

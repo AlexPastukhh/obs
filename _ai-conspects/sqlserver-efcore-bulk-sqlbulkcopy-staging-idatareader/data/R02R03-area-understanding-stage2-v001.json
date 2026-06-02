@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 16:05:00 UTC",
+  "region_id": "R02R03",
+  "area_title": "Staging/performance/cleanup plus IDataReader/custom-reader validation/retry tradeoff tail",
+  "what_area_is_about": [
+    "when SqlBulkCopy should target a staging table instead of the final table",
+    "performance controls: TableLock, BatchSize, indexes, triggers, transaction log pressure and streaming large files",
+    "staging-table shapes: heap staging, shared staging tables, temporary tables and import identifiers",
+    "cleanup strategies: drop table, delete successful rows, batch cleanup, cleanup inside/outside transaction",
+    "failed-row handling: keep failed rows, move errors to a separate table/path, identify bad rows after bulk operations",
+    "IDataReader/custom reader tradeoffs: streaming, custom CSV readers, DbDataReader, validation/error reporting, retry complexity and one-pass limitations"
+  ],
+  "key_ideas": [
+    "R01 explained the API; R02/R03 explain production import strategy around that API.",
+    "A staging table is the safer place for validation, transformation, deduplication, merge/upsert and failed-row isolation.",
+    "Performance is not one flag: indexes, triggers, batch size, locks and transaction-log pressure all interact.",
+    "Cleanup must be designed before the import: shared table with import id, temp table, drop table, delete-success rows, or move failures aside.",
+    "Custom IDataReader/DbDataReader streaming can reduce memory and support DB-to-DB or CSV streams, but validation, retries and error reporting become harder.",
+    "Custom readers are not automatically faster for small/medium imports; simplicity may beat one-pass streaming unless scale requires it."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: contact sheets are readable but several SQL/C# screenshots are small; preserved PNGs remain source of truth for exact punctuation",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Exact SQL/C# punctuation and some API/DDL details should be corrected from preserved PNGs if needed.",
+      "The final pass closes image-use coverage; it is not claiming every code screenshot is a verbatim authoritative transcript."
+    ],
+    "confidence_summary": "High for boundary/ownership and conceptual flow; medium-high for exact code transcription."
+  }
+}
