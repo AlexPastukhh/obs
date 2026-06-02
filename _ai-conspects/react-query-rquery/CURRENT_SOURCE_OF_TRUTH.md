@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 08:52:31 UTC
+Generated: 2026-06-02 09:02:20 UTC
 
 ## Current policy
 
@@ -47,15 +47,16 @@ R09B v001: network/offline transcript completed in Stage4x Rebuild A
 R09C v001: validation/resumePaused transcript completed in Stage4y Rebuild B
 R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 R11 v001: mutations/callbacks/optimistic transcript completed in Stage4y Rebuild B
+Stage4x corrected queue closure audit v001: completed
 Stage4x bad archive: invalidated / do not use
 ```
 
 ## Current processing target
 
 ```text
-Stage4x corrected queue transcript-complete.
+Stage4x corrected queue: closed
 Rebuild A processed: 30
 Rebuild B processed: 41
-Total: 71
-Next: Stage4x closure audit.
+Total audited: 71
+Next: next large logical block, boundary review first.
 ```

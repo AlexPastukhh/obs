@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage4y Rebuild B
+# Apply archive: React Query Stage4z closure audit
 
-Archive type: validated transcript rebuild batch.
+Archive type: closure audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4y-rebuild-b-corrections-r09c-r11-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4z-stage4x-closure-audit-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4y-rebuild-b-corre
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4y-rebuild-b-corrections-r09c-r11-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4y-rebuild-b-corrections-r09c-r11.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4z-stage4x-closure-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4z-stage4x-closure-audit.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add -A _ai-conspects/react-query-rquery
-git commit -m "Add React Query Stage4y rebuild B transcripts"
+git commit -m "Close React Query Stage4x corrected queue"
 git push origin ai-processed-conspects-text
 ```
 
@@ -61,4 +61,4 @@ git clean -fd -- _ai-conspects/react-query-rquery
 
 ## Notes
 
-This archive marks Rebuild B processed. After this, run Stage4x closure audit.
+This archive does not add transcript. It closes the corrected Stage4x queue after Rebuild A and Rebuild B.
