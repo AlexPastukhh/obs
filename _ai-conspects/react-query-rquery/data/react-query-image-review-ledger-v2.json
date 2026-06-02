@@ -1,96 +1,168 @@
 {
-  "generated": "2026-06-02 08:52:31 UTC",
-  "ledger_version": "v2-updated-by-stage4y-rebuild-b",
-  "critical_rule": "Rebuild B marks only visible-text sources processed. No OCR-placeholder sources are processed.",
-  "rebuild_a_already_processed": {
-    "R05": [
-      "S-118",
-      "S-119",
-      "S-121",
-      "S-122",
-      "S-136",
-      "S-137",
-      "S-148",
-      "S-156",
-      "S-166",
-      "S-174",
-      "S-181",
-      "S-188",
-      "S-192"
-    ],
-    "R09A": [
-      "S-211",
-      "S-213",
-      "S-223",
-      "S-229"
-    ],
-    "R09B": [
-      "S-202",
-      "S-203",
-      "S-205",
-      "S-208",
-      "S-214",
-      "S-217",
-      "S-225",
-      "S-228",
-      "S-230",
-      "S-231",
-      "S-232",
-      "S-234",
-      "S-235"
-    ]
+  "generated": "2026-06-02 09:26:17 UTC",
+  "ledger_version": "v2-updated-by-stage5a-s261-s383-boundary-review",
+  "critical_rule": "Stage5a is boundary review only. S-261..S-383 are candidates, not processed.",
+  "stage5a_delta": {
+    "R11B-mutation-tail": {
+      "region": "R11B",
+      "candidate_status": "r11b-mutation-tail-candidate-stage5a",
+      "sources": [
+        "S-261",
+        "S-262",
+        "S-263",
+        "S-264",
+        "S-265",
+        "S-266",
+        "S-267",
+        "S-268",
+        "S-269",
+        "S-270",
+        "S-271",
+        "S-272",
+        "S-273"
+      ]
+    },
+    "R12-suspense-enabled-serial": {
+      "region": "R12",
+      "candidate_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "sources": [
+        "S-274",
+        "S-276",
+        "S-277",
+        "S-278",
+        "S-279",
+        "S-283",
+        "S-287",
+        "S-292",
+        "S-298",
+        "S-308",
+        "S-318",
+        "S-321",
+        "S-329",
+        "S-340",
+        "S-345",
+        "S-350",
+        "S-354",
+        "S-358",
+        "S-363",
+        "S-366",
+        "S-370",
+        "S-373",
+        "S-375",
+        "S-377",
+        "S-380",
+        "S-382"
+      ]
+    },
+    "R13-websockets-streaming": {
+      "region": "R13",
+      "candidate_status": "r13-websockets-streaming-candidate-stage5a",
+      "sources": [
+        "S-285",
+        "S-293",
+        "S-299",
+        "S-313",
+        "S-328",
+        "S-333"
+      ]
+    },
+    "R09D-offline-fetchstatus-resume-tail": {
+      "region": "R09D",
+      "candidate_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "sources": [
+        "S-275",
+        "S-280",
+        "S-281",
+        "S-282",
+        "S-286",
+        "S-288",
+        "S-291",
+        "S-294",
+        "S-295",
+        "S-296",
+        "S-300",
+        "S-301",
+        "S-302",
+        "S-312",
+        "S-314",
+        "S-327",
+        "S-334",
+        "S-374"
+      ]
+    },
+    "R14-persistence-hydration-pruning": {
+      "region": "R14",
+      "candidate_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "sources": [
+        "S-284",
+        "S-289",
+        "S-290",
+        "S-297",
+        "S-303",
+        "S-304",
+        "S-305",
+        "S-306",
+        "S-307",
+        "S-309",
+        "S-310",
+        "S-311",
+        "S-315",
+        "S-316",
+        "S-317",
+        "S-319",
+        "S-320",
+        "S-322",
+        "S-323",
+        "S-324",
+        "S-325",
+        "S-326",
+        "S-330",
+        "S-331",
+        "S-332",
+        "S-335",
+        "S-336",
+        "S-337",
+        "S-338",
+        "S-339",
+        "S-341",
+        "S-342",
+        "S-343",
+        "S-344",
+        "S-346",
+        "S-347",
+        "S-348",
+        "S-349",
+        "S-351",
+        "S-352",
+        "S-353",
+        "S-355",
+        "S-356",
+        "S-357",
+        "S-359",
+        "S-360",
+        "S-361",
+        "S-362",
+        "S-364",
+        "S-365",
+        "S-367",
+        "S-368",
+        "S-369",
+        "S-371",
+        "S-372"
+      ]
+    },
+    "R15-query-cancellation": {
+      "region": "R15",
+      "candidate_status": "r15-query-cancellation-candidate-stage5a",
+      "sources": [
+        "S-376",
+        "S-378",
+        "S-379",
+        "S-381",
+        "S-383"
+      ]
+    }
   },
-  "rebuild_b_processed": {
-    "small_corrections": [
-      "S-065",
-      "S-066",
-      "S-109",
-      "S-110",
-      "S-113",
-      "S-189",
-      "S-195"
-    ],
-    "R09C": [
-      "S-196",
-      "S-199",
-      "S-201",
-      "S-209",
-      "S-210",
-      "S-215",
-      "S-218",
-      "S-220",
-      "S-222",
-      "S-226",
-      "S-227"
-    ],
-    "R11": [
-      "S-224",
-      "S-233",
-      "S-236",
-      "S-238",
-      "S-239",
-      "S-242",
-      "S-243",
-      "S-244",
-      "S-245",
-      "S-247",
-      "S-248",
-      "S-249",
-      "S-250",
-      "S-251",
-      "S-252",
-      "S-253",
-      "S-254",
-      "S-255",
-      "S-256",
-      "S-257",
-      "S-258",
-      "S-259",
-      "S-260"
-    ],
-    "total": 41
-  },
-  "next_step": "Stage4x closure audit for all 71 queued sources.",
   "rows": [
     {
       "source_id": "S-001",
@@ -5044,12 +5116,12 @@
       "width": "840",
       "height": "220",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-262",
@@ -5063,12 +5135,12 @@
       "width": "909",
       "height": "403",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-263",
@@ -5082,12 +5154,12 @@
       "width": "954",
       "height": "372",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-264",
@@ -5101,12 +5173,12 @@
       "width": "924",
       "height": "401",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-265",
@@ -5120,12 +5192,12 @@
       "width": "981",
       "height": "219",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-266",
@@ -5139,12 +5211,12 @@
       "width": "940",
       "height": "354",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-267",
@@ -5158,12 +5230,12 @@
       "width": "855",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-268",
@@ -5177,12 +5249,12 @@
       "width": "865",
       "height": "285",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-269",
@@ -5196,12 +5268,12 @@
       "width": "685",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-270",
@@ -5215,12 +5287,12 @@
       "width": "835",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-271",
@@ -5234,12 +5306,12 @@
       "width": "726",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-272",
@@ -5253,12 +5325,12 @@
       "width": "692",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-273",
@@ -5272,12 +5344,12 @@
       "width": "726",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r11b-mutation-tail-candidate-stage5a",
+      "current_region_decision": "R11B",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r11b",
+      "decision_basis": "Stage5a boundary candidate only: mutation callback / onSettled Promise / optimistic update tail after R11.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-274",
@@ -5291,12 +5363,12 @@
       "width": "874",
       "height": "431",
       "nearest_labels_for_search_only": "L-081: when suspence is being shown | L-084: suspence | L-082: websockets",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-275",
@@ -5310,12 +5382,12 @@
       "width": "956",
       "height": "213",
       "nearest_labels_for_search_only": "L-087: fetchstatus paused | L-083: OFFLINE network mode | L-085: mutations network mode resumepausedmutations",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-276",
@@ -5329,12 +5401,12 @@
       "width": "746",
       "height": "393",
       "nearest_labels_for_search_only": "L-082: websockets | L-081: when suspence is being shown | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-277",
@@ -5348,12 +5420,12 @@
       "width": "928",
       "height": "348",
       "nearest_labels_for_search_only": "L-084: suspence | L-081: when suspence is being shown | L-082: websockets",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-278",
@@ -5367,12 +5439,12 @@
       "width": "871",
       "height": "435",
       "nearest_labels_for_search_only": "L-081: when suspence is being shown | L-084: suspence | L-082: websockets",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-279",
@@ -5386,12 +5458,12 @@
       "width": "938",
       "height": "318",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-280",
@@ -5405,12 +5477,12 @@
       "width": "881",
       "height": "146",
       "nearest_labels_for_search_only": "L-087: fetchstatus paused | L-086: network modes | L-083: OFFLINE network mode",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-281",
@@ -5424,12 +5496,12 @@
       "width": "911",
       "height": "482",
       "nearest_labels_for_search_only": "L-086: network modes | L-087: fetchstatus paused | L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-282",
@@ -5443,12 +5515,12 @@
       "width": "732",
       "height": "471",
       "nearest_labels_for_search_only": "L-087: fetchstatus paused | L-083: OFFLINE network mode | L-085: mutations network mode resumepausedmutations",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-283",
@@ -5462,12 +5534,12 @@
       "width": "482",
       "height": "482",
       "nearest_labels_for_search_only": "L-084: suspence | L-081: when suspence is being shown | L-082: websockets",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-284",
@@ -5481,12 +5553,12 @@
       "width": "913",
       "height": "369",
       "nearest_labels_for_search_only": "L-088: persistance + resumepausedmutations | L-085: mutations network mode resumepausedmutations | L-091: !!!",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-285",
@@ -5500,12 +5572,12 @@
       "width": "913",
       "height": "471",
       "nearest_labels_for_search_only": "L-082: websockets | L-081: when suspence is being shown | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r13-websockets-streaming-candidate-stage5a",
+      "current_region_decision": "R13",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r13",
+      "decision_basis": "Stage5a boundary candidate only: websockets / server-push / event-driven cache updates / staleTime Infinity for push strategy.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-286",
@@ -5519,12 +5591,12 @@
       "width": "788",
       "height": "482",
       "nearest_labels_for_search_only": "L-087: fetchstatus paused | L-086: network modes | L-083: OFFLINE network mode",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-287",
@@ -5538,12 +5610,12 @@
       "width": "829",
       "height": "299",
       "nearest_labels_for_search_only": "L-081: when suspence is being shown | L-084: suspence | L-082: websockets",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-288",
@@ -5557,12 +5629,12 @@
       "width": "869",
       "height": "482",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-289",
@@ -5576,12 +5648,12 @@
       "width": "894",
       "height": "347",
       "nearest_labels_for_search_only": "L-088: persistance + resumepausedmutations | L-092: persistqueryclientsave,subscribe,restore | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-290",
@@ -5595,12 +5667,12 @@
       "width": "918",
       "height": "387",
       "nearest_labels_for_search_only": "L-091: !!! | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-088: persistance + resumepausedmutations",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-291",
@@ -5614,12 +5686,12 @@
       "width": "594",
       "height": "482",
       "nearest_labels_for_search_only": "L-087: fetchstatus paused | L-091: !!! | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-292",
@@ -5633,12 +5705,12 @@
       "width": "563",
       "height": "317",
       "nearest_labels_for_search_only": "L-084: suspence | L-081: when suspence is being shown | L-082: websockets",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-293",
@@ -5652,12 +5724,12 @@
       "width": "915",
       "height": "371",
       "nearest_labels_for_search_only": "L-082: websockets | L-081: when suspence is being shown | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r13-websockets-streaming-candidate-stage5a",
+      "current_region_decision": "R13",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r13",
+      "decision_basis": "Stage5a boundary candidate only: websockets / server-push / event-driven cache updates / staleTime Infinity for push strategy.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-294",
@@ -5671,12 +5743,12 @@
       "width": "749",
       "height": "482",
       "nearest_labels_for_search_only": "L-087: fetchstatus paused | L-086: network modes | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-295",
@@ -5690,12 +5762,12 @@
       "width": "907",
       "height": "185",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-296",
@@ -5709,12 +5781,12 @@
       "width": "896",
       "height": "137",
       "nearest_labels_for_search_only": "L-091: !!! | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-088: persistance + resumepausedmutations",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-297",
@@ -5728,12 +5800,12 @@
       "width": "912",
       "height": "379",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-088: persistance + resumepausedmutations | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-298",
@@ -5747,12 +5819,12 @@
       "width": "481",
       "height": "482",
       "nearest_labels_for_search_only": "L-084: suspence | L-081: when suspence is being shown | L-098: enabled, what to do",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-299",
@@ -5766,12 +5838,12 @@
       "width": "851",
       "height": "482",
       "nearest_labels_for_search_only": "L-082: websockets | L-081: when suspence is being shown | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r13-websockets-streaming-candidate-stage5a",
+      "current_region_decision": "R13",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r13",
+      "decision_basis": "Stage5a boundary candidate only: websockets / server-push / event-driven cache updates / staleTime Infinity for push strategy.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-300",
@@ -5785,12 +5857,12 @@
       "width": "945",
       "height": "377",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-301",
@@ -5804,12 +5876,12 @@
       "width": "917",
       "height": "434",
       "nearest_labels_for_search_only": "L-091: !!! | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-302",
@@ -5823,12 +5895,12 @@
       "width": "926",
       "height": "319",
       "nearest_labels_for_search_only": "L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-091: !!! | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-303",
@@ -5842,12 +5914,12 @@
       "width": "944",
       "height": "438",
       "nearest_labels_for_search_only": "L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-087: fetchstatus paused | L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-304",
@@ -5861,12 +5933,12 @@
       "width": "1029",
       "height": "393",
       "nearest_labels_for_search_only": "L-090: persist query client | L-089: persistqucl vs provider flows | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-305",
@@ -5880,12 +5952,12 @@
       "width": "772",
       "height": "482",
       "nearest_labels_for_search_only": "L-089: persistqucl vs provider flows | L-090: persist query client | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-306",
@@ -5899,12 +5971,12 @@
       "width": "927",
       "height": "300",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-088: persistance + resumepausedmutations | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-307",
@@ -5918,12 +5990,12 @@
       "width": "811",
       "height": "482",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-090: persist query client | L-089: persistqucl vs provider flows",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-308",
@@ -5937,12 +6009,12 @@
       "width": "606",
       "height": "406",
       "nearest_labels_for_search_only": "L-084: suspence | L-081: when suspence is being shown | L-098: enabled, what to do",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-309",
@@ -5956,12 +6028,12 @@
       "width": "837",
       "height": "341",
       "nearest_labels_for_search_only": "L-091: !!! | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-310",
@@ -5975,12 +6047,12 @@
       "width": "906",
       "height": "259",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-311",
@@ -5994,12 +6066,12 @@
       "width": "901",
       "height": "280",
       "nearest_labels_for_search_only": "L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-087: fetchstatus paused",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-312",
@@ -6013,12 +6085,12 @@
       "width": "929",
       "height": "348",
       "nearest_labels_for_search_only": "L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-094: hydrate/dehydrate options buster | L-091: !!!",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-313",
@@ -6032,12 +6104,12 @@
       "width": "531",
       "height": "364",
       "nearest_labels_for_search_only": "L-082: websockets | L-081: when suspence is being shown | L-098: enabled, what to do",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r13-websockets-streaming-candidate-stage5a",
+      "current_region_decision": "R13",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r13",
+      "decision_basis": "Stage5a boundary candidate only: websockets / server-push / event-driven cache updates / staleTime Infinity for push strategy.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-314",
@@ -6051,12 +6123,12 @@
       "width": "689",
       "height": "426",
       "nearest_labels_for_search_only": "L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-086: network modes",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-315",
@@ -6070,12 +6142,12 @@
       "width": "875",
       "height": "482",
       "nearest_labels_for_search_only": "L-090: persist query client | L-089: persistqucl vs provider flows | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-316",
@@ -6089,12 +6161,12 @@
       "width": "924",
       "height": "357",
       "nearest_labels_for_search_only": "L-089: persistqucl vs provider flows | L-090: persist query client | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-317",
@@ -6108,12 +6180,12 @@
       "width": "798",
       "height": "482",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-090: persist query client | L-089: persistqucl vs provider flows",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-318",
@@ -6127,12 +6199,12 @@
       "width": "892",
       "height": "364",
       "nearest_labels_for_search_only": "L-084: suspence | L-098: enabled, what to do | L-081: when suspence is being shown",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-319",
@@ -6146,12 +6218,12 @@
       "width": "876",
       "height": "279",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-094: hydrate/dehydrate options buster | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-320",
@@ -6165,12 +6237,12 @@
       "width": "770",
       "height": "315",
       "nearest_labels_for_search_only": "L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-097: pruning",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-321",
@@ -6184,12 +6256,12 @@
       "width": "572",
       "height": "256",
       "nearest_labels_for_search_only": "L-082: websockets | L-081: when suspence is being shown | L-098: enabled, what to do",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-322",
@@ -6203,12 +6275,12 @@
       "width": "745",
       "height": "482",
       "nearest_labels_for_search_only": "L-089: persistqucl vs provider flows | L-090: persist query client | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-323",
@@ -6222,12 +6294,12 @@
       "width": "632",
       "height": "64",
       "nearest_labels_for_search_only": "L-090: persist query client | L-089: persistqucl vs provider flows | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-324",
@@ -6241,12 +6313,12 @@
       "width": "899",
       "height": "201",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-094: hydrate/dehydrate options buster | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-325",
@@ -6260,12 +6332,12 @@
       "width": "866",
       "height": "482",
       "nearest_labels_for_search_only": "L-090: persist query client | L-089: persistqucl vs provider flows | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-326",
@@ -6279,12 +6351,12 @@
       "width": "914",
       "height": "312",
       "nearest_labels_for_search_only": "L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-097: pruning",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-327",
@@ -6298,12 +6370,12 @@
       "width": "1007",
       "height": "331",
       "nearest_labels_for_search_only": "L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-097: pruning",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-328",
@@ -6317,12 +6389,12 @@
       "width": "530",
       "height": "250",
       "nearest_labels_for_search_only": "L-082: websockets | L-098: enabled, what to do | L-081: when suspence is being shown",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r13-websockets-streaming-candidate-stage5a",
+      "current_region_decision": "R13",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r13",
+      "decision_basis": "Stage5a boundary candidate only: websockets / server-push / event-driven cache updates / staleTime Infinity for push strategy.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-329",
@@ -6336,12 +6408,12 @@
       "width": "886",
       "height": "418",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-084: suspence | L-081: when suspence is being shown",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-330",
@@ -6355,12 +6427,12 @@
       "width": "784",
       "height": "482",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-090: persist query client | L-089: persistqucl vs provider flows",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-331",
@@ -6374,12 +6446,12 @@
       "width": "792",
       "height": "482",
       "nearest_labels_for_search_only": "L-094: hydrate/dehydrate options buster | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-091: !!!",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-332",
@@ -6393,12 +6465,12 @@
       "width": "940",
       "height": "290",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-094: hydrate/dehydrate options buster | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-333",
@@ -6412,12 +6484,12 @@
       "width": "700",
       "height": "296",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-082: websockets | L-081: when suspence is being shown",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r13-websockets-streaming-candidate-stage5a",
+      "current_region_decision": "R13",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r13",
+      "decision_basis": "Stage5a boundary candidate only: websockets / server-push / event-driven cache updates / staleTime Infinity for push strategy.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-334",
@@ -6431,12 +6503,12 @@
       "width": "897",
       "height": "260",
       "nearest_labels_for_search_only": "L-095: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-097: pruning",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-335",
@@ -6450,12 +6522,12 @@
       "width": "896",
       "height": "309",
       "nearest_labels_for_search_only": "L-089: persistqucl vs provider flows | L-090: persist query client | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-336",
@@ -6469,12 +6541,12 @@
       "width": "911",
       "height": "293",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-094: hydrate/dehydrate options buster | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-337",
@@ -6488,12 +6560,12 @@
       "width": "926",
       "height": "325",
       "nearest_labels_for_search_only": "L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-097: pruning | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-338",
@@ -6507,12 +6579,12 @@
       "width": "713",
       "height": "482",
       "nearest_labels_for_search_only": "L-090: persist query client | L-089: persistqucl vs provider flows | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-339",
@@ -6526,12 +6598,12 @@
       "width": "807",
       "height": "482",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-090: persist query client | L-089: persistqucl vs provider flows",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-340",
@@ -6545,12 +6617,12 @@
       "width": "915",
       "height": "403",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-084: suspence | L-101: serial suspence not showing nested",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-341",
@@ -6564,12 +6636,12 @@
       "width": "917",
       "height": "309",
       "nearest_labels_for_search_only": "L-094: hydrate/dehydrate options buster | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-097: pruning",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-342",
@@ -6583,12 +6655,12 @@
       "width": "896",
       "height": "351",
       "nearest_labels_for_search_only": "L-094: hydrate/dehydrate options buster | L-092: persistqueryclientsave,subscribe,restore | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-343",
@@ -6602,12 +6674,12 @@
       "width": "818",
       "height": "397",
       "nearest_labels_for_search_only": "L-097: pruning | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-344",
@@ -6621,12 +6693,12 @@
       "width": "982",
       "height": "389",
       "nearest_labels_for_search_only": "L-094: hydrate/dehydrate options buster | L-097: pruning | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-345",
@@ -6640,12 +6712,12 @@
       "width": "729",
       "height": "327",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-101: serial suspence not showing nested | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-346",
@@ -6659,12 +6731,12 @@
       "width": "970",
       "height": "422",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-090: persist query client | L-089: persistqucl vs provider flows",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-347",
@@ -6678,12 +6750,12 @@
       "width": "857",
       "height": "445",
       "nearest_labels_for_search_only": "L-094: hydrate/dehydrate options buster | L-092: persistqueryclientsave,subscribe,restore | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-348",
@@ -6697,12 +6769,12 @@
       "width": "943",
       "height": "369",
       "nearest_labels_for_search_only": "L-097: pruning | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-349",
@@ -6716,12 +6788,12 @@
       "width": "712",
       "height": "329",
       "nearest_labels_for_search_only": "L-097: pruning | L-094: hydrate/dehydrate options buster | L-093: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST?",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-350",
@@ -6735,12 +6807,12 @@
       "width": "822",
       "height": "332",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-101: serial suspence not showing nested | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-351",
@@ -6754,12 +6826,12 @@
       "width": "955",
       "height": "276",
       "nearest_labels_for_search_only": "L-092: persistqueryclientsave,subscribe,restore | L-090: persist query client | L-089: persistqucl vs provider flows",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-352",
@@ -6773,12 +6845,12 @@
       "width": "899",
       "height": "214",
       "nearest_labels_for_search_only": "L-097: pruning | L-094: hydrate/dehydrate options buster | L-099: query.state",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-353",
@@ -6792,12 +6864,12 @@
       "width": "864",
       "height": "477",
       "nearest_labels_for_search_only": "L-094: hydrate/dehydrate options buster | L-097: pruning | L-092: persistqueryclientsave,subscribe,restore",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-354",
@@ -6811,12 +6883,12 @@
       "width": "765",
       "height": "482",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-101: serial suspence not showing nested | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-355",
@@ -6830,12 +6902,12 @@
       "width": "948",
       "height": "384",
       "nearest_labels_for_search_only": "L-097: pruning | L-094: hydrate/dehydrate options buster | L-099: query.state",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-356",
@@ -6849,12 +6921,12 @@
       "width": "886",
       "height": "482",
       "nearest_labels_for_search_only": "L-097: pruning | L-099: query.state | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-357",
@@ -6868,12 +6940,12 @@
       "width": "941",
       "height": "200",
       "nearest_labels_for_search_only": "L-094: hydrate/dehydrate options buster | L-097: pruning | L-099: query.state",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-358",
@@ -6887,12 +6959,12 @@
       "width": "789",
       "height": "349",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-101: serial suspence not showing nested | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-359",
@@ -6906,12 +6978,12 @@
       "width": "881",
       "height": "459",
       "nearest_labels_for_search_only": "L-097: pruning | L-099: query.state | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-360",
@@ -6925,12 +6997,12 @@
       "width": "854",
       "height": "482",
       "nearest_labels_for_search_only": "L-097: pruning | L-099: query.state | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-361",
@@ -6944,12 +7016,12 @@
       "width": "790",
       "height": "482",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-362",
@@ -6963,12 +7035,12 @@
       "width": "820",
       "height": "331",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-363",
@@ -6982,12 +7054,12 @@
       "width": "920",
       "height": "366",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-101: serial suspence not showing nested | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-364",
@@ -7001,12 +7073,12 @@
       "width": "934",
       "height": "406",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-365",
@@ -7020,12 +7092,12 @@
       "width": "853",
       "height": "303",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-366",
@@ -7039,12 +7111,12 @@
       "width": "871",
       "height": "308",
       "nearest_labels_for_search_only": "L-098: enabled, what to do | L-101: serial suspence not showing nested | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-367",
@@ -7058,12 +7130,12 @@
       "width": "923",
       "height": "462",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-368",
@@ -7077,12 +7149,12 @@
       "width": "923",
       "height": "320",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-369",
@@ -7096,12 +7168,12 @@
       "width": "534",
       "height": "367",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-370",
@@ -7115,12 +7187,12 @@
       "width": "909",
       "height": "482",
       "nearest_labels_for_search_only": "L-101: serial suspence not showing nested | L-098: enabled, what to do | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-371",
@@ -7134,12 +7206,12 @@
       "width": "991",
       "height": "422",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-096: meta for dehydraton filtering to avoid overpopulaton of the store + acessing metha in queryfn",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-372",
@@ -7153,12 +7225,12 @@
       "width": "913",
       "height": "369",
       "nearest_labels_for_search_only": "L-099: query.state | L-097: pruning | L-094: hydrate/dehydrate options buster",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r14-persistence-hydration-pruning-candidate-stage5a",
+      "current_region_decision": "R14",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r14",
+      "decision_basis": "Stage5a boundary candidate only: persistQueryClient / provider flow / hydrate-dehydrate / buster / pruning / meta filtering / query.state.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-373",
@@ -7172,12 +7244,12 @@
       "width": "912",
       "height": "322",
       "nearest_labels_for_search_only": "L-101: serial suspence not showing nested | L-098: enabled, what to do | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-374",
@@ -7191,12 +7263,12 @@
       "width": "976",
       "height": "451",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r09d-offline-fetchstatus-resume-tail-candidate-stage5a",
+      "current_region_decision": "R09D",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r09d",
+      "decision_basis": "Stage5a boundary candidate only: offline/fetchStatus paused/networkMode tail and resumePaused/offlineFirst follow-ups.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-375",
@@ -7210,12 +7282,12 @@
       "width": "735",
       "height": "359",
       "nearest_labels_for_search_only": "L-101: serial suspence not showing nested | L-098: enabled, what to do | L-084: suspence",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-376",
@@ -7229,12 +7301,12 @@
       "width": "785",
       "height": "467",
       "nearest_labels_for_search_only": "L-100: cancelling queries | L-102: Request cancellation | L-104: or better excplicitly cancel queries when you need cancellation on some aciton",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r15-query-cancellation-candidate-stage5a",
+      "current_region_decision": "R15",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r15",
+      "decision_basis": "Stage5a boundary candidate only: cancelQueries / request cancellation / explicit cancellation before actions.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-377",
@@ -7248,12 +7320,12 @@
       "width": "618",
       "height": "631",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-378",
@@ -7267,12 +7339,12 @@
       "width": "668",
       "height": "482",
       "nearest_labels_for_search_only": "L-100: cancelling queries | L-102: Request cancellation | L-104: or better excplicitly cancel queries when you need cancellation on some aciton",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r15-query-cancellation-candidate-stage5a",
+      "current_region_decision": "R15",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r15",
+      "decision_basis": "Stage5a boundary candidate only: cancelQueries / request cancellation / explicit cancellation before actions.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-379",
@@ -7286,12 +7358,12 @@
       "width": "831",
       "height": "482",
       "nearest_labels_for_search_only": "L-104: or better excplicitly cancel queries when you need cancellation on some aciton | L-102: Request cancellation | L-105: Error handling error boundary",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r15-query-cancellation-candidate-stage5a",
+      "current_region_decision": "R15",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r15",
+      "decision_basis": "Stage5a boundary candidate only: cancelQueries / request cancellation / explicit cancellation before actions.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-380",
@@ -7305,12 +7377,12 @@
       "width": "598",
       "height": "446",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-381",
@@ -7324,12 +7396,12 @@
       "width": "674",
       "height": "482",
       "nearest_labels_for_search_only": "L-100: cancelling queries | L-105: Error handling error boundary | L-104: or better excplicitly cancel queries when you need cancellation on some aciton",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r15-query-cancellation-candidate-stage5a",
+      "current_region_decision": "R15",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r15",
+      "decision_basis": "Stage5a boundary candidate only: cancelQueries / request cancellation / explicit cancellation before actions.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-382",
@@ -7343,12 +7415,12 @@
       "width": "534",
       "height": "463",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r12-suspense-enabled-serial-candidate-stage5a",
+      "current_region_decision": "R12",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r12",
+      "decision_basis": "Stage5a boundary candidate only: Suspense / useSuspenseQuery / enabled limitations / serial Suspense behavior.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-383",
@@ -7362,12 +7434,12 @@
       "width": "674",
       "height": "482",
       "nearest_labels_for_search_only": "L-104: or better excplicitly cancel queries when you need cancellation on some aciton | L-105: Error handling error boundary | L-106: throw on error",
-      "coverage_status": "unreviewed-needs-visual-boundary-review",
-      "current_region_decision": "",
-      "decision_is_final": "no",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Coordinates retained only. Must be reviewed visually/semantically before region assignment.",
-      "review_notes": "Coordinates retained only. Must be reviewed visually/semantically before region assignment."
+      "coverage_status": "r15-query-cancellation-candidate-stage5a",
+      "current_region_decision": "R15",
+      "decision_is_final": "no-stage5a-boundary-review-only",
+      "must_recheck_before_region_close": "yes-for-r15",
+      "decision_basis": "Stage5a boundary candidate only: cancelQueries / request cancellation / explicit cancellation before actions.",
+      "review_notes": "Stage5a boundary candidate only. Do not mark processed until visible transcript exists."
     },
     {
       "source_id": "S-384",

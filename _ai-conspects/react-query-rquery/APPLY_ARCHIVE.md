@@ -1,6 +1,6 @@
-# Apply archive: React Query Stage4z closure audit
+# Apply archive: React Query Stage5a S261-S383 boundary review
 
-Archive type: closure audit.
+Archive type: boundary review.
 
 Target branch:
 
@@ -17,48 +17,56 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4z-stage4x-closure-audit-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5a-s261-s383-boundary-review-v001.zip
 ```
 
-## Apply commands
+## Apply commands with cached diff review
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage4z-stage4x-closure-audit-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage4z-stage4x-closure-audit.diff"
+$target = "_ai-conspects\react-query-rquery"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-react-query-rquery-stage5a-s261-s383-boundary-review-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-stage5a-s261-s383-boundary-review.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
 git status --short
+
 Expand-Archive -Path $zip -DestinationPath . -Force
 
-git status --short
-git diff --stat -- _ai-conspects/react-query-rquery
+# Stage ONLY this target folder.
+git add -A -- $target
 
-# Save full diff to file and copy to clipboard. Do not print it and do not open a pager.
-git --no-pager diff -- _ai-conspects/react-query-rquery > $diffPath
+# Review staged diff, including new files.
+git status --short -- $target
+git diff --cached --stat -- $target
+git diff --cached --name-status -- $target
+
+git --no-pager diff --cached -- $target > $diffPath
 Get-Content $diffPath -Raw | Set-Clipboard
-Write-Host "Full diff saved to $diffPath and copied to clipboard."
+
+Write-Host "Cached diff saved to $diffPath"
+Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ```
 
 ## Commit commands
 
 ```powershell
-git add -A _ai-conspects/react-query-rquery
-git commit -m "Close React Query Stage4x corrected queue"
+git commit -m "Add React Query Stage5a boundary review"
 git push origin ai-processed-conspects-text
 ```
 
 ## Rollback before commit
 
 ```powershell
+git restore --staged -- _ai-conspects/react-query-rquery
 git restore -- _ai-conspects/react-query-rquery
 git clean -fd -- _ai-conspects/react-query-rquery
 ```
 
 ## Notes
 
-This archive does not add transcript. It closes the corrected Stage4x queue after Rebuild A and Rebuild B.
+This archive is boundary review only. It does not add transcript and does not mark S-261..S-383 as processed.
