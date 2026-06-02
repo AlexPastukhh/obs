@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core general
 
-Generated: 2026-06-02 00:12:16 UTC
+Generated: 2026-06-02 01:12:54 UTC
 
 ## Current policy
 
@@ -30,6 +30,7 @@ Stage9: EF04 transcript done
 Stage10: EF05/EF06 combined boundary review done
 Stage11: EF05A transcript done
 Stage12: EF05B transcript done
+Stage13: EF05C transcript done
 ```
 
 ## Done
@@ -42,12 +43,12 @@ EF03: Constructors / materialization
 EF04: Shadow property / query filter
 EF05A: Race protection with UNIQUE constraint/index
 EF05B: Owned FullName / optional mapping / CHECK constraint
+EF05C: Optional value objects / complex types
 ```
 
 ## Current candidate regions
 
 ```text
-EF05C: S-014, S-015, S-016, S-017, S-018, S-020, S-021, S-022, S-023
 EF06A: S-047, S-048
 EF06B: S-049, S-050, S-051, S-052
 EF06C: S-062, S-063, S-064, S-065, S-061
@@ -56,7 +57,7 @@ EF06C: S-062, S-063, S-064, S-065, S-061
 ## Recommended next transcript
 
 ```text
-EF05C:
-S-014, S-015, S-016, S-017, S-018, S-020, S-021, S-022, S-023
-Optional value objects / complex types
+EF06A:
+S-047, S-048
+Optimistic concurrency / check-then-add race
 ```

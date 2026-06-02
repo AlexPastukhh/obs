@@ -10,12 +10,12 @@ EF03 - Constructors / materialization
 EF04 - Shadow property / query filter
 EF05A - Race protection with UNIQUE constraint/index
 EF05B - Owned FullName / optional mapping / CHECK constraint
+EF05C - Optional value objects / complex types
 ```
 
 Boundary-reviewed candidates still pending transcript:
 
 ```text
-EF05C - Optional value objects / complex types
 EF06A - Optimistic concurrency / check-then-add race
 EF06B - Transactions / isolation levels
 EF06C - DB exceptions / retry exhausted / catch order

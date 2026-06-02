@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 01:12:54 UTC",
+  "region_id": "EF05C",
+  "what_area_is_about": [
+    "nullable value objects stored inside aggregates",
+    "exposing nullable fields to the domain as Maybe<T>",
+    "optional owned value-object mapping",
+    "optional child entities versus references to other aggregates",
+    "why not map Maybe<T> directly through EF value converters",
+    "optional complex type mapping for multi-column value objects such as Money",
+    "table shape and materialization behavior for optional complex/value objects"
+  ],
+  "key_ideas": [
+    "The domain can store a nullable field such as `FullName? _fullName` but expose it as `Maybe<FullName>`.",
+    "EF should map the underlying nullable value object or nullable complex type, not the Maybe wrapper directly.",
+    "For optional owned values, nullable columns and optional navigation configuration tell EF how to represent all-null columns.",
+    "If an object has its own identity, decide whether that identity is only meaningful inside the aggregate or globally meaningful.",
+    "Identity meaningful only inside the aggregate usually points to a child entity; globally meaningful identity usually points to another aggregate reference/id.",
+    "EF value converters are not a good fit for `Maybe<Money>` when the value object maps to multiple columns.",
+    "A practical pattern is: EF deals with `Money?`, the domain exposes `Maybe<Money>`.",
+    "For flattened optional complex types, at least one required property may be needed so EF can distinguish null complex object from empty object."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "S-016 continues into S-017.",
+      "S-022 bottom continues after visible Discount exists row."
+    ],
+    "confidence": "High for source transcript and boundary decision."
+  }
+}
