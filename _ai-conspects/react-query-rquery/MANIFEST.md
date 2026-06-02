@@ -1,22 +1,22 @@
-# MANIFEST - React Query Stage4x Rebuild A
+# MANIFEST - React Query Stage4y Rebuild B
 
 Archive type: **validated transcript rebuild batch**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 08:43:05 UTC
+Generated: 2026-06-02 08:52:31 UTC
 
 ## Direction check
 
 Goal:
-Rebuild Stage4x without OCR-placeholder processed sources.
+Finish Stage4x corrected queue without OCR-placeholder processed sources.
 
 Done:
-Stage4x-fixed preflight created the pending queue.
+Rebuild A processed R05/R09A/R09B.
 
 This step:
-Add Batch A transcripts:
-- R05 v003 correction
-- R09A cache remove/reset
-- R09B network/offline/offlineFirst
+Add Rebuild B transcripts:
+- R03/R04/R07 small corrections
+- R09C validation / resumePausedMutations
+- R11 mutations / callbacks / optimistic updates
 
 Why:
 Every included source has visible text in the region file. No OCR-timeout placeholder is marked processed.
@@ -24,19 +24,22 @@ Every included source has visible text in the region file. No OCR-timeout placeh
 Next:
 1. review diff;
 2. commit;
-3. process Batch B.
+3. run Stage4x closure audit.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/regions/R05-v003-infinite-query-correction.md
-_ai-conspects/react-query-rquery/regions/R09A-cache-remove-reset.md
-_ai-conspects/react-query-rquery/regions/R09B-network-offline.md
-_ai-conspects/react-query-rquery/data/*stage4x-rebuild-a-v001.*
+_ai-conspects/react-query-rquery/regions/R03-v002-notify-select-correction.md
+_ai-conspects/react-query-rquery/regions/R04A-v002-static-staleness-correction.md
+_ai-conspects/react-query-rquery/regions/R04B-v002-functional-refetchinterval-correction.md
+_ai-conspects/react-query-rquery/regions/R07-v005-prefetch-ensurequerydata-correction.md
+_ai-conspects/react-query-rquery/regions/R09C-validation-resumePaused.md
+_ai-conspects/react-query-rquery/regions/R11-mutations-callbacks-optimistic.md
+_ai-conspects/react-query-rquery/data/*stage4y-rebuild-b-v001.*
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
-_ai-conspects/react-query-rquery/audit-assets/stage4x-batch-a-source-images/*.png
-_ai-conspects/react-query-rquery/38-stage4x-rebuild-a-r05-r09a-r09b-transcripts.md
+_ai-conspects/react-query-rquery/audit-assets/stage4y-rebuild-b-source-images/*.png
+_ai-conspects/react-query-rquery/39-stage4y-rebuild-b-corrections-r09c-r11-transcripts.md
 _ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
@@ -45,6 +48,7 @@ _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Batch A processed: 30
-Remaining Stage4x-fixed queue pending: 41
+Rebuild B processed: 41
+Stage4x corrected queue transcript-complete: 71 / 71
+Next: closure audit
 ```

@@ -1,0 +1,265 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-224,IU-224,37ac0e6a45,S-224__37ac0e6a45.png,verified-visible-from-contact-sheet,cancellation handling for optimistic updates,"Do I need to do anything special in `useQuery` for cancellation?
+
+Usually, no.
+
+For optimistic updates, the recommended handling is:
+
+- call `cancelQueries` in `onMutate`
+- prefer `{ silent: true }`
+- rollback in the mutation's `onError`
+- refetch/invalidate in `onSettled`",,Readable; duplicated later by S-254.
+S-233,IU-233,7ace83dc39,S-233__7ace83dc39.png,verified-visible-from-contact-sheet,getMutationCache is lower-level mutation cache access,"`getMutationCache()`
+
+This returns the `MutationCache` connected to the `QueryClient`.
+
+What the mutation cache is:
+
+It is the low-level store for mutation entries:
+
+- pending mutations
+- paused mutations
+- mutation state/status
+- metadata and mutation execution
+
+Just like with `getQueryCache()`, most app code does not need this directly. Usually you use:
+
+- `useMutation`
+- `isMutating`
+- mutation defaults
+- `resumePausedMutations`
+
+instead of touching the mutation cache directly.",,Readable.
+S-236,IU-236,488e3dbdf9,S-236__488e3dbdf9.png,verified-visible-from-contact-sheet,onMutate receives variables and returns rollback context,"`mutate(variables)` and `mutateAsync(variables)` both pass those variables into `onMutate`, `mutationFn`, `onSuccess`, `onError`, and `onSettled`. `onMutate` runs before the mutation function, which is why it's the right place to do the optimistic cache update and return rollback info for later callbacks.
+
+So the flow you described is right:
+
+1. call `mutate(...)` or `mutateAsync(...)`
+2. `onMutate` gets the same variables
+3. optimistically write to cache before server responds
+4. return previous state or rollback context
+5. if server mutation fails, `onError` uses that returned value to restore state
+6. `onSettled` usually invalidates to resync with server truth",,Readable.
+S-238,IU-238,5bec075fe3,S-238__5bec075fe3.png,verified-visible-from-contact-sheet,cancel old fetches before optimistic update,"Why `cancelQueries` matters in optimistic updates.
+
+TanStack's optimistic update guide literally says to cancel outgoing refetches so they don't overwrite your optimistic update.
+
+The problem without cancellation:
+
+Imagine this timeline:
+
+1. `[""todos""]` query is on screen
+2. a refetch is already in flight
+3. user edits/adds a todo
+4. you optimistically call `setQueryData` and show the new todo immediately
+5. the older in-flight refetch finishes with stale server data
+6. that old response writes into cache and wipes out your optimistic change
+
+That is the race you are preventing.
+
+So the idea is: cancel old fetches first, then write optimistic data, then later sync with the server result.",,Readable.
+S-239,IU-239,73b5e8fd66,S-239__73b5e8fd66.png,verified-visible-from-contact-sheet,mutate vs mutateAsync,"`mutate` vs `mutateAsync`
+
+`mutate`
+
+Use when you want the callback-style flow and do not need to `await` the mutation result directly.
+
+You usually rely on:
+
+- `onSuccess`
+- `onError`
+- `onSettled`
+
+for follow-up behavior. The docs describe `mutate` as returning `void`.",mutation.mutate(newTodo),Readable.
+S-242,IU-242,f128bccab6,S-242__f128bccab6.png,verified-visible-from-contact-sheet,standard optimistic update flow with cancelQueries,"3) Standard optimistic update flow with `cancelQueries`
+
+TanStack's documented flow is:
+
+1. `onMutate`
+2. cancel outgoing refetches
+3. snapshot previous cache value
+4. write optimistic value with `setQueryData`
+5. if mutation fails, roll back using the snapshot
+6. on settled, invalidate/refetch to sync with server",,Readable.
+S-243,IU-243,7de4e030ee,S-243__7de4e030ee.png,verified-visible-from-contact-sheet,return full object from onMutate for callbacks,Example where `onMutate` returns a full object. Later callbacks can use that object for rollback or local UI state.,"function RenameButton() {
+  const mutation = useMutation({
+    mutationFn: updateUser,
+
+    onMutate: (variables) => {
+      return {
+        rollback: () => mutation.mutate({ id: 1, name: 'Alice' }),
+        disabledButton: isPending,
+      }
+    },
+  })
+
+  return (
+    <button disabled={mutation.isPending}>
+      Rename
+    </button>
+  )
+}",Readable code card; exact demo variable names are less important than returned object idea.
+S-244,IU-244,a7ac382dd0,S-244__a7ac382dd0.png,verified-visible-from-contact-sheet,mutateAsync returns Promise and can be awaited,"`mutateAsync`
+
+Use when you want a Promise and order with `await` / `try-catch`.
+
+The docs say `mutateAsync` is similar to `mutate`, but returns a Promise that resolves on success or throws on error.","try {
+  const result = await mutation.mutateAsync(newTodo)
+  other(result)
+} catch (err) {}",Readable.
+S-245,IU-245,8641ca8bc2,S-245__8641ca8bc2.png,verified-visible-from-contact-sheet,immutable updates only for setQueryData,"21.2 Immutable updates only
+
+Always return a new object/array.
+
+Good:
+
+Bad:
+
+If you return the same reference after mutating it, observers may not update correctly.","// Good
+queryClient.setQueryData(['users'], (old = []) => [
+  ...old,
+  { id: crypto.randomUUID(), name: 'Ann' },
+])
+
+// Bad
+queryClient.setQueryData(['users'], (old = []) => {
+  old.push(newUser)
+  return old
+})",Readable.
+S-247,IU-247,e7fe1b2b60,S-247__e7fe1b2b60.png,verified-visible-from-contact-sheet,when to use mutate,"When to use which
+
+Use `mutate` when:
+
+- you are happy with mutation callbacks
+- you trigger the mutation from UI events
+- you do not need the result inline in surrounding code",,Readable.
+S-248,IU-248,7ec1a778b8,S-248__7ec1a778b8.png,verified-visible-from-contact-sheet,when to use mutateAsync,"Example. Use `mutateAsync` when:
+
+- you want to `await` the result
+- you need sequential async logic
+- you want `try/catch/finally` style code","const saveTodo = () => {
+  return mutation.mutateAsync({ id, title: 'New' })
+}",Readable.
+S-249,IU-249,69bab5a10b,S-249__69bab5a10b.png,verified-visible-from-contact-sheet,mutation lifecycle mental model,"9. Best mental model
+
+- `onMutate` = prepare optimistic state before server call
+- `mutationFn` = do the actual write
+- `onSuccess` = handle confirmed success
+- `onError` = rollback failure
+- `onSettled` = always-run final synchronization/cleanup",,Readable.
+S-250,IU-250,c11c8e7392,S-250__c11c8e7392.png,verified-visible-from-contact-sheet,manual cache updates get hard,"21.3 When manual updates get hard
+
+Manual updates become painful when the same entity appears in:
+
+- sorted lists
+- filtered lists
+- detail page
+- summary cards
+- dashboard data
+
+If an update changes sort order or filter membership, you may need to update many caches.
+
+That is a sign to prefer invalidation.",,Readable.
+S-251,IU-251,850109ec0c,S-251__850109ec0c.png,verified-visible-from-contact-sheet,query callbacks removed but mutation callbacks remain,"In v5, `onSuccess`, `onError`, and `onSettled` were removed from `useQuery`, but still exist for mutations, not queries.
+
+So for optimistic updates, you usually do not “handle cancellation in `useQuery` somehow,” because there is no such callback in v5. Instead, you handle it by:
+
+- canceling the relevant queries before your optimistic write,
+- optionally marking that cancellation silent,
+- snapshotting previous cache data,
+- writing optimistic data,
+- rolling back in the mutation `onError`,
+- invalidating/refetching in `onSettled`.",,Readable.
+S-252,IU-252,4b9ba54f93,S-252__4b9ba54f93.png,verified-visible-from-contact-sheet,mutate vs mutateAsync return behavior,Example. That's the clearest difference: `mutate` = fire and let callbacks handle lifecycle; `mutateAsync` = await the mutation like a normal Promise.,"const savedTodo = await mutation.mutateAsync({
+  id,
+  title: 'New'
+})",Readable.
+S-253,IU-253,9373bdbda3,S-253__9373bdbda3.png,verified-visible-from-contact-sheet,onMutate return value is passed to later callbacks,"4. What do we return from `onMutate`, and why?
+
+You return rollback or context data that later callbacks may need.
+
+In v5 docs, the value returned from `onMutate` is passed to `onError` and `onSettled` as the `onMutateResult` argument.
+
+Typical returned values:
+
+- previous cached data
+- temporary optimistic IDs
+- metadata needed for rollback
+- anything you want later callbacks to know",,Readable.
+S-254,IU-254,37ac0e6a45,S-254__37ac0e6a45.png,verified-visible-from-contact-sheet,duplicate cancellation guidance for optimistic updates,"Do I need to do anything special in `useQuery` for cancellation?
+
+Usually, no.
+
+For optimistic updates, the recommended handling is:
+
+- call `cancelQueries` in `onMutate`
+- prefer `{ silent: true }`
+- rollback in the mutation's `onError`
+- refetch/invalidate in `onSettled`",,Duplicate of S-224; kept as duplicate-source evidence rather than dropped.
+S-255,IU-255,6759acc16a,S-255__6759acc16a.png,verified-visible-from-contact-sheet,callback arguments variables and context,"5. Callback arguments, one by one
+
+`onMutate`
+
+Signature in v5 shows that `onMutate` receives the same `variables` the mutation function received, plus context.","onMutate: (
+  variables,
+  context,
+) => Promise<TOnMutateResult> | void | TOnMutateResult",Readable; lower edge cropped after signature.
+S-256,IU-256,a6d0648cd6,S-256__a6d0648cd6.png,verified-visible-from-contact-sheet,why invalidation in onSettled,"Why do we invalidate in `onSettled`?
+
+`onSettled` runs whether the mutation succeeds or fails. TanStack defines it as the callback that fires when the mutation either succeeds or encounters an error.
+
+You invalidate there because the optimistic cache is only a temporary guess. After the mutation is done, you want the real server state to become the source of truth again. TanStack's optimistic update docs show invalidation in `onSettled`, and even note that you should return that Promise if you want the mutation to stay pending until the refetch completes.
+
+So:
+
+- if mutation succeeds, invalidation refetches and confirms the final server state
+- if mutation fails, `onError` rolls back, and invalidation can still refetch to the true server state if needed",,Readable.
+S-257,IU-257,ae6ed651d2,S-257__ae6ed651d2.png,verified-visible-from-contact-sheet,variables argument is the value passed to mutate,"Arguments
+
+`variables`
+
+This is the value you passed to `mutate(...)`.
+
+Example:
+
+Then inside `onMutate`, `variables` is:","mutation.mutate({
+  id: 5,
+  title: 'New title',
+})
+
+// variables:
+{
+  id: 5,
+  title: 'New title',
+}",Readable.
+S-258,IU-258,db2d4aae55,S-258__db2d4aae55.png,verified-visible-from-contact-sheet,return invalidateQueries promise to keep mutation pending,"If your `onSettled` returns the Promise from `queryClient.invalidateQueries(...)`, React Query will keep the mutation itself in the pending state until that invalidation-triggered refetch finishes.
+
+The official optimistic updates guide says to return that Promise “so that the mutation stays in `pending` state until the refetch is finished.”",,Readable.
+S-259,IU-259,e2bb07761c,S-259__e2bb07761c.png,verified-visible-from-contact-sheet,without returning promise mutation stops pending before refetch ends,"Without returning the Promise:
+
+What happens:
+
+1. mutation request finishes
+2. `onSettled` runs
+3. invalidation/refetch is started
+4. but `onSettled` itself finishes immediately
+5. mutation is no longer pending, even though the follow-up refetch may still be running
+
+So your mutation state may become:
+
+- `isPending = false`
+- while the query is still refetching in background","onSettled: () => {
+  queryClient.invalidateQueries({ queryKey: ['todos'] })
+}",Readable.
+S-260,IU-260,507dbfa569,S-260__507dbfa569.png,verified-visible-from-contact-sheet,onMutate context includes client QueryClient,"`context`
+
+This is a mutation function context object. In the optimistic update examples/docs, it includes `client`, which is the `QueryClient` you use for things like:
+
+- `cancelQueries`
+- `getQueryData`
+- `setQueryData`
+- `invalidateQueries`
+
+So in practice:","onMutate: async (variables, context) => {
+  const client = context.client
+}",Readable.

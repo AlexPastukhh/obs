@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-02 08:43:05 UTC",
-  "ledger_version": "v2-updated-by-stage4x-rebuild-a",
-  "critical_rule": "Only Batch A sources are marked processed. Remaining Stage4x-fixed sources stay pending.",
-  "batch_a_processed": {
+  "generated": "2026-06-02 08:52:31 UTC",
+  "ledger_version": "v2-updated-by-stage4y-rebuild-b",
+  "critical_rule": "Rebuild B marks only visible-text sources processed. No OCR-placeholder sources are processed.",
+  "rebuild_a_already_processed": {
     "R05": [
       "S-118",
       "S-119",
@@ -38,11 +38,10 @@
       "S-232",
       "S-234",
       "S-235"
-    ],
-    "total": 30
+    ]
   },
-  "pending_after_batch_a": {
-    "R03_R04_R07_small_corrections": [
+  "rebuild_b_processed": {
+    "small_corrections": [
       "S-065",
       "S-066",
       "S-109",
@@ -88,8 +87,10 @@
       "S-258",
       "S-259",
       "S-260"
-    ]
+    ],
+    "total": 41
   },
+  "next_step": "Stage4x closure audit for all 71 queued sources.",
   "rows": [
     {
       "source_id": "S-001",
@@ -1319,12 +1320,12 @@
       "width": "826",
       "height": "332",
       "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES",
-      "coverage_status": "stage4x-fixed-pending-transcript-r03",
+      "coverage_status": "processed-in-r03-v002-correction",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r03-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: notifyOnChangeProps/select correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: notifyOnChangeProps/select correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r03-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R03-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R03-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-066",
@@ -1338,12 +1339,12 @@
       "width": "834",
       "height": "362",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r03",
+      "coverage_status": "processed-in-r03-v002-correction",
       "current_region_decision": "R03",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r03-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: notifyOnChangeProps/select correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: notifyOnChangeProps/select correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r03-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R03-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R03-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-067",
@@ -2155,12 +2156,12 @@
       "width": "408",
       "height": "201",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r04a",
+      "coverage_status": "processed-in-r04a-v002-correction",
       "current_region_decision": "R04A",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r04a-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: static/staleness correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: static/staleness correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r04a-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R04A-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R04A-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-110",
@@ -2174,12 +2175,12 @@
       "width": "941",
       "height": "375",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r04a",
+      "coverage_status": "processed-in-r04a-v002-correction",
       "current_region_decision": "R04A",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r04a-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: static/staleness correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: static/staleness correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r04a-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R04A-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R04A-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-111",
@@ -2231,12 +2232,12 @@
       "width": "954",
       "height": "479",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r04b",
+      "coverage_status": "processed-in-r04b-v002-correction",
       "current_region_decision": "R04B",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r04b-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: functional refetchInterval correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: functional refetchInterval correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r04b-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R04B-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R04B-v002-correction Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-114",
@@ -3675,12 +3676,12 @@
       "width": "916",
       "height": "275",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r07",
+      "coverage_status": "processed-in-r07-v005-correction",
       "current_region_decision": "R07",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r07-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: prefetch/fetchQuery/ensureQueryData correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: prefetch/fetchQuery/ensureQueryData correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r07-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R07-v005-correction Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R07-v005-correction Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-190",
@@ -3789,12 +3790,12 @@
       "width": "788",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r07",
+      "coverage_status": "processed-in-r07-v005-correction",
       "current_region_decision": "R07",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r07-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: prefetch/fetchQuery/ensureQueryData correction addendum. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: prefetch/fetchQuery/ensureQueryData correction addendum. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r07-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R07-v005-correction Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R07-v005-correction Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-196",
@@ -3808,12 +3809,12 @@
       "width": "956",
       "height": "213",
       "nearest_labels_for_search_only": "L-064: fetchstatus paused | L-059: OFFLINE network mode | L-060: mutations network mode resumepausedmutations",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-197",
@@ -3865,12 +3866,12 @@
       "width": "913",
       "height": "369",
       "nearest_labels_for_search_only": "L-063: VALIDATION WITH ZOD | L-060: mutations network mode resumepausedmutations | L-068: !!!",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-200",
@@ -3903,12 +3904,12 @@
       "width": "525",
       "height": "230",
       "nearest_labels_for_search_only": "L-063: VALIDATION WITH ZOD | L-060: mutations network mode resumepausedmutations | L-068: !!!",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-202",
@@ -4055,12 +4056,12 @@
       "width": "830",
       "height": "443",
       "nearest_labels_for_search_only": "L-063: VALIDATION WITH ZOD | L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-068: !!!",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-210",
@@ -4074,12 +4075,12 @@
       "width": "918",
       "height": "387",
       "nearest_labels_for_search_only": "L-068: !!! | L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-063: VALIDATION WITH ZOD",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-211",
@@ -4169,12 +4170,12 @@
       "width": "896",
       "height": "137",
       "nearest_labels_for_search_only": "L-068: !!! | L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-063: VALIDATION WITH ZOD",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-216",
@@ -4226,12 +4227,12 @@
       "width": "672",
       "height": "283",
       "nearest_labels_for_search_only": "L-063: VALIDATION WITH ZOD | L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-068: !!!",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-219",
@@ -4264,12 +4265,12 @@
       "width": "926",
       "height": "319",
       "nearest_labels_for_search_only": "L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-068: !!! | L-063: VALIDATION WITH ZOD",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-221",
@@ -4302,12 +4303,12 @@
       "width": "917",
       "height": "434",
       "nearest_labels_for_search_only": "L-068: !!! | L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-064: fetchstatus paused",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-223",
@@ -4340,12 +4341,12 @@
       "width": "790",
       "height": "302",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-225",
@@ -4378,12 +4379,12 @@
       "width": "942",
       "height": "405",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-227",
@@ -4397,12 +4398,12 @@
       "width": "929",
       "height": "348",
       "nearest_labels_for_search_only": "L-069: SHOULD I USE RESUMEPAUSEDMUT WITH OFFLINEFIRST? | L-068: !!! | L-063: VALIDATION WITH ZOD",
-      "coverage_status": "stage4x-fixed-pending-transcript-r09c",
+      "coverage_status": "processed-in-r09c-v001",
       "current_region_decision": "R09C",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r09c-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: validation/Zod and resumePausedMutations/offline mutation support. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r09c-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R09C-validation-resumePaused Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-228",
@@ -4511,12 +4512,12 @@
       "width": "798",
       "height": "482",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-234",
@@ -4568,12 +4569,12 @@
       "width": "919",
       "height": "385",
       "nearest_labels_for_search_only": "L-075: SETQUERYDATA RETURN FULL OBJECT LIKE PUT | L-070: MUTATIONS | L-073: MUTATE VS MUTATEASYNC",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-237",
@@ -4606,12 +4607,12 @@
       "width": "730",
       "height": "430",
       "nearest_labels_for_search_only": "L-071: STRUCTURE, CALLBACKS INVALIDATION IN ONSETTLED | L-076: CALLBACKS AND ARGS | L-072: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-239",
@@ -4625,12 +4626,12 @@
       "width": "895",
       "height": "449",
       "nearest_labels_for_search_only": "L-073: MUTATE VS MUTATEASYNC | L-080: KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH | L-075: SETQUERYDATA RETURN FULL OBJECT LIKE PUT",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-240",
@@ -4682,12 +4683,12 @@
       "width": "740",
       "height": "308",
       "nearest_labels_for_search_only": "L-076: CALLBACKS AND ARGS | L-071: STRUCTURE, CALLBACKS INVALIDATION IN ONSETTLED | L-072: CANCELQUERIES IN OPTIMISTIC UPDATES PATTERN",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-243",
@@ -4701,12 +4702,12 @@
       "width": "826",
       "height": "341",
       "nearest_labels_for_search_only": "L-076: CALLBACKS AND ARGS | L-075: SETQUERYDATA RETURN FULL OBJECT LIKE PUT | L-071: STRUCTURE, CALLBACKS INVALIDATION IN ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-244",
@@ -4720,12 +4721,12 @@
       "width": "898",
       "height": "354",
       "nearest_labels_for_search_only": "L-073: MUTATE VS MUTATEASYNC | L-080: KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH | L-077: INVALIDATION ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-245",
@@ -4739,12 +4740,12 @@
       "width": "994",
       "height": "572",
       "nearest_labels_for_search_only": "L-075: SETQUERYDATA RETURN FULL OBJECT LIKE PUT | L-077: INVALIDATION ONSETTLED | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-246",
@@ -4777,12 +4778,12 @@
       "width": "617",
       "height": "191",
       "nearest_labels_for_search_only": "L-080: KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH | L-073: MUTATE VS MUTATEASYNC | L-077: INVALIDATION ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-248",
@@ -4796,12 +4797,12 @@
       "width": "939",
       "height": "347",
       "nearest_labels_for_search_only": "L-080: KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH | L-073: MUTATE VS MUTATEASYNC | L-077: INVALIDATION ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-249",
@@ -4815,12 +4816,12 @@
       "width": "737",
       "height": "210",
       "nearest_labels_for_search_only": "L-076: CALLBACKS AND ARGS | L-077: INVALIDATION ONSETTLED | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-250",
@@ -4834,12 +4835,12 @@
       "width": "841",
       "height": "375",
       "nearest_labels_for_search_only": "L-077: INVALIDATION ONSETTLED | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT | L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ...",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-251",
@@ -4853,12 +4854,12 @@
       "width": "940",
       "height": "376",
       "nearest_labels_for_search_only": "L-076: CALLBACKS AND ARGS | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT | L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ...",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-252",
@@ -4872,12 +4873,12 @@
       "width": "942",
       "height": "421",
       "nearest_labels_for_search_only": "L-080: KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH | L-077: INVALIDATION ONSETTLED | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-253",
@@ -4891,12 +4892,12 @@
       "width": "843",
       "height": "482",
       "nearest_labels_for_search_only": "L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT | L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ... | L-077: INVALIDATION ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-254",
@@ -4910,12 +4911,12 @@
       "width": "790",
       "height": "302",
       "nearest_labels_for_search_only": "L-076: CALLBACKS AND ARGS | L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ... | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-255",
@@ -4929,12 +4930,12 @@
       "width": "1004",
       "height": "336",
       "nearest_labels_for_search_only": "L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ... | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT | L-077: INVALIDATION ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-256",
@@ -4948,12 +4949,12 @@
       "width": "927",
       "height": "448",
       "nearest_labels_for_search_only": "L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ... | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT | L-077: INVALIDATION ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-257",
@@ -4967,12 +4968,12 @@
       "width": "928",
       "height": "451",
       "nearest_labels_for_search_only": "L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ... | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT | L-077: INVALIDATION ONSETTLED",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-258",
@@ -4986,12 +4987,12 @@
       "width": "930",
       "height": "151",
       "nearest_labels_for_search_only": "L-080: KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH | L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ... | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-259",
@@ -5005,12 +5006,12 @@
       "width": "772",
       "height": "482",
       "nearest_labels_for_search_only": "L-080: KEEPING MUTATION IN PENDING STATE UNTIL REVALIDATION + REFETCH | L-079: AND NEED TO REMEMBER THAT YOU ARE MANUALLY SETTING CACHE IN BOTH SUCCESS AND ERROR OUTCOMES SO ITS LOGICALLY CORRECT ... | L-078: SO UPDATING STATE NO MATTER WHAT AND GETTING THE FINAL RESULT AS THE TRUE SERVER STATE NO MATTER WHAT",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-260",
@@ -5024,12 +5025,12 @@
       "width": "857",
       "height": "463",
       "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE",
-      "coverage_status": "stage4x-fixed-pending-transcript-r11",
+      "coverage_status": "processed-in-r11-v001",
       "current_region_decision": "R11",
-      "decision_is_final": "no-stage4x-fixed-preflight-only",
-      "must_recheck_before_region_close": "yes-for-r11-stage4x-fixed",
-      "decision_basis": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Not processed yet.",
-      "review_notes": "Stage4x-fixed preflight queue only: mutations/callbacks/optimistic updates/mutate vs mutateAsync/pending until refetch. Do not mark processed until visible text is read without OCR/error placeholders."
+      "decision_is_final": "yes-for-r11-stage4y-rebuild-b",
+      "must_recheck_before_region_close": "no-for-stage4y-rebuild-b",
+      "decision_basis": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder.",
+      "review_notes": "Included in R11-mutations Rebuild B transcript; visible text present, no OCR-placeholder."
     },
     {
       "source_id": "S-261",

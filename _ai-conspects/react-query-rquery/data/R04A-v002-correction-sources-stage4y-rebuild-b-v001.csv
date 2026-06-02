@@ -1,0 +1,16 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-109,IU-109,39e62ae511,S-109__39e62ae511.png,verified-visible-from-contact-sheet,"query can have data, be stale, and be fetching at same time","A query can:
+
+- have data
+- be stale
+- be fetching
+
+all at the same time.",,Fully readable static/staleness correction.
+S-110,IU-110,96bd41a485,S-110__96bd41a485.png,verified-visible-from-contact-sheet,staleTime static overrides always refetch triggers,"Tiny example. Even with `""always""` on `refetchOnMount`, `refetchOnWindowFocus`, and `refetchOnReconnect`, the docs say those refetches still won't happen because `'static'` overrides them for those triggers.","useQuery({
+  queryKey: ['config'],
+  queryFn: fetchConfig,
+  staleTime: 'static',
+  refetchOnMount: 'always',
+  refetchOnWindowFocus: 'always',
+  refetchOnReconnect: 'always',
+})","Readable correction card; belongs to R04A static staleTime, not R09."

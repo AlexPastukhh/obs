@@ -1,0 +1,15 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-113,IU-113,2bc6c3c458,S-113__2bc6c3c458.png,verified-visible-from-contact-sheet,functional refetchInterval stops polling when condition met,"13.1 Functional `refetchInterval`
+
+You can stop polling when a condition is met.
+
+Return:
+
+- number → keep polling
+- `false` → stop polling","useQuery({
+  queryKey: ['totalAmount'],
+  queryFn: fetchTotalAmount,
+  refetchInterval: (query) => {
+    return query.state.data?.finished ? false : 3000
+  },
+})",Readable correction card; belongs to R04B polling/refetchInterval.

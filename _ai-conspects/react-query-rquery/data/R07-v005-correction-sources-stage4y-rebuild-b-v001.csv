@@ -1,0 +1,27 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-189,IU-189,a4fc92617d,S-189__a4fc92617d.png,verified-visible-from-contact-sheet,prefetch staleTime does not stamp future useQuery observer freshness,"Then:
+
+- prefetch won't refetch again within 10s
+- and the component's `useQuery` will also consider that cached data fresh for 10s.
+
+A compact rule:
+
+Prefetch `staleTime` does not “stamp” the future `useQuery` observer with freshness rules. It only affects the prefetch operation itself. The later observer still uses its own `staleTime` or the QueryClient defaults.",,Readable R07 correction.
+S-195,IU-195,4330f070b7,S-195__4330f070b7.png,verified-visible-from-contact-sheet,ensureQueryData revalidateIfStale returns cached data and refreshes in background,"`revalidateIfStale` on `ensureQueryData`
+
+This is what makes `ensureQueryData` closer to “return now, maybe refresh in background.”
+
+Behavior:
+
+- if cache exists, return cached data immediately
+- if that cached data is stale, also refetch in the background
+
+So it becomes:
+
+“Give me whatever we have now, but refresh if it's outdated.”
+
+That is different from `fetchQuery`, which would wait for the fresh fetch result if data is stale.","const data = await queryClient.ensureQueryData({
+  queryKey: ['todo', id],
+  queryFn: () => fetchTodo(id),
+  revalidateIfStale: true,
+})",Readable R07 correction.

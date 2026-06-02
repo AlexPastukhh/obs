@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-02 08:52:31 UTC",
+  "group": "R07-v005-correction",
+  "region": "R07",
+  "source_count": 2,
+  "reading_rule": "No OCR-placeholder sources are marked processed. Every included source has visible text from contact sheets/source images.",
+  "sources": [
+    {
+      "source_id": "S-189",
+      "theme": "prefetch staleTime does not stamp future useQuery observer freshness",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "Then:\n\n- prefetch won't refetch again within 10s\n- and the component's `useQuery` will also consider that cached data fresh for 10s.\n\nA compact rule:\n\nPrefetch `staleTime` does not “stamp” the future `useQuery` observer with freshness rules. It only affects the prefetch operation itself. The later observer still uses its own `staleTime` or the QueryClient defaults.",
+      "code": "",
+      "notes": "Readable R07 correction.",
+      "image_file": "S-189__a4fc92617d.png",
+      "image_use_id": "IU-189",
+      "fileId_short": "a4fc92617d",
+      "x": "8217.64",
+      "y": "13886.989",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    },
+    {
+      "source_id": "S-195",
+      "theme": "ensureQueryData revalidateIfStale returns cached data and refreshes in background",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "`revalidateIfStale` on `ensureQueryData`\n\nThis is what makes `ensureQueryData` closer to “return now, maybe refresh in background.”\n\nBehavior:\n\n- if cache exists, return cached data immediately\n- if that cached data is stale, also refetch in the background\n\nSo it becomes:\n\n“Give me whatever we have now, but refresh if it's outdated.”\n\nThat is different from `fetchQuery`, which would wait for the fresh fetch result if data is stale.",
+      "code": "const data = await queryClient.ensureQueryData({\n  queryKey: ['todo', id],\n  queryFn: () => fetchTodo(id),\n  revalidateIfStale: true,\n})",
+      "notes": "Readable R07 correction.",
+      "image_file": "S-195__4330f070b7.png",
+      "image_use_id": "IU-195",
+      "fileId_short": "4330f070b7",
+      "x": "9348.943",
+      "y": "14194.964",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    }
+  ]
+}

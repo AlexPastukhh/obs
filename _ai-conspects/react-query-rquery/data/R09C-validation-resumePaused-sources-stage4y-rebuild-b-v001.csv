@@ -1,0 +1,102 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-196,IU-196,5e844a74b1,S-196__5e844a74b1.png,verified-visible-from-contact-sheet,offline mutations can queue and resume later,"32. Offline mutations
+
+`networkMode` also matters for mutations.
+
+Offline mutations can be queued and resumed later. That means several queued writes may replay on reconnect, so plan invalidation and side effects carefully.",,Readable.
+S-199,IU-199,bf62b2d61c,S-199__bf62b2d61c.png,verified-visible-from-contact-sheet,mutation networkMode defaults and paused queued mutations,"Yes — mutations do have a `networkMode` option. On `useMutation`, it can be `'online'`, `'always'`, or `'offlineFirst'`, and it defaults to `'online'`.
+
+The important part:
+
+`networkMode: 'online'` for mutations
+
+This is the default. In this mode, queries and mutations will not fire unless there is network connection. When offline, they can be paused instead.
+
+So this is the mode where offline mutations can end up paused/queued and later resumed. The mutations guide shows exactly that flow: a mutation can be paused while offline, dehydrated/hydrated, and then continued with `queryClient.resumePausedMutations()`.",,Readable; bottom continuation noted but core is visible.
+S-201,IU-201,c9417e839c,S-201__c9417e839c.png,verified-visible-from-contact-sheet,response validation with Zod,"30. Response validation
+
+Do not blindly trust API data.
+
+Schema validation is useful for third-party or fragile APIs.
+
+Using Zod:",,Readable heading/intro.
+S-209,IU-209,1c40ea8745,S-209__1c40ea8745.png,verified-visible-from-contact-sheet,Zod schema parse in query function,Example TypeScript/Zod validation for fetched posts. The query function fetches JSON and returns `PostsSchema.parse(json)` so malformed API data throws instead of silently entering the cache.,"import { z } from 'zod'
+
+const PostSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  body: z.string(),
+})
+
+const PostsSchema = z.array(PostSchema)
+
+async function fetchPosts() {
+  const response = await fetch('/api/posts')
+  if (!response.ok) throw new Error('Failed to fetch')
+
+  const json = await response.json()
+  return PostsSchema.parse(json)
+}",Readable code card; lower edge is cropped but parse flow is visible.
+S-210,IU-210,dfc5091fca,S-210__dfc5091fca.png,verified-visible-from-contact-sheet,networkMode always does not pause; no need for resumePausedMutations,"`networkMode: 'always'`
+
+This means “ignore online/offline state.” TanStack says in `always` mode, queries and mutations always run and are not paused because of missing network. Retries also do not pause.
+
+So for your question:
+
+when they are being queued while offline, always, we just choose to run `resumePausedMutations` or not?
+
+No.
+
+With `always`, they generally are not paused/queued because of offline state in the first place. They try to run immediately; if they truly need network, they can just fail rather than sit paused waiting for resume.",,Readable.
+S-215,IU-215,810e074c35,S-215__810e074c35.png,verified-visible-from-contact-sheet,networkMode offlineFirst for mutations,"`networkMode: 'offlineFirst'`
+
+This is the middle ground. TanStack says it will run once, but then pause retries if needed. That mode is mainly useful when some cache/storage layer might satisfy the request first.",,Readable.
+S-218,IU-218,213fe9db03,S-218__213fe9db03.png,verified-visible-from-contact-sheet,validation benefits and tradeoffs,"Benefits:
+
+- catches malformed data early
+- throws into normal query error handling
+- can reduce useless data in cache if schema strips/reshapes
+
+Tradeoff:
+
+- runtime validation costs performance
+- expensive for very large payloads",,Readable.
+S-220,IU-220,819762c974,S-220__819762c974.png,verified-visible-from-contact-sheet,when resumePausedMutations matters,"So when does `resumePausedMutations()` matter?
+
+It matters when you actually have paused mutations — typically with offline behavior under the default `online` mode, especially if you persist them across app reloads. The docs show calling `queryClient.resumePausedMutations()` after hydration/restore for that case.
+
+Best mental model:
+
+- `online` → offline can pause/queue mutations; `resumePausedMutations()` is relevant.
+- `always` → doesn't pause because of offline; usually nothing to “resume”.
+- `offlineFirst` → try once, then pause retries if network is needed.",,Readable.
+S-222,IU-222,805253d94b,S-222__805253d94b.png,verified-visible-from-contact-sheet,networkMode default and always example,"31.3 `networkMode`
+
+Default: `'online'`
+
+Pauses network-dependent queries when offline.
+
+`'always'`
+
+Use when the query does not actually need network.","useQuery({
+  queryKey: ['localValue'],
+  queryFn: () => Promise.resolve(1),
+  networkMode: 'always',
+})",Readable.
+S-226,IU-226,2d9e66f8f9,S-226__2d9e66f8f9.png,verified-visible-from-contact-sheet,resumePausedMutations on reconnect example,"Example. Add an online listener and call `queryClient.resumePausedMutations()` on reconnect.
+
+Mental model:
+
+- paused mutation = “write is queued/waiting”
+- `resumePausedMutations` = “continue those writes now”","import { QueryClient } from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
+
+window.addEventListener('online', () => {
+  queryClient.resumePausedMutations()
+})",Readable.
+S-227,IU-227,79a4777b2f,S-227__79a4777b2f.png,verified-visible-from-contact-sheet,resumePausedMutations mainly for persisted/hydrated paused mutations,"Usually no, not in the normal “same app session reconnects” case.
+
+With `networkMode: 'offlineFirst'`, TanStack Query will keep the mutation once, and if retries are needed it can pause those retries when there is no network. For paused work, TanStack Query's network mode behavior is that it can continue once connectivity returns; that “continue when back online” behavior is built into the paused/retry mechanism.
+
+`resumePausedMutations()` is mainly needed when you have paused mutations that were persisted and then restored, such as after a page reload or app restart. The mutations guide shows the pattern: dehydrate state, hydrate it later, then call `queryClient.resumePausedMutations()`. It also notes that if you persist offline mutations, they cannot be resumed after reload unless you provide a default mutation function.",,Readable.

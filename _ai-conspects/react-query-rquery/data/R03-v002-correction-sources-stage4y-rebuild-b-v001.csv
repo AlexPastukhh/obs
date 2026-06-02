@@ -1,0 +1,23 @@
+source_id,image_use_id,fileId_short,image_file,status,theme,text,code,notes
+S-065,IU-065,1a557e01c2,S-065__1a557e01c2.png,verified-visible-from-contact-sheet,select/default tracked props/notifyOnChangeProps mental model,"So the practical answer is:
+
+- If you don't use `isPending`, `isLoading`, `isFetching`, etc., you usually don't need `notifyOnChangeProps` to suppress them — default tracking already does that.
+- If you do use them, then their changes should re-render the component, because you asked for them.
+- You use `notifyOnChangeProps` when you want stricter/manual control over which fields can trigger re-renders, or when you want zero subscription behavior like `[]`.
+
+A good mental model is:
+
+- `select` = “give me only this slice of `data`”
+- default tracked props = “re-render only for query result fields I actually read”
+- `notifyOnChangeProps` = “ignore automatic tracking and use this exact whitelist instead”",,"Readable correction card; belongs to R03, not R09."
+S-066,IU-066,3b93be2992,S-066__3b93be2992.png,verified-visible-from-contact-sheet,useQuery notifyOnChangeProps [] vs prefetchQuery timing,"Another reason is timing. `useQuery` participates naturally in the component lifecycle, while `prefetchQuery` is often used in:
+
+- event handlers
+- route loaders / router integration
+- effects
+- explicit preloading logic
+
+So the practical advice is:
+
+- If you want true prefetching, especially from a click, hover, route transition, loader, or explicit preload step, use `queryClient.prefetchQuery()`.
+- If you want a component to kick off another query during render but not subscribe to updates from it, `useQuery({ notifyOnChangeProps: [] })` is a valid special-case pattern.",,Readable correction card; belongs to R03 prefetch-like discussion.

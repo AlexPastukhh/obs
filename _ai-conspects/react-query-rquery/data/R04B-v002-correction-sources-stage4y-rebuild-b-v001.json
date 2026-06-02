@@ -1,0 +1,23 @@
+{
+  "generated": "2026-06-02 08:52:31 UTC",
+  "group": "R04B-v002-correction",
+  "region": "R04B",
+  "source_count": 1,
+  "reading_rule": "No OCR-placeholder sources are marked processed. Every included source has visible text from contact sheets/source images.",
+  "sources": [
+    {
+      "source_id": "S-113",
+      "theme": "functional refetchInterval stops polling when condition met",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "13.1 Functional `refetchInterval`\n\nYou can stop polling when a condition is met.\n\nReturn:\n\n- number → keep polling\n- `false` → stop polling",
+      "code": "useQuery({\n  queryKey: ['totalAmount'],\n  queryFn: fetchTotalAmount,\n  refetchInterval: (query) => {\n    return query.state.data?.finished ? false : 3000\n  },\n})",
+      "notes": "Readable correction card; belongs to R04B polling/refetchInterval.",
+      "image_file": "S-113__2bc6c3c458.png",
+      "image_use_id": "IU-113",
+      "fileId_short": "2bc6c3c458",
+      "x": "7487.485",
+      "y": "9843.954",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    }
+  ]
+}

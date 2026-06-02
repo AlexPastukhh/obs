@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-02 08:52:31 UTC",
+  "group": "R04A-v002-correction",
+  "region": "R04A",
+  "source_count": 2,
+  "reading_rule": "No OCR-placeholder sources are marked processed. Every included source has visible text from contact sheets/source images.",
+  "sources": [
+    {
+      "source_id": "S-109",
+      "theme": "query can have data, be stale, and be fetching at same time",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "A query can:\n\n- have data\n- be stale\n- be fetching\n\nall at the same time.",
+      "code": "",
+      "notes": "Fully readable static/staleness correction.",
+      "image_file": "S-109__39e62ae511.png",
+      "image_use_id": "IU-109",
+      "fileId_short": "39e62ae511",
+      "x": "9033.527",
+      "y": "9580.732",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    },
+    {
+      "source_id": "S-110",
+      "theme": "staleTime static overrides always refetch triggers",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "Tiny example. Even with `\"always\"` on `refetchOnMount`, `refetchOnWindowFocus`, and `refetchOnReconnect`, the docs say those refetches still won't happen because `'static'` overrides them for those triggers.",
+      "code": "useQuery({\n  queryKey: ['config'],\n  queryFn: fetchConfig,\n  staleTime: 'static',\n  refetchOnMount: 'always',\n  refetchOnWindowFocus: 'always',\n  refetchOnReconnect: 'always',\n})",
+      "notes": "Readable correction card; belongs to R04A static staleTime, not R09.",
+      "image_file": "S-110__96bd41a485.png",
+      "image_use_id": "IU-110",
+      "fileId_short": "96bd41a485",
+      "x": "11373.687",
+      "y": "9617.883",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    }
+  ]
+}

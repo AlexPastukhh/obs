@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-02 08:52:31 UTC",
+  "group": "R03-v002-correction",
+  "region": "R03",
+  "source_count": 2,
+  "reading_rule": "No OCR-placeholder sources are marked processed. Every included source has visible text from contact sheets/source images.",
+  "sources": [
+    {
+      "source_id": "S-065",
+      "theme": "select/default tracked props/notifyOnChangeProps mental model",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "So the practical answer is:\n\n- If you don't use `isPending`, `isLoading`, `isFetching`, etc., you usually don't need `notifyOnChangeProps` to suppress them — default tracking already does that.\n- If you do use them, then their changes should re-render the component, because you asked for them.\n- You use `notifyOnChangeProps` when you want stricter/manual control over which fields can trigger re-renders, or when you want zero subscription behavior like `[]`.\n\nA good mental model is:\n\n- `select` = “give me only this slice of `data`”\n- default tracked props = “re-render only for query result fields I actually read”\n- `notifyOnChangeProps` = “ignore automatic tracking and use this exact whitelist instead”",
+      "code": "",
+      "notes": "Readable correction card; belongs to R03, not R09.",
+      "image_file": "S-065__1a557e01c2.png",
+      "image_use_id": "IU-065",
+      "fileId_short": "1a557e01c2",
+      "x": "1994.132",
+      "y": "6636.076",
+      "nearest_labels_for_search_only": "L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE | L-065: REMOVEQUERIES RESETQUERIES"
+    },
+    {
+      "source_id": "S-066",
+      "theme": "useQuery notifyOnChangeProps [] vs prefetchQuery timing",
+      "status": "verified-visible-from-contact-sheet",
+      "text": "Another reason is timing. `useQuery` participates naturally in the component lifecycle, while `prefetchQuery` is often used in:\n\n- event handlers\n- route loaders / router integration\n- effects\n- explicit preloading logic\n\nSo the practical advice is:\n\n- If you want true prefetching, especially from a click, hover, route transition, loader, or explicit preload step, use `queryClient.prefetchQuery()`.\n- If you want a component to kick off another query during render but not subscribe to updates from it, `useQuery({ notifyOnChangeProps: [] })` is a valid special-case pattern.",
+      "code": "",
+      "notes": "Readable correction card; belongs to R03 prefetch-like discussion.",
+      "image_file": "S-066__3b93be2992.png",
+      "image_use_id": "IU-066",
+      "fileId_short": "3b93be2992",
+      "x": "3297.684",
+      "y": "6731.287",
+      "nearest_labels_for_search_only": "L-065: REMOVEQUERIES RESETQUERIES | L-074: OFFLINE FIRST CAN TRY TO GET DATA UNTIL IT NEED RETRIES RETRIES WILL BE QUEUED CAN TRY TO GET DATA FROM CACHE"
+    }
+  ]
+}
