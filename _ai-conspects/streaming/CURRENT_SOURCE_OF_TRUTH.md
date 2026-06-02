@@ -1,6 +1,6 @@
 # Current Source of Truth - Streaming
 
-Generated: 2026-06-01 23:52:39 UTC
+Generated: 2026-06-02 00:01:16 UTC
 
 ## Policy
 
@@ -17,13 +17,20 @@ R03 streaming objects / async iteration / REST API concerns: transcript v001 don
 R04 IAsyncEnumerable / NDJSON / FlushAsync: transcript v003 coverage correction done
 R05 SSE / EventSource / writer / heartbeat / reconnect: transcript v001 done
 R06 streaming benefits / memory / mental model: transcript v001 done
-Final streaming coverage audit: next
+Final streaming coverage audit: done
 ```
 
-## R06 note
+## Final audit note
 
 ```text
-R06 closes lower-tail benefits, memory/GC tradeoffs, when streaming is worth it, and concrete mental model distinctions.
-S-083 is a duplicate/fragment image use of S-076 and is recorded for coverage.
-S-057/S-058 were checked and remain R02-owned.
+Total image uses: 194
+Unresolved image uses: 0
+Verdict: coverage-complete
+```
+
+## Completion rule
+
+```text
+If this final audit diff is clean, commit it and consider the streaming conspect complete.
+Future work should be targeted correction only if a concrete transcript-quality or missing-image issue is found.
 ```

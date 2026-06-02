@@ -1,6 +1,6 @@
-# Apply archive: Streaming R06 transcript v001
+# Apply archive: Streaming final coverage audit v001
 
-Archive type: stage-7 verified region transcript.
+Archive type: stage-8 final coverage audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-streaming-stage7-r06-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-streaming-stage8-final-coverage-audit-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-streaming-stage7-r06-transcript-v001.zip
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage7-r06-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage7-r06-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage8-final-coverage-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-streaming-stage8-final-coverage-audit.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -48,7 +48,7 @@ Write-Host "Full diff saved to $diffPath and copied to clipboard."
 
 ```powershell
 git add _ai-conspects/streaming
-git commit -m "Add streaming R06 benefits transcript"
+git commit -m "Finalize streaming conspect coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
