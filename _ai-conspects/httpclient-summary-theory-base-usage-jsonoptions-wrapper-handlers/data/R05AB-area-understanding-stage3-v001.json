@@ -1,0 +1,33 @@
+{
+  "generated": "2026-06-02 01:36:31 UTC",
+  "region_id": "R05AB",
+  "what_area_is_about": [
+    "why creating/disposing HttpClient per request is problematic",
+    "connection pooling, TCP/TLS handshakes, TIME_WAIT and socket exhaustion",
+    "why singleton/static HttpClient improves reuse but can produce stale DNS problems",
+    "how IHttpClientFactory creates cheap HttpClient instances while pooling handlers",
+    "handler lifetime, pooled handlers and DNS refresh behavior",
+    "named clients and typed clients as ways to centralize configuration",
+    "handler rotation versus connection rotation and why rotation is not a perfect DNS-health guarantee"
+  ],
+  "key_ideas": [
+    "HttpClient is a facade; the underlying SocketsHttpHandler owns connection pools and DNS-related behavior.",
+    "Disposing HttpClient per request often tears down handler/pool state, prevents connection reuse, and can create socket/TIME_WAIT pressure.",
+    "Keeping one HttpClient alive improves reuse, but a long-lived handler can keep old connections to old IPs after DNS changes.",
+    "IHttpClientFactory returns cheap HttpClient wrappers and manages pooled handlers, usually with a default handler lifetime around two minutes.",
+    "Named clients centralize base address, timeout, headers and per-client configuration by name.",
+    "Typed clients wrap HttpClient behind domain-specific methods and are registered/configured through IHttpClientFactory.",
+    "Handler lifetime/rotation helps refresh DNS and avoid forever-stale pools, but it does not magically close active long-lived connections.",
+    "R06/R07 must still cover configuration APIs, primary handlers and delegating-handler chains separately."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_readability": "medium-high to high; many sources are readable, exact code punctuation should be checked against images",
+    "limitations": [
+      "75 source images in one larger pass; region is coherent but large.",
+      "Source-image-backed label/search gists are included for searchability; source images remain the exact visual evidence.",
+      "Some lower R05B images discuss handler rotation; those are included only as HttpClientFactory/DNS/lifetime behavior, not R07 message-handler configuration."
+    ],
+    "confidence_summary": "High for boundary and concepts; medium-high for exact code punctuation in small screenshots."
+  }
+}

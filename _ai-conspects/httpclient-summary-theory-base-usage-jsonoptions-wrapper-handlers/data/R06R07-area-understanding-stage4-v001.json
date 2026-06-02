@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 01:52:08 UTC",
+  "region_id": "R06R07",
+  "what_area_is_about": [
+    "global HttpClient configuration and default options",
+    "client-level timeout vs per-request cancellation",
+    "linked cancellation tokens and distinguishing timeout from caller cancellation",
+    "primary transport handler configuration",
+    "DelegatingHandler/message-handler chains",
+    "named/typed client scoped primary-handler configuration",
+    "handler rotation vs connection rotation and DNS refresh"
+  ],
+  "key_ideas": [
+    "HttpClient.Timeout is global to the client instance; per-request timeout should use CancellationTokenSource.CancelAfter or a linked token.",
+    "In ASP.NET Core, combine request-aborted cancellation with operation timeout to avoid wasting work after disconnects.",
+    "catch filters with when are useful to distinguish timeout vs caller cancellation without swallowing unrelated OperationCanceledException cases.",
+    "The primary handler is the innermost transport handler; DelegatingHandlers wrap around it as outgoing middleware.",
+    "AddHttpClient can configure default headers/base address/timeouts, add message handlers, and configure the primary transport handler.",
+    "Named and typed client registrations scope handler options to a logical client.",
+    "Handler lifetime and pooled connection lifetime solve different but related DNS/connection-refresh concerns."
+  ],
+  "perception_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_readability": "medium-high; many code screenshots are readable but source images are kept for exact punctuation",
+    "limitations": [
+      "Large final pass closes 51 previously unclosed sources, so exact code punctuation should be checked against source images if needed.",
+      "Some R07 sources discuss handler rotation, which overlaps conceptually with R05B; ownership is separated by theme: R05B = factory/DNS lifetime behavior, R07 = message/primary handler configuration details."
+    ],
+    "confidence_summary": "High for boundary/coverage and key ideas; medium-high for exact code transcription."
+  }
+}

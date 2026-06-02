@@ -1,0 +1,994 @@
+{
+  "generated": "2026-06-02 01:36:31 UTC",
+  "region_id": "R05AB",
+  "region_name": "HttpClientFactory / lifetime / connection reuse / DNS / named and typed clients",
+  "included_count": 75,
+  "included_sources": [
+    "S-035",
+    "S-037",
+    "S-038",
+    "S-045",
+    "S-048",
+    "S-049",
+    "S-052",
+    "S-055",
+    "S-057",
+    "S-059",
+    "S-061",
+    "S-063",
+    "S-069",
+    "S-070",
+    "S-072",
+    "S-077",
+    "S-079",
+    "S-082",
+    "S-086",
+    "S-087",
+    "S-090",
+    "S-092",
+    "S-098",
+    "S-100",
+    "S-101",
+    "S-103",
+    "S-105",
+    "S-108",
+    "S-109",
+    "S-110",
+    "S-111",
+    "S-117",
+    "S-118",
+    "S-119",
+    "S-123",
+    "S-126",
+    "S-127",
+    "S-132",
+    "S-135",
+    "S-138",
+    "S-140",
+    "S-141",
+    "S-148",
+    "S-149",
+    "S-154",
+    "S-155",
+    "S-164",
+    "S-168",
+    "S-172",
+    "S-177",
+    "S-179",
+    "S-182",
+    "S-185",
+    "S-186",
+    "S-187",
+    "S-188",
+    "S-189",
+    "S-190",
+    "S-193",
+    "S-198",
+    "S-204",
+    "S-208",
+    "S-211",
+    "S-215",
+    "S-217",
+    "S-219",
+    "S-221",
+    "S-222",
+    "S-223",
+    "S-224",
+    "S-225",
+    "S-226",
+    "S-227",
+    "S-228",
+    "S-229"
+  ],
+  "boundary_status": "reviewed-v001",
+  "decision": "R05A and R05B are processed together because they form one connected road from disposing HttpClient and connection reuse to IHttpClientFactory, DNS, handler lifetime, named clients and typed clients. R06/R07 are explicitly reserved for config and handler configuration details.",
+  "checked_not_included": {
+    "R06": [
+      "S-027",
+      "S-042",
+      "S-071",
+      "S-083",
+      "S-091",
+      "S-097",
+      "S-104",
+      "S-113",
+      "S-122",
+      "S-130",
+      "S-134",
+      "S-142",
+      "S-145",
+      "S-153",
+      "S-159",
+      "S-163",
+      "S-171",
+      "S-173"
+    ],
+    "R07": [
+      "S-175",
+      "S-176",
+      "S-178",
+      "S-180",
+      "S-181",
+      "S-183",
+      "S-184",
+      "S-191",
+      "S-192",
+      "S-194",
+      "S-195",
+      "S-196",
+      "S-197",
+      "S-199",
+      "S-200",
+      "S-201",
+      "S-202",
+      "S-203",
+      "S-205",
+      "S-206",
+      "S-207",
+      "S-209",
+      "S-210",
+      "S-212",
+      "S-213",
+      "S-214",
+      "S-216",
+      "S-218",
+      "S-220"
+    ]
+  },
+  "rows": [
+    {
+      "source_id": "S-035",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-037",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-038",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-045",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-048",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-049",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-052",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-055",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-057",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-059",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-061",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-063",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-069",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-070",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-072",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-077",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-079",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-082",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-086",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-087",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-090",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-092",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-098",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-100",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-101",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-103",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-105",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-108",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-109",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-110",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-111",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-117",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-118",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-119",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-123",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-126",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-127",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-132",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-135",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-138",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-140",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-141",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-148",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-149",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-154",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-155",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-164",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-168",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-172",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in combined R05A/R05B because it belongs to HttpClientFactory lifetime / connection reuse / DNS / named-typed client road."
+    },
+    {
+      "source_id": "S-177",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-179",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-182",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-185",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-186",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-187",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-188",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-189",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-190",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-193",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-198",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-204",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-208",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-211",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-215",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-217",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-219",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-221",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-222",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-223",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-224",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-225",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-226",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-227",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-228",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-229",
+      "decision": "included-in-R05AB-v001",
+      "candidate_type": "same-road-or-coherent-lower-continuation",
+      "assigned_region": "R05AB",
+      "reason": "Included in R05B because this lower road continues DNS/handler lifetime/rotation consequences for HttpClientFactory; not message-handler configuration."
+    },
+    {
+      "source_id": "S-027",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-042",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-071",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-083",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-091",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-097",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-104",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-113",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-122",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-130",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-134",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-142",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-145",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-153",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-159",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-163",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-171",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-173",
+      "decision": "checked-not-R05AB-reserved-R06",
+      "candidate_type": "neighbor-right-region",
+      "assigned_region": "R06",
+      "reason": "Global config / primary handler basics / timeout / redirection are reserved for R06; do not mix with factory lifetime transcript."
+    },
+    {
+      "source_id": "S-175",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-176",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-178",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-180",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-181",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-183",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-184",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-191",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-192",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-194",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-195",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-196",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-197",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-199",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-200",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-201",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-202",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-203",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-205",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-206",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-207",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-209",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-210",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-212",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-213",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-214",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-216",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-218",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    },
+    {
+      "source_id": "S-220",
+      "decision": "checked-not-R05AB-reserved-R07",
+      "candidate_type": "farther-right-or-lower-handler-region",
+      "assigned_region": "R07",
+      "reason": "Message handler / delegating handler examples / primary handler configuration are reserved for R07; R05 only discusses handler lifetime/rotation as factory/DNS behavior."
+    }
+  ]
+}

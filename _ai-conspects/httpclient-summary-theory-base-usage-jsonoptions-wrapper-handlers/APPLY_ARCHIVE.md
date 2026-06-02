@@ -1,6 +1,6 @@
-# Apply archive: HttpClient R03+R04 typed client / JsonOptions wrapper transcript v001
+# Apply archive: HttpClient R06/R07 final config/handlers transcript v001
 
-Archive type: stage-2 verified combined region transcript.
+Archive type: stage-4 final combined transcript + coverage audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-httpclient-summary-theory-base-usage-jsonoptions-wrapper-handlers-stage2-r03r04-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-httpclient-summary-theory-base-usage-jsonoptions-wrapper-handlers-stage4-r06r07-final-coverage-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-httpclient-summary-theory-base-usage-jsono
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-httpclient-summary-theory-base-usage-jsonoptions-wrapper-handlers-stage2-r03r04-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-httpclient-stage2-r03r04-transcript.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-httpclient-summary-theory-base-usage-jsonoptions-wrapper-handlers-stage4-r06r07-final-coverage-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-httpclient-stage4-r06r07-final-coverage.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -52,7 +52,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 
 ```powershell
 git add _ai-conspects/httpclient-summary-theory-base-usage-jsonoptions-wrapper-handlers
-git commit -m "Add HttpClient R03 R04 typed client transcript"
+git commit -m "Complete HttpClient config handlers coverage"
 git push origin ai-processed-conspects-text
 ```
 

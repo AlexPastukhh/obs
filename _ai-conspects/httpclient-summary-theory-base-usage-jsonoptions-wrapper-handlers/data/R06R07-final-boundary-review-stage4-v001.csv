@@ -1,0 +1,52 @@
+source_id,decision,assigned_region,reason
+S-074,included-in-r05ab-coverage-correction-v001,R05AB,R05AB correction: TLS background
+S-099,included-in-r05ab-coverage-correction-v001,R05AB,R05AB correction: TCP background
+S-128,included-in-r05ab-coverage-correction-v001,R05AB,R05AB correction: HttpClient problems summary
+S-136,included-in-r05ab-coverage-correction-v001,R05AB,R05AB correction: HttpClientFactory mitigation summary
+S-027,included-in-r06r07-v001,R06,Global AddHttpClient config example
+S-042,included-in-r06r07-v001,R06,Configure primary HttpClientHandler
+S-071,included-in-r06r07-v001,R06,HttpClient.Timeout is client-level timeout
+S-083,included-in-r06r07-v001,R06,Timeout nuance: global vs per-request
+S-091,included-in-r06r07-v001,R06,Common timeout layers
+S-097,included-in-r06r07-v001,R06,CancellationTokenSource.CancelAfter
+S-104,included-in-r06r07-v001,R06,Basic per-request CancelAfter example
+S-113,included-in-r06r07-v001,R06,One client with different request timeouts
+S-122,included-in-r06r07-v001,R06,CancelAfter with ASP.NET request cancellation
+S-130,included-in-r06r07-v001,R06,Linked token cancels on disconnect or timeout
+S-134,included-in-r06r07-v001,R06,Detect timeout vs caller cancellation
+S-142,included-in-r06r07-v001,R06,when as a guard/filter concept
+S-145,included-in-r06r07-v001,R06,when in catch filters
+S-153,included-in-r06r07-v001,R06,Why catch filters are useful
+S-159,included-in-r06r07-v001,R06,when in switch cases
+S-163,included-in-r06r07-v001,R06,switch case when example
+S-171,included-in-r06r07-v001,R06,when in switch expressions
+S-173,included-in-r06r07-v001,R06,when vs if inside catch
+S-175,included-in-r06r07-v001,R07,Access token handler / logging handler chain code
+S-176,included-in-r06r07-v001,R07,Demo title: configuring HttpClients
+S-178,included-in-r06r07-v001,R07,Access token and logging handlers implementation
+S-180,included-in-r06r07-v001,R07,Register handler chain in AddHttpClient
+S-181,included-in-r06r07-v001,R07,Correlation / logger handler examples
+S-183,included-in-r06r07-v001,R07,Configure primary handler in client registration
+S-184,included-in-r06r07-v001,R07,Redirect behavior note
+S-191,included-in-r06r07-v001,R07,Do we need a primary message handler?
+S-192,included-in-r06r07-v001,R07,Duplicate placement of global AddHttpClient config
+S-194,included-in-r06r07-v001,R07,Handler rotation vs connection rotation
+S-195,included-in-r06r07-v001,R07,Can configure primary handler for a specific client
+S-196,included-in-r06r07-v001,R07,Primary handler for one specific HttpClient
+S-197,included-in-r06r07-v001,R07,Duplicate placement of primary handler config
+S-199,included-in-r06r07-v001,R07,Why rotate handlers
+S-200,included-in-r06r07-v001,R07,Handler lifetime and connection lifetime are different knobs
+S-201,included-in-r06r07-v001,R07,ConfigurePrimaryHttpMessageHandler for named/typed client
+S-202,included-in-r06r07-v001,R07,Specific client primary handler options
+S-203,included-in-r06r07-v001,R07,Why not only PooledConnectionLifetime
+S-205,included-in-r06r07-v001,R07,Handler rotation summary
+S-206,included-in-r06r07-v001,R07,Typed/named client primary handler configuration
+S-207,included-in-r06r07-v001,R07,Question: one specific named client handler
+S-209,included-in-r06r07-v001,R07,Handler lifetime with named/typed clients
+S-210,included-in-r06r07-v001,R07,Handler rotation deeper explanation
+S-212,included-in-r06r07-v001,R07,Specific client configuration short note
+S-213,included-in-r06r07-v001,R07,Why need rotate handlers
+S-214,included-in-r06r07-v001,R07,Configure primary handler caveat
+S-216,included-in-r06r07-v001,R07,Primary handler options for particular client
+S-218,included-in-r06r07-v001,R07,Final handler rotation note
+S-220,included-in-r06r07-v001,R07,Wrap-up: named vs typed/global configuration

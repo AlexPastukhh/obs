@@ -1,0 +1,371 @@
+{
+  "generated": "2026-06-02 01:52:08 UTC",
+  "region_id": "R06R07-plus-r05ab-coverage-correction",
+  "boundary_status": "reviewed-v001-final-pass",
+  "r05ab_correction_sources": [
+    "S-074",
+    "S-099",
+    "S-128",
+    "S-136"
+  ],
+  "r06_sources": [
+    "S-027",
+    "S-042",
+    "S-071",
+    "S-083",
+    "S-091",
+    "S-097",
+    "S-104",
+    "S-113",
+    "S-122",
+    "S-130",
+    "S-134",
+    "S-142",
+    "S-145",
+    "S-153",
+    "S-159",
+    "S-163",
+    "S-171",
+    "S-173"
+  ],
+  "r07_sources": [
+    "S-175",
+    "S-176",
+    "S-178",
+    "S-180",
+    "S-181",
+    "S-183",
+    "S-184",
+    "S-191",
+    "S-192",
+    "S-194",
+    "S-195",
+    "S-196",
+    "S-197",
+    "S-199",
+    "S-200",
+    "S-201",
+    "S-202",
+    "S-203",
+    "S-205",
+    "S-206",
+    "S-207",
+    "S-209",
+    "S-210",
+    "S-212",
+    "S-213",
+    "S-214",
+    "S-216",
+    "S-218",
+    "S-220"
+  ],
+  "decision": "One larger final pass is accepted because remaining sources form the config/primary/delegating-handler tail, plus four clearly R05AB leftover screenshots from earlier neighbor checks.",
+  "rows": [
+    {
+      "source_id": "S-074",
+      "decision": "included-in-r05ab-coverage-correction-v001",
+      "assigned_region": "R05AB",
+      "reason": "R05AB correction: TLS background"
+    },
+    {
+      "source_id": "S-099",
+      "decision": "included-in-r05ab-coverage-correction-v001",
+      "assigned_region": "R05AB",
+      "reason": "R05AB correction: TCP background"
+    },
+    {
+      "source_id": "S-128",
+      "decision": "included-in-r05ab-coverage-correction-v001",
+      "assigned_region": "R05AB",
+      "reason": "R05AB correction: HttpClient problems summary"
+    },
+    {
+      "source_id": "S-136",
+      "decision": "included-in-r05ab-coverage-correction-v001",
+      "assigned_region": "R05AB",
+      "reason": "R05AB correction: HttpClientFactory mitigation summary"
+    },
+    {
+      "source_id": "S-027",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Global AddHttpClient config example"
+    },
+    {
+      "source_id": "S-042",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Configure primary HttpClientHandler"
+    },
+    {
+      "source_id": "S-071",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "HttpClient.Timeout is client-level timeout"
+    },
+    {
+      "source_id": "S-083",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Timeout nuance: global vs per-request"
+    },
+    {
+      "source_id": "S-091",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Common timeout layers"
+    },
+    {
+      "source_id": "S-097",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "CancellationTokenSource.CancelAfter"
+    },
+    {
+      "source_id": "S-104",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Basic per-request CancelAfter example"
+    },
+    {
+      "source_id": "S-113",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "One client with different request timeouts"
+    },
+    {
+      "source_id": "S-122",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "CancelAfter with ASP.NET request cancellation"
+    },
+    {
+      "source_id": "S-130",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Linked token cancels on disconnect or timeout"
+    },
+    {
+      "source_id": "S-134",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Detect timeout vs caller cancellation"
+    },
+    {
+      "source_id": "S-142",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "when as a guard/filter concept"
+    },
+    {
+      "source_id": "S-145",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "when in catch filters"
+    },
+    {
+      "source_id": "S-153",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "Why catch filters are useful"
+    },
+    {
+      "source_id": "S-159",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "when in switch cases"
+    },
+    {
+      "source_id": "S-163",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "switch case when example"
+    },
+    {
+      "source_id": "S-171",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "when in switch expressions"
+    },
+    {
+      "source_id": "S-173",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R06",
+      "reason": "when vs if inside catch"
+    },
+    {
+      "source_id": "S-175",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Access token handler / logging handler chain code"
+    },
+    {
+      "source_id": "S-176",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Demo title: configuring HttpClients"
+    },
+    {
+      "source_id": "S-178",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Access token and logging handlers implementation"
+    },
+    {
+      "source_id": "S-180",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Register handler chain in AddHttpClient"
+    },
+    {
+      "source_id": "S-181",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Correlation / logger handler examples"
+    },
+    {
+      "source_id": "S-183",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Configure primary handler in client registration"
+    },
+    {
+      "source_id": "S-184",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Redirect behavior note"
+    },
+    {
+      "source_id": "S-191",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Do we need a primary message handler?"
+    },
+    {
+      "source_id": "S-192",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Duplicate placement of global AddHttpClient config"
+    },
+    {
+      "source_id": "S-194",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Handler rotation vs connection rotation"
+    },
+    {
+      "source_id": "S-195",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Can configure primary handler for a specific client"
+    },
+    {
+      "source_id": "S-196",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Primary handler for one specific HttpClient"
+    },
+    {
+      "source_id": "S-197",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Duplicate placement of primary handler config"
+    },
+    {
+      "source_id": "S-199",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Why rotate handlers"
+    },
+    {
+      "source_id": "S-200",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Handler lifetime and connection lifetime are different knobs"
+    },
+    {
+      "source_id": "S-201",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "ConfigurePrimaryHttpMessageHandler for named/typed client"
+    },
+    {
+      "source_id": "S-202",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Specific client primary handler options"
+    },
+    {
+      "source_id": "S-203",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Why not only PooledConnectionLifetime"
+    },
+    {
+      "source_id": "S-205",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Handler rotation summary"
+    },
+    {
+      "source_id": "S-206",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Typed/named client primary handler configuration"
+    },
+    {
+      "source_id": "S-207",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Question: one specific named client handler"
+    },
+    {
+      "source_id": "S-209",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Handler lifetime with named/typed clients"
+    },
+    {
+      "source_id": "S-210",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Handler rotation deeper explanation"
+    },
+    {
+      "source_id": "S-212",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Specific client configuration short note"
+    },
+    {
+      "source_id": "S-213",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Why need rotate handlers"
+    },
+    {
+      "source_id": "S-214",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Configure primary handler caveat"
+    },
+    {
+      "source_id": "S-216",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Primary handler options for particular client"
+    },
+    {
+      "source_id": "S-218",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Final handler rotation note"
+    },
+    {
+      "source_id": "S-220",
+      "decision": "included-in-r06r07-v001",
+      "assigned_region": "R07",
+      "reason": "Wrap-up: named vs typed/global configuration"
+    }
+  ]
+}
