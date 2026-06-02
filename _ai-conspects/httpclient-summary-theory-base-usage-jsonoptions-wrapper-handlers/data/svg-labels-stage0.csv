@@ -1,0 +1,93 @@
+label_id,x,y,font_size,text
+L-001,4477.694,10.0,38.18319963197526,CREATE RESOURCE
+L-002,322.91,92.497,178.22216796874997,TESTING
+L-003,16175.856,272.788,99.51515891335215,TYPED HTTPCLINET
+L-004,10097.269,314.966,75.82222493489586,"accept/contenttype headers,"
+L-005,12401.436,703.522,104.00000000000009,sometheory
+L-006,8028.283,747.191,109.90478515625003,quick
+L-007,7808.148,1080.961,20.0,dispose requestmessage and especiallty response message
+L-008,19320.503,1181.559,20.0,configuring default json options with jsonoptions wrapper
+L-009,20719.375,1194.61,20.0,need a workaround
+L-010,21020.088,1204.554,20.0,can potentially use different wrappers for different
+L-011,31861.954,1225.21,253.20582490138585,global httpclient config
+L-012,27948.678,1346.497,238.66674804687486,newwer
+L-013,23823.616,1395.961,153.3333740234375,problems without httpclient factory
+L-014,7842.043,1494.687,20.0,NEED TO BUILD SOME CLEAR STEPS FOR USING HTTPCLIENT
+L-015,16525.317,1727.806,20.0,Factory will automatocally creqate instance of httpclient
+L-016,27747.08,1887.895,69.23076923077461,basic theo
+L-017,20695.424,1919.795,20.0,injecting though constructor and using
+L-018,28830.413,1952.767,72.51284555288733,flow
+L-019,13077.508,2076.025,20.0,"default, but not all message hand;ers"
+L-020,24065.712,2124.711,20.0,need to clarify evr after computer network course
+L-021,9309.967,2153.121,20.0,when getting objects stream
+L-022,16516.428,2161.88,20.0,Injecting via constructor
+L-023,12453.222,2308.406,20.0,often there is a pipeline of handlers
+L-024,13127.984,2587.929,20.0,there can be a caching handler that instead of
+L-025,7937.09,2658.038,20.0,"IF WE WANT, WE CAN ADD READING ON HEADERS ARRIVE"
+L-026,31255.17,2794.514,158.66650390624997,global timeout via client.timeout and
+L-027,8030.092,2913.321,20.0,CAN READ AS STRING AND SERIALIZE
+L-028,8031.3,2958.522,20.0,CAN READ AS JSON
+L-029,26285.32,3440.057,75.46669921874997,reusing connections
+L-030,11500.351,3619.143,20.0,ADD ACCEPT HEADERS
+L-031,11492.116,3802.673,20.0,CHECK RESPONSE CONTENT-TYPE
+L-032,25203.552,4013.845,20.0,as administrator
+L-033,15944.576,4200.808,108.36375903661298,!!!
+L-034,16125.317,4291.51,20.0,"IJ youve configured custom handler in program cs, you must not override it in client class - this handler"
+L-035,11508.387,4697.928,20.0,by default preference =1
+L-036,7144.233,4779.714,176.4444173177082,contenttype headers on
+L-037,25943.764,4805.895,20.0,after http client is disposed
+L-038,25947.891,4941.927,20.0,when you disposing socket with
+L-039,11344.101,4980.309,20.0,in our case will return json even if xml is default for
+L-040,16201.12,4980.398,20.0,Adding jsonoptonswrapper
+L-041,16625.923,4980.758,20.0,"we will create specific methods to interact with api,"
+L-042,25946.615,5033.387,20.0,can lead to socket exsaustion
+L-043,4596.378,5077.01,20.0,Why not to use shortcuts all the time?
+L-044,30305.313,5114.096,179.99999999999994,primaryhandlers
+L-045,4371.695,5168.439,20.0,"you cant set specific acept header for specific request with shortcusts, if you have different request scenario"
+L-046,25311.544,5264.215,20.0,using one httpclient
+L-047,4927.398,5350.828,20.0,Need to use Json.Net for this
+L-048,16078.651,5532.879,20.0,creating method of our typed client
+L-049,25212.433,5773.993,20.0,one connection instead of 10
+L-050,26085.698,5841.799,20.0,we didnt disposed httpclient
+L-051,3543.662,6242.472,48.44444444444383,same api for text.json patchdocument
+L-052,4656.116,6328.776,20.0,We need to return patch document of changes
+L-053,3050.876,6346.31,20.0,using Microsoft.AspNetCore.JsonPatch;
+L-054,16896.832,6771.06,20.0,can lead to calling api via uri that no
+L-055,31997.037,6781.945,115.99999999999999,!!!
+L-056,4658.475,6848.005,20.0,can do both typed and utyped version (untyped for dynamic sys when you dont have classes
+L-057,4348.253,7016.968,20.0,patch operations
+L-058,11103.303,7024.509,20.0,when using httpclient defaultrequestheaders need to clear
+L-059,7331.117,7043.545,166.58871866836566,need to dispose
+L-060,25053.433,7098.183,20.0,When instantiates httpclient it takes handler(socket usually) from a pool
+L-061,25034.729,7141.146,20.0,And it manages the lifetime of handlers (2 mins)
+L-062,4387.803,7154.296,20.0,creating request
+L-063,4581.136,7322.868,20.0,setting response content and content related header
+L-064,4132.846,7639.705,20.0,needed to check everything is good
+L-065,25013.063,7658.924,20.0,"For 2 mins, handlers can be reused"
+L-066,4727.115,7789.004,41.33328683035797,shortcut
+L-067,24220.84,7836.332,119.3402269051103,!1
+L-068,3846.131,7885.258,59.111165364581396,!!!!!!!
+L-069,24338.34,7890.22,20.0,need to understand with deep
+L-070,10177.302,8050.507,64.19042968749999,!!!
+L-071,10610.007,9154.749,58.095284598215926,!!
+L-072,24661.906,9292.456,20.0,named clients
+L-073,10135.721,9432.844,58.095284598215926,!!
+L-074,11194.672,9597.041,142.46463446685806,!!
+L-075,24674.633,9748.213,20.0,using typed client and inject it instead of factory
+L-076,4516.964,9748.687,20.0,better to check if advanced deep dive array onega is supported by the api
+L-077,10676.673,9815.701,58.095284598215926,!!
+L-078,36106.554,10330.176,109.77779134114533,httpmessagehandlers
+L-079,35870.136,10465.03,114.81483289930543,delegating handlers examples
+L-080,36071.138,10742.515,80.44444444444454,corridhandler example
+L-081,27844.234,10756.941,243.99999999999997,about dns
+L-082,36008.175,11296.589,80.44444444444454,accesstoken and logger ex
+L-083,37332.687,11567.339,20.0,Can create chain of handlers
+L-084,30413.234,11636.38,87.50477120535717,httpmessagehandler options
+L-085,37314.226,11917.082,20.0,Can configure primary handler
+L-086,37245.334,12366.211,20.0,configuring redirection(need to return new configured handler)
+L-087,38004.445,12604.211,20.0,"by default true, now RedirectToAction wont work"
+L-088,35767.037,12759.01,95.8517795138891,primary message handler
+L-089,33863.44,12854.302,84.00000000000001,do we need to create primary mes
+L-090,31835.209,13721.836,62.66664341517863,handler rotation vs connection rotation
+L-091,35534.963,15040.27,79.25927734375,can i configure primaryhandler for one specific httpclinet (not named)
+L-092,31218.626,15793.578,260.00000000000017,why need rotate handlers
