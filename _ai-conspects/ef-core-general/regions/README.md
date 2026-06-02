@@ -16,15 +16,24 @@ EF06B - Transactions / isolation levels
 EF06C - DB exceptions / retry exhausted / catch order
 ```
 
-Pending next:
+Final status:
 
 ```text
-Final closure/audit pass for ef-core-general.
+Stage15 final closure audit complete.
+ef-core-general is complete if the audit remains clean after diff review.
+S-001 is out-of-current-EFCore-scope.
 ```
 
-Each transcript must include:
+Each transcript includes:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality
 ## 0.2 Coverage / boundary review
+```
+
+Future workflow rule:
+
+```text
+30-50 images per batch is allowed, or more if it is one logical block.
+Keep subregion boundaries inside large archives.
 ```
