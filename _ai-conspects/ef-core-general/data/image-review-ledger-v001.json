@@ -1,33 +1,29 @@
 {
-  "generated": "2026-06-02 00:07:27 UTC",
-  "ledger_version": "v001-updated-by-ef05a-transcript",
+  "generated": "2026-06-02 00:12:16 UTC",
+  "ledger_version": "v001-updated-by-ef05b-transcript",
   "critical_rule": "Ledger is not source of truth. It records decisions after visual/semantic review.",
-  "stage11_delta": {
-    "ef05a_processed_sources": [
-      "S-012",
-      "S-013",
-      "S-011"
+  "stage12_delta": {
+    "ef05b_processed_sources": [
+      "S-004",
+      "S-005",
+      "S-002",
+      "S-003",
+      "S-019"
     ],
-    "ef05_pending": {
-      "EF05B": [
-        "S-004",
-        "S-005",
-        "S-002",
-        "S-003",
-        "S-019"
-      ],
-      "EF05C": [
-        "S-014",
-        "S-015",
-        "S-016",
-        "S-017",
-        "S-018",
-        "S-020",
-        "S-021",
-        "S-022",
-        "S-023"
-      ]
+    "duplicate_use": {
+      "S-019": "same image definition/fileId as S-003"
     },
+    "ef05c_pending": [
+      "S-014",
+      "S-015",
+      "S-016",
+      "S-017",
+      "S-018",
+      "S-020",
+      "S-021",
+      "S-022",
+      "S-023"
+    ],
     "ef06_pending": {
       "EF06A": [
         "S-047",
@@ -175,12 +171,12 @@
       "width": "726",
       "height": "192",
       "nearest_labels_for_search_only": "L-005: need to add somewhere, to some general dbcontext mapping sheet mb | L-002: hascheck constraint | L-118: remove  warnings | dbset | L-034: dbcontext about transactions strategies | L-004: owned isrequired",
-      "coverage_status": "ef05b-owned-fullname-optional-check-constraint",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
-      "review_notes": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns."
+      "coverage_status": "processed-in-ef05b-v001",
+      "current_region_decision": "EF05B",
+      "decision_is_final": "yes-for-ef05b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05b-v001",
+      "decision_basis": "Included in EF05B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF05B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -232,12 +228,12 @@
       "width": "1000",
       "height": "465",
       "nearest_labels_for_search_only": "L-118: remove  warnings | dbset | L-005: need to add somewhere, to some general dbcontext mapping sheet mb | L-002: hascheck constraint | L-034: dbcontext about transactions strategies | L-036: about transactions isolation level for atomicity",
-      "coverage_status": "ef05b-owned-fullname-optional-check-constraint",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
-      "review_notes": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns."
+      "coverage_status": "processed-in-ef05b-v001",
+      "current_region_decision": "EF05B",
+      "decision_is_final": "yes-for-ef05b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05b-v001",
+      "decision_basis": "Included in EF05B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF05B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -365,12 +361,12 @@
       "width": "458",
       "height": "391",
       "nearest_labels_for_search_only": "L-001: efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in clien | L-004: owned isrequired | L-118: remove  warnings | dbset | L-003: navigation | L-005: need to add somewhere, to some general dbcontext mapping sheet mb",
-      "coverage_status": "ef05b-owned-fullname-optional-check-constraint",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
-      "review_notes": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns."
+      "coverage_status": "processed-in-ef05b-v001",
+      "current_region_decision": "EF05B",
+      "decision_is_final": "yes-for-ef05b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05b-v001",
+      "decision_basis": "Included in EF05B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF05B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-033",
@@ -536,12 +532,12 @@
       "width": "1049",
       "height": "482",
       "nearest_labels_for_search_only": "L-001: efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in clien | L-118: remove  warnings | dbset | L-004: owned isrequired | L-005: need to add somewhere, to some general dbcontext mapping sheet mb | L-003: navigation",
-      "coverage_status": "ef05b-owned-fullname-optional-check-constraint",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
-      "review_notes": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns."
+      "coverage_status": "processed-in-ef05b-v001",
+      "current_region_decision": "EF05B",
+      "decision_is_final": "yes-for-ef05b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05b-v001",
+      "decision_basis": "Included in EF05B v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF05B v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-026",
@@ -897,12 +893,12 @@
       "width": "1049",
       "height": "482",
       "nearest_labels_for_search_only": "L-010: better to have isrequired false too | L-011: complex types | L-026: nullable relationships | L-117: coposite key sheet | L-116: alternate key sheet",
-      "coverage_status": "ef05b-owned-fullname-optional-check-constraint",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns.",
-      "review_notes": "Owned FullName / optional owned navigation / CHECK constraint for grouped-null or grouped-not-null columns."
+      "coverage_status": "processed-in-ef05b-v001",
+      "current_region_decision": "EF05B",
+      "decision_is_final": "yes-for-ef05b-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05b-v001",
+      "decision_basis": "Included in EF05B v001 as duplicate-use evidence of S-003 optional owned navigation source.",
+      "review_notes": "Included in EF05B v001 as duplicate-use evidence of S-003 optional owned navigation source."
     },
     {
       "source_id": "S-016",

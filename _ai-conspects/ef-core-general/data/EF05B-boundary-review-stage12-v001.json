@@ -1,0 +1,53 @@
+{
+  "generated": "2026-06-02 00:12:16 UTC",
+  "region_id": "EF05B",
+  "parent_region": "EF05",
+  "region_name": "Owned FullName / optional mapping / CHECK constraint",
+  "boundary_status": "reviewed-and-transcribed-v001",
+  "included_sources": [
+    "S-004",
+    "S-005",
+    "S-002",
+    "S-003",
+    "S-019"
+  ],
+  "included_count": 5,
+  "duplicate_use_note": "S-003 and S-019 use the same image definition/fileId 3945d0f1d7; S-019 is recorded as duplicate-use evidence.",
+  "pending": {
+    "EF05C": [
+      "S-014",
+      "S-015",
+      "S-016",
+      "S-017",
+      "S-018",
+      "S-020",
+      "S-021",
+      "S-022",
+      "S-023"
+    ],
+    "EF06": {
+      "EF06A": [
+        "S-047",
+        "S-048"
+      ],
+      "EF06B": [
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052"
+      ],
+      "EF06C": [
+        "S-062",
+        "S-063",
+        "S-064",
+        "S-065",
+        "S-061"
+      ]
+    }
+  },
+  "open_issues": [
+    "S-005 has right-edge crop in code; exact source code is reconstructed only for the obvious CHECK expression.",
+    "S-002 has slight left-edge crop in the first token.",
+    "EF05C remains candidate-only until its own transcript pass."
+  ]
+}

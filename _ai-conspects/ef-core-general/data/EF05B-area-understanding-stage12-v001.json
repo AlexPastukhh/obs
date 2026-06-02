@@ -1,0 +1,28 @@
+{
+  "generated": "2026-06-02 00:12:16 UTC",
+  "region_id": "EF05B",
+  "what_area_is_about": [
+    "mapping an owned FullName value object into nullable columns",
+    "controlling whether EF materializes the owned navigation as null when all columns are null",
+    "configuring owned navigation optionality with Navigation(...).IsRequired(false)",
+    "using a database CHECK constraint to enforce grouped nullability",
+    "preventing inconsistent rows where FirstName is null but LastName is not, or vice versa"
+  ],
+  "key_ideas": [
+    "When a value object is optional, its columns may be nullable.",
+    "If the owned value is optional, EF can be configured to set the navigation/field to null when all owned columns are NULL.",
+    "Column-level `IsRequired(false)` makes the individual columns nullable.",
+    "Navigation-level `.Navigation(\"_fullName\").IsRequired(false)` controls the optional owned navigation behavior.",
+    "A CHECK constraint can enforce an all-or-none rule for important grouped columns such as FirstName and LastName.",
+    "S-003 and S-019 are duplicate image uses and must be tracked as two uses but one transcript body."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "S-005 has right-edge code crop; exact long lines are not fully visible.",
+      "S-002 has a slight left-edge crop at the first identifier.",
+      "S-003/S-019 long code lines extend horizontally, but the key optional-navigation call is readable."
+    ],
+    "confidence": "High for concepts and boundary; medium-high for exact character-level S-005 code."
+  }
+}
