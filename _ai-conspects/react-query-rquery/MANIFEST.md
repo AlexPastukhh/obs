@@ -1,45 +1,46 @@
-# MANIFEST - React Query Stage4w R03/R04 Closure + Mega Boundary
+# MANIFEST - React Query Stage4w2 Mega Boundary Correction
 
-Archive type: **closure audit + mega boundary review**  
+Archive type: **boundary correction**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 01:52:36 UTC
+Generated: 2026-06-02 02:03:38 UTC
 
 ## Direction check
 
 Goal:
-Take a larger step while keeping audit discipline.
+Correct Stage4w before using it for a large transcript batch.
 
 Done:
-R03/R04 transcripts are complete.
+Stage4w created a mega-boundary, but local visual recheck found false R09A assignments.
 
 This step:
-Close R03/R04 and create a larger next boundary review for R09/R11.
+Add corrected Stage4w2 boundary and updated ledger.
 
 Why:
-This lets us increase throughput without beginning a huge transcript blindly.
+A 30-80 image batch is okay only if the boundary is visually clean first.
 
 Next:
 1. review diff;
 2. commit;
-3. try combined R09A + R09B transcript.
+3. process the corrected 30-80 image batch.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/react-query-rquery/35-stage4w-r03r04-closure-and-r09-r11-mega-boundary.md
+_ai-conspects/react-query-rquery/36-stage4w2-mega-boundary-correction.md
 _ai-conspects/react-query-rquery/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/react-query-rquery/data/R03-R04-closure-audit-stage4w-v001.csv
-_ai-conspects/react-query-rquery/data/R03-R04-closure-audit-stage4w-v001.json
-_ai-conspects/react-query-rquery/data/R09-R11-mega-boundary-review-stage4w-v001.csv
-_ai-conspects/react-query-rquery/data/R09-R11-mega-boundary-review-stage4w-v001.json
+_ai-conspects/react-query-rquery/data/R09-R11-mega-boundary-review-stage4w2-v002.csv
+_ai-conspects/react-query-rquery/data/R09-R11-mega-boundary-review-stage4w2-v002.json
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.csv
 _ai-conspects/react-query-rquery/data/react-query-image-review-ledger-v2.json
-_ai-conspects/react-query-rquery/audit-assets/R09-R11-mega-boundary-all-candidates-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R09A-cache-remove-reset-offlinefirst-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R09B-network-modes-fetchstatus-paused-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R09C-validation-resumepaused-offline-mutations-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R11-mutations-callbacks-optimistic-contact-sheet.png
-_ai-conspects/react-query-rquery/audit-assets/R09-R11-source-images/*.png
+_ai-conspects/react-query-rquery/audit-assets/R03-correction-notify-select-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R04-corrections-static-refetchinterval-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R05-correction-infinite-query-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R07-correction-prefetch-ensure-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09A-corrected-cache-remove-reset-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09B-corrected-network-offline-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09C-corrected-validation-resume-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R11-corrected-mutations-stage4w2-contact-sheet.png
+_ai-conspects/react-query-rquery/audit-assets/R09-R11-corrected-source-images/*.png
 _ai-conspects/react-query-rquery/MANIFEST.md
 _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ```
@@ -47,7 +48,7 @@ _ai-conspects/react-query-rquery/APPLY_ARCHIVE.md
 ## Status after apply
 
 ```text
-R03/R04 closure audit completed.
-R09A/R09B/R09C/R11 are provisional boundary candidates only.
-R10 overlaps remain R10, not reassigned.
+Stage4w v001 mega-boundary superseded.
+Stage4w2 v002 corrected boundary active.
+No new transcript added.
 ```

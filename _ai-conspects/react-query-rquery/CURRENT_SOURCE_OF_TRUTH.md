@@ -1,6 +1,6 @@
 # Current Source of Truth - React Query rquery
 
-Generated: 2026-06-02 01:52:36 UTC
+Generated: 2026-06-02 02:03:38 UTC
 
 ## Current policy
 
@@ -26,12 +26,22 @@ verified source transcript or correction addendum
 
 For large split regions, add a closure audit after the last sub-pass.
 
+## Batch-size rule
+
+```text
+Default transcript batch: 30-80 images.
+Can be larger if one logical block requires it.
+Use one archive with multiple region files when themes differ.
+Do not mix different regions into one region file.
+Local visual/semantic recheck can override nearest-label grouping before transcript.
+```
+
 ## Current correction / closure status
 
 ```text
 R01 v002: expanded full browser/cache road
 R02 closure audit v001: completed
-R03/R04 closure audit v001: completed
+R03/R04 closure audit v001: completed for Stage4t candidates
 R05 v002: expanded pagination / infinite-query road
 R06 v002: corrected with S-176
 R07 v004: corrected with S-184/S-186
@@ -42,16 +52,21 @@ R10 v006: corrected with S-240/S-241 + duplicate-use note S-237/S-246
 ## Current processing target
 
 ```text
-R09/R11 mega-boundary review started.
-R09A candidates: 35
-R09B candidates: 7
-R09C candidates: 9
-R11 candidates: 20
+Stage4w2 corrected mega-boundary active.
+Stage4w v001 mega-boundary is superseded for transcript planning.
+
+Next corrected transcript batch:
+R05 correction: 13
+R09A: 4
+R09B: 13
+R09C: 11
+Total: 41
 ```
 
-## Next transcript attempt
+## Pending later
 
 ```text
-Try combined archive for R09A + R09B, but keep separate region files.
-R09C and R11 remain pending.
+R03/R04 neighbor corrections: R03=2, R04A=2, R04B=1
+R07 correction candidates: 2
+R11 mutation batch: 23
 ```
