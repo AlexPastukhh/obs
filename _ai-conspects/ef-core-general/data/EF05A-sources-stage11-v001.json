@@ -1,0 +1,50 @@
+[
+  {
+    "region_source_id": "EF05A-S001",
+    "source_id": "S-012",
+    "image_use_id": "IU-012",
+    "fileId_short": "62853cad31",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef05a-toctou-race-email-availability-check",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "why pre-check isEmailAvailable does not protect from race",
+    "text": "1. Почему проверка «isEmailAvailable()» не спасёт от гонки\n\n• Сценарий TOCTOU:\n    i. Запрос A: сервер читает — email свободен.\n    ii. Запрос B: сервер читает — email свободен.\n    iii. A выполняет INSERT.\n    iv. B выполняет INSERT.",
+    "code": "",
+    "extra_text": "",
+    "notes": "Full source image visually checked. Russian text preserved."
+  },
+  {
+    "region_source_id": "EF05A-S002",
+    "source_id": "S-013",
+    "image_use_id": "IU-013",
+    "fileId_short": "0f7c82eb0b",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef05a-unique-constraint-semantics",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "what UNIQUE constraint/index does",
+    "text": "2. Что делает UNIQUE CONSTRAINT/INDEX\n\n• UNIQUE ограничение в СУБД — это механизм, который гарантирует, что в столбце (или наборе столбцов) не будет двух строк с одинаковым значением.\n• При попытке вставить вторую строку с тем же значением СУБД отклоняет операцию и возвращает ошибку (например, в PostgreSQL — error code 23505 UNIQUE_VIOLATION).\n• Следовательно: в корректной реляционной БД с включённым уникальным ограничением физически получить две строки с одинаковым email нельзя.",
+    "code": "",
+    "extra_text": "",
+    "notes": "Full source image visually checked. Russian text preserved."
+  },
+  {
+    "region_source_id": "EF05A-S003",
+    "source_id": "S-011",
+    "image_use_id": "IU-011",
+    "fileId_short": "3dc7a29628",
+    "status": "verified-from-source-image",
+    "candidate_type": "ef05a-efcore-owned-email-unique-index",
+    "readability": "high",
+    "cut_off": "no",
+    "confidence": "high",
+    "theme": "EF Core mapping: owned Email value and unique email index",
+    "text": "",
+    "code": "cb.OwnsOne(c=>c.Email,eb=>\n{\n    eb.Property(e=>e.Value)\n        .HasColumnName(\"Email\")\n        .HasMaxLength(100)\n        .IsRequired();\n});\n\n// Add this line for unique email constraint\ncb.HasIndex(\"Email\").IsUnique();",
+    "extra_text": "",
+    "notes": "Full source image visually checked. Code preserved as visible source."
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "generated": "2026-06-02 00:07:27 UTC",
+  "region_id": "EF05A",
+  "what_area_is_about": [
+    "TOCTOU race when checking if an email is available before insert",
+    "why application-level pre-checks do not guarantee uniqueness under parallel requests",
+    "UNIQUE constraints/indexes as database-level invariant protection",
+    "EF Core mapping for an owned Email value and unique index on the Email column"
+  ],
+  "key_ideas": [
+    "Two parallel requests can both observe that an email is free before either insert commits.",
+    "A database UNIQUE constraint/index is the authoritative guard that physically prevents duplicate email rows.",
+    "When a duplicate insert happens, the database rejects the operation, for example PostgreSQL error 23505 UNIQUE_VIOLATION.",
+    "For an owned Email value object mapped to an Email column, the model can add a unique index over that column.",
+    "Application pre-checks can improve UX, but DB-level constraints protect the invariant."
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [],
+    "confidence": "High for source transcript and boundary decision."
+  }
+}

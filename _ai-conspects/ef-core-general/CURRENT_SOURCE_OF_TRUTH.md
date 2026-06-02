@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core general
 
-Generated: 2026-06-01 23:58:11 UTC
+Generated: 2026-06-02 00:07:27 UTC
 
 ## Current policy
 
@@ -28,6 +28,7 @@ Stage7: EF03 transcript done
 Stage8: EF04 boundary review done
 Stage9: EF04 transcript done
 Stage10: EF05/EF06 combined boundary review done
+Stage11: EF05A transcript done
 ```
 
 ## Done
@@ -38,25 +39,23 @@ EF01B: Loading collections / Include / Find / Load / AutoInclude
 EF02: Attach / disconnected updates / entity state
 EF03: Constructors / materialization
 EF04: Shadow property / query filter
+EF05A: Race protection with UNIQUE constraint/index
 ```
 
 ## Current candidate regions
 
 ```text
-EF05: Model mapping / constraints / owned and complex types
-EF06: Transactions / concurrency / db exceptions / retry
+EF05B: S-004, S-005, S-002, S-003, S-019
+EF05C: S-014, S-015, S-016, S-017, S-018, S-020, S-021, S-022, S-023
+EF06A: S-047, S-048
+EF06B: S-049, S-050, S-051, S-052
+EF06C: S-062, S-063, S-064, S-065, S-061
 ```
 
 ## Recommended next transcript
 
 ```text
-EF05A:
-S-012, S-013, S-011
-Race protection with UNIQUE constraint/index
-```
-
-## Still unreviewed after Stage10
-
-```text
-none
+EF05B:
+S-004, S-005, S-002, S-003, S-019
+Owned FullName / optional mapping / CHECK constraint
 ```

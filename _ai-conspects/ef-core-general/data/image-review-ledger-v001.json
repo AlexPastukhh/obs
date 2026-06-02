@@ -1,44 +1,52 @@
 {
-  "generated": "2026-06-01 23:58:11 UTC",
-  "ledger_version": "v001-updated-by-ef05-ef06-combined-boundary-review",
-  "critical_rule": "Ledger is not source of truth. EF05/EF06 decisions remain provisional until each transcript pass does visual/semantic review.",
-  "stage10_delta": {
-    "ef05_candidate_sources": [
+  "generated": "2026-06-02 00:07:27 UTC",
+  "ledger_version": "v001-updated-by-ef05a-transcript",
+  "critical_rule": "Ledger is not source of truth. It records decisions after visual/semantic review.",
+  "stage11_delta": {
+    "ef05a_processed_sources": [
       "S-012",
       "S-013",
-      "S-011",
-      "S-004",
-      "S-005",
-      "S-002",
-      "S-003",
-      "S-019",
-      "S-014",
-      "S-015",
-      "S-016",
-      "S-017",
-      "S-018",
-      "S-020",
-      "S-021",
-      "S-022",
-      "S-023"
+      "S-011"
     ],
-    "ef06_candidate_sources": [
-      "S-047",
-      "S-048",
-      "S-049",
-      "S-050",
-      "S-051",
-      "S-052",
-      "S-062",
-      "S-063",
-      "S-064",
-      "S-065",
-      "S-061"
-    ],
-    "checked_not_current_efcore": [
-      "S-001"
-    ],
-    "still_unreviewed_after_stage10": []
+    "ef05_pending": {
+      "EF05B": [
+        "S-004",
+        "S-005",
+        "S-002",
+        "S-003",
+        "S-019"
+      ],
+      "EF05C": [
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023"
+      ]
+    },
+    "ef06_pending": {
+      "EF06A": [
+        "S-047",
+        "S-048"
+      ],
+      "EF06B": [
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052"
+      ],
+      "EF06C": [
+        "S-062",
+        "S-063",
+        "S-064",
+        "S-065",
+        "S-061"
+      ]
+    }
   },
   "rows": [
     {
@@ -91,12 +99,12 @@
       "width": "766",
       "height": "261",
       "nearest_labels_for_search_only": "L-009: how to save yourself | from sit when someone make 2 parallel requests | to create acc with same email | L-037: some onmodel creat hshit | L-003: navigation | L-004: owned isrequired | L-116: alternate key sheet",
-      "coverage_status": "ef05a-unique-constraint-race-protection",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection.",
-      "review_notes": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection."
+      "coverage_status": "processed-in-ef05a-v001",
+      "current_region_decision": "EF05A",
+      "decision_is_final": "yes-for-ef05a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05a-v001",
+      "decision_basis": "Included in EF05A v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF05A v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-047",
@@ -186,12 +194,12 @@
       "width": "1027",
       "height": "295",
       "nearest_labels_for_search_only": "L-009: how to save yourself | from sit when someone make 2 parallel requests | to create acc with same email | L-116: alternate key sheet | L-004: owned isrequired | L-003: navigation | L-037: some onmodel creat hshit",
-      "coverage_status": "ef05a-unique-constraint-race-protection",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection.",
-      "review_notes": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection."
+      "coverage_status": "processed-in-ef05a-v001",
+      "current_region_decision": "EF05A",
+      "decision_is_final": "yes-for-ef05a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05a-v001",
+      "decision_basis": "Included in EF05A v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF05A v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -319,12 +327,12 @@
       "width": "611",
       "height": "361",
       "nearest_labels_for_search_only": "L-116: alternate key sheet | L-117: coposite key sheet | L-001: efcore can materialise objecteven if all of its columns are null | the fact that you have ? for  your fullname  in clien | L-009: how to save yourself | from sit when someone make 2 parallel requests | to create acc with same email | L-004: owned isrequired",
-      "coverage_status": "ef05a-unique-constraint-race-protection",
-      "current_region_decision": "EF05",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes-for-ef05-transcript",
-      "decision_basis": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection.",
-      "review_notes": "Race protection / unique constraint / unique index; belongs to model constraints and DB-level invariant protection."
+      "coverage_status": "processed-in-ef05a-v001",
+      "current_region_decision": "EF05A",
+      "decision_is_final": "yes-for-ef05a-v001-boundary",
+      "must_recheck_before_region_close": "no-for-ef05a-v001",
+      "decision_basis": "Included in EF05A v001 after visual/semantic transcript pass.",
+      "review_notes": "Included in EF05A v001 after visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",

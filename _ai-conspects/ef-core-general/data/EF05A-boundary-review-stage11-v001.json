@@ -1,0 +1,145 @@
+{
+  "generated": "2026-06-02 00:07:27 UTC",
+  "region_id": "EF05A",
+  "parent_region": "EF05",
+  "region_name": "Race protection with UNIQUE constraint/index",
+  "boundary_status": "reviewed-and-transcribed-v001",
+  "included_sources": [
+    "S-012",
+    "S-013",
+    "S-011"
+  ],
+  "included_count": 3,
+  "checked_not_ef05a": [
+    {
+      "source_id": "S-004",
+      "decision": "pending-EF05B",
+      "reason": "owned FullName / optional mapping / CHECK constraint"
+    },
+    {
+      "source_id": "S-005",
+      "decision": "pending-EF05B",
+      "reason": "owned FullName / optional mapping / CHECK constraint"
+    },
+    {
+      "source_id": "S-002",
+      "decision": "pending-EF05B",
+      "reason": "owned FullName / optional mapping / CHECK constraint"
+    },
+    {
+      "source_id": "S-003",
+      "decision": "pending-EF05B",
+      "reason": "owned FullName / optional mapping / CHECK constraint"
+    },
+    {
+      "source_id": "S-019",
+      "decision": "pending-EF05B",
+      "reason": "owned FullName / optional mapping / CHECK constraint"
+    },
+    {
+      "source_id": "S-014",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-015",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-016",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-017",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-018",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-020",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-021",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-022",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-023",
+      "decision": "pending-EF05C",
+      "reason": "optional value object / complex type mapping"
+    },
+    {
+      "source_id": "S-047",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-048",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-049",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-050",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-051",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-052",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-062",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-063",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-064",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-065",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    },
+    {
+      "source_id": "S-061",
+      "decision": "pending-EF06",
+      "reason": "transactions / concurrency / db exceptions / retry"
+    }
+  ],
+  "open_issues": [
+    "This pass closes only EF05A.",
+    "EF05B/EF05C remain candidate-only from Stage10 until their own transcript passes.",
+    "EF06 remains candidate-only from Stage10 until its own transcript passes."
+  ]
+}
