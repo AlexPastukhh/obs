@@ -1,36 +1,39 @@
-# MANIFEST - CORS R01/R02 origin preflight ASP.NET transcript v001
+# MANIFEST - CORS R03/R04/R05 final coverage transcript v001
 
-Archive type: **stage-1 verified combined region transcript**  
+Archive type: **stage-2 final coverage transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 12:18:34 UTC
+Generated: 2026-06-02 12:31:17 UTC
 
 ## Done
 
-- R01/R02 combined transcript created.
-- 56 source images included.
-- Ledger updated for R01/R02.
-- R03/R04/R05 left pending for lower-half pass.
+- R03/R04/R05 combined final transcript created.
+- 70 source images included.
+- Final coverage audit added.
+- Ledger updated to zero remaining unprocessed image uses.
 
 ## Counts
 
 ```text
-R01 sources: 42
-R02 sources: 14
-Total: 56
-Remaining planned image uses: 70
+R03 sources: 26
+R04 sources: 25
+R05 sources: 19
+Total newly closed: 70
+Total image uses in conspect: 126
+Remaining unclosed: 0
 ```
 
 ## Files included / updated
 
 ```text
-_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/regions/R01R02-origin-preflight-aspnet-usecases.md
-_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/R01R02-sources-stage1-v001.*
-_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/R01R02-boundary-review-stage1-v001.*
-_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/R01R02-area-understanding-stage1-v001.json
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/regions/R03R04R05-policy-builder-headers-middleware.md
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/R03R04R05-sources-stage2-v001.*
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/R03R04R05-boundary-review-stage2-v001.*
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/R03R04R05-area-understanding-stage2-v001.json
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/final-coverage-audit-stage2-v001.*
 _ai-conspects/cors-origin-preflight-aspnet-policy-credentials/data/image-review-ledger-v001.*
-_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/audit-assets/contact-sheet-R01R02-origin-preflight-aspnet-v001.png
-_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/audit-assets/R01R02-source-images/*.png
-_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/01-stage1-r01r02-origin-preflight-aspnet-transcript.md
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/audit-assets/contact-sheet-R03R04R05-final-coverage-v001.png
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/audit-assets/R03R04R05-source-images/*.png
+_ai-conspects/cors-origin-preflight-aspnet-policy-credentials/02-stage2-r03r04r05-final-coverage-transcript.md
 _ai-conspects/cors-origin-preflight-aspnet-policy-credentials/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/cors-origin-preflight-aspnet-policy-credentials/MANIFEST.md
 _ai-conspects/cors-origin-preflight-aspnet-policy-credentials/APPLY_ARCHIVE.md
@@ -38,4 +41,4 @@ _ai-conspects/cors-origin-preflight-aspnet-policy-credentials/APPLY_ARCHIVE.md
 
 ## Next
 
-R03+R04+R05 combined boundary review if coherent.
+No normal transcript regions remain after this archive.

@@ -1,6 +1,6 @@
-# Apply archive: CORS R01/R02 origin preflight ASP.NET transcript v001
+# Apply archive: CORS R03/R04/R05 final coverage transcript v001
 
-Archive type: stage-1 verified combined region transcript.
+Archive type: stage-2 final coverage transcript.
 
 Target branch:
 
@@ -11,13 +11,13 @@ ai-processed-conspects-text
 Apply from repository root:
 
 ```powershell
-PS C:\Users\alexa\obs>
+PS C:\\Users\\alexa\\obs>
 ```
 
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-cors-origin-preflight-aspnet-policy-credentials-stage1-r01r02-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-cors-origin-preflight-aspnet-policy-credentials-stage2-r03r04r05-final-coverage-v001.zip
 ```
 
 ## Apply + staged diff review commands
@@ -26,9 +26,9 @@ C:\Users\alexa\Downloads\ai-conspects-cors-origin-preflight-aspnet-policy-creden
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-cors-origin-preflight-aspnet-policy-credentials-stage1-r01r02-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-cors-origin-preflight-aspnet-policy-credentials-stage2-r03r04r05-final-coverage-v001.zip"
 $target = "_ai-conspects\cors-origin-preflight-aspnet-policy-credentials"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-cors-stage1-r01r02-transcript.cached.diff"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-cors-stage2-r03r04r05-final-coverage.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -52,7 +52,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands after review
 
 ```powershell
-git commit -m "Add CORS R01 R02 origin preflight transcript"
+git commit -m "Complete CORS conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 

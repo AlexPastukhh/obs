@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 12:31:17 UTC",
+  "region_id": "R03R04R05",
+  "area_title": "Final lower-half pass: ASP.NET policy builder / Access-Control headers / middleware behavior",
+  "what_area_is_about": [
+    "ASP.NET CORS policy builder methods: WithOrigins, AllowAnyOrigin, SetIsOriginAllowed, WithHeaders, AllowAnyHeader, WithMethods, AllowAnyMethod, WithExposedHeaders, AllowCredentials, DisallowCredentials, SetPreflightMaxAge",
+    "Access-Control request and response headers: Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin/Methods/Headers/Credentials/Expose-Headers/Max-Age and Vary: Origin",
+    "browser behavior around credentialed CORS, rejected preflight, network/CORS errors, and cookie storage ambiguity",
+    "middleware/preflight mechanics and how a server chooses/echoes allowed origins when multiple origins are configured",
+    "final cache correctness concerns: Vary: Origin and avoiding wildcard/multiple-origin misconceptions"
+  ],
+  "key_ideas": [
+    "ASP.NET policy builder calls map directly to CORS headers and browser checks; they are not just server metadata.",
+    "Allowed origins, methods, and request headers are checked by preflight before the real request can proceed.",
+    "Expose-Headers controls which response headers JavaScript can read; it is separate from Allow-Headers, which is about request headers.",
+    "Credentialed CORS requires explicit AllowCredentials and a specific allowed origin; wildcard-style behavior is unsafe/incompatible.",
+    "Access-Control-Max-Age caches successful preflight decisions for the same request shape, but Vary: Origin is needed for shared cache correctness.",
+    "When CORS fails, JavaScript often receives a generic network/CORS failure, so app code should treat such failures as diagnostic/network-level unless additional server logs prove otherwise.",
+    "With multiple allowed origins, the server should echo the matching request origin or omit the allow-origin header; it should not return a comma-separated list of origins."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: lower-half contact sheets are readable, but several code/header screenshots are small or UI-heavy",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Exact code punctuation and some browser-console details should be corrected against preserved PNGs if needed.",
+      "This final pass closes image-use coverage; it does not claim every screenshot is an authoritative verbatim code transcript."
+    ],
+    "confidence_summary": "High for boundary/coverage and conceptual notes; medium-high for exact code line transcription."
+  }
+}
