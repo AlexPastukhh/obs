@@ -1,6 +1,6 @@
-# Apply archive: Polly R04/R05/R06 manual classic exception bubbling transcript v001
+# Apply archive: Polly R01/R02/R07 final coverage transcript v001
 
-Archive type: stage-2 verified combined region transcript.
+Archive type: stage-3 final coverage transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage2-r04r05r06-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage3-r01r02r07-final-coverage-v001.zip
 ```
 
 ## Apply + staged diff review commands
@@ -26,9 +26,9 @@ C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-excepti
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage2-r04r05r06-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-polly-cheat-sheet-production-ready-exceptions-pipeline-handling-stage3-r01r02r07-final-coverage-v001.zip"
 $target = "_ai-conspects\polly-cheat-sheet-production-ready-exceptions-pipeline-handling"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-polly-stage2-r04r05r06-transcript.cached.diff"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-polly-stage3-r01r02r07-final-coverage.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -52,7 +52,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands after review
 
 ```powershell
-git commit -m "Add Polly R04 R05 R06 exception handling transcript"
+git commit -m "Complete Polly conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 

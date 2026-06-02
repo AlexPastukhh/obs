@@ -1,36 +1,39 @@
-# MANIFEST - Polly R04/R05/R06 manual classic exception bubbling transcript v001
+# MANIFEST - Polly R01/R02/R07 final coverage transcript v001
 
-Archive type: **stage-2 verified combined region transcript**  
+Archive type: **stage-3 final coverage transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 11:22:40 UTC
+Generated: 2026-06-02 11:30:51 UTC
 
 ## Done
 
-- R04/R05/R06 combined transcript created.
-- 70 source images included.
-- Ledger updated for R04/R05/R06.
-- Duplicate image-use placements recorded.
+- R01/R02/R07 final transcript created.
+- 54 source images included.
+- Final coverage audit added.
+- Ledger updated to zero remaining unprocessed image uses.
 
 ## Counts
 
 ```text
-R04 sources: 27
-R05 sources: 18
-R06 sources: 25
-Total: 70
+R01 sources: 16
+R02 sources: 26
+R07 sources: 12
+Total newly closed: 54
+Total image uses in conspect: 186
+Remaining unclosed: 0
 ```
 
 ## Files included / updated
 
 ```text
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/regions/R04R05R06-manual-classic-exception-bubbling.md
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R04R05R06-sources-stage2-v001.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R04R05R06-boundary-review-stage2-v001.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R04R05R06-area-understanding-stage2-v001.json
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/regions/R01R02R07-final-options-hedging-cheatsheet.md
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R01R02R07-sources-stage3-v001.*
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R01R02R07-boundary-review-stage3-v001.*
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/R01R02R07-area-understanding-stage3-v001.json
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/final-coverage-audit-stage3-v001.*
 _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/data/image-review-ledger-v001.*
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/contact-sheet-R04R05R06-combined-transcript-v001.png
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/R04R05R06-source-images/*.png
-_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/02-stage2-r04r05r06-manual-classic-exception-bubbling-transcript.md
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/contact-sheet-R01R02R07-final-coverage-v001.png
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/audit-assets/R01R02R07-source-images/*.png
+_ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/03-stage3-r01r02r07-final-coverage-transcript.md
 _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/MANIFEST.md
 _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/APPLY_ARCHIVE.md
@@ -38,4 +41,4 @@ _ai-conspects/polly-cheat-sheet-production-ready-exceptions-pipeline-handling/AP
 
 ## Next
 
-R01/R02 combined boundary review if coherent; then R07 final production-ready cheat sheet / exception mapping.
+No normal transcript regions remain after this archive.

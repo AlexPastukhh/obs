@@ -1,0 +1,28 @@
+{
+  "generated": "2026-06-02 11:30:51 UTC",
+  "region_id": "R01R02R07",
+  "area_title": "Final remaining pass: R01/R02 option mechanics + R07 production-ready mapping",
+  "what_area_is_about": [
+    "R01: retry options, ShouldHandle args, Outcome, DelayGenerator fallback, request/context metadata, nesting/order effects",
+    "R02: standard vs custom pipeline selection, hedging mechanics, explicit pipeline/provider usage, testing/conditional limiter examples",
+    "R07: production-ready full cheat sheet, exception/status mapping, final handling examples"
+  ],
+  "key_ideas": [
+    "ShouldHandle/DelayGenerator callbacks reason over Outcome and ResilienceContext.",
+    "Returning null from nullable delay generators means fallback only where the delegate contract defines that behavior.",
+    "Request-aware decisions require request metadata via result.RequestMessage or ResilienceContext properties.",
+    "Strategy nesting/order changes what wraps each retry/hedge attempt.",
+    "Hedging/custom provider/testing examples are request-dependent and often require explicit pipeline/provider usage.",
+    "Production-ready mapping separates HTTP status handling, transient exception mapping, and what should bubble."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high; R07 is code-heavy/wide",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Exact code punctuation should be checked against preserved PNGs.",
+      "R07 is conceptually separate but included in same final coverage archive."
+    ],
+    "confidence_summary": "High for coverage and boundary; medium-high for exact code punctuation."
+  }
+}
