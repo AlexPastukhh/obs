@@ -1,0 +1,213 @@
+{
+  "generated": "2026-06-02 16:25:17 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 44,
+  "boundary_corrections": [],
+  "duplicate_image_uses_by_fileId_short": {},
+  "regions": {
+    "RIQ01": {
+      "name": "IQueryable as public API / leaky abstraction / repository boundary",
+      "processed_sources": [
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031"
+      ],
+      "key_ideas": [
+        "IQueryable lets the caller compose provider-translated expressions, so it can leak EF Core implementation details.",
+        "The public API should not expose IQueryable for medium/large systems; keep it internal to repositories.",
+        "Expression<Func<T,bool>> parameters can also leak expression-tree/provider details.",
+        "A safer repository API passes plain filter values and keeps query composition inside the repository."
+      ]
+    },
+    "RIQ02": {
+      "name": "Returning IEnumerable without ToList / materialization boundary",
+      "processed_sources": [
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-032",
+        "S-033",
+        "S-034"
+      ],
+      "key_ideas": [
+        "IEnumerable<T> does not guarantee materialized results; it can still be a deferred recipe.",
+        "ToList materializes once and later enumeration of the list does not rerun the source query.",
+        "Caller-added LINQ after return can still be deferred and repeated in memory.",
+        "Deferred sequences escaping a disposed DbContext/resource boundary can fail later."
+      ]
+    },
+    "RIQ03": {
+      "name": "Multiple enumeration hazards for IEnumerable",
+      "processed_sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011"
+      ],
+      "key_ideas": [
+        "Any, First, Count, ToArray, ToList and foreach are enumeration operations.",
+        "Multiple enumeration can duplicate DB queries, expensive work, side effects, or produce different results.",
+        "Partial enumeration can change behavior because a later enumeration often starts from the beginning.",
+        "Materialize once when the same result set must be reused."
+      ]
+    },
+    "RIQ04": {
+      "name": "Async enumerable repeated enumeration / caching / single-use streams",
+      "processed_sources": [
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040"
+      ],
+      "key_ideas": [
+        "IAsyncEnumerable<T> is also usually a deferred recipe, not stored results.",
+        "await foreach and ToListAsync enumerate the async sequence.",
+        "Repeated async enumeration can repeat DB/HTTP/delay/file/streaming work.",
+        "Some async enumerables are effectively single-use; materialize once when reuse is required."
+      ]
+    },
+    "RIQ05": {
+      "name": "Yield / iterator cleanup / finally restrictions",
+      "processed_sources": [
+        "S-041",
+        "S-042",
+        "S-043",
+        "S-044"
+      ],
+      "key_ideas": [
+        "yield return is not allowed inside finally in C# iterator methods.",
+        "Early stop disposes the enumerator and runs finally cleanup.",
+        "C# finally can clean up, but cannot emit extra values.",
+        "Async iterators follow the same cleanup idea with async-specific caveats."
+      ]
+    },
+    "RIQTXT01": {
+      "name": "Canvas text labels",
+      "text_labels": [
+        {
+          "text_id": "T-001",
+          "text": "so when we return ienumerable without tolist",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-002",
+          "text": "Had to call tolist above to do select",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-003",
+          "text": "client should keep in mind",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-004",
+          "text": "So there is no limitation on linq expressions",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-005",
+          "text": "When you return IEnumerable it is not",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-006",
+          "text": "When you call toList(), expression start to",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-007",
+          "text": "disposing db context inside method",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-008",
+          "text": "hidden db query outside rep boundary",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-009",
+          "text": "sometimes partial enumeration can",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-010",
+          "text": "repeated side effects",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-011",
+          "text": "dif results on each enumeration",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-012",
+          "text": "so we have 2 types of scenarios",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-013",
+          "text": "what if we have called to list",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-014",
+          "text": "what about async enumerable",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-015",
+          "text": "just not an immediate cleanup, nothing immportant",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-016",
+          "text": "getrnumerator",
+          "theme": "canvas text label / local note"
+        },
+        {
+          "text_id": "T-017",
+          "text": "!!!",
+          "theme": "canvas text label / local note"
+        }
+      ],
+      "key_ideas": [
+        "Canvas notes were used as local context, not as image sources.",
+        "All 17 text labels were accounted for in Stage1 and included in Stage2 context data."
+      ]
+    }
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Some dark screenshots are partial vertical crops from chat/code snippets; those are summarized at visible-code level.",
+      "The transcript preserves visible code/meaning and marks contextual notes when exact surrounding chat is not fully visible.",
+      "No source PNGs are duplicated in this archive; transcript refers to Stage0 source-images by source_id/fileId_short."
+    ],
+    "confidence": "High for concepts and visible text/code; medium-high for narrow cropped chat snippets."
+  }
+}

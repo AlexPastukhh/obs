@@ -1,6 +1,6 @@
 # Regions - returning-iqueryable-ienumerable-async-yield
 
-Boundary-reviewed candidate regions:
+Verified transcripts:
 
 ```text
 RIQ01 - IQueryable as public API / leaky abstraction / repository boundary
@@ -8,15 +8,24 @@ RIQ02 - Returning IEnumerable without ToList / materialization boundary
 RIQ03 - Multiple enumeration hazards for IEnumerable
 RIQ04 - Async enumerable repeated enumeration / caching / single-use streams
 RIQ05 - Yield / iterator cleanup / finally restrictions
+RIQTXT01 - Canvas text labels
 ```
 
-Recommended transcript order:
+All Stage1 candidate image uses are now processed.
+
+Boundary correction from Stage1 candidate review:
 
 ```text
-NEXT01: full transcript for RIQ01 + RIQ02 + RIQ03 + RIQ04 + RIQ05
+none
 ```
 
-Each transcript must include:
+Next step:
+
+```text
+Final closure/audit
+```
+
+Each transcript includes:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality

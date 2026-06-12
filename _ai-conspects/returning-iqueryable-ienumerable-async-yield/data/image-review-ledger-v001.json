@@ -1,14 +1,67 @@
 {
-  "generated": "2026-06-02 15:50:10 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 44,
-    "assigned_to_candidate_regions": 44,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
-    "duplicate_image_uses_by_fileId_short": {}
+  "generated": "2026-06-02 16:25:17 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-full-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "RIQ01": [
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031"
+      ],
+      "RIQ02": [
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-032",
+        "S-033",
+        "S-034"
+      ],
+      "RIQ03": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011"
+      ],
+      "RIQ04": [
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040"
+      ],
+      "RIQ05": [
+        "S-041",
+        "S-042",
+        "S-043",
+        "S-044"
+      ]
+    },
+    "processed_count": 44,
+    "pending_regions": [],
+    "boundary_corrections": []
   },
   "rows": [
     {
@@ -20,13 +73,13 @@
       "width": "663.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-010:repeated side effects | T-009:sometimes partial enumeration can | T-008:hidden db query outside rep boundary | T-007:disposing db context inside method | T-011:dif results on each enumeration",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -37,13 +90,13 @@
       "width": "845.0",
       "height": "346.0",
       "nearest_labels_for_search_only": "T-010:repeated side effects | T-009:sometimes partial enumeration can | T-008:hidden db query outside rep boundary | T-007:disposing db context inside method | T-011:dif results on each enumeration",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -54,13 +107,13 @@
       "width": "753.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-009:sometimes partial enumeration can | T-008:hidden db query outside rep boundary | T-010:repeated side effects | T-007:disposing db context inside method | T-011:dif results on each enumeration",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -71,13 +124,13 @@
       "width": "699.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-008:hidden db query outside rep boundary | T-009:sometimes partial enumeration can | T-007:disposing db context inside method | T-010:repeated side effects | T-011:dif results on each enumeration",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -88,13 +141,13 @@
       "width": "727.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-007:disposing db context inside method | T-008:hidden db query outside rep boundary | T-011:dif results on each enumeration | T-009:sometimes partial enumeration can | T-010:repeated side effects",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -105,13 +158,13 @@
       "width": "751.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-007:disposing db context inside method | T-011:dif results on each enumeration | T-008:hidden db query outside rep boundary | T-009:sometimes partial enumeration can | T-012:so we have 2 types of scenarios",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -122,13 +175,13 @@
       "width": "705.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-011:dif results on each enumeration | T-007:disposing db context inside method | T-008:hidden db query outside rep boundary | T-012:so we have 2 types of scenarios | T-009:sometimes partial enumeration can",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -139,13 +192,13 @@
       "width": "779.0",
       "height": "144.0",
       "nearest_labels_for_search_only": "T-011:dif results on each enumeration | T-007:disposing db context inside method | T-012:so we have 2 types of scenarios | T-008:hidden db query outside rep boundary | T-001:so when we return ienumerable without tolist",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -156,13 +209,13 @@
       "width": "780.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-011:dif results on each enumeration | T-012:so we have 2 types of scenarios | T-007:disposing db context inside method | T-001:so when we return ienumerable without tolist | T-008:hidden db query outside rep boundary",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -173,13 +226,13 @@
       "width": "889.0",
       "height": "471.0",
       "nearest_labels_for_search_only": "T-012:so we have 2 types of scenarios | T-011:dif results on each enumeration | T-001:so when we return ienumerable without tolist | T-007:disposing db context inside method | T-008:hidden db query outside rep boundary",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -190,13 +243,13 @@
       "width": "692.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-012:so we have 2 types of scenarios | T-001:so when we return ienumerable without tolist | T-011:dif results on each enumeration | T-007:disposing db context inside method | T-008:hidden db query outside rep boundary",
-      "coverage_status": "candidate-riq03",
+      "coverage_status": "processed-in-riq03-v001",
       "current_region_decision": "RIQ03",
       "current_subregion_decision": "RIQ03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Problems caused by enumerating deferred IEnumerable sequences multiple times: repeated side effects, partial enumeration changing behavior, hidden database queries outside repository boundary, disposed resources, different results on each enumeration, and expensive work repeated.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -207,13 +260,13 @@
       "width": "674.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-012:so we have 2 types of scenarios | T-001:so when we return ienumerable without tolist | T-011:dif results on each enumeration | T-007:disposing db context inside method | T-013:what if we have called to list",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -224,13 +277,13 @@
       "width": "658.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-001:so when we return ienumerable without tolist | T-012:so we have 2 types of scenarios | T-011:dif results on each enumeration | T-007:disposing db context inside method | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",
@@ -241,13 +294,13 @@
       "width": "689.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-012:so we have 2 types of scenarios | T-001:so when we return ienumerable without tolist | T-011:dif results on each enumeration | T-007:disposing db context inside method | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -258,13 +311,13 @@
       "width": "771.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-011:dif results on each enumeration | T-012:so we have 2 types of scenarios | T-007:disposing db context inside method | T-001:so when we return ienumerable without tolist | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -275,13 +328,13 @@
       "width": "825.0",
       "height": "117.0",
       "nearest_labels_for_search_only": "T-013:what if we have called to list | T-012:so we have 2 types of scenarios | T-011:dif results on each enumeration | T-007:disposing db context inside method | T-001:so when we return ienumerable without tolist",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -292,13 +345,13 @@
       "width": "623.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-013:what if we have called to list | T-011:dif results on each enumeration | T-012:so we have 2 types of scenarios | T-007:disposing db context inside method | T-001:so when we return ienumerable without tolist",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -309,13 +362,13 @@
       "width": "873.0",
       "height": "427.0",
       "nearest_labels_for_search_only": "T-011:dif results on each enumeration | T-013:what if we have called to list | T-007:disposing db context inside method | T-012:so we have 2 types of scenarios | T-016:getrnumerator",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -326,13 +379,13 @@
       "width": "820.0",
       "height": "414.0",
       "nearest_labels_for_search_only": "T-011:dif results on each enumeration | T-007:disposing db context inside method | T-013:what if we have called to list | T-016:getrnumerator | T-008:hidden db query outside rep boundary",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-020",
@@ -343,13 +396,13 @@
       "width": "791.0",
       "height": "339.0",
       "nearest_labels_for_search_only": "T-007:disposing db context inside method | T-011:dif results on each enumeration | T-008:hidden db query outside rep boundary | T-016:getrnumerator | T-009:sometimes partial enumeration can",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -360,13 +413,13 @@
       "width": "601.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-002:Had to call tolist above to do select | T-003:client should keep in mind | T-004:So there is no limitation on linq expressions | T-001:so when we return ienumerable without tolist | T-012:so we have 2 types of scenarios",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -377,13 +430,13 @@
       "width": "721.0",
       "height": "203.0",
       "nearest_labels_for_search_only": "T-002:Had to call tolist above to do select | T-003:client should keep in mind | T-004:So there is no limitation on linq expressions | T-001:so when we return ienumerable without tolist | T-005:When you return IEnumerable it is not",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -394,13 +447,13 @@
       "width": "716.0",
       "height": "410.0",
       "nearest_labels_for_search_only": "T-002:Had to call tolist above to do select | T-003:client should keep in mind | T-004:So there is no limitation on linq expressions | T-001:so when we return ienumerable without tolist | T-005:When you return IEnumerable it is not",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-024",
@@ -411,13 +464,13 @@
       "width": "535.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-002:Had to call tolist above to do select | T-003:client should keep in mind | T-004:So there is no limitation on linq expressions | T-005:When you return IEnumerable it is not | T-006:When you call toList(), expression start to",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-025",
@@ -428,13 +481,13 @@
       "width": "730.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-003:client should keep in mind | T-002:Had to call tolist above to do select | T-004:So there is no limitation on linq expressions | T-005:When you return IEnumerable it is not | T-006:When you call toList(), expression start to",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-026",
@@ -445,13 +498,13 @@
       "width": "519.0",
       "height": "353.0",
       "nearest_labels_for_search_only": "T-003:client should keep in mind | T-004:So there is no limitation on linq expressions | T-002:Had to call tolist above to do select | T-005:When you return IEnumerable it is not | T-006:When you call toList(), expression start to",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-027",
@@ -462,13 +515,13 @@
       "width": "492.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-004:So there is no limitation on linq expressions | T-003:client should keep in mind | T-002:Had to call tolist above to do select | T-005:When you return IEnumerable it is not | T-006:When you call toList(), expression start to",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-028",
@@ -479,13 +532,13 @@
       "width": "649.0",
       "height": "439.0",
       "nearest_labels_for_search_only": "T-004:So there is no limitation on linq expressions | T-003:client should keep in mind | T-005:When you return IEnumerable it is not | T-006:When you call toList(), expression start to | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-029",
@@ -496,13 +549,13 @@
       "width": "784.0",
       "height": "195.0",
       "nearest_labels_for_search_only": "T-005:When you return IEnumerable it is not | T-004:So there is no limitation on linq expressions | T-006:When you call toList(), expression start to | T-003:client should keep in mind | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-030",
@@ -513,13 +566,13 @@
       "width": "591.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-002:Had to call tolist above to do select | T-003:client should keep in mind | T-004:So there is no limitation on linq expressions | T-001:so when we return ienumerable without tolist | T-012:so we have 2 types of scenarios",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-031",
@@ -530,13 +583,13 @@
       "width": "362.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-002:Had to call tolist above to do select | T-003:client should keep in mind | T-004:So there is no limitation on linq expressions | T-001:so when we return ienumerable without tolist | T-012:so we have 2 types of scenarios",
-      "coverage_status": "candidate-riq01",
+      "coverage_status": "processed-in-riq01-v001",
       "current_region_decision": "RIQ01",
       "current_subregion_decision": "RIQ01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IQueryable and LINQ in repository/public API: leaky abstraction, arbitrary expressions, EF Core implementation details leaking, alternative IEnumerable interface, filtering arguments, and design-by-contract discussion.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-032",
@@ -547,13 +600,13 @@
       "width": "823.0",
       "height": "445.0",
       "nearest_labels_for_search_only": "T-005:When you return IEnumerable it is not | T-006:When you call toList(), expression start to | T-004:So there is no limitation on linq expressions | T-003:client should keep in mind | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-033",
@@ -564,13 +617,13 @@
       "width": "706.0",
       "height": "480.0",
       "nearest_labels_for_search_only": "T-006:When you call toList(), expression start to | T-005:When you return IEnumerable it is not | T-004:So there is no limitation on linq expressions | T-003:client should keep in mind | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-034",
@@ -581,13 +634,13 @@
       "width": "617.0",
       "height": "279.0",
       "nearest_labels_for_search_only": "T-006:When you call toList(), expression start to | T-005:When you return IEnumerable it is not | T-004:So there is no limitation on linq expressions | T-003:client should keep in mind | T-002:Had to call tolist above to do select",
-      "coverage_status": "candidate-riq02",
+      "coverage_status": "processed-in-riq02-v001",
       "current_region_decision": "RIQ02",
       "current_subregion_decision": "RIQ02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Returning IEnumerable<T> while query is still deferred: when it is okay, when ToList materializes inside the method, LINQ after return no longer composes to SQL, IEnumerator model, lazy evaluation, and disposed DbContext risk.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-035",
@@ -598,13 +651,13 @@
       "width": "966.0",
       "height": "436.0",
       "nearest_labels_for_search_only": "T-013:what if we have called to list | T-014:what about async enumerable | T-016:getrnumerator | T-012:so we have 2 types of scenarios | T-011:dif results on each enumeration",
-      "coverage_status": "candidate-riq04",
+      "coverage_status": "processed-in-riq04-v001",
       "current_region_decision": "RIQ04",
       "current_subregion_decision": "RIQ04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IEnumerable and IAsyncEnumerable deferred sequence behavior: foreach/await foreach reruns logic, ToList/ToListAsync caches once, repeated async enumeration can repeat database calls/HTTP/delays/streams, and some async enumerables should be treated as single-use.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-036",
@@ -615,13 +668,13 @@
       "width": "943.0",
       "height": "270.0",
       "nearest_labels_for_search_only": "T-013:what if we have called to list | T-014:what about async enumerable | T-016:getrnumerator | T-017:!!! | T-012:so we have 2 types of scenarios",
-      "coverage_status": "candidate-riq04",
+      "coverage_status": "processed-in-riq04-v001",
       "current_region_decision": "RIQ04",
       "current_subregion_decision": "RIQ04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IEnumerable and IAsyncEnumerable deferred sequence behavior: foreach/await foreach reruns logic, ToList/ToListAsync caches once, repeated async enumeration can repeat database calls/HTTP/delays/streams, and some async enumerables should be treated as single-use.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-037",
@@ -632,13 +685,13 @@
       "width": "628.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-014:what about async enumerable | T-013:what if we have called to list | T-016:getrnumerator | T-017:!!! | T-012:so we have 2 types of scenarios",
-      "coverage_status": "candidate-riq04",
+      "coverage_status": "processed-in-riq04-v001",
       "current_region_decision": "RIQ04",
       "current_subregion_decision": "RIQ04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IEnumerable and IAsyncEnumerable deferred sequence behavior: foreach/await foreach reruns logic, ToList/ToListAsync caches once, repeated async enumeration can repeat database calls/HTTP/delays/streams, and some async enumerables should be treated as single-use.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-038",
@@ -649,13 +702,13 @@
       "width": "843.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-014:what about async enumerable | T-013:what if we have called to list | T-016:getrnumerator | T-017:!!! | T-015:just not an immediate cleanup, nothing immportant",
-      "coverage_status": "candidate-riq04",
+      "coverage_status": "processed-in-riq04-v001",
       "current_region_decision": "RIQ04",
       "current_subregion_decision": "RIQ04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IEnumerable and IAsyncEnumerable deferred sequence behavior: foreach/await foreach reruns logic, ToList/ToListAsync caches once, repeated async enumeration can repeat database calls/HTTP/delays/streams, and some async enumerables should be treated as single-use.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-039",
@@ -666,13 +719,13 @@
       "width": "929.0",
       "height": "349.0",
       "nearest_labels_for_search_only": "T-014:what about async enumerable | T-013:what if we have called to list | T-016:getrnumerator | T-017:!!! | T-015:just not an immediate cleanup, nothing immportant",
-      "coverage_status": "candidate-riq04",
+      "coverage_status": "processed-in-riq04-v001",
       "current_region_decision": "RIQ04",
       "current_subregion_decision": "RIQ04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IEnumerable and IAsyncEnumerable deferred sequence behavior: foreach/await foreach reruns logic, ToList/ToListAsync caches once, repeated async enumeration can repeat database calls/HTTP/delays/streams, and some async enumerables should be treated as single-use.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-040",
@@ -683,13 +736,13 @@
       "width": "876.0",
       "height": "376.0",
       "nearest_labels_for_search_only": "T-014:what about async enumerable | T-016:getrnumerator | T-013:what if we have called to list | T-017:!!! | T-015:just not an immediate cleanup, nothing immportant",
-      "coverage_status": "candidate-riq04",
+      "coverage_status": "processed-in-riq04-v001",
       "current_region_decision": "RIQ04",
       "current_subregion_decision": "RIQ04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "IEnumerable and IAsyncEnumerable deferred sequence behavior: foreach/await foreach reruns logic, ToList/ToListAsync caches once, repeated async enumeration can repeat database calls/HTTP/delays/streams, and some async enumerables should be treated as single-use.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-041",
@@ -700,13 +753,13 @@
       "width": "861.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-016:getrnumerator | T-017:!!! | T-015:just not an immediate cleanup, nothing immportant | T-013:what if we have called to list | T-014:what about async enumerable",
-      "coverage_status": "candidate-riq05",
+      "coverage_status": "processed-in-riq05-v001",
       "current_region_decision": "RIQ05",
       "current_subregion_decision": "RIQ05A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "C# iterator and async iterator cleanup semantics: yield return restrictions in catch/finally, early stop disposal, finally cleanup, GetEnumerator/Dispose behavior, and async iterator finally behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-042",
@@ -717,13 +770,13 @@
       "width": "851.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-017:!!! | T-016:getrnumerator | T-015:just not an immediate cleanup, nothing immportant | T-013:what if we have called to list | T-009:sometimes partial enumeration can",
-      "coverage_status": "candidate-riq05",
+      "coverage_status": "processed-in-riq05-v001",
       "current_region_decision": "RIQ05",
       "current_subregion_decision": "RIQ05A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "C# iterator and async iterator cleanup semantics: yield return restrictions in catch/finally, early stop disposal, finally cleanup, GetEnumerator/Dispose behavior, and async iterator finally behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-043",
@@ -734,13 +787,13 @@
       "width": "919.0",
       "height": "325.0",
       "nearest_labels_for_search_only": "T-017:!!! | T-015:just not an immediate cleanup, nothing immportant | T-016:getrnumerator | T-010:repeated side effects | T-009:sometimes partial enumeration can",
-      "coverage_status": "candidate-riq05",
+      "coverage_status": "processed-in-riq05-v001",
       "current_region_decision": "RIQ05",
       "current_subregion_decision": "RIQ05B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "C# iterator and async iterator cleanup semantics: yield return restrictions in catch/finally, early stop disposal, finally cleanup, GetEnumerator/Dispose behavior, and async iterator finally behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-044",
@@ -751,13 +804,13 @@
       "width": "885.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-017:!!! | T-015:just not an immediate cleanup, nothing immportant | T-016:getrnumerator | T-010:repeated side effects | T-009:sometimes partial enumeration can",
-      "coverage_status": "candidate-riq05",
+      "coverage_status": "processed-in-riq05-v001",
       "current_region_decision": "RIQ05",
       "current_subregion_decision": "RIQ05B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "C# iterator and async iterator cleanup semantics: yield return restrictions in catch/finally, early stop disposal, finally cleanup, GetEnumerator/Dispose behavior, and async iterator finally behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-riq05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RIQ05 v001 after NEXT01 visual/semantic transcript pass."
     }
   ]
 }

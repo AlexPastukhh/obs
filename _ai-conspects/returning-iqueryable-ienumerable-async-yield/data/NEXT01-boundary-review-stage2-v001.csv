@@ -1,0 +1,45 @@
+source_id,decision,region,subregion,reason
+S-001,processed-in-riq03-v001,RIQ03,RIQ03B,Repeated side effects during enumeration
+S-002,processed-in-riq03-v001,RIQ03,RIQ03B,Partial enumeration then full enumeration starts over
+S-003,processed-in-riq03-v001,RIQ03,RIQ03B,Partial enumeration changes behavior
+S-004,processed-in-riq03-v001,RIQ03,RIQ03B,Hidden database query outside repository boundary
+S-005,processed-in-riq03-v001,RIQ03,RIQ03B,Materialize while DbContext is alive
+S-006,processed-in-riq03-v001,RIQ03,RIQ03A,Disposed resource due to using block and deferred return
+S-007,processed-in-riq03-v001,RIQ03,RIQ03A,Different results on each enumeration
+S-008,processed-in-riq03-v001,RIQ03,RIQ03A,First then ToList repeats expensive enumeration
+S-009,processed-in-riq03-v001,RIQ03,RIQ03A,Expensive work repeated
+S-010,processed-in-riq03-v001,RIQ03,RIQ03A,Any plus foreach can trigger duplicate DB work
+S-011,processed-in-riq03-v001,RIQ03,RIQ03A,Common problem: query runs multiple times
+S-012,processed-in-riq02-v001,RIQ02,RIQ02A,When returning IEnumerable<T> is okay
+S-013,processed-in-riq02-v001,RIQ02,RIQ02A,ToList inside repository materializes immediately
+S-014,processed-in-riq02-v001,RIQ02,RIQ02A,LINQ before ToList does not replay later
+S-015,processed-in-riq02-v001,RIQ02,RIQ02A,Caller-added LINQ after return can replay
+S-016,processed-in-riq02-v001,RIQ02,RIQ02A,Type alone does not tell materialization state
+S-017,processed-in-riq02-v001,RIQ02,RIQ02A,"Without ToList you often have a recipe, not stored results"
+S-018,processed-in-riq02-v001,RIQ02,RIQ02A,Any then foreach starts enumeration twice
+S-019,processed-in-riq02-v001,RIQ02,RIQ02A,IEnumerable produces a new enumerator
+S-020,processed-in-riq02-v001,RIQ02,RIQ02A,Why ToList changes the replay behavior
+S-021,processed-in-riq01-v001,RIQ01,RIQ01A,IQueryable vs IEnumerable LINQ execution location
+S-022,processed-in-riq01-v001,RIQ01,RIQ01A,Title: IQueryable is a leaky abstraction
+S-023,processed-in-riq01-v001,RIQ01,RIQ01A,Repository exposes IQueryable and leaks EF translation details
+S-024,processed-in-riq01-v001,RIQ01,RIQ01A,IQueryable interface is too broad
+S-025,processed-in-riq01-v001,RIQ01,RIQ01A,Expression parameters leak abstractions too
+S-026,processed-in-riq01-v001,RIQ01,RIQ01A,Do not expose IQueryable as public API
+S-027,processed-in-riq01-v001,RIQ01,RIQ01A,Alternative to IQueryable: IEnumerable interface
+S-028,processed-in-riq01-v001,RIQ01,RIQ01B,Return IEnumerable but pass filters as plain arguments
+S-029,processed-in-riq01-v001,RIQ01,RIQ01B,IEnumerable can also be leaky
+S-030,processed-in-riq01-v001,RIQ01,RIQ01B,Returning IQueryable from repository: risks and project size note
+S-031,processed-in-riq01-v001,RIQ01,RIQ01B,Design by Contract / LSP comment about LINQ query objects
+S-032,processed-in-riq02-v001,RIQ02,RIQ02B,IEnumerable and lazy evaluation slide
+S-033,processed-in-riq02-v001,RIQ02,RIQ02B,Disposed DbContext hidden behind IEnumerable
+S-034,processed-in-riq02-v001,RIQ02,RIQ02B,IEnumerable is preferable to IQueryable when DbContext presence is assumed
+S-035,processed-in-riq04-v001,RIQ04,RIQ04A,Deferred IEnumerable logic reruns on each enumeration
+S-036,processed-in-riq04-v001,RIQ04,RIQ04A,ToList caches once but original seq still reruns
+S-037,processed-in-riq04-v001,RIQ04,RIQ04B,IAsyncEnumerable is usually a recipe too
+S-038,processed-in-riq04-v001,RIQ04,RIQ04B,await foreach and ToListAsync enumerate async sequence
+S-039,processed-in-riq04-v001,RIQ04,RIQ04B,Async repeated enumeration can be more expensive
+S-040,processed-in-riq04-v001,RIQ04,RIQ04B,Some async enumerables are single-use
+S-041,processed-in-riq05-v001,RIQ05,RIQ05A,yield return not allowed inside finally
+S-042,processed-in-riq05-v001,RIQ05,RIQ05A,Early stop disposes enumerator and runs finally cleanup
+S-043,processed-in-riq05-v001,RIQ05,RIQ05B,Manual enumerator disposal triggers cleanup
+S-044,processed-in-riq05-v001,RIQ05,RIQ05B,Async iterator cleanup and finally
