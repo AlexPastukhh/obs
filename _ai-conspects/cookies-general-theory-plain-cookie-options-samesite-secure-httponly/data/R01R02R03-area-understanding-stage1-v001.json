@@ -1,0 +1,35 @@
+{
+  "generated": "2026-06-02 16:40:00 UTC",
+  "region_id": "R01R02R03",
+  "area_title": "Cookies general theory / plain CookieOptions / SameSite-Secure-HttpOnly final pass",
+  "what_area_is_about": [
+    "ASP.NET cookie surfaces: CookieAuthenticationOptions, CookieBuilder, CookieOptions, Response.Cookies.Append and UseCookiePolicy",
+    "how Set-Cookie response headers become Cookie request headers and how cookie attributes constrain browser behavior",
+    "important attributes: Name, Path, Domain, Expires/MaxAge, HttpOnly, Secure, SameSite, IsEssential and Priority",
+    "browser storage/devtools view, cookie persistence, normal cookie lifecycle and multiple cookie-name/scheme issues",
+    "general theory around first-party, third-party and partitioned cookies including CHIPS/Partitioned-style notes",
+    "HttpOnly vs non-HttpOnly storage, refresh-token notes and XSS/CSRF/security tradeoffs",
+    "SameSite Strict/Lax/None behavior, why SameSite=None requires Secure, and why CORS credentials do not override SameSite rules",
+    "HTTP vs HTTPS visibility: Secure controls whether cookie is sent over HTTP; HTTPS protects transport but not JavaScript access unless HttpOnly is set"
+  ],
+  "key_ideas": [
+    "Authentication cookie options and plain CookieOptions overlap in attributes, but they apply at different layers: auth ticket cookie vs arbitrary application cookie.",
+    "The browser enforces Set-Cookie attributes; the server emits them but cannot force the browser to send a cookie when SameSite/Secure/Domain/Path rules do not match.",
+    "Cookie.Name matters because multiple auth schemes or apps on the same host can collide when names/paths/domains are too broad.",
+    "HttpOnly hides cookie value from JavaScript but does not stop the browser from sending the cookie automatically with matching requests.",
+    "SameSite is mainly about cross-site request context, not about whether frontend CORS policy is configured correctly.",
+    "SameSite=None is the practical option for many cross-site cookie flows, but modern browsers require Secure with None.",
+    "Secure does not make a cookie unreadable to JavaScript; it only prevents sending it over plain HTTP and relies on HTTPS transport protection.",
+    "CORS credentials allow the browser to include credentials in an allowed cross-origin request, but SameSite may still prevent the cookie from being attached."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "medium-high: region contact sheets are readable, but code screenshots and browser-devtools captures remain small",
+    "transcript_method": "visual/contact-sheet review with source-preserving summaries and preserved PNGs",
+    "limitations": [
+      "Exact C# punctuation, option defaults and browser UI text should be corrected from preserved PNGs if needed.",
+      "The final pass closes image-use coverage; it is not claiming every screenshot is a verbatim authoritative transcript."
+    ],
+    "confidence_summary": "High for region ownership and conceptual flow; medium-high for exact code/API transcription."
+  }
+}

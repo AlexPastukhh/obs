@@ -1,6 +1,6 @@
 # Current Source of Truth - cookies-general-theory-plain-cookie-options-samesite-secure-httponly
 
-Generated: 2026-06-02 16:20:00 UTC
+Generated: 2026-06-02 16:40:00 UTC
 
 ## Policy
 
@@ -11,7 +11,10 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 auth/plain cookie options / normal cookie flow: transcript v001 done
+R02 general cookie theory / partitioned / HttpOnly / refresh-token notes: transcript v001 done
+R03 SameSite / Secure / CORS cookie-flow comparison: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -19,15 +22,14 @@ Normal transcript regions: not started
 ```text
 unique embedded images: 90
 image uses on canvas: 90
-text labels parsed: 25
-duplicate image uses by extracted file/content: 0
+R01 processed image uses: 21
+R02 processed image uses: 40
+R03 processed image uses: 29
+remaining unclosed image uses: 0
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after boundary review.
-Target size: 60-100 images, or larger if coherent.
-Suggested first candidate: R01+R02+R03 full pass = 90 images, because the whole conspect fits the current batch size.
-Fallback split: R01+R02 first, then R03 final coverage.
+No normal transcript regions remain. Only correction/polish archive if needed.
 ```
