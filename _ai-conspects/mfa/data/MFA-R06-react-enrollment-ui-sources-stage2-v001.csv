@@ -1,0 +1,59 @@
+source_id,image_use_id,fileId_short,image_file,status,stage0_group,theme,visible_text,notes
+S-056,IU-056,a5119b2fdc,S-056__a5119b2fdc.png,verified-visible-manual-read,MFA-R05,C) React implementation (API + components),"C) React implementation (API + components)
+
+For React, use JSON endpoints.
+Same rule: server stores pending secret in DB; client never sends secret back.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-073,IU-073,b486705c40,S-073__b486705c40.png,verified-visible-manual-read,MFA-R05,React component setup.,"React component setup.
+
+React component (Enroll).
+
+Install QR component:
+npm i qrcode.react
+
+Imports:
+import React, { useEffect, useState } from ""react"";
+import { QRCodeCanvas } from ""qrcode.react"";
+
+Type EnrollData:
+issuer, accountName, qrCodeUri, manualKey?.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-076,IU-076,c99022c3ab,S-076__c99022c3ab.png,verified-visible-manual-read,MFA-R06,React Enroll component state and initial fetch.,"React Enroll component state and initial fetch.
+
+State:
+data, deviceName, code, err, done.
+
+useEffect:
+- fetch /api/mfa/enroll with credentials: ""include"";
+- if response is not ok, set error;
+- otherwise set enrollment data from response JSON.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-078,IU-078,49f0b859ca,S-078__49f0b859ca.png,verified-visible-manual-read,MFA-R06,React submit handler.,"React submit handler.
+
+On submit:
+- prevent default;
+- clear error;
+- POST /api/mfa/enroll with JSON body { deviceName, code };
+- include credentials;
+- if response is not ok, show returned message or ""Invalid code."";
+- if ok, set done true and render success message.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-080,IU-080,017ef39b41,S-080__017ef39b41.png,verified-visible-manual-read,MFA-R06,React UI rendering.,"React UI rendering.
+
+Render:
+- h2 Enable MFA;
+- show error text;
+- show loading if no data;
+- instruct user to scan the QR code;
+- render QRCodeCanvas with data.qrCodeUri;
+- display issuer and account;
+- display manual key if present.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-082,IU-082,2202bb683a,S-082__2202bb683a.png,verified-visible-manual-read,MFA-R06,React / JSX manual key display continuation.,"React / JSX manual key display continuation.
+
+Shows account and optional manual key block:
+- strong Account label;
+- if data.manualKey exists, show Manual key heading and preformatted manual key;
+- the manual key is shown for setup only.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-084,IU-084,f59bbfcd9d,S-084__f59bbfcd9d.png,verified-visible-manual-read,MFA-R06,React form for verifying and enabling MFA.,"React form for verifying and enabling MFA.
+
+Form:
+- label Device name and input bound to deviceName;
+- label 6-digit code and input bound to code;
+- inputMode numeric, autocomplete one-time-code, width/letter spacing styling;
+- submit button ""Verify & Enable"".",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.

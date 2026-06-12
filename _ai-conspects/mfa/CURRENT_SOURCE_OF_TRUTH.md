@@ -1,6 +1,6 @@
 # Current Source of Truth - MFA
 
-Generated: 2026-06-02 16:01:53 UTC
+Generated: 2026-06-02 16:24:51 UTC
 
 ## Current policy
 
@@ -42,14 +42,16 @@ the source stays pending and must not be marked processed.
 ```text
 MFA Stage0 boundary review v001: completed
 MFA Stage1 R00-R04 transcript v001: completed
+MFA Stage2 remaining transcript v001: completed
 Image uses inventoried: 91
 Stage1 processed: 53
-Pending candidates: 38
+Stage2 processed: 38
+Pending candidates: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: MFA-stage2 transcript = R05 + R06 + R07
-Expected count: 38 images
+Next: MFA closure audit
+Expected count: 91 / 91
 ```

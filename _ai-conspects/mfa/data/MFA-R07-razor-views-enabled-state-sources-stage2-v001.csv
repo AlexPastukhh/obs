@@ -1,0 +1,86 @@
+source_id,image_use_id,fileId_short,image_file,status,stage0_group,theme,visible_text,notes
+S-081,IU-081,afdcc99848,S-081__afdcc99848.png,verified-visible-manual-read,MFA-R06,Razor Views section.,"Razor Views section.
+
+Views/Mfa/Enroll.cshtml starts with model and title:
+@model MfaEnrollGetVm
+ViewData[""Title""] = ""Enable MFA"";
+
+The page shows:
+- Enable MFA heading;
+- instruction to scan QR or enter 6-digit code;
+- a QR container that will be filled by JavaScript using Model.QrCodeUri.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-083,IU-083,1071957d42,S-083__1071957d42.png,verified-visible-manual-read,MFA-R06,Razor manual key / account block.,"Razor manual key / account block.
+
+Shows manual setup information:
+- ""Manually copy key"" / ""add this key into the authenticator app"";
+- shows @Model.ManualKey;
+- shows Issuer and Account from the model;
+- then continues into the form section.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-085,IU-085,f4afe1cf3a,S-085__f4afe1cf3a.png,verified-visible-manual-read,MFA-R07,Razor enroll form.,"Razor enroll form.
+
+<form asp-action=""Enroll"" method=""post"">
+@Html.AntiForgeryToken()
+
+Fields:
+- Device name input with default ""My phone"";
+- 6-digit code input named Code;
+- validation message for Code;
+- submit button ""Verify & Enable"";
+- validation summary.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-086,IU-086,f4afe1cf3a,S-086__f4afe1cf3a.png,verified-visible-manual-read,MFA-R07,Razor enroll form duplicate/continuation.,"Razor enroll form duplicate/continuation.
+
+Same visible form as S-085:
+- POST to Enroll;
+- antiforgery token;
+- DeviceName input;
+- Code input with autocomplete one-time-code;
+- validation message;
+- submit button;
+- validation summary.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-087,IU-087,ba98b379a7,S-087__ba98b379a7.png,verified-visible-manual-read,MFA-R07,Razor scripts section for client-side QR rendering.,"Razor scripts section for client-side QR rendering.
+
+@section Scripts includes:
+- script src=""~/js/qrcode.min.js"";
+- function that reads qrCodeUri and qrCode elements;
+- clears existing content;
+- creates new QRCode(el, { text: uri, width: 160, height: 160 });
+- partial ValidationScriptsPartial.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-088,IU-088,52e0b7d435,S-088__52e0b7d435.png,verified-visible-manual-read,MFA-R07,Script tag explanation: QR rendering.,"Script tag explanation: QR rendering.
+
+Razor view snippet:
+@section Scripts {
+  <script src=""~/js/qrcode.min.js""></script>
+  <script>
+    (function () {
+      const uri = document.getElementById(""qrCodeUri"").value;
+      const el = document.getElementById(""qrCode"");
+      el.innerHTML = """";
+      new QRCode(el, { text: uri, width: 160, height: 160 });
+    })();
+  </script>
+}",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-089,IU-089,cefa69eacb,S-089__cefa69eacb.png,verified-visible-manual-read,MFA-R07,Enroll success Razor view.,"Enroll success Razor view.
+
+Views/Mfa/EnrollSuccess.cshtml:
+
+@{
+    ViewData[""Title""] = ""MFA Enabled"";
+}
+
+<h2>MFA Enabled</h2>
+<p>Your authenticator device is now linked.</p>
+<a asp-controller=""Home"" asp-action=""Index"">Continue</a>",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-090,IU-090,c2132aa91d,S-090__c2132aa91d.png,verified-visible-manual-read,MFA-R07,Line-by-line meaning of the Scripts section.,"Line-by-line meaning of the Scripts section.
+
+- @section Scripts adds view scripts to a layout-defined scripts section.
+- <script src=""~/js/qrcode.min.js""> loads the QR library.
+- The IIFE runs immediately without polluting globals.
+- document.getElementById(""qrCodeUri"").value reads the otpauth URI from a hidden input.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-091,IU-091,861eac0d3e,S-091__861eac0d3e.png,verified-visible-manual-read,MFA-R07,QR rendering line-by-line.,"QR rendering line-by-line.
+
+- const el = document.getElementById(""qrCode"") gets the container div.
+- el.innerHTML = """" clears any existing QR code.
+- new QRCode(el, { text: uri, width: 160, height: 160 }) creates the QR code.
+- Why render on the client:
+  - easy, no server-side image generation required;
+  - server outputs only the URI, browser draws the QR.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.

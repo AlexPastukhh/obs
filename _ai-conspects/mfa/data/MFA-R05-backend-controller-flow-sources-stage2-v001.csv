@@ -1,0 +1,224 @@
+source_id,image_use_id,fileId_short,image_file,status,stage0_group,theme,visible_text,notes
+S-055,IU-055,34226d57c3,S-055__34226d57c3.png,verified-visible-manual-read,MFA-R05,B) MVC (Razor) implementation,"B) MVC (Razor) implementation
+
+ViewModels
+
+Enroll GET VM includes manual key for display only:
+public class MfaEnrollGetVm
+{
+    public string Issuer { get; set; } = default!;
+    public string AccountName { get; set; } = default!;
+    public string QrCodeUri { get; set; } = default!;
+    // optional: show manual key to the user, but do NOT accept it back on POST
+    public string ManualKey { get; set; } = default!;
+}
+
+Enroll POST VM has no secret:
+public class MfaEnrollPostVm
+{
+    public string DeviceName { get; set; } = ""My phone"";
+    public string Code { get; set; } = """";
+}",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-058,IU-058,b8668b0b1e,S-058__b8668b0b1e.png,verified-visible-manual-read,MFA-R05,API Controller uses same DB pending table.,"API Controller uses same DB pending table.
+
+Visible code:
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OtpNet;
+
+[Authorize]
+[ApiController]
+[Route(""api/mfa"")]
+public class MfaApiController : ControllerBase
+{
+    private readonly AppDbContext _db;
+    private readonly IUserContext _userContext;
+    private readonly IDataProtector _protector;
+
+    constructor receives AppDbContext, IUserContext, and IDataProtectionProvider.
+}",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-059,IU-059,62c1c29259,S-059__62c1c29259.png,verified-visible-manual-read,MFA-R05,MfaController (DB-pending secret),"MfaController (DB-pending secret)
+
+Visible code:
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OtpNet;
+
+[Authorize]
+public class MfaController : Controller
+{
+    private readonly AppDbContext _db;
+    private readonly IUserContext _userContext;
+    private readonly IDataProtector _protector;
+}",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-061,IU-061,008af801e9,S-061__008af801e9.png,verified-visible-manual-read,MFA-R05,API GET enrollment endpoint.,"API GET enrollment endpoint.
+
+[HttpGet(""enroll"")]
+public async Task<IActionResult> GetEnroll()
+{
+    var user = _userContext.GetCurrentUser();
+    var issuer = ""MyApp"";
+    var secret = CreateSecret();
+    var now = DateTime.UtcNow;
+
+    pending = await _db.PendingMfaEnrollments.SingleOrDefaultAsync(...);
+
+    if pending is null:
+        create PendingMfaEnrollment with UserId, protected secret, CreatedUtc, ExpiresUtc.
+    otherwise update the pending record.
+}",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-062,IU-062,573d9aa313,S-062__573d9aa313.png,verified-visible-manual-read,MFA-R05,MVC controller constructor and Enroll GET.,"MVC controller constructor and Enroll GET.
+
+Constructor stores:
+_db = db;
+_userContext = userContext;
+_protector = dp.CreateProtector(""mfa-secret-v1"");
+
+[HttpGet]
+public async Task<IActionResult> Enroll()
+
+The GET flow:
+- get current user;
+- set issuer;
+- create secret;
+- store pending secret in DB with upsert/single-per-user behavior;
+- protect the secret before storing.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-063,IU-063,3d84fbb1d7,S-063__3d84fbb1d7.png,verified-visible-manual-read,MFA-R05,Continuation of pending enrollment update.,"Continuation of pending enrollment update.
+
+If pending already exists:
+- update ProtectedSecret;
+- update CreatedUtc;
+- update ExpiresUtc = now.AddMinutes(10);
+- update ConcurrencyStamp.
+
+Then SaveChangesAsync.
+
+Return QR/manual data:
+return Ok(new {
+    issuer,
+    accountName = user.Email,
+    qrCodeUri = BuildOtpAuthUri(issuer, user.Email, secret),
+    manualKey = secret
+});",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-064,IU-064,6131621df4,S-064__6131621df4.png,verified-visible-manual-read,MFA-R05,MVC Enroll GET pending-secret upsert.,"MVC Enroll GET pending-secret upsert.
+
+If pending is null:
+- create PendingMfaEnrollment;
+- set UserId, ProtectedSecret, CreatedUtc, ExpiresUtc;
+- add to PendingMfaEnrollments.
+
+Else:
+- refresh protected secret, timestamps, concurrency stamp.
+
+Then save changes and build otpauth URI.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-065,IU-065,148627d551,S-065__148627d551.png,verified-visible-manual-read,MFA-R05,API request DTO:,"API request DTO:
+
+public sealed class CompleteEnrollRequest
+{
+    public string DeviceName { get; set; } = ""My phone"";
+    public string Code { get; set; } = default!;
+}",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-066,IU-066,da1f07450d,S-066__da1f07450d.png,verified-visible-manual-read,MFA-R05,MVC Enroll GET returns view model.,"MVC Enroll GET returns view model.
+
+Visible logic:
+var vm = new MfaEnrollGetVm
+{
+    Issuer = issuer,
+    AccountName = user.Email,
+    QrCodeUri = uri,
+    ManualKey = secret
+};
+
+return View(vm);",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-067,IU-067,9b11a7a41d,S-067__9b11a7a41d.png,verified-visible-manual-read,MFA-R05,API complete enrollment endpoint.,"API complete enrollment endpoint.
+
+[HttpPost(""enroll"")]
+public async Task<IActionResult> CompleteEnroll([FromBody] CompleteEnrollRequest req)
+
+Flow:
+- get current user and current time;
+- load pending enrollment;
+- reject if pending is missing or expired;
+- unprotect pending secret;
+- create Totp from Base32 decoded secret;
+- verify submitted code;
+- if invalid, return BadRequest;
+- save active UserSecret;
+- remove pending enrollment;
+- save changes;
+- return success.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-068,IU-068,f6e4c6934e,S-068__f6e4c6934e.png,verified-visible-manual-read,MFA-R05,MVC POST enrollment endpoint.,"MVC POST enrollment endpoint.
+
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Enroll(MfaEnrollPostVm vm)
+
+Flow:
+- get current user;
+- load pending enrollment;
+- if missing/expired, add ModelState error and rebuild Enroll GET VM;
+- unprotect pending secret;
+- verify submitted code;
+- on failure return the Enroll view with error;
+- on success save active secret, remove pending enrollment, save, and redirect.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-069,IU-069,0e5934a56c,S-069__0e5934a56c.png,verified-visible-manual-read,MFA-R05,End of API complete enrollment.,"End of API complete enrollment.
+
+After successful verification:
+- add/save active secret/device;
+- remove the pending enrollment;
+- await _db.SaveChangesAsync();
+- return Ok(new { success = true });",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-070,IU-070,69500a7baa,S-070__69500a7baa.png,verified-visible-manual-read,MFA-R05,Tiny cropped continuation of verification-window code.,"Tiny cropped continuation of verification-window code.
+
+Visible tail:
+future: 1));
+
+This belongs to the TOTP verification window setup around previous/next time-step tolerance.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-071,IU-071,a22d655368,S-071__a22d655368.png,verified-visible-manual-read,MFA-R05,React API auth note.,"React API auth note.
+
+If your React app uses cookie auth, keep credentials: ""include"" in fetch.
+If antiforgery is enforced on APIs, add a token endpoint and header setup.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-072,IU-072,cc518026f4,S-072__cc518026f4.png,verified-visible-manual-read,MFA-R05,MVC successful enrollment continuation.,"MVC successful enrollment continuation.
+
+If TOTP code is not ok:
+- ModelState.AddModelError(nameof(vm.Code), ""Invalid code."");
+- return View(""Enroll"", await RebuildEnrollGetVm(user));
+
+If code is valid:
+- add new UserSecret with UserId, Name, ProtectedSecret, IsActive;
+- remove pending enrollment;
+- save changes;
+- redirect to EnrollSuccess.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-074,IU-074,552ff88aa5,S-074__552ff88aa5.png,verified-visible-manual-read,MFA-R05,How we add -1 +1 step (time window drift).,"How we add -1 +1 step (time window drift).
+
+TOTP codes change in discrete time steps, usually 30 seconds.
+If the server time and phone time are slightly out of sync, the current step might differ.
+
+Accept codes not only from the current step, but also:
+- previous step (-1)
+- next step (+1)
+
+With OtpNet:
+totp.VerifyTotp(code, out _, new VerificationWindow(previous: 1, future: 1));
+This tolerates clock drift, commonly about 30 seconds on each side.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-075,IU-075,9880d53129,S-075__9880d53129.png,verified-visible-manual-read,MFA-R05,Backend POST continuation using verification window.,"Backend POST continuation using verification window.
+
+Before saving active secret:
+- unprotect pending secret;
+- create Totp from Base32 decoded secret;
+- verify code with VerificationWindow(previous: 1, future: 1);
+- if invalid, add ModelState error and rebuild the Enroll view;
+- if valid, persist the active secret and clean pending enrollment.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-077,IU-077,a84020e08d,S-077__a84020e08d.png,verified-visible-manual-read,MFA-R06,Backend note: pending secret is protected and stored server-side.,"Backend note: pending secret is protected and stored server-side.
+
+The visible tail returns a MfaEnrollGetVm containing issuer, accountName, qrCodeUri, and manualKey.
+It also notes placeholder helper methods:
+CreateSecret()
+BuildOtpAuthUri(issuer, account, secret).",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.
+S-079,IU-079,9548efdf49,S-079__9548efdf49.png,verified-visible-manual-read,MFA-R06,Why the DB pending-secret approach is good,"Why the DB pending-secret approach is good
+
+- Works with multiple servers with no sticky sessions.
+- Prevents client tampering because the secret never comes back from the client.
+- You can expire and clean pending records.",Visible text manually read from source image/contact sheet; not an OCR-timeout/error placeholder.

@@ -1,0 +1,59 @@
+{
+  "generated": "2026-06-02 16:24:51 UTC",
+  "corrections": [
+    {
+      "source_id": "S-054",
+      "from_stage0": "MFA-R05",
+      "stage2_decision": "MFA-R03",
+      "reason": "Secret-generation tail: little-endian byte grouping, alphabet indexing with modulo, and why cryptographic random bytes are random enough."
+    },
+    {
+      "source_id": "S-057",
+      "from_stage0": "MFA-R05",
+      "stage2_decision": "MFA-R03",
+      "reason": "Secret-generation tail: little-endian byte grouping, alphabet indexing with modulo, and why cryptographic random bytes are random enough."
+    },
+    {
+      "source_id": "S-060",
+      "from_stage0": "MFA-R05",
+      "stage2_decision": "MFA-R03",
+      "reason": "Secret-generation tail: little-endian byte grouping, alphabet indexing with modulo, and why cryptographic random bytes are random enough."
+    },
+    {
+      "source_id": "S-077",
+      "from_stage0": "MFA-R06",
+      "stage2_decision": "MFA-R05",
+      "reason": "ASP.NET MVC/API backend enrollment flow: view models, controller fields, pending secret upsert, protected storage, verification, active UserSecret persistence, and TOTP time-window tolerance."
+    },
+    {
+      "source_id": "S-079",
+      "from_stage0": "MFA-R06",
+      "stage2_decision": "MFA-R05",
+      "reason": "ASP.NET MVC/API backend enrollment flow: view models, controller fields, pending secret upsert, protected storage, verification, active UserSecret persistence, and TOTP time-window tolerance."
+    },
+    {
+      "source_id": "S-056",
+      "from_stage0": "MFA-R05",
+      "stage2_decision": "MFA-R06",
+      "reason": "React implementation: enrollment fetch, QRCodeCanvas rendering, manual key/account display, device/code form, submit handler, and completed state."
+    },
+    {
+      "source_id": "S-073",
+      "from_stage0": "MFA-R05",
+      "stage2_decision": "MFA-R06",
+      "reason": "React implementation: enrollment fetch, QRCodeCanvas rendering, manual key/account display, device/code form, submit handler, and completed state."
+    },
+    {
+      "source_id": "S-081",
+      "from_stage0": "MFA-R06",
+      "stage2_decision": "MFA-R07",
+      "reason": "Razor view implementation: Enroll.cshtml, antiforgery/form fields, manual key display, QR JavaScript rendering, validation scripts, and EnrollSuccess view."
+    },
+    {
+      "source_id": "S-083",
+      "from_stage0": "MFA-R06",
+      "stage2_decision": "MFA-R07",
+      "reason": "Razor view implementation: Enroll.cshtml, antiforgery/form fields, manual key display, QR JavaScript rendering, validation scripts, and EnrollSuccess view."
+    }
+  ]
+}

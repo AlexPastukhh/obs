@@ -1,0 +1,29 @@
+{
+  "generated": "2026-06-02 16:24:51 UTC",
+  "group": "MFA-R05-backend-controller-flow",
+  "region": "MFA-R05",
+  "source_count": 19,
+  "included_sources": [
+    "S-055",
+    "S-058",
+    "S-059",
+    "S-061",
+    "S-062",
+    "S-063",
+    "S-064",
+    "S-065",
+    "S-066",
+    "S-067",
+    "S-068",
+    "S-069",
+    "S-070",
+    "S-071",
+    "S-072",
+    "S-074",
+    "S-075",
+    "S-077",
+    "S-079"
+  ],
+  "boundary_decision": "processed-after-stage0-boundary-review-and-stage2-local-visual-semantic-recheck",
+  "meaning": "ASP.NET MVC/API backend enrollment flow: view models, controller fields, pending secret upsert, protected storage, verification, active UserSecret persistence, and TOTP time-window tolerance."
+}
