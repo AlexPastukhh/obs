@@ -1,6 +1,6 @@
-# Apply archive: MFA Stage2 remaining transcripts
+# Apply archive: MFA closure audit
 
-Archive type: verified transcript batch.
+Archive type: closure audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-mfa-stage2-remaining-transcripts-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-mfa-closure-audit-v001.zip
 ```
 
 ## Apply commands with cached diff review
@@ -27,8 +27,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\mfa"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-mfa-stage2-remaining-transcripts-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-mfa-stage2-remaining-transcripts.cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-mfa-closure-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-mfa-closure-audit.cached.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -55,7 +55,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add MFA Stage2 transcripts"
+git commit -m "Close MFA coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
@@ -69,4 +69,4 @@ git clean -fd -- _ai-conspects/mfa
 
 ## Notes
 
-This archive marks all remaining MFA Stage0 candidates as processed. Next step is MFA closure audit.
+This archive does not add new transcripts. It closes MFA after Stage1 and Stage2.

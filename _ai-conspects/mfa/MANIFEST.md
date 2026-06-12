@@ -1,41 +1,38 @@
-# MANIFEST - MFA Stage2 Remaining Transcripts
+# MANIFEST - MFA Closure Audit
 
-Archive type: **verified transcript batch**  
+Archive type: **closure audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 16:24:51 UTC
+Generated: 2026-06-12 13:39:25 UTC
 
 ## Direction check
 
 Goal:
-Close remaining MFA Stage0 transcript candidates.
+Close MFA after Stage1 and Stage2.
 
 Done:
-MFA Stage1 processed 53 images.
+MFA Stage1 and Stage2 processed all 91 image-use records.
 
 This step:
-Add Stage2 transcripts for all remaining 38 images.
+Add MFA closure audit.
 
 Why:
-Every included source has visible text. Stage2 corrects rough Stage0 grouping before marking processed.
+The conspect must be checked at closure level before being considered closed.
 
 Next:
 1. review staged/cached diff;
 2. commit;
-3. run MFA closure audit.
+3. stop MFA transcript work unless a precision patch is needed.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/mfa/03-stage2-remaining-transcripts.md
-_ai-conspects/mfa/regions/MFA-R03-v002-secret-generation-tail.md
-_ai-conspects/mfa/regions/MFA-R05-backend-controller-flow.md
-_ai-conspects/mfa/regions/MFA-R06-react-enrollment-ui.md
-_ai-conspects/mfa/regions/MFA-R07-razor-views-enabled-state.md
-_ai-conspects/mfa/data/*stage2-v001.*
-_ai-conspects/mfa/data/MFA-stage2-local-boundary-corrections-v001.*
+_ai-conspects/mfa/04-closure-audit.md
+_ai-conspects/mfa/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/mfa/data/MFA-closure-audit-v001.csv
+_ai-conspects/mfa/data/MFA-closure-audit-v001.json
+_ai-conspects/mfa/data/MFA-local-boundary-corrections-audit-v001.csv
 _ai-conspects/mfa/data/mfa-image-review-ledger-v1.csv
 _ai-conspects/mfa/data/mfa-image-review-ledger-v1.json
-_ai-conspects/mfa/audit-assets/stage2-remaining-source-images/*.png
 _ai-conspects/mfa/MANIFEST.md
 _ai-conspects/mfa/APPLY_ARCHIVE.md
 ```
@@ -43,7 +40,8 @@ _ai-conspects/mfa/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage2 processed: 38
-Stage0 remaining candidates after Stage2: 0
-Next: MFA closure audit
+MFA sources audited: 91 / 91
+Pending candidates: 0
+Local boundary corrections OK: yes
+Next: closed
 ```

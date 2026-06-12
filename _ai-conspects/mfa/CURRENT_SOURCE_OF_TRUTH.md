@@ -1,6 +1,6 @@
 # Current Source of Truth - MFA
 
-Generated: 2026-06-02 16:24:51 UTC
+Generated: 2026-06-12 13:39:25 UTC
 
 ## Current policy
 
@@ -43,15 +43,17 @@ the source stays pending and must not be marked processed.
 MFA Stage0 boundary review v001: completed
 MFA Stage1 R00-R04 transcript v001: completed
 MFA Stage2 remaining transcript v001: completed
+MFA closure audit v001: completed
 Image uses inventoried: 91
 Stage1 processed: 53
 Stage2 processed: 38
 Pending candidates: 0
+Bad placeholder/OCR-error processed rows: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: MFA closure audit
-Expected count: 91 / 91
+MFA: closed
+Next: no further MFA transcript work unless precision patch is requested.
 ```
