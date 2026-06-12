@@ -1,13 +1,34 @@
 # Current Source of Truth - returning-iqueryable-ienumerable-async-yield
 
-Generated: 2026-06-02 16:25:17 UTC
+Generated: 2026-06-12 13:35:45 UTC
 
 ## Current status
 
 ```text
+Status: complete
+
 Stage0: source materialized
 Stage1: boundary review done
 Stage2: NEXT01 full transcript done
+Stage3: final closure/audit done
+```
+
+## Final coverage
+
+```text
+Expected image uses: 44
+Processed image uses: 44
+Missing: 0
+Duplicates: 0
+Extra: 0
+Unreviewed: 0
+Candidate-only: 0
+Region mismatches: 0
+Subregion mismatches: 0
+Boundary corrections ok: true
+Duplicate embedded-image use mismatch: false
+Text labels missing: 0
+Required transcript files missing: 0
 ```
 
 ## Verified transcripts
@@ -21,13 +42,19 @@ RIQ05: Yield / iterator cleanup / finally restrictions
 RIQTXT01: Canvas text labels
 ```
 
-## Current candidate regions
+## Boundary corrections
 
 ```text
 none
 ```
 
-## Boundary corrections
+## Duplicate embedded-image use
+
+```text
+none
+```
+
+## Current candidate regions
 
 ```text
 none
@@ -36,15 +63,7 @@ none
 ## Current next step
 
 ```text
-Final closure/audit
-```
-
-## Counts
-
-```text
-Image uses: 44
-Processed image uses: 44
-Text labels: 17
+none for this conspect
 ```
 
 ## Rules

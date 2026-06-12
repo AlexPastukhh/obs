@@ -1,47 +1,42 @@
-# MANIFEST - Stage2 NEXT01 full transcript
+# MANIFEST - Stage3 final closure audit
 
-Archive type: **verified transcript / full conspect batch**  
+Archive type: **final closure / audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 16:25:17 UTC
+Generated: 2026-06-12 13:35:45 UTC
 
 ## Done
 
-- NEXT01 full transcript created.
-- Processed source count: 44.
-- Processed regions: RIQ01, RIQ02, RIQ03, RIQ04, RIQ05.
-- Included 17 text/context labels.
-- Boundary corrections: none.
-- This archive intentionally does not duplicate Stage0 source PNGs.
+- Final closure audit created.
+- Status: `complete`.
+- Expected image uses: 44.
+- Processed image uses: 44.
+- Missing: 0.
+- Duplicates: 0.
+- Unreviewed: 0.
+- Candidate-only: 0.
+- Region mismatches: 0.
+- Subregion mismatches: 0.
+- Boundary corrections ok: true.
+- Duplicate embedded-image use mismatch: false.
 
 ## Now
 
 - Apply and inspect cached diff.
-- Commit if transcript and boundary decisions are acceptable.
+- Commit if audit summary is acceptable.
 
 ## Next
 
-- Final closure/audit.
+- No next step inside this conspect.
+- Move to another conspect.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/02-stage2-next01-full-transcript.md
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/03-stage3-final-closure-audit.md
 _ai-conspects/returning-iqueryable-ienumerable-async-yield/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/regions/RIQ01-iqueryable-public-api-leaky-abstraction.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/regions/RIQ02-ienumerable-tolist-materialization-boundary.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/regions/RIQ03-multiple-enumeration-hazards.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/regions/RIQ04-async-enumerable-repeated-enumeration.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/regions/RIQ05-yield-iterator-cleanup-finally.md
 _ai-conspects/returning-iqueryable-ienumerable-async-yield/regions/README.md
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/NEXT01-sources-stage2-v001.csv
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/NEXT01-sources-stage2-v001.json
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/NEXT01-text-context-stage2-v001.csv
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/NEXT01-text-context-stage2-v001.json
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/NEXT01-boundary-review-stage2-v001.csv
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/NEXT01-boundary-review-stage2-v001.json
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/NEXT01-area-understanding-stage2-v001.json
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/image-review-ledger-v001.csv
-_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/image-review-ledger-v001.json
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/final-coverage-audit-stage3-v001.csv
+_ai-conspects/returning-iqueryable-ienumerable-async-yield/data/final-coverage-audit-stage3-v001.json
 _ai-conspects/returning-iqueryable-ienumerable-async-yield/APPLY_ARCHIVE.md
 _ai-conspects/returning-iqueryable-ienumerable-async-yield/MANIFEST.md
 ```

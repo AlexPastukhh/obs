@@ -1,5 +1,7 @@
 # Regions - returning-iqueryable-ienumerable-async-yield
 
+Status: **complete**
+
 Verified transcripts:
 
 ```text
@@ -11,23 +13,17 @@ RIQ05 - Yield / iterator cleanup / finally restrictions
 RIQTXT01 - Canvas text labels
 ```
 
-All Stage1 candidate image uses are now processed.
-
-Boundary correction from Stage1 candidate review:
+Final closure audit:
 
 ```text
-none
+Expected image uses: 44
+Processed image uses: 44
+Missing: 0
+Duplicates: 0
+Unreviewed: 0
+Candidate-only: 0
+Boundary corrections ok: true
+Duplicate embedded-image use mismatch: false
 ```
 
-Next step:
-
-```text
-Final closure/audit
-```
-
-Each transcript includes:
-
-```text
-## 0.1 Area overview / key ideas / reading quality
-## 0.2 Coverage / boundary review
-```
+No pending transcript regions remain.
