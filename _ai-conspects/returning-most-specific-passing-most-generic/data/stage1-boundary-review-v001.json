@@ -1,0 +1,218 @@
+{
+  "generated": "2026-06-13 08:53:27 UTC",
+  "stage": "1",
+  "conspect": "returning-most-specific-passing-most-generic",
+  "boundary_status": "boundary-reviewed-not-transcribed",
+  "image_coverage": {
+    "expected_image_uses": 8,
+    "assigned_to_candidate_regions": 8,
+    "missing": [],
+    "duplicates": [],
+    "extra": [],
+    "duplicate_image_uses_by_fileId_short": {}
+  },
+  "text_label_coverage": {
+    "total_text_labels": 2,
+    "assigned_text_labels": 2,
+    "missing": [],
+    "duplicates": [],
+    "extra": []
+  },
+  "regions": {
+    "RMSG01": {
+      "name": "Main guideline: accept generic, return specific",
+      "source_count": 5,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005"
+      ],
+      "text_labels": [
+        "T-001",
+        "T-002"
+      ],
+      "meaning": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
+      "subregions": {
+        "RMSG01A": [
+          "S-001",
+          "S-002"
+        ],
+        "RMSG01B": [
+          "S-003",
+          "S-004",
+          "S-005"
+        ]
+      }
+    },
+    "RMSG02": {
+      "name": ".NET generic/collection hierarchy and immutable collection consequence",
+      "source_count": 3,
+      "sources": [
+        "S-006",
+        "S-007",
+        "S-008"
+      ],
+      "text_labels": [],
+      "meaning": "C#/.NET grounding for the guideline: covariance/contravariance and collection interface hierarchy, plus the practical guideline that returned collections should be immutable to avoid copying and whole classes of errors.",
+      "subregions": {
+        "RMSG02A": [
+          "S-006",
+          "S-007"
+        ],
+        "RMSG02B": [
+          "S-008"
+        ]
+      }
+    }
+  },
+  "recommended_transcript_batches": {
+    "NEXT01": {
+      "regions": [
+        "RMSG01",
+        "RMSG02"
+      ],
+      "source_count": 8,
+      "meaning": "Full transcript in one batch."
+    }
+  },
+  "rows": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "4f101c5525",
+      "x": "765.2898293003909",
+      "y": "82.06033307670805",
+      "width": "1022.0",
+      "height": "267.0",
+      "candidate_region": "RMSG01",
+      "candidate_region_name": "Main guideline: accept generic, return specific",
+      "candidate_subregion": "RMSG01A",
+      "decision": "candidate-for-RMSG01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    },
+    {
+      "source_id": "S-002",
+      "image_use_id": "IU-002",
+      "fileId_short": "fe393faa4c",
+      "x": "770.0503137704463",
+      "y": "371.2600117702059",
+      "width": "805.0",
+      "height": "511.0",
+      "candidate_region": "RMSG01",
+      "candidate_region_name": "Main guideline: accept generic, return specific",
+      "candidate_subregion": "RMSG01A",
+      "decision": "candidate-for-RMSG01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    },
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "3a0ae4bedf",
+      "x": "790.7129787669492",
+      "y": "930.5745321486356",
+      "width": "728.0",
+      "height": "525.0",
+      "candidate_region": "RMSG01",
+      "candidate_region_name": "Main guideline: accept generic, return specific",
+      "candidate_subregion": "RMSG01B",
+      "decision": "candidate-for-RMSG01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "ade2a632af",
+      "x": "764.1447815384604",
+      "y": "1549.531645696712",
+      "width": "720.0",
+      "height": "317.0",
+      "candidate_region": "RMSG01",
+      "candidate_region_name": "Main guideline: accept generic, return specific",
+      "candidate_subregion": "RMSG01B",
+      "decision": "candidate-for-RMSG01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    },
+    {
+      "source_id": "S-005",
+      "image_use_id": "IU-005",
+      "fileId_short": "cc218458a7",
+      "x": "641.4919723989792",
+      "y": "1955.0185666275902",
+      "width": "842.0",
+      "height": "487.0",
+      "candidate_region": "RMSG01",
+      "candidate_region_name": "Main guideline: accept generic, return specific",
+      "candidate_subregion": "RMSG01B",
+      "decision": "candidate-for-RMSG01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    },
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "3b76c6d940",
+      "x": "709.5721465411602",
+      "y": "2543.313091559932",
+      "width": "684.0",
+      "height": "442.0",
+      "candidate_region": "RMSG02",
+      "candidate_region_name": ".NET generic/collection hierarchy and immutable collection consequence",
+      "candidate_subregion": "RMSG02A",
+      "decision": "candidate-for-RMSG02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "C#/.NET grounding for the guideline: covariance/contravariance and collection interface hierarchy, plus the practical guideline that returned collections should be immutable to avoid copying and whole classes of errors.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    },
+    {
+      "source_id": "S-007",
+      "image_use_id": "IU-007",
+      "fileId_short": "8702fc2b30",
+      "x": "610.4584272727061",
+      "y": "3049.0146686686167",
+      "width": "815.0",
+      "height": "468.0",
+      "candidate_region": "RMSG02",
+      "candidate_region_name": ".NET generic/collection hierarchy and immutable collection consequence",
+      "candidate_subregion": "RMSG02A",
+      "decision": "candidate-for-RMSG02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "C#/.NET grounding for the guideline: covariance/contravariance and collection interface hierarchy, plus the practical guideline that returned collections should be immutable to avoid copying and whole classes of errors.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    },
+    {
+      "source_id": "S-008",
+      "image_use_id": "IU-008",
+      "fileId_short": "57937ca009",
+      "x": "719.0079548785743",
+      "y": "3617.0234726686977",
+      "width": "594.0",
+      "height": "320.0",
+      "candidate_region": "RMSG02",
+      "candidate_region_name": ".NET generic/collection hierarchy and immutable collection consequence",
+      "candidate_subregion": "RMSG02B",
+      "decision": "candidate-for-RMSG02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "C#/.NET grounding for the guideline: covariance/contravariance and collection interface hierarchy, plus the practical guideline that returned collections should be immutable to avoid copying and whole classes of errors.",
+      "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type"
+    }
+  ]
+}

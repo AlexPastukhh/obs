@@ -1,0 +1,526 @@
+{
+  "generated": "2026-06-13 08:53:27 UTC",
+  "stage": "1",
+  "text_labels": [
+    {
+      "text_id": "T-001",
+      "text": "!!! processingn stream",
+      "x": "1766.124406259445",
+      "y": "10062.957880326298",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-002",
+      "text": "so how do we process bytes in loops in different situations?",
+      "x": "2258.7798045736617",
+      "y": "983.945509509832",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-003",
+      "text": "fetch get reader",
+      "x": "2417.760231495373",
+      "y": "3914.673914215128",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-004",
+      "text": "!!! processing until done that reader.read",
+      "x": "2417.760231495373",
+      "y": "3964.673914215128",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-005",
+      "text": "returns",
+      "x": "2417.760231495373",
+      "y": "3989.673914215128",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-006",
+      "text": "websocket asp receiveasync",
+      "x": "2589.118837082494",
+      "y": "4804.070835457348",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-007",
+      "text": "result.endoofmessage",
+      "x": "2589.118837082494",
+      "y": "4829.070835457348",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-008",
+      "text": "we are using buffer to write into and to specify number of bytes that we",
+      "x": "2589.118837082494",
+      "y": "4879.070835457348",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-009",
+      "text": "need to write into a chunk, so we can achieve readexactly or readatleast behavior",
+      "x": "2589.118837082494",
+      "y": "4904.070835457348",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-010",
+      "text": "using close async for gracefull handshake without receiveing and processing messages that are inflight",
+      "x": "2589.118837082494",
+      "y": "4954.070835457348",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-011",
+      "text": "closeoutputasync to stop sending but with possiblity to process all messages from peer",
+      "x": "2589.118837082494",
+      "y": "4979.070835457348",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-012",
+      "text": "abourt to just kill everything",
+      "x": "2589.118837082494",
+      "y": "5004.070835457348",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-013",
+      "text": "in controller endp",
+      "x": "2267.5908824118396",
+      "y": "1096.4047354644945",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-014",
+      "text": "readasync, when returns 0 - the end of request",
+      "x": "2267.5908824118396",
+      "y": "1121.4047354644945",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-015",
+      "text": "if  there is some network error abort request will be fired",
+      "x": "2267.5908824118396",
+      "y": "1146.4047354644945",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-016",
+      "text": "or can use readexactly/readatleast for some special behavior, we",
+      "x": "2267.5908824118396",
+      "y": "1196.4047354644945",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-017",
+      "text": "need buffer here to write available or specified number of bytes",
+      "x": "2267.5908824118396",
+      "y": "1221.4047354644945",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-018",
+      "text": "in client we cant process messages as stream, we are buffering the full message and the we",
+      "x": "2646.7722027360733",
+      "y": "6561.7819154083745",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-019",
+      "text": "process it with code",
+      "x": "2646.7722027360733",
+      "y": "6586.7819154083745",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-020",
+      "text": "processing chunk by chunk with httpclient",
+      "x": "2400.0489958776297",
+      "y": "8246.86518704864",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-021",
+      "text": "need to use text decoder to decode text from bytes without loosing data",
+      "x": "2859.151290496838",
+      "y": "3989.2676138538404",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-022",
+      "text": "because bytes are arrriving",
+      "x": "2859.151290496838",
+      "y": "4014.2676138538404",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-023",
+      "text": "do while because we get result.endofmessage",
+      "x": "2297.4991274212102",
+      "y": "5688.837891401493",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-024",
+      "text": "with the last message chunk",
+      "x": "2297.4991274212102",
+      "y": "5713.837891401493",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-025",
+      "text": "wrong, need to use encoding.utf8.getdecoder",
+      "x": "3691.284479349575",
+      "y": "5763.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-026",
+      "text": "and",
+      "x": "3691.284479349575",
+      "y": "5788.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-027",
+      "text": "decoder.getchars if we have char buffer that will always be",
+      "x": "3691.284479349575",
+      "y": "5813.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-028",
+      "text": "not smaller than the space we need for a chunk",
+      "x": "3691.284479349575",
+      "y": "5838.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-029",
+      "text": "or we can use decoder.convert that wont throw if the buffer is small",
+      "x": "3691.284479349575",
+      "y": "5888.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-030",
+      "text": "and has out args like bytesused charsused completed",
+      "x": "3691.284479349575",
+      "y": "5913.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-031",
+      "text": "so we can prosecc the byte buffer in loop",
+      "x": "3691.284479349575",
+      "y": "5963.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-032",
+      "text": "flush when some chars cant be decoded and we want to say that there is some char should be",
+      "x": "3691.284479349575",
+      "y": "6013.875102262359",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-033",
+      "text": "need to catch ioexception too",
+      "x": "144.44880722508287",
+      "y": "782.719918726217",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-034",
+      "text": "to get it from steram failure",
+      "x": "144.44880722508287",
+      "y": "893.6458559549496",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-035",
+      "text": "when using streams",
+      "x": "144.44880722508287",
+      "y": "1004.5717931836823",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-036",
+      "text": "controller asp",
+      "x": "2477.99283667714",
+      "y": "236.0841694132486",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-037",
+      "text": "fetch",
+      "x": "2714.6716768392566",
+      "y": "3856.3042876709887",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-038",
+      "text": "websockets asp endp",
+      "x": "2398.504225599221",
+      "y": "4598.515967308846",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-039",
+      "text": "browser websockets",
+      "x": "2654.1787768746335",
+      "y": "6346.900561362401",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-040",
+      "text": "stream, reading bytes",
+      "x": "2553.7435570854714",
+      "y": "652.7379190826697",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-041",
+      "text": "writing",
+      "x": "4240.409816851096",
+      "y": "2312.738224258451",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-042",
+      "text": "pipewriter",
+      "x": "4240.409816851096",
+      "y": "2471.0716593170446",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-043",
+      "text": "so we get unprocessed",
+      "x": "3935.241020019864",
+      "y": "1328.2278201880372",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-044",
+      "text": "buffer for next iteration",
+      "x": "3935.241020019864",
+      "y": "1353.2278201880372",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-045",
+      "text": "and we pass its start",
+      "x": "3935.241020019864",
+      "y": "1378.2278201880372",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-046",
+      "text": "and end",
+      "x": "3935.241020019864",
+      "y": "1403.2278201880372",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-047",
+      "text": "can have overloads with pos",
+      "x": "5247.912330441643",
+      "y": "854.7941276173889",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-048",
+      "text": "of count of bytes form start",
+      "x": "5247.912330441643",
+      "y": "879.7941276173889",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-049",
+      "text": "or some sequenceposition",
+      "x": "5247.912330441643",
+      "y": "904.7941276173889",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-050",
+      "text": "pipereader",
+      "x": "4053.1598966663005",
+      "y": "443.43571986391925",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-051",
+      "text": "pipereader",
+      "x": "4546.4936369006755",
+      "y": "3390.1025899811066",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-052",
+      "text": "make sense the most with sequence reader that provides cursor api",
+      "x": "4244.104857092285",
+      "y": "537.3697022291327",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    }
+  ]
+}

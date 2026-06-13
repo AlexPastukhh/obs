@@ -1,4 +1,4 @@
-# Current Source of Truth - returning-most-specific-passing-most-generic
+# Current Source of Truth - actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-endpoint-name-iapiendpointmetadata-ordered-metadata
 
 Generated: 2026-06-13 08:53:27 UTC
 
@@ -22,10 +22,10 @@ Stage1 ledger: data/image-review-ledger-v001.csv
 ## Counts
 
 ```text
-Image uses: 8
-Text labels: 2
+Image uses: 36
+Text labels: 9
 Duplicate image uses by fileId_short: 0
-Stage1 assigned image uses: 8
+Stage1 assigned image uses: 36
 Stage1 missing image uses: 0
 Stage1 duplicated assignments: 0
 ```
@@ -33,19 +33,21 @@ Stage1 duplicated assignments: 0
 ## Candidate regions
 
 ```text
-RMSG01: Main guideline: accept generic, return specific
-RMSG02: .NET generic/collection hierarchy and immutable collection consequence
+AEM01: ActionDescriptor and ControllerActionDescriptor in MVC/filter context
+AEM02: Endpoint metadata, MVC endpoint metadata, RouteEndpoint and IApiEndpointMetadata
+AEM03: Ordered metadata and ordered endpoint metadata lookup
 ```
 
 ## Current next step
 
 ```text
-NEXT01: RMSG01 + RMSG02 = 8 image uses
+NEXT01: AEM01 = 16 image uses
 ```
 
 ## Later
 
 ```text
+NEXT02: AEM02 + AEM03 = 20 image uses
 Final closure/audit
 ```
 

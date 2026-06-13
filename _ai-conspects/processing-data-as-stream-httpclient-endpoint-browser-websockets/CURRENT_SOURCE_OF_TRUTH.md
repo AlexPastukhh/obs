@@ -1,4 +1,4 @@
-# Current Source of Truth - returning-most-specific-passing-most-generic
+# Current Source of Truth - processing-data-as-stream-httpclient-endpoint-browser-websockets
 
 Generated: 2026-06-13 08:53:27 UTC
 
@@ -22,10 +22,10 @@ Stage1 ledger: data/image-review-ledger-v001.csv
 ## Counts
 
 ```text
-Image uses: 8
-Text labels: 2
+Image uses: 23
+Text labels: 52
 Duplicate image uses by fileId_short: 0
-Stage1 assigned image uses: 8
+Stage1 assigned image uses: 23
 Stage1 missing image uses: 0
 Stage1 duplicated assignments: 0
 ```
@@ -33,19 +33,23 @@ Stage1 duplicated assignments: 0
 ## Candidate regions
 
 ```text
-RMSG01: Main guideline: accept generic, return specific
-RMSG02: .NET generic/collection hierarchy and immutable collection consequence
+PDS01: ASP.NET endpoint request-body Stream reading and stream failure behavior
+PDS02: Browser fetch/WebSocket message chunks and UTF-8 decoding
+PDS03: HttpClient streaming response and chunk-by-chunk processing
+PDS04: System.IO.Pipelines PipeReader/PipeWriter and SequenceReader
 ```
 
 ## Current next step
 
 ```text
-NEXT01: RMSG01 + RMSG02 = 8 image uses
+NEXT01: PDS01 + PDS03 = 10 image uses
 ```
 
 ## Later
 
 ```text
+NEXT02: PDS02 = 6 image uses
+NEXT03: PDS04 = 7 image uses
 Final closure/audit
 ```
 

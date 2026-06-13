@@ -1,0 +1,602 @@
+{
+  "generated": "2026-06-13 08:53:27 UTC",
+  "stage": "1",
+  "conspect": "processing-data-as-stream-httpclient-endpoint-browser-websockets",
+  "boundary_status": "boundary-reviewed-not-transcribed",
+  "image_coverage": {
+    "expected_image_uses": 23,
+    "assigned_to_candidate_regions": 23,
+    "missing": [],
+    "duplicates": [],
+    "extra": [],
+    "duplicate_image_uses_by_fileId_short": {}
+  },
+  "text_label_coverage": {
+    "total_text_labels": 52,
+    "assigned_text_labels": 52,
+    "missing": [],
+    "duplicates": [],
+    "extra": []
+  },
+  "regions": {
+    "PDS01": {
+      "name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "source_count": 5,
+      "sources": [
+        "S-006",
+        "S-007",
+        "S-014",
+        "S-015",
+        "S-016"
+      ],
+      "text_labels": [
+        "T-013",
+        "T-014",
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-033",
+        "T-034",
+        "T-035",
+        "T-036",
+        "T-040"
+      ],
+      "meaning": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
+      "subregions": {
+        "PDS01A": [
+          "S-006",
+          "S-007"
+        ],
+        "PDS01B": [
+          "S-014",
+          "S-015",
+          "S-016"
+        ]
+      }
+    },
+    "PDS02": {
+      "name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "source_count": 6,
+      "sources": [
+        "S-005",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-012",
+        "S-013"
+      ],
+      "text_labels": [
+        "T-003",
+        "T-004",
+        "T-005",
+        "T-006",
+        "T-007",
+        "T-008",
+        "T-009",
+        "T-010",
+        "T-011",
+        "T-012",
+        "T-018",
+        "T-019",
+        "T-021",
+        "T-022",
+        "T-023",
+        "T-024",
+        "T-025",
+        "T-026",
+        "T-027",
+        "T-028",
+        "T-029",
+        "T-030",
+        "T-031",
+        "T-032",
+        "T-037",
+        "T-038",
+        "T-039"
+      ],
+      "meaning": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
+      "subregions": {
+        "PDS02A": [
+          "S-005"
+        ],
+        "PDS02B": [
+          "S-008",
+          "S-009"
+        ],
+        "PDS02C": [
+          "S-010"
+        ],
+        "PDS02D": [
+          "S-012",
+          "S-013"
+        ]
+      }
+    },
+    "PDS03": {
+      "name": "HttpClient streaming response and chunk-by-chunk processing",
+      "source_count": 5,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-011"
+      ],
+      "text_labels": [
+        "T-001",
+        "T-002",
+        "T-020"
+      ],
+      "meaning": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
+      "subregions": {
+        "PDS03A": [
+          "S-001",
+          "S-002",
+          "S-003",
+          "S-004"
+        ],
+        "PDS03B": [
+          "S-011"
+        ]
+      }
+    },
+    "PDS04": {
+      "name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "source_count": 7,
+      "sources": [
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023"
+      ],
+      "text_labels": [
+        "T-041",
+        "T-042",
+        "T-043",
+        "T-044",
+        "T-045",
+        "T-046",
+        "T-047",
+        "T-048",
+        "T-049",
+        "T-050",
+        "T-051",
+        "T-052"
+      ],
+      "meaning": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "subregions": {
+        "PDS04A": [
+          "S-017",
+          "S-018",
+          "S-019",
+          "S-020",
+          "S-021"
+        ],
+        "PDS04B": [
+          "S-022",
+          "S-023"
+        ]
+      }
+    }
+  },
+  "recommended_transcript_batches": {
+    "NEXT01": {
+      "regions": [
+        "PDS01",
+        "PDS03"
+      ],
+      "source_count": 10,
+      "meaning": "Server endpoint stream reading plus HttpClient streaming."
+    },
+    "NEXT02": {
+      "regions": [
+        "PDS02"
+      ],
+      "source_count": 6,
+      "meaning": "Browser/fetch/WebSocket chunking and text decoding."
+    },
+    "NEXT03": {
+      "regions": [
+        "PDS04"
+      ],
+      "source_count": 7,
+      "meaning": "Pipelines PipeReader/PipeWriter and SequenceReader."
+    }
+  },
+  "rows": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "9197db0d17",
+      "x": "2671.6084222082027",
+      "y": "8348.74402968026",
+      "width": "732.0",
+      "height": "482.0",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "candidate_subregion": "PDS03A",
+      "decision": "candidate-for-PDS03-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
+      "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-001:!!! processingn stream | T-039:browser websockets"
+    },
+    {
+      "source_id": "S-002",
+      "image_use_id": "IU-002",
+      "fileId_short": "9423825d90",
+      "x": "2602.559941173342",
+      "y": "8861.328894705373",
+      "width": "912.0",
+      "height": "200.0",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "candidate_subregion": "PDS03A",
+      "decision": "candidate-for-PDS03-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
+      "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-001:!!! processingn stream | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets"
+    },
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "70b21bba16",
+      "x": "2591.1076183496816",
+      "y": "9083.924074671886",
+      "width": "893.0",
+      "height": "471.0",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "candidate_subregion": "PDS03A",
+      "decision": "candidate-for-PDS03-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
+      "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-001:!!! processingn stream | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets"
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "e792d02515",
+      "x": "2562.3996173094592",
+      "y": "9575.410681814748",
+      "width": "848.0",
+      "height": "482.0",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "candidate_subregion": "PDS03A",
+      "decision": "candidate-for-PDS03-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
+      "nearest_labels_for_search_only": "T-001:!!! processingn stream | T-020:processing chunk by chunk with httpclient | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets"
+    },
+    {
+      "source_id": "S-005",
+      "image_use_id": "IU-005",
+      "fileId_short": "0b8ecf3862",
+      "x": "2446.606385341527",
+      "y": "4026.0667063623005",
+      "width": "865.0",
+      "height": "358.0",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "candidate_subregion": "PDS02A",
+      "decision": "candidate-for-PDS02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
+      "nearest_labels_for_search_only": "T-005:returns | T-004:!!! processing until done that reader.read | T-003:fetch get reader | T-037:fetch | T-022:because bytes are arrriving"
+    },
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "759a0c3eaa",
+      "x": "2178.3333806362716",
+      "y": "1245.4211545873732",
+      "width": "947.0",
+      "height": "234.0",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "candidate_subregion": "PDS01A",
+      "decision": "candidate-for-PDS01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
+      "nearest_labels_for_search_only": "T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we | T-015:if  there is some network error abort request will be fired | T-014:readasync, when returns 0 - the end of request | T-013:in controller endp"
+    },
+    {
+      "source_id": "S-007",
+      "image_use_id": "IU-007",
+      "fileId_short": "eb22a34337",
+      "x": "2201.2580189071004",
+      "y": "1521.2649600738696",
+      "width": "882.0",
+      "height": "482.0",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "candidate_subregion": "PDS01A",
+      "decision": "candidate-for-PDS01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
+      "nearest_labels_for_search_only": "T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we | T-015:if  there is some network error abort request will be fired | T-014:readasync, when returns 0 - the end of request | T-013:in controller endp"
+    },
+    {
+      "source_id": "S-008",
+      "image_use_id": "IU-008",
+      "fileId_short": "173aa87080",
+      "x": "2648.2283522890457",
+      "y": "5431.556321296943",
+      "width": "821.0",
+      "height": "632.0",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "candidate_subregion": "PDS02B",
+      "decision": "candidate-for-PDS02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
+      "nearest_labels_for_search_only": "T-012:abourt to just kill everything | T-023:do while because we get result.endofmessage | T-024:with the last message chunk | T-011:closeoutputasync to stop sending but with possiblity to process all messages from peer | T-010:using close async for gracefull handshake without receiveing and processing messages that are inflight"
+    },
+    {
+      "source_id": "S-009",
+      "image_use_id": "IU-009",
+      "fileId_short": "65a55deac0",
+      "x": "2606.191732403392",
+      "y": "5021.545891914619",
+      "width": "780.0",
+      "height": "339.0",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "candidate_subregion": "PDS02B",
+      "decision": "candidate-for-PDS02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
+      "nearest_labels_for_search_only": "T-012:abourt to just kill everything | T-011:closeoutputasync to stop sending but with possiblity to process all messages from peer | T-010:using close async for gracefull handshake without receiveing and processing messages that are inflight | T-009:need to write into a chunk, so we can achieve readexactly or readatleast behavior | T-008:we are using buffer to write into and to specify number of bytes that we"
+    },
+    {
+      "source_id": "S-010",
+      "image_use_id": "IU-010",
+      "fileId_short": "d97344f4d0",
+      "x": "2747.340344676316",
+      "y": "6604.588102448106",
+      "width": "689.0",
+      "height": "482.0",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "candidate_subregion": "PDS02C",
+      "decision": "candidate-for-PDS02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
+      "nearest_labels_for_search_only": "T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets | T-024:with the last message chunk | T-023:do while because we get result.endofmessage"
+    },
+    {
+      "source_id": "S-011",
+      "image_use_id": "IU-011",
+      "fileId_short": "ab59ca0404",
+      "x": "2754.8681196453017",
+      "y": "7634.254728424668",
+      "width": "804.0",
+      "height": "482.0",
+      "candidate_region": "PDS03",
+      "candidate_region_name": "HttpClient streaming response and chunk-by-chunk processing",
+      "candidate_subregion": "PDS03B",
+      "decision": "candidate-for-PDS03-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
+      "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets | T-032:flush when some chars cant be decoded and we want to say that there is some char should be"
+    },
+    {
+      "source_id": "S-012",
+      "image_use_id": "IU-012",
+      "fileId_short": "96aaf9f572",
+      "x": "2734.9114281908687",
+      "y": "7107.647466962582",
+      "width": "604.0",
+      "height": "463.0",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "candidate_subregion": "PDS02D",
+      "decision": "candidate-for-PDS02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
+      "nearest_labels_for_search_only": "T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets | T-020:processing chunk by chunk with httpclient | T-032:flush when some chars cant be decoded and we want to say that there is some char should be"
+    },
+    {
+      "source_id": "S-013",
+      "image_use_id": "IU-013",
+      "fileId_short": "843188ffb7",
+      "x": "3669.2027453514784",
+      "y": "6123.763186209685",
+      "width": "855.0",
+      "height": "434.0",
+      "candidate_region": "PDS02",
+      "candidate_region_name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "candidate_subregion": "PDS02D",
+      "decision": "candidate-for-PDS02-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
+      "nearest_labels_for_search_only": "T-032:flush when some chars cant be decoded and we want to say that there is some char should be | T-031:so we can prosecc the byte buffer in loop | T-030:and has out args like bytesused charsused completed | T-029:or we can use decoder.convert that wont throw if the buffer is small | T-028:not smaller than the space we need for a chunk"
+    },
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "db4553de54",
+      "x": "12.136363636363058",
+      "y": "1143.9505511858915",
+      "width": "1162.0",
+      "height": "466.0",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "candidate_subregion": "PDS01B",
+      "decision": "candidate-for-PDS01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
+      "nearest_labels_for_search_only": "T-035:when using streams | T-034:to get it from steram failure | T-033:need to catch ioexception too | T-002:so how do we process bytes in loops in different situations? | T-015:if  there is some network error abort request will be fired"
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "641b054b70",
+      "x": "10.0",
+      "y": "1615.1778239131563",
+      "width": "1159.0",
+      "height": "389.0",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "candidate_subregion": "PDS01B",
+      "decision": "candidate-for-PDS01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
+      "nearest_labels_for_search_only": "T-035:when using streams | T-034:to get it from steram failure | T-033:need to catch ioexception too | T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we"
+    },
+    {
+      "source_id": "S-016",
+      "image_use_id": "IU-016",
+      "fileId_short": "8574e13822",
+      "x": "45.5988255620523",
+      "y": "2046.446223634779",
+      "width": "989.0",
+      "height": "239.0",
+      "candidate_region": "PDS01",
+      "candidate_region_name": "ASP.NET endpoint request-body Stream reading and stream failure behavior",
+      "candidate_subregion": "PDS01B",
+      "decision": "candidate-for-PDS01-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
+      "nearest_labels_for_search_only": "T-035:when using streams | T-034:to get it from steram failure | T-033:need to catch ioexception too | T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we"
+    },
+    {
+      "source_id": "S-017",
+      "image_use_id": "IU-017",
+      "fileId_short": "909d2fecc6",
+      "x": "4226.533605223867",
+      "y": "572.1063999457983",
+      "width": "932.0",
+      "height": "351.0",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "candidate_subregion": "PDS04A",
+      "decision": "candidate-for-PDS04-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "nearest_labels_for_search_only": "T-052:make sense the most with sequence reader that provides cursor api | T-050:pipereader | T-043:so we get unprocessed | T-044:buffer for next iteration | T-045:and we pass its start"
+    },
+    {
+      "source_id": "S-018",
+      "image_use_id": "IU-018",
+      "fileId_short": "db28e20b0f",
+      "x": "4238.493971262971",
+      "y": "919.1448145341419",
+      "width": "824.0",
+      "height": "463.0",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "candidate_subregion": "PDS04A",
+      "decision": "candidate-for-PDS04-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "nearest_labels_for_search_only": "T-052:make sense the most with sequence reader that provides cursor api | T-043:so we get unprocessed | T-050:pipereader | T-044:buffer for next iteration | T-045:and we pass its start"
+    },
+    {
+      "source_id": "S-019",
+      "image_use_id": "IU-019",
+      "fileId_short": "66a2f88836",
+      "x": "4243.918314508723",
+      "y": "1393.0422660816184",
+      "width": "928.0",
+      "height": "344.0",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "candidate_subregion": "PDS04A",
+      "decision": "candidate-for-PDS04-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "nearest_labels_for_search_only": "T-046:and end | T-045:and we pass its start | T-044:buffer for next iteration | T-043:so we get unprocessed | T-052:make sense the most with sequence reader that provides cursor api"
+    },
+    {
+      "source_id": "S-020",
+      "image_use_id": "IU-020",
+      "fileId_short": "d1c3307e92",
+      "x": "4236.918314508723",
+      "y": "1746.516734606259",
+      "width": "942.0",
+      "height": "275.0",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "candidate_subregion": "PDS04A",
+      "decision": "candidate-for-PDS04-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "nearest_labels_for_search_only": "T-046:and end | T-045:and we pass its start | T-044:buffer for next iteration | T-043:so we get unprocessed | T-041:writing"
+    },
+    {
+      "source_id": "S-021",
+      "image_use_id": "IU-021",
+      "fileId_short": "0ea3a35556",
+      "x": "5204.079078488518",
+      "y": "1008.5408320044735",
+      "width": "497.0",
+      "height": "146.0",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "candidate_subregion": "PDS04A",
+      "decision": "candidate-for-PDS04-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "nearest_labels_for_search_only": "T-049:or some sequenceposition | T-048:of count of bytes form start | T-047:can have overloads with pos | T-052:make sense the most with sequence reader that provides cursor api | T-050:pipereader"
+    },
+    {
+      "source_id": "S-022",
+      "image_use_id": "IU-022",
+      "fileId_short": "c759b46f91",
+      "x": "4495.643490197277",
+      "y": "2740.800313521493",
+      "width": "885.0",
+      "height": "404.0",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "candidate_subregion": "PDS04B",
+      "decision": "candidate-for-PDS04-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "nearest_labels_for_search_only": "T-042:pipewriter | T-041:writing | T-051:pipereader | T-046:and end | T-045:and we pass its start"
+    },
+    {
+      "source_id": "S-023",
+      "image_use_id": "IU-023",
+      "fileId_short": "edcc8ae683",
+      "x": "4456.532236186396",
+      "y": "3155.578045280701",
+      "width": "931.0",
+      "height": "440.0",
+      "candidate_region": "PDS04",
+      "candidate_region_name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "candidate_subregion": "PDS04B",
+      "decision": "candidate-for-PDS04-transcript",
+      "decision_is_final": "no-boundary-review-only",
+      "must_recheck_before_region_close": "yes",
+      "reason": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
+      "nearest_labels_for_search_only": "T-051:pipereader | T-042:pipewriter | T-041:writing | T-021:need to use text decoder to decode text from bytes without loosing data | T-022:because bytes are arrriving"
+    }
+  ]
+}
