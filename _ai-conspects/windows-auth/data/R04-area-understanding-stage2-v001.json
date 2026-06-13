@@ -1,0 +1,31 @@
+{
+  "region": "R04",
+  "title": "Company/domain deployment / SPN / whoami / troubleshooting",
+  "included_image_uses": [
+    "S-030",
+    "S-031",
+    "S-032",
+    "S-029",
+    "S-033",
+    "S-028",
+    "S-027",
+    "S-034",
+    "S-035",
+    "S-036",
+    "S-037",
+    "S-038",
+    "S-039"
+  ],
+  "count": 13,
+  "meaning": [
+    "Real Windows Auth behavior depends on the hosting environment, domain membership, browser settings, IIS configuration and service identity.",
+    "Kerberos requires correct SPN/service identity configuration; NTLM may appear as fallback when Kerberos cannot be used.",
+    "A whoami/claims endpoint is the fastest way to inspect the authenticated principal and group/claim shape.",
+    "401 loops or login prompts usually mean the browser/server/domain negotiation failed or the endpoint is not reachable under the expected authentication conditions.",
+    "IIS Express/local behavior is not proof that production domain/SPN/app-pool identity is correctly configured."
+  ],
+  "boundary_notes": [
+    "R03 covers multi-scheme composition; R04 covers deployment and diagnostics.",
+    "Avoid mixing conceptual Windows Auth basics into troubleshooting unless needed to interpret the failure."
+  ]
+}

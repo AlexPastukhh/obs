@@ -1,0 +1,25 @@
+{
+  "region": "R03",
+  "title": "Dual scheme Windows Auth + cookies/client auth",
+  "included_image_uses": [
+    "S-026",
+    "S-025",
+    "S-024",
+    "S-023",
+    "S-022",
+    "S-021",
+    "S-040"
+  ],
+  "count": 7,
+  "meaning": [
+    "One application can support Windows Authentication for employees and another scheme, often cookies or tokens, for non-domain clients.",
+    "Multiple schemes require explicit defaults, policies, or per-endpoint scheme selection.",
+    "Windows Auth is not the same as a normal login page; it is challenge/response at the HTTP/server layer.",
+    "Cookie auth is app-issued and normally follows a login flow; Windows Auth is identity delegated from OS/domain infrastructure.",
+    "Endpoints must clearly state which scheme/policy they require to avoid accidental fallback or wrong challenge behavior."
+  ],
+  "boundary_notes": [
+    "R01/R02 cover the core model/basic Negotiate setup.",
+    "R04 covers company deployment, SPN and troubleshooting."
+  ]
+}

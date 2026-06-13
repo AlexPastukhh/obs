@@ -1,6 +1,6 @@
 # Current Source of Truth - Windows Auth
 
-Generated: 2026-06-13 05:43:48 UTC
+Generated: 2026-06-13 05:49:12 UTC
 
 ## Policy
 
@@ -14,20 +14,20 @@ A region is complete only after visual/semantic boundary review and verified tra
 Stage0 boundary review: done
 R01 core Windows Auth model / AD / Kerberos / NTLM: transcript v001 done
 R02 ASP.NET Core / IIS / Negotiate basic implementation: transcript v001 done
-P02/R03R04 dual schemes, company deployment and troubleshooting: next
+R03 dual scheme Windows Auth + cookies/client auth: transcript v001 done
+R04 company/domain deployment / SPN / troubleshooting: transcript v001 done
+Final coverage audit: next
 ```
 
-## P01 boundary decisions
+## Coverage after Stage2
 
 ```text
-R01 included:
-16 image uses
-
-R02 included:
-11 image uses
-
-Checked-not-P01 / reserved for P02:
-S-026, S-025, S-024, S-023, S-022, S-021, S-040, S-030, S-031, S-032, S-029, S-033, S-028, S-027, S-034, S-035, S-036, S-037, S-038, S-039
+total image uses: 47
+processed-in-r01-v001: 16
+processed-in-r02-v001: 11
+processed-in-r03-v001: 7
+processed-in-r04-v001: 13
+pending/problem rows before final audit: 0
 ```
 
 ## Current split policy
@@ -41,8 +41,8 @@ Exception: 120+ only on explicit request or one very cohesive road.
 ## Next pass
 
 ```text
-P02 / R03R04:
-dual scheme Windows Auth + cookies/client auth,
-company/domain deployment, SPN, roles/claims/whoami,
-401/login-prompt troubleshooting.
+Final coverage audit:
+verify all 47 image uses are processed,
+no candidate/reserved/pending/unreviewed rows remain,
+record coverage-complete or concrete problems.
 ```
