@@ -1,0 +1,31 @@
+{
+  "region": "R01",
+  "title": "Base MVC/Razor Products app / views / layouts / partials / view components",
+  "included_image_uses": [
+    "S-012",
+    "S-013",
+    "S-014",
+    "S-015",
+    "S-016",
+    "S-017",
+    "S-018",
+    "S-019",
+    "S-020",
+    "S-021",
+    "S-022",
+    "S-023",
+    "S-024"
+  ],
+  "count": 13,
+  "meaning": [
+    "The base MVC example is a small Products application used to demonstrate controller-to-view flow.",
+    "Views are Razor files under Views/<Controller>/<Action>.cshtml or shared locations such as Views/Shared.",
+    "_Layout, _ViewStart and _ViewImports define common layout and Razor imports/tag-helper availability.",
+    "Strongly typed views receive a model or view model from the controller.",
+    "Partials and view components split reusable UI pieces out of larger views."
+  ],
+  "boundary_notes": [
+    "R02 covers ViewData/ViewBag/TempData and validation flow.",
+    "R03/R04 cover tag helpers, cache helper, display templates and component/helper details."
+  ]
+}

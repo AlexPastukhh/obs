@@ -1,0 +1,28 @@
+{
+  "region": "R02",
+  "title": "ViewData / ViewBag / TempData / validation flow",
+  "included_image_uses": [
+    "S-030",
+    "S-029",
+    "S-031",
+    "S-035",
+    "S-036",
+    "S-034",
+    "S-028",
+    "S-027",
+    "S-026",
+    "S-039"
+  ],
+  "count": 10,
+  "meaning": [
+    "ViewData is a dictionary for current-request view data.",
+    "ViewBag is dynamic syntax over ViewData.",
+    "TempData persists short-lived data across redirects, commonly for PRG success/error messages.",
+    "Validation state flows from model binding and validation into ModelState and is rendered by validation helpers/tag helpers.",
+    "For strongly typed page data, prefer view models over ViewData/ViewBag; use ViewData/ViewBag mainly for small UI metadata."
+  ],
+  "boundary_notes": [
+    "R01 provides the base MVC view/controller context.",
+    "R03 contains validation tag helper infrastructure and should be checked in P02."
+  ]
+}
