@@ -1,6 +1,6 @@
 # Current Source of Truth - ASP.NET Core Application Model Conventions
 
-Generated: 2026-06-13 07:16:40 UTC
+Generated: 2026-06-13 07:29:58 UTC
 
 ## Policy
 
@@ -12,32 +12,37 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-P01/R01R02 overview and convention interfaces: next
-P02/R03R04 application model object graph and metadata models: pending
+R01 application model conventions overview / attributes: transcript v001 done
+R02 convention interfaces / app-controller-action-parameter: transcript v001 done
+P02/R03R04 application model object graph and metadata models: next
 ```
 
-## Stage0 inventory
+## P01 boundary decisions
 
 ```text
-unique embedded images: 50
-image uses: 50
-text labels: 19
+R01 included:
+7 image uses
+
+R02 included:
+13 image uses
+
+Checked-not-P01 / reserved for P02:
+S-021, S-022, S-023, S-024, S-025, S-026, S-027, S-028, S-029, S-030, S-031, S-032, S-033, S-034, S-035, S-036, S-037, S-038, S-039, S-040, S-041, S-042, S-043, S-044, S-045, S-046, S-047, S-048, S-049, S-050
 ```
 
-## Proposed split
+## Current split policy
 
 ```text
-R01 application model conventions overview / attributes: 7 image uses
-R02 convention interfaces / app-controller-action-parameter: 13 image uses
-R03 ApplicationModel / ControllerModel / ActionModel / ParameterModel: 15 image uses
-R04 PropertyModel / SelectorModel / ApiExplorerModel / BindingInfo: 15 image uses
+Default: 50-80 images.
+Can be bigger: 80-120 if the road is coherent.
+Exception: 120+ only on explicit request or one very cohesive road.
 ```
 
 ## Next pass
 
 ```text
-P01 / R01R02:
-overview, attributes, when to use conventions,
-IApplicationModelConvention / IControllerModelConvention /
-IActionModelConvention / IParameterModelConvention.
+P02 / R03R04:
+ApplicationModel, ControllerModel, ActionModel, ParameterModel,
+ParameterModelBase, PropertyModel, SelectorModel,
+ApiExplorerModel and BindingInfo.
 ```

@@ -1,6 +1,6 @@
-# Apply archive: ASP.NET Core Application Model Conventions Stage0 v001
+# Apply archive: ASP.NET Core Application Model Conventions P01 transcript v001
 
-Archive type: stage-0 boundary review and split plan.
+Archive type: stage-1 verified combined transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-aspnet-core-application-model-conventions-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-aspnet-core-application-model-conventions-stage1-p01-overview-convention-interfaces-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-aspnet-core-application-model-conventions-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-application-model-conventions-stage0-boundary-review-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-application-model-conventions-stage0-boundary-review-v001.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-application-model-conventions-stage1-p01-overview-convention-interfaces-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-aspnet-core-application-model-conventions-stage1-p01-overview-convention-interfaces-transcript-v001.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/aspnet-core-application-model-conventions
-git commit -m "Start application model conventions boundary review"
+git commit -m "Add application model conventions P01 transcript"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-Stage0 is inventory/split plan only. Do not treat region ownership as final until transcript boundary review.
+This archive closes P01/R01R02 and reserves application-model object graph and metadata-model screenshots for P02.

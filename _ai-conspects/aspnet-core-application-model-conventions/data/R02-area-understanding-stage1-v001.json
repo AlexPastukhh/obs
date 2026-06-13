@@ -1,0 +1,31 @@
+{
+  "region": "R02",
+  "title": "Convention interfaces / app-controller-action-parameter",
+  "included_image_uses": [
+    "S-008",
+    "S-009",
+    "S-010",
+    "S-011",
+    "S-012",
+    "S-013",
+    "S-014",
+    "S-015",
+    "S-016",
+    "S-017",
+    "S-018",
+    "S-019",
+    "S-020"
+  ],
+  "count": 13,
+  "meaning": [
+    "IApplicationModelConvention receives the whole ApplicationModel.",
+    "IControllerModelConvention targets ControllerModel and controller-level metadata.",
+    "IActionModelConvention targets ActionModel and action-level metadata.",
+    "IParameterModelConvention targets ParameterModel and parameter-level binding/metadata.",
+    "Razor Pages has analogous page model conventions."
+  ],
+  "boundary_notes": [
+    "R01 explains when/why to use conventions.",
+    "R03/R04 explain the model classes and their properties."
+  ]
+}

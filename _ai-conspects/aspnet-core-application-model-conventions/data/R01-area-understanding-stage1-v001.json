@@ -1,0 +1,25 @@
+{
+  "region": "R01",
+  "title": "Application model conventions overview / attributes",
+  "included_image_uses": [
+    "S-001",
+    "S-002",
+    "S-003",
+    "S-004",
+    "S-005",
+    "S-006",
+    "S-007"
+  ],
+  "count": 7,
+  "meaning": [
+    "Application model conventions are startup-time MVC/Razor Pages model transformations.",
+    "They apply cross-cutting metadata, filters, route/action changes, ApiExplorer settings, binding metadata or parameter/property rules without repeating attributes everywhere.",
+    "Attributes are usually better for local one-off metadata; conventions are better for broad rules or centralized policies.",
+    "Outer model conventions can inspect nested models.",
+    "Conventions shape the application model before endpoint/action execution."
+  ],
+  "boundary_notes": [
+    "R02 covers exact convention interfaces.",
+    "R03/R04 cover object graph and metadata model details."
+  ]
+}
