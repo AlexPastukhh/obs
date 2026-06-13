@@ -1,37 +1,37 @@
-# MANIFEST - Working With Bytes Streams Stage2 R03 Transcript
+# MANIFEST - Working With Bytes Streams Closure Audit
 
-Archive type: **source-level semantic transcript**  
+Archive type: **closure audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 07:33:25 UTC
+Generated: 2026-06-13 07:35:07 UTC
 
 ## Direction check
 
 Goal:
-Close remaining Working With Bytes Streams transcript candidates after Stage1.
+Close Working With Bytes Streams after Stage1 and Stage2.
 
 Done:
-Stage1 processed 24 images.
+Stage1 and Stage2 processed all 38 source image-use records.
 
 This step:
-Add Stage2 transcript for BYTES-R03, 14 source images.
+Add Working With Bytes Streams closure audit.
 
 Why:
-This closes the fixed-size-read block before closure audit.
+The conspect must be checked at closure level before being considered closed.
 
 Next:
 1. review staged file list/status;
 2. commit;
-3. run Working With Bytes Streams closure audit.
+3. stop Working With Bytes Streams transcript work unless a precision patch or repeat-material layer is needed.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/working-with-bytes-streams/03-stage2-r03-transcript.md
-_ai-conspects/working-with-bytes-streams/regions/BYTES-R03-readatleast-readexactly-fixed-size-reads.md
-_ai-conspects/working-with-bytes-streams/data/*stage2-v001.*
+_ai-conspects/working-with-bytes-streams/04-closure-audit.md
+_ai-conspects/working-with-bytes-streams/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/working-with-bytes-streams/data/WorkingWithBytesStreams-closure-audit-v001.csv
+_ai-conspects/working-with-bytes-streams/data/WorkingWithBytesStreams-closure-audit-v001.json
 _ai-conspects/working-with-bytes-streams/data/working-with-bytes-streams-image-review-ledger-v1.csv
 _ai-conspects/working-with-bytes-streams/data/working-with-bytes-streams-image-review-ledger-v1.json
-_ai-conspects/working-with-bytes-streams/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/working-with-bytes-streams/MANIFEST.md
 _ai-conspects/working-with-bytes-streams/APPLY_ARCHIVE.md
 ```
@@ -39,7 +39,7 @@ _ai-conspects/working-with-bytes-streams/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage2 processed: 14
-Stage0 remaining candidates after Stage2: 0
-Next: Working With Bytes Streams closure audit
+Working With Bytes Streams sources audited: 38 / 38
+Pending candidates: 0
+Next: closed by source coverage
 ```

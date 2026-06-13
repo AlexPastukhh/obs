@@ -1,6 +1,6 @@
-# Apply archive: Working With Bytes Streams Stage2 transcript
+# Apply archive: Working With Bytes Streams closure audit
 
-Archive type: source-level semantic transcript.
+Archive type: closure audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-stage2-r03-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-closure-audit-v001.zip
 ```
 
 ## Apply commands
@@ -27,7 +27,7 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\working-with-bytes-streams"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-stage2-r03-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-closure-audit-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -46,7 +46,7 @@ git status --short -- $target
 ## Commit commands
 
 ```powershell
-git commit -m "Add Working With Bytes Streams Stage2 transcript"
+git commit -m "Close Working With Bytes Streams coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git clean -fd -- _ai-conspects/working-with-bytes-streams
 
 ## Notes
 
-This archive processes BYTES-R03 and leaves no Working With Bytes Streams transcript candidates pending. Next archive should be closure audit.
+This archive does not add new transcripts. It closes Working With Bytes Streams by source coverage after Stage1 and Stage2.
