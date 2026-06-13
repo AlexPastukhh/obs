@@ -1,0 +1,16 @@
+{
+  "generated": "2026-06-13 05:40:30 UTC",
+  "group": "EFC-R04-transactions-concurrency-execution-strategy",
+  "region": "EFC-R04",
+  "source_count": 6,
+  "included_sources": [
+    "S-004",
+    "S-013",
+    "S-022",
+    "S-028",
+    "S-030",
+    "S-032"
+  ],
+  "meaning": "Transactions, optimistic concurrency, isolation levels, reading own changes, SaveChanges atomicity, and execution strategy / retry boundaries.",
+  "boundary_decision": "included after Stage0 candidate split and Stage2 visual/semantic source review"
+}

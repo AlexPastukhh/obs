@@ -1,0 +1,64 @@
+{
+  "generated": "2026-06-13 05:40:30 UTC",
+  "group": "EFC-R05-db-invariants-exceptions-error-handling",
+  "region": "EFC-R05",
+  "source_count": 5,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-061",
+      "image_use_id": "IU-061",
+      "fileId_short": "ea9b1ba7b6",
+      "stage0_group": "EFC-R05-db-invariants-exceptions-error-handling",
+      "stage2_region": "EFC-R05",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Exception guide.",
+      "transcript": "Exception guide.\n\n1) SaveChanges failure.\n\nMost common EF-level exceptions when saving:\n- DbUpdateException: general save failure.\n- DbUpdateConcurrencyException: optimistic concurrency conflict, usually \"unexpected number of rows affected.\"\n\nUnder those, there is often an inner provider exception such as:\n- SqlException for SQL Server.\n- more generally, a provider-specific DbException.\n\nPractical rule:\nSaveChanges failed -> usually catch DbUpdateException and maybe DbUpdateConcurrencyException separately -> inspect InnerException for provider-specific details.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-062",
+      "image_use_id": "IU-062",
+      "fileId_short": "5310695bc8",
+      "stage0_group": "EFC-R05-db-invariants-exceptions-error-handling",
+      "stage2_region": "EFC-R05",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "2) Transaction commit failure.",
+      "transcript": "2) Transaction commit failure.\n\nFor explicit CommitAsync failures, the exception is often provider-specific, such as SQL Server SqlException, or another database exception type.\n\nCommit is a database/connection operation rather than an EF change-tracker issue.\n\nIf EF's transaction and resilience docs focus on commit behavior, while save exceptions are often DbUpdateException / DbUpdateConcurrencyException, do not assume every commit failure is a DbUpdateException.\n\nPractical rule:\nCommitAsync failed -> often provider exception / DbException / SqlException -> not usually DbUpdateException.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-063",
+      "image_use_id": "IU-063",
+      "fileId_short": "bb49429aea",
+      "stage0_group": "EFC-R05-db-invariants-exceptions-error-handling",
+      "stage2_region": "EFC-R05",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "3) Retries exhausted.",
+      "transcript": "3) Retries exhausted.\n\nWhen the execution strategy retries and still cannot succeed within the configured limit, EF throws RetryLimitExceededException.\n\nThis applies to execution strategy operations such as ExecuteAsync(...) and ExecuteInTransactionAsync(...), and by the same model to returned tasks if the retry limit is reached.\n\nQuestion:\nWhen VerifySucceeded from ExecuteInTransaction fails multiple times and there are no retries left?\n\nPractical final exception:\nRetryLimitExceededException if the operation kept failing/retrying until the configured retry limit was exceeded.\n\nIf the error is non-transient, EF does not keep retrying forever; the underlying task fault can be returned, and the returned task becomes failed.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-064",
+      "image_use_id": "IU-064",
+      "fileId_short": "601cdc59fb",
+      "stage0_group": "EFC-R05-db-invariants-exceptions-error-handling",
+      "stage2_region": "EFC-R05",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "What to catch.",
+      "transcript": "What to catch.\n\nGood practical order:\n\ntry\n{\n    // save / transaction / execution strategy work\n}\ncatch (DbUpdateConcurrencyException ex)\n{\n    // concurrency conflict\n}\ncatch (DbUpdateException ex)\n{\n    // general EF save failure\n}\ncatch (RetryLimitExceededException ex)\n{\n    // transient retries exhausted\n}\ncatch (DbException ex) // or SqlException if SQL Server-specific\n{\n    // transaction commit / provider-level DB failure\n}\n\nMeaning:\nCatch the EF-specific cases before the broader database/provider catch path.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-065",
+      "image_use_id": "IU-065",
+      "fileId_short": "bf9f234ad6",
+      "stage0_group": "EFC-R05-db-invariants-exceptions-error-handling",
+      "stage2_region": "EFC-R05",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "RetryLimitExceededException is the general EF Core exception for the execution strategy retrying an action more times than configured.",
+      "transcript": "RetryLimitExceededException is the general EF Core exception for the execution strategy retrying an action more times than configured.\n\nFor your cases:\n- ExecuteAsync(...) with transient failures and retries exhausted -> RetryLimitExceededException.\n- ExecuteInTransactionAsync(...) with a clear non-success path that keeps retrying until limit is hit -> RetryLimitExceededException.\n- ExecuteInTransactionAsync(...) with an ambiguous commit path where verifySucceeded keeps determining \"not succeeded\" and retries are exhausted -> again, general \"retry limit exceeded\" outcome is RetryLimitExceededException.\n\nNuance:\nIf the failure is treated as non-transient / not retryable, EF does not keep retrying to the limit; in that case you get the underlying exception path instead, not RetryLimitExceededException.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

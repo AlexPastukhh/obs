@@ -1,0 +1,84 @@
+source_id,image_use_id,fileId_short,stage0_group,stage2_region,status,theme,transcript,notes
+S-004,IU-004,0dc3625229,EFC-R04-transactions-concurrency-execution-strategy,EFC-R04,verified-visible-semantic-transcript,So for your scenario:,"So for your scenario:
+
+1. Request A reads entity.
+2. Request B reads same entity.
+3. A checks current state and decides to add/update something.
+4. B changes the entity first.
+5. A later calls SaveChanges().
+
+What happens depends on model and SQL constraints.
+
+Without a concurrency token:
+- EF usually will not throw a concurrency exception only because the row changed after A read it.
+- For normal updates, the ""last write wins"" pattern can happen.
+- Microsoft says that if concurrency detection is not enabled, later updates can overwrite earlier ones.
+
+With a concurrency token:
+- EF compares the original token it read with the current token in the database during SaveChanges().
+- If another user changed that row first, EF sees that 0 rows were updated/deleted and throws DbUpdateConcurrencyException.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-013,IU-013,119679e20c,EFC-R04-transactions-concurrency-execution-strategy,EFC-R04,verified-visible-semantic-transcript,"Important detail for the ""check then add"" case.","Important detail for the ""check then add"" case.
+
+If the logic is:
+- read parent/order/cart/user;
+- inspect its current children/count/status;
+- decide whether to insert a new child row,
+
+then EF concurrency on the parent row only helps if the parent row itself gets updated and has a concurrency token.
+
+If only a new child row is inserted and the parent row is not updated, EF may have nothing to compare on the parent, so no concurrency exception is guaranteed.
+
+In that case, the race is often caught only by:
+- a database constraint such as unique index/check/foreign key; or
+- explicit transaction/isolation level/locking strategy; or
+- intentionally updating a versioned parent row as part of the operation.
+
+Question:
+Do you need IsRowVersion() or IsConcurrencyToken()?
+For EF optimistic concurrency detection: yes, you need to configure something.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-022,IU-022,3710ca8272,EFC-R04-transactions-concurrency-execution-strategy,EFC-R04,verified-visible-semantic-transcript,SaveChanges atomicity and explicit transactions.,"SaveChanges atomicity and explicit transactions.
+
+If you want multiple SaveChanges calls to succeed or fail together, wrap them in one explicit transaction.
+
+By default, each individual SaveChanges call runs in its own transaction, so two separate SaveChanges calls are not automatically atomic together.
+
+EF Core docs say a single SaveChanges is transactional by default and BigInTransaction/BeginTransaction is used when several operations and SaveChanges calls need one transaction.
+
+First distinction:
+- Atomicity: all DB changes commit or all roll back.
+- Isolation level: what one transaction can see from other concurrent transactions.
+
+To get ""all applied or reverted together"", you need a transaction. Isolation alone does not give that.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-028,IU-028,4e35b1cbc9,EFC-R04-transactions-concurrency-execution-strategy,EFC-R04,verified-visible-semantic-transcript,Which isolation level should you use?,"Which isolation level should you use?
+
+Usually:
+- ReadCommitted is the normal SQL Server default and the default SQL Server isolation level.
+- Snapshot can be useful when you need row-versioned consistent reads and want to reduce blocking, but it is a stronger design choice and the default answer for ""I want both SaveChanges to roll back together"" is not snapshot.
+- ReadUncommitted is generally bad for business write workflows because it allows dirty reads. Microsoft calls READ UNCOMMITTED and row uncommitted modifications the least restrictive level.
+
+For the stated scenario, ReadCommitted is usually the right default unless there is a specific concurrency reason to use Snapshot.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-030,IU-030,b7164244ce,EFC-R04-transactions-concurrency-execution-strategy,EFC-R04,verified-visible-semantic-transcript,What about ReadUncommitted?,"What about ReadUncommitted?
+
+ReadUncommitted does not mean ""include my EF change tracker changes.""
+
+It means SQL queries in that transaction may read other transactions' uncommitted database writes: dirty reads.
+
+SQL Server says READ UNCOMMITTED allows reading modified data values that have not yet been committed by other transactions.
+
+So this is about database-level reads, not in-memory EF objects.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-032,IU-032,a9bd2293fc,EFC-R04-transactions-concurrency-execution-strategy,EFC-R04,verified-visible-semantic-transcript,Question:,"Question:
+If I modified an entity that I queried from DB, does ReadUncommitted know its changes?
+
+No, not before SaveChanges.
+
+Example:
+var user = await db.Users.FindAsync(id);
+user.Name = ""New Name"";
+
+At that point:
+- EF change tracker knows user.Name changed in memory.
+- The database does not know yet.
+- Transaction isolation levels do not affect that in-memory state.
+- ReadUncommitted only affects what SQL reads from the database can see.
+
+Until SaveChanges, those changes are not in the database at all. Isolation level has nothing to ""see"" there.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

@@ -1,0 +1,74 @@
+source_id,image_use_id,fileId_short,stage0_group,stage2_region,status,theme,transcript,notes
+S-061,IU-061,ea9b1ba7b6,EFC-R05-db-invariants-exceptions-error-handling,EFC-R05,verified-visible-semantic-transcript,Exception guide.,"Exception guide.
+
+1) SaveChanges failure.
+
+Most common EF-level exceptions when saving:
+- DbUpdateException: general save failure.
+- DbUpdateConcurrencyException: optimistic concurrency conflict, usually ""unexpected number of rows affected.""
+
+Under those, there is often an inner provider exception such as:
+- SqlException for SQL Server.
+- more generally, a provider-specific DbException.
+
+Practical rule:
+SaveChanges failed -> usually catch DbUpdateException and maybe DbUpdateConcurrencyException separately -> inspect InnerException for provider-specific details.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-062,IU-062,5310695bc8,EFC-R05-db-invariants-exceptions-error-handling,EFC-R05,verified-visible-semantic-transcript,2) Transaction commit failure.,"2) Transaction commit failure.
+
+For explicit CommitAsync failures, the exception is often provider-specific, such as SQL Server SqlException, or another database exception type.
+
+Commit is a database/connection operation rather than an EF change-tracker issue.
+
+If EF's transaction and resilience docs focus on commit behavior, while save exceptions are often DbUpdateException / DbUpdateConcurrencyException, do not assume every commit failure is a DbUpdateException.
+
+Practical rule:
+CommitAsync failed -> often provider exception / DbException / SqlException -> not usually DbUpdateException.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-063,IU-063,bb49429aea,EFC-R05-db-invariants-exceptions-error-handling,EFC-R05,verified-visible-semantic-transcript,3) Retries exhausted.,"3) Retries exhausted.
+
+When the execution strategy retries and still cannot succeed within the configured limit, EF throws RetryLimitExceededException.
+
+This applies to execution strategy operations such as ExecuteAsync(...) and ExecuteInTransactionAsync(...), and by the same model to returned tasks if the retry limit is reached.
+
+Question:
+When VerifySucceeded from ExecuteInTransaction fails multiple times and there are no retries left?
+
+Practical final exception:
+RetryLimitExceededException if the operation kept failing/retrying until the configured retry limit was exceeded.
+
+If the error is non-transient, EF does not keep retrying forever; the underlying task fault can be returned, and the returned task becomes failed.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-064,IU-064,601cdc59fb,EFC-R05-db-invariants-exceptions-error-handling,EFC-R05,verified-visible-semantic-transcript,What to catch.,"What to catch.
+
+Good practical order:
+
+try
+{
+    // save / transaction / execution strategy work
+}
+catch (DbUpdateConcurrencyException ex)
+{
+    // concurrency conflict
+}
+catch (DbUpdateException ex)
+{
+    // general EF save failure
+}
+catch (RetryLimitExceededException ex)
+{
+    // transient retries exhausted
+}
+catch (DbException ex) // or SqlException if SQL Server-specific
+{
+    // transaction commit / provider-level DB failure
+}
+
+Meaning:
+Catch the EF-specific cases before the broader database/provider catch path.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-065,IU-065,bf9f234ad6,EFC-R05-db-invariants-exceptions-error-handling,EFC-R05,verified-visible-semantic-transcript,RetryLimitExceededException is the general EF Core exception for the execution strategy retrying an action more times than configured.,"RetryLimitExceededException is the general EF Core exception for the execution strategy retrying an action more times than configured.
+
+For your cases:
+- ExecuteAsync(...) with transient failures and retries exhausted -> RetryLimitExceededException.
+- ExecuteInTransactionAsync(...) with a clear non-success path that keeps retrying until limit is hit -> RetryLimitExceededException.
+- ExecuteInTransactionAsync(...) with an ambiguous commit path where verifySucceeded keeps determining ""not succeeded"" and retries are exhausted -> again, general ""retry limit exceeded"" outcome is RetryLimitExceededException.
+
+Nuance:
+If the failure is treated as non-transient / not retryable, EF does not keep retrying to the limit; in that case you get the underlying exception path instead, not RetryLimitExceededException.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

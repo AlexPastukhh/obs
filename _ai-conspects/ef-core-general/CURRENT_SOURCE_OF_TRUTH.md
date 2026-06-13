@@ -1,6 +1,6 @@
 # Current Source of Truth - EF Core General
 
-Generated: 2026-06-13 05:33:27 UTC
+Generated: 2026-06-13 05:40:30 UTC
 
 ## Current policy
 
@@ -40,7 +40,7 @@ the source stays pending and must not be marked processed.
 ## Transcript precision policy
 
 ```text
-Stage1 transcript level: source-level semantic transcript.
+Stage1/Stage2 transcript level: source-level semantic transcript.
 For exact C# punctuation, use preserved Stage0 source PNGs.
 Precision patches can upgrade individual sources to verbatim code later.
 ```
@@ -50,14 +50,16 @@ Precision patches can upgrade individual sources to verbatim code later.
 ```text
 EF Core General Stage0 boundary review v001: completed
 EF Core General Stage1 R01-R03 transcript v001: completed
+EF Core General Stage2 R04-R05 transcript v001: completed
 Image uses inventoried: 65
 Stage1 processed: 54
-Pending candidates: 11
+Stage2 processed: 11
+Pending candidates: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: EFCoreGeneral-stage2 transcript = R04 + R05
-Expected count: 11 images
+Next: EF Core General closure audit
+Expected count: 65 / 65
 ```

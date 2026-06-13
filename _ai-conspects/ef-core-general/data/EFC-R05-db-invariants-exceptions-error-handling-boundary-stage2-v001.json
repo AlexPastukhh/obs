@@ -1,0 +1,15 @@
+{
+  "generated": "2026-06-13 05:40:30 UTC",
+  "group": "EFC-R05-db-invariants-exceptions-error-handling",
+  "region": "EFC-R05",
+  "source_count": 5,
+  "included_sources": [
+    "S-061",
+    "S-062",
+    "S-063",
+    "S-064",
+    "S-065"
+  ],
+  "meaning": "EF Core exception guide: SaveChanges failures, DbUpdateException vs DbUpdateConcurrencyException, provider-specific inner exceptions, transaction commit failure, RetryLimitExceededException, and catch ordering.",
+  "boundary_decision": "included after Stage0 candidate split and Stage2 visual/semantic source review"
+}
