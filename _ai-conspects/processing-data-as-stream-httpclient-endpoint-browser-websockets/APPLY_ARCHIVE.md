@@ -1,5 +1,11 @@
-# Apply archive: processing-data-as-stream-httpclient-endpoint-browser-websockets Stage4 NEXT03 transcript
+# Apply archive: processing-data-as-stream-httpclient-endpoint-browser-websockets Stage5 final closure audit
 
-This conspect is part of the combined Stage4 archive.
+Archive type: final closure / audit.
 
-Use the combined archive apply command from the assistant response.
+Target branch:
+
+```text
+ai-processed-conspects-text
+```
+
+Use the assistant-provided apply command for this archive.

@@ -1,15 +1,36 @@
 # Current Source of Truth - processing-data-as-stream-httpclient-endpoint-browser-websockets
 
-Generated: 2026-06-13 11:03:22 UTC
+Generated: 2026-06-13 11:13:26 UTC
 
 ## Current status
 
 ```text
+Status: complete
+
 Stage0: source materialized
 Stage1: boundary review done
 Stage2: NEXT01 transcript done
 Stage3: NEXT02 transcript done
 Stage4: NEXT03 transcript done
+Stage5: final closure/audit done
+```
+
+## Final coverage
+
+```text
+Expected image uses: 23
+Processed image uses: 23
+Missing: 0
+Duplicates: 0
+Extra: 0
+Unreviewed: 0
+Candidate-only: 0
+Region mismatches: 0
+Subregion mismatches: 0
+Boundary corrections ok: true
+Duplicate embedded-image use mismatch: false
+Text labels missing: 0
+Required transcript files missing: 0
 ```
 
 ## Verified transcripts
@@ -21,23 +42,8 @@ PDS02: Browser fetch/WebSocket message chunks and UTF-8 decoding
 PDS04: System.IO.Pipelines PipeReader/PipeWriter and SequenceReader
 ```
 
-## Current candidate regions
-
-```text
-none
-```
-
 ## Current next step
 
 ```text
-Final closure/audit
-```
-
-## Counts
-
-```text
-Image uses: 23
-Processed image uses: 23
-Pending image uses: 0
-Text labels: 52
+none for this conspect
 ```
