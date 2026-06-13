@@ -35,8 +35,8 @@ duplicate image uses by extracted file/content: 1
 | Region | Candidate images | Candidate text labels | Meaning |
 |---|---:|---:|---|
 | R01 | 19 | 18 | authorization metadata/options and policy construction: endpoint metadata, IAuthorizeData, AuthorizationPolicy, AuthorizationMiddleware entry and cache/policy-combine road |
-| R02 | 29 | 12 | AuthorizationMiddleware execution: policy authentication, AllowAnonymous handling, resource selection, PolicyEvaluator.Authorize, IAuthorizationService and handler/evaluator flow |
-| R03 | 7 | 34 | AuthorizationMiddlewareResultHandler/result handling: PolicyAuthorizationResult, challenge/forbid/succeeded, failed requirements, custom responses, loop over schemes and handler customization |
+| R02 | 36 | 15 | AuthorizationMiddleware execution: policy authentication, AllowAnonymous handling, resource selection, PolicyEvaluator.Authorize, IAuthorizationService and handler/evaluator flow |
+| R03 | 0 | 31 | AuthorizationMiddlewareResultHandler/result handling: PolicyAuthorizationResult, challenge/forbid/succeeded, failed requirements, custom responses, loop over schemes and handler customization |
 
 ## Important rule
 

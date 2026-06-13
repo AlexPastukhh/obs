@@ -20,7 +20,7 @@ T-016,R02,4967.988,7596.696,"respect allowanonymous
 but populate context.User"
 T-017,R02,5073.703,8295.744,resource
 T-018,R02,5065.86,9120.057,PolicyEvaluator.Authorize
-T-019,R03,5078.045,11046.55,"IAuthorizationService
+T-019,R02,5078.045,11046.55,"IAuthorizationService
 default one"
 T-020,R03,5047.06,11764.277,defaulthandlerprovider
 T-021,R03,5059.56,12334.277,defaultAuthorizationEvaluator
@@ -79,8 +79,8 @@ T-041,R02,2892.353,8753.877,"policyevaluator, authorizeasync
 call authorizationservice.Authorize
 if failed - forbid(authorizationfailure)
 if no authentication failure - challenge"
-T-042,R03,2833.975,10633.448,authorizaitonserviceextensions
-T-043,R03,2968.546,11073.394,"defaultauthorizationservice
+T-042,R02,2833.975,10633.448,authorizaitonserviceextensions
+T-043,R02,2968.546,11073.394,"defaultauthorizationservice
 authorizeasync"
 T-044,R03,6541.512,13401.876,"but we can fail fast inside one specific expensive handler with context
 has failed"

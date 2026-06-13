@@ -1,53 +1,51 @@
-# MANIFEST - ASP.NET Core authorization flow/options/result-handler stage0 boundary review v001
+# MANIFEST - ASP.NET Core authorization flow R01/R02/R03 final coverage transcript v001
 
-Archive type: **source check / boundary review**  
+Archive type: **stage-1 final coverage transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 17:10:00 UTC
+Generated: 2026-06-13 06:20:00 UTC
 
 ## Done
 
-- Started new conspect folder: `_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/`.
-- Parsed uploaded authorization SVG.
-- Extracted embedded images.
-- Created image-use inventory, labels, duplicate-use list, ledger, region split plan, contact sheets, and canvas map.
+- R01/R02/R03 combined final transcript created.
+- 55 image uses processed.
+- 64 canvas text labels processed.
+- Duplicate embedded-image use group recorded and closed: S-010 + S-014.
+- Final coverage audit added.
+- Ledger updated to zero remaining unprocessed image uses.
 
 ## Counts
 
 ```text
-unique embedded images: 54
-image uses on canvas: 55
-text labels parsed: 64
-duplicate image uses by extracted file/content: 1
-```
-
-## Candidate regions
-
-```text
-R01: 19 images / 18 text labels -> authorization metadata/options and policy construction: endpoint metadata, IAuthorizeData, AuthorizationPolicy, AuthorizationMiddleware entry and cache/policy-combine road
-R02: 29 images / 12 text labels -> AuthorizationMiddleware execution: policy authentication, AllowAnonymous handling, resource selection, PolicyEvaluator.Authorize, IAuthorizationService and handler/evaluator flow
-R03: 7 images / 34 text labels -> AuthorizationMiddlewareResultHandler/result handling: PolicyAuthorizationResult, challenge/forbid/succeeded, failed requirements, custom responses, loop over schemes and handler customization
+R01 image uses: 19
+R02 image uses: 36
+R03 image uses: 0
+R01 text labels: 18
+R02 text labels: 15
+R03 text labels: 31
+Total image uses in conspect: 55
+Total text labels in conspect: 64
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
 ## Files included / updated
 
 ```text
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/00-source-check-and-boundary-review.md
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/source/authorization-flow-authorization-options-framework-authorizationmiddlewareresulthandler.svg
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/source/images/*.png
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/embedded-images-stage0.json
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/image-uses-stage0.*
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/svg-labels-stage0.*
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/duplicate-image-uses-stage0.*
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/region-split-plan-stage0.*
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/source-summary-stage0.json
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/01-stage1-r01r02r03-final-coverage-transcript.md
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/regions/R01R02R03-authorization-flow-options-framework-result-handler-final.md
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/R01R02R03-sources-stage1-v001.*
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/R01R02R03-text-labels-stage1-v001.*
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/R01R02R03-boundary-review-stage1-v001.*
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/R01R02R03-area-understanding-stage1-v001.json
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/final-coverage-audit-stage1-v001.*
 _ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/data/image-review-ledger-v001.*
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/audit-assets/contact-sheet-*.png
-_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/audit-assets/canvas-map-labels-and-image-boxes-stage0.png
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/audit-assets/contact-sheet-R01R02R03-final-coverage-v001.png
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/audit-assets/R01R02R03-source-images/*.png
+_ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/MANIFEST.md
 _ai-conspects/aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler/APPLY_ARCHIVE.md
 ```
 
 ## Next
 
-Transcript pass after boundary review. Suggested: full R01+R02+R03 pass if coherent; otherwise R01+R02 then R03 final coverage.
+No normal transcript regions remain after this archive. Only correction/polish or repeat-material archive if needed.

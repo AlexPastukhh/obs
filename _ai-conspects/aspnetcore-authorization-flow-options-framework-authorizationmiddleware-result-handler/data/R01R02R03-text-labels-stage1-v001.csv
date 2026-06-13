@@ -1,0 +1,113 @@
+label_id,region,x,y,text,status,notes
+T-010,R01,6394.941,1378.88,InvokeHanldersAfterFailure,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-007,R01,5095.327,1608.21,defaultpolicy,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-003,R01,568.328,2030.817,"Multiple ways to
+attach authorization info
+to endpoint",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-001,R01,4841.04,2282.239,!!!,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-008,R01,4960.782,2366.997,fallbackpolicy,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-004,R01,626.789,2658.509,IAuthorizeData,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-009,R01,5057.828,3261.997,getPolicy,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-005,R01,655.507,3302.612,AuthorizationPolicy,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-006,R01,564.225,3983.637,IAuthorizationRequirementData,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-002,R01,2906.565,3985.891,AuthorizationMiddleware,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-011,R01,4984.225,4077.539,AuthorizationMiddleware,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-031,R01,2397.815,4267.141,"get endpoint and set features
+for future endpointRoutingMiddleware
+so we will know that authorization middleware
+has checked this shit",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-032,R01,2482.815,4494.641,"trying cache lookup
+for cacheable policies",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-012,R01,4810.892,4679.891,"build or retrieve policy, ordered metadata",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-033,R01,2515.315,4701.307,"if nothing in cache
+then getmetadata from
+endpoint and combine into
+one policy
+get requirements form req
+metadata
+and in the end combine
+combined policy with
+requirements into
+result policy
+cache if cacheable",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-034,R01,2498.764,5264.812,"if no policies
+just call next
+(means that there is
+even no fallback policy
+that is applyed when
+tehre is nothing on endpoint)",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-013,R01,4828.931,5307.342,if there is absolutely no policy,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-014,R01,4906.578,5875.97,run policy authentication,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-035,R02,6120.256,6481.227,"if policy has scheme/s
+but there is the one that we ve
+authenticated already as default scheme
+during authentication middleware call",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-015,R02,4942.211,6501.807,Policyeval.Authenticate,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-037,R02,2822.482,6905.025,"Policy evaluator authenticate, run all
+schemes, (used handler results
+are cached)
+merge principal from multiple schemes
+if there are some",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-016,R02,4967.988,7596.696,"respect allowanonymous
+but populate context.User",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-038,R02,2470.651,7923.756,"create new ticket from new
+principal and concatenation of
+schemes
+or",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-017,R02,5073.703,8295.744,resource,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-040,R02,2843.474,8348.461,"if there is no attributes, then we get result from features/context.user",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-039,R02,2563.555,8435.333,nested func,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-041,R02,2892.353,8753.877,"policyevaluator, authorizeasync
+call authorizationservice.Authorize
+if failed - forbid(authorizationfailure)
+if no authentication failure - challenge",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-036,R02,7418.041,8978.089,"the handler is scoped and here
+in ensure
+we set some prop on it, so it has cached result",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-018,R02,5065.86,9120.057,PolicyEvaluator.Authorize,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-064,R02,2534.826,9528.13,"authentication result check
+not authorization",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-042,R02,2833.975,10633.448,authorizaitonserviceextensions,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-019,R02,5078.045,11046.55,"IAuthorizationService
+default one",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-043,R02,2968.546,11073.394,"defaultauthorizationservice
+authorizeasync",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-029,R03,6477.745,11262.478,InvokeHanldersAfterFailure,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-020,R03,5047.06,11764.277,defaulthandlerprovider,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-021,R03,5059.56,12334.277,defaultAuthorizationEvaluator,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-022,R03,5055.545,12889.808,After authorization resulot,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-044,R03,6541.512,13401.876,"but we can fail fast inside one specific expensive handler with context
+has failed",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-028,R03,4205.204,13543.604,AuthorizationMiddlewareResHanlder,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-030,R03,6485.746,13611.811,"why to have
+InvokeHanldersAfterFailure",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-045,R03,5006.672,14117.018,!!!,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-023,R03,5150.246,14394.423,for what,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-046,R03,4513.864,14912.001,!!!WW,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-024,R03,5047.34,15213.895,interface,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-025,R03,6307.34,15213.895,default implementation behavior,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-026,R03,5279.941,15820.653,parameters,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-051,R03,550.206,16719.416,policyauthorizationresult,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-062,R03,2123.564,16862.121,result types,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-027,R03,5047.189,16934.054,Looping over policy schemes,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-048,R03,6224.697,16956.637,custom handler example,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-053,R03,3477.011,17024.325,AuthorizationPolicy,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-058,R03,2065.835,17156.04,succeeded,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-057,R03,534.406,17163.659,inspect failed requirements,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-054,R03,3461.406,17608.58,properties,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-059,R03,2020.835,17756.874,Challenged,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-047,R03,4932.805,17919.025,!!!,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-055,R03,3484.996,18043.451,requirements,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-061,R03,682.772,18149.252,"Custom response for
+specific requirements",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-056,R03,3527.047,18506.016,authSchemes,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-049,R03,6163.956,18549.23,bypasses scheme beh,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-052,R03,7287.754,18604.163,events wont run,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-060,R03,2089.168,18651.04,Forbidden,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-050,R03,6129.247,19474.521,customize only specific cases,processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.
+T-063,R03,6967.339,19644.124,"or can pass some metadata in headers/context so your
+forbidden even callback will know the exatc reason of forbid
+and you may pass some info to frontend
++
+its mostly safe to bypass forbid
+if you dont need events to run",processed-in-stage1-final-coverage,Canvas text label; handled in semantic transcript. Typos normalized in prose when appropriate.

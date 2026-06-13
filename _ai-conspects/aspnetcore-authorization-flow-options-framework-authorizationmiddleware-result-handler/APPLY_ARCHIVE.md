@@ -1,6 +1,6 @@
-# Apply archive: ASP.NET Core authorization flow/options/result-handler stage0 boundary review v001
+# Apply archive: ASP.NET Core authorization flow R01/R02/R03 final coverage transcript v001
 
-Archive type: source check / boundary review.
+Archive type: final coverage transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler-stage1-r01r02r03-final-coverage-v001.zip
 ```
 
 ## Apply + staged-only check commands
@@ -26,7 +26,7 @@ C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-fram
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler-stage1-r01r02r03-final-coverage-v001.zip"
 $target = "_ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -43,7 +43,7 @@ git status --short -- $target
 ## Commit commands after review
 
 ```powershell
-git commit -m "Start ASP.NET Core authorization flow conspect boundary review"
+git commit -m "Complete ASP.NET Core authorization flow conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 
@@ -51,5 +51,6 @@ git push origin ai-processed-conspects-text
 
 ```powershell
 git restore --staged -- _ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler
+git restore -- _ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler
 git clean -fd -- _ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler
 ```
