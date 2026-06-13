@@ -1,35 +1,33 @@
 {
-  "generated": "2026-06-13 06:07:33 UTC",
-  "ledger_version": "v001-updated-by-stage3-next02-transcript",
+  "generated": "2026-06-13 06:13:23 UTC",
+  "ledger_version": "v001-updated-by-stage4-next03-transcript",
   "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
-  "stage3_delta": {
+  "stage4_delta": {
     "processed_regions": {
-      "CH03": [
-        "S-014",
-        "S-034",
-        "S-035",
-        "S-036",
-        "S-037"
-      ],
-      "CH04": [
-        "S-038",
-        "S-039",
-        "S-040",
-        "S-041",
-        "S-042",
-        "S-043",
-        "S-044",
-        "S-045",
-        "S-046",
-        "S-047"
+      "CH05": [
+        "S-012",
+        "S-013",
+        "S-021",
+        "S-048",
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052",
+        "S-053",
+        "S-054",
+        "S-055",
+        "S-056",
+        "S-057",
+        "S-058",
+        "S-059",
+        "S-060",
+        "S-061"
       ]
     },
-    "processed_count": 15,
-    "total_processed_after_next02": 45,
-    "pending_regions": {
-      "CH05": 17
-    },
-    "pending_count": 17,
+    "processed_count": 17,
+    "total_processed_after_next03": 62,
+    "pending_regions": {},
+    "pending_count": 0,
     "boundary_corrections": []
   },
   "rows": [
@@ -229,13 +227,13 @@
       "width": "800.0",
       "height": "340.0",
       "nearest_labels_for_search_only": "T-029:async waiting | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -246,13 +244,13 @@
       "width": "785.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-029:async waiting | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",
@@ -382,13 +380,13 @@
       "width": "676.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-018:and not wait forever | T-017:after some time of waiting start, after losed race | T-016:3 may want to give up after some count of attempts or",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -841,13 +839,13 @@
       "width": "481.0",
       "height": "443.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-001:about await foreach | T-002:and possible sync reading/writing | T-003:and async awaiting | T-004:valuetask",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-049",
@@ -858,13 +856,13 @@
       "width": "737.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-001:about await foreach | T-002:and possible sync reading/writing | T-003:and async awaiting | T-004:valuetask",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-050",
@@ -875,13 +873,13 @@
       "width": "776.0",
       "height": "325.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-001:about await foreach | T-002:and possible sync reading/writing | T-003:and async awaiting | T-004:valuetask",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-051",
@@ -892,13 +890,13 @@
       "width": "808.0",
       "height": "334.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-001:about await foreach | T-002:and possible sync reading/writing | T-003:and async awaiting | T-004:valuetask",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-052",
@@ -909,13 +907,13 @@
       "width": "850.0",
       "height": "717.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-053",
@@ -926,13 +924,13 @@
       "width": "878.0",
       "height": "133.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-054",
@@ -943,13 +941,13 @@
       "width": "642.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-055",
@@ -960,13 +958,13 @@
       "width": "726.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-056",
@@ -977,13 +975,13 @@
       "width": "818.0",
       "height": "268.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-057",
@@ -994,13 +992,13 @@
       "width": "825.0",
       "height": "323.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-058",
@@ -1011,13 +1009,13 @@
       "width": "810.0",
       "height": "401.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-059",
@@ -1028,13 +1026,13 @@
       "width": "774.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-060",
@@ -1045,13 +1043,13 @@
       "width": "799.0",
       "height": "403.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-061",
@@ -1062,13 +1060,13 @@
       "width": "750.0",
       "height": "394.0",
       "nearest_labels_for_search_only": "T-019:websockets example | T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach",
-      "coverage_status": "candidate-ch05",
+      "coverage_status": "processed-in-ch05-v001",
       "current_region_decision": "CH05",
       "current_subregion_decision": "CH05C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Application-level patterns: producer/consumer architecture, common background-processor/channel pattern, WebSockets send/receive loops, connection manager/controller examples, outgoing channel, realistic version and data-flow walkthrough.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch05-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in CH05 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-062",

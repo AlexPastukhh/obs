@@ -1,6 +1,6 @@
-# Apply archive: channel Stage3 NEXT02 transcript
+# Apply archive: channel Stage4 NEXT03 transcript
 
-Archive type: verified transcript / partial conspect batch.
+Archive type: verified transcript / final conspect batch before audit.
 
 Target branch:
 
@@ -13,7 +13,7 @@ Use `tar.exe -xf` instead of PowerShell `Expand-Archive`.
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-channel-stage3-next02-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-channel-stage4-next03-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -23,8 +23,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\channel"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-channel-stage3-next02-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\channel-stage3-next02-transcript-cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-channel-stage4-next03-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\channel-stage4-next03-transcript-cached.diff"
 
 git status --short
 
@@ -46,7 +46,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add channel conspect NEXT02 transcript"
+git commit -m "Add channel conspect NEXT03 transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,6 +60,6 @@ git clean -fd -- "$target"
 
 ## Notes
 
-This archive completes CH03 and CH04 only and does not duplicate Stage0 source images.
+This archive completes CH05 and does not duplicate Stage0 source images.
 
-Next step should be NEXT03 transcript.
+Next step should be final closure/audit.

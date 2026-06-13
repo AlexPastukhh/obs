@@ -1,0 +1,18 @@
+region_source_id,source_id,image_use_id,fileId_short,region,subregion,status,readability,cut_off,confidence,theme,notes
+CH05A-S001,S-012,IU-012,a5267d76ae,CH05,CH05A,verified-from-source-image,high,no,high,WebSocket channel terms,
+CH05A-S002,S-013,IU-013,0c073a9b2d,CH05,CH05A,verified-from-source-image,high,no,high,Producer / consumer WebSocket architecture,
+CH05A-S003,S-021,IU-021,cdbfdbd4a8,CH05,CH05A,verified-from-source-image,medium,no,high,Common channel pattern in apps,Contact sheet shows the main structure clearly; some lower code is small.
+CH05B-S001,S-048,IU-048,e678295334,CH05,CH05B,verified-from-source-image,high,no,high,Usual WebSocket send/receive loop pattern,
+CH05B-S002,S-049,IU-049,d7437357fc,CH05,CH05B,verified-from-source-image,medium,no,high,Basic idea of incoming connection and receive loop,Code is partially small/cropped; transcript captures visible structure and intended flow.
+CH05B-S003,S-050,IU-050,570ae45a1d,CH05,CH05B,verified-from-source-image,high,no,high,Why not just await send loop immediately?,
+CH05B-S004,S-051,IU-051,5731fe231a,CH05,CH05B,verified-from-source-image,high,no,high,Typical shape: connection object and loops,
+CH05C-S001,S-052,IU-052,74f1931b64,CH05,CH05C,verified-from-source-image,high,no,high,OutgoingMessage and SocketConnection classes,
+CH05C-S002,S-053,IU-053,f8aaedfb4c,CH05,CH05C,verified-from-source-image,low,no,high,Controller action example header,The screenshot mostly contains the title and code block header.
+CH05C-S003,S-054,IU-054,cf8f5e4ddf,CH05,CH05C,verified-from-source-image,high,yes,high,Controller action accepts WebSocket and starts send loop,Screenshot contains first half of action; finalizer is in S-055.
+CH05C-S004,S-055,IU-055,df5a898bfd,CH05,CH05C,verified-from-source-image,high,no,high,Controller action finally completes outgoing channel and closes socket,
+CH05C-S005,S-056,IU-056,84a8dbed34,CH05,CH05C,verified-from-source-image,high,no,high,SendLoopAsync drains outgoing channel and sends,
+CH05C-S006,S-057,IU-057,d082a755d1,CH05,CH05C,verified-from-source-image,high,yes,high,ReceiveLoopAsync reads socket and handles close,Continuation with text/response behavior is in S-058.
+CH05C-S007,S-058,IU-058,366666af82,CH05,CH05C,verified-from-source-image,high,no,high,Receive loop enqueues echo and pong responses,
+CH05C-S008,S-059,IU-059,80a95f74d5,CH05,CH05C,verified-from-source-image,high,no,high,More realistic version: other producers can write to outgoing channel,
+CH05C-S009,S-060,IU-060,12001449c3,CH05,CH05C,verified-from-source-image,high,no,high,Ping/pong flow example,
+CH05C-S010,S-061,IU-061,b553a5bc46,CH05,CH05C,verified-from-source-image,high,no,high,Outgoing channel can be written by other code too,

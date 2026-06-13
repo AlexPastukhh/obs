@@ -1,6 +1,6 @@
 # Current Source of Truth - channel
 
-Generated: 2026-06-13 06:07:33 UTC
+Generated: 2026-06-13 06:13:23 UTC
 
 ## Current status
 
@@ -9,6 +9,7 @@ Stage0: source materialized
 Stage1: boundary review done
 Stage2: NEXT01 transcript done
 Stage3: NEXT02 transcript done
+Stage4: NEXT03 transcript done
 ```
 
 ## Verified transcripts
@@ -18,12 +19,13 @@ CH01: Channel fundamentals, creation, types, options, backpressure
 CH02: Reader/Writer operations, async waiting, completion, ReadAllAsync
 CH03: Concurrency assumptions and completion edge cases
 CH04: Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns
+CH05: WebSockets/application examples and connection manager channel pattern
 ```
 
 ## Current candidate regions
 
 ```text
-CH05: WebSockets/application examples and connection manager channel pattern
+none
 ```
 
 ## Boundary corrections
@@ -41,14 +43,6 @@ none
 ## Current next step
 
 ```text
-NEXT03 transcript:
-CH05
-17 image uses
-```
-
-## Later
-
-```text
 Final closure/audit
 ```
 
@@ -56,8 +50,8 @@ Final closure/audit
 
 ```text
 Image uses: 62
-Processed image uses: 45
-Pending image uses: 17
+Processed image uses: 62
+Pending image uses: 0
 Text labels: 37
 ```
 

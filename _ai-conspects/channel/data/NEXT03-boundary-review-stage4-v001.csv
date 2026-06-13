@@ -1,0 +1,18 @@
+source_id,decision,region,subregion,reason
+S-012,processed-in-ch05-v001,CH05,CH05A,WebSocket channel terms
+S-013,processed-in-ch05-v001,CH05,CH05A,Producer / consumer WebSocket architecture
+S-021,processed-in-ch05-v001,CH05,CH05A,Common channel pattern in apps
+S-048,processed-in-ch05-v001,CH05,CH05B,Usual WebSocket send/receive loop pattern
+S-049,processed-in-ch05-v001,CH05,CH05B,Basic idea of incoming connection and receive loop
+S-050,processed-in-ch05-v001,CH05,CH05B,Why not just await send loop immediately?
+S-051,processed-in-ch05-v001,CH05,CH05B,Typical shape: connection object and loops
+S-052,processed-in-ch05-v001,CH05,CH05C,OutgoingMessage and SocketConnection classes
+S-053,processed-in-ch05-v001,CH05,CH05C,Controller action example header
+S-054,processed-in-ch05-v001,CH05,CH05C,Controller action accepts WebSocket and starts send loop
+S-055,processed-in-ch05-v001,CH05,CH05C,Controller action finally completes outgoing channel and closes socket
+S-056,processed-in-ch05-v001,CH05,CH05C,SendLoopAsync drains outgoing channel and sends
+S-057,processed-in-ch05-v001,CH05,CH05C,ReceiveLoopAsync reads socket and handles close
+S-058,processed-in-ch05-v001,CH05,CH05C,Receive loop enqueues echo and pong responses
+S-059,processed-in-ch05-v001,CH05,CH05C,More realistic version: other producers can write to outgoing channel
+S-060,processed-in-ch05-v001,CH05,CH05C,Ping/pong flow example
+S-061,processed-in-ch05-v001,CH05,CH05C,Outgoing channel can be written by other code too
