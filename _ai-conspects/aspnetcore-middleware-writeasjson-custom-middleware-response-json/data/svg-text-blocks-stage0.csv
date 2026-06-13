@@ -1,0 +1,35 @@
+block_id,region,x,y,line_count,text
+TB-001,R02,3372.708,3511.772,18,"public class RequestTimingMiddleware
+{
+private readonly RequestDelegate _next;
+private readonly ILogger<RequestTimingMiddleware> _log;
+public RequestTimingMiddleware(RequestDelegate next, ILogger<RequestTimingMiddleware> log)
+{
+_next = next;
+_log = log;
+}
+public async Task InvokeAsync(HttpContext context)
+{
+var sw = Stopwatch.StartNew();
+await _next(context);
+sw.Stop();
+context.Response.Headers[""X-Elapsed-ms""] = sw.ElapsedMilliseconds.ToString();
+_log.LogInformation(""Elapsed: {ms}ms"", sw.ElapsedMilliseconds);
+}
+}"
+TB-002,R01,2501.634,1209.826,3,"ORDER
+______
+theory"
+TB-003,R02,2396.332,2878.808,2,"1 INHERITANCE
+2 DI GOTCHA MIDDLEWARE + SCOPED MIDDLEWARE"
+TB-004,R02,2048.377,2867.858,4,"1 SHORT CIRCUIT
+2 ASYNC TIPS
+3 DEBUGGING TIPS
+4 COMMON PATTERNS"
+TB-005,R01,3382.609,1410.456,1,all SERVICED
+TB-006,R01,2372.596,10.0,1,EXAMPLE
+TB-007,R01,3369.929,1172.889,1,FEATURES-->
+TB-008,R01,4152.084,1559.539,1,CAN GET EXCEPTION
+TB-009,R01,165.353,2150.33,1,what is brunch here
+TB-010,R01,3228.595,698.651,1,to write json in non mvc land :
+TB-011,R01,1172.931,686.216,1,METHODS

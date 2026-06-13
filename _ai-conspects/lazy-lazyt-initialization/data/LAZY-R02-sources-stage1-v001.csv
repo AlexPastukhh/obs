@@ -1,0 +1,421 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-011,IU-011,24f7fa12a7,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,ctor lazy,"Source theme:
+ctor lazy
+
+Visible source anchors:
+- ctor lazy
+- factory lazy
+- exception caching
+- !!!
+- LAZY
+- lock contention
+- lazy<Task>
+- async
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+- different patterns
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-015,IU-015,bbf4f4e0aa,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,"ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT","Source theme:
+ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Visible source anchors:
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONLY FOR SOME PRIVATE CACHE
+- different patterns
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- lazy with params
+- !!!
+- lazy<Task>
+- async
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-023,IU-023,82104533a4,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,!!!,"Source theme:
+!!!
+
+Visible source anchors:
+- !!!
+- threadsafety modes
+- lock contention
+- exception behavior
+- ctor lazy
+- factory lazy
+- exception caching
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-027,IU-027,99771384c9,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,exception behavior,"Source theme:
+exception behavior
+
+Visible source anchors:
+- exception behavior
+- threadsafety modes
+- DEFAULT
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- !!!
+- BEST FOR PATTER C
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-028,IU-028,d4b203077d,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD,"Source theme:
+ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+
+Visible source anchors:
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- BEST FOR PATTER C
+- DEFAULT
+- exception behavior
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- threadsafety modes
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+- !!!
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-029,IU-029,5c1d50de1d,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,BEST FOR PATTER C,"Source theme:
+BEST FOR PATTER C
+
+Visible source anchors:
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- DEFAULT
+- exception behavior
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- threadsafety modes
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+- !!!
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-030,IU-030,77adb48257,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,exception behavior,"Source theme:
+exception behavior
+
+Visible source anchors:
+- exception behavior
+- DEFAULT
+- threadsafety modes
+- !!!
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-031,IU-031,818278420a,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,BEST FOR PATTER C,"Source theme:
+BEST FOR PATTER C
+
+Visible source anchors:
+- BEST FOR PATTER C
+- DEFAULT
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- exception behavior
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- threadsafety modes
+- !!!
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-032,IU-032,1d571d0114,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,DEFAULT,"Source theme:
+DEFAULT
+
+Visible source anchors:
+- DEFAULT
+- exception behavior
+- threadsafety modes
+- !!!
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-033,IU-033,71f1b96224,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,!!!,"Source theme:
+!!!
+
+Visible source anchors:
+- !!!
+- DEFAULT
+- exception behavior
+- threadsafety modes
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-034,IU-034,10d0651ab9,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,BEST FOR PATTER C,"Source theme:
+BEST FOR PATTER C
+
+Visible source anchors:
+- BEST FOR PATTER C
+- DEFAULT
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- !!!
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- exception behavior
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- threadsafety modes
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-035,IU-035,bc7f530751,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,!!!,"Source theme:
+!!!
+
+Visible source anchors:
+- !!!
+- DEFAULT
+- exception behavior
+- threadsafety modes
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-036,IU-036,b0d91879e3,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,!!!,"Source theme:
+!!!
+
+Visible source anchors:
+- !!!
+- DEFAULT
+- exception behavior
+- threadsafety modes
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-037,IU-037,7ef28154d1,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,!!!,"Source theme:
+!!!
+
+Visible source anchors:
+- !!!
+- DEFAULT
+- exception behavior
+- threadsafety modes
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.
+S-038,IU-038,0670d0ac3a,LAZY-R02-thread-safety-modes-di,LAZY-R02,verified-visible-semantic-transcript,!!!,"Source theme:
+!!!
+
+Visible source anchors:
+- !!!
+- DEFAULT
+- exception behavior
+- threadsafety modes
+- BEST FOR PATTER C
+- ARGUMENT AND SETS IT AS KEY AND INTERNALLY DOES GETORADD
+- SHARED CACHE IMPLEMENTATION, CAN CREATE METHOD THAT ACCEPTS
+- ONLY FOR SOME PRIVATE CACHE
+- SO HERE WE CAN HAVE DIFFERENT ARGS BUT IT ISNOT SUITABLE FOR SHARED CACHE,
+- ONE CAPTURED VALUE FOR ALL USAGES, CANT CHANGE IT
+
+Semantic transcript:
+This source belongs to `LAZY-R02` / thread-safety modes / DI. It is part of the `Lazy LazyT Initialization` conspect and supports this region meaning:
+
+Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.
+
+Operational reading:
+- Treat this source as a concrete example or supporting note for the region.
+- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.
+- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.
+
+Cleaned note:
+ExecutionAndPublication is the default: one thread initializes and all others use the same value.
+PublicationOnly may allow several factories to run, but only one result gets published.",Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG.

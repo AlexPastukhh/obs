@@ -1,6 +1,6 @@
 # Current Source of Truth - Creating Base32 Secret
 
-Generated: 2026-06-13 08:19:37 UTC
+Generated: 2026-06-13 08:38:25 UTC
 
 ## Current policy
 
@@ -27,18 +27,27 @@ If visible transcript has OCR timeout/error, image missing, empty text, or place
 the source stays pending and must not be marked processed.
 ```
 
+## Transcript precision policy
+
+```text
+Stage1 transcript level: source-level semantic transcript.
+For exact code punctuation, use preserved Stage0 source PNGs.
+Precision patches can upgrade individual sources to verbatim code later.
+```
+
 ## Current status
 
 ```text
 Creating Base32 Secret Stage0 boundary review v001: completed
+Creating Base32 Secret Stage1 transcript v001: completed
 Image uses inventoried: 34
-Processed sources: 0
-Pending candidates: 34
+Stage1 processed: 34
+Pending candidates: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: B32SEC-stage1 transcript = all candidate groups
-Expected count: 34 images
+Next: closure audit
+Expected count: 34 / 34
 ```

@@ -1,0 +1,25 @@
+{
+  "generated": "2026-06-13 08:38:25 UTC",
+  "conspect": "lazy-lazyt-initialization",
+  "region": "LAZY-R02",
+  "source_count": 15,
+  "included_sources": [
+    "S-011",
+    "S-015",
+    "S-023",
+    "S-027",
+    "S-028",
+    "S-029",
+    "S-030",
+    "S-031",
+    "S-032",
+    "S-033",
+    "S-034",
+    "S-035",
+    "S-036",
+    "S-037",
+    "S-038"
+  ],
+  "meaning": "Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls.",
+  "boundary_decision": "included after Stage0 candidate split and Stage1 source-level semantic source review"
+}

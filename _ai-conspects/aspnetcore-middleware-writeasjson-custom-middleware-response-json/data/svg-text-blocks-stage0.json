@@ -1,0 +1,90 @@
+[
+  {
+    "block_id": "TB-001",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3511.772,
+    "line_count": 18,
+    "text": "public class RequestTimingMiddleware\n{\nprivate readonly RequestDelegate _next;\nprivate readonly ILogger<RequestTimingMiddleware> _log;\npublic RequestTimingMiddleware(RequestDelegate next, ILogger<RequestTimingMiddleware> log)\n{\n_next = next;\n_log = log;\n}\npublic async Task InvokeAsync(HttpContext context)\n{\nvar sw = Stopwatch.StartNew();\nawait _next(context);\nsw.Stop();\ncontext.Response.Headers[\"X-Elapsed-ms\"] = sw.ElapsedMilliseconds.ToString();\n_log.LogInformation(\"Elapsed: {ms}ms\", sw.ElapsedMilliseconds);\n}\n}"
+  },
+  {
+    "block_id": "TB-002",
+    "region": "R01",
+    "x": 2501.634,
+    "y": 1209.826,
+    "line_count": 3,
+    "text": "ORDER\n______\ntheory"
+  },
+  {
+    "block_id": "TB-003",
+    "region": "R02",
+    "x": 2396.332,
+    "y": 2878.808,
+    "line_count": 2,
+    "text": "1 INHERITANCE\n2 DI GOTCHA MIDDLEWARE + SCOPED MIDDLEWARE"
+  },
+  {
+    "block_id": "TB-004",
+    "region": "R02",
+    "x": 2048.377,
+    "y": 2867.858,
+    "line_count": 4,
+    "text": "1 SHORT CIRCUIT\n2 ASYNC TIPS\n3 DEBUGGING TIPS\n4 COMMON PATTERNS"
+  },
+  {
+    "block_id": "TB-005",
+    "region": "R01",
+    "x": 3382.609,
+    "y": 1410.456,
+    "line_count": 1,
+    "text": "all SERVICED"
+  },
+  {
+    "block_id": "TB-006",
+    "region": "R01",
+    "x": 2372.596,
+    "y": 10.0,
+    "line_count": 1,
+    "text": "EXAMPLE"
+  },
+  {
+    "block_id": "TB-007",
+    "region": "R01",
+    "x": 3369.929,
+    "y": 1172.889,
+    "line_count": 1,
+    "text": "FEATURES-->"
+  },
+  {
+    "block_id": "TB-008",
+    "region": "R01",
+    "x": 4152.084,
+    "y": 1559.539,
+    "line_count": 1,
+    "text": "CAN GET EXCEPTION"
+  },
+  {
+    "block_id": "TB-009",
+    "region": "R01",
+    "x": 165.353,
+    "y": 2150.33,
+    "line_count": 1,
+    "text": "what is brunch here"
+  },
+  {
+    "block_id": "TB-010",
+    "region": "R01",
+    "x": 3228.595,
+    "y": 698.651,
+    "line_count": 1,
+    "text": "to write json in non mvc land :"
+  },
+  {
+    "block_id": "TB-011",
+    "region": "R01",
+    "x": 1172.931,
+    "y": 686.216,
+    "line_count": 1,
+    "text": "METHODS"
+  }
+]

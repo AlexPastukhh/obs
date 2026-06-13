@@ -1,0 +1,22 @@
+{
+  "generated": "2026-06-13 08:38:25 UTC",
+  "conspect": "raw-connections-dbconnection-sqlconnection-commands",
+  "region": "RAWCONN-R01",
+  "source_count": 12,
+  "included_sources": [
+    "S-001",
+    "S-002",
+    "S-003",
+    "S-004",
+    "S-005",
+    "S-006",
+    "S-007",
+    "S-008",
+    "S-009",
+    "S-010",
+    "S-011",
+    "S-012"
+  ],
+  "meaning": "ADO.NET connection basics: DbConnection/SqlConnection, connection string, Open/OpenAsync, Close/Dispose, using blocks, and connection lifetime.",
+  "boundary_decision": "included after Stage0 candidate split and Stage1 source-level semantic source review"
+}

@@ -1,0 +1,196 @@
+{
+  "generated": "2026-06-13 08:38:25 UTC",
+  "conspect": "creating-base32-secret",
+  "region": "B32SEC-R01",
+  "source_count": 17,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "e372e25659",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "using System.Security.Cryptography;",
+      "transcript": "Source theme:\nusing System.Security.Cryptography;\n\nVisible source anchors:\n- using System.Security.Cryptography;\n- using OtpNet;\n- public static class TotpSecretBytes\n- {\n- public static byte[] CreateSecretBytes(int byteLength = 20)\n- => RandomNumberGenerator.GetBytes(byteLength);\n- explaining bits, bytes in base32\n- public static string ToBase32(byte[] secretBytes)\n- => Base32Encoding.ToString(secretBytes);\n- }\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-002",
+      "image_use_id": "IU-002",
+      "fileId_short": "af235edcff",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "using System.Security.Cryptography;",
+      "transcript": "Source theme:\nusing System.Security.Cryptography;\n\nVisible source anchors:\n- using System.Security.Cryptography;\n- using OtpNet;\n- public static class TotpSecret\n- {\n- // 20 bytes = 160 bits (common standard; plenty for TOTP)\n- public static string CreateBase32Secret(int byteLength = 20)\n- byte[] secretBytes = RandomNumberGenerator.GetBytes(byteLength);\n- return Base32Encoding.ToString(secretBytes); // Base32 text for QR/manual entry\n- }\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "6a38860e29",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "using System.Security.Cryptography;",
+      "transcript": "Source theme:\nusing System.Security.Cryptography;\n\nVisible source anchors:\n- using System.Security.Cryptography;\n- using OtpNet;\n- public static class TotpSecretBytes\n- {\n- public static byte[] CreateSecretBytes(int byteLength = 20)\n- => RandomNumberGenerator.GetBytes(byteLength);\n- public static string ToBase32(byte[] secretBytes)\n- => Base32Encoding.ToString(secretBytes);\n- }\n- explaining bits, bytes in base32\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "63646802a6",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "using System.Security.Cryptography;",
+      "transcript": "Source theme:\nusing System.Security.Cryptography;\n\nVisible source anchors:\n- using System.Security.Cryptography;\n- using OtpNet;\n- public static class TotpSecretBytes\n- {\n- public static byte[] CreateSecretBytes(int byteLength = 20)\n- => RandomNumberGenerator.GetBytes(byteLength);\n- public static string ToBase32(byte[] secretBytes)\n- => Base32Encoding.ToString(secretBytes);\n- }\n- public static class TotpSecret\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-005",
+      "image_use_id": "IU-005",
+      "fileId_short": "3e32384479",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "creating base32 secret",
+      "transcript": "Source theme:\ncreating base32 secret\n\nVisible source anchors:\n- creating base32 secret\n- explaining bits, bytes in base32\n- using OtpNet;\n- public static class TotpSecretBytes\n- using System.Security.Cryptography;\n- {\n- public static byte[] CreateSecretBytes(int byteLength = 20)\n- => RandomNumberGenerator.GetBytes(byteLength);\n- public static string ToBase32(byte[] secretBytes)\n- => Base32Encoding.ToString(secretBytes);\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "d143beb145",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return Base32Encoding.ToString(secretBytes); // Base32 text for QR/manual entry\n- byte[] secretBytes = RandomNumberGenerator.GetBytes(byteLength);\n- {\n- public static string CreateBase32Secret(int byteLength = 20)\n- // 20 bytes = 160 bits (common standard; plenty for TOTP)\n- public static class TotpSecret\n- using OtpNet;\n- using System.Security.Cryptography;\n- entropy, bitconverter unsigned int\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-007",
+      "image_use_id": "IU-007",
+      "fileId_short": "2deb847856",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- => Base32Encoding.ToString(secretBytes);\n- using System.Security.Cryptography;\n- public static string ToBase32(byte[] secretBytes)\n- using System.Text;\n- => RandomNumberGenerator.GetBytes(byteLength);\n- public static class TotpSecretCourseStyle\n- public static byte[] CreateSecretBytes(int byteLength = 20)\n- {\n- // Base32 alphabet (classic): A-Z and 2-7\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-008",
+      "image_use_id": "IU-008",
+      "fileId_short": "2a85d9c8eb",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "creating base32 secret",
+      "transcript": "Source theme:\ncreating base32 secret\n\nVisible source anchors:\n- creating base32 secret\n- }\n- => Base32Encoding.ToString(secretBytes);\n- public static string ToBase32(byte[] secretBytes)\n- explaining bits, bytes in base32\n- => RandomNumberGenerator.GetBytes(byteLength);\n- public static byte[] CreateSecretBytes(int byteLength = 20)\n- {\n- public static class TotpSecretBytes\n- using OtpNet;\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-009",
+      "image_use_id": "IU-009",
+      "fileId_short": "bb7d428777",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "using System.Security.Cryptography;",
+      "transcript": "Source theme:\nusing System.Security.Cryptography;\n\nVisible source anchors:\n- using System.Security.Cryptography;\n- using System.Text;\n- public static class TotpSecretCourseStyle\n- {\n- // Base32 alphabet (classic): A-Z and 2-7\n- private static readonly char[] Alphabet = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567\".ToCharArray();\n- public static string CreateSecret(int length = 16)\n- // Generate plenty of random bytes so every character pick is random\n- byte[] random = RandomNumberGenerator.GetBytes(length * 4);\n- var sb = new StringBuilder(length);\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-010",
+      "image_use_id": "IU-010",
+      "fileId_short": "e72b9df5c9",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "creating base32 secret",
+      "transcript": "Source theme:\ncreating base32 secret\n\nVisible source anchors:\n- creating base32 secret\n- why 5 bits for one base 32\n- }\n- => Base32Encoding.ToString(secretBytes);\n- public static string ToBase32(byte[] secretBytes)\n- explaining bits, bytes in base32\n- => RandomNumberGenerator.GetBytes(byteLength);\n- public static byte[] CreateSecretBytes(int byteLength = 20)\n- {\n- public static class TotpSecretBytes\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-011",
+      "image_use_id": "IU-011",
+      "fileId_short": "c0f0d81876",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "entropy, bitconverter unsigned int",
+      "transcript": "Source theme:\nentropy, bitconverter unsigned int\n\nVisible source anchors:\n- entropy, bitconverter unsigned int\n- }\n- using System.Security.Cryptography;\n- using System.Text;\n- return Base32Encoding.ToString(secretBytes); // Base32 text for QR/manual entry\n- byte[] secretBytes = RandomNumberGenerator.GetBytes(byteLength);\n- public static class TotpSecretCourseStyle\n- {\n- public static string CreateBase32Secret(int byteLength = 20)\n- // Base32 alphabet (classic): A-Z and 2-7\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-012",
+      "image_use_id": "IU-012",
+      "fileId_short": "fca73d7345",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "entropy, bitconverter unsigned int",
+      "transcript": "Source theme:\nentropy, bitconverter unsigned int\n\nVisible source anchors:\n- entropy, bitconverter unsigned int\n- uint val = BitConverter.ToUInt32(random, i * 4);\n- // Read 4 bytes as an unsigned int (0..2^32-1)\n- // Convert to an index inside Alphabet\n- {\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n- for (int i = 0; i < length; i++)\n- }\n- var sb = new StringBuilder(length);\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-013",
+      "image_use_id": "IU-013",
+      "fileId_short": "d5a1cc3f1a",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n- // Convert to an index inside Alphabet\n- uint val = BitConverter.ToUInt32(random, i * 4);\n- // Read 4 bytes as an unsigned int (0..2^32-1)\n- {\n- for (int i = 0; i < length; i++)\n- var sb = new StringBuilder(length);\n- byte[] random = RandomNumberGenerator.GetBytes(length * 4);\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "0930efc45e",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "entropy, bitconverter unsigned int",
+      "transcript": "Source theme:\nentropy, bitconverter unsigned int\n\nVisible source anchors:\n- entropy, bitconverter unsigned int\n- }\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n- // Convert to an index inside Alphabet\n- uint val = BitConverter.ToUInt32(random, i * 4);\n- // Read 4 bytes as an unsigned int (0..2^32-1)\n- {\n- for (int i = 0; i < length; i++)\n- var sb = new StringBuilder(length);\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "28ea1c0d03",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "why 5 bits for one base 32",
+      "transcript": "Source theme:\nwhy 5 bits for one base 32\n\nVisible source anchors:\n- why 5 bits for one base 32\n- }\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n- // Convert to an index inside Alphabet\n- uint val = BitConverter.ToUInt32(random, i * 4);\n- // Read 4 bytes as an unsigned int (0..2^32-1)\n- {\n- for (int i = 0; i < length; i++)\n- using System.Net;\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-016",
+      "image_use_id": "IU-016",
+      "fileId_short": "8abb3ea9b6",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n- // Convert to an index inside Alphabet\n- uint val = BitConverter.ToUInt32(random, i * 4);\n- // Read 4 bytes as an unsigned int (0..2^32-1)\n- {\n- for (int i = 0; i < length; i++)\n- var sb = new StringBuilder(length);\n- using System.Net;\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-018",
+      "image_use_id": "IU-018",
+      "fileId_short": "445c351263",
+      "stage0_group": "B32SEC-R01-random-secret-bytes-base32-encoding",
+      "stage1_region": "B32SEC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "entropy, bitconverter unsigned int",
+      "transcript": "Source theme:\nentropy, bitconverter unsigned int\n\nVisible source anchors:\n- entropy, bitconverter unsigned int\n- }\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n- // Convert to an index inside Alphabet\n- using System.Net;\n- uint val = BitConverter.ToUInt32(random, i * 4);\n- // Read 4 bytes as an unsigned int (0..2^32-1)\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- {\n\nSemantic transcript:\nThis source belongs to `B32SEC-R01` / random bytes / Base32 secret encoding. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nCreating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nGenerate secret material from a cryptographic RNG, not Random or predictable input.\nFor TOTP a common secret length is 20 bytes / 160 bits, then encoded as Base32.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    }
+  ]
+}

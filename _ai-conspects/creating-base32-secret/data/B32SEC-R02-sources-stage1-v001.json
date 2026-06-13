@@ -1,0 +1,196 @@
+{
+  "generated": "2026-06-13 08:38:25 UTC",
+  "conspect": "creating-base32-secret",
+  "region": "B32SEC-R02",
+  "source_count": 17,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-017",
+      "image_use_id": "IU-017",
+      "fileId_short": "81e89319e5",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "why 5 bits for one base 32",
+      "transcript": "Source theme:\nwhy 5 bits for one base 32\n\nVisible source anchors:\n- why 5 bits for one base 32\n- using System.Net;\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- {\n- var i = WebUtility.UrlEncode(issuer);\n- var a = WebUtility.UrlEncode(account);\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- }\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-019",
+      "image_use_id": "IU-019",
+      "fileId_short": "1f864166f4",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "using System.Net;",
+      "transcript": "Source theme:\nusing System.Net;\n\nVisible source anchors:\n- using System.Net;\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- {\n- var i = WebUtility.UrlEncode(issuer);\n- var a = WebUtility.UrlEncode(account);\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- }\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-020",
+      "image_use_id": "IU-020",
+      "fileId_short": "67413bcad1",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "using System.Net;",
+      "transcript": "Source theme:\nusing System.Net;\n\nVisible source anchors:\n- using System.Net;\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- {\n- var i = WebUtility.UrlEncode(issuer);\n- var a = WebUtility.UrlEncode(account);\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- }\n- entropy, bitconverter unsigned int\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-021",
+      "image_use_id": "IU-021",
+      "fileId_short": "d44dac484d",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)",
+      "transcript": "Source theme:\npublic static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n\nVisible source anchors:\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- {\n- var i = WebUtility.UrlEncode(issuer);\n- using System.Net;\n- var a = WebUtility.UrlEncode(account);\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- }\n- why 5 bits for one base 32\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-022",
+      "image_use_id": "IU-022",
+      "fileId_short": "ef3ce43858",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "var a = WebUtility.UrlEncode(account);",
+      "transcript": "Source theme:\nvar a = WebUtility.UrlEncode(account);\n\nVisible source anchors:\n- var a = WebUtility.UrlEncode(account);\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var i = WebUtility.UrlEncode(issuer);\n- }\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- entropy, bitconverter unsigned int\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-023",
+      "image_use_id": "IU-023",
+      "fileId_short": "ae61d75d45",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-024",
+      "image_use_id": "IU-024",
+      "fileId_short": "41095b1f9b",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- why 5 bits for one base 32\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-025",
+      "image_use_id": "IU-025",
+      "fileId_short": "a23deb8e93",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- entropy, bitconverter unsigned int\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-026",
+      "image_use_id": "IU-026",
+      "fileId_short": "6a7d386cbf",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- return sb.ToString();\n- sb.Append(Alphabet[val % (uint)Alphabet.Length]);\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-027",
+      "image_use_id": "IU-027",
+      "fileId_short": "b8ad2b3658",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- why 5 bits for one base 32\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-028",
+      "image_use_id": "IU-028",
+      "fileId_short": "c67ff2a646",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- why 5 bits for one base 32\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-029",
+      "image_use_id": "IU-029",
+      "fileId_short": "a9d8d5295d",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- entropy, bitconverter unsigned int\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-030",
+      "image_use_id": "IU-030",
+      "fileId_short": "478de6c892",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- why 5 bits for one base 32\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-031",
+      "image_use_id": "IU-031",
+      "fileId_short": "208d2e042d",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- entropy, bitconverter unsigned int\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-032",
+      "image_use_id": "IU-032",
+      "fileId_short": "ace90252b6",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- why 5 bits for one base 32\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-033",
+      "image_use_id": "IU-033",
+      "fileId_short": "0658797da8",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- entropy, bitconverter unsigned int\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-034",
+      "image_use_id": "IU-034",
+      "fileId_short": "5919469b14",
+      "stage0_group": "B32SEC-R02-totp-authenticator-qr-provisioning",
+      "stage1_region": "B32SEC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "}",
+      "transcript": "Source theme:\n}\n\nVisible source anchors:\n- }\n- return $\"otpauth://totp/{i}:{a}?secret={base32Secret}&issuer={i}\";\n- var a = WebUtility.UrlEncode(account);\n- var i = WebUtility.UrlEncode(issuer);\n- {\n- public static string BuildOtpAuthUri(string issuer, string account, string base32Secret)\n- using System.Net;\n- why 5 bits for one base 32\n- return sb.ToString();\n\nSemantic transcript:\nThis source belongs to `B32SEC-R02` / TOTP authenticator / QR provisioning. It is part of the `Creating Base32 Secret` conspect and supports this region meaning:\n\nTOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes.\n\nOperational reading:\n- Treat this source as a concrete example or supporting note for the region.\n- Use the preserved Stage0 PNG for exact code punctuation, line breaks, and symbol-level details.\n- The source-level meaning is closed for this pass: it contributes to the region transcript and no placeholder/OCR-error source is marked processed.\n\nCleaned note:\nAuthenticator apps consume an otpauth://totp URI containing issuer, account label, and secret.\nIssuer and account values must be URL-encoded before building the URI.",
+      "notes": "Stage1 source-level semantic transcript; exact punctuation remains in preserved Stage0 PNG."
+    }
+  ]
+}

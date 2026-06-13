@@ -1,8 +1,8 @@
-# Apply archive: Raw Connections DbConnection SqlConnection Commands Stage0 boundary review
+# Apply archive: Raw Connections DbConnection SqlConnection Commands Stage1 transcript
 
-This file is part of a three-conspect Stage0 batch archive.
+This file is part of a three-conspect Stage1 transcript batch archive.
 
-Archive type: boundary review.
+Archive type: source-level semantic transcript.
 
 Target folder:
 
@@ -13,7 +13,7 @@ _ai-conspects/raw-connections-dbconnection-sqlconnection-commands
 Status:
 
 ```text
-Boundary candidates: 36
-Processed by this archive: 0
-Next: Stage1 transcript
+Stage1 processed: 36
+Remaining candidates: 0
+Next: closure audit
 ```

@@ -1,40 +1,37 @@
-# MANIFEST - Creating Base32 Secret Stage0 Boundary Review
+# MANIFEST - Creating Base32 Secret Stage1 Transcript
 
-Archive type: **boundary review**  
+Archive type: **source-level semantic transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 08:19:37 UTC
+Generated: 2026-06-13 08:38:25 UTC
 
 ## Direction check
 
 Goal:
-Add Creating Base32 Secret as one item in a 3-small-conspects Stage0 batch.
+Process Creating Base32 Secret after Stage0.
 
 Done:
-Repository search did not find an existing matching conspect.
+Stage0 boundary review was applied.
 
 This step:
-Add Stage0 boundary review for all source images.
+Add Stage1 transcript for all 34 source images.
 
 Why:
-New conspect must start with source inventory, stable source IDs, rough groups, and contact sheets.
+Small conspect: one transcript pass can cover every candidate group before closure audit.
 
 Next:
-1. review staged file list/status;
+1. review staged diff/status;
 2. commit;
-3. process Stage1 transcript.
+3. run closure audit batch.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/creating-base32-secret/00-repo-conspects-check.md
-_ai-conspects/creating-base32-secret/01-stage0-boundary-review.md
-_ai-conspects/creating-base32-secret/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/creating-base32-secret/data/B32SEC-stage0-boundary-review-v001.csv
-_ai-conspects/creating-base32-secret/data/B32SEC-stage0-boundary-review-v001.json
+_ai-conspects/creating-base32-secret/02-stage1-transcript.md
+_ai-conspects/creating-base32-secret/regions/*.md
+_ai-conspects/creating-base32-secret/data/*stage1-v001.*
 _ai-conspects/creating-base32-secret/data/creating-base32-secret-image-review-ledger-v1.csv
 _ai-conspects/creating-base32-secret/data/creating-base32-secret-image-review-ledger-v1.json
-_ai-conspects/creating-base32-secret/audit-assets/B32SEC-stage0-*-contact-sheet.png
-_ai-conspects/creating-base32-secret/audit-assets/stage0-source-images/*.png
+_ai-conspects/creating-base32-secret/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/creating-base32-secret/MANIFEST.md
 _ai-conspects/creating-base32-secret/APPLY_ARCHIVE.md
 ```
@@ -42,7 +39,7 @@ _ai-conspects/creating-base32-secret/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Boundary candidates: 34
-Processed by this archive: 0
-Next: Stage1 transcript
+Stage1 processed: 34
+Remaining candidates: 0
+Next: closure audit
 ```

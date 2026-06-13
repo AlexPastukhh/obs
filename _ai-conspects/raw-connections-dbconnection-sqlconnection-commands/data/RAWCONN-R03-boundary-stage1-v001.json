@@ -1,0 +1,22 @@
+{
+  "generated": "2026-06-13 08:38:25 UTC",
+  "conspect": "raw-connections-dbconnection-sqlconnection-commands",
+  "region": "RAWCONN-R03",
+  "source_count": 12,
+  "included_sources": [
+    "S-025",
+    "S-026",
+    "S-027",
+    "S-028",
+    "S-029",
+    "S-030",
+    "S-031",
+    "S-032",
+    "S-033",
+    "S-034",
+    "S-035",
+    "S-036"
+  ],
+  "meaning": "Raw connection edge cases: transactions, data readers, provider abstraction, exceptions, async/cancellation, and when raw commands are appropriate vs EF/Core ORM.",
+  "boundary_decision": "included after Stage0 candidate split and Stage1 source-level semantic source review"
+}
