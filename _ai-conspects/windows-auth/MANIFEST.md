@@ -1,42 +1,44 @@
-# MANIFEST - Windows Auth Stage0 v001
+# MANIFEST - Windows Auth P01 Transcript v001
 
-Archive type: **stage-0 boundary review and split plan**  
+Archive type: **stage-1 verified combined transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 05:40:28 UTC
+Generated: 2026-06-13 05:43:48 UTC
 
-## Contents
+## Done
+
+- R01 transcript created.
+- R02 transcript created.
+- Included R01 image uses: 16.
+- Included R02 image uses: 11.
+- Checked-not-P01: S-026, S-025, S-024, S-023, S-022, S-021, S-040, S-030, S-031, S-032, S-029, S-033, S-028, S-027, S-034, S-035, S-036, S-037, S-038, S-039.
+
+## Files included / updated
 
 ```text
-_ai-conspects/windows-auth/00-stage0-boundary-review-and-split-plan.md
+_ai-conspects/windows-auth/regions/R01-core-windows-auth-model-ad-kerberos-ntlm.md
+_ai-conspects/windows-auth/regions/R02-aspnet-core-iis-negotiate-basic-implementation.md
+_ai-conspects/windows-auth/01-stage1-p01-windows-auth-core-implementation-transcript.md
+_ai-conspects/windows-auth/data/R01-sources-stage1-v001.csv
+_ai-conspects/windows-auth/data/R01-sources-stage1-v001.json
+_ai-conspects/windows-auth/data/R02-sources-stage1-v001.csv
+_ai-conspects/windows-auth/data/R02-sources-stage1-v001.json
+_ai-conspects/windows-auth/data/P01-boundary-review-stage1-v001.csv
+_ai-conspects/windows-auth/data/P01-boundary-review-stage1-v001.json
+_ai-conspects/windows-auth/data/R01-area-understanding-stage1-v001.json
+_ai-conspects/windows-auth/data/R02-area-understanding-stage1-v001.json
+_ai-conspects/windows-auth/data/image-review-ledger-v001.csv
+_ai-conspects/windows-auth/data/image-review-ledger-v001.json
+_ai-conspects/windows-auth/audit-assets/contact-sheet-R01-final-included.png
+_ai-conspects/windows-auth/audit-assets/contact-sheet-R02-final-included.png
+_ai-conspects/windows-auth/audit-assets/contact-sheet-P01-checked-excluded.png
+_ai-conspects/windows-auth/audit-assets/R01-source-images/*.png
+_ai-conspects/windows-auth/audit-assets/R02-source-images/*.png
+_ai-conspects/windows-auth/audit-assets/P01-checked-excluded-images/*.png
 _ai-conspects/windows-auth/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/windows-auth/MANIFEST.md
 _ai-conspects/windows-auth/APPLY_ARCHIVE.md
-_ai-conspects/windows-auth/data/image-uses-stage0.csv
-_ai-conspects/windows-auth/data/image-uses-stage0.json
-_ai-conspects/windows-auth/data/svg-labels-stage0.csv
-_ai-conspects/windows-auth/data/svg-labels-stage0.json
-_ai-conspects/windows-auth/data/region-split-plan-stage0.csv
-_ai-conspects/windows-auth/data/region-split-plan-stage0.json
-_ai-conspects/windows-auth/source/full.svg
-_ai-conspects/windows-auth/source/images/*.png
-_ai-conspects/windows-auth/audit-assets/contact-sheet-all-candidates-stage0.png
-_ai-conspects/windows-auth/audit-assets/contact-sheet-P01-R01R02-core-model-aspnet-iis-implementation.png
-_ai-conspects/windows-auth/audit-assets/contact-sheet-P02-R03R04-dual-scheme-company-deploy-troubleshooting.png
-_ai-conspects/windows-auth/audit-assets/contact-sheet-R01-core-windows-auth-model.png
-_ai-conspects/windows-auth/audit-assets/contact-sheet-R02-aspnet-core-iis-negotiate-basic-implementation.png
-_ai-conspects/windows-auth/audit-assets/contact-sheet-R03-dual-scheme-windows-auth-and-cookies.png
-_ai-conspects/windows-auth/audit-assets/contact-sheet-R04-company-domain-deployment-spn-troubleshooting.png
-_ai-conspects/windows-auth/audit-assets/canvas-map-labels-and-image-boxes.png
-```
-
-## Counts
-
-```text
-unique embedded images: 45
-image uses: 47
-text labels: 2
 ```
 
 ## Next
 
-P01/R01R02 transcript after boundary review.
+P02/R03R04 dual scheme and deployment/troubleshooting after boundary review.

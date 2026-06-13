@@ -1,0 +1,30 @@
+{
+  "region": "R02",
+  "title": "ASP.NET Core / IIS / Negotiate basic implementation",
+  "included_image_uses": [
+    "S-014",
+    "S-013",
+    "S-012",
+    "S-011",
+    "S-047",
+    "S-041",
+    "S-046",
+    "S-042",
+    "S-045",
+    "S-043",
+    "S-044"
+  ],
+  "count": 11,
+  "meaning": [
+    "ASP.NET Core can use the Negotiate authentication handler for Windows Authentication.",
+    "In IIS/IIS Express hosting, Windows Authentication and Anonymous Authentication switches matter before the request reaches the app.",
+    "AddAuthentication/AddNegotiate wires the handler; UseAuthentication and UseAuthorization must be in the middleware pipeline.",
+    "Authorize attributes/policies decide which endpoints require an authenticated Windows principal.",
+    "The authenticated user is available through HttpContext.User / User.Identity.Name and may include domain/group claims depending on host/configuration."
+  ],
+  "boundary_notes": [
+    "R01 explains the underlying Windows/domain model.",
+    "R03 covers multi-scheme use with cookies/client auth.",
+    "R04 covers deployment and troubleshooting such as SPN, app pool identity, and login prompts."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "region": "R01",
+  "title": "Core Windows Auth model / AD / Kerberos / NTLM",
+  "included_image_uses": [
+    "S-001",
+    "S-002",
+    "S-003",
+    "S-018",
+    "S-019",
+    "S-020",
+    "S-017",
+    "S-016",
+    "S-015",
+    "S-010",
+    "S-009",
+    "S-008",
+    "S-007",
+    "S-006",
+    "S-005",
+    "S-004"
+  ],
+  "count": 16,
+  "meaning": [
+    "Windows Authentication uses the user's Windows/domain identity instead of app-managed username/password login.",
+    "The usual enterprise model is domain-joined clients and servers with Active Directory as the identity authority.",
+    "Kerberos is the preferred protocol in domain scenarios; NTLM is fallback/legacy and has different security/delegation behavior.",
+    "The browser/server negotiate credentials at the HTTP layer before the app receives an authenticated principal.",
+    "Windows Auth is strongest for intranet/corporate environments and usually inappropriate as a public internet login story."
+  ],
+  "boundary_notes": [
+    "Basic ASP.NET Core/IIS implementation is in R02.",
+    "Dual-scheme cookie/client auth is reserved for R03.",
+    "Domain/SPN/troubleshooting is reserved for R04."
+  ]
+}

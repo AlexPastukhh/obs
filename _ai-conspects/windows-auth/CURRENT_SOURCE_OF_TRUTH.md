@@ -1,6 +1,6 @@
 # Current Source of Truth - Windows Auth
 
-Generated: 2026-06-13 05:40:28 UTC
+Generated: 2026-06-13 05:43:48 UTC
 
 ## Policy
 
@@ -12,31 +12,37 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-P01/R01R02 core Windows Auth and ASP.NET Core/IIS implementation: next
-P02/R03R04 dual schemes, company deployment and troubleshooting: pending
+R01 core Windows Auth model / AD / Kerberos / NTLM: transcript v001 done
+R02 ASP.NET Core / IIS / Negotiate basic implementation: transcript v001 done
+P02/R03R04 dual schemes, company deployment and troubleshooting: next
 ```
 
-## Stage0 inventory
+## P01 boundary decisions
 
 ```text
-unique embedded images: 45
-image uses: 47
-text labels: 2
+R01 included:
+16 image uses
+
+R02 included:
+11 image uses
+
+Checked-not-P01 / reserved for P02:
+S-026, S-025, S-024, S-023, S-022, S-021, S-040, S-030, S-031, S-032, S-029, S-033, S-028, S-027, S-034, S-035, S-036, S-037, S-038, S-039
 ```
 
-## Proposed split
+## Current split policy
 
 ```text
-R01 core Windows Auth model / AD / Kerberos / NTLM: 16 image uses
-R02 ASP.NET Core / IIS / Negotiate implementation: 11 image uses
-R03 dual scheme Windows Auth + cookies/client auth: 7 image uses
-R04 company/domain deployment / SPN / troubleshooting: 13 image uses
+Default: 50-80 images.
+Can be bigger: 80-120 if the road is coherent.
+Exception: 120+ only on explicit request or one very cohesive road.
 ```
 
 ## Next pass
 
 ```text
-P01 / R01R02:
-Windows Authentication mental model, AD/Kerberos/NTLM,
-ASP.NET Core Negotiate/IIS setup and basic implementation.
+P02 / R03R04:
+dual scheme Windows Auth + cookies/client auth,
+company/domain deployment, SPN, roles/claims/whoami,
+401/login-prompt troubleshooting.
 ```
