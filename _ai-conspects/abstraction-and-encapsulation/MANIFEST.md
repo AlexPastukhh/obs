@@ -1,47 +1,43 @@
-# MANIFEST - Stage2 NEXT01 full transcript
+# MANIFEST - Stage3 final closure audit
 
-Archive type: **verified transcript / full conspect batch**  
+Archive type: **final closure / audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 05:09:18 UTC
+Generated: 2026-06-13 05:25:08 UTC
 
 ## Done
 
-- NEXT01 full transcript created.
-- Processed source count: 19.
-- Processed regions: AE01, AE02, AE03, AE04.
-- Text labels: 0.
-- Duplicate embedded-image use: ad91a03ef9 = S-009 + S-019.
-- Boundary corrections: none.
-- This archive intentionally does not duplicate Stage0 source PNGs.
+- Final closure audit created.
+- Status: `complete`.
+- Expected image uses: 19.
+- Processed image uses: 19.
+- Missing: 0.
+- Duplicates: 0.
+- Unreviewed: 0.
+- Candidate-only: 0.
+- Region mismatches: 0.
+- Subregion mismatches: 0.
+- Boundary corrections ok: true.
+- Duplicate embedded-image use mismatch: false.
+- Duplicate embedded-image use tracked: ad91a03ef9 = S-009 + S-019.
 
 ## Now
 
 - Apply and inspect cached diff.
-- Commit if transcript and boundary decisions are acceptable.
+- Commit if audit summary is acceptable.
 
 ## Next
 
-- Final closure/audit.
+- No next step inside this conspect.
+- Move to another conspect.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/abstraction-and-encapsulation/02-stage2-next01-full-transcript.md
+_ai-conspects/abstraction-and-encapsulation/03-stage3-final-closure-audit.md
 _ai-conspects/abstraction-and-encapsulation/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/abstraction-and-encapsulation/regions/AE01-abstraction-definition-purpose-hierarchy.md
-_ai-conspects/abstraction-and-encapsulation/regions/AE02-normalize-customer-name-abstraction.md
-_ai-conspects/abstraction-and-encapsulation/regions/AE03-encapsulation-data-integrity-invariants.md
-_ai-conspects/abstraction-and-encapsulation/regions/AE04-abstraction-encapsulation-difference-overlap.md
 _ai-conspects/abstraction-and-encapsulation/regions/README.md
-_ai-conspects/abstraction-and-encapsulation/data/NEXT01-sources-stage2-v001.csv
-_ai-conspects/abstraction-and-encapsulation/data/NEXT01-sources-stage2-v001.json
-_ai-conspects/abstraction-and-encapsulation/data/NEXT01-text-context-stage2-v001.csv
-_ai-conspects/abstraction-and-encapsulation/data/NEXT01-text-context-stage2-v001.json
-_ai-conspects/abstraction-and-encapsulation/data/NEXT01-boundary-review-stage2-v001.csv
-_ai-conspects/abstraction-and-encapsulation/data/NEXT01-boundary-review-stage2-v001.json
-_ai-conspects/abstraction-and-encapsulation/data/NEXT01-area-understanding-stage2-v001.json
-_ai-conspects/abstraction-and-encapsulation/data/image-review-ledger-v001.csv
-_ai-conspects/abstraction-and-encapsulation/data/image-review-ledger-v001.json
+_ai-conspects/abstraction-and-encapsulation/data/final-coverage-audit-stage3-v001.csv
+_ai-conspects/abstraction-and-encapsulation/data/final-coverage-audit-stage3-v001.json
 _ai-conspects/abstraction-and-encapsulation/APPLY_ARCHIVE.md
 _ai-conspects/abstraction-and-encapsulation/MANIFEST.md
 ```
