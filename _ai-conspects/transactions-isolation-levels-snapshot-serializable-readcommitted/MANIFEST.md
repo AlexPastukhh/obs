@@ -1,21 +1,23 @@
 # Manifest - transactions-isolation-levels-snapshot-serializable-readcommitted
 
-Generated: 2026-06-13 09:35:00 UTC
+Generated: 2026-06-13 09:50:00 UTC
 
-## Stage0 files
+## Stage1 files
 
-- `00-source-check-and-boundary-review.md`
+- `01-stage1-final-coverage-transcript.md`
+- `regions/r01r02r03r04-final-coverage-transcript-v001.md`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `MANIFEST.md`
 - `APPLY_ARCHIVE.md`
-- `source/transaction, isolation.svg`
-- `source/images/*`
-- `data/source-summary-stage0-v001.json`
-- `data/embedded-images-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-labels-stage0-v001.*`
-- `data/region-split-plan-stage0-v001.*`
-- `data/duplicate-image-uses-stage0-v001.*`
+- `data/final-coverage-audit-stage1-v001.*`
+- `data/final-sources-stage1-v001.*`
 - `data/image-review-ledger-v001.*`
-- `audit-assets/contact-sheet-all-stage0.png`
-- `audit-assets/contact-sheet-R*.png`
+
+## Coverage
+
+```text
+image uses closed: 18
+text labels closed: 71
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
+```

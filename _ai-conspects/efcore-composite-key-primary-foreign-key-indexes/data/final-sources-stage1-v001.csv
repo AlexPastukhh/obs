@@ -1,0 +1,44 @@
+source_id,type,region,status,file,text
+I001,image_use,R01,closed,source/images/image-c5d92dd162ee4dc0cec0d1afa408ee65f552e78d.png,
+I002,image_use,R01,closed,source/images/image-9356e971a883e957ada210c29537f6ba50a02d2b.png,
+I003,image_use,R01,closed,source/images/image-e30dffc38f07d3cf33afaee66c20fda0193e072d.png,
+I004,image_use,R01,closed,source/images/image-b9b040c7efa2f302ff224b64972f8497c940e966.png,
+I005,image_use,R01,closed,source/images/image-20af60e27d86a8fcb8b997432591918c99ea4b4d.png,
+I006,image_use,R01,closed,source/images/image-0dec519f38a2a9fe8b3a422a54213e07f85a8dfa.png,
+I007,image_use,R01,closed,source/images/image-6fcb4694e5a0332b0b51b2b78fb97a6bdc5ea4e2.png,
+I008,image_use,R01,closed,source/images/image-3bafa61c13945576b8d07dfad6f23624eb01a538.png,
+I009,image_use,R01,closed,source/images/image-2bd21b2efdebb711ecead22580c73aa83ef5dfd6.png,
+I010,image_use,R01,closed,source/images/image-c2ebc322225dcefefe8462ca7c6419da0dd46754.png,
+I011,image_use,R01,closed,source/images/image-eee64de0b2233c4cd1174ee7ec310affbba4813b.png,
+I012,image_use,R01,closed,source/images/image-556f87153f857dd3e857db1330b46bf2be43dfaa.png,
+I013,image_use,R01,closed,source/images/image-452798c3b60780837949fe888dc2c8f00df584bd.png,
+I014,image_use,R01,closed,source/images/image-03372d6675d4b9ffed5ec84b8d85c45e03fd11f2.png,
+I015,image_use,R02,closed,source/images/image-1d04456ec3dc1250f41de46c47e09230f45f73cf.png,
+I016,image_use,R02,closed,source/images/image-9a3eddce9a534fad99cc97f047468bd17bd8e228.png,
+I017,image_use,R02,closed,source/images/image-e45df442834ad7139509556f9d69c08de5f65f43.png,
+I018,image_use,R02,closed,source/images/image-ce51c8915b14d77e197959ceff8a798e8d2368f8.png,
+I019,image_use,R02,closed,source/images/image-5fa53fc2686414607fa7198105db0e71cb15aa04.png,
+I020,image_use,R02,closed,source/images/image-83f5966cd8029121601c61a32092d0af76d28360.png,
+I021,image_use,R03,closed,source/images/image-232a48cdc40ccc9e7bb7a32ddd31618f09a7d603.png,
+I022,image_use,R03,closed,source/images/image-5a0758d992d9adccdd483d015f4fa0b51969508a.png,
+I023,image_use,R03,closed,source/images/image-e632b0e177fdee08203bba9634e132e6affdd939.png,
+I024,image_use,R03,closed,source/images/image-b2c51e50f14613619f5f431116925ad3a33bc5a5.png,
+I025,image_use,R03,closed,source/images/image-f2e1b6ed2c5e7c9c12817d5c15d403bde4e4674f.png,
+T001,text_label,R01,closed,,composite key
+T002,text_label,R01,closed,,entity example
+T003,text_label,R01,closed,,ef core example
+T004,text_label,R01,closed,,why a composite key
+T005,text_label,R02,closed,,------what it leads to------
+T006,text_label,R02,closed,,to find entity need to pass all keys
+T007,text_label,R02,closed,,foreign keys
+T008,text_label,R02,closed,,need to actually add hasforignkey
+T009,text_label,R02,closed,,just about the
+T010,text_label,R02,closed,,fact that we need
+T011,text_label,R02,closed,,to point at
+T012,text_label,R02,closed,,2 elements
+T013,text_label,R02,closed,,everywhere
+T014,text_label,R03,closed,,null if any part is null
+T015,text_label,R03,closed,,!!!
+T016,text_label,R03,closed,,uniqueness applies to comb
+T017,text_label,R03,closed,,indexes over composite keys
+T018,text_label,R03,closed,,???

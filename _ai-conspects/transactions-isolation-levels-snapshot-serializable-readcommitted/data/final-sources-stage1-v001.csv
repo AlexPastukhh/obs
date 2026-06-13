@@ -1,0 +1,90 @@
+source_id,type,region,status,file,text
+I001,image_use,R01,closed,source/images/image-3710ca8272c1f3d9c6a7d4c590e992559504cb75.png,
+I002,image_use,R01,closed,source/images/image-4e35b1cbc9934429c0cd8079ae69a2a49dd4ca29.png,
+I003,image_use,R01,closed,source/images/image-b7164244ce7dec37e2e2e5c83a86e10438119523.png,
+I004,image_use,R01,closed,source/images/image-a9bd2293fc248ae07c1173e461985575a8632271.png,
+I005,image_use,R03,closed,source/images/image-056e4fefe5c2572c2b7b66d3c882f35dec288c38.png,
+I006,image_use,R03,closed,source/images/image-f4607cf32cc1dffc6dc350cda8e2c74b89727a62.png,
+I007,image_use,R03,closed,source/images/image-1e94621611e97994d9c16c55b9b38115742bc1fe.png,
+I008,image_use,R03,closed,source/images/image-d197e219eca82c17b39333fe4a5456c265b517d6.png,
+I009,image_use,R03,closed,source/images/image-4cc33634dc088092fe7e587bdcb80392042864db.png,
+I010,image_use,R03,closed,source/images/image-fd4a0dc1e585d85f4a749d9e2c47caccb5bef358.png,
+I011,image_use,R03,closed,source/images/image-af02526ffb2b64145dcbd783b7c5053d0929c829.png,
+I012,image_use,R03,closed,source/images/image-9472679ba0e5865384f1f858a82bcc796ab1c37d.png,
+I013,image_use,R03,closed,source/images/image-d09912616c18e9474589656ad43a25f79af63bdf.png,
+I014,image_use,R03,closed,source/images/image-90e41a6b1d84787f1128b6d22c998eeeb2d0eb47.png,
+I015,image_use,R03,closed,source/images/image-f9eb8dfba85bfae9dcdefc4bb93b37d0bf0589c7.png,
+I016,image_use,R03,closed,source/images/image-3d1f30420be14877c04426e9696d08d1dadb952d.png,
+I017,image_use,R03,closed,source/images/image-9b076d48d0de7a69074fa70b625260c2063a6844.png,
+I018,image_use,R03,closed,source/images/image-cf67614c6127baf44a7add42b8dc0f11e518af28.png,
+T001,text_label,R01,closed,,you can get all applied or all rolled back(atomicity)
+T002,text_label,R01,closed,,with any isolation level
+T003,text_label,R01,closed,,when reads are part of
+T004,text_label,R01,closed,,transaction
+T005,text_label,R01,closed,,when the query runs (linq/sql api to get smth)
+T006,text_label,R01,closed,,readcommited
+T007,text_label,R02,closed,,isolaton levels
+T008,text_label,R02,closed,,how can help to avoid inconsistency
+T009,text_label,R02,closed,,with multiple queries
+T010,text_label,R02,closed,,with snapshot/serializable
+T011,text_label,R01,closed,,so readcommited is ok when
+T012,text_label,R01,closed,,we cant have some state changes from
+T013,text_label,R01,closed,,other transaction
+T014,text_label,R01,closed,,like when we have some
+T015,text_label,R01,closed,,e tags that will prevent
+T016,text_label,R01,closed,,update with incons stae
+T017,text_label,R01,closed,,like when we change e tag on some
+T018,text_label,R01,closed,,children changes
+T019,text_label,R02,closed,,"other isolaton levels, default"
+T020,text_label,R02,closed,,"snapshot,"
+T021,text_label,R02,closed,,snapshot exception with code
+T022,text_label,R02,closed,,when you update/delete/insert
+T023,text_label,R02,closed,,based on old data
+T024,text_label,R02,closed,,why serializable
+T025,text_label,R01,closed,,reading your own
+T026,text_label,R01,closed,,uncommited changes
+T027,text_label,R01,closed,,dbcontext about transactions strategies
+T028,text_label,R02,closed,,readuncommited
+T029,text_label,R01,closed,,so i have some scenarios when i may need some
+T030,text_label,R01,closed,,transaction or when i may think that i need them
+T031,text_label,R01,closed,,"1 when i query something from db, look at it and chose to change it"
+T032,text_label,R01,closed,,but at the same time i may have another request that
+T033,text_label,R01,closed,,changes the same thing
+T034,text_label,R01,closed,,"dont need manual transaction, can configure rowversion or"
+T035,text_label,R01,closed,,isconcurencytoken and ef will throw exceptions
+T036,text_label,R01,closed,,2 when i have multiple queries to get data
+T037,text_label,R01,closed,,may need transaction with isolationlevel snapshot
+T038,text_label,R01,closed,,3 when i have some possible nesting of methods that mutate
+T039,text_label,R01,closed,,queried entity and each may call savechanges
+T040,text_label,R01,closed,,one savechanges succeds another fails and we get inconsistency
+T041,text_label,R01,closed,,need to wrap everything in one transaction with any isolatoin level but usually with default
+T042,text_label,R01,closed,,4 when i have some database.executesql  or other like dbset.executeupdate (that is
+T043,text_label,R01,closed,,linq based but everything else like executesql) - they all dont care about savechanges
+T044,text_label,R01,closed,,so if i want them to be in a traqnsaction i need to create transaction
+T045,text_label,R02,closed,,readcommited
+T046,text_label,R02,closed,,repeatableread vs serialized
+T047,text_label,R02,closed,,repeatableread vs serialized
+T048,text_label,R02,closed,,repeatableread
+T049,text_label,R03,closed,,isolation level
+T050,text_label,R03,closed,,in manual retries from same tranaction
+T051,text_label,R03,closed,,using savepoints cases
+T052,text_label,R03,closed,,when we use execute (not in transaction)
+T053,text_label,R03,closed,,method
+T054,text_label,R03,closed,,and there is some ambigous outcome of
+T055,text_label,R03,closed,,the transaction
+T056,text_label,R03,closed,,by default - we will retry
+T057,text_label,R03,closed,,!!!
+T058,text_label,R04,closed,,"locks with readcommited,"
+T059,text_label,R04,closed,,"rcsi,serializable"
+T060,text_label,R04,closed,,when locks are acquired
+T061,text_label,R04,closed,,on start of transaction
+T062,text_label,R04,closed,,or on data touch?
+T063,text_label,R04,closed,,read commited
+T064,text_label,R04,closed,,rcsi
+T065,text_label,R04,closed,,serializable
+T066,text_label,R04,closed,,serializable protects the
+T067,text_label,R04,closed,,range relevant to predicate
+T068,text_label,R04,closed,,when both trans need to have isolation
+T069,text_label,R04,closed,,serializable
+T070,text_label,R04,closed,,to keep invariants
+T071,text_label,R04,closed,,!!!

@@ -1,0 +1,44 @@
+source_id,type,region,status,file,text
+I001,image_use,R01,closed,source/images/image-0768e8760f32ac4a046918a6dfebc8be450ed96b.png,
+I002,image_use,R04,closed,source/images/image-862f64b86318bbfb47d84beaf39558524d83ebf4.png,
+I003,image_use,R02,closed,source/images/image-111d59d17f7da51b35c7a6dc06fc8c7176d32645.png,
+I004,image_use,R02,closed,source/images/image-33c0cb13368408ec069b2d5f7bb39512824ceb03.png,
+I005,image_use,R03,closed,source/images/image-d2d2cb880900647ad316b4165a65f18aff385148.png,
+I006,image_use,R03,closed,source/images/image-f3d777a1ce705da50e420f168174142578b6832b.png,
+I007,image_use,R01,closed,source/images/image-e7858708a8c11fc4117d6d7b625d273674d133af.png,
+I008,image_use,R04,closed,source/images/image-867c28fa9b3fca75dc17f85a79efb855d4646258.png,
+I009,image_use,R03,closed,source/images/image-1dea6dbfafeafd63ddeb97cee414b9b69b5fb8fb.png,
+I010,image_use,R02,closed,source/images/image-382102833af406814b30013765515bb7aabe713f.png,
+I011,image_use,R02,closed,source/images/image-cb45bbcf6378093ddd93f265da703d47c1f83d0a.png,
+I012,image_use,R03,closed,source/images/image-86bf733554d9f0ffdce2360c08decd24ab18576f.png,
+I013,image_use,R04,closed,source/images/image-5de264734f0cda6e4fc90f966af800ef4a40c53a.png,
+I014,image_use,R01,closed,source/images/image-61bbd16b7c1208ce2687f67d175c578b5e7f8a92.png,
+I015,image_use,R02,closed,source/images/image-9f5421df8a9ecdb55490c8f363832d6b1094d979.png,
+I016,image_use,R04,closed,source/images/image-4c6dc683b0263db86eafca6676db125c5c52da3a.png,
+I017,image_use,R03,closed,source/images/image-0b61ab963a1ea5d03c6c63e3dfddd71f91541b61.png,
+I018,image_use,R02,closed,source/images/image-ae54e3f6c6168274c52204712f74263f85326563.png,
+I019,image_use,R03,closed,source/images/image-d9480492d97d6ac6b0b5ed926a8135d01d15abd8.png,
+I020,image_use,R04,closed,source/images/image-e00c8da905cf49651171f8d040b7599e97e94d82.png,
+I021,image_use,R02,closed,source/images/image-38dc4d707082c8f0da267b22a8e21ed8e71033e3.png,
+I022,image_use,R03,closed,source/images/image-06fc3f33ceb65ddc1fa0e66c2ba304c3d9a3685c.png,
+I023,image_use,R02,closed,source/images/image-c75f3b963f79cedfced1dc484d204150ee9ad0e3.png,
+I024,image_use,R03,closed,source/images/image-0f189db3409ffafc8141bcf8cd8f983e20b36b50.png,
+T001,text_label,R01,closed,,DONT MAKE OBJECTS WITH MUTABLE
+T002,text_label,R01,closed,,PROPS - KEY OF DICT/EL OF HASHSET
+T003,text_label,R02,closed,,"hashcode,hashcode"
+T004,text_label,R02,closed,,combine
+T005,text_label,R03,closed,,hashcode struct
+T006,text_label,R03,closed,,incr adding
+T007,text_label,R02,closed,,some considerations
+T008,text_label,R02,closed,,dont use mutable fields if obj
+T009,text_label,R02,closed,,is dict key
+T010,text_label,R04,closed,,hashcode in a loop
+T011,text_label,R04,closed,,example
+T012,text_label,R03,closed,,handles null fine
+T013,text_label,R01,closed,,compute hash once
+T014,text_label,R01,closed,,place in bucket
+T015,text_label,R01,closed,,dont recompute on mutation
+T016,text_label,R01,closed,,hashtable gets different hash
+T017,text_label,R01,closed,,when we pass mutated obj as key
+T018,text_label,R01,closed,,searches different bucket
+T019,text_label,R03,closed,,conditional logic
