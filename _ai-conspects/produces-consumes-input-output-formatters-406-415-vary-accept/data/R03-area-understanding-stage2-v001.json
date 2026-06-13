@@ -1,0 +1,30 @@
+{
+  "region": "R03",
+  "title": "406/415 diagnostics / StatusCodePages / ProblemDetails",
+  "included_image_uses": [
+    "S-015",
+    "S-016",
+    "S-017",
+    "S-018",
+    "S-019",
+    "S-020",
+    "S-021",
+    "S-028",
+    "S-029",
+    "S-030",
+    "S-031"
+  ],
+  "count": 11,
+  "meaning": [
+    "406 Not Acceptable is response-side negotiation failure: server cannot produce a media type acceptable to the client.",
+    "415 Unsupported Media Type is request-side body media-type failure: server/action/input formatter cannot consume the request Content-Type.",
+    "StatusCodePages can provide a readable body for status-code-only responses.",
+    "ProblemDetails can be enriched with useful diagnostics, but should not leak unsafe internal implementation details.",
+    "ReasonPhrases and custom status-code endpoints can make 406/415 responses easier to understand during debugging."
+  ],
+  "boundary_notes": [
+    "R01 covers Produces/output formatter basics.",
+    "R02 covers Consumes/input formatter/action selection basics.",
+    "R04 covers Vary: Accept and browser Accept policy."
+  ]
+}

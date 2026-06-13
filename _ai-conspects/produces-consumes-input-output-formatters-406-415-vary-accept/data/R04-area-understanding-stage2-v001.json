@@ -1,0 +1,30 @@
+{
+  "region": "R04",
+  "title": "Vary: Accept / browser Accept header policy",
+  "included_image_uses": [
+    "S-033",
+    "S-034",
+    "S-035",
+    "S-036",
+    "S-037",
+    "S-038",
+    "S-039",
+    "S-040",
+    "S-041",
+    "S-042",
+    "S-043",
+    "S-044"
+  ],
+  "count": 12,
+  "meaning": [
+    "Vary: Accept tells caches that the Accept request header affects the selected response representation.",
+    "If one URL can return JSON, XML, or a custom representation based on Accept, caches must not reuse one representation for incompatible Accept headers.",
+    "Browsers often send broad Accept headers such as */* or multiple document/media preferences.",
+    "RespectBrowserAcceptHeader changes how MVC treats browser Accept headers instead of ignoring them as too broad.",
+    "Vary and Accept negotiation are related but separate: negotiation chooses the response; Vary protects cache correctness."
+  ],
+  "boundary_notes": [
+    "R01 covers the basic Produces/output negotiation material.",
+    "R04 is specifically the cache/browser Accept-header policy tail."
+  ]
+}
