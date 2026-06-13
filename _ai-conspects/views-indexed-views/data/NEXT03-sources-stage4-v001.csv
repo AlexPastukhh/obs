@@ -1,0 +1,13 @@
+region_source_id,source_id,image_use_id,fileId_short,region,subregion,status,readability,cut_off,confidence,theme,notes
+VIV04B-S001,S-042,IU-042,dc11e1331f,VIV04,VIV04B,verified-from-source-image,high,no,high,WITH SCHEMABINDING meaning,
+VIV04B-S002,S-043,IU-043,f9727378fb,VIV04,VIV04B,verified-from-source-image,high,no,high,Examples of schema changes that would fail,
+VIV04B-S003,S-044,IU-044,092bc59027,VIV04,VIV04B,verified-from-source-image,high,no,high,Why SQL Server blocks those changes,
+VIV04B-S004,S-045,IU-045,aa12d5f1bc,VIV04,VIV04B,verified-from-source-image,high,no,high,Why indexed views require SCHEMABINDING,
+VIV04B-S005,S-046,IU-046,07aa25ea49,VIV04,VIV04B,verified-from-source-image,high,no,high,SQL Server requires schemabinding before indexed view index,
+VIV04C-S001,S-047,IU-047,3387890789,VIV04,VIV04C,verified-from-source-image,high,no,high,SCHEMABINDING rule: two-part table names,
+VIV04C-S002,S-048,IU-048,543997ecf4,VIV04,VIV04C,verified-from-source-image,high,no,high,SCHEMABINDING rule: avoid SELECT star,
+VIV04D-S001,S-049,IU-049,2346bf9345,VIV04,VIV04D,verified-from-source-image,high,no,high,COUNT_BIG versus COUNT,
+VIV04D-S002,S-050,IU-050,0fa205f407,VIV04,VIV04D,verified-from-source-image,high,no,high,Why indexed grouped views need COUNT_BIG,
+VIV04A-S001,S-051,IU-051,80fefbece1,VIV04,VIV04A,verified-from-source-image,high,no,high,Make the view eligible for indexing,
+VIV04A-S002,S-052,IU-052,3cf6471b45,VIV04,VIV04A,verified-from-source-image,high,no,high,Recreate the view with schemabinding and COUNT_BIG,
+VIV04A-S003,S-053,IU-053,4e4fff1773,VIV04,VIV04A,verified-from-source-image,high,no,high,Important parts of indexed-view-compatible definition,

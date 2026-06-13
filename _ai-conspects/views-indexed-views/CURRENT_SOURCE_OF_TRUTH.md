@@ -1,6 +1,6 @@
 # Current Source of Truth - views-indexed-views
 
-Generated: 2026-06-13 07:51:03 UTC
+Generated: 2026-06-13 07:53:32 UTC
 
 ## Current status
 
@@ -9,6 +9,7 @@ Stage0: source materialized
 Stage1: boundary review done
 Stage2: NEXT01 transcript done
 Stage3: NEXT02 transcript done
+Stage4: NEXT03 transcript done
 ```
 
 ## Verified transcripts
@@ -17,12 +18,13 @@ Stage3: NEXT02 transcript done
 VIV01: Views concept, readonly behavior, EF Core mapping flow, ToSqlQuery vs ToView
 VIV02: Good and bad use cases for views
 VIV03: Indexed views fundamentals, materialization, clustered index and write cost
+VIV04: SCHEMABINDING and indexed-view requirements/rules
 ```
 
 ## Current candidate regions
 
 ```text
-VIV04: SCHEMABINDING and indexed-view requirements/rules
+none
 ```
 
 ## Boundary corrections
@@ -40,14 +42,6 @@ none
 ## Current next step
 
 ```text
-NEXT03 transcript:
-VIV04
-12 image uses
-```
-
-## Later
-
-```text
 Final closure/audit
 ```
 
@@ -55,8 +49,8 @@ Final closure/audit
 
 ```text
 Image uses: 53
-Processed image uses: 41
-Pending image uses: 12
+Processed image uses: 53
+Pending image uses: 0
 Text labels: 43
 ```
 

@@ -1,0 +1,45 @@
+{
+  "generated": "2026-06-13 07:53:32 UTC",
+  "stage": "4",
+  "batch_id": "NEXT03",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 12,
+  "pending_count": 0,
+  "boundary_corrections": [],
+  "regions": {
+    "VIV04": {
+      "name": "SCHEMABINDING and indexed-view requirements/rules",
+      "processed_sources": [
+        "S-042",
+        "S-043",
+        "S-044",
+        "S-045",
+        "S-046",
+        "S-047",
+        "S-048",
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052",
+        "S-053"
+      ],
+      "key_ideas": [
+        "SCHEMABINDING binds a view to the underlying table schema and blocks incompatible schema changes.",
+        "Indexed views require schemabinding because SQL Server physically stores and maintains the view result.",
+        "Schema-bound views must use explicit schema-qualified object names and avoid unstable dependencies such as SELECT *.",
+        "Grouped indexed views often require COUNT_BIG(*).",
+        "An indexed-view-compatible definition usually combines WITH SCHEMABINDING, explicit two-part names, deterministic expressions and COUNT_BIG(*) for grouped results."
+      ]
+    }
+  },
+  "pending_regions": {},
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Most screenshots are readable.",
+      "S-052 is a large SQL definition screenshot, but the key clauses are visible.",
+      "No remaining transcript regions after NEXT03."
+    ],
+    "confidence": "High for VIV04 concepts and visible SQL."
+  }
+}

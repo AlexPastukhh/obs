@@ -6,18 +6,13 @@ Verified transcripts:
 VIV01 - Views concept, readonly behavior, EF Core mapping flow, ToSqlQuery vs ToView
 VIV02 - Good and bad use cases for views
 VIV03 - Indexed views fundamentals, materialization, clustered index and write cost
-```
-
-Candidate / pending transcripts:
-
-```text
 VIV04 - SCHEMABINDING and indexed-view requirements/rules
 ```
 
 Next step:
 
 ```text
-NEXT03: VIV04
+Final closure/audit
 ```
 
 Each transcript includes:

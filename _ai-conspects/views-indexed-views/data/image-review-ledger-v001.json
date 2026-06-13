@@ -1,32 +1,28 @@
 {
-  "generated": "2026-06-13 07:51:03 UTC",
-  "ledger_version": "v001-updated-by-stage3-next02-transcript",
+  "generated": "2026-06-13 07:53:32 UTC",
+  "ledger_version": "v001-updated-by-stage4-next03-transcript",
   "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
-  "stage3_delta": {
+  "stage4_delta": {
     "processed_regions": {
-      "VIV03": [
-        "S-028",
-        "S-029",
-        "S-030",
-        "S-031",
-        "S-032",
-        "S-033",
-        "S-034",
-        "S-035",
-        "S-036",
-        "S-037",
-        "S-038",
-        "S-039",
-        "S-040",
-        "S-041"
+      "VIV04": [
+        "S-042",
+        "S-043",
+        "S-044",
+        "S-045",
+        "S-046",
+        "S-047",
+        "S-048",
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052",
+        "S-053"
       ]
     },
-    "processed_count": 14,
-    "total_processed_after_next02": 41,
-    "pending_regions": {
-      "VIV04": 12
-    },
-    "pending_count": 12,
+    "processed_count": 12,
+    "total_processed_after_next03": 53,
+    "pending_regions": {},
+    "pending_count": 0,
     "boundary_corrections": []
   },
   "rows": [
@@ -736,13 +732,13 @@
       "width": "967.0",
       "height": "303.0",
       "nearest_labels_for_search_only": "T-032:what it prevents | T-031:protect view from breaking | T-030:SCHEMABINDING | T-034:indexed views require | T-035:it",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-043",
@@ -753,13 +749,13 @@
       "width": "982.0",
       "height": "343.0",
       "nearest_labels_for_search_only": "T-032:what it prevents | T-034:indexed views require | T-031:protect view from breaking | T-030:SCHEMABINDING | T-035:it",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-044",
@@ -770,13 +766,13 @@
       "width": "958.0",
       "height": "182.0",
       "nearest_labels_for_search_only": "T-034:indexed views require | T-035:it | T-032:what it prevents | T-031:protect view from breaking | T-030:SCHEMABINDING",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-045",
@@ -787,13 +783,13 @@
       "width": "979.0",
       "height": "413.0",
       "nearest_labels_for_search_only": "T-035:it | T-034:indexed views require | T-032:what it prevents | T-031:protect view from breaking | T-030:SCHEMABINDING",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-046",
@@ -804,13 +800,13 @@
       "width": "970.0",
       "height": "367.0",
       "nearest_labels_for_search_only": "T-035:it | T-034:indexed views require | T-032:what it prevents | T-031:protect view from breaking | T-030:SCHEMABINDING",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-047",
@@ -821,13 +817,13 @@
       "width": "973.0",
       "height": "434.0",
       "nearest_labels_for_search_only": "T-033:schemabinding rules | T-032:what it prevents | T-037:COUNT BIG for grouping | T-036:indexed views require | T-031:protect view from breaking",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-048",
@@ -838,13 +834,13 @@
       "width": "736.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-033:schemabinding rules | T-034:indexed views require | T-032:what it prevents | T-035:it | T-037:COUNT BIG for grouping",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-049",
@@ -855,13 +851,13 @@
       "width": "1009.0",
       "height": "440.0",
       "nearest_labels_for_search_only": "T-037:COUNT BIG for grouping | T-036:indexed views require | T-033:schemabinding rules | T-043:at first | T-032:what it prevents",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-050",
@@ -872,13 +868,13 @@
       "width": "840.0",
       "height": "128.0",
       "nearest_labels_for_search_only": "T-037:COUNT BIG for grouping | T-036:indexed views require | T-033:schemabinding rules | T-034:indexed views require | T-032:what it prevents",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-051",
@@ -889,13 +885,13 @@
       "width": "797.0",
       "height": "174.0",
       "nearest_labels_for_search_only": "T-029:protect view from breaking | T-028:SCHEMABINDING | T-038:Clustered index first | T-026:with material dependent | T-027:table",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-052",
@@ -906,13 +902,13 @@
       "width": "979.0",
       "height": "464.0",
       "nearest_labels_for_search_only": "T-029:protect view from breaking | T-028:SCHEMABINDING | T-038:Clustered index first | T-027:table | T-026:with material dependent",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-053",
@@ -923,13 +919,13 @@
       "width": "1005.0",
       "height": "383.0",
       "nearest_labels_for_search_only": "T-029:protect view from breaking | T-028:SCHEMABINDING | T-030:SCHEMABINDING | T-031:protect view from breaking | T-038:Clustered index first",
-      "coverage_status": "candidate-viv04",
+      "coverage_status": "processed-in-viv04-v001",
       "current_region_decision": "VIV04",
       "current_subregion_decision": "VIV04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "SCHEMABINDING and indexed view requirements: why schemabinding protects the view from breaking, what it prevents, two-part names, schema-bound dependency rules, deterministic expressions, COUNT_BIG for grouping, unique clustered index rules, and additional indexed-view restrictions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next03",
+      "decision_basis": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV04 v001 after NEXT03 visual/semantic transcript pass."
     }
   ]
 }
