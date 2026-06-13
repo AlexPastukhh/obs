@@ -1,0 +1,27 @@
+{
+  "region": "R01",
+  "title": "Produces / output formatters / Accept negotiation",
+  "included_image_uses": [
+    "S-001",
+    "S-002",
+    "S-003",
+    "S-004",
+    "S-005",
+    "S-006",
+    "S-007",
+    "S-008",
+    "S-009",
+    "S-010"
+  ],
+  "count": 10,
+  "meaning": [
+    "[Produces] constrains response Content-Type metadata and formatter choice.",
+    "Output formatters serialize response objects; runtime chooses a formatter based on declared response media types and Accept negotiation.",
+    "When several media-type variants are possible, action splitting or explicit [Produces] metadata makes the contract clear.",
+    "If 406 behavior is enabled, a client Accept header that cannot be satisfied can produce 406 Not Acceptable."
+  ],
+  "boundary_notes": [
+    "Vary: Accept details are reserved for R04/P02.",
+    "Consumes/action-selection/input-formatter details are covered in R02."
+  ]
+}

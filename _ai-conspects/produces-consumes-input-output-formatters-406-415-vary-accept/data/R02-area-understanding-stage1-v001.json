@@ -1,0 +1,28 @@
+{
+  "region": "R02",
+  "title": "Consumes / input formatters / action selection / 415",
+  "included_image_uses": [
+    "S-011",
+    "S-012",
+    "S-013",
+    "S-014",
+    "S-022",
+    "S-023",
+    "S-024",
+    "S-025",
+    "S-026",
+    "S-027",
+    "S-032"
+  ],
+  "count": 11,
+  "meaning": [
+    "[Consumes] constrains request Content-Type/action selection.",
+    "Input formatters read request bodies; unsupported or unreadable Content-Type can lead to 415 Unsupported Media Type.",
+    "[Consumes] can disambiguate otherwise identical routes by media type.",
+    "Custom IActionConstraint can implement specialized action matching, but [Consumes] is the normal attribute-level solution."
+  ],
+  "boundary_notes": [
+    "406/415 diagnostic customization, StatusCodePages and ProblemDetails are reserved for R03/P02.",
+    "R01 handles response/output negotiation, R02 handles request/input negotiation."
+  ]
+}
