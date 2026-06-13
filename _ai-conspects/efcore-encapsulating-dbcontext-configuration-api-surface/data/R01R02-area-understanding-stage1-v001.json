@@ -1,0 +1,31 @@
+{
+  "generated": "2026-06-02 17:00:00 UTC",
+  "region_id": "R01R02",
+  "area_title": "Encapsulating DbContext configuration and minimizing API surface",
+  "what_area_is_about": [
+    "DbContext configuration details leaking into Program.cs via AddDbContext options-builder chains",
+    "sensitive-data logging and SQL parameter logging as examples of configuration details that should not be scattered through client code",
+    "passing only environment-dependent parameters such as connection string and logging flag",
+    "moving EF Core provider/logging setup into SchoolContext.OnConfiguring",
+    "reducing public API/configuration surface by using a small constructor or factory registration",
+    "preserving scoped DbContext lifetime with AddScoped while hiding option-builder complexity"
+  ],
+  "key_ideas": [
+    "Encapsulation applies to infrastructure code, not only domain models.",
+    "Startup/Program.cs should not need to know every internal EF Core configuration detail when the DbContext can own it.",
+    "Expose only parameters that vary by environment; hide stable composition logic inside the DbContext.",
+    "Sensitive-data logging is a useful example because its accidental exposure can leak query parameters into logs.",
+    "Manual AddScoped factory registration can preserve the same scoped lifetime while exposing a smaller application-facing surface.",
+    "Simple AddDbContext configuration can remain as-is; encapsulation becomes valuable when the options chain grows."
+  ],
+  "reading_quality": {
+    "overall_conceptual_understanding": "high",
+    "source_image_readability": "high for slides and most code; medium-high for terminal/log screenshot and cropped helper method tail",
+    "transcript_method": "visual/contact-sheet review with source-preserving semantic transcript and preserved PNGs",
+    "limitations": [
+      "Exact C# punctuation and terminal text should be corrected from preserved PNGs if needed.",
+      "This closes image-use coverage but is not a character-by-character OCR transcript."
+    ],
+    "confidence_summary": "High for boundary/ownership and conceptual flow; medium-high for exact code/log punctuation."
+  }
+}

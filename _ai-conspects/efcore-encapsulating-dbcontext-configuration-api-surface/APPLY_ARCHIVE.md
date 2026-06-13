@@ -1,6 +1,6 @@
-# Apply archive: EF Core encapsulating DbContext stage0 boundary review v001
+# Apply archive: EF Core encapsulating DbContext R01/R02 final coverage transcript v001
 
-Archive type: source check / boundary review.
+Archive type: stage-1 final coverage transcript.
 
 Target branch:
 
@@ -8,21 +8,25 @@ Target branch:
 ai-processed-conspects-text
 ```
 
-Apply from repository root.
+Apply from repository root:
+
+```powershell
+PS C:\Users\alexa\obs>
+```
 
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-efcore-encapsulating-dbcontext-configuration-api-surface-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-efcore-encapsulating-dbcontext-configuration-api-surface-stage1-r01r02-final-coverage-v001.zip
 ```
 
-## Apply + stage commands
+## Apply + staged-only check commands
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-efcore-encapsulating-dbcontext-configuration-api-surface-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-efcore-encapsulating-dbcontext-configuration-api-surface-stage1-r01r02-final-coverage-v001.zip"
 $target = "_ai-conspects\efcore-encapsulating-dbcontext-configuration-api-surface"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -39,7 +43,7 @@ git status --short -- $target
 ## Commit commands after review
 
 ```powershell
-git commit -m "Start EF Core encapsulating DbContext conspect boundary review"
+git commit -m "Complete EF Core encapsulating DbContext conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 
@@ -47,5 +51,6 @@ git push origin ai-processed-conspects-text
 
 ```powershell
 git restore --staged -- _ai-conspects\efcore-encapsulating-dbcontext-configuration-api-surface
+git restore -- _ai-conspects\efcore-encapsulating-dbcontext-configuration-api-surface
 git clean -fd -- _ai-conspects\efcore-encapsulating-dbcontext-configuration-api-surface
 ```

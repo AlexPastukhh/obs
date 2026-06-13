@@ -1,0 +1,34 @@
+{
+  "generated": "2026-06-02 17:00:00 UTC",
+  "region_id": "R01R02",
+  "region_name": "Encapsulating DbContext configuration and reducing API surface",
+  "included_sources_by_region": {
+    "R01": [
+      "S-001",
+      "S-002",
+      "S-003",
+      "S-004",
+      "S-005",
+      "S-006",
+      "S-007"
+    ],
+    "R02": [
+      "S-008",
+      "S-009",
+      "S-010",
+      "S-011",
+      "S-012",
+      "S-013"
+    ]
+  },
+  "included_counts_by_region": {
+    "R01": 7,
+    "R02": 6
+  },
+  "included_count": 13,
+  "decision": "R01 and R02 are one coherent sheet: R01 introduces why EF Core options leaking into Program.cs is a configuration/API-surface problem; R02 closes the recap by replacing a broad options-builder surface with a smaller factory/constructor surface while preserving scoped lifetime.",
+  "checked_but_not_included": {},
+  "duplicate_image_use_handling": "No duplicate image uses were detected in stage0 for this conspect.",
+  "remaining_after_this": 0,
+  "final_coverage_added": true
+}

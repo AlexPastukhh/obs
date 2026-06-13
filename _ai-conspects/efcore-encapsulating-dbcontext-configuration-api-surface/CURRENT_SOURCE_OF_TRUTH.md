@@ -1,6 +1,6 @@
 # Current Source of Truth - efcore-encapsulating-dbcontext-configuration-api-surface
 
-Generated: 2026-06-02 16:45:00 UTC
+Generated: 2026-06-02 17:00:00 UTC
 
 ## Policy
 
@@ -11,7 +11,9 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 DbContext configuration leakage / move EF details into DbContext: transcript v001 done
+R02 reduce DbContext API surface / lifetime-equivalent factory wrapper: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -19,14 +21,13 @@ Normal transcript regions: not started
 ```text
 unique embedded images: 13
 image uses on canvas: 13
-text labels parsed: 4
-duplicate image uses by extracted file/content: 0
+R01 processed image uses: 7
+R02 processed image uses: 6
+remaining unclosed image uses: 0
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after boundary review.
-Suggested first candidate: R01+R02 full pass = 13 images, because the whole conspect is small and coherent-looking.
-Fallback split: R01 first, then R02 final coverage if boundary review shows two separate roads.
+No normal transcript regions remain. Only correction/polish or repeat-material archive if needed.
 ```

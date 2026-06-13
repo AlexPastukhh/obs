@@ -9,9 +9,10 @@
     "y": 41.18585896299055,
     "width": 374.0,
     "height": 297.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Slide frames “Encapsulating the DbContext”: encapsulation protects data integrity and reduces a class API surface. The note says this applies to all code, not only domain model code.",
+    "final_region": "R01"
   },
   {
     "source_id": "S-002",
@@ -23,9 +24,10 @@
     "y": 479.6915390236377,
     "width": 475.0,
     "height": 80.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Shows Program.cs/AddDbContext registering SchoolContext and configuring UseSqlServer, UseLoggerFactory and EnableSensitiveDataLogging directly in the application startup surface.",
+    "final_region": "R01"
   },
   {
     "source_id": "S-003",
@@ -37,9 +39,10 @@
     "y": 560.4620125286006,
     "width": 661.0,
     "height": 79.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Shows CreateLoggerFactory filtering EF Core database command logs and writing to console, making logging configuration part of the DbContext setup details.",
+    "final_region": "R01"
   },
   {
     "source_id": "S-004",
@@ -51,9 +54,10 @@
     "y": 656.3594121299889,
     "width": 554.0,
     "height": 277.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Console output screenshot highlights SQL command logging including parameter values; this motivates the warning that sensitive-data logging can expose query parameters.",
+    "final_region": "R01"
   },
   {
     "source_id": "S-005",
@@ -65,9 +69,10 @@
     "y": 1119.4760066672884,
     "width": 424.0,
     "height": 91.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Text rule: only use parameters that change depending on the environment.",
+    "final_region": "R01"
   },
   {
     "source_id": "S-006",
@@ -79,9 +84,10 @@
     "y": 1230.9609095178153,
     "width": 523.0,
     "height": 220.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Shows SchoolContext with private readonly fields _connectionString and _useConsoleLogger, DbSet properties, and a constructor accepting string connectionString and bool useConsoleLogger.",
+    "final_region": "R01"
   },
   {
     "source_id": "S-007",
@@ -93,9 +99,10 @@
     "y": 1476.4217400563925,
     "width": 519.0,
     "height": 376.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Shows OnConfiguring inside SchoolContext: UseSqlServer(_connectionString), then selects logging behavior based on _useConsoleLogger using CreateLoggerFactory or CreateEmptyLoggerFactory. This moves EF configuration detail from Program.cs into DbContext.",
+    "final_region": "R01"
   },
   {
     "source_id": "S-008",
@@ -107,9 +114,10 @@
     "y": 10.0,
     "width": 669.0,
     "height": 39.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Shows a smaller AddScoped registration that constructs SchoolContext with builder.Configuration[\"ConnectionString\"] and a boolean flag, instead of exposing the whole options-builder chain.",
+    "final_region": "R02"
   },
   {
     "source_id": "S-009",
@@ -121,9 +129,10 @@
     "y": 61.630600162854535,
     "width": 422.0,
     "height": 312.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Recap slide: DbContext is encapsulated; the conventional AddDbContext options approach leaves too much room for data/configuration inconsistencies, similar to public setters.",
+    "final_region": "R02"
   },
   {
     "source_id": "S-010",
@@ -135,9 +144,10 @@
     "y": 376.0639305863224,
     "width": 430.0,
     "height": 264.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Recap slide distinguishes simple configuration, which can stay as-is, from complex configuration, which is better to encapsulate.",
+    "final_region": "R02"
   },
   {
     "source_id": "S-011",
@@ -149,9 +159,10 @@
     "y": 665.2691131931206,
     "width": 464.0,
     "height": 294.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Recap slide: the possible configuration options are reduced to a minimum. The client sees constructor parameters such as connectionString and useConsoleLogger, while EF configuration complexity is abstracted and encapsulated inside DbContext.",
+    "final_region": "R02"
   },
   {
     "source_id": "S-012",
@@ -163,9 +174,10 @@
     "y": 980.9331258804598,
     "width": 447.0,
     "height": 278.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Recap slide: registering with AddScoped factory configures the DbContext as a scoped dependency; the two registration styles are equivalent in terms of DbContext lifetime.",
+    "final_region": "R02"
   },
   {
     "source_id": "S-013",
@@ -177,8 +189,9 @@
     "y": 1285.3847461766636,
     "width": 415.0,
     "height": 220.0,
-    "status": "pending-transcript",
-    "transcript_stage": "not-started",
-    "notes": "Stage0 inventory only; ownership must be rechecked visually/semantically before transcript."
+    "status": "processed-in-r01r02-final-v001",
+    "transcript_stage": "stage1-r01r02-final-coverage-v001",
+    "notes": "Summary slide: encapsulated DbContext usage bundles dependencies and operations together, moves configuration logic to the DbContext, and encourages looking for encapsulation opportunities throughout code.",
+    "final_region": "R02"
   }
 ]
