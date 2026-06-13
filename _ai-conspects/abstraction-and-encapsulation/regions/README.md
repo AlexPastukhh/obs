@@ -1,14 +1,21 @@
 # Regions - abstraction-and-encapsulation
 
-No transcript regions yet.
-
-Next step:
+Boundary-reviewed candidate regions:
 
 ```text
-Stage1 boundary review
+AE01 - Abstraction definition, purpose and hierarchy
+AE02 - Abstraction as code simplification / normalized customer name example
+AE03 - Encapsulation, data integrity and invariants
+AE04 - Difference and overlap between encapsulation and abstraction
 ```
 
-Each future transcript should include:
+Recommended transcript order:
+
+```text
+NEXT01: full transcript for AE01 + AE02 + AE03 + AE04
+```
+
+Each transcript must include:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality
