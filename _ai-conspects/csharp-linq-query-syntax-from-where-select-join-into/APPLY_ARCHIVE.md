@@ -1,10 +1,14 @@
-# APPLY_ARCHIVE - csharp-linq-query-syntax-from-where-select-join-into stage0 boundary review v001
+# APPLY ARCHIVE - C# LINQ query syntax / from-where-select / join / into final coverage transcript v001
+
+Target branch: `ai-processed-conspects-text`
+
+## Apply
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-linq-query-syntax-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-batch-stage1-final-coverage-middleware-linq-alternatekey-v001.zip"
 $target = "_ai-conspects\csharp-linq-query-syntax-from-where-select-join-into"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -18,9 +22,16 @@ git add -A -- $target
 git status --short -- $target
 ```
 
-Commit after review:
+## Commit after review
 
 ```powershell
-git commit -m "Start C# LINQ query syntax / from-where-select / join / into conspect boundary review"
+git commit -m "Complete C# LINQ query syntax conspect final coverage"
 git push origin ai-processed-conspects-text
+```
+
+## Rollback staged target only
+
+```powershell
+git restore --staged -- $target
+git restore -- $target
 ```

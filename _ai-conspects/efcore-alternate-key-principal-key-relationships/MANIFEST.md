@@ -1,28 +1,35 @@
-# MANIFEST - EF Core alternate key / principal key / relationships stage0 boundary review v001
+# MANIFEST - EF Core alternate key / principal key / relationships final coverage transcript v001
 
-Archive type: **stage0 source/boundary review**  
+Archive type: **stage-1 final coverage transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 08:25:00 UTC
+Generated: 2026-06-13 08:55:00 UTC
 
 ## Done
 
-- Source SVG materialized.
-- Embedded image inventory extracted.
-- Image-use ledger created.
-- SVG text labels parsed.
-- Candidate region split created.
-- Contact sheets and canvas map generated.
+- Combined final transcript created for all stage0 candidate regions.
+- 24 image uses included.
+- 8 canvas text labels included.
+- Final coverage audit added.
+- Ledger updated to zero remaining unprocessed image/text-label uses.
 
-## Counts
+## Files included / updated
 
 ```text
-unique embedded images: 24
-image uses on canvas: 24
-text labels parsed: 8
-text blocks parsed: 4
-duplicate image-use groups: 0
+_ai-conspects/efcore-alternate-key-principal-key-relationships/01-stage1-r01r02r03-final-coverage-transcript.md
+_ai-conspects/efcore-alternate-key-principal-key-relationships/regions/R01R02R03-efcore-alternate-key-final.md
+_ai-conspects/efcore-alternate-key-principal-key-relationships/data/R01R02R03-sources-stage1-v001.*
+_ai-conspects/efcore-alternate-key-principal-key-relationships/data/R01R02R03-boundary-review-stage1-v001.*
+_ai-conspects/efcore-alternate-key-principal-key-relationships/data/R01R02R03-text-labels-stage1-v001.*
+_ai-conspects/efcore-alternate-key-principal-key-relationships/data/R01R02R03-area-understanding-stage1-v001.json
+_ai-conspects/efcore-alternate-key-principal-key-relationships/data/final-coverage-audit-stage1-v001.*
+_ai-conspects/efcore-alternate-key-principal-key-relationships/data/image-review-ledger-v001.*
+_ai-conspects/efcore-alternate-key-principal-key-relationships/audit-assets/R01R02R03-source-images/*.png
+_ai-conspects/efcore-alternate-key-principal-key-relationships/audit-assets/contact-sheet-R01R02R03-final-coverage-v001.png
+_ai-conspects/efcore-alternate-key-principal-key-relationships/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/efcore-alternate-key-principal-key-relationships/MANIFEST.md
+_ai-conspects/efcore-alternate-key-principal-key-relationships/APPLY_ARCHIVE.md
 ```
 
 ## Next
 
-No transcript yet. Next archive should do verified source-preserving transcript and final coverage audit.
+No normal transcript regions remain after this archive.

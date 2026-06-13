@@ -1,10 +1,14 @@
-# APPLY_ARCHIVE - efcore-alternate-key-principal-key-relationships stage0 boundary review v001
+# APPLY ARCHIVE - EF Core alternate key / principal key / relationships final coverage transcript v001
+
+Target branch: `ai-processed-conspects-text`
+
+## Apply
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-alternate-key-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-batch-stage1-final-coverage-middleware-linq-alternatekey-v001.zip"
 $target = "_ai-conspects\efcore-alternate-key-principal-key-relationships"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -18,9 +22,16 @@ git add -A -- $target
 git status --short -- $target
 ```
 
-Commit after review:
+## Commit after review
 
 ```powershell
-git commit -m "Start EF Core alternate key / principal key / relationships conspect boundary review"
+git commit -m "Complete EF Core alternate key conspect final coverage"
 git push origin ai-processed-conspects-text
+```
+
+## Rollback staged target only
+
+```powershell
+git restore --staged -- $target
+git restore -- $target
 ```

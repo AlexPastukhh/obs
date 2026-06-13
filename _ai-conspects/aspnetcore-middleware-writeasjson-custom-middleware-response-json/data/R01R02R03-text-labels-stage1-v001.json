@@ -1,0 +1,308 @@
+[
+  {
+    "text_id": "T-001",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3529.392,
+    "text": "public class RequestTimingMiddleware",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-002",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3554.392,
+    "text": "{",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-003",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3579.392,
+    "text": "private readonly RequestDelegate _next;",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-004",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3604.392,
+    "text": "private readonly ILogger<RequestTimingMiddleware> _log;",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-005",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3654.392,
+    "text": "public RequestTimingMiddleware(RequestDelegate next, ILogger<RequestTimingMiddleware> log)",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-006",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3679.392,
+    "text": "{",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-007",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3704.392,
+    "text": "_next = next;",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-008",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3729.392,
+    "text": "_log = log;",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-009",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3754.392,
+    "text": "}",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-010",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3804.392,
+    "text": "public async Task InvokeAsync(HttpContext context)",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-011",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3829.392,
+    "text": "{",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-012",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3854.392,
+    "text": "var sw = Stopwatch.StartNew();",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-013",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3879.392,
+    "text": "await _next(context);",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-014",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3904.392,
+    "text": "sw.Stop();",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-015",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3954.392,
+    "text": "context.Response.Headers[\"X-Elapsed-ms\"] = sw.ElapsedMilliseconds.ToString();",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-016",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 3979.392,
+    "text": "_log.LogInformation(\"Elapsed: {ms}ms\", sw.ElapsedMilliseconds);",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-017",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 4004.392,
+    "text": "}",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-018",
+    "region": "R02",
+    "x": 3372.708,
+    "y": 4029.392,
+    "text": "}",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-019",
+    "region": "R01",
+    "x": 2501.634,
+    "y": 1260.859,
+    "text": "ORDER",
+    "font_size": "57.925922309027804px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-020",
+    "region": "R01",
+    "x": 2501.634,
+    "y": 1333.266,
+    "text": "______",
+    "font_size": "57.925922309027804px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-021",
+    "region": "R01",
+    "x": 2501.634,
+    "y": 1405.674,
+    "text": "theory",
+    "font_size": "57.925922309027804px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-022",
+    "region": "R02",
+    "x": 2396.332,
+    "y": 2896.428,
+    "text": "1 INHERITANCE",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-023",
+    "region": "R02",
+    "x": 2396.332,
+    "y": 2921.428,
+    "text": "2 DI GOTCHA MIDDLEWARE + SCOPED MIDDLEWARE",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-024",
+    "region": "R02",
+    "x": 2048.377,
+    "y": 2885.478,
+    "text": "1 SHORT CIRCUIT",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-025",
+    "region": "R02",
+    "x": 2048.377,
+    "y": 2910.478,
+    "text": "2 ASYNC TIPS",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-026",
+    "region": "R02",
+    "x": 2048.377,
+    "y": 2935.478,
+    "text": "3 DEBUGGING TIPS",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-027",
+    "region": "R02",
+    "x": 2048.377,
+    "y": 2960.478,
+    "text": "4 COMMON PATTERNS",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-028",
+    "region": "R01",
+    "x": 3382.609,
+    "y": 1445.931,
+    "text": "all SERVICED",
+    "font_size": "40.26666666666661px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-029",
+    "region": "R01",
+    "x": 2372.596,
+    "y": 76.173,
+    "text": "EXAMPLE",
+    "font_size": "75.11110432942692px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-030",
+    "region": "R01",
+    "x": 3369.929,
+    "y": 1204.605,
+    "text": "FEATURES-->",
+    "font_size": "35.99999999999999px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-031",
+    "region": "R01",
+    "x": 4152.084,
+    "y": 1577.159,
+    "text": "CAN GET EXCEPTION",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-032",
+    "region": "R01",
+    "x": 165.353,
+    "y": 2167.95,
+    "text": "what is brunch here",
+    "font_size": "20px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-033",
+    "region": "R01",
+    "x": 3228.595,
+    "y": 820.686,
+    "text": "to write json in non mvc land :",
+    "font_size": "138.51855468750014px",
+    "stage1_status": "closed-by-stage1"
+  },
+  {
+    "text_id": "T-034",
+    "region": "R01",
+    "x": 1172.931,
+    "y": 768.948,
+    "text": "METHODS",
+    "font_size": "93.90760633680544px",
+    "stage1_status": "closed-by-stage1"
+  }
+]
