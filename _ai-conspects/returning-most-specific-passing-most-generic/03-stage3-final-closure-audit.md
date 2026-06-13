@@ -1,28 +1,21 @@
-# Current Source of Truth - returning-most-specific-passing-most-generic
+# Stage 3 - Final Closure Audit
 
 Generated: 2026-06-13 10:41:31 UTC
 
-## Current status
+## Final status
 
 ```text
 Status: complete
-
-Stage0: source materialized
-Stage1: boundary review done
-Stage2: NEXT01 transcript done
-Stage3: final closure/audit done
-```
-
-## Final coverage
-
-```text
 Expected image uses: 8
-Processed image uses: 8
+Ledger rows: 8
+Processed rows: 8
 Missing: 0
 Duplicates: 0
 Extra: 0
 Unreviewed: 0
 Candidate-only: 0
+Region mismatches: 0
+Subregion mismatches: 0
 Text labels missing: 0
 ```
 
@@ -33,8 +26,8 @@ RMSG01: Main guideline: accept generic, return specific
 RMSG02: .NET generic/collection hierarchy and immutable collection consequence
 ```
 
-## Current next step
+## Conclusion
 
 ```text
-none for this conspect
+All image uses are processed. This conspect is complete.
 ```

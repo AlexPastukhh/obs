@@ -1,0 +1,38 @@
+{
+  "generated": "2026-06-13 10:41:31 UTC",
+  "stage": "3",
+  "batch_id": "NEXT02",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 6,
+  "pending_count": 7,
+  "boundary_corrections": [],
+  "regions": {
+    "PDS02": {
+      "name": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "processed_sources": [
+        "S-005",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-012",
+        "S-013"
+      ],
+      "key_ideas": [
+        "Browser fetch exposes body chunks through a reader loop.",
+        "Server WebSocket ReceiveAsync may return partial message chunks and EndOfMessage is required.",
+        "Browser WebSocket onmessage gives full messages, not partial frames.",
+        "UTF-8 decoding across arbitrary byte chunks needs stateful Decoder/Decoder.Convert."
+      ]
+    }
+  },
+  "pending_regions": {
+    "PDS04": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader"
+  },
+  "reading_quality": {
+    "overall": "Overall: medium-high/high. Main API shapes are clear.",
+    "limitations": [
+      "Small code details should be verified against source images if exact syntax matters."
+    ],
+    "confidence": "high"
+  }
+}

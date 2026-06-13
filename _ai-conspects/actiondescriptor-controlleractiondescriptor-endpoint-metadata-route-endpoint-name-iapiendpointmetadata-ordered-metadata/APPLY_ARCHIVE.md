@@ -1,6 +1,6 @@
-# Apply archive: actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-endpoint-name-iapiendpointmetadata-ordered-metadata Stage2 NEXT01 transcript
+# Apply archive: actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-endpoint-name-iapiendpointmetadata-ordered-metadata Stage3 NEXT02 transcript
 
-This conspect is part of the combined next-three Stage2/NEXT01 transcript archive.
+This conspect is part of the combined next-three archive.
 
 Target branch:
 

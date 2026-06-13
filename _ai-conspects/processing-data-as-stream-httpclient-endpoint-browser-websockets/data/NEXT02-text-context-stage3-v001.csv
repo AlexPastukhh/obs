@@ -1,0 +1,28 @@
+text_id,text,candidate_region,theme
+T-003,fetch get reader,PDS02,canvas text label / local note
+T-004,!!! processing until done that reader.read,PDS02,canvas text label / local note
+T-005,returns,PDS02,canvas text label / local note
+T-006,websocket asp receiveasync,PDS02,canvas text label / local note
+T-007,result.endoofmessage,PDS02,canvas text label / local note
+T-008,we are using buffer to write into and to specify number of bytes that we,PDS02,canvas text label / local note
+T-009,"need to write into a chunk, so we can achieve readexactly or readatleast behavior",PDS02,canvas text label / local note
+T-010,using close async for gracefull handshake without receiveing and processing messages that are inflight,PDS02,canvas text label / local note
+T-011,closeoutputasync to stop sending but with possiblity to process all messages from peer,PDS02,canvas text label / local note
+T-012,abourt to just kill everything,PDS02,canvas text label / local note
+T-018,"in client we cant process messages as stream, we are buffering the full message and the we",PDS02,canvas text label / local note
+T-019,process it with code,PDS02,canvas text label / local note
+T-021,need to use text decoder to decode text from bytes without loosing data,PDS02,canvas text label / local note
+T-022,because bytes are arrriving,PDS02,canvas text label / local note
+T-023,do while because we get result.endofmessage,PDS02,canvas text label / local note
+T-024,with the last message chunk,PDS02,canvas text label / local note
+T-025,"wrong, need to use encoding.utf8.getdecoder",PDS02,canvas text label / local note
+T-026,and,PDS02,canvas text label / local note
+T-027,decoder.getchars if we have char buffer that will always be,PDS02,canvas text label / local note
+T-028,not smaller than the space we need for a chunk,PDS02,canvas text label / local note
+T-029,or we can use decoder.convert that wont throw if the buffer is small,PDS02,canvas text label / local note
+T-030,and has out args like bytesused charsused completed,PDS02,canvas text label / local note
+T-031,so we can prosecc the byte buffer in loop,PDS02,canvas text label / local note
+T-032,flush when some chars cant be decoded and we want to say that there is some char should be,PDS02,canvas text label / local note
+T-037,fetch,PDS02,canvas text label / local note
+T-038,websockets asp endp,PDS02,canvas text label / local note
+T-039,browser websockets,PDS02,canvas text label / local note

@@ -1,31 +1,28 @@
 {
-  "generated": "2026-06-13 09:11:01 UTC",
-  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "generated": "2026-06-13 10:41:31 UTC",
+  "ledger_version": "v001-updated-by-stage3-next02-or-final-step",
   "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
-  "stage2_delta": {
-    "processed_regions": {
-      "PDS01": [
-        "S-006",
-        "S-007",
-        "S-014",
-        "S-015",
-        "S-016"
-      ],
-      "PDS03": [
-        "S-001",
-        "S-002",
-        "S-003",
-        "S-004",
-        "S-011"
-      ]
-    },
-    "processed_count": 10,
-    "total_processed_after_next01": 10,
-    "pending_regions": {
-      "PDS02": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
-      "PDS04": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader"
-    },
-    "pending_count": 13,
+  "stage3_delta": {
+    "processed_sources": [
+      "S-005",
+      "S-008",
+      "S-009",
+      "S-010",
+      "S-012",
+      "S-013"
+    ],
+    "processed_count": 6,
+    "total_processed_after_this_step": 16,
+    "pending_sources": [
+      "S-017",
+      "S-018",
+      "S-019",
+      "S-020",
+      "S-021",
+      "S-022",
+      "S-023"
+    ],
+    "pending_count": 7,
     "boundary_corrections": []
   },
   "rows": [
@@ -106,13 +103,13 @@
       "width": "865.0",
       "height": "358.0",
       "nearest_labels_for_search_only": "T-005:returns | T-004:!!! processing until done that reader.read | T-003:fetch get reader | T-037:fetch | T-022:because bytes are arrriving",
-      "coverage_status": "candidate-pds02",
+      "coverage_status": "processed-in-pds02-v001",
       "current_region_decision": "PDS02",
       "current_subregion_decision": "PDS02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -157,13 +154,13 @@
       "width": "821.0",
       "height": "632.0",
       "nearest_labels_for_search_only": "T-012:abourt to just kill everything | T-023:do while because we get result.endofmessage | T-024:with the last message chunk | T-011:closeoutputasync to stop sending but with possiblity to process all messages from peer | T-010:using close async for gracefull handshake without receiveing and processing messages that are inflight",
-      "coverage_status": "candidate-pds02",
+      "coverage_status": "processed-in-pds02-v001",
       "current_region_decision": "PDS02",
       "current_subregion_decision": "PDS02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -174,13 +171,13 @@
       "width": "780.0",
       "height": "339.0",
       "nearest_labels_for_search_only": "T-012:abourt to just kill everything | T-011:closeoutputasync to stop sending but with possiblity to process all messages from peer | T-010:using close async for gracefull handshake without receiveing and processing messages that are inflight | T-009:need to write into a chunk, so we can achieve readexactly or readatleast behavior | T-008:we are using buffer to write into and to specify number of bytes that we",
-      "coverage_status": "candidate-pds02",
+      "coverage_status": "processed-in-pds02-v001",
       "current_region_decision": "PDS02",
       "current_subregion_decision": "PDS02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -191,13 +188,13 @@
       "width": "689.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets | T-024:with the last message chunk | T-023:do while because we get result.endofmessage",
-      "coverage_status": "candidate-pds02",
+      "coverage_status": "processed-in-pds02-v001",
       "current_region_decision": "PDS02",
       "current_subregion_decision": "PDS02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -225,13 +222,13 @@
       "width": "604.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets | T-020:processing chunk by chunk with httpclient | T-032:flush when some chars cant be decoded and we want to say that there is some char should be",
-      "coverage_status": "candidate-pds02",
+      "coverage_status": "processed-in-pds02-v001",
       "current_region_decision": "PDS02",
       "current_subregion_decision": "PDS02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -242,13 +239,13 @@
       "width": "855.0",
       "height": "434.0",
       "nearest_labels_for_search_only": "T-032:flush when some chars cant be decoded and we want to say that there is some char should be | T-031:so we can prosecc the byte buffer in loop | T-030:and has out args like bytesused charsused completed | T-029:or we can use decoder.convert that wont throw if the buffer is small | T-028:not smaller than the space we need for a chunk",
-      "coverage_status": "candidate-pds02",
+      "coverage_status": "processed-in-pds02-v001",
       "current_region_decision": "PDS02",
       "current_subregion_decision": "PDS02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Fetch reader and WebSocket receive processing: reader.read until done, ReceiveAsync with EndOfMessage, close/close-output/abort semantics, browser WebSockets buffering full messages, and UTF-8 decoder/Decoder.Convert versus direct Encoding.GetString.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",

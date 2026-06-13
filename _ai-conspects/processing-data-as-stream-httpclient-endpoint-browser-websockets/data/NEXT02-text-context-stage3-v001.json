@@ -1,0 +1,296 @@
+{
+  "generated": "2026-06-13 10:41:31 UTC",
+  "batch_id": "NEXT02",
+  "text_labels_included": 27,
+  "items": [
+    {
+      "text_id": "T-003",
+      "text": "fetch get reader",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-004",
+      "text": "!!! processing until done that reader.read",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-005",
+      "text": "returns",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-006",
+      "text": "websocket asp receiveasync",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-007",
+      "text": "result.endoofmessage",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-008",
+      "text": "we are using buffer to write into and to specify number of bytes that we",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-009",
+      "text": "need to write into a chunk, so we can achieve readexactly or readatleast behavior",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-010",
+      "text": "using close async for gracefull handshake without receiveing and processing messages that are inflight",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-011",
+      "text": "closeoutputasync to stop sending but with possiblity to process all messages from peer",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-012",
+      "text": "abourt to just kill everything",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-018",
+      "text": "in client we cant process messages as stream, we are buffering the full message and the we",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-019",
+      "text": "process it with code",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-021",
+      "text": "need to use text decoder to decode text from bytes without loosing data",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-022",
+      "text": "because bytes are arrriving",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-023",
+      "text": "do while because we get result.endofmessage",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-024",
+      "text": "with the last message chunk",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-025",
+      "text": "wrong, need to use encoding.utf8.getdecoder",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-026",
+      "text": "and",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-027",
+      "text": "decoder.getchars if we have char buffer that will always be",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-028",
+      "text": "not smaller than the space we need for a chunk",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-029",
+      "text": "or we can use decoder.convert that wont throw if the buffer is small",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-030",
+      "text": "and has out args like bytesused charsused completed",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-031",
+      "text": "so we can prosecc the byte buffer in loop",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-032",
+      "text": "flush when some chars cant be decoded and we want to say that there is some char should be",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-037",
+      "text": "fetch",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-038",
+      "text": "websockets asp endp",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    },
+    {
+      "text_id": "T-039",
+      "text": "browser websockets",
+      "candidate_region": "PDS02",
+      "theme": "canvas text label / local note"
+    }
+  ],
+  "pending_text_labels": [
+    {
+      "text_id": "T-001",
+      "text": "!!! processingn stream",
+      "candidate_region": "PDS03"
+    },
+    {
+      "text_id": "T-002",
+      "text": "so how do we process bytes in loops in different situations?",
+      "candidate_region": "PDS03"
+    },
+    {
+      "text_id": "T-013",
+      "text": "in controller endp",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-014",
+      "text": "readasync, when returns 0 - the end of request",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-015",
+      "text": "if  there is some network error abort request will be fired",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-016",
+      "text": "or can use readexactly/readatleast for some special behavior, we",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-017",
+      "text": "need buffer here to write available or specified number of bytes",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-020",
+      "text": "processing chunk by chunk with httpclient",
+      "candidate_region": "PDS03"
+    },
+    {
+      "text_id": "T-033",
+      "text": "need to catch ioexception too",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-034",
+      "text": "to get it from steram failure",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-035",
+      "text": "when using streams",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-036",
+      "text": "controller asp",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-040",
+      "text": "stream, reading bytes",
+      "candidate_region": "PDS01"
+    },
+    {
+      "text_id": "T-041",
+      "text": "writing",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-042",
+      "text": "pipewriter",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-043",
+      "text": "so we get unprocessed",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-044",
+      "text": "buffer for next iteration",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-045",
+      "text": "and we pass its start",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-046",
+      "text": "and end",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-047",
+      "text": "can have overloads with pos",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-048",
+      "text": "of count of bytes form start",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-049",
+      "text": "or some sequenceposition",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-050",
+      "text": "pipereader",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-051",
+      "text": "pipereader",
+      "candidate_region": "PDS04"
+    },
+    {
+      "text_id": "T-052",
+      "text": "make sense the most with sequence reader that provides cursor api",
+      "candidate_region": "PDS04"
+    }
+  ]
+}

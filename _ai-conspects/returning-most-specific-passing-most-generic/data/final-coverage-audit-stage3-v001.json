@@ -1,0 +1,86 @@
+{
+  "generated": "2026-06-13 10:41:31 UTC",
+  "stage": "3",
+  "audit_type": "final-closure-audit",
+  "status": "complete",
+  "coverage": {
+    "expected_image_uses": 8,
+    "ledger_rows": 8,
+    "processed_rows": 8,
+    "missing": [],
+    "duplicates": [],
+    "extra": [],
+    "unreviewed": [],
+    "candidate_only": []
+  },
+  "regions": {
+    "RMSG01": {
+      "expected": 5,
+      "actual": 5,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005"
+      ]
+    },
+    "RMSG02": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-006",
+        "S-007",
+        "S-008"
+      ]
+    }
+  },
+  "subregions": {
+    "RMSG01A": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-001",
+        "S-002"
+      ]
+    },
+    "RMSG01B": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-003",
+        "S-004",
+        "S-005"
+      ]
+    },
+    "RMSG02A": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-006",
+        "S-007"
+      ]
+    },
+    "RMSG02B": {
+      "expected": 1,
+      "actual": 1,
+      "sources": [
+        "S-008"
+      ]
+    }
+  },
+  "region_mismatches": {},
+  "subregion_mismatches": {},
+  "text_context": {
+    "expected_text_labels": 2,
+    "actual_text_labels": 2,
+    "missing": [],
+    "duplicates": [],
+    "extra": []
+  },
+  "verified_transcripts": {
+    "RMSG01": "Main guideline: accept generic, return specific",
+    "RMSG02": ".NET generic/collection hierarchy and immutable collection consequence"
+  },
+  "conclusion": "All image uses are processed and the conspect can be marked complete."
+}

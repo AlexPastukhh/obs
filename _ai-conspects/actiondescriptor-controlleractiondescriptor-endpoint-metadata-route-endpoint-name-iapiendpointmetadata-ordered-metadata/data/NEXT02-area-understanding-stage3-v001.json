@@ -1,0 +1,62 @@
+{
+  "generated": "2026-06-13 10:41:31 UTC",
+  "stage": "3",
+  "batch_id": "NEXT02",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 20,
+  "pending_count": 0,
+  "boundary_corrections": [],
+  "regions": {
+    "AEM02": {
+      "name": "Endpoint metadata, MVC endpoint metadata, RouteEndpoint and IApiEndpointMetadata",
+      "processed_sources": [
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031"
+      ],
+      "key_ideas": [
+        "Endpoint.Metadata is the unified endpoint-routing metadata bag.",
+        "Minimal APIs rely heavily on Endpoint.Metadata.",
+        "MVC endpoints can have both endpoint metadata and MVC ActionDescriptor.",
+        "IApiEndpointMetadata participates in API Explorer/OpenAPI-oriented metadata.",
+        "Metadata can come from attributes, conventions and endpoint builder calls."
+      ]
+    },
+    "AEM03": {
+      "name": "Ordered metadata and ordered endpoint metadata lookup",
+      "processed_sources": [
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036"
+      ],
+      "key_ideas": [
+        "Endpoint metadata ordering matters.",
+        "GetMetadata<T>() returns the effective item according to ordering semantics.",
+        "GetOrderedMetadata<T>() returns all matching metadata in order.",
+        "Group/convention/endpoint-local metadata can combine and override each other."
+      ]
+    }
+  },
+  "pending_regions": {},
+  "reading_quality": {
+    "overall": "Overall: medium-high. Code is small in places, but metadata concepts and API names are clear.",
+    "limitations": [
+      "Some screenshots are tiny in contact sheet."
+    ],
+    "confidence": "high"
+  }
+}

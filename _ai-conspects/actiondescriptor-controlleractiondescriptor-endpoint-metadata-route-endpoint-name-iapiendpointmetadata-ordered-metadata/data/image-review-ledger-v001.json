@@ -1,35 +1,34 @@
 {
-  "generated": "2026-06-13 09:11:01 UTC",
-  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "generated": "2026-06-13 10:41:31 UTC",
+  "ledger_version": "v001-updated-by-stage3-next02-or-final-step",
   "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
-  "stage2_delta": {
-    "processed_regions": {
-      "AEM01": [
-        "S-021",
-        "S-022",
-        "S-023",
-        "S-024",
-        "S-025",
-        "S-001",
-        "S-002",
-        "S-003",
-        "S-004",
-        "S-005",
-        "S-006",
-        "S-007",
-        "S-017",
-        "S-018",
-        "S-019",
-        "S-020"
-      ]
-    },
-    "processed_count": 16,
-    "total_processed_after_next01": 16,
-    "pending_regions": {
-      "AEM02": "Endpoint metadata, MVC endpoint metadata, RouteEndpoint and IApiEndpointMetadata",
-      "AEM03": "Ordered metadata and ordered endpoint metadata lookup"
-    },
-    "pending_count": 20,
+  "stage3_delta": {
+    "processed_sources": [
+      "S-008",
+      "S-009",
+      "S-010",
+      "S-011",
+      "S-012",
+      "S-013",
+      "S-014",
+      "S-015",
+      "S-016",
+      "S-026",
+      "S-027",
+      "S-028",
+      "S-029",
+      "S-030",
+      "S-031",
+      "S-032",
+      "S-033",
+      "S-034",
+      "S-035",
+      "S-036"
+    ],
+    "processed_count": 20,
+    "total_processed_after_this_step": 36,
+    "pending_sources": [],
+    "pending_count": 0,
     "boundary_corrections": []
   },
   "rows": [
@@ -161,13 +160,13 @@
       "width": "769.0",
       "height": "301.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-005:endpoint metadata | T-006:ordered metadata | T-008:iroutenamemetadata",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -178,13 +177,13 @@
       "width": "786.0",
       "height": "419.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-005:endpoint metadata | T-006:ordered metadata | T-008:iroutenamemetadata",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -195,13 +194,13 @@
       "width": "856.0",
       "height": "356.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-005:endpoint metadata | T-006:ordered metadata | T-001:Action descriptor",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -212,13 +211,13 @@
       "width": "696.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-005:endpoint metadata | T-006:ordered metadata | T-001:Action descriptor | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -229,13 +228,13 @@
       "width": "621.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-005:endpoint metadata | T-001:Action descriptor | T-006:ordered metadata | T-009:IApiEndpointMetadata | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -246,13 +245,13 @@
       "width": "804.0",
       "height": "433.0",
       "nearest_labels_for_search_only": "T-005:endpoint metadata | T-001:Action descriptor | T-009:IApiEndpointMetadata | T-006:ordered metadata | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",
@@ -263,13 +262,13 @@
       "width": "684.0",
       "height": "403.0",
       "nearest_labels_for_search_only": "T-005:endpoint metadata | T-006:ordered metadata | T-001:Action descriptor | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -280,13 +279,13 @@
       "width": "834.0",
       "height": "464.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-005:endpoint metadata | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-001:Action descriptor",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -297,13 +296,13 @@
       "width": "793.0",
       "height": "403.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-005:endpoint metadata | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-001:Action descriptor",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -467,13 +466,13 @@
       "width": "904.0",
       "height": "223.0",
       "nearest_labels_for_search_only": "T-009:IApiEndpointMetadata | T-005:endpoint metadata | T-006:ordered metadata | T-001:Action descriptor | T-002:using methodinfo/method info from",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-027",
@@ -484,13 +483,13 @@
       "width": "894.0",
       "height": "430.0",
       "nearest_labels_for_search_only": "T-009:IApiEndpointMetadata | T-006:ordered metadata | T-005:endpoint metadata | T-001:Action descriptor | T-002:using methodinfo/method info from",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-028",
@@ -501,13 +500,13 @@
       "width": "944.0",
       "height": "430.0",
       "nearest_labels_for_search_only": "T-009:IApiEndpointMetadata | T-006:ordered metadata | T-005:endpoint metadata | T-001:Action descriptor | T-002:using methodinfo/method info from",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-029",
@@ -518,13 +517,13 @@
       "width": "996.0",
       "height": "327.0",
       "nearest_labels_for_search_only": "T-009:IApiEndpointMetadata | T-006:ordered metadata | T-005:endpoint metadata | T-001:Action descriptor | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-030",
@@ -535,13 +534,13 @@
       "width": "969.0",
       "height": "306.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-009:IApiEndpointMetadata | T-005:endpoint metadata | T-001:Action descriptor | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-031",
@@ -552,13 +551,13 @@
       "width": "954.0",
       "height": "330.0",
       "nearest_labels_for_search_only": "T-009:IApiEndpointMetadata | T-005:endpoint metadata | T-006:ordered metadata | T-001:Action descriptor | T-002:using methodinfo/method info from",
-      "coverage_status": "candidate-aem02",
+      "coverage_status": "processed-in-aem02-v001",
       "current_region_decision": "AEM02",
       "current_subregion_decision": "AEM02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Endpoint metadata as the unified endpoint-routing metadata bag: what metadata can be read, MVC endpoint examples, metadata from MapGet/WithMetadata/WithTags, minimal APIs vs MVC endpoint metadata, and IApiEndpointMetadata used by API Explorer/OpenAPI-oriented metadata.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM02 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-032",
@@ -569,13 +568,13 @@
       "width": "794.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-005:endpoint metadata | T-009:IApiEndpointMetadata | T-001:Action descriptor | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem03",
+      "coverage_status": "processed-in-aem03-v001",
       "current_region_decision": "AEM03",
       "current_subregion_decision": "AEM03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Ordered endpoint metadata behavior: metadata collection order, GetMetadata<T>(), reading ordered metadata from the endpoint, how authentication/authorization/CORS examples depend on ordered metadata, and why order matters practically.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-033",
@@ -586,13 +585,13 @@
       "width": "930.0",
       "height": "373.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-005:endpoint metadata | T-009:IApiEndpointMetadata | T-001:Action descriptor | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem03",
+      "coverage_status": "processed-in-aem03-v001",
       "current_region_decision": "AEM03",
       "current_subregion_decision": "AEM03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Ordered endpoint metadata behavior: metadata collection order, GetMetadata<T>(), reading ordered metadata from the endpoint, how authentication/authorization/CORS examples depend on ordered metadata, and why order matters practically.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-034",
@@ -603,13 +602,13 @@
       "width": "949.0",
       "height": "245.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-005:endpoint metadata | T-009:IApiEndpointMetadata | T-001:Action descriptor | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem03",
+      "coverage_status": "processed-in-aem03-v001",
       "current_region_decision": "AEM03",
       "current_subregion_decision": "AEM03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Ordered endpoint metadata behavior: metadata collection order, GetMetadata<T>(), reading ordered metadata from the endpoint, how authentication/authorization/CORS examples depend on ordered metadata, and why order matters practically.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-035",
@@ -620,13 +619,13 @@
       "width": "933.0",
       "height": "453.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-009:IApiEndpointMetadata | T-005:endpoint metadata | T-001:Action descriptor | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem03",
+      "coverage_status": "processed-in-aem03-v001",
       "current_region_decision": "AEM03",
       "current_subregion_decision": "AEM03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Ordered endpoint metadata behavior: metadata collection order, GetMetadata<T>(), reading ordered metadata from the endpoint, how authentication/authorization/CORS examples depend on ordered metadata, and why order matters practically.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-036",
@@ -637,13 +636,13 @@
       "width": "939.0",
       "height": "237.0",
       "nearest_labels_for_search_only": "T-006:ordered metadata | T-009:IApiEndpointMetadata | T-005:endpoint metadata | T-001:Action descriptor | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem03",
+      "coverage_status": "processed-in-aem03-v001",
       "current_region_decision": "AEM03",
       "current_subregion_decision": "AEM03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Ordered endpoint metadata behavior: metadata collection order, GetMetadata<T>(), reading ordered metadata from the endpoint, how authentication/authorization/CORS examples depend on ordered metadata, and why order matters practically.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM03 v001 after NEXT02 visual/semantic transcript pass."
     }
   ]
 }
