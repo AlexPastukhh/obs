@@ -1,6 +1,6 @@
-# Apply archive: Produces Consumes Formatters P02 transcript v001
+# Apply archive: Produces Consumes Formatters final coverage audit v001
 
-Archive type: stage-2 verified combined transcript.
+Archive type: stage-3 final coverage audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-produces-consumes-input-output-formatters-406-415-vary-accept-stage2-p02-status-diagnostics-vary-accept-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-produces-consumes-input-output-formatters-406-415-vary-accept-stage3-final-coverage-audit-v001.zip
 ```
 
 ## Apply commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-produces-consumes-input-output-formatters-
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-produces-consumes-input-output-formatters-406-415-vary-accept-stage2-p02-status-diagnostics-vary-accept-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-produces-consumes-input-output-formatters-406-415-vary-accept-stage2-p02-status-diagnostics-vary-accept-transcript-v001.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-produces-consumes-input-output-formatters-406-415-vary-accept-stage3-final-coverage-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-produces-consumes-input-output-formatters-406-415-vary-accept-stage3-final-coverage-audit-v001.diff"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -54,10 +54,10 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add _ai-conspects/produces-consumes-input-output-formatters-406-415-vary-accept
-git commit -m "Add produces consumes formatters P02 transcript"
+git commit -m "Finalize produces consumes formatters coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
 ## Notes
 
-This archive closes P02/R03R04. Next archive should be final coverage audit.
+This archive does not add a new transcript. It records final coverage completeness for all 44 image uses.
