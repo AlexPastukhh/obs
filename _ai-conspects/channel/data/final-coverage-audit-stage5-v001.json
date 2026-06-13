@@ -1,0 +1,339 @@
+{
+  "generated": "2026-06-13 07:22:01 UTC",
+  "stage": "5",
+  "audit_type": "final-closure-audit",
+  "status": "complete",
+  "coverage": {
+    "expected_image_uses": 62,
+    "ledger_rows": 62,
+    "processed_rows": 62,
+    "missing": [],
+    "duplicates": [],
+    "extra": [],
+    "unreviewed": [],
+    "candidate_only": []
+  },
+  "regions": {
+    "CH01": {
+      "expected": 10,
+      "actual": 10,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-062"
+      ]
+    },
+    "CH02": {
+      "expected": 20,
+      "actual": 20,
+      "sources": [
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-011",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033"
+      ]
+    },
+    "CH03": {
+      "expected": 5,
+      "actual": 5,
+      "sources": [
+        "S-014",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037"
+      ]
+    },
+    "CH04": {
+      "expected": 10,
+      "actual": 10,
+      "sources": [
+        "S-038",
+        "S-039",
+        "S-040",
+        "S-041",
+        "S-042",
+        "S-043",
+        "S-044",
+        "S-045",
+        "S-046",
+        "S-047"
+      ]
+    },
+    "CH05": {
+      "expected": 17,
+      "actual": 17,
+      "sources": [
+        "S-012",
+        "S-013",
+        "S-021",
+        "S-048",
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052",
+        "S-053",
+        "S-054",
+        "S-055",
+        "S-056",
+        "S-057",
+        "S-058",
+        "S-059",
+        "S-060",
+        "S-061"
+      ]
+    }
+  },
+  "subregions": {
+    "CH01A": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003"
+      ]
+    },
+    "CH01B": {
+      "expected": 5,
+      "actual": 5,
+      "sources": [
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-020",
+        "S-062"
+      ]
+    },
+    "CH01C": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-018",
+        "S-019"
+      ]
+    },
+    "CH02A": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007"
+      ]
+    },
+    "CH02B": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-011",
+        "S-015",
+        "S-016",
+        "S-017"
+      ]
+    },
+    "CH02C": {
+      "expected": 6,
+      "actual": 6,
+      "sources": [
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027"
+      ]
+    },
+    "CH02D": {
+      "expected": 6,
+      "actual": 6,
+      "sources": [
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033"
+      ]
+    },
+    "CH03A": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-014",
+        "S-034",
+        "S-035"
+      ]
+    },
+    "CH03B": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-036",
+        "S-037"
+      ]
+    },
+    "CH04A": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-038",
+        "S-039",
+        "S-040",
+        "S-041"
+      ]
+    },
+    "CH04B": {
+      "expected": 6,
+      "actual": 6,
+      "sources": [
+        "S-042",
+        "S-043",
+        "S-044",
+        "S-045",
+        "S-046",
+        "S-047"
+      ]
+    },
+    "CH05A": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-012",
+        "S-013",
+        "S-021"
+      ]
+    },
+    "CH05B": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-048",
+        "S-049",
+        "S-050",
+        "S-051"
+      ]
+    },
+    "CH05C": {
+      "expected": 10,
+      "actual": 10,
+      "sources": [
+        "S-052",
+        "S-053",
+        "S-054",
+        "S-055",
+        "S-056",
+        "S-057",
+        "S-058",
+        "S-059",
+        "S-060",
+        "S-061"
+      ]
+    }
+  },
+  "region_mismatches": {},
+  "subregion_mismatches": {},
+  "boundary_corrections": {
+    "expected": {
+      "NEXT01": [],
+      "NEXT02": [],
+      "NEXT03": []
+    },
+    "actual": {
+      "NEXT01": [],
+      "NEXT02": [],
+      "NEXT03": []
+    },
+    "ok": true
+  },
+  "duplicate_embedded_image_uses": {
+    "expected": {
+      "3ff670517a": [
+        "S-020",
+        "S-062"
+      ]
+    },
+    "actual": {
+      "3ff670517a": [
+        "S-020",
+        "S-062"
+      ]
+    },
+    "mismatch": false
+  },
+  "text_context": {
+    "expected_text_labels": 37,
+    "actual_text_labels": 37,
+    "missing": [],
+    "duplicates": [],
+    "extra": []
+  },
+  "required_transcript_files": {
+    "checked": [
+      "02-stage2-next01-transcript.md",
+      "03-stage3-next02-transcript.md",
+      "04-stage4-next03-transcript.md",
+      "regions/CH01-channel-fundamentals-types-backpressure.md",
+      "regions/CH02-reader-writer-operations-async-completion.md",
+      "regions/CH03-concurrency-assumptions-completion-edge-cases.md",
+      "regions/CH04-manual-wait-try-batching-patterns.md",
+      "regions/CH05-websockets-connection-manager-channel-pattern.md",
+      "data/NEXT01-sources-stage2-v001.csv",
+      "data/NEXT01-sources-stage2-v001.json",
+      "data/NEXT01-boundary-review-stage2-v001.csv",
+      "data/NEXT01-boundary-review-stage2-v001.json",
+      "data/NEXT01-area-understanding-stage2-v001.json",
+      "data/NEXT01-text-context-stage2-v001.csv",
+      "data/NEXT01-text-context-stage2-v001.json",
+      "data/NEXT02-sources-stage3-v001.csv",
+      "data/NEXT02-sources-stage3-v001.json",
+      "data/NEXT02-boundary-review-stage3-v001.csv",
+      "data/NEXT02-boundary-review-stage3-v001.json",
+      "data/NEXT02-area-understanding-stage3-v001.json",
+      "data/NEXT02-text-context-stage3-v001.csv",
+      "data/NEXT02-text-context-stage3-v001.json",
+      "data/NEXT03-sources-stage4-v001.csv",
+      "data/NEXT03-sources-stage4-v001.json",
+      "data/NEXT03-boundary-review-stage4-v001.csv",
+      "data/NEXT03-boundary-review-stage4-v001.json",
+      "data/NEXT03-area-understanding-stage4-v001.json",
+      "data/NEXT03-text-context-stage4-v001.csv",
+      "data/NEXT03-text-context-stage4-v001.json",
+      "data/image-review-ledger-v001.csv",
+      "data/image-review-ledger-v001.json"
+    ],
+    "missing": []
+  },
+  "verified_transcripts": {
+    "CH01": "Channel fundamentals, creation, types, options, backpressure",
+    "CH02": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+    "CH03": "Concurrency assumptions and completion edge cases",
+    "CH04": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+    "CH05": "WebSockets/application examples and connection manager channel pattern"
+  },
+  "conclusion": "All image uses are processed and the conspect can be marked complete."
+}

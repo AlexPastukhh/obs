@@ -1,5 +1,7 @@
 # Regions - channel
 
+Status: **complete**
+
 Verified transcripts:
 
 ```text
@@ -10,21 +12,18 @@ CH04 - Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns
 CH05 - WebSockets/application examples and connection manager channel pattern
 ```
 
-Duplicate embedded-image use:
+Final closure audit:
 
 ```text
-3ff670517a: S-020, S-062
+Expected image uses: 62
+Processed image uses: 62
+Missing: 0
+Duplicates: 0
+Unreviewed: 0
+Candidate-only: 0
+Boundary corrections ok: true
+Duplicate embedded-image use mismatch: false
+Duplicate embedded-image use: 3ff670517a = S-020 + S-062
 ```
 
-Next step:
-
-```text
-Final closure/audit
-```
-
-Each transcript includes:
-
-```text
-## 0.1 Area overview / key ideas / reading quality
-## 0.2 Coverage / boundary review
-```
+No pending transcript regions remain.
