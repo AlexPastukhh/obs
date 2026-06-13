@@ -1,0 +1,60 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-001,IU-001,946177ff27,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,Not exactly: EF Core materializes entities from database rows without necessarily calling the same normal business methods used by application code.,"Not exactly: EF Core materializes entities from database rows without necessarily calling the same normal business methods used by application code.
+
+Visible meaning:
+- EF creates an instance.
+- It fills properties/fields from database values.
+- It starts tracking the entity when the query is tracking.
+- Constructor behavior can vary by mapping/access pattern.
+- Do not rely on EF replaying business behavior during materialization.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-011,IU-011,8a232da430,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,Filter by a shadow property.,"Filter by a shadow property.
+
+Visible code:
+var active = await db.Orders
+    .Where(o => EF.Property<bool>(o, ""IsDeleted"") == false)
+    .ToListAsync();
+
+Meaning:
+Shadow properties are database/model columns not exposed as normal CLR properties, but EF can still query them with EF.Property.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-014,IU-014,5e335b4ef1,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,Detached entity update example.,"Detached entity update example.
+
+Visible code:
+var blog = new Blog { Id = 5, Name = ""New name"" };
+context.Attach(blog);
+context.Entry(blog).Property(x => x.Name).IsModified = true;
+await context.SaveChangesAsync();
+
+Meaning:
+Attach tells EF the entity exists. Then individual modified properties must be marked, otherwise EF may not update or may update too much.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-019,IU-019,4538d60710,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,Parameterless constructor question.,"Parameterless constructor question.
+
+Visible note:
+Do not remove all logic from constructors just because EF wants/uses a parameterless constructor. If EF can bind a parameterized constructor to mapped properties/services, it may use it; otherwise it can use a parameterless constructor and set members afterward.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-020,IU-020,1b74640858,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,How Attach helps.,"How Attach helps.
+
+Attach is useful when:
+- the entity already exists;
+- you do not want EF to insert it;
+- you want it tracked as Unchanged;
+- then you will modify properties and let change tracking detect them, or explicitly mark properties as modified.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-021,IU-021,bc91d60828,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,Safe constructor logic.,"Safe constructor logic.
+
+Good constructor logic:
+- assign fields/properties;
+- perform simple validation;
+- maintain object consistency from passed values.
+
+Example Money constructor validates amount and assigns amount/currency. If EF uses this constructor during materialization, the logic runs.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-025,IU-025,354939e8d7,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,Detached entity with unchanged state.,"Detached entity with unchanged state.
+
+Image shows attached entity state and property states. By default, Attach marks the entity as Unchanged; only explicitly marked properties become Modified. This prevents updating every column accidentally.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-027,IU-027,e42dcdf323,EFC-R02-entities-constructors-attach-shadow-props,EFC-R02,verified-visible-semantic-transcript,What to avoid in constructors.,"What to avoid in constructors.
+
+Avoid constructor logic that assumes normal app creation flow:
+- calling services;
+- publishing events;
+- touching database;
+- depending on navigations being populated;
+- logic only sensible for newly created objects, not rehydrated persisted ones.
+
+EF may call the constructor during materialization.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

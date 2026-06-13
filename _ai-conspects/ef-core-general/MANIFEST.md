@@ -1,40 +1,39 @@
-# MANIFEST - EF Core General Stage0 Boundary Review
+# MANIFEST - EF Core General Stage1 R01-R03 Transcript
 
-Archive type: **boundary review**  
+Archive type: **source-level semantic transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-12 13:56:26 UTC
+Generated: 2026-06-13 05:33:27 UTC
 
 ## Direction check
 
 Goal:
-Start EF Core General conspect only if an existing EF Core conspect is not found.
+Continue EF Core General after Stage0.
 
 Done:
-Known existing conspects were checked and EF Core was not found.
+Stage0 boundary review was applied.
 
 This step:
-Add Stage0 boundary review for all EF Core General source images.
+Add Stage1 transcript for R01/R02/R03, 54 source images.
 
 Why:
-New conspect must start with source inventory, stable source IDs, rough groups, and contact sheets.
+This is the first transcript pass. It is source-level semantic transcript, not only coverage summary.
 
 Next:
 1. review staged file list/status;
 2. commit;
-3. process EFCoreGeneral-stage1 transcript.
+3. process EFCoreGeneral Stage2 R04 + R05.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/ef-core-general/00-repo-conspects-check.md
-_ai-conspects/ef-core-general/01-stage0-boundary-review.md
-_ai-conspects/ef-core-general/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/ef-core-general/data/EFCoreGeneral-stage0-boundary-review-v001.csv
-_ai-conspects/ef-core-general/data/EFCoreGeneral-stage0-boundary-review-v001.json
+_ai-conspects/ef-core-general/02-stage1-r01-r02-r03-transcript.md
+_ai-conspects/ef-core-general/regions/EFC-R01-repository-reads-tracking-identity-map.md
+_ai-conspects/ef-core-general/regions/EFC-R02-entities-constructors-attach-shadow-props.md
+_ai-conspects/ef-core-general/regions/EFC-R03-model-configuration-relationships-keys.md
+_ai-conspects/ef-core-general/data/*stage1-v001.*
 _ai-conspects/ef-core-general/data/ef-core-general-image-review-ledger-v1.csv
 _ai-conspects/ef-core-general/data/ef-core-general-image-review-ledger-v1.json
-_ai-conspects/ef-core-general/audit-assets/EFCoreGeneral-stage0-*-contact-sheet.png
-_ai-conspects/ef-core-general/audit-assets/stage0-source-images/*.png
+_ai-conspects/ef-core-general/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/ef-core-general/MANIFEST.md
 _ai-conspects/ef-core-general/APPLY_ARCHIVE.md
 ```
@@ -42,7 +41,7 @@ _ai-conspects/ef-core-general/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Boundary candidates: 65
-Processed by this archive: 0
-Next: EFCoreGeneral-stage1 transcript
+Stage1 processed: 54
+Stage0 remaining candidates: 11
+Next: EFCoreGeneral Stage2
 ```

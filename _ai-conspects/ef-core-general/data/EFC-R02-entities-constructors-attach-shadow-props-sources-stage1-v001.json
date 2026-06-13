@@ -1,0 +1,97 @@
+{
+  "generated": "2026-06-13 05:33:27 UTC",
+  "group": "EFC-R02-entities-constructors-attach-shadow-props",
+  "region": "EFC-R02",
+  "source_count": 8,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "946177ff27",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Not exactly: EF Core materializes entities from database rows without necessarily calling the same normal business methods used by application code.",
+      "transcript": "Not exactly: EF Core materializes entities from database rows without necessarily calling the same normal business methods used by application code.\n\nVisible meaning:\n- EF creates an instance.\n- It fills properties/fields from database values.\n- It starts tracking the entity when the query is tracking.\n- Constructor behavior can vary by mapping/access pattern.\n- Do not rely on EF replaying business behavior during materialization.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-011",
+      "image_use_id": "IU-011",
+      "fileId_short": "8a232da430",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Filter by a shadow property.",
+      "transcript": "Filter by a shadow property.\n\nVisible code:\nvar active = await db.Orders\n    .Where(o => EF.Property<bool>(o, \"IsDeleted\") == false)\n    .ToListAsync();\n\nMeaning:\nShadow properties are database/model columns not exposed as normal CLR properties, but EF can still query them with EF.Property.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "5e335b4ef1",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Detached entity update example.",
+      "transcript": "Detached entity update example.\n\nVisible code:\nvar blog = new Blog { Id = 5, Name = \"New name\" };\ncontext.Attach(blog);\ncontext.Entry(blog).Property(x => x.Name).IsModified = true;\nawait context.SaveChangesAsync();\n\nMeaning:\nAttach tells EF the entity exists. Then individual modified properties must be marked, otherwise EF may not update or may update too much.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-019",
+      "image_use_id": "IU-019",
+      "fileId_short": "4538d60710",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Parameterless constructor question.",
+      "transcript": "Parameterless constructor question.\n\nVisible note:\nDo not remove all logic from constructors just because EF wants/uses a parameterless constructor. If EF can bind a parameterized constructor to mapped properties/services, it may use it; otherwise it can use a parameterless constructor and set members afterward.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-020",
+      "image_use_id": "IU-020",
+      "fileId_short": "1b74640858",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "How Attach helps.",
+      "transcript": "How Attach helps.\n\nAttach is useful when:\n- the entity already exists;\n- you do not want EF to insert it;\n- you want it tracked as Unchanged;\n- then you will modify properties and let change tracking detect them, or explicitly mark properties as modified.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-021",
+      "image_use_id": "IU-021",
+      "fileId_short": "bc91d60828",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Safe constructor logic.",
+      "transcript": "Safe constructor logic.\n\nGood constructor logic:\n- assign fields/properties;\n- perform simple validation;\n- maintain object consistency from passed values.\n\nExample Money constructor validates amount and assigns amount/currency. If EF uses this constructor during materialization, the logic runs.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-025",
+      "image_use_id": "IU-025",
+      "fileId_short": "354939e8d7",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Detached entity with unchanged state.",
+      "transcript": "Detached entity with unchanged state.\n\nImage shows attached entity state and property states. By default, Attach marks the entity as Unchanged; only explicitly marked properties become Modified. This prevents updating every column accidentally.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-027",
+      "image_use_id": "IU-027",
+      "fileId_short": "e42dcdf323",
+      "stage0_group": "EFC-R02-entities-constructors-attach-shadow-props",
+      "stage1_region": "EFC-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "What to avoid in constructors.",
+      "transcript": "What to avoid in constructors.\n\nAvoid constructor logic that assumes normal app creation flow:\n- calling services;\n- publishing events;\n- touching database;\n- depending on navigations being populated;\n- logic only sensible for newly created objects, not rehydrated persisted ones.\n\nEF may call the constructor during materialization.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "generated": "2026-06-13 05:33:27 UTC",
+  "group": "EFC-R03-model-configuration-relationships-keys",
+  "region": "EFC-R03",
+  "source_count": 18,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "62853cad31",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Unique email / availability check race.",
+      "transcript": "Unique email / availability check race.\n\nVisible flow:\n1. User checks IsEmailAvailable.\n2. Server checks database: email is free.\n3. Later user sends INSERT.\n4. Another insert can happen between check and insert.\n\nMeaning:\nApplication pre-check is not enough. Database unique constraint / unique index is the real invariant for email uniqueness.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "7e221f7688",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Navigation / redirect / browser cache note.",
+      "transcript": "Navigation / redirect / browser cache note.\n\nVisible card is mostly about browser/proxy cache redirects and Location header behavior. In EF grouping it is a candidate boundary artifact near model/navigation notes.\n\nStage1 interpretation:\nThis is not a core EF model mapping source. It is kept in R03 because it sat in the OnModelCreating/navigation area, but it should be rechecked in a later precision pass if exact source ownership matters.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-007",
+      "image_use_id": "IU-007",
+      "fileId_short": "55ea344509",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Question about infrastructure-generated fields.",
+      "transcript": "Question about infrastructure-generated fields.\n\nVisible note:\nIs there a way to ensure that properties should exist or not exist together so a case like firstName exists while lastname does not?\n\nMeaning:\nThis points to a model invariant: related columns/properties should be configured so partial invalid states are impossible or explicitly handled.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-008",
+      "image_use_id": "IU-008",
+      "fileId_short": "0f7c82eb0b",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Email uniqueness / duplicate insert failure.",
+      "transcript": "Email uniqueness / duplicate insert failure.\n\nVisible Russian/English mixed note:\n- DB unique constraint or unique index is the safe protection.\n- Concurrent requests can both see an email as available.\n- Only database insert/update can finally reject a duplicate.\n- Typical DB exception is unique violation.\n\nMeaning:\nPut the invariant in the database, not only in pre-check code.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-010",
+      "image_use_id": "IU-010",
+      "fileId_short": "1e229933ef",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "OnModelCreating example with HasIndex / HasConstraintName.",
+      "transcript": "OnModelCreating example with HasIndex / HasConstraintName.\n\nVisible code configures indexes and constraints, including one with HasDatabaseName / HasFilter style. The source belongs to model configuration: index naming, filtered/unique indexes, and mapping database-level rules from Fluent API.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "3dc7a29628",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Owned value object mapping / unique email.",
+      "transcript": "Owned value object mapping / unique email.\n\nVisible code:\ncb.OwnsOne(c => c.Email, eb =>\n{\n    eb.Property(e => e.Value)\n      .HasColumnName(\"Email\")\n      .HasMaxLength(100)\n      .IsRequired();\n});\ncb.HasIndex(\"Email\").IsUnique();\n\nMeaning:\nOwned value object can be flattened to a column, and a unique index can enforce email uniqueness at DB level.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-017",
+      "image_use_id": "IU-017",
+      "fileId_short": "5152f87def",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "OwnsOne full name / split columns.",
+      "transcript": "OwnsOne full name / split columns.\n\nVisible code configures FullName as owned value object with columns:\n- FirstName\n- MiddleName\n- LastName\n\nSome fields are required/optional with max length. Meaning: owned type maps value object internals into columns while keeping a domain object model.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-026",
+      "image_use_id": "IU-026",
+      "fileId_short": "3945d0f1d7",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Explicitly control nullable/required behavior.",
+      "transcript": "Explicitly control nullable/required behavior.\n\nVisible code shows making a relationship optional/required and using OnDelete behavior. Meaning: do not rely only on CLR nullability; configure FK and relationship rules explicitly when the domain needs it.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-039",
+      "image_use_id": "IU-039",
+      "fileId_short": "9f752fd7b7",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Nullable value object inside aggregate.",
+      "transcript": "Nullable value object inside aggregate.\n\nCard describes a nullable value object such as FullName inside a client aggregate. If the owned object is null or optional, EF/model configuration must match the domain intent and column nullability.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-041",
+      "image_use_id": "IU-041",
+      "fileId_short": "9be28189df",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Required false too / nullable relationship.",
+      "transcript": "Required false too / nullable relationship.\n\nVisible code uses HasOne / WithMany / IsRequired(false). Meaning: optional relationship is allowed; database FK can be nullable and object can be null depending on configuration.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-045",
+      "image_use_id": "IU-045",
+      "fileId_short": "3945d0f1d7",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Explicitly controlling behavior / optional address.",
+      "transcript": "Explicitly controlling behavior / optional address.\n\nVisible code shows configuring an optional owned/complex object and its properties. Meaning: when columns may all be null, model behavior must be explicit so EF knows whether the owned object exists or is null.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-046",
+      "image_use_id": "IU-046",
+      "fileId_short": "dfe76f5f7c",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Model identity cleanly in code.",
+      "transcript": "Model identity cleanly in code.\n\nVisible DDD advice:\nUse an explicit reference/value object or ID rather than relying on a primitive column when the relationship/identity has domain meaning. Optional child entity inside aggregate is shown.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-048",
+      "image_use_id": "IU-048",
+      "fileId_short": "8d6946160e",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Owned/complex type mapping variants.",
+      "transcript": "Owned/complex type mapping variants.\n\nVisible card shows OwnsOne / owned type and optional reference to another aggregate. Meaning: value objects can be embedded in owner columns; references to other aggregates should often be stored as IDs instead.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-050",
+      "image_use_id": "IU-050",
+      "fileId_short": "deb7e62c3f",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Important DDD advice: identity inside the aggregate.",
+      "transcript": "Important DDD advice: identity inside the aggregate.\n\nAsk:\n- Is this identity meaningful only inside the aggregate?\n- Or globally meaningful?\n\nIf identity is only inside aggregate, model as a child entity/owned collection. If globally meaningful, store/reference by ID.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-053",
+      "image_use_id": "IU-053",
+      "fileId_short": "2e1caff84a",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "EF Core mapping for complex/owned types.",
+      "transcript": "EF Core mapping for complex/owned types.\n\nVisible code shows ModelBuilder configuration for a value object like Money inside Order/Product. It maps amount/currency columns and stores owned/complex object fields in the owner table.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-055",
+      "image_use_id": "IU-055",
+      "fileId_short": "064840baae",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Materialized column / computed value table example.",
+      "transcript": "Materialized column / computed value table example.\n\nVisible table shows Discount with DiscountAmount and DiscountCurrency columns. If a value object is materialized or flattened, the database columns reflect its fields. Configuration can choose whether the object exists when all columns are null.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-057",
+      "image_use_id": "IU-057",
+      "fileId_short": "548433edd7",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Nullable/optional owned columns and materialization.",
+      "transcript": "Nullable/optional owned columns and materialization.\n\nIf materialization sees all owned columns as null, EF can treat the owned object as null depending on configuration. If values are present, it materializes the owned/value object.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-059",
+      "image_use_id": "IU-059",
+      "fileId_short": "685f8e9fda",
+      "stage0_group": "EFC-R03-model-configuration-relationships-keys",
+      "stage1_region": "EFC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Why not map Money directly as a primitive.",
+      "transcript": "Why not map Money directly as a primitive.\n\nEF value conversions can store a value object as one scalar, but if you need separate queryable/indexable columns such as amount/currency, owned/complex mapping or explicit columns may be better.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

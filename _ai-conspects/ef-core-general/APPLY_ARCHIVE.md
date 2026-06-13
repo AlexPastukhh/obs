@@ -1,6 +1,6 @@
-# Apply archive: EF Core General Stage0 boundary review
+# Apply archive: EF Core General Stage1 transcript
 
-Archive type: boundary review.
+Archive type: source-level semantic transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage1-r01-r02-r03-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -27,7 +27,7 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\ef-core-general"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage1-r01-r02-r03-transcript-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -46,7 +46,7 @@ git status --short -- $target
 ## Commit commands
 
 ```powershell
-git commit -m "Add EF Core General Stage0 boundary review"
+git commit -m "Add EF Core General Stage1 transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git clean -fd -- _ai-conspects/ef-core-general
 
 ## Notes
 
-This archive is boundary review only. It does not add transcript and does not mark EF Core General sources as processed.
+This archive processes R01/R02/R03 only. R04/R05 remain pending for Stage2.

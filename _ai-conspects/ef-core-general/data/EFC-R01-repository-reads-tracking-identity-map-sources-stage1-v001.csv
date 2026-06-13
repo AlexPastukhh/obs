@@ -1,0 +1,170 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-002,IU-002,e64cf87310,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Make reads no-tracking by default.,"Make reads no-tracking by default.
+
+Idea:
+- Tracking a big CQRS/query model can cost more than it gives.
+- Use AsNoTracking for read-only queries.
+- If the same entity can appear multiple times and reference equality matters, use AsNoTrackingWithIdentityResolution instead of full tracking.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-005,IU-005,af19e8920a,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Identity map reason.,"Identity map reason.
+
+Within one DbContext, EF Core keeps one tracked object instance per primary key.
+If EF sees the same row again, it returns the already tracked object instead of creating another instance.
+
+But this matters only for tracking queries, not normal no-tracking reads.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-009,IU-009,1256f47477,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,"If you need identity resolution, consider AsNoTrackingWithIdentityResolution.","If you need identity resolution, consider AsNoTrackingWithIdentityResolution.
+
+It gives a no-tracking result but prevents duplicate instances of the same entity within the result graph. Good when you need reference consistency in a read result but do not want tracked state.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-012,IU-012,27e0fafb7d,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,When does an entity become tracked?,"When does an entity become tracked?
+
+Usually when:
+- the query is a tracking query;
+- the entity is returned by the DbContext;
+- or it is explicitly attached/added/updated.
+
+No-tracking queries do not add returned entities to the change tracker.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-016,IU-016,5f5db5c14f,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Project only what you need.,"Project only what you need.
+
+Projection avoids materializing entire aggregates or graphs when a query only needs a DTO/read model. The note contrasts selecting only needed fields with loading full tracked objects.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-018,IU-018,31d62e0a78,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Load data only when needed.,"Load data only when needed.
+
+The visible code contrasts querying/including related data versus calling Load. It warns that change tracking can observe and keep relationships, so understand when a collection/reference is loaded.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-023,IU-023,07d0c9bb3c,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Find skips query if entity is already loaded/tracked.,"Find skips query if entity is already loaded/tracked.
+
+Find checks the identity map first. If the entity is already tracked, it returns the tracked instance without a new database query. If not tracked, it queries by key and then tracks the entity.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-024,IU-024,a67f713ace,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Avoid big Include graphs.,"Avoid big Include graphs.
+
+Includes can duplicate rows and explode result size when collections are involved. Multiple collection includes can produce large SQL/results. Prefer projections, split queries, or explicit loads when appropriate.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-029,IU-029,f5a69d20bc,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,"If entity appears twice in a tracked query, EF returns the same tracked instance.","If entity appears twice in a tracked query, EF returns the same tracked instance.
+
+Example pattern:
+- tracking query + include/cross reference;
+- same primary key appears more than once;
+- identity map returns the same object reference.
+
+This can be useful for aggregate graph consistency.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-031,IU-031,0e5b2c9aff,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Find is useful but not a general query replacement.,"Find is useful but not a general query replacement.
+
+Find:
+- checks identity map first;
+- queries by primary key if not tracked;
+- returns tracked entity.
+
+Use it when you need by-key lookup and identity-map behavior. Do not use it as a general query/filter mechanism.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-033,IU-033,05e414e028,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,What AsNoTrackingWithIdentityResolution is.,"What AsNoTrackingWithIdentityResolution is.
+
+It is no-tracking, but EF still performs identity resolution within the result so that multiple appearances of the same row map to one object instance. After enumeration those instances are not kept tracked in the DbContext.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-034,IU-034,be97b0c8b5,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Compare three query modes.,"Compare three query modes.
+
+Tracking:
+- tracked by DbContext;
+- identity resolution;
+- changes can be saved.
+
+No tracking:
+- no tracking;
+- faster;
+- can duplicate instances.
+
+No tracking with identity resolution:
+- no tracking after result materialization;
+- avoids duplicate instances inside result graph.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-035,IU-035,691ce63670,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Loading collections explicitly.,"Loading collections explicitly.
+
+Visible code:
+var student = await context.Students...
+await context.Entry(student).Collection(s => s.Enrollments).LoadAsync();
+
+Meaning:
+Explicit Load loads a relationship later. It is a database call. Use when you intentionally want to defer relationship loading.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-036,IU-036,75c8a8c2fe,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,No-tracking + identity resolution practical card.,"No-tracking + identity resolution practical card.
+
+AsNoTrackingWithIdentityResolution does not track for SaveChanges, but it deduplicates instances inside the materialized result. Use it when read graph consistency matters more than change tracking.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-037,IU-037,ac404adaa8,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Multiple collections can load in one roundtrip but maybe with duplicate rows.,"Multiple collections can load in one roundtrip but maybe with duplicate rows.
+
+Visible note:
+Include can join multiple collections, which may create a huge joined result. Split query can reduce duplication but may involve multiple SQL queries. Choose intentionally.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-038,IU-038,2252a4c4af,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Why this matters.,"Why this matters.
+
+Suppose every page returns the same Customer row. Without identity resolution, many copies may exist in the object graph. With identity resolution, one object is reused within the result, reducing duplicate instances.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-040,IU-040,7f7dafd9fe,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Use Include when you know the root and which related data you need.,"Use Include when you know the root and which related data you need.
+
+Example:
+context.Students
+    .Include(s => s.Enrollments)
+    .Single(...)
+
+Good when:
+- you need the full aggregate/graph;
+- you want to avoid lazy/implicit extra queries;
+- graph is not too large.
+
+Bad when only a small projection is needed.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-042,IU-042,eb072cdd8b,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Not by default: Include does not automatically happen.,"Not by default: Include does not automatically happen.
+
+A normal query does not load navigations unless:
+- Include/ThenInclude is used;
+- explicit Load is called;
+- lazy loading proxies are enabled;
+- AutoInclude is configured.
+
+If no related data is loaded, navigation access may be null/empty or trigger lazy load if configured.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-043,IU-043,e3704b53e4,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Use Find or Load when appropriate.,"Use Find or Load when appropriate.
+
+Find:
+- searches identity map first;
+- queries by key only if needed.
+
+Load:
+- explicitly loads a navigation/collection.
+
+Use these for command/write scenarios or self-contained work-unit code.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-044,IU-044,16669395cb,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Why not default to always loading.,"Why not default to always loading.
+
+Because extra columns/rows and huge graphs are expensive. Loading everything can mask N+1 or create huge result sets. Prefer projection for read models and explicit includes/loads for write workflows.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-047,IU-047,2175a4a601,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Practical tradeoff: Include vs Find + Load.,"Practical tradeoff: Include vs Find + Load.
+
+Include:
+- usually one roundtrip;
+- simpler when full graph is needed;
+- can get heavy with multiple collections.
+
+Find + Load:
+- can avoid re-querying tracked roots;
+- more explicit and easier to debug;
+- each Load is usually another DB call.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-049,IU-049,f79556b4d7,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Queries that project entities multiple times.,"Queries that project entities multiple times.
+
+If a projection returns the same entity through several paths, tracking gives same instance, no-tracking can produce duplicates, and no-tracking identity resolution deduplicates only within the result.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-051,IU-051,a42c0c4aad,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Self-referencing / graph-like data.,"Self-referencing / graph-like data.
+
+Visible example shows graph-like data and why projection may be better than loading full entity graphs. Use DTOs/projections to avoid accidentally materializing large cyclic graphs.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-052,IU-052,810b517d3a,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Load after Fetch / explicit loading note.,"Load after Fetch / explicit loading note.
+
+You can fetch a root entity and later use explicit Load for related data. This is often useful in command handlers where the root was already found/tracked and you conditionally need relationships.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-054,IU-054,4f85a4e72b,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Fetch + include / then can use Find if entity already tracked.,"Fetch + include / then can use Find if entity already tracked.
+
+Card compares:
+- querying with Include;
+- then finding/using already tracked entities.
+
+Main idea:
+if root is already tracked, Find avoids extra root query, but related collections still require Include/Load/explicit handling.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-056,IU-056,3edaef3497,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,"Fetch root, then conditionally load relationships.","Fetch root, then conditionally load relationships.
+
+Pattern:
+- fetch tracked root;
+- if condition, call context.Entry(root).Collection(...).LoadAsync();
+- then modify and SaveChanges.
+
+This is useful when relationship loading depends on runtime logic.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-058,IU-058,1607e83e8f,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,When to include because root is already fetched.,"When to include because root is already fetched.
+
+If root is already tracked, avoid re-querying root. Use explicit loading if needed. But if you need the whole graph in one query, Include can still be correct. For one-to-many collections, understand split/single-query behavior.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-060,IU-060,b074625c29,EFC-R01-repository-reads-tracking-identity-map,EFC-R01,verified-visible-semantic-transcript,Is this still practical?,"Is this still practical?
+
+Sometimes yes, but not useful as an early optimization. Start with a straightforward query design:
+- avoid huge graphs;
+- use projection for read models;
+- use Include/Load when you need relationships for writes.
+
+Only add identity-resolution tricks when duplicated instances or graph consistency actually matter.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

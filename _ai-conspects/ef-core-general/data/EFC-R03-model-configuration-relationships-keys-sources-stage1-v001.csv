@@ -1,0 +1,97 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-003,IU-003,62853cad31,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Unique email / availability check race.,"Unique email / availability check race.
+
+Visible flow:
+1. User checks IsEmailAvailable.
+2. Server checks database: email is free.
+3. Later user sends INSERT.
+4. Another insert can happen between check and insert.
+
+Meaning:
+Application pre-check is not enough. Database unique constraint / unique index is the real invariant for email uniqueness.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-006,IU-006,7e221f7688,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Navigation / redirect / browser cache note.,"Navigation / redirect / browser cache note.
+
+Visible card is mostly about browser/proxy cache redirects and Location header behavior. In EF grouping it is a candidate boundary artifact near model/navigation notes.
+
+Stage1 interpretation:
+This is not a core EF model mapping source. It is kept in R03 because it sat in the OnModelCreating/navigation area, but it should be rechecked in a later precision pass if exact source ownership matters.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-007,IU-007,55ea344509,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Question about infrastructure-generated fields.,"Question about infrastructure-generated fields.
+
+Visible note:
+Is there a way to ensure that properties should exist or not exist together so a case like firstName exists while lastname does not?
+
+Meaning:
+This points to a model invariant: related columns/properties should be configured so partial invalid states are impossible or explicitly handled.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-008,IU-008,0f7c82eb0b,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Email uniqueness / duplicate insert failure.,"Email uniqueness / duplicate insert failure.
+
+Visible Russian/English mixed note:
+- DB unique constraint or unique index is the safe protection.
+- Concurrent requests can both see an email as available.
+- Only database insert/update can finally reject a duplicate.
+- Typical DB exception is unique violation.
+
+Meaning:
+Put the invariant in the database, not only in pre-check code.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-010,IU-010,1e229933ef,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,OnModelCreating example with HasIndex / HasConstraintName.,"OnModelCreating example with HasIndex / HasConstraintName.
+
+Visible code configures indexes and constraints, including one with HasDatabaseName / HasFilter style. The source belongs to model configuration: index naming, filtered/unique indexes, and mapping database-level rules from Fluent API.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-015,IU-015,3dc7a29628,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Owned value object mapping / unique email.,"Owned value object mapping / unique email.
+
+Visible code:
+cb.OwnsOne(c => c.Email, eb =>
+{
+    eb.Property(e => e.Value)
+      .HasColumnName(""Email"")
+      .HasMaxLength(100)
+      .IsRequired();
+});
+cb.HasIndex(""Email"").IsUnique();
+
+Meaning:
+Owned value object can be flattened to a column, and a unique index can enforce email uniqueness at DB level.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-017,IU-017,5152f87def,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,OwnsOne full name / split columns.,"OwnsOne full name / split columns.
+
+Visible code configures FullName as owned value object with columns:
+- FirstName
+- MiddleName
+- LastName
+
+Some fields are required/optional with max length. Meaning: owned type maps value object internals into columns while keeping a domain object model.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-026,IU-026,3945d0f1d7,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Explicitly control nullable/required behavior.,"Explicitly control nullable/required behavior.
+
+Visible code shows making a relationship optional/required and using OnDelete behavior. Meaning: do not rely only on CLR nullability; configure FK and relationship rules explicitly when the domain needs it.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-039,IU-039,9f752fd7b7,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Nullable value object inside aggregate.,"Nullable value object inside aggregate.
+
+Card describes a nullable value object such as FullName inside a client aggregate. If the owned object is null or optional, EF/model configuration must match the domain intent and column nullability.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-041,IU-041,9be28189df,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Required false too / nullable relationship.,"Required false too / nullable relationship.
+
+Visible code uses HasOne / WithMany / IsRequired(false). Meaning: optional relationship is allowed; database FK can be nullable and object can be null depending on configuration.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-045,IU-045,3945d0f1d7,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Explicitly controlling behavior / optional address.,"Explicitly controlling behavior / optional address.
+
+Visible code shows configuring an optional owned/complex object and its properties. Meaning: when columns may all be null, model behavior must be explicit so EF knows whether the owned object exists or is null.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-046,IU-046,dfe76f5f7c,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Model identity cleanly in code.,"Model identity cleanly in code.
+
+Visible DDD advice:
+Use an explicit reference/value object or ID rather than relying on a primitive column when the relationship/identity has domain meaning. Optional child entity inside aggregate is shown.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-048,IU-048,8d6946160e,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Owned/complex type mapping variants.,"Owned/complex type mapping variants.
+
+Visible card shows OwnsOne / owned type and optional reference to another aggregate. Meaning: value objects can be embedded in owner columns; references to other aggregates should often be stored as IDs instead.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-050,IU-050,deb7e62c3f,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Important DDD advice: identity inside the aggregate.,"Important DDD advice: identity inside the aggregate.
+
+Ask:
+- Is this identity meaningful only inside the aggregate?
+- Or globally meaningful?
+
+If identity is only inside aggregate, model as a child entity/owned collection. If globally meaningful, store/reference by ID.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-053,IU-053,2e1caff84a,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,EF Core mapping for complex/owned types.,"EF Core mapping for complex/owned types.
+
+Visible code shows ModelBuilder configuration for a value object like Money inside Order/Product. It maps amount/currency columns and stores owned/complex object fields in the owner table.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-055,IU-055,064840baae,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Materialized column / computed value table example.,"Materialized column / computed value table example.
+
+Visible table shows Discount with DiscountAmount and DiscountCurrency columns. If a value object is materialized or flattened, the database columns reflect its fields. Configuration can choose whether the object exists when all columns are null.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-057,IU-057,548433edd7,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Nullable/optional owned columns and materialization.,"Nullable/optional owned columns and materialization.
+
+If materialization sees all owned columns as null, EF can treat the owned object as null depending on configuration. If values are present, it materializes the owned/value object.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-059,IU-059,685f8e9fda,EFC-R03-model-configuration-relationships-keys,EFC-R03,verified-visible-semantic-transcript,Why not map Money directly as a primitive.,"Why not map Money directly as a primitive.
+
+EF value conversions can store a value object as one scalar, but if you need separate queryable/indexable columns such as amount/currency, owned/complex mapping or explicit columns may be better.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
