@@ -1,14 +1,48 @@
 {
-  "generated": "2026-06-13 07:34:52 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 53,
-    "assigned_to_candidate_regions": 53,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
-    "duplicate_image_uses_by_fileId_short": {}
+  "generated": "2026-06-13 07:38:29 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "VIV01": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027"
+      ],
+      "VIV02": [
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-022",
+        "S-023"
+      ]
+    },
+    "processed_count": 27,
+    "pending_regions": {
+      "VIV03": 14,
+      "VIV04": 12
+    },
+    "pending_count": 26,
+    "boundary_corrections": []
   },
   "rows": [
     {
@@ -20,13 +54,13 @@
       "width": "927.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables | T-003:concept of views | T-002:Ef core view flow",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -37,13 +71,13 @@
       "width": "967.0",
       "height": "257.0",
       "nearest_labels_for_search_only": "T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables | T-003:concept of views | T-022:stored or not, indexes views",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -54,13 +88,13 @@
       "width": "982.0",
       "height": "458.0",
       "nearest_labels_for_search_only": "T-022:stored or not, indexes views | T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables | T-003:concept of views",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -71,13 +105,13 @@
       "width": "1008.0",
       "height": "360.0",
       "nearest_labels_for_search_only": "T-022:stored or not, indexes views | T-021:can views be updated? | T-015:Security, allow to work with | T-016:some viewed data, not with | T-017:sources",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -88,13 +122,13 @@
       "width": "1064.0",
       "height": "476.0",
       "nearest_labels_for_search_only": "T-022:stored or not, indexes views | T-021:can views be updated? | T-018:legacy | T-019:stable read api, sources | T-017:sources",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -105,13 +139,13 @@
       "width": "971.0",
       "height": "379.0",
       "nearest_labels_for_search_only": "T-009:aggregated into one domain | T-008:multiple sources, | T-007:good for view | T-010:hide ugly queries | T-011:hiding bad queries",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -122,13 +156,13 @@
       "width": "1002.0",
       "height": "410.0",
       "nearest_labels_for_search_only": "T-010:hide ugly queries | T-009:aggregated into one domain | T-008:multiple sources, | T-007:good for view | T-015:Security, allow to work with",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -139,13 +173,13 @@
       "width": "928.0",
       "height": "259.0",
       "nearest_labels_for_search_only": "T-017:sources | T-016:some viewed data, not with | T-015:Security, allow to work with | T-018:legacy | T-019:stable read api, sources",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -156,13 +190,13 @@
       "width": "940.0",
       "height": "139.0",
       "nearest_labels_for_search_only": "T-018:legacy | T-019:stable read api, sources | T-020:can change, evolve | T-017:sources | T-016:some viewed data, not with",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -173,13 +207,13 @@
       "width": "879.0",
       "height": "134.0",
       "nearest_labels_for_search_only": "T-020:can change, evolve | T-019:stable read api, sources | T-018:legacy | T-017:sources | T-016:some viewed data, not with",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -190,13 +224,13 @@
       "width": "1016.0",
       "height": "299.0",
       "nearest_labels_for_search_only": "T-011:hiding bad queries | T-023:bad for view | T-012:to much buisness logic | T-013:overusing for simple queries | T-009:aggregated into one domain",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -207,13 +241,13 @@
       "width": "1006.0",
       "height": "269.0",
       "nearest_labels_for_search_only": "T-012:to much buisness logic | T-013:overusing for simple queries | T-011:hiding bad queries | T-023:bad for view | T-014:expecting normal entity behav",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -224,13 +258,13 @@
       "width": "994.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-013:overusing for simple queries | T-014:expecting normal entity behav | T-012:to much buisness logic | T-011:hiding bad queries | T-023:bad for view",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",
@@ -241,13 +275,13 @@
       "width": "977.0",
       "height": "325.0",
       "nearest_labels_for_search_only": "T-014:expecting normal entity behav | T-013:overusing for simple queries | T-012:to much buisness logic | T-015:Security, allow to work with | T-016:some viewed data, not with",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -258,13 +292,13 @@
       "width": "994.0",
       "height": "335.0",
       "nearest_labels_for_search_only": "T-021:can views be updated? | T-022:stored or not, indexes views | T-020:can change, evolve | T-019:stable read api, sources | T-018:legacy",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -275,13 +309,13 @@
       "width": "990.0",
       "height": "274.0",
       "nearest_labels_for_search_only": "T-021:can views be updated? | T-022:stored or not, indexes views | T-020:can change, evolve | T-019:stable read api, sources | T-018:legacy",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -292,13 +326,13 @@
       "width": "1011.0",
       "height": "249.0",
       "nearest_labels_for_search_only": "T-021:can views be updated? | T-022:stored or not, indexes views | T-038:Clustered index first | T-020:can change, evolve | T-019:stable read api, sources",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -309,13 +343,13 @@
       "width": "998.0",
       "height": "402.0",
       "nearest_labels_for_search_only": "T-002:Ef core view flow | T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables | T-003:concept of views",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -326,13 +360,13 @@
       "width": "983.0",
       "height": "317.0",
       "nearest_labels_for_search_only": "T-002:Ef core view flow | T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables | T-003:concept of views",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-020",
@@ -343,13 +377,13 @@
       "width": "964.0",
       "height": "282.0",
       "nearest_labels_for_search_only": "T-002:Ef core view flow | T-022:stored or not, indexes views | T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -360,13 +394,13 @@
       "width": "1057.0",
       "height": "243.0",
       "nearest_labels_for_search_only": "T-022:stored or not, indexes views | T-002:Ef core view flow | T-021:can views be updated? | T-006:not physically stored until indexed | T-005:usually readonly",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -377,13 +411,13 @@
       "width": "799.0",
       "height": "84.0",
       "nearest_labels_for_search_only": "T-015:Security, allow to work with | T-010:hide ugly queries | T-016:some viewed data, not with | T-017:sources | T-009:aggregated into one domain",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -394,13 +428,13 @@
       "width": "826.0",
       "height": "183.0",
       "nearest_labels_for_search_only": "T-015:Security, allow to work with | T-016:some viewed data, not with | T-017:sources | T-010:hide ugly queries | T-018:legacy",
-      "coverage_status": "candidate-viv02",
+      "coverage_status": "processed-in-viv02-v001",
       "current_region_decision": "VIV02",
       "current_subregion_decision": "VIV02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "When views are useful and when they become harmful: multiple sources aggregated into a read model, hiding ugly queries, security/limited exposure, legacy/stable read API, and anti-patterns such as hiding bad queries, too much business logic, overusing views for simple queries, and expecting normal entity behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-024",
@@ -411,13 +445,13 @@
       "width": "1078.0",
       "height": "432.0",
       "nearest_labels_for_search_only": "T-001:tosqlquery vs toview | T-002:Ef core view flow | T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-025",
@@ -428,13 +462,13 @@
       "width": "944.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-001:tosqlquery vs toview | T-002:Ef core view flow | T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-026",
@@ -445,13 +479,13 @@
       "width": "1018.0",
       "height": "448.0",
       "nearest_labels_for_search_only": "T-001:tosqlquery vs toview | T-002:Ef core view flow | T-006:not physically stored until indexed | T-005:usually readonly | T-004:depend on uderl tables",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-027",
@@ -462,13 +496,13 @@
       "width": "1044.0",
       "height": "339.0",
       "nearest_labels_for_search_only": "T-001:tosqlquery vs toview | T-002:Ef core view flow | T-024:Indexed views | T-006:not physically stored until indexed | T-005:usually readonly",
-      "coverage_status": "candidate-viv01",
+      "coverage_status": "processed-in-viv01-v001",
       "current_region_decision": "VIV01",
       "current_subregion_decision": "VIV01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core SQL view and EF Core mapping flow: what a view is, dependency on underlying tables, usually readonly, not physically stored until indexed, whether views can be updated, EF Core create/configure/query flow, and ToSqlQuery versus ToView mapping.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-028",

@@ -1,23 +1,26 @@
 # Regions - views-indexed-views
 
-Boundary-reviewed candidate regions:
+Verified transcripts:
 
 ```text
 VIV01 - Views concept, readonly behavior, EF Core mapping flow, ToSqlQuery vs ToView
 VIV02 - Good and bad use cases for views
+```
+
+Candidate / pending transcripts:
+
+```text
 VIV03 - Indexed views fundamentals, materialization, clustered index and write cost
 VIV04 - SCHEMABINDING and indexed-view requirements/rules
 ```
 
-Recommended transcript order:
+Next step:
 
 ```text
-NEXT01: VIV01 + VIV02
 NEXT02: VIV03
-NEXT03: VIV04
 ```
 
-Each transcript must include:
+Each transcript includes:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality

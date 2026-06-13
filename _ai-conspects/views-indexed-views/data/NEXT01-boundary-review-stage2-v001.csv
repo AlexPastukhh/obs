@@ -1,0 +1,54 @@
+source_id,decision,region,subregion,reason
+S-001,processed-in-viv01-v001,VIV01,VIV01A,SQL view concept: saved query
+S-002,processed-in-viv01-v001,VIV01,VIV01A,Querying a normal view and storage behavior
+S-003,processed-in-viv01-v001,VIV01,VIV01A,Views are useful for hiding complex SQL
+S-004,processed-in-viv01-v001,VIV01,VIV01A,Create view then query view
+S-005,processed-in-viv01-v001,VIV01,VIV01A,Views in SQL Server summary
+S-006,processed-in-viv02-v001,VIV02,VIV02A,Good use case: reporting/read models
+S-007,processed-in-viv02-v001,VIV02,VIV02A,Good use case: hide complex joins
+S-008,processed-in-viv02-v001,VIV02,VIV02A,Good use case: security / limited exposure
+S-009,processed-in-viv02-v001,VIV02,VIV02A,Good use case: legacy database
+S-010,processed-in-viv02-v001,VIV02,VIV02A,Good use case: stable read API for database
+S-011,processed-in-viv02-v001,VIV02,VIV02B,Bad use case: hiding bad performance
+S-012,processed-in-viv02-v001,VIV02,VIV02B,Bad use case: business logic dumping ground
+S-013,processed-in-viv02-v001,VIV02,VIV02B,Bad use case: overusing views for simple queries
+S-014,processed-in-viv02-v001,VIV02,VIV02B,Bad use case: expecting normal entity behavior
+S-015,processed-in-viv02-v001,VIV02,VIV02C,Can views be updated?
+S-016,processed-in-viv02-v001,VIV02,VIV02C,View model with key or no key
+S-017,processed-in-viv02-v001,VIV02,VIV02C,View model can have key if result has unique stable key
+S-018,processed-in-viv01-v001,VIV01,VIV01B,EF Core view flow step 1: create SQL view
+S-019,processed-in-viv01-v001,VIV01,VIV01B,EF Core view flow step 2: create C# model
+S-020,processed-in-viv01-v001,VIV01,VIV01B,EF Core view flow step 3: configure EF
+S-021,processed-in-viv01-v001,VIV01,VIV01B,EF Core view flow step 4: query it
+S-022,processed-in-viv02-v001,VIV02,VIV02A,"Views hide complex joins, not necessarily improve performance"
+S-023,processed-in-viv02-v001,VIV02,VIV02A,Optimizer expands normal views; performance is not automatic
+S-024,processed-in-viv01-v001,VIV01,VIV01C,ToView vs ToSqlQuery
+S-025,processed-in-viv01-v001,VIV01,VIV01C,ToSqlQuery mapping
+S-026,processed-in-viv01-v001,VIV01,VIV01C,ToView: SQL lives in the database
+S-027,processed-in-viv01-v001,VIV01,VIV01C,ToSqlQuery: SQL lives in EF mapping
+S-028,pending-later-transcript,VIV03,VIV03A,not part of NEXT01
+S-029,pending-later-transcript,VIV03,VIV03A,not part of NEXT01
+S-030,pending-later-transcript,VIV03,VIV03B,not part of NEXT01
+S-031,pending-later-transcript,VIV03,VIV03B,not part of NEXT01
+S-032,pending-later-transcript,VIV03,VIV03C,not part of NEXT01
+S-033,pending-later-transcript,VIV03,VIV03C,not part of NEXT01
+S-034,pending-later-transcript,VIV03,VIV03C,not part of NEXT01
+S-035,pending-later-transcript,VIV03,VIV03D,not part of NEXT01
+S-036,pending-later-transcript,VIV03,VIV03D,not part of NEXT01
+S-037,pending-later-transcript,VIV03,VIV03D,not part of NEXT01
+S-038,pending-later-transcript,VIV03,VIV03D,not part of NEXT01
+S-039,pending-later-transcript,VIV03,VIV03D,not part of NEXT01
+S-040,pending-later-transcript,VIV03,VIV03D,not part of NEXT01
+S-041,pending-later-transcript,VIV03,VIV03B,not part of NEXT01
+S-042,pending-later-transcript,VIV04,VIV04B,not part of NEXT01
+S-043,pending-later-transcript,VIV04,VIV04B,not part of NEXT01
+S-044,pending-later-transcript,VIV04,VIV04B,not part of NEXT01
+S-045,pending-later-transcript,VIV04,VIV04B,not part of NEXT01
+S-046,pending-later-transcript,VIV04,VIV04B,not part of NEXT01
+S-047,pending-later-transcript,VIV04,VIV04C,not part of NEXT01
+S-048,pending-later-transcript,VIV04,VIV04C,not part of NEXT01
+S-049,pending-later-transcript,VIV04,VIV04D,not part of NEXT01
+S-050,pending-later-transcript,VIV04,VIV04D,not part of NEXT01
+S-051,pending-later-transcript,VIV04,VIV04A,not part of NEXT01
+S-052,pending-later-transcript,VIV04,VIV04A,not part of NEXT01
+S-053,pending-later-transcript,VIV04,VIV04A,not part of NEXT01

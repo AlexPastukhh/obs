@@ -1,0 +1,75 @@
+{
+  "generated": "2026-06-13 07:38:29 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 27,
+  "pending_count": 26,
+  "boundary_corrections": [],
+  "duplicate_image_uses_by_fileId_short": {},
+  "regions": {
+    "VIV01": {
+      "name": "Views concept, readonly behavior, EF Core mapping flow, ToSqlQuery vs ToView",
+      "processed_sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027"
+      ],
+      "key_ideas": [
+        "A normal SQL view stores a query definition, not necessarily the data.",
+        "EF Core can map a model to a database view with ToView, often as HasNoKey.",
+        "ToView means SQL lives in the database view object.",
+        "ToSqlQuery means SQL lives in EF Core mapping.",
+        "View mappings are normally read-only/read-model oriented."
+      ]
+    },
+    "VIV02": {
+      "name": "Good and bad use cases for views",
+      "processed_sources": [
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-022",
+        "S-023"
+      ],
+      "key_ideas": [
+        "Good view uses include read models, reporting, complex joins, security-limited exposure, legacy contracts and stable read APIs.",
+        "A normal view does not automatically optimize SQL; it mostly hides/reuses query definitions.",
+        "Bad uses include hiding bad performance, dumping business logic into views, overusing views for simple queries and expecting normal entity behavior.",
+        "Use HasNoKey for most read-model views unless a stable unique key really exists."
+      ]
+    }
+  },
+  "pending_regions": {
+    "VIV03": "Indexed views fundamentals, materialization, clustered index and write cost",
+    "VIV04": "SCHEMABINDING and indexed-view requirements/rules"
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Most screenshots are clean slide/code screenshots.",
+      "A few SQL snippets are cropped at the bottom; visible intent and key statements are still clear.",
+      "VIV03/VIV04 remain intentionally pending."
+    ],
+    "confidence": "High for VIV01/VIV02 concepts and visible code."
+  }
+}
