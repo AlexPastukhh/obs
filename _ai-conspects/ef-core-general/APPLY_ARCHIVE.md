@@ -1,6 +1,6 @@
-# Apply archive: EF Core final closure audit
+# Apply archive: EF Core General Stage0 boundary review
 
-Archive type: final closure / audit.
+Archive type: boundary review.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage15-final-closure-audit-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage0-boundary-review-v001.zip
 ```
 
 ## Apply commands
@@ -26,39 +26,38 @@ C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage15-final-closure-audi
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage15-final-closure-audit-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage15-final-closure-audit.diff"
+$target = "_ai-conspects\ef-core-general"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage0-boundary-review-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
 git status --short
+
 Expand-Archive -Path $zip -DestinationPath . -Force
 
-git status --short
-git diff --stat -- _ai-conspects/ef-core-general
+# Stage ONLY this target folder.
+git add -A -- $target
 
-git --no-pager diff -- _ai-conspects/ef-core-general > $diffPath
-Get-Content $diffPath -Raw | Set-Clipboard
-Write-Host "Full diff saved to $diffPath and copied to clipboard."
+# Review staged file list/status.
+git status --short -- $target
 ```
 
 ## Commit commands
 
 ```powershell
-git add _ai-conspects/ef-core-general
-git commit -m "Finalize EF Core general conspect audit"
+git commit -m "Add EF Core General Stage0 boundary review"
 git push origin ai-processed-conspects-text
 ```
 
 ## Rollback before commit
 
 ```powershell
+git restore --staged -- _ai-conspects/ef-core-general
 git restore -- _ai-conspects/ef-core-general
+git clean -fd -- _ai-conspects/ef-core-general
 ```
 
 ## Notes
 
-This archive does not add transcript content.
-
-It closes `ef-core-general` if final diff review is clean.
+This archive is boundary review only. It does not add transcript and does not mark EF Core General sources as processed.

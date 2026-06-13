@@ -1,77 +1,54 @@
-# Current Source of Truth - EF Core general
+# Current Source of Truth - EF Core General
 
-Generated: 2026-06-02 01:55:59 UTC
+Generated: 2026-06-12 13:56:26 UTC
 
 ## Current policy
 
-Inventory and ledger are checklists, not source of truth.
+Do not treat the review ledger as source of truth.
 
-Actual source of truth for a processed region is:
+A region is complete only when its region file contains coverage / boundary review, included sources, candidate checks, excluded/reassigned candidates, open issues, and verified source transcript or correction addendum.
+
+For large split regions, add a closure audit after the last sub-pass.
+
+## Big archive apply workflow
 
 ```text
-visual/semantic boundary review
-verified source transcript
-included/excluded/pending source decisions
+Expand archive.
+git add -A -- <target>
+Review staged file list/status.
+Commit only after staged file review.
+Never use git add . when unrelated files are modified.
+```
+
+## Batch-size rule
+
+```text
+Default transcript batch: 80-160 images.
+Can be larger if one logical block requires it.
+Use one archive with multiple region files when themes differ.
+Do not mix different regions into one region file.
+Local visual/semantic recheck can override nearest-label grouping before transcript.
+```
+
+## No-placeholder-processed rule
+
+```text
+If visible transcript has OCR timeout/error, image missing, empty text, or placeholder text,
+the source stays pending and must not be marked processed.
 ```
 
 ## Current status
 
 ```text
-Stage0: source materialized
-Stage1: EF01 boundary review done
-Stage2: EF01A transcript done
-Stage3: EF01B transcript done + EF01A correction for S-059/S-060
-Stage4: EF02 boundary review done
-Stage5: EF02 transcript done
-Stage6: EF03 boundary review done
-Stage7: EF03 transcript done
-Stage8: EF04 boundary review done
-Stage9: EF04 transcript done
-Stage10: EF05/EF06 combined boundary review done
-Stage11: EF05A transcript done
-Stage12: EF05B transcript done
-Stage13: EF05C transcript done
-Stage14: EF06 combined transcript done
-Stage15: final closure audit done
+EF Core General Stage0 boundary review v001: completed
+Image uses inventoried: 65
+Processed sources: 0
+Pending candidates: 65
 ```
 
-## Done
+## Current processing target
 
 ```text
-EF01A: Tracking / identity map / no tracking / identity resolution
-EF01B: Loading collections / Include / Find / Load / AutoInclude
-EF02: Attach / disconnected updates / entity state
-EF03: Constructors / materialization
-EF04: Shadow property / query filter
-EF05A: Race protection with UNIQUE constraint/index
-EF05B: Owned FullName / optional mapping / CHECK constraint
-EF05C: Optional value objects / complex types
-EF06A: Optimistic concurrency / check-then-add race
-EF06B: Transactions / isolation levels
-EF06C: DB exceptions / retry exhausted / catch order
-```
-
-## Final audit
-
-```text
-Status: complete
-Unreviewed EF Core images: 0
-Candidate-only EF Core images: 0
-Must-recheck EF Core images: 0
-S-001: out-of-current-EFCore-scope
-```
-
-## Completion decision
-
-```text
-ef-core-general can be marked complete; S-001 remains out-of-current-EFCore-scope.
-```
-
-## Future batch-size rule
-
-```text
-30-50 images per batch is allowed for future work, and more is allowed if it is one logical block.
-Large transcript archives must preserve subregion boundaries.
-Boundary review can be larger than transcript subregions.
-Every transcript subregion still requires visual source recheck.
+Next: EFCoreGeneral-stage1 transcript = R01 + R02 + R03
+Expected count: 54 images
 ```
