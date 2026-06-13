@@ -1,0 +1,38 @@
+[
+  {
+    "pass_id": "P01",
+    "region_id": "R01",
+    "region_slug": "lock-monitor-mutual-exclusion-and-critical-section",
+    "image_use_count": 8,
+    "source_ids": "S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008",
+    "purpose": "lock/Monitor mental model: mutual exclusion, critical section, monitor enter/exit, object gate and why only one thread enters.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  },
+  {
+    "pass_id": "P01",
+    "region_id": "R02",
+    "region_slug": "monitor-wait-pulse-pulseall-and-condition-signaling",
+    "image_use_count": 8,
+    "source_ids": "S-009, S-010, S-011, S-012, S-013, S-014, S-015, S-016",
+    "purpose": "Monitor.Wait/Pulse/PulseAll condition signaling, releasing/reacquiring lock and producer-consumer style coordination.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R03",
+    "region_slug": "deadlocks-reentrancy-tryenter-timeouts-and-lock-ordering",
+    "image_use_count": 8,
+    "source_ids": "S-017, S-018, S-019, S-020, S-021, S-022, S-023, S-024",
+    "purpose": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R04",
+    "region_slug": "async-locking-alternatives-and-practical-guidelines",
+    "image_use_count": 1,
+    "source_ids": "S-025",
+    "purpose": "Async locking caveats, SemaphoreSlim/ReaderWriterLockSlim alternatives, private lock object guidelines and practical usage notes.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  }
+]
