@@ -1,0 +1,53 @@
+{
+  "generated": "2026-06-13 06:08:50 UTC",
+  "group": "ENC-R03-encoder-trygetbytes-output-buffers",
+  "region": "ENC-R03",
+  "source_count": 4,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-042",
+      "image_use_id": "IU-042",
+      "fileId_short": "31601648b5",
+      "stage0_group": "ENC-R03-encoder-trygetbytes-output-buffers",
+      "stage1_region": "ENC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "What if I do not know the exact byte count?",
+      "transcript": "What if I do not know the exact byte count?\n\nVisible option:\n1. Call `GetByteCount` first.\n2. Allocate exact byte array.\n3. Use `GetBytes` to write into destination span.\n4. Advance writer by the number of bytes written.\n\nMeaning:\nThis is the clean exact-size workflow when the full text is already available.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-044",
+      "image_use_id": "IU-044",
+      "fileId_short": "8f3d9634b1",
+      "stage0_group": "ENC-R03-encoder-trygetbytes-output-buffers",
+      "stage1_region": "ENC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Replacement behavior vs exception behavior.",
+      "transcript": "Replacement behavior vs exception behavior.\n\nVisible example:\n- `new UTF8Encoding(false, false)` does not throw on invalid bytes and can use replacement output.\n- `new UTF8Encoding(false, true)` throws on invalid bytes.\n- With encoder/decoder, invalid/incomplete final data plus flush can produce replacement output or DecoderFallbackException depending on fallback settings.\n\nMeaning:\nUTF-8 encoding/decoding behavior depends on fallback configuration. Decide whether bad data should be replaced or should fail.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-047",
+      "image_use_id": "IU-047",
+      "fileId_short": "48c78495b2",
+      "stage0_group": "ENC-R03-encoder-trygetbytes-output-buffers",
+      "stage1_region": "ENC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Option 2: use TryGetBytes.",
+      "transcript": "Option 2: use TryGetBytes.\n\nVisible:\n- `Encoding.UTF8.TryGetBytes(text.AsSpan(), dest, out int written)`\n- returns true/false depending on whether destination span is large enough.\n- If false, ask for a bigger span or fall back to GetByteCount first.\n\nMeaning:\nTryGetBytes is useful when you have a destination buffer and want to avoid allocation, but you must handle the too-small-buffer case.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-052",
+      "image_use_id": "IU-052",
+      "fileId_short": "828fda32da",
+      "stage0_group": "ENC-R03-encoder-trygetbytes-output-buffers",
+      "stage1_region": "ENC-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Option 3: use an Encoder for chunked/stateful text encoding.",
+      "transcript": "Option 3: use an Encoder for chunked/stateful text encoding.\n\nVisible note:\nIf text is encoded in pieces and characters may span boundaries, use `Encoding.GetEncoder()` / `GetEncoder` stateful APIs instead of treating each piece as independent.\n\nMeaning:\nEncoder distinguishes discrete `Encoding.GetBytes` conversions from `Encoder.GetBytes`, which preserves state across calls on one input stream.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

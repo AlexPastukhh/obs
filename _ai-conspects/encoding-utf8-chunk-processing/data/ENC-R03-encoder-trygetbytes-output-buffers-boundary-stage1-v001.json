@@ -1,0 +1,14 @@
+{
+  "generated": "2026-06-13 06:08:50 UTC",
+  "group": "ENC-R03-encoder-trygetbytes-output-buffers",
+  "region": "ENC-R03",
+  "source_count": 4,
+  "included_sources": [
+    "S-042",
+    "S-044",
+    "S-047",
+    "S-052"
+  ],
+  "meaning": "Encoder side: Encoding.GetEncoder, Encoder.GetByteCount, Encoder.TryGetBytes, output buffers that may be too small, flush/fallback behavior, and chunked text-to-bytes encoding.",
+  "boundary_decision": "included after Stage0 candidate split and Stage1 visual/semantic source review"
+}

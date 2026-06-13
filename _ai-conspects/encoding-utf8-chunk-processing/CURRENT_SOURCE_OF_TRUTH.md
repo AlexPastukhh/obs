@@ -1,6 +1,6 @@
 # Current Source of Truth - Encoding UTF8 Chunk Processing
 
-Generated: 2026-06-13 06:00:46 UTC
+Generated: 2026-06-13 06:08:50 UTC
 
 ## Current policy
 
@@ -37,18 +37,27 @@ If visible transcript has OCR timeout/error, image missing, empty text, or place
 the source stays pending and must not be marked processed.
 ```
 
+## Transcript precision policy
+
+```text
+Stage1 transcript level: source-level semantic transcript.
+For exact C# punctuation, use preserved Stage0 source PNGs.
+Precision patches can upgrade individual sources to verbatim code later.
+```
+
 ## Current status
 
 ```text
 Encoding UTF8 Chunk Stage0 boundary review v001: completed
+Encoding UTF8 Chunk Stage1 R01/R03 transcript v001: completed
 Image uses inventoried: 55
-Processed sources: 0
-Pending candidates: 55
+Stage1 processed: 25
+Pending candidates: 30
 ```
 
 ## Current processing target
 
 ```text
-Next: EncodingUtf8Chunk-stage1 transcript = R01 + R03
-Expected count: 25 images
+Next: EncodingUtf8Chunk-stage2 transcript = ENC-R02
+Expected count: 30 images
 ```

@@ -1,0 +1,197 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-001,IU-001,2d8ac9d83e,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,Basics: GetString / GetBytes overloads.,"Basics: GetString / GetBytes overloads.
+
+Visible main thing:
+- `Encoding.UTF8.GetString(bytes)` decodes bytes into a string.
+- `Encoding.UTF8.GetBytes(text)` encodes a string into bytes.
+- In .NET / C#, the API defaults to using the full passed source when no offset/count or span slice is specified.
+
+Meaning:
+This is the entry point mental model: `GetString` is bytes -> string, `GetBytes` is string/chars -> bytes.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-003,IU-003,ea1f5a1316,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,Why counts usually do not need to be specified.,"Why counts usually do not need to be specified.
+
+Visible note:
+- Most overloads have simpler forms that use the whole source.
+- Advanced overloads take offset/count or spans.
+- For `Encoding.UTF8.GetString(...)`, if you pass a complete byte array/span, it decodes the whole thing.
+
+Meaning:
+Use the simple overload for whole-source conversions. Use span/index/count overloads only when you intentionally want a segment or caller-provided buffer.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-004,IU-004,3d6f0dd1d6,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,1. String -> bytes.,"1. String -> bytes.
+
+Visible code:
+- `byte[] bytes = Encoding.UTF8.GetBytes(""Hello"");`
+- span overload example writes to a provided byte buffer.
+
+Meaning:
+`GetBytes` is the usual direct conversion from `string`/chars to UTF-8 bytes. If you provide a destination span, you control allocation and can avoid creating a new array.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-005,IU-005,6992f787ac,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,"""Can I use Memory?""","""Can I use Memory?""
+
+Visible idea:
+- `Memory<T>` / `ReadOnlyMemory<T>` can be used by taking `.Span`.
+- Example: `readOnlyMemory.Span`
+- Use span-based overloads with `GetBytes` / `GetChars`.
+
+Meaning:
+Encoding APIs are mostly span-oriented for high-performance overloads. If your data is in Memory, pass its Span/ReadOnlySpan to the encoding method.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-008,IU-008,78c10d1ebd,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,2. Decode UTF-8 bytes to text.,"2. Decode UTF-8 bytes to text.
+
+Visible options:
+A. Allocate a new string:
+- `string s = Encoding.UTF8.GetString(bytes);`
+- or decode a byte segment with index/count.
+B. Important: GetString does not fill an existing char array.
+
+Meaning:
+Use `GetString` when the output should be a new string. If you want to decode into an existing char buffer, use `GetChars` instead.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-009,IU-009,4ed9508b45,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,1. Encode text to UTF-8 bytes.,"1. Encode text to UTF-8 bytes.
+
+Visible:
+- Allocate a new `byte[]`.
+- Example uses `Encoding.UTF8.GetBytes(""Hello"")`.
+- The note says this calls `GetByteCount(...)` and `GetBytes(...)` internally/under the hood conceptually.
+
+Meaning:
+The simple array-returning overload is convenient and allocates for you. For performance or fixed buffers, use count + caller-provided span overloads.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-010,IU-010,b9e22eab17,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,2. Bytes -> string.,"2. Bytes -> string.
+
+Visible code:
+- `string text = Encoding.UTF8.GetString(bytes);`
+- Example byte array for UTF-8 bytes.
+- Output is `""Hello""`.
+
+Meaning:
+If the byte sequence is complete and valid UTF-8, `GetString` decodes it into normal .NET UTF-16 string characters.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-012,IU-012,b12ae2226f,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,B. Old array + indexes API.,"B. Old array + indexes API.
+
+Visible code shows:
+- `charCount = Encoding.UTF8.GetCharCount(bytes, index, count);`
+- allocate `char[]`
+- `GetChars(bytes, index, count, chars, charIndex)`
+
+Meaning:
+The older overloads let you decode only a segment of a byte array and write into a char array. Good for legacy APIs or array-based pipelines.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-013,IU-013,794d3a440f,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,B. Old array + indexes API for decoded chars.,"B. Old array + indexes API for decoded chars.
+
+Visible flow:
+1. Call `GetCharCount` for a byte segment.
+2. Allocate `char[]` of that exact size.
+3. Call `GetChars` to fill it.
+4. Then build a string if needed.
+
+Meaning:
+This is the exact-size array workflow when you know the byte range and want a char array rather than directly creating a string.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-014,IU-014,a50e63ebcf,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,3. Most common encoding.,"3. Most common encoding.
+
+Visible:
+- `Encoding.UTF8`
+- Because UTF-8 is the normal default choice for APIs, JSON, HTTP, HTML, web data, and most text interchange.
+
+Meaning:
+Default to UTF-8 unless you have a concrete reason to use another encoding.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-015,IU-015,91bb466903,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,C. New span API.,"C. New span API.
+
+Visible:
+- Works on spans.
+- Can call `GetCharCount` over a byte span.
+- Allocate char buffer/span.
+- Decode bytes into chars.
+- Similar idea to array overloads, but span-based.
+
+Meaning:
+The span API is the modern version for slicing/working with memory without allocating intermediate arrays.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-016,IU-016,48e980e6ca,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,4. Other encodings also exist.,"4. Other encodings also exist.
+
+Visible examples:
+- Encoding.ASCII
+- Encoding.Unicode
+- Encoding.UTF32
+- Encoding.Latin1
+
+But note:
+- In most modern code, UTF-8 is what you want.
+
+Meaning:
+The `Encoding` class supports many encodings, but UTF-8 should be the default mental model unless interoperating with a legacy format/protocol.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-017,IU-017,809ebac342,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,C. New span API for decoded chars.,"C. New span API for decoded chars.
+
+Visible:
+- `ReadOnlySpan<byte>` input.
+- `Span<char>` output.
+- `Encoding.UTF8.GetChars(inputBytes, charBuffer);`
+
+Meaning:
+Use the span overload when you already have spans or want to write into a caller-provided char buffer without unnecessary allocations.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-018,IU-018,0c70d45b4f,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,5. Example with non-ASCII.,"5. Example with non-ASCII.
+
+Visible:
+- `string original = ""é"";`
+- UTF-8 bytes are multi-byte.
+- `Encoding.UTF8.GetString(bytes)` restores the original string.
+
+Meaning:
+UTF-8 uses multiple bytes for many non-ASCII characters. Character count and byte count are not the same.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-019,IU-019,9437f2e2d7,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,6. If you only want part of the byte array.,"6. If you only want part of the byte array.
+
+Visible:
+- There are overloads for offset/count.
+- Example decodes only a slice of a byte array.
+
+Meaning:
+If a byte array has extra bytes before or after the intended text segment, do not decode the whole array. Use index/count or a sliced span.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-021,IU-021,5787d89720,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,7. Span-based APIs in newer .NET.,"7. Span-based APIs in newer .NET.
+
+Visible:
+Modern .NET also has span-based APIs:
+- `ReadOnlySpan<byte>`
+- `Span<char>`
+- `ReadOnlySpan<char>`
+- `Span<byte>`
+
+Meaning:
+Span overloads are the modern way to avoid extra allocations and to integrate with pooled buffers or stackalloc buffers.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-022,IU-022,41361cc29f,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,The practical difference.,"The practical difference.
+
+Visible note:
+- `GetCharCount` gives exactly how many chars are required for this source.
+- `GetMaxCharCount` gives an upper bound based on maximum possible expansion, often larger than needed.
+
+Meaning:
+Use exact count when possible. Use max count only when you need a safe preallocation without first scanning/decoding the exact source.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-025,IU-025,e600d57a46,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,Example: incomplete/partial byte sequences can affect counts.,"Example: incomplete/partial byte sequences can affect counts.
+
+Visible code shows a byte array with UTF-8 bytes where a multi-byte character may be split.
+
+Meaning:
+With UTF-8, a single character can span multiple bytes. Counting/decoding must consider whether the byte sequence is complete, especially in streaming/chunk scenarios.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-026,IU-026,e9b4e4b776,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,8. Encoder / Decoder objects also exist.,"8. Encoder / Decoder objects also exist.
+
+Visible:
+- `Encoding.UTF8.GetEncoder()`
+- `Encoding.UTF8.GetDecoder()`
+- They preserve state for streaming/chunked processing.
+
+Meaning:
+Use Encoder/Decoder when a conversion happens in chunks and characters/byte sequences can cross chunk boundaries.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-028,IU-028,3f76d6f6be,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,Performance tradeoff.,"Performance tradeoff.
+
+Visible notes:
+- `GetMaxCharCount` generally gives a safe maximum and may allocate more memory.
+- `GetCharCount` computes the exact number and may scan more work first.
+- Microsoft docs mark the max-count methods as giving the maximum number of characters/bytes.
+
+Meaning:
+For simple conversions, convenience overloads are fine. For hot paths, choose between exact pre-counting and safe over-allocation intentionally.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-030,IU-030,3146da568f,ENC-R01-basics-getstring-getbytes-getchars-counts,ENC-R01,verified-visible-semantic-transcript,9. Practical rule.,"9. Practical rule.
+
+Visible:
+Most common:
+- `Encoding.UTF8.GetString(bytes)`
+- `Encoding.UTF8.GetBytes(text)`
+
+More advanced / chunked processing:
+- `Encoding.UTF8.GetDecoder()`
+- `Encoding.UTF8.GetEncoder()`
+
+Meaning:
+Use the simple methods for complete data. Use stateful Encoder/Decoder for streaming/chunked data.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

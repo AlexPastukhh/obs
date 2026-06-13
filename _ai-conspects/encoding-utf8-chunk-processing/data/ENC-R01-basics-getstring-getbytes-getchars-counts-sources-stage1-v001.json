@@ -1,0 +1,240 @@
+{
+  "generated": "2026-06-13 06:08:50 UTC",
+  "group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+  "region": "ENC-R01",
+  "source_count": 21,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "2d8ac9d83e",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Basics: GetString / GetBytes overloads.",
+      "transcript": "Basics: GetString / GetBytes overloads.\n\nVisible main thing:\n- `Encoding.UTF8.GetString(bytes)` decodes bytes into a string.\n- `Encoding.UTF8.GetBytes(text)` encodes a string into bytes.\n- In .NET / C#, the API defaults to using the full passed source when no offset/count or span slice is specified.\n\nMeaning:\nThis is the entry point mental model: `GetString` is bytes -> string, `GetBytes` is string/chars -> bytes.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "ea1f5a1316",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Why counts usually do not need to be specified.",
+      "transcript": "Why counts usually do not need to be specified.\n\nVisible note:\n- Most overloads have simpler forms that use the whole source.\n- Advanced overloads take offset/count or spans.\n- For `Encoding.UTF8.GetString(...)`, if you pass a complete byte array/span, it decodes the whole thing.\n\nMeaning:\nUse the simple overload for whole-source conversions. Use span/index/count overloads only when you intentionally want a segment or caller-provided buffer.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "3d6f0dd1d6",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "1. String -> bytes.",
+      "transcript": "1. String -> bytes.\n\nVisible code:\n- `byte[] bytes = Encoding.UTF8.GetBytes(\"Hello\");`\n- span overload example writes to a provided byte buffer.\n\nMeaning:\n`GetBytes` is the usual direct conversion from `string`/chars to UTF-8 bytes. If you provide a destination span, you control allocation and can avoid creating a new array.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-005",
+      "image_use_id": "IU-005",
+      "fileId_short": "6992f787ac",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "\"Can I use Memory?\"",
+      "transcript": "\"Can I use Memory?\"\n\nVisible idea:\n- `Memory<T>` / `ReadOnlyMemory<T>` can be used by taking `.Span`.\n- Example: `readOnlyMemory.Span`\n- Use span-based overloads with `GetBytes` / `GetChars`.\n\nMeaning:\nEncoding APIs are mostly span-oriented for high-performance overloads. If your data is in Memory, pass its Span/ReadOnlySpan to the encoding method.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-008",
+      "image_use_id": "IU-008",
+      "fileId_short": "78c10d1ebd",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "2. Decode UTF-8 bytes to text.",
+      "transcript": "2. Decode UTF-8 bytes to text.\n\nVisible options:\nA. Allocate a new string:\n- `string s = Encoding.UTF8.GetString(bytes);`\n- or decode a byte segment with index/count.\nB. Important: GetString does not fill an existing char array.\n\nMeaning:\nUse `GetString` when the output should be a new string. If you want to decode into an existing char buffer, use `GetChars` instead.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-009",
+      "image_use_id": "IU-009",
+      "fileId_short": "4ed9508b45",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "1. Encode text to UTF-8 bytes.",
+      "transcript": "1. Encode text to UTF-8 bytes.\n\nVisible:\n- Allocate a new `byte[]`.\n- Example uses `Encoding.UTF8.GetBytes(\"Hello\")`.\n- The note says this calls `GetByteCount(...)` and `GetBytes(...)` internally/under the hood conceptually.\n\nMeaning:\nThe simple array-returning overload is convenient and allocates for you. For performance or fixed buffers, use count + caller-provided span overloads.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-010",
+      "image_use_id": "IU-010",
+      "fileId_short": "b9e22eab17",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "2. Bytes -> string.",
+      "transcript": "2. Bytes -> string.\n\nVisible code:\n- `string text = Encoding.UTF8.GetString(bytes);`\n- Example byte array for UTF-8 bytes.\n- Output is `\"Hello\"`.\n\nMeaning:\nIf the byte sequence is complete and valid UTF-8, `GetString` decodes it into normal .NET UTF-16 string characters.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-012",
+      "image_use_id": "IU-012",
+      "fileId_short": "b12ae2226f",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "B. Old array + indexes API.",
+      "transcript": "B. Old array + indexes API.\n\nVisible code shows:\n- `charCount = Encoding.UTF8.GetCharCount(bytes, index, count);`\n- allocate `char[]`\n- `GetChars(bytes, index, count, chars, charIndex)`\n\nMeaning:\nThe older overloads let you decode only a segment of a byte array and write into a char array. Good for legacy APIs or array-based pipelines.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-013",
+      "image_use_id": "IU-013",
+      "fileId_short": "794d3a440f",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "B. Old array + indexes API for decoded chars.",
+      "transcript": "B. Old array + indexes API for decoded chars.\n\nVisible flow:\n1. Call `GetCharCount` for a byte segment.\n2. Allocate `char[]` of that exact size.\n3. Call `GetChars` to fill it.\n4. Then build a string if needed.\n\nMeaning:\nThis is the exact-size array workflow when you know the byte range and want a char array rather than directly creating a string.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "a50e63ebcf",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "3. Most common encoding.",
+      "transcript": "3. Most common encoding.\n\nVisible:\n- `Encoding.UTF8`\n- Because UTF-8 is the normal default choice for APIs, JSON, HTTP, HTML, web data, and most text interchange.\n\nMeaning:\nDefault to UTF-8 unless you have a concrete reason to use another encoding.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "91bb466903",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "C. New span API.",
+      "transcript": "C. New span API.\n\nVisible:\n- Works on spans.\n- Can call `GetCharCount` over a byte span.\n- Allocate char buffer/span.\n- Decode bytes into chars.\n- Similar idea to array overloads, but span-based.\n\nMeaning:\nThe span API is the modern version for slicing/working with memory without allocating intermediate arrays.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-016",
+      "image_use_id": "IU-016",
+      "fileId_short": "48e980e6ca",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "4. Other encodings also exist.",
+      "transcript": "4. Other encodings also exist.\n\nVisible examples:\n- Encoding.ASCII\n- Encoding.Unicode\n- Encoding.UTF32\n- Encoding.Latin1\n\nBut note:\n- In most modern code, UTF-8 is what you want.\n\nMeaning:\nThe `Encoding` class supports many encodings, but UTF-8 should be the default mental model unless interoperating with a legacy format/protocol.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-017",
+      "image_use_id": "IU-017",
+      "fileId_short": "809ebac342",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "C. New span API for decoded chars.",
+      "transcript": "C. New span API for decoded chars.\n\nVisible:\n- `ReadOnlySpan<byte>` input.\n- `Span<char>` output.\n- `Encoding.UTF8.GetChars(inputBytes, charBuffer);`\n\nMeaning:\nUse the span overload when you already have spans or want to write into a caller-provided char buffer without unnecessary allocations.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-018",
+      "image_use_id": "IU-018",
+      "fileId_short": "0c70d45b4f",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "5. Example with non-ASCII.",
+      "transcript": "5. Example with non-ASCII.\n\nVisible:\n- `string original = \"é\";`\n- UTF-8 bytes are multi-byte.\n- `Encoding.UTF8.GetString(bytes)` restores the original string.\n\nMeaning:\nUTF-8 uses multiple bytes for many non-ASCII characters. Character count and byte count are not the same.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-019",
+      "image_use_id": "IU-019",
+      "fileId_short": "9437f2e2d7",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "6. If you only want part of the byte array.",
+      "transcript": "6. If you only want part of the byte array.\n\nVisible:\n- There are overloads for offset/count.\n- Example decodes only a slice of a byte array.\n\nMeaning:\nIf a byte array has extra bytes before or after the intended text segment, do not decode the whole array. Use index/count or a sliced span.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-021",
+      "image_use_id": "IU-021",
+      "fileId_short": "5787d89720",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "7. Span-based APIs in newer .NET.",
+      "transcript": "7. Span-based APIs in newer .NET.\n\nVisible:\nModern .NET also has span-based APIs:\n- `ReadOnlySpan<byte>`\n- `Span<char>`\n- `ReadOnlySpan<char>`\n- `Span<byte>`\n\nMeaning:\nSpan overloads are the modern way to avoid extra allocations and to integrate with pooled buffers or stackalloc buffers.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-022",
+      "image_use_id": "IU-022",
+      "fileId_short": "41361cc29f",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "The practical difference.",
+      "transcript": "The practical difference.\n\nVisible note:\n- `GetCharCount` gives exactly how many chars are required for this source.\n- `GetMaxCharCount` gives an upper bound based on maximum possible expansion, often larger than needed.\n\nMeaning:\nUse exact count when possible. Use max count only when you need a safe preallocation without first scanning/decoding the exact source.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-025",
+      "image_use_id": "IU-025",
+      "fileId_short": "e600d57a46",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Example: incomplete/partial byte sequences can affect counts.",
+      "transcript": "Example: incomplete/partial byte sequences can affect counts.\n\nVisible code shows a byte array with UTF-8 bytes where a multi-byte character may be split.\n\nMeaning:\nWith UTF-8, a single character can span multiple bytes. Counting/decoding must consider whether the byte sequence is complete, especially in streaming/chunk scenarios.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-026",
+      "image_use_id": "IU-026",
+      "fileId_short": "e9b4e4b776",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "8. Encoder / Decoder objects also exist.",
+      "transcript": "8. Encoder / Decoder objects also exist.\n\nVisible:\n- `Encoding.UTF8.GetEncoder()`\n- `Encoding.UTF8.GetDecoder()`\n- They preserve state for streaming/chunked processing.\n\nMeaning:\nUse Encoder/Decoder when a conversion happens in chunks and characters/byte sequences can cross chunk boundaries.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-028",
+      "image_use_id": "IU-028",
+      "fileId_short": "3f76d6f6be",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Performance tradeoff.",
+      "transcript": "Performance tradeoff.\n\nVisible notes:\n- `GetMaxCharCount` generally gives a safe maximum and may allocate more memory.\n- `GetCharCount` computes the exact number and may scan more work first.\n- Microsoft docs mark the max-count methods as giving the maximum number of characters/bytes.\n\nMeaning:\nFor simple conversions, convenience overloads are fine. For hot paths, choose between exact pre-counting and safe over-allocation intentionally.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-030",
+      "image_use_id": "IU-030",
+      "fileId_short": "3146da568f",
+      "stage0_group": "ENC-R01-basics-getstring-getbytes-getchars-counts",
+      "stage1_region": "ENC-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "9. Practical rule.",
+      "transcript": "9. Practical rule.\n\nVisible:\nMost common:\n- `Encoding.UTF8.GetString(bytes)`\n- `Encoding.UTF8.GetBytes(text)`\n\nMore advanced / chunked processing:\n- `Encoding.UTF8.GetDecoder()`\n- `Encoding.UTF8.GetEncoder()`\n\nMeaning:\nUse the simple methods for complete data. Use stateful Encoder/Decoder for streaming/chunked data.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

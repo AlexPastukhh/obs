@@ -1,0 +1,36 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-042,IU-042,31601648b5,ENC-R03-encoder-trygetbytes-output-buffers,ENC-R03,verified-visible-semantic-transcript,What if I do not know the exact byte count?,"What if I do not know the exact byte count?
+
+Visible option:
+1. Call `GetByteCount` first.
+2. Allocate exact byte array.
+3. Use `GetBytes` to write into destination span.
+4. Advance writer by the number of bytes written.
+
+Meaning:
+This is the clean exact-size workflow when the full text is already available.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-044,IU-044,8f3d9634b1,ENC-R03-encoder-trygetbytes-output-buffers,ENC-R03,verified-visible-semantic-transcript,Replacement behavior vs exception behavior.,"Replacement behavior vs exception behavior.
+
+Visible example:
+- `new UTF8Encoding(false, false)` does not throw on invalid bytes and can use replacement output.
+- `new UTF8Encoding(false, true)` throws on invalid bytes.
+- With encoder/decoder, invalid/incomplete final data plus flush can produce replacement output or DecoderFallbackException depending on fallback settings.
+
+Meaning:
+UTF-8 encoding/decoding behavior depends on fallback configuration. Decide whether bad data should be replaced or should fail.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-047,IU-047,48c78495b2,ENC-R03-encoder-trygetbytes-output-buffers,ENC-R03,verified-visible-semantic-transcript,Option 2: use TryGetBytes.,"Option 2: use TryGetBytes.
+
+Visible:
+- `Encoding.UTF8.TryGetBytes(text.AsSpan(), dest, out int written)`
+- returns true/false depending on whether destination span is large enough.
+- If false, ask for a bigger span or fall back to GetByteCount first.
+
+Meaning:
+TryGetBytes is useful when you have a destination buffer and want to avoid allocation, but you must handle the too-small-buffer case.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-052,IU-052,828fda32da,ENC-R03-encoder-trygetbytes-output-buffers,ENC-R03,verified-visible-semantic-transcript,Option 3: use an Encoder for chunked/stateful text encoding.,"Option 3: use an Encoder for chunked/stateful text encoding.
+
+Visible note:
+If text is encoded in pieces and characters may span boundaries, use `Encoding.GetEncoder()` / `GetEncoder` stateful APIs instead of treating each piece as independent.
+
+Meaning:
+Encoder distinguishes discrete `Encoding.GetBytes` conversions from `Encoder.GetBytes`, which preserves state across calls on one input stream.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
