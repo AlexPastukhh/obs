@@ -1,6 +1,6 @@
 # Current Source of Truth - Base MVC Razor Views / TempData ViewData ViewBag / Cache Tag Helper
 
-Generated: 2026-06-13 08:04:08 UTC
+Generated: 2026-06-13 08:06:22 UTC
 
 ## Policy
 
@@ -14,20 +14,20 @@ A region is complete only after visual/semantic boundary review and verified tra
 Stage0 boundary review: done
 R01 base MVC/Razor Products app, views, layouts, partials/view components: transcript v001 done
 R02 ViewData/ViewBag/TempData/validation flow: transcript v001 done
-P02/R03R04 tag helpers + cache/view components/display templates: next
+R03 built-in tag helpers/forms/selects/infrastructure: transcript v001 done
+R04 cache tag helper/view components/display templates/validation helpers: transcript v001 done
+Final coverage audit: next
 ```
 
-## P01 boundary decisions
+## Coverage after Stage2
 
 ```text
-R01 included:
-13 image uses
-
-R02 included:
-10 image uses
-
-Checked-not-P01 / reserved for P02:
-S-033, S-032, S-003, S-004, S-005, S-006, S-037, S-038, S-040, S-041, S-001, S-002, S-007, S-008, S-009, S-010, S-011, S-025
+total image uses: 41
+processed-in-r01-v001: 13
+processed-in-r02-v001: 10
+processed-in-r03-v001: 10
+processed-in-r04-v001: 8
+pending/problem rows before final audit: 0
 ```
 
 ## Current split policy
@@ -41,7 +41,8 @@ Exception: 120+ only on explicit request or one very cohesive road.
 ## Next pass
 
 ```text
-P02 / R03R04:
-built-in tag helpers, form/input/label/select/validation,
-Cache Tag Helper, view components, display templates and validation helpers.
+Final coverage audit:
+verify all 41 image uses are processed,
+no candidate/reserved/pending/unreviewed rows remain,
+record coverage-complete or concrete problems.
 ```

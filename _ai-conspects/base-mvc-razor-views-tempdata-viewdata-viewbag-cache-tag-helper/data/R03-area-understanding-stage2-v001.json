@@ -1,0 +1,28 @@
+{
+  "region": "R03",
+  "title": "Built-in tag helpers / forms / selects / infrastructure",
+  "included_image_uses": [
+    "S-033",
+    "S-032",
+    "S-003",
+    "S-004",
+    "S-005",
+    "S-006",
+    "S-037",
+    "S-038",
+    "S-040",
+    "S-041"
+  ],
+  "count": 10,
+  "meaning": [
+    "Built-in MVC tag helpers transform server-side asp-* attributes into proper HTML.",
+    "Form-related helpers include form, input, label, textarea, select/option, validation message and validation summary helpers.",
+    "Navigation/rendering helpers include anchor, partial, environment, script/link/image and similar helpers.",
+    "Tag helpers keep Razor markup HTML-like while still binding to routes, model expressions, validation and static asset behavior.",
+    "Tag helper infrastructure requires imports such as @addTagHelper and runs during Razor rendering, not during controller execution."
+  ],
+  "boundary_notes": [
+    "P01 covered base views/state/validation flow.",
+    "R04 covers Cache Tag Helper, view components, display templates and worked UI examples."
+  ]
+}

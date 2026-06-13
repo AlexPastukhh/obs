@@ -1,0 +1,26 @@
+{
+  "region": "R04",
+  "title": "Cache Tag Helper / view components / display templates / validation helpers",
+  "included_image_uses": [
+    "S-001",
+    "S-002",
+    "S-007",
+    "S-008",
+    "S-009",
+    "S-010",
+    "S-011",
+    "S-025"
+  ],
+  "count": 8,
+  "meaning": [
+    "Cache Tag Helper caches generated output fragments in a view.",
+    "Cache can vary by route, query, user, cookie, header and similar values depending on helper attributes.",
+    "Expiration can be absolute, sliding or duration-based.",
+    "View components are reusable UI units with their own logic and view output.",
+    "Display/editor templates and validation helpers/tag helpers support consistent rendering of values and errors."
+  ],
+  "boundary_notes": [
+    "R03 covers the generic built-in tag helper list and infrastructure.",
+    "R04 focuses on cache/component/template/helper examples."
+  ]
+}
