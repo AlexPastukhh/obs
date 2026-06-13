@@ -1,0 +1,141 @@
+{
+  "generated": "2026-06-13 07:58:28 UTC",
+  "group": "MEDIA-R01-content-type-accept-media-type-basics",
+  "region": "MEDIA-R01",
+  "source_count": 12,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "94f3a08439",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "What is multipart/form-data?",
+      "transcript": "What is multipart/form-data?\n\nVisible:\n- multipart/form-data is an HTTP request body format.\n- The body is split into multiple parts.\n- Each part has its own headers and content.\n- Typical use: text fields plus one or more files in one POST/PUT request.\n\nMeaning:\nUse multipart/form-data when the client must send files plus metadata in one request body.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-002",
+      "image_use_id": "IU-002",
+      "fileId_short": "3b62b63f81",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "FormUrlEncodedContent vs multipart/form-data.",
+      "transcript": "FormUrlEncodedContent vs multipart/form-data.\n\nVisible:\n- FormUrlEncodedContent is classic HTML form submission.\n- Browser default form without file upload is usually application/x-www-form-urlencoded.\n- With enctype=\"multipart/form-data\", browser sends multipart.\n- ASP.NET Core usually binds x-www-form-urlencoded and multipart through form binding, not JSON input formatters.\n\nMeaning:\nUse x-www-form-urlencoded for simple key/value form data. Use multipart/form-data when files or mixed parts are involved.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "b846184eba",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "application/octet-stream for raw bytes.",
+      "transcript": "application/octet-stream for raw bytes.\n\nVisible:\n- application/octet-stream means raw binary bytes.\n- It is a request or response body that should be treated as uninterpreted bytes.\n- Common cases: streaming files, raw uploads, custom binary protocols.\n\nMeaning:\nIf the request body is just bytes, application/octet-stream is more appropriate than JSON or form media types.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "a70ade89d2",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Multipart/form-data vs application/octet-stream.",
+      "transcript": "Multipart/form-data vs application/octet-stream.\n\nVisible:\n- multipart/form-data when the request has multiple parts, metadata plus files, or several files.\n- application/octet-stream when the request body is one raw byte stream.\n- Examples: poster with title + file => multipart; raw image bytes only => octet-stream.\n\nMeaning:\nChoose multipart for structured multi-part body; choose octet-stream for a single raw payload.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-005",
+      "image_use_id": "IU-005",
+      "fileId_short": "0ba7d7e20a",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Download/stream response with octet-stream.",
+      "transcript": "Download/stream response with octet-stream.\n\nVisible code:\n- Controller action returns a file/stream.\n- `File(stream, \"application/octet-stream\", fileDownloadName: filename)` pattern.\n\nMeaning:\nFor returning raw bytes/file content from ASP.NET, application/octet-stream is a common response Content-Type when the exact file type is not otherwise specified.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "8354ff0204",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Multipart use cases.",
+      "transcript": "Multipart use cases.\n\nVisible:\nUse multipart/form-data when sending:\n1. file plus metadata in one request.\n2. multiple files in one request.\n3. mixed pieces like profile photo, ID scan, proof of address.\n\nMeaning:\nMultipart is not just “file upload”; it is a container for several body parts with potentially different content.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-007",
+      "image_use_id": "IU-007",
+      "fileId_short": "d68a50adce",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Receive raw bytes from client.",
+      "transcript": "Receive raw bytes from client.\n\nVisible:\n- application/octet-stream upload case.\n- Receive raw bytes from client.\n\nMeaning:\nFor one raw upload body, avoid form binding and read the body stream or use a raw-body action shape. The client should send Content-Type: application/octet-stream.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-008",
+      "image_use_id": "IU-008",
+      "fileId_short": "4efeefd343",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Classic HTML form default.",
+      "transcript": "Classic HTML form default.\n\nVisible:\n- HTML form with method post.\n- Without enctype multipart, browser sends application/x-www-form-urlencoded.\n- Fields become key/value pairs.\n\nMeaning:\nIf a classic form posts simple inputs and no files, x-www-form-urlencoded is the normal media type.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-009",
+      "image_use_id": "IU-009",
+      "fileId_short": "1bb2d97723",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Do you need to add media types to input formatters?",
+      "transcript": "Do you need to add media types to input formatters?\n\nVisible:\n- application/json is handled by JSON input formatter.\n- multipart/form-data is handled by form parsing/model binding, not JSON input formatter.\n- application/octet-stream is not handled by JSON formatters by default.\n- If you expect raw bytes/stream, read Request.Body directly or implement a custom input formatter.\n\nMeaning:\nDo not expect MVC JSON input formatters to handle arbitrary media types automatically. Raw bytes often need explicit endpoint logic.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-010",
+      "image_use_id": "IU-010",
+      "fileId_short": "34e917fb4b",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Read raw body in controller.",
+      "transcript": "Read raw body in controller.\n\nVisible code:\n- Controller route for upload.\n- Reads `Request.Body` with stream/file logic.\n- Does not rely on model binding to parse JSON/form.\n\nMeaning:\nFor octet-stream uploads, direct Request.Body reading is a clear path. You own validation, buffering, streaming, and error handling.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-011",
+      "image_use_id": "IU-011",
+      "fileId_short": "dc39ba02a4",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Server action examples for form and login.",
+      "transcript": "Server action examples for form and login.\n\nVisible code:\n- `[HttpPost(\"account/login\")]`\n- `[Consumes(\"application/x-www-form-urlencoded\")]`\n- action with `[FromForm] LoginForm form`\n- form fields like Username.\n\nMeaning:\nFor form-urlencoded or multipart form posts, use [FromForm] binding and optionally [Consumes] to document/restrict the media type.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-012",
+      "image_use_id": "IU-012",
+      "fileId_short": "cddeeb0072",
+      "stage0_group": "MEDIA-R01-content-type-accept-media-type-basics",
+      "stage1_region": "MEDIA-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Mixed content types inside multipart.",
+      "transcript": "Mixed content types inside multipart.\n\nVisible:\n- multipart can include an application/json part and one or more files.\n- Parts can have different Content-Type values.\n\nMeaning:\nMultipart is the way to send mixed body data such as JSON metadata plus file bytes in a single request.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

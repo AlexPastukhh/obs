@@ -1,0 +1,141 @@
+{
+  "generated": "2026-06-13 07:58:28 UTC",
+  "group": "MEDIA-R02-json-body-frombody-input-formatters",
+  "region": "MEDIA-R02",
+  "source_count": 12,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-013",
+      "image_use_id": "IU-013",
+      "fileId_short": "00cc23f3ae",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "If application/octet-stream is not added to supported input formatters.",
+      "transcript": "If application/octet-stream is not added to supported input formatters.\n\nVisible:\n- If action uses `byte[]` with model binding, unsupported media type can occur.\n- Case A: read Request.Body yourself for raw bytes.\n- MVC typically checks Content-Type only for model/input formatter paths.\n\nMeaning:\nIf you bypass input formatters and read Request.Body manually, you avoid formatter matching, but you also lose automatic formatter validation.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "34a2b97cf6",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Boundary parameter.",
+      "transcript": "Boundary parameter.\n\nVisible:\n- Boundary is a unique marker used to separate parts in a multipart request body.\n- It is like a delimiter.\n- Header example has `boundary=abc123`.\n\nMeaning:\nIn multipart/form-data, boundary is required so the server can split the raw body into individual parts.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "da4b7ecf6e",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Custom model binder / custom input formatter route.",
+      "transcript": "Custom model binder / custom input formatter route.\n\nVisible:\n- If you want a specific action parameter shape but body is application/octet-stream, you may need a custom binder/input formatter.\n- Otherwise copy/read Request.Body manually.\n\nMeaning:\nRaw body bytes do not become arbitrary model types automatically. Either use framework extensibility or read/parse the stream yourself.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-016",
+      "image_use_id": "IU-016",
+      "fileId_short": "3fb15b2ab5",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "HttpClient equivalent for FormUrlEncodedContent.",
+      "transcript": "HttpClient equivalent for FormUrlEncodedContent.\n\nVisible:\n- Dictionary<string,string> with username/password.\n- `new FormUrlEncodedContent(form)`\n- `PostAsync(\"/account/login\", content)`.\n\nMeaning:\nFor application/x-www-form-urlencoded requests from HttpClient, use FormUrlEncodedContent; it sets the correct body format and content type.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-017",
+      "image_use_id": "IU-017",
+      "fileId_short": "9f77cb1992",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "When to use [FromBody] Stream.",
+      "transcript": "When to use [FromBody] Stream.\n\nVisible:\n- If you want to process data as a stream.\n- Binding a Stream this way can be less common/less explicit than using Request.Body.\n- Most raw streaming endpoints use Request.Body directly.\n\nMeaning:\nA raw Stream body is a streaming contract; direct Request.Body access is often clearer than model binding.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-018",
+      "image_use_id": "IU-018",
+      "fileId_short": "3c9184aba6",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Checking for application/octet-stream.",
+      "transcript": "Checking for application/octet-stream.\n\nVisible:\n- You can check `Request.HasJsonContentType()` or Request.ContentType.\n- Example checks content type equals application/octet-stream.\n\nMeaning:\nWhen reading Request.Body manually, validate Content-Type yourself if the endpoint only accepts a specific raw body format.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-019",
+      "image_use_id": "IU-019",
+      "fileId_short": "f2646f2a1d",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Raw multipart body shape.",
+      "transcript": "Raw multipart body shape.\n\nVisible:\n- `--abc123`\n- headers for part 1\n- content for part 1\n- `--abc123`\n- headers/content for part 2\n- final boundary ends with `--`.\n\nMeaning:\nMultipart body is literally a sequence of parts separated by boundary lines.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-020",
+      "image_use_id": "IU-020",
+      "fileId_short": "7e838d1836",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Manual octet-stream upload controller.",
+      "transcript": "Manual octet-stream upload controller.\n\nVisible code:\n- Route like `/upload-raw`.\n- Checks ContentType against application/octet-stream.\n- Creates file path.\n- Uses `Request.Body.CopyToAsync(fileStream)`.\n- Returns filename.\n\nMeaning:\nFor large raw uploads, stream the request body to a file instead of buffering the whole body in memory.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-021",
+      "image_use_id": "IU-021",
+      "fileId_short": "b368b132fd",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "[FromBody] byte[] or Stream case.",
+      "transcript": "[FromBody] byte[] or Stream case.\n\nVisible:\n- For application/octet-stream uploads, if you use [FromBody] byte[] or [FromBody] Stream, MVC must choose an input formatter.\n- If no formatter supports the Content-Type, 415 can happen before the action runs.\n- Practical rule: read Request.Body manually or configure formatter support.\n\nMeaning:\n415 often occurs at binding/formatter selection time, not inside your action logic.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-022",
+      "image_use_id": "IU-022",
+      "fileId_short": "0e7e67310d",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Who sets the boundary?",
+      "transcript": "Who sets the boundary?\n\nVisible:\n- Browser form submissions.\n- MultipartFormDataContent in .NET.\n- FormData in JavaScript.\n\nMeaning:\nYou almost never hand-write the multipart boundary; the HTTP client library generates it and includes it in Content-Type.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-023",
+      "image_use_id": "IU-023",
+      "fileId_short": "50963e5bb4",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "When to use [FromBody] byte[].",
+      "transcript": "When to use [FromBody] byte[].\n\nVisible:\n- Small-ish payloads.\n- You are fine buffering the full body in memory.\n\nMeaning:\n[FromBody] byte[] is not a streaming upload strategy; it materializes the body. Use only when body size is controlled.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-024",
+      "image_use_id": "IU-024",
+      "fileId_short": "9eb6e383ba",
+      "stage0_group": "MEDIA-R02-json-body-frombody-input-formatters",
+      "stage1_region": "MEDIA-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "[FromBody] byte[] controller example.",
+      "transcript": "[FromBody] byte[] controller example.\n\nVisible code:\n- `[ApiController]`\n- `[Route(\"api/[controller]\")]`\n- action `Post([FromBody] byte[] rawData)`\n- returns length / processes raw bytes.\n\nMeaning:\nThis endpoint shape models the body as a byte array. It is simple, but only safe for small controlled payloads because the whole body is in memory.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

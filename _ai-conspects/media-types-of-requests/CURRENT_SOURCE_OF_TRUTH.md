@@ -1,6 +1,6 @@
 # Current Source of Truth - Media Types Of Requests
 
-Generated: 2026-06-13 07:53:30 UTC
+Generated: 2026-06-13 07:58:28 UTC
 
 ## Current policy
 
@@ -37,18 +37,27 @@ If visible transcript has OCR timeout/error, image missing, empty text, or place
 the source stays pending and must not be marked processed.
 ```
 
+## Transcript precision policy
+
+```text
+Stage1 transcript level: source-level semantic transcript.
+For exact C# punctuation, use preserved Stage0 source PNGs.
+Precision patches can upgrade individual sources to verbatim code later.
+```
+
 ## Current status
 
 ```text
 Media Types Of Requests Stage0 boundary review v001: completed
+Media Types Of Requests Stage1 R01/R02 transcript v001: completed
 Image uses inventoried: 49
-Processed sources: 0
-Pending candidates: 49
+Stage1 processed: 24
+Pending candidates: 25
 ```
 
 ## Current processing target
 
 ```text
-Next: MediaTypesOfRequests-stage1 transcript = R01 + R02
-Expected count: 24 images
+Next: MediaTypesOfRequests-stage2 transcript = MEDIA-R03 + MEDIA-R04
+Expected count: 25 images
 ```

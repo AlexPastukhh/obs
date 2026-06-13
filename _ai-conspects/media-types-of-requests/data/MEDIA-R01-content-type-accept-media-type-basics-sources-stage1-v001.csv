@@ -1,0 +1,111 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-001,IU-001,94f3a08439,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,What is multipart/form-data?,"What is multipart/form-data?
+
+Visible:
+- multipart/form-data is an HTTP request body format.
+- The body is split into multiple parts.
+- Each part has its own headers and content.
+- Typical use: text fields plus one or more files in one POST/PUT request.
+
+Meaning:
+Use multipart/form-data when the client must send files plus metadata in one request body.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-002,IU-002,3b62b63f81,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,FormUrlEncodedContent vs multipart/form-data.,"FormUrlEncodedContent vs multipart/form-data.
+
+Visible:
+- FormUrlEncodedContent is classic HTML form submission.
+- Browser default form without file upload is usually application/x-www-form-urlencoded.
+- With enctype=""multipart/form-data"", browser sends multipart.
+- ASP.NET Core usually binds x-www-form-urlencoded and multipart through form binding, not JSON input formatters.
+
+Meaning:
+Use x-www-form-urlencoded for simple key/value form data. Use multipart/form-data when files or mixed parts are involved.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-003,IU-003,b846184eba,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,application/octet-stream for raw bytes.,"application/octet-stream for raw bytes.
+
+Visible:
+- application/octet-stream means raw binary bytes.
+- It is a request or response body that should be treated as uninterpreted bytes.
+- Common cases: streaming files, raw uploads, custom binary protocols.
+
+Meaning:
+If the request body is just bytes, application/octet-stream is more appropriate than JSON or form media types.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-004,IU-004,a70ade89d2,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Multipart/form-data vs application/octet-stream.,"Multipart/form-data vs application/octet-stream.
+
+Visible:
+- multipart/form-data when the request has multiple parts, metadata plus files, or several files.
+- application/octet-stream when the request body is one raw byte stream.
+- Examples: poster with title + file => multipart; raw image bytes only => octet-stream.
+
+Meaning:
+Choose multipart for structured multi-part body; choose octet-stream for a single raw payload.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-005,IU-005,0ba7d7e20a,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Download/stream response with octet-stream.,"Download/stream response with octet-stream.
+
+Visible code:
+- Controller action returns a file/stream.
+- `File(stream, ""application/octet-stream"", fileDownloadName: filename)` pattern.
+
+Meaning:
+For returning raw bytes/file content from ASP.NET, application/octet-stream is a common response Content-Type when the exact file type is not otherwise specified.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-006,IU-006,8354ff0204,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Multipart use cases.,"Multipart use cases.
+
+Visible:
+Use multipart/form-data when sending:
+1. file plus metadata in one request.
+2. multiple files in one request.
+3. mixed pieces like profile photo, ID scan, proof of address.
+
+Meaning:
+Multipart is not just “file upload”; it is a container for several body parts with potentially different content.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-007,IU-007,d68a50adce,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Receive raw bytes from client.,"Receive raw bytes from client.
+
+Visible:
+- application/octet-stream upload case.
+- Receive raw bytes from client.
+
+Meaning:
+For one raw upload body, avoid form binding and read the body stream or use a raw-body action shape. The client should send Content-Type: application/octet-stream.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-008,IU-008,4efeefd343,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Classic HTML form default.,"Classic HTML form default.
+
+Visible:
+- HTML form with method post.
+- Without enctype multipart, browser sends application/x-www-form-urlencoded.
+- Fields become key/value pairs.
+
+Meaning:
+If a classic form posts simple inputs and no files, x-www-form-urlencoded is the normal media type.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-009,IU-009,1bb2d97723,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Do you need to add media types to input formatters?,"Do you need to add media types to input formatters?
+
+Visible:
+- application/json is handled by JSON input formatter.
+- multipart/form-data is handled by form parsing/model binding, not JSON input formatter.
+- application/octet-stream is not handled by JSON formatters by default.
+- If you expect raw bytes/stream, read Request.Body directly or implement a custom input formatter.
+
+Meaning:
+Do not expect MVC JSON input formatters to handle arbitrary media types automatically. Raw bytes often need explicit endpoint logic.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-010,IU-010,34e917fb4b,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Read raw body in controller.,"Read raw body in controller.
+
+Visible code:
+- Controller route for upload.
+- Reads `Request.Body` with stream/file logic.
+- Does not rely on model binding to parse JSON/form.
+
+Meaning:
+For octet-stream uploads, direct Request.Body reading is a clear path. You own validation, buffering, streaming, and error handling.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-011,IU-011,dc39ba02a4,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Server action examples for form and login.,"Server action examples for form and login.
+
+Visible code:
+- `[HttpPost(""account/login"")]`
+- `[Consumes(""application/x-www-form-urlencoded"")]`
+- action with `[FromForm] LoginForm form`
+- form fields like Username.
+
+Meaning:
+For form-urlencoded or multipart form posts, use [FromForm] binding and optionally [Consumes] to document/restrict the media type.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-012,IU-012,cddeeb0072,MEDIA-R01-content-type-accept-media-type-basics,MEDIA-R01,verified-visible-semantic-transcript,Mixed content types inside multipart.,"Mixed content types inside multipart.
+
+Visible:
+- multipart can include an application/json part and one or more files.
+- Parts can have different Content-Type values.
+
+Meaning:
+Multipart is the way to send mixed body data such as JSON metadata plus file bytes in a single request.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

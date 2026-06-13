@@ -1,40 +1,38 @@
-# MANIFEST - Media Types Of Requests Stage0 Boundary Review
+# MANIFEST - Media Types Of Requests Stage1 R01/R02 Transcript
 
-Archive type: **boundary review**  
+Archive type: **source-level semantic transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 07:53:30 UTC
+Generated: 2026-06-13 07:58:28 UTC
 
 ## Direction check
 
 Goal:
-Start Media Types Of Requests conspect only if an existing matching conspect is not found.
+Continue Media Types Of Requests after Stage0.
 
 Done:
-Repository search did not find an existing media-types-of-requests conspect.
+Stage0 boundary review was applied.
 
 This step:
-Add Stage0 boundary review for all source images.
+Add Stage1 transcript for R01/R02, 24 source images.
 
 Why:
-New conspect must start with source inventory, stable source IDs, rough groups, and contact sheets.
+This is the first transcript pass. It is source-level semantic transcript, not only coverage summary.
 
 Next:
 1. review staged file list/status;
 2. commit;
-3. process MediaTypesOfRequests-stage1 transcript.
+3. process MediaTypesOfRequests Stage2 MEDIA-R03 + MEDIA-R04.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/media-types-of-requests/00-repo-conspects-check.md
-_ai-conspects/media-types-of-requests/01-stage0-boundary-review.md
-_ai-conspects/media-types-of-requests/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/media-types-of-requests/data/MediaTypesOfRequests-stage0-boundary-review-v001.csv
-_ai-conspects/media-types-of-requests/data/MediaTypesOfRequests-stage0-boundary-review-v001.json
+_ai-conspects/media-types-of-requests/02-stage1-r01-r02-transcript.md
+_ai-conspects/media-types-of-requests/regions/MEDIA-R01-content-type-accept-media-type-basics.md
+_ai-conspects/media-types-of-requests/regions/MEDIA-R02-json-body-frombody-input-formatters.md
+_ai-conspects/media-types-of-requests/data/*stage1-v001.*
 _ai-conspects/media-types-of-requests/data/media-types-of-requests-image-review-ledger-v1.csv
 _ai-conspects/media-types-of-requests/data/media-types-of-requests-image-review-ledger-v1.json
-_ai-conspects/media-types-of-requests/audit-assets/MediaTypesOfRequests-stage0-*-contact-sheet.png
-_ai-conspects/media-types-of-requests/audit-assets/stage0-source-images/*.png
+_ai-conspects/media-types-of-requests/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/media-types-of-requests/MANIFEST.md
 _ai-conspects/media-types-of-requests/APPLY_ARCHIVE.md
 ```
@@ -42,7 +40,7 @@ _ai-conspects/media-types-of-requests/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Boundary candidates: 49
-Processed by this archive: 0
-Next: MediaTypesOfRequests-stage1 transcript
+Stage1 processed: 24
+Stage0 remaining candidates: 25
+Next: MediaTypesOfRequests Stage2
 ```

@@ -1,0 +1,112 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-013,IU-013,00cc23f3ae,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,If application/octet-stream is not added to supported input formatters.,"If application/octet-stream is not added to supported input formatters.
+
+Visible:
+- If action uses `byte[]` with model binding, unsupported media type can occur.
+- Case A: read Request.Body yourself for raw bytes.
+- MVC typically checks Content-Type only for model/input formatter paths.
+
+Meaning:
+If you bypass input formatters and read Request.Body manually, you avoid formatter matching, but you also lose automatic formatter validation.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-014,IU-014,34a2b97cf6,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,Boundary parameter.,"Boundary parameter.
+
+Visible:
+- Boundary is a unique marker used to separate parts in a multipart request body.
+- It is like a delimiter.
+- Header example has `boundary=abc123`.
+
+Meaning:
+In multipart/form-data, boundary is required so the server can split the raw body into individual parts.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-015,IU-015,da4b7ecf6e,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,Custom model binder / custom input formatter route.,"Custom model binder / custom input formatter route.
+
+Visible:
+- If you want a specific action parameter shape but body is application/octet-stream, you may need a custom binder/input formatter.
+- Otherwise copy/read Request.Body manually.
+
+Meaning:
+Raw body bytes do not become arbitrary model types automatically. Either use framework extensibility or read/parse the stream yourself.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-016,IU-016,3fb15b2ab5,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,HttpClient equivalent for FormUrlEncodedContent.,"HttpClient equivalent for FormUrlEncodedContent.
+
+Visible:
+- Dictionary<string,string> with username/password.
+- `new FormUrlEncodedContent(form)`
+- `PostAsync(""/account/login"", content)`.
+
+Meaning:
+For application/x-www-form-urlencoded requests from HttpClient, use FormUrlEncodedContent; it sets the correct body format and content type.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-017,IU-017,9f77cb1992,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,When to use [FromBody] Stream.,"When to use [FromBody] Stream.
+
+Visible:
+- If you want to process data as a stream.
+- Binding a Stream this way can be less common/less explicit than using Request.Body.
+- Most raw streaming endpoints use Request.Body directly.
+
+Meaning:
+A raw Stream body is a streaming contract; direct Request.Body access is often clearer than model binding.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-018,IU-018,3c9184aba6,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,Checking for application/octet-stream.,"Checking for application/octet-stream.
+
+Visible:
+- You can check `Request.HasJsonContentType()` or Request.ContentType.
+- Example checks content type equals application/octet-stream.
+
+Meaning:
+When reading Request.Body manually, validate Content-Type yourself if the endpoint only accepts a specific raw body format.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-019,IU-019,f2646f2a1d,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,Raw multipart body shape.,"Raw multipart body shape.
+
+Visible:
+- `--abc123`
+- headers for part 1
+- content for part 1
+- `--abc123`
+- headers/content for part 2
+- final boundary ends with `--`.
+
+Meaning:
+Multipart body is literally a sequence of parts separated by boundary lines.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-020,IU-020,7e838d1836,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,Manual octet-stream upload controller.,"Manual octet-stream upload controller.
+
+Visible code:
+- Route like `/upload-raw`.
+- Checks ContentType against application/octet-stream.
+- Creates file path.
+- Uses `Request.Body.CopyToAsync(fileStream)`.
+- Returns filename.
+
+Meaning:
+For large raw uploads, stream the request body to a file instead of buffering the whole body in memory.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-021,IU-021,b368b132fd,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,[FromBody] byte[] or Stream case.,"[FromBody] byte[] or Stream case.
+
+Visible:
+- For application/octet-stream uploads, if you use [FromBody] byte[] or [FromBody] Stream, MVC must choose an input formatter.
+- If no formatter supports the Content-Type, 415 can happen before the action runs.
+- Practical rule: read Request.Body manually or configure formatter support.
+
+Meaning:
+415 often occurs at binding/formatter selection time, not inside your action logic.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-022,IU-022,0e7e67310d,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,Who sets the boundary?,"Who sets the boundary?
+
+Visible:
+- Browser form submissions.
+- MultipartFormDataContent in .NET.
+- FormData in JavaScript.
+
+Meaning:
+You almost never hand-write the multipart boundary; the HTTP client library generates it and includes it in Content-Type.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-023,IU-023,50963e5bb4,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,When to use [FromBody] byte[].,"When to use [FromBody] byte[].
+
+Visible:
+- Small-ish payloads.
+- You are fine buffering the full body in memory.
+
+Meaning:
+[FromBody] byte[] is not a streaming upload strategy; it materializes the body. Use only when body size is controlled.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-024,IU-024,9eb6e383ba,MEDIA-R02-json-body-frombody-input-formatters,MEDIA-R02,verified-visible-semantic-transcript,[FromBody] byte[] controller example.,"[FromBody] byte[] controller example.
+
+Visible code:
+- `[ApiController]`
+- `[Route(""api/[controller]"")]`
+- action `Post([FromBody] byte[] rawData)`
+- returns length / processes raw bytes.
+
+Meaning:
+This endpoint shape models the body as a byte array. It is simple, but only safe for small controlled payloads because the whole body is in memory.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
