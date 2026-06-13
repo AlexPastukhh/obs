@@ -1,0 +1,20 @@
+{
+  "region": "R02",
+  "title": "ConnectionMultiplexer and IDatabase vs IDistributedCache",
+  "included_image_uses": [
+    "S-008",
+    "S-007",
+    "S-006",
+    "S-005",
+    "S-004",
+    "S-003",
+    "S-002",
+    "S-001"
+  ],
+  "count": 8,
+  "meaning": "ConnectionMultiplexer, IDatabase, direct Redis operations, IDistributedCache comparison and registration concerns.",
+  "boundary_notes": [
+    "R01 is included in same P01 pass.",
+    "R03/R04 reserved for P02."
+  ]
+}

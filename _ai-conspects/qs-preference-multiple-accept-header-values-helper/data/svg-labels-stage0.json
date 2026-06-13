@@ -1,0 +1,1570 @@
+[
+  {
+    "label_id": "L-001",
+    "text": "!!!",
+    "x": 4042.496,
+    "y": 3871.088,
+    "font_size": "126.43401646837597px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-002",
+    "text": "in controller",
+    "x": 1466.28,
+    "y": 5532.813,
+    "font_size": "152.10255784254792px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-003",
+    "text": "using Microsoft.Net.Http.Headers;",
+    "x": 10.0,
+    "y": 562.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-004",
+    "text": "using Microsoft.Extensions.Primitives;",
+    "x": 10.0,
+    "y": 587.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-005",
+    "text": "public static class AcceptHeaderSelectionHelper",
+    "x": 10.0,
+    "y": 637.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-006",
+    "text": "{",
+    "x": 10.0,
+    "y": 662.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-007",
+    "text": "// Define server preference order (first = most preferred when q ties)",
+    "x": 10.0,
+    "y": 687.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-008",
+    "text": "// Put the variants you support here in the exact preference order you want.",
+    "x": 10.0,
+    "y": 712.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-009",
+    "text": "private static readonly string[] SupportedByPreference =",
+    "x": 10.0,
+    "y": 737.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-010",
+    "text": "{",
+    "x": 10.0,
+    "y": 762.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-011",
+    "text": "\"application/vnd.marvin.author.full.hateoas+json\",",
+    "x": 10.0,
+    "y": 787.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-012",
+    "text": "\"application/vnd.marvin.author.full+json\",",
+    "x": 10.0,
+    "y": 812.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-013",
+    "text": "\"application/vnd.marvin.author.friendly.hateoas+json\",",
+    "x": 10.0,
+    "y": 837.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-014",
+    "text": "\"application/vnd.marvin.author.friendly+json\",",
+    "x": 10.0,
+    "y": 862.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-015",
+    "text": "\"application/json\",",
+    "x": 10.0,
+    "y": 887.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-016",
+    "text": "\"application/*\",",
+    "x": 10.0,
+    "y": 912.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-017",
+    "text": "\"*/*\"",
+    "x": 10.0,
+    "y": 937.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-018",
+    "text": "};",
+    "x": 10.0,
+    "y": 962.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-019",
+    "text": "public sealed record NegotiationResult(",
+    "x": 10.0,
+    "y": 1012.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-020",
+    "text": "string MediaType,",
+    "x": 10.0,
+    "y": 1037.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-021",
+    "text": "string PrimaryMediaType,  // e.g. vnd.marvin.author.full / vnd.marvin.author.friendly / application",
+    "x": 10.0,
+    "y": 1062.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-022",
+    "text": "bool IncludeLinks          // true if hateoas requested",
+    "x": 10.0,
+    "y": 1087.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-023",
+    "text": ");",
+    "x": 10.0,
+    "y": 1112.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-024",
+    "text": "/// <summary>",
+    "x": 10.0,
+    "y": 1162.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-025",
+    "text": "/// Picks the best matching media type from Accept header using:",
+    "x": 10.0,
+    "y": 1187.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-026",
+    "text": "/// 1) q weight (descending)",
+    "x": 10.0,
+    "y": 1212.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-027",
+    "text": "/// 2) specificity (exact > type/* > */*)",
+    "x": 10.0,
+    "y": 1237.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-028",
+    "text": "/// 3) server preference order (SupportedByPreference)",
+    "x": 10.0,
+    "y": 1262.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-029",
+    "text": "/// 4) header order as a final tie-breaker (stable by index)",
+    "x": 10.0,
+    "y": 1287.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-030",
+    "text": "/// </summary>",
+    "x": 10.0,
+    "y": 1312.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-031",
+    "text": "public static bool TrySelect(",
+    "x": 10.0,
+    "y": 1337.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-032",
+    "text": "StringValues acceptHeader,",
+    "x": 10.0,
+    "y": 1362.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-033",
+    "text": "out NegotiationResult? result)",
+    "x": 10.0,
+    "y": 1387.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-034",
+    "text": "{",
+    "x": 10.0,
+    "y": 1412.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-035",
+    "text": "result = null;",
+    "x": 10.0,
+    "y": 1437.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-036",
+    "text": "// Missing Accept => treat as */* (client accepts anything)",
+    "x": 10.0,
+    "y": 1487.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-037",
+    "text": "if (StringValues.IsNullOrEmpty(acceptHeader))",
+    "x": 10.0,
+    "y": 1512.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-038",
+    "text": "{",
+    "x": 10.0,
+    "y": 1537.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-039",
+    "text": "// choose your default representation here",
+    "x": 10.0,
+    "y": 1562.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-040",
+    "text": "var defaultMt = \"application/vnd.marvin.author.friendly+json\";",
+    "x": 10.0,
+    "y": 1587.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-041",
+    "text": "result = BuildResult(defaultMt);",
+    "x": 10.0,
+    "y": 1612.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-042",
+    "text": "return true;",
+    "x": 10.0,
+    "y": 1637.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-043",
+    "text": "}",
+    "x": 10.0,
+    "y": 1662.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-044",
+    "text": "if (!MediaTypeHeaderValue.TryParseList(acceptHeader, out var parsedList))",
+    "x": 10.0,
+    "y": 1712.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-045",
+    "text": "{",
+    "x": 10.0,
+    "y": 1737.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-046",
+    "text": "return false; // invalid syntax -> caller should return 400 ProblemDetails",
+    "x": 10.0,
+    "y": 1762.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-047",
+    "text": "}",
+    "x": 10.0,
+    "y": 1787.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-048",
+    "text": "// Build candidates from Accept values",
+    "x": 10.0,
+    "y": 1837.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-049",
+    "text": "var candidates = parsedList",
+    "x": 10.0,
+    "y": 1862.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-050",
+    "text": ".Select((mt, index) => new Candidate(mt, index))",
+    "x": 10.0,
+    "y": 1887.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-051",
+    "text": ".Where(c => c.Q > 0) // q=0 means \"not acceptable\"",
+    "x": 10.0,
+    "y": 1912.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-052",
+    "text": ".ToList();",
+    "x": 10.0,
+    "y": 1937.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-053",
+    "text": "if (candidates.Count == 0)",
+    "x": 10.0,
+    "y": 1987.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-054",
+    "text": "{",
+    "x": 10.0,
+    "y": 2012.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-055",
+    "text": "return false;",
+    "x": 10.0,
+    "y": 2037.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-056",
+    "text": "}",
+    "x": 10.0,
+    "y": 2062.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-057",
+    "text": "// For each Accept candidate, find best supported match based on:",
+    "x": 10.0,
+    "y": 2112.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-058",
+    "text": "// - exact match in SupportedByPreference",
+    "x": 10.0,
+    "y": 2137.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-059",
+    "text": "// - or \"application/*\" / \"*/*\" wildcard",
+    "x": 10.0,
+    "y": 2162.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-060",
+    "text": "var supportedMatches = new List<SupportedMatch>();",
+    "x": 10.0,
+    "y": 2187.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-061",
+    "text": "foreach (var c in candidates)",
+    "x": 10.0,
+    "y": 2237.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-062",
+    "text": "{",
+    "x": 10.0,
+    "y": 2262.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-063",
+    "text": "foreach (var supported in SupportedByPreference)",
+    "x": 10.0,
+    "y": 2287.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-064",
+    "text": "{",
+    "x": 10.0,
+    "y": 2312.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-065",
+    "text": "if (Matches(c, supported))",
+    "x": 10.0,
+    "y": 2337.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-066",
+    "text": "{",
+    "x": 10.0,
+    "y": 2362.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-067",
+    "text": "supportedMatches.Add(new SupportedMatch(",
+    "x": 10.0,
+    "y": 2387.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-068",
+    "text": "supportedMediaType: Normalize(supported),",
+    "x": 10.0,
+    "y": 2412.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-069",
+    "text": "q: c.Q,",
+    "x": 10.0,
+    "y": 2437.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-070",
+    "text": "specificity: c.Specificity,",
+    "x": 10.0,
+    "y": 2462.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-071",
+    "text": "supportedPreferenceRank: Array.IndexOf(SupportedByPreference, supported),",
+    "x": 10.0,
+    "y": 2487.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-072",
+    "text": "acceptHeaderIndex: c.Index));",
+    "x": 10.0,
+    "y": 2512.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-073",
+    "text": "}",
+    "x": 10.0,
+    "y": 2537.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-074",
+    "text": "}",
+    "x": 10.0,
+    "y": 2562.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-075",
+    "text": "}",
+    "x": 10.0,
+    "y": 2587.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-076",
+    "text": "if (supportedMatches.Count == 0)",
+    "x": 10.0,
+    "y": 2637.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-077",
+    "text": "{",
+    "x": 10.0,
+    "y": 2662.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-078",
+    "text": "// No overlap between Accept and what we can produce -> 406 scenario",
+    "x": 10.0,
+    "y": 2687.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-079",
+    "text": "return false;",
+    "x": 10.0,
+    "y": 2712.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-080",
+    "text": "}",
+    "x": 10.0,
+    "y": 2737.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-081",
+    "text": "var winner = supportedMatches",
+    "x": 10.0,
+    "y": 2787.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-082",
+    "text": ".OrderByDescending(m => m.Q)",
+    "x": 10.0,
+    "y": 2812.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-083",
+    "text": ".ThenByDescending(m => m.Specificity)",
+    "x": 10.0,
+    "y": 2837.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-084",
+    "text": ".ThenBy(m => m.SupportedPreferenceRank)",
+    "x": 10.0,
+    "y": 2862.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-085",
+    "text": ".ThenBy(m => m.AcceptHeaderIndex)",
+    "x": 10.0,
+    "y": 2887.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-086",
+    "text": ".First();",
+    "x": 10.0,
+    "y": 2912.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-087",
+    "text": "result = BuildResult(winner.SupportedMediaType);",
+    "x": 10.0,
+    "y": 2962.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-088",
+    "text": "return true;",
+    "x": 10.0,
+    "y": 2987.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-089",
+    "text": "}",
+    "x": 10.0,
+    "y": 3012.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-090",
+    "text": "private static NegotiationResult BuildResult(string mediaType)",
+    "x": 10.0,
+    "y": 3062.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-091",
+    "text": "{",
+    "x": 10.0,
+    "y": 3087.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-092",
+    "text": "// your course logic: include links if subtype ends with \"hateoas\"",
+    "x": 10.0,
+    "y": 3112.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-093",
+    "text": "var includeLinks = mediaType.Contains(\"hateoas\", StringComparison.OrdinalIgnoreCase);",
+    "x": 10.0,
+    "y": 3137.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-094",
+    "text": "// derive \"primary\" type similar to course:",
+    "x": 10.0,
+    "y": 3187.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-095",
+    "text": "// application/vnd.marvin.author.full.hateoas+json -> vnd.marvin.author.full",
+    "x": 10.0,
+    "y": 3212.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-096",
+    "text": "// application/vnd.marvin.author.friendly+json -> vnd.marvin.author.friendly",
+    "x": 10.0,
+    "y": 3237.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-097",
+    "text": "// application/json -> application",
+    "x": 10.0,
+    "y": 3262.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-098",
+    "text": "var parsed = MediaTypeHeaderValue.Parse(mediaType);",
+    "x": 10.0,
+    "y": 3287.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-099",
+    "text": "var subType = parsed.SubTypeWithoutSuffix.Value; // e.g. vnd.marvin.author.full.hateoas or json",
+    "x": 10.0,
+    "y": 3312.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-100",
+    "text": "var primary = subType.EndsWith(\".hateoas\", StringComparison.OrdinalIgnoreCase)",
+    "x": 10.0,
+    "y": 3337.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-101",
+    "text": "? subType[..^(\".hateoas\".Length)]",
+    "x": 10.0,
+    "y": 3362.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-102",
+    "text": ": subType;",
+    "x": 10.0,
+    "y": 3387.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-103",
+    "text": "return new NegotiationResult(mediaType, primary, includeLinks);",
+    "x": 10.0,
+    "y": 3437.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-104",
+    "text": "}",
+    "x": 10.0,
+    "y": 3462.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-105",
+    "text": "private static string Normalize(string mediaType) => mediaType.Trim();",
+    "x": 10.0,
+    "y": 3512.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-106",
+    "text": "private sealed record Candidate(MediaTypeHeaderValue Value, int Index)",
+    "x": 10.0,
+    "y": 3562.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-107",
+    "text": "{",
+    "x": 10.0,
+    "y": 3587.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-108",
+    "text": "public double Q",
+    "x": 10.0,
+    "y": 3612.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-109",
+    "text": "{",
+    "x": 10.0,
+    "y": 3637.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-110",
+    "text": "get",
+    "x": 10.0,
+    "y": 3662.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-111",
+    "text": "{",
+    "x": 10.0,
+    "y": 3687.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-112",
+    "text": "// If q is absent => 1.0",
+    "x": 10.0,
+    "y": 3712.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-113",
+    "text": "var qParam = Value.Parameters.FirstOrDefault(p =>",
+    "x": 10.0,
+    "y": 3737.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-114",
+    "text": "string.Equals(p.Name.Value, \"q\", StringComparison.OrdinalIgnoreCase));",
+    "x": 10.0,
+    "y": 3762.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-115",
+    "text": "if (qParam?.Value is null) return 1.0;",
+    "x": 10.0,
+    "y": 3812.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-116",
+    "text": "// q is a StringSegment like \"0.9\"",
+    "x": 10.0,
+    "y": 3862.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-117",
+    "text": "if (double.TryParse(qParam.Value.Value, System.Globalization.NumberStyles.AllowDecimalPoint,",
+    "x": 10.0,
+    "y": 3887.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-118",
+    "text": "System.Globalization.CultureInfo.InvariantCulture, out var q))",
+    "x": 10.0,
+    "y": 3912.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-119",
+    "text": "{",
+    "x": 10.0,
+    "y": 3937.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-120",
+    "text": "return q;",
+    "x": 10.0,
+    "y": 3962.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-121",
+    "text": "}",
+    "x": 10.0,
+    "y": 3987.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-122",
+    "text": "// Malformed q -> treat as invalid by making it unacceptable",
+    "x": 10.0,
+    "y": 4037.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-123",
+    "text": "return 0;",
+    "x": 10.0,
+    "y": 4062.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-124",
+    "text": "}",
+    "x": 10.0,
+    "y": 4087.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-125",
+    "text": "}",
+    "x": 10.0,
+    "y": 4112.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-126",
+    "text": "// exact = 2, type/* = 1, */* = 0",
+    "x": 10.0,
+    "y": 4162.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-127",
+    "text": "public int Specificity =>",
+    "x": 10.0,
+    "y": 4187.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-128",
+    "text": "Value.MediaType?.Value == \"*/*\" ? 0 :",
+    "x": 10.0,
+    "y": 4212.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-129",
+    "text": "Value.SubType?.Value == \"*\" ? 1 :",
+    "x": 10.0,
+    "y": 4237.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-130",
+    "text": "2;",
+    "x": 10.0,
+    "y": 4262.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-131",
+    "text": "}",
+    "x": 10.0,
+    "y": 4287.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-132",
+    "text": "private sealed record SupportedMatch(",
+    "x": 10.0,
+    "y": 4337.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-133",
+    "text": "string SupportedMediaType,",
+    "x": 10.0,
+    "y": 4362.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-134",
+    "text": "double Q,",
+    "x": 10.0,
+    "y": 4387.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-135",
+    "text": "int Specificity,",
+    "x": 10.0,
+    "y": 4412.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-136",
+    "text": "int SupportedPreferenceRank,",
+    "x": 10.0,
+    "y": 4437.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-137",
+    "text": "int AcceptHeaderIndex);",
+    "x": 10.0,
+    "y": 4462.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-138",
+    "text": "private static bool Matches(Candidate accept, string supported)",
+    "x": 10.0,
+    "y": 4512.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-139",
+    "text": "{",
+    "x": 10.0,
+    "y": 4537.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-140",
+    "text": "supported = Normalize(supported);",
+    "x": 10.0,
+    "y": 4562.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-141",
+    "text": "// wildcard supported entries are just there for preference list;",
+    "x": 10.0,
+    "y": 4612.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-142",
+    "text": "// treat them as matching in the obvious way.",
+    "x": 10.0,
+    "y": 4637.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-143",
+    "text": "if (supported == \"*/*\")",
+    "x": 10.0,
+    "y": 4662.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-144",
+    "text": "return true;",
+    "x": 10.0,
+    "y": 4687.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-145",
+    "text": "// Parse supported into type/subtype",
+    "x": 10.0,
+    "y": 4737.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-146",
+    "text": "if (!MediaTypeHeaderValue.TryParse(supported, out var supportedMt))",
+    "x": 10.0,
+    "y": 4762.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-147",
+    "text": "{",
+    "x": 10.0,
+    "y": 4787.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-148",
+    "text": "// developer error; should never happen because SupportedByPreference is ours",
+    "x": 10.0,
+    "y": 4812.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-149",
+    "text": "return false;",
+    "x": 10.0,
+    "y": 4837.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-150",
+    "text": "}",
+    "x": 10.0,
+    "y": 4862.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-151",
+    "text": "// If accept is */* it matches anything",
+    "x": 10.0,
+    "y": 4912.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-152",
+    "text": "if (accept.Value.MediaType?.Value == \"*/*\")",
+    "x": 10.0,
+    "y": 4937.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-153",
+    "text": "return true;",
+    "x": 10.0,
+    "y": 4962.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-154",
+    "text": "// If accept is type/* it matches any subtype for that type",
+    "x": 10.0,
+    "y": 5012.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-155",
+    "text": "if (accept.Value.SubType?.Value == \"*\")",
+    "x": 10.0,
+    "y": 5037.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-156",
+    "text": "{",
+    "x": 10.0,
+    "y": 5062.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-157",
+    "text": "return string.Equals(",
+    "x": 10.0,
+    "y": 5087.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-158",
+    "text": "accept.Value.Type?.Value,",
+    "x": 10.0,
+    "y": 5112.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-159",
+    "text": "supportedMt!.Type?.Value,",
+    "x": 10.0,
+    "y": 5137.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-160",
+    "text": "StringComparison.OrdinalIgnoreCase);",
+    "x": 10.0,
+    "y": 5162.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-161",
+    "text": "}",
+    "x": 10.0,
+    "y": 5187.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-162",
+    "text": "// Otherwise exact compare by media type (ignore parameters)",
+    "x": 10.0,
+    "y": 5237.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-163",
+    "text": "return string.Equals(",
+    "x": 10.0,
+    "y": 5262.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-164",
+    "text": "accept.Value.MediaType?.Value,",
+    "x": 10.0,
+    "y": 5287.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-165",
+    "text": "supportedMt!.MediaType?.Value,",
+    "x": 10.0,
+    "y": 5312.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-166",
+    "text": "StringComparison.OrdinalIgnoreCase);",
+    "x": 10.0,
+    "y": 5337.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-167",
+    "text": "}",
+    "x": 10.0,
+    "y": 5362.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-168",
+    "text": "}",
+    "x": 10.0,
+    "y": 5387.233,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-169",
+    "text": "using Microsoft.AspNetCore.Mvc;",
+    "x": 200.518,
+    "y": 5608.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-170",
+    "text": "[ApiController]",
+    "x": 200.518,
+    "y": 5658.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-171",
+    "text": "[Route(\"api/authors\")]",
+    "x": 200.518,
+    "y": 5683.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-172",
+    "text": "public class AuthorsController : ControllerBase",
+    "x": 200.518,
+    "y": 5708.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-173",
+    "text": "{",
+    "x": 200.518,
+    "y": 5733.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-174",
+    "text": "[HttpGet(\"{authorId}\")]",
+    "x": 200.518,
+    "y": 5758.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-175",
+    "text": "public IActionResult GetAuthor(Guid authorId, [FromHeader(Name = \"Accept\")] string? accept)",
+    "x": 200.518,
+    "y": 5783.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-176",
+    "text": "{",
+    "x": 200.518,
+    "y": 5808.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-177",
+    "text": "if (!AcceptHeaderSelectionHelper.TrySelect(accept, out var selected))",
+    "x": 200.518,
+    "y": 5833.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-178",
+    "text": "{",
+    "x": 200.518,
+    "y": 5858.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-179",
+    "text": "// Could be invalid Accept syntax (400) OR no supported match (406).",
+    "x": 200.518,
+    "y": 5883.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-180",
+    "text": "// If you want to distinguish, check TryParseList separately.",
+    "x": 200.518,
+    "y": 5908.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-181",
+    "text": "return StatusCode(StatusCodes.Status406NotAcceptable);",
+    "x": 200.518,
+    "y": 5933.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-182",
+    "text": "}",
+    "x": 200.518,
+    "y": 5958.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-183",
+    "text": "// selected.IncludeLinks -> add HATEOAS",
+    "x": 200.518,
+    "y": 6008.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-184",
+    "text": "// selected.PrimaryMediaType -> \"vnd.marvin.author.full\" / \"vnd.marvin.author.friendly\"",
+    "x": 200.518,
+    "y": 6033.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-185",
+    "text": "if (string.Equals(selected!.PrimaryMediaType, \"vnd.marvin.author.full\", StringComparison.OrdinalIgnoreCase))",
+    "x": 200.518,
+    "y": 6058.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-186",
+    "text": "{",
+    "x": 200.518,
+    "y": 6083.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-187",
+    "text": "// build full representation",
+    "x": 200.518,
+    "y": 6108.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-188",
+    "text": "return Ok(new { kind = \"full\", links = selected.IncludeLinks });",
+    "x": 200.518,
+    "y": 6133.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-189",
+    "text": "}",
+    "x": 200.518,
+    "y": 6158.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-190",
+    "text": "// build friendly representation",
+    "x": 200.518,
+    "y": 6208.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-191",
+    "text": "return Ok(new { kind = \"friendly\", links = selected.IncludeLinks });",
+    "x": 200.518,
+    "y": 6233.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-192",
+    "text": "}",
+    "x": 200.518,
+    "y": 6258.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-193",
+    "text": "}",
+    "x": 200.518,
+    "y": 6283.041,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-194",
+    "text": "negotiationresult biuldresult",
+    "x": 2553.909,
+    "y": 5556.773,
+    "font_size": "85.64103816105782px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-195",
+    "text": "candidate",
+    "x": 2477.982,
+    "y": 1881.907,
+    "font_size": "91.38508243183335px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-196",
+    "text": "matches",
+    "x": 2516.604,
+    "y": 3834.643,
+    "font_size": "198.65539439976678px",
+    "fill": "#d3d3d3"
+  }
+]

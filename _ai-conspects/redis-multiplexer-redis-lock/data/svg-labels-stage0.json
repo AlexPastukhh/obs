@@ -1,0 +1,154 @@
+[
+  {
+    "label_id": "L-001",
+    "text": "multiplexer",
+    "x": 2704.093,
+    "y": 1269.837,
+    "font_size": "57.92594401041567px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-002",
+    "text": "atomic counters, race conditions with idatabase",
+    "x": 2401.818,
+    "y": 3492.315,
+    "font_size": "50.66665649414062px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-003",
+    "text": "and idistributedcache",
+    "x": 2401.818,
+    "y": 3555.648,
+    "font_size": "50.66665649414062px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-004",
+    "text": "stampede protection,",
+    "x": 1127.806,
+    "y": 3479.342,
+    "font_size": "64px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-005",
+    "text": "1 single instance",
+    "x": 1127.806,
+    "y": 3559.342,
+    "font_size": "64px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-006",
+    "text": "2 multiple with redis lock",
+    "x": 1127.806,
+    "y": 3639.342,
+    "font_size": "64px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-007",
+    "text": "closer to end about redis lock and redlock for stronger guarantee",
+    "x": 1213.511,
+    "y": 4656.406,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-008",
+    "text": "some lua script shit, not interested rught now",
+    "x": 1213.511,
+    "y": 4681.406,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-009",
+    "text": "this is about data being lost,",
+    "x": 2582.736,
+    "y": 3619.598,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-010",
+    "text": "multiple concurrent requests",
+    "x": 2582.736,
+    "y": 3644.598,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-011",
+    "text": "one gets  5",
+    "x": 2582.736,
+    "y": 3669.598,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-012",
+    "text": "another sets  5 +1",
+    "x": 2582.736,
+    "y": 3694.598,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-013",
+    "text": "the first sets 5 + 1",
+    "x": 2582.736,
+    "y": 3719.598,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-014",
+    "text": "we have 6 instead of 7",
+    "x": 2582.736,
+    "y": 3744.598,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-015",
+    "text": "why use redis for failed attempt quering",
+    "x": 43.164,
+    "y": 1280.683,
+    "font_size": "64.3290585127271px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-016",
+    "text": "and not db",
+    "x": 43.164,
+    "y": 1361.094,
+    "font_size": "64.3290585127271px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-017",
+    "text": "differences in db and redis",
+    "x": 43.164,
+    "y": 1441.505,
+    "font_size": "64.3290585127271px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-018",
+    "text": "redis through idistributed cache vs",
+    "x": 3610.774,
+    "y": 135.635,
+    "font_size": "142.60444146164812px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-019",
+    "text": "multiplexer + idatabase",
+    "x": 3610.774,
+    "y": 313.89,
+    "font_size": "142.60444146164812px",
+    "fill": "#d3d3d3"
+  }
+]

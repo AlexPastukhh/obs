@@ -1,0 +1,38 @@
+[
+  {
+    "pass_id": "P01",
+    "region_id": "R01",
+    "region_slug": "redis-vs-db-failed-attempts-and-cache-choice",
+    "image_use_count": 2,
+    "source_ids": "S-023, S-024",
+    "purpose": "Why Redis for failed-attempt querying/counters instead of DB, Redis vs database differences and cache-role framing.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  },
+  {
+    "pass_id": "P01",
+    "region_id": "R02",
+    "region_slug": "connectionmultiplexer-idatabase-vs-idistributedcache",
+    "image_use_count": 8,
+    "source_ids": "S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008",
+    "purpose": "ConnectionMultiplexer and IDatabase vs IDistributedCache, direct Redis operations, shared multiplexer usage and registration concerns.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R03",
+    "region_slug": "atomic-counters-race-conditions-and-increment-semantics",
+    "image_use_count": 7,
+    "source_ids": "S-009, S-010, S-011, S-012, S-013, S-014, S-015",
+    "purpose": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R04",
+    "region_slug": "stampede-protection-single-instance-redis-lock-redlock",
+    "image_use_count": 7,
+    "source_ids": "S-016, S-017, S-018, S-019, S-020, S-021, S-022",
+    "purpose": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
+    "boundary_notes": "Candidate split from Stage0; verify neighbor region contact sheets before closing transcript."
+  }
+]

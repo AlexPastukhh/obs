@@ -1,0 +1,14 @@
+{
+  "region": "R01",
+  "title": "Redis vs DB for failed attempts and cache choice",
+  "included_image_uses": [
+    "S-023",
+    "S-024"
+  ],
+  "count": 2,
+  "meaning": "Why Redis for failed-attempt querying/counters instead of DB; Redis as cache/fast counter store.",
+  "boundary_notes": [
+    "R02 is included in same P01 pass.",
+    "R03/R04 reserved for P02."
+  ]
+}

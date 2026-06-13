@@ -1,0 +1,197 @@
+label_id,text,x,y,font_size,fill
+L-001,!!!,4042.496,3871.088,126.43401646837597px,#d3d3d3
+L-002,in controller,1466.28,5532.813,152.10255784254792px,#d3d3d3
+L-003,using Microsoft.Net.Http.Headers;,10.0,562.233,20px,#d3d3d3
+L-004,using Microsoft.Extensions.Primitives;,10.0,587.233,20px,#d3d3d3
+L-005,public static class AcceptHeaderSelectionHelper,10.0,637.233,20px,#d3d3d3
+L-006,{,10.0,662.233,20px,#d3d3d3
+L-007,// Define server preference order (first = most preferred when q ties),10.0,687.233,20px,#d3d3d3
+L-008,// Put the variants you support here in the exact preference order you want.,10.0,712.233,20px,#d3d3d3
+L-009,private static readonly string[] SupportedByPreference =,10.0,737.233,20px,#d3d3d3
+L-010,{,10.0,762.233,20px,#d3d3d3
+L-011,"""application/vnd.marvin.author.full.hateoas+json"",",10.0,787.233,20px,#d3d3d3
+L-012,"""application/vnd.marvin.author.full+json"",",10.0,812.233,20px,#d3d3d3
+L-013,"""application/vnd.marvin.author.friendly.hateoas+json"",",10.0,837.233,20px,#d3d3d3
+L-014,"""application/vnd.marvin.author.friendly+json"",",10.0,862.233,20px,#d3d3d3
+L-015,"""application/json"",",10.0,887.233,20px,#d3d3d3
+L-016,"""application/*"",",10.0,912.233,20px,#d3d3d3
+L-017,"""*/*""",10.0,937.233,20px,#d3d3d3
+L-018,};,10.0,962.233,20px,#d3d3d3
+L-019,public sealed record NegotiationResult(,10.0,1012.233,20px,#d3d3d3
+L-020,"string MediaType,",10.0,1037.233,20px,#d3d3d3
+L-021,"string PrimaryMediaType,  // e.g. vnd.marvin.author.full / vnd.marvin.author.friendly / application",10.0,1062.233,20px,#d3d3d3
+L-022,bool IncludeLinks          // true if hateoas requested,10.0,1087.233,20px,#d3d3d3
+L-023,);,10.0,1112.233,20px,#d3d3d3
+L-024,/// <summary>,10.0,1162.233,20px,#d3d3d3
+L-025,/// Picks the best matching media type from Accept header using:,10.0,1187.233,20px,#d3d3d3
+L-026,/// 1) q weight (descending),10.0,1212.233,20px,#d3d3d3
+L-027,/// 2) specificity (exact > type/* > */*),10.0,1237.233,20px,#d3d3d3
+L-028,/// 3) server preference order (SupportedByPreference),10.0,1262.233,20px,#d3d3d3
+L-029,/// 4) header order as a final tie-breaker (stable by index),10.0,1287.233,20px,#d3d3d3
+L-030,/// </summary>,10.0,1312.233,20px,#d3d3d3
+L-031,public static bool TrySelect(,10.0,1337.233,20px,#d3d3d3
+L-032,"StringValues acceptHeader,",10.0,1362.233,20px,#d3d3d3
+L-033,out NegotiationResult? result),10.0,1387.233,20px,#d3d3d3
+L-034,{,10.0,1412.233,20px,#d3d3d3
+L-035,result = null;,10.0,1437.233,20px,#d3d3d3
+L-036,// Missing Accept => treat as */* (client accepts anything),10.0,1487.233,20px,#d3d3d3
+L-037,if (StringValues.IsNullOrEmpty(acceptHeader)),10.0,1512.233,20px,#d3d3d3
+L-038,{,10.0,1537.233,20px,#d3d3d3
+L-039,// choose your default representation here,10.0,1562.233,20px,#d3d3d3
+L-040,"var defaultMt = ""application/vnd.marvin.author.friendly+json"";",10.0,1587.233,20px,#d3d3d3
+L-041,result = BuildResult(defaultMt);,10.0,1612.233,20px,#d3d3d3
+L-042,return true;,10.0,1637.233,20px,#d3d3d3
+L-043,},10.0,1662.233,20px,#d3d3d3
+L-044,"if (!MediaTypeHeaderValue.TryParseList(acceptHeader, out var parsedList))",10.0,1712.233,20px,#d3d3d3
+L-045,{,10.0,1737.233,20px,#d3d3d3
+L-046,return false; // invalid syntax -> caller should return 400 ProblemDetails,10.0,1762.233,20px,#d3d3d3
+L-047,},10.0,1787.233,20px,#d3d3d3
+L-048,// Build candidates from Accept values,10.0,1837.233,20px,#d3d3d3
+L-049,var candidates = parsedList,10.0,1862.233,20px,#d3d3d3
+L-050,".Select((mt, index) => new Candidate(mt, index))",10.0,1887.233,20px,#d3d3d3
+L-051,".Where(c => c.Q > 0) // q=0 means ""not acceptable""",10.0,1912.233,20px,#d3d3d3
+L-052,.ToList();,10.0,1937.233,20px,#d3d3d3
+L-053,if (candidates.Count == 0),10.0,1987.233,20px,#d3d3d3
+L-054,{,10.0,2012.233,20px,#d3d3d3
+L-055,return false;,10.0,2037.233,20px,#d3d3d3
+L-056,},10.0,2062.233,20px,#d3d3d3
+L-057,"// For each Accept candidate, find best supported match based on:",10.0,2112.233,20px,#d3d3d3
+L-058,// - exact match in SupportedByPreference,10.0,2137.233,20px,#d3d3d3
+L-059,"// - or ""application/*"" / ""*/*"" wildcard",10.0,2162.233,20px,#d3d3d3
+L-060,var supportedMatches = new List<SupportedMatch>();,10.0,2187.233,20px,#d3d3d3
+L-061,foreach (var c in candidates),10.0,2237.233,20px,#d3d3d3
+L-062,{,10.0,2262.233,20px,#d3d3d3
+L-063,foreach (var supported in SupportedByPreference),10.0,2287.233,20px,#d3d3d3
+L-064,{,10.0,2312.233,20px,#d3d3d3
+L-065,"if (Matches(c, supported))",10.0,2337.233,20px,#d3d3d3
+L-066,{,10.0,2362.233,20px,#d3d3d3
+L-067,supportedMatches.Add(new SupportedMatch(,10.0,2387.233,20px,#d3d3d3
+L-068,"supportedMediaType: Normalize(supported),",10.0,2412.233,20px,#d3d3d3
+L-069,"q: c.Q,",10.0,2437.233,20px,#d3d3d3
+L-070,"specificity: c.Specificity,",10.0,2462.233,20px,#d3d3d3
+L-071,"supportedPreferenceRank: Array.IndexOf(SupportedByPreference, supported),",10.0,2487.233,20px,#d3d3d3
+L-072,acceptHeaderIndex: c.Index));,10.0,2512.233,20px,#d3d3d3
+L-073,},10.0,2537.233,20px,#d3d3d3
+L-074,},10.0,2562.233,20px,#d3d3d3
+L-075,},10.0,2587.233,20px,#d3d3d3
+L-076,if (supportedMatches.Count == 0),10.0,2637.233,20px,#d3d3d3
+L-077,{,10.0,2662.233,20px,#d3d3d3
+L-078,// No overlap between Accept and what we can produce -> 406 scenario,10.0,2687.233,20px,#d3d3d3
+L-079,return false;,10.0,2712.233,20px,#d3d3d3
+L-080,},10.0,2737.233,20px,#d3d3d3
+L-081,var winner = supportedMatches,10.0,2787.233,20px,#d3d3d3
+L-082,.OrderByDescending(m => m.Q),10.0,2812.233,20px,#d3d3d3
+L-083,.ThenByDescending(m => m.Specificity),10.0,2837.233,20px,#d3d3d3
+L-084,.ThenBy(m => m.SupportedPreferenceRank),10.0,2862.233,20px,#d3d3d3
+L-085,.ThenBy(m => m.AcceptHeaderIndex),10.0,2887.233,20px,#d3d3d3
+L-086,.First();,10.0,2912.233,20px,#d3d3d3
+L-087,result = BuildResult(winner.SupportedMediaType);,10.0,2962.233,20px,#d3d3d3
+L-088,return true;,10.0,2987.233,20px,#d3d3d3
+L-089,},10.0,3012.233,20px,#d3d3d3
+L-090,private static NegotiationResult BuildResult(string mediaType),10.0,3062.233,20px,#d3d3d3
+L-091,{,10.0,3087.233,20px,#d3d3d3
+L-092,"// your course logic: include links if subtype ends with ""hateoas""",10.0,3112.233,20px,#d3d3d3
+L-093,"var includeLinks = mediaType.Contains(""hateoas"", StringComparison.OrdinalIgnoreCase);",10.0,3137.233,20px,#d3d3d3
+L-094,"// derive ""primary"" type similar to course:",10.0,3187.233,20px,#d3d3d3
+L-095,// application/vnd.marvin.author.full.hateoas+json -> vnd.marvin.author.full,10.0,3212.233,20px,#d3d3d3
+L-096,// application/vnd.marvin.author.friendly+json -> vnd.marvin.author.friendly,10.0,3237.233,20px,#d3d3d3
+L-097,// application/json -> application,10.0,3262.233,20px,#d3d3d3
+L-098,var parsed = MediaTypeHeaderValue.Parse(mediaType);,10.0,3287.233,20px,#d3d3d3
+L-099,var subType = parsed.SubTypeWithoutSuffix.Value; // e.g. vnd.marvin.author.full.hateoas or json,10.0,3312.233,20px,#d3d3d3
+L-100,"var primary = subType.EndsWith("".hateoas"", StringComparison.OrdinalIgnoreCase)",10.0,3337.233,20px,#d3d3d3
+L-101,"? subType[..^("".hateoas"".Length)]",10.0,3362.233,20px,#d3d3d3
+L-102,: subType;,10.0,3387.233,20px,#d3d3d3
+L-103,"return new NegotiationResult(mediaType, primary, includeLinks);",10.0,3437.233,20px,#d3d3d3
+L-104,},10.0,3462.233,20px,#d3d3d3
+L-105,private static string Normalize(string mediaType) => mediaType.Trim();,10.0,3512.233,20px,#d3d3d3
+L-106,"private sealed record Candidate(MediaTypeHeaderValue Value, int Index)",10.0,3562.233,20px,#d3d3d3
+L-107,{,10.0,3587.233,20px,#d3d3d3
+L-108,public double Q,10.0,3612.233,20px,#d3d3d3
+L-109,{,10.0,3637.233,20px,#d3d3d3
+L-110,get,10.0,3662.233,20px,#d3d3d3
+L-111,{,10.0,3687.233,20px,#d3d3d3
+L-112,// If q is absent => 1.0,10.0,3712.233,20px,#d3d3d3
+L-113,var qParam = Value.Parameters.FirstOrDefault(p =>,10.0,3737.233,20px,#d3d3d3
+L-114,"string.Equals(p.Name.Value, ""q"", StringComparison.OrdinalIgnoreCase));",10.0,3762.233,20px,#d3d3d3
+L-115,if (qParam?.Value is null) return 1.0;,10.0,3812.233,20px,#d3d3d3
+L-116,"// q is a StringSegment like ""0.9""",10.0,3862.233,20px,#d3d3d3
+L-117,"if (double.TryParse(qParam.Value.Value, System.Globalization.NumberStyles.AllowDecimalPoint,",10.0,3887.233,20px,#d3d3d3
+L-118,"System.Globalization.CultureInfo.InvariantCulture, out var q))",10.0,3912.233,20px,#d3d3d3
+L-119,{,10.0,3937.233,20px,#d3d3d3
+L-120,return q;,10.0,3962.233,20px,#d3d3d3
+L-121,},10.0,3987.233,20px,#d3d3d3
+L-122,// Malformed q -> treat as invalid by making it unacceptable,10.0,4037.233,20px,#d3d3d3
+L-123,return 0;,10.0,4062.233,20px,#d3d3d3
+L-124,},10.0,4087.233,20px,#d3d3d3
+L-125,},10.0,4112.233,20px,#d3d3d3
+L-126,"// exact = 2, type/* = 1, */* = 0",10.0,4162.233,20px,#d3d3d3
+L-127,public int Specificity =>,10.0,4187.233,20px,#d3d3d3
+L-128,"Value.MediaType?.Value == ""*/*"" ? 0 :",10.0,4212.233,20px,#d3d3d3
+L-129,"Value.SubType?.Value == ""*"" ? 1 :",10.0,4237.233,20px,#d3d3d3
+L-130,2;,10.0,4262.233,20px,#d3d3d3
+L-131,},10.0,4287.233,20px,#d3d3d3
+L-132,private sealed record SupportedMatch(,10.0,4337.233,20px,#d3d3d3
+L-133,"string SupportedMediaType,",10.0,4362.233,20px,#d3d3d3
+L-134,"double Q,",10.0,4387.233,20px,#d3d3d3
+L-135,"int Specificity,",10.0,4412.233,20px,#d3d3d3
+L-136,"int SupportedPreferenceRank,",10.0,4437.233,20px,#d3d3d3
+L-137,int AcceptHeaderIndex);,10.0,4462.233,20px,#d3d3d3
+L-138,"private static bool Matches(Candidate accept, string supported)",10.0,4512.233,20px,#d3d3d3
+L-139,{,10.0,4537.233,20px,#d3d3d3
+L-140,supported = Normalize(supported);,10.0,4562.233,20px,#d3d3d3
+L-141,// wildcard supported entries are just there for preference list;,10.0,4612.233,20px,#d3d3d3
+L-142,// treat them as matching in the obvious way.,10.0,4637.233,20px,#d3d3d3
+L-143,"if (supported == ""*/*"")",10.0,4662.233,20px,#d3d3d3
+L-144,return true;,10.0,4687.233,20px,#d3d3d3
+L-145,// Parse supported into type/subtype,10.0,4737.233,20px,#d3d3d3
+L-146,"if (!MediaTypeHeaderValue.TryParse(supported, out var supportedMt))",10.0,4762.233,20px,#d3d3d3
+L-147,{,10.0,4787.233,20px,#d3d3d3
+L-148,// developer error; should never happen because SupportedByPreference is ours,10.0,4812.233,20px,#d3d3d3
+L-149,return false;,10.0,4837.233,20px,#d3d3d3
+L-150,},10.0,4862.233,20px,#d3d3d3
+L-151,// If accept is */* it matches anything,10.0,4912.233,20px,#d3d3d3
+L-152,"if (accept.Value.MediaType?.Value == ""*/*"")",10.0,4937.233,20px,#d3d3d3
+L-153,return true;,10.0,4962.233,20px,#d3d3d3
+L-154,// If accept is type/* it matches any subtype for that type,10.0,5012.233,20px,#d3d3d3
+L-155,"if (accept.Value.SubType?.Value == ""*"")",10.0,5037.233,20px,#d3d3d3
+L-156,{,10.0,5062.233,20px,#d3d3d3
+L-157,return string.Equals(,10.0,5087.233,20px,#d3d3d3
+L-158,"accept.Value.Type?.Value,",10.0,5112.233,20px,#d3d3d3
+L-159,"supportedMt!.Type?.Value,",10.0,5137.233,20px,#d3d3d3
+L-160,StringComparison.OrdinalIgnoreCase);,10.0,5162.233,20px,#d3d3d3
+L-161,},10.0,5187.233,20px,#d3d3d3
+L-162,// Otherwise exact compare by media type (ignore parameters),10.0,5237.233,20px,#d3d3d3
+L-163,return string.Equals(,10.0,5262.233,20px,#d3d3d3
+L-164,"accept.Value.MediaType?.Value,",10.0,5287.233,20px,#d3d3d3
+L-165,"supportedMt!.MediaType?.Value,",10.0,5312.233,20px,#d3d3d3
+L-166,StringComparison.OrdinalIgnoreCase);,10.0,5337.233,20px,#d3d3d3
+L-167,},10.0,5362.233,20px,#d3d3d3
+L-168,},10.0,5387.233,20px,#d3d3d3
+L-169,using Microsoft.AspNetCore.Mvc;,200.518,5608.041,20px,#d3d3d3
+L-170,[ApiController],200.518,5658.041,20px,#d3d3d3
+L-171,"[Route(""api/authors"")]",200.518,5683.041,20px,#d3d3d3
+L-172,public class AuthorsController : ControllerBase,200.518,5708.041,20px,#d3d3d3
+L-173,{,200.518,5733.041,20px,#d3d3d3
+L-174,"[HttpGet(""{authorId}"")]",200.518,5758.041,20px,#d3d3d3
+L-175,"public IActionResult GetAuthor(Guid authorId, [FromHeader(Name = ""Accept"")] string? accept)",200.518,5783.041,20px,#d3d3d3
+L-176,{,200.518,5808.041,20px,#d3d3d3
+L-177,"if (!AcceptHeaderSelectionHelper.TrySelect(accept, out var selected))",200.518,5833.041,20px,#d3d3d3
+L-178,{,200.518,5858.041,20px,#d3d3d3
+L-179,// Could be invalid Accept syntax (400) OR no supported match (406).,200.518,5883.041,20px,#d3d3d3
+L-180,"// If you want to distinguish, check TryParseList separately.",200.518,5908.041,20px,#d3d3d3
+L-181,return StatusCode(StatusCodes.Status406NotAcceptable);,200.518,5933.041,20px,#d3d3d3
+L-182,},200.518,5958.041,20px,#d3d3d3
+L-183,// selected.IncludeLinks -> add HATEOAS,200.518,6008.041,20px,#d3d3d3
+L-184,"// selected.PrimaryMediaType -> ""vnd.marvin.author.full"" / ""vnd.marvin.author.friendly""",200.518,6033.041,20px,#d3d3d3
+L-185,"if (string.Equals(selected!.PrimaryMediaType, ""vnd.marvin.author.full"", StringComparison.OrdinalIgnoreCase))",200.518,6058.041,20px,#d3d3d3
+L-186,{,200.518,6083.041,20px,#d3d3d3
+L-187,// build full representation,200.518,6108.041,20px,#d3d3d3
+L-188,"return Ok(new { kind = ""full"", links = selected.IncludeLinks });",200.518,6133.041,20px,#d3d3d3
+L-189,},200.518,6158.041,20px,#d3d3d3
+L-190,// build friendly representation,200.518,6208.041,20px,#d3d3d3
+L-191,"return Ok(new { kind = ""friendly"", links = selected.IncludeLinks });",200.518,6233.041,20px,#d3d3d3
+L-192,},200.518,6258.041,20px,#d3d3d3
+L-193,},200.518,6283.041,20px,#d3d3d3
+L-194,negotiationresult biuldresult,2553.909,5556.773,85.64103816105782px,#d3d3d3
+L-195,candidate,2477.982,1881.907,91.38508243183335px,#d3d3d3
+L-196,matches,2516.604,3834.643,198.65539439976678px,#d3d3d3

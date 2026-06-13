@@ -1,0 +1,20 @@
+label_id,text,x,y,font_size,fill
+L-001,multiplexer,2704.093,1269.837,57.92594401041567px,#d3d3d3
+L-002,"atomic counters, race conditions with idatabase",2401.818,3492.315,50.66665649414062px,#d3d3d3
+L-003,and idistributedcache,2401.818,3555.648,50.66665649414062px,#d3d3d3
+L-004,"stampede protection,",1127.806,3479.342,64px,#d3d3d3
+L-005,1 single instance,1127.806,3559.342,64px,#d3d3d3
+L-006,2 multiple with redis lock,1127.806,3639.342,64px,#d3d3d3
+L-007,closer to end about redis lock and redlock for stronger guarantee,1213.511,4656.406,20px,#d3d3d3
+L-008,"some lua script shit, not interested rught now",1213.511,4681.406,20px,#d3d3d3
+L-009,"this is about data being lost,",2582.736,3619.598,20px,#d3d3d3
+L-010,multiple concurrent requests,2582.736,3644.598,20px,#d3d3d3
+L-011,one gets  5,2582.736,3669.598,20px,#d3d3d3
+L-012,another sets  5 +1,2582.736,3694.598,20px,#d3d3d3
+L-013,the first sets 5 + 1,2582.736,3719.598,20px,#d3d3d3
+L-014,we have 6 instead of 7,2582.736,3744.598,20px,#d3d3d3
+L-015,why use redis for failed attempt quering,43.164,1280.683,64.3290585127271px,#d3d3d3
+L-016,and not db,43.164,1361.094,64.3290585127271px,#d3d3d3
+L-017,differences in db and redis,43.164,1441.505,64.3290585127271px,#d3d3d3
+L-018,redis through idistributed cache vs,3610.774,135.635,142.60444146164812px,#d3d3d3
+L-019,multiplexer + idatabase,3610.774,313.89,142.60444146164812px,#d3d3d3

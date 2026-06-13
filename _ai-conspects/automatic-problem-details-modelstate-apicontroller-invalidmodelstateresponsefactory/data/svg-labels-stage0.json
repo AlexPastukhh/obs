@@ -1,0 +1,154 @@
+[
+  {
+    "label_id": "L-001",
+    "text": "with upsert",
+    "x": 3049.254,
+    "y": 3898.842,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-002",
+    "text": "create flow IF  id missing",
+    "x": 3041.254,
+    "y": 4022.842,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-003",
+    "text": "and then update flow as normal patch",
+    "x": 3031.92,
+    "y": 4564.176,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-004",
+    "text": "need to check if jsonpatchdoc valid first",
+    "x": 4184.99,
+    "y": 3227.372,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-005",
+    "text": "for system.text.json patch(we write modelstate errors manually)",
+    "x": 4723.047,
+    "y": 3160.72,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-006",
+    "text": "WHEN YOU HAVE SOME RULES, THAT CAN MAKE MODELSTATE INVALID AND YOU DIDNT REMOVE",
+    "x": 1572.916,
+    "y": 106.402,
+    "font_size": "80.34285714285716px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-007",
+    "text": "AUTO RESPONSE ON INVALID MODELSTATE,",
+    "x": 1572.916,
+    "y": 206.831,
+    "font_size": "80.34285714285716px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-008",
+    "text": "YOU HAVE INVALIDMODELSTATERESPONSEFACTORY CALLBACK THAT BUILDS RESPONSE AND RETURNS iACTIONRESULT",
+    "x": 522.822,
+    "y": 527.171,
+    "font_size": "84.00000000000001px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-009",
+    "text": "SO WE CAN GET IT AND EXECUTE",
+    "x": 1317.638,
+    "y": 2491.135,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-010",
+    "text": "IT WITH OUR ACTIONCONTEXT TO",
+    "x": 1317.638,
+    "y": 2516.135,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-011",
+    "text": "DO MANUAL VALIDATION BUT WITH",
+    "x": 1317.638,
+    "y": 2541.135,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-012",
+    "text": "CURRENT CONFIG",
+    "x": 1317.638,
+    "y": 2566.135,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-013",
+    "text": "HELPER FOR MANUAL VALIDATOIN",
+    "x": 3971.541,
+    "y": 1672.232,
+    "font_size": "116.00000000000001px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-014",
+    "text": "CREATE PD FROM MODELSTATE",
+    "x": 3538.507,
+    "y": 1660.894,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-015",
+    "text": "NOT RELATED, ABOUT PATCH VALIDATION",
+    "x": 3762.134,
+    "y": 3081.192,
+    "font_size": "48.44444444444455px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-016",
+    "text": "TRYVALIDATEMODEL",
+    "x": 10.0,
+    "y": 1252.555,
+    "font_size": "98.22216796874999px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-017",
+    "text": "APICONTROLLER  AND",
+    "x": 6858.697,
+    "y": 157.303,
+    "font_size": "167.20000000000007px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-018",
+    "text": "modelstate filter",
+    "x": 6858.697,
+    "y": 366.303,
+    "font_size": "167.20000000000007px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-019",
+    "text": "implicit required for non nullable reference types",
+    "x": 6858.697,
+    "y": 575.303,
+    "font_size": "167.20000000000007px",
+    "fill": "#d3d3d3"
+  }
+]
