@@ -1,0 +1,63 @@
+source_id,decision,region,subregion,reason
+S-001,processed-in-ch01-v001,CH01,CH01A,Namespace and why Channels exist
+S-002,processed-in-ch01-v001,CH01,CH01A,ChannelWriter<T> core piece
+S-003,processed-in-ch01-v001,CH01,CH01A,ChannelReader<T> and channel object exposing both sides
+S-004,processed-in-ch02-v001,CH02,CH02A,WriteAsync and TryWrite
+S-005,processed-in-ch02-v001,CH02,CH02A,ReadAsync and TryRead
+S-006,processed-in-ch02-v001,CH02,CH02A,TryComplete / writer completion
+S-007,processed-in-ch02-v001,CH02,CH02A,Common ReadAllAsync reading pattern
+S-008,processed-in-ch01-v001,CH01,CH01B,Unbounded channel
+S-009,processed-in-ch01-v001,CH01,CH01B,Bounded channel and explicit BoundedChannelOptions
+S-010,processed-in-ch01-v001,CH01,CH01B,BoundedChannelFullMode options
+S-011,processed-in-ch02-v001,CH02,CH02B,Important behavior: async waiting
+S-015,processed-in-ch02-v001,CH02,CH02B,WaitToReadAsync and WaitToWriteAsync reader side
+S-016,processed-in-ch02-v001,CH02,CH02B,WaitToWriteAsync writer side
+S-017,processed-in-ch02-v001,CH02,CH02B,Completion model and error completion
+S-018,processed-in-ch01-v001,CH01,CH01C,Difference from BlockingCollection
+S-019,processed-in-ch01-v001,CH01,CH01C,Difference from SemaphoreSlim
+S-020,processed-in-ch01-v001,CH01,CH01B,Bounded backpressure example
+S-022,processed-in-ch02-v001,CH02,CH02C,Rough mental model: IEnumerable vs IAsyncEnumerable
+S-023,processed-in-ch02-v001,CH02,CH02C,IAsyncEnumerable as not collected yet / produced over time
+S-024,processed-in-ch02-v001,CH02,CH02C,Async iteration with await foreach
+S-025,processed-in-ch02-v001,CH02,CH02C,Compare IAsyncEnumerable with normal enumerable
+S-026,processed-in-ch02-v001,CH02,CH02C,ReadAllAsync returns IAsyncEnumerable<T>
+S-027,processed-in-ch02-v001,CH02,CH02C,Why WriteAsync / ReadAsync return ValueTask
+S-028,processed-in-ch02-v001,CH02,CH02D,TryComplete meaning
+S-029,processed-in-ch02-v001,CH02,CH02D,TryComplete return bool / Complete stricter version
+S-030,processed-in-ch02-v001,CH02,CH02D,Why TryComplete matters / completion means no more writes
+S-031,processed-in-ch02-v001,CH02,CH02D,WaitToReadAsync and WaitToWriteAsync return ValueTask<bool>
+S-032,processed-in-ch02-v001,CH02,CH02D,WaitToReadAsync pattern
+S-033,processed-in-ch02-v001,CH02,CH02D,WaitToWriteAsync pattern
+S-062,processed-in-ch01-v001,CH01,CH01B,Duplicate canvas use of bounded backpressure example
+S-012,pending-later-transcript,CH05,CH05A,not part of NEXT01
+S-013,pending-later-transcript,CH05,CH05A,not part of NEXT01
+S-014,pending-later-transcript,CH03,CH03A,not part of NEXT01
+S-021,pending-later-transcript,CH05,CH05A,not part of NEXT01
+S-034,pending-later-transcript,CH03,CH03A,not part of NEXT01
+S-035,pending-later-transcript,CH03,CH03A,not part of NEXT01
+S-036,pending-later-transcript,CH03,CH03B,not part of NEXT01
+S-037,pending-later-transcript,CH03,CH03B,not part of NEXT01
+S-038,pending-later-transcript,CH04,CH04A,not part of NEXT01
+S-039,pending-later-transcript,CH04,CH04A,not part of NEXT01
+S-040,pending-later-transcript,CH04,CH04A,not part of NEXT01
+S-041,pending-later-transcript,CH04,CH04A,not part of NEXT01
+S-042,pending-later-transcript,CH04,CH04B,not part of NEXT01
+S-043,pending-later-transcript,CH04,CH04B,not part of NEXT01
+S-044,pending-later-transcript,CH04,CH04B,not part of NEXT01
+S-045,pending-later-transcript,CH04,CH04B,not part of NEXT01
+S-046,pending-later-transcript,CH04,CH04B,not part of NEXT01
+S-047,pending-later-transcript,CH04,CH04B,not part of NEXT01
+S-048,pending-later-transcript,CH05,CH05B,not part of NEXT01
+S-049,pending-later-transcript,CH05,CH05B,not part of NEXT01
+S-050,pending-later-transcript,CH05,CH05B,not part of NEXT01
+S-051,pending-later-transcript,CH05,CH05B,not part of NEXT01
+S-052,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-053,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-054,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-055,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-056,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-057,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-058,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-059,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-060,pending-later-transcript,CH05,CH05C,not part of NEXT01
+S-061,pending-later-transcript,CH05,CH05C,not part of NEXT01

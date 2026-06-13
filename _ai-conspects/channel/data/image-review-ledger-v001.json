@@ -1,13 +1,52 @@
 {
-  "generated": "2026-06-13 05:42:57 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 62,
-    "assigned_to_candidate_regions": 62,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
+  "generated": "2026-06-13 05:56:30 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "CH01": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-062"
+      ],
+      "CH02": [
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-011",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033"
+      ]
+    },
+    "processed_count": 30,
+    "pending_regions": {
+      "CH03": 5,
+      "CH04": 10,
+      "CH05": 17
+    },
+    "pending_count": 32,
+    "boundary_corrections": [],
     "duplicate_image_uses_by_fileId_short": {
       "3ff670517a": [
         "S-020",
@@ -25,13 +64,13 @@
       "width": "765.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-032:and try versions | T-031:readasync/writeasync/readallasync/complete | T-030:channelwriter/reader | T-024:channelreader | T-033:create and get",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -42,13 +81,13 @@
       "width": "798.0",
       "height": "288.0",
       "nearest_labels_for_search_only": "T-024:channelreader | T-025:channelreader | T-032:and try versions | T-031:readasync/writeasync/readallasync/complete | T-034:reader or writer",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -59,13 +98,13 @@
       "width": "870.0",
       "height": "385.0",
       "nearest_labels_for_search_only": "T-025:channelreader | T-026:write | T-024:channelreader | T-034:reader or writer | T-033:create and get",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -76,13 +115,13 @@
       "width": "809.0",
       "height": "431.0",
       "nearest_labels_for_search_only": "T-026:write | T-027:read | T-025:channelreader | T-028:readallasync | T-024:channelreader",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -93,13 +132,13 @@
       "width": "833.0",
       "height": "385.0",
       "nearest_labels_for_search_only": "T-027:read | T-028:readallasync | T-026:write | T-025:channelreader | T-024:channelreader",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -110,13 +149,13 @@
       "width": "824.0",
       "height": "348.0",
       "nearest_labels_for_search_only": "T-023:fullmodeoptions | T-005:trycomplete | T-021:bounded channel | T-034:reader or writer | T-033:create and get",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -127,13 +166,13 @@
       "width": "828.0",
       "height": "426.0",
       "nearest_labels_for_search_only": "T-023:fullmodeoptions | T-005:trycomplete | T-021:bounded channel | T-008:singlereader | T-009:singlewriter",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -144,13 +183,13 @@
       "width": "831.0",
       "height": "452.0",
       "nearest_labels_for_search_only": "T-020:unbounded channel | T-022:channeltypes and their options | T-021:bounded channel | T-023:fullmodeoptions | T-033:create and get",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -161,13 +200,13 @@
       "width": "631.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-021:bounded channel | T-023:fullmodeoptions | T-020:unbounded channel | T-022:channeltypes and their options | T-033:create and get",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -178,13 +217,13 @@
       "width": "639.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-023:fullmodeoptions | T-021:bounded channel | T-020:unbounded channel | T-022:channeltypes and their options | T-034:reader or writer",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -195,13 +234,13 @@
       "width": "831.0",
       "height": "438.0",
       "nearest_labels_for_search_only": "T-029:async waiting | T-001:about await foreach | T-028:readallasync | T-002:and possible sync reading/writing | T-003:and async awaiting",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -263,13 +302,13 @@
       "width": "836.0",
       "height": "450.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-009:singlewriter | T-008:singlereader | T-004:valuetask",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -280,13 +319,13 @@
       "width": "793.0",
       "height": "249.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-009:singlewriter | T-008:singlereader | T-004:valuetask",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -297,13 +336,13 @@
       "width": "761.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-009:singlewriter | T-008:singlereader | T-018:and not wait forever",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -314,13 +353,13 @@
       "width": "696.0",
       "height": "293.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-018:and not wait forever | T-017:after some time of waiting start, after losed race | T-016:3 may want to give up after some count of attempts or",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -331,13 +370,13 @@
       "width": "797.0",
       "height": "395.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-018:and not wait forever | T-017:after some time of waiting start, after losed race | T-016:3 may want to give up after some count of attempts or",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-020",
@@ -348,13 +387,13 @@
       "width": "828.0",
       "height": "434.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-018:and not wait forever | T-017:after some time of waiting start, after losed race | T-016:3 may want to give up after some count of attempts or",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -382,13 +421,13 @@
       "width": "747.0",
       "height": "268.0",
       "nearest_labels_for_search_only": "T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach | T-007:tryread/trywrite",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -399,13 +438,13 @@
       "width": "753.0",
       "height": "358.0",
       "nearest_labels_for_search_only": "T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach | T-007:tryread/trywrite",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-024",
@@ -416,13 +455,13 @@
       "width": "821.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach | T-029:async waiting",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-025",
@@ -433,13 +472,13 @@
       "width": "831.0",
       "height": "465.0",
       "nearest_labels_for_search_only": "T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach | T-029:async waiting",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-026",
@@ -450,13 +489,13 @@
       "width": "641.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach | T-029:async waiting",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-027",
@@ -467,13 +506,13 @@
       "width": "628.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-004:valuetask | T-003:and async awaiting | T-002:and possible sync reading/writing | T-001:about await foreach | T-029:async waiting",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-028",
@@ -484,13 +523,13 @@
       "width": "753.0",
       "height": "337.0",
       "nearest_labels_for_search_only": "T-005:trycomplete | T-023:fullmodeoptions | T-021:bounded channel | T-020:unbounded channel | T-022:channeltypes and their options",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-029",
@@ -501,13 +540,13 @@
       "width": "773.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-005:trycomplete | T-023:fullmodeoptions | T-021:bounded channel | T-008:singlereader | T-020:unbounded channel",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-030",
@@ -518,13 +557,13 @@
       "width": "896.0",
       "height": "469.0",
       "nearest_labels_for_search_only": "T-005:trycomplete | T-008:singlereader | T-009:singlewriter | T-023:fullmodeoptions | T-010:examples when it can make sense",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-031",
@@ -535,13 +574,13 @@
       "width": "818.0",
       "height": "461.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-015:like you will do with readallasync | T-014:you add to batch if there is some available and dont wait automatically | T-016:3 may want to give up after some count of attempts or",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-032",
@@ -552,13 +591,13 @@
       "width": "625.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-018:and not wait forever | T-017:after some time of waiting start, after losed race | T-016:3 may want to give up after some count of attempts or",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-033",
@@ -569,13 +608,13 @@
       "width": "788.0",
       "height": "365.0",
       "nearest_labels_for_search_only": "T-007:tryread/trywrite | T-006:waitto... | T-018:and not wait forever | T-017:after some time of waiting start, after losed race | T-016:3 may want to give up after some count of attempts or",
-      "coverage_status": "candidate-ch02",
+      "coverage_status": "processed-in-ch02-v001",
       "current_region_decision": "CH02",
       "current_subregion_decision": "CH02D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "ChannelReader/ChannelWriter operations: WriteAsync, ReadAsync, Complete, ReadAllAsync, async waiting behavior, ValueTask-based wait APIs, TryRead/TryWrite, TryComplete, completion semantics and failure behavior.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-034",
@@ -1062,13 +1101,13 @@
       "width": "828.0",
       "height": "434.0",
       "nearest_labels_for_search_only": "T-034:reader or writer | T-033:create and get | T-024:channelreader | T-025:channelreader | T-032:and try versions",
-      "coverage_status": "candidate-ch01",
+      "coverage_status": "processed-in-ch01-v001",
       "current_region_decision": "CH01",
       "current_subregion_decision": "CH01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core Channels overview: namespace and fit, writer/reader pieces, create/get APIs, unbounded vs bounded channels, full modes, comparison with BlockingCollection/SemaphoreSlim, and bounded backpressure. S-020 and S-062 are duplicate canvas uses of the same bounded-backpressure screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ch01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in CH01 v001 after NEXT01 visual/semantic transcript pass."
     }
   ]
 }

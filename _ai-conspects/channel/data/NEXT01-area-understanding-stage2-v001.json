@@ -1,0 +1,85 @@
+{
+  "generated": "2026-06-13 05:56:30 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 30,
+  "pending_count": 32,
+  "boundary_corrections": [],
+  "duplicate_image_uses_by_fileId_short": {
+    "3ff670517a": [
+      "S-020",
+      "S-062"
+    ]
+  },
+  "regions": {
+    "CH01": {
+      "name": "Channel fundamentals, creation, types, options, backpressure",
+      "processed_sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-062"
+      ],
+      "key_ideas": [
+        "System.Threading.Channels is a built-in producer/consumer primitive.",
+        "A channel has writer and reader sides.",
+        "Unbounded channels are simple but can grow memory if producers outrun consumers.",
+        "Bounded channels introduce capacity/backpressure and FullMode policy.",
+        "Channels are async-friendly queues, not just gates like SemaphoreSlim."
+      ]
+    },
+    "CH02": {
+      "name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "processed_sources": [
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-011",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033"
+      ],
+      "key_ideas": [
+        "WriteAsync/ReadAsync wait asynchronously when needed.",
+        "TryWrite/TryRead are immediate success/failure operations.",
+        "ReadAllAsync returns IAsyncEnumerable<T> and is the common consumer pattern.",
+        "TryComplete closes the writer side without throwing for normal already-completed cases.",
+        "WaitToReadAsync/WaitToWriteAsync are lower-level manual coordination APIs."
+      ]
+    }
+  },
+  "pending_regions": {
+    "CH03": "Concurrency assumptions and completion edge cases",
+    "CH04": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+    "CH05": "WebSockets/application examples and connection manager channel pattern"
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Most screenshots are clean slide/code screenshots.",
+      "Some code blocks are visually cropped at image boundaries, but core visible code and meaning are readable.",
+      "CH03-CH05 are intentionally pending for later transcript batches."
+    ],
+    "confidence": "High for CH01/CH02 concepts and visible code."
+  }
+}
