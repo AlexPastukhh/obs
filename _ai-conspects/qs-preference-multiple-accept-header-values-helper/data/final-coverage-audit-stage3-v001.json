@@ -1,0 +1,29 @@
+{
+  "generated": "2026-06-13 10:53:40 UTC",
+  "audit_version": "stage3-final-coverage-audit-v001",
+  "conspect": "qs-preference-multiple-accept-header-values-helper",
+  "title": "QS Preference / Multiple Accept Header Values Helper",
+  "verdict": "coverage-complete",
+  "total_image_uses": 30,
+  "covered_image_uses": 30,
+  "problem_image_uses": 0,
+  "coverage_status_counts": {
+    "processed-in-r01-v001": 9,
+    "processed-in-r02-v001": 6,
+    "processed-in-r03-v001": 7,
+    "processed-in-r04-v001": 8
+  },
+  "region_counts": {
+    "R01": 9,
+    "R02": 6,
+    "R03": 7,
+    "R04": 8
+  },
+  "notes": [
+    "Inventory/ledger is a checklist, not source of truth; transcript ownership was determined by boundary review.",
+    "The final audit verifies that every known image use is processed by a transcript region.",
+    "No candidate/reserved/pending image uses remain if problem_image_uses is 0.",
+    "This audit confirms coverage, not a separate polished repeat-material layer."
+  ],
+  "problem_rows": []
+}

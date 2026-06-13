@@ -1,0 +1,29 @@
+{
+  "generated": "2026-06-13 10:53:40 UTC",
+  "audit_version": "stage3-final-coverage-audit-v001",
+  "conspect": "redis-multiplexer-redis-lock",
+  "title": "Redis / Multiplexer / Redis Lock",
+  "verdict": "coverage-complete",
+  "total_image_uses": 24,
+  "covered_image_uses": 24,
+  "problem_image_uses": 0,
+  "coverage_status_counts": {
+    "processed-in-r02-v001": 8,
+    "processed-in-r03-v001": 7,
+    "processed-in-r04-v001": 7,
+    "processed-in-r01-v001": 2
+  },
+  "region_counts": {
+    "R02": 8,
+    "R03": 7,
+    "R04": 7,
+    "R01": 2
+  },
+  "notes": [
+    "Inventory/ledger is a checklist, not source of truth; transcript ownership was determined by boundary review.",
+    "The final audit verifies that every known image use is processed by a transcript region.",
+    "No candidate/reserved/pending image uses remain if problem_image_uses is 0.",
+    "This audit confirms coverage, not a separate polished repeat-material layer."
+  ],
+  "problem_rows": []
+}

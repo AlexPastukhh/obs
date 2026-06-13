@@ -1,6 +1,6 @@
 # Current Source of Truth - Redis / Multiplexer / Redis Lock
 
-Generated: 2026-06-13 09:03:25 UTC
+Generated: 2026-06-13 10:53:40 UTC
 
 ## Policy
 
@@ -12,22 +12,44 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-R01/R02 P01 transcript: done
-R03 Atomic counters, race conditions and increment semantics: transcript v001 done
-R04 Stampede protection, single-instance Redis lock and RedLock: transcript v001 done
-Final coverage audit: next
+P01/R01R02 transcript: done
+P02/R03R04 transcript: done
+Final coverage audit: done
+Verdict: coverage-complete
 ```
 
-## Coverage after Stage2
+## Final coverage audit
 
 ```text
 total image uses: 24
-processed after stage2: 24
-pending/problem rows before final audit: 0
+covered image uses: 24
+problem image uses: 0
 ```
 
-## Next pass
+## Coverage by region
 
 ```text
-Final coverage audit.
+R01: 2
+R02: 8
+R03: 7
+R04: 7
 ```
+
+## Important note
+
+This directory is complete as an AI source-processing/transcript-coverage package.
+
+It is not yet a polished direct-repeat package unless a later archive adds:
+
+```text
+FINAL_TRANSCRIPT.md
+REPEAT_MATERIAL_DRAFT.md
+QUESTIONS.md
+LOOKUP_INDEX.md
+```
+
+## Next
+
+No next transcript block.
+
+Only create targeted correction archives if a concrete issue is found later, or create a separate repeat-material layer if needed.

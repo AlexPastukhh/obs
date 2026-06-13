@@ -1,6 +1,6 @@
 # Current Source of Truth - Automatic ProblemDetails / ModelState / ApiController
 
-Generated: 2026-06-13 09:03:25 UTC
+Generated: 2026-06-13 10:53:40 UTC
 
 ## Policy
 
@@ -12,22 +12,44 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-R01/R02 P01 transcript: done
-R03 TryValidateModel and custom manual validation flow: transcript v001 done
-R04 JsonPatch validation, upsert and ModelState ProblemDetails: transcript v001 done
-Final coverage audit: next
+P01/R01R02 transcript: done
+P02/R03R04 transcript: done
+Final coverage audit: done
+Verdict: coverage-complete
 ```
 
-## Coverage after Stage2
+## Final coverage audit
 
 ```text
 total image uses: 24
-processed after stage2: 24
-pending/problem rows before final audit: 0
+covered image uses: 24
+problem image uses: 0
 ```
 
-## Next pass
+## Coverage by region
 
 ```text
-Final coverage audit.
+R01: 5
+R02: 10
+R03: 4
+R04: 5
 ```
+
+## Important note
+
+This directory is complete as an AI source-processing/transcript-coverage package.
+
+It is not yet a polished direct-repeat package unless a later archive adds:
+
+```text
+FINAL_TRANSCRIPT.md
+REPEAT_MATERIAL_DRAFT.md
+QUESTIONS.md
+LOOKUP_INDEX.md
+```
+
+## Next
+
+No next transcript block.
+
+Only create targeted correction archives if a concrete issue is found later, or create a separate repeat-material layer if needed.
