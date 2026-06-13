@@ -1,0 +1,27 @@
+source_id,decision,region,subregion,reason
+S-028,processed-in-viv03-v001,VIV03,VIV03A,Normal view versus indexed view
+S-029,processed-in-viv03-v001,VIV03,VIV03A,Indexed view stores result physically with unique clustered index
+S-030,processed-in-viv03-v001,VIV03,VIV03B,Create the unique clustered index first
+S-031,processed-in-viv03-v001,VIV03,VIV03B,New physical structures after indexed view creation
+S-032,processed-in-viv03-v001,VIV03,VIV03C,Indexed view maintenance flow after insert
+S-033,processed-in-viv03-v001,VIV03,VIV03C,Base row change must maintain base table and indexed view
+S-034,processed-in-viv03-v001,VIV03,VIV03C,View result stays synchronized automatically
+S-035,processed-in-viv03-v001,VIV03,VIV03D,Nonclustered indexes on an indexed view
+S-036,processed-in-viv03-v001,VIV03,VIV03D,Why the first index must be unique clustered
+S-037,processed-in-viv03-v001,VIV03,VIV03D,Nonclustered indexes need physical rows to point to
+S-038,processed-in-viv03-v001,VIV03,VIV03D,Why indexed view costs feel heavier than table indexes
+S-039,processed-in-viv03-v001,VIV03,VIV03D,A single write can cause more complicated maintenance
+S-040,processed-in-viv03-v001,VIV03,VIV03D,Detailed write cost for indexed views
+S-041,processed-in-viv03-v001,VIV03,VIV03B,Indexed view = definition plus stored result set plus indexes
+S-042,pending-later-transcript,VIV04,VIV04B,not part of NEXT02
+S-043,pending-later-transcript,VIV04,VIV04B,not part of NEXT02
+S-044,pending-later-transcript,VIV04,VIV04B,not part of NEXT02
+S-045,pending-later-transcript,VIV04,VIV04B,not part of NEXT02
+S-046,pending-later-transcript,VIV04,VIV04B,not part of NEXT02
+S-047,pending-later-transcript,VIV04,VIV04C,not part of NEXT02
+S-048,pending-later-transcript,VIV04,VIV04C,not part of NEXT02
+S-049,pending-later-transcript,VIV04,VIV04D,not part of NEXT02
+S-050,pending-later-transcript,VIV04,VIV04D,not part of NEXT02
+S-051,pending-later-transcript,VIV04,VIV04A,not part of NEXT02
+S-052,pending-later-transcript,VIV04,VIV04A,not part of NEXT02
+S-053,pending-later-transcript,VIV04,VIV04A,not part of NEXT02

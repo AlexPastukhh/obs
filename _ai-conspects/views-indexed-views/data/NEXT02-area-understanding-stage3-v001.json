@@ -1,0 +1,50 @@
+{
+  "generated": "2026-06-13 07:51:03 UTC",
+  "stage": "3",
+  "batch_id": "NEXT02",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 14,
+  "pending_count": 12,
+  "boundary_corrections": [],
+  "regions": {
+    "VIV03": {
+      "name": "Indexed views fundamentals, materialization, clustered index and write cost",
+      "processed_sources": [
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040",
+        "S-041"
+      ],
+      "key_ideas": [
+        "An indexed view starts as a normal view but becomes physically stored when a unique clustered index is created.",
+        "The unique clustered index is the required first index and creates the physical foundation for indexed view rows.",
+        "SQL Server automatically maintains indexed view storage when base table rows change.",
+        "Nonclustered indexes can be created on the indexed view after the unique clustered index exists.",
+        "Indexed views can speed reads but can make writes heavier due to aggregation, joins, filters and derived-row maintenance."
+      ]
+    }
+  },
+  "pending_regions": {
+    "VIV04": "SCHEMABINDING and indexed-view requirements/rules"
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Most screenshots are readable.",
+      "S-032 right edge is slightly cropped, but the insert/update flow is readable.",
+      "S-037 is conversational but the core nonclustered-index/foundation point is clear.",
+      "VIV04 remains intentionally pending."
+    ],
+    "confidence": "High for VIV03 concepts and visible SQL."
+  }
+}

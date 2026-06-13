@@ -1,4 +1,4 @@
-# Apply archive: views-indexed-views Stage2 NEXT01 transcript
+# Apply archive: views-indexed-views Stage3 NEXT02 transcript
 
 Archive type: verified transcript / partial conspect batch.
 
@@ -13,7 +13,7 @@ Use `tar.exe -xf` instead of PowerShell `Expand-Archive`.
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage2-next01-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage3-next02-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -23,8 +23,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\views-indexed-views"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage2-next01-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\views-indexed-views-stage2-next01-transcript-cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage3-next02-transcript-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\views-indexed-views-stage3-next02-transcript-cached.diff"
 
 git status --short
 
@@ -46,7 +46,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add views indexed views conspect NEXT01 transcript"
+git commit -m "Add views indexed views conspect NEXT02 transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,6 +60,6 @@ git clean -fd -- "$target"
 
 ## Notes
 
-This archive completes VIV01 and VIV02 only and does not duplicate Stage0 source images.
+This archive completes VIV03 only and does not duplicate Stage0 source images.
 
-Next step should be NEXT02 transcript.
+Next step should be NEXT03 transcript.

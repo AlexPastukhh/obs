@@ -1,47 +1,32 @@
 {
-  "generated": "2026-06-13 07:38:29 UTC",
-  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "generated": "2026-06-13 07:51:03 UTC",
+  "ledger_version": "v001-updated-by-stage3-next02-transcript",
   "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
-  "stage2_delta": {
+  "stage3_delta": {
     "processed_regions": {
-      "VIV01": [
-        "S-001",
-        "S-002",
-        "S-003",
-        "S-004",
-        "S-005",
-        "S-018",
-        "S-019",
-        "S-020",
-        "S-021",
-        "S-024",
-        "S-025",
-        "S-026",
-        "S-027"
-      ],
-      "VIV02": [
-        "S-006",
-        "S-007",
-        "S-008",
-        "S-009",
-        "S-010",
-        "S-011",
-        "S-012",
-        "S-013",
-        "S-014",
-        "S-015",
-        "S-016",
-        "S-017",
-        "S-022",
-        "S-023"
+      "VIV03": [
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039",
+        "S-040",
+        "S-041"
       ]
     },
-    "processed_count": 27,
+    "processed_count": 14,
+    "total_processed_after_next02": 41,
     "pending_regions": {
-      "VIV03": 14,
       "VIV04": 12
     },
-    "pending_count": 26,
+    "pending_count": 12,
     "boundary_corrections": []
   },
   "rows": [
@@ -513,13 +498,13 @@
       "width": "1006.0",
       "height": "340.0",
       "nearest_labels_for_search_only": "T-027:table | T-026:with material dependent | T-025:view/indexed view | T-029:protect view from breaking | T-028:SCHEMABINDING",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-029",
@@ -530,13 +515,13 @@
       "width": "997.0",
       "height": "315.0",
       "nearest_labels_for_search_only": "T-027:table | T-026:with material dependent | T-025:view/indexed view | T-029:protect view from breaking | T-028:SCHEMABINDING",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-030",
@@ -547,13 +532,13 @@
       "width": "932.0",
       "height": "277.0",
       "nearest_labels_for_search_only": "T-038:Clustered index first | T-040:changes/writes cost | T-039:flow when source row | T-029:protect view from breaking | T-028:SCHEMABINDING",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-031",
@@ -564,13 +549,13 @@
       "width": "965.0",
       "height": "370.0",
       "nearest_labels_for_search_only": "T-038:Clustered index first | T-040:changes/writes cost | T-039:flow when source row | T-029:protect view from breaking | T-028:SCHEMABINDING",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-032",
@@ -581,13 +566,13 @@
       "width": "873.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-040:changes/writes cost | T-039:flow when source row | T-038:Clustered index first | T-043:at first | T-042:why clustered index",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-033",
@@ -598,13 +583,13 @@
       "width": "970.0",
       "height": "385.0",
       "nearest_labels_for_search_only": "T-040:changes/writes cost | T-039:flow when source row | T-038:Clustered index first | T-043:at first | T-042:why clustered index",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-034",
@@ -615,13 +600,13 @@
       "width": "968.0",
       "height": "311.0",
       "nearest_labels_for_search_only": "T-040:changes/writes cost | T-039:flow when source row | T-036:indexed views require | T-033:schemabinding rules | T-037:COUNT BIG for grouping",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-035",
@@ -632,13 +617,13 @@
       "width": "960.0",
       "height": "287.0",
       "nearest_labels_for_search_only": "T-043:at first | T-042:why clustered index | T-036:indexed views require | T-037:COUNT BIG for grouping | T-041:indexed view cost",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-036",
@@ -649,13 +634,13 @@
       "width": "943.0",
       "height": "253.0",
       "nearest_labels_for_search_only": "T-043:at first | T-042:why clustered index | T-040:changes/writes cost | T-041:indexed view cost | T-039:flow when source row",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-037",
@@ -666,13 +651,13 @@
       "width": "1074.0",
       "height": "250.0",
       "nearest_labels_for_search_only": "T-043:at first | T-042:why clustered index | T-040:changes/writes cost | T-041:indexed view cost | T-039:flow when source row",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-038",
@@ -683,13 +668,13 @@
       "width": "951.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-041:indexed view cost | T-024:Indexed views | T-043:at first | T-042:why clustered index | T-040:changes/writes cost",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-039",
@@ -700,13 +685,13 @@
       "width": "972.0",
       "height": "275.0",
       "nearest_labels_for_search_only": "T-041:indexed view cost | T-024:Indexed views | T-043:at first | T-042:why clustered index | T-036:indexed views require",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-040",
@@ -717,13 +702,13 @@
       "width": "957.0",
       "height": "296.0",
       "nearest_labels_for_search_only": "T-041:indexed view cost | T-043:at first | T-024:Indexed views | T-042:why clustered index | T-036:indexed views require",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03D",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-041",
@@ -734,13 +719,13 @@
       "width": "1037.0",
       "height": "304.0",
       "nearest_labels_for_search_only": "T-038:Clustered index first | T-030:SCHEMABINDING | T-031:protect view from breaking | T-032:what it prevents | T-033:schemabinding rules",
-      "coverage_status": "candidate-viv03",
+      "coverage_status": "processed-in-viv03-v001",
       "current_region_decision": "VIV03",
       "current_subregion_decision": "VIV03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Indexed views: materialized/physically stored result, dependency on base tables, unique clustered index first, what happens when base rows change, automatic maintenance, write cost, why indexed views can be heavier than normal table indexes, and nonclustered-index considerations.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-viv03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage3-next02",
+      "decision_basis": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass.",
+      "review_notes": "Included in VIV03 v001 after NEXT02 visual/semantic transcript pass."
     },
     {
       "source_id": "S-042",
