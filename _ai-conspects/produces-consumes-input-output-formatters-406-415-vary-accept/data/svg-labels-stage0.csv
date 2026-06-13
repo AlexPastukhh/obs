@@ -1,0 +1,93 @@
+label_id,text,x,y,font_size,fill
+L-001,CAN SPLIT OUR ACTION THAT PRODUCES 4 DIFFERENT VARIANTS(APPJSON/HATEMARVIN,4976.406,795.67,21.00979783530446px,#d3d3d3
+L-002,= FRENDLYJSON/FRENDLYHATE),4976.406,821.932,21.00979783530446px,#d3d3d3
+L-003,produces attribute,6274.47,924.073,106.3640427990936px,#d3d3d3
+L-004,"what if there is no matching consumes, even",10978.354,958.271,82.54546564275809px,#d3d3d3
+L-005,if there is a configured supported type in input formatter,10978.354,1061.453,82.54546564275809px,#d3d3d3
+L-006,!!!,11383.531,2389.04,73.49006748911633px,#d3d3d3
+L-007,ADD STATUSCODEPAGES FOR 406/415 ETC,7729.687,5135.004,67.12092741243252px,#d3d3d3
+L-008,OR,9355.551,5164.908,53.185167100695274px,#d3d3d3
+L-009,CREATE SOME ENDPOINTS FOR STATUS CODES,9712.921,5164.113,46.074110243056204px,#d3d3d3
+L-010,can add check for status code and add more info about,9705.83,6119.239,20px,#d3d3d3
+L-011,the initial path and what client does need to do,9705.83,6144.239,20px,#d3d3d3
+L-012,(406 check accept 415 check content tyep),9705.83,6169.239,20px,#d3d3d3
+L-013,cant add the exact,9094.114,6197.251,20px,#d3d3d3
+L-014,reason to problem,9094.114,6222.251,20px,#d3d3d3
+L-015,but can add useful details,9094.114,6247.251,20px,#d3d3d3
+L-016,using Microsoft.AspNetCore.Mvc;,7070.738,5098.959,15.309236947791158px,#d3d3d3
+L-017,using Microsoft.AspNetCore.WebUtilities;,7070.738,5118.095,15.309236947791158px,#d3d3d3
+L-018,var builder = WebApplication.CreateBuilder(args);,7070.738,5156.368,15.309236947791158px,#d3d3d3
+L-019,// MVC (or minimal APIs + services),7070.738,5194.641,15.309236947791158px,#d3d3d3
+L-020,builder.Services.AddControllers();,7070.738,5213.778,15.309236947791158px,#d3d3d3
+L-021,// ProblemDetails infrastructure,7070.738,5252.051,15.309236947791158px,#d3d3d3
+L-022,builder.Services.AddProblemDetails();,7070.738,5271.188,15.309236947791158px,#d3d3d3
+L-023,var app = builder.Build();,7070.738,5309.461,15.309236947791158px,#d3d3d3
+L-024,app.UseRouting();,7070.738,5347.734,15.309236947791158px,#d3d3d3
+L-025,app.UseWhen(,7070.738,5386.007,15.309236947791158px,#d3d3d3
+L-026,"ctx => ctx.Request.Path.StartsWithSegments(""/api""),",7070.738,5405.143,15.309236947791158px,#d3d3d3
+L-027,apiApp =>,7070.738,5424.28,15.309236947791158px,#d3d3d3
+L-028,{,7070.738,5443.417,15.309236947791158px,#d3d3d3
+L-029,apiApp.UseStatusCodePages(async statusCodeContext =>,7070.738,5462.553,15.309236947791158px,#d3d3d3
+L-030,{,7070.738,5481.69,15.309236947791158px,#d3d3d3
+L-031,var http = statusCodeContext.HttpContext;,7070.738,5500.826,15.309236947791158px,#d3d3d3
+L-032,"// If headers/body already started, can't write a body safely",7070.738,5539.099,15.309236947791158px,#d3d3d3
+L-033,if (http.Response.HasStarted),7070.738,5558.236,15.309236947791158px,#d3d3d3
+L-034,return;,7070.738,5577.372,15.309236947791158px,#d3d3d3
+L-035,var code = http.Response.StatusCode;,7070.738,5615.645,15.309236947791158px,#d3d3d3
+L-036,// Only handle selected status codes,7070.738,5653.919,15.309236947791158px,#d3d3d3
+L-037,if (code is not (,7070.738,5673.055,15.309236947791158px,#d3d3d3
+L-038,StatusCodes.Status404NotFound or,7070.738,5692.192,15.309236947791158px,#d3d3d3
+L-039,StatusCodes.Status405MethodNotAllowed or,7070.738,5711.328,15.309236947791158px,#d3d3d3
+L-040,StatusCodes.Status406NotAcceptable or,7070.738,5730.465,15.309236947791158px,#d3d3d3
+L-041,StatusCodes.Status415UnsupportedMediaType)),7070.738,5749.601,15.309236947791158px,#d3d3d3
+L-042,{,7070.738,5768.738,15.309236947791158px,#d3d3d3
+L-043,return;,7070.738,5787.874,15.309236947791158px,#d3d3d3
+L-044,},7070.738,5807.011,15.309236947791158px,#d3d3d3
+L-045,var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();,7070.738,5845.284,15.309236947791158px,#d3d3d3
+L-046,var pdService = http.RequestServices.GetRequiredService<IProblemDetailsService>();,7070.738,5864.421,15.309236947791158px,#d3d3d3
+L-047,var detail = code switch,7070.738,5902.694,15.309236947791158px,#d3d3d3
+L-048,{,7070.738,5921.83,15.309236947791158px,#d3d3d3
+L-049,StatusCodes.Status404NotFound =>,7070.738,5940.967,15.309236947791158px,#d3d3d3
+L-050,"""Endpoint not found."",",7070.738,5960.103,15.309236947791158px,#d3d3d3
+L-051,StatusCodes.Status405MethodNotAllowed =>,7070.738,5979.24,15.309236947791158px,#d3d3d3
+L-052,"""HTTP method not allowed for this endpoint."",",7070.738,5998.376,15.309236947791158px,#d3d3d3
+L-053,StatusCodes.Status406NotAcceptable =>,7070.738,6017.513,15.309236947791158px,#d3d3d3
+L-054,"""The requested response media type is not acceptable. Check the Accept header."",",7070.738,6036.65,15.309236947791158px,#d3d3d3
+L-055,StatusCodes.Status415UnsupportedMediaType =>,7070.738,6055.786,15.309236947791158px,#d3d3d3
+L-056,"""The request media type is unsupported. Check the Content-Type header."",",7070.738,6074.923,15.309236947791158px,#d3d3d3
+L-057,_ => null,7070.738,6094.059,15.309236947791158px,#d3d3d3
+L-058,};,7070.738,6113.196,15.309236947791158px,#d3d3d3
+L-059,var pd = factory.CreateProblemDetails(,7070.738,6151.469,15.309236947791158px,#d3d3d3
+L-060,"httpContext: http,",7070.738,6170.605,15.309236947791158px,#d3d3d3
+L-061,"statusCode: code,",7070.738,6189.742,15.309236947791158px,#d3d3d3
+L-062,"title: ReasonPhrases.GetReasonPhrase(code),",7070.738,6208.878,15.309236947791158px,#d3d3d3
+L-063,"type: $""https://httpstatuses.com/{code}"",",7070.738,6228.015,15.309236947791158px,#d3d3d3
+L-064,"detail: detail,",7070.738,6247.152,15.309236947791158px,#d3d3d3
+L-065,instance: http.Request.Path,7070.738,6266.288,15.309236947791158px,#d3d3d3
+L-066,);,7070.738,6285.425,15.309236947791158px,#d3d3d3
+L-067,// Safe writer (content-negotiates across registered ProblemDetails writers),7070.738,6323.698,15.309236947791158px,#d3d3d3
+L-068,var written = await pdService.TryWriteAsync(new ProblemDetailsContext,7070.738,6342.834,15.309236947791158px,#d3d3d3
+L-069,{,7070.738,6361.971,15.309236947791158px,#d3d3d3
+L-070,"HttpContext = http,",7070.738,6381.107,15.309236947791158px,#d3d3d3
+L-071,ProblemDetails = pd,7070.738,6400.244,15.309236947791158px,#d3d3d3
+L-072,});,7070.738,6419.38,15.309236947791158px,#d3d3d3
+L-073,if (!written),7070.738,6457.654,15.309236947791158px,#d3d3d3
+L-074,{,7070.738,6476.79,15.309236947791158px,#d3d3d3
+L-075,// Fallback if no ProblemDetails writer is registered for the request,7070.738,6495.927,15.309236947791158px,#d3d3d3
+L-076,"http.Response.ContentType = ""application/problem+json; charset=utf-8"";",7070.738,6515.063,15.309236947791158px,#d3d3d3
+L-077,await http.Response.WriteAsJsonAsync(pd);,7070.738,6534.2,15.309236947791158px,#d3d3d3
+L-078,},7070.738,6553.336,15.309236947791158px,#d3d3d3
+L-079,});,7070.738,6572.473,15.309236947791158px,#d3d3d3
+L-080,});,7070.738,6591.609,15.309236947791158px,#d3d3d3
+L-081,app.MapControllers();,7070.738,6629.882,15.309236947791158px,#d3d3d3
+L-082,app.Run();,7070.738,6668.156,15.309236947791158px,#d3d3d3
+L-083,IACTIONCONSTRAINT,10002.187,927.49,65.81819291548294px,#d3d3d3
+L-084,use consumes,8555.473,871.127,20px,#d3d3d3
+L-085,OR,9257.333,864.004,20px,#d3d3d3
+L-086,CONSUMES,8166.542,727.691,78.6666259765625px,#d3d3d3
+L-087,when we need to,10.0,130.991,137.333349609375px,#d3d3d3
+L-088,set varry accept,10.0,302.657,137.333349609375px,#d3d3d3
+L-089,broad accept header,1982.0,222.494,98.93334960937501px,#d3d3d3
+L-090,from browser,1982.0,346.16,98.93334960937501px,#d3d3d3
+L-091,respect browser accept header,3089.196,2648.597,98.6666870117188px,#d3d3d3
+L-092,"when have endpoint distinction with produces, need to vary",6203.386,1038.705,20px,#d3d3d3

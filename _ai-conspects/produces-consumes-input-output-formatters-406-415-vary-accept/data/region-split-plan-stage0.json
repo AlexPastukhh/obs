@@ -1,0 +1,38 @@
+[
+  {
+    "pass_id": "P01",
+    "region_id": "R01",
+    "region_slug": "R01-produces-output-formatters-accept-negotiation",
+    "image_use_count": 10,
+    "source_ids": "S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008, S-009, S-010",
+    "purpose": "Produces/output-formatters/Accept negotiation road.",
+    "boundary_notes": "Check right neighbor Consumes/IActionConstraint screenshots before closing; likely same pass but separate region."
+  },
+  {
+    "pass_id": "P01",
+    "region_id": "R02",
+    "region_slug": "R02-consumes-input-formatters-action-selection-415",
+    "image_use_count": 11,
+    "source_ids": "S-011, S-012, S-013, S-014, S-022, S-023, S-024, S-025, S-026, S-027, S-032",
+    "purpose": "Consumes/input-formatters/action selection/415 road.",
+    "boundary_notes": "Check status-code/problem-details material before closing; 406/415 diagnostics may be P02."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R03",
+    "region_slug": "R03-406-415-statuscodepages-problemdetails-diagnostics",
+    "image_use_count": 11,
+    "source_ids": "S-015, S-016, S-017, S-018, S-019, S-020, S-021, S-028, S-029, S-030, S-031",
+    "purpose": "StatusCodePages and ProblemDetails diagnostics for 406/415.",
+    "boundary_notes": "Check Consumes screenshots and Vary/Accept browser screenshots as neighbors."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R04",
+    "region_slug": "R04-vary-accept-browser-accept-header-policy",
+    "image_use_count": 12,
+    "source_ids": "S-033, S-034, S-035, S-036, S-037, S-038, S-039, S-040, S-041, S-042, S-043, S-044",
+    "purpose": "Vary: Accept, browser Accept header, RespectBrowserAcceptHeader, caching/content negotiation tail.",
+    "boundary_notes": "Check Produces/Accept-output region as neighbor; avoid duplicating output negotiation basics."
+  }
+]

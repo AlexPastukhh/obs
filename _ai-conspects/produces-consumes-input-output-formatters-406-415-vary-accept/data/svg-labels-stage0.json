@@ -1,0 +1,738 @@
+[
+  {
+    "label_id": "L-001",
+    "text": "CAN SPLIT OUR ACTION THAT PRODUCES 4 DIFFERENT VARIANTS(APPJSON/HATEMARVIN",
+    "x": 4976.406,
+    "y": 795.67,
+    "font_size": "21.00979783530446px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-002",
+    "text": "= FRENDLYJSON/FRENDLYHATE)",
+    "x": 4976.406,
+    "y": 821.932,
+    "font_size": "21.00979783530446px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-003",
+    "text": "produces attribute",
+    "x": 6274.47,
+    "y": 924.073,
+    "font_size": "106.3640427990936px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-004",
+    "text": "what if there is no matching consumes, even",
+    "x": 10978.354,
+    "y": 958.271,
+    "font_size": "82.54546564275809px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-005",
+    "text": "if there is a configured supported type in input formatter",
+    "x": 10978.354,
+    "y": 1061.453,
+    "font_size": "82.54546564275809px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-006",
+    "text": "!!!",
+    "x": 11383.531,
+    "y": 2389.04,
+    "font_size": "73.49006748911633px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-007",
+    "text": "ADD STATUSCODEPAGES FOR 406/415 ETC",
+    "x": 7729.687,
+    "y": 5135.004,
+    "font_size": "67.12092741243252px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-008",
+    "text": "OR",
+    "x": 9355.551,
+    "y": 5164.908,
+    "font_size": "53.185167100695274px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-009",
+    "text": "CREATE SOME ENDPOINTS FOR STATUS CODES",
+    "x": 9712.921,
+    "y": 5164.113,
+    "font_size": "46.074110243056204px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-010",
+    "text": "can add check for status code and add more info about",
+    "x": 9705.83,
+    "y": 6119.239,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-011",
+    "text": "the initial path and what client does need to do",
+    "x": 9705.83,
+    "y": 6144.239,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-012",
+    "text": "(406 check accept 415 check content tyep)",
+    "x": 9705.83,
+    "y": 6169.239,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-013",
+    "text": "cant add the exact",
+    "x": 9094.114,
+    "y": 6197.251,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-014",
+    "text": "reason to problem",
+    "x": 9094.114,
+    "y": 6222.251,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-015",
+    "text": "but can add useful details",
+    "x": 9094.114,
+    "y": 6247.251,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-016",
+    "text": "using Microsoft.AspNetCore.Mvc;",
+    "x": 7070.738,
+    "y": 5098.959,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-017",
+    "text": "using Microsoft.AspNetCore.WebUtilities;",
+    "x": 7070.738,
+    "y": 5118.095,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-018",
+    "text": "var builder = WebApplication.CreateBuilder(args);",
+    "x": 7070.738,
+    "y": 5156.368,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-019",
+    "text": "// MVC (or minimal APIs + services)",
+    "x": 7070.738,
+    "y": 5194.641,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-020",
+    "text": "builder.Services.AddControllers();",
+    "x": 7070.738,
+    "y": 5213.778,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-021",
+    "text": "// ProblemDetails infrastructure",
+    "x": 7070.738,
+    "y": 5252.051,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-022",
+    "text": "builder.Services.AddProblemDetails();",
+    "x": 7070.738,
+    "y": 5271.188,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-023",
+    "text": "var app = builder.Build();",
+    "x": 7070.738,
+    "y": 5309.461,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-024",
+    "text": "app.UseRouting();",
+    "x": 7070.738,
+    "y": 5347.734,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-025",
+    "text": "app.UseWhen(",
+    "x": 7070.738,
+    "y": 5386.007,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-026",
+    "text": "ctx => ctx.Request.Path.StartsWithSegments(\"/api\"),",
+    "x": 7070.738,
+    "y": 5405.143,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-027",
+    "text": "apiApp =>",
+    "x": 7070.738,
+    "y": 5424.28,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-028",
+    "text": "{",
+    "x": 7070.738,
+    "y": 5443.417,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-029",
+    "text": "apiApp.UseStatusCodePages(async statusCodeContext =>",
+    "x": 7070.738,
+    "y": 5462.553,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-030",
+    "text": "{",
+    "x": 7070.738,
+    "y": 5481.69,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-031",
+    "text": "var http = statusCodeContext.HttpContext;",
+    "x": 7070.738,
+    "y": 5500.826,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-032",
+    "text": "// If headers/body already started, can't write a body safely",
+    "x": 7070.738,
+    "y": 5539.099,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-033",
+    "text": "if (http.Response.HasStarted)",
+    "x": 7070.738,
+    "y": 5558.236,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-034",
+    "text": "return;",
+    "x": 7070.738,
+    "y": 5577.372,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-035",
+    "text": "var code = http.Response.StatusCode;",
+    "x": 7070.738,
+    "y": 5615.645,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-036",
+    "text": "// Only handle selected status codes",
+    "x": 7070.738,
+    "y": 5653.919,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-037",
+    "text": "if (code is not (",
+    "x": 7070.738,
+    "y": 5673.055,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-038",
+    "text": "StatusCodes.Status404NotFound or",
+    "x": 7070.738,
+    "y": 5692.192,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-039",
+    "text": "StatusCodes.Status405MethodNotAllowed or",
+    "x": 7070.738,
+    "y": 5711.328,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-040",
+    "text": "StatusCodes.Status406NotAcceptable or",
+    "x": 7070.738,
+    "y": 5730.465,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-041",
+    "text": "StatusCodes.Status415UnsupportedMediaType))",
+    "x": 7070.738,
+    "y": 5749.601,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-042",
+    "text": "{",
+    "x": 7070.738,
+    "y": 5768.738,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-043",
+    "text": "return;",
+    "x": 7070.738,
+    "y": 5787.874,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-044",
+    "text": "}",
+    "x": 7070.738,
+    "y": 5807.011,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-045",
+    "text": "var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();",
+    "x": 7070.738,
+    "y": 5845.284,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-046",
+    "text": "var pdService = http.RequestServices.GetRequiredService<IProblemDetailsService>();",
+    "x": 7070.738,
+    "y": 5864.421,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-047",
+    "text": "var detail = code switch",
+    "x": 7070.738,
+    "y": 5902.694,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-048",
+    "text": "{",
+    "x": 7070.738,
+    "y": 5921.83,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-049",
+    "text": "StatusCodes.Status404NotFound =>",
+    "x": 7070.738,
+    "y": 5940.967,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-050",
+    "text": "\"Endpoint not found.\",",
+    "x": 7070.738,
+    "y": 5960.103,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-051",
+    "text": "StatusCodes.Status405MethodNotAllowed =>",
+    "x": 7070.738,
+    "y": 5979.24,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-052",
+    "text": "\"HTTP method not allowed for this endpoint.\",",
+    "x": 7070.738,
+    "y": 5998.376,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-053",
+    "text": "StatusCodes.Status406NotAcceptable =>",
+    "x": 7070.738,
+    "y": 6017.513,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-054",
+    "text": "\"The requested response media type is not acceptable. Check the Accept header.\",",
+    "x": 7070.738,
+    "y": 6036.65,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-055",
+    "text": "StatusCodes.Status415UnsupportedMediaType =>",
+    "x": 7070.738,
+    "y": 6055.786,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-056",
+    "text": "\"The request media type is unsupported. Check the Content-Type header.\",",
+    "x": 7070.738,
+    "y": 6074.923,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-057",
+    "text": "_ => null",
+    "x": 7070.738,
+    "y": 6094.059,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-058",
+    "text": "};",
+    "x": 7070.738,
+    "y": 6113.196,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-059",
+    "text": "var pd = factory.CreateProblemDetails(",
+    "x": 7070.738,
+    "y": 6151.469,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-060",
+    "text": "httpContext: http,",
+    "x": 7070.738,
+    "y": 6170.605,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-061",
+    "text": "statusCode: code,",
+    "x": 7070.738,
+    "y": 6189.742,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-062",
+    "text": "title: ReasonPhrases.GetReasonPhrase(code),",
+    "x": 7070.738,
+    "y": 6208.878,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-063",
+    "text": "type: $\"https://httpstatuses.com/{code}\",",
+    "x": 7070.738,
+    "y": 6228.015,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-064",
+    "text": "detail: detail,",
+    "x": 7070.738,
+    "y": 6247.152,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-065",
+    "text": "instance: http.Request.Path",
+    "x": 7070.738,
+    "y": 6266.288,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-066",
+    "text": ");",
+    "x": 7070.738,
+    "y": 6285.425,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-067",
+    "text": "// Safe writer (content-negotiates across registered ProblemDetails writers)",
+    "x": 7070.738,
+    "y": 6323.698,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-068",
+    "text": "var written = await pdService.TryWriteAsync(new ProblemDetailsContext",
+    "x": 7070.738,
+    "y": 6342.834,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-069",
+    "text": "{",
+    "x": 7070.738,
+    "y": 6361.971,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-070",
+    "text": "HttpContext = http,",
+    "x": 7070.738,
+    "y": 6381.107,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-071",
+    "text": "ProblemDetails = pd",
+    "x": 7070.738,
+    "y": 6400.244,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-072",
+    "text": "});",
+    "x": 7070.738,
+    "y": 6419.38,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-073",
+    "text": "if (!written)",
+    "x": 7070.738,
+    "y": 6457.654,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-074",
+    "text": "{",
+    "x": 7070.738,
+    "y": 6476.79,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-075",
+    "text": "// Fallback if no ProblemDetails writer is registered for the request",
+    "x": 7070.738,
+    "y": 6495.927,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-076",
+    "text": "http.Response.ContentType = \"application/problem+json; charset=utf-8\";",
+    "x": 7070.738,
+    "y": 6515.063,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-077",
+    "text": "await http.Response.WriteAsJsonAsync(pd);",
+    "x": 7070.738,
+    "y": 6534.2,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-078",
+    "text": "}",
+    "x": 7070.738,
+    "y": 6553.336,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-079",
+    "text": "});",
+    "x": 7070.738,
+    "y": 6572.473,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-080",
+    "text": "});",
+    "x": 7070.738,
+    "y": 6591.609,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-081",
+    "text": "app.MapControllers();",
+    "x": 7070.738,
+    "y": 6629.882,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-082",
+    "text": "app.Run();",
+    "x": 7070.738,
+    "y": 6668.156,
+    "font_size": "15.309236947791158px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-083",
+    "text": "IACTIONCONSTRAINT",
+    "x": 10002.187,
+    "y": 927.49,
+    "font_size": "65.81819291548294px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-084",
+    "text": "use consumes",
+    "x": 8555.473,
+    "y": 871.127,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-085",
+    "text": "OR",
+    "x": 9257.333,
+    "y": 864.004,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-086",
+    "text": "CONSUMES",
+    "x": 8166.542,
+    "y": 727.691,
+    "font_size": "78.6666259765625px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-087",
+    "text": "when we need to",
+    "x": 10.0,
+    "y": 130.991,
+    "font_size": "137.333349609375px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-088",
+    "text": "set varry accept",
+    "x": 10.0,
+    "y": 302.657,
+    "font_size": "137.333349609375px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-089",
+    "text": "broad accept header",
+    "x": 1982.0,
+    "y": 222.494,
+    "font_size": "98.93334960937501px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-090",
+    "text": "from browser",
+    "x": 1982.0,
+    "y": 346.16,
+    "font_size": "98.93334960937501px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-091",
+    "text": "respect browser accept header",
+    "x": 3089.196,
+    "y": 2648.597,
+    "font_size": "98.6666870117188px",
+    "fill": "#d3d3d3"
+  },
+  {
+    "label_id": "L-092",
+    "text": "when have endpoint distinction with produces, need to vary",
+    "x": 6203.386,
+    "y": 1038.705,
+    "font_size": "20px",
+    "fill": "#d3d3d3"
+  }
+]
