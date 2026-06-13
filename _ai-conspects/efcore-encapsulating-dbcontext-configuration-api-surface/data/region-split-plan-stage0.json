@@ -1,0 +1,14 @@
+[
+  {
+    "region_id": "R01",
+    "region_name": "left-column-dbcontext-configuration-move-from-program",
+    "image_count": 7,
+    "meaning": "DbContext configuration leaking into Program.cs, sensitive-data logging, moving configuration details into DbContext/on-configuring/options parameters."
+  },
+  {
+    "region_id": "R02",
+    "region_name": "right-column-reduce-api-surface-options-wrapper",
+    "image_count": 6,
+    "meaning": "Reducing DbContext API surface and encapsulating EF Core options/configuration behind a smaller application-facing interface."
+  }
+]
