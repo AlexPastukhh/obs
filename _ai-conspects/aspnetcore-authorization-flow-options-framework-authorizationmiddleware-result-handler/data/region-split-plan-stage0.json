@@ -1,0 +1,38 @@
+[
+  {
+    "region": "R01",
+    "candidate_image_uses": 19,
+    "candidate_text_labels": 18,
+    "meaning": "authorization metadata/options and policy construction: endpoint metadata, IAuthorizeData, AuthorizationPolicy, AuthorizationMiddleware entry and cache/policy-combine road",
+    "bbox_hint": {
+      "x_min": 565.631,
+      "x_max": 4997.434,
+      "y_min": 10.0,
+      "y_max": 5532.85
+    }
+  },
+  {
+    "region": "R02",
+    "candidate_image_uses": 29,
+    "candidate_text_labels": 12,
+    "meaning": "AuthorizationMiddleware execution: policy authentication, AllowAnonymous handling, resource selection, PolicyEvaluator.Authorize, IAuthorizationService and handler/evaluator flow",
+    "bbox_hint": {
+      "x_min": 2773.473,
+      "x_max": 8442.562,
+      "y_min": 6003.59,
+      "y_max": 9836.658
+    }
+  },
+  {
+    "region": "R03",
+    "candidate_image_uses": 7,
+    "candidate_text_labels": 34,
+    "meaning": "AuthorizationMiddlewareResultHandler/result handling: PolicyAuthorizationResult, challenge/forbid/succeeded, failed requirements, custom responses, loop over schemes and handler customization",
+    "bbox_hint": {
+      "x_min": 1374.158,
+      "x_max": 6136.46,
+      "y_min": 10029.318,
+      "y_max": 11058.722
+    }
+  }
+]
