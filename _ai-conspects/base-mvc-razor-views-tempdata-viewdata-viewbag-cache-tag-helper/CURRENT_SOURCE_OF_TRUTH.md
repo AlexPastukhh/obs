@@ -1,6 +1,6 @@
 # Current Source of Truth - Base MVC Razor Views / TempData ViewData ViewBag / Cache Tag Helper
 
-Generated: 2026-06-13 08:06:22 UTC
+Generated: 2026-06-13 08:09:52 UTC
 
 ## Policy
 
@@ -16,33 +16,42 @@ R01 base MVC/Razor Products app, views, layouts, partials/view components: trans
 R02 ViewData/ViewBag/TempData/validation flow: transcript v001 done
 R03 built-in tag helpers/forms/selects/infrastructure: transcript v001 done
 R04 cache tag helper/view components/display templates/validation helpers: transcript v001 done
-Final coverage audit: next
+Final coverage audit: done
+Verdict: coverage-complete
 ```
 
-## Coverage after Stage2
+## Final coverage audit
 
 ```text
 total image uses: 41
-processed-in-r01-v001: 13
-processed-in-r02-v001: 10
-processed-in-r03-v001: 10
-processed-in-r04-v001: 8
-pending/problem rows before final audit: 0
+covered image uses: 41
+problem image uses: 0
 ```
 
-## Current split policy
+## Coverage by region
 
 ```text
-Default: 50-80 images.
-Can be bigger: 80-120 if the road is coherent.
-Exception: 120+ only on explicit request or one very cohesive road.
+R01: 13
+R02: 10
+R03: 10
+R04: 8
 ```
 
-## Next pass
+## Important note
+
+This directory is now complete as an AI source-processing/transcript-coverage package.
+
+It is not yet a polished direct-repeat package unless a later archive adds:
 
 ```text
-Final coverage audit:
-verify all 41 image uses are processed,
-no candidate/reserved/pending/unreviewed rows remain,
-record coverage-complete or concrete problems.
+FINAL_TRANSCRIPT.md
+REPEAT_MATERIAL_DRAFT.md
+QUESTIONS.md
+LOOKUP_INDEX.md
 ```
+
+## Next
+
+No next transcript block.
+
+Only create targeted correction archives if a concrete issue is found later, or create a separate repeat-material layer if needed.
