@@ -1,37 +1,37 @@
-# MANIFEST - Encoding UTF8 Chunk Processing Stage2 R02 Transcript
+# MANIFEST - Encoding UTF8 Chunk Processing Closure Audit
 
-Archive type: **source-level semantic transcript**  
+Archive type: **closure audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 06:12:13 UTC
+Generated: 2026-06-13 06:20:09 UTC
 
 ## Direction check
 
 Goal:
-Close remaining Encoding UTF8 Chunk transcript candidates after Stage1.
+Close Encoding UTF8 Chunk Processing after Stage1 and Stage2.
 
 Done:
-Stage1 processed 25 images.
+Stage1 and Stage2 processed all 55 source image-use records.
 
 This step:
-Add Stage2 transcript for ENC-R02, 30 source images.
+Add Encoding UTF8 Chunk closure audit.
 
 Why:
-This closes the decoder/chunk-processing block before closure audit.
+The conspect must be checked at closure level before being considered closed.
 
 Next:
 1. review staged file list/status;
 2. commit;
-3. run Encoding UTF8 Chunk closure audit.
+3. stop Encoding UTF8 Chunk transcript work unless a precision patch or repeat-material layer is needed.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/encoding-utf8-chunk-processing/03-stage2-r02-transcript.md
-_ai-conspects/encoding-utf8-chunk-processing/regions/ENC-R02-decoder-chunk-processing-incomplete-utf8.md
-_ai-conspects/encoding-utf8-chunk-processing/data/*stage2-v001.*
+_ai-conspects/encoding-utf8-chunk-processing/04-closure-audit.md
+_ai-conspects/encoding-utf8-chunk-processing/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/encoding-utf8-chunk-processing/data/EncodingUtf8Chunk-closure-audit-v001.csv
+_ai-conspects/encoding-utf8-chunk-processing/data/EncodingUtf8Chunk-closure-audit-v001.json
 _ai-conspects/encoding-utf8-chunk-processing/data/encoding-utf8-chunk-image-review-ledger-v1.csv
 _ai-conspects/encoding-utf8-chunk-processing/data/encoding-utf8-chunk-image-review-ledger-v1.json
-_ai-conspects/encoding-utf8-chunk-processing/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/encoding-utf8-chunk-processing/MANIFEST.md
 _ai-conspects/encoding-utf8-chunk-processing/APPLY_ARCHIVE.md
 ```
@@ -39,7 +39,7 @@ _ai-conspects/encoding-utf8-chunk-processing/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage2 processed: 30
-Stage0 remaining candidates after Stage2: 0
-Next: Encoding UTF8 Chunk closure audit
+Encoding UTF8 Chunk sources audited: 55 / 55
+Pending candidates: 0
+Next: closed by source coverage
 ```

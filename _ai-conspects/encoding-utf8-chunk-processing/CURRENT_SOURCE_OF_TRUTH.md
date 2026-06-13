@@ -1,6 +1,6 @@
 # Current Source of Truth - Encoding UTF8 Chunk Processing
 
-Generated: 2026-06-13 06:12:13 UTC
+Generated: 2026-06-13 06:20:09 UTC
 
 ## Current policy
 
@@ -51,15 +51,17 @@ Precision patches can upgrade individual sources to verbatim code later.
 Encoding UTF8 Chunk Stage0 boundary review v001: completed
 Encoding UTF8 Chunk Stage1 R01/R03 transcript v001: completed
 Encoding UTF8 Chunk Stage2 R02 transcript v001: completed
+Encoding UTF8 Chunk closure audit v001: completed
 Image uses inventoried: 55
 Stage1 processed: 25
 Stage2 processed: 30
 Pending candidates: 0
+Bad placeholder/OCR-error processed rows: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: Encoding UTF8 Chunk closure audit
-Expected count: 55 / 55
+Encoding UTF8 Chunk Processing: closed by source coverage
+Next: no further Encoding UTF8 Chunk transcript work unless precision patch or repeat-material layer is requested.
 ```
