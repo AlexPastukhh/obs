@@ -1,19 +1,9 @@
-# Apply archive: Scopes And IDisposable Stage0 boundary review
+# Apply archive: Scopes And IDisposable Stage1 transcript
 
-This file is part of a three-conspect Stage0 batch archive.
-
-Archive type: boundary review.
-
-Target folder:
+This file is part of a three-conspect Stage1 transcript batch archive.
 
 ```text
-_ai-conspects/scopes-and-idisposable
-```
-
-Status:
-
-```text
-Boundary candidates: 22
-Processed by this archive: 0
-Next: Stage1 transcript
+Stage1 processed: 22
+Remaining candidates: 0
+Next: closure audit
 ```

@@ -1,19 +1,9 @@
-# Apply archive: HttpContent Custom ReadAsStream Buffering Compression Stage0 boundary review
+# Apply archive: HttpContent Custom ReadAsStream Buffering Compression Stage1 transcript
 
-This file is part of a three-conspect Stage0 batch archive.
-
-Archive type: boundary review.
-
-Target folder:
+This file is part of a three-conspect Stage1 transcript batch archive.
 
 ```text
-_ai-conspects/httpcontent-custom-readasstream-buffering-compression
-```
-
-Status:
-
-```text
-Boundary candidates: 26
-Processed by this archive: 0
-Next: Stage1 transcript
+Stage1 processed: 26
+Remaining candidates: 0
+Next: closure audit
 ```

@@ -1,0 +1,89 @@
+{
+  "generated": "2026-06-13 11:27:40 UTC",
+  "conspect": "exception-handlers",
+  "region": "EXHAND-R02",
+  "source_count": 8,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-009",
+      "image_use_id": "IU-009",
+      "fileId_short": "711e76bae2",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "HASSTARTED EXPLAINATION",
+      "transcript": "Source theme:\nHASSTARTED EXPLAINATION\n\nVisible source anchors:\n- HASSTARTED EXPLAINATION\n- statusCode: statusCode,\n- context,\n- title: \"An unexpected error occurred.\",\n- var problem = problemDetailsFactory.CreateProblemDetails(\n- type: \"https://httpstatuses.com/500\",\n- // Create ProblemDetails using the factory (consistent defaults)\n- detail: app.Environment.IsDevelopment() ? ex?.ToString() : null,\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-010",
+      "image_use_id": "IU-010",
+      "fileId_short": "92fd6d15a5",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "WITH PROBLEMDETAILS SERVICE",
+      "transcript": "Source theme:\nWITH PROBLEMDETAILS SERVICE\n\nVisible source anchors:\n- WITH PROBLEMDETAILS SERVICE\n- });\n- }\n- await context.Response.WriteAsJsonAsync(problem);\n- context.Response.ContentType = \"application/problem+json\";\n- HASSTARTED EXPLAINATION\n- context.Response.StatusCode = statusCode;\n- context.Response.Clear();\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-011",
+      "image_use_id": "IU-011",
+      "fileId_short": "2da5a4e5a4",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "WITH PROBLEMDETAILS SERVICE",
+      "transcript": "Source theme:\nWITH PROBLEMDETAILS SERVICE\n\nVisible source anchors:\n- WITH PROBLEMDETAILS SERVICE\n- WHAT IS PROBLEMDETAILSCONTEXT\n- USING PROBLEMDETAILSCONTEXT.EXCEPTION\n- FOR CUSTOM WRITER TO ACCESS\n- TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER\n- FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE\n- AND MUST HAVE CALLBACK\n- TO PROCESS AS TEXT\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-012",
+      "image_use_id": "IU-012",
+      "fileId_short": "f3864fa46d",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "WITH PROBLEMDETAILS SERVICE",
+      "transcript": "Source theme:\nWITH PROBLEMDETAILS SERVICE\n\nVisible source anchors:\n- WITH PROBLEMDETAILS SERVICE\n- }\n- });\n- await context.Response.WriteAsJsonAsync(problem);\n- context.Response.ContentType = \"application/problem+json\";\n- context.Response.StatusCode = statusCode;\n- context.Response.Clear();\n- problem.Extensions[\"traceId\"] = context.TraceIdentifier;\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-013",
+      "image_use_id": "IU-013",
+      "fileId_short": "031612ffea",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "WHAT IS PROBLEMDETAILSCONTEXT",
+      "transcript": "Source theme:\nWHAT IS PROBLEMDETAILSCONTEXT\n\nVisible source anchors:\n- WHAT IS PROBLEMDETAILSCONTEXT\n- USING PROBLEMDETAILSCONTEXT.EXCEPTION\n- WITH PROBLEMDETAILS SERVICE\n- FOR CUSTOM WRITER TO ACCESS\n- TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER\n- FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE\n- AND MUST HAVE CALLBACK\n- TO PROCESS AS TEXT\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "e44924341d",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "WITH PROBLEMDETAILS SERVICE",
+      "transcript": "Source theme:\nWITH PROBLEMDETAILS SERVICE\n\nVisible source anchors:\n- WITH PROBLEMDETAILS SERVICE\n- WHAT IS PROBLEMDETAILSCONTEXT\n- USING PROBLEMDETAILSCONTEXT.EXCEPTION\n- FOR CUSTOM WRITER TO ACCESS\n- TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER\n- FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE\n- AND MUST HAVE CALLBACK\n- }\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "6528715276",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "WHAT IS PROBLEMDETAILSCONTEXT",
+      "transcript": "Source theme:\nWHAT IS PROBLEMDETAILSCONTEXT\n\nVisible source anchors:\n- WHAT IS PROBLEMDETAILSCONTEXT\n- USING PROBLEMDETAILSCONTEXT.EXCEPTION\n- FOR CUSTOM WRITER TO ACCESS\n- TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER\n- FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE\n- AND MUST HAVE CALLBACK\n- TO PROCESS AS TEXT\n- WITH PROBLEMDETAILS SERVICE\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-016",
+      "image_use_id": "IU-016",
+      "fileId_short": "9b12324f8c",
+      "stage1_region": "EXHAND-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "WHAT IS PROBLEMDETAILSCONTEXT",
+      "transcript": "Source theme:\nWHAT IS PROBLEMDETAILSCONTEXT\n\nVisible source anchors:\n- WHAT IS PROBLEMDETAILSCONTEXT\n- USING PROBLEMDETAILSCONTEXT.EXCEPTION\n- FOR CUSTOM WRITER TO ACCESS\n- TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER\n- FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE\n- AND MUST HAVE CALLBACK\n- TO PROCESS AS TEXT\n- !!!\n\nSemantic transcript:\nThis source belongs to `EXHAND-R02` / IExceptionHandler / ProblemDetails / status mapping. It supports `Exception Handlers` by documenting: IExceptionHandler centralizes typed exception handling with TryHandleAsync.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    }
+  ]
+}

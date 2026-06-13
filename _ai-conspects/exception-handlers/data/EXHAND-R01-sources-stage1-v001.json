@@ -1,0 +1,89 @@
+{
+  "generated": "2026-06-13 11:27:40 UTC",
+  "conspect": "exception-handlers",
+  "region": "EXHAND-R01",
+  "source_count": 8,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-001",
+      "image_use_id": "IU-001",
+      "fileId_short": "37c92f6208",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "PLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS",
+      "transcript": "Source theme:\nPLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS\n\nVisible source anchors:\n- PLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS\n- HASSTARTED EXPLAINATION\n- from anywhere(where they werent handled)\n- add exception handler middleware so youll return problemdetails with 500 status code on exception\n- WIHTOUT PROBLEMDETAILSFACTORY AND\n- IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE\n- EXCEPTIONHANDLER MIVVLEWARE\n- ausing Microsoft.AspNetCore.Diagnostics;\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-002",
+      "image_use_id": "IU-002",
+      "fileId_short": "38ac32e966",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "HASSTARTED EXPLAINATION",
+      "transcript": "Source theme:\nHASSTARTED EXPLAINATION\n\nVisible source anchors:\n- HASSTARTED EXPLAINATION\n- IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE\n- WIHTOUT PROBLEMDETAILSFACTORY AND\n- from anywhere(where they werent handled)\n- add exception handler middleware so youll return problemdetails with 500 status code on exception\n- EXCEPTIONHANDLER MIVVLEWARE\n- ausing Microsoft.AspNetCore.Diagnostics;\n- using Microsoft.AspNetCore.Mvc;\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-003",
+      "image_use_id": "IU-003",
+      "fileId_short": "617dbd951b",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE",
+      "transcript": "Source theme:\nIPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE\n\nVisible source anchors:\n- IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE\n- WIHTOUT PROBLEMDETAILSFACTORY AND\n- from anywhere(where they werent handled)\n- add exception handler middleware so youll return problemdetails with 500 status code on exception\n- ausing Microsoft.AspNetCore.Diagnostics;\n- using Microsoft.AspNetCore.Mvc;\n- using Microsoft.AspNetCore.WebUtilities;\n- if (app.Environment.IsDevelopment())\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-004",
+      "image_use_id": "IU-004",
+      "fileId_short": "7a3afbd1c5",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "PLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS",
+      "transcript": "Source theme:\nPLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS\n\nVisible source anchors:\n- PLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS\n- HASSTARTED EXPLAINATION\n- IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE\n- WIHTOUT PROBLEMDETAILSFACTORY AND\n- from anywhere(where they werent handled)\n- add exception handler middleware so youll return problemdetails with 500 status code on exception\n- ausing Microsoft.AspNetCore.Diagnostics;\n- using Microsoft.AspNetCore.Mvc;\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-005",
+      "image_use_id": "IU-005",
+      "fileId_short": "966d0bb9d4",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "{",
+      "transcript": "Source theme:\n{\n\nVisible source anchors:\n- {\n- app.UseDeveloperExceptionPage();\n- if (app.Environment.IsDevelopment())\n- }\n- else\n- using Microsoft.AspNetCore.WebUtilities;\n- using Microsoft.AspNetCore.Mvc;\n- app.UseExceptionHandler(errorApp =>\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-006",
+      "image_use_id": "IU-006",
+      "fileId_short": "c2fa9a8507",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "HASSTARTED EXPLAINATION",
+      "transcript": "Source theme:\nHASSTARTED EXPLAINATION\n\nVisible source anchors:\n- HASSTARTED EXPLAINATION\n- {\n- app.UseExceptionHandler(errorApp =>\n- errorApp.Run(async context =>\n- IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE\n- else\n- // If the response already started, we can't write our problem details\n- }\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-007",
+      "image_use_id": "IU-007",
+      "fileId_short": "12e6365615",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "HASSTARTED EXPLAINATION",
+      "transcript": "Source theme:\nHASSTARTED EXPLAINATION\n\nVisible source anchors:\n- HASSTARTED EXPLAINATION\n- errorApp.Run(async context =>\n- {\n- app.UseExceptionHandler(errorApp =>\n- // If the response already started, we can't write our problem details\n- PLAIN USEEXCEPTIONHANDLER WITH ADDPROBLEMDETAILS\n- IPROBLEMDETAILS SERVICE BUT WITH EXCEPTIONHANDLERFEATURE\n- if (context.Response.HasStarted)\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    },
+    {
+      "source_id": "S-008",
+      "image_use_id": "IU-008",
+      "fileId_short": "6defc373d3",
+      "stage1_region": "EXHAND-R01",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "var problemDetailsFactory = context.RequestServices.GetRequiredService<ProblemDetailsFactory>();",
+      "transcript": "Source theme:\nvar problemDetailsFactory = context.RequestServices.GetRequiredService<ProblemDetailsFactory>();\n\nVisible source anchors:\n- var problemDetailsFactory = context.RequestServices.GetRequiredService<ProblemDetailsFactory>();\n- // You can map exception types to status codes if you want\n- // Resolve ProblemDetailsFactory from DI\n- var statusCode = StatusCodes.Status500InternalServerError;\n- var ex = exceptionHandlerFeature?.Error;\n- // Create ProblemDetails using the factory (consistent defaults)\n- var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();\n- var problem = problemDetailsFactory.CreateProblemDetails(\n\nSemantic transcript:\nThis source belongs to `EXHAND-R01` / global middleware / UseExceptionHandler. It supports `Exception Handlers` by documenting: Global exception middleware handles unhandled exceptions from later pipeline steps.\n\nOperational reading:\n- This is a source-level semantic transcript, not exact code punctuation.\n- Use preserved Stage0 PNGs for exact line breaks, symbols, and C# punctuation.\n- No OCR-timeout / image-missing / placeholder source is marked processed.",
+      "notes": "Exact punctuation remains in preserved Stage0 PNG."
+    }
+  ]
+}
