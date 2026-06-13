@@ -1,12 +1,14 @@
-# APPLY ARCHIVE - allocations stage0 boundary/source review v001
+# APPLY ARCHIVE - .NET allocations final coverage transcript v001
 
-## PowerShell
+Target branch: `ai-processed-conspects-text`
+
+## Apply
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-dotnet-allocations-memory-gc-span-arraypool-performance-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-dotnet-allocations-memory-gc-span-arraypool-performance-stage1-r01r02r03r04-final-coverage-v001.zip"
 $target = "_ai-conspects\dotnet-allocations-memory-gc-span-arraypool-performance"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -23,11 +25,11 @@ git status --short -- $target
 ## Commit after review
 
 ```powershell
-git commit -m "Start .NET allocations conspect boundary review"
+git commit -m "Complete .NET allocations conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 
-## Rollback target only
+## Rollback staged target only
 
 ```powershell
 git restore --staged -- $target

@@ -1,0 +1,24 @@
+{
+  "conspect": "dotnet-allocations-memory-gc-span-arraypool-performance",
+  "stage": "stage1-r01r02r03r04-final-coverage-v001",
+  "generated": "2026-06-13 07:30:00 UTC",
+  "global_summary": "The sheet explains why heap allocations matter in .NET/ASP.NET Core, how allocations interact with GC pauses and latency, and how to reduce allocation pressure through better data structures, capacity planning, spans/buffers/pools, and measurement-driven optimization.",
+  "regions": [
+    {
+      "id": "R01",
+      "summary": "Allocation basics: which constructs allocate on the heap, async/iterator/generic cases, why heap allocation triggers GC work, latency, shared heap synchronization, stack/heap locality, and value-vs-reference examples."
+    },
+    {
+      "id": "R02",
+      "summary": "When allocation pressure matters: hidden performance costs under load, GC generations, Gen 0/1/2 behavior in ASP.NET Core, server GC, pauses and throughput/latency effects."
+    },
+    {
+      "id": "R03",
+      "summary": "Optimization and runtime-collapse road: request latency spikes, shared heap in ASP.NET Core, synchronization, Gen 2 promotions, ThreadPool/GC interaction, steps to avoid promotions and reduce long-lived objects."
+    },
+    {
+      "id": "R04",
+      "summary": "Final low-allocation and diagnostics road: churn, StringBuilder/reuse/pooling, when to use StringBuilder, and profiler-based allocation measurement/cautions."
+    }
+  ]
+}

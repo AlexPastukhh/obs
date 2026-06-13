@@ -1,6 +1,6 @@
 # Current Source of Truth - dotnet-allocations-memory-gc-span-arraypool-performance
 
-Generated: 2026-06-13 07:20:00 UTC
+Generated: 2026-06-13 07:30:00 UTC
 
 ## Policy
 
@@ -11,7 +11,11 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 allocation basics / value-reference / stack-heap: transcript v001 done
+R02 strings / collections / GC pressure / ASP.NET Core pauses: transcript v001 done
+R03 Span/Memory/ArrayPool/ThreadPool-GC/low-allocation patterns: transcript v001 done
+R04 benchmarking / churn / StringBuilder / diagnostics final notes: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -20,13 +24,16 @@ Normal transcript regions: not started
 unique embedded images: 41
 image uses on canvas: 41
 text labels parsed: 3
-duplicate image uses by extracted file/content: 0
+R01 processed image uses: 9
+R02 processed image uses: 12
+R03 processed image uses: 14
+R04 processed image uses: 6
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after boundary review.
-Suggested first candidate: R01+R02+R03+R04 full pass = 41 image uses + 3 text labels.
-Fallback split: R01+R02 first, then R03+R04 final coverage if lower optimization/diagnostics road needs a separate pass.
+No normal transcript regions remain. Only correction/polish or repeat-material archive if needed.
 ```
