@@ -191,11 +191,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
     "nearest_labels_for_search_only": "L-014: we have 6 instead of 7 | L-013: the first sets 5 + 1 | L-012: another sets  5 +1 | L-011: one gets  5",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-010",
@@ -213,11 +213,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
     "nearest_labels_for_search_only": "L-014: we have 6 instead of 7 | L-013: the first sets 5 + 1 | L-012: another sets  5 +1 | L-011: one gets  5",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-011",
@@ -235,11 +235,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
     "nearest_labels_for_search_only": "L-009: this is about data being lost, | L-010: multiple concurrent requests | L-011: one gets  5 | L-012: another sets  5 +1",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-012",
@@ -257,11 +257,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
     "nearest_labels_for_search_only": "L-002: atomic counters, race conditions with idatabase | L-009: this is about data being lost, | L-010: multiple concurrent requests | L-011: one gets  5",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-013",
@@ -279,11 +279,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
     "nearest_labels_for_search_only": "L-002: atomic counters, race conditions with idatabase | L-009: this is about data being lost, | L-003: and idistributedcache | L-010: multiple concurrent requests",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-014",
@@ -301,11 +301,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
     "nearest_labels_for_search_only": "L-001: multiplexer | L-002: atomic counters, race conditions with idatabase | L-003: and idistributedcache | L-009: this is about data being lost,",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-015",
@@ -323,11 +323,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic operations prevent lost updates.",
     "nearest_labels_for_search_only": "L-001: multiplexer | L-019: multiplexer + idatabase | L-018: redis through idistributed cache vs | L-002: atomic counters, race conditions with idatabase",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-016",
@@ -345,11 +345,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
     "nearest_labels_for_search_only": "L-014: we have 6 instead of 7 | L-013: the first sets 5 + 1 | L-012: another sets  5 +1 | L-011: one gets  5",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-017",
@@ -367,11 +367,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
     "nearest_labels_for_search_only": "L-014: we have 6 instead of 7 | L-013: the first sets 5 + 1 | L-012: another sets  5 +1 | L-011: one gets  5",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-018",
@@ -389,11 +389,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
     "nearest_labels_for_search_only": "L-014: we have 6 instead of 7 | L-013: the first sets 5 + 1 | L-012: another sets  5 +1 | L-011: one gets  5",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-019",
@@ -411,11 +411,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
     "nearest_labels_for_search_only": "L-014: we have 6 instead of 7 | L-013: the first sets 5 + 1 | L-012: another sets  5 +1 | L-011: one gets  5",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-020",
@@ -433,11 +433,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
     "nearest_labels_for_search_only": "L-007: closer to end about redis lock and redlock for stronger guarantee | L-008: some lua script shit, not interested rught now | L-006: 2 multiple with redis lock | L-005: 1 single instance",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-021",
@@ -455,11 +455,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
     "nearest_labels_for_search_only": "L-006: 2 multiple with redis lock | L-005: 1 single instance | L-004: stampede protection, | L-007: closer to end about redis lock and redlock for stronger guarantee",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-022",
@@ -477,11 +477,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Cache stampede protection, single-instance protection, Redis lock, lock TTL/ownership and RedLock notes for stronger distributed guarantees.",
     "nearest_labels_for_search_only": "L-008: some lua script shit, not interested rught now | L-007: closer to end about redis lock and redlock for stronger guarantee | L-006: 2 multiple with redis lock | L-005: 1 single instance",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-023",

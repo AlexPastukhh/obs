@@ -1,6 +1,6 @@
-# Current Source of Truth - QS Preference with Multiple Accept Header Values Helper
+# Current Source of Truth - QS Preference / Multiple Accept Header Values Helper
 
-Generated: 2026-06-13 08:09:52 UTC
+Generated: 2026-06-13 09:03:25 UTC
 
 ## Policy
 
@@ -12,22 +12,22 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-R01 Accept header negotiation result and supported types: transcript v001 done
-R02 TrySelect parsing candidates and matching: transcript v001 done
-P02/R03R04: next
-Final coverage audit: pending
+R01/R02 P01 transcript: done
+R03 Winner ordering, BuildResult and HATEOAS primary type: transcript v001 done
+R04 Controller integration, edge cases and tests: transcript v001 done
+Final coverage audit: next
 ```
 
-## P01 boundary decisions
+## Coverage after Stage2
 
 ```text
-R01 included: 9 image uses
-R02 included: 6 image uses
-Checked-not-P01 / reserved for P02: 15 image uses
+total image uses: 30
+processed after stage2: 30
+pending/problem rows before final audit: 0
 ```
 
 ## Next pass
 
 ```text
-P02/R03R04 transcript.
+Final coverage audit.
 ```

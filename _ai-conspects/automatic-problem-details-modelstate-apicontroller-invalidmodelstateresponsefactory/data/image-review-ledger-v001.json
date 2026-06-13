@@ -235,11 +235,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "JSON Patch validation, manually adding ModelState errors, upsert/create/update flow and returning ProblemDetails from ModelState.",
     "nearest_labels_for_search_only": "L-015: NOT RELATED, ABOUT PATCH VALIDATION | L-004: need to check if jsonpatchdoc valid first | L-001: with upsert | L-002: create flow IF  id missing",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-012",
@@ -257,11 +257,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "JSON Patch validation, manually adding ModelState errors, upsert/create/update flow and returning ProblemDetails from ModelState.",
     "nearest_labels_for_search_only": "L-001: with upsert | L-002: create flow IF  id missing | L-015: NOT RELATED, ABOUT PATCH VALIDATION | L-004: need to check if jsonpatchdoc valid first",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-013",
@@ -279,11 +279,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "JSON Patch validation, manually adding ModelState errors, upsert/create/update flow and returning ProblemDetails from ModelState.",
     "nearest_labels_for_search_only": "L-002: create flow IF  id missing | L-003: and then update flow as normal patch | L-001: with upsert | L-015: NOT RELATED, ABOUT PATCH VALIDATION",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-014",
@@ -301,11 +301,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "JSON Patch validation, manually adding ModelState errors, upsert/create/update flow and returning ProblemDetails from ModelState.",
     "nearest_labels_for_search_only": "L-004: need to check if jsonpatchdoc valid first | L-005: for system.text.json patch(we write modelstate errors manually) | L-015: NOT RELATED, ABOUT PATCH VALIDATION | L-001: with upsert",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-015",
@@ -323,11 +323,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "JSON Patch validation, manually adding ModelState errors, upsert/create/update flow and returning ProblemDetails from ModelState.",
     "nearest_labels_for_search_only": "L-005: for system.text.json patch(we write modelstate errors manually) | L-004: need to check if jsonpatchdoc valid first | L-015: NOT RELATED, ABOUT PATCH VALIDATION | L-001: with upsert",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 boundary review.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   },
   {
     "source_id": "S-016",
@@ -345,11 +345,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "TryValidateModel, manual ModelState invalidation, removing automatic response when custom rules must validate before response.",
     "nearest_labels_for_search_only": "L-005: for system.text.json patch(we write modelstate errors manually) | L-004: need to check if jsonpatchdoc valid first | L-015: NOT RELATED, ABOUT PATCH VALIDATION | L-013: HELPER FOR MANUAL VALIDATOIN",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-017",
@@ -367,11 +367,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "TryValidateModel, manual ModelState invalidation, removing automatic response when custom rules must validate before response.",
     "nearest_labels_for_search_only": "L-013: HELPER FOR MANUAL VALIDATOIN | L-005: for system.text.json patch(we write modelstate errors manually) | L-004: need to check if jsonpatchdoc valid first | L-015: NOT RELATED, ABOUT PATCH VALIDATION",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-018",
@@ -389,11 +389,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "TryValidateModel, manual ModelState invalidation, removing automatic response when custom rules must validate before response.",
     "nearest_labels_for_search_only": "L-016: TRYVALIDATEMODEL | L-009: SO WE CAN GET IT AND EXECUTE | L-010: IT WITH OUR ACTIONCONTEXT TO | L-011: DO MANUAL VALIDATION BUT WITH",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-019",
@@ -411,11 +411,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "TryValidateModel, manual ModelState invalidation, removing automatic response when custom rules must validate before response.",
     "nearest_labels_for_search_only": "L-009: SO WE CAN GET IT AND EXECUTE | L-010: IT WITH OUR ACTIONCONTEXT TO | L-011: DO MANUAL VALIDATION BUT WITH | L-012: CURRENT CONFIG",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 boundary review.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-020",

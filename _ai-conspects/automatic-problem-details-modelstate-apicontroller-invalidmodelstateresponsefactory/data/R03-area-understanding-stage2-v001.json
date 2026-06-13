@@ -1,0 +1,16 @@
+{
+  "region": "R03",
+  "title": "TryValidateModel and custom manual validation flow",
+  "included_image_uses": [
+    "S-016",
+    "S-017",
+    "S-018",
+    "S-019"
+  ],
+  "count": 4,
+  "meaning": "TryValidateModel, manual ModelState invalidation, removing automatic response when custom rules must validate before response.",
+  "boundary_notes": [
+    "R04 included in same P02 pass.",
+    "R01/R02 already processed in P01."
+  ]
+}

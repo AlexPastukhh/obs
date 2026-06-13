@@ -1,0 +1,19 @@
+{
+  "region": "R03",
+  "title": "Atomic counters, race conditions and increment semantics",
+  "included_image_uses": [
+    "S-015",
+    "S-014",
+    "S-013",
+    "S-012",
+    "S-011",
+    "S-010",
+    "S-009"
+  ],
+  "count": 7,
+  "meaning": "Atomic counters, race conditions from read-modify-write, IDatabase increment semantics and why Redis atomic ops prevent lost updates.",
+  "boundary_notes": [
+    "R04 included in same P02 pass.",
+    "R01/R02 already processed in P01."
+  ]
+}

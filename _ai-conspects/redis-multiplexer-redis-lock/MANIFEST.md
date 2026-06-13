@@ -1,39 +1,40 @@
-# MANIFEST - Redis / Multiplexer / Redis Lock P01 Transcript v001
+# MANIFEST - Redis / Multiplexer / Redis Lock P02 Transcript v001
 
-Archive type: **stage-1 verified combined transcript**  
+Archive type: **stage-2 verified combined transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 08:09:52 UTC
+Generated: 2026-06-13 09:03:25 UTC
 
 ## Done
 
-- R01 transcript created.
-- R02 transcript created.
-- Included R01 image uses: 2.
-- Included R02 image uses: 8.
-- Checked-not-P01 / reserved for P02: 14.
+- R03 transcript created.
+- R04 transcript created.
+- Included R03 image uses: 7.
+- Included R04 image uses: 7.
+- P01 screenshots checked as already processed.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/redis-multiplexer-redis-lock/01-stage1-p01-redis-multiplexer-transcript.md
-_ai-conspects/redis-multiplexer-redis-lock/regions/R01-redis-vs-db-failed-attempts-and-cache-choice.md
-_ai-conspects/redis-multiplexer-redis-lock/regions/R02-connectionmultiplexer-idatabase-vs-idistributedcache.md
-_ai-conspects/redis-multiplexer-redis-lock/data/R01-sources-stage1-v001.csv
-_ai-conspects/redis-multiplexer-redis-lock/data/R01-sources-stage1-v001.json
-_ai-conspects/redis-multiplexer-redis-lock/data/R02-sources-stage1-v001.csv
-_ai-conspects/redis-multiplexer-redis-lock/data/R02-sources-stage1-v001.json
-_ai-conspects/redis-multiplexer-redis-lock/data/P01-boundary-review-stage1-v001.csv
-_ai-conspects/redis-multiplexer-redis-lock/data/P01-boundary-review-stage1-v001.json
-_ai-conspects/redis-multiplexer-redis-lock/data/R01-area-understanding-stage1-v001.json
-_ai-conspects/redis-multiplexer-redis-lock/data/R02-area-understanding-stage1-v001.json
+_ai-conspects/redis-multiplexer-redis-lock/02-stage2-p02-atomic-counters-locks-transcript.md
+_ai-conspects/redis-multiplexer-redis-lock/regions/R03-atomic-counters-race-conditions-and-increment-semantics.md
+_ai-conspects/redis-multiplexer-redis-lock/regions/R04-stampede-protection-single-instance-redis-lock-redlock.md
+_ai-conspects/redis-multiplexer-redis-lock/data/R03-sources-stage2-v001.csv
+_ai-conspects/redis-multiplexer-redis-lock/data/R03-sources-stage2-v001.json
+_ai-conspects/redis-multiplexer-redis-lock/data/R04-sources-stage2-v001.csv
+_ai-conspects/redis-multiplexer-redis-lock/data/R04-sources-stage2-v001.json
+_ai-conspects/redis-multiplexer-redis-lock/data/P02-boundary-review-stage2-v001.csv
+_ai-conspects/redis-multiplexer-redis-lock/data/P02-boundary-review-stage2-v001.json
+_ai-conspects/redis-multiplexer-redis-lock/data/R03-area-understanding-stage2-v001.json
+_ai-conspects/redis-multiplexer-redis-lock/data/R04-area-understanding-stage2-v001.json
 _ai-conspects/redis-multiplexer-redis-lock/data/image-review-ledger-v001.csv
 _ai-conspects/redis-multiplexer-redis-lock/data/image-review-ledger-v001.json
-_ai-conspects/redis-multiplexer-redis-lock/audit-assets/contact-sheet-R01-final-included.png
-_ai-conspects/redis-multiplexer-redis-lock/audit-assets/contact-sheet-R02-final-included.png
-_ai-conspects/redis-multiplexer-redis-lock/audit-assets/contact-sheet-P01-checked-excluded.png
-_ai-conspects/redis-multiplexer-redis-lock/audit-assets/R01-source-images/*.png
-_ai-conspects/redis-multiplexer-redis-lock/audit-assets/R02-source-images/*.png
-_ai-conspects/redis-multiplexer-redis-lock/audit-assets/P01-checked-excluded-images/*.png
+_ai-conspects/redis-multiplexer-redis-lock/data/coverage-summary-after-stage2-v001.json
+_ai-conspects/redis-multiplexer-redis-lock/audit-assets/contact-sheet-R03-final-included.png
+_ai-conspects/redis-multiplexer-redis-lock/audit-assets/contact-sheet-R04-final-included.png
+_ai-conspects/redis-multiplexer-redis-lock/audit-assets/contact-sheet-P02-checked-excluded-already-p01.png
+_ai-conspects/redis-multiplexer-redis-lock/audit-assets/R03-source-images/*.png
+_ai-conspects/redis-multiplexer-redis-lock/audit-assets/R04-source-images/*.png
+_ai-conspects/redis-multiplexer-redis-lock/audit-assets/P02-checked-excluded-already-p01-images/*.png
 _ai-conspects/redis-multiplexer-redis-lock/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/redis-multiplexer-redis-lock/MANIFEST.md
 _ai-conspects/redis-multiplexer-redis-lock/APPLY_ARCHIVE.md
@@ -41,4 +42,4 @@ _ai-conspects/redis-multiplexer-redis-lock/APPLY_ARCHIVE.md
 
 ## Next
 
-P02/R03R04 transcript.
+Final coverage audit.
