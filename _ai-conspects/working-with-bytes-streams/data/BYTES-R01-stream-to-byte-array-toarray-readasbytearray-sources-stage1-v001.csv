@@ -1,0 +1,117 @@
+source_id,image_use_id,fileId_short,stage0_group,stage1_region,status,theme,transcript,notes
+S-001,IU-001,95a8895a79,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,When to use what for reading.,"When to use what for reading.
+
+Visible topic area:
+- `ToArray` / `ReadAsByteArray`
+- `ReadExactly`
+- compact methods conspect
+- `ReadAsync`
+
+Meaning:
+This source sets the decision map: whole-stream convenience methods are good when you want everything; `ReadAsync` is lower-level and may return partial data; `ReadExactly` is for fixed-size protocol reads.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-002,IU-002,c837ff2c44,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,When to use what / cheat sheet.,"When to use what / cheat sheet.
+
+Visible cases:
+- simple full-body read;
+- streaming upload to disk with progress;
+- compute hash while downloading/uploading;
+- custom parser/protocol;
+- read a fixed header length then continue.
+
+Meaning:
+Choose the API by required semantics: whole content, streaming processing, bounded reading, or exact fixed-size reads.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-003,IU-003,41330f01f8,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,When you can use ToArray.,"When you can use ToArray.
+
+Visible idea:
+`MemoryStream.ToArray()` copies the memory stream contents into a new byte array.
+
+Meaning:
+Use this only when the data is already in a MemoryStream or when you intentionally copied a source stream into MemoryStream first. `ToArray` creates a separate byte[] copy.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-004,IU-004,d1973d9e80,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,Empty source / stream response to file.,"Empty source / stream response to file.
+
+Visible question:
+Use when you only want to pipe bytes from stream A to stream B efficiently.
+
+Real use cases:
+- save HTTP response to a file;
+- forward request body to storage;
+- stream/generate/download.
+
+Meaning:
+If you do not need all bytes in memory, prefer `CopyToAsync`/streaming rather than `ToArray`.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-005,IU-005,7c6ce4cc95,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,Can uploaded screenshot body be read exactly?,"Can uploaded screenshot body be read exactly?
+
+Visible answer:
+Not directly. You first need to decide whether you want the whole body or a fixed number of bytes.
+
+Meaning:
+For full request body, use a full-body buffering helper with a size limit. For a known header/prefix, use fixed-size reads. Do not assume the request body fits safely into memory.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-006,IU-006,ea3dbd0653,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,Byte list / byte[] / MemoryBytes.,"Byte list / byte[] / MemoryBytes.
+
+Visible labels:
+- byte[]
+- list<byte>
+- Memory<byte> / MemoryStream-style names.
+
+Meaning:
+Several containers can hold bytes, but they differ in ownership/allocation. byte[] is a raw array; Memory/Span is a view; MemoryStream is a stream abstraction over memory.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-007,IU-007,0b3dffb71c,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,ReadAsByteArrayAsync on HttpContent.,"ReadAsByteArrayAsync on HttpContent.
+
+Visible:
+`ReadAsByteArrayAsync()` returns the full HTTP content as byte[].
+
+Meaning:
+It buffers the complete response body in memory. It is convenient for small, known-size HTTP payloads, but not for large or untrusted payloads.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-008,IU-008,6b4d0bf47c,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,ReadAsByteArrayAsync plus HttpContent.,"ReadAsByteArrayAsync plus HttpContent.
+
+Visible:
+`ReadAsByteArrayAsync()` on `HttpContent` reads content and returns `byte[]`.
+
+Real use cases:
+- download a small image;
+- small API response;
+- unit tests / quick prototypes.
+
+Warning:
+Buffers whole body in RAM.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-009,IU-009,347881d8ab,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,Alternative: chunk-by-chunk from stream.,"Alternative: chunk-by-chunk from stream.
+
+Visible option:
+Ask for stream and read it chunk by chunk.
+
+Meaning:
+For large uploads/downloads, use `ReadAsStreamAsync` / stream API and process chunks rather than buffering everything into a byte[].",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-010,IU-010,91c91316b9,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,ReadExactly on Stream.,"ReadExactly on Stream.
+
+Visible:
+Use when you must read a known exact byte count and failure should be treated as truncated/corrupt.
+
+Real use cases:
+- binary protocol headers;
+- file formats;
+- message frame prefixes;
+- handshake data.
+
+Meaning:
+`ReadExactly` is for fixed-size mandatory reads, not for arbitrary whole-body HTTP payloads.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-011,IU-011,620e004fe1,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,If you have Stream and want byte[].,"If you have Stream and want byte[].
+
+Visible note:
+No direct `stream.ToArray()`. You use a `MemoryStream` and copy into it, then call `ToArray()`.
+
+Meaning:
+A general Stream does not necessarily expose an array. Convert to byte[] by copying to MemoryStream, while respecting size limits.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-012,IU-012,84e92f8ecb,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,ReadExactly only makes sense with fixed segments.,"ReadExactly only makes sense with fixed segments.
+
+Visible:
+Example: read 16-byte header, then payload length, etc.
+
+Meaning:
+Do not use ReadExactly to read an unknown whole stream unless you have an exact count. Use it for exact protocol sections.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-013,IU-013,6d7f3116f8,BYTES-R01-stream-to-byte-array-toarray-readasbytearray,BYTES-R01,verified-visible-semantic-transcript,Can we ReadExactly and process at same time?,"Can we ReadExactly and process at same time?
+
+Visible question:
+No, not for the pattern ""read full body then process."" `ReadExactly` into a buffer still materializes that segment before processing.
+
+Meaning:
+If you want to process bytes as they arrive, use chunked `ReadAsync` loop. Use `ReadExactly` for fixed-size units like header/prefix/frame.",Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

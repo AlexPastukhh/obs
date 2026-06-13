@@ -1,6 +1,6 @@
-# Apply archive: Working With Bytes Streams Stage0 boundary review
+# Apply archive: Working With Bytes Streams Stage1 transcript
 
-Archive type: boundary review.
+Archive type: source-level semantic transcript.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-stage0-boundary-review-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-stage1-r01-r02-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -27,7 +27,7 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\working-with-bytes-streams"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-working-with-bytes-streams-stage1-r01-r02-transcript-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -46,7 +46,7 @@ git status --short -- $target
 ## Commit commands
 
 ```powershell
-git commit -m "Add Working With Bytes Streams Stage0 boundary review"
+git commit -m "Add Working With Bytes Streams Stage1 transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git clean -fd -- _ai-conspects/working-with-bytes-streams
 
 ## Notes
 
-This archive is boundary review only. It does not add transcript and does not mark Working With Bytes Streams sources as processed.
+This archive processes R01/R02 only. R03 remains pending for Stage2.

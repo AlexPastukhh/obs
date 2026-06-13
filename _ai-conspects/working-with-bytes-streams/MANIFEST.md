@@ -1,32 +1,38 @@
-# MANIFEST - Working With Bytes Streams Stage0 Boundary Review
+# MANIFEST - Working With Bytes Streams Stage1 R01/R02 Transcript
 
-Archive type: **boundary review**  
+Archive type: **source-level semantic transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 07:17:47 UTC
+Generated: 2026-06-13 07:30:12 UTC
 
 ## Direction check
 
 Goal:
-Start Working With Bytes Streams conspect only if an existing matching conspect is not found.
+Continue Working With Bytes Streams after Stage0.
 
 Done:
-Repository search did not find an existing bytes/streams/readexactly/readatleast conspect.
+Stage0 boundary review was applied.
 
 This step:
-Add Stage0 boundary review for all source images.
+Add Stage1 transcript for R01/R02, 24 source images.
+
+Why:
+This is the first transcript pass. It is source-level semantic transcript, not only coverage summary.
+
+Next:
+1. review staged file list/status;
+2. commit;
+3. process WorkingWithBytesStreams Stage2 BYTES-R03.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/working-with-bytes-streams/00-repo-conspects-check.md
-_ai-conspects/working-with-bytes-streams/01-stage0-boundary-review.md
-_ai-conspects/working-with-bytes-streams/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/working-with-bytes-streams/data/WorkingWithBytesStreams-stage0-boundary-review-v001.csv
-_ai-conspects/working-with-bytes-streams/data/WorkingWithBytesStreams-stage0-boundary-review-v001.json
+_ai-conspects/working-with-bytes-streams/02-stage1-r01-r02-transcript.md
+_ai-conspects/working-with-bytes-streams/regions/BYTES-R01-stream-to-byte-array-toarray-readasbytearray.md
+_ai-conspects/working-with-bytes-streams/regions/BYTES-R02-readasync-partial-reads-compact-helpers.md
+_ai-conspects/working-with-bytes-streams/data/*stage1-v001.*
 _ai-conspects/working-with-bytes-streams/data/working-with-bytes-streams-image-review-ledger-v1.csv
 _ai-conspects/working-with-bytes-streams/data/working-with-bytes-streams-image-review-ledger-v1.json
-_ai-conspects/working-with-bytes-streams/audit-assets/WorkingWithBytesStreams-stage0-*-contact-sheet.png
-_ai-conspects/working-with-bytes-streams/audit-assets/stage0-source-images/*.png
+_ai-conspects/working-with-bytes-streams/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/working-with-bytes-streams/MANIFEST.md
 _ai-conspects/working-with-bytes-streams/APPLY_ARCHIVE.md
 ```
@@ -34,7 +40,7 @@ _ai-conspects/working-with-bytes-streams/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Boundary candidates: 38
-Processed by this archive: 0
-Next: WorkingWithBytesStreams-stage1 transcript
+Stage1 processed: 24
+Stage0 remaining candidates: 14
+Next: WorkingWithBytesStreams Stage2
 ```

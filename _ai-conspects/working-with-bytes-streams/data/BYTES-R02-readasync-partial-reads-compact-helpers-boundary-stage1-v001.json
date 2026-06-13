@@ -1,0 +1,21 @@
+{
+  "generated": "2026-06-13 07:30:12 UTC",
+  "group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+  "region": "BYTES-R02",
+  "source_count": 11,
+  "included_sources": [
+    "S-014",
+    "S-015",
+    "S-016",
+    "S-017",
+    "S-018",
+    "S-019",
+    "S-020",
+    "S-021",
+    "S-022",
+    "S-023",
+    "S-024"
+  ],
+  "meaning": "ReadAsync and partial reads: Stream.Read/ReadAsync can return fewer bytes than requested, compact helper methods, implicit loops, upper bounds, slices, and bounded full reads.",
+  "boundary_decision": "included after Stage0 candidate split and Stage1 visual/semantic source review"
+}

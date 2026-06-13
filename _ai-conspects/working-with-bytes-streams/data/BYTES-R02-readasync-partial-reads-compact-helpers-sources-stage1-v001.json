@@ -1,0 +1,130 @@
+{
+  "generated": "2026-06-13 07:30:12 UTC",
+  "group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+  "region": "BYTES-R02",
+  "source_count": 11,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-014",
+      "image_use_id": "IU-014",
+      "fileId_short": "cf4c695911",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Buffering in HTTP response/client pipeline.",
+      "transcript": "Buffering in HTTP response/client pipeline.\n\nVisible note:\nYou may be asking about buffering in an incorrect pipeline layer. HTTP response/client content may already buffer or expose content as stream depending on API.\n\nMeaning:\nBe clear whether you are reading request body, response body, or middleware pipeline stream. Buffering strategy depends on where you are.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-015",
+      "image_use_id": "IU-015",
+      "fileId_short": "897e82239d",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "What is Stream.ReadAtLeast / ReadExactlyAsync?",
+      "transcript": "What is Stream.ReadAtLeast / ReadExactlyAsync?\n\nVisible:\nThese are .NET helpers for a very specific job:\n- read an exact number of bytes into a buffer;\n- if stream ends early, throw or report failure depending on API.\n\nMeaning:\nThey solve fixed-size read problems, not general \"read all stream into memory\" problems.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-016",
+      "image_use_id": "IU-016",
+      "fileId_short": "ec341e85a9",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "When to use what.",
+      "transcript": "When to use what.\n\nVisible:\nBoth MemoryStream and ReadExactly/ReadAtLeast APIs can be relevant, but for different purposes.\n\nMeaning:\nMemoryStream is about accumulating bytes in memory. ReadExactly/ReadAtLeast are about guaranteed byte counts in a destination buffer.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-017",
+      "image_use_id": "IU-017",
+      "fileId_short": "9d7cb75d8d",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Is ReadAsByteArrayAsync the same as ReadExactly?",
+      "transcript": "Is ReadAsByteArrayAsync the same as ReadExactly?\n\nVisible answer:\nNo.\n\nReadAsByteArrayAsync:\n- reads all content and returns byte[].\n- Usually used for HttpContent.\n\nReadExactly:\n- reads exactly N bytes into a buffer.\n- Throws if not enough bytes are available.\n\nMeaning:\nOne is whole-content buffering; the other is fixed-count reading.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-018",
+      "image_use_id": "IU-018",
+      "fileId_short": "18d41f90d2",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Can ReadExactly help with payload into MemoryStream?",
+      "transcript": "Can ReadExactly help with payload into MemoryStream?\n\nVisible code:\nRead loop into buffer, then write to MemoryStream.\n\nMeaning:\nIf you do not know total size, repeated `ReadAsync` loop into a buffer and MemoryStream accumulation is the normal approach. But it still buffers all data if you keep writing into MemoryStream.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-019",
+      "image_use_id": "IU-019",
+      "fileId_short": "908727bbc3",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Buffering does not have to be MemoryStream.",
+      "transcript": "Buffering does not have to be MemoryStream.\n\nVisible note:\nYou can buffer in:\n- MemoryStream;\n- Pipe/Pipelines;\n- or other storage.\n\nMeaning:\nMemoryStream is common but not mandatory. For huge content, disk/file/temp storage or streaming processing may be better.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-020",
+      "image_use_id": "IU-020",
+      "fileId_short": "a9969f3ffe",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Read loop example.",
+      "transcript": "Read loop example.\n\nVisible code:\nloop while `ReadAsync` returns bytes > 0, write bytes to destination.\n\nMeaning:\nThis is the standard read-until-EOF pattern. It handles partial reads because each iteration processes whatever was actually read.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-021",
+      "image_use_id": "IU-021",
+      "fileId_short": "8398737ef7",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Compact helper with limit.",
+      "transcript": "Compact helper with limit.\n\nVisible code:\nA helper takes a stream and an upper limit / max bytes.\n\nMeaning:\nIf you provide a convenience method that reads whole stream into memory, include a size limit so it cannot allocate unbounded memory.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-022",
+      "image_use_id": "IU-022",
+      "fileId_short": "2f71411062",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Important nuance: HttpClient already buffers sometimes.",
+      "transcript": "Important nuance: HttpClient already buffers sometimes.\n\nVisible:\nIf you use `GetStringAsync`, default HttpClient behavior may buffer whole response before returning depending on API.\n\nMeaning:\nSome high-level helpers already do full buffering. For streaming, request headers/response handling mode and read the content stream.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-023",
+      "image_use_id": "IU-023",
+      "fileId_short": "db0e04201a",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "What ReadExactly really is.",
+      "transcript": "What ReadExactly really is.\n\nVisible:\n`ReadExactly` / `ReadAtLeast` are mostly convenience helpers over a loop.\n\nMeaning:\nThey do not magically avoid reading loops; they package the repeated reads and error/EOF handling for exact or minimum byte count.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-024",
+      "image_use_id": "IU-024",
+      "fileId_short": "584a6aee2e",
+      "stage0_group": "BYTES-R02-readasync-partial-reads-compact-helpers",
+      "stage1_region": "BYTES-R02",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "If you want at most N bytes.",
+      "transcript": "If you want at most N bytes.\n\nVisible:\nRead into a fixed-size buffer/slice and enforce a limit.\n\nMeaning:\nThe benefit of bounded read helpers is limiting memory and preventing huge allocations. For \"read all\" helpers, the max size limit is the important safety property.",
+      "notes": "Stage1 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}
