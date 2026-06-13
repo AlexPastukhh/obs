@@ -1,0 +1,204 @@
+{
+  "generated": "2026-06-13 11:03:22 UTC",
+  "stage": "4",
+  "audit_type": "final-closure-audit",
+  "status": "complete",
+  "coverage": {
+    "expected_image_uses": 36,
+    "ledger_rows": 36,
+    "processed_rows": 36,
+    "missing": [],
+    "duplicates": [],
+    "extra": [],
+    "unreviewed": [],
+    "candidate_only": []
+  },
+  "regions": {
+    "AEM01": {
+      "expected": 16,
+      "actual": 16,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025"
+      ]
+    },
+    "AEM02": {
+      "expected": 15,
+      "actual": 15,
+      "sources": [
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031"
+      ]
+    },
+    "AEM03": {
+      "expected": 5,
+      "actual": 5,
+      "sources": [
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036"
+      ]
+    }
+  },
+  "subregions": {
+    "AEM01A": {
+      "expected": 5,
+      "actual": 5,
+      "sources": [
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025"
+      ]
+    },
+    "AEM01B": {
+      "expected": 7,
+      "actual": 7,
+      "sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007"
+      ]
+    },
+    "AEM01C": {
+      "expected": 4,
+      "actual": 4,
+      "sources": [
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020"
+      ]
+    },
+    "AEM02A": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-008",
+        "S-009",
+        "S-010"
+      ]
+    },
+    "AEM02B": {
+      "expected": 6,
+      "actual": 6,
+      "sources": [
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016"
+      ]
+    },
+    "AEM02C": {
+      "expected": 6,
+      "actual": 6,
+      "sources": [
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029",
+        "S-030",
+        "S-031"
+      ]
+    },
+    "AEM03A": {
+      "expected": 3,
+      "actual": 3,
+      "sources": [
+        "S-032",
+        "S-033",
+        "S-034"
+      ]
+    },
+    "AEM03B": {
+      "expected": 2,
+      "actual": 2,
+      "sources": [
+        "S-035",
+        "S-036"
+      ]
+    }
+  },
+  "region_mismatches": {},
+  "subregion_mismatches": {},
+  "duplicate_embedded_image_uses": {
+    "expected": {},
+    "actual": {},
+    "mismatch": false
+  },
+  "text_context": {
+    "expected_text_labels": 9,
+    "actual_text_labels": 9,
+    "missing": [],
+    "duplicates": [],
+    "extra": []
+  },
+  "required_transcript_files": {
+    "checked": [
+      "02-stage2-next01-transcript.md",
+      "03-stage3-next02-transcript.md",
+      "regions/AEM01-actiondescriptor-controlleractiondescriptor-mvc-filter-context.md",
+      "regions/AEM02-endpoint-metadata-routeendpoint-iapiendpointmetadata.md",
+      "regions/AEM03-ordered-endpoint-metadata.md",
+      "data/NEXT01-sources-stage2-v001.csv",
+      "data/NEXT01-sources-stage2-v001.json",
+      "data/NEXT01-boundary-review-stage2-v001.csv",
+      "data/NEXT01-boundary-review-stage2-v001.json",
+      "data/NEXT01-area-understanding-stage2-v001.json",
+      "data/NEXT01-text-context-stage2-v001.csv",
+      "data/NEXT01-text-context-stage2-v001.json",
+      "data/NEXT02-sources-stage3-v001.csv",
+      "data/NEXT02-sources-stage3-v001.json",
+      "data/NEXT02-boundary-review-stage3-v001.csv",
+      "data/NEXT02-boundary-review-stage3-v001.json",
+      "data/NEXT02-area-understanding-stage3-v001.json",
+      "data/NEXT02-text-context-stage3-v001.csv",
+      "data/NEXT02-text-context-stage3-v001.json",
+      "data/image-review-ledger-v001.csv",
+      "data/image-review-ledger-v001.json"
+    ],
+    "missing": []
+  },
+  "verified_transcripts": {
+    "AEM01": "ActionDescriptor and ControllerActionDescriptor in MVC/filter context",
+    "AEM02": "Endpoint metadata, MVC endpoint metadata, RouteEndpoint and IApiEndpointMetadata",
+    "AEM03": "Ordered metadata and ordered endpoint metadata lookup"
+  },
+  "conclusion": "All image uses are processed and the conspect can be marked complete."
+}

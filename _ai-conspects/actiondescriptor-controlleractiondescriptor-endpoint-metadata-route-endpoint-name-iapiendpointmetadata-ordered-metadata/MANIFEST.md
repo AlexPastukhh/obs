@@ -1,20 +1,18 @@
-# MANIFEST - Stage3 NEXT02 transcript
+# MANIFEST - Stage4 final closure audit
 
-Archive type: **verified transcript / partial conspect batch**  
+Archive type: **final closure / audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 10:41:31 UTC
+Generated: 2026-06-13 11:03:22 UTC
 
 ## Done
 
-- NEXT02 transcript created.
-- Processed source count: 20.
-- Processed regions: AEM02, AEM03.
-- Included text/context labels: 3.
-- Boundary corrections: none.
-- This archive intentionally does not duplicate Stage0 source PNGs.
+- Final closure audit created.
+- Status: `complete`.
+- Expected image uses: 36.
+- Processed image uses: 36.
 
 ## Next
 
 ```text
-Final closure/audit
+No next step inside this conspect.
 ```

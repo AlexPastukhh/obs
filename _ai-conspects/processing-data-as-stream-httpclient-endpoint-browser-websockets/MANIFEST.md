@@ -1,21 +1,20 @@
-# MANIFEST - Stage3 NEXT02 transcript
+# MANIFEST - Stage4 NEXT03 transcript
 
-Archive type: **verified transcript / partial conspect batch**  
+Archive type: **verified transcript / final conspect batch before audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 10:41:31 UTC
+Generated: 2026-06-13 11:03:22 UTC
 
 ## Done
 
-- NEXT02 transcript created.
-- Processed source count: 6.
-- Processed regions: PDS02.
-- Included text/context labels: 27.
+- NEXT03 transcript created.
+- Processed source count: 7.
+- Processed region: PDS04.
+- Included text/context labels: 12.
 - Boundary corrections: none.
 - This archive intentionally does not duplicate Stage0 source PNGs.
 
 ## Next
 
 ```text
-NEXT03: PDS04 = 7 image uses
 Final closure/audit
 ```

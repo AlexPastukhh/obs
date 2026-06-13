@@ -1,0 +1,38 @@
+{
+  "generated": "2026-06-13 11:03:22 UTC",
+  "stage": "4",
+  "batch_id": "NEXT03",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 7,
+  "pending_count": 0,
+  "boundary_corrections": [],
+  "regions": {
+    "PDS04": {
+      "name": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader",
+      "processed_sources": [
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023"
+      ],
+      "key_ideas": [
+        "PipeReader exposes buffered data as ReadOnlySequence<byte>.",
+        "AdvanceTo(consumed, examined) is the key contract for what was processed and what was inspected.",
+        "SequenceReader is a cursor helper over potentially non-contiguous buffers.",
+        "PipeWriter writes by GetMemory/GetSpan, Advance and FlushAsync.",
+        "Completion/error flows are explicit on PipeReader/PipeWriter."
+      ]
+    }
+  },
+  "pending_regions": {},
+  "reading_quality": {
+    "overall": "Overall: medium-high. Pipe API shapes and mental model are clear.",
+    "limitations": [
+      "Small code details should still be checked against source images if exact syntax matters."
+    ],
+    "confidence": "high"
+  }
+}

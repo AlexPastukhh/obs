@@ -1,11 +1,5 @@
-# Apply archive: actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-endpoint-name-iapiendpointmetadata-ordered-metadata Stage3 NEXT02 transcript
+# Apply archive: actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-endpoint-name-iapiendpointmetadata-ordered-metadata Stage4 final closure audit
 
-This conspect is part of the combined next-three archive.
-
-Target branch:
-
-```text
-ai-processed-conspects-text
-```
+This conspect is part of the combined Stage4 archive.
 
 Use the combined archive apply command from the assistant response.

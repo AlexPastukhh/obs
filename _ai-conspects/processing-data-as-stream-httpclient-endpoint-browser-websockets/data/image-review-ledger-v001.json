@@ -1,19 +1,9 @@
 {
-  "generated": "2026-06-13 10:41:31 UTC",
-  "ledger_version": "v001-updated-by-stage3-next02-or-final-step",
+  "generated": "2026-06-13 11:03:22 UTC",
+  "ledger_version": "v001-updated-by-stage4-next02-or-final-step",
   "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
-  "stage3_delta": {
+  "stage4_delta": {
     "processed_sources": [
-      "S-005",
-      "S-008",
-      "S-009",
-      "S-010",
-      "S-012",
-      "S-013"
-    ],
-    "processed_count": 6,
-    "total_processed_after_this_step": 16,
-    "pending_sources": [
       "S-017",
       "S-018",
       "S-019",
@@ -22,7 +12,10 @@
       "S-022",
       "S-023"
     ],
-    "pending_count": 7,
+    "processed_count": 7,
+    "total_processed_after_this_step": 23,
+    "pending_sources": [],
+    "pending_count": 0,
     "boundary_corrections": []
   },
   "rows": [
@@ -307,13 +300,13 @@
       "width": "932.0",
       "height": "351.0",
       "nearest_labels_for_search_only": "T-052:make sense the most with sequence reader that provides cursor api | T-050:pipereader | T-043:so we get unprocessed | T-044:buffer for next iteration | T-045:and we pass its start",
-      "coverage_status": "candidate-pds04",
+      "coverage_status": "processed-in-pds04-v001",
       "current_region_decision": "PDS04",
       "current_subregion_decision": "PDS04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next02",
+      "decision_basis": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -324,13 +317,13 @@
       "width": "824.0",
       "height": "463.0",
       "nearest_labels_for_search_only": "T-052:make sense the most with sequence reader that provides cursor api | T-043:so we get unprocessed | T-050:pipereader | T-044:buffer for next iteration | T-045:and we pass its start",
-      "coverage_status": "candidate-pds04",
+      "coverage_status": "processed-in-pds04-v001",
       "current_region_decision": "PDS04",
       "current_subregion_decision": "PDS04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next02",
+      "decision_basis": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -341,13 +334,13 @@
       "width": "928.0",
       "height": "344.0",
       "nearest_labels_for_search_only": "T-046:and end | T-045:and we pass its start | T-044:buffer for next iteration | T-043:so we get unprocessed | T-052:make sense the most with sequence reader that provides cursor api",
-      "coverage_status": "candidate-pds04",
+      "coverage_status": "processed-in-pds04-v001",
       "current_region_decision": "PDS04",
       "current_subregion_decision": "PDS04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next02",
+      "decision_basis": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-020",
@@ -358,13 +351,13 @@
       "width": "942.0",
       "height": "275.0",
       "nearest_labels_for_search_only": "T-046:and end | T-045:and we pass its start | T-044:buffer for next iteration | T-043:so we get unprocessed | T-041:writing",
-      "coverage_status": "candidate-pds04",
+      "coverage_status": "processed-in-pds04-v001",
       "current_region_decision": "PDS04",
       "current_subregion_decision": "PDS04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next02",
+      "decision_basis": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -375,13 +368,13 @@
       "width": "497.0",
       "height": "146.0",
       "nearest_labels_for_search_only": "T-049:or some sequenceposition | T-048:of count of bytes form start | T-047:can have overloads with pos | T-052:make sense the most with sequence reader that provides cursor api | T-050:pipereader",
-      "coverage_status": "candidate-pds04",
+      "coverage_status": "processed-in-pds04-v001",
       "current_region_decision": "PDS04",
       "current_subregion_decision": "PDS04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next02",
+      "decision_basis": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -392,13 +385,13 @@
       "width": "885.0",
       "height": "404.0",
       "nearest_labels_for_search_only": "T-042:pipewriter | T-041:writing | T-051:pipereader | T-046:and end | T-045:and we pass its start",
-      "coverage_status": "candidate-pds04",
+      "coverage_status": "processed-in-pds04-v001",
       "current_region_decision": "PDS04",
       "current_subregion_decision": "PDS04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next02",
+      "decision_basis": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -409,13 +402,13 @@
       "width": "931.0",
       "height": "440.0",
       "nearest_labels_for_search_only": "T-051:pipereader | T-042:pipewriter | T-041:writing | T-021:need to use text decoder to decode text from bytes without loosing data | T-022:because bytes are arrriving",
-      "coverage_status": "candidate-pds04",
+      "coverage_status": "processed-in-pds04-v001",
       "current_region_decision": "PDS04",
       "current_subregion_decision": "PDS04B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "PipeReader/PipeWriter and SequenceReader: read results, buffer consumed/examined positions, passing start/end for next iteration, cursor-like SequenceReader API, PipeWriter writing and flush semantics.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage4-next02",
+      "decision_basis": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS04 v001 after NEXT03 visual/semantic transcript pass."
     }
   ]
 }
