@@ -1,13 +1,40 @@
 {
-  "generated": "2026-06-12 14:00:23 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 19,
-    "assigned_to_candidate_regions": 19,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
+  "generated": "2026-06-13 05:09:18 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-full-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "AE01": [
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-011",
+        "S-012"
+      ],
+      "AE02": [
+        "S-009",
+        "S-010",
+        "S-019"
+      ],
+      "AE03": [
+        "S-001",
+        "S-013",
+        "S-014",
+        "S-016",
+        "S-018"
+      ],
+      "AE04": [
+        "S-015",
+        "S-017"
+      ]
+    },
+    "processed_count": 19,
+    "pending_regions": [],
+    "boundary_corrections": [],
     "duplicate_image_uses_by_fileId_short": {
       "ad91a03ef9": [
         "S-009",
@@ -25,13 +52,13 @@
       "width": "481.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae03",
+      "coverage_status": "processed-in-ae03-v001",
       "current_region_decision": "AE03",
       "current_subregion_decision": "AE03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Encapsulation as protecting data integrity: bundling data and operations, private setters, methods enforcing invariants, impossible-to-violate invariant examples, and guard clauses.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -42,13 +69,13 @@
       "width": "591.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -59,13 +86,13 @@
       "width": "483.0",
       "height": "265.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -76,13 +103,13 @@
       "width": "423.0",
       "height": "262.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -93,13 +120,13 @@
       "width": "382.0",
       "height": "257.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -110,13 +137,13 @@
       "width": "355.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -127,13 +154,13 @@
       "width": "344.0",
       "height": "240.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -144,13 +171,13 @@
       "width": "381.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-009",
@@ -161,13 +188,13 @@
       "width": "418.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae02",
+      "coverage_status": "processed-in-ae02-v001",
       "current_region_decision": "AE02",
       "current_subregion_decision": "AE02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Code-level abstraction example: extracting NormalizeCustomerName to name the essential idea, remove irrelevant details from the caller, and simplify code. S-009 and S-019 are two canvas uses of the same embedded screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-010",
@@ -178,13 +205,13 @@
       "width": "368.0",
       "height": "249.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae02",
+      "coverage_status": "processed-in-ae02-v001",
       "current_region_decision": "AE02",
       "current_subregion_decision": "AE02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Code-level abstraction example: extracting NormalizeCustomerName to name the essential idea, remove irrelevant details from the caller, and simplify code. S-009 and S-019 are two canvas uses of the same embedded screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-011",
@@ -195,13 +222,13 @@
       "width": "347.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -212,13 +239,13 @@
       "width": "365.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae01",
+      "coverage_status": "processed-in-ae01-v001",
       "current_region_decision": "AE01",
       "current_subregion_decision": "AE01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core abstraction idea: amplify essential, eliminate irrelevant; unlimited ways to code, abstractions help focus, all code is abstraction, good vs bad abstractions, and hierarchy/higher-order abstractions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-013",
@@ -229,13 +256,13 @@
       "width": "428.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae03",
+      "coverage_status": "processed-in-ae03-v001",
       "current_region_decision": "AE03",
       "current_subregion_decision": "AE03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Encapsulation as protecting data integrity: bundling data and operations, private setters, methods enforcing invariants, impossible-to-violate invariant examples, and guard clauses.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-014",
@@ -246,13 +273,13 @@
       "width": "420.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae03",
+      "coverage_status": "processed-in-ae03-v001",
       "current_region_decision": "AE03",
       "current_subregion_decision": "AE03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Encapsulation as protecting data integrity: bundling data and operations, private setters, methods enforcing invariants, impossible-to-violate invariant examples, and guard clauses.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -263,13 +290,13 @@
       "width": "409.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae04",
+      "coverage_status": "processed-in-ae04-v001",
       "current_region_decision": "AE04",
       "current_subregion_decision": "AE04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Synthesis region: comparison between encapsulation and abstraction, where they overlap, and how examples such as Triangle, EmailAddress, and NormalizeCustomerName sit in the two-circle model.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -280,13 +307,13 @@
       "width": "369.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae03",
+      "coverage_status": "processed-in-ae03-v001",
       "current_region_decision": "AE03",
       "current_subregion_decision": "AE03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Encapsulation as protecting data integrity: bundling data and operations, private setters, methods enforcing invariants, impossible-to-violate invariant examples, and guard clauses.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",
@@ -297,13 +324,13 @@
       "width": "473.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae04",
+      "coverage_status": "processed-in-ae04-v001",
       "current_region_decision": "AE04",
       "current_subregion_decision": "AE04A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Synthesis region: comparison between encapsulation and abstraction, where they overlap, and how examples such as Triangle, EmailAddress, and NormalizeCustomerName sit in the two-circle model.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae04-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE04 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE04 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -314,13 +341,13 @@
       "width": "417.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae03",
+      "coverage_status": "processed-in-ae03-v001",
       "current_region_decision": "AE03",
       "current_subregion_decision": "AE03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Encapsulation as protecting data integrity: bundling data and operations, private setters, methods enforcing invariants, impossible-to-violate invariant examples, and guard clauses.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -331,13 +358,13 @@
       "width": "418.0",
       "height": "220.0",
       "nearest_labels_for_search_only": "",
-      "coverage_status": "candidate-ae02",
+      "coverage_status": "processed-in-ae02-v001",
       "current_region_decision": "AE02",
       "current_subregion_decision": "AE02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Code-level abstraction example: extracting NormalizeCustomerName to name the essential idea, remove irrelevant details from the caller, and simplify code. S-009 and S-019 are two canvas uses of the same embedded screenshot.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-ae02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2",
+      "decision_basis": "Included in AE02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AE02 v001 after NEXT01 visual/semantic transcript pass."
     }
   ]
 }

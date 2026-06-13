@@ -1,0 +1,95 @@
+{
+  "generated": "2026-06-13 05:09:18 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 19,
+  "boundary_corrections": [],
+  "duplicate_image_uses_by_fileId_short": {
+    "ad91a03ef9": [
+      "S-009",
+      "S-019"
+    ]
+  },
+  "regions": {
+    "AE01": {
+      "name": "Abstraction definition, purpose and hierarchy",
+      "processed_sources": [
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-011",
+        "S-012"
+      ],
+      "key_ideas": [
+        "Abstraction amplifies the essential and eliminates the irrelevant.",
+        "Abstraction exists throughout code, not only in abstract classes or interfaces.",
+        "Good abstractions reduce the number of concerns the reader must hold in mind.",
+        "Abstraction hierarchies let complex logic be expressed as simple concepts."
+      ]
+    },
+    "AE02": {
+      "name": "Abstraction as code simplification / normalized customer name example",
+      "processed_sources": [
+        "S-009",
+        "S-010",
+        "S-019"
+      ],
+      "key_ideas": [
+        "Extracting NormalizeCustomerName names the intention of a repeated/detail-heavy transformation.",
+        "A method can be an abstraction even when its purpose is simplification rather than reuse.",
+        "The caller sees what the code does, while the method hides how it does it.",
+        "S-009 and S-019 are duplicate canvas uses of the same embedded image, both intentionally tracked."
+      ]
+    },
+    "AE03": {
+      "name": "Encapsulation, data integrity and invariants",
+      "processed_sources": [
+        "S-001",
+        "S-013",
+        "S-014",
+        "S-016",
+        "S-018"
+      ],
+      "key_ideas": [
+        "Encapsulation protects data integrity by hiding state and bundling operations with data.",
+        "Public setters make invariants easy to violate.",
+        "Private setters plus behavior methods preserve valid object state.",
+        "Guard clauses in constructors can prevent invalid objects from existing."
+      ]
+    },
+    "AE04": {
+      "name": "Difference and overlap between encapsulation and abstraction",
+      "processed_sources": [
+        "S-015",
+        "S-017"
+      ],
+      "key_ideas": [
+        "Encapsulation focuses on maintaining data consistency and legal operations.",
+        "Abstraction focuses on essential meaning and hiding irrelevant implementation details.",
+        "The two concepts often go hand in hand.",
+        "Some examples are mostly encapsulation, some mostly abstraction, and some combine both."
+      ]
+    },
+    "AETXT01": {
+      "name": "Canvas text labels",
+      "text_labels": [],
+      "key_ideas": [
+        "No raw SVG text labels were extracted for this conspect."
+      ]
+    }
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Most sources are clean slide screenshots.",
+      "S-008 right-side sentence is slightly cropped but meaning is readable from context.",
+      "No separate raw text labels were extracted from SVG."
+    ],
+    "confidence": "High for source text/code and conceptual grouping."
+  }
+}
