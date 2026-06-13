@@ -1,19 +1,25 @@
 # Regions - returning-most-specific-passing-most-generic
 
-Boundary-reviewed candidate regions:
+Verified transcripts:
 
 ```text
 RMSG01: Main guideline: accept generic, return specific
 RMSG02: .NET generic/collection hierarchy and immutable collection consequence
 ```
 
-Recommended transcript order:
+Candidate / pending transcripts:
 
 ```text
-NEXT01: RMSG01 + RMSG02 = 8 image uses
+none
 ```
 
-Each transcript must include:
+Next step:
+
+```text
+Final closure/audit
+```
+
+Each transcript includes:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality

@@ -1,14 +1,36 @@
 {
-  "generated": "2026-06-13 08:53:27 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 36,
-    "assigned_to_candidate_regions": 36,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
-    "duplicate_image_uses_by_fileId_short": {}
+  "generated": "2026-06-13 09:11:01 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "AEM01": [
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020"
+      ]
+    },
+    "processed_count": 16,
+    "total_processed_after_next01": 16,
+    "pending_regions": {
+      "AEM02": "Endpoint metadata, MVC endpoint metadata, RouteEndpoint and IApiEndpointMetadata",
+      "AEM03": "Ordered metadata and ordered endpoint metadata lookup"
+    },
+    "pending_count": 20,
+    "boundary_corrections": []
   },
   "rows": [
     {
@@ -20,13 +42,13 @@
       "width": "810.0",
       "height": "313.0",
       "nearest_labels_for_search_only": "T-001:Action descriptor | T-005:endpoint metadata | T-002:using methodinfo/method info from | T-003:ctoractiondescriptor | T-007:iendpointnamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -37,13 +59,13 @@
       "width": "886.0",
       "height": "451.0",
       "nearest_labels_for_search_only": "T-001:Action descriptor | T-005:endpoint metadata | T-002:using methodinfo/method info from | T-003:ctoractiondescriptor | T-007:iendpointnamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -54,13 +76,13 @@
       "width": "823.0",
       "height": "164.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-005:endpoint metadata | T-001:Action descriptor | T-008:iroutenamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -71,13 +93,13 @@
       "width": "794.0",
       "height": "360.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-005:endpoint metadata | T-002:using methodinfo/method info from | T-001:Action descriptor | T-008:iroutenamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -88,13 +110,13 @@
       "width": "748.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-005:endpoint metadata | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-001:Action descriptor | T-008:iroutenamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -105,13 +127,13 @@
       "width": "774.0",
       "height": "258.0",
       "nearest_labels_for_search_only": "T-005:endpoint metadata | T-001:Action descriptor | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-008:iroutenamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -122,13 +144,13 @@
       "width": "708.0",
       "height": "464.0",
       "nearest_labels_for_search_only": "T-001:Action descriptor | T-005:endpoint metadata | T-002:using methodinfo/method info from | T-003:ctoractiondescriptor | T-007:iendpointnamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -292,13 +314,13 @@
       "width": "840.0",
       "height": "313.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-005:endpoint metadata | T-001:Action descriptor | T-006:ordered metadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-018",
@@ -309,13 +331,13 @@
       "width": "824.0",
       "height": "382.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-005:endpoint metadata | T-001:Action descriptor | T-008:iroutenamemetadata",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-019",
@@ -326,13 +348,13 @@
       "width": "769.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-008:iroutenamemetadata | T-007:iendpointnamemetadata | T-001:Action descriptor",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-020",
@@ -343,13 +365,13 @@
       "width": "1028.0",
       "height": "431.0",
       "nearest_labels_for_search_only": "T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-007:iendpointnamemetadata | T-008:iroutenamemetadata | T-001:Action descriptor",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01C",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-021",
@@ -360,13 +382,13 @@
       "width": "756.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-004:actionsesscriptor vs ctoraction descr | T-007:iendpointnamemetadata | T-008:iroutenamemetadata | T-002:using methodinfo/method info from | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-022",
@@ -377,13 +399,13 @@
       "width": "924.0",
       "height": "374.0",
       "nearest_labels_for_search_only": "T-004:actionsesscriptor vs ctoraction descr | T-007:iendpointnamemetadata | T-008:iroutenamemetadata | T-002:using methodinfo/method info from | T-003:ctoractiondescriptor",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-023",
@@ -394,13 +416,13 @@
       "width": "940.0",
       "height": "169.0",
       "nearest_labels_for_search_only": "T-008:iroutenamemetadata | T-007:iendpointnamemetadata | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-004:actionsesscriptor vs ctoraction descr",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-024",
@@ -411,13 +433,13 @@
       "width": "944.0",
       "height": "367.0",
       "nearest_labels_for_search_only": "T-008:iroutenamemetadata | T-007:iendpointnamemetadata | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-004:actionsesscriptor vs ctoraction descr",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-025",
@@ -428,13 +450,13 @@
       "width": "939.0",
       "height": "139.0",
       "nearest_labels_for_search_only": "T-008:iroutenamemetadata | T-007:iendpointnamemetadata | T-003:ctoractiondescriptor | T-002:using methodinfo/method info from | T-004:actionsesscriptor vs ctoraction descr",
-      "coverage_status": "candidate-aem01",
+      "coverage_status": "processed-in-aem01-v001",
       "current_region_decision": "AEM01",
       "current_subregion_decision": "AEM01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "MVC ActionDescriptor/ControllerActionDescriptor: what it contains, how action filters see it, MethodInfo usage, route values, ControllerActionDescriptor-specific properties, and endpoint-name/route-name metadata questions around MVC actions.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-aem01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in AEM01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-026",

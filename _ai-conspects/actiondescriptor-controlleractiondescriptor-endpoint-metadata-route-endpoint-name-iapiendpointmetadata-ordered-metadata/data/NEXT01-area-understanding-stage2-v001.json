@@ -1,0 +1,50 @@
+{
+  "generated": "2026-06-13 09:11:01 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 16,
+  "pending_count": 20,
+  "boundary_corrections": [],
+  "regions": {
+    "AEM01": {
+      "name": "ActionDescriptor and ControllerActionDescriptor in MVC/filter context",
+      "processed_sources": [
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-017",
+        "S-018",
+        "S-019",
+        "S-020"
+      ],
+      "key_ideas": [
+        "MVC filters expose ActionDescriptor through filter context.",
+        "ControllerActionDescriptor is the MVC-controller-specific descriptor and exposes MethodInfo, ControllerName, ActionName and ControllerTypeInfo.",
+        "Endpoint metadata and MVC ActionDescriptor are related but different access paths.",
+        "After routing, HttpContext.GetEndpoint().Metadata can expose endpoint-name and route-name metadata.",
+        "Minimal APIs rely more directly on Endpoint.Metadata; MVC actions also have MVC action descriptors."
+      ]
+    }
+  },
+  "pending_regions": {
+    "AEM02": "Endpoint metadata, MVC endpoint metadata, RouteEndpoint and IApiEndpointMetadata",
+    "AEM03": "Ordered metadata and ordered endpoint metadata lookup"
+  },
+  "reading_quality": {
+    "overall": "Overall: medium-high. The contact sheet is readable, but exact code should still be checked against source images in deeper work.",
+    "limitations": [
+      "Some tiny code in contact sheets is hard to read exactly."
+    ],
+    "confidence": "high for semantic regioning"
+  }
+}

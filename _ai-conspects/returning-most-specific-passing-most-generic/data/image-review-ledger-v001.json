@@ -1,14 +1,27 @@
 {
-  "generated": "2026-06-13 08:53:27 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 8,
-    "assigned_to_candidate_regions": 8,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
-    "duplicate_image_uses_by_fileId_short": {}
+  "generated": "2026-06-13 09:11:01 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "RMSG01": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005"
+      ],
+      "RMSG02": [
+        "S-006",
+        "S-007",
+        "S-008"
+      ]
+    },
+    "processed_count": 8,
+    "total_processed_after_next01": 8,
+    "pending_regions": {},
+    "pending_count": 0,
+    "boundary_corrections": []
   },
   "rows": [
     {
@@ -20,13 +33,13 @@
       "width": "1022.0",
       "height": "267.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg01",
+      "coverage_status": "processed-in-rmsg01-v001",
       "current_region_decision": "RMSG01",
       "current_subregion_decision": "RMSG01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -37,13 +50,13 @@
       "width": "805.0",
       "height": "511.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg01",
+      "coverage_status": "processed-in-rmsg01-v001",
       "current_region_decision": "RMSG01",
       "current_subregion_decision": "RMSG01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -54,13 +67,13 @@
       "width": "728.0",
       "height": "525.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg01",
+      "coverage_status": "processed-in-rmsg01-v001",
       "current_region_decision": "RMSG01",
       "current_subregion_decision": "RMSG01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -71,13 +84,13 @@
       "width": "720.0",
       "height": "317.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg01",
+      "coverage_status": "processed-in-rmsg01-v001",
       "current_region_decision": "RMSG01",
       "current_subregion_decision": "RMSG01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -88,13 +101,13 @@
       "width": "842.0",
       "height": "487.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg01",
+      "coverage_status": "processed-in-rmsg01-v001",
       "current_region_decision": "RMSG01",
       "current_subregion_decision": "RMSG01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Core API design guideline: accept the most generic type that still supports what the method needs, and return the most specific useful type so callers keep richer capabilities; object/pet/dog diagram and leaky abstraction counterexample.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-006",
@@ -105,13 +118,13 @@
       "width": "684.0",
       "height": "442.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg02",
+      "coverage_status": "processed-in-rmsg02-v001",
       "current_region_decision": "RMSG02",
       "current_subregion_decision": "RMSG02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "C#/.NET grounding for the guideline: covariance/contravariance and collection interface hierarchy, plus the practical guideline that returned collections should be immutable to avoid copying and whole classes of errors.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -122,13 +135,13 @@
       "width": "815.0",
       "height": "468.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg02",
+      "coverage_status": "processed-in-rmsg02-v001",
       "current_region_decision": "RMSG02",
       "current_subregion_decision": "RMSG02A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "C#/.NET grounding for the guideline: covariance/contravariance and collection interface hierarchy, plus the practical guideline that returned collections should be immutable to avoid copying and whole classes of errors.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG02 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -139,13 +152,13 @@
       "width": "594.0",
       "height": "320.0",
       "nearest_labels_for_search_only": "T-002:and return the most specific, because it has more opportunities | T-001:Gibing opportunity to client, to give the most generic type",
-      "coverage_status": "candidate-rmsg02",
+      "coverage_status": "processed-in-rmsg02-v001",
       "current_region_decision": "RMSG02",
       "current_subregion_decision": "RMSG02B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "C#/.NET grounding for the guideline: covariance/contravariance and collection interface hierarchy, plus the practical guideline that returned collections should be immutable to avoid copying and whole classes of errors.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-rmsg02-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in RMSG02 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in RMSG02 v001 after NEXT01 visual/semantic transcript pass."
     }
   ]
 }

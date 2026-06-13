@@ -1,37 +1,39 @@
-# MANIFEST - Stage1 boundary review
+# MANIFEST - Stage2 NEXT01 transcript
 
-Archive type: **boundary review / split plan**  
+Archive type: **verified transcript / partial conspect batch**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 08:53:27 UTC
+Generated: 2026-06-13 09:11:01 UTC
 
 ## Done
 
-- Stage1 assigns all 23 image uses to candidate regions.
-- Stage1 assigns all 52 text labels to candidate regions.
-- Duplicate embedded-image uses by fileId_short: 0.
+- NEXT01 transcript created.
+- Processed source count: 10.
+- Processed regions: PDS01, PDS03.
+- Included text/context labels: 13.
+- Boundary corrections: none.
 - This archive intentionally does not duplicate Stage0 source PNGs.
 
 ## Now
 
 - Apply and inspect cached diff.
-- Commit if boundary split is acceptable.
+- Commit if transcript and boundary decisions are acceptable.
 
 ## Next
 
 ```text
-NEXT01: PDS01 + PDS03 = 10 image uses
+NEXT02: PDS02 = 6 image uses
+NEXT03: PDS04 = 7 image uses
+Final closure/audit
 ```
 
 ## Files included / updated
 
 ```text
-_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/01-stage1-boundary-review.md
+_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/02-stage2-next01-transcript.md
 _ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/regions/README.md
-_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/stage1-boundary-review-v001.csv
-_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/stage1-boundary-review-v001.json
-_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/stage1-text-label-boundary-review-v001.csv
-_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/stage1-text-label-boundary-review-v001.json
+_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/regions/*.md
+_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/NEXT01-*.csv
+_ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/NEXT01-*.json
 _ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/image-review-ledger-v001.csv
 _ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/data/image-review-ledger-v001.json
 _ai-conspects/processing-data-as-stream-httpclient-endpoint-browser-websockets/APPLY_ARCHIVE.md

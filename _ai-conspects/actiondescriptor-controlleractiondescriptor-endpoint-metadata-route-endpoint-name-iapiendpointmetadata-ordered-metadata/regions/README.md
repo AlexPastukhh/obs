@@ -1,21 +1,26 @@
 # Regions - actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-endpoint-name-iapiendpointmetadata-ordered-metadata
 
-Boundary-reviewed candidate regions:
+Verified transcripts:
 
 ```text
 AEM01: ActionDescriptor and ControllerActionDescriptor in MVC/filter context
+```
+
+Candidate / pending transcripts:
+
+```text
 AEM02: Endpoint metadata, MVC endpoint metadata, RouteEndpoint and IApiEndpointMetadata
 AEM03: Ordered metadata and ordered endpoint metadata lookup
 ```
 
-Recommended transcript order:
+Next step:
 
 ```text
-NEXT01: AEM01 = 16 image uses
 NEXT02: AEM02 + AEM03 = 20 image uses
+Final closure/audit
 ```
 
-Each transcript must include:
+Each transcript includes:
 
 ```text
 ## 0.1 Area overview / key ideas / reading quality

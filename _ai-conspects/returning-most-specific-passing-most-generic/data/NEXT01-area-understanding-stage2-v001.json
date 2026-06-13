@@ -1,0 +1,45 @@
+{
+  "generated": "2026-06-13 09:11:01 UTC",
+  "stage": "2",
+  "batch_id": "NEXT01",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 8,
+  "pending_count": 0,
+  "boundary_corrections": [],
+  "regions": {
+    "RMSG01": {
+      "name": "Main guideline: accept generic, return specific",
+      "processed_sources": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005"
+      ],
+      "key_ideas": [
+        "Accept the most generic argument type that supports the operation.",
+        "Return the most specific useful type so callers keep richer capabilities.",
+        "Returning too generic can force casts and leak implementation knowledge."
+      ]
+    },
+    "RMSG02": {
+      "name": ".NET generic/collection hierarchy and immutable collection consequence",
+      "processed_sources": [
+        "S-006",
+        "S-007",
+        "S-008"
+      ],
+      "key_ideas": [
+        "C# variance helps explain input/output generic positions.",
+        "Collection interfaces form a hierarchy; choose the least constraining input abstraction.",
+        "Returned collections should be immutable/read-only when possible to avoid mutation bugs."
+      ]
+    }
+  },
+  "pending_regions": {},
+  "reading_quality": {
+    "overall": "Overall: high. Slides are readable.",
+    "limitations": [],
+    "confidence": "high"
+  }
+}

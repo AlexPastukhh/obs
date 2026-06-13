@@ -1,14 +1,32 @@
 {
-  "generated": "2026-06-13 08:53:27 UTC",
-  "ledger_version": "v001-created-by-stage1-boundary-review",
-  "critical_rule": "Ledger is a checklist only. It is not source of truth until transcript pass visually rechecks source images.",
-  "coverage": {
-    "total_image_uses": 23,
-    "assigned_to_candidate_regions": 23,
-    "missing": [],
-    "duplicates": [],
-    "extra": [],
-    "duplicate_image_uses_by_fileId_short": {}
+  "generated": "2026-06-13 09:11:01 UTC",
+  "ledger_version": "v001-updated-by-stage2-next01-transcript",
+  "critical_rule": "Ledger records decisions after visual/semantic review; source images remain Stage0 artifacts.",
+  "stage2_delta": {
+    "processed_regions": {
+      "PDS01": [
+        "S-006",
+        "S-007",
+        "S-014",
+        "S-015",
+        "S-016"
+      ],
+      "PDS03": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-011"
+      ]
+    },
+    "processed_count": 10,
+    "total_processed_after_next01": 10,
+    "pending_regions": {
+      "PDS02": "Browser fetch/WebSocket message chunks and UTF-8 decoding",
+      "PDS04": "System.IO.Pipelines PipeReader/PipeWriter and SequenceReader"
+    },
+    "pending_count": 13,
+    "boundary_corrections": []
   },
   "rows": [
     {
@@ -20,13 +38,13 @@
       "width": "732.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-001:!!! processingn stream | T-039:browser websockets",
-      "coverage_status": "candidate-pds03",
+      "coverage_status": "processed-in-pds03-v001",
       "current_region_decision": "PDS03",
       "current_subregion_decision": "PDS03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-002",
@@ -37,13 +55,13 @@
       "width": "912.0",
       "height": "200.0",
       "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-001:!!! processingn stream | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets",
-      "coverage_status": "candidate-pds03",
+      "coverage_status": "processed-in-pds03-v001",
       "current_region_decision": "PDS03",
       "current_subregion_decision": "PDS03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-003",
@@ -54,13 +72,13 @@
       "width": "893.0",
       "height": "471.0",
       "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-001:!!! processingn stream | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets",
-      "coverage_status": "candidate-pds03",
+      "coverage_status": "processed-in-pds03-v001",
       "current_region_decision": "PDS03",
       "current_subregion_decision": "PDS03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-004",
@@ -71,13 +89,13 @@
       "width": "848.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-001:!!! processingn stream | T-020:processing chunk by chunk with httpclient | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets",
-      "coverage_status": "candidate-pds03",
+      "coverage_status": "processed-in-pds03-v001",
       "current_region_decision": "PDS03",
       "current_subregion_decision": "PDS03A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-005",
@@ -105,13 +123,13 @@
       "width": "947.0",
       "height": "234.0",
       "nearest_labels_for_search_only": "T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we | T-015:if  there is some network error abort request will be fired | T-014:readasync, when returns 0 - the end of request | T-013:in controller endp",
-      "coverage_status": "candidate-pds01",
+      "coverage_status": "processed-in-pds01-v001",
       "current_region_decision": "PDS01",
       "current_subregion_decision": "PDS01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-007",
@@ -122,13 +140,13 @@
       "width": "882.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we | T-015:if  there is some network error abort request will be fired | T-014:readasync, when returns 0 - the end of request | T-013:in controller endp",
-      "coverage_status": "candidate-pds01",
+      "coverage_status": "processed-in-pds01-v001",
       "current_region_decision": "PDS01",
       "current_subregion_decision": "PDS01A",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-008",
@@ -190,13 +208,13 @@
       "width": "804.0",
       "height": "482.0",
       "nearest_labels_for_search_only": "T-020:processing chunk by chunk with httpclient | T-019:process it with code | T-018:in client we cant process messages as stream, we are buffering the full message and the we | T-039:browser websockets | T-032:flush when some chars cant be decoded and we want to say that there is some char should be",
-      "coverage_status": "candidate-pds03",
+      "coverage_status": "processed-in-pds03-v001",
       "current_region_decision": "PDS03",
       "current_subregion_decision": "PDS03B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "HttpClient streaming response processing: ResponseHeadersRead, processing chunks as they arrive, not buffering whole response, buffer loop shape, practical mental model of network buffers, app buffers and message boundaries.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds03-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS03 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-012",
@@ -241,13 +259,13 @@
       "width": "1162.0",
       "height": "466.0",
       "nearest_labels_for_search_only": "T-035:when using streams | T-034:to get it from steram failure | T-033:need to catch ioexception too | T-002:so how do we process bytes in loops in different situations? | T-015:if  there is some network error abort request will be fired",
-      "coverage_status": "candidate-pds01",
+      "coverage_status": "processed-in-pds01-v001",
       "current_region_decision": "PDS01",
       "current_subregion_decision": "PDS01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-015",
@@ -258,13 +276,13 @@
       "width": "1159.0",
       "height": "389.0",
       "nearest_labels_for_search_only": "T-035:when using streams | T-034:to get it from steram failure | T-033:need to catch ioexception too | T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we",
-      "coverage_status": "candidate-pds01",
+      "coverage_status": "processed-in-pds01-v001",
       "current_region_decision": "PDS01",
       "current_subregion_decision": "PDS01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-016",
@@ -275,13 +293,13 @@
       "width": "989.0",
       "height": "239.0",
       "nearest_labels_for_search_only": "T-035:when using streams | T-034:to get it from steram failure | T-033:need to catch ioexception too | T-017:need buffer here to write available or specified number of bytes | T-016:or can use readexactly/readatleast for some special behavior, we",
-      "coverage_status": "candidate-pds01",
+      "coverage_status": "processed-in-pds01-v001",
       "current_region_decision": "PDS01",
       "current_subregion_decision": "PDS01B",
-      "decision_is_final": "no-boundary-review-only",
-      "must_recheck_before_region_close": "yes",
-      "decision_basis": "Server endpoint request-body stream processing: ReadAsync loops, returns 0 as end-of-request, request abort/network failure behavior, ReadExactly/ReadAtLeast style behavior, stream exceptions and catching IOException.",
-      "review_notes": "Stage1 boundary review only; source image is not processed yet."
+      "decision_is_final": "yes-for-pds01-v001-boundary",
+      "must_recheck_before_region_close": "no-for-stage2-next01",
+      "decision_basis": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass.",
+      "review_notes": "Included in PDS01 v001 after NEXT01 visual/semantic transcript pass."
     },
     {
       "source_id": "S-017",

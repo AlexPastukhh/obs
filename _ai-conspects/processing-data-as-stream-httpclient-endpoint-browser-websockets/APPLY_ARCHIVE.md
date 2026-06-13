@@ -1,6 +1,6 @@
-# Apply archive: processing-data-as-stream-httpclient-endpoint-browser-websockets Stage1 boundary review
+# Apply archive: processing-data-as-stream-httpclient-endpoint-browser-websockets Stage2 NEXT01 transcript
 
-This conspect is part of combined three-conspects Stage1 archive.
+This conspect is part of the combined next-three Stage2/NEXT01 transcript archive.
 
 Target branch:
 

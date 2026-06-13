@@ -1,0 +1,11 @@
+region_source_id,source_id,image_use_id,fileId_short,region,subregion,status,readability,cut_off,confidence,theme,notes
+PDS03A-S001,S-001,IU-001,9197db0d17,PDS03,PDS03A,verified-from-source-image,medium-high,no,high,HttpClient streaming response with ResponseHeadersRead,
+PDS03A-S002,S-002,IU-002,9423825d90,PDS03,PDS03A,verified-from-source-image,medium-high,no,high,"ResponseHeadersRead means headers first, body streamed later",
+PDS03A-S003,S-003,IU-003,70b21bba16,PDS03,PDS03A,verified-from-source-image,medium-high,no,high,Full stream copy loop example,
+PDS03A-S004,S-004,IU-004,e792d02515,PDS03,PDS03A,verified-from-source-image,medium-high,no,high,Practical rules for chunk processing,
+PDS01A-S001,S-006,IU-006,759a0c3eaa,PDS01,PDS01A,verified-from-source-image,medium-high,no,high,Request body stream: ReadAsync returns 0 at end,
+PDS01A-S002,S-007,IU-007,eb22a34337,PDS01,PDS01A,verified-from-source-image,medium-high,no,high,Endpoint request-body loop using ReadAsync,
+PDS03B-S001,S-011,IU-011,ab59ca0404,PDS03,PDS03B,verified-from-source-image,medium-high,no,high,Practical mental model: layers and message boundaries,
+PDS01B-S001,S-014,IU-014,db4553de54,PDS01,PDS01B,verified-from-source-image,medium-high,no,high,Request stream exceptions and aborts,
+PDS01B-S002,S-015,IU-015,641b054b70,PDS01,PDS01B,verified-from-source-image,medium-high,no,high,Practical rule for stream exceptions,
+PDS01B-S003,S-016,IU-016,8574e13822,PDS01,PDS01B,verified-from-source-image,medium-high,no,high,Which exceptions to catch for different APIs,

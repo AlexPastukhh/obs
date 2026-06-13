@@ -1,52 +1,53 @@
 # Current Source of Truth - returning-most-specific-passing-most-generic
 
-Generated: 2026-06-13 08:53:27 UTC
+Generated: 2026-06-13 09:11:01 UTC
 
 ## Current status
 
 ```text
 Stage0: source materialized
 Stage1: boundary review done
-Transcript: not started
+Stage2: NEXT01 transcript done
 ```
 
-## Source material
-
-```text
-Image inventory: data/image-inventory-v001.csv
-Text elements: data/text-elements-raw-v001.csv
-Stage1 boundary review: data/stage1-boundary-review-v001.csv
-Stage1 ledger: data/image-review-ledger-v001.csv
-```
-
-## Counts
-
-```text
-Image uses: 8
-Text labels: 2
-Duplicate image uses by fileId_short: 0
-Stage1 assigned image uses: 8
-Stage1 missing image uses: 0
-Stage1 duplicated assignments: 0
-```
-
-## Candidate regions
+## Verified transcripts
 
 ```text
 RMSG01: Main guideline: accept generic, return specific
 RMSG02: .NET generic/collection hierarchy and immutable collection consequence
 ```
 
+## Current candidate regions
+
+```text
+none
+```
+
+## Boundary corrections
+
+```text
+none
+```
+
+## Duplicate embedded-image use
+
+```text
+none
+```
+
 ## Current next step
 
 ```text
-NEXT01: RMSG01 + RMSG02 = 8 image uses
+Final closure/audit
 ```
 
-## Later
+## Counts
 
 ```text
-Final closure/audit
+Image uses: 8
+Processed image uses: 8
+Pending image uses: 0
+Text labels: 2
 ```
 
 ## Rules
@@ -54,7 +55,7 @@ Final closure/audit
 ```text
 Inventory/contact sheets are checklists, not source of truth.
 Nearest labels are coordinate hints only.
-Every transcript must visually recheck source images.
+Every transcript visually rechecked source images during its pass.
 For large archives, use tar.exe -xf and staged cached diff review.
 Do not duplicate source PNGs in later stage archives unless there is a concrete audit need.
 ```

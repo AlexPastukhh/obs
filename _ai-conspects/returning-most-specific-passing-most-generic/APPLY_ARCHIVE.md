@@ -1,6 +1,6 @@
-# Apply archive: returning-most-specific-passing-most-generic Stage1 boundary review
+# Apply archive: returning-most-specific-passing-most-generic Stage2 NEXT01 transcript
 
-This conspect is part of combined three-conspects Stage1 archive.
+This conspect is part of the combined next-three Stage2/NEXT01 transcript archive.
 
 Target branch:
 
