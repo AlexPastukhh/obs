@@ -1,0 +1,46 @@
+[
+  {
+    "region": "R01",
+    "name": "safety / whether output caching is beneficial",
+    "image_use_count": 8,
+    "text_label_count": 8,
+    "sources": "S-018, S-033, S-034, S-035, S-036, S-037, S-038, S-039",
+    "labels": "T-001, T-002, T-003, T-013, T-014, T-015, T-016, T-060",
+    "decision": "included in combined final transcript pass",
+    "reason": "Top road: is OutputCache safe/beneficial for the endpoint; personal/session data, cookies, side effects, and first summary.",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R02",
+    "name": "cache usefulness decision criteria / hotness / freshness / CDN question",
+    "image_use_count": 14,
+    "text_label_count": 20,
+    "sources": "S-019, S-020, S-021, S-022, S-023, S-024, S-025, S-026, S-027, S-028, S-029, S-030, S-031, S-032",
+    "labels": "T-017, T-018, T-019, T-020, T-021, T-022, T-023, T-024, T-025, T-026, T-027, T-028, T-029, T-030, T-031, T-032, T-033, T-052, T-053, T-054",
+    "decision": "included in combined final transcript pass",
+    "reason": "Middle decision road: cache key reuse, unused entries, expensive endpoints, response size, freshness/dynamic data, and whether caching already happens elsewhere.",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R03",
+    "name": "locking / cache stampede / expiration and catastrophic locking cases",
+    "image_use_count": 17,
+    "text_label_count": 15,
+    "sources": "S-001, S-002, S-003, S-004, S-005, S-006, S-007, S-008, S-009, S-010, S-011, S-012, S-013, S-014, S-015, S-016, S-017",
+    "labels": "T-004, T-005, T-006, T-007, T-008, T-009, T-010, T-011, T-012, T-055, T-056, T-057, T-058, T-059, T-061",
+    "decision": "included in combined final transcript pass",
+    "reason": "Lower-middle road: OutputCache locking, when locking is useful, when it is harmful, expiration time, endpoint cost, response cost, connection quality, and catastrophic locking cases.",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R04",
+    "name": "OutputCache vs CDN / browser cache / revalidation notes",
+    "image_use_count": 0,
+    "text_label_count": 20,
+    "sources": "",
+    "labels": "T-034, T-035, T-036, T-037, T-038, T-039, T-040, T-041, T-042, T-043, T-044, T-045, T-046, T-047, T-048, T-049, T-050, T-051, T-062, T-063",
+    "decision": "included in combined final transcript pass",
+    "reason": "Right text-heavy road: when OutputCache is redundant with CDN, when it is useful even with CDN, CDN misses, private/internal users, app-level cache rules, and 304/revalidation notes.",
+    "remaining_after_pass": 0
+  }
+]

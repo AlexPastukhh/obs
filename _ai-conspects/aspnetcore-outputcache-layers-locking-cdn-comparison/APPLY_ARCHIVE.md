@@ -1,12 +1,14 @@
-# Apply archive - aspnetcore-outputcache-layers-locking-cdn-comparison stage0
+# APPLY ARCHIVE - ASP.NET Core OutputCache final coverage transcript v001
 
-PowerShell, from repository root:
+Target branch: `ai-processed-conspects-text`
+
+## Apply
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnetcore-outputcache-layers-locking-cdn-comparison-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnetcore-outputcache-layers-locking-cdn-comparison-stage1-r01r02r03r04-final-coverage-v001.zip"
 $target = "_ai-conspects\aspnetcore-outputcache-layers-locking-cdn-comparison"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -20,14 +22,14 @@ git add -A -- $target
 git status --short -- $target
 ```
 
-Commit after review:
+## Commit after review
 
 ```powershell
-git commit -m "Start ASP.NET Core OutputCache layers conspect boundary review"
+git commit -m "Complete ASP.NET Core OutputCache conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 
-Rollback target only:
+## Rollback staged target only
 
 ```powershell
 git restore --staged -- $target
