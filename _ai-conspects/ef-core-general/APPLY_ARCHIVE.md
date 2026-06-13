@@ -1,6 +1,6 @@
-# Apply archive: EF Core General Stage2 transcript
+# Apply archive: EF Core General closure audit
 
-Archive type: source-level semantic transcript.
+Archive type: closure audit.
 
 Target branch:
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage2-r04-r05-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-ef-core-general-closure-audit-v001.zip
 ```
 
 ## Apply commands
@@ -27,7 +27,7 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\ef-core-general"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-stage2-r04-r05-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-closure-audit-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -46,7 +46,7 @@ git status --short -- $target
 ## Commit commands
 
 ```powershell
-git commit -m "Add EF Core General Stage2 transcript"
+git commit -m "Close EF Core General coverage audit"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git clean -fd -- _ai-conspects/ef-core-general
 
 ## Notes
 
-This archive processes R04/R05 and leaves no EF Core General transcript candidates pending. Next archive should be closure audit.
+This archive does not add new transcripts. It closes EF Core General by source coverage after Stage1 and Stage2.
