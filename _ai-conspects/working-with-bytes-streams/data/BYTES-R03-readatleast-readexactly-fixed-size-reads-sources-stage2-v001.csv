@@ -1,0 +1,114 @@
+source_id,image_use_id,fileId_short,stage0_group,stage2_region,status,theme,transcript,notes
+S-025,IU-025,7fca9d5d4f,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,ReadExactly area intro.,"ReadExactly area intro.
+
+Visible topic:
+- `ReadExactly`
+- `ReadAtLeast`
+- fixed-size reads
+- not the same as reading a whole stream
+
+Meaning:
+This region is about guaranteeing a required number of bytes from a stream. It is not about convenient full-body buffering.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-026,IU-026,a2ddc4fcde,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,Why ReadAsync is not enough.,"Why ReadAsync is not enough.
+
+Visible idea:
+`ReadAsync(buffer)` may return fewer bytes than the buffer size.
+
+Meaning:
+If you requested 100 bytes, getting 20 bytes does not automatically mean the stream is finished. It can mean only 20 bytes were available now. For exact-size reads, you need a loop or a helper.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-027,IU-027,2f51507f51,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,ReadExactly mental model.,"ReadExactly mental model.
+
+Visible:
+Read exactly N bytes into a buffer.
+
+Meaning:
+`ReadExactly` keeps reading until the destination buffer is full. If the stream ends before that, it fails. This is useful when the format/protocol requires exactly that many bytes.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-028,IU-028,5786c00c51,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,ReadExactly use cases.,"ReadExactly use cases.
+
+Visible examples:
+- fixed binary header
+- message prefix
+- known-size protocol field
+- file format structure
+
+Meaning:
+Use `ReadExactly` when a missing byte means the input is truncated or invalid, not when you simply want whatever data is available.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-029,IU-029,e0a1064f58,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,ReadAtLeast mental model.,"ReadAtLeast mental model.
+
+Visible:
+Read at least minimum bytes.
+
+Meaning:
+`ReadAtLeast` tries to fill a buffer until at least the requested minimum count is available. It may read more than the minimum, up to the destination buffer size, and returns the actual count read.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-030,IU-030,2889d39afb,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,ReadAtLeast vs ReadExactly.,"ReadAtLeast vs ReadExactly.
+
+Visible contrast:
+- `ReadExactly`: destination must be filled / exact count required.
+- `ReadAtLeast`: minimum count required, can return more.
+
+Meaning:
+Choose based on parser needs. If the next step needs exactly 4-byte length prefix, use ReadExactly. If it can process after at least N bytes, ReadAtLeast may fit.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-031,IU-031,8f2c1e0fcd,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,EOF behavior.,"EOF behavior.
+
+Visible notes:
+- If the stream ends before enough bytes arrive, exact/minimum helpers can throw.
+- There is behavior around `throwOnEndOfStream`.
+
+Meaning:
+EOF is not the same as a normal partial read. If the contract says enough bytes must exist, early EOF is an error.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-032,IU-032,e840872a80,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,throwOnEndOfStream option.,"throwOnEndOfStream option.
+
+Visible:
+ReadAtLeast overload can take `throwOnEndOfStream`.
+
+Meaning:
+When true, early EOF before the minimum count is an exception. When false, the method can return fewer bytes if the stream ended, and caller must handle that result.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-033,IU-033,e26265df6e,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,What count means.,"What count means.
+
+Visible reminder:
+- count is a number of bytes to read.
+- it is not an end index.
+
+Meaning:
+When using buffer slices or array overloads, keep length math correct: start + count describes the segment. Do not confuse count with final index.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-034,IU-034,f4daf233e1,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,Loop hidden inside helper.,"Loop hidden inside helper.
+
+Visible:
+ReadExactly/ReadAtLeast are convenience helpers around repeated reads.
+
+Meaning:
+They are not special transport primitives. They repeatedly call the underlying stream read until the required condition is satisfied or EOF/failure happens.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-035,IU-035,f115a1fc2f,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,Fixed-size read with buffer slice.,"Fixed-size read with buffer slice.
+
+Visible code-like idea:
+Use a buffer/slice with the exact size you want.
+
+Meaning:
+For exact reads, the destination size often expresses the required count. Passing a slice also prevents accidental overwrite outside the intended range.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-036,IU-036,a26d9ea469,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,Protocol parser pattern.,"Protocol parser pattern.
+
+Visible:
+Read fixed header, parse length, then read payload according to length.
+
+Meaning:
+A common parser pattern is:
+1. ReadExactly header bytes.
+2. Decode length/type.
+3. Validate length against max.
+4. ReadExactly or stream payload according to that length.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-037,IU-037,a27eb58b49,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,Do not use exact read for unknown whole stream.,"Do not use exact read for unknown whole stream.
+
+Visible warning:
+If you do not know total length, ReadExactly is not the right read-all primitive.
+
+Meaning:
+For unknown streams, either stream/process chunks or copy with bounded buffering. Exact reads require a known count.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-038,IU-038,d877046c28,BYTES-R03-readatleast-readexactly-fixed-size-reads,BYTES-R03,verified-visible-semantic-transcript,Final rule summary.,"Final rule summary.
+
+Visible summary:
+- ReadAsync = may return partial.
+- ReadExactly = fill or fail.
+- ReadAtLeast = minimum or optional early EOF handling.
+
+Meaning:
+The core model is count guarantee: use the weakest helper that matches the protocol requirement, and keep memory limits explicit.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

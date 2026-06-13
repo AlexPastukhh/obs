@@ -1,0 +1,163 @@
+{
+  "generated": "2026-06-13 07:33:25 UTC",
+  "group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+  "region": "BYTES-R03",
+  "source_count": 14,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-025",
+      "image_use_id": "IU-025",
+      "fileId_short": "7fca9d5d4f",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "ReadExactly area intro.",
+      "transcript": "ReadExactly area intro.\n\nVisible topic:\n- `ReadExactly`\n- `ReadAtLeast`\n- fixed-size reads\n- not the same as reading a whole stream\n\nMeaning:\nThis region is about guaranteeing a required number of bytes from a stream. It is not about convenient full-body buffering.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-026",
+      "image_use_id": "IU-026",
+      "fileId_short": "a2ddc4fcde",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Why ReadAsync is not enough.",
+      "transcript": "Why ReadAsync is not enough.\n\nVisible idea:\n`ReadAsync(buffer)` may return fewer bytes than the buffer size.\n\nMeaning:\nIf you requested 100 bytes, getting 20 bytes does not automatically mean the stream is finished. It can mean only 20 bytes were available now. For exact-size reads, you need a loop or a helper.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-027",
+      "image_use_id": "IU-027",
+      "fileId_short": "2f51507f51",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "ReadExactly mental model.",
+      "transcript": "ReadExactly mental model.\n\nVisible:\nRead exactly N bytes into a buffer.\n\nMeaning:\n`ReadExactly` keeps reading until the destination buffer is full. If the stream ends before that, it fails. This is useful when the format/protocol requires exactly that many bytes.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-028",
+      "image_use_id": "IU-028",
+      "fileId_short": "5786c00c51",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "ReadExactly use cases.",
+      "transcript": "ReadExactly use cases.\n\nVisible examples:\n- fixed binary header\n- message prefix\n- known-size protocol field\n- file format structure\n\nMeaning:\nUse `ReadExactly` when a missing byte means the input is truncated or invalid, not when you simply want whatever data is available.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-029",
+      "image_use_id": "IU-029",
+      "fileId_short": "e0a1064f58",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "ReadAtLeast mental model.",
+      "transcript": "ReadAtLeast mental model.\n\nVisible:\nRead at least minimum bytes.\n\nMeaning:\n`ReadAtLeast` tries to fill a buffer until at least the requested minimum count is available. It may read more than the minimum, up to the destination buffer size, and returns the actual count read.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-030",
+      "image_use_id": "IU-030",
+      "fileId_short": "2889d39afb",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "ReadAtLeast vs ReadExactly.",
+      "transcript": "ReadAtLeast vs ReadExactly.\n\nVisible contrast:\n- `ReadExactly`: destination must be filled / exact count required.\n- `ReadAtLeast`: minimum count required, can return more.\n\nMeaning:\nChoose based on parser needs. If the next step needs exactly 4-byte length prefix, use ReadExactly. If it can process after at least N bytes, ReadAtLeast may fit.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-031",
+      "image_use_id": "IU-031",
+      "fileId_short": "8f2c1e0fcd",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "EOF behavior.",
+      "transcript": "EOF behavior.\n\nVisible notes:\n- If the stream ends before enough bytes arrive, exact/minimum helpers can throw.\n- There is behavior around `throwOnEndOfStream`.\n\nMeaning:\nEOF is not the same as a normal partial read. If the contract says enough bytes must exist, early EOF is an error.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-032",
+      "image_use_id": "IU-032",
+      "fileId_short": "e840872a80",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "throwOnEndOfStream option.",
+      "transcript": "throwOnEndOfStream option.\n\nVisible:\nReadAtLeast overload can take `throwOnEndOfStream`.\n\nMeaning:\nWhen true, early EOF before the minimum count is an exception. When false, the method can return fewer bytes if the stream ended, and caller must handle that result.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-033",
+      "image_use_id": "IU-033",
+      "fileId_short": "e26265df6e",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "What count means.",
+      "transcript": "What count means.\n\nVisible reminder:\n- count is a number of bytes to read.\n- it is not an end index.\n\nMeaning:\nWhen using buffer slices or array overloads, keep length math correct: start + count describes the segment. Do not confuse count with final index.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-034",
+      "image_use_id": "IU-034",
+      "fileId_short": "f4daf233e1",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Loop hidden inside helper.",
+      "transcript": "Loop hidden inside helper.\n\nVisible:\nReadExactly/ReadAtLeast are convenience helpers around repeated reads.\n\nMeaning:\nThey are not special transport primitives. They repeatedly call the underlying stream read until the required condition is satisfied or EOF/failure happens.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-035",
+      "image_use_id": "IU-035",
+      "fileId_short": "f115a1fc2f",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Fixed-size read with buffer slice.",
+      "transcript": "Fixed-size read with buffer slice.\n\nVisible code-like idea:\nUse a buffer/slice with the exact size you want.\n\nMeaning:\nFor exact reads, the destination size often expresses the required count. Passing a slice also prevents accidental overwrite outside the intended range.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-036",
+      "image_use_id": "IU-036",
+      "fileId_short": "a26d9ea469",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Protocol parser pattern.",
+      "transcript": "Protocol parser pattern.\n\nVisible:\nRead fixed header, parse length, then read payload according to length.\n\nMeaning:\nA common parser pattern is:\n1. ReadExactly header bytes.\n2. Decode length/type.\n3. Validate length against max.\n4. ReadExactly or stream payload according to that length.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-037",
+      "image_use_id": "IU-037",
+      "fileId_short": "a27eb58b49",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Do not use exact read for unknown whole stream.",
+      "transcript": "Do not use exact read for unknown whole stream.\n\nVisible warning:\nIf you do not know total length, ReadExactly is not the right read-all primitive.\n\nMeaning:\nFor unknown streams, either stream/process chunks or copy with bounded buffering. Exact reads require a known count.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-038",
+      "image_use_id": "IU-038",
+      "fileId_short": "d877046c28",
+      "stage0_group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+      "stage2_region": "BYTES-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Final rule summary.",
+      "transcript": "Final rule summary.\n\nVisible summary:\n- ReadAsync = may return partial.\n- ReadExactly = fill or fail.\n- ReadAtLeast = minimum or optional early EOF handling.\n\nMeaning:\nThe core model is count guarantee: use the weakest helper that matches the protocol requirement, and keep memory limits explicit.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

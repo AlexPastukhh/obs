@@ -1,0 +1,24 @@
+{
+  "generated": "2026-06-13 07:33:25 UTC",
+  "group": "BYTES-R03-readatleast-readexactly-fixed-size-reads",
+  "region": "BYTES-R03",
+  "source_count": 14,
+  "included_sources": [
+    "S-025",
+    "S-026",
+    "S-027",
+    "S-028",
+    "S-029",
+    "S-030",
+    "S-031",
+    "S-032",
+    "S-033",
+    "S-034",
+    "S-035",
+    "S-036",
+    "S-037",
+    "S-038"
+  ],
+  "meaning": "Fixed-size stream reads: ReadExactly, ReadAtLeast, Stream.Read partial-read behavior, EOF handling, count guarantees, exceptions, protocol headers/frames, and when exact/minimum reads are appropriate.",
+  "boundary_decision": "included after Stage0 candidate split and Stage2 visual/semantic source review"
+}
