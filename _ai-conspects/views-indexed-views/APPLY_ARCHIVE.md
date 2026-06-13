@@ -1,6 +1,6 @@
-# Apply archive: views-indexed-views Stage4 NEXT03 transcript
+# Apply archive: views-indexed-views Stage5 final closure audit
 
-Archive type: verified transcript / final conspect batch before audit.
+Archive type: final closure / audit.
 
 Target branch:
 
@@ -13,7 +13,7 @@ Use `tar.exe -xf` instead of PowerShell `Expand-Archive`.
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage4-next03-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage5-final-closure-audit-v001.zip
 ```
 
 ## Apply commands
@@ -23,8 +23,8 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\views-indexed-views"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage4-next03-transcript-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\views-indexed-views-stage4-next03-transcript-cached.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-views-indexed-views-stage5-final-closure-audit-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\views-indexed-views-stage5-final-closure-audit-cached.diff"
 
 git status --short
 
@@ -46,7 +46,7 @@ Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
 ## Commit commands
 
 ```powershell
-git commit -m "Add views indexed views conspect NEXT03 transcript"
+git commit -m "Finalize views indexed views conspect audit"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,6 +60,4 @@ git clean -fd -- "$target"
 
 ## Notes
 
-This archive completes VIV04 and does not duplicate Stage0 source images.
-
-Next step should be final closure/audit.
+This archive marks the views-indexed-views conspect complete if the cached diff matches the audit summary.

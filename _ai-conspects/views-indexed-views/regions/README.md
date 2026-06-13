@@ -1,5 +1,7 @@
 # Regions - views-indexed-views
 
+Status: **complete**
+
 Verified transcripts:
 
 ```text
@@ -9,15 +11,18 @@ VIV03 - Indexed views fundamentals, materialization, clustered index and write c
 VIV04 - SCHEMABINDING and indexed-view requirements/rules
 ```
 
-Next step:
+Final closure audit:
 
 ```text
-Final closure/audit
+Expected image uses: 53
+Processed image uses: 53
+Missing: 0
+Duplicates: 0
+Unreviewed: 0
+Candidate-only: 0
+Boundary corrections ok: true
+Duplicate embedded-image use mismatch: false
+Duplicate embedded-image use: none
 ```
 
-Each transcript includes:
-
-```text
-## 0.1 Area overview / key ideas / reading quality
-## 0.2 Coverage / boundary review
-```
+No pending transcript regions remain.

@@ -1,44 +1,43 @@
-# MANIFEST - Stage4 NEXT03 transcript
+# MANIFEST - Stage5 final closure audit
 
-Archive type: **verified transcript / final conspect batch before audit**  
+Archive type: **final closure / audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 07:53:32 UTC
+Generated: 2026-06-13 07:56:48 UTC
 
 ## Done
 
-- NEXT03 transcript created.
-- Processed source count: 12.
-- Processed region: VIV04.
-- Included text/context labels: 10.
-- Boundary corrections: none.
+- Final closure audit created.
+- Status: `complete`.
+- Expected image uses: 53.
+- Processed image uses: 53.
+- Missing: 0.
+- Duplicates: 0.
+- Unreviewed: 0.
+- Candidate-only: 0.
+- Region mismatches: 0.
+- Subregion mismatches: 0.
+- Boundary corrections ok: true.
+- Duplicate embedded-image use mismatch: false.
 - Duplicate embedded-image uses: none.
-- This archive intentionally does not duplicate Stage0 source PNGs.
 
 ## Now
 
 - Apply and inspect cached diff.
-- Commit if transcript and boundary decisions are acceptable.
+- Commit if audit summary is acceptable.
 
 ## Next
 
-- Final closure/audit.
+- No next step inside this conspect.
+- Move to another conspect or create repeat material.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/views-indexed-views/04-stage4-next03-transcript.md
+_ai-conspects/views-indexed-views/05-stage5-final-closure-audit.md
 _ai-conspects/views-indexed-views/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/views-indexed-views/regions/VIV04-schemabinding-indexed-view-requirements.md
 _ai-conspects/views-indexed-views/regions/README.md
-_ai-conspects/views-indexed-views/data/NEXT03-sources-stage4-v001.csv
-_ai-conspects/views-indexed-views/data/NEXT03-sources-stage4-v001.json
-_ai-conspects/views-indexed-views/data/NEXT03-text-context-stage4-v001.csv
-_ai-conspects/views-indexed-views/data/NEXT03-text-context-stage4-v001.json
-_ai-conspects/views-indexed-views/data/NEXT03-boundary-review-stage4-v001.csv
-_ai-conspects/views-indexed-views/data/NEXT03-boundary-review-stage4-v001.json
-_ai-conspects/views-indexed-views/data/NEXT03-area-understanding-stage4-v001.json
-_ai-conspects/views-indexed-views/data/image-review-ledger-v001.csv
-_ai-conspects/views-indexed-views/data/image-review-ledger-v001.json
+_ai-conspects/views-indexed-views/data/final-coverage-audit-stage5-v001.csv
+_ai-conspects/views-indexed-views/data/final-coverage-audit-stage5-v001.json
 _ai-conspects/views-indexed-views/APPLY_ARCHIVE.md
 _ai-conspects/views-indexed-views/MANIFEST.md
 ```
