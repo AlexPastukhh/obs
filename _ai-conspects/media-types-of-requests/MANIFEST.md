@@ -1,38 +1,37 @@
-# MANIFEST - Media Types Of Requests Stage2 R03/R04 Transcript
+# MANIFEST - Media Types Of Requests Closure Audit
 
-Archive type: **source-level semantic transcript**  
+Archive type: **closure audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 08:05:13 UTC
+Generated: 2026-06-13 08:09:17 UTC
 
 ## Direction check
 
 Goal:
-Close remaining Media Types Of Requests transcript candidates after Stage1.
+Close Media Types Of Requests after Stage1 and Stage2.
 
 Done:
-Stage1 processed 24 images.
+Stage1 and Stage2 processed all 49 source image-use records.
 
 This step:
-Add Stage2 transcript for MEDIA-R03/MEDIA-R04, 25 source images.
+Add Media Types Of Requests closure audit.
 
 Why:
-This closes the form/multipart and endpoint-metadata/errors blocks before closure audit.
+The conspect must be checked at closure level before being considered closed.
 
 Next:
 1. review staged file list/status;
 2. commit;
-3. run Media Types Of Requests closure audit.
+3. stop Media Types Of Requests transcript work unless a precision patch or repeat-material layer is needed.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/media-types-of-requests/03-stage2-r03-r04-transcript.md
-_ai-conspects/media-types-of-requests/regions/MEDIA-R03-form-urlencoded-multipart-fromform-files.md
-_ai-conspects/media-types-of-requests/regions/MEDIA-R04-endpoints-consumes-produces-errors.md
-_ai-conspects/media-types-of-requests/data/*stage2-v001.*
+_ai-conspects/media-types-of-requests/04-closure-audit.md
+_ai-conspects/media-types-of-requests/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/media-types-of-requests/data/MediaTypesOfRequests-closure-audit-v001.csv
+_ai-conspects/media-types-of-requests/data/MediaTypesOfRequests-closure-audit-v001.json
 _ai-conspects/media-types-of-requests/data/media-types-of-requests-image-review-ledger-v1.csv
 _ai-conspects/media-types-of-requests/data/media-types-of-requests-image-review-ledger-v1.json
-_ai-conspects/media-types-of-requests/CURRENT_SOURCE_OF_TRUTH.md
 _ai-conspects/media-types-of-requests/MANIFEST.md
 _ai-conspects/media-types-of-requests/APPLY_ARCHIVE.md
 ```
@@ -40,7 +39,7 @@ _ai-conspects/media-types-of-requests/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage2 processed: 25
-Stage0 remaining candidates after Stage2: 0
-Next: Media Types Of Requests closure audit
+Media Types Of Requests sources audited: 49 / 49
+Pending candidates: 0
+Next: closed by source coverage
 ```

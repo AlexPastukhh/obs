@@ -1,6 +1,6 @@
 # Current Source of Truth - Media Types Of Requests
 
-Generated: 2026-06-13 08:05:13 UTC
+Generated: 2026-06-13 08:09:17 UTC
 
 ## Current policy
 
@@ -51,15 +51,17 @@ Precision patches can upgrade individual sources to verbatim code later.
 Media Types Of Requests Stage0 boundary review v001: completed
 Media Types Of Requests Stage1 R01/R02 transcript v001: completed
 Media Types Of Requests Stage2 R03/R04 transcript v001: completed
+Media Types Of Requests closure audit v001: completed
 Image uses inventoried: 49
 Stage1 processed: 24
 Stage2 processed: 25
 Pending candidates: 0
+Bad placeholder/OCR-error processed rows: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: Media Types Of Requests closure audit
-Expected count: 49 / 49
+Media Types Of Requests: closed by source coverage
+Next: no further Media Types Of Requests transcript work unless precision patch or repeat-material layer is requested.
 ```
