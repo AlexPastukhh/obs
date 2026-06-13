@@ -1,0 +1,59 @@
+{
+  "generated": "2026-06-13 06:07:33 UTC",
+  "stage": "3",
+  "batch_id": "NEXT02",
+  "status": "reviewed-and-transcribed-v001",
+  "processed_count": 15,
+  "pending_count": 17,
+  "boundary_corrections": [],
+  "regions": {
+    "CH03": {
+      "name": "Concurrency assumptions and completion edge cases",
+      "processed_sources": [
+        "S-014",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037"
+      ],
+      "key_ideas": [
+        "SingleReader/SingleWriter are performance hints, not exact counts.",
+        "These options express whether access is single or potentially multiple.",
+        "TryComplete is useful for idempotent shutdown paths.",
+        "TryComplete usually returns false when the channel is already completed."
+      ]
+    },
+    "CH04": {
+      "name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "processed_sources": [
+        "S-038",
+        "S-039",
+        "S-040",
+        "S-041",
+        "S-042",
+        "S-043",
+        "S-044",
+        "S-045",
+        "S-046",
+        "S-047"
+      ],
+      "key_ideas": [
+        "WaitToReadAsync + TryRead is useful for burst draining and batching.",
+        "TryRead drains only currently available items without waiting.",
+        "WaitToWriteAsync + TryWrite supports custom bounded-channel policies.",
+        "Batching reduces per-item overhead such as database calls.",
+        "ReadAllAsync is simpler for one-at-a-time processing but less direct for custom batch boundaries."
+      ]
+    }
+  },
+  "pending_regions": {
+    "CH05": "WebSockets/application examples and connection manager channel pattern"
+  },
+  "reading_quality": {
+    "overall": "high",
+    "limitations": [
+      "Most screenshots are readable. Some code screenshots are compact but core text/code is visible."
+    ],
+    "confidence": "High for CH03/CH04 concepts and visible code."
+  }
+}

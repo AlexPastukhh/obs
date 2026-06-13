@@ -1,0 +1,33 @@
+source_id,decision,region,subregion,reason
+S-014,processed-in-ch03-v001,CH03,CH03A,SingleReader / SingleWriter options
+S-034,processed-in-ch03-v001,CH03,CH03A,Can we specify number of writers/readers?
+S-035,processed-in-ch03-v001,CH03,CH03A,SingleReader/SingleWriter for unbounded and bounded channels
+S-036,processed-in-ch03-v001,CH03,CH03B,Ignore TryComplete result if shutdown is idempotent
+S-037,processed-in-ch03-v001,CH03,CH03B,Can TryComplete fail only because it was already completed?
+S-038,processed-in-ch04-v001,CH04,CH04A,WaitToReadAsync + TryRead burst draining
+S-039,processed-in-ch04-v001,CH04,CH04A,Example: batching reads
+S-040,processed-in-ch04-v001,CH04,CH04A,WaitToWriteAsync + TryWrite for bounded channels
+S-041,processed-in-ch04-v001,CH04,CH04A,Drop old telemetry instead of waiting forever
+S-042,processed-in-ch04-v001,CH04,CH04B,Batching means collect available items then process together
+S-043,processed-in-ch04-v001,CH04,CH04B,What each part of batching code means
+S-044,processed-in-ch04-v001,CH04,CH04B,batch.Clear and TryRead inner loop
+S-045,processed-in-ch04-v001,CH04,CH04B,Add item and save batch
+S-046,processed-in-ch04-v001,CH04,CH04B,Why WaitToReadAsync + TryRead makes sense
+S-047,processed-in-ch04-v001,CH04,CH04B,Why not just ReadAllAsync?
+S-012,pending-later-transcript,CH05,CH05A,not part of NEXT02
+S-013,pending-later-transcript,CH05,CH05A,not part of NEXT02
+S-021,pending-later-transcript,CH05,CH05A,not part of NEXT02
+S-048,pending-later-transcript,CH05,CH05B,not part of NEXT02
+S-049,pending-later-transcript,CH05,CH05B,not part of NEXT02
+S-050,pending-later-transcript,CH05,CH05B,not part of NEXT02
+S-051,pending-later-transcript,CH05,CH05B,not part of NEXT02
+S-052,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-053,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-054,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-055,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-056,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-057,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-058,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-059,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-060,pending-later-transcript,CH05,CH05C,not part of NEXT02
+S-061,pending-later-transcript,CH05,CH05C,not part of NEXT02
