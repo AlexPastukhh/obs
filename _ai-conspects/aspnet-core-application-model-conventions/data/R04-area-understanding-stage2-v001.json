@@ -1,0 +1,33 @@
+{
+  "region": "R04",
+  "title": "ParameterModelBase / PropertyModel / SelectorModel / ApiExplorerModel / BindingInfo",
+  "included_image_uses": [
+    "S-036",
+    "S-037",
+    "S-038",
+    "S-039",
+    "S-040",
+    "S-041",
+    "S-042",
+    "S-043",
+    "S-044",
+    "S-045",
+    "S-046",
+    "S-047",
+    "S-048",
+    "S-049",
+    "S-050"
+  ],
+  "count": 15,
+  "meaning": [
+    "ParameterModelBase is shared base metadata for parameter-like model elements.",
+    "PropertyModel represents controller/page/model properties that can participate in binding/metadata.",
+    "SelectorModel represents route/action selection metadata including attributes, endpoint metadata and action constraints.",
+    "ApiExplorerModel controls API explorer/OpenAPI visibility, grouping and naming metadata.",
+    "BindingInfo contains model binding metadata such as binding source, binder model name and binder type."
+  ],
+  "boundary_notes": [
+    "R03 covers the main controller/action/parameter object graph.",
+    "R04 is the late metadata layer that conventions often mutate for binding, routes and API explorer behavior."
+  ]
+}

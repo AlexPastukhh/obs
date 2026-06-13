@@ -1,6 +1,6 @@
 # Current Source of Truth - ASP.NET Core Application Model Conventions
 
-Generated: 2026-06-13 07:29:58 UTC
+Generated: 2026-06-13 07:33:21 UTC
 
 ## Policy
 
@@ -14,20 +14,20 @@ A region is complete only after visual/semantic boundary review and verified tra
 Stage0 boundary review: done
 R01 application model conventions overview / attributes: transcript v001 done
 R02 convention interfaces / app-controller-action-parameter: transcript v001 done
-P02/R03R04 application model object graph and metadata models: next
+R03 ApplicationModel / ControllerModel / ActionModel / ParameterModel: transcript v001 done
+R04 ParameterModelBase / PropertyModel / SelectorModel / ApiExplorerModel / BindingInfo: transcript v001 done
+Final coverage audit: next
 ```
 
-## P01 boundary decisions
+## Coverage after Stage2
 
 ```text
-R01 included:
-7 image uses
-
-R02 included:
-13 image uses
-
-Checked-not-P01 / reserved for P02:
-S-021, S-022, S-023, S-024, S-025, S-026, S-027, S-028, S-029, S-030, S-031, S-032, S-033, S-034, S-035, S-036, S-037, S-038, S-039, S-040, S-041, S-042, S-043, S-044, S-045, S-046, S-047, S-048, S-049, S-050
+total image uses: 50
+processed-in-r01-v001: 7
+processed-in-r02-v001: 13
+processed-in-r03-v001: 15
+processed-in-r04-v001: 15
+pending/problem rows before final audit: 0
 ```
 
 ## Current split policy
@@ -41,8 +41,8 @@ Exception: 120+ only on explicit request or one very cohesive road.
 ## Next pass
 
 ```text
-P02 / R03R04:
-ApplicationModel, ControllerModel, ActionModel, ParameterModel,
-ParameterModelBase, PropertyModel, SelectorModel,
-ApiExplorerModel and BindingInfo.
+Final coverage audit:
+verify all 50 image uses are processed,
+no candidate/reserved/pending/unreviewed rows remain,
+record coverage-complete or concrete problems.
 ```

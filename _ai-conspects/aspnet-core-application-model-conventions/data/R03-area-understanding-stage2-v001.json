@@ -1,0 +1,33 @@
+{
+  "region": "R03",
+  "title": "Application / Controller / Action / Parameter models",
+  "included_image_uses": [
+    "S-021",
+    "S-022",
+    "S-023",
+    "S-024",
+    "S-025",
+    "S-026",
+    "S-027",
+    "S-028",
+    "S-029",
+    "S-030",
+    "S-031",
+    "S-032",
+    "S-033",
+    "S-034",
+    "S-035"
+  ],
+  "count": 15,
+  "meaning": [
+    "The application model is a tree/graph representing MVC application structure discovered at startup.",
+    "ApplicationModel contains controllers and global metadata.",
+    "ControllerModel contains action models, controller filters/selectors/properties and controller-level metadata.",
+    "ActionModel contains action-specific metadata, selectors, filters, parameters and route/action details.",
+    "ParameterModel represents action parameters and carries parameter-level binding/metadata."
+  ],
+  "boundary_notes": [
+    "P01 covered the conventions/interfaces that mutate this graph.",
+    "R04 covers related metadata model types such as SelectorModel, ApiExplorerModel and BindingInfo."
+  ]
+}
