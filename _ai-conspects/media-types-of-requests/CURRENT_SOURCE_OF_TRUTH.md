@@ -1,6 +1,6 @@
 # Current Source of Truth - Media Types Of Requests
 
-Generated: 2026-06-13 07:58:28 UTC
+Generated: 2026-06-13 08:05:13 UTC
 
 ## Current policy
 
@@ -40,7 +40,7 @@ the source stays pending and must not be marked processed.
 ## Transcript precision policy
 
 ```text
-Stage1 transcript level: source-level semantic transcript.
+Stage1/Stage2 transcript level: source-level semantic transcript.
 For exact C# punctuation, use preserved Stage0 source PNGs.
 Precision patches can upgrade individual sources to verbatim code later.
 ```
@@ -50,14 +50,16 @@ Precision patches can upgrade individual sources to verbatim code later.
 ```text
 Media Types Of Requests Stage0 boundary review v001: completed
 Media Types Of Requests Stage1 R01/R02 transcript v001: completed
+Media Types Of Requests Stage2 R03/R04 transcript v001: completed
 Image uses inventoried: 49
 Stage1 processed: 24
-Pending candidates: 25
+Stage2 processed: 25
+Pending candidates: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: MediaTypesOfRequests-stage2 transcript = MEDIA-R03 + MEDIA-R04
-Expected count: 25 images
+Next: Media Types Of Requests closure audit
+Expected count: 49 / 49
 ```

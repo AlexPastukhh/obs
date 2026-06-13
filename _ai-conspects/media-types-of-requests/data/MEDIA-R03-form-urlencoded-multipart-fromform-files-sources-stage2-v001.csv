@@ -1,0 +1,112 @@
+source_id,image_use_id,fileId_short,stage0_group,stage2_region,status,theme,transcript,notes
+S-025,IU-025,2cf08118b6,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,Form media-type branch.,"Form media-type branch.
+
+Visible topic:
+- application/x-www-form-urlencoded
+- multipart/form-data
+- [FromForm]
+- form fields and files
+
+Meaning:
+This starts the form branch: form media types are not JSON and are usually handled by form binding in ASP.NET Core.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-026,IU-026,dbc51eb7a8,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,application/x-www-form-urlencoded shape.,"application/x-www-form-urlencoded shape.
+
+Visible:
+- classic key/value pairs.
+- body looks like `name=value&age=20`.
+- good for simple HTML forms and login-style data.
+- no file content.
+
+Meaning:
+Use x-www-form-urlencoded when the body is simple flat form fields, not files or nested/mixed binary content.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-027,IU-027,102d4a5966,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,[FromForm] with form-urlencoded.,"[FromForm] with form-urlencoded.
+
+Visible code:
+- action parameter with `[FromForm]`.
+- login or form DTO fields.
+- Content-Type: application/x-www-form-urlencoded.
+
+Meaning:
+[FromForm] reads values from submitted form data. For simple fields, both browser forms and FormUrlEncodedContent can feed this path.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-028,IU-028,46eadebbbe,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,multipart/form-data shape.,"multipart/form-data shape.
+
+Visible:
+- body has multiple parts.
+- each part has Content-Disposition.
+- file parts have filename and content type.
+- boundary separates parts.
+
+Meaning:
+Multipart is a container format for form fields and binary file parts in the same request.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-029,IU-029,6400c4d942,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,IFormFile upload.,"IFormFile upload.
+
+Visible code:
+- controller action receives `[FromForm] IFormFile file`.
+- maybe additional `[FromForm]` fields.
+- endpoint consumes multipart/form-data.
+
+Meaning:
+IFormFile binding is for multipart file uploads. It is not for application/json or raw octet-stream uploads.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-030,IU-030,4d24af0060,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,Multiple files.,"Multiple files.
+
+Visible:
+- `List<IFormFile>` or `IFormFile[]`.
+- field name must match the form field.
+- multipart request can include repeated file fields.
+
+Meaning:
+For multiple file upload, multipart/form-data can carry several file parts under the same or different field names.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-031,IU-031,b0d8109358,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,Metadata + file in multipart.,"Metadata + file in multipart.
+
+Visible:
+- fields like title/description.
+- file part.
+- DTO + IFormFile or separate parameters.
+
+Meaning:
+When a request needs file plus text metadata, multipart/form-data is usually the natural media type.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-032,IU-032,d61c25ef6e,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,JSON plus file problem.,"JSON plus file problem.
+
+Visible idea:
+- If you send JSON body and file together, plain application/json cannot carry a file part as a separate stream.
+- Use multipart/form-data and include JSON metadata as a part/string or model binder custom logic.
+
+Meaning:
+One request body has one top-level media type. Mixed file + JSON metadata normally means multipart, not two independent bodies.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-033,IU-033,8b77f9fb32,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,Postman / browser client settings.,"Postman / browser client settings.
+
+Visible:
+- In Postman use form-data for files.
+- Browser FormData automatically sets multipart boundary.
+- Do not manually set boundary incorrectly.
+
+Meaning:
+Let the client library create the multipart Content-Type including boundary. Manual header mistakes often break server parsing.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-034,IU-034,a26752b65b,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,Form binding vs body input formatter.,"Form binding vs body input formatter.
+
+Visible:
+- [FromForm] uses form readers/model binding.
+- [FromBody] uses input formatters like JSON.
+- Different pipelines.
+
+Meaning:
+A parameter source matters. A form request should normally bind with [FromForm], while JSON uses [FromBody].",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-035,IU-035,6dfc2050c8,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,When multipart is wrong.,"When multipart is wrong.
+
+Visible warnings:
+- If body is one raw file only, application/octet-stream can be simpler.
+- If body is pure JSON, application/json is simpler.
+- Multipart is for mixed parts / file form.
+
+Meaning:
+Do not use multipart automatically for every POST. Pick it when the body is truly multi-part.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-036,IU-036,5a7a070e22,MEDIA-R03-form-urlencoded-multipart-fromform-files,MEDIA-R03,verified-visible-semantic-transcript,Multipart size/security notes.,"Multipart size/security notes.
+
+Visible:
+- file size limits.
+- request size limits.
+- streaming large files.
+- temp storage / memory implications.
+
+Meaning:
+Multipart upload endpoints still need limits and streaming/storage decisions. IFormFile is convenient but can involve buffering.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

@@ -1,0 +1,115 @@
+source_id,image_use_id,fileId_short,stage0_group,stage2_region,status,theme,transcript,notes
+S-037,IU-037,3496bdde45,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,[Consumes] attribute.,"[Consumes] attribute.
+
+Visible:
+- `[Consumes(""application/json"")]`
+- `[Consumes(""multipart/form-data"")]`
+- controls/declares what request content types the action accepts.
+
+Meaning:
+Use [Consumes] to restrict and document expected request Content-Type, especially when overloads/actions could otherwise be ambiguous.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-038,IU-038,5401f93bf5,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,[Produces] attribute.,"[Produces] attribute.
+
+Visible:
+- `[Produces(""application/json"")]`
+- maybe response media type.
+
+Meaning:
+[Produces] is about response content type/documentation, not request body parsing. It belongs to output formatting/metadata.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-039,IU-039,606f4408a0,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Consumes vs Produces.,"Consumes vs Produces.
+
+Visible contrast:
+- Consumes = request Content-Type.
+- Produces = response Content-Type / Accept negotiation/documentation.
+
+Meaning:
+Do not confuse inbound and outbound media type metadata. Content-Type describes what is sent; Accept describes what response client wants.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-040,IU-040,2447dcc90b,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,415 Unsupported Media Type.,"415 Unsupported Media Type.
+
+Visible:
+- Happens when request Content-Type is not supported by endpoint/input formatter.
+- Example: sending text/plain or form data to an action expecting JSON.
+
+Meaning:
+415 is usually a media-type/binder/formatter mismatch before your action logic runs.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-041,IU-041,681a4e223f,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,406 Not Acceptable.,"406 Not Acceptable.
+
+Visible:
+- Related to Accept header and response format negotiation.
+- Server cannot produce requested media type.
+
+Meaning:
+406 is about response negotiation, not request body parsing. It can be enabled by returning 406 when Accept cannot be satisfied.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-042,IU-042,f8fc6ac3c1,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,400 Bad Request.,"400 Bad Request.
+
+Visible:
+- Bad JSON / validation / model state errors.
+- Body parses to wrong shape or fails validation.
+
+Meaning:
+400 is after the server accepted the media type but could not bind/validate the request successfully.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-043,IU-043,9387845e51,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Swagger/OpenAPI requestBody.,"Swagger/OpenAPI requestBody.
+
+Visible:
+- OpenAPI shows content types under requestBody/content.
+- multipart/form-data schema for files.
+- application/json schema for JSON DTOs.
+
+Meaning:
+Swagger metadata should reflect real endpoint behavior. If docs say JSON but endpoint expects form data, client generation/testing will be wrong.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-044,IU-044,cb0d7475da,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Endpoint examples.,"Endpoint examples.
+
+Visible:
+- Controller/minimal API examples with attributes.
+- Different endpoints for JSON vs multipart/raw.
+
+Meaning:
+Separate endpoints or explicit Consumes metadata can make API contracts clearer than one ambiguous action trying to accept everything.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-045,IU-045,3e7f46737d,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Debugging checklist.,"Debugging checklist.
+
+Visible list:
+- Check client Content-Type.
+- Check request body shape.
+- Check action attributes: FromBody/FromForm.
+- Check [Consumes].
+- Check formatters/model binding.
+
+Meaning:
+Most media type bugs are mismatches among body format, Content-Type header, and server binding path.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-046,IU-046,c764c0a46f,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Accept header debugging.,"Accept header debugging.
+
+Visible:
+- Accept: application/json
+- Accept: text/plain
+- response output format.
+
+Meaning:
+If request reaches action but response type is unexpected, inspect Accept and output formatters rather than input formatter logic.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-047,IU-047,3d1ab870e9,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Minimal APIs / endpoint metadata.,"Minimal APIs / endpoint metadata.
+
+Visible:
+- Minimal API can document/consume/produce content types through metadata helpers.
+- Body binding still depends on parameter shape/content type.
+
+Meaning:
+The same media-type concepts apply in minimal APIs: request body binding, metadata, and response negotiation.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-048,IU-048,439afad388,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Practical mismatch examples.,"Practical mismatch examples.
+
+Visible:
+- Client sends multipart but action expects [FromBody] JSON DTO.
+- Client sends JSON but action expects [FromForm].
+- Client sends octet-stream but action expects byte[] through unsupported formatter.
+
+Meaning:
+When you see 415/400, first compare body media type with action parameter source and registered formatters.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.
+S-049,IU-049,b6bf00cf88,MEDIA-R04-endpoints-consumes-produces-errors,MEDIA-R04,verified-visible-semantic-transcript,Final rule summary.,"Final rule summary.
+
+Visible summary:
+- Content-Type chooses request parser.
+- Accept chooses desired response.
+- [FromBody] uses input formatters.
+- [FromForm] uses form binding.
+- [Consumes]/[Produces] document/restrict endpoint behavior.
+
+Meaning:
+The central model is: body bytes + Content-Type + action parameter source determine request binding; Accept + output formatters determine response media type.",Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed.

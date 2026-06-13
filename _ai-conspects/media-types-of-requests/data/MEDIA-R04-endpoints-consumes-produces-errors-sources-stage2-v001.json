@@ -1,0 +1,152 @@
+{
+  "generated": "2026-06-13 08:05:13 UTC",
+  "group": "MEDIA-R04-endpoints-consumes-produces-errors",
+  "region": "MEDIA-R04",
+  "source_count": 13,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-037",
+      "image_use_id": "IU-037",
+      "fileId_short": "3496bdde45",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "[Consumes] attribute.",
+      "transcript": "[Consumes] attribute.\n\nVisible:\n- `[Consumes(\"application/json\")]`\n- `[Consumes(\"multipart/form-data\")]`\n- controls/declares what request content types the action accepts.\n\nMeaning:\nUse [Consumes] to restrict and document expected request Content-Type, especially when overloads/actions could otherwise be ambiguous.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-038",
+      "image_use_id": "IU-038",
+      "fileId_short": "5401f93bf5",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "[Produces] attribute.",
+      "transcript": "[Produces] attribute.\n\nVisible:\n- `[Produces(\"application/json\")]`\n- maybe response media type.\n\nMeaning:\n[Produces] is about response content type/documentation, not request body parsing. It belongs to output formatting/metadata.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-039",
+      "image_use_id": "IU-039",
+      "fileId_short": "606f4408a0",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Consumes vs Produces.",
+      "transcript": "Consumes vs Produces.\n\nVisible contrast:\n- Consumes = request Content-Type.\n- Produces = response Content-Type / Accept negotiation/documentation.\n\nMeaning:\nDo not confuse inbound and outbound media type metadata. Content-Type describes what is sent; Accept describes what response client wants.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-040",
+      "image_use_id": "IU-040",
+      "fileId_short": "2447dcc90b",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "415 Unsupported Media Type.",
+      "transcript": "415 Unsupported Media Type.\n\nVisible:\n- Happens when request Content-Type is not supported by endpoint/input formatter.\n- Example: sending text/plain or form data to an action expecting JSON.\n\nMeaning:\n415 is usually a media-type/binder/formatter mismatch before your action logic runs.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-041",
+      "image_use_id": "IU-041",
+      "fileId_short": "681a4e223f",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "406 Not Acceptable.",
+      "transcript": "406 Not Acceptable.\n\nVisible:\n- Related to Accept header and response format negotiation.\n- Server cannot produce requested media type.\n\nMeaning:\n406 is about response negotiation, not request body parsing. It can be enabled by returning 406 when Accept cannot be satisfied.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-042",
+      "image_use_id": "IU-042",
+      "fileId_short": "f8fc6ac3c1",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "400 Bad Request.",
+      "transcript": "400 Bad Request.\n\nVisible:\n- Bad JSON / validation / model state errors.\n- Body parses to wrong shape or fails validation.\n\nMeaning:\n400 is after the server accepted the media type but could not bind/validate the request successfully.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-043",
+      "image_use_id": "IU-043",
+      "fileId_short": "9387845e51",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Swagger/OpenAPI requestBody.",
+      "transcript": "Swagger/OpenAPI requestBody.\n\nVisible:\n- OpenAPI shows content types under requestBody/content.\n- multipart/form-data schema for files.\n- application/json schema for JSON DTOs.\n\nMeaning:\nSwagger metadata should reflect real endpoint behavior. If docs say JSON but endpoint expects form data, client generation/testing will be wrong.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-044",
+      "image_use_id": "IU-044",
+      "fileId_short": "cb0d7475da",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Endpoint examples.",
+      "transcript": "Endpoint examples.\n\nVisible:\n- Controller/minimal API examples with attributes.\n- Different endpoints for JSON vs multipart/raw.\n\nMeaning:\nSeparate endpoints or explicit Consumes metadata can make API contracts clearer than one ambiguous action trying to accept everything.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-045",
+      "image_use_id": "IU-045",
+      "fileId_short": "3e7f46737d",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Debugging checklist.",
+      "transcript": "Debugging checklist.\n\nVisible list:\n- Check client Content-Type.\n- Check request body shape.\n- Check action attributes: FromBody/FromForm.\n- Check [Consumes].\n- Check formatters/model binding.\n\nMeaning:\nMost media type bugs are mismatches among body format, Content-Type header, and server binding path.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-046",
+      "image_use_id": "IU-046",
+      "fileId_short": "c764c0a46f",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Accept header debugging.",
+      "transcript": "Accept header debugging.\n\nVisible:\n- Accept: application/json\n- Accept: text/plain\n- response output format.\n\nMeaning:\nIf request reaches action but response type is unexpected, inspect Accept and output formatters rather than input formatter logic.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-047",
+      "image_use_id": "IU-047",
+      "fileId_short": "3d1ab870e9",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Minimal APIs / endpoint metadata.",
+      "transcript": "Minimal APIs / endpoint metadata.\n\nVisible:\n- Minimal API can document/consume/produce content types through metadata helpers.\n- Body binding still depends on parameter shape/content type.\n\nMeaning:\nThe same media-type concepts apply in minimal APIs: request body binding, metadata, and response negotiation.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-048",
+      "image_use_id": "IU-048",
+      "fileId_short": "439afad388",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Practical mismatch examples.",
+      "transcript": "Practical mismatch examples.\n\nVisible:\n- Client sends multipart but action expects [FromBody] JSON DTO.\n- Client sends JSON but action expects [FromForm].\n- Client sends octet-stream but action expects byte[] through unsupported formatter.\n\nMeaning:\nWhen you see 415/400, first compare body media type with action parameter source and registered formatters.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-049",
+      "image_use_id": "IU-049",
+      "fileId_short": "b6bf00cf88",
+      "stage0_group": "MEDIA-R04-endpoints-consumes-produces-errors",
+      "stage2_region": "MEDIA-R04",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Final rule summary.",
+      "transcript": "Final rule summary.\n\nVisible summary:\n- Content-Type chooses request parser.\n- Accept chooses desired response.\n- [FromBody] uses input formatters.\n- [FromForm] uses form binding.\n- [Consumes]/[Produces] document/restrict endpoint behavior.\n\nMeaning:\nThe central model is: body bytes + Content-Type + action parameter source determine request binding; Accept + output formatters determine response media type.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}

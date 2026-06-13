@@ -1,4 +1,4 @@
-# Apply archive: Media Types Of Requests Stage1 transcript
+# Apply archive: Media Types Of Requests Stage2 transcript
 
 Archive type: source-level semantic transcript.
 
@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-media-types-of-requests-stage1-r01-r02-transcript-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-media-types-of-requests-stage2-r03-r04-transcript-v001.zip
 ```
 
 ## Apply commands
@@ -27,7 +27,7 @@ cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
 $target = "_ai-conspects\media-types-of-requests"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-media-types-of-requests-stage1-r01-r02-transcript-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-media-types-of-requests-stage2-r03-r04-transcript-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -46,7 +46,7 @@ git status --short -- $target
 ## Commit commands
 
 ```powershell
-git commit -m "Add Media Types Of Requests Stage1 transcript"
+git commit -m "Add Media Types Of Requests Stage2 transcript"
 git push origin ai-processed-conspects-text
 ```
 
@@ -60,4 +60,4 @@ git clean -fd -- _ai-conspects/media-types-of-requests
 
 ## Notes
 
-This archive processes R01/R02 only. R03/R04 remain pending for Stage2.
+This archive processes MEDIA-R03/MEDIA-R04 and leaves no Media Types Of Requests transcript candidates pending. Next archive should be closure audit.

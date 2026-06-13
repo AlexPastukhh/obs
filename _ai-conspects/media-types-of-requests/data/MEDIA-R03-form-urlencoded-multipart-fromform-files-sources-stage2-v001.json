@@ -1,0 +1,141 @@
+{
+  "generated": "2026-06-13 08:05:13 UTC",
+  "group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+  "region": "MEDIA-R03",
+  "source_count": 12,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved PNG source images",
+  "sources": [
+    {
+      "source_id": "S-025",
+      "image_use_id": "IU-025",
+      "fileId_short": "2cf08118b6",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Form media-type branch.",
+      "transcript": "Form media-type branch.\n\nVisible topic:\n- application/x-www-form-urlencoded\n- multipart/form-data\n- [FromForm]\n- form fields and files\n\nMeaning:\nThis starts the form branch: form media types are not JSON and are usually handled by form binding in ASP.NET Core.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-026",
+      "image_use_id": "IU-026",
+      "fileId_short": "dbc51eb7a8",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "application/x-www-form-urlencoded shape.",
+      "transcript": "application/x-www-form-urlencoded shape.\n\nVisible:\n- classic key/value pairs.\n- body looks like `name=value&age=20`.\n- good for simple HTML forms and login-style data.\n- no file content.\n\nMeaning:\nUse x-www-form-urlencoded when the body is simple flat form fields, not files or nested/mixed binary content.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-027",
+      "image_use_id": "IU-027",
+      "fileId_short": "102d4a5966",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "[FromForm] with form-urlencoded.",
+      "transcript": "[FromForm] with form-urlencoded.\n\nVisible code:\n- action parameter with `[FromForm]`.\n- login or form DTO fields.\n- Content-Type: application/x-www-form-urlencoded.\n\nMeaning:\n[FromForm] reads values from submitted form data. For simple fields, both browser forms and FormUrlEncodedContent can feed this path.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-028",
+      "image_use_id": "IU-028",
+      "fileId_short": "46eadebbbe",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "multipart/form-data shape.",
+      "transcript": "multipart/form-data shape.\n\nVisible:\n- body has multiple parts.\n- each part has Content-Disposition.\n- file parts have filename and content type.\n- boundary separates parts.\n\nMeaning:\nMultipart is a container format for form fields and binary file parts in the same request.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-029",
+      "image_use_id": "IU-029",
+      "fileId_short": "6400c4d942",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "IFormFile upload.",
+      "transcript": "IFormFile upload.\n\nVisible code:\n- controller action receives `[FromForm] IFormFile file`.\n- maybe additional `[FromForm]` fields.\n- endpoint consumes multipart/form-data.\n\nMeaning:\nIFormFile binding is for multipart file uploads. It is not for application/json or raw octet-stream uploads.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-030",
+      "image_use_id": "IU-030",
+      "fileId_short": "4d24af0060",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Multiple files.",
+      "transcript": "Multiple files.\n\nVisible:\n- `List<IFormFile>` or `IFormFile[]`.\n- field name must match the form field.\n- multipart request can include repeated file fields.\n\nMeaning:\nFor multiple file upload, multipart/form-data can carry several file parts under the same or different field names.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-031",
+      "image_use_id": "IU-031",
+      "fileId_short": "b0d8109358",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Metadata + file in multipart.",
+      "transcript": "Metadata + file in multipart.\n\nVisible:\n- fields like title/description.\n- file part.\n- DTO + IFormFile or separate parameters.\n\nMeaning:\nWhen a request needs file plus text metadata, multipart/form-data is usually the natural media type.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-032",
+      "image_use_id": "IU-032",
+      "fileId_short": "d61c25ef6e",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "JSON plus file problem.",
+      "transcript": "JSON plus file problem.\n\nVisible idea:\n- If you send JSON body and file together, plain application/json cannot carry a file part as a separate stream.\n- Use multipart/form-data and include JSON metadata as a part/string or model binder custom logic.\n\nMeaning:\nOne request body has one top-level media type. Mixed file + JSON metadata normally means multipart, not two independent bodies.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-033",
+      "image_use_id": "IU-033",
+      "fileId_short": "8b77f9fb32",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Postman / browser client settings.",
+      "transcript": "Postman / browser client settings.\n\nVisible:\n- In Postman use form-data for files.\n- Browser FormData automatically sets multipart boundary.\n- Do not manually set boundary incorrectly.\n\nMeaning:\nLet the client library create the multipart Content-Type including boundary. Manual header mistakes often break server parsing.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-034",
+      "image_use_id": "IU-034",
+      "fileId_short": "a26752b65b",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Form binding vs body input formatter.",
+      "transcript": "Form binding vs body input formatter.\n\nVisible:\n- [FromForm] uses form readers/model binding.\n- [FromBody] uses input formatters like JSON.\n- Different pipelines.\n\nMeaning:\nA parameter source matters. A form request should normally bind with [FromForm], while JSON uses [FromBody].",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-035",
+      "image_use_id": "IU-035",
+      "fileId_short": "6dfc2050c8",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "When multipart is wrong.",
+      "transcript": "When multipart is wrong.\n\nVisible warnings:\n- If body is one raw file only, application/octet-stream can be simpler.\n- If body is pure JSON, application/json is simpler.\n- Multipart is for mixed parts / file form.\n\nMeaning:\nDo not use multipart automatically for every POST. Pick it when the body is truly multi-part.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    },
+    {
+      "source_id": "S-036",
+      "image_use_id": "IU-036",
+      "fileId_short": "5a7a070e22",
+      "stage0_group": "MEDIA-R03-form-urlencoded-multipart-fromform-files",
+      "stage2_region": "MEDIA-R03",
+      "status": "verified-visible-semantic-transcript",
+      "theme": "Multipart size/security notes.",
+      "transcript": "Multipart size/security notes.\n\nVisible:\n- file size limits.\n- request size limits.\n- streaming large files.\n- temp storage / memory implications.\n\nMeaning:\nMultipart upload endpoints still need limits and streaming/storage decisions. IFormFile is convenient but can involve buffering.",
+      "notes": "Stage2 source-level semantic transcript from visible source image/contact sheet; exact code punctuation should be checked against preserved PNG if needed."
+    }
+  ]
+}
