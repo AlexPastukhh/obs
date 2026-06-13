@@ -1,0 +1,376 @@
+{
+  "generated": "2026-06-13 05:42:57 UTC",
+  "stage": "1",
+  "text_labels": [
+    {
+      "text_id": "T-001",
+      "text": "about await foreach",
+      "x": "6036.785029965713",
+      "y": "4408.964052582036",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-002",
+      "text": "and possible sync reading/writing",
+      "x": "6036.785029965713",
+      "y": "4468.408490244797",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-003",
+      "text": "and async awaiting",
+      "x": "6036.785029965713",
+      "y": "4527.852927907557",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-004",
+      "text": "valuetask",
+      "x": "6036.785029965713",
+      "y": "4646.741803233079",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-005",
+      "text": "trycomplete",
+      "x": "760.1420572479892",
+      "y": "2559.801549205812",
+      "candidate_region": "CH03",
+      "candidate_region_name": "Concurrency assumptions and completion edge cases",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-006",
+      "text": "waitto...",
+      "x": "3413.176158334848",
+      "y": "6112.226778453882",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-007",
+      "text": "tryread/trywrite",
+      "x": "3413.176158334848",
+      "y": "6185.671216116642",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-008",
+      "text": "singlereader",
+      "x": "3547.180481214803",
+      "y": "4903.049573434017",
+      "candidate_region": "CH03",
+      "candidate_region_name": "Concurrency assumptions and completion edge cases",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-009",
+      "text": "singlewriter",
+      "x": "3547.180481214803",
+      "y": "5023.049598865332",
+      "candidate_region": "CH03",
+      "candidate_region_name": "Concurrency assumptions and completion edge cases",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-010",
+      "text": "examples when it can make sense",
+      "x": "2438.0433874491982",
+      "y": "6115.745510946067",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-011",
+      "text": "1 may need to do something when you processed currently avalable chunk and",
+      "x": "2468.812727374435",
+      "y": "6148.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-012",
+      "text": "the stream isnt ended yet",
+      "x": "2468.812727374435",
+      "y": "6173.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-013",
+      "text": "2 batch processing of sync available at the moment items",
+      "x": "2468.812727374435",
+      "y": "6198.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-014",
+      "text": "you add to batch if there is some available and dont wait automatically",
+      "x": "2468.812727374435",
+      "y": "6223.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-015",
+      "text": "like you will do with readallasync",
+      "x": "2468.812727374435",
+      "y": "6248.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-016",
+      "text": "3 may want to give up after some count of attempts or",
+      "x": "2468.812727374435",
+      "y": "6273.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-017",
+      "text": "after some time of waiting start, after losed race",
+      "x": "2468.812727374435",
+      "y": "6298.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-018",
+      "text": "and not wait forever",
+      "x": "2468.812727374435",
+      "y": "6323.030683579383",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-019",
+      "text": "websockets example",
+      "x": "10731.156782550219",
+      "y": "2626.8979251703568",
+      "candidate_region": "CH05",
+      "candidate_region_name": "WebSockets/application examples and connection manager channel pattern",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-020",
+      "text": "unbounded channel",
+      "x": "2377.7056850674517",
+      "y": "265.85403012242864",
+      "candidate_region": "CH01",
+      "candidate_region_name": "Channel fundamentals, creation, types, options, backpressure",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-021",
+      "text": "bounded channel",
+      "x": "2387.4027287464287",
+      "y": "947.0661328390481",
+      "candidate_region": "CH01",
+      "candidate_region_name": "Channel fundamentals, creation, types, options, backpressure",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-022",
+      "text": "channeltypes and their options",
+      "x": "2059.6046877840167",
+      "y": "96.5335565737693",
+      "candidate_region": "CH01",
+      "candidate_region_name": "Channel fundamentals, creation, types, options, backpressure",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-023",
+      "text": "fullmodeoptions",
+      "x": "2510.1034074941863",
+      "y": "1547.6149943188918",
+      "candidate_region": "CH01",
+      "candidate_region_name": "Channel fundamentals, creation, types, options, backpressure",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-024",
+      "text": "channelreader",
+      "x": "4790.49965644787",
+      "y": "1117.6148417310012",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-025",
+      "text": "channelreader",
+      "x": "4783.388572463495",
+      "y": "1543.3925923820432",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-026",
+      "text": "write",
+      "x": "4804.502174315743",
+      "y": "2039.216784974119",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-027",
+      "text": "read",
+      "x": "4845.527846641464",
+      "y": "2546.909092666426",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-028",
+      "text": "readallasync",
+      "x": "4849.704860118598",
+      "y": "3032.8350363304585",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-029",
+      "text": "async waiting",
+      "x": "4908.616129643429",
+      "y": "4156.016737842988",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-030",
+      "text": "channelwriter/reader",
+      "x": "4696.120761281989",
+      "y": "228.78565839476806",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-031",
+      "text": "readasync/writeasync/readallasync/complete",
+      "x": "4705.570275241556",
+      "y": "410.92443407400697",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-032",
+      "text": "and try versions",
+      "x": "4705.570275241556",
+      "y": "495.73586524309974",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-033",
+      "text": "create and get",
+      "x": "4010.237084323587",
+      "y": "1078.924434074007",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-034",
+      "text": "reader or writer",
+      "x": "4010.237084323587",
+      "y": "1163.7358652430999",
+      "candidate_region": "CH02",
+      "candidate_region_name": "Reader/Writer operations, async waiting, completion, ReadAllAsync",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-035",
+      "text": "read group of items",
+      "x": "1308.9468894861866",
+      "y": "6650.633455558413",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-036",
+      "text": "until there is nothing to read",
+      "x": "1308.9468894861866",
+      "y": "6719.33735795346",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-037",
+      "text": "and process the whole group",
+      "x": "1308.9468894861866",
+      "y": "6788.0412603485065",
+      "candidate_region": "CH04",
+      "candidate_region_name": "Manual WaitToRead/TryRead and WaitToWrite/TryWrite patterns",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    }
+  ]
+}
