@@ -1,6 +1,6 @@
-# Current Source of Truth - Automatic ProblemDetails / ModelState / ApiController
+# Current Source of Truth - Automatic ProblemDetails from ModelState / ApiController / InvalidModelStateResponseFactory
 
-Generated: 2026-06-13 10:53:40 UTC
+Generated: 2026-06-13 08:09:52 UTC
 
 ## Policy
 
@@ -12,44 +12,22 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 boundary review: done
-P01/R01R02 transcript: done
-P02/R03R04 transcript: done
-Final coverage audit: done
-Verdict: coverage-complete
+R01 ApiController automatic ModelState filter and default ProblemDetails: transcript v001 done
+R02 InvalidModelStateResponseFactory manual response helper: transcript v001 done
+P02/R03R04: next
+Final coverage audit: pending
 ```
 
-## Final coverage audit
+## P01 boundary decisions
 
 ```text
-total image uses: 24
-covered image uses: 24
-problem image uses: 0
+R01 included: 5 image uses
+R02 included: 10 image uses
+Checked-not-P01 / reserved for P02: 9 image uses
 ```
 
-## Coverage by region
+## Next pass
 
 ```text
-R01: 5
-R02: 10
-R03: 4
-R04: 5
+P02/R03R04 transcript.
 ```
-
-## Important note
-
-This directory is complete as an AI source-processing/transcript-coverage package.
-
-It is not yet a polished direct-repeat package unless a later archive adds:
-
-```text
-FINAL_TRANSCRIPT.md
-REPEAT_MATERIAL_DRAFT.md
-QUESTIONS.md
-LOOKUP_INDEX.md
-```
-
-## Next
-
-No next transcript block.
-
-Only create targeted correction archives if a concrete issue is found later, or create a separate repeat-material layer if needed.
