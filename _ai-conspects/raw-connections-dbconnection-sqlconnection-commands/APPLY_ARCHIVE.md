@@ -1,8 +1,8 @@
-# Apply archive: Raw Connections DbConnection SqlConnection Commands Stage1 transcript
+# Apply archive: Raw Connections DbConnection SqlConnection Commands closure audit
 
-This file is part of a three-conspect Stage1 transcript batch archive.
+This file is part of a three-conspect closure audit batch archive.
 
-Archive type: source-level semantic transcript.
+Archive type: closure audit.
 
 Target folder:
 
@@ -13,7 +13,7 @@ _ai-conspects/raw-connections-dbconnection-sqlconnection-commands
 Status:
 
 ```text
-Stage1 processed: 36
-Remaining candidates: 0
-Next: closure audit
+Sources audited: 36 / 36
+Pending candidates: 0
+Final verdict: Raw Connections DbConnection SqlConnection Commands S-001..S-036 is closed
 ```

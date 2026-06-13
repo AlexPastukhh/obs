@@ -1,6 +1,6 @@
 # Current Source of Truth - Raw Connections DbConnection SqlConnection Commands
 
-Generated: 2026-06-13 08:38:25 UTC
+Generated: 2026-06-13 08:48:07 UTC
 
 ## Current policy
 
@@ -40,14 +40,16 @@ Precision patches can upgrade individual sources to verbatim code later.
 ```text
 Raw Connections DbConnection SqlConnection Commands Stage0 boundary review v001: completed
 Raw Connections DbConnection SqlConnection Commands Stage1 transcript v001: completed
+Raw Connections DbConnection SqlConnection Commands closure audit v001: completed
 Image uses inventoried: 36
 Stage1 processed: 36
 Pending candidates: 0
+Bad placeholder/OCR-error processed rows: 0
 ```
 
 ## Current processing target
 
 ```text
-Next: closure audit
-Expected count: 36 / 36
+Raw Connections DbConnection SqlConnection Commands: closed by source coverage
+Next: no further transcript work unless precision patch or repeat-material layer is requested.
 ```

@@ -1,8 +1,8 @@
-# Apply archive: Creating Base32 Secret Stage1 transcript
+# Apply archive: Creating Base32 Secret closure audit
 
-This file is part of a three-conspect Stage1 transcript batch archive.
+This file is part of a three-conspect closure audit batch archive.
 
-Archive type: source-level semantic transcript.
+Archive type: closure audit.
 
 Target folder:
 
@@ -13,7 +13,7 @@ _ai-conspects/creating-base32-secret
 Status:
 
 ```text
-Stage1 processed: 34
-Remaining candidates: 0
-Next: closure audit
+Sources audited: 34 / 34
+Pending candidates: 0
+Final verdict: Creating Base32 Secret S-001..S-034 is closed
 ```

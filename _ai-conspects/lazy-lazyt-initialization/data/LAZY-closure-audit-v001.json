@@ -1,0 +1,363 @@
+{
+  "generated": "2026-06-13 08:48:07 UTC",
+  "audit_id": "lazy-lazyt-initialization-closure-audit-v001",
+  "total_sources": 38,
+  "processed_sources": 38,
+  "pending_candidates": 0,
+  "bad_placeholder_signals": 0,
+  "region_counts": {
+    "LAZY-R01": 23,
+    "LAZY-R02": 15
+  },
+  "expected_region_counts": {
+    "LAZY-R01": 23,
+    "LAZY-R02": 15
+  },
+  "all_sources_closed": true,
+  "final_verdict": "Lazy LazyT Initialization S-001..S-038 is closed",
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved Stage0 PNGs",
+  "rows": [
+    {
+      "source_id": "S-001",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-002",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-003",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-004",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-005",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-006",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-007",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-008",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-009",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-010",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-011",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-012",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-013",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-014",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-015",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-016",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-017",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-018",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-019",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-020",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-021",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-022",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-023",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-024",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-025",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-026",
+      "region": "LAZY-R01",
+      "coverage_status": "processed-in-lazy-r01-v001",
+      "decision_is_final": "yes-for-lazy-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-027",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-028",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-029",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-030",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-031",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-032",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-033",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-034",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-035",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-036",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-037",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-038",
+      "region": "LAZY-R02",
+      "coverage_status": "processed-in-lazy-r02-v001",
+      "decision_is_final": "yes-for-lazy-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    }
+  ]
+}

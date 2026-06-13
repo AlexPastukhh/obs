@@ -1,37 +1,33 @@
-# MANIFEST - Lazy LazyT Initialization Stage1 Transcript
+# MANIFEST - Lazy LazyT Initialization Closure Audit
 
-Archive type: **source-level semantic transcript**  
+Archive type: **closure audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 08:38:25 UTC
+Generated: 2026-06-13 08:48:07 UTC
 
 ## Direction check
 
 Goal:
-Process Lazy LazyT Initialization after Stage0.
+Close Lazy LazyT Initialization after Stage1.
 
 Done:
-Stage0 boundary review was applied.
+Stage1 processed all source images.
 
 This step:
-Add Stage1 transcript for all 38 source images.
+Add closure audit.
 
 Why:
-Small conspect: one transcript pass can cover every candidate group before closure audit.
+The conspect must be checked at closure level before being considered closed.
 
 Next:
-1. review staged diff/status;
-2. commit;
-3. run closure audit batch.
+Commit this audit as part of the three-small-conspects closure batch.
 
 ## Files included / updated
 
 ```text
-_ai-conspects/lazy-lazyt-initialization/02-stage1-transcript.md
-_ai-conspects/lazy-lazyt-initialization/regions/*.md
-_ai-conspects/lazy-lazyt-initialization/data/*stage1-v001.*
-_ai-conspects/lazy-lazyt-initialization/data/lazy-lazyt-initialization-image-review-ledger-v1.csv
-_ai-conspects/lazy-lazyt-initialization/data/lazy-lazyt-initialization-image-review-ledger-v1.json
+_ai-conspects/lazy-lazyt-initialization/03-closure-audit.md
 _ai-conspects/lazy-lazyt-initialization/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/lazy-lazyt-initialization/data/LAZY-closure-audit-v001.csv
+_ai-conspects/lazy-lazyt-initialization/data/LAZY-closure-audit-v001.json
 _ai-conspects/lazy-lazyt-initialization/MANIFEST.md
 _ai-conspects/lazy-lazyt-initialization/APPLY_ARCHIVE.md
 ```
@@ -39,7 +35,7 @@ _ai-conspects/lazy-lazyt-initialization/APPLY_ARCHIVE.md
 ## Status
 
 ```text
-Stage1 processed: 38
-Remaining candidates: 0
-Next: closure audit
+Sources audited: 38 / 38
+Pending candidates: 0
+Final verdict: Lazy LazyT Initialization S-001..S-038 is closed
 ```
