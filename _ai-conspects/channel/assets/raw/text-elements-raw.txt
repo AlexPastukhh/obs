@@ -1,0 +1,37 @@
+T-001 @ (6036.8,4409.0): about await foreach
+T-002 @ (6036.8,4468.4): and possible sync reading/writing
+T-003 @ (6036.8,4527.9): and async awaiting
+T-004 @ (6036.8,4646.7): valuetask
+T-005 @ (760.1,2559.8): trycomplete
+T-006 @ (3413.2,6112.2): waitto...
+T-007 @ (3413.2,6185.7): tryread/trywrite
+T-008 @ (3547.2,4903.0): singlereader
+T-009 @ (3547.2,5023.0): singlewriter
+T-010 @ (2438.0,6115.7): examples when it can make sense
+T-011 @ (2468.8,6148.0): 1 may need to do something when you processed currently avalable chunk and
+T-012 @ (2468.8,6173.0): the stream isnt ended yet
+T-013 @ (2468.8,6198.0): 2 batch processing of sync available at the moment items
+T-014 @ (2468.8,6223.0): you add to batch if there is some available and dont wait automatically
+T-015 @ (2468.8,6248.0): like you will do with readallasync
+T-016 @ (2468.8,6273.0): 3 may want to give up after some count of attempts or
+T-017 @ (2468.8,6298.0): after some time of waiting start, after losed race
+T-018 @ (2468.8,6323.0): and not wait forever
+T-019 @ (10731.2,2626.9): websockets example
+T-020 @ (2377.7,265.9): unbounded channel
+T-021 @ (2387.4,947.1): bounded channel
+T-022 @ (2059.6,96.5): channeltypes and their options
+T-023 @ (2510.1,1547.6): fullmodeoptions
+T-024 @ (4790.5,1117.6): channelreader
+T-025 @ (4783.4,1543.4): channelreader
+T-026 @ (4804.5,2039.2): write
+T-027 @ (4845.5,2546.9): read
+T-028 @ (4849.7,3032.8): readallasync
+T-029 @ (4908.6,4156.0): async waiting
+T-030 @ (4696.1,228.8): channelwriter/reader
+T-031 @ (4705.6,410.9): readasync/writeasync/readallasync/complete
+T-032 @ (4705.6,495.7): and try versions
+T-033 @ (4010.2,1078.9): create and get
+T-034 @ (4010.2,1163.7): reader or writer
+T-035 @ (1308.9,6650.6): read group of items
+T-036 @ (1308.9,6719.3): until there is nothing to read
+T-037 @ (1308.9,6788.0): and process the whole group
