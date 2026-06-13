@@ -1,0 +1,38 @@
+[
+  {
+    "pass_id": "P01",
+    "region_id": "R01",
+    "region_slug": "R01-core-windows-auth-model-ad-kerberos-ntlm",
+    "image_use_count": 16,
+    "source_ids": "S-001, S-002, S-003, S-018, S-019, S-020, S-017, S-016, S-015, S-010, S-009, S-008, S-007, S-006, S-005, S-004",
+    "purpose": "Core Windows Authentication mental model: domain, AD, Kerberos/NTLM, request flow, where Windows Auth fits.",
+    "boundary_notes": "Check ASP.NET Core/IIS implementation screenshots before closing; core concept and implementation are adjacent."
+  },
+  {
+    "pass_id": "P01",
+    "region_id": "R02",
+    "region_slug": "R02-aspnet-core-iis-negotiate-basic-implementation",
+    "image_use_count": 11,
+    "source_ids": "S-014, S-013, S-012, S-011, S-047, S-041, S-046, S-042, S-045, S-043, S-044",
+    "purpose": "ASP.NET Core + IIS/IIS Express setup: AddNegotiate, Authorize, Windows Authentication switches.",
+    "boundary_notes": "Check dual-scheme cookie screenshots before closing; do not mix basic Negotiate setup with multi-scheme auth."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R03",
+    "region_slug": "R03-dual-scheme-windows-auth-and-cookies",
+    "image_use_count": 7,
+    "source_ids": "S-026, S-025, S-024, S-023, S-022, S-021, S-040",
+    "purpose": "Windows Auth for employees plus cookie/client auth; schemes, policies, controller/action selection.",
+    "boundary_notes": "Check company-domain/SPN troubleshooting screenshots as neighbor; shared scheme/policy terms."
+  },
+  {
+    "pass_id": "P02",
+    "region_id": "R04",
+    "region_slug": "R04-company-domain-deployment-spn-troubleshooting",
+    "image_use_count": 13,
+    "source_ids": "S-030, S-031, S-032, S-029, S-033, S-028, S-027, S-034, S-035, S-036, S-037, S-038, S-039",
+    "purpose": "Company/domain deployment, IIS Express vs real domain, app-pool identity, SPN, claims/roles/whoami, login prompt/401 troubleshooting.",
+    "boundary_notes": "Check R03 dual-scheme examples before closing; avoid duplicating auth-scheme composition."
+  }
+]
