@@ -200,8 +200,15 @@ Use this version for small UI surfaces such as Tampermonkey.
    - leave omitted optional cells blank;
    - do not write `not provided`, `—`, inferred goals, or session-name fallbacks into blank session cells;
    - do not store Base, Adj, score deltas in parentheses, or other calculation internals in Finished Sessions;
+   - low D or low F alone never creates a Penalty Event;
    - update Penalty Events only when a separate penalty event is explicitly applicable;
-   - update Net Work Score from final Points and penalties;
+   - Work Points = sum of final Points in Finished Sessions plus any explicit user-defined manual closure entries;
+   - Penalties = sum of explicit Penalty Events;
+   - Net Work Score = Work Points + Penalties;
+   - missing carryover is `not provided`, not `0`;
+   - do not calculate Net score after carryover until carryover is provided;
+   - a derived value is `not calculated` until every required input exists;
+   - do not calculate Support Penalty or Final Day Score before support close;
    - update support facts only when relevant information is available.
 
 ## Pattern playbook
