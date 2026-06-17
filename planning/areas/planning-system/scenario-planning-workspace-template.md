@@ -1,7 +1,7 @@
 # Scenario Planning Workspace Template
 
 Status: active OBS area template
-Doc version: v0.2.0
+Doc version: v0.3.0
 Scope: universal planning workspace for a time scope, goal map, project result or experiment.
 
 ## 0. Scope
@@ -11,8 +11,21 @@ Scope Type: time-scope / goal-map / project / experiment / not provided
 Scope Anchor: not provided
 ```
 
-Use `time-scope` for year / period / week / day planning.
+Use `time-scope` for year / period / month / week / day planning.
 Use `goal-map` for a concrete result or goal that can span multiple time scopes.
+
+### 0.1 Time-Scope Extension Point
+
+Time-scope implementations may add a local `## Scope Units` section.
+
+The universal workspace template owns the base workspace sections.
+The exact `Scope Units` table, unit identifiers, statuses and day planning modes are owned by:
+
+```text
+planning/areas/planning-system/local-planning-dashboard-template.md
+```
+
+Do not copy the exact local `Scope Units` contract into this universal template.
 
 ## 1. Current Target Scenario
 

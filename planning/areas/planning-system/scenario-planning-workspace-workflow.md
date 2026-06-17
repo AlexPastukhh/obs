@@ -1,7 +1,7 @@
 # Scenario Planning Workspace Workflow
 
 Status: active OBS area workflow
-Doc version: v0.2.0
+Doc version: v0.3.0
 Scope: rules for filling and updating the universal planning workspace template.
 
 ## 1. Core Rule
@@ -21,7 +21,7 @@ If assistant adds anything:
 
 ```text
 time-scope:
-  year / period / week / day overview.
+  year / period / month / week / day overview.
   Use when the anchor is a time segment.
 
 goal-map:
@@ -35,7 +35,47 @@ experiment:
   deliberately uncertain attempt that may not produce payoff.
 ```
 
-## 3. Minimal Workspace Sections
+## 3. Time-Scope Hierarchy And Scope Units
+
+Calendar hierarchy:
+
+```text
+Year -> Month -> Week -> Day
+```
+
+Day may be planned through one local execution mode:
+
+```text
+Day -> Session units
+or
+Day -> Hour units
+```
+
+A `Period` is a thematic time scope. It may span one or several months and does not replace the calendar Month layer.
+
+Time-scope dashboard files may add a local `## Scope Units` section.
+
+Ownership:
+
+```text
+Scenario Planning Workspace Template:
+  owns the universal workspace shape.
+
+Local Planning Dashboard Template:
+  owns the exact Scope Units shape, statuses,
+  unit identifiers and day planning modes.
+
+Parent time scope:
+  owns goal allocation and summary for child units.
+
+Child time scope:
+  owns detailed planning for that child unit.
+```
+
+Do not copy detailed child planning into the parent merely for visibility.
+Use a short summary and a child-source path when the child file exists.
+
+## 4. Minimal Workspace Sections
 
 ```text
 0. Scope
@@ -55,9 +95,11 @@ experiment:
 8. Links
 ```
 
+For a dashboard time scope, the local `Scope Units` extension may be placed after Plan Core and before Acceptance Criteria.
+
 Do not force a separate Slice Map, Risk Table or Decision Log unless the user asks for it or the planning situation truly needs it.
 
-## 4. Working With Acceptance Criteria
+## 5. Working With Acceptance Criteria
 
 Acceptance Criteria are practical checkable chunks.
 
@@ -70,13 +112,14 @@ Rules:
 - Suggested AC goes under AI ASSUMPTIONS / SUGGESTIONS or clearly marked Source = ai suggestion.
 ```
 
-## 5. Time Scope vs Goal Map
+## 6. Time Scope Vs Goal Map
 
 The same workspace template can be used for both.
 
 ```text
 Time scope:
-  Current Target Scenario = what this year/period/week/day should become.
+  Current Target Scenario = what this year/period/month/week/day should become.
+  Scope Units = how goals are allocated to the next planning unit level.
   Done / Evidence = what happened inside this time scope.
   Links = parent/child time scopes and related goal maps.
 
@@ -86,13 +129,14 @@ Goal map:
   Links = related time scopes where the goal is active.
 ```
 
-## 6. Dashboard Use
+## 7. Dashboard Use
 
 The local dashboard can render workspace files from:
 
 ```text
 planning/dashboard/years/
 planning/dashboard/periods/
+planning/dashboard/months/
 planning/dashboard/weeks/
 planning/dashboard/days/
 planning/dashboard/goals/
@@ -101,9 +145,9 @@ planning/dashboard/backlog/
 
 Repo markdown files are source of truth.
 Tampermonkey is a read-only viewer.
-AI output is not source of truth until manually written into repo files.
+AI output is not source of truth until written into repo files.
 
-## 7. Ambiguous Work Rule
+## 8. Ambiguous Work Rule
 
 If work was done and its result is unclear, do not silently count it as useful progress.
 
