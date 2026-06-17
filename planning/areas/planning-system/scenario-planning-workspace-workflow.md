@@ -1,8 +1,8 @@
 # Scenario Planning Workspace Workflow
 
 Status: active OBS area workflow
-Doc version: v0.1.0
-Scope: rules for filling and updating the Scenario Planning Workspace template.
+Doc version: v0.2.0
+Scope: rules for filling and updating the universal planning workspace template.
 
 ## 1. Core Rule
 
@@ -17,25 +17,49 @@ If assistant adds anything:
   never silently in USER INPUT or Plan Core.
 ```
 
-## 2. Minimal Workspace Sections
+## 2. Scope Types
 
 ```text
-0. Current Target Scenario
-1. Plan Core
+time-scope:
+  year / period / week / day overview.
+  Use when the anchor is a time segment.
+
+goal-map:
+  concrete result or goal that may span multiple time segments.
+  Use when the anchor is a goal/result.
+
+project:
+  larger working area with several goals.
+
+experiment:
+  deliberately uncertain attempt that may not produce payoff.
+```
+
+## 3. Minimal Workspace Sections
+
+```text
+0. Scope
+1. Current Target Scenario
+2. Plan Core
    - Minimum
    - Base
    - Desired
    - Max / Very Wide
-2. Acceptance Criteria
-3. Ideas Inbox
+3. Acceptance Criteria
+4. Ideas Inbox
    - Desired Ideas
    - Other Ideas
-4. Idea Evaluation
+5. Idea Evaluation
+6. Done / Evidence
+7. Still Needed
+8. Links
 ```
 
-## 3. Working With Acceptance Criteria
+Do not force a separate Slice Map, Risk Table or Decision Log unless the user asks for it or the planning situation truly needs it.
 
-Acceptance Criteria are currently the practical working chunks. Do not force a separate Slice Map until the user asks for slices or a practical difference becomes clear.
+## 4. Working With Acceptance Criteria
+
+Acceptance Criteria are practical checkable chunks.
 
 Rules:
 
@@ -46,64 +70,49 @@ Rules:
 - Suggested AC goes under AI ASSUMPTIONS / SUGGESTIONS or clearly marked Source = ai suggestion.
 ```
 
-## 4. Working With Ideas
+## 5. Time Scope vs Goal Map
 
-Ideas do not become Plan Core automatically.
-
-Use categories:
+The same workspace template can be used for both.
 
 ```text
-Desired Ideas:
-  what would be good, useful, motivating, moving the scenario forward;
-  fantasy/desire stream is allowed.
+Time scope:
+  Current Target Scenario = what this year/period/week/day should become.
+  Done / Evidence = what happened inside this time scope.
+  Links = parent/child time scopes and related goal maps.
 
-Other Ideas:
-  technical, organizational, commands, questions, doubts, possible improvements.
+Goal map:
+  Current Target Scenario = what result should exist when the goal is successful.
+  Done / Evidence = evidence of progress toward this goal.
+  Links = related time scopes where the goal is active.
 ```
 
-## 5. Idea Evaluation
+## 6. Dashboard Use
 
-When asked to evaluate an idea, check:
+The local dashboard can render workspace files from:
 
 ```text
-- What benefit does it give?
-- What does it relate to: Minimum/Base/Desired/Max/Other?
-- What can it break?
-- Risk for Base: low/medium/high.
-- What must be checked?
-- Decision: add to AC / keep as idea / reject / later.
+planning/dashboard/years/
+planning/dashboard/periods/
+planning/dashboard/weeks/
+planning/dashboard/days/
+planning/dashboard/goals/
+planning/dashboard/backlog/
 ```
 
-Do not overfill beyond the available evidence. Use `not provided` when unknown.
+Repo markdown files are source of truth.
+Tampermonkey is a read-only viewer.
+AI output is not source of truth until manually written into repo files.
 
-## 6. Base Protection
+## 7. Ambiguous Work Rule
 
-The Base is a protective layer.
+If work was done and its result is unclear, do not silently count it as useful progress.
+
+Write it under:
 
 ```text
-Max / Very Wide ideas may be recorded freely,
-but they must not break Base unless the user explicitly accepts that risk.
+Done / Evidence
+Still Needed
+or Open / Unclear if the dashboard file has that section.
 ```
 
-## 7. AI Assumption Boundary
-
-AI may organize user input, but must not convert its own assumptions into plan facts.
-
-Acceptable AI output by default:
-
-```text
-- move user input into the matching section;
-- preserve uncertainty;
-- mark missing fields as not provided;
-- ask clarifying questions when blocking.
-```
-
-Not acceptable by default:
-
-```text
-- inventing acceptance criteria;
-- inventing next action;
-- inventing Base/Desired/Max;
-- adding risk tables unless requested;
-- treating suggestions as accepted plan.
-```
+Experimental work is allowed if it is explicitly marked as uncertain or experimental.

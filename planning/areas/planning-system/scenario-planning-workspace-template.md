@@ -1,12 +1,22 @@
 # Scenario Planning Workspace Template
 
 Status: active OBS area template
-Doc version: v0.1.0
-Scope: minimal working workspace for planning a target future scenario without mixing user input and AI assumptions.
+Doc version: v0.2.0
+Scope: universal planning workspace for a time scope, goal map, project result or experiment.
 
-## 0. 🎯 Current Target Scenario
+## 0. Scope
 
-In general words: what target future scenario is being built?
+```text
+Scope Type: time-scope / goal-map / project / experiment / not provided
+Scope Anchor: not provided
+```
+
+Use `time-scope` for year / period / week / day planning.
+Use `goal-map` for a concrete result or goal that can span multiple time scopes.
+
+## 1. Current Target Scenario
+
+What target future scenario is being built?
 
 USER INPUT:
 
@@ -20,11 +30,11 @@ AI ASSUMPTIONS / SUGGESTIONS:
 not provided
 ```
 
-## 1. 🧱 Plan Core
+## 2. Plan Core
 
 Only accepted working-plan content belongs here.
 
-### 1.1 Minimum
+### 2.1 Minimum
 
 Not very profitable, but no collapse or loss of control.
 
@@ -40,7 +50,7 @@ AI ASSUMPTIONS / SUGGESTIONS:
 not provided
 ```
 
-### 1.2 Base
+### 2.2 Base
 
 Positive, stable, non-maximal scenario. Base must not be broken by Max.
 
@@ -56,7 +66,7 @@ AI ASSUMPTIONS / SUGGESTIONS:
 not provided
 ```
 
-### 1.3 Desired
+### 2.3 Desired
 
 The normal desired result.
 
@@ -72,7 +82,7 @@ AI ASSUMPTIONS / SUGGESTIONS:
 not provided
 ```
 
-### 1.4 Max / Very Wide
+### 2.4 Max / Very Wide
 
 Maximum / very wide desired scenario. This can be broad, but does not automatically become plan.
 
@@ -88,21 +98,21 @@ AI ASSUMPTIONS / SUGGESTIONS:
 not provided
 ```
 
-## 2. ✅ Acceptance Criteria
+## 3. Acceptance Criteria
 
-Acceptance Criteria are verifiable readiness conditions. For now, AC can be used as the practical working chunks.
+Acceptance Criteria are verifiable readiness conditions.
 
 | AC | Criterion | Source | Verifiable Result | Status |
 |---|---|---|---|---|
 | AC1 | not provided | user / ai assumption / ai suggestion | not provided | todo |
 
-## 3. 💡 Ideas Inbox
+## 4. Ideas Inbox
 
 Raw ideas go here first. They are not Plan Core until evaluated and accepted.
 
-### 3.1 Desired Ideas
+### 4.1 Desired Ideas
 
-Intermediate desired / fantasy / benefit stream. Realism is not required yet.
+Ideas about what would be useful, motivating or beneficial. Realism is not required yet.
 
 USER INPUT:
 
@@ -116,7 +126,7 @@ AI ASSUMPTIONS / SUGGESTIONS:
 not provided
 ```
 
-### 3.2 Other Ideas
+### 4.2 Other Ideas
 
 Technical, organizational, questions, doubts, possible improvements.
 
@@ -132,7 +142,7 @@ AI ASSUMPTIONS / SUGGESTIONS:
 not provided
 ```
 
-## 4. 🧪 Idea Evaluation
+## 5. Idea Evaluation
 
 Use this section when an idea must be checked before entering the plan.
 
@@ -141,7 +151,7 @@ Idea:
 not provided
 
 Source:
-user / ai assumption / ai suggestion
+user / ai assumption / ai suggestion / not provided
 
 What benefit does it give?
 not provided
@@ -161,4 +171,31 @@ not provided
 
 Decision:
 add to AC / keep as idea / reject / later / not provided
+```
+
+## 6. Done / Evidence
+
+What is already done for this scope or goal.
+
+```text
+not provided
+```
+
+## 7. Still Needed
+
+What still needs doing for this scope or goal.
+
+```text
+not provided
+```
+
+## 8. Links
+
+```text
+Parent Time Scope: not provided
+Child Time Scopes: not provided
+Related Goal Maps: not provided
+Related Days / Sessions: not provided
+Deferred Work: planning/dashboard/backlog/deferred-work.md
+Deferred Ideas: planning/dashboard/backlog/deferred-ideas.md
 ```
