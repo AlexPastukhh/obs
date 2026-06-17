@@ -1,8 +1,8 @@
 # Local Planning Dashboard Workflow
 
 Status: active OBS area workflow
-Doc version: v0.2.0
-Scope: safe workflow for using local planning dashboard files and Tampermonkey viewer.
+Doc version: v0.3.0
+Scope: safe workflow for local planning dashboard files, formatted viewer rendering and optional operational session-day composition.
 
 ## 1. Core Rule
 
@@ -14,23 +14,125 @@ AI output is not source of truth until written into repo files.
 
 ## 2. Safety Boundary
 
-Tampermonkey MVP is read-only.
+Tampermonkey viewer is read-only.
 
 ```text
 Allowed:
   - fetch local markdown from localhost;
-  - render dashboard sections;
+  - render formatted dashboard sections;
+  - combine linked planning-day and session-day files in memory;
   - copy prompts/file paths;
-  - refresh view.
+  - open local source URLs;
+  - refresh view;
+  - store viewer preferences in Tampermonkey storage.
 
 Not allowed:
-  - write local files;
+  - write local repo files;
   - run git commands;
-  - push/commit;
-  - send planning files to external services.
+  - commit or push;
+  - send planning files to external services;
+  - treat rendered HTML as source of truth.
 ```
 
-## 3. Local Server
+## 3. Source Ownership For Day Work
+
+```text
+planning/dashboard/days/YYYY-MM-DD.md
+  planning owner for the day time scope.
+
+-Planning/Days/YYYY/YYYY-MM-DD.md
+  operational owner for sessions, D/F, points, penalties,
+  support, carryover/debt and day close.
+```
+
+The viewer may show both sources in one Day tab, but must retain their paths and ownership boundaries.
+
+Do not duplicate session rows into the planning-day file merely for visualization.
+
+## 4. Scope-Specific Display
+
+### Day
+
+Show the full planning workspace.
+
+When `active_session_day` exists, also show:
+
+```text
+- Work Points / Net Work Score;
+- incoming and remaining debt when provided;
+- current-day score when provided;
+- Finished Sessions;
+- D/F details;
+- worked-on goals or session target exactly as recorded;
+- short result;
+- Penalty Events;
+- support marks/average/penalty;
+- Carryover;
+- Final Day Summary.
+```
+
+Session rows should be compact by default and expandable for detail.
+
+### Week
+
+Show week planning and available day summaries. Session-level detail stays in day files unless explicitly linked or summarized.
+
+### Period
+
+Show the period plan and available week/day progress summaries. Do not copy the entire day ledger into the period file.
+
+### Year
+
+Show year direction, periods, goals, evidence and remaining work. Operational session detail remains below year level.
+
+### Goal Map
+
+Show result-oriented planning only:
+
+```text
+Current Target Scenario
+Plan Core
+Acceptance Criteria
+Done / Evidence
+Still Needed
+Links
+```
+
+Do not show D/F, support, penalties or debt as Goal Map-owned fields.
+A Goal Map may link to time-scope evidence where sessions occurred.
+
+## 5. Formatted And Raw Modes
+
+Formatted mode is the default.
+
+It should render:
+
+```text
+- metadata as badges;
+- text sections as readable cards;
+- Markdown tables as HTML tables;
+- Plan Core subsections as scenario cards;
+- session rows as compact expandable records;
+- goal-map and time-scope content without raw Markdown fences.
+```
+
+Raw mode remains available for source inspection and debugging.
+
+If a file does not match known sections, formatted mode may render generic Markdown blocks before falling back to Raw.
+
+## 6. Missing File And Parsing Rule
+
+The index is required. Linked files are optional per file.
+
+```text
+- failure to load the index blocks the dashboard;
+- failure to load one linked file does not block other tabs;
+- missing active_session_day does not break the Day view;
+- malformed or unknown content must not be invented;
+- show the source path and a local error message.
+```
+
+## 7. Local Server
 
 Run local server from repository root:
 
@@ -45,9 +147,9 @@ The viewer reads:
 http://127.0.0.1:8765/planning/dashboard/index.md
 ```
 
-## 4. Editing Rule
+## 8. Editing Rule
 
-Edit files manually in repo / Obsidian / VS Code.
+Edit source files manually in repo / Obsidian / VS Code, or apply an explicitly requested reviewed replacement package.
 
 After edit:
 
@@ -57,19 +159,9 @@ review diff
 commit manually only after review
 ```
 
-## 5. Time Scope And Goal Map Rule
+The viewer's `Copy AI prompt` action may prepare source content for an AI-assisted update, but the copied prompt does not write files.
 
-Use the same planning workspace core for both time scopes and goal maps.
-
-```text
-time-scope:
-  use for year / period / week / day files.
-
-goal-map:
-  use for goal files under planning/dashboard/goals/.
-```
-
-## 6. Ambiguous Work Rule
+## 9. Ambiguous Work Rule
 
 Work should not disappear as vague effort.
 
@@ -79,25 +171,26 @@ If work was done, record at least one of:
 Done / Evidence
 Still Needed
 Open / Unclear
-Sessions table in a day file
+Finished Sessions result/evidence
 ```
 
 Do not silently treat unclear work as progress.
 
-## 7. Conscious Experiment Rule
+## 10. Conscious Experiment Rule
 
 Experimental work is allowed.
 
-But it must be visible as uncertain, experimental, delayed, or unclear in the relevant day/goal/time file.
+It must be visible as uncertain, experimental, delayed or unclear in the relevant day/goal/time file.
 
-## 8. Suggested First Use
+## 11. Suggested First Use
 
 ```text
 1. Open dashboard.
 2. Read Year.
 3. Read active Period.
 4. Read active Week.
-5. Read active Day.
-6. Read active Goal Maps.
-7. Update only the smallest relevant file.
+5. Read active Day planning.
+6. If linked, read active Session Day.
+7. Read active Goal Maps.
+8. Update only the smallest relevant source file.
 ```

@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         OBS Local Planning Dashboard Viewer
 // @namespace    https://github.com/AlexPastukhh/obs/planning-dashboard
-// @version      0.2.1
-// @description  Read-only local markdown planning dashboard viewer for OBS time scopes, goal maps and backlog files.
+// @version      0.3.0
+// @description  Read-only formatted local planning dashboard viewer for OBS time scopes, goal maps, backlog and optional session-day ledgers.
 // @author       OBS planning-system
 // @match        https://chatgpt.com/*
 // @match        https://chat.openai.com/*
@@ -20,13 +20,7 @@
 
   const DEFAULT_BASE_URL = 'http://127.0.0.1:8765/';
   const DEFAULT_INDEX_PATH = 'planning/dashboard/index.md';
-  const SECTION_NAMES = [
-    'Scope', 'Current Target Scenario', 'Plan Core', 'Minimum', 'Base', 'Desired', 'Max / Very Wide',
-    'Acceptance Criteria', 'Ideas Inbox', 'Desired Ideas', 'Other Ideas', 'Idea Evaluation',
-    'Done / Evidence', 'Done', 'Done By Month', 'Previous Year Review', 'Previous Days / Sessions Done',
-    'Sessions', 'Done Today', 'Still Needed', 'Still Needed This Year', 'Still Needed This Week',
-    'Still Needed Today', 'Open / Unclear', 'Links', 'Purpose', 'Items', 'Notes'
-  ];
+  const OPTIONAL_EMPTY_VALUES = new Set(['', '-', 'none', 'null', 'not provided', 'n/a']);
 
   const state = {
     baseUrl: GM_getValue('obsPlanningDashboard.baseUrl', DEFAULT_BASE_URL),
@@ -34,50 +28,664 @@
     indexText: '',
     files: {},
     groups: {},
-    activeTab: 'index'
+    activeTab: 'index',
+    rawMode: false,
+    settingsOpen: false,
+    loading: false
   };
 
   GM_addStyle(`
+    #obs-planning-dashboard-btn,
+    #obs-planning-dashboard-panel,
+    #obs-planning-dashboard-panel * {
+      box-sizing: border-box;
+    }
+
     #obs-planning-dashboard-btn {
-      position: fixed; right: 18px; bottom: 90px; z-index: 2147483647;
-      border: 1px solid rgba(120,120,120,.35); border-radius: 999px;
-      padding: 8px 12px; background: #111827; color: white;
-      font: 13px/1.2 system-ui, -apple-system, Segoe UI, sans-serif;
-      cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.25);
+      position: fixed;
+      right: 18px;
+      bottom: 90px;
+      z-index: 2147483647;
+      border: 1px solid rgba(148, 163, 184, .38);
+      border-radius: 999px;
+      padding: 9px 14px;
+      background: #111827;
+      color: #f8fafc;
+      font: 600 13px/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .32);
     }
+
     #obs-planning-dashboard-panel {
-      position: fixed; right: 18px; bottom: 135px;
-      width: min(860px, calc(100vw - 36px)); height: min(780px, calc(100vh - 170px));
-      z-index: 2147483647; display: none; flex-direction: column;
-      background: #0b1020; color: #f8fafc; border: 1px solid rgba(148,163,184,.35);
-      border-radius: 14px; box-shadow: 0 18px 60px rgba(0,0,0,.45); overflow: hidden;
-      font: 13px/1.45 system-ui, -apple-system, Segoe UI, sans-serif;
+      position: fixed;
+      inset: 18px;
+      z-index: 2147483647;
+      display: none;
+      flex-direction: column;
+      min-width: 320px;
+      background: #08111f;
+      color: #e5edf8;
+      border: 1px solid rgba(148, 163, 184, .32);
+      border-radius: 16px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .52);
+      overflow: hidden;
+      font: 13px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    #obs-planning-dashboard-panel[data-open="true"] { display: flex; }
-    .obs-pd-header { display: flex; align-items: center; gap: 8px; padding: 10px; border-bottom: 1px solid rgba(148,163,184,.25); background: #111827; }
-    .obs-pd-title { font-weight: 700; margin-right: auto; }
-    .obs-pd-btn { border: 1px solid rgba(148,163,184,.35); background: #1f2937; color: #f8fafc; border-radius: 8px; padding: 5px 8px; cursor: pointer; font: inherit; }
-    .obs-pd-btn:hover { background: #334155; }
-    .obs-pd-settings { display: grid; grid-template-columns: 90px 1fr; gap: 6px; padding: 10px; border-bottom: 1px solid rgba(148,163,184,.18); background: #0f172a; }
-    .obs-pd-input { width: 100%; box-sizing: border-box; background: #020617; color: #f8fafc; border: 1px solid rgba(148,163,184,.35); border-radius: 6px; padding: 5px 7px; font: inherit; }
-    .obs-pd-tabs { display: flex; gap: 4px; padding: 8px 10px; border-bottom: 1px solid rgba(148,163,184,.18); background: #0b1020; overflow-x: auto; }
-    .obs-pd-tab[data-active="true"] { background: #2563eb; border-color: #60a5fa; }
-    .obs-pd-body { padding: 12px; overflow: auto; white-space: normal; }
-    .obs-pd-card { border: 1px solid rgba(148,163,184,.24); border-radius: 10px; background: #0f172a; padding: 10px; margin-bottom: 10px; }
-    .obs-pd-card h2, .obs-pd-card h3 { margin: 0 0 6px; font-size: 14px; color: #bfdbfe; }
-    .obs-pd-pre { margin: 0; padding: 8px; background: #020617; border-radius: 8px; overflow: auto; white-space: pre-wrap; color: #e5e7eb; }
-    .obs-pd-error { color: #fecaca; background: #450a0a; border: 1px solid #991b1b; border-radius: 8px; padding: 8px; white-space: pre-wrap; margin-bottom: 10px; }
-    .obs-pd-path { color: #93c5fd; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; margin-bottom: 8px; }
+
+    #obs-planning-dashboard-panel[data-open="true"] {
+      display: flex;
+    }
+
+    .obs-pd-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(148, 163, 184, .22);
+      background: #101b2d;
+    }
+
+    .obs-pd-title {
+      min-width: 0;
+      margin-right: auto;
+    }
+
+    .obs-pd-title-main {
+      font-size: 14px;
+      font-weight: 760;
+      color: #f8fafc;
+    }
+
+    .obs-pd-title-sub {
+      color: #94a3b8;
+      font-size: 11px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .obs-pd-btn {
+      border: 1px solid rgba(148, 163, 184, .34);
+      background: #18263a;
+      color: #edf4ff;
+      border-radius: 8px;
+      padding: 6px 9px;
+      cursor: pointer;
+      font: inherit;
+      white-space: nowrap;
+    }
+
+    .obs-pd-btn:hover,
+    .obs-pd-btn:focus-visible {
+      outline: none;
+      background: #243750;
+      border-color: rgba(147, 197, 253, .56);
+    }
+
+    .obs-pd-btn[data-emphasis="true"] {
+      background: #1d4ed8;
+      border-color: #60a5fa;
+    }
+
+    .obs-pd-settings {
+      display: none;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 8px;
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(148, 163, 184, .18);
+      background: #0d1728;
+    }
+
+    .obs-pd-settings[data-open="true"] {
+      display: grid;
+    }
+
+    .obs-pd-settings label {
+      align-self: center;
+      color: #9fb0c6;
+      font-size: 12px;
+    }
+
+    .obs-pd-input {
+      width: 100%;
+      min-width: 0;
+      background: #030a16;
+      color: #eef6ff;
+      border: 1px solid rgba(148, 163, 184, .32);
+      border-radius: 7px;
+      padding: 6px 8px;
+      font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .obs-pd-tabs {
+      display: flex;
+      gap: 5px;
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(148, 163, 184, .18);
+      background: #0b1525;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .obs-pd-tab {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #101b2d;
+    }
+
+    .obs-pd-tab[data-active="true"] {
+      background: #1d4ed8;
+      border-color: #60a5fa;
+      color: white;
+    }
+
+    .obs-pd-body {
+      flex: 1;
+      min-height: 0;
+      overflow: auto;
+      padding: 12px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(37, 99, 235, .08), transparent 34%),
+        #08111f;
+    }
+
+    .obs-pd-source-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 9px;
+      padding: 7px 9px;
+      border: 1px solid rgba(148, 163, 184, .2);
+      border-radius: 9px;
+      background: rgba(15, 28, 48, .82);
+    }
+
+    .obs-pd-source-label {
+      color: #93c5fd;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .obs-pd-path {
+      min-width: 0;
+      flex: 1;
+      color: #9fb6d4;
+      font: 11px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .obs-pd-document-header,
+    .obs-pd-card,
+    .obs-pd-scenario-card,
+    .obs-pd-session-panel,
+    .obs-pd-note,
+    .obs-pd-error {
+      border: 1px solid rgba(148, 163, 184, .22);
+      border-radius: 11px;
+      background: rgba(15, 28, 48, .92);
+    }
+
+    .obs-pd-document-header {
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+
+    .obs-pd-document-header h1 {
+      margin: 0 0 8px;
+      color: #f8fafc;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .obs-pd-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .obs-pd-badge,
+    .obs-pd-goal-chip,
+    .obs-pd-status-chip {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      border: 1px solid rgba(148, 163, 184, .26);
+      border-radius: 999px;
+      padding: 3px 7px;
+      background: #17243a;
+      color: #cbd8e9;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    .obs-pd-badge[data-kind="status"] {
+      background: rgba(5, 150, 105, .18);
+      border-color: rgba(52, 211, 153, .34);
+      color: #a7f3d0;
+    }
+
+    .obs-pd-badge[data-kind="scope"] {
+      background: rgba(109, 40, 217, .2);
+      border-color: rgba(167, 139, 250, .36);
+      color: #ddd6fe;
+    }
+
+    .obs-pd-section-title {
+      margin: 14px 0 7px;
+      color: #dbeafe;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    .obs-pd-card {
+      padding: 10px;
+      margin-bottom: 9px;
+    }
+
+    .obs-pd-card h2,
+    .obs-pd-card h3,
+    .obs-pd-card h4 {
+      margin: 0 0 7px;
+      color: #c7ddff;
+      font-size: 13px;
+    }
+
+    .obs-pd-card p {
+      margin: 0 0 7px;
+      color: #d9e4f2;
+    }
+
+    .obs-pd-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .obs-pd-card ul,
+    .obs-pd-card ol {
+      margin: 5px 0 5px 20px;
+      padding: 0;
+      color: #d9e4f2;
+    }
+
+    .obs-pd-card li + li {
+      margin-top: 3px;
+    }
+
+    .obs-pd-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+      margin-bottom: 9px;
+    }
+
+    .obs-pd-scenario-card {
+      padding: 10px;
+      min-width: 0;
+    }
+
+    .obs-pd-scenario-card h3 {
+      margin: 0 0 6px;
+      color: #bfdbfe;
+      font-size: 12px;
+    }
+
+    .obs-pd-scenario-card[data-scenario="minimum"] {
+      border-color: rgba(96, 165, 250, .35);
+    }
+
+    .obs-pd-scenario-card[data-scenario="base"] {
+      border-color: rgba(45, 212, 191, .34);
+    }
+
+    .obs-pd-scenario-card[data-scenario="desired"] {
+      border-color: rgba(251, 191, 36, .42);
+      background: rgba(69, 52, 12, .32);
+    }
+
+    .obs-pd-scenario-card[data-scenario="max"] {
+      border-color: rgba(74, 222, 128, .34);
+    }
+
+    .obs-pd-code,
+    .obs-pd-raw {
+      margin: 0;
+      padding: 9px;
+      border-radius: 8px;
+      background: #020817;
+      color: #d7e5f8;
+      white-space: pre-wrap;
+      overflow: auto;
+      font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .obs-pd-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid rgba(148, 163, 184, .18);
+      border-radius: 9px;
+    }
+
+    .obs-pd-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+      color: #dbe7f5;
+      font-size: 12px;
+    }
+
+    .obs-pd-table th,
+    .obs-pd-table td {
+      padding: 7px 8px;
+      border-bottom: 1px solid rgba(148, 163, 184, .16);
+      border-right: 1px solid rgba(148, 163, 184, .12);
+      text-align: left;
+      vertical-align: top;
+      white-space: pre-line;
+    }
+
+    .obs-pd-table th {
+      background: #17243a;
+      color: #eaf2ff;
+      font-weight: 720;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .obs-pd-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .obs-pd-table th:last-child,
+    .obs-pd-table td:last-child {
+      border-right: 0;
+    }
+
+    .obs-pd-two-column {
+      display: grid;
+      grid-template-columns: minmax(300px, .78fr) minmax(520px, 1.7fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .obs-pd-pane {
+      min-width: 0;
+    }
+
+    .obs-pd-score-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(126px, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .obs-pd-score-card {
+      min-width: 0;
+      padding: 9px;
+      border: 1px solid rgba(96, 165, 250, .25);
+      border-radius: 9px;
+      background: rgba(13, 28, 49, .96);
+    }
+
+    .obs-pd-score-label {
+      color: #9fb3cd;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .obs-pd-score-value {
+      margin-top: 3px;
+      color: #bfdbfe;
+      font-size: 20px;
+      font-weight: 760;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+
+    .obs-pd-score-card[data-tone="good"] .obs-pd-score-value {
+      color: #86efac;
+    }
+
+    .obs-pd-score-card[data-tone="bad"] .obs-pd-score-value {
+      color: #fca5a5;
+    }
+
+    .obs-pd-score-card[data-tone="warn"] .obs-pd-score-value {
+      color: #fcd34d;
+    }
+
+    .obs-pd-score-card[data-tone="violet"] .obs-pd-score-value {
+      color: #c4b5fd;
+    }
+
+    .obs-pd-session-panel {
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .obs-pd-session-head,
+    .obs-pd-session-summary {
+      display: grid;
+      grid-template-columns: 28px 80px 76px minmax(180px, 1fr);
+      gap: 8px;
+      align-items: center;
+    }
+
+    .obs-pd-session-head {
+      padding: 7px 9px;
+      background: #17243a;
+      color: #b9c9dc;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .035em;
+    }
+
+    .obs-pd-session-record {
+      border-top: 1px solid rgba(148, 163, 184, .14);
+      background: rgba(9, 20, 36, .82);
+    }
+
+    .obs-pd-session-record:first-of-type {
+      border-top: 0;
+    }
+
+    .obs-pd-session-record summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 8px 9px;
+    }
+
+    .obs-pd-session-record summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .obs-pd-session-record[open] summary {
+      background: rgba(30, 64, 175, .16);
+    }
+
+    .obs-pd-chevron {
+      color: #93c5fd;
+      transition: transform .15s ease;
+    }
+
+    .obs-pd-session-record[open] .obs-pd-chevron {
+      transform: rotate(90deg);
+    }
+
+    .obs-pd-session-id {
+      color: #f8fafc;
+      font-weight: 750;
+    }
+
+    .obs-pd-session-score {
+      color: #93c5fd;
+      font-size: 16px;
+      font-weight: 760;
+    }
+
+    .obs-pd-session-worked {
+      min-width: 0;
+      color: #d8e5f5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .obs-pd-session-details {
+      padding: 0 10px 10px 116px;
+    }
+
+    .obs-pd-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+
+    .obs-pd-detail-item {
+      padding: 7px 8px;
+      border: 1px solid rgba(148, 163, 184, .17);
+      border-radius: 7px;
+      background: rgba(15, 28, 48, .75);
+    }
+
+    .obs-pd-detail-label {
+      color: #93a8c2;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .obs-pd-detail-value {
+      margin-top: 3px;
+      color: #e2ebf7;
+      white-space: pre-line;
+    }
+
+    .obs-pd-goal-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .obs-pd-note,
+    .obs-pd-error {
+      padding: 10px;
+      margin-bottom: 9px;
+      white-space: pre-wrap;
+    }
+
+    .obs-pd-note {
+      color: #bfdbfe;
+      background: rgba(30, 64, 175, .13);
+      border-color: rgba(96, 165, 250, .28);
+    }
+
+    .obs-pd-error {
+      color: #fecaca;
+      background: rgba(127, 29, 29, .34);
+      border-color: rgba(248, 113, 113, .46);
+    }
+
+    .obs-pd-empty {
+      color: #91a3ba;
+      font-style: italic;
+    }
+
+    .obs-pd-link-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(148, 163, 184, .12);
+    }
+
+    .obs-pd-link-row:last-child {
+      border-bottom: 0;
+    }
+
+    .obs-pd-link-key {
+      color: #9fb3ca;
+      min-width: 126px;
+    }
+
+    .obs-pd-link-value {
+      color: #93c5fd;
+      overflow-wrap: anywhere;
+    }
+
+    .obs-pd-raw-group + .obs-pd-raw-group {
+      margin-top: 12px;
+    }
+
+    @media (max-width: 980px) {
+      #obs-planning-dashboard-panel {
+        inset: 8px;
+      }
+
+      .obs-pd-header {
+        flex-wrap: wrap;
+      }
+
+      .obs-pd-title {
+        flex-basis: 100%;
+      }
+
+      .obs-pd-two-column,
+      .obs-pd-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .obs-pd-session-head,
+      .obs-pd-session-summary {
+        grid-template-columns: 24px 64px 64px minmax(120px, 1fr);
+      }
+
+      .obs-pd-session-details {
+        padding-left: 10px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .obs-pd-body {
+        padding: 8px;
+      }
+
+      .obs-pd-header .obs-pd-btn {
+        flex: 1;
+      }
+
+      .obs-pd-detail-grid,
+      .obs-pd-score-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .obs-pd-session-head {
+        display: none;
+      }
+
+      .obs-pd-session-summary {
+        grid-template-columns: 22px 54px 54px minmax(0, 1fr);
+      }
+    }
   `);
 
   function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);
     for (const [key, value] of Object.entries(attrs)) {
-      if (key === 'text') node.textContent = value;
-      else if (key.startsWith('on') && typeof value === 'function') node.addEventListener(key.slice(2), value);
-      else node.setAttribute(key, value);
+      if (key === 'text') {
+        node.textContent = value;
+      } else if (key.startsWith('on') && typeof value === 'function') {
+        node.addEventListener(key.slice(2).toLowerCase(), value);
+      } else if (value !== undefined && value !== null) {
+        node.setAttribute(key, String(value));
+      }
     }
-    for (const child of children) node.appendChild(child);
+    for (const child of children) {
+      if (child) node.appendChild(child);
+    }
     return node;
   }
 
@@ -85,16 +693,29 @@
     return String(url || DEFAULT_BASE_URL).replace(/\/?$/, '/');
   }
 
+  function normalizeOptionalPath(value) {
+    const text = String(value || '').trim();
+    return OPTIONAL_EMPTY_VALUES.has(text.toLowerCase()) ? '' : text;
+  }
+
+  function buildLocalUrl(path) {
+    const cleanPath = String(path || '').replace(/^\/+/, '');
+    return encodeURI(normalizeBaseUrl(state.baseUrl) + cleanPath);
+  }
+
   function fetchText(path) {
-    const url = normalizeBaseUrl(state.baseUrl) + String(path || '').replace(/^\/+/, '');
+    const url = buildLocalUrl(path);
     return new Promise((resolve, reject) => {
       GM_xmlhttpRequest({
         method: 'GET',
         url,
         timeout: 8000,
-        onload: (res) => {
-          if (res.status >= 200 && res.status < 300) resolve(res.responseText || '');
-          else reject(new Error(`HTTP ${res.status} for ${url}`));
+        onload: (response) => {
+          if (response.status >= 200 && response.status < 300) {
+            resolve(response.responseText || '');
+          } else {
+            reject(new Error(`HTTP ${response.status} for ${url}`));
+          }
         },
         onerror: () => reject(new Error(`Request failed for ${url}`)),
         ontimeout: () => reject(new Error(`Request timed out for ${url}`))
@@ -103,98 +724,778 @@
   }
 
   function getIndexBlock(text) {
-    return text.match(/```text\s*([\s\S]*?)```/i)?.[1] || text;
+    return String(text || '').match(/```text\s*([\s\S]*?)```/i)?.[1] || String(text || '');
   }
 
   function parseListAfter(block, key) {
     const lines = String(block || '').split(/\r?\n/);
-    const out = [];
+    const output = [];
     let collecting = false;
+
     for (const line of lines) {
       if (!collecting) {
-        if (line.match(new RegExp(`^${key}:\\s*$`, 'i'))) collecting = true;
+        if (line.match(new RegExp(`^${escapeRegExp(key)}:\\s*$`, 'i'))) collecting = true;
         continue;
       }
+
       if (/^\S/.test(line) && !/^\s*-\s+/.test(line)) break;
-      const item = line.match(/^\s*-\s+(.+)\s*$/)?.[1];
-      if (item) out.push(item.trim());
+      const item = line.match(/^\s*-\s+(.+?)\s*$/)?.[1];
+      if (item) output.push(item.trim());
     }
-    return out;
+
+    return output;
   }
 
   function parseScalar(block, key) {
-    return String(block || '').match(new RegExp(`^${key}:\\s*(.+)$`, 'mi'))?.[1]?.trim() || '';
+    return String(block || '').match(new RegExp(`^${escapeRegExp(key)}:\\s*(.*)$`, 'mi'))?.[1]?.trim() || '';
   }
 
   function parseIndex(text) {
     const block = getIndexBlock(text);
     return {
-      previousYear: parseScalar(block, 'previous_year'),
-      year: parseScalar(block, 'active_year'),
-      period: parseScalar(block, 'active_period'),
-      week: parseScalar(block, 'active_week'),
-      day: parseScalar(block, 'active_day'),
-      goalMaps: parseListAfter(block, 'active_goal_maps'),
-      deferredWork: parseScalar(block, 'deferred_work'),
-      deferredIdeas: parseScalar(block, 'deferred_ideas')
+      previousYear: normalizeOptionalPath(parseScalar(block, 'previous_year')),
+      year: normalizeOptionalPath(parseScalar(block, 'active_year')),
+      period: normalizeOptionalPath(parseScalar(block, 'active_period')),
+      week: normalizeOptionalPath(parseScalar(block, 'active_week')),
+      day: normalizeOptionalPath(parseScalar(block, 'active_day')),
+      sessionDay: normalizeOptionalPath(parseScalar(block, 'active_session_day')),
+      goalMaps: parseListAfter(block, 'active_goal_maps').map(normalizeOptionalPath).filter(Boolean),
+      deferredWork: normalizeOptionalPath(parseScalar(block, 'deferred_work')),
+      deferredIdeas: normalizeOptionalPath(parseScalar(block, 'deferred_ideas'))
     };
   }
 
-  function extractTitle(md) {
-    return (md.match(/^#\s+(.+)$/m)?.[1] || 'Untitled').trim();
+  function escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
-  function extractSection(md, sectionName) {
-    const escaped = sectionName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const re = new RegExp(`^##\\s+${escaped}\\s*$([\\s\\S]*?)(?=^##\\s+|\\s*$)`, 'm');
-    const match = md.match(re);
-    return match ? match[1].trim() : '';
-  }
-
-  function extractSubsection(md, sectionName) {
-    const escaped = sectionName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const re = new RegExp(`^###\\s+${escaped}\\s*$([\\s\\S]*?)(?=^###\\s+|^##\\s+|\\s*$)`, 'm');
-    const match = md.match(re);
-    return match ? match[1].trim() : '';
-  }
-
-  function cleanupMarkdownBody(text) {
-    return String(text || '')
-      .replace(/^```[a-zA-Z0-9_-]*\s*/m, '')
-      .replace(/```\s*$/m, '')
+  function normalizeHeading(value) {
+    return String(value || '')
+      .toLowerCase()
+      .replace(/[—–]/g, '-')
+      .replace(/[^a-z0-9а-яё/ -]+/gi, ' ')
+      .replace(/\s+/g, ' ')
       .trim();
   }
 
-  function firstLines(text, count) {
-    return String(text || '').split(/\r?\n/).slice(0, count).join('\n').trim();
+  function parseMarkdownDocument(markdown) {
+    const text = String(markdown || '').replace(/\r\n?/g, '\n');
+    const lines = text.split('\n');
+    const documentModel = {
+      raw: text,
+      title: 'Untitled',
+      metadata: {},
+      sections: [],
+      preamble: []
+    };
+
+    let currentSection = null;
+    let currentSubsection = null;
+    let inFence = false;
+
+    for (const line of lines) {
+      if (/^```/.test(line.trim())) inFence = !inFence;
+
+      const h1 = !inFence ? line.match(/^#\s+(.+?)\s*$/) : null;
+      const h2 = !inFence ? line.match(/^##\s+(.+?)\s*$/) : null;
+      const h3 = !inFence ? line.match(/^###\s+(.+?)\s*$/) : null;
+
+      if (h1) {
+        documentModel.title = h1[1].trim();
+        continue;
+      }
+
+      if (h2) {
+        currentSection = { title: h2[1].trim(), lines: [], subsections: [] };
+        documentModel.sections.push(currentSection);
+        currentSubsection = null;
+        continue;
+      }
+
+      if (h3 && currentSection) {
+        currentSubsection = { title: h3[1].trim(), lines: [] };
+        currentSection.subsections.push(currentSubsection);
+        continue;
+      }
+
+      if (!currentSection) {
+        const metadata = !inFence ? line.match(/^([A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё0-9 _/-]{1,40}):\s*(.+?)\s*$/) : null;
+        if (metadata) {
+          documentModel.metadata[metadata[1].trim()] = metadata[2].trim();
+        } else if (line.trim()) {
+          documentModel.preamble.push(line);
+        }
+      } else if (currentSubsection) {
+        currentSubsection.lines.push(line);
+      } else {
+        currentSection.lines.push(line);
+      }
+    }
+
+    return documentModel;
   }
 
-  function renderMarkdownSummary(path, md) {
-    const wrap = el('div');
-    wrap.appendChild(el('div', { class: 'obs-pd-path', text: path || 'not provided' }));
-    wrap.appendChild(el('div', { class: 'obs-pd-card' }, [
-      el('h2', { text: extractTitle(md) }),
-      el('pre', { class: 'obs-pd-pre', text: firstLines(md, 10) })
+  function findSection(documentModel, query) {
+    const normalizedQuery = normalizeHeading(query);
+    return documentModel.sections.find((section) => normalizeHeading(section.title).includes(normalizedQuery)) || null;
+  }
+
+  function findSubsection(documentModel, query) {
+    const normalizedQuery = normalizeHeading(query);
+    for (const section of documentModel.sections) {
+      const found = section.subsections.find((subsection) => normalizeHeading(subsection.title).includes(normalizedQuery));
+      if (found) return found;
+    }
+    return null;
+  }
+
+  function trimBlankLines(lines) {
+    const output = [...(lines || [])];
+    while (output.length && !output[0].trim()) output.shift();
+    while (output.length && !output[output.length - 1].trim()) output.pop();
+    return output;
+  }
+
+  function stripOuterFence(lines) {
+    const output = trimBlankLines(lines);
+    if (output.length >= 2 && /^```/.test(output[0].trim()) && /^```\s*$/.test(output[output.length - 1].trim())) {
+      return output.slice(1, -1);
+    }
+    return output;
+  }
+
+  function cleanCell(value) {
+    return String(value || '')
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/^\s+|\s+$/g, '')
+      .replace(/^\*\*(.*?)\*\*$/s, '$1')
+      .trim();
+  }
+
+  function splitTableRow(line) {
+    const normalized = String(line || '').trim().replace(/^\|/, '').replace(/\|$/, '');
+    return normalized.split('|').map(cleanCell);
+  }
+
+  function isTableSeparator(line) {
+    const cells = splitTableRow(line);
+    return cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell.replace(/\s/g, '')));
+  }
+
+  function parseFirstTable(lines) {
+    const source = trimBlankLines(lines);
+    for (let index = 0; index < source.length - 1; index += 1) {
+      if (!source[index].includes('|') || !isTableSeparator(source[index + 1])) continue;
+
+      const headers = splitTableRow(source[index]);
+      const rows = [];
+      let cursor = index + 2;
+      while (cursor < source.length && source[cursor].includes('|') && source[cursor].trim()) {
+        rows.push(splitTableRow(source[cursor]));
+        cursor += 1;
+      }
+      return { headers, rows, start: index, end: cursor };
+    }
+    return null;
+  }
+
+  function appendInline(parent, value) {
+    const text = String(value || '').replace(/<br\s*\/?>/gi, '\n');
+    const tokenPattern = /(`[^`]+`|\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
+    let cursor = 0;
+    let match;
+
+    while ((match = tokenPattern.exec(text)) !== null) {
+      appendPlainWithBreaks(parent, text.slice(cursor, match.index));
+      const token = match[0];
+
+      if (token.startsWith('`')) {
+        parent.appendChild(el('code', { text: token.slice(1, -1) }));
+      } else if (token.startsWith('**')) {
+        parent.appendChild(el('strong', { text: token.slice(2, -2) }));
+      } else {
+        const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          const anchor = el('a', { href: linkMatch[2], text: linkMatch[1], target: '_blank', rel: 'noopener noreferrer' });
+          anchor.style.color = '#93c5fd';
+          parent.appendChild(anchor);
+        }
+      }
+      cursor = match.index + token.length;
+    }
+
+    appendPlainWithBreaks(parent, text.slice(cursor));
+  }
+
+  function appendPlainWithBreaks(parent, value) {
+    const parts = String(value || '').split('\n');
+    parts.forEach((part, index) => {
+      if (index > 0) parent.appendChild(document.createElement('br'));
+      if (part) parent.appendChild(document.createTextNode(part));
+    });
+  }
+
+  function renderTable(table) {
+    const wrapper = el('div', { class: 'obs-pd-table-wrap' });
+    const tableNode = el('table', { class: 'obs-pd-table' });
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+
+    table.headers.forEach((header) => {
+      headerRow.appendChild(el('th', { text: header }));
+    });
+    thead.appendChild(headerRow);
+    tableNode.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    table.rows.forEach((row) => {
+      const tr = document.createElement('tr');
+      table.headers.forEach((_, index) => {
+        const td = document.createElement('td');
+        appendInline(td, row[index] || '');
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    tableNode.appendChild(tbody);
+    wrapper.appendChild(tableNode);
+    return wrapper;
+  }
+
+  function renderMarkdownLines(lines) {
+    const container = document.createDocumentFragment();
+    const source = stripOuterFence(lines);
+    let index = 0;
+
+    while (index < source.length) {
+      const line = source[index];
+      if (!line.trim()) {
+        index += 1;
+        continue;
+      }
+
+      if (/^```/.test(line.trim())) {
+        const codeLines = [];
+        index += 1;
+        while (index < source.length && !/^```\s*$/.test(source[index].trim())) {
+          codeLines.push(source[index]);
+          index += 1;
+        }
+        if (index < source.length) index += 1;
+        container.appendChild(el('pre', { class: 'obs-pd-code', text: codeLines.join('\n') }));
+        continue;
+      }
+
+      if (index + 1 < source.length && line.includes('|') && isTableSeparator(source[index + 1])) {
+        const table = parseFirstTable(source.slice(index));
+        if (table) {
+          container.appendChild(renderTable(table));
+          index += table.end;
+          continue;
+        }
+      }
+
+      const minorHeading = line.match(/^####\s+(.+?)\s*$/);
+      if (minorHeading) {
+        container.appendChild(el('h4', { text: minorHeading[1] }));
+        index += 1;
+        continue;
+      }
+
+      if (/^\s*[-*]\s+/.test(line)) {
+        const list = document.createElement('ul');
+        while (index < source.length && /^\s*[-*]\s+/.test(source[index])) {
+          const li = document.createElement('li');
+          appendInline(li, source[index].replace(/^\s*[-*]\s+/, ''));
+          list.appendChild(li);
+          index += 1;
+        }
+        container.appendChild(list);
+        continue;
+      }
+
+      if (/^\s*\d+\.\s+/.test(line)) {
+        const list = document.createElement('ol');
+        while (index < source.length && /^\s*\d+\.\s+/.test(source[index])) {
+          const li = document.createElement('li');
+          appendInline(li, source[index].replace(/^\s*\d+\.\s+/, ''));
+          list.appendChild(li);
+          index += 1;
+        }
+        container.appendChild(list);
+        continue;
+      }
+
+      const paragraphLines = [line];
+      index += 1;
+      while (
+        index < source.length &&
+        source[index].trim() &&
+        !/^```/.test(source[index].trim()) &&
+        !/^####\s+/.test(source[index]) &&
+        !/^\s*[-*]\s+/.test(source[index]) &&
+        !/^\s*\d+\.\s+/.test(source[index]) &&
+        !(index + 1 < source.length && source[index].includes('|') && isTableSeparator(source[index + 1]))
+      ) {
+        paragraphLines.push(source[index]);
+        index += 1;
+      }
+
+      const paragraph = document.createElement('p');
+      appendInline(paragraph, paragraphLines.join('\n'));
+      container.appendChild(paragraph);
+    }
+
+    if (!source.length) {
+      container.appendChild(el('div', { class: 'obs-pd-empty', text: 'not provided' }));
+    }
+
+    return container;
+  }
+
+  function metadataValue(documentModel, ...keys) {
+    const entries = Object.entries(documentModel.metadata);
+    for (const key of keys) {
+      const normalizedKey = normalizeHeading(key);
+      const found = entries.find(([candidate]) => normalizeHeading(candidate) === normalizedKey);
+      if (found) return found[1];
+    }
+    return '';
+  }
+
+  function renderDocumentHeader(documentModel) {
+    const header = el('div', { class: 'obs-pd-document-header' });
+    header.appendChild(el('h1', { text: documentModel.title }));
+
+    const badges = el('div', { class: 'obs-pd-badges' });
+    const status = metadataValue(documentModel, 'Status');
+    const scopeType = metadataValue(documentModel, 'Scope Type');
+    const scopeAnchor = metadataValue(documentModel, 'Scope Anchor');
+    const version = metadataValue(documentModel, 'Doc version');
+
+    if (status) badges.appendChild(el('span', { class: 'obs-pd-badge', 'data-kind': 'status', text: status }));
+    if (scopeType) badges.appendChild(el('span', { class: 'obs-pd-badge', 'data-kind': 'scope', text: scopeType }));
+    if (scopeAnchor) badges.appendChild(el('span', { class: 'obs-pd-badge', text: scopeAnchor }));
+    if (version) badges.appendChild(el('span', { class: 'obs-pd-badge', text: version }));
+
+    for (const [key, value] of Object.entries(documentModel.metadata)) {
+      if (['status', 'scope type', 'scope anchor', 'doc version'].includes(normalizeHeading(key))) continue;
+      badges.appendChild(el('span', { class: 'obs-pd-badge', text: `${key}: ${value}` }));
+    }
+
+    if (badges.childNodes.length) header.appendChild(badges);
+    return header;
+  }
+
+  function scenarioKind(title) {
+    const normalized = normalizeHeading(title);
+    if (normalized.includes('minimum')) return 'minimum';
+    if (normalized === 'base' || normalized.includes(' base')) return 'base';
+    if (normalized.includes('desired')) return 'desired';
+    if (normalized.includes('max') || normalized.includes('very wide')) return 'max';
+    return 'other';
+  }
+
+  function renderPlanCore(section) {
+    const wrapper = document.createDocumentFragment();
+    wrapper.appendChild(el('div', { class: 'obs-pd-section-title', text: section.title }));
+
+    if (trimBlankLines(section.lines).length) {
+      const intro = el('div', { class: 'obs-pd-card' });
+      intro.appendChild(renderMarkdownLines(section.lines));
+      wrapper.appendChild(intro);
+    }
+
+    const grid = el('div', { class: 'obs-pd-grid' });
+    section.subsections.forEach((subsection) => {
+      const card = el('div', { class: 'obs-pd-scenario-card', 'data-scenario': scenarioKind(subsection.title) });
+      card.appendChild(el('h3', { text: subsection.title }));
+      card.appendChild(renderMarkdownLines(subsection.lines));
+      grid.appendChild(card);
+    });
+
+    if (section.subsections.length) wrapper.appendChild(grid);
+    return wrapper;
+  }
+
+  function renderLinksSection(section) {
+    const card = el('div', { class: 'obs-pd-card' });
+    card.appendChild(el('h2', { text: section.title }));
+    const lines = stripOuterFence(section.lines);
+    let renderedAny = false;
+
+    for (const line of lines) {
+      const match = line.match(/^([^:]+):\s*(.*)$/);
+      if (!match) continue;
+      renderedAny = true;
+      const row = el('div', { class: 'obs-pd-link-row' });
+      row.appendChild(el('div', { class: 'obs-pd-link-key', text: match[1].trim() }));
+      row.appendChild(el('div', { class: 'obs-pd-link-value', text: match[2].trim() || 'not provided' }));
+      card.appendChild(row);
+    }
+
+    if (!renderedAny) card.appendChild(renderMarkdownLines(section.lines));
+    return card;
+  }
+
+  function renderGenericSection(section) {
+    if (normalizeHeading(section.title).includes('plan core')) return renderPlanCore(section);
+    if (normalizeHeading(section.title) === 'links') return renderLinksSection(section);
+
+    const card = el('div', { class: 'obs-pd-card' });
+    card.appendChild(el('h2', { text: section.title }));
+    if (trimBlankLines(section.lines).length) card.appendChild(renderMarkdownLines(section.lines));
+
+    section.subsections.forEach((subsection) => {
+      card.appendChild(el('h3', { text: subsection.title }));
+      card.appendChild(renderMarkdownLines(subsection.lines));
+    });
+
+    if (!trimBlankLines(section.lines).length && !section.subsections.length) {
+      card.appendChild(el('div', { class: 'obs-pd-empty', text: 'not provided' }));
+    }
+
+    return card;
+  }
+
+  function sourceBar(path, label) {
+    const bar = el('div', { class: 'obs-pd-source-bar' });
+    bar.appendChild(el('div', { class: 'obs-pd-source-label', text: label }));
+    bar.appendChild(el('div', { class: 'obs-pd-path', text: path || 'not provided' }));
+    if (path) {
+      bar.appendChild(el('button', {
+        class: 'obs-pd-btn',
+        text: 'Open',
+        onclick: () => window.open(buildLocalUrl(path), '_blank', 'noopener,noreferrer')
+      }));
+    }
+    return bar;
+  }
+
+  function renderFormattedDocument(path, markdown, label) {
+    const wrapper = el('div');
+    wrapper.appendChild(sourceBar(path, label));
+    const model = parseMarkdownDocument(markdown);
+    wrapper.appendChild(renderDocumentHeader(model));
+
+    if (trimBlankLines(model.preamble).length) {
+      const preambleCard = el('div', { class: 'obs-pd-card' });
+      preambleCard.appendChild(renderMarkdownLines(model.preamble));
+      wrapper.appendChild(preambleCard);
+    }
+
+    if (!model.sections.length) {
+      wrapper.appendChild(el('div', { class: 'obs-pd-note', text: 'Known dashboard sections were not found. Use Raw mode to inspect the source.' }));
+      return wrapper;
+    }
+
+    model.sections.forEach((section) => wrapper.appendChild(renderGenericSection(section)));
+    return wrapper;
+  }
+
+  function renderRawSource(file, label) {
+    const wrapper = el('div', { class: 'obs-pd-raw-group' });
+    wrapper.appendChild(sourceBar(file.path, label));
+    if (file.error) {
+      wrapper.appendChild(el('div', { class: 'obs-pd-error', text: `Could not load:\n${file.path}\n\n${file.error}` }));
+    } else {
+      wrapper.appendChild(el('pre', { class: 'obs-pd-raw', text: file.text }));
+    }
+    return wrapper;
+  }
+
+  function normalizedHeaderIndex(table, aliases) {
+    const normalizedAliases = aliases.map(normalizeHeading);
+    return table.headers.findIndex((header) => normalizedAliases.some((alias) => normalizeHeading(header) === alias || normalizeHeading(header).includes(alias)));
+  }
+
+  function rowValue(row, table, aliases) {
+    const index = normalizedHeaderIndex(table, aliases);
+    return index >= 0 ? (row[index] || '') : '';
+  }
+
+  function tableToKeyValue(table) {
+    const output = {};
+    if (!table || table.headers.length < 2) return output;
+    table.rows.forEach((row) => {
+      const key = cleanCell(row[0]);
+      if (key) output[normalizeHeading(key)] = cleanCell(row[1]);
+    });
+    return output;
+  }
+
+  function pickKeyValue(map, aliases) {
+    const keys = Object.keys(map);
+    for (const alias of aliases) {
+      const normalizedAlias = normalizeHeading(alias);
+      const exact = keys.find((key) => key === normalizedAlias);
+      if (exact) return map[exact];
+      const partial = keys.find((key) => key.includes(normalizedAlias));
+      if (partial) return map[partial];
+    }
+    return '';
+  }
+
+  function scoreCard(label, value, tone) {
+    const card = el('div', { class: 'obs-pd-score-card', 'data-tone': tone || 'neutral' });
+    card.appendChild(el('div', { class: 'obs-pd-score-label', text: label }));
+    card.appendChild(el('div', { class: 'obs-pd-score-value', text: value || '—' }));
+    return card;
+  }
+
+  function extractSupportMetric(documentModel, pattern) {
+    const match = documentModel.raw.match(pattern);
+    return match ? cleanCell(match[1]) : '';
+  }
+
+  function renderSessionOverview(documentModel) {
+    const summarySubsection = findSubsection(documentModel, 'work score summary');
+    const summaryTable = summarySubsection ? parseFirstTable(summarySubsection.lines) : null;
+    const values = tableToKeyValue(summaryTable);
+
+    const supportAverage = extractSupportMetric(documentModel, /Support Score:\s*(?:\*\*)?([^*\n]+?)(?:\*\*)?(?=\n|$)/i);
+    const supportPenalty = extractSupportMetric(documentModel, /Support Penalty:\s*(?:\*\*)?([^*\n]+?)(?:\*\*)?(?=\n|$)/i);
+
+    const cards = [
+      ['Work Points', pickKeyValue(values, ['Work Points']), 'neutral'],
+      ['Penalties', pickKeyValue(values, ['Penalties', 'Penalties / planned carryover']), 'bad'],
+      ['Net Work Score', pickKeyValue(values, ['Net Work Score']), 'good'],
+      ['Incoming Debt', pickKeyValue(values, ['Previous-day carryover debt', 'Incoming debt']), 'violet'],
+      ['Net After Debt', pickKeyValue(values, ['Net score after carryover', 'Net after debt']), 'warn'],
+      ['Current-Day Score', pickKeyValue(values, ['Current-day score', 'Remaining current-day score']), 'warn'],
+      ['Support Avg', supportAverage, 'violet'],
+      ['Support Penalty', supportPenalty, supportPenalty && supportPenalty !== '0' ? 'bad' : 'good']
+    ].filter(([, value]) => value);
+
+    if (!cards.length) return null;
+
+    const wrapper = document.createDocumentFragment();
+    wrapper.appendChild(el('div', { class: 'obs-pd-section-title', text: 'Session Overview' }));
+    const grid = el('div', { class: 'obs-pd-score-grid' });
+    cards.forEach(([label, value, tone]) => grid.appendChild(scoreCard(label, value, tone)));
+    wrapper.appendChild(grid);
+    return wrapper;
+  }
+
+  function splitGoalValues(value) {
+    const source = cleanCell(value);
+    if (!source) return [];
+    return source
+      .split(/\n|;|\s+\+\s+/)
+      .map((item) => item.replace(/^[-*]\s*/, '').trim())
+      .filter(Boolean);
+  }
+
+  function compactSessionName(row, table) {
+    const number = rowValue(row, table, ['#', 'Session #']);
+    const sessionText = rowValue(row, table, ['Session']);
+    const explicitId = sessionText.match(/\bS\d+\b/i)?.[0];
+    if (explicitId) return explicitId.toUpperCase();
+    if (number) return `S${number}`;
+    return sessionText || 'Session';
+  }
+
+  function workedOnValue(row, table) {
+    return rowValue(row, table, ['Worked On (Goals)', 'Worked On', 'Related Goals', 'Goal Maps', 'Goals', 'Target']) ||
+      rowValue(row, table, ['Session']) ||
+      'not provided';
+  }
+
+  function renderGoalChips(value) {
+    const wrapper = el('div', { class: 'obs-pd-goal-list' });
+    const goals = splitGoalValues(value);
+    if (!goals.length) {
+      wrapper.appendChild(el('span', { class: 'obs-pd-empty', text: 'not provided' }));
+      return wrapper;
+    }
+    goals.forEach((goal) => wrapper.appendChild(el('span', { class: 'obs-pd-goal-chip', text: goal })));
+    return wrapper;
+  }
+
+  function renderSessionList(documentModel) {
+    const sessionsSection = findSection(documentModel, 'finished sessions') || findSection(documentModel, 'sessions');
+    if (!sessionsSection) return null;
+
+    const table = parseFirstTable(sessionsSection.lines);
+    const wrapper = document.createDocumentFragment();
+    wrapper.appendChild(el('div', { class: 'obs-pd-section-title', text: 'Finished Sessions' }));
+
+    if (!table || !table.rows.length) {
+      const card = el('div', { class: 'obs-pd-card' });
+      card.appendChild(renderMarkdownLines(sessionsSection.lines));
+      wrapper.appendChild(card);
+      return wrapper;
+    }
+
+    const panel = el('div', { class: 'obs-pd-session-panel' });
+    panel.appendChild(el('div', { class: 'obs-pd-session-head' }, [
+      el('div', { text: '' }),
+      el('div', { text: 'Session' }),
+      el('div', { text: 'Score' }),
+      el('div', { text: 'Worked on' })
     ]));
 
-    let hasAny = false;
-    for (const name of SECTION_NAMES) {
-      const body = extractSection(md, name) || extractSubsection(md, name);
-      if (!body) continue;
-      hasAny = true;
-      wrap.appendChild(el('div', { class: 'obs-pd-card' }, [
-        el('h3', { text: name }),
-        el('pre', { class: 'obs-pd-pre', text: cleanupMarkdownBody(body) })
-      ]));
+    table.rows.forEach((row) => {
+      const details = el('details', { class: 'obs-pd-session-record' });
+      const summary = el('summary', { class: 'obs-pd-session-summary' });
+      const sessionId = compactSessionName(row, table);
+      const score = rowValue(row, table, ['Points', 'Score', 'Total']) || '—';
+      const workedOn = workedOnValue(row, table);
+
+      summary.appendChild(el('div', { class: 'obs-pd-chevron', text: '›' }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-id', text: sessionId }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-score', text: score }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-worked', text: workedOn.replace(/\n/g, ' · ') }));
+      details.appendChild(summary);
+
+      const detailArea = el('div', { class: 'obs-pd-session-details' });
+      detailArea.appendChild(renderGoalChips(workedOn));
+      const grid = el('div', { class: 'obs-pd-detail-grid' });
+
+      const preferredFields = [
+        ['D / F', ['D/F', 'D / F', 'D/F/K/P']],
+        ['Time', ['Time']],
+        ['Result', ['Result', 'Result (short)']],
+        ['Progress Signal', ['Progress Signal']],
+        ['Base', ['Base']],
+        ['Adj', ['Adj', 'Adjustment']]
+      ];
+
+      const usedIndexes = new Set();
+      preferredFields.forEach(([label, aliases]) => {
+        const index = normalizedHeaderIndex(table, aliases);
+        if (index < 0 || !row[index]) return;
+        usedIndexes.add(index);
+        const item = el('div', { class: 'obs-pd-detail-item' });
+        item.appendChild(el('div', { class: 'obs-pd-detail-label', text: label }));
+        item.appendChild(el('div', { class: 'obs-pd-detail-value', text: cleanCell(row[index]) }));
+        grid.appendChild(item);
+      });
+
+      table.headers.forEach((header, index) => {
+        if (usedIndexes.has(index)) return;
+        if (['#', 'session', 'points', 'score', 'total', 'worked on (goals)', 'worked on', 'goals', 'related goals', 'goal maps', 'target'].includes(normalizeHeading(header))) return;
+        if (!row[index]) return;
+        const item = el('div', { class: 'obs-pd-detail-item' });
+        item.appendChild(el('div', { class: 'obs-pd-detail-label', text: header }));
+        item.appendChild(el('div', { class: 'obs-pd-detail-value', text: cleanCell(row[index]) }));
+        grid.appendChild(item);
+      });
+
+      if (grid.childNodes.length) detailArea.appendChild(grid);
+      details.appendChild(detailArea);
+      panel.appendChild(details);
+    });
+
+    wrapper.appendChild(panel);
+    return wrapper;
+  }
+
+  function renderNamedSessionSection(documentModel, query, displayTitle) {
+    const section = findSection(documentModel, query);
+    const subsection = findSubsection(documentModel, query);
+    const source = subsection || section;
+    if (!source) return null;
+
+    const wrapper = document.createDocumentFragment();
+    wrapper.appendChild(el('div', { class: 'obs-pd-section-title', text: displayTitle }));
+    const card = el('div', { class: 'obs-pd-card' });
+    card.appendChild(renderMarkdownLines(source.lines));
+    wrapper.appendChild(card);
+    return wrapper;
+  }
+
+  function renderSessionLedger(file) {
+    const wrapper = el('div');
+    wrapper.appendChild(sourceBar(file.path, 'Operational Session Day'));
+
+    if (file.error) {
+      wrapper.appendChild(el('div', { class: 'obs-pd-error', text: `Could not load session day:\n${file.path}\n\n${file.error}` }));
+      return wrapper;
     }
 
-    if (!hasAny) {
-      wrap.appendChild(el('div', { class: 'obs-pd-card' }, [
-        el('h3', { text: 'Raw file' }),
-        el('pre', { class: 'obs-pd-pre', text: md })
-      ]));
+    const model = parseMarkdownDocument(file.text);
+    wrapper.appendChild(renderDocumentHeader(model));
+
+    const overview = renderSessionOverview(model);
+    if (overview) wrapper.appendChild(overview);
+
+    const sessions = renderSessionList(model);
+    if (sessions) wrapper.appendChild(sessions);
+
+    const penalties = renderNamedSessionSection(model, 'penalty events', 'Penalty Events');
+    if (penalties) wrapper.appendChild(penalties);
+
+    const supportMarks = renderNamedSessionSection(model, 'support marks', 'Support');
+    if (supportMarks) wrapper.appendChild(supportMarks);
+    else {
+      const supportFacts = renderNamedSessionSection(model, 'support facts', 'Support Facts');
+      if (supportFacts) wrapper.appendChild(supportFacts);
     }
-    return wrap;
+
+    const carryover = renderNamedSessionSection(model, 'carryover', 'Carryover / Debt');
+    if (carryover) wrapper.appendChild(carryover);
+
+    const finalSummary = renderNamedSessionSection(model, 'final day summary', 'Final Day Summary');
+    if (finalSummary) wrapper.appendChild(finalSummary);
+
+    return wrapper;
+  }
+
+  function renderLoadedFile(body, file, label) {
+    if (!file) {
+      body.appendChild(el('div', { class: 'obs-pd-note', text: `${label}: not linked.` }));
+      return;
+    }
+    if (state.rawMode) {
+      body.appendChild(renderRawSource(file, label));
+      return;
+    }
+    if (file.error) {
+      body.appendChild(sourceBar(file.path, label));
+      body.appendChild(el('div', { class: 'obs-pd-error', text: `Could not load:\n${file.path}\n\n${file.error}` }));
+      return;
+    }
+    body.appendChild(renderFormattedDocument(file.path, file.text, label));
+  }
+
+  function renderDayComposite(body) {
+    const day = state.files.day;
+    const sessionDay = state.files.sessionDay;
+
+    if (state.rawMode) {
+      if (day) body.appendChild(renderRawSource(day, 'Planning Day'));
+      if (sessionDay) body.appendChild(renderRawSource(sessionDay, 'Operational Session Day'));
+      if (!sessionDay) body.appendChild(el('div', { class: 'obs-pd-note', text: 'No active_session_day is linked. The planning day remains available; session state is not inferred.' }));
+      return;
+    }
+
+    const layout = el('div', { class: 'obs-pd-two-column' });
+    const planningPane = el('div', { class: 'obs-pd-pane' });
+    const sessionPane = el('div', { class: 'obs-pd-pane' });
+
+    if (day) {
+      if (day.error) {
+        planningPane.appendChild(sourceBar(day.path, 'Planning Day'));
+        planningPane.appendChild(el('div', { class: 'obs-pd-error', text: day.error }));
+      } else {
+        planningPane.appendChild(renderFormattedDocument(day.path, day.text, 'Planning Day'));
+      }
+    } else {
+      planningPane.appendChild(el('div', { class: 'obs-pd-note', text: 'No active planning day is linked.' }));
+    }
+
+    if (sessionDay) {
+      sessionPane.appendChild(renderSessionLedger(sessionDay));
+    } else {
+      sessionPane.appendChild(el('div', { class: 'obs-pd-note', text:
+        'No operational session day is linked.\n\nAdd a real matching path as active_session_day in planning/dashboard/index.md when the detailed file exists. D/F, support, penalties and debt are not inferred from the planning file.'
+      }));
+    }
+
+    layout.appendChild(planningPane);
+    layout.appendChild(sessionPane);
+    body.appendChild(layout);
   }
 
   async function loadOptional(path) {
@@ -202,47 +1503,53 @@
     try {
       return { path, text: await fetchText(path), error: null };
     } catch (error) {
-      return { path, text: '', error: error.message || String(error) };
+      return { path, text: '', error: error?.message || String(error) };
     }
   }
 
   async function refresh() {
+    if (state.loading) return;
+    state.loading = true;
     const body = document.querySelector('#obs-planning-dashboard-body');
-    body.textContent = 'Loading...';
+    if (body) body.textContent = 'Loading dashboard…';
+
     try {
       GM_setValue('obsPlanningDashboard.baseUrl', state.baseUrl);
       GM_setValue('obsPlanningDashboard.indexPath', state.indexPath);
 
       state.indexText = await fetchText(state.indexPath);
       const paths = parseIndex(state.indexText);
-
       state.files = { index: { path: state.indexPath, text: state.indexText, error: null } };
       state.groups = { goalMaps: [] };
 
-      for (const [key, path] of Object.entries({
+      const fileEntries = Object.entries({
         previousYear: paths.previousYear,
         year: paths.year,
         period: paths.period,
         week: paths.week,
         day: paths.day,
+        sessionDay: paths.sessionDay,
         deferredWork: paths.deferredWork,
         deferredIdeas: paths.deferredIdeas
-      })) {
-        const loaded = await loadOptional(path);
-        if (loaded) state.files[key] = loaded;
-      }
+      });
 
-      for (const path of paths.goalMaps || []) {
-        const loaded = await loadOptional(path);
-        if (loaded) state.groups.goalMaps.push(loaded);
-      }
+      const loadedFiles = await Promise.all(fileEntries.map(async ([key, path]) => [key, await loadOptional(path)]));
+      loadedFiles.forEach(([key, file]) => {
+        if (file) state.files[key] = file;
+      });
 
+      const loadedGoals = await Promise.all((paths.goalMaps || []).map(loadOptional));
+      state.groups.goalMaps = loadedGoals.filter(Boolean);
       render();
     } catch (error) {
-      body.innerHTML = '';
-      body.appendChild(el('div', { class: 'obs-pd-error', text:
-        `Could not load dashboard index.\n\n${error.message}\n\nCheck:\n1. Run: python -m http.server 8765 from repo root.\n2. Confirm base URL and index path.\n3. Confirm planning/dashboard/index.md exists.`
-      }));
+      if (body) {
+        body.innerHTML = '';
+        body.appendChild(el('div', { class: 'obs-pd-error', text:
+          `Could not load dashboard index.\n\n${error?.message || error}\n\nCheck:\n1. Run python -m http.server 8765 from repo root.\n2. Confirm Base URL and Index.\n3. Confirm planning/dashboard/index.md exists.`
+        }));
+      }
+    } finally {
+      state.loading = false;
     }
   }
 
@@ -253,61 +1560,78 @@
       ['year', 'Year', 'file'],
       ['period', 'Period', 'file'],
       ['week', 'Week', 'file'],
-      ['day', 'Day', 'file'],
+      ['day', 'Day', 'day'],
       ['goalMaps', 'Goal Maps', 'group'],
       ['deferredWork', 'Deferred Work', 'file'],
       ['deferredIdeas', 'Deferred Ideas', 'file']
-    ].filter(([key, , kind]) => kind === 'group' ? (state.groups[key] || []).length : state.files[key]);
+    ].filter(([key, , kind]) => {
+      if (kind === 'group') return (state.groups[key] || []).length > 0;
+      if (kind === 'day') return Boolean(state.files.day || state.files.sessionDay);
+      return Boolean(state.files[key]);
+    });
   }
 
-  function renderLoadedFile(body, file) {
-    if (file.error) {
-      body.appendChild(el('div', { class: 'obs-pd-error', text: `Could not load:\n${file.path}\n\n${file.error}` }));
-    } else {
-      body.appendChild(renderMarkdownSummary(file.path, file.text));
-    }
+  function currentPrimaryFile() {
+    if (state.activeTab === 'day') return state.files.day || state.files.sessionDay || null;
+    const group = state.groups[state.activeTab];
+    if (group?.length) return group[0];
+    return state.files[state.activeTab] || null;
   }
 
   function render() {
     const tabs = document.querySelector('#obs-planning-dashboard-tabs');
     const body = document.querySelector('#obs-planning-dashboard-body');
+    const modeButton = document.querySelector('#obs-planning-dashboard-mode');
+    const settings = document.querySelector('#obs-planning-dashboard-settings');
+    if (!tabs || !body) return;
+
     tabs.innerHTML = '';
     body.innerHTML = '';
+    if (modeButton) modeButton.textContent = state.rawMode ? 'Formatted' : 'Raw';
+    if (settings) settings.setAttribute('data-open', String(state.settingsOpen));
 
-    const defs = tabDefinitions();
-    if (!defs.some(([key]) => key === state.activeTab)) state.activeTab = defs[0]?.[0] || 'index';
+    const definitions = tabDefinitions();
+    if (!definitions.some(([key]) => key === state.activeTab)) state.activeTab = definitions[0]?.[0] || 'index';
 
-    for (const [key, label] of defs) {
+    definitions.forEach(([key, label]) => {
       tabs.appendChild(el('button', {
         class: 'obs-pd-btn obs-pd-tab',
         'data-active': String(state.activeTab === key),
         text: label,
-        onclick: () => { state.activeTab = key; render(); }
+        onclick: () => {
+          state.activeTab = key;
+          render();
+        }
       }));
+    });
+
+    if (state.activeTab === 'day') {
+      renderDayComposite(body);
+      return;
     }
 
     const group = state.groups[state.activeTab];
     if (group) {
-      if (!group.length) {
-        body.appendChild(el('div', { class: 'obs-pd-error', text: 'No files loaded for this group.' }));
-      }
-      for (const file of group) renderLoadedFile(body, file);
+      if (!group.length) body.appendChild(el('div', { class: 'obs-pd-note', text: 'No files loaded for this group.' }));
+      group.forEach((file, index) => renderLoadedFile(body, file, `Goal Map ${index + 1}`));
       return;
     }
 
     const file = state.files[state.activeTab];
-    if (!file) {
-      body.appendChild(el('div', { class: 'obs-pd-error', text: 'No file loaded.' }));
-      return;
-    }
-    renderLoadedFile(body, file);
+    renderLoadedFile(body, file, state.activeTab === 'index' ? 'Dashboard Index' : 'Source');
   }
 
   function activeFileOrGroupText() {
+    if (state.activeTab === 'day') {
+      const files = [state.files.day, state.files.sessionDay].filter(Boolean);
+      return files.map((file) => `path: ${file.path}\n\n${file.error ? `LOAD ERROR: ${file.error}` : file.text}`).join('\n\n---\n\n');
+    }
+
     const group = state.groups[state.activeTab];
-    if (group && group.length) {
+    if (group?.length) {
       return group.map((file) => `path: ${file.path}\n\n${file.error ? `LOAD ERROR: ${file.error}` : file.text}`).join('\n\n---\n\n');
     }
+
     const file = state.files[state.activeTab];
     if (!file) return '';
     return `path: ${file.path}\n\n${file.error ? `LOAD ERROR: ${file.error}` : file.text}`;
@@ -316,13 +1640,23 @@
   function copyUpdatePrompt() {
     const current = activeFileOrGroupText();
     if (!current) return;
+
+    const dayRule = state.activeTab === 'day'
+      ? [
+          'The planning-day file and operational session-day file have separate ownership.',
+          'Do not copy or invent D/F, support, penalties or debt inside the planning-day file.',
+          'Preserve every referenced goal when a session worked on several goals.'
+        ]
+      : [];
+
     const prompt = [
       '[PLANNING_DASHBOARD_UPDATE]',
-      'Update this local planning dashboard content using the Scenario Planning Workspace Template.',
+      'Update the supplied local planning source content using its owner templates and workflows.',
       'Preserve source-of-truth boundaries.',
       'Do not invent user facts.',
-      'Use not provided for unknown fields.',
+      'Use not provided for unknown planning fields.',
       'Mark unclear work explicitly instead of treating it as progress.',
+      ...dayRule,
       '',
       'current_content:',
       '```markdown',
@@ -330,45 +1664,82 @@
       '```',
       '[/PLANNING_DASHBOARD_UPDATE]'
     ].join('\n');
+
     navigator.clipboard.writeText(prompt).catch(() => {});
   }
 
-  function openSourceUrl() {
-    const file = state.files[state.activeTab] || (state.groups[state.activeTab] || [])[0];
+  function openCurrentSource() {
+    const file = currentPrimaryFile();
     if (!file) return;
-    const url = normalizeBaseUrl(state.baseUrl) + file.path.replace(/^\/+/, '');
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(buildLocalUrl(file.path), '_blank', 'noopener,noreferrer');
   }
 
   function buildUI() {
     if (document.querySelector('#obs-planning-dashboard-btn')) return;
 
-    const button = el('button', { id: 'obs-planning-dashboard-btn', text: 'Planning' });
-    const panel = el('div', { id: 'obs-planning-dashboard-panel' }, [
-      el('div', { class: 'obs-pd-header' }, [
-        el('div', { class: 'obs-pd-title', text: 'OBS Local Planning Dashboard' }),
-        el('button', { class: 'obs-pd-btn', text: 'Refresh', onclick: refresh }),
-        el('button', { class: 'obs-pd-btn', text: 'Open', onclick: openSourceUrl }),
-        el('button', { class: 'obs-pd-btn', text: 'Copy AI prompt', onclick: copyUpdatePrompt }),
-        el('button', { class: 'obs-pd-btn', text: 'x', onclick: () => panel.setAttribute('data-open', 'false') })
-      ]),
-      el('div', { class: 'obs-pd-settings' }, [
-        el('label', { text: 'Base URL' }),
-        el('input', { class: 'obs-pd-input', value: state.baseUrl, onchange: (event) => { state.baseUrl = event.target.value; } }),
-        el('label', { text: 'Index' }),
-        el('input', { class: 'obs-pd-input', value: state.indexPath, onchange: (event) => { state.indexPath = event.target.value; } })
-      ]),
-      el('div', { id: 'obs-planning-dashboard-tabs', class: 'obs-pd-tabs' }),
-      el('div', { id: 'obs-planning-dashboard-body', class: 'obs-pd-body' })
+    const openButton = el('button', { id: 'obs-planning-dashboard-btn', text: 'Planning' });
+    const panel = el('div', { id: 'obs-planning-dashboard-panel', 'data-open': 'false' });
+
+    const title = el('div', { class: 'obs-pd-title' }, [
+      el('div', { class: 'obs-pd-title-main', text: 'OBS Local Planning Dashboard' }),
+      el('div', { class: 'obs-pd-title-sub', text: 'Read-only formatted repo view' })
     ]);
 
-    button.addEventListener('click', async () => {
-      const isOpen = panel.getAttribute('data-open') === 'true';
-      panel.setAttribute('data-open', String(!isOpen));
-      if (!isOpen && !state.indexText) await refresh();
+    const header = el('div', { class: 'obs-pd-header' }, [
+      title,
+      el('button', { class: 'obs-pd-btn', text: 'Refresh', onclick: refresh }),
+      el('button', { class: 'obs-pd-btn', text: 'Open', onclick: openCurrentSource }),
+      el('button', { class: 'obs-pd-btn', text: 'Copy AI prompt', onclick: copyUpdatePrompt }),
+      el('button', {
+        id: 'obs-planning-dashboard-mode',
+        class: 'obs-pd-btn',
+        text: 'Raw',
+        onclick: () => {
+          state.rawMode = !state.rawMode;
+          render();
+        }
+      }),
+      el('button', {
+        class: 'obs-pd-btn',
+        text: '⚙',
+        onclick: () => {
+          state.settingsOpen = !state.settingsOpen;
+          render();
+        }
+      }),
+      el('button', { class: 'obs-pd-btn', text: '×', onclick: () => panel.setAttribute('data-open', 'false') })
+    ]);
+
+    const baseInput = el('input', {
+      class: 'obs-pd-input',
+      value: state.baseUrl,
+      onchange: (event) => { state.baseUrl = event.target.value; }
+    });
+    const indexInput = el('input', {
+      class: 'obs-pd-input',
+      value: state.indexPath,
+      onchange: (event) => { state.indexPath = event.target.value; }
     });
 
-    document.body.appendChild(button);
+    const settings = el('div', { id: 'obs-planning-dashboard-settings', class: 'obs-pd-settings', 'data-open': 'false' }, [
+      el('label', { text: 'Base URL' }),
+      baseInput,
+      el('label', { text: 'Index' }),
+      indexInput
+    ]);
+
+    panel.appendChild(header);
+    panel.appendChild(settings);
+    panel.appendChild(el('div', { id: 'obs-planning-dashboard-tabs', class: 'obs-pd-tabs' }));
+    panel.appendChild(el('div', { id: 'obs-planning-dashboard-body', class: 'obs-pd-body' }));
+
+    openButton.addEventListener('click', async () => {
+      const willOpen = panel.getAttribute('data-open') !== 'true';
+      panel.setAttribute('data-open', String(willOpen));
+      if (willOpen && !state.indexText) await refresh();
+    });
+
+    document.body.appendChild(openButton);
     document.body.appendChild(panel);
   }
 
