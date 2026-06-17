@@ -181,15 +181,28 @@ Use this version for small UI surfaces such as Tampermonkey.
 
 8. Log finished session or penalty event.
 
-   After the segment:
+   After the segment, a normal Finished Session must record:
 
-   - log D/F;
-   - log points;
-   - log Progress Signal;
-   - update Finished Sessions;
-   - update Penalty Events if needed;
-   - update Net Work Score;
-   - update support facts when relevant.
+   - final D;
+   - final F;
+   - final Points / Score.
+
+   Optional session context is recorded only when explicitly provided by the user:
+
+   - Time;
+   - Session name;
+   - Goal(s), preserving every explicitly named goal;
+   - Progress Signal;
+   - Result.
+
+   Recording rules:
+
+   - leave omitted optional cells blank;
+   - do not write `not provided`, `—`, inferred goals, or session-name fallbacks into blank session cells;
+   - do not store Base, Adj, score deltas in parentheses, or other calculation internals in Finished Sessions;
+   - update Penalty Events only when a separate penalty event is explicitly applicable;
+   - update Net Work Score from final Points and penalties;
+   - update support facts only when relevant information is available.
 
 ## Pattern playbook
 

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OBS Local Planning Dashboard Viewer
 // @namespace    https://github.com/AlexPastukhh/obs/planning-dashboard
-// @version      0.3.0
+// @version      0.3.2
 // @description  Read-only formatted local planning dashboard viewer for OBS time scopes, goal maps, backlog and optional session-day ledgers.
 // @author       OBS planning-system
 // @match        https://chatgpt.com/*
@@ -468,7 +468,7 @@
     .obs-pd-session-head,
     .obs-pd-session-summary {
       display: grid;
-      grid-template-columns: 28px 80px 76px minmax(180px, 1fr);
+      grid-template-columns: 28px 72px 76px 108px minmax(160px, 1fr);
       gap: 8px;
       align-items: center;
     }
@@ -488,14 +488,23 @@
       background: rgba(9, 20, 36, .82);
     }
 
-    .obs-pd-session-record:first-of-type {
+    .obs-pd-session-record:first-of-type,
+    .obs-pd-session-head + .obs-pd-session-record {
       border-top: 0;
+    }
+
+    .obs-pd-session-record summary,
+    .obs-pd-session-record-static .obs-pd-session-summary {
+      padding: 8px 9px;
     }
 
     .obs-pd-session-record summary {
       list-style: none;
       cursor: pointer;
-      padding: 8px 9px;
+    }
+
+    .obs-pd-session-record-static .obs-pd-session-summary {
+      cursor: default;
     }
 
     .obs-pd-session-record summary::-webkit-details-marker {
@@ -535,7 +544,7 @@
     }
 
     .obs-pd-session-details {
-      padding: 0 10px 10px 116px;
+      padding: 0 10px 10px 10px;
     }
 
     .obs-pd-detail-grid {
@@ -640,7 +649,7 @@
 
       .obs-pd-session-head,
       .obs-pd-session-summary {
-        grid-template-columns: 24px 64px 64px minmax(120px, 1fr);
+        grid-template-columns: 24px 60px 60px 92px minmax(110px, 1fr);
       }
 
       .obs-pd-session-details {
@@ -667,7 +676,7 @@
       }
 
       .obs-pd-session-summary {
-        grid-template-columns: 22px 54px 54px minmax(0, 1fr);
+        grid-template-columns: 22px 50px 54px 72px minmax(0, 1fr);
       }
     }
   `);
@@ -1292,22 +1301,28 @@
     const explicitId = sessionText.match(/\bS\d+\b/i)?.[0];
     if (explicitId) return explicitId.toUpperCase();
     if (number) return `S${number}`;
-    return sessionText || 'Session';
+    return sessionText || '';
   }
 
-  function workedOnValue(row, table) {
-    return rowValue(row, table, ['Worked On (Goals)', 'Worked On', 'Related Goals', 'Goal Maps', 'Goals', 'Target']) ||
-      rowValue(row, table, ['Session']) ||
-      'not provided';
+  function sessionGoalsValue(row, table) {
+    return rowValue(row, table, [
+      'Goal(s)', 'Goals', 'Goal', 'Worked On (Goals)', 'Worked On',
+      'Related Goals', 'Goal Maps', 'Target'
+    ]);
+  }
+
+  function sessionDfForDisplay(value) {
+    return cleanCell(value)
+      .replace(/\s*\(\s*[+-]?\d+(?:[.,]\d+)?\s*\)/g, '')
+      .replace(/\s*\/\s*/g, ' / ')
+      .replace(/[ \t]+(?=\n|$)/g, '')
+      .trim();
   }
 
   function renderGoalChips(value) {
-    const wrapper = el('div', { class: 'obs-pd-goal-list' });
     const goals = splitGoalValues(value);
-    if (!goals.length) {
-      wrapper.appendChild(el('span', { class: 'obs-pd-empty', text: 'not provided' }));
-      return wrapper;
-    }
+    if (!goals.length) return null;
+    const wrapper = el('div', { class: 'obs-pd-goal-list' });
     goals.forEach((goal) => wrapper.appendChild(el('span', { class: 'obs-pd-goal-chip', text: goal })));
     return wrapper;
   }
@@ -1327,44 +1342,62 @@
       return wrapper;
     }
 
+    const goalAliases = [
+      'Goal(s)', 'Goals', 'Goal', 'Worked On (Goals)', 'Worked On',
+      'Related Goals', 'Goal Maps', 'Target'
+    ];
+    const ignoredHeaderNames = new Set([
+      '#', 'Session #', 'Session', 'Points', 'Score', 'Total',
+      'D/F', 'D / F', 'D/F/K/P',
+      ...goalAliases,
+      'Base', 'Adj', 'Adjustment'
+    ].map(normalizeHeading));
+
     const panel = el('div', { class: 'obs-pd-session-panel' });
     panel.appendChild(el('div', { class: 'obs-pd-session-head' }, [
       el('div', { text: '' }),
       el('div', { text: 'Session' }),
       el('div', { text: 'Score' }),
-      el('div', { text: 'Worked on' })
+      el('div', { text: 'D / F' }),
+      el('div', { text: 'Goal(s)' })
     ]));
 
     table.rows.forEach((row) => {
-      const details = el('details', { class: 'obs-pd-session-record' });
-      const summary = el('summary', { class: 'obs-pd-session-summary' });
       const sessionId = compactSessionName(row, table);
-      const score = rowValue(row, table, ['Points', 'Score', 'Total']) || '—';
-      const workedOn = workedOnValue(row, table);
-
-      summary.appendChild(el('div', { class: 'obs-pd-chevron', text: '›' }));
-      summary.appendChild(el('div', { class: 'obs-pd-session-id', text: sessionId }));
-      summary.appendChild(el('div', { class: 'obs-pd-session-score', text: score }));
-      summary.appendChild(el('div', { class: 'obs-pd-session-worked', text: workedOn.replace(/\n/g, ' · ') }));
-      details.appendChild(summary);
+      const score = rowValue(row, table, ['Points', 'Score', 'Total']);
+      const df = sessionDfForDisplay(rowValue(row, table, ['D/F', 'D / F', 'D/F/K/P']));
+      const goals = sessionGoalsValue(row, table);
 
       const detailArea = el('div', { class: 'obs-pd-session-details' });
-      detailArea.appendChild(renderGoalChips(workedOn));
-      const grid = el('div', { class: 'obs-pd-detail-grid' });
+      const goalChips = renderGoalChips(goals);
+      if (goalChips) detailArea.appendChild(goalChips);
 
+      const grid = el('div', { class: 'obs-pd-detail-grid' });
       const preferredFields = [
-        ['D / F', ['D/F', 'D / F', 'D/F/K/P']],
         ['Time', ['Time']],
         ['Result', ['Result', 'Result (short)']],
-        ['Progress Signal', ['Progress Signal']],
-        ['Base', ['Base']],
-        ['Adj', ['Adj', 'Adjustment']]
+        ['Progress Signal', ['Progress Signal']]
       ];
 
       const usedIndexes = new Set();
+      const markUsedIndex = (aliases) => {
+        const index = normalizedHeaderIndex(table, aliases);
+        if (index >= 0) usedIndexes.add(index);
+      };
+
+      [
+        ['#', 'Session #'],
+        ['Session'],
+        ['Points', 'Score', 'Total'],
+        ['D/F', 'D / F', 'D/F/K/P'],
+        goalAliases,
+        ['Base'],
+        ['Adj', 'Adjustment']
+      ].forEach(markUsedIndex);
+
       preferredFields.forEach(([label, aliases]) => {
         const index = normalizedHeaderIndex(table, aliases);
-        if (index < 0 || !row[index]) return;
+        if (index < 0 || !cleanCell(row[index])) return;
         usedIndexes.add(index);
         const item = el('div', { class: 'obs-pd-detail-item' });
         item.appendChild(el('div', { class: 'obs-pd-detail-label', text: label }));
@@ -1374,8 +1407,8 @@
 
       table.headers.forEach((header, index) => {
         if (usedIndexes.has(index)) return;
-        if (['#', 'session', 'points', 'score', 'total', 'worked on (goals)', 'worked on', 'goals', 'related goals', 'goal maps', 'target'].includes(normalizeHeading(header))) return;
-        if (!row[index]) return;
+        if (ignoredHeaderNames.has(normalizeHeading(header))) return;
+        if (!cleanCell(row[index])) return;
         const item = el('div', { class: 'obs-pd-detail-item' });
         item.appendChild(el('div', { class: 'obs-pd-detail-label', text: header }));
         item.appendChild(el('div', { class: 'obs-pd-detail-value', text: cleanCell(row[index]) }));
@@ -1383,8 +1416,23 @@
       });
 
       if (grid.childNodes.length) detailArea.appendChild(grid);
-      details.appendChild(detailArea);
-      panel.appendChild(details);
+      const hasDetails = Boolean(goalChips || grid.childNodes.length);
+      const record = hasDetails
+        ? el('details', { class: 'obs-pd-session-record' })
+        : el('div', { class: 'obs-pd-session-record obs-pd-session-record-static' });
+      const summary = hasDetails
+        ? el('summary', { class: 'obs-pd-session-summary' })
+        : el('div', { class: 'obs-pd-session-summary' });
+
+      summary.appendChild(el('div', { class: 'obs-pd-chevron', text: hasDetails ? '›' : '' }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-id', text: sessionId }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-score', text: score }));
+      summary.appendChild(el('div', { class: 'obs-pd-detail-value', text: df }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-worked', text: goals.replace(/\n/g, ' · ') }));
+      record.appendChild(summary);
+
+      if (hasDetails) record.appendChild(detailArea);
+      panel.appendChild(record);
     });
 
     wrapper.appendChild(panel);

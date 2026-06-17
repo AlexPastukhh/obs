@@ -1,7 +1,7 @@
 # Local Planning Dashboard Workflow
 
 Status: active OBS area workflow
-Doc version: v0.3.0
+Doc version: v0.3.2
 Scope: safe workflow for local planning dashboard files, formatted viewer rendering and optional operational session-day composition.
 
 ## 1. Core Rule
@@ -62,16 +62,29 @@ When `active_session_day` exists, also show:
 - incoming and remaining debt when provided;
 - current-day score when provided;
 - Finished Sessions;
-- D/F details;
-- worked-on goals or session target exactly as recorded;
-- short result;
+- final D and final F;
+- final Score / Points;
+- Goal(s) exactly as recorded when present;
+- optional Time, Session, Progress Signal and Result only when present;
 - Penalty Events;
 - support marks/average/penalty;
 - Carryover;
 - Final Day Summary.
 ```
 
-Session rows should be compact by default and expandable for detail.
+Session rows should be compact by default and expandable only for source fields that actually exist. A minimal D/F/Score-only row must not render an empty disclosure control.
+
+For Finished Sessions:
+
+```text
+- D, F and final Score / Points are the required score record;
+- Goal(s) is optional and may contain several explicitly named goals;
+- Time, Session, Goal(s), Progress Signal and Result remain blank when omitted;
+- do not substitute `not provided`, `—`, inferred goals or Session text into blank cells;
+- do not reconstruct or display Base, Adj, score deltas in parentheses or other calculation internals in formatted mode;
+- for legacy D/F text, hide numeric parenthetical deltas in Formatted mode without rewriting Raw source;
+- render Goal(s) once as goal content, not again as a generic detail field.
+```
 
 ### Week
 
@@ -112,7 +125,8 @@ It should render:
 - text sections as readable cards;
 - Markdown tables as HTML tables;
 - Plan Core subsections as scenario cards;
-- session rows as compact expandable records;
+- session rows as compact records with Score, D/F and optional Goal(s);
+- empty optional session metadata omitted rather than replaced with placeholders;
 - goal-map and time-scope content without raw Markdown fences.
 ```
 

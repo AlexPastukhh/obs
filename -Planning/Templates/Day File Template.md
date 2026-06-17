@@ -75,8 +75,17 @@ Rules:
 
 ## 🧾 Finished Sessions
 
-| # | Time | Session | D/F | Points | Progress Signal | Result |
-|---|---|---|---|---:|---|---|
+| # | Time | Session | Goal(s) | D/F | Points | Progress Signal | Result |
+|---|---|---|---|---|---:|---|---|
+
+Rules:
+
+- Every finished session records only final `D`, final `F`, and final `Points` as required score fields.
+- `Base`, `Adj`, score deltas in parentheses, and other calculation internals are not stored in Finished Sessions.
+- `Goal(s)` is optional. Record only goals explicitly provided by the user. Preserve all explicitly named goals.
+- `Time`, `Session`, `Goal(s)`, `Progress Signal`, and `Result` remain blank when the user does not provide them.
+- Do not replace blank optional cells with `not provided`, `—`, inferred text, or session-name fallbacks.
+- A minimal valid row is: blank optional cells + `D <value> / F <value>` + final `Points`.
 
 ---
 

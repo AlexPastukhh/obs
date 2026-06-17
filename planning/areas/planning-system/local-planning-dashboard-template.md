@@ -1,7 +1,7 @@
 # Local Planning Dashboard Template
 
 Status: active OBS area template
-Doc version: v0.3.0
+Doc version: v0.3.2
 Scope: dashboard file shapes for time scopes, goal maps, backlog files and optional operational session-day files rendered by the local Tampermonkey viewer.
 
 ## 1. Model
@@ -99,19 +99,40 @@ Carryover / Debt
 Final Day Summary
 ```
 
+Finished Session storage contract:
+
+```text
+Required score fields:
+  final D
+  final F
+  final Score / Points
+
+Optional context fields, only when explicitly provided:
+  Time
+  Session
+  Goal(s)
+  Progress Signal
+  Result
+```
+
+Do not store `Base`, `Adj`, score deltas in parentheses or other calculation internals in Finished Sessions.
+
+Blank optional session cells remain blank. Do not replace them with `not provided`, `—`, inferred text or a fallback copied from another field.
+
 Compact session rows should prioritize:
 
 ```text
-Session
+Session identifier when present
 Score / Points
 D/F
-Worked On / related goals
-Short result
+Goal(s) when present
 ```
 
-Detailed session fields may be shown inside an expandable row.
+Detailed session fields may be shown inside an expandable row only when the source value exists. A row with only the required D/F/Score record remains a static compact row without an empty expander.
 
-When a session references several goals, preserve all of them. Do not reduce a multi-goal session to one goal silently.
+When a session references several goals, preserve all of them. Do not reduce a multi-goal session to one goal silently. Goal(s) should not be duplicated as both goal chips and a generic detail field.
+
+For legacy source rows that contain numeric score deltas in parentheses after D or F, formatted mode hides those parenthetical deltas while Raw mode preserves the source unchanged.
 
 ## 6. Time-Scope Rendering Levels
 
@@ -161,7 +182,9 @@ The viewer should:
 - render known Markdown headings as cards;
 - render Markdown tables as HTML tables;
 - render Plan Core scenarios as separate cards;
-- render session rows compactly with expandable details;
+- render session rows compactly with Score, D/F and optional Goal(s);
+- omit empty optional session values instead of inventing placeholders;
+- ignore Base/Adj and other calculation internals in formatted session rendering;
 - keep Formatted and Raw modes available;
 - show per-file load errors without breaking other tabs;
 - never infer missing session facts or goal links;
