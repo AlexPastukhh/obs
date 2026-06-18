@@ -1,8 +1,8 @@
 # OBS Planning-System Commands
 
 Status: active OBS area command owner doc
-Doc version: v0.2.0
-Scope: local command behavior for Scenario Planning Workspace, local dashboard, goal maps and idea evaluation.
+Doc version: v0.3.0
+Scope: local command behavior for Scenario Planning Workspace, local dashboard, goal maps, idea evaluation and operational end-session updates.
 
 ## 1. Command: план сценария / scenario plan / workspace plan / шаблон планирования
 
@@ -124,4 +124,66 @@ Boundary:
 ```text
 - Use `planning/documentation/command-creation-workflow.md` before treating a new command as accepted.
 - Tampermonkey projection is optional and must use the reusable projection workflow if in scope.
+```
+
+## 7. Command: конец / конец сессии / end session
+
+Purpose:
+
+```text
+Add exactly one completed normal session to the existing active operational day.
+```
+
+Required input:
+
+```text
+- final D
+- final F
+- final Points
+```
+
+Optional input, only when explicitly provided:
+
+```text
+- Time
+- Session
+- Goal(s)
+- Progress Signal
+- Result
+```
+
+Resolution:
+
+```text
+1. Read planning/dashboard/index.md.
+2. Require an existing active_day and active_session_day.
+3. Require the dates in both paths to match.
+4. Read the existing active operational-day file.
+5. Apply planning/areas/planning-system/end-session-command-workflow.md.
+```
+
+Boundary:
+
+```text
+- Do not infer the current date.
+- Do not create an operational day automatically.
+- Do not change planning/dashboard/index.md.
+- Do not write not provided or dash placeholders into omitted optional session cells.
+- Do not infer goals from the planning day.
+- Do not add Base, Adj, score deltas, Plan Unit or planning-to-operational linkage.
+- Low D or low F alone never creates a Penalty Event.
+- Change only the active operational-day file.
+- Produce a full replacement archive and apply/diff commands.
+- User must paste the diff before commit.
+- Do not commit or push.
+- Tampermonkey projection is deferred.
+```
+
+Owner files:
+
+```text
+planning/areas/planning-system/end-session-command-workflow.md
+-Planning/Templates/Day File Template.md
+-Planning/Workflows/Real Reward Work Loop Workflow.md
+planning/dashboard/index.md
 ```

@@ -1,7 +1,7 @@
 # OBS Planning Use-Case Map
 
 Status: active project-specific root command router
-Doc version: v0.1.1-obs-cleanup
+Doc version: v0.1.2-obs-cleanup
 Scope: concrete OBS command routing, based on the reusable documentation layer and OBS planning-system area docs.
 
 ## 1. Authority Model
@@ -38,6 +38,7 @@ Do not use `planning/documentation/field-kits/root-use-case-map-field-kit.md` as
 | `оцени идею`, `idea eval`, `оценка идеи` | Evaluate an idea against minimum/base/desired/max and base-protection risks. | Use the provided idea and current workspace if supplied. | Targeted read of planning-system workflow/template. | `planning/areas/planning-system/scenario-planning-workspace-workflow.md`. | Idea Evaluation card. AI assumptions/suggestions must be separated from user input. |
 | `AC план`, `acceptance plan`, `критерии готовности` | Convert explicit user goals into Acceptance Criteria. | Do not invent criteria beyond user input unless asked for suggestions. | Targeted read of planning-system workflow/template. | `planning/areas/planning-system/scenario-planning-workspace-template.md`. | AC table with criterion, verifiable result and status. Missing verifiable result is `not provided`. |
 | `команды планирования`, `planning commands` | Review or propose commands for the planning-system area. | Use command-creation workflow before treating a command as accepted. | Targeted/full by command impact. | This UCM, `planning/documentation/command-creation-workflow.md`, `planning/areas/planning-system/README.md`. | Proposed command family/type/owner/UCM rows. No Tampermonkey projection unless explicitly in scope. |
+| `конец`, `конец сессии`, `end session` | Add exactly one completed normal session to the existing active operational day. | Read `planning/dashboard/index.md`; require an existing `active_session_day`; require matching `active_day` and operational dates; ask only for missing final D/F/Points. | Targeted: index → active operational day → end-session workflow → Day File Template → Real Reward Work Loop Workflow. | `planning/areas/planning-system/end-session-command-workflow.md`, `planning/dashboard/index.md`, `-Planning/Templates/Day File Template.md`, `-Planning/Workflows/Real Reward Work Loop Workflow.md`. | When inputs and checks pass, produce a full replacement archive containing only the active operational-day file plus apply/diff commands. User pastes diff before commit. Do not commit or push. |
 
 ## 4. Tampermonkey Projection Rule
 

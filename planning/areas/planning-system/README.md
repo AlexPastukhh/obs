@@ -1,8 +1,8 @@
 # OBS Planning System Area
 
 Status: active OBS area documentation
-Doc version: v0.3.0
-Scope: local OBS planning workspace templates, year/period/month/week/day dashboard files, goal maps, command behavior, Scope Units and idea-evaluation workflow.
+Doc version: v0.4.0
+Scope: local OBS planning workspace templates, year/period/month/week/day dashboard files, goal maps, command behavior, operational end-session updates, Scope Units and idea-evaluation workflow.
 
 ## 1. Purpose
 
@@ -23,6 +23,7 @@ It owns local templates and command behavior for:
 - Idea Evaluation
 - planning-day / operational-day source separation
 - session/outcome visibility through dashboard files
+- safe end-session updates that append one finished session and recalculate owned score summaries
 - explicit user input vs AI assumptions/suggestions
 ```
 
@@ -83,6 +84,7 @@ Dashboard Day view
 | `local-goal-map-template.md` | Minimal goal-map template using workspace semantics. |
 | `local-planning-dashboard-goal-map.md` | Local goal map for building the dashboard system itself. |
 | `planning-commands.md` | Local command definitions and route details for planning-system commands. |
+| `end-session-command-workflow.md` | Exact operational command workflow for validating, appending and recalculating one finished session without changing planning sources. |
 
 ## 5. Related Root Route
 
