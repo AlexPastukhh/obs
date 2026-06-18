@@ -1,36 +1,34 @@
-# Tampermonkey Command Helper Reusable Tool
+# OBS Tampermonkey Tools
 
-Status: active reusable documentation-layer full tool
-Doc version: v0.2.1
-Scope: reusable full Tampermonkey/ChatGPT command helper implementation and adaptation notes for projects using the reusable documentation layer
+Status: active reusable/project planning tool index
+Doc version: v0.3.1
+Scope: tracked Tampermonkey scripts used by the OBS planning system, including reusable command projection and project planning runtime tools.
 
-Use with:
-
-```text
-planning/documentation/tampermonkey-command-projection-workflow.md
-planning/documentation/command-creation-workflow.md
-planning/documentation/field-kits/root-use-case-map-field-kit.md
-```
-
-## 1. Purpose
-
-This folder owns the reusable Tampermonkey helper implementation shipped with the reusable documentation layer.
-
-The full helper userscript lives here:
+## 1. Tracked scripts
 
 ```text
 planning/documentation/tools/tampermonkey/chat-command-palette.user.js
+  reusable command projection only; command meaning stays in owner documentation.
+
+planning/documentation/tools/tampermonkey/local-planning-dashboard-viewer.user.js
+  read-only local-first dashboard projection; reads repo Markdown through localhost,
+  keeps a source-bound IndexedDB snapshot, displays pending local sessions and exports reviewed JSON.
+
+planning/documentation/tools/tampermonkey/planning-pattern-capture.user.js
+  local D/F pattern capture and one-click finished-session capture into the shared pending outbox.
 ```
 
-There should not be a second project-local tracked helper copy while this reusable-only model is active.
+Do not create competing tracked copies of the same script.
 
-## 2. Authority Boundary
+## 2. Authority boundary
 
 ```text
-Tampermonkey is projection only, not authority.
+Repo Markdown files are durable source of truth.
+Tampermonkey scripts are browser-side capture/projection tools.
+They do not write repo files, run git, commit or push.
+A pending-session JSON export becomes repo state only after a reviewed replacement archive is applied.
+Tampermonkey command projection does not define command meaning.
 ```
-
-The helper inserts command bodies and improves command recall. It does not define command meaning.
 
 Command semantics must come from:
 
@@ -41,41 +39,118 @@ planning/documentation/tampermonkey-command-projection-workflow.md
 other linked command owner workflows/examples
 ```
 
-## 3. Included Full Helper
+## 3. Storage boundary
 
-The included userscript provides:
+```text
+Pattern Capture private GM storage:
+  planningPatternCapture:v2:settings
+  planningPatternCapture:v2:active
+  planningPatternCapture:v2:events
+
+Shared page localStorage:
+  obsPlanning:sessionContext:v1
+  obsPlanning:sessionOutbox:v1
+
+Dashboard IndexedDB:
+  database: obsPlanningCache
+  store: snapshots
+  record: dashboard:v1
+```
+
+Rules:
+
+```text
+- Raw Capture events and UI state remain in GM storage.
+- Only completed pending sessions are written to the shared outbox.
+- Dashboard snapshot and pending outbox remain separate.
+- Cached snapshots are accepted only for the current normalized Base URL and Index path.
+- Exporting does not clear pending records.
+- Pending records clear only after reviewed repository application plus reconciliation, or explicit user action.
+- Conflict records block additional Finish actions until resolved.
+- chatgpt.com and chat.openai.com are different storage origins; use chatgpt.com as the canonical V1 origin.
+```
+
+## 4. Local server
+
+Run from repository root:
+
+```powershell
+python -m http.server 8765
+```
+
+The dashboard reads:
+
+```text
+http://127.0.0.1:8765/planning/dashboard/index.md
+```
+
+A successful live load remains usable even if snapshot writing fails. When the index request fails, the viewer uses only a compatible snapshot and labels it `Offline cache`.
+
+## 5. V1 finished-session flow
+
+```text
+1. Open/refresh the Dashboard Viewer to publish the active operational-day context.
+2. Work in Planning Pattern Capture.
+3. Press Finish.
+4. Capture stores one pending session and advances to the next session ID.
+5. Dashboard displays repository sessions plus pending/conflict local sessions.
+6. Pending totals include only status=pending records; conflicts are shown separately and block export/Finish.
+7. At the end of the day, press Copy pending or Download pending.
+8. Paste/upload the JSON for one reviewed replacement archive.
+9. Apply the archive and refresh localhost.
+10. Reconciliation requires the exact row count and complete ordered appended sequence.
+```
+
+`Copy End` remains as a manual fallback and does not write the shared outbox.
+
+## 6. Installation/update
+
+```text
+1. Open the tracked .user.js file.
+2. Copy the complete source into its matching Tampermonkey script.
+3. Save in Tampermonkey.
+4. Reload ChatGPT.
+5. Use https://chatgpt.com for the shared V1 localStorage origin.
+```
+
+## 7. Command Palette reusable contract
+
+The reusable Command Palette provides:
 
 ```text
 - draggable helper panel;
 - command search/list;
-- one-click insertion into ChatGPT prompt textarea/contenteditable;
+- one-click insertion into the ChatGPT prompt editor;
 - button labels rendered as <englishName> · <label>;
-- full inserted command bodies with command, english_name, command_family, source_of_truth, route_read_rule, key_reminders and user_target;
+- complete command bodies with command, english_name, command_family,
+  source_of_truth, route_read_rule, key_reminders and user_target;
 - no repo writes, network calls, commits or pushes.
 ```
 
-## 4. Adaptation Rule For Another Project
+## 8. Command Palette adaptation rule
 
-A project copying `planning/documentation/` can use this tracked full helper directly as the reusable command-helper UI projection.
-
-Before enabling or adapting the reusable helper for a target project, verify:
+Before enabling or adapting the reusable helper for another project, verify:
 
 ```text
 1. The project root UCM exists.
-2. Each command in COMMANDS exists in the project root UCM or is being created in the same approved batch.
+2. Each projected command exists in the project root UCM or is created in the same approved batch.
 3. Commands that do not apply to the target project are removed.
 4. source_of_truth points to the target project's real route/owner docs.
-5. @name and @namespace are adapted only if the project intentionally forks or rebrands the reusable helper.
+5. @name and @namespace change only for an intentional fork or rebrand.
 6. The helper remains projection-only.
-7. No second tracked project-local helper copy is created by default.
+7. No second tracked project-local command-helper copy is created by default.
 ```
 
-## 5. Do Not
+## 9. Safety checks
 
 ```text
-- Do not create a second tracked local helper copy by default.
-- Do not treat this helper as command authority.
-- Do not add project-only command semantics here without a UCM route.
-- Do not keep both the reusable full helper and a tracked local helper fork as competing authorities.
-- Do not use the helper to write to the repo or perform network calls.
+- Dashboard remains read-only toward the repo.
+- Pattern Capture requires a published operational path and SHA-256 before Finish.
+- A changed source hash blocks extending an existing pending batch.
+- A conflict batch blocks additional Finish actions and batch export.
+- Event IDs identify browser records only; Finished Sessions Markdown does not store them.
+- Duplicate protection uses source SHA-256, source row boundary, exact resulting row count and ordered appended sequence.
+- Do not treat Command Palette as command authority.
+- Do not add project-only command semantics without a UCM route.
+- Do not use any helper to write to the repo or perform external network calls.
 ```

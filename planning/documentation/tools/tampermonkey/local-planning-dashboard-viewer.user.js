@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         OBS Local Planning Dashboard Viewer
 // @namespace    https://github.com/AlexPastukhh/obs/planning-dashboard
-// @version      0.3.2
-// @description  Read-only formatted local planning dashboard viewer for OBS time scopes, goal maps, backlog and optional session-day ledgers.
+// @version      0.4.1
+// @description  Local-first read-only planning dashboard with offline snapshot cache, pending sessions, and reviewed batch export.
 // @author       OBS planning-system
 // @match        https://chatgpt.com/*
 // @match        https://chat.openai.com/*
@@ -10,6 +10,7 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @grant        GM_setClipboard
 // @grant        GM_addStyle
 // @connect      127.0.0.1
 // @connect      localhost
@@ -21,6 +22,12 @@
   const DEFAULT_BASE_URL = 'http://127.0.0.1:8765/';
   const DEFAULT_INDEX_PATH = 'planning/dashboard/index.md';
   const OPTIONAL_EMPTY_VALUES = new Set(['', '-', 'none', 'null', 'not provided', 'n/a']);
+  const OUTBOX_KEY = 'obsPlanning:sessionOutbox:v1';
+  const CONTEXT_KEY = 'obsPlanning:sessionContext:v1';
+  const CACHE_DB_NAME = 'obsPlanningCache';
+  const CACHE_DB_VERSION = 1;
+  const CACHE_STORE = 'snapshots';
+  const CACHE_KEY = 'dashboard:v1';
 
   const state = {
     baseUrl: GM_getValue('obsPlanningDashboard.baseUrl', DEFAULT_BASE_URL),
@@ -31,7 +38,10 @@
     activeTab: 'index',
     rawMode: false,
     settingsOpen: false,
-    loading: false
+    loading: false,
+    sourceMode: 'none',
+    snapshotSavedAt: null,
+    lastLoadError: null
   };
 
   GM_addStyle(`
@@ -629,6 +639,39 @@
       margin-top: 12px;
     }
 
+
+    .obs-pd-runtime-status {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 9px;
+      padding: 7px 9px;
+      border: 1px solid rgba(148, 163, 184, .22);
+      border-radius: 9px;
+      background: rgba(15, 28, 48, .86);
+      color: #cbd8e9;
+    }
+
+    .obs-pd-runtime-status[data-mode="live"] { border-color: rgba(52, 211, 153, .42); }
+    .obs-pd-runtime-status[data-mode="offline-cache"] { border-color: rgba(251, 191, 36, .5); }
+    .obs-pd-runtime-status[data-mode="none"] { border-color: rgba(248, 113, 113, .48); }
+
+    .obs-pd-runtime-pill,
+    .obs-pd-pending-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 3px 7px;
+      font-size: 10px;
+      font-weight: 760;
+      line-height: 1.2;
+    }
+
+    .obs-pd-runtime-pill { background: #17243a; color: #bfdbfe; }
+    .obs-pd-pending-pill { background: rgba(180, 83, 9, .32); color: #fde68a; border: 1px solid rgba(251, 191, 36, .4); }
+    .obs-pd-session-record[data-pending="true"] { background: rgba(120, 53, 15, .18); }
+
     @media (max-width: 980px) {
       #obs-planning-dashboard-panel {
         inset: 8px;
@@ -730,6 +773,347 @@
         ontimeout: () => reject(new Error(`Request timed out for ${url}`))
       });
     });
+  }
+
+  function readSharedJson(key, fallback) {
+    try {
+      const raw = window.localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (error) {
+      console.warn('OBS dashboard shared read failed', key, error);
+      return fallback;
+    }
+  }
+
+  function writeSharedJson(key, value) {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (error) {
+      console.warn('OBS dashboard shared write failed', key, error);
+      return false;
+    }
+  }
+
+  function readOutbox() {
+    const value = readSharedJson(OUTBOX_KEY, { schema: 'obs-session-outbox-v1', days: {} });
+    return value && value.schema === 'obs-session-outbox-v1' && typeof value.days === 'object'
+      ? value
+      : { schema: 'obs-session-outbox-v1', days: {} };
+  }
+
+  function dateFromOperationalPath(path) {
+    return String(path || '').match(/(\d{4}-\d{2}-\d{2})\.md(?:$|[?#])/)?.[1] || '';
+  }
+
+  function pendingDayForFile(file) {
+    if (!file?.path) return null;
+    const date = dateFromOperationalPath(file.path);
+    const day = readOutbox().days?.[date];
+    if (!day || day.operationalPath !== file.path || !Array.isArray(day.sessions)) return null;
+    return day;
+  }
+
+  function activePendingSessions(file) {
+    const day = pendingDayForFile(file);
+    return day ? day.sessions.filter((session) => session.status === 'pending') : [];
+  }
+
+  function visibleLocalSessions(file) {
+    const day = pendingDayForFile(file);
+    return day ? day.sessions.filter((session) => session.status !== 'synced') : [];
+  }
+
+  function parseNumber(value) {
+    const normalized = String(value ?? '').replace(',', '.').match(/[+-]?\d+(?:\.\d+)?/)?.[0];
+    const number = Number(normalized);
+    return Number.isFinite(number) ? number : 0;
+  }
+
+  function formatNumber(value) {
+    const rounded = Math.round(Number(value) * 1000) / 1000;
+    return Number.isFinite(rounded) ? String(rounded).replace(/\.0+$/, '') : '0';
+  }
+
+  async function sha256Text(text) {
+    const bytes = new TextEncoder().encode(String(text || ''));
+    const digest = await crypto.subtle.digest('SHA-256', bytes);
+    return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
+  }
+
+  function openCacheDb() {
+    return new Promise((resolve, reject) => {
+      const request = indexedDB.open(CACHE_DB_NAME, CACHE_DB_VERSION);
+      request.onupgradeneeded = () => {
+        const db = request.result;
+        if (!db.objectStoreNames.contains(CACHE_STORE)) db.createObjectStore(CACHE_STORE);
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error || new Error('Could not open IndexedDB cache'));
+    });
+  }
+
+  async function writeSnapshot(snapshot) {
+    const db = await openCacheDb();
+    try {
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction(CACHE_STORE, 'readwrite');
+        tx.objectStore(CACHE_STORE).put(snapshot, CACHE_KEY);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error || new Error('Could not write dashboard snapshot'));
+        tx.onabort = () => reject(tx.error || new Error('Dashboard snapshot write aborted'));
+      });
+    } finally {
+      db.close();
+    }
+  }
+
+  async function readSnapshot() {
+    const db = await openCacheDb();
+    try {
+      return await new Promise((resolve, reject) => {
+        const tx = db.transaction(CACHE_STORE, 'readonly');
+        const request = tx.objectStore(CACHE_STORE).get(CACHE_KEY);
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error || new Error('Could not read dashboard snapshot'));
+      });
+    } finally {
+      db.close();
+    }
+  }
+
+  function cloneFile(file) {
+    if (!file) return null;
+    return {
+      path: file.path,
+      text: file.text || '',
+      error: file.error || null,
+      sha256: file.sha256 || null,
+      loadedAt: file.loadedAt || null
+    };
+  }
+
+  function cacheSourceKey(baseUrl = state.baseUrl, indexPath = state.indexPath) {
+    return `${normalizeBaseUrl(baseUrl)}|${String(indexPath || '').replace(/^\/+/, '')}`;
+  }
+
+  function snapshotFromState(savedAt) {
+    const files = {};
+    Object.entries(state.files || {}).forEach(([key, file]) => { files[key] = cloneFile(file); });
+    return {
+      schema: 'obs-dashboard-snapshot-v1',
+      sourceKey: cacheSourceKey(),
+      savedAt,
+      baseUrl: state.baseUrl,
+      indexPath: state.indexPath,
+      indexText: state.indexText,
+      files,
+      groups: { goalMaps: (state.groups.goalMaps || []).map(cloneFile) }
+    };
+  }
+
+  function restoreSnapshot(snapshot) {
+    if (!snapshot || snapshot.schema !== 'obs-dashboard-snapshot-v1') throw new Error('No compatible browser snapshot');
+    const expectedSourceKey = cacheSourceKey();
+    const snapshotSourceKey = snapshot.sourceKey || cacheSourceKey(snapshot.baseUrl, snapshot.indexPath);
+    if (snapshotSourceKey !== expectedSourceKey) {
+      throw new Error(`Browser snapshot belongs to another source: ${snapshotSourceKey}`);
+    }
+    state.indexText = snapshot.indexText || snapshot.files?.index?.text || '';
+    state.files = snapshot.files || {};
+    state.groups = snapshot.groups || { goalMaps: [] };
+    state.snapshotSavedAt = snapshot.savedAt || null;
+    state.sourceMode = 'offline-cache';
+  }
+
+  function sessionSourceContext(file) {
+    if (!file || file.error || !file.text || !file.sha256) return null;
+    const model = parseMarkdownDocument(file.text);
+    const section = findSection(model, 'finished sessions') || findSection(model, 'sessions');
+    const table = section ? parseFirstTable(section.lines) : null;
+    const rows = table?.rows || [];
+    const lastSessionNumber = rows.reduce((max, row, index) => {
+      const raw = rowValue(row, table, ['#', 'Session #']);
+      const number = Number(String(raw || '').replace(/\D/g, ''));
+      return Math.max(max, Number.isFinite(number) && number > 0 ? number : index + 1);
+    }, 0);
+    const summary = findSubsection(model, 'work score summary');
+    const values = tableToKeyValue(summary ? parseFirstTable(summary.lines) : null);
+    return {
+      schema: 'obs-session-context-v1',
+      publishedAt: new Date().toISOString(),
+      sourceMode: state.sourceMode,
+      snapshotSavedAt: state.snapshotSavedAt,
+      date: dateFromOperationalPath(file.path),
+      operationalPath: file.path,
+      operationalFileSha256: file.sha256,
+      lastSessionNumber,
+      sessionRowCount: rows.length,
+      workPoints: parseNumber(pickKeyValue(values, ['Work Points']))
+    };
+  }
+
+  function clearSessionContext(reason) {
+    try {
+      window.localStorage.removeItem(CONTEXT_KEY);
+    } catch (error) {
+      console.warn('OBS dashboard session context clear failed', error);
+    }
+    try {
+      window.dispatchEvent(new CustomEvent('obs-planning-session-context-updated', {
+        detail: { schema: 'obs-session-context-v1', available: false, reason: reason || 'unavailable' }
+      }));
+    } catch {}
+  }
+
+  function publishSessionContext() {
+    const context = sessionSourceContext(state.files.sessionDay);
+    if (!context?.date) {
+      clearSessionContext('active operational session day is unavailable');
+      return;
+    }
+    writeSharedJson(CONTEXT_KEY, { ...context, available: true });
+    try { window.dispatchEvent(new CustomEvent('obs-planning-session-context-updated', { detail: context })); } catch {}
+  }
+
+
+  function sessionRowMatchesPending(row, table, session) {
+    const dfText = rowValue(row, table, ['D/F', 'D / F', 'D/F/K/P']);
+    const d = parseNumber(dfText.match(/\bD\s*([+-]?\d+(?:[.,]\d+)?)/i)?.[1]);
+    const f = parseNumber(dfText.match(/\bF\s*([+-]?\d+(?:[.,]\d+)?)/i)?.[1]);
+    const points = parseNumber(rowValue(row, table, ['Points', 'Score', 'Total']));
+    const normalized = (value) => cleanCell(value || '');
+    const optionalColumnMatches = (aliases, expected) => {
+      const index = normalizedHeaderIndex(table, aliases);
+      return index < 0 || normalized(row[index]) === normalized(expected);
+    };
+    const rowNumber = parseNumber(rowValue(row, table, ['#', 'Session #']));
+    const expectedRowNumber = parseNumber(String(session.session || '').replace(/\D/g, ''));
+    return Math.abs(d - parseNumber(session.d)) < 0.0001
+      && Math.abs(f - parseNumber(session.f)) < 0.0001
+      && Math.abs(points - parseNumber(session.points)) < 0.0001
+      && (!expectedRowNumber || !rowNumber || rowNumber === expectedRowNumber)
+      && optionalColumnMatches(['Time'], session.time)
+      && optionalColumnMatches(['Goal(s)', 'Goals', 'Goal', 'Worked On (Goals)', 'Worked On', 'Related Goals', 'Goal Maps', 'Target'], session.goals)
+      && optionalColumnMatches(['Progress Signal'], session.progressSignal)
+      && optionalColumnMatches(['Result', 'Result (short)'], session.result);
+  }
+
+  function reconcileOutboxWithLiveFile(file) {
+    if (state.sourceMode !== 'live' || !file || file.error || !file.text) return;
+    const date = dateFromOperationalPath(file.path);
+    const outbox = readOutbox();
+    const day = outbox.days?.[date];
+    if (!day || day.operationalPath !== file.path || !Array.isArray(day.sessions)) return;
+    const unsynced = day.sessions.filter((session) => session.status !== 'synced');
+    if (!unsynced.length) return;
+
+    if (file.sha256 === day.source?.operationalFileSha256) return;
+
+    const model = parseMarkdownDocument(file.text);
+    const section = findSection(model, 'finished sessions') || findSection(model, 'sessions');
+    const table = section ? parseFirstTable(section.lines) : null;
+    if (!table) return;
+
+    const boundary = Number(day.source?.sessionRowCount ?? day.source?.lastSessionNumber ?? 0);
+    const expectedRowCount = boundary + unsynced.length;
+    const appended = table.rows.slice(boundary);
+    const complete = table.rows.length === expectedRowCount
+      && appended.length === unsynced.length
+      && unsynced.every((session, index) => sessionRowMatchesPending(appended[index], table, session));
+
+    if (complete) {
+      const syncedAt = new Date().toISOString();
+      unsynced.forEach((session) => {
+        session.status = 'synced';
+        session.syncedAt = syncedAt;
+        session.syncedFileSha256 = file.sha256;
+      });
+      day.reconciledAt = syncedAt;
+      day.reconciledFileSha256 = file.sha256;
+    } else {
+      unsynced.forEach((session) => { session.status = 'conflict'; });
+      day.conflictAt = new Date().toISOString();
+      day.conflictFileSha256 = file.sha256;
+    }
+
+    outbox.updatedAt = new Date().toISOString();
+    writeSharedJson(OUTBOX_KEY, outbox);
+    try { window.dispatchEvent(new CustomEvent('obs-planning-outbox-updated', { detail: { date } })); } catch {}
+  }
+
+  function runtimeStatusNode() {
+    const labels = {
+      live: 'Live localhost',
+      'offline-cache': 'Offline cache',
+      none: 'No data'
+    };
+    const node = el('div', { class: 'obs-pd-runtime-status', 'data-mode': state.sourceMode || 'none' });
+    node.appendChild(el('span', { class: 'obs-pd-runtime-pill', text: labels[state.sourceMode] || labels.none }));
+    const timestamp = state.snapshotSavedAt ? new Date(state.snapshotSavedAt).toLocaleString() : 'not available';
+    node.appendChild(el('span', { text: `Snapshot: ${timestamp}` }));
+    if (state.lastLoadError && state.sourceMode === 'offline-cache') node.appendChild(el('span', { text: `Localhost unavailable: ${state.lastLoadError}` }));
+    return node;
+  }
+
+  function updateHeaderStatus() {
+    const node = document.querySelector('#obs-planning-dashboard-source-status');
+    if (!node) return;
+    const label = state.sourceMode === 'live' ? 'Live localhost'
+      : state.sourceMode === 'offline-cache' ? 'Offline cache'
+      : 'No data';
+    node.textContent = state.snapshotSavedAt ? `${label} · ${new Date(state.snapshotSavedAt).toLocaleString()}` : label;
+  }
+
+  function currentPendingExport() {
+    const file = state.files.sessionDay;
+    const date = dateFromOperationalPath(file?.path);
+    const day = pendingDayForFile(file);
+    if (!file || !date || !day) return null;
+    const conflicts = day.sessions.filter((session) => session.status === 'conflict');
+    if (conflicts.length) return { conflict: true, count: conflicts.length };
+    const sessions = day.sessions.filter((session) => session.status === 'pending');
+    if (!sessions.length) return null;
+    return {
+      schema: 'obs-session-sync-v1',
+      exportedAt: new Date().toISOString(),
+      date,
+      operationalPath: day.operationalPath,
+      source: day.source,
+      sessions: sessions.map(({ status, ...session }) => session)
+    };
+  }
+
+  function copyText(text) {
+    try {
+      if (typeof GM_setClipboard === 'function') GM_setClipboard(text);
+      else navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      navigator.clipboard.writeText(text).catch(() => {});
+      return false;
+    }
+  }
+
+  function copyPendingJson() {
+    const payload = currentPendingExport();
+    if (!payload) return alert('No pending sessions for the active operational day.');
+    if (payload.conflict) return alert(`${payload.count} local session(s) are in conflict. Resolve or restore the guarded source before export.`);
+    copyText(JSON.stringify(payload, null, 2));
+    alert(`Copied ${payload.sessions.length} pending session(s). Export does not clear the outbox.`);
+  }
+
+  function downloadPendingJson() {
+    const payload = currentPendingExport();
+    if (!payload) return alert('No pending sessions for the active operational day.');
+    if (payload.conflict) return alert(`${payload.count} local session(s) are in conflict. Resolve or restore the guarded source before export.`);
+    const blob = new Blob([JSON.stringify(payload, null, 2) + '\n'], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = `obs-session-sync-${payload.date}.json`;
+    anchor.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   function getIndexBlock(text) {
@@ -1257,7 +1641,7 @@
     return match ? cleanCell(match[1]) : '';
   }
 
-  function renderSessionOverview(documentModel) {
+  function renderSessionOverview(documentModel, file) {
     const summarySubsection = findSubsection(documentModel, 'work score summary');
     const summaryTable = summarySubsection ? parseFirstTable(summarySubsection.lines) : null;
     const values = tableToKeyValue(summaryTable);
@@ -1265,8 +1649,15 @@
     const supportAverage = extractSupportMetric(documentModel, /Support Score:\s*(?:\*\*)?([^*\n]+?)(?:\*\*)?(?=\n|$)/i);
     const supportPenalty = extractSupportMetric(documentModel, /Support Penalty:\s*(?:\*\*)?([^*\n]+?)(?:\*\*)?(?=\n|$)/i);
 
+    const workPointsText = pickKeyValue(values, ['Work Points']);
+    const pendingSessions = activePendingSessions(file);
+    const pendingPoints = pendingSessions.reduce((sum, session) => sum + parseNumber(session.points), 0);
     const cards = [
-      ['Work Points', pickKeyValue(values, ['Work Points']), 'neutral'],
+      ['Work Points', workPointsText, 'neutral'],
+      ...(pendingSessions.length ? [
+        ['Pending Points', formatNumber(pendingPoints), 'warn'],
+        ['Preview Work Points', formatNumber(parseNumber(workPointsText) + pendingPoints), 'good']
+      ] : []),
       ['Penalties', pickKeyValue(values, ['Penalties', 'Penalties / planned carryover']), 'bad'],
       ['Net Work Score', pickKeyValue(values, ['Net Work Score']), 'good'],
       ['Incoming Debt', pickKeyValue(values, ['Previous-day carryover debt', 'Incoming debt']), 'violet'],
@@ -1327,7 +1718,7 @@
     return wrapper;
   }
 
-  function renderSessionList(documentModel) {
+  function renderSessionList(documentModel, file) {
     const sessionsSection = findSection(documentModel, 'finished sessions') || findSection(documentModel, 'sessions');
     if (!sessionsSection) return null;
 
@@ -1435,6 +1826,22 @@
       panel.appendChild(record);
     });
 
+    const pendingSessions = visibleLocalSessions(file);
+    pendingSessions.forEach((session) => {
+      const record = el('div', { class: 'obs-pd-session-record obs-pd-session-record-static', 'data-pending': 'true' });
+      const summary = el('div', { class: 'obs-pd-session-summary' });
+      const worked = el('div', { class: 'obs-pd-session-worked' });
+      worked.appendChild(el('span', { class: 'obs-pd-pending-pill', text: session.status === 'conflict' ? 'Conflict local' : 'Pending local' }));
+      if (session.goals) worked.appendChild(document.createTextNode(` ${session.goals}`));
+      summary.appendChild(el('div', { class: 'obs-pd-chevron', text: '' }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-id', text: session.session || 'local' }));
+      summary.appendChild(el('div', { class: 'obs-pd-session-score', text: formatNumber(session.points) }));
+      summary.appendChild(el('div', { class: 'obs-pd-detail-value', text: `D ${formatNumber(session.d)} / F ${formatNumber(session.f)}` }));
+      summary.appendChild(worked);
+      record.appendChild(summary);
+      panel.appendChild(record);
+    });
+
     wrapper.appendChild(panel);
     return wrapper;
   }
@@ -1465,10 +1872,10 @@
     const model = parseMarkdownDocument(file.text);
     wrapper.appendChild(renderDocumentHeader(model));
 
-    const overview = renderSessionOverview(model);
+    const overview = renderSessionOverview(model, file);
     if (overview) wrapper.appendChild(overview);
 
-    const sessions = renderSessionList(model);
+    const sessions = renderSessionList(model, file);
     if (sessions) wrapper.appendChild(sessions);
 
     const penalties = renderNamedSessionSection(model, 'penalty events', 'Penalty Events');
@@ -1549,9 +1956,10 @@
   async function loadOptional(path) {
     if (!path) return null;
     try {
-      return { path, text: await fetchText(path), error: null };
+      const text = await fetchText(path);
+      return { path, text, error: null, sha256: await sha256Text(text), loadedAt: new Date().toISOString() };
     } catch (error) {
-      return { path, text: '', error: error?.message || String(error) };
+      return { path, text: '', error: error?.message || String(error), sha256: null, loadedAt: null };
     }
   }
 
@@ -1565,36 +1973,87 @@
       GM_setValue('obsPlanningDashboard.baseUrl', state.baseUrl);
       GM_setValue('obsPlanningDashboard.indexPath', state.indexPath);
 
-      state.indexText = await fetchText(state.indexPath);
-      const paths = parseIndex(state.indexText);
-      state.files = { index: { path: state.indexPath, text: state.indexText, error: null } };
-      state.groups = { goalMaps: [] };
+      try {
+        state.indexText = await fetchText(state.indexPath);
+        const now = new Date().toISOString();
+        const paths = parseIndex(state.indexText);
+        state.files = {
+          index: {
+            path: state.indexPath,
+            text: state.indexText,
+            error: null,
+            sha256: await sha256Text(state.indexText),
+            loadedAt: now
+          }
+        };
+        state.groups = { goalMaps: [] };
 
-      const fileEntries = Object.entries({
-        previousYear: paths.previousYear,
-        year: paths.year,
-        period: paths.period,
-        week: paths.week,
-        day: paths.day,
-        sessionDay: paths.sessionDay,
-        deferredWork: paths.deferredWork,
-        deferredIdeas: paths.deferredIdeas
-      });
+        const fileEntries = Object.entries({
+          previousYear: paths.previousYear,
+          year: paths.year,
+          period: paths.period,
+          week: paths.week,
+          day: paths.day,
+          sessionDay: paths.sessionDay,
+          deferredWork: paths.deferredWork,
+          deferredIdeas: paths.deferredIdeas
+        });
 
-      const loadedFiles = await Promise.all(fileEntries.map(async ([key, path]) => [key, await loadOptional(path)]));
-      loadedFiles.forEach(([key, file]) => {
-        if (file) state.files[key] = file;
-      });
+        const loadedFiles = await Promise.all(fileEntries.map(async ([key, path]) => [key, await loadOptional(path)]));
+        loadedFiles.forEach(([key, file]) => {
+          if (file) state.files[key] = file;
+        });
 
-      const loadedGoals = await Promise.all((paths.goalMaps || []).map(loadOptional));
-      state.groups.goalMaps = loadedGoals.filter(Boolean);
-      render();
-    } catch (error) {
-      if (body) {
-        body.innerHTML = '';
-        body.appendChild(el('div', { class: 'obs-pd-error', text:
-          `Could not load dashboard index.\n\n${error?.message || error}\n\nCheck:\n1. Run python -m http.server 8765 from repo root.\n2. Confirm Base URL and Index.\n3. Confirm planning/dashboard/index.md exists.`
-        }));
+        const loadedGoals = await Promise.all((paths.goalMaps || []).map(loadOptional));
+        state.groups.goalMaps = loadedGoals.filter(Boolean);
+        const previousSnapshotSavedAt = state.snapshotSavedAt;
+        state.sourceMode = 'live';
+        state.lastLoadError = null;
+        reconcileOutboxWithLiveFile(state.files.sessionDay);
+
+        try {
+          await writeSnapshot(snapshotFromState(now));
+          state.snapshotSavedAt = now;
+        } catch (cacheWriteError) {
+          state.snapshotSavedAt = previousSnapshotSavedAt || null;
+          console.warn('OBS dashboard snapshot write failed; live data remains active', cacheWriteError);
+        }
+
+        publishSessionContext();
+        render();
+        return;
+      } catch (liveError) {
+        state.lastLoadError = liveError?.message || String(liveError);
+      }
+
+      try {
+        const snapshot = await readSnapshot();
+        restoreSnapshot(snapshot);
+        publishSessionContext();
+        render();
+      } catch (cacheError) {
+        state.sourceMode = 'none';
+        state.snapshotSavedAt = null;
+        state.indexText = '';
+        state.files = {};
+        state.groups = { goalMaps: [] };
+        publishSessionContext();
+        updateHeaderStatus();
+        if (body) {
+          body.innerHTML = '';
+          body.appendChild(runtimeStatusNode());
+          body.appendChild(el('div', { class: 'obs-pd-error', text:
+            `Could not load dashboard index or compatible browser snapshot.
+
+Localhost: ${state.lastLoadError}
+Cache: ${cacheError?.message || cacheError}
+
+Check:
+1. Run python -m http.server 8765 from repo root.
+2. Confirm Base URL and Index.
+3. Confirm planning/dashboard/index.md exists.`
+          }));
+        }
       }
     } finally {
       state.loading = false;
@@ -1635,6 +2094,8 @@
 
     tabs.innerHTML = '';
     body.innerHTML = '';
+    body.appendChild(runtimeStatusNode());
+    updateHeaderStatus();
     if (modeButton) modeButton.textContent = state.rawMode ? 'Formatted' : 'Raw';
     if (settings) settings.setAttribute('data-open', String(state.settingsOpen));
 
@@ -1730,7 +2191,7 @@
 
     const title = el('div', { class: 'obs-pd-title' }, [
       el('div', { class: 'obs-pd-title-main', text: 'OBS Local Planning Dashboard' }),
-      el('div', { class: 'obs-pd-title-sub', text: 'Read-only formatted repo view' })
+      el('div', { id: 'obs-planning-dashboard-source-status', class: 'obs-pd-title-sub', text: 'No data' })
     ]);
 
     const header = el('div', { class: 'obs-pd-header' }, [
@@ -1738,6 +2199,8 @@
       el('button', { class: 'obs-pd-btn', text: 'Refresh', onclick: refresh }),
       el('button', { class: 'obs-pd-btn', text: 'Open', onclick: openCurrentSource }),
       el('button', { class: 'obs-pd-btn', text: 'Copy AI prompt', onclick: copyUpdatePrompt }),
+      el('button', { class: 'obs-pd-btn', text: 'Copy pending', onclick: copyPendingJson }),
+      el('button', { class: 'obs-pd-btn', text: 'Download pending', onclick: downloadPendingJson }),
       el('button', {
         id: 'obs-planning-dashboard-mode',
         class: 'obs-pd-btn',
@@ -1790,6 +2253,13 @@
     document.body.appendChild(openButton);
     document.body.appendChild(panel);
   }
+
+  window.addEventListener('obs-planning-outbox-updated', () => {
+    if (state.indexText) render();
+  });
+  window.addEventListener('storage', (event) => {
+    if (event.key === OUTBOX_KEY && state.indexText) render();
+  });
 
   buildUI();
 })();
