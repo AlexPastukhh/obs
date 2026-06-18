@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OBS Local Planning Dashboard Viewer
 // @namespace    https://github.com/AlexPastukhh/obs/planning-dashboard
-// @version      0.4.1
+// @version      0.4.3
 // @description  Local-first read-only planning dashboard with offline snapshot cache, pending sessions, and reviewed batch export.
 // @author       OBS planning-system
 // @match        https://chatgpt.com/*
@@ -933,7 +933,7 @@
     const table = section ? parseFirstTable(section.lines) : null;
     const rows = table?.rows || [];
     const lastSessionNumber = rows.reduce((max, row, index) => {
-      const raw = rowValue(row, table, ['#', 'Session #']);
+      const raw = exactRowValue(row, table, ['#', 'Session #']);
       const number = Number(String(raw || '').replace(/\D/g, ''));
       return Math.max(max, Number.isFinite(number) && number > 0 ? number : index + 1);
     }, 0);
@@ -978,22 +978,23 @@
 
 
   function sessionRowMatchesPending(row, table, session) {
-    const dfText = rowValue(row, table, ['D/F', 'D / F', 'D/F/K/P']);
+    const dfText = exactRowValue(row, table, ['D/F', 'D / F', 'D/F/K/P']);
     const d = parseNumber(dfText.match(/\bD\s*([+-]?\d+(?:[.,]\d+)?)/i)?.[1]);
     const f = parseNumber(dfText.match(/\bF\s*([+-]?\d+(?:[.,]\d+)?)/i)?.[1]);
-    const points = parseNumber(rowValue(row, table, ['Points', 'Score', 'Total']));
+    const points = parseNumber(exactRowValue(row, table, ['Points', 'Score', 'Total']));
     const normalized = (value) => cleanCell(value || '');
     const optionalColumnMatches = (aliases, expected) => {
-      const index = normalizedHeaderIndex(table, aliases);
+      const index = exactHeaderIndex(table, aliases);
       return index < 0 || normalized(row[index]) === normalized(expected);
     };
-    const rowNumber = parseNumber(rowValue(row, table, ['#', 'Session #']));
-    const expectedRowNumber = parseNumber(String(session.session || '').replace(/\D/g, ''));
+    const rowNumber = parseNumber(exactRowValue(row, table, ['#', 'Session #']));
+    const expectedRowNumber = parseNumber(session.expectedRowNumber);
     return Math.abs(d - parseNumber(session.d)) < 0.0001
       && Math.abs(f - parseNumber(session.f)) < 0.0001
       && Math.abs(points - parseNumber(session.points)) < 0.0001
       && (!expectedRowNumber || !rowNumber || rowNumber === expectedRowNumber)
       && optionalColumnMatches(['Time'], session.time)
+      && optionalColumnMatches(['Session'], session.session)
       && optionalColumnMatches(['Goal(s)', 'Goals', 'Goal', 'Worked On (Goals)', 'Worked On', 'Related Goals', 'Goal Maps', 'Target'], session.goals)
       && optionalColumnMatches(['Progress Signal'], session.progressSignal)
       && optionalColumnMatches(['Result', 'Result (short)'], session.result);
@@ -1597,8 +1598,28 @@
     return wrapper;
   }
 
+  function normalizeExactHeader(value) {
+    return String(value || '')
+      .toLowerCase()
+      .replace(/\u00a0/g, ' ')
+      .replace(/[—–]/g, '-')
+      .replace(/[`*_]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function exactHeaderIndex(table, aliases) {
+    const exactAliases = new Set(aliases.map(normalizeExactHeader).filter(Boolean));
+    return table.headers.findIndex((header) => exactAliases.has(normalizeExactHeader(header)));
+  }
+
+  function exactRowValue(row, table, aliases) {
+    const index = exactHeaderIndex(table, aliases);
+    return index >= 0 ? (row[index] || '') : '';
+  }
+
   function normalizedHeaderIndex(table, aliases) {
-    const normalizedAliases = aliases.map(normalizeHeading);
+    const normalizedAliases = aliases.map(normalizeHeading).filter(Boolean);
     return table.headers.findIndex((header) => normalizedAliases.some((alias) => normalizeHeading(header) === alias || normalizeHeading(header).includes(alias)));
   }
 
@@ -2183,6 +2204,43 @@ Check:
     window.open(buildLocalUrl(file.path), '_blank', 'noopener,noreferrer');
   }
 
+  async function setDashboardOpen(open) {
+    const panel = document.querySelector('#obs-planning-dashboard-panel');
+    if (!panel) return;
+    panel.setAttribute('data-open', String(Boolean(open)));
+    if (open && !state.indexText) await refresh();
+  }
+
+  async function toggleDashboardPanel() {
+    const panel = document.querySelector('#obs-planning-dashboard-panel');
+    if (!panel) return;
+    await setDashboardOpen(panel.getAttribute('data-open') !== 'true');
+  }
+
+  function closeDashboardPanel() {
+    const panel = document.querySelector('#obs-planning-dashboard-panel');
+    if (panel?.getAttribute('data-open') === 'true') panel.setAttribute('data-open', 'false');
+  }
+
+  function handleDashboardShortcut(event) {
+    if (event.repeat) return;
+    const key = String(event.key || '');
+    if (event.altKey && !event.ctrlKey && !event.metaKey && key === 'F3') {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleDashboardPanel();
+      return;
+    }
+    if (key === 'Escape') {
+      const panel = document.querySelector('#obs-planning-dashboard-panel');
+      if (panel?.getAttribute('data-open') === 'true') {
+        event.preventDefault();
+        event.stopPropagation();
+        closeDashboardPanel();
+      }
+    }
+  }
+
   function buildUI() {
     if (document.querySelector('#obs-planning-dashboard-btn')) return;
 
@@ -2218,7 +2276,7 @@ Check:
           render();
         }
       }),
-      el('button', { class: 'obs-pd-btn', text: '×', onclick: () => panel.setAttribute('data-open', 'false') })
+      el('button', { class: 'obs-pd-btn', text: '×', onclick: closeDashboardPanel })
     ]);
 
     const baseInput = el('input', {
@@ -2244,11 +2302,7 @@ Check:
     panel.appendChild(el('div', { id: 'obs-planning-dashboard-tabs', class: 'obs-pd-tabs' }));
     panel.appendChild(el('div', { id: 'obs-planning-dashboard-body', class: 'obs-pd-body' }));
 
-    openButton.addEventListener('click', async () => {
-      const willOpen = panel.getAttribute('data-open') !== 'true';
-      panel.setAttribute('data-open', String(willOpen));
-      if (willOpen && !state.indexText) await refresh();
-    });
+    openButton.addEventListener('click', toggleDashboardPanel);
 
     document.body.appendChild(openButton);
     document.body.appendChild(panel);
@@ -2262,4 +2316,5 @@ Check:
   });
 
   buildUI();
+  window.addEventListener('keydown', handleDashboardShortcut, true);
 })();

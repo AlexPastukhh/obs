@@ -1,7 +1,7 @@
 # OBS Tampermonkey Tools
 
 Status: active reusable/project planning tool index
-Doc version: v0.3.1
+Doc version: v0.3.4
 Scope: tracked Tampermonkey scripts used by the OBS planning system, including reusable command projection and project planning runtime tools.
 
 ## 1. Tracked scripts
@@ -91,14 +91,15 @@ A successful live load remains usable even if snapshot writing fails. When the i
 ```text
 1. Open/refresh the Dashboard Viewer to publish the active operational-day context.
 2. Work in Planning Pattern Capture.
-3. Press Finish.
-4. Capture stores one pending session and advances to the next session ID.
-5. Dashboard displays repository sessions plus pending/conflict local sessions.
-6. Pending totals include only status=pending records; conflicts are shown separately and block export/Finish.
-7. At the end of the day, press Copy pending or Download pending.
-8. Paste/upload the JSON for one reviewed replacement archive.
-9. Apply the archive and refresh localhost.
-10. Reconciliation requires the exact row count and complete ordered appended sequence.
+3. Use Auto session numbering or enter a manual session label such as S4.
+4. Press Finish.
+5. Capture stores one pending session, preserves its session label and advances to the next session ID.
+6. Dashboard displays repository sessions plus pending/conflict local sessions.
+7. Pending totals include only status=pending records; conflicts are shown separately and block export/Finish.
+8. At the end of the day, press Copy pending or Download pending.
+9. Paste/upload the JSON for one reviewed replacement archive.
+10. Apply the archive and refresh localhost.
+11. Reconciliation requires the exact row count and complete ordered appended sequence.
 ```
 
 `Copy End` remains as a manual fallback and does not write the shared outbox.
@@ -113,7 +114,20 @@ A successful live load remains usable even if snapshot writing fails. When the i
 5. Use https://chatgpt.com for the shared V1 localStorage origin.
 ```
 
-## 7. Command Palette reusable contract
+
+## 7. Keyboard controls
+
+```text
+Alt+F2  open/hide Planning Pattern Capture.
+Alt+F3  open/close Planning Dashboard.
+Escape  close any open Capture/Dashboard panel without clearing state.
+Ctrl+Alt+P  emergency show/reset for Pattern Capture.
+```
+
+Pattern Capture keeps its last size and position when hidden with Escape or the close button.
+Its Session field supports `S1`, `S2`, `S3` and later positive integer labels. Valid input is stored immediately without rebuilding the panel, so the first click on `Finish`, `Auto`, or a D/F action is not lost. `Enter` validates and refreshes the score view. `Auto` restores the next label derived from the repository row boundary plus pending records.
+
+## 8. Command Palette reusable contract
 
 The reusable Command Palette provides:
 
@@ -127,7 +141,7 @@ The reusable Command Palette provides:
 - no repo writes, network calls, commits or pushes.
 ```
 
-## 8. Command Palette adaptation rule
+## 9. Command Palette adaptation rule
 
 Before enabling or adapting the reusable helper for another project, verify:
 
@@ -141,15 +155,17 @@ Before enabling or adapting the reusable helper for another project, verify:
 7. No second tracked project-local command-helper copy is created by default.
 ```
 
-## 9. Safety checks
+## 10. Safety checks
 
 ```text
 - Dashboard remains read-only toward the repo.
 - Pattern Capture requires a published operational path and SHA-256 before Finish.
+- Manual session labels are separate from the expected sequential Markdown row number.
 - A changed source hash blocks extending an existing pending batch.
 - A conflict batch blocks additional Finish actions and batch export.
 - Event IDs identify browser records only; Finished Sessions Markdown does not store them.
 - Duplicate protection uses source SHA-256, source row boundary, exact resulting row count and ordered appended sequence.
+- Reconciliation resolves contract columns by exact header names; fuzzy display matching cannot confuse `Session` with `Session #` or `#` with another column.
 - Do not treat Command Palette as command authority.
 - Do not add project-only command semantics without a UCM route.
 - Do not use any helper to write to the repo or perform external network calls.

@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Planning Pattern Capture v0.3.1
+// @name         Planning Pattern Capture v0.3.3
 // @namespace    planning-pattern-capture
-// @version      0.3.1
+// @version      0.3.3
 // @description  ChatGPT-only capture panel with D/F scoring, one-click finished-session outbox, and reviewed batch sync
 // @match        *://chatgpt.com/*
 // @match        *://*.chatgpt.com/*
@@ -43,10 +43,10 @@
   const BASE_TOTAL_SCORE = 3.5;
   const BASE_DIM_SCORE = BASE_TOTAL_SCORE / 2;
   const DF_STEP = 0.1;
-  const SETTINGS_VERSION = "0.3.1";
+  const SETTINGS_VERSION = "0.3.3";
 
-  const DEFAULT_SETTINGS = { scriptVersion: SETTINGS_VERSION, collapsed: false, x: 80, y: 120, width: 410, height: 720 };
-  const DEFAULT_ACTIVE = { date: localDate(), session: "S1", selectedPatternIds: [], shownPatternIds: [] };
+  const DEFAULT_SETTINGS = { scriptVersion: SETTINGS_VERSION, collapsed: false, hidden: false, x: 80, y: 120, width: 410, height: 720 };
+  const DEFAULT_ACTIVE = { date: localDate(), session: "S1", sessionMode: "auto", selectedPatternIds: [], shownPatternIds: [] };
 
   const workflowSteps = [
     {
@@ -293,12 +293,7 @@
   function boot() {
     try {
       waitForBodyAndRender();
-      window.addEventListener("keydown", (e) => {
-        if (e.ctrlKey && e.altKey && String(e.key).toLowerCase() === "p") {
-          e.preventDefault();
-          forceShowPanel();
-        }
-      });
+      window.addEventListener("keydown", handleGlobalShortcut, true);
       window.addEventListener("resize", () => {
         settings = normalizeSettings(settings);
         save(KEY_SETTINGS, settings);
@@ -308,6 +303,49 @@
       console.error("Planning Pattern Capture failed to boot", err);
       showFallbackError(err);
     }
+  }
+
+  function handleGlobalShortcut(event) {
+    if (event.repeat) return;
+    const key = String(event.key || '');
+
+    if (event.altKey && !event.ctrlKey && !event.metaKey && key === 'F2') {
+      event.preventDefault();
+      event.stopPropagation();
+      togglePanelVisibility();
+      return;
+    }
+
+    if (key === 'Escape' && !settings.hidden) {
+      event.preventDefault();
+      event.stopPropagation();
+      hidePanel();
+      return;
+    }
+
+    if (event.ctrlKey && event.altKey && key.toLowerCase() === 'p') {
+      event.preventDefault();
+      event.stopPropagation();
+      forceShowPanel();
+    }
+  }
+
+  function togglePanelVisibility() {
+    if (settings.hidden) {
+      settings.hidden = false;
+      settings.collapsed = false;
+    } else {
+      settings.hidden = true;
+    }
+    save(KEY_SETTINGS, settings);
+    refresh();
+  }
+
+  function hidePanel() {
+    if (settings.hidden) return;
+    settings.hidden = true;
+    save(KEY_SETTINGS, settings);
+    refresh();
   }
 
   function waitForBodyAndRender() {
@@ -329,7 +367,7 @@
   }
 
   function ensureRenderedAndVisible() {
-    if (!document.body) return;
+    if (!document.body || settings.hidden) return;
     const el = document.getElementById("ppc-root");
     if (!el || !el.children.length) {
       render();
@@ -341,7 +379,7 @@
   }
 
   function forceShowPanel() {
-    settings = normalizeSettings({ ...DEFAULT_SETTINGS, collapsed: false });
+    settings = normalizeSettings({ ...DEFAULT_SETTINGS, collapsed: false, hidden: false });
     save(KEY_SETTINGS, settings);
     refresh();
     toast("PPC shown/reset");
@@ -354,6 +392,8 @@
     merged.width = clampNumber(merged.width, 280, Math.max(280, window.innerWidth - 12), DEFAULT_SETTINGS.width);
     merged.height = clampNumber(merged.height, 260, Math.max(260, window.innerHeight - 12), DEFAULT_SETTINGS.height);
     merged.collapsed = Boolean(merged.collapsed);
+    merged.hidden = Boolean(merged.hidden);
+    merged.scriptVersion = SETTINGS_VERSION;
     return merged;
   }
 
@@ -364,10 +404,16 @@
       ...DEFAULT_ACTIVE,
       ...(value || {}),
       date: String((value && value.date) || DEFAULT_ACTIVE.date),
-      session: String((value && value.session) || DEFAULT_ACTIVE.session),
+      session: normalizeSessionName((value && value.session) || DEFAULT_ACTIVE.session) || DEFAULT_ACTIVE.session,
+      sessionMode: value && value.sessionMode === "manual" ? "manual" : "auto",
       selectedPatternIds: migratePatternIds(rawSelected),
       shownPatternIds: migratePatternIds(rawShown),
     };
+  }
+
+  function normalizeSessionName(value) {
+    const text = String(value || '').trim().toUpperCase();
+    return /^S[1-9]\d*$/.test(text) ? text : '';
   }
 
   function migratePatternIds(rawIds) {
@@ -425,8 +471,7 @@
 
   function loadSettings() {
     const current = load(KEY_SETTINGS, null);
-    if (!current || current.scriptVersion !== SETTINGS_VERSION) return { ...DEFAULT_SETTINGS };
-    return current;
+    return current ? { ...DEFAULT_SETTINGS, ...current, scriptVersion: SETTINGS_VERSION } : { ...DEFAULT_SETTINGS };
   }
 
   function save(key, value) {
@@ -476,7 +521,7 @@
 
   function currentSessionContext() {
     const context = readSharedJson(CONTEXT_KEY, null);
-    return context && context.schema === "obs-session-context-v1" ? context : null;
+    return context && context.schema === "obs-session-context-v1" && context.available !== false ? context : null;
   }
 
   function pendingCountForDate(date) {
@@ -495,13 +540,14 @@
   function expectedRepositorySession(context, outbox) {
     const day = outbox.days?.[active.date];
     const pending = Array.isArray(day?.sessions)
-      ? day.sessions.filter((session) => session.status !== "synced").length
+      ? day.sessions.filter((session) => session.status === "pending").length
       : 0;
     const last = Number(context?.lastSessionNumber || 0);
     return `S${last + pending + 1}`;
   }
 
   function alignActiveSessionWithContext() {
+    if (active.sessionMode !== "auto") return;
     const context = currentSessionContext();
     if (!context || context.date !== active.date) return;
     const hasCurrentSessionEvents = currentDateEvents().some((event) => event.session === active.session);
@@ -511,6 +557,66 @@
       active = normalizeActive({ ...active, session: expected });
       save(KEY_ACTIVE, active);
     }
+  }
+
+  function setManualSession(value, options = {}) {
+    const normalized = normalizeSessionName(value);
+    const input = options.input || null;
+    const mode = options.mode || null;
+
+    if (!normalized) {
+      if (input) {
+        input.classList.add('ppc-session-input-invalid');
+        input.setAttribute('aria-invalid', 'true');
+      }
+      if (mode) mode.textContent = 'Invalid';
+      if (options.showAlert !== false) alert('Session must use the format S1, S2, S3...');
+      return null;
+    }
+
+    active = normalizeActive({ ...active, session: normalized, sessionMode: 'manual' });
+    save(KEY_ACTIVE, active);
+
+    if (input) {
+      input.value = normalized;
+      input.classList.remove('ppc-session-input-invalid');
+      input.setAttribute('aria-invalid', 'false');
+    }
+    if (mode) mode.textContent = 'Manual';
+    if (options.refresh === true) refresh();
+    return normalized;
+  }
+
+  function sessionNameForAction() {
+    const input = root?.querySelector('.ppc-session-input');
+    if (input?.getAttribute('aria-invalid') === 'true') {
+      alert('Enter a valid session name in the format S1, S2, S3...');
+      input.focus();
+      return null;
+    }
+
+    const normalized = normalizeSessionName(active.session);
+    if (!normalized) {
+      alert('Enter a valid session name in the format S1, S2, S3...');
+      input?.focus();
+      return null;
+    }
+    return normalized;
+  }
+
+  function useAutoSession() {
+    const context = currentSessionContext();
+    if (!context || context.date !== active.date) {
+      alert('Open the Planning Dashboard and press Refresh before enabling Auto session.');
+      return;
+    }
+    active = normalizeActive({
+      ...active,
+      sessionMode: 'auto',
+      session: expectedRepositorySession(context, loadOutbox())
+    });
+    save(KEY_ACTIVE, active);
+    refresh();
   }
 
   function dispatchOutboxUpdated(detail) {
@@ -575,12 +681,14 @@
   }
 
   function addDfEvent(def) {
+    const sessionName = sessionNameForAction();
+    if (!sessionName) return;
     const event = {
       id: id(),
       createdAt: new Date().toISOString(),
       date: active.date,
       time: localTime(),
-      session: active.session,
+      session: sessionName,
       kind: "df-score-adjustment",
       dimension: def.dimension,
       delta: def.delta,
@@ -589,18 +697,20 @@
       note: "",
     };
     appendEventToStorage(event);
-    const nextScore = scoreForSession(active.session);
+    const nextScore = scoreForSession(sessionName);
     toast(`${def.dimension} ${fmtSigned(def.delta)} · Total ${fmt(nextScore.total)}`);
     refresh();
   }
 
   function addSupportEvent(def) {
+    const sessionName = sessionNameForAction();
+    if (!sessionName) return;
     const event = {
       id: id(),
       createdAt: new Date().toISOString(),
       date: active.date,
       time: localTime(),
-      session: active.session.startsWith("after") ? active.session : `after ${active.session}`,
+      session: `after ${sessionName}`,
       kind: "support",
       supportType: def.supportType,
       fact: def.fact,
@@ -753,7 +863,9 @@
   }
 
   function copyEndScore() {
-    const s = scoreForSession(active.session);
+    const sessionName = sessionNameForAction();
+    if (!sessionName) return;
+    const s = scoreForSession(sessionName);
     const text = [
       "конец",
       "Base",
@@ -807,9 +919,15 @@
       return;
     }
 
-    const repositorySession = expectedRepositorySession(context, outbox);
-    const s = scoreForSession(active.session);
-    const summary = `${active.date} ${repositorySession}\nD ${fmt(s.dims.D)} / F ${fmt(s.dims.F)}\nPoints ${fmt(s.total)}`;
+    const sessionName = sessionNameForAction();
+    if (!sessionName) return;
+
+    const expectedRowNumber = Number(context.sessionRowCount || context.lastSessionNumber || 0) + activePending.length + 1;
+    const duplicate = activePending.some((session) => normalizeSessionName(session.session) === sessionName);
+    if (duplicate && !confirm(`${sessionName} already exists in the pending batch. Store another record with the same session label?`)) return;
+
+    const s = scoreForSession(sessionName);
+    const summary = `${active.date} row #${expectedRowNumber} · ${sessionName}\nD ${fmt(s.dims.D)} / F ${fmt(s.dims.F)}\nPoints ${fmt(s.total)}`;
     if (!confirm(`Finish and store this session locally?\n\n${summary}`)) return;
 
     const eventId = id();
@@ -819,7 +937,8 @@
     const record = {
       eventId,
       createdAt: capturedAtIso,
-      session: repositorySession,
+      expectedRowNumber,
+      session: sessionName,
       time: "",
       d: Number(fmt(s.dims.D)),
       f: Number(fmt(s.dims.F)),
@@ -856,7 +975,7 @@
       createdAt: capturedAtIso,
       date: active.date,
       time: capturedLocalTime,
-      session: active.session,
+      session: sessionName,
       kind: "session-finished-local",
       outboxEventId: eventId,
       d: record.d,
@@ -867,7 +986,8 @@
 
     active = normalizeActive({
       ...active,
-      session: nextSessionName(repositorySession),
+      session: nextSessionName(sessionName),
+      sessionMode: active.sessionMode,
       selectedPatternIds: [],
       shownPatternIds: [],
     });
@@ -939,6 +1059,8 @@
       root.innerHTML = "";
       root.style.left = `${settings.x}px`;
       root.style.top = `${settings.y}px`;
+      root.style.display = settings.hidden ? "none" : "block";
+      if (settings.hidden) return;
       if (settings.collapsed) {
         root.style.width = "170px";
         root.style.height = "auto";
@@ -1010,7 +1132,7 @@
     controls.className = "ppc-header-controls";
     controls.append(
       button("−", "ppc-mini", () => { settings.collapsed = true; saveAll(); refresh(); }),
-      button("×", "ppc-mini", () => { settings.collapsed = true; saveAll(); refresh(); })
+      button("×", "ppc-mini", hidePanel)
     );
 
     header.addEventListener("click", (e) => {
@@ -1029,6 +1151,7 @@
     const body = document.createElement("div");
     body.className = "ppc-body";
     body.appendChild(topActionBar());
+    body.appendChild(sessionControlBox());
     body.appendChild(sectionTitle("Session Score"));
     body.appendChild(scoreBox(active.session));
     body.appendChild(sectionTitle("D/F Quick"));
@@ -1071,6 +1194,54 @@
       button("Clear date", "ppc-danger", clearDate)
     );
     return bar;
+  }
+
+  function sessionControlBox() {
+    const box = document.createElement('div');
+    box.className = 'ppc-session-control';
+
+    const label = document.createElement('label');
+    label.className = 'ppc-session-label';
+    label.textContent = 'Session';
+
+    const input = document.createElement('input');
+    input.className = 'ppc-session-input';
+    input.type = 'text';
+    input.value = active.session;
+    input.placeholder = 'S1';
+    input.setAttribute('aria-label', 'Session name');
+    input.setAttribute('aria-invalid', 'false');
+
+    const mode = document.createElement('span');
+    mode.className = 'ppc-session-mode';
+    mode.textContent = active.sessionMode === 'auto' ? 'Auto' : 'Manual';
+
+    input.addEventListener('input', () => {
+      const upper = String(input.value || '').trim().toUpperCase();
+      if (input.value !== upper) input.value = upper;
+      setManualSession(input.value, {
+        input,
+        mode,
+        showAlert: false,
+        refresh: false,
+      });
+    });
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        const committed = setManualSession(input.value, {
+          input,
+          mode,
+          showAlert: true,
+          refresh: false,
+        });
+        if (committed) refresh();
+      }
+    });
+
+    const auto = button('Auto', 'ppc-action', useAutoSession);
+    box.append(label, input, mode, auto);
+    return box;
   }
 
   function workflowBox() {
@@ -1476,6 +1647,11 @@
     style.textContent = `
       #ppc-root { position: fixed; z-index: 2147483647; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; color: #f5f5f5; }
       #ppc-root * { box-sizing: border-box; }
+      .ppc-session-control { display: grid; grid-template-columns: auto minmax(80px, 1fr) auto auto; align-items: center; gap: 6px; padding: 8px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; background: rgba(255,255,255,0.04); }
+      .ppc-session-label { color: #cbd5e1; font-size: 11px; font-weight: 700; }
+      .ppc-session-input { min-width: 0; width: 100%; padding: 5px 7px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: #0b1220; color: #f8fafc; font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .ppc-session-input-invalid { border-color: #f87171; box-shadow: 0 0 0 1px rgba(248,113,113,.35); }
+      .ppc-session-mode { color: #93c5fd; font-size: 10px; }
       .ppc-collapsed { background: #1f2937; border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; padding: 8px 10px; cursor: move; user-select: none; box-shadow: 0 8px 24px rgba(0,0,0,0.25); text-align: center; white-space: nowrap; }
       .ppc-collapsed::after { content: "  click"; opacity: 0.45; font-size: 10px; }
       .ppc-panel { background: #111827; border: 1px solid rgba(255,255,255,0.22); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.35); max-width: calc(100vw - 12px); max-height: calc(100vh - 12px); min-width: 280px; min-height: 260px; display: flex; flex-direction: column; position: relative; resize: both; }
