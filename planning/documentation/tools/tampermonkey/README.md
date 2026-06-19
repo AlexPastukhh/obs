@@ -1,7 +1,7 @@
 # OBS Tampermonkey Tools
 
 Status: active reusable/project planning tool index
-Doc version: v0.3.4
+Doc version: v0.3.7
 Scope: tracked Tampermonkey scripts used by the OBS planning system, including reusable command projection and project planning runtime tools.
 
 ## 1. Tracked scripts
@@ -118,18 +118,22 @@ A successful live load remains usable even if snapshot writing fails. When the i
 ## 7. Keyboard controls
 
 ```text
-Alt+F2  open/hide Planning Pattern Capture.
+Alt+F2  open/close Command Palette.
 Alt+F3  open/close Planning Dashboard.
-Escape  close any open Capture/Dashboard panel without clearing state.
+Escape  close an open Command Palette or Planning Dashboard without clearing state.
 Ctrl+Alt+P  emergency show/reset for Pattern Capture.
 ```
 
-Pattern Capture keeps its last size and position when hidden with Escape or the close button.
+Command Palette owns Alt+F2; Pattern Capture does not consume that shortcut.
+Pattern Capture does not consume Escape or Alt+F2. Its close button hides the panel; Ctrl+Alt+P is the explicit emergency show/reset path.
 Its Session field supports `S1`, `S2`, `S3` and later positive integer labels. Valid input is stored immediately without rebuilding the panel, so the first click on `Finish`, `Auto`, or a D/F action is not lost. `Enter` validates and refreshes the score view. `Auto` restores the next label derived from the repository row boundary plus pending records.
 
 ## 8. Command Palette reusable contract
 
 The reusable Command Palette provides:
+
+- an explicit projection-only boundary: the root UCM and linked owner files remain command authority;
+- separate sibling controls for command insertion and copying, avoiding nested interactive elements;
 
 ```text
 - draggable helper panel;

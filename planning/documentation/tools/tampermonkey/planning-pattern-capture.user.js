@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Planning Pattern Capture v0.3.3
+// @name         Planning Pattern Capture v0.3.5
 // @namespace    planning-pattern-capture
-// @version      0.3.3
+// @version      0.3.5
 // @description  ChatGPT-only capture panel with D/F scoring, one-click finished-session outbox, and reviewed batch sync
 // @match        *://chatgpt.com/*
 // @match        *://*.chatgpt.com/*
@@ -43,7 +43,7 @@
   const BASE_TOTAL_SCORE = 3.5;
   const BASE_DIM_SCORE = BASE_TOTAL_SCORE / 2;
   const DF_STEP = 0.1;
-  const SETTINGS_VERSION = "0.3.3";
+  const SETTINGS_VERSION = "0.3.5";
 
   const DEFAULT_SETTINGS = { scriptVersion: SETTINGS_VERSION, collapsed: false, hidden: false, x: 80, y: 120, width: 410, height: 720 };
   const DEFAULT_ACTIVE = { date: localDate(), session: "S1", sessionMode: "auto", selectedPatternIds: [], shownPatternIds: [] };
@@ -309,36 +309,11 @@
     if (event.repeat) return;
     const key = String(event.key || '');
 
-    if (event.altKey && !event.ctrlKey && !event.metaKey && key === 'F2') {
-      event.preventDefault();
-      event.stopPropagation();
-      togglePanelVisibility();
-      return;
-    }
-
-    if (key === 'Escape' && !settings.hidden) {
-      event.preventDefault();
-      event.stopPropagation();
-      hidePanel();
-      return;
-    }
-
     if (event.ctrlKey && event.altKey && key.toLowerCase() === 'p') {
       event.preventDefault();
       event.stopPropagation();
       forceShowPanel();
     }
-  }
-
-  function togglePanelVisibility() {
-    if (settings.hidden) {
-      settings.hidden = false;
-      settings.collapsed = false;
-    } else {
-      settings.hidden = true;
-    }
-    save(KEY_SETTINGS, settings);
-    refresh();
   }
 
   function hidePanel() {
