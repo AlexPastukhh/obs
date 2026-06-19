@@ -1,7 +1,7 @@
 # OBS Tampermonkey Tools
 
 Status: active reusable/project planning tool index
-Doc version: v0.3.7
+Doc version: v0.3.9
 Scope: tracked Tampermonkey scripts used by the OBS planning system, including reusable command projection and project planning runtime tools.
 
 ## 1. Tracked scripts
@@ -64,6 +64,8 @@ Rules:
 - Only completed pending sessions are written to the shared outbox.
 - Dashboard snapshot and pending outbox remain separate.
 - Cached snapshots are accepted only for the current normalized Base URL and Index path.
+- Transient refresh and _obs_cache_bust parameters are excluded from Index identity so manual cache-bypass cleanup does not orphan the compatible snapshot.
+- Legacy snapshots recompute source identity from their stored Base URL and Index path when those fields exist, instead of trusting an older pre-normalized sourceKey.
 - Exporting does not clear pending records.
 - Pending records clear only after reviewed repository application plus reconciliation, or explicit user action.
 - Conflict records block additional Finish actions until resolved.
@@ -85,6 +87,17 @@ http://127.0.0.1:8765/planning/dashboard/index.md
 ```
 
 A successful live load remains usable even if snapshot writing fails. When the index request fails, the viewer uses only a compatible snapshot and labels it `Offline cache`.
+
+Live Markdown reads intentionally bypass the browser/Tampermonkey HTTP cache:
+
+```text
+- every localhost request receives a unique _obs_cache_bust query value;
+- request headers use no-cache / no-store directives;
+- the IndexedDB snapshot remains the only intentional offline fallback;
+- compatible legacy snapshots survive cleanup of a temporary refresh query suffix because their source identity is recalculated from stored Base URL and Index path;
+- the Index setting should remain planning/dashboard/index.md;
+- temporary manual refresh and _obs_cache_bust query parameters are removed from the saved Index setting.
+```
 
 ## 5. V1 finished-session flow
 
@@ -163,6 +176,7 @@ Before enabling or adapting the reusable helper for another project, verify:
 
 ```text
 - Dashboard remains read-only toward the repo.
+- Live localhost Markdown requests bypass HTTP cache; IndexedDB snapshot fallback remains separate and explicit.
 - Pattern Capture requires a published operational path and SHA-256 before Finish.
 - Manual session labels are separate from the expected sequential Markdown row number.
 - A changed source hash blocks extending an existing pending batch.

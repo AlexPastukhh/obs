@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OBS Local Planning Dashboard Viewer
 // @namespace    https://github.com/AlexPastukhh/obs/planning-dashboard
-// @version      0.4.3
+// @version      0.4.5
 // @description  Local-first read-only planning dashboard with offline snapshot cache, pending sessions, and reviewed batch export.
 // @author       OBS planning-system
 // @match        https://chatgpt.com/*
@@ -31,7 +31,7 @@
 
   const state = {
     baseUrl: GM_getValue('obsPlanningDashboard.baseUrl', DEFAULT_BASE_URL),
-    indexPath: GM_getValue('obsPlanningDashboard.indexPath', DEFAULT_INDEX_PATH),
+    indexPath: normalizeIndexPathSetting(GM_getValue('obsPlanningDashboard.indexPath', DEFAULT_INDEX_PATH)),
     indexText: '',
     files: {},
     groups: {},
@@ -745,6 +745,19 @@
     return String(url || DEFAULT_BASE_URL).replace(/\/?$/, '/');
   }
 
+  function normalizeIndexPathSetting(value) {
+    const text = String(value || DEFAULT_INDEX_PATH).trim() || DEFAULT_INDEX_PATH;
+    try {
+      const url = new URL(text, 'http://obs-dashboard.local/');
+      url.searchParams.delete('refresh');
+      url.searchParams.delete('_obs_cache_bust');
+      const query = url.searchParams.toString();
+      return `${url.pathname.replace(/^\/+/, '')}${query ? `?${query}` : ''}${url.hash || ''}`;
+    } catch {
+      return text;
+    }
+  }
+
   function normalizeOptionalPath(value) {
     const text = String(value || '').trim();
     return OPTIONAL_EMPTY_VALUES.has(text.toLowerCase()) ? '' : text;
@@ -756,21 +769,28 @@
   }
 
   function fetchText(path) {
-    const url = buildLocalUrl(path);
+    const url = new URL(buildLocalUrl(path));
+    url.searchParams.set('_obs_cache_bust', `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`);
+    const requestUrl = url.toString();
+
     return new Promise((resolve, reject) => {
       GM_xmlhttpRequest({
         method: 'GET',
-        url,
+        url: requestUrl,
+        headers: {
+          'Cache-Control': 'no-cache, no-store, max-age=0',
+          Pragma: 'no-cache'
+        },
         timeout: 8000,
         onload: (response) => {
           if (response.status >= 200 && response.status < 300) {
             resolve(response.responseText || '');
           } else {
-            reject(new Error(`HTTP ${response.status} for ${url}`));
+            reject(new Error(`HTTP ${response.status} for ${requestUrl}`));
           }
         },
-        onerror: () => reject(new Error(`Request failed for ${url}`)),
-        ontimeout: () => reject(new Error(`Request timed out for ${url}`))
+        onerror: () => reject(new Error(`Request failed for ${requestUrl}`)),
+        ontimeout: () => reject(new Error(`Request timed out for ${requestUrl}`))
       });
     });
   }
@@ -894,7 +914,7 @@
   }
 
   function cacheSourceKey(baseUrl = state.baseUrl, indexPath = state.indexPath) {
-    return `${normalizeBaseUrl(baseUrl)}|${String(indexPath || '').replace(/^\/+/, '')}`;
+    return `${normalizeBaseUrl(baseUrl)}|${normalizeIndexPathSetting(indexPath).replace(/^\/+/, '')}`;
   }
 
   function snapshotFromState(savedAt) {
@@ -915,7 +935,11 @@
   function restoreSnapshot(snapshot) {
     if (!snapshot || snapshot.schema !== 'obs-dashboard-snapshot-v1') throw new Error('No compatible browser snapshot');
     const expectedSourceKey = cacheSourceKey();
-    const snapshotSourceKey = snapshot.sourceKey || cacheSourceKey(snapshot.baseUrl, snapshot.indexPath);
+    const snapshotSourceKey = (
+      snapshot.baseUrl != null && snapshot.indexPath != null
+        ? cacheSourceKey(snapshot.baseUrl, snapshot.indexPath)
+        : snapshot.sourceKey
+    );
     if (snapshotSourceKey !== expectedSourceKey) {
       throw new Error(`Browser snapshot belongs to another source: ${snapshotSourceKey}`);
     }
@@ -2287,7 +2311,10 @@ Check:
     const indexInput = el('input', {
       class: 'obs-pd-input',
       value: state.indexPath,
-      onchange: (event) => { state.indexPath = event.target.value; }
+      onchange: (event) => {
+        state.indexPath = normalizeIndexPathSetting(event.target.value);
+        event.target.value = state.indexPath;
+      }
     });
 
     const settings = el('div', { id: 'obs-planning-dashboard-settings', class: 'obs-pd-settings', 'data-open': 'false' }, [
