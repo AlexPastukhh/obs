@@ -1,7 +1,7 @@
 # OBS Tampermonkey Tools
 
 Status: active reusable/project planning tool index
-Doc version: v0.3.9
+Doc version: v0.4.1
 Scope: tracked Tampermonkey scripts used by the OBS planning system, including reusable command projection and project planning runtime tools.
 
 ## 1. Tracked scripts
@@ -15,7 +15,8 @@ planning/documentation/tools/tampermonkey/local-planning-dashboard-viewer.user.j
   keeps a source-bound IndexedDB snapshot, displays pending local sessions and exports reviewed JSON.
 
 planning/documentation/tools/tampermonkey/planning-pattern-capture.user.js
-  local D/F pattern capture and one-click finished-session capture into the shared pending outbox.
+  local D/F pattern capture, one-click 10/20/30-minute session timer, sound/system notifications,
+  and one-click finished-session capture into the shared pending outbox.
 ```
 
 Do not create competing tracked copies of the same script.
@@ -46,6 +47,7 @@ Pattern Capture private GM storage:
   planningPatternCapture:v2:settings
   planningPatternCapture:v2:active
   planningPatternCapture:v2:events
+  planningPatternCapture:v2:timer
 
 Shared page localStorage:
   obsPlanning:sessionContext:v1
@@ -60,7 +62,7 @@ Dashboard IndexedDB:
 Rules:
 
 ```text
-- Raw Capture events and UI state remain in GM storage.
+- Raw Capture events, timer state and UI state remain in GM storage.
 - Only completed pending sessions are written to the shared outbox.
 - Dashboard snapshot and pending outbox remain separate.
 - Cached snapshots are accepted only for the current normalized Base URL and Index path.
@@ -117,7 +119,36 @@ Live Markdown reads intentionally bypass the browser/Tampermonkey HTTP cache:
 
 `Copy End` remains as a manual fallback and does not write the shared outbox.
 
-## 6. Installation/update
+
+## 6. Pattern Capture session timer
+
+```text
+1. Confirm the active date and session label in Pattern Capture.
+2. Press Start <session> · 30m once.
+3. The session clock creates focus milestones at 10, 20 and 30 minutes.
+4. The same Pause all / Resume all action freezes or resumes every pending milestone.
+5. Each reached milestone produces an in-panel notice, a Tampermonkey system notification and an audible Web Audio signal when sound is enabled.
+6. The 30-minute milestone marks the timer expired but never calls Finish automatically.
+7. D/F review and Finish remain explicit user actions.
+8. A successful Finish clears the timer only when the timer belongs to that same date/session.
+```
+
+Timer rules:
+
+```text
+- Timer source of truth is elapsed real time from stored timestamps, not decrementing interval ticks.
+- Timer state survives panel collapse, page reload and temporary background throttling.
+- The 500 ms display ticker updates only timer text nodes; it does not rebuild buttons while the user is clicking them.
+- Timer persistence uses the dedicated timer writer; unrelated UI/event saves do not overwrite timer state.
+- Start replaces another running/paused timer only after confirmation.
+- A date/session mismatch is shown explicitly; a timer is never silently transferred to another session.
+- If several milestones become due while the page is suspended, earlier due milestones are marked reached and the latest due notification is emitted to avoid an alarm burst.
+- Sound can be toggled and tested from the timer controls.
+- Browser autoplay rules may require the Start or Test button to prime Web Audio after a page reload.
+- Timer expiration does not create a pending session, score or repository change.
+```
+
+## 7. Installation/update
 
 ```text
 1. Open the tracked .user.js file.
@@ -128,7 +159,7 @@ Live Markdown reads intentionally bypass the browser/Tampermonkey HTTP cache:
 ```
 
 
-## 7. Keyboard controls
+## 8. Keyboard controls
 
 ```text
 Alt+F2  open/close Command Palette.
@@ -141,7 +172,7 @@ Command Palette owns Alt+F2; Pattern Capture does not consume that shortcut.
 Pattern Capture does not consume Escape or Alt+F2. Its close button hides the panel; Ctrl+Alt+P is the explicit emergency show/reset path.
 Its Session field supports `S1`, `S2`, `S3` and later positive integer labels. Valid input is stored immediately without rebuilding the panel, so the first click on `Finish`, `Auto`, or a D/F action is not lost. `Enter` validates and refreshes the score view. `Auto` restores the next label derived from the repository row boundary plus pending records.
 
-## 8. Command Palette reusable contract
+## 9. Command Palette reusable contract
 
 The reusable Command Palette provides:
 
@@ -158,7 +189,7 @@ The reusable Command Palette provides:
 - no repo writes, network calls, commits or pushes.
 ```
 
-## 9. Command Palette adaptation rule
+## 10. Command Palette adaptation rule
 
 Before enabling or adapting the reusable helper for another project, verify:
 
@@ -172,12 +203,14 @@ Before enabling or adapting the reusable helper for another project, verify:
 7. No second tracked project-local command-helper copy is created by default.
 ```
 
-## 10. Safety checks
+## 11. Safety checks
 
 ```text
 - Dashboard remains read-only toward the repo.
 - Live localhost Markdown requests bypass HTTP cache; IndexedDB snapshot fallback remains separate and explicit.
 - Pattern Capture requires a published operational path and SHA-256 before Finish.
+- Pattern Capture owns the session timer; Dashboard may only mirror it in a future read-only projection.
+- Timer completion never calls Finish or writes the shared outbox automatically.
 - Manual session labels are separate from the expected sequential Markdown row number.
 - A changed source hash blocks extending an existing pending batch.
 - A conflict batch blocks additional Finish actions and batch export.

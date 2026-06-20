@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Planning Pattern Capture v0.3.5
+// @name         Planning Pattern Capture v0.4.1
 // @namespace    planning-pattern-capture
-// @version      0.3.5
-// @description  ChatGPT-only capture panel with D/F scoring, one-click finished-session outbox, and reviewed batch sync
+// @version      0.4.1
+// @description  ChatGPT-only capture panel with D/F scoring, one-click session timer milestones, finished-session outbox, and reviewed batch sync
 // @match        *://chatgpt.com/*
 // @match        *://*.chatgpt.com/*
 // @match        *://chat.openai.com/*
@@ -17,6 +17,7 @@
 // @grant        GM_setValue
 // @grant        GM_setClipboard
 // @grant        GM_addValueChangeListener
+// @grant        GM_notification
 // ==/UserScript==
 
 (function () {
@@ -26,6 +27,7 @@
   const KEY_SETTINGS = "planningPatternCapture:v2:settings";
   const KEY_ACTIVE = "planningPatternCapture:v2:active";
   const KEY_EVENTS = "planningPatternCapture:v2:events";
+  const KEY_TIMER = "planningPatternCapture:v2:timer";
 
   // Shared page-origin storage used by both Pattern Capture and Dashboard Viewer.
   const OUTBOX_KEY = "obsPlanning:sessionOutbox:v1";
@@ -43,9 +45,26 @@
   const BASE_TOTAL_SCORE = 3.5;
   const BASE_DIM_SCORE = BASE_TOTAL_SCORE / 2;
   const DF_STEP = 0.1;
-  const SETTINGS_VERSION = "0.3.5";
+  const SETTINGS_VERSION = "0.4.1";
+  const TIMER_SCHEMA = "planning-pattern-session-timer-v1";
+  const TIMER_TOTAL_MS = 30 * 60 * 1000;
+  const TIMER_MILESTONES = [
+    { minutes: 10, label: "10m focus", title: "10 минут прошло", text: "Проверь направление и фокус: работа всё ещё двигает цель сессии?" },
+    { minutes: 20, label: "20m focus", title: "20 минут прошло", text: "Последние 10 минут: верни максимум D/F и доведи видимый результат." },
+    { minutes: 30, label: "30m end", title: "30 минут прошло", text: "Сегмент завершён: оцени D/F и зафиксируй результат через Finish." },
+  ];
 
-  const DEFAULT_SETTINGS = { scriptVersion: SETTINGS_VERSION, collapsed: false, hidden: false, x: 80, y: 120, width: 410, height: 720 };
+  const DEFAULT_SETTINGS = {
+    scriptVersion: SETTINGS_VERSION,
+    collapsed: false,
+    hidden: false,
+    x: 80,
+    y: 120,
+    width: 410,
+    height: 720,
+    timerSoundEnabled: true,
+    timerVolume: 0.65,
+  };
   const DEFAULT_ACTIVE = { date: localDate(), session: "S1", sessionMode: "auto", selectedPatternIds: [], shownPatternIds: [] };
 
   const workflowSteps = [
@@ -275,6 +294,9 @@
   let settings = normalizeSettings(loadSettings());
   let active = normalizeActive(loadWithMigration(KEY_ACTIVE, KEY_ACTIVE_V1, DEFAULT_ACTIVE));
   let events = loadEventsFromStorage();
+  let timer = normalizeTimer(load(KEY_TIMER, emptyTimer()));
+  let timerTicker = null;
+  let timerAudioContext = null;
   let workflowPinned = false;
   let root = null;
   let didDragCollapsed = false;
@@ -285,6 +307,11 @@
   alignActiveSessionWithContext();
   boot();
   setupStorageListeners();
+  startTimerTicker();
+  window.addEventListener("focus", () => { processTimerMilestones(); updateTimerUi(); });
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) { processTimerMilestones(); updateTimerUi(); }
+  });
   window.addEventListener("obs-planning-session-context-updated", () => {
     alignActiveSessionWithContext();
     refresh();
@@ -368,6 +395,8 @@
     merged.height = clampNumber(merged.height, 260, Math.max(260, window.innerHeight - 12), DEFAULT_SETTINGS.height);
     merged.collapsed = Boolean(merged.collapsed);
     merged.hidden = Boolean(merged.hidden);
+    merged.timerSoundEnabled = merged.timerSoundEnabled !== false;
+    merged.timerVolume = clampNumber(merged.timerVolume, 0, 1, DEFAULT_SETTINGS.timerVolume);
     merged.scriptVersion = SETTINGS_VERSION;
     return merged;
   }
@@ -384,6 +413,46 @@
       selectedPatternIds: migratePatternIds(rawSelected),
       shownPatternIds: migratePatternIds(rawShown),
     };
+  }
+
+  function emptyTimer() {
+    return {
+      schema: TIMER_SCHEMA,
+      status: "idle",
+      date: "",
+      session: "",
+      startedAt: null,
+      runStartedAt: null,
+      elapsedMs: 0,
+      pausedAt: null,
+      expiredAt: null,
+      notifiedMinutes: [],
+      lastNotice: null,
+    };
+  }
+
+  function normalizeTimer(value) {
+    if (!value || value.schema !== TIMER_SCHEMA) return emptyTimer();
+    const validStatuses = new Set(["idle", "running", "paused", "expired"]);
+    const normalized = { ...emptyTimer(), ...value };
+    normalized.status = validStatuses.has(normalized.status) ? normalized.status : "idle";
+    normalized.date = String(normalized.date || "");
+    normalized.session = normalizeSessionName(normalized.session) || "";
+    normalized.startedAt = normalized.startedAt == null || !Number.isFinite(Number(normalized.startedAt)) ? null : Number(normalized.startedAt);
+    normalized.runStartedAt = normalized.runStartedAt == null || !Number.isFinite(Number(normalized.runStartedAt)) ? null : Number(normalized.runStartedAt);
+    normalized.elapsedMs = clampNumber(normalized.elapsedMs, 0, TIMER_TOTAL_MS, 0);
+    normalized.pausedAt = normalized.pausedAt == null || !Number.isFinite(Number(normalized.pausedAt)) ? null : Number(normalized.pausedAt);
+    normalized.expiredAt = normalized.expiredAt == null || !Number.isFinite(Number(normalized.expiredAt)) ? null : Number(normalized.expiredAt);
+    normalized.notifiedMinutes = Array.from(new Set(
+      (Array.isArray(normalized.notifiedMinutes) ? normalized.notifiedMinutes : [])
+        .map(Number)
+        .filter((minutes) => TIMER_MILESTONES.some((milestone) => milestone.minutes === minutes))
+    )).sort((a, b) => a - b);
+    if (normalized.status === "running" && !normalized.runStartedAt) {
+      normalized.runStartedAt = Date.now();
+    }
+    if (normalized.status !== "running") normalized.runStartedAt = null;
+    return normalized;
   }
 
   function normalizeSessionName(value) {
@@ -462,6 +531,11 @@
     save(KEY_SETTINGS, settings);
     save(KEY_ACTIVE, active);
     save(KEY_EVENTS, events);
+  }
+
+  function saveTimer() {
+    timer = normalizeTimer(timer);
+    save(KEY_TIMER, timer);
   }
 
   function readSharedJson(key, fallback) {
@@ -617,6 +691,8 @@
     settings = normalizeSettings(loadWithMigration(KEY_SETTINGS, KEY_SETTINGS_V1, DEFAULT_SETTINGS));
     active = normalizeActive(loadWithMigration(KEY_ACTIVE, KEY_ACTIVE_V1, DEFAULT_ACTIVE));
     events = loadEventsFromStorage();
+    timer = normalizeTimer(load(KEY_TIMER, emptyTimer()));
+    processTimerMilestones();
     refresh();
     if (showToast) toast("Synced from storage");
   }
@@ -633,6 +709,258 @@
       active = normalizeActive(newValue);
       refresh();
     });
+    GM_addValueChangeListener(KEY_TIMER, function (_name, _oldValue, newValue, remote) {
+      if (!remote) return;
+      timer = normalizeTimer(newValue);
+      processTimerMilestones();
+      refresh();
+    });
+  }
+
+  function timerElapsedMs(now = Date.now()) {
+    const base = clampNumber(timer.elapsedMs, 0, TIMER_TOTAL_MS, 0);
+    const running = timer.status === "running" && timer.runStartedAt
+      ? Math.max(0, now - timer.runStartedAt)
+      : 0;
+    return Math.max(0, Math.min(TIMER_TOTAL_MS, base + running));
+  }
+
+  function formatTimerClock(ms) {
+    const totalSeconds = Math.max(0, Math.ceil(Number(ms || 0) / 1000));
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  }
+
+  function timerBelongsTo(date = active.date, session = active.session) {
+    return timer.status !== "idle" && timer.date === date && timer.session === session;
+  }
+
+  function timerStatusLabel() {
+    if (timer.status === "running") return "running";
+    if (timer.status === "paused") return "paused";
+    if (timer.status === "expired") return "time ended";
+    return "idle";
+  }
+
+  function nextTimerMilestone() {
+    const elapsed = timerElapsedMs();
+    return TIMER_MILESTONES.find((milestone) => elapsed < milestone.minutes * 60 * 1000) || TIMER_MILESTONES[TIMER_MILESTONES.length - 1];
+  }
+
+  function startSessionTimer() {
+    const sessionName = sessionNameForAction();
+    if (!sessionName) return;
+
+    if (timer.status === "running" || timer.status === "paused") {
+      const owner = `${timer.date || "unknown"} ${timer.session || "session"}`;
+      if (!confirm(`A timer is already ${timer.status} for ${owner}. Replace it and start ${active.date} ${sessionName}?`)) return;
+    }
+
+    const now = Date.now();
+    timer = normalizeTimer({
+      ...emptyTimer(),
+      status: "running",
+      date: active.date,
+      session: sessionName,
+      startedAt: now,
+      runStartedAt: now,
+    });
+    saveTimer();
+    primeTimerAudio();
+    playTimerSound("start");
+    refresh();
+    toast(`Started ${sessionName} · checks at 10/20/30m`);
+  }
+
+  function pauseSessionTimer() {
+    if (timer.status !== "running") return;
+    const now = Date.now();
+    timer = normalizeTimer({
+      ...timer,
+      status: "paused",
+      elapsedMs: timerElapsedMs(now),
+      runStartedAt: null,
+      pausedAt: now,
+    });
+    saveTimer();
+    refresh();
+    toast(`Paused ${timer.session}`);
+  }
+
+  function resumeSessionTimer() {
+    if (timer.status !== "paused") return;
+    if (!timerBelongsTo()) {
+      const owner = `${timer.date || "unknown"} ${timer.session || "session"}`;
+      if (!confirm(`Resume timer for ${owner} while Capture is on ${active.date} ${active.session}?`)) return;
+    }
+    timer = normalizeTimer({
+      ...timer,
+      status: "running",
+      runStartedAt: Date.now(),
+      pausedAt: null,
+    });
+    saveTimer();
+    primeTimerAudio();
+    refresh();
+    toast(`Resumed ${timer.session}`);
+  }
+
+  function stopSessionTimer(options = {}) {
+    if (timer.status === "idle") return;
+    if (options.confirm !== false && !confirm(`Stop and clear the timer for ${timer.date} ${timer.session}?`)) return;
+    const stoppedSession = timer.session;
+    timer = emptyTimer();
+    saveTimer();
+    refresh();
+    if (options.toast !== false) toast(`Timer stopped${stoppedSession ? ` · ${stoppedSession}` : ""}`);
+  }
+
+  function restartSessionTimer() {
+    if (timer.status === "running" || timer.status === "paused") {
+      if (!confirm(`Restart the 30-minute timer for ${active.date} ${active.session}?`)) return;
+    }
+    timer = emptyTimer();
+    saveTimer();
+    startSessionTimer();
+  }
+
+  function dismissTimerNotice() {
+    if (!timer.lastNotice) return;
+    timer = normalizeTimer({ ...timer, lastNotice: null });
+    saveTimer();
+    refresh();
+  }
+
+  function toggleTimerSound() {
+    settings.timerSoundEnabled = !settings.timerSoundEnabled;
+    save(KEY_SETTINGS, settings);
+    if (settings.timerSoundEnabled) {
+      primeTimerAudio();
+      playTimerSound("test");
+      toast("Timer sound on");
+    } else {
+      toast("Timer sound off");
+    }
+    refresh();
+  }
+
+  function testTimerSound() {
+    primeTimerAudio();
+    playTimerSound("test");
+    toast(settings.timerSoundEnabled ? "Timer sound test" : "Sound is off");
+  }
+
+  function primeTimerAudio() {
+    try {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return;
+      if (!timerAudioContext) timerAudioContext = new AudioContextClass();
+      if (timerAudioContext.state === "suspended") timerAudioContext.resume().catch(() => {});
+    } catch (err) {
+      console.warn("Planning Pattern Capture audio prime failed", err);
+    }
+  }
+
+  function playTimerSound(kind) {
+    if (!settings.timerSoundEnabled) return;
+    primeTimerAudio();
+    if (!timerAudioContext) return;
+
+    const patterns = {
+      start: [{ frequency: 520, duration: 0.08 }],
+      test: [{ frequency: 660, duration: 0.10 }, { frequency: 820, duration: 0.12 }],
+      10: [{ frequency: 660, duration: 0.12 }],
+      20: [{ frequency: 660, duration: 0.10 }, { frequency: 660, duration: 0.10 }],
+      30: [{ frequency: 880, duration: 0.16 }, { frequency: 660, duration: 0.16 }, { frequency: 880, duration: 0.22 }],
+    };
+    const sequence = patterns[kind] || patterns.test;
+
+    Promise.resolve(timerAudioContext.resume()).then(() => {
+      let cursor = timerAudioContext.currentTime + 0.02;
+      for (const tone of sequence) {
+        const oscillator = timerAudioContext.createOscillator();
+        const gain = timerAudioContext.createGain();
+        oscillator.type = "sine";
+        oscillator.frequency.setValueAtTime(tone.frequency, cursor);
+        gain.gain.setValueAtTime(0.0001, cursor);
+        gain.gain.exponentialRampToValueAtTime(Math.max(0.0001, settings.timerVolume * 0.24), cursor + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, cursor + tone.duration);
+        oscillator.connect(gain);
+        gain.connect(timerAudioContext.destination);
+        oscillator.start(cursor);
+        oscillator.stop(cursor + tone.duration + 0.02);
+        cursor += tone.duration + 0.10;
+      }
+    }).catch((err) => console.warn("Planning Pattern Capture timer sound failed", err));
+  }
+
+  function revealCaptureForTimer() {
+    settings.hidden = false;
+    settings.collapsed = false;
+    save(KEY_SETTINGS, settings);
+    try { window.focus(); } catch {}
+    refresh();
+  }
+
+  function showTimerNotification(milestone) {
+    const title = `${milestone.title} · ${timer.session || "session"}`;
+    const text = milestone.text;
+    const onClick = () => revealCaptureForTimer();
+
+    try {
+      if (typeof GM_notification === "function") {
+        GM_notification({ title, text, timeout: 15000, onclick: onClick });
+        return;
+      }
+    } catch (err) {
+      console.warn("Planning Pattern Capture GM notification failed", err);
+    }
+
+    try {
+      if ("Notification" in window && Notification.permission === "granted") {
+        const notification = new Notification(title, { body: text });
+        notification.onclick = onClick;
+      }
+    } catch (err) {
+      console.warn("Planning Pattern Capture browser notification failed", err);
+    }
+  }
+
+  function processTimerMilestones() {
+    if (timer.status !== "running") return;
+    const elapsed = timerElapsedMs();
+    const alreadyNotified = new Set(timer.notifiedMinutes);
+    const due = TIMER_MILESTONES.filter((milestone) =>
+      elapsed >= milestone.minutes * 60 * 1000 && !alreadyNotified.has(milestone.minutes)
+    );
+    if (!due.length) return;
+
+    const latest = due[due.length - 1];
+    const now = Date.now();
+    timer = normalizeTimer({
+      ...timer,
+      status: latest.minutes >= 30 ? "expired" : timer.status,
+      elapsedMs: latest.minutes >= 30 ? TIMER_TOTAL_MS : timer.elapsedMs,
+      runStartedAt: latest.minutes >= 30 ? null : timer.runStartedAt,
+      expiredAt: latest.minutes >= 30 ? now : timer.expiredAt,
+      notifiedMinutes: Array.from(new Set([...timer.notifiedMinutes, ...due.map((milestone) => milestone.minutes)])),
+      lastNotice: { minutes: latest.minutes, at: new Date(now).toISOString(), text: latest.text },
+    });
+    saveTimer();
+    playTimerSound(String(latest.minutes));
+    showTimerNotification(latest);
+    refresh();
+    toast(`${latest.minutes}m · ${timer.session}`);
+  }
+
+  function startTimerTicker() {
+    if (timerTicker) clearInterval(timerTicker);
+    timerTicker = setInterval(() => {
+      processTimerMilestones();
+      updateTimerUi();
+    }, 500);
+    processTimerMilestones();
   }
 
   function currentDateEvents() {
@@ -902,7 +1230,11 @@
     if (duplicate && !confirm(`${sessionName} already exists in the pending batch. Store another record with the same session label?`)) return;
 
     const s = scoreForSession(sessionName);
-    const summary = `${active.date} row #${expectedRowNumber} · ${sessionName}\nD ${fmt(s.dims.D)} / F ${fmt(s.dims.F)}\nPoints ${fmt(s.total)}`;
+    const matchingTimerActive = timerBelongsTo(active.date, sessionName) && (timer.status === "running" || timer.status === "paused");
+    const timerSummary = matchingTimerActive
+      ? `\nTimer ${timer.status} at ${formatTimerClock(timerElapsedMs())}; it will stop after Finish.`
+      : "";
+    const summary = `${active.date} row #${expectedRowNumber} · ${sessionName}\nD ${fmt(s.dims.D)} / F ${fmt(s.dims.F)}\nPoints ${fmt(s.total)}${timerSummary}`;
     if (!confirm(`Finish and store this session locally?\n\n${summary}`)) return;
 
     const eventId = id();
@@ -958,6 +1290,11 @@
       points: record.points,
       note: "stored in obsPlanning:sessionOutbox:v1",
     });
+
+    if (timerBelongsTo(active.date, sessionName)) {
+      timer = emptyTimer();
+      saveTimer();
+    }
 
     active = normalizeActive({
       ...active,
@@ -1071,7 +1408,7 @@
   function renderCollapsed() {
     const el = document.createElement("div");
     el.className = "ppc-collapsed";
-    el.textContent = `🧲 Capture (${currentDateEvents().length})`;
+    el.textContent = collapsedCaptureLabel();
     el.title = "Click to expand. Drag to move.";
     el.addEventListener("click", (e) => {
       e.preventDefault();
@@ -1127,6 +1464,7 @@
     body.className = "ppc-body";
     body.appendChild(topActionBar());
     body.appendChild(sessionControlBox());
+    body.appendChild(sessionTimerBox());
     body.appendChild(sectionTitle("Session Score"));
     body.appendChild(scoreBox(active.session));
     body.appendChild(sectionTitle("D/F Quick"));
@@ -1217,6 +1555,137 @@
     const auto = button('Auto', 'ppc-action', useAutoSession);
     box.append(label, input, mode, auto);
     return box;
+  }
+
+  function collapsedCaptureLabel() {
+    if (timer.status === "idle") return `🧲 Capture (${currentDateEvents().length})`;
+    const next = nextTimerMilestone();
+    const remaining = Math.max(0, next.minutes * 60 * 1000 - timerElapsedMs());
+    const stateMark = timer.status === "paused" ? "⏸" : timer.status === "expired" ? "⏰" : "▶";
+    return `${stateMark} ${timer.session || "Timer"} · ${formatTimerClock(remaining)}`;
+  }
+
+  function sessionTimerBox() {
+    const box = document.createElement("div");
+    box.className = "ppc-timer-box";
+    populateSessionTimerBox(box);
+    return box;
+  }
+
+  function populateSessionTimerBox(box) {
+    if (!box) return;
+    box.innerHTML = "";
+
+    const elapsed = timerElapsedMs();
+    const ownerSession = timer.status === "idle" ? active.session : timer.session;
+    const ownerDate = timer.status === "idle" ? active.date : timer.date;
+
+    const head = document.createElement("div");
+    head.className = "ppc-timer-head";
+    const title = document.createElement("div");
+    title.className = "ppc-timer-title";
+    title.textContent = `⏱ Session timer · ${ownerSession || "session"}`;
+    const status = document.createElement("div");
+    status.className = `ppc-timer-status ppc-timer-status-${timer.status}`;
+    status.textContent = timerStatusLabel();
+    head.append(title, status);
+
+    const identity = document.createElement("div");
+    identity.className = "ppc-timer-identity";
+    identity.dataset.timerIdentity = "true";
+    identity.textContent = `${ownerDate || active.date} · elapsed ${formatTimerClock(elapsed)} / 30:00`;
+
+    if (timer.status !== "idle" && !timerBelongsTo()) {
+      const mismatch = document.createElement("div");
+      mismatch.className = "ppc-timer-mismatch";
+      mismatch.textContent = `Timer belongs to ${timer.date} ${timer.session}; Capture is on ${active.date} ${active.session}.`;
+      box.append(head, identity, mismatch);
+    } else {
+      box.append(head, identity);
+    }
+
+    const milestones = document.createElement("div");
+    milestones.className = "ppc-timer-milestones";
+    const notified = new Set(timer.notifiedMinutes);
+    for (const milestone of TIMER_MILESTONES) {
+      const row = document.createElement("div");
+      row.className = "ppc-timer-milestone";
+      const label = document.createElement("span");
+      label.textContent = milestone.label;
+      const value = document.createElement("strong");
+      value.dataset.timerMinute = String(milestone.minutes);
+      const thresholdMs = milestone.minutes * 60 * 1000;
+      value.textContent = timer.status === "idle"
+        ? formatTimerClock(thresholdMs)
+        : notified.has(milestone.minutes)
+          ? "✓"
+          : formatTimerClock(Math.max(0, thresholdMs - elapsed));
+      row.append(label, value);
+      milestones.appendChild(row);
+    }
+    box.appendChild(milestones);
+
+    if (timer.lastNotice) {
+      const notice = document.createElement("div");
+      notice.className = "ppc-timer-notice";
+      const noticeText = document.createElement("div");
+      noticeText.textContent = `${timer.lastNotice.minutes}m: ${timer.lastNotice.text}`;
+      notice.append(noticeText, button("Dismiss", "ppc-mini", dismissTimerNotice));
+      box.appendChild(notice);
+    }
+
+    const controls = document.createElement("div");
+    controls.className = "ppc-timer-controls";
+    if (timer.status === "idle") {
+      controls.append(button(`▶ Start ${active.session} · 30m`, "ppc-action ppc-timer-start", startSessionTimer));
+    } else if (timer.status === "running") {
+      controls.append(
+        button("⏸ Pause all", "ppc-action ppc-timer-pause", pauseSessionTimer),
+        button("■ Stop", "ppc-danger", stopSessionTimer)
+      );
+    } else if (timer.status === "paused") {
+      controls.append(
+        button("▶ Resume all", "ppc-action ppc-timer-start", resumeSessionTimer),
+        button("↻ Restart", "ppc-action", restartSessionTimer),
+        button("■ Stop", "ppc-danger", stopSessionTimer)
+      );
+    } else {
+      controls.append(
+        button(`↻ Restart ${active.session}`, "ppc-action ppc-timer-start", restartSessionTimer),
+        button("Clear", "ppc-danger", () => stopSessionTimer({ confirm: false }))
+      );
+    }
+    controls.append(
+      button(settings.timerSoundEnabled ? "🔊 Sound" : "🔇 Sound", "ppc-action", toggleTimerSound),
+      button("Test", "ppc-action", testTimerSound)
+    );
+    box.appendChild(controls);
+  }
+
+  function updateTimerUi() {
+    if (!root) return;
+
+    const elapsed = timerElapsedMs();
+    const ownerDate = timer.status === "idle" ? active.date : timer.date;
+    const identity = root.querySelector('[data-timer-identity="true"]');
+    if (identity) {
+      identity.textContent = `${ownerDate || active.date} · elapsed ${formatTimerClock(elapsed)} / 30:00`;
+    }
+
+    const notified = new Set(timer.notifiedMinutes);
+    for (const milestone of TIMER_MILESTONES) {
+      const value = root.querySelector(`[data-timer-minute="${milestone.minutes}"]`);
+      if (!value) continue;
+      const thresholdMs = milestone.minutes * 60 * 1000;
+      value.textContent = timer.status === "idle"
+        ? formatTimerClock(thresholdMs)
+        : notified.has(milestone.minutes)
+          ? "✓"
+          : formatTimerClock(Math.max(0, thresholdMs - elapsed));
+    }
+
+    const collapsed = root.querySelector(".ppc-collapsed");
+    if (collapsed) collapsed.textContent = collapsedCaptureLabel();
   }
 
   function workflowBox() {
@@ -1627,6 +2096,23 @@
       .ppc-session-input { min-width: 0; width: 100%; padding: 5px 7px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: #0b1220; color: #f8fafc; font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
       .ppc-session-input-invalid { border-color: #f87171; box-shadow: 0 0 0 1px rgba(248,113,113,.35); }
       .ppc-session-mode { color: #93c5fd; font-size: 10px; }
+      .ppc-timer-box { margin-bottom: 8px; padding: 8px; border: 1px solid rgba(96,165,250,0.30); border-radius: 9px; background: rgba(30,64,175,0.10); }
+      .ppc-timer-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+      .ppc-timer-title { font-weight: 900; color: #dbeafe; }
+      .ppc-timer-status { padding: 2px 7px; border-radius: 999px; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+      .ppc-timer-status-idle { background: rgba(148,163,184,0.18); color: #cbd5e1; }
+      .ppc-timer-status-running { background: rgba(34,197,94,0.18); color: #86efac; }
+      .ppc-timer-status-paused { background: rgba(250,204,21,0.18); color: #fde047; }
+      .ppc-timer-status-expired { background: rgba(239,68,68,0.20); color: #fca5a5; }
+      .ppc-timer-identity { margin-top: 4px; color: #bfdbfe; font: 600 11px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .ppc-timer-mismatch { margin-top: 6px; padding: 5px 7px; border-radius: 7px; background: rgba(245,158,11,0.15); color: #fcd34d; font-size: 11px; }
+      .ppc-timer-milestones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin-top: 8px; }
+      .ppc-timer-milestone { display: flex; flex-direction: column; gap: 2px; min-width: 0; padding: 6px; border-radius: 7px; background: rgba(255,255,255,0.055); color: #cbd5e1; font-size: 10px; text-align: center; }
+      .ppc-timer-milestone strong { color: #f8fafc; font: 800 14px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .ppc-timer-controls { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+      .ppc-timer-start { background: #14532d; color: #dcfce7; border-color: #22c55e; font-weight: 800; }
+      .ppc-timer-pause { background: #713f12; color: #fef3c7; border-color: #f59e0b; font-weight: 800; }
+      .ppc-timer-notice { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 8px; padding: 7px; border: 1px solid rgba(248,113,113,0.38); border-radius: 8px; background: rgba(127,29,29,0.35); color: #fee2e2; font-size: 11px; line-height: 1.35; }
       .ppc-collapsed { background: #1f2937; border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; padding: 8px 10px; cursor: move; user-select: none; box-shadow: 0 8px 24px rgba(0,0,0,0.25); text-align: center; white-space: nowrap; }
       .ppc-collapsed::after { content: "  click"; opacity: 0.45; font-size: 10px; }
       .ppc-panel { background: #111827; border: 1px solid rgba(255,255,255,0.22); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.35); max-width: calc(100vw - 12px); max-height: calc(100vh - 12px); min-width: 280px; min-height: 260px; display: flex; flex-direction: column; position: relative; resize: both; }
