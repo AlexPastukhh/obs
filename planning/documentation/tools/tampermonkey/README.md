@@ -1,7 +1,7 @@
 # OBS Tampermonkey Tools
 
 Status: active reusable/project planning tool index
-Doc version: v0.4.1
+Doc version: v0.4.2
 Scope: tracked Tampermonkey scripts used by the OBS planning system, including reusable command projection and project planning runtime tools.
 
 ## 1. Tracked scripts
@@ -127,10 +127,12 @@ Live Markdown reads intentionally bypass the browser/Tampermonkey HTTP cache:
 2. Press Start <session> · 30m once.
 3. The session clock creates focus milestones at 10, 20 and 30 minutes.
 4. The same Pause all / Resume all action freezes or resumes every pending milestone.
-5. Each reached milestone produces an in-panel notice, a Tampermonkey system notification and an audible Web Audio signal when sound is enabled.
-6. The 30-minute milestone marks the timer expired but never calls Finish automatically.
-7. D/F review and Finish remain explicit user actions.
-8. A successful Finish clears the timer only when the timer belongs to that same date/session.
+5. Use −1 min to reduce remaining time or +1 min to add remaining time while running, paused or expired.
+6. A manual adjustment that crosses 10, 20 or 30 minutes emits the same sound, system notification and in-panel notice as natural elapsed time.
+7. Each naturally reached milestone also produces an in-panel notice, a Tampermonkey system notification and an audible Web Audio signal when sound is enabled.
+8. The 30-minute milestone marks the timer expired but never calls Finish automatically.
+9. D/F review and Finish remain explicit user actions.
+10. A successful Finish clears the timer only when the timer belongs to that same date/session.
 ```
 
 Timer rules:
@@ -140,6 +142,8 @@ Timer rules:
 - Timer state survives panel collapse, page reload and temporary background throttling.
 - The 500 ms display ticker updates only timer text nodes; it does not rebuild buttons while the user is clicking them.
 - Timer persistence uses the dedicated timer writer; unrelated UI/event saves do not overwrite timer state.
+- Manual −1/+1 minute adjustments preserve reached milestone history, so moving backward and crossing the same point again does not duplicate its alarm.
+- Adding time after expiry reopens the clock without rearming the already-sent 30-minute alarm.
 - Start replaces another running/paused timer only after confirmation.
 - A date/session mismatch is shown explicitly; a timer is never silently transferred to another session.
 - If several milestones become due while the page is suspended, earlier due milestones are marked reached and the latest due notification is emitted to avoid an alarm burst.
@@ -169,7 +173,7 @@ Ctrl+Alt+P  emergency show/reset for Pattern Capture.
 ```
 
 Command Palette owns Alt+F2; Pattern Capture does not consume that shortcut.
-Pattern Capture does not consume Escape or Alt+F2. Its close button hides the panel; Ctrl+Alt+P is the explicit emergency show/reset path.
+Pattern Capture does not consume Escape or Alt+F2. Its close button hides the panel only for the current page lifetime, so a reload shows it again. Ctrl+Alt+P remains the explicit emergency show/reset path. Legacy persistent hidden state is cleared by v0.4.2.
 Its Session field supports `S1`, `S2`, `S3` and later positive integer labels. Valid input is stored immediately without rebuilding the panel, so the first click on `Finish`, `Auto`, or a D/F action is not lost. `Enter` validates and refreshes the score view. `Auto` restores the next label derived from the repository row boundary plus pending records.
 
 ## 9. Command Palette reusable contract

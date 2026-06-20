@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Planning Pattern Capture v0.4.1
+// @name         Planning Pattern Capture v0.4.2
 // @namespace    planning-pattern-capture
-// @version      0.4.1
+// @version      0.4.2
 // @description  ChatGPT-only capture panel with D/F scoring, one-click session timer milestones, finished-session outbox, and reviewed batch sync
 // @match        *://chatgpt.com/*
 // @match        *://*.chatgpt.com/*
@@ -45,7 +45,7 @@
   const BASE_TOTAL_SCORE = 3.5;
   const BASE_DIM_SCORE = BASE_TOTAL_SCORE / 2;
   const DF_STEP = 0.1;
-  const SETTINGS_VERSION = "0.4.1";
+  const SETTINGS_VERSION = "0.4.2";
   const TIMER_SCHEMA = "planning-pattern-session-timer-v1";
   const TIMER_TOTAL_MS = 30 * 60 * 1000;
   const TIMER_MILESTONES = [
@@ -297,12 +297,16 @@
   let timer = normalizeTimer(load(KEY_TIMER, emptyTimer()));
   let timerTicker = null;
   let timerAudioContext = null;
+  let panelHiddenForPage = false;
   let workflowPinned = false;
   let root = null;
   let didDragCollapsed = false;
   let didDragExpanded = false;
   let resizeObserver = null;
   let resizeSaveTimer = null;
+
+  // Migrate the old persistent close state: closing is page-local from v0.4.2 onward.
+  save(KEY_SETTINGS, settings);
 
   alignActiveSessionWithContext();
   boot();
@@ -344,9 +348,8 @@
   }
 
   function hidePanel() {
-    if (settings.hidden) return;
-    settings.hidden = true;
-    save(KEY_SETTINGS, settings);
+    if (panelHiddenForPage) return;
+    panelHiddenForPage = true;
     refresh();
   }
 
@@ -369,7 +372,7 @@
   }
 
   function ensureRenderedAndVisible() {
-    if (!document.body || settings.hidden) return;
+    if (!document.body || panelHiddenForPage) return;
     const el = document.getElementById("ppc-root");
     if (!el || !el.children.length) {
       render();
@@ -381,7 +384,8 @@
   }
 
   function forceShowPanel() {
-    settings = normalizeSettings({ ...DEFAULT_SETTINGS, collapsed: false, hidden: false });
+    panelHiddenForPage = false;
+    settings = normalizeSettings({ ...DEFAULT_SETTINGS, collapsed: false });
     save(KEY_SETTINGS, settings);
     refresh();
     toast("PPC shown/reset");
@@ -394,7 +398,7 @@
     merged.width = clampNumber(merged.width, 280, Math.max(280, window.innerWidth - 12), DEFAULT_SETTINGS.width);
     merged.height = clampNumber(merged.height, 260, Math.max(260, window.innerHeight - 12), DEFAULT_SETTINGS.height);
     merged.collapsed = Boolean(merged.collapsed);
-    merged.hidden = Boolean(merged.hidden);
+    merged.hidden = false;
     merged.timerSoundEnabled = merged.timerSoundEnabled !== false;
     merged.timerVolume = clampNumber(merged.timerVolume, 0, 1, DEFAULT_SETTINGS.timerVolume);
     merged.scriptVersion = SETTINGS_VERSION;
@@ -515,7 +519,9 @@
 
   function loadSettings() {
     const current = load(KEY_SETTINGS, null);
-    return current ? { ...DEFAULT_SETTINGS, ...current, scriptVersion: SETTINGS_VERSION } : { ...DEFAULT_SETTINGS };
+    return current
+      ? { ...DEFAULT_SETTINGS, ...current, hidden: false, scriptVersion: SETTINGS_VERSION }
+      : { ...DEFAULT_SETTINGS };
   }
 
   function save(key, value) {
@@ -806,6 +812,39 @@
     toast(`Resumed ${timer.session}`);
   }
 
+  function adjustTimerRemaining(minutes) {
+    if (timer.status === "idle") return;
+
+    const remainingDeltaMs = Number(minutes) * 60 * 1000;
+    if (!Number.isFinite(remainingDeltaMs) || remainingDeltaMs === 0) return;
+
+    const now = Date.now();
+    const currentElapsed = timerElapsedMs(now);
+    const nextElapsed = Math.max(0, Math.min(TIMER_TOTAL_MS, currentElapsed - remainingDeltaMs));
+    if (nextElapsed === currentElapsed) {
+      toast(minutes > 0 ? "Timer is already at the start" : "Timer is already at 30:00");
+      return;
+    }
+
+    let nextStatus = timer.status;
+    if (timer.status === "expired" && nextElapsed < TIMER_TOTAL_MS) nextStatus = "running";
+
+    timer = normalizeTimer({
+      ...timer,
+      status: nextStatus,
+      elapsedMs: nextElapsed,
+      runStartedAt: nextStatus === "running" ? now : null,
+      pausedAt: nextStatus === "paused" ? (timer.pausedAt || now) : null,
+      expiredAt: nextStatus === "expired" ? timer.expiredAt : null,
+    });
+
+    saveTimer();
+    primeTimerAudio();
+    const milestoneHandled = processTimerMilestones({ allowPaused: true });
+    if (!milestoneHandled) refresh();
+    toast(`${minutes > 0 ? "+" : "−"}${Math.abs(minutes)} min remaining · ${timer.session}`);
+  }
+
   function stopSessionTimer(options = {}) {
     if (timer.status === "idle") return;
     if (options.confirm !== false && !confirm(`Stop and clear the timer for ${timer.date} ${timer.session}?`)) return;
@@ -896,7 +935,7 @@
   }
 
   function revealCaptureForTimer() {
-    settings.hidden = false;
+    panelHiddenForPage = false;
     settings.collapsed = false;
     save(KEY_SETTINGS, settings);
     try { window.focus(); } catch {}
@@ -927,23 +966,42 @@
     }
   }
 
-  function processTimerMilestones() {
-    if (timer.status !== "running") return;
+  function processTimerMilestones(options = {}) {
+    const allowPaused = options.allowPaused === true;
+    const processable = timer.status === "running" || (allowPaused && timer.status === "paused");
+    if (!processable) return false;
+
     const elapsed = timerElapsedMs();
     const alreadyNotified = new Set(timer.notifiedMinutes);
     const due = TIMER_MILESTONES.filter((milestone) =>
       elapsed >= milestone.minutes * 60 * 1000 && !alreadyNotified.has(milestone.minutes)
     );
-    if (!due.length) return;
+    const reachedEnd = elapsed >= TIMER_TOTAL_MS;
+    const now = Date.now();
+
+    if (!due.length) {
+      if (!reachedEnd) return false;
+      timer = normalizeTimer({
+        ...timer,
+        status: "expired",
+        elapsedMs: TIMER_TOTAL_MS,
+        runStartedAt: null,
+        pausedAt: null,
+        expiredAt: timer.expiredAt || now,
+      });
+      saveTimer();
+      refresh();
+      return true;
+    }
 
     const latest = due[due.length - 1];
-    const now = Date.now();
     timer = normalizeTimer({
       ...timer,
-      status: latest.minutes >= 30 ? "expired" : timer.status,
-      elapsedMs: latest.minutes >= 30 ? TIMER_TOTAL_MS : timer.elapsedMs,
-      runStartedAt: latest.minutes >= 30 ? null : timer.runStartedAt,
-      expiredAt: latest.minutes >= 30 ? now : timer.expiredAt,
+      status: reachedEnd ? "expired" : timer.status,
+      elapsedMs: reachedEnd ? TIMER_TOTAL_MS : timer.elapsedMs,
+      runStartedAt: reachedEnd ? null : timer.runStartedAt,
+      pausedAt: reachedEnd ? null : timer.pausedAt,
+      expiredAt: reachedEnd ? now : timer.expiredAt,
       notifiedMinutes: Array.from(new Set([...timer.notifiedMinutes, ...due.map((milestone) => milestone.minutes)])),
       lastNotice: { minutes: latest.minutes, at: new Date(now).toISOString(), text: latest.text },
     });
@@ -952,6 +1010,7 @@
     showTimerNotification(latest);
     refresh();
     toast(`${latest.minutes}m · ${timer.session}`);
+    return true;
   }
 
   function startTimerTicker() {
@@ -1371,8 +1430,8 @@
       root.innerHTML = "";
       root.style.left = `${settings.x}px`;
       root.style.top = `${settings.y}px`;
-      root.style.display = settings.hidden ? "none" : "block";
-      if (settings.hidden) return;
+      root.style.display = panelHiddenForPage ? "none" : "block";
+      if (panelHiddenForPage) return;
       if (settings.collapsed) {
         root.style.width = "170px";
         root.style.height = "auto";
@@ -1653,6 +1712,12 @@
       controls.append(
         button(`↻ Restart ${active.session}`, "ppc-action ppc-timer-start", restartSessionTimer),
         button("Clear", "ppc-danger", () => stopSessionTimer({ confirm: false }))
+      );
+    }
+    if (timer.status !== "idle") {
+      controls.append(
+        button("−1 min", "ppc-action", () => adjustTimerRemaining(-1)),
+        button("+1 min", "ppc-action", () => adjustTimerRemaining(1))
       );
     }
     controls.append(
