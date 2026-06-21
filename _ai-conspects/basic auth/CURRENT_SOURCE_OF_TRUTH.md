@@ -1,4 +1,4 @@
-# Current Source of Truth — aspnetcore-basic-authentication-custom-handler-httpclient-curl
+# Current Source of Truth — basic auth
 
 Generated: 2026-06-22 00:00:00 UTC
 

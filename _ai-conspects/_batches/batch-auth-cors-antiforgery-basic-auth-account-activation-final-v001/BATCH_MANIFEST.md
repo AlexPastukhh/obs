@@ -6,9 +6,9 @@ This is one combined, superseding delivery for three conspects. It includes thei
 
 ## Closed conspects
 
-1. `aspnetcore-cors-vs-antiforgery-simple-requests-preflight-credentials` — 20 image uses + 5 text blocks.
-2. `aspnetcore-basic-authentication-custom-handler-httpclient-curl` — 24 image uses + 6 text blocks.
-3. `aspnetcore-account-activation-email-confirmation-dataprotection-identity` — 22 image uses + 9 text blocks.
+1. `cors vs anti forgery` — 20 image uses + 5 text blocks.
+2. `basic auth` — 24 image uses + 6 text blocks.
+3. `account activation` — 22 image uses + 9 text blocks.
 
 ```text
 Batch total image uses: 66

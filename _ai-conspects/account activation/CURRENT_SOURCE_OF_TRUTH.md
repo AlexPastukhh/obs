@@ -1,4 +1,4 @@
-# Current Source of Truth — aspnetcore-account-activation-email-confirmation-dataprotection-identity
+# Current Source of Truth — account activation
 
 Generated: 2026-06-22 00:00:00 UTC
 

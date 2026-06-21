@@ -1,4 +1,4 @@
-# Current Source of Truth — aspnetcore-cors-vs-antiforgery-simple-requests-preflight-credentials
+# Current Source of Truth — cors vs anti forgery
 
 Generated: 2026-06-22 00:00:00 UTC
 
