@@ -1,0 +1,257 @@
+{
+  "generated": "2026-06-20 08:07:06 UTC",
+  "audit_id": "httpcontent-custom-readasstream-buffering-compression-closure-audit-v001",
+  "total_sources": 26,
+  "processed_sources": 26,
+  "pending_candidates": 0,
+  "bad_placeholder_signals": 0,
+  "region_counts": {
+    "HTTPCONTENT-R01": 9,
+    "HTTPCONTENT-R02": 9,
+    "HTTPCONTENT-R03": 8
+  },
+  "expected_region_counts": {
+    "HTTPCONTENT-R01": 9,
+    "HTTPCONTENT-R02": 9,
+    "HTTPCONTENT-R03": 8
+  },
+  "all_sources_closed": true,
+  "final_verdict": "HttpContent Custom ReadAsStream Buffering Compression S-001..S-026 is closed",
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved Stage0 PNGs",
+  "rows": [
+    {
+      "source_id": "S-001",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-002",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-003",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-004",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-005",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-006",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-007",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-008",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-009",
+      "region": "HTTPCONTENT-R01",
+      "coverage_status": "processed-in-httpcontent-r01-v001",
+      "decision_is_final": "yes-for-httpcontent-r01-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-010",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-011",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-012",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-013",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-014",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-015",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-016",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-017",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-018",
+      "region": "HTTPCONTENT-R02",
+      "coverage_status": "processed-in-httpcontent-r02-v001",
+      "decision_is_final": "yes-for-httpcontent-r02-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-019",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-020",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-021",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-022",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-023",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-024",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-025",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    },
+    {
+      "source_id": "S-026",
+      "region": "HTTPCONTENT-R03",
+      "coverage_status": "processed-in-httpcontent-r03-v001",
+      "decision_is_final": "yes-for-httpcontent-r03-stage1",
+      "must_recheck_before_region_close": "no-for-stage1-semantic-transcript",
+      "bad_placeholder_signal_found": "no",
+      "closure_ok": "yes"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-# MANIFEST - Exception Handlers Stage1 Transcript
+# MANIFEST - Exception Handlers Closure Audit
 
-Generated: 2026-06-13 11:27:40 UTC
+Generated: 2026-06-20 08:07:06 UTC
 
 ```text
-Stage1 processed: 24
-Remaining candidates: 0
-Next: closure audit
+Sources audited: 24 / 24
+Pending candidates: 0
+Final verdict: Exception Handlers S-001..S-024 is closed
 ```

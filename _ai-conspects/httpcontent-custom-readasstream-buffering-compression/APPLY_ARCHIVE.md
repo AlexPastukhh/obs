@@ -1,9 +1,9 @@
-# Apply archive: HttpContent Custom ReadAsStream Buffering Compression Stage1 transcript
+# Apply archive: HttpContent Custom ReadAsStream Buffering Compression closure audit
 
-This file is part of a three-conspect Stage1 transcript batch archive.
+This file is part of a three-conspect closure audit batch archive.
 
 ```text
-Stage1 processed: 26
-Remaining candidates: 0
-Next: closure audit
+Sources audited: 26 / 26
+Pending candidates: 0
+Final verdict: HttpContent Custom ReadAsStream Buffering Compression S-001..S-026 is closed
 ```

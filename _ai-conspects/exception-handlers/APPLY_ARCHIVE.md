@@ -1,9 +1,9 @@
-# Apply archive: Exception Handlers Stage1 transcript
+# Apply archive: Exception Handlers closure audit
 
-This file is part of a three-conspect Stage1 transcript batch archive.
+This file is part of a three-conspect closure audit batch archive.
 
 ```text
-Stage1 processed: 24
-Remaining candidates: 0
-Next: closure audit
+Sources audited: 24 / 24
+Pending candidates: 0
+Final verdict: Exception Handlers S-001..S-024 is closed
 ```

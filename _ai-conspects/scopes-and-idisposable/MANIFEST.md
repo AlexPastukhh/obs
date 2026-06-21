@@ -1,9 +1,9 @@
-# MANIFEST - Scopes And IDisposable Stage1 Transcript
+# MANIFEST - Scopes And IDisposable Closure Audit
 
-Generated: 2026-06-13 11:27:40 UTC
+Generated: 2026-06-20 08:07:06 UTC
 
 ```text
-Stage1 processed: 22
-Remaining candidates: 0
-Next: closure audit
+Sources audited: 22 / 22
+Pending candidates: 0
+Final verdict: Scopes And IDisposable S-001..S-022 is closed
 ```
