@@ -24,18 +24,18 @@ Remaining unclosed: 0
 ## Files included / updated
 
 ```text
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/regions/R01R02R03-cookies-options-theory-samesite-final.md
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/data/R01R02R03-sources-stage1-v001.*
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/data/R01R02R03-boundary-review-stage1-v001.*
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/data/R01R02R03-area-understanding-stage1-v001.json
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/data/final-coverage-audit-stage1-v001.*
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/data/image-review-ledger-v001.*
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/audit-assets/contact-sheet-R01R02R03-final-coverage-v001.png
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/audit-assets/R01R02R03-source-images/*.png
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/01-stage1-r01r02r03-final-coverage-transcript.md
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/MANIFEST.md
-_ai-conspects/cookies-general-theory-plain-cookie-options-samesite-secure-httponly/APPLY_ARCHIVE.md
+_ai-conspects/cookies, general theo, plain cookie options/regions/R01R02R03-cookies-options-theory-samesite-final.md
+_ai-conspects/cookies, general theo, plain cookie options/data/R01R02R03-sources-stage1-v001.*
+_ai-conspects/cookies, general theo, plain cookie options/data/R01R02R03-boundary-review-stage1-v001.*
+_ai-conspects/cookies, general theo, plain cookie options/data/R01R02R03-area-understanding-stage1-v001.json
+_ai-conspects/cookies, general theo, plain cookie options/data/final-coverage-audit-stage1-v001.*
+_ai-conspects/cookies, general theo, plain cookie options/data/image-review-ledger-v001.*
+_ai-conspects/cookies, general theo, plain cookie options/audit-assets/contact-sheet-R01R02R03-final-coverage-v001.png
+_ai-conspects/cookies, general theo, plain cookie options/audit-assets/R01R02R03-source-images/*.png
+_ai-conspects/cookies, general theo, plain cookie options/01-stage1-r01r02r03-final-coverage-transcript.md
+_ai-conspects/cookies, general theo, plain cookie options/CURRENT_SOURCE_OF_TRUTH.md
+_ai-conspects/cookies, general theo, plain cookie options/MANIFEST.md
+_ai-conspects/cookies, general theo, plain cookie options/APPLY_ARCHIVE.md
 ```
 
 ## Next

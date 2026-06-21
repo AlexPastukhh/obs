@@ -1,4 +1,4 @@
-# Current Source of Truth - cookies-general-theory-plain-cookie-options-samesite-secure-httponly
+# Current Source of Truth - cookies, general theo, plain cookie options
 
 Generated: 2026-06-02 16:40:00 UTC
 

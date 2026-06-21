@@ -1,4 +1,4 @@
-# Apply archive: Cookies general theory / plain cookie options final coverage transcript v001
+# Apply archive: EF Core encapsulating DbContext R01/R02 final coverage transcript v001
 
 Archive type: stage-1 final coverage transcript.
 
@@ -17,17 +17,17 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-cookies, general theo, plain cookie options-stage1-r01r02r03-final-coverage-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-encapsulating dbcontext-stage1-r01r02-final-coverage-v001.zip
 ```
 
-## Apply + stage commands
+## Apply + staged-only check commands
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-cookies, general theo, plain cookie options-stage1-r01r02r03-final-coverage-v001.zip"
-$target = "_ai-conspects\cookies, general theo, plain cookie options"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-encapsulating dbcontext-stage1-r01r02-final-coverage-v001.zip"
+$target = "_ai-conspects\encapsulating dbcontext"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -43,13 +43,14 @@ git status --short -- $target
 ## Commit commands after review
 
 ```powershell
-git commit -m "Complete cookies conspect final coverage"
+git commit -m "Complete EF Core encapsulating DbContext conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 
 ## Rollback before commit
 
 ```powershell
-git restore --staged -- _ai-conspects\cookies, general theo, plain cookie options
-git restore -- _ai-conspects\cookies, general theo, plain cookie options
+git restore --staged -- _ai-conspects\encapsulating dbcontext
+git restore -- _ai-conspects\encapsulating dbcontext
+git clean -fd -- _ai-conspects\encapsulating dbcontext
 ```

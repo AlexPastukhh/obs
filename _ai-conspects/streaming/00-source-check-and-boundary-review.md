@@ -5,7 +5,7 @@ Generated: 2026-06-01 22:31:21 UTC
 ## Done
 
 - Started a separate conspect folder: `_ai-conspects/streaming/`.
-- Read uploaded SVG snapshot: `streaming(1).svg`.
+- Read uploaded SVG snapshot: `streaming.svg`.
 - Confirmed it is an Excalidraw SVG with embedded screenshots.
 - Extracted image-use and label inventory.
 - Created contact sheets and a rough canvas map.

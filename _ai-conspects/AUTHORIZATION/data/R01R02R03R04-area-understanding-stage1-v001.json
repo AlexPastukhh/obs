@@ -1,0 +1,29 @@
+{
+  "conspect": "AUTHORIZATION",
+  "generated": "2026-06-22 UTC",
+  "stage": "stage1-r01r02r03r04-final-coverage-v001",
+  "global_summary": "ASP.NET Core authorization policies, requirements, handlers, AuthorizationHandlerContext semantics, resource-based authorization, generic/non-generic handlers, multiple requirements, batching and shared authorization decisions.",
+  "reading_quality": {
+    "overall": "high for conceptual material; medium-high for exact code punctuation",
+    "source_of_truth": "preserved SVG and extracted PNGs",
+    "limitations": "Some screenshots contain dense code; transcript preserves semantics rather than claiming character-perfect transcription."
+  },
+  "regions": [
+    {
+      "id": "R01",
+      "summary": "AddAuthorization policies, RequireRole/RequireClaim semantics, default/fallback/global authorization, requirement data and endpoint/middleware integration."
+    },
+    {
+      "id": "R02",
+      "summary": "Custom requirements and handlers, multiple handlers for a requirement, context.Fail cautions, resource-based authorization and edit/operation checks."
+    },
+    {
+      "id": "R03",
+      "summary": "AuthorizationHandlerContext properties and semantics: User, Resource, Requirements, PendingRequirements, Succeed and Fail."
+    },
+    {
+      "id": "R04",
+      "summary": "Generic and non-generic handlers, multiple requirement types, scope parsing, batching permission checks and rule-dispatcher/shared-decision patterns."
+    }
+  ]
+}
