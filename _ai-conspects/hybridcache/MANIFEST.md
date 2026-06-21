@@ -1,16 +1,16 @@
-# MANIFEST - HybridCache Stage0 v001
+# MANIFEST - HybridCache P01 Transcript v001
 
-Archive type: **stage-0 boundary review and split plan**  
+Archive type: **stage-1 verified combined transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 11:04:52 UTC
+Generated: 2026-06-20 08:05:01 UTC
 
-## Counts
+## Done
 
-```text
-unique embedded images: 21
-image uses: 21
-text labels: 7
-```
+- R01 transcript created.
+- R02 transcript created.
+- Included R01 image uses: 8.
+- Included R02 image uses: 8.
+- Checked-not-P01 / reserved for P02: 5.
 
 ## Included path
 
@@ -20,4 +20,4 @@ _ai-conspects/hybridcache
 
 ## Next
 
-P01/R01R02 transcript: HybridCache purpose/two-level model + GetOrCreate/stampede flow.
+P02/R03R04 transcript.

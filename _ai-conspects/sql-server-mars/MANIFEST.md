@@ -1,16 +1,16 @@
-# MANIFEST - SQL Server MARS Stage0 v001
+# MANIFEST - SQL Server MARS P01 Transcript v001
 
-Archive type: **stage-0 boundary review and split plan**  
+Archive type: **stage-1 verified combined transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 11:04:52 UTC
+Generated: 2026-06-20 08:05:01 UTC
 
-## Counts
+## Done
 
-```text
-unique embedded images: 26
-image uses: 26
-text labels: 13
-```
+- R01 transcript created.
+- R02 transcript created.
+- Included R01 image uses: 8.
+- Included R02 image uses: 8.
+- Checked-not-P01 / reserved for P02: 10.
 
 ## Included path
 
@@ -20,4 +20,4 @@ _ai-conspects/sql-server-mars
 
 ## Next
 
-P01/R01R02 transcript: MARS purpose/basics + multiple readers/transactions behavior.
+P02/R03R04 transcript.

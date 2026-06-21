@@ -1,21 +1,13 @@
-# Apply archive: HybridCache Stage0 v001
+# Apply archive: HybridCache P01 transcript v001
 
 This conspect is packaged inside the combined archive:
 
 ```text
-ai-conspects-three-conspects-stage0-boundary-review-v001.zip
+ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage1-p01-transcripts-v001.zip
 ```
 
 Use the top-level apply instructions:
 
 ```text
-_ai-conspects/APPLY_THREE_STAGE0_BOUNDARY_REVIEW.md
-```
-
-That apply block expands the combined archive, diffs all 3 conspect paths, saves the combined diff file, and copies it to clipboard.
-
-## Included path
-
-```text
-_ai-conspects/hybridcache
+_ai-conspects/APPLY_LOCK_HYBRID_MARS_STAGE1_P01_TRANSCRIPTS.md
 ```

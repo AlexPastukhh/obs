@@ -1,16 +1,16 @@
-# MANIFEST - Lock / Monitor Stage0 v001
+# MANIFEST - Lock / Monitor P01 Transcript v001
 
-Archive type: **stage-0 boundary review and split plan**  
+Archive type: **stage-1 verified combined transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-13 11:04:52 UTC
+Generated: 2026-06-20 08:05:01 UTC
 
-## Counts
+## Done
 
-```text
-unique embedded images: 25
-image uses: 25
-text labels: 22
-```
+- R01 transcript created.
+- R02 transcript created.
+- Included R01 image uses: 8.
+- Included R02 image uses: 8.
+- Checked-not-P01 / reserved for P02: 9.
 
 ## Included path
 
@@ -20,4 +20,4 @@ _ai-conspects/lock-monitor
 
 ## Next
 
-P01/R01R02 transcript: lock/Monitor mutual exclusion + Wait/Pulse signaling.
+P02/R03R04 transcript.
