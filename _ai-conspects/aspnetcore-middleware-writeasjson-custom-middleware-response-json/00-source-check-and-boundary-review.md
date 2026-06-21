@@ -1,7 +1,7 @@
 # Stage0 source check and boundary review - ASP.NET Core middleware / WriteAsJson / custom middleware response JSON
 
-Conspect slug: `aspnetcore-middleware-writeasjson-custom-middleware-response-json`  
-Source SVG: `source/middleware, writeasjson.svg`  
+Conspect slug: `aspnetcore-middleware-writeasjson-custom-middleware-response-json`
+Source SVG: `source/aspnetcore-middleware-writeasjson-custom-middleware-response-json.svg`
 Stage: **stage0 / source availability + boundary review v001**
 
 ## Policy

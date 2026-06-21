@@ -4,7 +4,7 @@ Generated: 2026-06-13 09:05:00 UTC
 
 ## Source
 
-- SVG: `source/apibehavioroptions.svg`
+- SVG: `source/aspnetcore-apibehavioroptions-invalidmodelstate-clienterror-mapping.svg`
 - Semantic title: ASP.NET Core ApiBehaviorOptions: invalid model state and client error mapping
 - Stage0 is an inventory/boundary checklist only. It is not source of truth for final wording.
 

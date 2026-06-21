@@ -4,7 +4,7 @@ Generated: 2026-06-13 09:35:00 UTC
 
 ## Source
 
-- SVG: `source/composite key.svg`
+- SVG: `source/efcore-composite-key-primary-foreign-key-indexes.svg`
 - Semantic title: EF Core composite keys: primary keys, foreign keys and indexes
 - Stage0 is an inventory/boundary checklist only. It is not source of truth for final wording.
 

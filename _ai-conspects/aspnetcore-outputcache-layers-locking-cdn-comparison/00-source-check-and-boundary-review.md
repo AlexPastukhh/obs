@@ -57,7 +57,7 @@ R01+R02 first, then R03+R04 final coverage.
 ## Files produced
 
 ```text
-source/outputcache-layers-to-use-or-not-locking-outputcache-vs-cdn.svg
+source/aspnetcore-outputcache-layers-locking-cdn-comparison.svg
 source/images/*.png
 data/embedded-images-stage0.json
 data/image-uses-stage0.*

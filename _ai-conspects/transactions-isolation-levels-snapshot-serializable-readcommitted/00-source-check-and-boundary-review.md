@@ -4,7 +4,7 @@ Generated: 2026-06-13 09:35:00 UTC
 
 ## Source
 
-- SVG: `source/transaction, isolation.svg`
+- SVG: `source/transactions-isolation-levels-snapshot-serializable-readcommitted.svg`
 - Semantic title: Transactions and isolation levels: read committed, snapshot and serializable
 - Stage0 is an inventory/boundary checklist only. It is not source of truth for final wording.
 

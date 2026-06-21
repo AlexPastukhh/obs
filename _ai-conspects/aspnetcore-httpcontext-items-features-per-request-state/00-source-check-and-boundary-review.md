@@ -4,7 +4,7 @@ Generated: 2026-06-13 09:05:00 UTC
 
 ## Source
 
-- SVG: `source/httpcontext items and features.svg`
+- SVG: `source/aspnetcore-httpcontext-items-features-per-request-state.svg`
 - Semantic title: ASP.NET Core HttpContext Items and Features
 - Stage0 is an inventory/boundary checklist only. It is not source of truth for final wording.
 

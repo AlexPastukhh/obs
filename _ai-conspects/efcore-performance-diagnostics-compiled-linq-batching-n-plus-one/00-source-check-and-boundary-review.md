@@ -4,7 +4,7 @@ Generated: 2026-06-13 09:05:00 UTC
 
 ## Source
 
-- SVG: `source/ef core performance, diagnostics , compiled linq, batching, n + 1.svg`
+- SVG: `source/efcore-performance-diagnostics-compiled-linq-batching-n-plus-one.svg`
 - Semantic title: EF Core performance: diagnostics, compiled LINQ, batching, N+1
 - Stage0 is an inventory/boundary checklist only. It is not source of truth for final wording.
 

@@ -1,7 +1,7 @@
 # Stage0 source check and boundary review - EF Core alternate key / principal key / relationships
 
-Conspect slug: `efcore-alternate-key-principal-key-relationships`  
-Source SVG: `source/alternate key.svg`  
+Conspect slug: `efcore-alternate-key-principal-key-relationships`
+Source SVG: `source/efcore-alternate-key-principal-key-relationships.svg`
 Stage: **stage0 / source availability + boundary review v001**
 
 ## Policy

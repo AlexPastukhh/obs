@@ -5,7 +5,7 @@ Generated: 2026-06-02 15:23:45 UTC
 ## Done
 
 - Source SVG materialized: `returning iqueryable,problems when returning ienumerable without tolist, async enumerable problems,yield.svg`.
-- Raw SVG copied to `assets/raw/full.svg`.
+- Raw SVG copied to `assets/raw/returning-iqueryable-ienumerable-async-yield.svg`.
 - Extracted all embedded image definitions/uses into `assets/source-images`.
 - Built image inventory and raw text inventory.
 - Built contact sheets.

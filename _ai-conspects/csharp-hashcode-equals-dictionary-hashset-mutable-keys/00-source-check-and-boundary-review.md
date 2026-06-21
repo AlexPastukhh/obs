@@ -4,7 +4,7 @@ Generated: 2026-06-13 09:35:00 UTC
 
 ## Source
 
-- SVG: `source/hashcode.svg`
+- SVG: `source/csharp-hashcode-equals-dictionary-hashset-mutable-keys.svg`
 - Semantic title: C# HashCode, Equals/GetHashCode and mutable dictionary keys
 - Stage0 is an inventory/boundary checklist only. It is not source of truth for final wording.
 

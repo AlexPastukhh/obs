@@ -1,7 +1,7 @@
 # Stage0 source check and boundary review - C# LINQ query syntax / from-where-select / join / into
 
-Conspect slug: `csharp-linq-query-syntax-from-where-select-join-into`  
-Source SVG: `source/linq query syntax.svg`  
+Conspect slug: `csharp-linq-query-syntax-from-where-select-join-into`
+Source SVG: `source/csharp-linq-query-syntax-from-where-select-join-into.svg`
 Stage: **stage0 / source availability + boundary review v001**
 
 ## Policy
