@@ -11,7 +11,11 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 AddAuthorization/basic-global policies: transcript v001 done
+R02 custom requirements/handlers/resource authorization: transcript v001 done
+R03 AuthorizationHandlerContext semantics: transcript v001 done
+R04 generic/non-generic/multiple-requirement/batching patterns: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -21,13 +25,13 @@ embedded symbols: 69
 unique embedded images: 68
 image uses on canvas: 75
 text labels parsed: 110
-duplicate image uses by extracted content: 7
+duplicate extra placements: 7
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-Start verified transcript after boundary review.
-Preferred candidate: R01+R02+R03+R04 full pass = 75 image uses + 110 text labels.
-Fallback: R01+R02 then R03+R04 final coverage.
+No normal transcript regions remain. Only correction/polish or optional repeat-material archive if needed.
 ```
