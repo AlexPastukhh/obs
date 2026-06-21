@@ -1,0 +1,37 @@
+[
+  {
+    "id": "R01",
+    "name": "secure-random-overview-examples-and-entropy-sizing",
+    "summary": "upper road: cryptographically secure randomness, common token/code examples and byte/entropy sizing guidance",
+    "count": 4,
+    "sources": [
+      "S-007",
+      "S-002",
+      "S-011",
+      "S-010"
+    ]
+  },
+  {
+    "id": "R02",
+    "name": "static-apis-unbiased-ranges-and-shuffling",
+    "summary": "middle road: GetBytes, Fill, GetInt32, modulo-bias avoidance, bounded ranges and secure shuffling",
+    "count": 5,
+    "sources": [
+      "S-006",
+      "S-009",
+      "S-005",
+      "S-008",
+      "S-001"
+    ]
+  },
+  {
+    "id": "R03",
+    "name": "instance-and-obsolete-api-notes",
+    "summary": "lower road: Create instance option and obsolete RNGCryptoServiceProvider API to avoid",
+    "count": 2,
+    "sources": [
+      "S-004",
+      "S-003"
+    ]
+  }
+]

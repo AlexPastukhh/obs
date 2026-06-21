@@ -1,0 +1,39 @@
+[
+  {
+    "id": "R01",
+    "name": "why-stringreader-and-readline-basics",
+    "summary": "upper road: why StringReader is used, incremental ReadLine processing, internal position and comparison with Split",
+    "count": 4,
+    "sources": [
+      "S-002",
+      "S-001",
+      "S-003",
+      "S-004"
+    ]
+  },
+  {
+    "id": "R02",
+    "name": "lazy-allocation-live-memory-and-gc-effects",
+    "summary": "middle road: eager versus lazy allocation, peak live memory, GC scanning, promotion, concurrency and fragmentation pressure",
+    "count": 6,
+    "sources": [
+      "S-005",
+      "S-006",
+      "S-007",
+      "S-008",
+      "S-009",
+      "S-010"
+    ]
+  },
+  {
+    "id": "R03",
+    "name": "concrete-memory-example-and-summary",
+    "summary": "lower road: concrete large-line example, peak-memory comparison and final conclusion about live allocations versus total allocations",
+    "count": 3,
+    "sources": [
+      "S-011",
+      "S-012",
+      "S-013"
+    ]
+  }
+]
