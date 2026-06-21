@@ -1,0 +1,38 @@
+[
+  {
+    "id": "R01",
+    "name": "base64url-dataprotection-binary-to-text-url-safety",
+    "min_y": 0,
+    "max_y": 1200,
+    "image_count": 6,
+    "label_count": 3,
+    "summary": "Data Protection bytes, Base64Url encoding, why/when binary-to-text and URL safety are needed",
+    "sources": [
+      "S-001",
+      "S-002",
+      "S-003",
+      "S-004",
+      "S-005",
+      "S-006"
+    ],
+    "labels": [
+      "T-001",
+      "T-002",
+      "T-003"
+    ]
+  },
+  {
+    "id": "R02",
+    "name": "hex-vs-base64url-db-json-url-contexts",
+    "min_y": 1200,
+    "max_y": 999999,
+    "image_count": 2,
+    "label_count": 0,
+    "summary": "Hex vs Base64/Base64Url tradeoffs for DB, JSON, headers, routes and query strings",
+    "sources": [
+      "S-007",
+      "S-008"
+    ],
+    "labels": []
+  }
+]
