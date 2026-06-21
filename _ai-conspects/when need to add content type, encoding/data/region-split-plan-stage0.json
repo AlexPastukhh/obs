@@ -1,0 +1,39 @@
+[
+  {
+    "id": "R01",
+    "name": "content-type-automatic-vs-manual-content-classes",
+    "count": 7,
+    "label_count": 0,
+    "sources": [
+      "S-002",
+      "S-004",
+      "S-006",
+      "S-007",
+      "S-009",
+      "S-011",
+      "S-013"
+    ],
+    "labels": [],
+    "summary": "when HttpContent sets Content-Type automatically and when ByteArrayContent/StreamContent require manual media type"
+  },
+  {
+    "id": "R02",
+    "name": "charset-content-encoding-and-constructor-behavior",
+    "count": 10,
+    "label_count": 0,
+    "sources": [
+      "S-001",
+      "S-003",
+      "S-005",
+      "S-008",
+      "S-010",
+      "S-012",
+      "S-014",
+      "S-015",
+      "S-016",
+      "S-017"
+    ],
+    "labels": [],
+    "summary": "charset vs compression Content-Encoding, StringContent/JsonContent behavior, and interoperability guidance"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "R01",
+    "name": "database-enrichment-normalization-legacy-claims",
+    "count": 5,
+    "label_count": 8,
+    "sources": [
+      "S-001",
+      "S-002",
+      "S-007",
+      "S-010",
+      "S-015"
+    ],
+    "labels": [
+      "T-006",
+      "T-007",
+      "T-008",
+      "T-009",
+      "T-010",
+      "T-011",
+      "T-012",
+      "T-013"
+    ],
+    "summary": "database-backed enrichment, tenant information, claim normalization, and legacy claim aliases"
+  },
+  {
+    "id": "R02",
+    "name": "claims-transformation-service-registration-and-implementation",
+    "count": 6,
+    "label_count": 0,
+    "sources": [
+      "S-003",
+      "S-005",
+      "S-006",
+      "S-008",
+      "S-011",
+      "S-014"
+    ],
+    "labels": [],
+    "summary": "IClaimsTransformation purpose, service implementation, registration, and TransformAsync behavior"
+  },
+  {
+    "id": "R03",
+    "name": "execution-frequency-idempotency-and-persistence-limits",
+    "count": 8,
+    "label_count": 11,
+    "sources": [
+      "S-004",
+      "S-009",
+      "S-012",
+      "S-013",
+      "S-016",
+      "S-017",
+      "S-018",
+      "S-019"
+    ],
+    "labels": [
+      "T-001",
+      "T-002",
+      "T-003",
+      "T-004",
+      "T-005",
+      "T-014",
+      "T-015",
+      "T-016",
+      "T-017",
+      "T-018",
+      "T-019"
+    ],
+    "summary": "when transformation runs, repeated execution guards, marker claims, current-principal scope, and persistence limits"
+  }
+]
