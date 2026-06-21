@@ -1,0 +1,4 @@
+region,name,candidate_image_uses,candidate_text_labels,meaning,sources
+R01,attacker-capabilities-cors-boundaries,7,4,"Attacker capabilities, classic form/img requests, what CORS blocks, what it does not block, reading vs sending requests.",S-001;S-002;S-003;S-004;S-005;S-006;S-007
+R02,simple-requests-preflight-why-cors-is-not-enough,8,1,"Simple requests, preflight behavior, cookie-authenticated cross-site POSTs, why CORS is not CSRF protection, server-side antiforgery validation.",S-008;S-009;S-010;S-011;S-012;S-013;S-014;S-015
+R03,xhr-fetch-practical-defense,5,0,"XHR vs Fetch, modern API request patterns, failed preflight examples, practical CSRF/CORS defense checklist.",S-016;S-017;S-018;S-019;S-020

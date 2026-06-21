@@ -1,0 +1,97 @@
+x,y,text,label_id,candidate_region
+6160.915192299338,290.6561610427484,"when using react, and need to read params/query",T-001,R01
+2044.254640715433,668.6059767295746,"so we protect, the proteted payload contaions everything for protected to successsfully unprotedt
+so we just need to put protected into unprotect
+we pass into token the users id so we can fetch the user from db and change account status(before it we check
+if its already confirmed)",T-002,R01
+4115.6774989909845,1198.7108627420093,"// Program.cs
+builder.Services
+.AddIdentity<AppUser, IdentityRole>(options =>
+{
+options.SignIn.RequireConfirmedEmail = true; // blocks login until confirmed
+})
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();",T-003,R03
+2268.028584945081,1253.09707348667,"better to use timelimiteddataprotector
+to avoid manual parsing of expire time",T-004,R02
+10.0,1354.9280344049912,"using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
+public static class ActivationTokens
+{
+public static string Create(IDataProtector protector, string userId, DateTimeOffset expiresUtc)
+{
+var payload = $""{userId}|{expiresUtc.UtcDateTime:o}"";
+var protectedBytes = protector.Protect(Encoding.UTF8.GetBytes(payload));
+return WebEncoders.Base64UrlEncode(protectedBytes);
+}
+public static bool TryValidate(IDataProtector protector, string token, out string userId)
+{
+userId = """";
+byte[] protectedBytes;
+try { protectedBytes = WebEncoders.Base64UrlDecode(token); }
+catch { return false; }
+byte[] bytes;
+try { bytes = protector.Unprotect(protectedBytes); }
+catch { return false; } // tampered / wrong key / etc.
+var payload = Encoding.UTF8.GetString(bytes);
+var parts = payload.Split('|');
+if (parts.Length != 2) return false;
+userId = parts[0];
+if (!DateTimeOffset.TryParse(parts[1], out var exp)) return false;
+return exp > DateTimeOffset.UtcNow;
+}
+}",T-005,R02
+4272.582137693016,1519.1969332823355,"using Microsoft.AspNetCore.Identity;
+builder.Services.Configure<DataProtectionTokenProviderOptions>(o =>
+{
+o.TokenLifespan = TimeSpan.FromHours(24);
+});",T-006,R03
+4201.919444294226,1783.4866785724735,"using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
+app.MapPost(""/register"", async (
+UserManager<AppUser> userManager,
+IEmailSender emailSender,
+HttpContext http,
+RegisterRequest req) =>
+{
+var user = new AppUser { UserName = req.Email, Email = req.Email };
+var result = await userManager.CreateAsync(user, req.Password);
+if (!result.Succeeded) return Results.BadRequest(result.Errors);
+var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+// Token contains characters that should be URL-encoded safely:
+var tokenEncoded = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+var link = $""{http.Request.Scheme}://{http.Request.Host}/confirm-email?userId={user.Id}&token={tokenEncoded}"";
+await emailSender.SendEmailAsync(req.Email, ""Confirm your account"",
+$""Click to confirm: {link}"");
+return Results.Ok(""Check your email to activate your account."");
+});
+record RegisterRequest(string Email, string Password);",T-007,R03
+1365.614050132699,2433.3573051372514,"app.MapPost(""/register-custom"", async (AppDbContext db, IDataProtector protector, HttpContext http, RegisterRequest req) =>
+{
+var user = new UserAccount { Id = Guid.NewGuid().ToString(), Email = req.Email, EmailConfirmed = false };
+// set PasswordHash using PasswordHasher or your KDF...
+db.Users.Add(user);
+await db.SaveChangesAsync();
+var token = ActivationTokens.Create(protector, user.Id, DateTimeOffset.UtcNow.AddHours(24));
+var link = $""{http.Request.Scheme}://{http.Request.Host}/activate?token={token}"";
+// send email with link...
+return Results.Ok(""Check your email to activate."");
+});",T-008,R02
+4189.122223489809,2609.1834127762413,"using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
+app.MapGet(""/confirm-email"", async (
+UserManager<AppUser> userManager,
+string userId,
+string token) =>
+{
+var user = await userManager.FindByIdAsync(userId);
+if (user is null) return Results.NotFound();
+// Decode from Base64Url back into the original token string
+var tokenDecoded = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+var result = await userManager.ConfirmEmailAsync(user, tokenDecoded);
+if (!result.Succeeded) return Results.BadRequest(result.Errors);
+return Results.Ok(""Email confirmed. You can log in now."");
+});",T-009,R03
