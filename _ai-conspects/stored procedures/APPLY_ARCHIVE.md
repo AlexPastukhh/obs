@@ -1,12 +1,12 @@
-# APPLY ARCHIVE - 10 small conspects stage0 v001
+# APPLY ARCHIVE — 10 small conspects final coverage v001
 
-This single archive applies all ten conspects in one step.
+All ten conspects are delivered together in one archive.
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-10-small-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-10-small-stage1-final-coverage-v001.zip"
 $targets = @(
   "_ai-conspects\linq to sql"
   "_ai-conspects\stored procedures"
@@ -30,9 +30,16 @@ git add -A -- $targets
 git status --short -- $targets
 ```
 
-Commit after review:
+## Commit after review
 
 ```powershell
-git commit -m "Start 10 small conspect boundary reviews"
+git commit -m "Complete 10 small conspects final coverage"
 git push origin ai-processed-conspects-text
+```
+
+## Rollback only this batch
+
+```powershell
+git restore --staged -- $targets
+git restore -- $targets
 ```

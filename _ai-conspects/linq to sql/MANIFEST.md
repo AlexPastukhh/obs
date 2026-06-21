@@ -1,22 +1,33 @@
-# MANIFEST - linq to sql stage0 boundary review v001
+# MANIFEST — linq to sql final coverage transcript v001
 
-Target branch: `ai-processed-conspects-text`
-
-## Source
-
-```text
-linq to sql.svg
-```
-
-Uploaded filename: `linq to sql.svg`
+Archive type: **stage1 final coverage, ten-conspect combined delivery**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-22 03:30:00 UTC
 
 ## Counts
 
 ```text
-unique embedded images: 2
-image uses on canvas: 2
-text labels parsed: 60
-duplicate image uses: 0
+image uses: 2
+text labels: 60
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
-This folder is one member of the combined ten-small-conspect stage0 archive.
+## Delivery batch
+
+This folder is delivered together with all ten exact SVG-named folders:
+
+```text
+_ai-conspects/linq to sql
+_ai-conspects/stored procedures
+_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache
+_ai-conspects/injecting into razor
+_ai-conspects/tag helpers razor,partial
+_ai-conspects/BINDING SOURCE ATTRIBUTES
+_ai-conspects/content disposition header
+_ai-conspects/CUSTOM ROUTE CONSTRAINT
+_ai-conspects/utf8 string  literal
+_ai-conspects/link generator
+```
+
+Archive: `ai-conspects-10-small-stage1-final-coverage-v001.zip`
