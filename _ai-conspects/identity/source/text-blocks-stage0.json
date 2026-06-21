@@ -1,0 +1,130 @@
+[
+  {
+    "block_id": "B001",
+    "x": 7727.893493772448,
+    "y": 3726.0923753099705,
+    "line_count": 1,
+    "text": "lockout with identity",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B002",
+    "x": 4476.081737090864,
+    "y": 799.481491661134,
+    "line_count": 1,
+    "text": "iemailsender",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B003",
+    "x": 8874.12803156026,
+    "y": 2839.3006366621466,
+    "line_count": 1,
+    "text": "url safety of identities tokens ",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B004",
+    "x": 6071.022933677497,
+    "y": 8294.519533364513,
+    "line_count": 4,
+    "text": "so we can login with external login only if we have \naccount for user and if we added login with info from \nactual google login \n",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B005",
+    "x": 5974.729674069093,
+    "y": 14368.980971529752,
+    "line_count": 1,
+    "text": "default ui, api endpoints",
+    "region_id": "R05"
+  },
+  {
+    "block_id": "B006",
+    "x": 2539.5716876251718,
+    "y": 556.6671752929688,
+    "line_count": 1,
+    "text": "basics, min setup",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B007",
+    "x": 6399.571687625172,
+    "y": 10.0,
+    "line_count": 1,
+    "text": "methods",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B008",
+    "x": 6120.164867963714,
+    "y": 3215.185719807944,
+    "line_count": 1,
+    "text": "email confirmation password reset",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B009",
+    "x": 7740.9903117764925,
+    "y": 5457.127311827648,
+    "line_count": 1,
+    "text": "external login",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B010",
+    "x": 6438.9903117764925,
+    "y": 6014.627311827648,
+    "line_count": 1,
+    "text": "Challenge method",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B011",
+    "x": 3500.791169878821,
+    "y": 4124.848119844079,
+    "line_count": 1,
+    "text": "jwt + identity implementation",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B012",
+    "x": 3699.990321949019,
+    "y": 4333.571891905773,
+    "line_count": 3,
+    "text": "so just an normal jswt endpoint but with manager that verifies password\n\nbuild jwt ourselves",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B013",
+    "x": 1795.5578308105469,
+    "y": 5230.22377833764,
+    "line_count": 81,
+    "text": "using System.IdentityModel.Tokens.Jwt;\nusing System.Security.Claims;\nusing System.Text;\nusing Microsoft.AspNetCore.Identity;\nusing Microsoft.Extensions.Options;\nusing Microsoft.IdentityModel.Tokens;\n\npublic sealed class JwtOptions\n{\n    public string Issuer { get; init; } = \"\";\n    public string Audience { get; init; } = \"\";\n    public string SigningKey { get; init; } = \"\"; // store in secrets\n    public int ExpMinutes { get; init; } = 60;\n}\n\npublic sealed class JwtTokenService<TUser> where TUser : IdentityUser\n{\n    private readonly UserManager<TUser> _userManager;\n    private readonly RoleManager<IdentityRole> _roleManager;\n    private readonly JwtOptions _jwt;\n\n    public JwtTokenService(\n        UserManager<TUser> userManager,\n        RoleManager<IdentityRole> roleManager,\n        IOptions<JwtOptions> jwtOptions)\n    {\n        _userManager = userManager;\n        _roleManager = roleManager;\n        _jwt = jwtOptions.Value;\n    }\n\n    public async Task<string> CreateTokenAsync(TUser user, CancellationToken ct = default)\n    {\n        // Base identity claims\n        var claims = new List<Claim>\n        {\n            new(JwtRegisteredClaimNames.Sub, user.Id),\n            new(JwtRegisteredClaimNames.UniqueName, user.UserName ?? \"\"),\n            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),\n        };\n\n        // User claims (from AspNetUserClaims)\n        var userClaims = await _userManager.GetClaimsAsync(user);\n        claims.AddRange(userClaims);\n\n        // Roles + role claims (AspNetUserRoles + AspNetRoleClaims)\n        var roles = await _userManager.GetRolesAsync(user);\n        foreach (var roleName in roles)\n        {\n            // Add role claim recognized by [Authorize(Roles=\"...\")]\n            claims.Add(new Claim(ClaimTypes.Role, roleName));\n\n            // If you also store claims on roles, include them\n            var role = await _roleManager.FindByNameAsync(roleName);\n            if (role != null)\n            {\n                var roleClaims = await _roleManager.GetClaimsAsync(role);\n                claims.AddRange(roleClaims);\n            }\n        }\n\n        // Optional: remove duplicates (common when role+user claims overlap)\n        claims = claims\n            .GroupBy(c => new { c.Type, c.Value })\n            .Select(g => g.First())\n            .ToList();\n\n        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.SigningKey));\n        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);\n\n        var token = new JwtSecurityToken(\n            issuer: _jwt.Issuer,\n            audience: _jwt.Audience,\n            claims: claims,\n            notBefore: DateTime.UtcNow,\n            expires: DateTime.UtcNow.AddMinutes(_jwt.ExpMinutes),\n            signingCredentials: creds);\n\n        return new JwtSecurityTokenHandler().WriteToken(token);\n    }\n}",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B014",
+    "x": 29.557830810546875,
+    "y": 6130.223839372797,
+    "line_count": 2,
+    "text": "can have role related claims so may need \nto fetch claims for the role that user has",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B015",
+    "x": 1176.6668701171875,
+    "y": 674.2672862315267,
+    "line_count": 1,
+    "text": "identity schema",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B016",
+    "x": 10.0,
+    "y": 3980.9340037608235,
+    "line_count": 4,
+    "text": "jwt claims + token creator service\nthat creates fro user claims\nand from role claims \nof roles tht user hhas",
+    "region_id": "R02"
+  }
+]

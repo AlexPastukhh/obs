@@ -1,0 +1,98 @@
+[
+  {
+    "region_id": "R01",
+    "title": "compression theory, negotiation headers, levels and provider options",
+    "block_count": 6,
+    "text_label_count": 10,
+    "min_x": 167.58759150527567,
+    "min_y": 199.77856584578117,
+    "max_x": 7554.253952996161,
+    "max_y": 3653.7144881793765,
+    "block_ids": [
+      "B008",
+      "B010",
+      "B012",
+      "B016",
+      "B017",
+      "B020"
+    ],
+    "representative_text": [
+      "theory",
+      "compression ",
+      "with httpclient and on server ",
+      "compression level",
+      "when to compress"
+    ]
+  },
+  {
+    "region_id": "R02",
+    "title": "HttpClient automatic decompression and compression-stream wrapping",
+    "block_count": 5,
+    "text_label_count": 8,
+    "min_x": 10.0,
+    "min_y": 264.22314592390615,
+    "max_x": 5755.9877524284575,
+    "max_y": 5197.096195529562,
+    "block_ids": [
+      "B009",
+      "B013",
+      "B014",
+      "B018",
+      "B019"
+    ],
+    "representative_text": [
+      "automatic ",
+      "decompression on",
+      "httpclient",
+      "wrapping with compression/decompression stream",
+      "decompression"
+    ]
+  },
+  {
+    "region_id": "R03",
+    "title": "leaveOpen, ownership, disposal and multiple content encodings",
+    "block_count": 4,
+    "text_label_count": 5,
+    "min_x": 2747.139300476789,
+    "min_y": 138.03864874267575,
+    "max_x": 5430.325112286973,
+    "max_y": 10666.291800029248,
+    "block_ids": [
+      "B001",
+      "B002",
+      "B011",
+      "B015"
+    ],
+    "representative_text": [
+      "some problems with implementation",
+      "about leaveopen false and ownershitp, disposal responsibility(!!!!!!!!!!!!)",
+      "leaveopen, managing",
+      "the wrapped stream",
+      "handling multiple encodings (rarely implemented)"
+    ]
+  },
+  {
+    "region_id": "R04",
+    "title": "custom request-body decompressor registry and middleware implementation",
+    "block_count": 5,
+    "text_label_count": 80,
+    "min_x": 3007.7981507468594,
+    "min_y": 12198.096357082117,
+    "max_x": 5416.893342339121,
+    "max_y": 14324.55750596601,
+    "block_ids": [
+      "B003",
+      "B004",
+      "B005",
+      "B006",
+      "B007"
+    ],
+    "representative_text": [
+      "using System.IO;",
+      "public interface IRequestBodyDecompressor",
+      "{",
+      "    string EncodingName { get; }",
+      "    Stream WrapDecompressionStream(Stream input);"
+    ]
+  }
+]

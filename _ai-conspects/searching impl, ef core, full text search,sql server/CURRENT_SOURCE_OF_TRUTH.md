@@ -1,25 +1,26 @@
-# Current Source of Truth — searching impl, ef core, full text search,sql server
+# Current Source of Truth - searching impl, ef core, full text search,sql server
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-22 04:00:00 UTC
 
-## Status
+## Current status
 
 ```text
 Stage0 source/boundary review: done
-Final transcript: done
-Final coverage audit: done
+Normal transcript regions: not started
 ```
 
-## Coverage
+## Counts
 
 ```text
-unique embedded images: 0
+embedded raster images: 0
 image uses on canvas: 0
-text elements: 73
-remaining unclosed image uses: 0
-remaining unclosed text elements: 0
+text blocks parsed: 45
+text labels parsed: 73
+duplicate text assignments: 0
 ```
 
-## Next
+## Candidate next step
 
-No normal transcript regions remain. Only correction/polish if needed.
+```text
+Suggested full pass: R01 + R02 + R03 + R04 = 45 text blocks + 73 text labels.
+```

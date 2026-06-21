@@ -1,0 +1,106 @@
+﻿label_id,block_id,region_id,status,text,x,y
+T001,B001,R03,pending_transcript,lockout with identity,7727.893493772448,3825.939077824619
+T002,B002,R01,pending_transcript,iemailsender,4476.081737090864,896.7475737538249
+T003,B003,R03,pending_transcript,url safety of identities tokens ,8874.12803156026,2920.1577609242127
+T004,B004,R04,pending_transcript,so we can login with external login only if we have ,6071.022933677497,8327.116533364513
+T005,B004,R04,pending_transcript,account for user and if we added login with info from ,6071.022933677497,8373.366533364513
+T006,B004,R04,pending_transcript,actual google login ,6071.022933677497,8419.616533364513
+T007,B004,R04,pending_transcript,,6071.022933677497,8465.866533364513
+T008,B005,R05,pending_transcript,"default ui, api endpoints",5974.729674069093,14452.382304863086
+T009,B006,R01,pending_transcript,"basics, min setup",2539.5716876251718,663.5617702636719
+T010,B007,R01,pending_transcript,methods,6399.571687625172,121.59329748535154
+T011,B008,R03,pending_transcript,email confirmation password reset,6120.164867963714,3298.5870531412775
+T012,B009,R04,pending_transcript,external login,7740.9903117764925,5589.394749815929
+T013,B010,R04,pending_transcript,Challenge method,6438.9903117764925,6093.329960570323
+T014,B011,R02,pending_transcript,jwt + identity implementation,3500.791169878821,4207.727291474938
+T015,B012,R02,pending_transcript,so just an normal jswt endpoint but with manager that verifies password,3699.990321949019,4351.1918919057725
+T016,B012,R02,pending_transcript,,3699.990321949019,4376.1918919057725
+T017,B012,R02,pending_transcript,build jwt ourselves,3699.990321949019,4401.1918919057725
+T018,B013,R02,pending_transcript,using System.IdentityModel.Tokens.Jwt;,1795.5578308105469,5247.84377833764
+T019,B013,R02,pending_transcript,using System.Security.Claims;,1795.5578308105469,5272.84377833764
+T020,B013,R02,pending_transcript,using System.Text;,1795.5578308105469,5297.84377833764
+T021,B013,R02,pending_transcript,using Microsoft.AspNetCore.Identity;,1795.5578308105469,5322.84377833764
+T022,B013,R02,pending_transcript,using Microsoft.Extensions.Options;,1795.5578308105469,5347.84377833764
+T023,B013,R02,pending_transcript,using Microsoft.IdentityModel.Tokens;,1795.5578308105469,5372.84377833764
+T024,B013,R02,pending_transcript,,1795.5578308105469,5397.84377833764
+T025,B013,R02,pending_transcript,public sealed class JwtOptions,1795.5578308105469,5422.84377833764
+T026,B013,R02,pending_transcript,{,1795.5578308105469,5447.84377833764
+T027,B013,R02,pending_transcript,"    public string Issuer { get; init; } = """";",1795.5578308105469,5472.84377833764
+T028,B013,R02,pending_transcript,"    public string Audience { get; init; } = """";",1795.5578308105469,5497.84377833764
+T029,B013,R02,pending_transcript,"    public string SigningKey { get; init; } = """"; // store in secrets",1795.5578308105469,5522.84377833764
+T030,B013,R02,pending_transcript,    public int ExpMinutes { get; init; } = 60;,1795.5578308105469,5547.84377833764
+T031,B013,R02,pending_transcript,},1795.5578308105469,5572.84377833764
+T032,B013,R02,pending_transcript,,1795.5578308105469,5597.84377833764
+T033,B013,R02,pending_transcript,public sealed class JwtTokenService<TUser> where TUser : IdentityUser,1795.5578308105469,5622.84377833764
+T034,B013,R02,pending_transcript,{,1795.5578308105469,5647.84377833764
+T035,B013,R02,pending_transcript,    private readonly UserManager<TUser> _userManager;,1795.5578308105469,5672.84377833764
+T036,B013,R02,pending_transcript,    private readonly RoleManager<IdentityRole> _roleManager;,1795.5578308105469,5697.84377833764
+T037,B013,R02,pending_transcript,    private readonly JwtOptions _jwt;,1795.5578308105469,5722.84377833764
+T038,B013,R02,pending_transcript,,1795.5578308105469,5747.84377833764
+T039,B013,R02,pending_transcript,    public JwtTokenService(,1795.5578308105469,5772.84377833764
+T040,B013,R02,pending_transcript,"        UserManager<TUser> userManager,",1795.5578308105469,5797.84377833764
+T041,B013,R02,pending_transcript,"        RoleManager<IdentityRole> roleManager,",1795.5578308105469,5822.84377833764
+T042,B013,R02,pending_transcript,        IOptions<JwtOptions> jwtOptions),1795.5578308105469,5847.84377833764
+T043,B013,R02,pending_transcript,    {,1795.5578308105469,5872.84377833764
+T044,B013,R02,pending_transcript,        _userManager = userManager;,1795.5578308105469,5897.84377833764
+T045,B013,R02,pending_transcript,        _roleManager = roleManager;,1795.5578308105469,5922.84377833764
+T046,B013,R02,pending_transcript,        _jwt = jwtOptions.Value;,1795.5578308105469,5947.84377833764
+T047,B013,R02,pending_transcript,    },1795.5578308105469,5972.84377833764
+T048,B013,R02,pending_transcript,,1795.5578308105469,5997.84377833764
+T049,B013,R02,pending_transcript,"    public async Task<string> CreateTokenAsync(TUser user, CancellationToken ct = default)",1795.5578308105469,6022.84377833764
+T050,B013,R02,pending_transcript,    {,1795.5578308105469,6047.84377833764
+T051,B013,R02,pending_transcript,        // Base identity claims,1795.5578308105469,6072.84377833764
+T052,B013,R02,pending_transcript,        var claims = new List<Claim>,1795.5578308105469,6097.84377833764
+T053,B013,R02,pending_transcript,        {,1795.5578308105469,6122.84377833764
+T054,B013,R02,pending_transcript,"            new(JwtRegisteredClaimNames.Sub, user.Id),",1795.5578308105469,6147.84377833764
+T055,B013,R02,pending_transcript,"            new(JwtRegisteredClaimNames.UniqueName, user.UserName ?? """"),",1795.5578308105469,6172.84377833764
+T056,B013,R02,pending_transcript,"            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),",1795.5578308105469,6197.84377833764
+T057,B013,R02,pending_transcript,        };,1795.5578308105469,6222.84377833764
+T058,B013,R02,pending_transcript,,1795.5578308105469,6247.84377833764
+T059,B013,R02,pending_transcript,        // User claims (from AspNetUserClaims),1795.5578308105469,6272.84377833764
+T060,B013,R02,pending_transcript,        var userClaims = await _userManager.GetClaimsAsync(user);,1795.5578308105469,6297.84377833764
+T061,B013,R02,pending_transcript,        claims.AddRange(userClaims);,1795.5578308105469,6322.84377833764
+T062,B013,R02,pending_transcript,,1795.5578308105469,6347.84377833764
+T063,B013,R02,pending_transcript,        // Roles + role claims (AspNetUserRoles + AspNetRoleClaims),1795.5578308105469,6372.84377833764
+T064,B013,R02,pending_transcript,        var roles = await _userManager.GetRolesAsync(user);,1795.5578308105469,6397.84377833764
+T065,B013,R02,pending_transcript,        foreach (var roleName in roles),1795.5578308105469,6422.84377833764
+T066,B013,R02,pending_transcript,        {,1795.5578308105469,6447.84377833764
+T067,B013,R02,pending_transcript,"            // Add role claim recognized by [Authorize(Roles=""..."")]",1795.5578308105469,6472.84377833764
+T068,B013,R02,pending_transcript,"            claims.Add(new Claim(ClaimTypes.Role, roleName));",1795.5578308105469,6497.84377833764
+T069,B013,R02,pending_transcript,,1795.5578308105469,6522.84377833764
+T070,B013,R02,pending_transcript,"            // If you also store claims on roles, include them",1795.5578308105469,6547.84377833764
+T071,B013,R02,pending_transcript,            var role = await _roleManager.FindByNameAsync(roleName);,1795.5578308105469,6572.84377833764
+T072,B013,R02,pending_transcript,            if (role != null),1795.5578308105469,6597.84377833764
+T073,B013,R02,pending_transcript,            {,1795.5578308105469,6622.84377833764
+T074,B013,R02,pending_transcript,                var roleClaims = await _roleManager.GetClaimsAsync(role);,1795.5578308105469,6647.84377833764
+T075,B013,R02,pending_transcript,                claims.AddRange(roleClaims);,1795.5578308105469,6672.84377833764
+T076,B013,R02,pending_transcript,            },1795.5578308105469,6697.84377833764
+T077,B013,R02,pending_transcript,        },1795.5578308105469,6722.84377833764
+T078,B013,R02,pending_transcript,,1795.5578308105469,6747.84377833764
+T079,B013,R02,pending_transcript,        // Optional: remove duplicates (common when role+user claims overlap),1795.5578308105469,6772.84377833764
+T080,B013,R02,pending_transcript,        claims = claims,1795.5578308105469,6797.84377833764
+T081,B013,R02,pending_transcript,"            .GroupBy(c => new { c.Type, c.Value })",1795.5578308105469,6822.84377833764
+T082,B013,R02,pending_transcript,            .Select(g => g.First()),1795.5578308105469,6847.84377833764
+T083,B013,R02,pending_transcript,            .ToList();,1795.5578308105469,6872.84377833764
+T084,B013,R02,pending_transcript,,1795.5578308105469,6897.84377833764
+T085,B013,R02,pending_transcript,        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.SigningKey));,1795.5578308105469,6922.84377833764
+T086,B013,R02,pending_transcript,"        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);",1795.5578308105469,6947.84377833764
+T087,B013,R02,pending_transcript,,1795.5578308105469,6972.84377833764
+T088,B013,R02,pending_transcript,        var token = new JwtSecurityToken(,1795.5578308105469,6997.84377833764
+T089,B013,R02,pending_transcript,"            issuer: _jwt.Issuer,",1795.5578308105469,7022.84377833764
+T090,B013,R02,pending_transcript,"            audience: _jwt.Audience,",1795.5578308105469,7047.84377833764
+T091,B013,R02,pending_transcript,"            claims: claims,",1795.5578308105469,7072.84377833764
+T092,B013,R02,pending_transcript,"            notBefore: DateTime.UtcNow,",1795.5578308105469,7097.84377833764
+T093,B013,R02,pending_transcript,"            expires: DateTime.UtcNow.AddMinutes(_jwt.ExpMinutes),",1795.5578308105469,7122.84377833764
+T094,B013,R02,pending_transcript,            signingCredentials: creds);,1795.5578308105469,7147.84377833764
+T095,B013,R02,pending_transcript,,1795.5578308105469,7172.84377833764
+T096,B013,R02,pending_transcript,        return new JwtSecurityTokenHandler().WriteToken(token);,1795.5578308105469,7197.84377833764
+T097,B013,R02,pending_transcript,    },1795.5578308105469,7222.84377833764
+T098,B013,R02,pending_transcript,},1795.5578308105469,7247.84377833764
+T099,B014,R02,pending_transcript,can have role related claims so may need ,29.557830810546875,6147.8438393727965
+T100,B014,R02,pending_transcript,to fetch claims for the role that user has,29.557830810546875,6172.8438393727965
+T101,B015,R01,pending_transcript,identity schema,1176.6668701171875,762.3672862315266
+T102,B016,R02,pending_transcript,jwt claims + token creator service,10.0,4134.815328132161
+T103,B016,R02,pending_transcript,that creates fro user claims,10.0,4353.148648749837
+T104,B016,R02,pending_transcript,and from role claims ,10.0,4571.481969367513
+T105,B016,R02,pending_transcript,of roles tht user hhas,10.0,4789.815289985188

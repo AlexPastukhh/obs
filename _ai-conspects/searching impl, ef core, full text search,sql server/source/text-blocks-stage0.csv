@@ -1,0 +1,74 @@
+﻿block_id,region_id,x,y,line_count,text
+B001,R03,16641.44838019104,1562.8051778856538,4,"need to understand all those possibilities of contains
++ mb freetext has some
++ what about some possibilies that was discussed at the start of 
+this fulltext shit"
+B002,R04,14040.067251640332,5708.635898515893,1,!!!!
+B003,R04,13069.361666572713,9162.29876659459,3,"normal index vs fulltext index
+are both sort/ adds some to allow 
+jumbing directly to needed place"
+B004,R02,7723.485145733986,80.77769470214844,1,"when to use what, summary"
+B005,R01,7290.152015851174,4247.444564819336,1,LIKE
+B006,R01,6824.818733380471,2260.778030395508,2,"when substring searching
+is ok,when not"
+B007,R01,5766.485450909768,2259.111312866211,2,"Example implementation
+with escaping helper"
+B008,R01,5864.262957420185,4023.555689493815,1,helper to escape user input
+B009,R01,4752.152107403908,2326.778060913086,1,LIKE patterns
+B010,R01,4681.292374180588,2815.0669271219504,1,_ and [aboba]
+B011,R01,4817.292374180588,3707.0669881571066,1,_ 
+B012,R01,3491.485298321877,2205.778030395508,2,"there is no all substring 
+values in your indexes"
+B013,R01,2444.212682022164,2248.2022913152523,2,"Escaping special 
+characters with !"
+B014,R01,1520.7205759023727,2236.9007456725813,2,"case sensitivity,
+collation"
+B015,R01,1567.3872018789352,2922.2340891784406,1,avoid to lower
+B016,R01,302.1173974239482,2242.2975235976182,2,"Contains translates to 
+Like"
+B017,R01,452.7840234005107,3220.9642716444932,2,"Like is for full column
+values"
+B018,R02,9156.818885968361,1834.1106719970703,1,full text search
+B019,R02,6110.152015851174,5980.777847290039,1,search engine
+B020,R04,14893.485756085549,7184.111282348633,2,"fulltext vs like
+fulltext indexes vs normal ones"
+B021,R02,9318.403493772443,550.7776184082031,1,useful service
+B022,R02,8085.784606007375,576.4919150216242,1,ef core filtering when
+B023,R02,8033.403711755143,908.8728528703964,1,db full text dearch when
+B024,R02,8016.260854612286,1180.301446097238,1,search engine when
+B025,R02,8151.540272462782,2158.4834206820983,2,"LIKE, INDEXES,
+full text search"
+B026,R02,9099.818665212611,2130.7910526253504,2,"word based searching,
+no substring full value shit"
+B027,R03,10333.065513579088,2033.3019042005335,3,"create catalog
+create fulltext index 
+(only one,can contain mult cols)"
+B028,R03,11013.510276762681,3676.6351459811326,1,rankings
+B029,R03,11756.843711821275,3603.301710922539,1,TABLE
+B030,R02,7120.07021130174,554.1109771728516,1,good hierarchy
+B031,R03,12932.860213178206,3776.2597214187176,2,"HOW DOES FULL text search index
+look like"
+B032,R03,12909.156464263277,4702.18569255587,1,but its sorted actually
+B033,R04,12977.727892834704,7168.852301093817,1,Btree index
+B034,R04,12987.251644229795,7776.4713196485045,1,Fulltext index
+B035,R04,13989.156289877115,7285.042748219934,1,like cases 
+B036,R04,13994.870575591402,7738.376052488908,1,fulltext cases
+B037,R04,12985.346824196313,8412.661766774621,1,Substring search
+B038,R04,14256.738707459534,9131.172220554245,3,"Yes fulltext index is just an index
+but not on full column values, but
+on each token of those values"
+B039,R03,14180.664630633717,4532.384723954227,3,"Yes fulltext index is just an index
+but not on full column values, but
+on each token of those values"
+B040,R03,15236.42218789579,4632.99080305579,1,what else fulltext idex can store
+B041,R03,12905.881402905634,2489.890876377922,4,"KEY INDEX (indexname)
+defining the way to id
+the row of the token that 
+we ve found as matched"
+B042,R03,14391.595514233759,1964.176590663636,2,"EF CORE FUll text search
+SQL server"
+B043,R03,18214.071693084203,2089.827388189678,1,Freetext
+B044,R03,16782.96073117014,1992.4941057189744,1,Contains
+B045,R03,14088.738632955858,3482.2718578232348,3,"ROW Locator MUST be unique
+its not about unique index,index quality etc
+its about the ability to find the exact row"

@@ -1,0 +1,106 @@
+[
+  {
+    "region_id": "R01",
+    "title": "Identity schema, minimal setup, methods and email sender",
+    "block_count": 4,
+    "text_label_count": 4,
+    "min_x": 1176.6668701171875,
+    "min_y": 121.59329748535154,
+    "max_x": 6399.571687625172,
+    "max_y": 896.7475737538249,
+    "block_ids": [
+      "B002",
+      "B006",
+      "B007",
+      "B015"
+    ],
+    "representative_text": [
+      "iemailsender",
+      "basics, min setup",
+      "methods",
+      "identity schema"
+    ]
+  },
+  {
+    "region_id": "R02",
+    "title": "JWT claims, token creation, Identity integration and role claims",
+    "block_count": 5,
+    "text_label_count": 91,
+    "min_x": 10.0,
+    "min_y": 4134.815328132161,
+    "max_x": 3699.990321949019,
+    "max_y": 7247.84377833764,
+    "block_ids": [
+      "B011",
+      "B012",
+      "B013",
+      "B014",
+      "B016"
+    ],
+    "representative_text": [
+      "jwt + identity implementation",
+      "so just an normal jswt endpoint but with manager that verifies password",
+      "build jwt ourselves",
+      "using System.IdentityModel.Tokens.Jwt;",
+      "using System.Security.Claims;"
+    ]
+  },
+  {
+    "region_id": "R03",
+    "title": "email confirmation, password reset, token safety and lockout",
+    "block_count": 3,
+    "text_label_count": 3,
+    "min_x": 6120.164867963714,
+    "min_y": 2920.1577609242127,
+    "max_x": 8874.12803156026,
+    "max_y": 3825.939077824619,
+    "block_ids": [
+      "B001",
+      "B003",
+      "B008"
+    ],
+    "representative_text": [
+      "lockout with identity",
+      "url safety of identities tokens ",
+      "email confirmation password reset"
+    ]
+  },
+  {
+    "region_id": "R04",
+    "title": "external login, challenge flow and linking external accounts",
+    "block_count": 3,
+    "text_label_count": 6,
+    "min_x": 6071.022933677497,
+    "min_y": 5589.394749815929,
+    "max_x": 7740.9903117764925,
+    "max_y": 8465.866533364513,
+    "block_ids": [
+      "B004",
+      "B009",
+      "B010"
+    ],
+    "representative_text": [
+      "so we can login with external login only if we have ",
+      "account for user and if we added login with info from ",
+      "actual google login ",
+      "external login",
+      "Challenge method"
+    ]
+  },
+  {
+    "region_id": "R05",
+    "title": "default UI and API endpoints",
+    "block_count": 1,
+    "text_label_count": 1,
+    "min_x": 5974.729674069093,
+    "min_y": 14452.382304863086,
+    "max_x": 5974.729674069093,
+    "max_y": 14452.382304863086,
+    "block_ids": [
+      "B005"
+    ],
+    "representative_text": [
+      "default ui, api endpoints"
+    ]
+  }
+]

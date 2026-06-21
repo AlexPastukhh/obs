@@ -1,0 +1,106 @@
+﻿block_id,region_id,x,y,line_count,text
+B001,R03,7727.893493772448,3726.0923753099705,1,lockout with identity
+B002,R01,4476.081737090864,799.481491661134,1,iemailsender
+B003,R03,8874.12803156026,2839.3006366621466,1,url safety of identities tokens 
+B004,R04,6071.022933677497,8294.519533364513,4,"so we can login with external login only if we have 
+account for user and if we added login with info from 
+actual google login 
+"
+B005,R05,5974.729674069093,14368.980971529752,1,"default ui, api endpoints"
+B006,R01,2539.5716876251718,556.6671752929688,1,"basics, min setup"
+B007,R01,6399.571687625172,10.0,1,methods
+B008,R03,6120.164867963714,3215.185719807944,1,email confirmation password reset
+B009,R04,7740.9903117764925,5457.127311827648,1,external login
+B010,R04,6438.9903117764925,6014.627311827648,1,Challenge method
+B011,R02,3500.791169878821,4124.848119844079,1,jwt + identity implementation
+B012,R02,3699.990321949019,4333.571891905773,3,"so just an normal jswt endpoint but with manager that verifies password
+
+build jwt ourselves"
+B013,R02,1795.5578308105469,5230.22377833764,81,"using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+
+public sealed class JwtOptions
+{
+    public string Issuer { get; init; } = """";
+    public string Audience { get; init; } = """";
+    public string SigningKey { get; init; } = """"; // store in secrets
+    public int ExpMinutes { get; init; } = 60;
+}
+
+public sealed class JwtTokenService<TUser> where TUser : IdentityUser
+{
+    private readonly UserManager<TUser> _userManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
+    private readonly JwtOptions _jwt;
+
+    public JwtTokenService(
+        UserManager<TUser> userManager,
+        RoleManager<IdentityRole> roleManager,
+        IOptions<JwtOptions> jwtOptions)
+    {
+        _userManager = userManager;
+        _roleManager = roleManager;
+        _jwt = jwtOptions.Value;
+    }
+
+    public async Task<string> CreateTokenAsync(TUser user, CancellationToken ct = default)
+    {
+        // Base identity claims
+        var claims = new List<Claim>
+        {
+            new(JwtRegisteredClaimNames.Sub, user.Id),
+            new(JwtRegisteredClaimNames.UniqueName, user.UserName ?? """"),
+            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        };
+
+        // User claims (from AspNetUserClaims)
+        var userClaims = await _userManager.GetClaimsAsync(user);
+        claims.AddRange(userClaims);
+
+        // Roles + role claims (AspNetUserRoles + AspNetRoleClaims)
+        var roles = await _userManager.GetRolesAsync(user);
+        foreach (var roleName in roles)
+        {
+            // Add role claim recognized by [Authorize(Roles=""..."")]
+            claims.Add(new Claim(ClaimTypes.Role, roleName));
+
+            // If you also store claims on roles, include them
+            var role = await _roleManager.FindByNameAsync(roleName);
+            if (role != null)
+            {
+                var roleClaims = await _roleManager.GetClaimsAsync(role);
+                claims.AddRange(roleClaims);
+            }
+        }
+
+        // Optional: remove duplicates (common when role+user claims overlap)
+        claims = claims
+            .GroupBy(c => new { c.Type, c.Value })
+            .Select(g => g.First())
+            .ToList();
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.SigningKey));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        var token = new JwtSecurityToken(
+            issuer: _jwt.Issuer,
+            audience: _jwt.Audience,
+            claims: claims,
+            notBefore: DateTime.UtcNow,
+            expires: DateTime.UtcNow.AddMinutes(_jwt.ExpMinutes),
+            signingCredentials: creds);
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}"
+B014,R02,29.557830810546875,6130.223839372797,2,"can have role related claims so may need 
+to fetch claims for the role that user has"
+B015,R01,1176.6668701171875,674.2672862315267,1,identity schema
+B016,R02,10.0,3980.9340037608235,4,"jwt claims + token creator service
+that creates fro user claims
+and from role claims 
+of roles tht user hhas"

@@ -1,0 +1,81 @@
+﻿block_id,region_id,x,y,line_count,text
+B001,R02,10386.684300585099,782.1217682735542,1,implementing full identity
+B002,R01,1581.67457620824,144.93235391600592,1,manual hashing
+B003,R01,2713.5659232674216,723.2549596770941,1,In ddd style
+B004,R01,2150.8124715223967,1385.7534131473694,2,"Doesnt depends on how long it takes
+to actually verify password"
+B005,R01,2721.0332805562375,2945.165155044956,50,"using System.Security.Cryptography;
+
+public static class PasswordKdf
+{
+    // tune this based on perf tests
+    private const int Iterations = 210_000;
+    private const int SaltSize = 16;     // 128-bit
+    private const int KeySize = 32;      // 256-bit
+    private const string Algo = ""PBKDF2-SHA256"";
+    private const int Version = 1;
+
+    public static string Hash(string password)
+    {
+        byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);
+
+        byte[] key = Rfc2898DeriveBytes.Pbkdf2(
+            password,
+            salt,
+            Iterations,
+            HashAlgorithmName.SHA256,
+            KeySize);
+
+        // Store: v:algo:iter:saltB64:hashB64
+        return $""{Version}:{Algo}:{Iterations}:{Convert.ToBase64String(salt)}:{Convert.ToBase64String(key)}"";
+    }
+
+    public static bool Verify(string password, string stored)
+    {
+        var parts = stored.Split(':');
+        if (parts.Length != 5) return false;
+
+        if (!int.TryParse(parts[0], out var version) || version != Version) return false;
+        var algo = parts[1];
+        if (algo != Algo) return false;
+
+        if (!int.TryParse(parts[2], out var iterations)) return false;
+
+        byte[] salt = Convert.FromBase64String(parts[3]);
+        byte[] expected = Convert.FromBase64String(parts[4]);
+
+        byte[] actual = Rfc2898DeriveBytes.Pbkdf2(
+            password,
+            salt,
+            iterations,
+            HashAlgorithmName.SHA256,
+            expected.Length);
+
+        return CryptographicOperations.FixedTimeEquals(actual, expected);
+    }
+}"
+B006,R03,13967.311732851162,1302.5987428394683,1,how key stretching works
+B007,R03,14566.823347277068,1857.4958469854273,3,"basically kdf is a deterministic functions, it produces same hash on each input
+and when you hash with iterations - you always will get same hash for each input
+, psw -> hash1 -> hash2 -> hash300000"
+B008,R03,16360.445652157718,286.0565963458821,1,hasging
+B009,R03,18280.7629768415,571.2952438068269,1,flow
+B010,R03,18986.23932571845,240.26323014076024,4,"what we are storing in db
+how it looks
+why do we store it in one place
+for what salt"
+B011,R03,13761.725895562045,1526.8827878393286,1,different algorythms cost params
+B012,R03,6645.989142040501,10.0,1,implementations->theo
+B013,R01,4539.164205400808,2842.5394112723225,1,version
+B014,R03,16545.422438365218,3928.2648392934616,1,cost params values
+B015,R01,3251.4432738123223,7152.453651747484,1,migrating to automatic versioning with password hasher
+B016,R01,5925.212431982811,2867.7583941580624,2,"does identityhash adds literal string verion
+rehashis needed from identity hasher"
+B017,R01,45.20497347935634,5070.225455671074,1,fixed time equals
+B018,R01,105.10154522464109,2859.969042806324,1,pbkdf
+B019,R02,7546.802843697145,796.5002769446683,1,PASSWORDHASHER
+B020,R01,5871.1795869456,4211.967522491509,1,rehashneeded
+B021,R02,10719.24357504084,3529.4914046762187,1,about user arg
+B022,R02,10401.886882765986,4860.876719455427,1,"why is user there, what to do?"
+B023,R02,10856.788867485655,5109.111941767008,2,"can pot, create excplicit hasher class that uses the default
+hasher and doesnt need user"

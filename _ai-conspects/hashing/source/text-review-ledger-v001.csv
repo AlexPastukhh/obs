@@ -1,0 +1,81 @@
+﻿label_id,block_id,region_id,status,text,x,y
+T001,B001,R02,pending_transcript,implementing full identity,10386.684300585099,896.8476416459466
+T002,B002,R01,pending_transcript,manual hashing,1581.67457620824,330.52965140135757
+T003,B003,R01,pending_transcript,In ddd style,2713.5659232674216,740.8749596770941
+T004,B004,R01,pending_transcript,Doesnt depends on how long it takes,2150.8124715223967,1403.3734131473693
+T005,B004,R01,pending_transcript,to actually verify password,2150.8124715223967,1428.3734131473693
+T006,B005,R01,pending_transcript,using System.Security.Cryptography;,2721.0332805562375,2962.785155044956
+T007,B005,R01,pending_transcript,,2721.0332805562375,2987.785155044956
+T008,B005,R01,pending_transcript,public static class PasswordKdf,2721.0332805562375,3012.785155044956
+T009,B005,R01,pending_transcript,{,2721.0332805562375,3037.785155044956
+T010,B005,R01,pending_transcript,    // tune this based on perf tests,2721.0332805562375,3062.785155044956
+T011,B005,R01,pending_transcript,    private const int Iterations = 210_000;,2721.0332805562375,3087.785155044956
+T012,B005,R01,pending_transcript,    private const int SaltSize = 16;     // 128-bit,2721.0332805562375,3112.785155044956
+T013,B005,R01,pending_transcript,    private const int KeySize = 32;      // 256-bit,2721.0332805562375,3137.785155044956
+T014,B005,R01,pending_transcript,"    private const string Algo = ""PBKDF2-SHA256"";",2721.0332805562375,3162.785155044956
+T015,B005,R01,pending_transcript,    private const int Version = 1;,2721.0332805562375,3187.785155044956
+T016,B005,R01,pending_transcript,,2721.0332805562375,3212.785155044956
+T017,B005,R01,pending_transcript,    public static string Hash(string password),2721.0332805562375,3237.785155044956
+T018,B005,R01,pending_transcript,    {,2721.0332805562375,3262.785155044956
+T019,B005,R01,pending_transcript,        byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);,2721.0332805562375,3287.785155044956
+T020,B005,R01,pending_transcript,,2721.0332805562375,3312.785155044956
+T021,B005,R01,pending_transcript,        byte[] key = Rfc2898DeriveBytes.Pbkdf2(,2721.0332805562375,3337.785155044956
+T022,B005,R01,pending_transcript,"            password,",2721.0332805562375,3362.785155044956
+T023,B005,R01,pending_transcript,"            salt,",2721.0332805562375,3387.785155044956
+T024,B005,R01,pending_transcript,"            Iterations,",2721.0332805562375,3412.785155044956
+T025,B005,R01,pending_transcript,"            HashAlgorithmName.SHA256,",2721.0332805562375,3437.785155044956
+T026,B005,R01,pending_transcript,            KeySize);,2721.0332805562375,3462.785155044956
+T027,B005,R01,pending_transcript,,2721.0332805562375,3487.785155044956
+T028,B005,R01,pending_transcript,        // Store: v:algo:iter:saltB64:hashB64,2721.0332805562375,3512.785155044956
+T029,B005,R01,pending_transcript,"        return $""{Version}:{Algo}:{Iterations}:{Convert.ToBase64String(salt)}:{Convert.ToBase64String(key)}"";",2721.0332805562375,3537.785155044956
+T030,B005,R01,pending_transcript,    },2721.0332805562375,3562.785155044956
+T031,B005,R01,pending_transcript,,2721.0332805562375,3587.785155044956
+T032,B005,R01,pending_transcript,"    public static bool Verify(string password, string stored)",2721.0332805562375,3612.785155044956
+T033,B005,R01,pending_transcript,    {,2721.0332805562375,3637.785155044956
+T034,B005,R01,pending_transcript,        var parts = stored.Split(':');,2721.0332805562375,3662.785155044956
+T035,B005,R01,pending_transcript,        if (parts.Length != 5) return false;,2721.0332805562375,3687.785155044956
+T036,B005,R01,pending_transcript,,2721.0332805562375,3712.785155044956
+T037,B005,R01,pending_transcript,"        if (!int.TryParse(parts[0], out var version) || version != Version) return false;",2721.0332805562375,3737.785155044956
+T038,B005,R01,pending_transcript,        var algo = parts[1];,2721.0332805562375,3762.785155044956
+T039,B005,R01,pending_transcript,        if (algo != Algo) return false;,2721.0332805562375,3787.785155044956
+T040,B005,R01,pending_transcript,,2721.0332805562375,3812.785155044956
+T041,B005,R01,pending_transcript,"        if (!int.TryParse(parts[2], out var iterations)) return false;",2721.0332805562375,3837.785155044956
+T042,B005,R01,pending_transcript,,2721.0332805562375,3862.785155044956
+T043,B005,R01,pending_transcript,        byte[] salt = Convert.FromBase64String(parts[3]);,2721.0332805562375,3887.785155044956
+T044,B005,R01,pending_transcript,        byte[] expected = Convert.FromBase64String(parts[4]);,2721.0332805562375,3912.785155044956
+T045,B005,R01,pending_transcript,,2721.0332805562375,3937.785155044956
+T046,B005,R01,pending_transcript,        byte[] actual = Rfc2898DeriveBytes.Pbkdf2(,2721.0332805562375,3962.785155044956
+T047,B005,R01,pending_transcript,"            password,",2721.0332805562375,3987.785155044956
+T048,B005,R01,pending_transcript,"            salt,",2721.0332805562375,4012.785155044956
+T049,B005,R01,pending_transcript,"            iterations,",2721.0332805562375,4037.785155044956
+T050,B005,R01,pending_transcript,"            HashAlgorithmName.SHA256,",2721.0332805562375,4062.785155044956
+T051,B005,R01,pending_transcript,            expected.Length);,2721.0332805562375,4087.785155044956
+T052,B005,R01,pending_transcript,,2721.0332805562375,4112.785155044956
+T053,B005,R01,pending_transcript,"        return CryptographicOperations.FixedTimeEquals(actual, expected);",2721.0332805562375,4137.785155044956
+T054,B005,R01,pending_transcript,    },2721.0332805562375,4162.785155044956
+T055,B005,R01,pending_transcript,},2721.0332805562375,4187.785155044956
+T056,B006,R03,pending_transcript,how key stretching works,13967.311732851162,1431.1072618336088
+T057,B007,R03,pending_transcript,"basically kdf is a deterministic functions, it produces same hash on each input",14566.823347277068,1875.1158469854272
+T058,B007,R03,pending_transcript,and when you hash with iterations - you always will get same hash for each input,14566.823347277068,1900.1158469854272
+T059,B007,R03,pending_transcript,", psw -> hash1 -> hash2 -> hash300000",14566.823347277068,1925.1158469854272
+T060,B008,R03,pending_transcript,hasging,16360.445652157718,627.8847038898272
+T061,B009,R03,pending_transcript,flow,18280.7629768415,682.8886488361237
+T062,B010,R03,pending_transcript,what we are storing in db,18986.23932571845,323.6645813980844
+T063,B010,R03,pending_transcript,how it looks,18986.23932571845,441.9979401627328
+T064,B010,R03,pending_transcript,why do we store it in one place,18986.23932571845,560.3312989273811
+T065,B010,R03,pending_transcript,for what salt,18986.23932571845,678.6646576920296
+T066,B011,R03,pending_transcript,different algorythms cost params,13761.725895562045,1655.3913283422582
+T067,B012,R03,pending_transcript,implementations->theo,6645.989142040501,306.4076033528652
+T068,B013,R01,pending_transcript,version,4539.164205400808,2954.132601213729
+T069,B014,R03,pending_transcript,cost params values,16545.422438365218,4039.8582443227583
+T070,B015,R01,pending_transcript,migrating to automatic versioning with password hasher,3251.4432738123223,7261.697651747484
+T071,B016,R01,pending_transcript,does identityhash adds literal string verion,5925.212431982811,2922.967799187359
+T072,B016,R01,pending_transcript,rehashis needed from identity hasher,5925.212431982811,3001.301234245953
+T073,B017,R01,pending_transcript,fixed time equals,45.20497347935634,5180.774656788696
+T074,B018,R01,pending_transcript,pbkdf,105.10154522464109,3030.03468836839
+T075,B019,R02,pending_transcript,PASSWORDHASHER,7546.802843697145,883.9290183648693
+T076,B020,R01,pending_transcript,rehashneeded,5871.1795869456,4346.740963832654
+T077,B021,R02,pending_transcript,about user arg,10719.24357504084,3630.3448875166205
+T078,B022,R02,pending_transcript,"why is user there, what to do?",10401.886882765986,4958.926849754715
+T079,B023,R02,pending_transcript,"can pot, create excplicit hasher class that uses the default",10856.788867485655,5126.731941767008
+T080,B023,R02,pending_transcript,hasher and doesnt need user,10856.788867485655,5151.731941767008

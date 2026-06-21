@@ -1,0 +1,104 @@
+﻿block_id,region_id,x,y,line_count,text
+B001,R03,5430.325112286973,5284.962826438578,1,some problems with implementation
+B002,R03,4476.2508896617255,7767.079290720422,1,"about leaveopen false and ownershitp, disposal responsibility(!!!!!!!!!!!!)"
+B003,R04,3007.7981507468594,12228.20662601465,8,"using System.IO;
+
+public interface IRequestBodyDecompressor
+{
+    string EncodingName { get; }
+
+    Stream WrapDecompressionStream(Stream input);
+}"
+B004,R04,3034.4648174135264,12537.095480995118,44,"using System.IO;
+using System.IO.Compression;
+
+public sealed class GzipRequestBodyDecompressor
+    : IRequestBodyDecompressor
+{
+    public string EncodingName => ""gzip"";
+
+    public Stream WrapDecompressionStream(Stream input)
+    {
+        return new GZipStream(
+            input,
+            CompressionMode.Decompress,
+            leaveOpen: true);
+    }
+}
+
+public sealed class BrotliRequestBodyDecompressor
+    : IRequestBodyDecompressor
+{
+    public string EncodingName => ""br"";
+
+    public Stream WrapDecompressionStream(Stream input)
+    {
+        return new BrotliStream(
+            input,
+            CompressionMode.Decompress,
+            leaveOpen: true);
+    }
+}
+
+public sealed class DeflateRequestBodyDecompressor
+    : IRequestBodyDecompressor
+{
+    public string EncodingName => ""deflate"";
+
+    public Stream WrapDecompressionStream(Stream input)
+    {
+        return new DeflateStream(
+            input,
+            CompressionMode.Decompress,
+            leaveOpen: true);
+    }
+}"
+B005,R04,3019.2580099713505,13681.937505966009,26,"public interface IRequestBodyDecompressorRegistry
+{
+    bool TryGet(string encoding, out IRequestBodyDecompressor decompressor);
+}
+
+public sealed class RequestBodyDecompressorRegistry
+    : IRequestBodyDecompressorRegistry
+{
+    private readonly Dictionary<string, IRequestBodyDecompressor> _map;
+
+    public RequestBodyDecompressorRegistry(
+        IEnumerable<IRequestBodyDecompressor> decompressors)
+    {
+        _map = decompressors.ToDictionary(
+            d => d.EncodingName,
+            d => d,
+            StringComparer.OrdinalIgnoreCase);
+    }
+
+    public bool TryGet(
+        string encoding,
+        out IRequestBodyDecompressor decompressor)
+    {
+        return _map.TryGetValue(encoding, out decompressor!);
+    }
+}"
+B006,R04,5416.893342339121,12180.476357082116,1,middleware
+B007,R04,3778.226350151621,13331.142922023522,1,!!!!!
+B008,R01,7554.253952996161,280.4247639903124,1,theory
+B009,R02,4416.476039584702,115.98018391218739,3,"automatic 
+decompression on
+httpclient"
+B010,R01,167.58759150527567,51.535603834062385,3,"compression 
+with httpclient and on server 
+"
+B011,R03,2747.139300476789,10.0,2,"leaveopen, managing
+the wrapped stream"
+B012,R01,2264.7904649575466,1540.3724533816403,1,compression level
+B013,R02,10.0,800.845261154429,1,wrapping with compression/decompression stream
+B014,R02,4571.335800491011,3087.314526929951,1,decompression
+B015,R03,4153.952938635797,10582.89043801753,1,handling multiple encodings (rarely implemented)
+B016,R01,7493.349657477347,1782.0952970579583,1,when to compress
+B017,R01,2186.9601005925833,3414.0952614541166,2,"ACCEPT ENCODING
+VARY ACCEPT ENCODING"
+B018,R02,2090.7986532117416,4611.345250844506,1,just explicitness
+B019,R02,5755.9877524284575,4987.784582166932,2,"True implementation of 
+decompressoin"
+B020,R01,284.5092764641013,3035.4336079621535,2,"do i always need to conf
+compression provider options"

@@ -1,0 +1,104 @@
+﻿label_id,block_id,region_id,status,text,x,y
+T001,B001,R03,pending_transcript,some problems with implementation,5430.325112286973,5302.582826438578
+T002,B002,R03,pending_transcript,"about leaveopen false and ownershitp, disposal responsibility(!!!!!!!!!!!!)",4476.2508896617255,7895.117885691126
+T003,B003,R04,pending_transcript,using System.IO;,3007.7981507468594,12245.82662601465
+T004,B003,R04,pending_transcript,,3007.7981507468594,12270.82662601465
+T005,B003,R04,pending_transcript,public interface IRequestBodyDecompressor,3007.7981507468594,12295.82662601465
+T006,B003,R04,pending_transcript,{,3007.7981507468594,12320.82662601465
+T007,B003,R04,pending_transcript,    string EncodingName { get; },3007.7981507468594,12345.82662601465
+T008,B003,R04,pending_transcript,,3007.7981507468594,12370.82662601465
+T009,B003,R04,pending_transcript,    Stream WrapDecompressionStream(Stream input);,3007.7981507468594,12395.82662601465
+T010,B003,R04,pending_transcript,},3007.7981507468594,12420.82662601465
+T011,B004,R04,pending_transcript,using System.IO;,3034.4648174135264,12554.715480995119
+T012,B004,R04,pending_transcript,using System.IO.Compression;,3034.4648174135264,12579.715480995119
+T013,B004,R04,pending_transcript,,3034.4648174135264,12604.715480995119
+T014,B004,R04,pending_transcript,public sealed class GzipRequestBodyDecompressor,3034.4648174135264,12629.715480995119
+T015,B004,R04,pending_transcript,    : IRequestBodyDecompressor,3034.4648174135264,12654.715480995119
+T016,B004,R04,pending_transcript,{,3034.4648174135264,12679.715480995119
+T017,B004,R04,pending_transcript,"    public string EncodingName => ""gzip"";",3034.4648174135264,12704.715480995119
+T018,B004,R04,pending_transcript,,3034.4648174135264,12729.715480995119
+T019,B004,R04,pending_transcript,    public Stream WrapDecompressionStream(Stream input),3034.4648174135264,12754.715480995119
+T020,B004,R04,pending_transcript,    {,3034.4648174135264,12779.715480995119
+T021,B004,R04,pending_transcript,        return new GZipStream(,3034.4648174135264,12804.715480995119
+T022,B004,R04,pending_transcript,"            input,",3034.4648174135264,12829.715480995119
+T023,B004,R04,pending_transcript,"            CompressionMode.Decompress,",3034.4648174135264,12854.715480995119
+T024,B004,R04,pending_transcript,            leaveOpen: true);,3034.4648174135264,12879.715480995119
+T025,B004,R04,pending_transcript,    },3034.4648174135264,12904.715480995119
+T026,B004,R04,pending_transcript,},3034.4648174135264,12929.715480995119
+T027,B004,R04,pending_transcript,,3034.4648174135264,12954.715480995119
+T028,B004,R04,pending_transcript,public sealed class BrotliRequestBodyDecompressor,3034.4648174135264,12979.715480995119
+T029,B004,R04,pending_transcript,    : IRequestBodyDecompressor,3034.4648174135264,13004.715480995119
+T030,B004,R04,pending_transcript,{,3034.4648174135264,13029.715480995119
+T031,B004,R04,pending_transcript,"    public string EncodingName => ""br"";",3034.4648174135264,13054.715480995119
+T032,B004,R04,pending_transcript,,3034.4648174135264,13079.715480995119
+T033,B004,R04,pending_transcript,    public Stream WrapDecompressionStream(Stream input),3034.4648174135264,13104.715480995119
+T034,B004,R04,pending_transcript,    {,3034.4648174135264,13129.715480995119
+T035,B004,R04,pending_transcript,        return new BrotliStream(,3034.4648174135264,13154.715480995119
+T036,B004,R04,pending_transcript,"            input,",3034.4648174135264,13179.715480995119
+T037,B004,R04,pending_transcript,"            CompressionMode.Decompress,",3034.4648174135264,13204.715480995119
+T038,B004,R04,pending_transcript,            leaveOpen: true);,3034.4648174135264,13229.715480995119
+T039,B004,R04,pending_transcript,    },3034.4648174135264,13254.715480995119
+T040,B004,R04,pending_transcript,},3034.4648174135264,13279.715480995119
+T041,B004,R04,pending_transcript,,3034.4648174135264,13304.715480995119
+T042,B004,R04,pending_transcript,public sealed class DeflateRequestBodyDecompressor,3034.4648174135264,13329.715480995119
+T043,B004,R04,pending_transcript,    : IRequestBodyDecompressor,3034.4648174135264,13354.715480995119
+T044,B004,R04,pending_transcript,{,3034.4648174135264,13379.715480995119
+T045,B004,R04,pending_transcript,"    public string EncodingName => ""deflate"";",3034.4648174135264,13404.715480995119
+T046,B004,R04,pending_transcript,,3034.4648174135264,13429.715480995119
+T047,B004,R04,pending_transcript,    public Stream WrapDecompressionStream(Stream input),3034.4648174135264,13454.715480995119
+T048,B004,R04,pending_transcript,    {,3034.4648174135264,13479.715480995119
+T049,B004,R04,pending_transcript,        return new DeflateStream(,3034.4648174135264,13504.715480995119
+T050,B004,R04,pending_transcript,"            input,",3034.4648174135264,13529.715480995119
+T051,B004,R04,pending_transcript,"            CompressionMode.Decompress,",3034.4648174135264,13554.715480995119
+T052,B004,R04,pending_transcript,            leaveOpen: true);,3034.4648174135264,13579.715480995117
+T053,B004,R04,pending_transcript,    },3034.4648174135264,13604.715480995117
+T054,B004,R04,pending_transcript,},3034.4648174135264,13629.715480995117
+T055,B005,R04,pending_transcript,public interface IRequestBodyDecompressorRegistry,3019.2580099713505,13699.55750596601
+T056,B005,R04,pending_transcript,{,3019.2580099713505,13724.55750596601
+T057,B005,R04,pending_transcript,"    bool TryGet(string encoding, out IRequestBodyDecompressor decompressor);",3019.2580099713505,13749.55750596601
+T058,B005,R04,pending_transcript,},3019.2580099713505,13774.55750596601
+T059,B005,R04,pending_transcript,,3019.2580099713505,13799.55750596601
+T060,B005,R04,pending_transcript,public sealed class RequestBodyDecompressorRegistry,3019.2580099713505,13824.55750596601
+T061,B005,R04,pending_transcript,    : IRequestBodyDecompressorRegistry,3019.2580099713505,13849.55750596601
+T062,B005,R04,pending_transcript,{,3019.2580099713505,13874.55750596601
+T063,B005,R04,pending_transcript,"    private readonly Dictionary<string, IRequestBodyDecompressor> _map;",3019.2580099713505,13899.55750596601
+T064,B005,R04,pending_transcript,,3019.2580099713505,13924.55750596601
+T065,B005,R04,pending_transcript,    public RequestBodyDecompressorRegistry(,3019.2580099713505,13949.55750596601
+T066,B005,R04,pending_transcript,        IEnumerable<IRequestBodyDecompressor> decompressors),3019.2580099713505,13974.55750596601
+T067,B005,R04,pending_transcript,    {,3019.2580099713505,13999.55750596601
+T068,B005,R04,pending_transcript,        _map = decompressors.ToDictionary(,3019.2580099713505,14024.55750596601
+T069,B005,R04,pending_transcript,"            d => d.EncodingName,",3019.2580099713505,14049.55750596601
+T070,B005,R04,pending_transcript,"            d => d,",3019.2580099713505,14074.55750596601
+T071,B005,R04,pending_transcript,            StringComparer.OrdinalIgnoreCase);,3019.2580099713505,14099.55750596601
+T072,B005,R04,pending_transcript,    },3019.2580099713505,14124.55750596601
+T073,B005,R04,pending_transcript,,3019.2580099713505,14149.55750596601
+T074,B005,R04,pending_transcript,    public bool TryGet(,3019.2580099713505,14174.55750596601
+T075,B005,R04,pending_transcript,"        string encoding,",3019.2580099713505,14199.55750596601
+T076,B005,R04,pending_transcript,        out IRequestBodyDecompressor decompressor),3019.2580099713505,14224.55750596601
+T077,B005,R04,pending_transcript,    {,3019.2580099713505,14249.55750596601
+T078,B005,R04,pending_transcript,"        return _map.TryGetValue(encoding, out decompressor!);",3019.2580099713505,14274.55750596601
+T079,B005,R04,pending_transcript,    },3019.2580099713505,14299.55750596601
+T080,B005,R04,pending_transcript,},3019.2580099713505,14324.55750596601
+T081,B006,R04,pending_transcript,middleware,5416.893342339121,12198.096357082117
+T082,B007,R04,pending_transcript,!!!!!,3778.226350151621,13532.010922023523
+T083,B008,R01,pending_transcript,theory,7554.253952996161,428.66772600203115
+T084,B009,R02,pending_transcript,automatic ,4416.476039584702,264.22314592390615
+T085,B009,R02,pending_transcript,decompression on,4416.476039584702,474.55651994734376
+T086,B009,R02,pending_transcript,httpclient,4416.476039584702,684.8898939707813
+T087,B010,R01,pending_transcript,compression ,167.58759150527567,199.77856584578117
+T088,B010,R01,pending_transcript,with httpclient and on server ,167.58759150527567,410.11193986921876
+T089,B010,R01,pending_transcript,,167.58759150527567,620.4453138926563
+T090,B011,R03,pending_transcript,"leaveopen, managing",2747.139300476789,138.03864874267575
+T091,B011,R03,pending_transcript,the wrapped stream,2747.139300476789,319.7052899780273
+T092,B012,R01,pending_transcript,compression level,2264.7904649575466,1606.521246938406
+T093,B013,R02,pending_transcript,wrapping with compression/decompression stream,10.0,837.982799615968
+T094,B014,R02,pending_transcript,decompression,4571.335800491011,3200.474058586852
+T095,B015,R03,pending_transcript,handling multiple encodings (rarely implemented),4153.952938635797,10666.291800029248
+T096,B016,R01,pending_transcript,when to compress,7493.349657477347,1857.2739995726067
+T097,B017,R01,pending_transcript,ACCEPT ENCODING,2186.9601005925833,3513.158864806981
+T098,B017,R01,pending_transcript,VARY ACCEPT ENCODING,2186.9601005925833,3653.7144881793765
+T099,B018,R02,pending_transcript,just explicitness,2090.7986532117416,4628.965250844506
+T100,B019,R02,pending_transcript,True implementation of ,5755.9877524284575,5074.318383843364
+T101,B019,R02,pending_transcript,decompressoin,5755.9877524284575,5197.096195529562
+T102,B020,R01,pending_transcript,do i always need to conf,284.5092764641013,3123.5336079621534
+T103,B020,R01,pending_transcript,compression provider options,284.5092764641013,3248.5336079621534

@@ -1,20 +1,32 @@
-# MANIFEST — compression,decompression,request,response
+# Manifest — compression,decompression,request,response
 
-Generated: 2026-06-22 00:00:00 UTC
+## Stage
 
-## Included
+`stage0-boundary-review-v001`
 
-- original SVG: `source/compression,decompression,request,response.svg`
-- visual preview: `audit-assets/canvas-preview.png`
-- source and text ledgers: `data/`
-- source review: `00-source-check-and-boundary-review.md`
-- final transcript: `01-final-transcript.md`
-- final coverage audit: `data/final-coverage-audit.*`
+## Source
 
-## Coverage
+- `source/compression,decompression,request,response.svg`
+- `source/source-summary-stage0.json`
 
-```text
-image uses: 0
-text elements: 91
-remaining: 0
-```
+## Extracted structure
+
+- `source/text-blocks-stage0.json`
+- `source/text-blocks-stage0.csv`
+- `source/svg-labels-stage0.json`
+- `source/svg-labels-stage0.csv`
+- `source/region-split-plan-stage0.json`
+- `source/region-split-plan-stage0.csv`
+- `source/text-review-ledger-v001.json`
+- `source/text-review-ledger-v001.csv`
+
+## Audit assets
+
+- `audit-assets/canvas-overview-stage0.png`
+- `audit-assets/region-map-stage0.png`
+
+## Review documents
+
+- `00-source-check-and-boundary-review.md`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `APPLY_ARCHIVE.md`

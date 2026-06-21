@@ -1,0 +1,162 @@
+[
+  {
+    "block_id": "B001",
+    "x": 5430.325112286973,
+    "y": 5284.962826438578,
+    "line_count": 1,
+    "text": "some problems with implementation",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B002",
+    "x": 4476.2508896617255,
+    "y": 7767.079290720422,
+    "line_count": 1,
+    "text": "about leaveopen false and ownershitp, disposal responsibility(!!!!!!!!!!!!)",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B003",
+    "x": 3007.7981507468594,
+    "y": 12228.20662601465,
+    "line_count": 8,
+    "text": "using System.IO;\n\npublic interface IRequestBodyDecompressor\n{\n    string EncodingName { get; }\n\n    Stream WrapDecompressionStream(Stream input);\n}",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B004",
+    "x": 3034.4648174135264,
+    "y": 12537.095480995118,
+    "line_count": 44,
+    "text": "using System.IO;\nusing System.IO.Compression;\n\npublic sealed class GzipRequestBodyDecompressor\n    : IRequestBodyDecompressor\n{\n    public string EncodingName => \"gzip\";\n\n    public Stream WrapDecompressionStream(Stream input)\n    {\n        return new GZipStream(\n            input,\n            CompressionMode.Decompress,\n            leaveOpen: true);\n    }\n}\n\npublic sealed class BrotliRequestBodyDecompressor\n    : IRequestBodyDecompressor\n{\n    public string EncodingName => \"br\";\n\n    public Stream WrapDecompressionStream(Stream input)\n    {\n        return new BrotliStream(\n            input,\n            CompressionMode.Decompress,\n            leaveOpen: true);\n    }\n}\n\npublic sealed class DeflateRequestBodyDecompressor\n    : IRequestBodyDecompressor\n{\n    public string EncodingName => \"deflate\";\n\n    public Stream WrapDecompressionStream(Stream input)\n    {\n        return new DeflateStream(\n            input,\n            CompressionMode.Decompress,\n            leaveOpen: true);\n    }\n}",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B005",
+    "x": 3019.2580099713505,
+    "y": 13681.937505966009,
+    "line_count": 26,
+    "text": "public interface IRequestBodyDecompressorRegistry\n{\n    bool TryGet(string encoding, out IRequestBodyDecompressor decompressor);\n}\n\npublic sealed class RequestBodyDecompressorRegistry\n    : IRequestBodyDecompressorRegistry\n{\n    private readonly Dictionary<string, IRequestBodyDecompressor> _map;\n\n    public RequestBodyDecompressorRegistry(\n        IEnumerable<IRequestBodyDecompressor> decompressors)\n    {\n        _map = decompressors.ToDictionary(\n            d => d.EncodingName,\n            d => d,\n            StringComparer.OrdinalIgnoreCase);\n    }\n\n    public bool TryGet(\n        string encoding,\n        out IRequestBodyDecompressor decompressor)\n    {\n        return _map.TryGetValue(encoding, out decompressor!);\n    }\n}",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B006",
+    "x": 5416.893342339121,
+    "y": 12180.476357082116,
+    "line_count": 1,
+    "text": "middleware",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B007",
+    "x": 3778.226350151621,
+    "y": 13331.142922023522,
+    "line_count": 1,
+    "text": "!!!!!",
+    "region_id": "R04"
+  },
+  {
+    "block_id": "B008",
+    "x": 7554.253952996161,
+    "y": 280.4247639903124,
+    "line_count": 1,
+    "text": "theory",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B009",
+    "x": 4416.476039584702,
+    "y": 115.98018391218739,
+    "line_count": 3,
+    "text": "automatic \ndecompression on\nhttpclient",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B010",
+    "x": 167.58759150527567,
+    "y": 51.535603834062385,
+    "line_count": 3,
+    "text": "compression \nwith httpclient and on server \n",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B011",
+    "x": 2747.139300476789,
+    "y": 10.0,
+    "line_count": 2,
+    "text": "leaveopen, managing\nthe wrapped stream",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B012",
+    "x": 2264.7904649575466,
+    "y": 1540.3724533816403,
+    "line_count": 1,
+    "text": "compression level",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B013",
+    "x": 10.0,
+    "y": 800.845261154429,
+    "line_count": 1,
+    "text": "wrapping with compression/decompression stream",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B014",
+    "x": 4571.335800491011,
+    "y": 3087.314526929951,
+    "line_count": 1,
+    "text": "decompression",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B015",
+    "x": 4153.952938635797,
+    "y": 10582.89043801753,
+    "line_count": 1,
+    "text": "handling multiple encodings (rarely implemented)",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B016",
+    "x": 7493.349657477347,
+    "y": 1782.0952970579583,
+    "line_count": 1,
+    "text": "when to compress",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B017",
+    "x": 2186.9601005925833,
+    "y": 3414.0952614541166,
+    "line_count": 2,
+    "text": "ACCEPT ENCODING\nVARY ACCEPT ENCODING",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B018",
+    "x": 2090.7986532117416,
+    "y": 4611.345250844506,
+    "line_count": 1,
+    "text": "just explicitness",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B019",
+    "x": 5755.9877524284575,
+    "y": 4987.784582166932,
+    "line_count": 2,
+    "text": "True implementation of \ndecompressoin",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B020",
+    "x": 284.5092764641013,
+    "y": 3035.4336079621535,
+    "line_count": 2,
+    "text": "do i always need to conf\ncompression provider options",
+    "region_id": "R01"
+  }
+]

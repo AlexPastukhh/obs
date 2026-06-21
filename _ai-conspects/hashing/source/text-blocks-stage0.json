@@ -1,0 +1,186 @@
+[
+  {
+    "block_id": "B001",
+    "x": 10386.684300585099,
+    "y": 782.1217682735542,
+    "line_count": 1,
+    "text": "implementing full identity",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B002",
+    "x": 1581.67457620824,
+    "y": 144.93235391600592,
+    "line_count": 1,
+    "text": "manual hashing",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B003",
+    "x": 2713.5659232674216,
+    "y": 723.2549596770941,
+    "line_count": 1,
+    "text": "In ddd style",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B004",
+    "x": 2150.8124715223967,
+    "y": 1385.7534131473694,
+    "line_count": 2,
+    "text": "Doesnt depends on how long it takes\nto actually verify password",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B005",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "line_count": 50,
+    "text": "using System.Security.Cryptography;\n\npublic static class PasswordKdf\n{\n    // tune this based on perf tests\n    private const int Iterations = 210_000;\n    private const int SaltSize = 16;     // 128-bit\n    private const int KeySize = 32;      // 256-bit\n    private const string Algo = \"PBKDF2-SHA256\";\n    private const int Version = 1;\n\n    public static string Hash(string password)\n    {\n        byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);\n\n        byte[] key = Rfc2898DeriveBytes.Pbkdf2(\n            password,\n            salt,\n            Iterations,\n            HashAlgorithmName.SHA256,\n            KeySize);\n\n        // Store: v:algo:iter:saltB64:hashB64\n        return $\"{Version}:{Algo}:{Iterations}:{Convert.ToBase64String(salt)}:{Convert.ToBase64String(key)}\";\n    }\n\n    public static bool Verify(string password, string stored)\n    {\n        var parts = stored.Split(':');\n        if (parts.Length != 5) return false;\n\n        if (!int.TryParse(parts[0], out var version) || version != Version) return false;\n        var algo = parts[1];\n        if (algo != Algo) return false;\n\n        if (!int.TryParse(parts[2], out var iterations)) return false;\n\n        byte[] salt = Convert.FromBase64String(parts[3]);\n        byte[] expected = Convert.FromBase64String(parts[4]);\n\n        byte[] actual = Rfc2898DeriveBytes.Pbkdf2(\n            password,\n            salt,\n            iterations,\n            HashAlgorithmName.SHA256,\n            expected.Length);\n\n        return CryptographicOperations.FixedTimeEquals(actual, expected);\n    }\n}",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B006",
+    "x": 13967.311732851162,
+    "y": 1302.5987428394683,
+    "line_count": 1,
+    "text": "how key stretching works",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B007",
+    "x": 14566.823347277068,
+    "y": 1857.4958469854273,
+    "line_count": 3,
+    "text": "basically kdf is a deterministic functions, it produces same hash on each input\nand when you hash with iterations - you always will get same hash for each input\n, psw -> hash1 -> hash2 -> hash300000",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B008",
+    "x": 16360.445652157718,
+    "y": 286.0565963458821,
+    "line_count": 1,
+    "text": "hasging",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B009",
+    "x": 18280.7629768415,
+    "y": 571.2952438068269,
+    "line_count": 1,
+    "text": "flow",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B010",
+    "x": 18986.23932571845,
+    "y": 240.26323014076024,
+    "line_count": 4,
+    "text": "what we are storing in db\nhow it looks\nwhy do we store it in one place\nfor what salt",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B011",
+    "x": 13761.725895562045,
+    "y": 1526.8827878393286,
+    "line_count": 1,
+    "text": "different algorythms cost params",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B012",
+    "x": 6645.989142040501,
+    "y": 10.0,
+    "line_count": 1,
+    "text": "implementations->theo",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B013",
+    "x": 4539.164205400808,
+    "y": 2842.5394112723225,
+    "line_count": 1,
+    "text": "version",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B014",
+    "x": 16545.422438365218,
+    "y": 3928.2648392934616,
+    "line_count": 1,
+    "text": "cost params values",
+    "region_id": "R03"
+  },
+  {
+    "block_id": "B015",
+    "x": 3251.4432738123223,
+    "y": 7152.453651747484,
+    "line_count": 1,
+    "text": "migrating to automatic versioning with password hasher",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B016",
+    "x": 5925.212431982811,
+    "y": 2867.7583941580624,
+    "line_count": 2,
+    "text": "does identityhash adds literal string verion\nrehashis needed from identity hasher",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B017",
+    "x": 45.20497347935634,
+    "y": 5070.225455671074,
+    "line_count": 1,
+    "text": "fixed time equals",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B018",
+    "x": 105.10154522464109,
+    "y": 2859.969042806324,
+    "line_count": 1,
+    "text": "pbkdf",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B019",
+    "x": 7546.802843697145,
+    "y": 796.5002769446683,
+    "line_count": 1,
+    "text": "PASSWORDHASHER",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B020",
+    "x": 5871.1795869456,
+    "y": 4211.967522491509,
+    "line_count": 1,
+    "text": "rehashneeded",
+    "region_id": "R01"
+  },
+  {
+    "block_id": "B021",
+    "x": 10719.24357504084,
+    "y": 3529.4914046762187,
+    "line_count": 1,
+    "text": "about user arg",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B022",
+    "x": 10401.886882765986,
+    "y": 4860.876719455427,
+    "line_count": 1,
+    "text": "why is user there, what to do?",
+    "region_id": "R02"
+  },
+  {
+    "block_id": "B023",
+    "x": 10856.788867485655,
+    "y": 5109.111941767008,
+    "line_count": 2,
+    "text": "can pot, create excplicit hasher class that uses the default\nhasher and doesnt need user",
+    "region_id": "R02"
+  }
+]

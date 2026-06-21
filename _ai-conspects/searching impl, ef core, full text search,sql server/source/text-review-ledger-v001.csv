@@ -1,0 +1,74 @@
+﻿label_id,block_id,region_id,status,text,x,y
+T001,B001,R03,pending_transcript,need to understand all those possibilities of contains,16641.44838019104,1580.4251778856537
+T002,B001,R03,pending_transcript,+ mb freetext has some,16641.44838019104,1605.4251778856537
+T003,B001,R03,pending_transcript,+ what about some possibilies that was discussed at the start of ,16641.44838019104,1630.4251778856537
+T004,B001,R03,pending_transcript,this fulltext shit,16641.44838019104,1655.4251778856537
+T005,B002,R04,pending_transcript,!!!!,14040.067251640332,5766.609144983035
+T006,B003,R04,pending_transcript,normal index vs fulltext index,13069.361666572713,9209.534609323637
+T007,B003,R04,pending_transcript,are both sort/ adds some to allow ,13069.361666572713,9276.554817509006
+T008,B003,R04,pending_transcript,jumbing directly to needed place,13069.361666572713,9343.575025694376
+T009,B004,R02,pending_transcript,"when to use what, summary",7723.485145733986,192.37105671386723
+T010,B005,R01,pending_transcript,LIKE,7290.152015851174,4359.037926831054
+T011,B006,R01,pending_transcript,when substring searching,6824.818733380471,2334.7820303955077
+T012,B006,R01,pending_transcript,"is ok,when not",6824.818733380471,2439.7820303955077
+T013,B007,R01,pending_transcript,Example implementation,5766.485450909768,2329.591312866211
+T014,B007,R01,pending_transcript,with escaping helper,5766.485450909768,2429.591312866211
+T015,B008,R01,pending_transcript,helper to escape user input,5864.262957420185,4094.035689493815
+T016,B009,R01,pending_transcript,LIKE patterns,4752.152107403908,2397.258060913086
+T017,B010,R01,pending_transcript,_ and [aboba],4681.292374180588,2885.5469271219504
+T018,B011,R01,pending_transcript,_ ,4817.292374180588,3777.5469881571066
+T019,B012,R01,pending_transcript,there is no all substring ,3491.485298321877,2276.258030395508
+T020,B012,R01,pending_transcript,values in your indexes,3491.485298321877,2376.258030395508
+T021,B013,R01,pending_transcript,Escaping special ,2444.212682022164,2318.6822913152523
+T022,B013,R01,pending_transcript,characters with !,2444.212682022164,2418.6822913152523
+T023,B014,R01,pending_transcript,"case sensitivity,",1520.7205759023727,2307.3807456725813
+T024,B014,R01,pending_transcript,collation,1520.7205759023727,2407.3807456725813
+T025,B015,R01,pending_transcript,avoid to lower,1567.3872018789352,2992.7140891784406
+T026,B016,R01,pending_transcript,Contains translates to ,302.1173974239482,2312.7775235976183
+T027,B016,R01,pending_transcript,Like,302.1173974239482,2412.7775235976183
+T028,B017,R01,pending_transcript,Like is for full column,452.7840234005107,3291.4442716444933
+T029,B017,R01,pending_transcript,values,452.7840234005107,3391.4442716444933
+T030,B018,R02,pending_transcript,full text search,9156.818885968361,1945.7040340087892
+T031,B019,R02,pending_transcript,search engine,6110.152015851174,6092.3712093017575
+T032,B020,R04,pending_transcript,fulltext vs like,14893.485756085549,7295.704644360351
+T033,B020,R04,pending_transcript,fulltext indexes vs normal ones,14893.485756085549,7454.03801838379
+T034,B021,R02,pending_transcript,useful service,9318.403493772443,624.7816291625977
+T035,B022,R02,pending_transcript,ef core filtering when,8085.784606007375,650.4959257760188
+T036,B023,R02,pending_transcript,db full text dearch when,8033.403711755143,982.876863624791
+T037,B024,R02,pending_transcript,search engine when,8016.260854612286,1254.3054568516327
+T038,B025,R02,pending_transcript,"LIKE, INDEXES,",8151.540272462782,2232.487431436493
+T039,B025,R02,pending_transcript,full text search,8151.540272462782,2337.487446695282
+T040,B026,R02,pending_transcript,"word based searching,",9099.818665212611,2204.795063379745
+T041,B026,R02,pending_transcript,no substring full value shit,9099.818665212611,2309.795078638534
+T042,B027,R03,pending_transcript,create catalog,10333.065513579088,2107.305914954928
+T043,B027,R03,pending_transcript,create fulltext index ,10333.065513579088,2212.305930213717
+T044,B027,R03,pending_transcript,"(only one,can contain mult cols)",10333.065513579088,2317.305945472506
+T045,B028,R03,pending_transcript,rankings,11013.510276762681,3750.639156735527
+T046,B029,R03,pending_transcript,TABLE,11756.843711821275,3754.8337216769337
+T047,B030,R02,pending_transcript,good hierarchy,7120.07021130174,628.1149879272461
+T048,B031,R03,pending_transcript,HOW DOES FULL text search index,12932.860213178206,3822.0717214187175
+T049,B031,R03,pending_transcript,look like,12932.860213178206,3887.0717214187175
+T050,B032,R03,pending_transcript,but its sorted actually,12909.156464263277,4747.99769255587
+T051,B033,R04,pending_transcript,Btree index,12977.727892834704,7214.664301093817
+T052,B034,R04,pending_transcript,Fulltext index,12987.251644229795,7822.283319648504
+T053,B035,R04,pending_transcript,like cases ,13989.156289877115,7330.854748219934
+T054,B036,R04,pending_transcript,fulltext cases,13994.870575591402,7784.1880524889075
+T055,B037,R04,pending_transcript,Substring search,12985.346824196313,8458.473766774621
+T056,B038,R04,pending_transcript,Yes fulltext index is just an index,14256.738707459534,9176.984220554245
+T057,B038,R04,pending_transcript,"but not on full column values, but",14256.738707459534,9241.984220554245
+T058,B038,R04,pending_transcript,on each token of those values,14256.738707459534,9306.984220554245
+T059,B039,R03,pending_transcript,Yes fulltext index is just an index,14180.664630633717,4578.196723954227
+T060,B039,R03,pending_transcript,"but not on full column values, but",14180.664630633717,4643.196723954227
+T061,B039,R03,pending_transcript,on each token of those values,14180.664630633717,4708.196723954227
+T062,B040,R03,pending_transcript,what else fulltext idex can store,15236.42218789579,4678.80280305579
+T063,B041,R03,pending_transcript,KEY INDEX (indexname),12905.881402905634,2535.7028763779217
+T064,B041,R03,pending_transcript,defining the way to id,12905.881402905634,2600.7028763779217
+T065,B041,R03,pending_transcript,the row of the token that ,12905.881402905634,2665.7028763779217
+T066,B041,R03,pending_transcript,we ve found as matched,12905.881402905634,2730.7028763779217
+T067,B042,R03,pending_transcript,EF CORE FUll text search,14391.595514233759,2009.988590663636
+T068,B042,R03,pending_transcript,SQL server,14391.595514233759,2074.988590663636
+T069,B043,R03,pending_transcript,Freetext,18214.071693084203,2181.059856532777
+T070,B044,R03,pending_transcript,Contains,16782.96073117014,2091.5576732238574
+T071,B045,R03,pending_transcript,ROW Locator MUST be unique,14088.738632955858,3528.0838578232347
+T072,B045,R03,pending_transcript,"its not about unique index,index quality etc",14088.738632955858,3593.0838578232347
+T073,B045,R03,pending_transcript,its about the ability to find the exact row,14088.738632955858,3658.0838578232347
