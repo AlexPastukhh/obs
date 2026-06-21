@@ -1,4 +1,4 @@
-# Current Source of Truth - aspnetcore-imemorycache-expiration-invalidation-stampede
+# Current Source of Truth - imemorycache
 
 Generated: 2026-06-22 UTC
 

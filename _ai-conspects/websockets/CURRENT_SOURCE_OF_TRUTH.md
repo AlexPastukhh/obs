@@ -1,4 +1,4 @@
-# Current Source of Truth - aspnetcore-websockets-client-browser-auth-subprotocols
+# Current Source of Truth - websockets
 
 Generated: 2026-06-22 UTC
 

@@ -1,4 +1,4 @@
-# Current Source of Truth - dotnet-systemtextjson-jsonconverter-optional-activator
+# Current Source of Truth - jsonconverter
 
 Generated: 2026-06-22 UTC
 
