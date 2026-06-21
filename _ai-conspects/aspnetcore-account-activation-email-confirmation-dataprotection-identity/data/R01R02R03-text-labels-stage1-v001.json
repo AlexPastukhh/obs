@@ -1,0 +1,74 @@
+[
+  {
+    "x": 6160.915192299338,
+    "y": 290.6561610427484,
+    "text": "when using react, and need to read params/query",
+    "label_id": "T-001",
+    "candidate_region": "R01",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 2044.254640715433,
+    "y": 668.6059767295746,
+    "text": "so we protect, the proteted payload contaions everything for protected to successsfully unprotedt\nso we just need to put protected into unprotect\nwe pass into token the users id so we can fetch the user from db and change account status(before it we check\nif its already confirmed)",
+    "label_id": "T-002",
+    "candidate_region": "R01",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 4115.6774989909845,
+    "y": 1198.7108627420093,
+    "text": "// Program.cs\nbuilder.Services\n.AddIdentity<AppUser, IdentityRole>(options =>\n{\noptions.SignIn.RequireConfirmedEmail = true; // blocks login until confirmed\n})\n.AddEntityFrameworkStores<AppDbContext>()\n.AddDefaultTokenProviders();",
+    "label_id": "T-003",
+    "candidate_region": "R03",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 2268.028584945081,
+    "y": 1253.09707348667,
+    "text": "better to use timelimiteddataprotector\nto avoid manual parsing of expire time",
+    "label_id": "T-004",
+    "candidate_region": "R02",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 10.0,
+    "y": 1354.9280344049912,
+    "text": "using Microsoft.AspNetCore.DataProtection;\nusing Microsoft.AspNetCore.WebUtilities;\nusing System.Text;\npublic static class ActivationTokens\n{\npublic static string Create(IDataProtector protector, string userId, DateTimeOffset expiresUtc)\n{\nvar payload = $\"{userId}|{expiresUtc.UtcDateTime:o}\";\nvar protectedBytes = protector.Protect(Encoding.UTF8.GetBytes(payload));\nreturn WebEncoders.Base64UrlEncode(protectedBytes);\n}\npublic static bool TryValidate(IDataProtector protector, string token, out string userId)\n{\nuserId = \"\";\nbyte[] protectedBytes;\ntry { protectedBytes = WebEncoders.Base64UrlDecode(token); }\ncatch { return false; }\nbyte[] bytes;\ntry { bytes = protector.Unprotect(protectedBytes); }\ncatch { return false; } // tampered / wrong key / etc.\nvar payload = Encoding.UTF8.GetString(bytes);\nvar parts = payload.Split('|');\nif (parts.Length != 2) return false;\nuserId = parts[0];\nif (!DateTimeOffset.TryParse(parts[1], out var exp)) return false;\nreturn exp > DateTimeOffset.UtcNow;\n}\n}",
+    "label_id": "T-005",
+    "candidate_region": "R02",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 4272.582137693016,
+    "y": 1519.1969332823355,
+    "text": "using Microsoft.AspNetCore.Identity;\nbuilder.Services.Configure<DataProtectionTokenProviderOptions>(o =>\n{\no.TokenLifespan = TimeSpan.FromHours(24);\n});",
+    "label_id": "T-006",
+    "candidate_region": "R03",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 4201.919444294226,
+    "y": 1783.4866785724735,
+    "text": "using Microsoft.AspNetCore.Identity;\nusing Microsoft.AspNetCore.WebUtilities;\nusing System.Text;\napp.MapPost(\"/register\", async (\nUserManager<AppUser> userManager,\nIEmailSender emailSender,\nHttpContext http,\nRegisterRequest req) =>\n{\nvar user = new AppUser { UserName = req.Email, Email = req.Email };\nvar result = await userManager.CreateAsync(user, req.Password);\nif (!result.Succeeded) return Results.BadRequest(result.Errors);\nvar token = await userManager.GenerateEmailConfirmationTokenAsync(user);\n// Token contains characters that should be URL-encoded safely:\nvar tokenEncoded = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));\nvar link = $\"{http.Request.Scheme}://{http.Request.Host}/confirm-email?userId={user.Id}&token={tokenEncoded}\";\nawait emailSender.SendEmailAsync(req.Email, \"Confirm your account\",\n$\"Click to confirm: {link}\");\nreturn Results.Ok(\"Check your email to activate your account.\");\n});\nrecord RegisterRequest(string Email, string Password);",
+    "label_id": "T-007",
+    "candidate_region": "R03",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 1365.614050132699,
+    "y": 2433.3573051372514,
+    "text": "app.MapPost(\"/register-custom\", async (AppDbContext db, IDataProtector protector, HttpContext http, RegisterRequest req) =>\n{\nvar user = new UserAccount { Id = Guid.NewGuid().ToString(), Email = req.Email, EmailConfirmed = false };\n// set PasswordHash using PasswordHasher or your KDF...\ndb.Users.Add(user);\nawait db.SaveChangesAsync();\nvar token = ActivationTokens.Create(protector, user.Id, DateTimeOffset.UtcNow.AddHours(24));\nvar link = $\"{http.Request.Scheme}://{http.Request.Host}/activate?token={token}\";\n// send email with link...\nreturn Results.Ok(\"Check your email to activate.\");\n});",
+    "label_id": "T-008",
+    "candidate_region": "R02",
+    "stage1_status": "closed-by-stage1-final"
+  },
+  {
+    "x": 4189.122223489809,
+    "y": 2609.1834127762413,
+    "text": "using Microsoft.AspNetCore.Identity;\nusing Microsoft.AspNetCore.WebUtilities;\nusing System.Text;\napp.MapGet(\"/confirm-email\", async (\nUserManager<AppUser> userManager,\nstring userId,\nstring token) =>\n{\nvar user = await userManager.FindByIdAsync(userId);\nif (user is null) return Results.NotFound();\n// Decode from Base64Url back into the original token string\nvar tokenDecoded = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));\nvar result = await userManager.ConfirmEmailAsync(user, tokenDecoded);\nif (!result.Succeeded) return Results.BadRequest(result.Errors);\nreturn Results.Ok(\"Email confirmed. You can log in now.\");\n});",
+    "label_id": "T-009",
+    "candidate_region": "R03",
+    "stage1_status": "closed-by-stage1-final"
+  }
+]

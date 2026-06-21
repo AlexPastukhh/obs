@@ -1,0 +1,4 @@
+region,name,processed_image_uses,processed_text_labels,decision,remaining_after_pass,meaning
+R01,attacker-capabilities-cors-boundaries,7,4,included in combined final pass,0,"Attacker capabilities, classic form/img requests, what CORS blocks, what it does not block, reading vs sending requests."
+R02,simple-requests-preflight-why-cors-is-not-enough,8,1,included in combined final pass,0,"Simple requests, preflight behavior, cookie-authenticated cross-site POSTs, why CORS is not CSRF protection, server-side antiforgery validation."
+R03,xhr-fetch-practical-defense,5,0,included in combined final pass,0,"XHR vs Fetch, modern API request patterns, failed preflight examples, practical CSRF/CORS defense checklist."

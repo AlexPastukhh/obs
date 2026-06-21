@@ -1,0 +1,29 @@
+[
+  {
+    "region": "R01",
+    "name": "attacker-capabilities-cors-boundaries",
+    "processed_image_uses": 7,
+    "processed_text_labels": 4,
+    "decision": "included in combined final pass",
+    "remaining_after_pass": 0,
+    "meaning": "Attacker capabilities, classic form/img requests, what CORS blocks, what it does not block, reading vs sending requests."
+  },
+  {
+    "region": "R02",
+    "name": "simple-requests-preflight-why-cors-is-not-enough",
+    "processed_image_uses": 8,
+    "processed_text_labels": 1,
+    "decision": "included in combined final pass",
+    "remaining_after_pass": 0,
+    "meaning": "Simple requests, preflight behavior, cookie-authenticated cross-site POSTs, why CORS is not CSRF protection, server-side antiforgery validation."
+  },
+  {
+    "region": "R03",
+    "name": "xhr-fetch-practical-defense",
+    "processed_image_uses": 5,
+    "processed_text_labels": 0,
+    "decision": "included in combined final pass",
+    "remaining_after_pass": 0,
+    "meaning": "XHR vs Fetch, modern API request patterns, failed preflight examples, practical CSRF/CORS defense checklist."
+  }
+]

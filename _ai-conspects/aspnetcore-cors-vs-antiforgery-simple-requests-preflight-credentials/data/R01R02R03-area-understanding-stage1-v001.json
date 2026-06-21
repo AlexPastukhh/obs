@@ -1,0 +1,24 @@
+{
+  "conspect": "aspnetcore-cors-vs-antiforgery-simple-requests-preflight-credentials",
+  "stage": "stage1-final-v001",
+  "generated": "2026-06-22 00:00:00 UTC",
+  "global_summary": "Explains why CORS and antiforgery solve different browser-security problems: CORS controls cross-origin JavaScript access and some non-simple request delivery, while antiforgery protects cookie-authenticated state-changing endpoints from cross-site request forgery.",
+  "regions": [
+    {
+      "id": "R01",
+      "title": "Attacker capabilities and CORS boundaries",
+      "summary": "Classic HTML mechanisms such as forms, images and navigation can send cross-origin requests even when JavaScript cannot read responses. CORS is primarily an origin-based browser access-control mechanism; it does not authenticate a request and is not a complete CSRF defense."
+    },
+    {
+      "id": "R02",
+      "title": "Simple requests, preflight and why CORS is not enough",
+      "summary": "Simple requests can be sent without preflight. A cookie-authenticated cross-site form POST may therefore reach the server and change state. Non-simple requests trigger OPTIONS preflight; if preflight fails the browser does not send the actual request, but this behavior must not be treated as antiforgery validation."
+    },
+    {
+      "id": "R03",
+      "title": "XHR/fetch behavior and practical defense",
+      "summary": "XHR and fetch expose CORS failures to JavaScript and support modern API request shapes. Practical defense combines same-site cookie settings, server-side antiforgery tokens for cookie-authenticated unsafe methods, careful CORS allowlists, explicit credentials policy and defense-in-depth headers/origin checks."
+    }
+  ],
+  "reading_quality": "High conceptual readability. Screenshots and code examples were readable enough for semantic transcription; preserved PNGs remain source of truth for exact punctuation and code formatting."
+}

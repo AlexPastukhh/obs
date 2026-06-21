@@ -1,21 +1,15 @@
-# MANIFEST - ASP.NET Core account activation / email confirmation / Data Protection / Identity stage0 v001
+# MANIFEST — ASP.NET Core account activation / email confirmation / Data Protection / Identity final coverage v001
 
-This folder is one member of combined batch `batch-auth-cors-antiforgery-basic-auth-account-activation-stage0-v001`.
+Archive type: **superseding stage0 + stage1 final coverage**  
+Generated: 2026-06-22 00:00:00 UTC
 
-## Included
+## Done
 
-- preserved source SVG
-- extracted embedded images
-- image-use and text-label inventories
-- duplicate-use audit
-- candidate region split
-- contact sheets and canvas map
-- review ledger
+- Stage0 source inventory preserved.
+- R01/R02/R03 final transcript added.
+- 22 image uses and 9 grouped text blocks closed.
+- Remaining coverage: 0.
 
-## Counts
+## Main final file
 
-```text
-image uses: 22
-text labels: 9
-unique images: 21
-```
+`regions/R01R02R03-account-activation-final.md`

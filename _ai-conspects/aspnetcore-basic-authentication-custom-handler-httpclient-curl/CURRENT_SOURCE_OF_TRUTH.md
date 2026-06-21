@@ -1,10 +1,15 @@
-# Current Source of Truth - aspnetcore-basic-authentication-custom-handler-httpclient-curl
+# Current Source of Truth — aspnetcore-basic-authentication-custom-handler-httpclient-curl
+
+Generated: 2026-06-22 00:00:00 UTC
 
 ## Current status
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 basic-auth-theory-scripts-clients: transcript v001 done
+R02 aspnetcore-custom-handler-scheme-challenge: transcript v001 done
+R03 automatic-vs-manual-httpclient-project-endpoints: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -12,12 +17,11 @@ Normal transcript regions: not started
 ```text
 unique embedded images: 24
 image uses on canvas: 24
-text labels parsed: 6
-duplicate image uses by content: 0
+grouped text blocks: 6
+remaining unclosed image uses: 0
+remaining unclosed text blocks: 0
 ```
 
-## Candidate next step
+## Next
 
-```text
-Process all candidate regions in the next combined three-conspect transcript archive if boundary review remains coherent.
-```
+No normal transcript regions remain; only later correction/polish or repeat-material work.

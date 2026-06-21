@@ -1,21 +1,15 @@
-# MANIFEST - ASP.NET Core Basic authentication / custom handler / HttpClient / curl stage0 v001
+# MANIFEST — ASP.NET Core Basic authentication / custom handler / HttpClient / curl final coverage v001
 
-This folder is one member of combined batch `batch-auth-cors-antiforgery-basic-auth-account-activation-stage0-v001`.
+Archive type: **superseding stage0 + stage1 final coverage**  
+Generated: 2026-06-22 00:00:00 UTC
 
-## Included
+## Done
 
-- preserved source SVG
-- extracted embedded images
-- image-use and text-label inventories
-- duplicate-use audit
-- candidate region split
-- contact sheets and canvas map
-- review ledger
+- Stage0 source inventory preserved.
+- R01/R02/R03 final transcript added.
+- 24 image uses and 6 grouped text blocks closed.
+- Remaining coverage: 0.
 
-## Counts
+## Main final file
 
-```text
-image uses: 24
-text labels: 6
-unique images: 24
-```
+`regions/R01R02R03-basic-authentication-final.md`

@@ -1,0 +1,24 @@
+{
+  "conspect": "aspnetcore-basic-authentication-custom-handler-httpclient-curl",
+  "stage": "stage1-final-v001",
+  "generated": "2026-06-22 00:00:00 UTC",
+  "global_summary": "Covers HTTP Basic authentication from wire format through client examples and an ASP.NET Core custom authentication handler, including scheme registration, credential validation, claims creation, challenge behavior and automatic versus manual client headers.",
+  "regions": [
+    {
+      "id": "R01",
+      "title": "Basic authentication theory and clients",
+      "summary": "Basic authentication sends an Authorization header containing the Basic scheme and Base64-encoded username:password credentials. Base64 is encoding, not encryption; TLS is mandatory. It is useful for scripts, internal tools, simple machine clients and controlled integrations, but generally weaker than token-based or federated approaches for modern public applications."
+    },
+    {
+      "id": "R02",
+      "title": "ASP.NET Core custom handler and challenge",
+      "summary": "A custom AuthenticationHandler reads Authorization, checks the Basic scheme, decodes credentials, validates them, creates claims and a ClaimsPrincipal, then returns AuthenticateResult.Success. Missing credentials can return NoResult; malformed or invalid credentials return Fail. Challenge behavior returns 401 and should include WWW-Authenticate: Basic with an optional realm."
+    },
+    {
+      "id": "R03",
+      "title": "Automatic vs manual HttpClient usage and protected endpoints",
+      "summary": "Clients can set Authorization manually with AuthenticationHeaderValue(\"Basic\", base64) or use handler credential support where appropriate. Curl and PowerShell provide convenience switches. Protected endpoints use authentication scheme registration plus authorization metadata such as RequireAuthorization or Authorize attributes."
+    }
+  ],
+  "reading_quality": "High readability for theory and handler flow. Exact code punctuation is retained in source PNGs; transcript focuses on reliable semantics and API relationships."
+}

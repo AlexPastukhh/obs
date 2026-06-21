@@ -1,0 +1,12 @@
+x,y,text,label_id,candidate_region,stage1_status
+1848.2817352093261,10.0,"when cors can reject request
+so server state wont be modified",T-001,R01,closed-by-stage1-final
+10.0,238.5653516964844,"what attacker can do with some classic form/img
+that cors dont handle",T-002,R01,closed-by-stage1-final
+2013.7473584968077,269.37169094643014,"(when there is no preflight because
+of simple request
+authenticated with cookies request may
+bypass preflight, but only if it doesnt have json
+body because json is not a simple content type)",T-003,R01,closed-by-stage1-final
+3479.493127170231,405.20506624304926,why cors is not enough,T-004,R01,closed-by-stage1-final
+2129.3859605370553,1078.7308839728348,BUT,T-005,R02,closed-by-stage1-final
