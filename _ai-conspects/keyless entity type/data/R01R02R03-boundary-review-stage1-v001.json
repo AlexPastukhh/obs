@@ -1,0 +1,29 @@
+[
+  {
+    "region": "R01",
+    "name": "keyless-overview-and-definition",
+    "image_uses": 2,
+    "sources": "S-001, S-002",
+    "decision": "included in final combined transcript",
+    "reason": "top road: keyless entity type overview, definition and basic EF Core setup",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R02",
+    "name": "raw-sql-query-model-mapping-options",
+    "image_uses": 8,
+    "sources": "S-006, S-003, S-009, S-007, S-010, S-004, S-008, S-005",
+    "decision": "included in final combined transcript",
+    "reason": "middle road: easy raw SQL retrieval versus mapped query-model approach, ToSqlQuery and model configuration",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R03",
+    "name": "query-result-vs-model-dbset-and-immutability",
+    "image_uses": 6,
+    "sources": "S-013, S-014, S-011, S-012, S-015, S-016",
+    "decision": "included in final combined transcript",
+    "reason": "lower road: model vs query result differences, DbSet exposure, immutable/read-only result types and tradeoffs",
+    "remaining_after_pass": 0
+  }
+]

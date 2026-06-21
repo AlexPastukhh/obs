@@ -1,20 +1,26 @@
-# MANIFEST - keyless entity type stage0 boundary review v001
+# MANIFEST — keyless entity type final coverage transcript v001
 
-Target branch: `ai-processed-conspects-text`
-
-## Source
-
-```text
-keyless entity type.svg
-```
+Archive type: **stage1 final coverage, three-conspect combined delivery**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-22 01:10:00 UTC
 
 ## Counts
 
 ```text
-unique embedded images: 16
-image uses on canvas: 16
-text labels parsed: 11
-duplicate image uses: 0
+image uses: 16
+text labels: 11
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
-This folder is one member of the combined three-conspect stage0 archive.
+## Delivery batch
+
+This folder is delivered in one archive together with:
+
+```text
+_ai-conspects/equality
+_ai-conspects/ref in out
+_ai-conspects/keyless entity type
+```
+
+Archive: `ai-conspects-equality-ref-in-out-keyless-entity-type-stage1-final-coverage-v001.zip`

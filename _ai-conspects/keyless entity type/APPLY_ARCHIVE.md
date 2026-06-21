@@ -1,12 +1,12 @@
-# APPLY ARCHIVE - equality + ref in out + keyless entity type stage0 v001
+# APPLY ARCHIVE — equality / ref in out / keyless entity type final coverage v001
 
-This single archive applies all three conspects in one step.
+All three conspects are delivered together in one archive.
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-equality-ref-in-out-keyless-entity-type-stage0-boundary-review-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-equality-ref-in-out-keyless-entity-type-stage1-final-coverage-v001.zip"
 $target1 = "_ai-conspects\equality"
 $target2 = "_ai-conspects\ref in out"
 $target3 = "_ai-conspects\keyless entity type"
@@ -21,9 +21,16 @@ git add -A -- $target1 $target2 $target3
 git status --short -- $target1 $target2 $target3
 ```
 
-Commit after review:
+## Commit after review
 
 ```powershell
-git commit -m "Start equality ref in out and keyless entity type conspect boundary reviews"
+git commit -m "Complete equality ref in out and keyless entity type final coverage"
 git push origin ai-processed-conspects-text
+```
+
+## Rollback only this batch
+
+```powershell
+git restore --staged -- $target1 $target2 $target3
+git restore -- $target1 $target2 $target3
 ```

@@ -1,0 +1,5 @@
+region,name,image_uses,sources,decision,reason,remaining_after_pass
+R01,tostring-and-operators,3,"S-010, S-011, S-012",included in final combined transcript,"left road: ToString, operator overloads and equality entry examples",0
+R02,equals-object-iequatable-core,7,"S-001, S-002, S-003, S-004, S-005, S-008, S-009",included in final combined transcript,"core road: equality, Equals(object?), IEquatable<T>.Equals and related implementation flow",0
+R03,gethashcode-contract,2,"S-006, S-007",included in final combined transcript,middle-right road: GetHashCode contract and hash-based collection implications,0
+R04,getequalitycomponents-pattern,6,"S-013, S-014, S-015, S-016, S-017, S-018",included in final combined transcript,right road: GetEqualityComponents pattern and composed value equality,0
