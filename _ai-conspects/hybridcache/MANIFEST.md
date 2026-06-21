@@ -1,22 +1,28 @@
-# MANIFEST - HybridCache P02 Transcript v001
+# MANIFEST - HybridCache Final Coverage Audit v001
 
-Archive type: **stage-2 verified combined transcript**  
+Archive type: **stage-3 final coverage audit**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-21 14:45:12 UTC
+Generated: 2026-06-21 14:48:11 UTC
 
-## Done
-
-- R03 transcript created: 5 image uses.
-- R04 transcript created/closed: 0 image uses.
-- Total processed image uses: 21 / 21.
-- Unprocessed image uses: 0.
-
-## Included path
+## Result
 
 ```text
-_ai-conspects/hybridcache
+verdict: coverage-complete
+total: 21
+covered: 21
+problems: 0
+```
+
+## Files added
+
+```text
+_ai-conspects/hybridcache/03-stage3-final-coverage-audit.md
+_ai-conspects/hybridcache/data/final-coverage-audit-stage3-v001.csv
+_ai-conspects/hybridcache/data/final-coverage-audit-stage3-v001.json
+_ai-conspects/hybridcache/data/final-coverage-summary-stage3-v001.json
+_ai-conspects/hybridcache/audit-assets/contact-sheet-final-coverage-summary.png
 ```
 
 ## Next
 
-Stage3 final coverage audit.
+No next transcript block.

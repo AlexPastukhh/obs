@@ -1,15 +1,15 @@
-# Apply archive: SQL Server MARS P02 transcript v001
+# Apply archive: SQL Server MARS final coverage audit v001
 
 This conspect is packaged inside the combined archive:
 
 ```text
-ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage2-p02-transcripts-v001.zip
+ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage3-final-coverage-audit-v001.zip
 ```
 
 Use the top-level apply instructions:
 
 ```text
-_ai-conspects/APPLY_LOCK_HYBRID_MARS_STAGE2_P02_TRANSCRIPTS.md
+_ai-conspects/APPLY_LOCK_HYBRID_MARS_STAGE3_FINAL_COVERAGE_AUDIT.md
 ```
 
 ## Included path

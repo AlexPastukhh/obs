@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-21 14:48:11 UTC",
+  "audit_version": "stage3-final-coverage-audit-v001",
+  "conspect": "sql-server-mars",
+  "title": "SQL Server MARS",
+  "verdict": "coverage-complete",
+  "expected": {
+    "R01": 8,
+    "R02": 8,
+    "R03": 8,
+    "R04": 2,
+    "total": 26
+  },
+  "total_image_uses": 26,
+  "covered_image_uses": 26,
+  "problem_image_uses": 0,
+  "duplicate_source_ids": [],
+  "region_counts": {
+    "R01": 8,
+    "R02": 8,
+    "R03": 8,
+    "R04": 2
+  },
+  "coverage_status_counts": {
+    "processed-in-r01-v001": 8,
+    "processed-in-r02-v001": 8,
+    "processed-in-r03-v001": 8,
+    "processed-in-r04-v001": 2
+  },
+  "transcript_files": [
+    "regions/R01-mars-purpose-connection-reader-command-basics.md",
+    "regions/R02-multiple-readers-batches-transactions-and-interleaving.md",
+    "regions/R03-yield-points-savepoints-session-cache-and-mars-constraints.md",
+    "regions/R04-performance-tradeoffs-thread-sharing-and-alternatives.md"
+  ],
+  "problems": []
+}
