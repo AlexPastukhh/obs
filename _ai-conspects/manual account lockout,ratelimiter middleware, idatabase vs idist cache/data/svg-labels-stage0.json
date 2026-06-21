@@ -1,0 +1,338 @@
+[
+  {
+    "idx": 1,
+    "text": "how retry after works for rate limiting",
+    "x": 10.0,
+    "y": 67.2392277580377,
+    "font_size": "64.97074660390204px"
+  },
+  {
+    "idx": 2,
+    "text": "manual account lockout + retry after manually",
+    "x": 1366.5259521725256,
+    "y": 71.39979073610306,
+    "font_size": "65.33331298828122px"
+  },
+  {
+    "idx": 3,
+    "text": "rate limiting + lockout patterns",
+    "x": 7858.271107121404,
+    "y": 139.67144400398624,
+    "font_size": "101.60205675934124px"
+  },
+  {
+    "idx": 4,
+    "text": "its just for client to show ui and not allow normal users to do requests",
+    "x": 391.61078147145236,
+    "y": 153.8650263084138,
+    "font_size": "20px"
+  },
+  {
+    "idx": 5,
+    "text": "you should rate limit on server to avoid problems",
+    "x": 391.61078147145236,
+    "y": 178.8650263084138,
+    "font_size": "20px"
+  },
+  {
+    "idx": 6,
+    "text": "and examples",
+    "x": 7858.271107121404,
+    "y": 266.6740149531628,
+    "font_size": "101.60205675934124px"
+  },
+  {
+    "idx": 7,
+    "text": "lockout with identity",
+    "x": 10377.898843353898,
+    "y": 288.0041942379968,
+    "font_size": "113.3333740234375px"
+  },
+  {
+    "idx": 8,
+    "text": "limiter types",
+    "x": 3999.529491059371,
+    "y": 315.44946403743484,
+    "font_size": "136.84838867187494px"
+  },
+  {
+    "idx": 9,
+    "text": "rate limiter middleware",
+    "x": 4979.303763858723,
+    "y": 317.7026800096136,
+    "font_size": "101.26978120349811px"
+  },
+  {
+    "idx": 10,
+    "text": "pattern 2, add ratelimiter for all requests and cache based service to",
+    "x": 7709.00397377631,
+    "y": 721.238741498323,
+    "font_size": "40.800000000000004px"
+  },
+  {
+    "idx": 11,
+    "text": "score failed attempts",
+    "x": 7709.00397377631,
+    "y": 772.238741498323,
+    "font_size": "40.800000000000004px"
+  },
+  {
+    "idx": 12,
+    "text": "using custom middleware (bad)",
+    "x": 6684.118319706163,
+    "y": 1528.6153904468017,
+    "font_size": "52.9696821732941px"
+  },
+  {
+    "idx": 13,
+    "text": "it seems great for ip only throttles but to create ip + email",
+    "x": 6688.889552751707,
+    "y": 1577.276818293457,
+    "font_size": "20px"
+  },
+  {
+    "idx": 14,
+    "text": "we need to read the request which is stream and it can cause issues",
+    "x": 6688.889552751707,
+    "y": 1602.276818293457,
+    "font_size": "20px"
+  },
+  {
+    "idx": 15,
+    "text": "we will need some manual buffering and at hot paths better to avoid it",
+    "x": 6688.889552751707,
+    "y": 1627.276818293457,
+    "font_size": "20px"
+  },
+  {
+    "idx": 16,
+    "text": "with action service we can grab email from the deserialized payload easily",
+    "x": 6688.889552751707,
+    "y": 1652.276818293457,
+    "font_size": "20px"
+  },
+  {
+    "idx": 17,
+    "text": "combined key for rate limiting",
+    "x": 5231.129707353474,
+    "y": 1995.6141742654788,
+    "font_size": "43.11110723586364px"
+  },
+  {
+    "idx": 18,
+    "text": "attacker changes ips",
+    "x": 5231.129707353474,
+    "y": 2049.5030583103085,
+    "font_size": "43.11110723586364px"
+  },
+  {
+    "idx": 19,
+    "text": "locking other people's accounts",
+    "x": 5231.129707353474,
+    "y": 2103.391942355138,
+    "font_size": "43.11110723586364px"
+  },
+  {
+    "idx": 20,
+    "text": "context.lease",
+    "x": 2905.641657885938,
+    "y": 2360.309302639301,
+    "font_size": "112px"
+  },
+  {
+    "idx": 21,
+    "text": "new key - set expiration",
+    "x": 7595.440183164493,
+    "y": 2420.9801053085603,
+    "font_size": "20px"
+  },
+  {
+    "idx": 22,
+    "text": "for it only when count is 1",
+    "x": 7595.440183164493,
+    "y": 2445.9801053085603,
+    "font_size": "20px"
+  },
+  {
+    "idx": 23,
+    "text": "redis through idistributed cache vs",
+    "x": 10002.731235339346,
+    "y": 2919.8875966729606,
+    "font_size": "142.60444146164812px"
+  },
+  {
+    "idx": 24,
+    "text": "multiplexer + idatabase",
+    "x": 10002.731235339346,
+    "y": 3098.1431485000207,
+    "font_size": "142.60444146164812px"
+  },
+  {
+    "idx": 25,
+    "text": "retry after from lease by limiter type",
+    "x": 2984.006672974664,
+    "y": 3611.915537077601,
+    "font_size": "41.333356584823925px"
+  },
+  {
+    "idx": 26,
+    "text": "multiplexer",
+    "x": 9021.567458984355,
+    "y": 3882.569300819298,
+    "font_size": "57.92594401041567px"
+  },
+  {
+    "idx": 27,
+    "text": "so the most secure approaches",
+    "x": 6850.2363878400065,
+    "y": 4784.698285699006,
+    "font_size": "68px"
+  },
+  {
+    "idx": 28,
+    "text": "per ip attempts",
+    "x": 7487.680856020344,
+    "y": 4886.688087212678,
+    "font_size": "20px"
+  },
+  {
+    "idx": 29,
+    "text": "global limiter",
+    "x": 5193.066224574866,
+    "y": 5265.9881437198665,
+    "font_size": "62.074083116318796px"
+  },
+  {
+    "idx": 30,
+    "text": "multiple limiters for one policy",
+    "x": 5193.066224574866,
+    "y": 5343.580747615265,
+    "font_size": "62.074083116318796px"
+  },
+  {
+    "idx": 31,
+    "text": "applying limiters via attributes",
+    "x": 5193.066224574866,
+    "y": 5421.173351510663,
+    "font_size": "62.074083116318796px"
+  },
+  {
+    "idx": 32,
+    "text": "what lease CAN include, how to discover it",
+    "x": 2912.654195035395,
+    "y": 5613.9021178101375,
+    "font_size": "55.2px"
+  },
+  {
+    "idx": 33,
+    "text": "atomic counters, race conditions with idatabase",
+    "x": 8719.292158456756,
+    "y": 6105.046980423956,
+    "font_size": "50.66665649414062px"
+  },
+  {
+    "idx": 34,
+    "text": "and idistributedcache",
+    "x": 8719.292158456756,
+    "y": 6168.380301041631,
+    "font_size": "50.66665649414062px"
+  },
+  {
+    "idx": 35,
+    "text": "this is about data being lost,",
+    "x": 8900.210359525363,
+    "y": 6232.330057495695,
+    "font_size": "20px"
+  },
+  {
+    "idx": 36,
+    "text": "multiple concurrent requests",
+    "x": 8900.210359525363,
+    "y": 6257.330057495695,
+    "font_size": "20px"
+  },
+  {
+    "idx": 37,
+    "text": "one gets  5",
+    "x": 8900.210359525363,
+    "y": 6282.330057495695,
+    "font_size": "20px"
+  },
+  {
+    "idx": 38,
+    "text": "another sets  5 +1",
+    "x": 8900.210359525363,
+    "y": 6307.330057495695,
+    "font_size": "20px"
+  },
+  {
+    "idx": 39,
+    "text": "the first sets 5 + 1",
+    "x": 8900.210359525363,
+    "y": 6332.330057495695,
+    "font_size": "20px"
+  },
+  {
+    "idx": 40,
+    "text": "we have 6 instead of 7",
+    "x": 8900.210359525363,
+    "y": 6357.330057495695,
+    "font_size": "20px"
+  },
+  {
+    "idx": 41,
+    "text": "stampede protection,",
+    "x": 10231.94673384869,
+    "y": 7672.074007963904,
+    "font_size": "64px"
+  },
+  {
+    "idx": 42,
+    "text": "1 single instance",
+    "x": 10231.94673384869,
+    "y": 7752.074007963904,
+    "font_size": "64px"
+  },
+  {
+    "idx": 43,
+    "text": "2 multiple with redis lock",
+    "x": 10231.94673384869,
+    "y": 7832.074007963904,
+    "font_size": "64px"
+  },
+  {
+    "idx": 44,
+    "text": "closer to end about redis lock and redlock for stronger guarantee",
+    "x": 10317.65239370126,
+    "y": 8849.138879169339,
+    "font_size": "20px"
+  },
+  {
+    "idx": 45,
+    "text": "some lua script shit, not interested rught now",
+    "x": 10317.65239370126,
+    "y": 8874.138879169339,
+    "font_size": "20px"
+  },
+  {
+    "idx": 46,
+    "text": "where does ratelimiter stores attempt counts",
+    "x": 5740.82070975257,
+    "y": 9699.52999600646,
+    "font_size": "67.38654729769914px"
+  },
+  {
+    "idx": 47,
+    "text": "how ratelimiter behaves with multiple instances",
+    "x": 5740.82070975257,
+    "y": 9783.763180128584,
+    "font_size": "67.38654729769914px"
+  },
+  {
+    "idx": 48,
+    "text": "accessing redis in ratelimiter",
+    "x": 3883.917332004747,
+    "y": 10300.235325114969,
+    "font_size": "64.00000000000001px"
+  }
+]

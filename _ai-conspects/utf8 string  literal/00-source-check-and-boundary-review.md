@@ -1,0 +1,37 @@
+# Stage0 - utf8 string  literal source check and boundary review v001
+
+Source SVG: `utf8 string  literal.svg`  
+Conspect folder: `_ai-conspects/utf8 string  literal`
+
+## Counts
+
+```text
+unique embedded images: 4
+image uses on canvas: 4
+text labels parsed: 0
+duplicate image uses by content: 0
+```
+
+## Important rule
+
+Inventory and candidate regions are checklists only, not source of truth. A transcript region becomes complete only after visual/semantic review.
+
+## Text labels
+
+- No standalone SVG text labels; knowledge is carried by embedded screenshots.
+
+## Candidate regions
+
+### R01 - utf8-string-literal
+
+full small-conspect pass: C# UTF-8 string literals, byte-oriented representation, usage and limitations
+
+```text
+image uses: 4
+sources: S-001, S-002, S-003, S-004
+text labels: 0
+```
+
+## Next
+
+Process this full small conspect in the next combined ten-conspect final-coverage archive after stage0 is reviewed and committed.

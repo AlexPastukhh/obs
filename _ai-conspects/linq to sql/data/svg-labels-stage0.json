@@ -1,0 +1,422 @@
+[
+  {
+    "idx": 1,
+    "text": "inner / left joins",
+    "x": 18311.142855244027,
+    "y": 112.1960179239909,
+    "font_size": "116.0000203450521px"
+  },
+  {
+    "idx": 2,
+    "text": "select many to sql",
+    "x": 13722.025091528834,
+    "y": 252.13293856478379,
+    "font_size": "230.66662597656259px"
+  },
+  {
+    "idx": 3,
+    "text": "with join in query syntax",
+    "x": 18311.142855244027,
+    "y": 257.196043355306,
+    "font_size": "116.0000203450521px"
+  },
+  {
+    "idx": 4,
+    "text": "and with multile from",
+    "x": 18311.142855244027,
+    "y": 402.19606878662114,
+    "font_size": "116.0000203450521px"
+  },
+  {
+    "idx": 5,
+    "text": "where filter after left join can lead to not inclu nulls",
+    "x": 18613.483935556214,
+    "y": 638.9902147334816,
+    "font_size": "20px"
+  },
+  {
+    "idx": 6,
+    "text": "so need to be careful",
+    "x": 18613.483935556214,
+    "y": 663.9902147334816,
+    "font_size": "20px"
+  },
+  {
+    "idx": 7,
+    "text": "inner and left joins",
+    "x": 869.6560386262681,
+    "y": 892.345487183685,
+    "font_size": "83.40738932291764px"
+  },
+  {
+    "idx": 8,
+    "text": "what doesnt translate well",
+    "x": 8121.217749059301,
+    "y": 921.9156013499911,
+    "font_size": "260.00000000000006px"
+  },
+  {
+    "idx": 9,
+    "text": "when including navigations in query",
+    "x": 869.6560386262681,
+    "y": 996.604723837332,
+    "font_size": "83.40738932291764px"
+  },
+  {
+    "idx": 10,
+    "text": "ef linq translation to sql",
+    "x": 4258.578127084694,
+    "y": 1060.0094869900345,
+    "font_size": "114.66668701171874px"
+  },
+  {
+    "idx": 11,
+    "text": "how we can loose data with query filters",
+    "x": 869.6560386262681,
+    "y": 1100.863960490979,
+    "font_size": "83.40738932291764px"
+  },
+  {
+    "idx": 12,
+    "text": "cross join",
+    "x": 14539.994458407093,
+    "y": 1208.227803405447,
+    "font_size": "74.36433447997281px"
+  },
+  {
+    "idx": 13,
+    "text": "know exact sql",
+    "x": 6443.788602245686,
+    "y": 1218.7409435590164,
+    "font_size": "69.33337402343751px"
+  },
+  {
+    "idx": 14,
+    "text": "list of unsupported",
+    "x": 7937.104769200047,
+    "y": 1219.6600367838491,
+    "font_size": "70.66674804687499px"
+  },
+  {
+    "idx": 15,
+    "text": "include == join",
+    "x": 995.5822931698749,
+    "y": 1239.527244509715,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 16,
+    "text": "when navigation has required() then ef uses inner join (because if this",
+    "x": 995.5822931698749,
+    "y": 1281.7067277766917,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 17,
+    "text": "shit is required - it must be there and we cant loose data with inner join)",
+    "x": 995.5822931698749,
+    "y": 1323.8862110436683,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 18,
+    "text": "when navigation is optional then ef uses left join",
+    "x": 995.5822931698749,
+    "y": 1366.0656943106449,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 19,
+    "text": "query filters break this shit, so when some navigation is required and",
+    "x": 995.5822931698749,
+    "y": 1450.424660844598,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 20,
+    "text": "it has query filter - we will build inner join and we may not fetch outer",
+    "x": 995.5822931698749,
+    "y": 1492.6041441115747,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 21,
+    "text": "!!!",
+    "x": 6143.177655590412,
+    "y": 1506.90485168076,
+    "font_size": "68.88887532552037px"
+  },
+  {
+    "idx": 22,
+    "text": "entities whoose children was filtered (we will fetch them if navigation is a collection",
+    "x": 995.5822931698749,
+    "y": 1534.7836273785513,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 23,
+    "text": "!!!",
+    "x": 7615.313285262396,
+    "y": 1541.1048139352627,
+    "font_size": "54.285714285715976px"
+  },
+  {
+    "idx": 24,
+    "text": "usually",
+    "x": 14307.393779504238,
+    "y": 1566.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 25,
+    "text": "and there is so children that wasnt filtered)",
+    "x": 995.5822931698749,
+    "y": 1576.9631106455279,
+    "font_size": "33.743586613581286px"
+  },
+  {
+    "idx": 26,
+    "text": "we have",
+    "x": 14307.393779504238,
+    "y": 1591.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 27,
+    "text": "matched inner",
+    "x": 14307.393779504238,
+    "y": 1616.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 28,
+    "text": "collection element",
+    "x": 14307.393779504238,
+    "y": 1641.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 29,
+    "text": "for every outer coll",
+    "x": 14307.393779504238,
+    "y": 1666.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 30,
+    "text": "element",
+    "x": 14307.393779504238,
+    "y": 1691.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 31,
+    "text": "but if we dont",
+    "x": 14307.393779504238,
+    "y": 1741.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 32,
+    "text": "reference outer coll",
+    "x": 14307.393779504238,
+    "y": 1766.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 33,
+    "text": "then its cross and",
+    "x": 14307.393779504238,
+    "y": 1791.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 34,
+    "text": "that it",
+    "x": 14307.393779504238,
+    "y": 1816.6276400534098,
+    "font_size": "20px"
+  },
+  {
+    "idx": 35,
+    "text": "!!!",
+    "x": 8938.635153234107,
+    "y": 2272.4433006996983,
+    "font_size": "69.3333740234375px"
+  },
+  {
+    "idx": 36,
+    "text": "!!!",
+    "x": 8903.635153234107,
+    "y": 2613.307231913077,
+    "font_size": "46.666687011718764px"
+  },
+  {
+    "idx": 37,
+    "text": "inner join",
+    "x": 14527.32473716227,
+    "y": 2676.755526617343,
+    "font_size": "74.36433447997281px"
+  },
+  {
+    "idx": 38,
+    "text": "will translate to on syntax",
+    "x": 15526.374711101495,
+    "y": 2946.1702374290685,
+    "font_size": "20px"
+  },
+  {
+    "idx": 39,
+    "text": "left join",
+    "x": 14582.610381292812,
+    "y": 4064.658163209048,
+    "font_size": "74.36433447997281px"
+  },
+  {
+    "idx": 40,
+    "text": "to create on expression, need to use multiple froms",
+    "x": 16607.406276965707,
+    "y": 4369.096016692154,
+    "font_size": "44.888884715544776px"
+  },
+  {
+    "idx": 41,
+    "text": "cant do it with join, with join and then where you will",
+    "x": 16607.406276965707,
+    "y": 4425.207122586585,
+    "font_size": "44.888884715544776px"
+  },
+  {
+    "idx": 42,
+    "text": "join all the shit and then filter with where",
+    "x": 16607.406276965707,
+    "y": 4481.318228481016,
+    "font_size": "44.888884715544776px"
+  },
+  {
+    "idx": 43,
+    "text": "where",
+    "x": 16461.450299917073,
+    "y": 5011.433870696063,
+    "font_size": "20px"
+  },
+  {
+    "idx": 44,
+    "text": "filtering out the shit",
+    "x": 16461.450299917073,
+    "y": 5036.433870696063,
+    "font_size": "20px"
+  },
+  {
+    "idx": 45,
+    "text": "cross apply",
+    "x": 14507.744297219979,
+    "y": 5877.570052419618,
+    "font_size": "74.36433447997281px"
+  },
+  {
+    "idx": 46,
+    "text": "!!!",
+    "x": 5005.17638361768,
+    "y": 5924.443997475674,
+    "font_size": "68.88887532552037px"
+  },
+  {
+    "idx": 47,
+    "text": "so apply can be useful also",
+    "x": 12908.715952490413,
+    "y": 6364.88191505964,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 48,
+    "text": "when you need to do something",
+    "x": 12908.715952490413,
+    "y": 6400.252281319899,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 49,
+    "text": "with inner /right side table",
+    "x": 12908.715952490413,
+    "y": 6435.622647580158,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 50,
+    "text": "you can join but if you need just some",
+    "x": 12908.715952490413,
+    "y": 6506.363380100675,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 51,
+    "text": "little part of data with join you will",
+    "x": 12908.715952490413,
+    "y": 6541.733746360935,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 52,
+    "text": "create wide intermediate result",
+    "x": 12908.715952490413,
+    "y": 6577.104112621193,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 53,
+    "text": "and then you will process",
+    "x": 12908.715952490413,
+    "y": 6612.474478881452,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 54,
+    "text": "with apply you wont create that result",
+    "x": 12908.715952490413,
+    "y": 6683.21521140197,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 55,
+    "text": "you will just process per left/outer row",
+    "x": 12908.715952490413,
+    "y": 6718.585577662228,
+    "font_size": "28.29629300820708px"
+  },
+  {
+    "idx": 56,
+    "text": "??",
+    "x": 9151.135153234107,
+    "y": 6837.313956949698,
+    "font_size": "20px"
+  },
+  {
+    "idx": 57,
+    "text": "outer apply",
+    "x": 14431.726391547832,
+    "y": 7746.919460084642,
+    "font_size": "74.36433447997281px"
+  },
+  {
+    "idx": 58,
+    "text": "!!!",
+    "x": 9088.64672032099,
+    "y": 8294.438096405966,
+    "font_size": "54.285714285715976px"
+  },
+  {
+    "idx": 59,
+    "text": "need to place info clearly so i can find some sheet with some",
+    "x": 9339.991534076571,
+    "y": 8562.803810691685,
+    "font_size": "20px"
+  },
+  {
+    "idx": 60,
+    "text": "unsupported shit list quickly",
+    "x": 9339.991534076571,
+    "y": 8587.803810691685,
+    "font_size": "20px"
+  }
+]
