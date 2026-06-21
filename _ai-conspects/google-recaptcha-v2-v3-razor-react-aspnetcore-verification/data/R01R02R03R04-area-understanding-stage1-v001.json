@@ -1,0 +1,29 @@
+{
+  "conspect": "google-recaptcha-v2-v3-razor-react-aspnetcore-verification",
+  "stage": "stage1-r01r02r03r04-final-coverage-v001",
+  "generated": "2026-06-22 00:20:00 UTC",
+  "global_summary": "The conspect covers the complete reCAPTCHA request lifecycle: expose only the site key to the client, obtain a short-lived token, send it with the business request, verify it server-side with the secret key, and apply v2/v3-specific checks before continuing registration or another protected action.",
+  "regions": [
+    {
+      "id": "R01",
+      "summary": "Core flow and trust boundary: site key vs secret key, token acquisition, form submission, server siteverify call, hostname/action notes, and why client-side success alone is not authoritative."
+    },
+    {
+      "id": "R02",
+      "summary": "reCAPTCHA v2 in Razor and React, both library and manual script/widget approaches, DTO/model binding, reusable ASP.NET Core verifier/service, controller flow, failure reset, and combined v2/v3 abstractions."
+    },
+    {
+      "id": "R03",
+      "summary": "reCAPTCHA v3 in Razor and React, manual grecaptcha.execute and provider-library approaches, expected action, score threshold, backend checks, and request/controller integration."
+    },
+    {
+      "id": "R04",
+      "summary": "Optional remoteip handling and proxy correctness: forwarded headers, real client IP retrieval, when remoteip is useful, and when sending a wrong proxy address reduces its value."
+    }
+  ],
+  "reading_quality": {
+    "overall": "high",
+    "code_exactness": "medium-high",
+    "limitations": "Exact punctuation and package API details remain anchored by preserved source PNGs; semantic flow and major code shapes were readable."
+  }
+}

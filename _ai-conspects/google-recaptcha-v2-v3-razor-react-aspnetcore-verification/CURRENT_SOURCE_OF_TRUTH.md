@@ -1,6 +1,6 @@
-# Current Source of Truth - google-recaptcha-v2-v3-razor-react-aspnetcore-verification
+# Current Source of Truth — google-recaptcha-v2-v3-razor-react-aspnetcore-verification
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-22 00:20:00 UTC
 
 ## Policy
 
@@ -11,7 +11,11 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 core flow / keys / token / server verification: transcript v001 done
+R02 v2 Razor/React + combined ASP.NET Core service: transcript v001 done
+R03 v3 Razor/React + action/score policy: transcript v001 done
+R04 remoteip / forwarded headers / proxy notes: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -20,12 +24,13 @@ Normal transcript regions: not started
 unique embedded images: 76
 image uses on canvas: 77
 text blocks parsed: 29
-duplicate image uses: 1
+duplicate image placements resolved: 1
+remaining unclosed image uses: 0
+remaining unclosed text blocks: 0
 ```
 
 ## Candidate next step
 
 ```text
-Suggested full pass: R01+R02+R03+R04 = 77 image uses + 29 text blocks.
-Fallback: R01+R02 first, then R03+R04 final coverage if lower v3/remote-IP road needs a separate pass.
+No normal transcript regions remain. Only correction/polish or repeat-material archive if later needed.
 ```
