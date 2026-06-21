@@ -1,4 +1,4 @@
-# Current Source of Truth - dotnet-allocations-memory-gc-span-arraypool-performance
+# Current Source of Truth - allocations
 
 Generated: 2026-06-13 07:30:00 UTC
 

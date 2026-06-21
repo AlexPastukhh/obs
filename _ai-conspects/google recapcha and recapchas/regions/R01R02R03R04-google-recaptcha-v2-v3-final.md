@@ -1,6 +1,6 @@
 # R01/R02/R03/R04 — Google reCAPTCHA v2/v3, Razor/React and ASP.NET Core verification
 
-Conspect: `google-recaptcha-v2-v3-razor-react-aspnetcore-verification`  
+Conspect: `google recapcha and recapchas`  
 File type: **source-preserving combined final transcript**  
 Stage: **stage-1 final coverage v001**  
 Generated: 2026-06-22 00:20:00 UTC

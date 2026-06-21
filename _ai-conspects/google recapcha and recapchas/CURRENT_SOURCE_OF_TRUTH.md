@@ -1,4 +1,4 @@
-# Current Source of Truth — google-recaptcha-v2-v3-razor-react-aspnetcore-verification
+# Current Source of Truth — google recapcha and recapchas
 
 Generated: 2026-06-22 00:20:00 UTC
 

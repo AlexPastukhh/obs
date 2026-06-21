@@ -17,7 +17,7 @@ PS C:\Users\alexa\obs>
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler-stage1-r01r02r03-final-coverage-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-authorization flow,autorization options, framework, authorizationmiddlewareresulthandler-stage1-r01r02r03-final-coverage-v001.zip
 ```
 
 ## Apply + staged-only check commands
@@ -26,8 +26,8 @@ C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-fram
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler-stage1-r01r02r03-final-coverage-v001.zip"
-$target = "_ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-authorization flow,autorization options, framework, authorizationmiddlewareresulthandler-stage1-r01r02r03-final-coverage-v001.zip"
+$target = "_ai-conspects\authorization flow,autorization options, framework, authorizationmiddlewareresulthandler"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -50,7 +50,7 @@ git push origin ai-processed-conspects-text
 ## Rollback before commit
 
 ```powershell
-git restore --staged -- _ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler
-git restore -- _ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler
-git clean -fd -- _ai-conspects\aspnetcore-authorization-flow-options-framework-authorizationmiddleware-result-handler
+git restore --staged -- _ai-conspects\authorization flow,autorization options, framework, authorizationmiddlewareresulthandler
+git restore -- _ai-conspects\authorization flow,autorization options, framework, authorizationmiddlewareresulthandler
+git clean -fd -- _ai-conspects\authorization flow,autorization options, framework, authorizationmiddlewareresulthandler
 ```

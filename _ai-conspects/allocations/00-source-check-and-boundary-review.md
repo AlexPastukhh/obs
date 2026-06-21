@@ -1,6 +1,6 @@
 # Stage0 - source check and boundary review
 
-Conspect: `dotnet-allocations-memory-gc-span-arraypool-performance`  
+Conspect: `allocations`  
 Source: `allocations.svg`  
 Archive type: **stage0 boundary/source review**
 

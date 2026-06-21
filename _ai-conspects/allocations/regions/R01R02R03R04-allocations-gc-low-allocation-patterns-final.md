@@ -1,6 +1,6 @@
 # R01/R02/R03/R04 - .NET allocations / GC pressure / low-allocation patterns / diagnostics final transcript v001
 
-Conspect: `dotnet-allocations-memory-gc-span-arraypool-performance`  
+Conspect: `allocations`  
 File type: **source-preserving final combined region transcript**  
 Stage: **stage-1 / verified final coverage transcript v001**  
 Generated: 2026-06-13 07:30:00 UTC
