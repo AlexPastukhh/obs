@@ -1,0 +1,492 @@
+[
+  {
+    "id": "T-001",
+    "text": "implementing full identity",
+    "x": "0",
+    "y": "114.72587337239241",
+    "transform": ""
+  },
+  {
+    "id": "T-002",
+    "text": "manual hashing",
+    "x": "0",
+    "y": "185.59729748535167",
+    "transform": ""
+  },
+  {
+    "id": "T-003",
+    "text": "In ddd style",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-004",
+    "text": "Doesnt depends on how long it takes",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-005",
+    "text": "to actually verify password",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-006",
+    "text": "using System.Security.Cryptography;",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-008",
+    "text": "public static class PasswordKdf",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-009",
+    "text": "{",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-010",
+    "text": "// tune this based on perf tests",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-011",
+    "text": "private const int Iterations = 210_000;",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-012",
+    "text": "private const int SaltSize = 16; // 128-bit",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-013",
+    "text": "private const int KeySize = 32; // 256-bit",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-014",
+    "text": "private const string Algo = \"PBKDF2-SHA256\";",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-015",
+    "text": "private const int Version = 1;",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-017",
+    "text": "public static string Hash(string password)",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-018",
+    "text": "{",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-019",
+    "text": "byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-021",
+    "text": "byte[] key = Rfc2898DeriveBytes.Pbkdf2(",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-022",
+    "text": "password,",
+    "x": "0",
+    "y": "417.62",
+    "transform": ""
+  },
+  {
+    "id": "T-023",
+    "text": "salt,",
+    "x": "0",
+    "y": "442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-024",
+    "text": "Iterations,",
+    "x": "0",
+    "y": "467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-025",
+    "text": "HashAlgorithmName.SHA256,",
+    "x": "0",
+    "y": "492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-026",
+    "text": "KeySize);",
+    "x": "0",
+    "y": "517.62",
+    "transform": ""
+  },
+  {
+    "id": "T-028",
+    "text": "// Store: v:algo:iter:saltB64:hashB64",
+    "x": "0",
+    "y": "567.62",
+    "transform": ""
+  },
+  {
+    "id": "T-029",
+    "text": "return $\"{Version}:{Algo}:{Iterations}:{Convert.ToBase64String(salt)}:{Convert.ToBase64String(key)}\";",
+    "x": "0",
+    "y": "592.62",
+    "transform": ""
+  },
+  {
+    "id": "T-030",
+    "text": "}",
+    "x": "0",
+    "y": "617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-032",
+    "text": "public static bool Verify(string password, string stored)",
+    "x": "0",
+    "y": "667.62",
+    "transform": ""
+  },
+  {
+    "id": "T-033",
+    "text": "{",
+    "x": "0",
+    "y": "692.62",
+    "transform": ""
+  },
+  {
+    "id": "T-034",
+    "text": "var parts = stored.Split(':');",
+    "x": "0",
+    "y": "717.62",
+    "transform": ""
+  },
+  {
+    "id": "T-035",
+    "text": "if (parts.Length != 5) return false;",
+    "x": "0",
+    "y": "742.62",
+    "transform": ""
+  },
+  {
+    "id": "T-037",
+    "text": "if (!int.TryParse(parts[0], out var version) || version != Version) return false;",
+    "x": "0",
+    "y": "792.62",
+    "transform": ""
+  },
+  {
+    "id": "T-038",
+    "text": "var algo = parts[1];",
+    "x": "0",
+    "y": "817.62",
+    "transform": ""
+  },
+  {
+    "id": "T-039",
+    "text": "if (algo != Algo) return false;",
+    "x": "0",
+    "y": "842.62",
+    "transform": ""
+  },
+  {
+    "id": "T-041",
+    "text": "if (!int.TryParse(parts[2], out var iterations)) return false;",
+    "x": "0",
+    "y": "892.62",
+    "transform": ""
+  },
+  {
+    "id": "T-043",
+    "text": "byte[] salt = Convert.FromBase64String(parts[3]);",
+    "x": "0",
+    "y": "942.62",
+    "transform": ""
+  },
+  {
+    "id": "T-044",
+    "text": "byte[] expected = Convert.FromBase64String(parts[4]);",
+    "x": "0",
+    "y": "967.62",
+    "transform": ""
+  },
+  {
+    "id": "T-046",
+    "text": "byte[] actual = Rfc2898DeriveBytes.Pbkdf2(",
+    "x": "0",
+    "y": "1017.62",
+    "transform": ""
+  },
+  {
+    "id": "T-047",
+    "text": "password,",
+    "x": "0",
+    "y": "1042.62",
+    "transform": ""
+  },
+  {
+    "id": "T-048",
+    "text": "salt,",
+    "x": "0",
+    "y": "1067.62",
+    "transform": ""
+  },
+  {
+    "id": "T-049",
+    "text": "iterations,",
+    "x": "0",
+    "y": "1092.62",
+    "transform": ""
+  },
+  {
+    "id": "T-050",
+    "text": "HashAlgorithmName.SHA256,",
+    "x": "0",
+    "y": "1117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-051",
+    "text": "expected.Length);",
+    "x": "0",
+    "y": "1142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-053",
+    "text": "return CryptographicOperations.FixedTimeEquals(actual, expected);",
+    "x": "0",
+    "y": "1192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-054",
+    "text": "}",
+    "x": "0",
+    "y": "1217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-055",
+    "text": "}",
+    "x": "0",
+    "y": "1242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-056",
+    "text": "how key stretching works",
+    "x": "0",
+    "y": "128.50851899414062",
+    "transform": ""
+  },
+  {
+    "id": "T-057",
+    "text": "basically kdf is a deterministic functions, it produces same hash on each input",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-058",
+    "text": "and when you hash with iterations - you always will get same hash for each input",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-059",
+    "text": ", psw -> hash1 -> hash2 -> hash300000",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-060",
+    "text": "hasging",
+    "x": "0",
+    "y": "341.82810754394507",
+    "transform": ""
+  },
+  {
+    "id": "T-061",
+    "text": "flow",
+    "x": "0",
+    "y": "111.59340502929686",
+    "transform": ""
+  },
+  {
+    "id": "T-062",
+    "text": "what we are storing in db",
+    "x": "0",
+    "y": "83.40135125732418",
+    "transform": ""
+  },
+  {
+    "id": "T-063",
+    "text": "how it looks",
+    "x": "0",
+    "y": "201.73471002197255",
+    "transform": ""
+  },
+  {
+    "id": "T-064",
+    "text": "why do we store it in one place",
+    "x": "0",
+    "y": "320.0680687866209",
+    "transform": ""
+  },
+  {
+    "id": "T-065",
+    "text": "for what salt",
+    "x": "0",
+    "y": "438.4014275512693",
+    "transform": ""
+  },
+  {
+    "id": "T-066",
+    "text": "different algorythms cost params",
+    "x": "0",
+    "y": "128.5085405029297",
+    "transform": ""
+  },
+  {
+    "id": "T-067",
+    "text": "implementations->theo",
+    "x": "0",
+    "y": "296.4076033528652",
+    "transform": ""
+  },
+  {
+    "id": "T-068",
+    "text": "version",
+    "x": "0",
+    "y": "111.59318994140627",
+    "transform": ""
+  },
+  {
+    "id": "T-069",
+    "text": "cost params values",
+    "x": "0",
+    "y": "111.59340502929686",
+    "transform": ""
+  },
+  {
+    "id": "T-070",
+    "text": "migrating to automatic versioning with password hasher",
+    "x": "0",
+    "y": "109.24400000000003",
+    "transform": ""
+  },
+  {
+    "id": "T-071",
+    "text": "does identityhash adds literal string verion",
+    "x": "0",
+    "y": "55.20940502929686",
+    "transform": ""
+  },
+  {
+    "id": "T-072",
+    "text": "rehashis needed from identity hasher",
+    "x": "0",
+    "y": "133.5428400878906",
+    "transform": ""
+  },
+  {
+    "id": "T-073",
+    "text": "fixed time equals",
+    "x": "0",
+    "y": "110.5492011176216",
+    "transform": ""
+  },
+  {
+    "id": "T-074",
+    "text": "pbkdf",
+    "x": "0",
+    "y": "170.06564556206598",
+    "transform": ""
+  },
+  {
+    "id": "T-075",
+    "text": "PASSWORDHASHER",
+    "x": "0",
+    "y": "87.42874142020099",
+    "transform": ""
+  },
+  {
+    "id": "T-076",
+    "text": "rehashneeded",
+    "x": "0",
+    "y": "134.77344134114577",
+    "transform": ""
+  },
+  {
+    "id": "T-077",
+    "text": "about user arg",
+    "x": "0",
+    "y": "100.85348284040191",
+    "transform": ""
+  },
+  {
+    "id": "T-078",
+    "text": "why is user there, what to do?",
+    "x": "0",
+    "y": "98.05013029928786",
+    "transform": ""
+  },
+  {
+    "id": "T-079",
+    "text": "can pot, create excplicit hasher class that uses the default",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-080",
+    "text": "hasher and doesnt need user",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  }
+]

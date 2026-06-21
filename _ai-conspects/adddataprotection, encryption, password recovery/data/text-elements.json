@@ -1,0 +1,541 @@
+[
+  {
+    "id": "T-001",
+    "text": "public class SendResetLinkHandler :",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-002",
+    "text": "IRequestHandler<SendResetLinkCommand, UnitResult<Error>>",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-003",
+    "text": "{",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-004",
+    "text": "private readonly IEmailService _email;",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-005",
+    "text": "private readonly IDataProtectionProvider _protectionProvider;",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-006",
+    "text": "private readonly IHttpContextAccessor _contextAccessor;",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-007",
+    "text": "private readonly IVerificationLinkFactory _linkFactory;",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-008",
+    "text": "public SendResetLinkHandler(IEmailService email,",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-009",
+    "text": "IDataProtectionProvider protector,",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-010",
+    "text": "IHttpContextAccessor contextAccessor,",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-011",
+    "text": "IVerificationLinkFactory linkFactory)",
+    "x": "0",
+    "y": "267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-012",
+    "text": "{",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-013",
+    "text": "_email = email;",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-014",
+    "text": "_protectionProvider = protector;",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-015",
+    "text": "_contextAccessor = contextAccessor;",
+    "x": "0",
+    "y": "367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-016",
+    "text": "_linkFactory = linkFactory;",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-017",
+    "text": "}",
+    "x": "0",
+    "y": "417.62",
+    "transform": ""
+  },
+  {
+    "id": "T-018",
+    "text": "public async Task<UnitResult<Error>> Handle(SendResetLinkCommand request,",
+    "x": "0",
+    "y": "442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-019",
+    "text": "CancellationToken cancellationToken)",
+    "x": "0",
+    "y": "467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-020",
+    "text": "{",
+    "x": "0",
+    "y": "492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-021",
+    "text": "var emailStr = _contextAccessor.HttpContext!.User.Claims.",
+    "x": "0",
+    "y": "517.62",
+    "transform": ""
+  },
+  {
+    "id": "T-022",
+    "text": "FirstOrDefault(c => c.Type == ClaimTypes.Email)!.Value;",
+    "x": "0",
+    "y": "542.62",
+    "transform": ""
+  },
+  {
+    "id": "T-025",
+    "text": "var protector = _protectionProvider.CreateProtector(",
+    "x": "0",
+    "y": "617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-026",
+    "text": "purpose: \"Password reset\");",
+    "x": "0",
+    "y": "642.62",
+    "transform": ""
+  },
+  {
+    "id": "T-028",
+    "text": "var code = protector.Protect(emailStr);",
+    "x": "0",
+    "y": "692.62",
+    "transform": ""
+  },
+  {
+    "id": "T-029",
+    "text": "var email = Email.Create(emailStr).Value;",
+    "x": "0",
+    "y": "717.62",
+    "transform": ""
+  },
+  {
+    "id": "T-031",
+    "text": "var sendLink = await SendResetLinkAsync(email,code,cancellationToken);",
+    "x": "0",
+    "y": "767.62",
+    "transform": ""
+  },
+  {
+    "id": "T-032",
+    "text": "if (sendLink.IsFailure)",
+    "x": "0",
+    "y": "792.62",
+    "transform": ""
+  },
+  {
+    "id": "T-033",
+    "text": "{",
+    "x": "0",
+    "y": "817.62",
+    "transform": ""
+  },
+  {
+    "id": "T-034",
+    "text": "return sendLink.Error;",
+    "x": "0",
+    "y": "842.62",
+    "transform": ""
+  },
+  {
+    "id": "T-035",
+    "text": "}",
+    "x": "0",
+    "y": "867.62",
+    "transform": ""
+  },
+  {
+    "id": "T-037",
+    "text": "return UnitResult.Success<Error>();",
+    "x": "0",
+    "y": "917.62",
+    "transform": ""
+  },
+  {
+    "id": "T-039",
+    "text": "}",
+    "x": "0",
+    "y": "967.62",
+    "transform": ""
+  },
+  {
+    "id": "T-041",
+    "text": "private async Task<UnitResult<Error>> SendResetLinkAsync(Email email,",
+    "x": "0",
+    "y": "1017.62",
+    "transform": ""
+  },
+  {
+    "id": "T-042",
+    "text": "string code,",
+    "x": "0",
+    "y": "1042.62",
+    "transform": ""
+  },
+  {
+    "id": "T-043",
+    "text": "CancellationToken cancellation)",
+    "x": "0",
+    "y": "1067.62",
+    "transform": ""
+  },
+  {
+    "id": "T-044",
+    "text": "{",
+    "x": "0",
+    "y": "1092.62",
+    "transform": ""
+  },
+  {
+    "id": "T-045",
+    "text": "var link = _linkFactory.CreateLink(\"ResetPassword\",\"Account\",code);",
+    "x": "0",
+    "y": "1117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-047",
+    "text": "var message = $\"To reset password click on <a href=\\\"{link}\\\">link</a>\";",
+    "x": "0",
+    "y": "1167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-049",
+    "text": "var sendEmail =await _email.SendEmailAsync(email,",
+    "x": "0",
+    "y": "1217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-050",
+    "text": "\"Reset password\",",
+    "x": "0",
+    "y": "1242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-051",
+    "text": "message,",
+    "x": "0",
+    "y": "1267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-052",
+    "text": "cancellation);",
+    "x": "0",
+    "y": "1292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-053",
+    "text": "if (sendEmail.IsFailure)",
+    "x": "0",
+    "y": "1317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-054",
+    "text": "{",
+    "x": "0",
+    "y": "1342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-055",
+    "text": "return sendEmail.Error;",
+    "x": "0",
+    "y": "1367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-056",
+    "text": "}",
+    "x": "0",
+    "y": "1392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-058",
+    "text": "return UnitResult.Success<Error>();",
+    "x": "0",
+    "y": "1442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-059",
+    "text": "}",
+    "x": "0",
+    "y": "1467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-061",
+    "text": "}",
+    "x": "0",
+    "y": "1517.62",
+    "transform": ""
+  },
+  {
+    "id": "T-062",
+    "text": "password recovery",
+    "x": "0",
+    "y": "165.29237071010044",
+    "transform": ""
+  },
+  {
+    "id": "T-063",
+    "text": "hashing vs encryption/dataprotection",
+    "x": "0",
+    "y": "165.29237071010044",
+    "transform": ""
+  },
+  {
+    "id": "T-064",
+    "text": "newer flow",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-065",
+    "text": "when hashing",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-066",
+    "text": "hashing,",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-067",
+    "text": "need to verify",
+    "x": "0",
+    "y": "250.44318854631695",
+    "transform": ""
+  },
+  {
+    "id": "T-068",
+    "text": "encryptoin,",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-069",
+    "text": "when need data back",
+    "x": "0",
+    "y": "250.44318854631695",
+    "transform": ""
+  },
+  {
+    "id": "T-070",
+    "text": "when encryption/dataprot",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-071",
+    "text": "dp token design",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-072",
+    "text": "with data in payload",
+    "x": "0",
+    "y": "250.44318854631695",
+    "transform": ""
+  },
+  {
+    "id": "T-073",
+    "text": "jwt signature is a hash?",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-074",
+    "text": "hashing style token",
+    "x": "0",
+    "y": "103.53845570591517",
+    "transform": ""
+  },
+  {
+    "id": "T-075",
+    "text": "design, with cols in db",
+    "x": "0",
+    "y": "250.44318854631695",
+    "transform": ""
+  },
+  {
+    "id": "T-076",
+    "text": "dataprotector",
+    "x": "0",
+    "y": "81.10663791715962",
+    "transform": ""
+  },
+  {
+    "id": "T-077",
+    "text": "so maybe better to create",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-078",
+    "text": "some dadaprotector interfaces",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-079",
+    "text": "that derive from idataprotector",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-080",
+    "text": "and create those separate singletons",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-081",
+    "text": "and inject them without hardcoding purpose",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-082",
+    "text": "everywhere",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-083",
+    "text": "so better to create protector services and mb implement catching inside instead of doing it everywhere",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-084",
+    "text": "purpose chains",
+    "x": "0",
+    "y": "111.59336201171872",
+    "transform": ""
+  },
+  {
+    "id": "T-085",
+    "text": "itimellimiteddataprotector",
+    "x": "0",
+    "y": "51.45040000000002",
+    "transform": ""
+  },
+  {
+    "id": "T-086",
+    "text": "protector services",
+    "x": "0",
+    "y": "118.84933861882278",
+    "transform": ""
+  },
+  {
+    "id": "T-087",
+    "text": "named protectors logic, are they weaker(not named)",
+    "x": "0",
+    "y": "96.84290809970298",
+    "transform": ""
+  },
+  {
+    "id": "T-088",
+    "text": "unprotect can throw",
+    "x": "0",
+    "y": "94.20615941259594",
+    "transform": ""
+  }
+]

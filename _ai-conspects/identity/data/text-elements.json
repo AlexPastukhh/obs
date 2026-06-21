@@ -1,0 +1,646 @@
+[
+  {
+    "id": "T-001",
+    "text": "lockout with identity",
+    "x": "0",
+    "y": "99.84670251464844",
+    "transform": ""
+  },
+  {
+    "id": "T-002",
+    "text": "iemailsender",
+    "x": "0",
+    "y": "97.26608209269088",
+    "transform": ""
+  },
+  {
+    "id": "T-003",
+    "text": "url safety of identities tokens",
+    "x": "0",
+    "y": "80.85712426206604",
+    "transform": ""
+  },
+  {
+    "id": "T-004",
+    "text": "so we can login with external login only if we have",
+    "x": "0",
+    "y": "32.59700000000001",
+    "transform": ""
+  },
+  {
+    "id": "T-005",
+    "text": "account for user and if we added login with info from",
+    "x": "0",
+    "y": "78.84700000000002",
+    "transform": ""
+  },
+  {
+    "id": "T-006",
+    "text": "actual google login",
+    "x": "0",
+    "y": "125.09700000000004",
+    "transform": ""
+  },
+  {
+    "id": "T-008",
+    "text": "default ui, api endpoints",
+    "x": "0",
+    "y": "83.40133333333375",
+    "transform": ""
+  },
+  {
+    "id": "T-009",
+    "text": "basics, min setup",
+    "x": "0",
+    "y": "106.89459497070312",
+    "transform": ""
+  },
+  {
+    "id": "T-010",
+    "text": "methods",
+    "x": "0",
+    "y": "111.59329748535154",
+    "transform": ""
+  },
+  {
+    "id": "T-011",
+    "text": "email confirmation password reset",
+    "x": "0",
+    "y": "83.40133333333345",
+    "transform": ""
+  },
+  {
+    "id": "T-012",
+    "text": "external login",
+    "x": "0",
+    "y": "132.26743798828124",
+    "transform": ""
+  },
+  {
+    "id": "T-013",
+    "text": "Challenge method",
+    "x": "0",
+    "y": "78.70264874267578",
+    "transform": ""
+  },
+  {
+    "id": "T-014",
+    "text": "jwt + identity implementation",
+    "x": "0",
+    "y": "82.87917163085939",
+    "transform": ""
+  },
+  {
+    "id": "T-015",
+    "text": "so just an normal jswt endpoint but with manager that verifies password",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-017",
+    "text": "build jwt ourselves",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-018",
+    "text": "using System.IdentityModel.Tokens.Jwt;",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-019",
+    "text": "using System.Security.Claims;",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-020",
+    "text": "using System.Text;",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-021",
+    "text": "using Microsoft.AspNetCore.Identity;",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-022",
+    "text": "using Microsoft.Extensions.Options;",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-023",
+    "text": "using Microsoft.IdentityModel.Tokens;",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-025",
+    "text": "public sealed class JwtOptions",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-026",
+    "text": "{",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-027",
+    "text": "public string Issuer { get; init; } = \"\";",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-028",
+    "text": "public string Audience { get; init; } = \"\";",
+    "x": "0",
+    "y": "267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-029",
+    "text": "public string SigningKey { get; init; } = \"\"; // store in secrets",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-030",
+    "text": "public int ExpMinutes { get; init; } = 60;",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-031",
+    "text": "}",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-033",
+    "text": "public sealed class JwtTokenService<TUser> where TUser : IdentityUser",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-034",
+    "text": "{",
+    "x": "0",
+    "y": "417.62",
+    "transform": ""
+  },
+  {
+    "id": "T-035",
+    "text": "private readonly UserManager<TUser> _userManager;",
+    "x": "0",
+    "y": "442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-036",
+    "text": "private readonly RoleManager<IdentityRole> _roleManager;",
+    "x": "0",
+    "y": "467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-037",
+    "text": "private readonly JwtOptions _jwt;",
+    "x": "0",
+    "y": "492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-039",
+    "text": "public JwtTokenService(",
+    "x": "0",
+    "y": "542.62",
+    "transform": ""
+  },
+  {
+    "id": "T-040",
+    "text": "UserManager<TUser> userManager,",
+    "x": "0",
+    "y": "567.62",
+    "transform": ""
+  },
+  {
+    "id": "T-041",
+    "text": "RoleManager<IdentityRole> roleManager,",
+    "x": "0",
+    "y": "592.62",
+    "transform": ""
+  },
+  {
+    "id": "T-042",
+    "text": "IOptions<JwtOptions> jwtOptions)",
+    "x": "0",
+    "y": "617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-043",
+    "text": "{",
+    "x": "0",
+    "y": "642.62",
+    "transform": ""
+  },
+  {
+    "id": "T-044",
+    "text": "_userManager = userManager;",
+    "x": "0",
+    "y": "667.62",
+    "transform": ""
+  },
+  {
+    "id": "T-045",
+    "text": "_roleManager = roleManager;",
+    "x": "0",
+    "y": "692.62",
+    "transform": ""
+  },
+  {
+    "id": "T-046",
+    "text": "_jwt = jwtOptions.Value;",
+    "x": "0",
+    "y": "717.62",
+    "transform": ""
+  },
+  {
+    "id": "T-047",
+    "text": "}",
+    "x": "0",
+    "y": "742.62",
+    "transform": ""
+  },
+  {
+    "id": "T-049",
+    "text": "public async Task<string> CreateTokenAsync(TUser user, CancellationToken ct = default)",
+    "x": "0",
+    "y": "792.62",
+    "transform": ""
+  },
+  {
+    "id": "T-050",
+    "text": "{",
+    "x": "0",
+    "y": "817.62",
+    "transform": ""
+  },
+  {
+    "id": "T-051",
+    "text": "// Base identity claims",
+    "x": "0",
+    "y": "842.62",
+    "transform": ""
+  },
+  {
+    "id": "T-052",
+    "text": "var claims = new List<Claim>",
+    "x": "0",
+    "y": "867.62",
+    "transform": ""
+  },
+  {
+    "id": "T-053",
+    "text": "{",
+    "x": "0",
+    "y": "892.62",
+    "transform": ""
+  },
+  {
+    "id": "T-054",
+    "text": "new(JwtRegisteredClaimNames.Sub, user.Id),",
+    "x": "0",
+    "y": "917.62",
+    "transform": ""
+  },
+  {
+    "id": "T-055",
+    "text": "new(JwtRegisteredClaimNames.UniqueName, user.UserName ?? \"\"),",
+    "x": "0",
+    "y": "942.62",
+    "transform": ""
+  },
+  {
+    "id": "T-056",
+    "text": "new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),",
+    "x": "0",
+    "y": "967.62",
+    "transform": ""
+  },
+  {
+    "id": "T-057",
+    "text": "};",
+    "x": "0",
+    "y": "992.62",
+    "transform": ""
+  },
+  {
+    "id": "T-059",
+    "text": "// User claims (from AspNetUserClaims)",
+    "x": "0",
+    "y": "1042.62",
+    "transform": ""
+  },
+  {
+    "id": "T-060",
+    "text": "var userClaims = await _userManager.GetClaimsAsync(user);",
+    "x": "0",
+    "y": "1067.62",
+    "transform": ""
+  },
+  {
+    "id": "T-061",
+    "text": "claims.AddRange(userClaims);",
+    "x": "0",
+    "y": "1092.62",
+    "transform": ""
+  },
+  {
+    "id": "T-063",
+    "text": "// Roles + role claims (AspNetUserRoles + AspNetRoleClaims)",
+    "x": "0",
+    "y": "1142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-064",
+    "text": "var roles = await _userManager.GetRolesAsync(user);",
+    "x": "0",
+    "y": "1167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-065",
+    "text": "foreach (var roleName in roles)",
+    "x": "0",
+    "y": "1192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-066",
+    "text": "{",
+    "x": "0",
+    "y": "1217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-067",
+    "text": "// Add role claim recognized by [Authorize(Roles=\"...\")]",
+    "x": "0",
+    "y": "1242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-068",
+    "text": "claims.Add(new Claim(ClaimTypes.Role, roleName));",
+    "x": "0",
+    "y": "1267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-070",
+    "text": "// If you also store claims on roles, include them",
+    "x": "0",
+    "y": "1317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-071",
+    "text": "var role = await _roleManager.FindByNameAsync(roleName);",
+    "x": "0",
+    "y": "1342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-072",
+    "text": "if (role != null)",
+    "x": "0",
+    "y": "1367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-073",
+    "text": "{",
+    "x": "0",
+    "y": "1392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-074",
+    "text": "var roleClaims = await _roleManager.GetClaimsAsync(role);",
+    "x": "0",
+    "y": "1417.62",
+    "transform": ""
+  },
+  {
+    "id": "T-075",
+    "text": "claims.AddRange(roleClaims);",
+    "x": "0",
+    "y": "1442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-076",
+    "text": "}",
+    "x": "0",
+    "y": "1467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-077",
+    "text": "}",
+    "x": "0",
+    "y": "1492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-079",
+    "text": "// Optional: remove duplicates (common when role+user claims overlap)",
+    "x": "0",
+    "y": "1542.62",
+    "transform": ""
+  },
+  {
+    "id": "T-080",
+    "text": "claims = claims",
+    "x": "0",
+    "y": "1567.62",
+    "transform": ""
+  },
+  {
+    "id": "T-081",
+    "text": ".GroupBy(c => new { c.Type, c.Value })",
+    "x": "0",
+    "y": "1592.62",
+    "transform": ""
+  },
+  {
+    "id": "T-082",
+    "text": ".Select(g => g.First())",
+    "x": "0",
+    "y": "1617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-083",
+    "text": ".ToList();",
+    "x": "0",
+    "y": "1642.62",
+    "transform": ""
+  },
+  {
+    "id": "T-085",
+    "text": "var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.SigningKey));",
+    "x": "0",
+    "y": "1692.62",
+    "transform": ""
+  },
+  {
+    "id": "T-086",
+    "text": "var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);",
+    "x": "0",
+    "y": "1717.62",
+    "transform": ""
+  },
+  {
+    "id": "T-088",
+    "text": "var token = new JwtSecurityToken(",
+    "x": "0",
+    "y": "1767.62",
+    "transform": ""
+  },
+  {
+    "id": "T-089",
+    "text": "issuer: _jwt.Issuer,",
+    "x": "0",
+    "y": "1792.62",
+    "transform": ""
+  },
+  {
+    "id": "T-090",
+    "text": "audience: _jwt.Audience,",
+    "x": "0",
+    "y": "1817.62",
+    "transform": ""
+  },
+  {
+    "id": "T-091",
+    "text": "claims: claims,",
+    "x": "0",
+    "y": "1842.62",
+    "transform": ""
+  },
+  {
+    "id": "T-092",
+    "text": "notBefore: DateTime.UtcNow,",
+    "x": "0",
+    "y": "1867.62",
+    "transform": ""
+  },
+  {
+    "id": "T-093",
+    "text": "expires: DateTime.UtcNow.AddMinutes(_jwt.ExpMinutes),",
+    "x": "0",
+    "y": "1892.62",
+    "transform": ""
+  },
+  {
+    "id": "T-094",
+    "text": "signingCredentials: creds);",
+    "x": "0",
+    "y": "1917.62",
+    "transform": ""
+  },
+  {
+    "id": "T-096",
+    "text": "return new JwtSecurityTokenHandler().WriteToken(token);",
+    "x": "0",
+    "y": "1967.62",
+    "transform": ""
+  },
+  {
+    "id": "T-097",
+    "text": "}",
+    "x": "0",
+    "y": "1992.62",
+    "transform": ""
+  },
+  {
+    "id": "T-098",
+    "text": "}",
+    "x": "0",
+    "y": "2017.62",
+    "transform": ""
+  },
+  {
+    "id": "T-099",
+    "text": "can have role related claims so may need",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-100",
+    "text": "to fetch claims for the role that user has",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-101",
+    "text": "identity schema",
+    "x": "0",
+    "y": "88.09999999999995",
+    "transform": ""
+  },
+  {
+    "id": "T-102",
+    "text": "jwt claims + token creator service",
+    "x": "0",
+    "y": "153.88132437133788",
+    "transform": ""
+  },
+  {
+    "id": "T-103",
+    "text": "that creates fro user claims",
+    "x": "0",
+    "y": "372.21464498901366",
+    "transform": ""
+  },
+  {
+    "id": "T-104",
+    "text": "and from role claims",
+    "x": "0",
+    "y": "590.5479656066894",
+    "transform": ""
+  },
+  {
+    "id": "T-105",
+    "text": "of roles tht user hhas",
+    "x": "0",
+    "y": "808.8812862243652",
+    "transform": ""
+  }
+]

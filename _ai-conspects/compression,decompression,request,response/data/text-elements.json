@@ -1,0 +1,639 @@
+[
+  {
+    "id": "T-001",
+    "text": "some problems with implementation",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-002",
+    "text": "about leaveopen false and ownershitp, disposal responsibility(!!!!!!!!!!!!)",
+    "x": "0",
+    "y": "128.03859497070303",
+    "transform": ""
+  },
+  {
+    "id": "T-003",
+    "text": "using System.IO;",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-005",
+    "text": "public interface IRequestBodyDecompressor",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-006",
+    "text": "{",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-007",
+    "text": "string EncodingName { get; }",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-009",
+    "text": "Stream WrapDecompressionStream(Stream input);",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-010",
+    "text": "}",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-011",
+    "text": "using System.IO;",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-012",
+    "text": "using System.IO.Compression;",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-014",
+    "text": "public sealed class GzipRequestBodyDecompressor",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-015",
+    "text": ": IRequestBodyDecompressor",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-016",
+    "text": "{",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-017",
+    "text": "public string EncodingName => \"gzip\";",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-019",
+    "text": "public Stream WrapDecompressionStream(Stream input)",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-020",
+    "text": "{",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-021",
+    "text": "return new GZipStream(",
+    "x": "0",
+    "y": "267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-022",
+    "text": "input,",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-023",
+    "text": "CompressionMode.Decompress,",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-024",
+    "text": "leaveOpen: true);",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-025",
+    "text": "}",
+    "x": "0",
+    "y": "367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-026",
+    "text": "}",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-028",
+    "text": "public sealed class BrotliRequestBodyDecompressor",
+    "x": "0",
+    "y": "442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-029",
+    "text": ": IRequestBodyDecompressor",
+    "x": "0",
+    "y": "467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-030",
+    "text": "{",
+    "x": "0",
+    "y": "492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-031",
+    "text": "public string EncodingName => \"br\";",
+    "x": "0",
+    "y": "517.62",
+    "transform": ""
+  },
+  {
+    "id": "T-033",
+    "text": "public Stream WrapDecompressionStream(Stream input)",
+    "x": "0",
+    "y": "567.62",
+    "transform": ""
+  },
+  {
+    "id": "T-034",
+    "text": "{",
+    "x": "0",
+    "y": "592.62",
+    "transform": ""
+  },
+  {
+    "id": "T-035",
+    "text": "return new BrotliStream(",
+    "x": "0",
+    "y": "617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-036",
+    "text": "input,",
+    "x": "0",
+    "y": "642.62",
+    "transform": ""
+  },
+  {
+    "id": "T-037",
+    "text": "CompressionMode.Decompress,",
+    "x": "0",
+    "y": "667.62",
+    "transform": ""
+  },
+  {
+    "id": "T-038",
+    "text": "leaveOpen: true);",
+    "x": "0",
+    "y": "692.62",
+    "transform": ""
+  },
+  {
+    "id": "T-039",
+    "text": "}",
+    "x": "0",
+    "y": "717.62",
+    "transform": ""
+  },
+  {
+    "id": "T-040",
+    "text": "}",
+    "x": "0",
+    "y": "742.62",
+    "transform": ""
+  },
+  {
+    "id": "T-042",
+    "text": "public sealed class DeflateRequestBodyDecompressor",
+    "x": "0",
+    "y": "792.62",
+    "transform": ""
+  },
+  {
+    "id": "T-043",
+    "text": ": IRequestBodyDecompressor",
+    "x": "0",
+    "y": "817.62",
+    "transform": ""
+  },
+  {
+    "id": "T-044",
+    "text": "{",
+    "x": "0",
+    "y": "842.62",
+    "transform": ""
+  },
+  {
+    "id": "T-045",
+    "text": "public string EncodingName => \"deflate\";",
+    "x": "0",
+    "y": "867.62",
+    "transform": ""
+  },
+  {
+    "id": "T-047",
+    "text": "public Stream WrapDecompressionStream(Stream input)",
+    "x": "0",
+    "y": "917.62",
+    "transform": ""
+  },
+  {
+    "id": "T-048",
+    "text": "{",
+    "x": "0",
+    "y": "942.62",
+    "transform": ""
+  },
+  {
+    "id": "T-049",
+    "text": "return new DeflateStream(",
+    "x": "0",
+    "y": "967.62",
+    "transform": ""
+  },
+  {
+    "id": "T-050",
+    "text": "input,",
+    "x": "0",
+    "y": "992.62",
+    "transform": ""
+  },
+  {
+    "id": "T-051",
+    "text": "CompressionMode.Decompress,",
+    "x": "0",
+    "y": "1017.62",
+    "transform": ""
+  },
+  {
+    "id": "T-052",
+    "text": "leaveOpen: true);",
+    "x": "0",
+    "y": "1042.62",
+    "transform": ""
+  },
+  {
+    "id": "T-053",
+    "text": "}",
+    "x": "0",
+    "y": "1067.62",
+    "transform": ""
+  },
+  {
+    "id": "T-054",
+    "text": "}",
+    "x": "0",
+    "y": "1092.62",
+    "transform": ""
+  },
+  {
+    "id": "T-055",
+    "text": "public interface IRequestBodyDecompressorRegistry",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-056",
+    "text": "{",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-057",
+    "text": "bool TryGet(string encoding, out IRequestBodyDecompressor decompressor);",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-058",
+    "text": "}",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-060",
+    "text": "public sealed class RequestBodyDecompressorRegistry",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-061",
+    "text": ": IRequestBodyDecompressorRegistry",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-062",
+    "text": "{",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-063",
+    "text": "private readonly Dictionary<string, IRequestBodyDecompressor> _map;",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-065",
+    "text": "public RequestBodyDecompressorRegistry(",
+    "x": "0",
+    "y": "267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-066",
+    "text": "IEnumerable<IRequestBodyDecompressor> decompressors)",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-067",
+    "text": "{",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-068",
+    "text": "_map = decompressors.ToDictionary(",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-069",
+    "text": "d => d.EncodingName,",
+    "x": "0",
+    "y": "367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-070",
+    "text": "d => d,",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-071",
+    "text": "StringComparer.OrdinalIgnoreCase);",
+    "x": "0",
+    "y": "417.62",
+    "transform": ""
+  },
+  {
+    "id": "T-072",
+    "text": "}",
+    "x": "0",
+    "y": "442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-074",
+    "text": "public bool TryGet(",
+    "x": "0",
+    "y": "492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-075",
+    "text": "string encoding,",
+    "x": "0",
+    "y": "517.62",
+    "transform": ""
+  },
+  {
+    "id": "T-076",
+    "text": "out IRequestBodyDecompressor decompressor)",
+    "x": "0",
+    "y": "542.62",
+    "transform": ""
+  },
+  {
+    "id": "T-077",
+    "text": "{",
+    "x": "0",
+    "y": "567.62",
+    "transform": ""
+  },
+  {
+    "id": "T-078",
+    "text": "return _map.TryGetValue(encoding, out decompressor!);",
+    "x": "0",
+    "y": "592.62",
+    "transform": ""
+  },
+  {
+    "id": "T-079",
+    "text": "}",
+    "x": "0",
+    "y": "617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-080",
+    "text": "}",
+    "x": "0",
+    "y": "642.62",
+    "transform": ""
+  },
+  {
+    "id": "T-081",
+    "text": "middleware",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-082",
+    "text": "!!!!!",
+    "x": "0",
+    "y": "200.86800000000005",
+    "transform": ""
+  },
+  {
+    "id": "T-083",
+    "text": "theory",
+    "x": "0",
+    "y": "148.2429620117188",
+    "transform": ""
+  },
+  {
+    "id": "T-084",
+    "text": "automatic",
+    "x": "0",
+    "y": "148.2429620117188",
+    "transform": ""
+  },
+  {
+    "id": "T-085",
+    "text": "decompression on",
+    "x": "0",
+    "y": "358.5763360351564",
+    "transform": ""
+  },
+  {
+    "id": "T-086",
+    "text": "httpclient",
+    "x": "0",
+    "y": "568.9097100585939",
+    "transform": ""
+  },
+  {
+    "id": "T-087",
+    "text": "compression",
+    "x": "0",
+    "y": "148.2429620117188",
+    "transform": ""
+  },
+  {
+    "id": "T-088",
+    "text": "with httpclient and on server",
+    "x": "0",
+    "y": "358.5763360351564",
+    "transform": ""
+  },
+  {
+    "id": "T-090",
+    "text": "leaveopen, managing",
+    "x": "0",
+    "y": "128.03864874267575",
+    "transform": ""
+  },
+  {
+    "id": "T-091",
+    "text": "the wrapped stream",
+    "x": "0",
+    "y": "309.7052899780273",
+    "transform": ""
+  },
+  {
+    "id": "T-092",
+    "text": "compression level",
+    "x": "0",
+    "y": "66.14879355676564",
+    "transform": ""
+  },
+  {
+    "id": "T-093",
+    "text": "wrapping with compression/decompression stream",
+    "x": "0",
+    "y": "37.137538461539066",
+    "transform": ""
+  },
+  {
+    "id": "T-094",
+    "text": "decompression",
+    "x": "0",
+    "y": "113.15953165690098",
+    "transform": ""
+  },
+  {
+    "id": "T-095",
+    "text": "handling multiple encodings (rarely implemented)",
+    "x": "0",
+    "y": "83.40136201171876",
+    "transform": ""
+  },
+  {
+    "id": "T-096",
+    "text": "when to compress",
+    "x": "0",
+    "y": "75.17870251464846",
+    "transform": ""
+  },
+  {
+    "id": "T-097",
+    "text": "ACCEPT ENCODING",
+    "x": "0",
+    "y": "99.06360335286436",
+    "transform": ""
+  },
+  {
+    "id": "T-098",
+    "text": "VARY ACCEPT ENCODING",
+    "x": "0",
+    "y": "239.6192267252599",
+    "transform": ""
+  },
+  {
+    "id": "T-099",
+    "text": "just explicitness",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-100",
+    "text": "True implementation of",
+    "x": "0",
+    "y": "86.53380167643226",
+    "transform": ""
+  },
+  {
+    "id": "T-101",
+    "text": "decompressoin",
+    "x": "0",
+    "y": "209.31161336263014",
+    "transform": ""
+  },
+  {
+    "id": "T-102",
+    "text": "do i always need to conf",
+    "x": "0",
+    "y": "88.10000000000001",
+    "transform": ""
+  },
+  {
+    "id": "T-103",
+    "text": "compression provider options",
+    "x": "0",
+    "y": "213.10000000000002",
+    "transform": ""
+  }
+]
