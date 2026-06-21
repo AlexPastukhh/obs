@@ -1,0 +1,13 @@
+﻿text,x,y,font_size,label_id,region,verified_region,status
+protecting secret,10.0,1732.1285934848465,20px,T-001,R01,R01,closed-by-stage1
+and store to db,10.0,1757.1285934848465,20px,T-002,R01,R01,closed-by-stage1
+then unprotect,10.0,1782.1285934848465,20px,T-003,R01,R01,closed-by-stage1
+to verify token using,10.0,1807.1285934848465,20px,T-004,R01,R01,closed-by-stage1
+library,10.0,1832.1285934848465,20px,T-005,R01,R01,closed-by-stage1
+"so we are creating secret, creating uri for qr code which is urlsafe",645.4694699509837,27.619999999999997,20px,T-006,R01,R01,closed-by-stage1
+and shit,645.4694699509837,52.62,20px,T-007,R01,R01,closed-by-stage1
+"adding to db a pending enrollment, for it we need to protect the key",645.4694699509837,77.62,20px,T-008,R01,R01,closed-by-stage1
+if there is a pending enrollemnt - upsert,645.4694699509837,102.62,20px,T-009,R01,R01,closed-by-stage1
+then return the secret and uri,645.4694699509837,127.62,20px,T-010,R01,R01,closed-by-stage1
+then on enroll we need to get and unprotect the secret and use,645.4694699509837,152.62,20px,T-011,R01,R01,closed-by-stage1
+library to create totp class and verify totp with -1 +1,645.4694699509837,177.62,20px,T-012,R01,R01,closed-by-stage1

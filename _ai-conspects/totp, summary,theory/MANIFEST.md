@@ -1,25 +1,30 @@
-# MANIFEST - totp, summary,theory stage0 boundary review v001
+# MANIFEST — totp, summary,theory stage1 final coverage v001
 
+Source SVG: `totp, summary,theory.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/totp, summary,theory/00-source-check-and-boundary-review.md
-_ai-conspects/totp, summary,theory/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/totp, summary,theory/MANIFEST.md
-_ai-conspects/totp, summary,theory/APPLY_ARCHIVE.md
-_ai-conspects/totp, summary,theory/source/totp, summary,theory.svg
-_ai-conspects/totp, summary,theory/source/images/*
-_ai-conspects/totp, summary,theory/data/*
-_ai-conspects/totp, summary,theory/audit-assets/*
+Processed image uses: 8
+Processed text labels: 12
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 8
-text labels: 12
-regions: 1
+_ai-conspects/totp, summary,theory/regions/R01-totp-theory-enrollment-verification-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

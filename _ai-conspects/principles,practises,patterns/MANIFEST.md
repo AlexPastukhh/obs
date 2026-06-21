@@ -1,25 +1,30 @@
-# MANIFEST - principles,practises,patterns stage0 boundary review v001
+# MANIFEST — principles,practises,patterns stage1 final coverage v001
 
+Source SVG: `principles,practises,patterns.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/principles,practises,patterns/00-source-check-and-boundary-review.md
-_ai-conspects/principles,practises,patterns/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/principles,practises,patterns/MANIFEST.md
-_ai-conspects/principles,practises,patterns/APPLY_ARCHIVE.md
-_ai-conspects/principles,practises,patterns/source/principles,practises,patterns.svg
-_ai-conspects/principles,practises,patterns/source/images/*
-_ai-conspects/principles,practises,patterns/data/*
-_ai-conspects/principles,practises,patterns/audit-assets/*
+Processed image uses: 3
+Processed text labels: 9
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 3
-text labels: 9
-regions: 1
+_ai-conspects/principles,practises,patterns/regions/R01-domain-modeling-many-to-many-ownership-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

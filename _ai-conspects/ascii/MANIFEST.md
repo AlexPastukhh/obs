@@ -1,25 +1,30 @@
-# MANIFEST - ascii stage0 boundary review v001
+# MANIFEST — ascii stage1 final coverage v001
 
+Source SVG: `ascii.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/ascii/00-source-check-and-boundary-review.md
-_ai-conspects/ascii/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/ascii/MANIFEST.md
-_ai-conspects/ascii/APPLY_ARCHIVE.md
-_ai-conspects/ascii/source/ascii.svg
-_ai-conspects/ascii/source/images/*
-_ai-conspects/ascii/data/*
-_ai-conspects/ascii/audit-assets/*
+Processed image uses: 10
+Processed text labels: 2
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 10
-text labels: 2
-regions: 1
+_ai-conspects/ascii/regions/R01-ascii-encoding-utf8-comparison-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

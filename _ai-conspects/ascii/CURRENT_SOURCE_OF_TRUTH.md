@@ -11,7 +11,8 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 ASCII numeric mapping, control/printable ranges, C# conversion, UTF-8 compatibility, and encoding choice: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -20,11 +21,14 @@ Normal transcript regions: not started
 unique embedded images: 10
 image uses on canvas: 10
 text labels parsed: 2
-duplicate image-use groups: 0
+R01 processed image uses: 10
+R01 processed text labels: 2
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-R01 full pass = 10 image uses + 2 text labels
+No normal transcript regions remain. Only correction/polish if needed.
 ```

@@ -1,25 +1,30 @@
-# MANIFEST - pointers stage0 boundary review v001
+# MANIFEST — pointers stage1 final coverage v001
 
+Source SVG: `pointers.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/pointers/00-source-check-and-boundary-review.md
-_ai-conspects/pointers/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/pointers/MANIFEST.md
-_ai-conspects/pointers/APPLY_ARCHIVE.md
-_ai-conspects/pointers/source/pointers.svg
-_ai-conspects/pointers/source/images/*
-_ai-conspects/pointers/data/*
-_ai-conspects/pointers/audit-assets/*
+Processed image uses: 9
+Processed text labels: 0
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 9
-text labels: 0
-regions: 1
+_ai-conspects/pointers/regions/R01-csharp-pointers-unsafe-fixed-interop-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

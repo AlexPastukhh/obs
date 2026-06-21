@@ -1,25 +1,30 @@
-# MANIFEST - cookies auth ON REDIRECT  probmem details returning stage0 boundary review v001
+# MANIFEST — cookies auth ON REDIRECT  probmem details returning stage1 final coverage v001
 
+Source SVG: `cookies auth ON REDIRECT  probmem details returning.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/00-source-check-and-boundary-review.md
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/MANIFEST.md
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/APPLY_ARCHIVE.md
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/source/cookies auth ON REDIRECT  probmem details returning.svg
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/source/images/*
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/data/*
-_ai-conspects/cookies auth ON REDIRECT  probmem details returning/audit-assets/*
+Processed image uses: 4
+Processed text labels: 43
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 4
-text labels: 43
-regions: 1
+_ai-conspects/cookies auth ON REDIRECT  probmem details returning/regions/R01-cookie-auth-redirects-api-problemdetails-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

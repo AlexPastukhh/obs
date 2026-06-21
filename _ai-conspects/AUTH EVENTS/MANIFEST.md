@@ -1,25 +1,30 @@
-# MANIFEST - AUTH EVENTS stage0 boundary review v001
+# MANIFEST — AUTH EVENTS stage1 final coverage v001
 
+Source SVG: `AUTH EVENTS.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/AUTH EVENTS/00-source-check-and-boundary-review.md
-_ai-conspects/AUTH EVENTS/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/AUTH EVENTS/MANIFEST.md
-_ai-conspects/AUTH EVENTS/APPLY_ARCHIVE.md
-_ai-conspects/AUTH EVENTS/source/AUTH EVENTS.svg
-_ai-conspects/AUTH EVENTS/source/images/*
-_ai-conspects/AUTH EVENTS/data/*
-_ai-conspects/AUTH EVENTS/audit-assets/*
+Processed image uses: 6
+Processed text labels: 38
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 6
-text labels: 38
-regions: 1
+_ai-conspects/AUTH EVENTS/regions/R01-cookie-jwt-authentication-events-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

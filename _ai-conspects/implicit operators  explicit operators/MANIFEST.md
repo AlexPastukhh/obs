@@ -1,25 +1,30 @@
-# MANIFEST - implicit operators  explicit operators stage0 boundary review v001
+# MANIFEST — implicit operators  explicit operators stage1 final coverage v001
 
+Source SVG: `implicit operators  explicit operators.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/implicit operators  explicit operators/00-source-check-and-boundary-review.md
-_ai-conspects/implicit operators  explicit operators/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/implicit operators  explicit operators/MANIFEST.md
-_ai-conspects/implicit operators  explicit operators/APPLY_ARCHIVE.md
-_ai-conspects/implicit operators  explicit operators/source/implicit operators  explicit operators.svg
-_ai-conspects/implicit operators  explicit operators/source/images/*
-_ai-conspects/implicit operators  explicit operators/data/*
-_ai-conspects/implicit operators  explicit operators/audit-assets/*
+Processed image uses: 7
+Processed text labels: 8
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 7
-text labels: 8
-regions: 1
+_ai-conspects/implicit operators  explicit operators/regions/R01-implicit-explicit-conversion-operators-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

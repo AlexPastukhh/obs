@@ -1,25 +1,30 @@
-# MANIFEST - editor,display templates stage0 boundary review v001
+# MANIFEST — editor,display templates stage1 final coverage v001
 
+Source SVG: `editor,display templates.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/editor,display templates/00-source-check-and-boundary-review.md
-_ai-conspects/editor,display templates/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/editor,display templates/MANIFEST.md
-_ai-conspects/editor,display templates/APPLY_ARCHIVE.md
-_ai-conspects/editor,display templates/source/editor,display templates.svg
-_ai-conspects/editor,display templates/source/images/*
-_ai-conspects/editor,display templates/data/*
-_ai-conspects/editor,display templates/audit-assets/*
+Processed image uses: 5
+Processed text labels: 0
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 5
-text labels: 0
-regions: 1
+_ai-conspects/editor,display templates/regions/R01-display-editor-templates-final.md
+```
+
+## Evidence
+
+```text
+data/R01-sources-stage1-v001.*
+data/R01-boundary-review-stage1-v001.*
+data/R01-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01-source-images/*
 ```

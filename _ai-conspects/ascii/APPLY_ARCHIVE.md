@@ -1,13 +1,9 @@
-# APPLY ARCHIVE - ascii stage0 boundary review v001
+# APPLY ARCHIVE — next ten small conspects stage1 final coverage v001
 
-This conspect is included in the shared logical-step archive:
-
-```text
-ai-conspects-next-ten-small-stage0-boundary-reviews-v001.zip
-```
-
-Apply the bundle once from its root-level instructions. Exact target:
+This folder is delivered inside one combined archive:
 
 ```text
-_ai-conspects\ascii
+ai-conspects-next-ten-small-stage1-final-coverage-v001.zip
 ```
+
+Apply all ten target folders together. See `_ai-conspects/APPLY_NEXT_TEN_STAGE1.md`.

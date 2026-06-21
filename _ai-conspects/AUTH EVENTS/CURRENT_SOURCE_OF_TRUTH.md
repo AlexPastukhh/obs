@@ -11,7 +11,8 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 cookie/JWT event lifecycle, context types, challenge/forbid response handling, sliding expiration, and known API endpoint metadata: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -20,11 +21,14 @@ Normal transcript regions: not started
 unique embedded images: 6
 image uses on canvas: 6
 text labels parsed: 38
-duplicate image-use groups: 0
+R01 processed image uses: 6
+R01 processed text labels: 38
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-R01 full pass = 6 image uses + 38 text labels
+No normal transcript regions remain. Only correction/polish if needed.
 ```

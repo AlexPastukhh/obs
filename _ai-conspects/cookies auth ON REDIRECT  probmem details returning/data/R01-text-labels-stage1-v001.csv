@@ -1,0 +1,44 @@
+﻿text,x,y,font_size,label_id,region,verified_region,status
+cookies auth probmem details returning,10.0,63.64306331380219,60.888834635416785px,T-001,R01,R01,closed-by-stage1
+using Microsoft.AspNetCore.Mvc;,1132.7042613795604,691.9914412144649,20px,T-002,R01,R01,closed-by-stage1
+options.Events.OnRedirectToLogin = async ctx =>,1132.7042613795604,741.9914412144649,20px,T-003,R01,R01,closed-by-stage1
+{,1132.7042613795604,766.9914412144649,20px,T-004,R01,R01,closed-by-stage1
+"if (!ctx.Request.Path.StartsWithSegments(""/api""))",1132.7042613795604,791.9914412144649,20px,T-005,R01,R01,closed-by-stage1
+{,1132.7042613795604,816.9914412144649,20px,T-006,R01,R01,closed-by-stage1
+ctx.Response.Redirect(ctx.RedirectUri);,1132.7042613795604,841.9914412144649,20px,T-007,R01,R01,closed-by-stage1
+return;,1132.7042613795604,866.9914412144649,20px,T-008,R01,R01,closed-by-stage1
+},1132.7042613795604,891.9914412144649,20px,T-009,R01,R01,closed-by-stage1
+ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;,1132.7042613795604,941.9914412144649,20px,T-010,R01,R01,closed-by-stage1
+var http = ctx.HttpContext;,1132.7042613795604,991.9914412144649,20px,T-011,R01,R01,closed-by-stage1
+var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();,1132.7042613795604,1016.9914412144649,20px,T-012,R01,R01,closed-by-stage1
+var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();,1132.7042613795604,1041.9914412144649,20px,T-013,R01,R01,closed-by-stage1
+var pd = factory.CreateProblemDetails(,1132.7042613795604,1091.9914412144649,20px,T-014,R01,R01,closed-by-stage1
+"httpContext: http,",1132.7042613795604,1116.9914412144649,20px,T-015,R01,R01,closed-by-stage1
+"statusCode: StatusCodes.Status401Unauthorized,",1132.7042613795604,1141.9914412144649,20px,T-016,R01,R01,closed-by-stage1
+"title: ""Unauthorized"",",1132.7042613795604,1166.9914412144649,20px,T-017,R01,R01,closed-by-stage1
+"type: ""https://httpstatuses.com/401"",",1132.7042613795604,1191.9914412144649,20px,T-018,R01,R01,closed-by-stage1
+"detail: ""Authentication is required to access this resource."",",1132.7042613795604,1216.9914412144649,20px,T-019,R01,R01,closed-by-stage1
+instance: http.Request.Path);,1132.7042613795604,1241.9914412144649,20px,T-020,R01,R01,closed-by-stage1
+"await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });",1132.7042613795604,1291.9914412144649,20px,T-021,R01,R01,closed-by-stage1
+};,1132.7042613795604,1316.9914412144649,20px,T-022,R01,R01,closed-by-stage1
+options.Events.OnRedirectToAccessDenied = async ctx =>,1132.7042613795604,1366.9914412144649,20px,T-023,R01,R01,closed-by-stage1
+{,1132.7042613795604,1391.9914412144649,20px,T-024,R01,R01,closed-by-stage1
+"if (!ctx.Request.Path.StartsWithSegments(""/api""))",1132.7042613795604,1416.9914412144649,20px,T-025,R01,R01,closed-by-stage1
+{,1132.7042613795604,1441.9914412144649,20px,T-026,R01,R01,closed-by-stage1
+ctx.Response.Redirect(ctx.RedirectUri);,1132.7042613795604,1466.9914412144649,20px,T-027,R01,R01,closed-by-stage1
+return;,1132.7042613795604,1491.9914412144649,20px,T-028,R01,R01,closed-by-stage1
+},1132.7042613795604,1516.9914412144649,20px,T-029,R01,R01,closed-by-stage1
+ctx.Response.StatusCode = StatusCodes.Status403Forbidden;,1132.7042613795604,1566.9914412144649,20px,T-030,R01,R01,closed-by-stage1
+var http = ctx.HttpContext;,1132.7042613795604,1616.9914412144649,20px,T-031,R01,R01,closed-by-stage1
+var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();,1132.7042613795604,1641.9914412144649,20px,T-032,R01,R01,closed-by-stage1
+var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();,1132.7042613795604,1666.9914412144649,20px,T-033,R01,R01,closed-by-stage1
+var pd = factory.CreateProblemDetails(,1132.7042613795604,1716.9914412144649,20px,T-034,R01,R01,closed-by-stage1
+"httpContext: http,",1132.7042613795604,1741.9914412144649,20px,T-035,R01,R01,closed-by-stage1
+"statusCode: StatusCodes.Status403Forbidden,",1132.7042613795604,1766.9914412144649,20px,T-036,R01,R01,closed-by-stage1
+"title: ""Forbidden"",",1132.7042613795604,1791.9914412144649,20px,T-037,R01,R01,closed-by-stage1
+"type: ""https://httpstatuses.com/403"",",1132.7042613795604,1816.9914412144649,20px,T-038,R01,R01,closed-by-stage1
+"detail: ""You do not have permission to access this resource."",",1132.7042613795604,1841.9914412144649,20px,T-039,R01,R01,closed-by-stage1
+instance: http.Request.Path);,1132.7042613795604,1866.9914412144649,20px,T-040,R01,R01,closed-by-stage1
+"await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });",1132.7042613795604,1916.9914412144649,20px,T-041,R01,R01,closed-by-stage1
+};,1132.7042613795604,1941.9914412144649,20px,T-042,R01,R01,closed-by-stage1
+WITH TRYWRITEASYNC,249.17221840549882,1801.3716383722447,20px,T-043,R01,R01,closed-by-stage1
