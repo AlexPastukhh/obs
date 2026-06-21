@@ -1,0 +1,78 @@
+[
+  {
+    "id": "R01",
+    "name": "linked-token-source-disconnect-propagation",
+    "summary": "linked token sources, request disconnect/external API cancellation and propagation/bubbling",
+    "image_use_count": 0,
+    "text_label_count": 23,
+    "source_ids": [],
+    "label_ids": [
+      "T-004",
+      "T-005",
+      "T-006",
+      "T-007",
+      "T-008",
+      "T-009",
+      "T-010",
+      "T-011",
+      "T-012",
+      "T-013",
+      "T-014",
+      "T-015",
+      "T-016",
+      "T-017",
+      "T-018",
+      "T-019",
+      "T-023",
+      "T-024",
+      "T-025",
+      "T-034",
+      "T-035",
+      "T-036",
+      "T-037"
+    ],
+    "axis": "x",
+    "min": -1000000000.0,
+    "max": 5000
+  },
+  {
+    "id": "R02",
+    "name": "cpu-bound-manual-cancellation-checks",
+    "summary": "CPU-bound cancellation loops and ThrowIfCancellationRequested placement",
+    "image_use_count": 0,
+    "text_label_count": 6,
+    "source_ids": [],
+    "label_ids": [
+      "T-001",
+      "T-002",
+      "T-003",
+      "T-020",
+      "T-021",
+      "T-022"
+    ],
+    "axis": "x",
+    "min": 5000,
+    "max": 9000
+  },
+  {
+    "id": "R03",
+    "name": "async-cancellation-exceptions",
+    "summary": "async exception behavior, TaskCanceledException and OperationCanceledException distinctions",
+    "image_use_count": 0,
+    "text_label_count": 8,
+    "source_ids": [],
+    "label_ids": [
+      "T-026",
+      "T-027",
+      "T-028",
+      "T-029",
+      "T-030",
+      "T-031",
+      "T-032",
+      "T-033"
+    ],
+    "axis": "x",
+    "min": 9000,
+    "max": 1000000000.0
+  }
+]

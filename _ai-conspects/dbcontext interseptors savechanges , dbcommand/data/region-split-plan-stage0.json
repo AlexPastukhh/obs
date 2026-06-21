@@ -1,0 +1,59 @@
+[
+  {
+    "id": "R01",
+    "name": "savechanges-failure-concurrency",
+    "summary": "SaveChanges interception, failure callbacks and concurrency exception paths",
+    "image_use_count": 0,
+    "text_label_count": 6,
+    "source_ids": [],
+    "label_ids": [
+      "T-009",
+      "T-010",
+      "T-012",
+      "T-013",
+      "T-017",
+      "T-018"
+    ],
+    "axis": "x",
+    "min": -1000000000.0,
+    "max": 3500
+  },
+  {
+    "id": "R02",
+    "name": "event-data-suppression-return-values",
+    "summary": "event data, result suppression, callback return values and suppression detection",
+    "image_use_count": 0,
+    "text_label_count": 8,
+    "source_ids": [],
+    "label_ids": [
+      "T-001",
+      "T-003",
+      "T-004",
+      "T-005",
+      "T-006",
+      "T-011",
+      "T-015",
+      "T-016"
+    ],
+    "axis": "x",
+    "min": 3500,
+    "max": 8500
+  },
+  {
+    "id": "R03",
+    "name": "dbcommand-command-interceptors-scalar",
+    "summary": "DbCommand interceptors, command event data and scalar execution return behavior",
+    "image_use_count": 0,
+    "text_label_count": 4,
+    "source_ids": [],
+    "label_ids": [
+      "T-002",
+      "T-007",
+      "T-008",
+      "T-014"
+    ],
+    "axis": "x",
+    "min": 8500,
+    "max": 1000000000.0
+  }
+]

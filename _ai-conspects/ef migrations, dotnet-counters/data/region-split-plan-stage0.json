@@ -1,0 +1,68 @@
+[
+  {
+    "id": "R01",
+    "name": "migration-basics-add-apply-remove",
+    "summary": "whether to migrate from code, add/apply/remove/list migration workflow",
+    "image_use_count": 0,
+    "text_label_count": 13,
+    "source_ids": [],
+    "label_ids": [
+      "T-001",
+      "T-002",
+      "T-003",
+      "T-007",
+      "T-008",
+      "T-009",
+      "T-018",
+      "T-019",
+      "T-020",
+      "T-024",
+      "T-025",
+      "T-026",
+      "T-027"
+    ],
+    "axis": "y",
+    "min": -1000000000.0,
+    "max": 3000
+  },
+  {
+    "id": "R02",
+    "name": "scripts-idempotent-bundles-history",
+    "summary": "SQL scripts, idempotent scripts, history checks and migration bundles",
+    "image_use_count": 0,
+    "text_label_count": 9,
+    "source_ids": [],
+    "label_ids": [
+      "T-004",
+      "T-005",
+      "T-006",
+      "T-010",
+      "T-016",
+      "T-017",
+      "T-021",
+      "T-022",
+      "T-023"
+    ],
+    "axis": "y",
+    "min": 3000,
+    "max": 7000
+  },
+  {
+    "id": "R03",
+    "name": "dotnet-counters-ef-metrics",
+    "summary": "dotnet-counters, process selection, query count/cache-hit rate and optimistic concurrency metrics",
+    "image_use_count": 0,
+    "text_label_count": 5,
+    "source_ids": [],
+    "label_ids": [
+      "T-011",
+      "T-012",
+      "T-013",
+      "T-014",
+      "T-015"
+    ],
+    "axis": "y",
+    "min": 7000,
+    "max": 1000000000.0
+  }
+]

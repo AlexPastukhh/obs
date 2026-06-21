@@ -1,0 +1,4 @@
+id,name,summary,image_use_count,text_label_count,source_ids,label_ids,axis,min,max
+R01,linked-token-source-disconnect-propagation,"linked token sources, request disconnect/external API cancellation and propagation/bubbling",0,23,,T-004;T-005;T-006;T-007;T-008;T-009;T-010;T-011;T-012;T-013;T-014;T-015;T-016;T-017;T-018;T-019;T-023;T-024;T-025;T-034;T-035;T-036;T-037,x,-1000000000.0,5000
+R02,cpu-bound-manual-cancellation-checks,CPU-bound cancellation loops and ThrowIfCancellationRequested placement,0,6,,T-001;T-002;T-003;T-020;T-021;T-022,x,5000,9000
+R03,async-cancellation-exceptions,"async exception behavior, TaskCanceledException and OperationCanceledException distinctions",0,8,,T-026;T-027;T-028;T-029;T-030;T-031;T-032;T-033,x,9000,1000000000.0

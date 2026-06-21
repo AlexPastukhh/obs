@@ -1,0 +1,39 @@
+label_id,text,x,y,font_size,candidate_region
+T-001,pattern to enable multitenancy or,4745.236123256454,1951.9857093443356,103.35234026227684px,R02
+T-002,some dbcontext instance property based shit,4745.236123256454,1951.9857093443356,103.35234026227684px,R02
+T-003,so when we register pooledfactory we dont get dbcontext from di,4725.568217983016,2389.2239382784874,20px,R02
+T-004,we get factory from di and we create context with it,4725.568217983016,2389.2239382784874,20px,R02
+T-005,so we need to create wrapper that will get some request info from registered scoped service,4725.568217983016,2389.2239382784874,20px,R02
+T-006,and set props on dbcontext,4725.568217983016,2389.2239382784874,20px,R02
+T-007,and then we will return dbcontext with rep request state,4725.568217983016,2389.2239382784874,20px,R02
+T-008,but we wont use this wrapper manuallly,4725.568217983016,2389.2239382784874,20px,R02
+T-009,we will register scoped instance service - we will get wraper and we will create dbcontext with our method,4725.568217983016,2389.2239382784874,20px,R02
+T-010,about dbcontext allocatjions,4778.589413167633,607.5731460809084,55.7333374023437px,R02
+T-011,and setup pressure,4778.589413167633,607.5731460809084,55.7333374023437px,R02
+T-012,50kb vs 4kb,4778.589413167633,607.5731460809084,55.7333374023437px,R02
+T-013,and x2 faster,4778.589413167633,607.5731460809084,55.7333374023437px,R02
+T-014,need to dispose manually,10.0,1074.5568022235575,89.39408337683922px,R01
+T-015,the dbcontext from factory,10.0,1074.5568022235575,89.39408337683922px,R01
+T-016,dont need the dbcontext from di,10.0,1074.5568022235575,89.39408337683922px,R01
+T-017,addpooleddbcontextfactory,1705.4618354577378,1282.9084357372021,106.58558744912656px,R01
+T-018,idcontextfactory<dbcontexgt>,1705.4618354577378,1282.9084357372021,106.58558744912656px,R01
+T-019,"onmodelcreating, when it runs,",4713.421680294541,4237.491436447698,49.03704155816011px,R02
+T-020,what is better not to do there,4713.421680294541,4237.491436447698,49.03704155816011px,R02
+T-021,props for queryfilters,4713.421680294541,4237.491436447698,49.03704155816011px,R02
+T-022,!!!,6285.94719300683,4634.8352483149765,61.71177438320738px,R03
+T-023,!!!,8256.957850350234,5038.730341427637,33.82143739493622px,R03
+T-024,so when we do shit with raw conneciton,7391.966191567457,3516.644521948064,20px,R03
+T-025,1 we need to reset all connection state changes - to avoid same state for,7391.966191567457,3516.644521948064,20px,R03
+T-026,polled contexts + for polled connections on db provider level (without reset it returns connection with same session,7391.966191567457,3516.644521948064,20px,R03
+T-027,state that we have set to the connection pool),7391.966191567457,3516.644521948064,20px,R03
+T-028,"2 and we need to close the connection so it actually returns to the connection pool,",7391.966191567457,3516.644521948064,20px,R03
+T-029,we can have pool exhaustion without it even if we kinda reuse the connection in case we do cleanup,7391.966191567457,3516.644521948064,20px,R03
+T-030,we may just not reuse that same instance that has long running(endless connection) and reuse,7391.966191567457,3516.644521948064,20px,R03
+T-031,another contexts - and we will end up with some connections just being open and doing nothing,7391.966191567457,3516.644521948064,20px,R03
+T-032,what eef core resets by itself,6498.449128779243,2966.938986897102,147.99995930989593px,R03
+T-033,what and when you need to reset manually,6498.449128779243,2966.938986897102,147.99995930989593px,R03
+T-034,di disposes disposable,3732.3439974266257,3855.039615582222,69.87864347903539px,R02
+T-035,what if you exceeded pool limits,2551.201519957104,10.0,46.70717254502671px,R01
+T-036,operating dbconnection,6456.5119878527585,3500.7300159704523,58.32098162615737px,R03
+T-037,with ado.net,6456.5119878527585,3500.7300159704523,58.32098162615737px,R03
+T-038,and context pools,6456.5119878527585,3500.7300159704523,58.32098162615737px,R03

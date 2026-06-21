@@ -1,0 +1,4 @@
+id,name,summary,image_use_count,text_label_count,source_ids,label_ids,axis,min,max
+R01,raw-interpolated-dynamic-sql-injection,"raw vs interpolated SQL, dynamic SQL parts, parameterization and injection danger",0,9,,T-006;T-007;T-008;T-009;T-010;T-016;T-017;T-018;T-019,x,-1000000000.0,2500
+R02,executeupdate-executedelete-setproperty,"ExecuteUpdate/ExecuteDelete, SetProperty limitations and bypassing the change tracker",0,2,,T-014;T-015,x,2500,4300
+R03,sqlquery-fromsql-projections-tracking,Database.SqlQuery projections/scalars and DbSet.FromSql tracked entity results,0,8,,T-001;T-002;T-003;T-004;T-005;T-011;T-012;T-013,x,4300,1000000000.0

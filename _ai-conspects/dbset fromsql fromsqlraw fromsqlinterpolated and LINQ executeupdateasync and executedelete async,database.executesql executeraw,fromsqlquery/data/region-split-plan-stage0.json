@@ -1,0 +1,60 @@
+[
+  {
+    "id": "R01",
+    "name": "raw-interpolated-dynamic-sql-injection",
+    "summary": "raw vs interpolated SQL, dynamic SQL parts, parameterization and injection danger",
+    "image_use_count": 0,
+    "text_label_count": 9,
+    "source_ids": [],
+    "label_ids": [
+      "T-006",
+      "T-007",
+      "T-008",
+      "T-009",
+      "T-010",
+      "T-016",
+      "T-017",
+      "T-018",
+      "T-019"
+    ],
+    "axis": "x",
+    "min": -1000000000.0,
+    "max": 2500
+  },
+  {
+    "id": "R02",
+    "name": "executeupdate-executedelete-setproperty",
+    "summary": "ExecuteUpdate/ExecuteDelete, SetProperty limitations and bypassing the change tracker",
+    "image_use_count": 0,
+    "text_label_count": 2,
+    "source_ids": [],
+    "label_ids": [
+      "T-014",
+      "T-015"
+    ],
+    "axis": "x",
+    "min": 2500,
+    "max": 4300
+  },
+  {
+    "id": "R03",
+    "name": "sqlquery-fromsql-projections-tracking",
+    "summary": "Database.SqlQuery projections/scalars and DbSet.FromSql tracked entity results",
+    "image_use_count": 0,
+    "text_label_count": 8,
+    "source_ids": [],
+    "label_ids": [
+      "T-001",
+      "T-002",
+      "T-003",
+      "T-004",
+      "T-005",
+      "T-011",
+      "T-012",
+      "T-013"
+    ],
+    "axis": "x",
+    "min": 4300,
+    "max": 1000000000.0
+  }
+]
