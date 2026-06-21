@@ -1,0 +1,27 @@
+{
+  "conspect": "claimstransformation",
+  "source_svg": "claimstransformation.svg",
+  "stage": "stage1-r01r02r03-final-coverage-v001",
+  "generated": "2026-06-22 UTC",
+  "title": "Claims transformation: enrichment, implementation, idempotency, and persistence limits",
+  "regions": [
+    {
+      "id": "R01",
+      "summary": "database-backed enrichment, tenant information, claim normalization, and legacy claim aliases",
+      "image_uses": 5,
+      "text_labels": 8
+    },
+    {
+      "id": "R02",
+      "summary": "IClaimsTransformation purpose, service implementation, registration, and TransformAsync behavior",
+      "image_uses": 6,
+      "text_labels": 0
+    },
+    {
+      "id": "R03",
+      "summary": "when transformation runs, repeated execution guards, marker claims, current-principal scope, and persistence limits",
+      "image_uses": 8,
+      "text_labels": 11
+    }
+  ]
+}

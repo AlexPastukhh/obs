@@ -1,0 +1,21 @@
+{
+  "conspect": "when need to add content type, encoding",
+  "source_svg": "when need to add content type, encoding.svg",
+  "stage": "stage1-r01r02-final-coverage-v001",
+  "generated": "2026-06-22 UTC",
+  "title": "HttpContent Content-Type, charset, and Content-Encoding final coverage",
+  "regions": [
+    {
+      "id": "R01",
+      "summary": "when HttpContent sets Content-Type automatically and when ByteArrayContent/StreamContent require manual media type",
+      "image_uses": 7,
+      "text_labels": 0
+    },
+    {
+      "id": "R02",
+      "summary": "charset vs compression Content-Encoding, StringContent/JsonContent behavior, and interoperability guidance",
+      "image_uses": 10,
+      "text_labels": 0
+    }
+  ]
+}

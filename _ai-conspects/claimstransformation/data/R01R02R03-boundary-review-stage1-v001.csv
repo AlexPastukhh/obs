@@ -1,0 +1,4 @@
+region,name,count,sources,decision,reason,remaining_after_pass
+R01,database-enrichment-normalization-legacy-claims,5,"S-001, S-002, S-007, S-010, S-015",included in combined final transcript pass,"database-backed enrichment, tenant information, claim normalization, and legacy claim aliases",0
+R02,claims-transformation-service-registration-and-implementation,6,"S-003, S-005, S-006, S-008, S-011, S-014",included in combined final transcript pass,"IClaimsTransformation purpose, service implementation, registration, and TransformAsync behavior",0
+R03,execution-frequency-idempotency-and-persistence-limits,8,"S-004, S-009, S-012, S-013, S-016, S-017, S-018, S-019",included in combined final transcript pass,"when transformation runs, repeated execution guards, marker claims, current-principal scope, and persistence limits",0

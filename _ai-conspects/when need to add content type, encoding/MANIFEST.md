@@ -1,25 +1,30 @@
-# MANIFEST - when need to add content type, encoding stage0 boundary review v001
+# MANIFEST — when need to add content type, encoding stage1 final coverage v001
 
+Source SVG: `when need to add content type, encoding.svg`  
 Target branch: `ai-processed-conspects-text`  
 Generated: 2026-06-22 UTC
 
-## Included
+## Result
 
 ```text
-_ai-conspects/when need to add content type, encoding/00-source-check-and-boundary-review.md
-_ai-conspects/when need to add content type, encoding/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/when need to add content type, encoding/MANIFEST.md
-_ai-conspects/when need to add content type, encoding/APPLY_ARCHIVE.md
-_ai-conspects/when need to add content type, encoding/source/when need to add content type, encoding.svg
-_ai-conspects/when need to add content type, encoding/source/images/*
-_ai-conspects/when need to add content type, encoding/data/*
-_ai-conspects/when need to add content type, encoding/audit-assets/*
+Processed image uses: 17
+Processed text labels: 0
+Remaining unclosed image uses: 0
+Remaining unclosed text labels: 0
 ```
 
-## Counts
+## Main transcript
 
 ```text
-image uses: 17
-text labels: 0
-regions: 2
+_ai-conspects/when need to add content type, encoding/regions/R01R02-content-type-charset-content-encoding-final.md
+```
+
+## Evidence
+
+```text
+data/R01R02-sources-stage1-v001.*
+data/R01R02-boundary-review-stage1-v001.*
+data/R01R02-text-labels-stage1-v001.*
+data/final-coverage-audit-stage1-v001.*
+audit-assets/R01R02-source-images/*.png
 ```

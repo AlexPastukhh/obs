@@ -11,20 +11,26 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 MVC view, partial, layout, area, view component, and display-folder discovery conventions plus override paths: transcript v001 done
+R02 display/editor template discovery, model conventions, usage, and reasons to use templates: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
 
 ```text
-unique embedded images: 13
 image uses on canvas: 13
 text labels parsed: 0
-duplicate image-use groups: 0
+R01 processed image uses: 8
+R01 processed text labels: 0
+R02 processed image uses: 5
+R02 processed text labels: 0
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-R01+R02 full pass = 13 image uses
+No normal transcript regions remain. Only correction/polish if needed.
 ```

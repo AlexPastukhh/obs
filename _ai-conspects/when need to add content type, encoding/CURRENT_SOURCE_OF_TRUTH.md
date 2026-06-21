@@ -11,20 +11,26 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 when HttpContent sets Content-Type automatically and when ByteArrayContent/StreamContent require manual media type: transcript v001 done
+R02 charset vs compression Content-Encoding, StringContent/JsonContent behavior, and interoperability guidance: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
 
 ```text
-unique embedded images: 17
 image uses on canvas: 17
 text labels parsed: 0
-duplicate image-use groups: 0
+R01 processed image uses: 7
+R01 processed text labels: 0
+R02 processed image uses: 10
+R02 processed text labels: 0
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-R01+R02 full pass = 17 image uses
+No normal transcript regions remain. Only correction/polish if needed.
 ```
