@@ -1,0 +1,122 @@
+[
+  {
+    "label_id": "T-001",
+    "text": "include == join",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-002",
+    "text": "when navigation has required() then ef uses inner join (because if this",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-003",
+    "text": "shit is required - it must be there and we cant loose data with inner join)",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-004",
+    "text": "when navigation is optional then ef uses left join",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-005",
+    "text": "query filters break this shit, so when some navigation is required and",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-006",
+    "text": "it has query filter - we will build inner join and we may not fetch outer",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-007",
+    "text": "entities whoose children was filtered (we will fetch them if navigation is a collection",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-008",
+    "text": "and there is so children that wasnt filtered)",
+    "x": 995.5822931698749,
+    "y": 728.1191263116052,
+    "font_size": "33.743586613581286px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-009",
+    "text": "inner and left joins",
+    "x": 869.6560386262681,
+    "y": 337.18355879864976,
+    "font_size": "83.40738932291764px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-010",
+    "text": "when including navigations in query",
+    "x": 869.6560386262681,
+    "y": 337.18355879864976,
+    "font_size": "83.40738932291764px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-011",
+    "text": "how we can loose data with query filters",
+    "x": 869.6560386262681,
+    "y": 337.18355879864976,
+    "font_size": "83.40738932291764px",
+    "candidate_region": "R01"
+  },
+  {
+    "label_id": "T-012",
+    "text": "query filters",
+    "x": 2770.7972004965613,
+    "y": 10.0,
+    "font_size": "228.88891601562497px",
+    "candidate_region": "R02"
+  },
+  {
+    "label_id": "T-013",
+    "text": "!!!",
+    "x": 4081.6770840046233,
+    "y": 1281.5778116771548,
+    "font_size": "61.5962982614777px",
+    "candidate_region": "R02"
+  },
+  {
+    "label_id": "T-014",
+    "text": "ignore query filters",
+    "x": 4212.699754108334,
+    "y": 1333.192802930132,
+    "font_size": "61.5962982614777px",
+    "candidate_region": "R02"
+  },
+  {
+    "label_id": "T-015",
+    "text": "multiple filters",
+    "x": 4097.410893562705,
+    "y": 1905.3540448083108,
+    "font_size": "70.45228370159998px",
+    "candidate_region": "R02"
+  }
+]
