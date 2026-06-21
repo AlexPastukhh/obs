@@ -1,0 +1,695 @@
+[
+  {
+    "idx": 1,
+    "text": "ADD STATUSCODEPAGES FOR 406/415 ETC",
+    "x": 909.7994733914811,
+    "y": 179.56056022566145,
+    "font_size": "50.35899939903904px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 2,
+    "text": "OR",
+    "x": 2294.8136418944196,
+    "y": 189.36108481500514,
+    "font_size": "53.185167100695274px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 3,
+    "text": "CREATE SOME ENDPOINTS FOR STATUS CODES",
+    "x": 2652.183594574586,
+    "y": 194.8311181182903,
+    "font_size": "46.074110243056204px",
+    "region": "R02",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 4,
+    "text": "can add check for status code and add more info about",
+    "x": 2645.0926892507846,
+    "y": 1172.1878041782352,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 5,
+    "text": "the initial path and what client does need to do",
+    "x": 2645.0926892507846,
+    "y": 1172.1878041782352,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 6,
+    "text": "(406 check accept 415 check content tyep)",
+    "x": 2645.0926892507846,
+    "y": 1172.1878041782352,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 7,
+    "text": "cant add the exact",
+    "x": 2033.376205247956,
+    "y": 1250.940465207174,
+    "font_size": "20px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 8,
+    "text": "reason to problem",
+    "x": 2033.376205247956,
+    "y": 1250.940465207174,
+    "font_size": "20px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 9,
+    "text": "but can add useful details",
+    "x": 2033.376205247956,
+    "y": 1250.940465207174,
+    "font_size": "20px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 10,
+    "text": "using Microsoft.AspNetCore.Mvc;",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 11,
+    "text": "using Microsoft.AspNetCore.WebUtilities;",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 12,
+    "text": "var builder = WebApplication.CreateBuilder(args);",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 13,
+    "text": "// MVC (or minimal APIs + services)",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 14,
+    "text": "builder.Services.AddControllers();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 15,
+    "text": "// ProblemDetails infrastructure",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 16,
+    "text": "builder.Services.AddProblemDetails();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 17,
+    "text": "var app = builder.Build();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 18,
+    "text": "app.UseRouting();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 19,
+    "text": "app.UseWhen(",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 20,
+    "text": "ctx => ctx.Request.Path.StartsWithSegments(\"/api\"),",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 21,
+    "text": "apiApp =>",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 22,
+    "text": "{",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 23,
+    "text": "apiApp.UseStatusCodePages(async statusCodeContext =>",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 24,
+    "text": "{",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 25,
+    "text": "var http = statusCodeContext.HttpContext;",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 26,
+    "text": "// If headers/body already started, can't write a body safely",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 27,
+    "text": "if (http.Response.HasStarted)",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 28,
+    "text": "return;",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 29,
+    "text": "var code = http.Response.StatusCode;",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 30,
+    "text": "// Only handle selected status codes",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 31,
+    "text": "if (code is not (",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 32,
+    "text": "StatusCodes.Status404NotFound or",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 33,
+    "text": "StatusCodes.Status405MethodNotAllowed or",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 34,
+    "text": "StatusCodes.Status406NotAcceptable or",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 35,
+    "text": "StatusCodes.Status415UnsupportedMediaType))",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 36,
+    "text": "{",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 37,
+    "text": "return;",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 38,
+    "text": "}",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 39,
+    "text": "var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 40,
+    "text": "var pdService = http.RequestServices.GetRequiredService<IProblemDetailsService>();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 41,
+    "text": "var detail = code switch",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 42,
+    "text": "{",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 43,
+    "text": "StatusCodes.Status404NotFound =>",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 44,
+    "text": "\"Endpoint not found.\",",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 45,
+    "text": "StatusCodes.Status405MethodNotAllowed =>",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 46,
+    "text": "\"HTTP method not allowed for this endpoint.\",",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 47,
+    "text": "StatusCodes.Status406NotAcceptable =>",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 48,
+    "text": "\"The requested response media type is not acceptable. Check the Accept header.\",",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 49,
+    "text": "StatusCodes.Status415UnsupportedMediaType =>",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 50,
+    "text": "\"The request media type is unsupported. Check the Content-Type header.\",",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 51,
+    "text": "_ => null",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 52,
+    "text": "};",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 53,
+    "text": "var pd = factory.CreateProblemDetails(",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 54,
+    "text": "httpContext: http,",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 55,
+    "text": "statusCode: code,",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 56,
+    "text": "title: ReasonPhrases.GetReasonPhrase(code),",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 57,
+    "text": "type: $\"https://httpstatuses.com/{code}\",",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 58,
+    "text": "detail: detail,",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 59,
+    "text": "instance: http.Request.Path",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 60,
+    "text": ");",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 61,
+    "text": "// Safe writer (content-negotiates across registered ProblemDetails writers)",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 62,
+    "text": "var written = await pdService.TryWriteAsync(new ProblemDetailsContext",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 63,
+    "text": "{",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 64,
+    "text": "HttpContext = http,",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 65,
+    "text": "ProblemDetails = pd",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 66,
+    "text": "});",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 67,
+    "text": "if (!written)",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 68,
+    "text": "{",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 69,
+    "text": "// Fallback if no ProblemDetails writer is registered for the request",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 70,
+    "text": "http.Response.ContentType = \"application/problem+json; charset=utf-8\";",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 71,
+    "text": "await http.Response.WriteAsJsonAsync(pd);",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 72,
+    "text": "}",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 73,
+    "text": "});",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 74,
+    "text": "});",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 75,
+    "text": "app.MapControllers();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 76,
+    "text": "app.Run();",
+    "x": 10.0,
+    "y": 156.78062822910442,
+    "font_size": "15.309236947791158px",
+    "region": "R01",
+    "status": "closed-by-stage1-final-coverage"
+  },
+  {
+    "idx": 77,
+    "text": "STATUSCODEPAGES WITH ADDPROBLEMDETAILS",
+    "x": 4476.216176993755,
+    "y": 10.0,
+    "font_size": "63.010389422892686px",
+    "region": "R03",
+    "status": "closed-by-stage1-final-coverage"
+  }
+]
