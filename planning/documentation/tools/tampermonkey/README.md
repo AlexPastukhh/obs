@@ -1,7 +1,7 @@
 # OBS Tampermonkey Tools
 
 Status: active reusable/project planning tool index
-Doc version: v0.4.2
+Doc version: v0.4.3
 Scope: tracked Tampermonkey scripts used by the OBS planning system, including reusable command projection and project planning runtime tools.
 
 ## 1. Tracked scripts
@@ -105,16 +105,17 @@ Live Markdown reads intentionally bypass the browser/Tampermonkey HTTP cache:
 
 ```text
 1. Open/refresh the Dashboard Viewer to publish the active operational-day context.
-2. Work in Planning Pattern Capture.
-3. Use Auto session numbering or enter a manual session label such as S4.
-4. Press Finish.
-5. Capture stores one pending session, preserves its session label and advances to the next session ID.
-6. Dashboard displays repository sessions plus pending/conflict local sessions.
-7. Pending totals include only status=pending records; conflicts are shown separately and block export/Finish.
-8. At the end of the day, press Copy pending or Download pending.
-9. Paste/upload the JSON for one reviewed replacement archive.
-10. Apply the archive and refresh localhost.
-11. Reconciliation requires the exact row count and complete ordered appended sequence.
+2. Set the Capture Date field to the same YYYY-MM-DD date shown by Dashboard.
+3. Work in Planning Pattern Capture.
+4. Use Auto session numbering or enter a manual session label such as S4.
+5. Press Finish.
+6. Capture stores one pending session, preserves its session label and advances to the next session ID.
+7. Dashboard displays repository sessions plus pending/conflict local sessions.
+8. Pending totals include only status=pending records; conflicts are shown separately and block export/Finish.
+9. At the end of the day, press Copy pending or Download pending.
+10. Paste/upload the JSON for one reviewed replacement archive.
+11. Apply the archive and refresh localhost.
+12. Reconciliation requires the exact row count and complete ordered appended sequence.
 ```
 
 `Copy End` remains as a manual fallback and does not write the shared outbox.
@@ -174,6 +175,7 @@ Ctrl+Alt+P  emergency show/reset for Pattern Capture.
 
 Command Palette owns Alt+F2; Pattern Capture does not consume that shortcut.
 Pattern Capture does not consume Escape or Alt+F2. Its close button hides the panel only for the current page lifetime, so a reload shows it again. Ctrl+Alt+P remains the explicit emergency show/reset path. Legacy persistent hidden state is cleared by v0.4.2.
+Its Date field is a native `YYYY-MM-DD` date input stored in `planningPatternCapture:v2:active`. Finish requires this Capture date to match the published Dashboard session date. Changing the date switches the visible Capture events and pending count to that day; it does not silently move an existing timer to another date.
 Its Session field supports `S1`, `S2`, `S3` and later positive integer labels. Valid input is stored immediately without rebuilding the panel, so the first click on `Finish`, `Auto`, or a D/F action is not lost. `Enter` validates and refreshes the score view. `Auto` restores the next label derived from the repository row boundary plus pending records.
 
 ## 9. Command Palette reusable contract
@@ -213,6 +215,7 @@ Before enabling or adapting the reusable helper for another project, verify:
 - Dashboard remains read-only toward the repo.
 - Live localhost Markdown requests bypass HTTP cache; IndexedDB snapshot fallback remains separate and explicit.
 - Pattern Capture requires a published operational path and SHA-256 before Finish.
+- Capture Date must be a valid YYYY-MM-DD value matching the published Dashboard session date before Finish.
 - Pattern Capture owns the session timer; Dashboard may only mirror it in a future read-only projection.
 - Timer completion never calls Finish or writes the shared outbox automatically.
 - Manual session labels are separate from the expected sequential Markdown row number.

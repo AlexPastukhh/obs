@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Planning Pattern Capture v0.4.2
+// @name         Planning Pattern Capture v0.4.3
 // @namespace    planning-pattern-capture
-// @version      0.4.2
+// @version      0.4.3
 // @description  ChatGPT-only capture panel with D/F scoring, one-click session timer milestones, finished-session outbox, and reviewed batch sync
 // @match        *://chatgpt.com/*
 // @match        *://*.chatgpt.com/*
@@ -45,7 +45,7 @@
   const BASE_TOTAL_SCORE = 3.5;
   const BASE_DIM_SCORE = BASE_TOTAL_SCORE / 2;
   const DF_STEP = 0.1;
-  const SETTINGS_VERSION = "0.4.2";
+  const SETTINGS_VERSION = "0.4.3";
   const TIMER_SCHEMA = "planning-pattern-session-timer-v1";
   const TIMER_TOTAL_MS = 30 * 60 * 1000;
   const TIMER_MILESTONES = [
@@ -411,12 +411,31 @@
     return {
       ...DEFAULT_ACTIVE,
       ...(value || {}),
-      date: String((value && value.date) || DEFAULT_ACTIVE.date),
+      date: normalizeDateValue((value && value.date) || DEFAULT_ACTIVE.date) || DEFAULT_ACTIVE.date,
       session: normalizeSessionName((value && value.session) || DEFAULT_ACTIVE.session) || DEFAULT_ACTIVE.session,
       sessionMode: value && value.sessionMode === "manual" ? "manual" : "auto",
       selectedPatternIds: migratePatternIds(rawSelected),
       shownPatternIds: migratePatternIds(rawShown),
     };
+  }
+
+  function normalizeDateValue(value) {
+    const text = String(value || "").trim();
+    const match = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return "";
+
+    const year = Number(match[1]);
+    const month = Number(match[2]);
+    const day = Number(match[3]);
+    const date = new Date(Date.UTC(year, month - 1, day));
+
+    if (
+      date.getUTCFullYear() !== year ||
+      date.getUTCMonth() !== month - 1 ||
+      date.getUTCDate() !== day
+    ) return "";
+
+    return text;
   }
 
   function emptyTimer() {
@@ -614,6 +633,43 @@
     }
   }
 
+  function setCaptureDate(value, options = {}) {
+    const normalized = normalizeDateValue(value);
+    const input = options.input || null;
+
+    if (!normalized) {
+      if (input) {
+        input.classList.add("ppc-session-input-invalid");
+        input.setAttribute("aria-invalid", "true");
+      }
+      if (options.showAlert !== false) alert("Choose a valid Capture date.");
+      return null;
+    }
+
+    active = normalizeActive({ ...active, date: normalized });
+
+    if (active.sessionMode === "auto") {
+      const context = currentSessionContext();
+      if (context && context.date === active.date) {
+        active = normalizeActive({
+          ...active,
+          session: expectedRepositorySession(context, loadOutbox()),
+        });
+      }
+    }
+
+    save(KEY_ACTIVE, active);
+
+    if (input) {
+      input.value = normalized;
+      input.classList.remove("ppc-session-input-invalid");
+      input.setAttribute("aria-invalid", "false");
+    }
+
+    if (options.refresh === true) refresh();
+    return normalized;
+  }
+
   function setManualSession(value, options = {}) {
     const normalized = normalizeSessionName(value);
     const input = options.input || null;
@@ -640,6 +696,28 @@
     if (mode) mode.textContent = 'Manual';
     if (options.refresh === true) refresh();
     return normalized;
+  }
+
+  function captureDateForAction() {
+    const input = root?.querySelector('.ppc-date-input');
+    const normalized = normalizeDateValue(input?.value || active.date);
+
+    if (!normalized) {
+      alert('Choose a valid Capture date.');
+      input?.focus();
+      return null;
+    }
+
+    if (normalized !== active.date) {
+      const committed = setCaptureDate(normalized, {
+        input,
+        showAlert: true,
+        refresh: false,
+      });
+      if (!committed) return null;
+    }
+
+    return active.date;
   }
 
   function sessionNameForAction() {
@@ -755,6 +833,7 @@
   }
 
   function startSessionTimer() {
+    if (!captureDateForAction()) return;
     const sessionName = sessionNameForAction();
     if (!sessionName) return;
 
@@ -1247,13 +1326,14 @@
 
 
   function finishSession() {
+    if (!captureDateForAction()) return;
     const context = currentSessionContext();
     if (!context) {
       alert("Open the Planning Dashboard and press Refresh first. A repository/cache session context is required before Finish Session.");
       return;
     }
     if (context.date !== active.date) {
-      alert(`Dashboard session date ${context.date || "unknown"} does not match Capture date ${active.date}. Refresh the dashboard or change the Capture date.`);
+      alert(`Dashboard session date ${context.date || "unknown"} does not match Capture date ${active.date}. Set the Capture Date field to the Dashboard date.`);
       return;
     }
     if (!context.operationalPath || !context.operationalFileSha256) {
@@ -1572,6 +1652,41 @@
     const box = document.createElement('div');
     box.className = 'ppc-session-control';
 
+    const dateLabel = document.createElement('label');
+    dateLabel.className = 'ppc-session-label';
+    dateLabel.textContent = 'Date';
+
+    const dateInput = document.createElement('input');
+    dateInput.className = 'ppc-session-input ppc-date-input';
+    dateInput.type = 'date';
+    dateInput.value = active.date;
+    dateInput.setAttribute('aria-label', 'Capture date');
+    dateInput.setAttribute('aria-invalid', 'false');
+
+    const commitDate = (showAlert) => {
+      const committed = setCaptureDate(dateInput.value, {
+        input: dateInput,
+        showAlert,
+        refresh: false,
+      });
+      if (committed) refresh();
+    };
+
+    dateInput.addEventListener('input', () => {
+      setCaptureDate(dateInput.value, {
+        input: dateInput,
+        showAlert: false,
+        refresh: false,
+      });
+    });
+    dateInput.addEventListener('change', () => commitDate(true));
+    dateInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        commitDate(true);
+      }
+    });
+
     const label = document.createElement('label');
     label.className = 'ppc-session-label';
     label.textContent = 'Session';
@@ -1612,7 +1727,7 @@
     });
 
     const auto = button('Auto', 'ppc-action', useAutoSession);
-    box.append(label, input, mode, auto);
+    box.append(dateLabel, dateInput, label, input, mode, auto);
     return box;
   }
 
@@ -2160,6 +2275,7 @@
       .ppc-session-label { color: #cbd5e1; font-size: 11px; font-weight: 700; }
       .ppc-session-input { min-width: 0; width: 100%; padding: 5px 7px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: #0b1220; color: #f8fafc; font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
       .ppc-session-input-invalid { border-color: #f87171; box-shadow: 0 0 0 1px rgba(248,113,113,.35); }
+      .ppc-date-input { grid-column: 2 / 5; color-scheme: dark; }
       .ppc-session-mode { color: #93c5fd; font-size: 10px; }
       .ppc-timer-box { margin-bottom: 8px; padding: 8px; border: 1px solid rgba(96,165,250,0.30); border-radius: 9px; background: rgba(30,64,175,0.10); }
       .ppc-timer-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
