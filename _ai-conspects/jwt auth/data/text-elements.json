@@ -1,0 +1,786 @@
+[
+  {
+    "id": "T-001",
+    "text": "symmetric/ assymetric keys",
+    "x": "0",
+    "y": "97.49733333333342",
+    "transform": ""
+  },
+  {
+    "id": "T-002",
+    "text": "KID",
+    "x": "0",
+    "y": "95.038342447804",
+    "transform": ""
+  },
+  {
+    "id": "T-003",
+    "text": "END TO END JWT, REFRESH",
+    "x": "0",
+    "y": "87.42874142020095",
+    "transform": ""
+  },
+  {
+    "id": "T-004",
+    "text": "REACT",
+    "x": "0",
+    "y": "211.47633140345997",
+    "transform": ""
+  },
+  {
+    "id": "T-005",
+    "text": "react implementation",
+    "x": "0",
+    "y": "169.99093495396428",
+    "transform": ""
+  },
+  {
+    "id": "T-006",
+    "text": "if there is an existing promise",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-007",
+    "text": "we just return it",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-008",
+    "text": "react query with singletone query client",
+    "x": "0",
+    "y": "135.08670251464855",
+    "transform": ""
+  },
+  {
+    "id": "T-010",
+    "text": "// src/auth/tokenCache.ts",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-011",
+    "text": "import { queryClient, TOKEN_KEY } from \"../queryClient\";",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-013",
+    "text": "export function getAccessToken(): string | null {",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-014",
+    "text": "return (queryClient.getQueryData(TOKEN_KEY) as string | null) ?? null;",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-015",
+    "text": "}",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-017",
+    "text": "export function setAccessToken(token: string | null) {",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-018",
+    "text": "queryClient.setQueryData(TOKEN_KEY, token);",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-019",
+    "text": "}",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-020",
+    "text": "// src/auth/refresh.ts",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-021",
+    "text": "import { setAccessToken } from \"./tokenCache\";",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-023",
+    "text": "export async function refreshAccessToken(): Promise<string> {",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-024",
+    "text": "const res = await fetch(\"/api/auth/refresh\", {",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-025",
+    "text": "method: \"POST\",",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-026",
+    "text": "credentials: \"include\", // sends refresh cookie",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-027",
+    "text": "});",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-029",
+    "text": "if (!res.ok) throw new Error(\"Refresh failed\");",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-031",
+    "text": "const data = (await res.json()) as { accessToken: string };",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-032",
+    "text": "setAccessToken(data.accessToken); // <-- update React Query cache",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-033",
+    "text": "return data.accessToken;",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-034",
+    "text": "}",
+    "x": "0",
+    "y": "367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-035",
+    "text": "// src/api/fetchWithAuth.ts",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-036",
+    "text": "import { getAccessToken, setAccessToken } from \"../auth/tokenCache\";",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-037",
+    "text": "import { refreshAccessToken } from \"../auth/refresh\";",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-039",
+    "text": "let refreshPromise: Promise<string> | null = null;",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-041",
+    "text": "async function refreshOnce(): Promise<string> {",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-042",
+    "text": "if (!refreshPromise) {",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-043",
+    "text": "refreshPromise = refreshAccessToken().finally(() => {",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-044",
+    "text": "refreshPromise = null;",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-045",
+    "text": "});",
+    "x": "0",
+    "y": "267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-046",
+    "text": "}",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-047",
+    "text": "return refreshPromise;",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-048",
+    "text": "}",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-050",
+    "text": "export async function fetchWithAuth(input: RequestInfo, init: RequestInit = {}) {",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-051",
+    "text": "const headers = new Headers(init.headers);",
+    "x": "0",
+    "y": "417.62",
+    "transform": ""
+  },
+  {
+    "id": "T-053",
+    "text": "const token = getAccessToken(); // <-- read from React Query cache",
+    "x": "0",
+    "y": "467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-054",
+    "text": "if (token) headers.set(\"Authorization\", `Bearer ${token}`);",
+    "x": "0",
+    "y": "492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-056",
+    "text": "const doReq = () =>",
+    "x": "0",
+    "y": "542.62",
+    "transform": ""
+  },
+  {
+    "id": "T-057",
+    "text": "fetch(input, { ...init, headers, credentials: \"include\" });",
+    "x": "0",
+    "y": "567.62",
+    "transform": ""
+  },
+  {
+    "id": "T-059",
+    "text": "let res = await doReq();",
+    "x": "0",
+    "y": "617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-060",
+    "text": "if (res.status !== 401) return res;",
+    "x": "0",
+    "y": "642.62",
+    "transform": ""
+  },
+  {
+    "id": "T-062",
+    "text": "// 401 -> refresh -> retry once",
+    "x": "0",
+    "y": "692.62",
+    "transform": ""
+  },
+  {
+    "id": "T-063",
+    "text": "try {",
+    "x": "0",
+    "y": "717.62",
+    "transform": ""
+  },
+  {
+    "id": "T-064",
+    "text": "const fresh = await refreshOnce();",
+    "x": "0",
+    "y": "742.62",
+    "transform": ""
+  },
+  {
+    "id": "T-065",
+    "text": "headers.set(\"Authorization\", `Bearer ${fresh}`);",
+    "x": "0",
+    "y": "767.62",
+    "transform": ""
+  },
+  {
+    "id": "T-066",
+    "text": "res = await doReq();",
+    "x": "0",
+    "y": "792.62",
+    "transform": ""
+  },
+  {
+    "id": "T-067",
+    "text": "return res;",
+    "x": "0",
+    "y": "817.62",
+    "transform": ""
+  },
+  {
+    "id": "T-068",
+    "text": "} catch {",
+    "x": "0",
+    "y": "842.62",
+    "transform": ""
+  },
+  {
+    "id": "T-069",
+    "text": "// Refresh failed: clear token so UI switches to login",
+    "x": "0",
+    "y": "867.62",
+    "transform": ""
+  },
+  {
+    "id": "T-070",
+    "text": "setAccessToken(null);",
+    "x": "0",
+    "y": "892.62",
+    "transform": ""
+  },
+  {
+    "id": "T-071",
+    "text": "return res; // still 401",
+    "x": "0",
+    "y": "917.62",
+    "transform": ""
+  },
+  {
+    "id": "T-072",
+    "text": "}",
+    "x": "0",
+    "y": "942.62",
+    "transform": ""
+  },
+  {
+    "id": "T-073",
+    "text": "}",
+    "x": "0",
+    "y": "967.62",
+    "transform": ""
+  },
+  {
+    "id": "T-074",
+    "text": "// src/auth/login.ts",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-075",
+    "text": "import { setAccessToken } from \"./tokenCache\";",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-077",
+    "text": "export async function login(username: string, password: string) {",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-078",
+    "text": "const res = await fetch(\"/api/auth/login\", {",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-079",
+    "text": "method: \"POST\",",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-080",
+    "text": "credentials: \"include\",",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-081",
+    "text": "headers: { \"Content-Type\": \"application/json\" },",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-082",
+    "text": "body: JSON.stringify({ username, password }),",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-083",
+    "text": "});",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-085",
+    "text": "if (!res.ok) throw new Error(await res.text());",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-087",
+    "text": "const data = (await res.json()) as { accessToken: string };",
+    "x": "0",
+    "y": "342.62",
+    "transform": ""
+  },
+  {
+    "id": "T-088",
+    "text": "setAccessToken(data.accessToken); // updates cache -> UI re-renders",
+    "x": "0",
+    "y": "367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-089",
+    "text": "}",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-090",
+    "text": "// src/auth/logout.ts",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-091",
+    "text": "import { setAccessToken } from \"./tokenCache\";",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-092",
+    "text": "import { queryClient } from \"../queryClient\";",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-094",
+    "text": "export async function logout() {",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-095",
+    "text": "await fetch(\"/api/auth/logout\", { method: \"POST\", credentials: \"include\" });",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-096",
+    "text": "setAccessToken(null);",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-097",
+    "text": "queryClient.clear(); // optional: clear all cached server data",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-098",
+    "text": "}",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-099",
+    "text": "jwt auth and token descriptor",
+    "x": "0",
+    "y": "105.3283966471353",
+    "transform": ""
+  },
+  {
+    "id": "T-100",
+    "text": "!",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-101",
+    "text": "jwtsecuritytoken",
+    "x": "0",
+    "y": "130.38799999999998",
+    "transform": ""
+  },
+  {
+    "id": "T-102",
+    "text": "jwt token handler",
+    "x": "0",
+    "y": "144.48400000000004",
+    "transform": ""
+  },
+  {
+    "id": "T-103",
+    "text": "jwt headers",
+    "x": "0",
+    "y": "98.28043249511728",
+    "transform": ""
+  },
+  {
+    "id": "T-104",
+    "text": "jwt headers vs payload/claims vs signature",
+    "x": "0",
+    "y": "95.48358319963573",
+    "transform": ""
+  },
+  {
+    "id": "T-105",
+    "text": "we should refresh if",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-106",
+    "text": "there is no token or",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-107",
+    "text": "if there is some problem",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-108",
+    "text": "(401)",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-109",
+    "text": "example flows with redis",
+    "x": "0",
+    "y": "74.00399999999871",
+    "transform": ""
+  },
+  {
+    "id": "T-110",
+    "text": "why revoke the whole familiy",
+    "x": "0",
+    "y": "87.16026666666686",
+    "transform": ""
+  },
+  {
+    "id": "T-111",
+    "text": "what does the use of an old token tells us",
+    "x": "0",
+    "y": "50.82392067057284",
+    "transform": ""
+  },
+  {
+    "id": "T-112",
+    "text": "setnx",
+    "x": "0",
+    "y": "66.05239922626237",
+    "transform": ""
+  },
+  {
+    "id": "T-113",
+    "text": "refresh tokens strategies",
+    "x": "0",
+    "y": "155.7085945841472",
+    "transform": ""
+  },
+  {
+    "id": "T-114",
+    "text": "token family",
+    "x": "0",
+    "y": "376.6345233357748",
+    "transform": ""
+  },
+  {
+    "id": "T-115",
+    "text": "redis",
+    "x": "0",
+    "y": "597.5604520874025",
+    "transform": ""
+  },
+  {
+    "id": "T-116",
+    "text": "how can theft happen",
+    "x": "0",
+    "y": "54.03467562866213",
+    "transform": ""
+  },
+  {
+    "id": "T-117",
+    "text": "and only of the old token?",
+    "x": "0",
+    "y": "130.7013550109864",
+    "transform": ""
+  },
+  {
+    "id": "T-118",
+    "text": "rotation pattern",
+    "x": "0",
+    "y": "68.22103115609973",
+    "transform": ""
+  },
+  {
+    "id": "T-119",
+    "text": "flow",
+    "x": "0",
+    "y": "165.01591077599153",
+    "transform": ""
+  },
+  {
+    "id": "T-120",
+    "text": "refresh token family",
+    "x": "0",
+    "y": "136.0264",
+    "transform": ""
+  },
+  {
+    "id": "T-121",
+    "text": "!!!!",
+    "x": "0",
+    "y": "149.85388427734364",
+    "transform": ""
+  },
+  {
+    "id": "T-122",
+    "text": "!!!",
+    "x": "0",
+    "y": "108.98297889539937",
+    "transform": ""
+  },
+  {
+    "id": "T-123",
+    "text": "mb make sense to",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-124",
+    "text": "check if token was revoked",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-125",
+    "text": "and store revoked tokens",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-126",
+    "text": "there(or at least not too old",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-127",
+    "text": "revoked tokens)",
+    "x": "0",
+    "y": "117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-128",
+    "text": "return issuccesss",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-129",
+    "text": "the value to store",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  }
+]

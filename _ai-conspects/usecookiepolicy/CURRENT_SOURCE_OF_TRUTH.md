@@ -1,0 +1,25 @@
+# Current Source of Truth — usecookiepolicy
+
+Generated: 2026-06-22 00:00:00 UTC
+
+## Status
+
+```text
+Stage0 source/boundary review: done
+Final transcript: done
+Final coverage audit: done
+```
+
+## Coverage
+
+```text
+unique embedded images: 2
+image uses on canvas: 2
+text elements: 42
+remaining unclosed image uses: 0
+remaining unclosed text elements: 0
+```
+
+## Next
+
+No normal transcript regions remain. Only correction/polish if needed.

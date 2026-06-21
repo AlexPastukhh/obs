@@ -1,0 +1,870 @@
+[
+  {
+    "id": "T-001",
+    "text": "using System.Security.Claims;",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-002",
+    "text": "using Microsoft.AspNetCore.Authentication;",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-003",
+    "text": "using Microsoft.AspNetCore.Authentication.Cookies;",
+    "x": "0",
+    "y": "67.62",
+    "transform": ""
+  },
+  {
+    "id": "T-004",
+    "text": "using Microsoft.AspNetCore.Mvc;",
+    "x": "0",
+    "y": "92.62",
+    "transform": ""
+  },
+  {
+    "id": "T-006",
+    "text": "public class AccountController : Controller",
+    "x": "0",
+    "y": "142.62",
+    "transform": ""
+  },
+  {
+    "id": "T-007",
+    "text": "{",
+    "x": "0",
+    "y": "167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-008",
+    "text": "[HttpGet]",
+    "x": "0",
+    "y": "192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-009",
+    "text": "public IActionResult Login(string? returnUrl = null)",
+    "x": "0",
+    "y": "217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-010",
+    "text": "{",
+    "x": "0",
+    "y": "242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-011",
+    "text": "ViewData[\"ReturnUrl\"] = returnUrl ?? Url.Action(\"Index\", \"Home\");",
+    "x": "0",
+    "y": "267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-012",
+    "text": "return View();",
+    "x": "0",
+    "y": "292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-013",
+    "text": "}",
+    "x": "0",
+    "y": "317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-015",
+    "text": "[HttpPost]",
+    "x": "0",
+    "y": "367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-016",
+    "text": "[ValidateAntiForgeryToken]",
+    "x": "0",
+    "y": "392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-017",
+    "text": "public async Task<IActionResult> Login(string username, string password, string? returnUrl)",
+    "x": "0",
+    "y": "417.62",
+    "transform": ""
+  },
+  {
+    "id": "T-018",
+    "text": "{",
+    "x": "0",
+    "y": "442.62",
+    "transform": ""
+  },
+  {
+    "id": "T-019",
+    "text": "// Demo auth check (replace with DB/Identity)",
+    "x": "0",
+    "y": "467.62",
+    "transform": ""
+  },
+  {
+    "id": "T-020",
+    "text": "if (username != \"alice\" || password != \"pass123\")",
+    "x": "0",
+    "y": "492.62",
+    "transform": ""
+  },
+  {
+    "id": "T-021",
+    "text": "{",
+    "x": "0",
+    "y": "517.62",
+    "transform": ""
+  },
+  {
+    "id": "T-022",
+    "text": "ModelState.AddModelError(\"\", \"Invalid credentials\");",
+    "x": "0",
+    "y": "542.62",
+    "transform": ""
+  },
+  {
+    "id": "T-023",
+    "text": "ViewData[\"ReturnUrl\"] = returnUrl;",
+    "x": "0",
+    "y": "567.62",
+    "transform": ""
+  },
+  {
+    "id": "T-024",
+    "text": "return View();",
+    "x": "0",
+    "y": "592.62",
+    "transform": ""
+  },
+  {
+    "id": "T-025",
+    "text": "}",
+    "x": "0",
+    "y": "617.62",
+    "transform": ""
+  },
+  {
+    "id": "T-027",
+    "text": "var claims = new List<Claim>",
+    "x": "0",
+    "y": "667.62",
+    "transform": ""
+  },
+  {
+    "id": "T-028",
+    "text": "{",
+    "x": "0",
+    "y": "692.62",
+    "transform": ""
+  },
+  {
+    "id": "T-029",
+    "text": "new(ClaimTypes.Name, \"alice\"),",
+    "x": "0",
+    "y": "717.62",
+    "transform": ""
+  },
+  {
+    "id": "T-030",
+    "text": "new(ClaimTypes.Role, \"Admin\"),",
+    "x": "0",
+    "y": "742.62",
+    "transform": ""
+  },
+  {
+    "id": "T-031",
+    "text": "new(\"permission\", \"products.edit\")",
+    "x": "0",
+    "y": "767.62",
+    "transform": ""
+  },
+  {
+    "id": "T-032",
+    "text": "};",
+    "x": "0",
+    "y": "792.62",
+    "transform": ""
+  },
+  {
+    "id": "T-034",
+    "text": "var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);",
+    "x": "0",
+    "y": "842.62",
+    "transform": ""
+  },
+  {
+    "id": "T-035",
+    "text": "var principal = new ClaimsPrincipal(identity);",
+    "x": "0",
+    "y": "867.62",
+    "transform": ""
+  },
+  {
+    "id": "T-037",
+    "text": "await HttpContext.SignInAsync(",
+    "x": "0",
+    "y": "917.62",
+    "transform": ""
+  },
+  {
+    "id": "T-038",
+    "text": "CookieAuthenticationDefaults.AuthenticationScheme,",
+    "x": "0",
+    "y": "942.62",
+    "transform": ""
+  },
+  {
+    "id": "T-039",
+    "text": "principal);",
+    "x": "0",
+    "y": "967.62",
+    "transform": ""
+  },
+  {
+    "id": "T-041",
+    "text": "if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))",
+    "x": "0",
+    "y": "1017.62",
+    "transform": ""
+  },
+  {
+    "id": "T-042",
+    "text": "return Redirect(returnUrl);",
+    "x": "0",
+    "y": "1042.62",
+    "transform": ""
+  },
+  {
+    "id": "T-044",
+    "text": "return RedirectToAction(\"Index\", \"Home\");",
+    "x": "0",
+    "y": "1092.62",
+    "transform": ""
+  },
+  {
+    "id": "T-045",
+    "text": "}",
+    "x": "0",
+    "y": "1117.62",
+    "transform": ""
+  },
+  {
+    "id": "T-047",
+    "text": "[HttpPost]",
+    "x": "0",
+    "y": "1167.62",
+    "transform": ""
+  },
+  {
+    "id": "T-048",
+    "text": "[ValidateAntiForgeryToken]",
+    "x": "0",
+    "y": "1192.62",
+    "transform": ""
+  },
+  {
+    "id": "T-049",
+    "text": "public async Task<IActionResult> Logout()",
+    "x": "0",
+    "y": "1217.62",
+    "transform": ""
+  },
+  {
+    "id": "T-050",
+    "text": "{",
+    "x": "0",
+    "y": "1242.62",
+    "transform": ""
+  },
+  {
+    "id": "T-051",
+    "text": "await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);",
+    "x": "0",
+    "y": "1267.62",
+    "transform": ""
+  },
+  {
+    "id": "T-052",
+    "text": "return RedirectToAction(\"Index\", \"Home\");",
+    "x": "0",
+    "y": "1292.62",
+    "transform": ""
+  },
+  {
+    "id": "T-053",
+    "text": "}",
+    "x": "0",
+    "y": "1317.62",
+    "transform": ""
+  },
+  {
+    "id": "T-055",
+    "text": "public IActionResult Denied() => View();",
+    "x": "0",
+    "y": "1367.62",
+    "transform": ""
+  },
+  {
+    "id": "T-056",
+    "text": "}",
+    "x": "0",
+    "y": "1392.62",
+    "transform": ""
+  },
+  {
+    "id": "T-057",
+    "text": "!!!",
+    "x": "0",
+    "y": "55.335151271968286",
+    "transform": ""
+  },
+  {
+    "id": "T-058",
+    "text": "BASIC",
+    "x": "0",
+    "y": "147.95562632696397",
+    "transform": ""
+  },
+  {
+    "id": "T-059",
+    "text": "SPA WITH COOKIES, REACT,",
+    "x": "0",
+    "y": "93.68650609625877",
+    "transform": ""
+  },
+  {
+    "id": "T-060",
+    "text": "ANTIFORGERY",
+    "x": "0",
+    "y": "226.61287683442387",
+    "transform": ""
+  },
+  {
+    "id": "T-061",
+    "text": "how setandstoretokens works,",
+    "x": "0",
+    "y": "36.11541091801318",
+    "transform": ""
+  },
+  {
+    "id": "T-062",
+    "text": "2 tokens antiforgery",
+    "x": "0",
+    "y": "87.35748089249273",
+    "transform": ""
+  },
+  {
+    "id": "T-063",
+    "text": "may throw?",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-064",
+    "text": "paths on events",
+    "x": "0",
+    "y": "64.37228087004527",
+    "transform": ""
+  },
+  {
+    "id": "T-065",
+    "text": "what if you dont have them?",
+    "x": "0",
+    "y": "155.7063910715851",
+    "transform": ""
+  },
+  {
+    "id": "T-066",
+    "text": "ispersistent",
+    "x": "0",
+    "y": "68.53718114466469",
+    "transform": ""
+  },
+  {
+    "id": "T-067",
+    "text": "expires on setcookie",
+    "x": "0",
+    "y": "165.78062771768498",
+    "transform": ""
+  },
+  {
+    "id": "T-068",
+    "text": "when do we have httpcontext.user",
+    "x": "0",
+    "y": "46.98664874267577",
+    "transform": ""
+  },
+  {
+    "id": "T-069",
+    "text": "it depends on what? authorize attr",
+    "x": "0",
+    "y": "113.65328997802732",
+    "transform": ""
+  },
+  {
+    "id": "T-070",
+    "text": "or whether we have auth cookie attached that",
+    "x": "0",
+    "y": "180.31993121337888",
+    "transform": ""
+  },
+  {
+    "id": "T-071",
+    "text": "has valid authticket that we can decrypt and read",
+    "x": "0",
+    "y": "246.98657244873039",
+    "transform": ""
+  },
+  {
+    "id": "T-072",
+    "text": "iticketstore",
+    "x": "0",
+    "y": "466.34281005859384",
+    "transform": ""
+  },
+  {
+    "id": "T-073",
+    "text": "iticketstore",
+    "x": "0",
+    "y": "466.34281005859384",
+    "transform": ""
+  },
+  {
+    "id": "T-074",
+    "text": "auth cookie options",
+    "x": "0",
+    "y": "466.34281005859384",
+    "transform": ""
+  },
+  {
+    "id": "T-075",
+    "text": "defaults",
+    "x": "0",
+    "y": "1128.0096801757813",
+    "transform": ""
+  },
+  {
+    "id": "T-076",
+    "text": "usecookiepolicy",
+    "x": "0",
+    "y": "149.96581960042275",
+    "transform": ""
+  },
+  {
+    "id": "T-077",
+    "text": "cookie.name",
+    "x": "0",
+    "y": "137.43614339192703",
+    "transform": ""
+  },
+  {
+    "id": "T-078",
+    "text": "just cookie optons",
+    "x": "0",
+    "y": "124.74959999999994",
+    "transform": ""
+  },
+  {
+    "id": "T-079",
+    "text": "to add ticketstore to",
+    "x": "0",
+    "y": "110.0270633138021",
+    "transform": ""
+  },
+  {
+    "id": "T-080",
+    "text": "authcookie options",
+    "x": "0",
+    "y": "266.138106608073",
+    "transform": ""
+  },
+  {
+    "id": "T-081",
+    "text": "need to use options pattern",
+    "x": "0",
+    "y": "422.24914990234385",
+    "transform": ""
+  },
+  {
+    "id": "T-082",
+    "text": "some little flow",
+    "x": "0",
+    "y": "102.19600000000001",
+    "transform": ""
+  },
+  {
+    "id": "T-083",
+    "text": "renewal occurs when we have some sliding exp and",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-084",
+    "text": "framework does retrieve and decides to update expiration",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-085",
+    "text": "!!!",
+    "x": "0",
+    "y": "86.08628571428939",
+    "transform": ""
+  },
+  {
+    "id": "T-086",
+    "text": "dbcall on every request",
+    "x": "0",
+    "y": "45.812",
+    "transform": ""
+  },
+  {
+    "id": "T-087",
+    "text": "that needs cookie validation",
+    "x": "0",
+    "y": "110.812",
+    "transform": ""
+  },
+  {
+    "id": "T-088",
+    "text": "how to avoid",
+    "x": "0",
+    "y": "175.812",
+    "transform": ""
+  },
+  {
+    "id": "T-089",
+    "text": "onvalidateprincipal",
+    "x": "0",
+    "y": "90.91920000000002",
+    "transform": ""
+  },
+  {
+    "id": "T-090",
+    "text": "onvalidateprincipal",
+    "x": "0",
+    "y": "90.91920000000002",
+    "transform": ""
+  },
+  {
+    "id": "T-091",
+    "text": "renewal without ticketstore",
+    "x": "0",
+    "y": "219.91920000000005",
+    "transform": ""
+  },
+  {
+    "id": "T-092",
+    "text": "!!!",
+    "x": "0",
+    "y": "94.05165400390624",
+    "transform": ""
+  },
+  {
+    "id": "T-093",
+    "text": "what has been done before onvalidateprincipal",
+    "x": "0",
+    "y": "48.94443249511719",
+    "transform": ""
+  },
+  {
+    "id": "T-095",
+    "text": "onvalidateprincipal and authorizatoin",
+    "x": "0",
+    "y": "47.37823417154776",
+    "transform": ""
+  },
+  {
+    "id": "T-096",
+    "text": "how renew async gets called",
+    "x": "0",
+    "y": "97.81058733723957",
+    "transform": ""
+  },
+  {
+    "id": "T-097",
+    "text": "how to change claims so",
+    "x": "0",
+    "y": "236.58837867838537",
+    "transform": ""
+  },
+  {
+    "id": "T-098",
+    "text": "they will be updated in cache",
+    "x": "0",
+    "y": "375.3661700195312",
+    "transform": ""
+  },
+  {
+    "id": "T-099",
+    "text": "some strats to avoid db call on every request",
+    "x": "0",
+    "y": "37.93338566034828",
+    "transform": ""
+  },
+  {
+    "id": "T-100",
+    "text": "that checks whether the user has the same claims",
+    "x": "0",
+    "y": "91.75487496277205",
+    "transform": ""
+  },
+  {
+    "id": "T-101",
+    "text": "!!!",
+    "x": "0",
+    "y": "139.00219832356814",
+    "transform": ""
+  },
+  {
+    "id": "T-102",
+    "text": "!!!",
+    "x": "0",
+    "y": "88.77123809523795",
+    "transform": ""
+  },
+  {
+    "id": "T-103",
+    "text": "lax option",
+    "x": "0",
+    "y": "112.31621615835336",
+    "transform": ""
+  },
+  {
+    "id": "T-104",
+    "text": "spa vs classic mbc",
+    "x": "0",
+    "y": "271.6752061673678",
+    "transform": ""
+  },
+  {
+    "id": "T-105",
+    "text": "(lax is default)",
+    "x": "0",
+    "y": "431.0341961763822",
+    "transform": ""
+  },
+  {
+    "id": "T-106",
+    "text": "when have proxy for spa",
+    "x": "0",
+    "y": "61.47419832356766",
+    "transform": ""
+  },
+  {
+    "id": "T-107",
+    "text": "confgured",
+    "x": "0",
+    "y": "148.6963866373697",
+    "transform": ""
+  },
+  {
+    "id": "T-108",
+    "text": "whats the visual difference",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-109",
+    "text": "between a normal cookie and auth/session cookie",
+    "x": "0",
+    "y": "42.62",
+    "transform": ""
+  },
+  {
+    "id": "T-110",
+    "text": "auth cookies and session cookies",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-111",
+    "text": "crypto valid and buisness valid",
+    "x": "0",
+    "y": "17.619999999999997",
+    "transform": ""
+  },
+  {
+    "id": "T-112",
+    "text": "some low(high) level cookie",
+    "x": "0",
+    "y": "103.20285714285716",
+    "transform": ""
+  },
+  {
+    "id": "T-113",
+    "text": "auth/verification flow",
+    "x": "0",
+    "y": "249.63142857142861",
+    "transform": ""
+  },
+  {
+    "id": "T-114",
+    "text": "when include credentials",
+    "x": "0",
+    "y": "49.805859497070344",
+    "transform": ""
+  },
+  {
+    "id": "T-115",
+    "text": "need to catch network error",
+    "x": "0",
+    "y": "120.47251599121101",
+    "transform": ""
+  },
+  {
+    "id": "T-116",
+    "text": "from not allowed creditials somewhere",
+    "x": "0",
+    "y": "191.13917248535168",
+    "transform": ""
+  },
+  {
+    "id": "T-117",
+    "text": "(cors issue)",
+    "x": "0",
+    "y": "261.80582897949233",
+    "transform": ""
+  },
+  {
+    "id": "T-118",
+    "text": "adding claims to authenticatied user",
+    "x": "0",
+    "y": "112.26457911028189",
+    "transform": ""
+  },
+  {
+    "id": "T-119",
+    "text": "iticketstore cases",
+    "x": "0",
+    "y": "271.55030429513135",
+    "transform": ""
+  },
+  {
+    "id": "T-120",
+    "text": "normal cases have 2 options too",
+    "x": "0",
+    "y": "430.83602947998077",
+    "transform": ""
+  },
+  {
+    "id": "T-122",
+    "text": "domain option",
+    "x": "0",
+    "y": "61.06586397257711",
+    "transform": ""
+  },
+  {
+    "id": "T-123",
+    "text": "TicketDataFormat",
+    "x": "0",
+    "y": "61.06586397257711",
+    "transform": ""
+  },
+  {
+    "id": "T-124",
+    "text": "why usually do not set",
+    "x": "0",
+    "y": "61.06586397257711",
+    "transform": ""
+  },
+  {
+    "id": "T-125",
+    "text": "when you would customize",
+    "x": "0",
+    "y": "61.06586397257711",
+    "transform": ""
+  },
+  {
+    "id": "T-126",
+    "text": "domain vs host",
+    "x": "0",
+    "y": "61.06586397257711",
+    "transform": ""
+  },
+  {
+    "id": "T-127",
+    "text": "path vs domain",
+    "x": "0",
+    "y": "61.06586397257711",
+    "transform": ""
+  },
+  {
+    "id": "T-128",
+    "text": "WWW",
+    "x": "0",
+    "y": "80.26890083821272",
+    "transform": ""
+  },
+  {
+    "id": "T-129",
+    "text": "!!!",
+    "x": "0",
+    "y": "95.73535125732424",
+    "transform": ""
+  },
+  {
+    "id": "T-130",
+    "text": "Holding invariants (options consistency)",
+    "x": "0",
+    "y": "46.75174050292969",
+    "transform": ""
+  },
+  {
+    "id": "T-131",
+    "text": "with __Host and __Secure names of cookies",
+    "x": "0",
+    "y": "113.08508400878907",
+    "transform": ""
+  },
+  {
+    "id": "T-132",
+    "text": "forcing host cookie",
+    "x": "0",
+    "y": "106.26818494737415",
+    "transform": ""
+  },
+  {
+    "id": "T-133",
+    "text": "_Secure",
+    "x": "0",
+    "y": "106.26818494737415",
+    "transform": ""
+  },
+  {
+    "id": "T-134",
+    "text": "Why name prefixes",
+    "x": "0",
+    "y": "106.26818494737415",
+    "transform": ""
+  },
+  {
+    "id": "T-135",
+    "text": "both host and secure?",
+    "x": "0",
+    "y": "106.26818494737415",
+    "transform": ""
+  }
+]
