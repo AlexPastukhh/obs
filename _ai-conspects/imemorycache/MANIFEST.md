@@ -1,14 +1,23 @@
-# MANIFEST - ASP.NET Core IMemoryCache stage0 v001
+# MANIFEST - ASP.NET Core IMemoryCache final coverage transcript v001
 
-Archive type: **source/boundary review**  
-Target branch: `ai-processed-conspects-text`
+Archive type: **stage-1 final coverage transcript**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-22 UTC
 
-## Counts
+## Done
+
+- All candidate regions processed.
+- 20 source image uses included.
+- 7 canvas text labels included.
+- Final coverage audit added.
+- Remaining unclosed: 0.
+
+## Main transcript
 
 ```text
-images: 20
-labels: 7
-regions: 3
+regions/R01R02R03-imemorycache-final.md
 ```
 
-This conspect is delivered inside the combined three-conspect stage0 archive.
+## Bundle
+
+This conspect is delivered together with the WebSockets / IMemoryCache / JsonConverter three-conspect final-coverage bundle.

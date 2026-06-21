@@ -1,0 +1,19 @@
+{
+  "conspect": "imemorycache",
+  "generated": "2026-06-22 UTC",
+  "overview": "IMemoryCache registration and APIs, expiration and size limits, key/version/tag invalidation, cache organization and single-flight/stampede protection.",
+  "regions": [
+    {
+      "region": "R01",
+      "summary": "Basic setup and extension methods; Get/Set/TryGetValue/GetOrCreate; absolute/sliding expiration; size limits and per-entry size; explicit removal and update invalidation."
+    },
+    {
+      "region": "R02",
+      "summary": "Bulk invalidation strategies: explicit key removal, versioned keys, version counters, lightweight manual tag/index implementations, when each strategy is appropriate and caveats in multi-instance systems."
+    },
+    {
+      "region": "R03",
+      "summary": "Cache stampede behavior, why GetOrCreate is convenience rather than a single-flight guarantee, per-key SemaphoreSlim/lock patterns, cleanup concerns and why distributed caches need distributed coordination."
+    }
+  ]
+}

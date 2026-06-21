@@ -11,7 +11,8 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+Final combined transcript: done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -20,12 +21,20 @@ Normal transcript regions: not started
 unique embedded images: 20
 image uses on canvas: 20
 text labels parsed: 7
-duplicate image uses by extracted content: 0
+processed image uses: 20
+processed text labels: 7
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
+```
+
+## Completed regions
+
+```text
+R01, R02, R03
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after combined stage0 bundle review.
-Candidate regions: R01, R02, R03.
+No normal transcript regions remain. Only correction/polish if later needed.
 ```

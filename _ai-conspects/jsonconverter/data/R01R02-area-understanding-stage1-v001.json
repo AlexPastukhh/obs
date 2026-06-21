@@ -1,0 +1,15 @@
+{
+  "conspect": "jsonconverter",
+  "generated": "2026-06-22 UTC",
+  "overview": "A generic System.Text.Json converter factory for Optional<T>, reflection/Activator-based converter construction, token reading/writing and the semantic difference between a missing property and an explicit JSON null.",
+  "regions": [
+    {
+      "region": "R01",
+      "summary": "Why a JsonConverterFactory is needed for open generic Optional<T>; Optional<T> state model; Activator.CreateInstance vs ConstructorInfo.Invoke; factory CanConvert/CreateConverter; registration; reader/token flow and converter Read/Write skeleton."
+    },
+    {
+      "region": "R02",
+      "summary": "Missing property vs present null vs present value; default(Optional<T>); serializer behavior when converter is not called; Optional<T>.IsSet semantics; writer behavior and limitations around omitting properties."
+    }
+  ]
+}

@@ -1,14 +1,23 @@
-# MANIFEST - System.Text.Json JsonConverter stage0 v001
+# MANIFEST - System.Text.Json JsonConverter / Optional<T> final coverage transcript v001
 
-Archive type: **source/boundary review**  
-Target branch: `ai-processed-conspects-text`
+Archive type: **stage-1 final coverage transcript**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-22 UTC
 
-## Counts
+## Done
+
+- All candidate regions processed.
+- 19 source image uses included.
+- 3 canvas text labels included.
+- Final coverage audit added.
+- Remaining unclosed: 0.
+
+## Main transcript
 
 ```text
-images: 19
-labels: 3
-regions: 2
+regions/R01R02-jsonconverter-optional-final.md
 ```
 
-This conspect is delivered inside the combined three-conspect stage0 archive.
+## Bundle
+
+This conspect is delivered together with the WebSockets / IMemoryCache / JsonConverter three-conspect final-coverage bundle.

@@ -1,0 +1,19 @@
+{
+  "conspect": "websockets",
+  "generated": "2026-06-22 UTC",
+  "overview": "WebSocket protocol and application-level message processing across ASP.NET Core, ClientWebSocket, browser WebSocket, close semantics, subprotocols, serialized send loops, buffering/backpressure, and authentication/origin checks.",
+  "regions": [
+    {
+      "region": "R01",
+      "summary": "Core WebSocket protocol model, text/binary message parsing, fragmented messages, EndOfMessage loops, ClientWebSocket/browser APIs, close frames, CloseAsync vs CloseOutputAsync vs Abort, close codes/reasons and client-side processing."
+    },
+    {
+      "region": "R02",
+      "summary": "Runtime properties and concurrency rules: one send and one receive may run in parallel, but multiple concurrent sends/receives must be serialized; channels and a dedicated send loop; frames vs HTTP messages; negotiated subprotocols; bufferedAmount and backpressure."
+    },
+    {
+      "region": "R03",
+      "summary": "Browser/server integration and security: UI acknowledgement patterns, auth via cookies or JWT/query-string during upgrade, protected endpoints, origin validation, allowed origins, why Origin is useful but not a complete identity mechanism, and why WebSocket upgrade is not a CORS preflight flow."
+    }
+  ]
+}
