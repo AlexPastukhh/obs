@@ -11,21 +11,24 @@ A region is complete only after visual/semantic boundary review and verified tra
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 required navigation inner-join data-loss trap: transcript done
+R02 HasQueryFilter / IgnoreQueryFilters / multiple filters: transcript done
+R03 mitigations / multitenancy / context pooling: transcript done
+Final coverage audit: done
 ```
 
 ## Counts
 
 ```text
-unique embedded images: 15
 image uses on canvas: 15
 text labels parsed: 15
 duplicate image uses by extracted content: 0
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-Start transcript pass after combined stage0 bundle review.
-Candidate regions: R01, R02, R03.
+No normal transcript regions remain. Only correction/polish if later needed.
 ```

@@ -1,8 +1,9 @@
-# APPLY ARCHIVE - query filters ef core stage0 v001
+# APPLY ARCHIVE - query filters ef core final coverage v001
 
-This conspect is delivered inside the combined three-conspect archive.
+This folder is delivered inside the combined three-conspect archive.
 
-```text
-Target: _ai-conspects/query filters ef core
-Source: query filters ef core.svg
+```powershell
+$target = "_ai-conspects\query filters ef core"
+git add -A -- $target
+git status --short -- $target
 ```

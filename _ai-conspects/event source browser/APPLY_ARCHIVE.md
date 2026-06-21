@@ -1,8 +1,9 @@
-# APPLY ARCHIVE - event source browser stage0 v001
+# APPLY ARCHIVE - event source browser final coverage v001
 
-This conspect is delivered inside the combined three-conspect archive.
+This folder is delivered inside the combined three-conspect archive.
 
-```text
-Target: _ai-conspects/event source browser
-Source: event source browser.svg
+```powershell
+$target = "_ai-conspects\event source browser"
+git add -A -- $target
+git status --short -- $target
 ```

@@ -1,8 +1,9 @@
-# APPLY ARCHIVE - problem details stage0 v001
+# APPLY ARCHIVE - problem details final coverage v001
 
-This conspect is delivered inside the combined three-conspect archive.
+This folder is delivered inside the combined three-conspect archive.
 
-```text
-Target: _ai-conspects/problem details
-Source: problem details.svg
+```powershell
+$target = "_ai-conspects\problem details"
+git add -A -- $target
+git status --short -- $target
 ```
