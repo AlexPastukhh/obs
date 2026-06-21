@@ -1,17 +1,20 @@
-# MANIFEST - cookies vs tokens sheet jswt in cookies stage0 boundary/source review v001
+# MANIFEST - cookies vs tokens sheet jswt in cookies final coverage v001
 
-Source SVG: `cookies vs tokens sheet jswt in cookies.svg`  
-Target folder: `_ai-conspects/cookies vs tokens sheet jswt in cookies`
+Generated: 2026-06-22 UTC
 
-## Counts
+## Done
+
+- All candidate regions processed.
+- 10 image uses closed.
+- 2 text labels closed.
+- Final coverage audit added.
+- Remaining unclosed: 0.
+
+## Main output
 
 ```text
-images: 10
-labels: 2
-duplicate placements: 0
-regions: 2
+regions/R01R02-final-coverage.md
+data/final-coverage-audit-stage1-v001.json
+data/final-coverage-audit-stage1-v001.csv
+CURRENT_SOURCE_OF_TRUTH.md
 ```
-
-## Next
-
-Apply/review this combined stage0 bundle, commit, then create one combined final-coverage archive for all three conspects.

@@ -1,17 +1,20 @@
-# MANIFEST - viewcomponent stage0 boundary/source review v001
+# MANIFEST - viewcomponent final coverage v001
 
-Source SVG: `viewcomponent.svg`  
-Target folder: `_ai-conspects/viewcomponent`
+Generated: 2026-06-22 UTC
 
-## Counts
+## Done
+
+- All candidate regions processed.
+- 11 image uses closed.
+- 0 text labels closed.
+- Final coverage audit added.
+- Remaining unclosed: 0.
+
+## Main output
 
 ```text
-images: 11
-labels: 0
-duplicate placements: 0
-regions: 3
+regions/R01R02R03-final-coverage.md
+data/final-coverage-audit-stage1-v001.json
+data/final-coverage-audit-stage1-v001.csv
+CURRENT_SOURCE_OF_TRUTH.md
 ```
-
-## Next
-
-Apply/review this combined stage0 bundle, commit, then create one combined final-coverage archive for all three conspects.

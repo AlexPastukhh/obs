@@ -1,3 +1,12 @@
-# APPLY ARCHIVE - cookies vs tokens sheet jswt in cookies stage0
+# APPLY ARCHIVE - cookies vs tokens sheet jswt in cookies final coverage v001
 
-This conspect is delivered inside the combined three-conspect archive. Use the bundle-level apply instructions under `_ai-conspects/_bundles/`.
+```powershell
+cd C:\Users\alexa\obs
+git checkout ai-processed-conspects-text
+
+$target = "_ai-conspects\cookies vs tokens sheet jswt in cookies"
+
+git status --short
+git add -A -- $target
+git status --short -- $target
+```

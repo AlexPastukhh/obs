@@ -1,17 +1,20 @@
-# MANIFEST - url save base 64 for db, hex string stage0 boundary/source review v001
+# MANIFEST - url save base 64 for db, hex string final coverage v001
 
-Source SVG: `url save base 64 for db, hex string.svg`  
-Target folder: `_ai-conspects/url save base 64 for db, hex string`
+Generated: 2026-06-22 UTC
 
-## Counts
+## Done
+
+- All candidate regions processed.
+- 8 image uses closed.
+- 3 text labels closed.
+- Final coverage audit added.
+- Remaining unclosed: 0.
+
+## Main output
 
 ```text
-images: 8
-labels: 3
-duplicate placements: 0
-regions: 2
+regions/R01R02-final-coverage.md
+data/final-coverage-audit-stage1-v001.json
+data/final-coverage-audit-stage1-v001.csv
+CURRENT_SOURCE_OF_TRUTH.md
 ```
-
-## Next
-
-Apply/review this combined stage0 bundle, commit, then create one combined final-coverage archive for all three conspects.
