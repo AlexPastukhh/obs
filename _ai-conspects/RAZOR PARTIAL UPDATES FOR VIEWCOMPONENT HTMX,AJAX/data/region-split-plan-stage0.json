@@ -1,0 +1,56 @@
+[
+  {
+    "id": "R01",
+    "name": "viewcomponent-update-options-overview",
+    "summary": "why rendered ViewComponent HTML is static after delivery and the AJAX/HTMX/SignalR update options",
+    "image_count": 2,
+    "sources": [
+      "S-001",
+      "S-005"
+    ],
+    "label_count": 0,
+    "labels": []
+  },
+  {
+    "id": "R02",
+    "name": "ajax-endpoint-fetch-dom-replacement",
+    "summary": "controller endpoint returning ViewComponent HTML, fetch/AJAX request, and replacing the DOM fragment",
+    "image_count": 2,
+    "sources": [
+      "S-002",
+      "S-003"
+    ],
+    "label_count": 1,
+    "labels": [
+      "T-009"
+    ]
+  },
+  {
+    "id": "R03",
+    "name": "htmx-partial-updates-polling-triggered-refresh",
+    "summary": "HTMX attributes, polling/button triggers, Razor integration, minimal MVC/ViewComponent example and SPA-like partial updates",
+    "image_count": 8,
+    "sources": [
+      "S-004",
+      "S-012",
+      "S-011",
+      "S-010",
+      "S-009",
+      "S-008",
+      "S-007",
+      "S-006"
+    ],
+    "label_count": 9,
+    "labels": [
+      "T-001",
+      "T-002",
+      "T-003",
+      "T-004",
+      "T-005",
+      "T-006",
+      "T-007",
+      "T-008",
+      "T-010"
+    ]
+  }
+]

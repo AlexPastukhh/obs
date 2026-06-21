@@ -1,0 +1,62 @@
+[
+  {
+    "id": "R01",
+    "name": "basics-storage-persisted",
+    "summary": "computed-column basics, non-persisted evaluation, PERSISTED storage, SELECT/UPDATE behavior",
+    "image_count": 7,
+    "sources": [
+      "S-005",
+      "S-001",
+      "S-006",
+      "S-002",
+      "S-007",
+      "S-003",
+      "S-004"
+    ],
+    "label_count": 5,
+    "labels": [
+      "T-001",
+      "T-002",
+      "T-003",
+      "T-004",
+      "T-005"
+    ]
+  },
+  {
+    "id": "R02",
+    "name": "indexed-computed-column-maintenance",
+    "summary": "indexing a computed column, insert/update index maintenance, deterministic expressions and dependency tracking",
+    "image_count": 8,
+    "sources": [
+      "S-008",
+      "S-013",
+      "S-014",
+      "S-009",
+      "S-015",
+      "S-010",
+      "S-011",
+      "S-012"
+    ],
+    "label_count": 5,
+    "labels": [
+      "T-006",
+      "T-007",
+      "T-008",
+      "T-009",
+      "T-010"
+    ]
+  },
+  {
+    "id": "R03",
+    "name": "nondeterministic-functions-index-safety",
+    "summary": "unpredictable functions such as GETDATE, row instability, and why indexable computed expressions must be deterministic",
+    "image_count": 3,
+    "sources": [
+      "S-016",
+      "S-017",
+      "S-018"
+    ],
+    "label_count": 0,
+    "labels": []
+  }
+]
