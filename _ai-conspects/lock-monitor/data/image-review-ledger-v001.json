@@ -367,11 +367,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-004: pulse,pulseall | L-005: example | L-022: !!!! | L-003: when to use",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-018",
@@ -389,11 +389,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-005: example | L-003: when to use | L-004: pulse,pulseall | L-022: !!!!",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-019",
@@ -411,11 +411,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-005: example | L-003: when to use | L-004: pulse,pulseall | L-022: !!!!",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-020",
@@ -433,11 +433,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-005: example | L-004: pulse,pulseall | L-022: !!!! | L-002: wait pulse pulseall",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-021",
@@ -455,11 +455,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-008: lock,can be wastefull | L-007: each still need to acquire | L-006: pulseall example | L-003: when to use",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-022",
@@ -477,11 +477,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-003: when to use | L-008: lock,can be wastefull | L-007: each still need to acquire | L-006: pulseall example",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-023",
@@ -499,11 +499,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-003: when to use | L-011: same thread can reenter | L-012: when it holds the gate | L-005: example",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-024",
@@ -521,11 +521,11 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Deadlocks, reentrancy, TryEnter/timeouts, lock ordering and common mistakes around nested locks.",
     "nearest_labels_for_search_only": "L-003: when to use | L-012: when it holds the gate | L-011: same thread can reenter | L-005: example",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r03-v001",
+    "decision_is_final": "yes-for-r03-v001-boundary",
+    "review_notes": "R03 processed after P02 review: Pulse vs PulseAll, producer/consumer flow and wakeup costs.",
+    "current_region_decision": "R03",
+    "must_recheck_before_region_close": "no-for-r03-v001"
   },
   {
     "source_id": "S-025",
@@ -543,10 +543,10 @@
     "combined_pass": "P02-R03-R04",
     "initial_meaning": "Async locking caveats, SemaphoreSlim/ReaderWriterLockSlim alternatives, private lock object guidelines and practical usage notes.",
     "nearest_labels_for_search_only": "L-016: async semaphore | L-015: synch lock | L-014: can use await? | L-013: lock,",
-    "coverage_status": "checked-not-p01-reserved-for-p02-r03r04",
-    "decision_is_final": "yes-not-p01",
-    "review_notes": "Checked during P01 boundary review; reserved for P02.",
-    "current_region_decision": "candidate-P02-R03R04",
-    "must_recheck_before_region_close": "yes-for-p02-r03r04"
+    "coverage_status": "processed-in-r04-v001",
+    "decision_is_final": "yes-for-r04-v001-boundary",
+    "review_notes": "R04 processed after P02 review: Async locking caveat and SemaphoreSlim alternative.",
+    "current_region_decision": "R04",
+    "must_recheck_before_region_close": "no-for-r04-v001"
   }
 ]

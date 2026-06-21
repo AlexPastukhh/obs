@@ -1,16 +1,15 @@
-# MANIFEST - HybridCache P01 Transcript v001
+# MANIFEST - HybridCache P02 Transcript v001
 
-Archive type: **stage-1 verified combined transcript**  
+Archive type: **stage-2 verified combined transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-20 08:05:01 UTC
+Generated: 2026-06-21 14:45:12 UTC
 
 ## Done
 
-- R01 transcript created.
-- R02 transcript created.
-- Included R01 image uses: 8.
-- Included R02 image uses: 8.
-- Checked-not-P01 / reserved for P02: 5.
+- R03 transcript created: 5 image uses.
+- R04 transcript created/closed: 0 image uses.
+- Total processed image uses: 21 / 21.
+- Unprocessed image uses: 0.
 
 ## Included path
 
@@ -20,4 +19,4 @@ _ai-conspects/hybridcache
 
 ## Next
 
-P02/R03R04 transcript.
+Stage3 final coverage audit.

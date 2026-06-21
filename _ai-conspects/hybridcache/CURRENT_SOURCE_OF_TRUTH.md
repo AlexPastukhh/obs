@@ -1,21 +1,34 @@
 # Current Source of Truth - HybridCache
 
-Generated: 2026-06-20 08:05:01 UTC
+Generated: 2026-06-21 14:45:12 UTC
 
 ## Current status
 
 ```text
 Stage0 boundary review: done
-R01 HybridCache purpose, two-level cache and API shape: transcript v001 done
-R02 GetOrCreate flow, stampede protection and factory behavior: transcript v001 done
-P02/R03R04: next
-Final coverage audit: pending
+P01/R01R02 transcript: done
+P02/R03R04 transcript: done
+Final coverage audit: next
 ```
 
-## P01 boundary decisions
+## Final region counts before audit
 
 ```text
-R01 included: 8 image uses
-R02 included: 8 image uses
-Checked-not-P01 / reserved for P02: 5 image uses
+R01: 8
+R02: 8
+R03: 5
+R04: 0
+total: 21
+unprocessed: 0
 ```
+
+## P02 semantic decisions
+
+```text
+R03: Tag invalidation, local-cache coherence and entry flags
+R04: No separate R04 source region after boundary review
+```
+
+## Next
+
+Run Stage3 final coverage audit. No additional transcript region is pending.
