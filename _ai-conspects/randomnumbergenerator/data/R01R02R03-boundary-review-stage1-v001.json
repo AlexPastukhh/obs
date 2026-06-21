@@ -1,0 +1,29 @@
+[
+  {
+    "region": "R01",
+    "name": "secure-random-overview-examples-and-entropy-sizing",
+    "image_uses": 4,
+    "sources": "S-007, S-002, S-011, S-010",
+    "decision": "included in final combined transcript",
+    "reason": "cryptographically secure randomness, common token/code examples and entropy/byte sizing",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R02",
+    "name": "static-apis-unbiased-ranges-and-shuffling",
+    "image_uses": 5,
+    "sources": "S-006, S-009, S-005, S-008, S-001",
+    "decision": "included in final combined transcript",
+    "reason": "static RandomNumberGenerator APIs, unbiased bounded integers and secure Fisher–Yates shuffling",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R03",
+    "name": "instance-and-obsolete-api-notes",
+    "image_uses": 2,
+    "sources": "S-004, S-003",
+    "decision": "included in final combined transcript",
+    "reason": "instance creation when needed and obsolete RNGCryptoServiceProvider usage to avoid",
+    "remaining_after_pass": 0
+  }
+]

@@ -1,0 +1,4 @@
+region,name,image_uses,sources,decision,reason,remaining_after_pass
+R01,secure-random-overview-examples-and-entropy-sizing,4,"S-007, S-002, S-011, S-010",included in final combined transcript,"cryptographically secure randomness, common token/code examples and entropy/byte sizing",0
+R02,static-apis-unbiased-ranges-and-shuffling,5,"S-006, S-009, S-005, S-008, S-001",included in final combined transcript,"static RandomNumberGenerator APIs, unbiased bounded integers and secure Fisher–Yates shuffling",0
+R03,instance-and-obsolete-api-notes,2,"S-004, S-003",included in final combined transcript,instance creation when needed and obsolete RNGCryptoServiceProvider usage to avoid,0

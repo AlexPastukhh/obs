@@ -1,12 +1,14 @@
 # Current Source of Truth - IVALIDATABLE OBJECT, VALIDATION ATTRIBUTES
 
-Generated: 2026-06-22 02:00:00 UTC
+Generated: 2026-06-22 02:30:00 UTC
 
 ## Current status
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+R01 ivalidatableobject-class-level-validation: transcript v001 done
+R02 custom-validationattribute-class-level-validation: transcript v001 done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -15,11 +17,14 @@ Normal transcript regions: not started
 unique embedded images: 7
 image uses on canvas: 7
 text labels parsed: 2
-duplicate image uses: 0
+R01 processed image uses: 3
+R02 processed image uses: 4
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
 ## Candidate next step
 
 ```text
-Suggested full pass: R01+R02 = 7 image uses + 2 text labels.
+No normal transcript regions remain. Only correction/polish or repeat-material archive if needed.
 ```

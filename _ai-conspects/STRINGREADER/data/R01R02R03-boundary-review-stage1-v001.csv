@@ -1,0 +1,4 @@
+region,name,image_uses,sources,decision,reason,remaining_after_pass
+R01,why-stringreader-and-readline-basics,4,"S-002, S-001, S-003, S-004",included in final combined transcript,"why StringReader is used, incremental ReadLine processing, internal cursor behavior and comparison with Split",0
+R02,lazy-allocation-live-memory-and-gc-effects,6,"S-005, S-006, S-007, S-008, S-009, S-010",included in final combined transcript,"eager versus lazy line allocation, peak live memory, GC scanning, promotions, concurrency and fragmentation pressure",0
+R03,concrete-memory-example-and-summary,3,"S-011, S-012, S-013",included in final combined transcript,concrete large-line memory example and the distinction between total allocations and simultaneously live allocations,0

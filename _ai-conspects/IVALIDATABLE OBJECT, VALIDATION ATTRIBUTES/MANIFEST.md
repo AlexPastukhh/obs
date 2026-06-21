@@ -1,20 +1,26 @@
-# MANIFEST - IVALIDATABLE OBJECT, VALIDATION ATTRIBUTES stage0 boundary review v001
+# MANIFEST — IVALIDATABLE OBJECT, VALIDATION ATTRIBUTES final coverage transcript v001
 
-Target branch: `ai-processed-conspects-text`
-
-## Source
-
-```text
-IVALIDATABLE OBJECT, VALIDATION ATTRIBUTES.svg
-```
+Archive type: **stage1 final coverage, three-conspect combined delivery**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-22 02:30:00 UTC
 
 ## Counts
 
 ```text
-unique embedded images: 7
-image uses on canvas: 7
-text labels parsed: 2
-duplicate image uses: 0
+image uses: 7
+text labels: 2
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
-This folder is one member of the combined three-conspect stage0 archive.
+## Delivery batch
+
+This folder is delivered in one archive together with:
+
+```text
+_ai-conspects/STRINGREADER
+_ai-conspects/randomnumbergenerator
+_ai-conspects/IVALIDATABLE OBJECT, VALIDATION ATTRIBUTES
+```
+
+Archive: `ai-conspects-STRINGREADER-randomnumbergenerator-IVALIDATABLE-OBJECT-VALIDATION-ATTRIBUTES-stage1-final-coverage-v001.zip`

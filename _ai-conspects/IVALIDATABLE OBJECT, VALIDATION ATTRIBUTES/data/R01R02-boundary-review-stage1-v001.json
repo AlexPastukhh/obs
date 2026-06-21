@@ -1,0 +1,20 @@
+[
+  {
+    "region": "R01",
+    "name": "ivalidatableobject-class-level-validation",
+    "image_uses": 3,
+    "sources": "S-002, S-001, S-003",
+    "decision": "included in final combined transcript",
+    "reason": "IValidatableObject.Validate, ModelState integration, MemberNames and validation-order behavior",
+    "remaining_after_pass": 0
+  },
+  {
+    "region": "R02",
+    "name": "custom-validationattribute-class-level-validation",
+    "image_uses": 4,
+    "sources": "S-004, S-005, S-006, S-007",
+    "decision": "included in final combined transcript",
+    "reason": "reusable class-level ValidationAttribute, ValidationContext.ObjectInstance, result mapping and attribute application",
+    "remaining_after_pass": 0
+  }
+]
