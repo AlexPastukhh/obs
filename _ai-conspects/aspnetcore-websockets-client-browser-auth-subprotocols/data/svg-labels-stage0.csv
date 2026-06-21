@@ -1,0 +1,100 @@
+label_id,region_candidate,x,y,text
+T-001,R01,23274.43194160078,10.0,"sending messages
+from browser with websocket
+closing"
+T-002,R01,16933.04177164083,115.65364982774918,react
+T-003,R01,25054.43255195234,123.93958351830952,closing
+T-004,R01,20252.337026475027,195.77655901438993,"processing messages wit hwebsocket
+on client"
+T-005,R01,15313.597191562705,228.98698316108312,js websocket
+T-006,R01,13144.153527011926,240.83878980171175,basics
+T-007,R01,10419.708540032758,247.50545646837963,asp websockets
+T-008,R01,26350.18434251001,261.08480123259505,available codes
+T-009,R01,10.0,269.52041637984803,"processing different types of messages
+processing binary on server"
+T-010,R01,27326.628909024766,276.6403669606807,"about code/reason
+how browser checks code/reason
+how server checks code/reason"
+T-011,R01,4363.985127933249,376.10227763863804,closeasync/closeoutputasync/abort differences
+T-012,R01,5469.494826798296,496.5255887483072,summary
+T-013,R01,7513.302692165842,509.20979778669425,clientwebsocket
+T-014,R01,12784.927447275146,1855.94765761306,!!!
+T-015,R01,11687.053411359706,2026.3679728793632,"can chet for
+messagetype close
+too
+on both
+we close connection"
+T-016,R01,20202.81337971163,2379.7766854443253,!!!
+T-017,R01,5194.395441932202,2733.0203766242194,when close received we shouldnt do that
+T-018,R01,11391.053248599288,2772.145723530404,"on end of message
+stop the loop"
+T-019,R01,5238.135569622717,2859.401112621358,more like close not received
+T-020,R01,13240.953991052098,3288.278449903941,browser websocket optons
+T-021,R01,7527.747272243968,3411.4321386883867,clientoptions
+T-022,R01,5781.130130162246,3517.6738686463086,"do we have http request
+everything while using websockets
+handshake, websocket frames"
+T-023,R01,3108.542312149857,3527.3827228861483,"when we want to process messages that
+might be inflight when we send
+close, we need to use closeoutputasync
+closeasyn for your side response
+on close or for stop receiveing
+completeley
+(closeoutputasync is clener for your
+side close response too)"
+T-024,R01,16764.332448449313,5004.47449139984,"so its another way in react to inclue func into eddect without triggering effect
+but this approach is needed when we cant rely on the callers code to wrap func into usecallback
+or we dont want to wrap it"
+T-025,R01,11761.924339646324,5197.350757309032,message types
+T-026,R01,16559.332448449313,5626.97449139984,!!!
+T-027,R01,12800.129242345218,5920.0915656422985,websocket props
+T-028,R02,14911.045698632277,6798.888291570576,.nets websocket properties
+T-029,R02,10093.25986354813,7194.373484620384,WEBSOCKET METHODS
+T-030,R02,4293.9688298611545,8457.210072444897,"websockets one send
+one receive at a time
+can have send and receive in parallel"
+T-031,R02,6794.549010171748,8490.54413794626,channel example
+T-032,R02,15147.756678495783,8603.99357799509,Browser websocket properties
+T-033,R02,12872.762620979618,8918.368665126356,"examples without suprotocol
+and with subprotocol when processing
+text/binary"
+T-034,R02,13769.464051019975,8952.825856112555,"browsers protocol
+.nets subprotocol"
+T-035,R02,4430.689253704075,9023.26974970492,"if have different places in app where sends can occur, need to push messages into
+channel and have one running send loop that will send one by one with
+option onereaderonly or smth like that"
+T-036,R02,13799.792258490745,9160.163606973758,its what server agreed to accept via
+T-037,R02,16639.161094698953,9385.553128839834,buffered amount
+T-038,R02,9557.30257009553,9393.876789974194,"websocket frames vs
+http messages
+contenttype
+headers etc"
+T-039,R02,14325.506544205029,9417.306464116627,we can have parameter here
+T-040,R02,13762.649401347886,9494.449321259483,"so in both browser and server ws we can check what is the current
+subprotocol now
+main protocol is websocket protocol
+subprotocol is our custom protocol"
+T-041,R02,13778.086484301217,9930.649728587246,parsing headers
+T-042,R02,18340.40694683128,10186.800664776027,"what can go wrong if
+we ignore large buffered amount"
+T-043,R02,17506.571863150362,10659.283616293353,!!! ugar
+T-044,R03,18034.712036533547,13508.550649517238,"buffered amount for ui spinner?
+server ack"
+T-045,R03,8897.30257009553,14429.1182827956,"authenticated
+websockets"
+T-046,R03,12124.922081122346,14825.496133096414,credentials include?
+T-047,R03,9101.418440103263,15226.439896410127,"what is origin
+is client controlled?"
+T-048,R03,11980.477602769482,15479.162764159242,"does websocket upgr
+causes preflight?
+can it cause preflight if there are other things?"
+T-049,R03,13144.243816963002,16573.788724553422,jwt websockets
+T-050,R03,11084.24361351248,16660.455391220086,cookie websockets
+T-051,R03,12885.429486551022,17362.763936306896,"receiveing message
+in protected endpoint
+getting access token from
+qs
+setting token to context
+for validation"
+T-052,R03,12073.96974452227,18131.352469400626,allowed origins
+T-053,R03,10762.554101749138,20534.147230569342,!!!

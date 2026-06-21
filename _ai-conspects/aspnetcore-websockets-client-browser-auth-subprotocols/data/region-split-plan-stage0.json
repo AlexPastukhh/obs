@@ -1,0 +1,53 @@
+[
+  {
+    "region": "R01",
+    "y_min": 0,
+    "y_max": 6000,
+    "candidate_image_uses": 4,
+    "candidate_text_labels": 27,
+    "meaning": "core protocol, handshake, message processing, close semantics, client/server APIs",
+    "sources": [
+      "S-001",
+      "S-002",
+      "S-003",
+      "S-004"
+    ]
+  },
+  {
+    "region": "R02",
+    "y_min": 6000,
+    "y_max": 12000,
+    "candidate_image_uses": 7,
+    "candidate_text_labels": 16,
+    "meaning": ".NET/browser properties, subprotocols, one-send/one-receive rule, channels, frames",
+    "sources": [
+      "S-005",
+      "S-006",
+      "S-007",
+      "S-008",
+      "S-009",
+      "S-010",
+      "S-011"
+    ]
+  },
+  {
+    "region": "R03",
+    "y_min": 12000,
+    "y_max": 999999,
+    "candidate_image_uses": 10,
+    "candidate_text_labels": 10,
+    "meaning": "browser client behavior, bufferedAmount, auth, cookies/JWT/origin/allowed origins",
+    "sources": [
+      "S-012",
+      "S-013",
+      "S-014",
+      "S-015",
+      "S-016",
+      "S-017",
+      "S-018",
+      "S-019",
+      "S-020",
+      "S-021"
+    ]
+  }
+]
