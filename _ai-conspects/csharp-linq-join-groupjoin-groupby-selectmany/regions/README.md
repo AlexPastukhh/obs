@@ -1,13 +1,15 @@
 # Regions — C# LINQ join / GroupJoin / GroupBy / SelectMany
 
-These regions are **provisional Stage0 candidates**, not verified boundaries.
+Stage1 candidate boundaries:
 
-- `LJG01` — Join and GroupJoin semantics (**provisional only; Stage1 must verify visually**)
-- `LJG02` — GroupBy grouping and result shape (**provisional only; Stage1 must verify visually**)
-- `LJG03` — SelectMany flattening and result-selector callback (**provisional only; Stage1 must verify visually**)
+- `LJG01` — Join and GroupJoin semantics: 14 image uses
+- `LJG02` — GroupBy grouping and result shape: 6 image uses
+- `LJG03` — SelectMany flattening and result-selector callback: 9 image uses
 
-Next:
+Next transcript batches:
 
 ```text
-Stage1 visual boundary review
+NEXT01: LJG01 = 14 image uses
+NEXT02: LJG02 + LJG03 = 15 image uses
+Final closure/audit
 ```

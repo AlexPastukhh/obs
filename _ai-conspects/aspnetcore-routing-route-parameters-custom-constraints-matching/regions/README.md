@@ -1,13 +1,15 @@
 # Regions — ASP.NET Core routing / route parameters / custom constraints / matching
 
-These regions are **provisional Stage0 candidates**, not verified boundaries.
+Stage1 candidate boundaries:
 
-- `RTR01` — Routing matching, precedence and endpoint order (**provisional only; Stage1 must verify visually**)
-- `RTR02` — Route parameters and constraint behavior (**provisional only; Stage1 must verify visually**)
-- `RTR03` — Custom IRouteConstraint implementation and registration (**provisional only; Stage1 must verify visually**)
+- `RTR01` — Route parameter forms and built-in constraints: 4 image uses
+- `RTR02` — Custom IRouteConstraint implementation and registration: 1 image uses
+- `RTR03` — Router matching, precedence, order and overlapping endpoints: 13 image uses
 
-Next:
+Next transcript batches:
 
 ```text
-Stage1 visual boundary review
+NEXT01: RTR01 + RTR02 = 5 image uses
+NEXT02: RTR03 = 13 image uses
+Final closure/audit
 ```

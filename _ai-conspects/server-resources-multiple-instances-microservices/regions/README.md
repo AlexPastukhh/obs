@@ -1,13 +1,16 @@
 # Regions — Server resources / multiple instances / microservices
 
-These regions are **provisional Stage0 candidates**, not verified boundaries.
+Stage1 candidate boundaries:
 
-- `SRM01` — Finite server resources and request-processing limits (**provisional only; Stage1 must verify visually**)
-- `SRM02` — Scaling out with multiple instances (**provisional only; Stage1 must verify visually**)
-- `SRM03` — Microservices versus simply adding machines (**provisional only; Stage1 must verify visually**)
+- `SRM01` — Finite server resources and bottleneck categories: 12 image uses
+- `SRM02` — Request budgets, concurrency and saturation: 12 image uses
+- `SRM03` — Scale up, scale out and microservices distinction: 6 image uses
 
-Next:
+Next transcript batches:
 
 ```text
-Stage1 visual boundary review
+NEXT01: SRM01 = 12 image uses
+NEXT02: SRM02 = 12 image uses
+NEXT03: SRM03 = 6 image uses
+Final closure/audit
 ```

@@ -1,0 +1,124 @@
+{
+  "generated": "2026-06-21 14:48:44 UTC",
+  "stage": "1",
+  "status": "boundary-review-complete",
+  "image_uses_total": 18,
+  "image_uses_assigned": 18,
+  "image_uses_missing": [],
+  "image_uses_duplicate_assignments": [],
+  "regions": {
+    "RTR01": {
+      "name": "Route parameter forms and built-in constraints",
+      "reason": "Required, optional and catch-all route parameters plus the role of built-in route constraints.",
+      "source_ids": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004"
+      ],
+      "source_count": 4,
+      "text_ids": [],
+      "text_count": 0,
+      "subregions": {
+        "RTR01A": [
+          "S-001",
+          "S-002",
+          "S-003"
+        ],
+        "RTR01B": [
+          "S-004"
+        ]
+      },
+      "status": "boundary-reviewed-candidate"
+    },
+    "RTR02": {
+      "name": "Custom IRouteConstraint implementation and registration",
+      "reason": "Custom constraint Match implementation, RouteOptions.ConstraintMap registration and inline use in a route template.",
+      "source_ids": [
+        "S-005"
+      ],
+      "source_count": 1,
+      "text_ids": [
+        "T-002",
+        "T-003",
+        "T-004",
+        "T-005",
+        "T-006",
+        "T-007",
+        "T-008",
+        "T-009",
+        "T-010",
+        "T-011",
+        "T-012",
+        "T-013",
+        "T-014",
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-018"
+      ],
+      "text_count": 17,
+      "subregions": {
+        "RTR02A": [
+          "S-005"
+        ]
+      },
+      "status": "boundary-reviewed-candidate"
+    },
+    "RTR03": {
+      "name": "Router matching, precedence, order and overlapping endpoints",
+      "reason": "Candidate creation, constraint filtering, route precedence, endpoint order, fallback routes, attributes/filters and deliberate overrides.",
+      "source_ids": [
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018"
+      ],
+      "source_count": 13,
+      "text_ids": [
+        "T-001",
+        "T-019",
+        "T-020",
+        "T-021",
+        "T-022",
+        "T-023"
+      ],
+      "text_count": 6,
+      "subregions": {
+        "RTR03A": [
+          "S-006",
+          "S-007",
+          "S-008",
+          "S-009",
+          "S-010",
+          "S-011",
+          "S-012",
+          "S-013",
+          "S-014"
+        ],
+        "RTR03B": [
+          "S-015",
+          "S-016",
+          "S-017",
+          "S-018"
+        ]
+      },
+      "status": "boundary-reviewed-candidate"
+    }
+  },
+  "next_batches": [
+    "NEXT01: RTR01 + RTR02 = 5 image uses",
+    "NEXT02: RTR03 = 13 image uses",
+    "Final closure/audit"
+  ],
+  "critical_rule": "Boundary assignment is not transcript processing; every source image must be rechecked during its transcript pass."
+}

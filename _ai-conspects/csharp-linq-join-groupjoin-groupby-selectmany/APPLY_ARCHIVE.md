@@ -1,6 +1,6 @@
-# Apply archive — csharp-linq-join-groupjoin-groupby-selectmany
+# Apply archive — csharp-linq-join-groupjoin-groupby-selectmany Stage1 boundary review
 
-This conspect is part of the combined three-conspect Stage0 archive.
+This conspect is part of the combined Stage1 archive.
 
 Target branch:
 
@@ -8,4 +8,4 @@ Target branch:
 ai-processed-conspects-text
 ```
 
-Use the combined archive command supplied with the archive.
+Use the combined apply command from the assistant response.

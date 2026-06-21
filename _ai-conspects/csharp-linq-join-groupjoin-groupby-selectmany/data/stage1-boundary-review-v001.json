@@ -1,0 +1,138 @@
+{
+  "generated": "2026-06-21 14:48:44 UTC",
+  "stage": "1",
+  "status": "boundary-review-complete",
+  "image_uses_total": 29,
+  "image_uses_assigned": 29,
+  "image_uses_missing": [],
+  "image_uses_duplicate_assignments": [],
+  "regions": {
+    "LJG01": {
+      "name": "Join and GroupJoin semantics",
+      "reason": "Join, GroupJoin, left-join flattening, key selectors and result selectors.",
+      "source_ids": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-020"
+      ],
+      "source_count": 14,
+      "text_ids": [
+        "T-007",
+        "T-008"
+      ],
+      "text_count": 2,
+      "subregions": {
+        "LJG01A": [
+          "S-001",
+          "S-002",
+          "S-003"
+        ],
+        "LJG01B": [
+          "S-004",
+          "S-005",
+          "S-006",
+          "S-007",
+          "S-008",
+          "S-009",
+          "S-010",
+          "S-011",
+          "S-012",
+          "S-013",
+          "S-020"
+        ]
+      },
+      "status": "boundary-reviewed-candidate"
+    },
+    "LJG02": {
+      "name": "GroupBy grouping and result shape",
+      "reason": "GroupBy semantics, grouped elements, aggregation and projection into summary objects.",
+      "source_ids": [
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-018",
+        "S-019"
+      ],
+      "source_count": 6,
+      "text_ids": [
+        "T-009"
+      ],
+      "text_count": 1,
+      "subregions": {
+        "LJG02A": [
+          "S-014",
+          "S-015",
+          "S-016"
+        ],
+        "LJG02B": [
+          "S-017",
+          "S-018",
+          "S-019"
+        ]
+      },
+      "status": "boundary-reviewed-candidate"
+    },
+    "LJG03": {
+      "name": "SelectMany flattening and result-selector callback",
+      "reason": "SelectMany collection selector, flattening, overload without result selector and overload with second callback.",
+      "source_ids": [
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-029"
+      ],
+      "source_count": 9,
+      "text_ids": [
+        "T-001",
+        "T-002",
+        "T-003",
+        "T-004",
+        "T-005",
+        "T-006",
+        "T-010"
+      ],
+      "text_count": 7,
+      "subregions": {
+        "LJG03A": [
+          "S-021",
+          "S-022",
+          "S-023",
+          "S-024"
+        ],
+        "LJG03B": [
+          "S-025",
+          "S-026"
+        ],
+        "LJG03C": [
+          "S-027",
+          "S-028",
+          "S-029"
+        ]
+      },
+      "status": "boundary-reviewed-candidate"
+    }
+  },
+  "next_batches": [
+    "NEXT01: LJG01 = 14 image uses",
+    "NEXT02: LJG02 + LJG03 = 15 image uses",
+    "Final closure/audit"
+  ],
+  "critical_rule": "Boundary assignment is not transcript processing; every source image must be rechecked during its transcript pass."
+}

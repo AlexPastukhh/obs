@@ -1,0 +1,24 @@
+text_id,text,x,y,candidate_region,candidate_region_name,status,notes
+T-001,ROUTING,0.0,17.619999999999997,RTR03,"Router matching, precedence, order and overlapping endpoints",region-context-label,Text label is canvas context; not an image source.
+T-002,// custom constraint,0.0,17.619999999999997,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-003,public class EvenNumberConstraint : IRouteConstraint,0.0,42.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-004,{,0.0,67.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-005,"public bool Match(HttpContext httpContext, IRouter route, string routeKey,",0.0,92.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-006,"RouteValueDictionary values, RouteDirection routeDirection)",0.0,117.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-007,{,0.0,142.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-008,"if (!values.TryGetValue(routeKey, out var val) || val == null) return false;",0.0,167.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-009,"return int.TryParse(Convert.ToString(val), out var i) && i % 2 == 0;",0.0,192.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-010,},0.0,217.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-011,},0.0,242.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-012,// register in Startup / Program.cs,0.0,292.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-013,services.Configure<RouteOptions>(opts =>,0.0,317.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-014,{,0.0,342.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-015,"opts.ConstraintMap.Add(""even"", typeof(EvenNumberConstraint));",0.0,367.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-016,});,0.0,392.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-017,// now usable:,0.0,442.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-018,"app.MapGet(""/nums/{id:even}"", (int id) => $""even {id}"");",0.0,467.62,RTR02,Custom IRouteConstraint implementation and registration,region-context-label,Text label is canvas context; not an image source.
+T-019,Order,0.0,17.619999999999997,RTR03,"Router matching, precedence, order and overlapping endpoints",region-context-label,Text label is canvas context; not an image source.
+T-020,actually no,0.0,17.619999999999997,RTR03,"Router matching, precedence, order and overlapping endpoints",region-context-label,Text label is canvas context; not an image source.
+T-021,precedence rules,0.0,42.62,RTR03,"Router matching, precedence, order and overlapping endpoints",region-context-label,Text label is canvas context; not an image source.
+T-022,apply specific endpoint,0.0,67.62,RTR03,"Router matching, precedence, order and overlapping endpoints",region-context-label,Text label is canvas context; not an image source.
+T-023,first,0.0,92.62,RTR03,"Router matching, precedence, order and overlapping endpoints",region-context-label,Text label is canvas context; not an image source.

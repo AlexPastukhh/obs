@@ -1,21 +1,31 @@
-# MANIFEST — Stage0 source check
+# MANIFEST — Stage1 boundary review
 
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-20 08:40:16 UTC
+Generated: 2026-06-21 14:48:44 UTC
 
-## Included
+## Included / updated
 
-- Stage0 source-check document
-- current source of truth
-- raw SVG and extracted raw text
-- 29 source-image files
-- image inventory CSV/JSON
-- text inventory CSV/JSON
-- contact sheet
-- provisional region map
+```text
+01-stage1-boundary-review.md
+CURRENT_SOURCE_OF_TRUTH.md
+MANIFEST.md
+APPLY_ARCHIVE.md
+regions/README.md
+data/stage1-boundary-review-v001.csv
+data/stage1-boundary-review-v001.json
+data/stage1-text-label-boundary-review-v001.csv
+data/stage1-text-label-boundary-review-v001.json
+data/image-review-ledger-v001.csv
+data/image-review-ledger-v001.json
+```
+
+## Important
+
+- No source PNGs are duplicated.
+- Stage1 assigns candidate boundaries but does not process transcript content.
 
 ## Next
 
 ```text
-Stage1 boundary review
+NEXT01: LJG01 = 14 image uses
 ```

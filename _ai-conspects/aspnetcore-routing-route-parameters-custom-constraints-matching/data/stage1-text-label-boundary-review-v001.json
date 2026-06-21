@@ -1,0 +1,238 @@
+{
+  "generated": "2026-06-21 14:48:44 UTC",
+  "text_labels_total": 23,
+  "text_labels_assigned": 23,
+  "missing": [],
+  "rows": [
+    {
+      "text_id": "T-001",
+      "text": "ROUTING",
+      "x": "0.0",
+      "y": "17.619999999999997",
+      "candidate_region": "RTR03",
+      "candidate_region_name": "Router matching, precedence, order and overlapping endpoints",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-002",
+      "text": "// custom constraint",
+      "x": "0.0",
+      "y": "17.619999999999997",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-003",
+      "text": "public class EvenNumberConstraint : IRouteConstraint",
+      "x": "0.0",
+      "y": "42.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-004",
+      "text": "{",
+      "x": "0.0",
+      "y": "67.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-005",
+      "text": "public bool Match(HttpContext httpContext, IRouter route, string routeKey,",
+      "x": "0.0",
+      "y": "92.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-006",
+      "text": "RouteValueDictionary values, RouteDirection routeDirection)",
+      "x": "0.0",
+      "y": "117.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-007",
+      "text": "{",
+      "x": "0.0",
+      "y": "142.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-008",
+      "text": "if (!values.TryGetValue(routeKey, out var val) || val == null) return false;",
+      "x": "0.0",
+      "y": "167.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-009",
+      "text": "return int.TryParse(Convert.ToString(val), out var i) && i % 2 == 0;",
+      "x": "0.0",
+      "y": "192.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-010",
+      "text": "}",
+      "x": "0.0",
+      "y": "217.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-011",
+      "text": "}",
+      "x": "0.0",
+      "y": "242.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-012",
+      "text": "// register in Startup / Program.cs",
+      "x": "0.0",
+      "y": "292.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-013",
+      "text": "services.Configure<RouteOptions>(opts =>",
+      "x": "0.0",
+      "y": "317.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-014",
+      "text": "{",
+      "x": "0.0",
+      "y": "342.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-015",
+      "text": "opts.ConstraintMap.Add(\"even\", typeof(EvenNumberConstraint));",
+      "x": "0.0",
+      "y": "367.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-016",
+      "text": "});",
+      "x": "0.0",
+      "y": "392.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-017",
+      "text": "// now usable:",
+      "x": "0.0",
+      "y": "442.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-018",
+      "text": "app.MapGet(\"/nums/{id:even}\", (int id) => $\"even {id}\");",
+      "x": "0.0",
+      "y": "467.62",
+      "candidate_region": "RTR02",
+      "candidate_region_name": "Custom IRouteConstraint implementation and registration",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-019",
+      "text": "Order",
+      "x": "0.0",
+      "y": "17.619999999999997",
+      "candidate_region": "RTR03",
+      "candidate_region_name": "Router matching, precedence, order and overlapping endpoints",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-020",
+      "text": "actually no",
+      "x": "0.0",
+      "y": "17.619999999999997",
+      "candidate_region": "RTR03",
+      "candidate_region_name": "Router matching, precedence, order and overlapping endpoints",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-021",
+      "text": "precedence rules",
+      "x": "0.0",
+      "y": "42.62",
+      "candidate_region": "RTR03",
+      "candidate_region_name": "Router matching, precedence, order and overlapping endpoints",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-022",
+      "text": "apply specific endpoint",
+      "x": "0.0",
+      "y": "67.62",
+      "candidate_region": "RTR03",
+      "candidate_region_name": "Router matching, precedence, order and overlapping endpoints",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    },
+    {
+      "text_id": "T-023",
+      "text": "first",
+      "x": "0.0",
+      "y": "92.62",
+      "candidate_region": "RTR03",
+      "candidate_region_name": "Router matching, precedence, order and overlapping endpoints",
+      "status": "region-context-label",
+      "notes": "Text label is canvas context; not an image source."
+    }
+  ]
+}
