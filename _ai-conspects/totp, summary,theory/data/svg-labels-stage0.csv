@@ -1,0 +1,13 @@
+﻿label_id,text,x,y,font_size,region
+T-001,protecting secret,10.0,1732.1285934848465,20px,R01
+T-002,and store to db,10.0,1757.1285934848465,20px,R01
+T-003,then unprotect,10.0,1782.1285934848465,20px,R01
+T-004,to verify token using,10.0,1807.1285934848465,20px,R01
+T-005,library,10.0,1832.1285934848465,20px,R01
+T-006,"so we are creating secret, creating uri for qr code which is urlsafe",645.4694699509837,27.619999999999997,20px,R01
+T-007,and shit,645.4694699509837,52.62,20px,R01
+T-008,"adding to db a pending enrollment, for it we need to protect the key",645.4694699509837,77.62,20px,R01
+T-009,if there is a pending enrollemnt - upsert,645.4694699509837,102.62,20px,R01
+T-010,then return the secret and uri,645.4694699509837,127.62,20px,R01
+T-011,then on enroll we need to get and unprotect the secret and use,645.4694699509837,152.62,20px,R01
+T-012,library to create totp class and verify totp with -1 +1,645.4694699509837,177.62,20px,R01

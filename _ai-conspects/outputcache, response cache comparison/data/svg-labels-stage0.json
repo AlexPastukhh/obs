@@ -1,0 +1,1002 @@
+[
+  {
+    "text": "response cache",
+    "x": 12607.824696260179,
+    "y": 655.6142466267444,
+    "font_size": "77.10862101248607px",
+    "label_id": "T-001",
+    "region": "R01"
+  },
+  {
+    "text": "custom policy",
+    "x": 9481.515141117041,
+    "y": 575.3704728839663,
+    "font_size": "108.48808969986113px",
+    "label_id": "T-002",
+    "region": "R01"
+  },
+  {
+    "text": "can cache based on request",
+    "x": 9481.515141117041,
+    "y": 710.9805850087927,
+    "font_size": "108.48808969986113px",
+    "label_id": "T-003",
+    "region": "R01"
+  },
+  {
+    "text": "(in fluent builder too)",
+    "x": 9481.515141117041,
+    "y": 846.5906971336192,
+    "font_size": "108.48808969986113px",
+    "label_id": "T-004",
+    "region": "R01"
+  },
+  {
+    "text": "varybyvalue",
+    "x": 3821.708258804514,
+    "y": 7185.02465416772,
+    "font_size": "129.62969292534686px",
+    "label_id": "T-005",
+    "region": "R01"
+  },
+  {
+    "text": "varybyvalue vs with",
+    "x": 3744.367572045214,
+    "y": 8582.328224963658,
+    "font_size": "88.74077690972189px",
+    "label_id": "T-006",
+    "region": "R01"
+  },
+  {
+    "text": "allows multiple variants of cache response (like any vary)",
+    "x": 3966.1732629306407,
+    "y": 7285.661761027125,
+    "font_size": "20px",
+    "label_id": "T-007",
+    "region": "R01"
+  },
+  {
+    "text": "depending on the result of callback or not callback",
+    "x": 3966.1732629306407,
+    "y": 7310.661761027125,
+    "font_size": "20px",
+    "label_id": "T-008",
+    "region": "R01"
+  },
+  {
+    "text": "and we can use ctx to create rule",
+    "x": 3966.1732629306407,
+    "y": 7335.661761027125,
+    "font_size": "20px",
+    "label_id": "T-009",
+    "region": "R01"
+  },
+  {
+    "text": "with can use ctx to create rule whether endpoint should be allowed to return cache (whether policy",
+    "x": 3781.7336438322855,
+    "y": 8695.899652911057,
+    "font_size": "20px",
+    "label_id": "T-010",
+    "region": "R01"
+  },
+  {
+    "text": "should be applied)",
+    "x": 3781.7336438322855,
+    "y": 8720.899652911057,
+    "font_size": "20px",
+    "label_id": "T-011",
+    "region": "R01"
+  },
+  {
+    "text": "addPolicy overloads",
+    "x": 4493.501410171911,
+    "y": 475.9376019957008,
+    "font_size": "183.55566406249983px",
+    "label_id": "T-012",
+    "region": "R01"
+  },
+  {
+    "text": "outputcachecontext props",
+    "x": 11156.631702675277,
+    "y": 5881.90048027416,
+    "font_size": "82.22216796874996px",
+    "label_id": "T-013",
+    "region": "R01"
+  },
+  {
+    "text": "(of custom policy)",
+    "x": 11156.631702675277,
+    "y": 5984.678190235098,
+    "font_size": "82.22216796874996px",
+    "label_id": "T-014",
+    "region": "R01"
+  },
+  {
+    "text": "outputcachepolicybuilder operations",
+    "x": 4209.210465961705,
+    "y": 2564.1085836745483,
+    "font_size": "132.72736150568187px",
+    "label_id": "T-015",
+    "region": "R01"
+  },
+  {
+    "text": "(not custom policy)",
+    "x": 4209.210465961705,
+    "y": 2730.0177855566503,
+    "font_size": "132.72736150568187px",
+    "label_id": "T-016",
+    "region": "R01"
+  },
+  {
+    "text": "custom policy vs fluent builder",
+    "x": 10993.82218074244,
+    "y": 8353.322037657703,
+    "font_size": "96.80000000000004px",
+    "label_id": "T-017",
+    "region": "R01"
+  },
+  {
+    "text": "how tag invalidation works",
+    "x": 11171.125164279947,
+    "y": 4052.3346172283386,
+    "font_size": "83.99999999999999px",
+    "label_id": "T-018",
+    "region": "R01"
+  },
+  {
+    "text": "enableoutputcaching",
+    "x": 9146.714068480092,
+    "y": 5732.551704769942,
+    "font_size": "59.46666870117185px",
+    "label_id": "T-019",
+    "region": "R01"
+  },
+  {
+    "text": "vs",
+    "x": 9146.714068480092,
+    "y": 5806.885040646407,
+    "font_size": "59.46666870117185px",
+    "label_id": "T-020",
+    "region": "R01"
+  },
+  {
+    "text": "allowcachestorage",
+    "x": 9146.714068480092,
+    "y": 5881.218376522872,
+    "font_size": "59.46666870117185px",
+    "label_id": "T-021",
+    "region": "R01"
+  },
+  {
+    "text": "vs",
+    "x": 9146.714068480092,
+    "y": 5955.551712399336,
+    "font_size": "59.46666870117185px",
+    "label_id": "T-022",
+    "region": "R01"
+  },
+  {
+    "text": "allowcachelookup",
+    "x": 9146.714068480092,
+    "y": 6029.885048275801,
+    "font_size": "59.46666870117185px",
+    "label_id": "T-023",
+    "region": "R01"
+  },
+  {
+    "text": "setup",
+    "x": 11222.370270660793,
+    "y": 679.980665803609,
+    "font_size": "143.25927734374991px",
+    "label_id": "T-024",
+    "region": "R01"
+  },
+  {
+    "text": "responsetime",
+    "x": 13001.039835778589,
+    "y": 6783.195183203862,
+    "font_size": "118.66668701171876px",
+    "label_id": "T-025",
+    "region": "R01"
+  },
+  {
+    "text": "when populated",
+    "x": 14158.373087731714,
+    "y": 6761.861809180425,
+    "font_size": "118.66668701171876px",
+    "label_id": "T-026",
+    "region": "R01"
+  },
+  {
+    "text": "!!!",
+    "x": 3081.946108332213,
+    "y": 6458.435872191696,
+    "font_size": "51.11108398437499px",
+    "label_id": "T-027",
+    "region": "R01"
+  },
+  {
+    "text": "the difference is more logical/semantic",
+    "x": 3099.2645699804107,
+    "y": 6074.377741896727,
+    "font_size": "81.75454721631542px",
+    "label_id": "T-028",
+    "region": "R01"
+  },
+  {
+    "text": "will we serve the cache of user id 1",
+    "x": 169.69562943385426,
+    "y": 3969.2912564088774,
+    "font_size": "44.45957239154963px",
+    "label_id": "T-029",
+    "region": "R01"
+  },
+  {
+    "text": "to user id 2 without varybyroutevalues",
+    "x": 169.69562943385426,
+    "y": 4024.8657218983144,
+    "font_size": "44.45957239154963px",
+    "label_id": "T-030",
+    "region": "R01"
+  },
+  {
+    "text": "both setvarybyroutevalue",
+    "x": 1485.8188656904786,
+    "y": 3826.731019520331,
+    "font_size": "88.6606874651334px",
+    "label_id": "T-031",
+    "region": "R01"
+  },
+  {
+    "text": "and setvarybyhost",
+    "x": 1485.8188656904786,
+    "y": 3937.5568788517476,
+    "font_size": "88.6606874651334px",
+    "label_id": "T-032",
+    "region": "R01"
+  },
+  {
+    "text": "do nothing",
+    "x": 1485.8188656904786,
+    "y": 4048.3827381831643,
+    "font_size": "88.6606874651334px",
+    "label_id": "T-033",
+    "region": "R01"
+  },
+  {
+    "text": "start policy building from",
+    "x": 3532.7948870282617,
+    "y": 2928.866113188814,
+    "font_size": "62.66666666666666px",
+    "label_id": "T-034",
+    "region": "R01"
+  },
+  {
+    "text": "cache,extend default policy",
+    "x": 3532.7948870282617,
+    "y": 3007.1994465221474,
+    "font_size": "62.66666666666666px",
+    "label_id": "T-035",
+    "region": "R01"
+  },
+  {
+    "text": "defaults of default policy(cache())",
+    "x": 3448.325116076556,
+    "y": 3788.511433438429,
+    "font_size": "59.11116536458337px",
+    "label_id": "T-036",
+    "region": "R01"
+  },
+  {
+    "text": "middlewares options",
+    "x": 1003.2066255210284,
+    "y": 266.16760958158045,
+    "font_size": "290.7691368689903px",
+    "label_id": "T-037",
+    "region": "R01"
+  },
+  {
+    "text": "defaultexpiratointimespan",
+    "x": 1774.3972034367653,
+    "y": 989.8391858842451,
+    "font_size": "61.43588491586526px",
+    "label_id": "T-038",
+    "region": "R01"
+  },
+  {
+    "text": "maximumbodysize",
+    "x": 1829.3972034367653,
+    "y": 1343.1724683549483,
+    "font_size": "61.43588491586526px",
+    "label_id": "T-039",
+    "region": "R01"
+  },
+  {
+    "text": "sizelilmit",
+    "x": 1872.730638495359,
+    "y": 1663.9502139197268,
+    "font_size": "61.43588491586526px",
+    "label_id": "T-040",
+    "region": "R01"
+  },
+  {
+    "text": "usecasesensitivepaths",
+    "x": 1836.0640735539528,
+    "y": 1953.172392061003,
+    "font_size": "61.43588491586526px",
+    "label_id": "T-041",
+    "region": "R01"
+  },
+  {
+    "text": "app services",
+    "x": 1837.7307910832496,
+    "y": 2349.8391095903,
+    "font_size": "61.43588491586526px",
+    "label_id": "T-042",
+    "region": "R01"
+  },
+  {
+    "text": "defaults without some",
+    "x": 513.4601395715345,
+    "y": 2906.981325590135,
+    "font_size": "118.66668701171868px",
+    "label_id": "T-043",
+    "region": "R01"
+  },
+  {
+    "text": "policy method",
+    "x": 513.4601395715345,
+    "y": 3055.3146843547834,
+    "font_size": "118.66668701171868px",
+    "label_id": "T-044",
+    "region": "R01"
+  },
+  {
+    "text": "setcachekeyprefix",
+    "x": 3325.5816765530235,
+    "y": 4691.887519461043,
+    "font_size": "81.84126499720985px",
+    "label_id": "T-045",
+    "region": "R01"
+  },
+  {
+    "text": "vs varybyvalue",
+    "x": 3325.5816765530235,
+    "y": 4794.189100707555,
+    "font_size": "81.84126499720985px",
+    "label_id": "T-046",
+    "region": "R01"
+  },
+  {
+    "text": "can we rely on some custom policy defaults?",
+    "x": 10.0,
+    "y": 4815.133720790942,
+    "font_size": "97.71428571428545px",
+    "label_id": "T-047",
+    "region": "R01"
+  },
+  {
+    "text": "can we rely on some custom policy defaults?",
+    "x": 12803.333740234375,
+    "y": 5775.133720790942,
+    "font_size": "97.71428571428545px",
+    "label_id": "T-048",
+    "region": "R01"
+  },
+  {
+    "text": "varybyquery",
+    "x": 805.2095425187181,
+    "y": 5816.769576294491,
+    "font_size": "85.18518337673602px",
+    "label_id": "T-049",
+    "region": "R01"
+  },
+  {
+    "text": "default",
+    "x": 805.2095425187181,
+    "y": 5923.251055515411,
+    "font_size": "85.18518337673602px",
+    "label_id": "T-050",
+    "region": "R01"
+  },
+  {
+    "text": "vs not default(ignore some keys)",
+    "x": 805.2095425187181,
+    "y": 6029.732534736331,
+    "font_size": "85.18518337673602px",
+    "label_id": "T-051",
+    "region": "R01"
+  },
+  {
+    "text": "custom",
+    "x": 13283.42424445497,
+    "y": 5340.5905202810345,
+    "font_size": "256.4444173177081px",
+    "label_id": "T-052",
+    "region": "R01"
+  },
+  {
+    "text": "cachevaryvyrules.querykeys = \"*\"",
+    "x": 13974.305420617948,
+    "y": 8619.224176552038,
+    "font_size": "156.72727272727275px",
+    "label_id": "T-053",
+    "region": "R01"
+  },
+  {
+    "text": "decide whether you want to",
+    "x": 12843.946805921318,
+    "y": 10270.817878317801,
+    "font_size": "90.33334350585935px",
+    "label_id": "T-054",
+    "region": "R01"
+  },
+  {
+    "text": "serve the current cached response",
+    "x": 12843.946805921318,
+    "y": 10383.734557700125,
+    "font_size": "90.33334350585935px",
+    "label_id": "T-055",
+    "region": "R01"
+  },
+  {
+    "text": "based on something from request by",
+    "x": 12843.946805921318,
+    "y": 10496.65123708245,
+    "font_size": "90.33334350585935px",
+    "label_id": "T-056",
+    "region": "R01"
+  },
+  {
+    "text": "setting responseexpirationtimespan",
+    "x": 12843.946805921318,
+    "y": 10609.567916464774,
+    "font_size": "90.33334350585935px",
+    "label_id": "T-057",
+    "region": "R01"
+  },
+  {
+    "text": "but need to reset in serverrespone method to avoid some unexpected behavior",
+    "x": 13045.160150224427,
+    "y": 10917.580667962184,
+    "font_size": "20px",
+    "label_id": "T-058",
+    "region": "R01"
+  },
+  {
+    "text": "can we jsut set allowcachelookiup to false",
+    "x": 15380.9583671781,
+    "y": 10388.54572438765,
+    "font_size": "99.99999999999996px",
+    "label_id": "T-059",
+    "region": "R01"
+  },
+  {
+    "text": "to dissallow serving cached response",
+    "x": 15380.9583671781,
+    "y": 10513.54572438765,
+    "font_size": "99.99999999999996px",
+    "label_id": "T-060",
+    "region": "R01"
+  },
+  {
+    "text": "when each rule check runs",
+    "x": 15380.9583671781,
+    "y": 10763.54572438765,
+    "font_size": "99.99999999999996px",
+    "label_id": "T-061",
+    "region": "R01"
+  },
+  {
+    "text": "place in cacherequest",
+    "x": 15250.180626699583,
+    "y": 11375.954569195588,
+    "font_size": "20px",
+    "label_id": "T-062",
+    "region": "R01"
+  },
+  {
+    "text": "shit like this",
+    "x": 15250.180626699583,
+    "y": 11400.954569195588,
+    "font_size": "20px",
+    "label_id": "T-063",
+    "region": "R01"
+  },
+  {
+    "text": "when methods run",
+    "x": 17945.048270510037,
+    "y": 10407.021243060823,
+    "font_size": "113.33334350585938px",
+    "label_id": "T-064",
+    "region": "R01"
+  },
+  {
+    "text": "when dont",
+    "x": 17945.048270510037,
+    "y": 10548.687922443147,
+    "font_size": "113.33334350585938px",
+    "label_id": "T-065",
+    "region": "R01"
+  },
+  {
+    "text": "when methods run",
+    "x": 17369.04839258035,
+    "y": 12361.375975604768,
+    "font_size": "227.99996948242168px",
+    "label_id": "T-066",
+    "region": "R01"
+  },
+  {
+    "text": "what we can set",
+    "x": 17369.04839258035,
+    "y": 12646.375937457795,
+    "font_size": "227.99996948242168px",
+    "label_id": "T-067",
+    "region": "R01"
+  },
+  {
+    "text": "set expiration time based on response",
+    "x": 9317.716217814292,
+    "y": 16084.192829865333,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-068",
+    "region": "R01"
+  },
+  {
+    "text": "cache only hot products",
+    "x": 9504.38308793148,
+    "y": 17323.08188829632,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-069",
+    "region": "R01"
+  },
+  {
+    "text": "at general products endpoint",
+    "x": 9504.38308793148,
+    "y": 17433.415221629653,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-070",
+    "region": "R01"
+  },
+  {
+    "text": "avoid a lot of unused cache entries",
+    "x": 9504.38308793148,
+    "y": 17543.748554962986,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-071",
+    "region": "R01"
+  },
+  {
+    "text": "skip personalized",
+    "x": 9671.049551147626,
+    "y": 15199.748453237724,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-072",
+    "region": "R01"
+  },
+  {
+    "text": "cache redirects/dont cache",
+    "x": 9498.827159383301,
+    "y": 14376.415119904395,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-073",
+    "region": "R01"
+  },
+  {
+    "text": "cache small",
+    "x": 9582.97540699615,
+    "y": 12758.044717886161,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-074",
+    "region": "R01"
+  },
+  {
+    "text": "do not cache responses with cookies",
+    "x": 9296.753198337294,
+    "y": 11914.489196239036,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-075",
+    "region": "R01"
+  },
+  {
+    "text": "do not cache error resp",
+    "x": 9544.753198337294,
+    "y": 11267.822509227317,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-076",
+    "region": "R01"
+  },
+  {
+    "text": "respect cachcontrol maxage 0",
+    "x": 7706.086572360732,
+    "y": 10474.489226756614,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-077",
+    "region": "R01"
+  },
+  {
+    "text": "force fresh for admins",
+    "x": 7728.086633395888,
+    "y": 11484.489226756614,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-078",
+    "region": "R01"
+  },
+  {
+    "text": "disallow shit explicitly",
+    "x": 7842.753381442763,
+    "y": 12556.489226756614,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-079",
+    "region": "R01"
+  },
+  {
+    "text": "when have some cache hit logic",
+    "x": 9221.049449422364,
+    "y": 13408.637206492935,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-080",
+    "region": "R01"
+  },
+  {
+    "text": "with expiration and want to set explicitly for",
+    "x": 9221.049449422364,
+    "y": 13518.970539826267,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-081",
+    "region": "R01"
+  },
+  {
+    "text": "new cache",
+    "x": 9221.049449422364,
+    "y": 13629.3038731596,
+    "font_size": "88.26666666666571px",
+    "label_id": "T-082",
+    "region": "R01"
+  },
+  {
+    "text": "about cookies and output cache",
+    "x": 12848.711096848545,
+    "y": 12997.489232310083,
+    "font_size": "89.33331853693232px",
+    "label_id": "T-083",
+    "region": "R01"
+  },
+  {
+    "text": "even if you dont set cookie",
+    "x": 12199.49279507478,
+    "y": 13915.643331413834,
+    "font_size": "47.16666412353518px",
+    "label_id": "T-084",
+    "region": "R01"
+  },
+  {
+    "text": "you shouldnt use cache for endpoints",
+    "x": 12199.49279507478,
+    "y": 13974.601661568253,
+    "font_size": "47.16666412353518px",
+    "label_id": "T-085",
+    "region": "R01"
+  },
+  {
+    "text": "that internally depend on session and",
+    "x": 12199.49279507478,
+    "y": 14033.559991722672,
+    "font_size": "47.16666412353518px",
+    "label_id": "T-086",
+    "region": "R01"
+  },
+  {
+    "text": "user specific thing",
+    "x": 12199.49279507478,
+    "y": 14092.51832187709,
+    "font_size": "47.16666412353518px",
+    "label_id": "T-087",
+    "region": "R01"
+  },
+  {
+    "text": "judy set outputcache disabled",
+    "x": 12270.431380096812,
+    "y": 14215.116282605277,
+    "font_size": "20px",
+    "label_id": "T-088",
+    "region": "R01"
+  },
+  {
+    "text": "!!!",
+    "x": 13052.249476551138,
+    "y": 14849.06140100514,
+    "font_size": "115.37258731617767px",
+    "label_id": "T-089",
+    "region": "R01"
+  },
+  {
+    "text": "can we have allowstorage false and",
+    "x": 19703.006462670848,
+    "y": 10174.80420723769,
+    "font_size": "115.17460995628794px",
+    "label_id": "T-090",
+    "region": "R01"
+  },
+  {
+    "text": "ahve serverresponse run?",
+    "x": 19703.006462670848,
+    "y": 10318.77246968305,
+    "font_size": "115.17460995628794px",
+    "label_id": "T-091",
+    "region": "R01"
+  },
+  {
+    "text": "yes we can have allowstorage true/false",
+    "x": 19279.355586671034,
+    "y": 11021.292757493842,
+    "font_size": "29.48147922091982px",
+    "label_id": "T-092",
+    "region": "R01"
+  },
+  {
+    "text": "and then change it based on response",
+    "x": 19279.355586671034,
+    "y": 11058.144606519993,
+    "font_size": "29.48147922091982px",
+    "label_id": "T-093",
+    "region": "R01"
+  },
+  {
+    "text": "here",
+    "x": 19279.355586671034,
+    "y": 11094.996455546143,
+    "font_size": "29.48147922091982px",
+    "label_id": "T-094",
+    "region": "R01"
+  },
+  {
+    "text": "can we set allowstorage in",
+    "x": 19900.71918604367,
+    "y": 11678.47232099322,
+    "font_size": "56.60605690696028px",
+    "label_id": "T-095",
+    "region": "R01"
+  },
+  {
+    "text": "servefromcache",
+    "x": 19900.71918604367,
+    "y": 11749.229892126921,
+    "font_size": "56.60605690696028px",
+    "label_id": "T-096",
+    "region": "R01"
+  },
+  {
+    "text": "or we need to set all the allow things before",
+    "x": 19900.71918604367,
+    "y": 11819.98746326062,
+    "font_size": "56.60605690696028px",
+    "label_id": "T-097",
+    "region": "R01"
+  },
+  {
+    "text": "middleware in cacherequest?",
+    "x": 19900.71918604367,
+    "y": 11890.745034394322,
+    "font_size": "56.60605690696028px",
+    "label_id": "T-098",
+    "region": "R01"
+  },
+  {
+    "text": "are ioutputcachestore methods to read/write",
+    "x": 7710.997020352686,
+    "y": 3466.164465740586,
+    "font_size": "83.12278250725788px",
+    "label_id": "T-099",
+    "region": "R01"
+  },
+  {
+    "text": "usable in app code?",
+    "x": 7710.997020352686,
+    "y": 3570.067943874658,
+    "font_size": "83.12278250725788px",
+    "label_id": "T-100",
+    "region": "R01"
+  },
+  {
+    "text": "get bytes too",
+    "x": 8036.762631186332,
+    "y": 3772.32532537546,
+    "font_size": "20px",
+    "label_id": "T-101",
+    "region": "R01"
+  },
+  {
+    "text": "one key, different",
+    "x": 8224.344698340712,
+    "y": 4096.874306883909,
+    "font_size": "34.09831720553241px",
+    "label_id": "T-102",
+    "region": "R01"
+  },
+  {
+    "text": "tags for different entry values by condition?",
+    "x": 8224.344698340712,
+    "y": 4139.497203390825,
+    "font_size": "34.09831720553241px",
+    "label_id": "T-103",
+    "region": "R01"
+  },
+  {
+    "text": "setting this shit manually?",
+    "x": 8224.344698340712,
+    "y": 4182.12009989774,
+    "font_size": "34.09831720553241px",
+    "label_id": "T-104",
+    "region": "R01"
+  },
+  {
+    "text": "does adding a tag",
+    "x": 9758.227753600513,
+    "y": 3787.631375433453,
+    "font_size": "49.737371271306806px",
+    "label_id": "T-105",
+    "region": "R01"
+  },
+  {
+    "text": "creates a separate cache entry with",
+    "x": 9758.227753600513,
+    "y": 3849.803089522586,
+    "font_size": "49.737371271306806px",
+    "label_id": "T-106",
+    "region": "R01"
+  },
+  {
+    "text": "different key?",
+    "x": 9758.227753600513,
+    "y": 3911.97480361172,
+    "font_size": "49.737371271306806px",
+    "label_id": "T-107",
+    "region": "R01"
+  },
+  {
+    "text": "where we can set tags in custom",
+    "x": 9725.760333674472,
+    "y": 4222.940059569613,
+    "font_size": "57.0526315789473px",
+    "label_id": "T-108",
+    "region": "R01"
+  },
+  {
+    "text": "policy",
+    "x": 9725.760333674472,
+    "y": 4294.2558490432975,
+    "font_size": "57.0526315789473px",
+    "label_id": "T-109",
+    "region": "R01"
+  },
+  {
+    "text": "but we can change",
+    "x": 18730.6101087601,
+    "y": 13644.075149455713,
+    "font_size": "20px",
+    "label_id": "T-110",
+    "region": "R01"
+  },
+  {
+    "text": "allowstorage here",
+    "x": 18730.6101087601,
+    "y": 13669.075149455713,
+    "font_size": "20px",
+    "label_id": "T-111",
+    "region": "R01"
+  },
+  {
+    "text": "and it will store",
+    "x": 18730.6101087601,
+    "y": 13694.075149455713,
+    "font_size": "20px",
+    "label_id": "T-112",
+    "region": "R01"
+  },
+  {
+    "text": "just dont set here,",
+    "x": 19109.181537331526,
+    "y": 13106.932292312857,
+    "font_size": "20px",
+    "label_id": "T-113",
+    "region": "R01"
+  },
+  {
+    "text": "no evidence will it have",
+    "x": 19109.181537331526,
+    "y": 13131.932292312857,
+    "font_size": "20px",
+    "label_id": "T-114",
+    "region": "R01"
+  },
+  {
+    "text": "an effect or no",
+    "x": 19109.181537331526,
+    "y": 13156.932292312857,
+    "font_size": "20px",
+    "label_id": "T-115",
+    "region": "R01"
+  },
+  {
+    "text": "where we can set tags in custom",
+    "x": 17694.352704192723,
+    "y": 13996.76285053496,
+    "font_size": "57.0526315789473px",
+    "label_id": "T-116",
+    "region": "R01"
+  },
+  {
+    "text": "policy",
+    "x": 17694.352704192723,
+    "y": 14068.078640008645,
+    "font_size": "57.0526315789473px",
+    "label_id": "T-117",
+    "region": "R01"
+  },
+  {
+    "text": "e-tag with outputcache",
+    "x": 14222.084582381922,
+    "y": 1671.1239423990066,
+    "font_size": "165.77775065104134px",
+    "label_id": "T-118",
+    "region": "R01"
+  },
+  {
+    "text": "outputcache revalidates against cached",
+    "x": 16581.147196141115,
+    "y": 1639.4019903004921,
+    "font_size": "97.93078891636182px",
+    "label_id": "T-119",
+    "region": "R01"
+  },
+  {
+    "text": "response",
+    "x": 16581.147196141115,
+    "y": 1761.8154764459443,
+    "font_size": "97.93078891636182px",
+    "label_id": "T-120",
+    "region": "R01"
+  },
+  {
+    "text": "can respect maxage by revalidating",
+    "x": 16696.157835235565,
+    "y": 2691.0969030481006,
+    "font_size": "97.93078891636182px",
+    "label_id": "T-121",
+    "region": "R01"
+  },
+  {
+    "text": "ag db",
+    "x": 16696.157835235565,
+    "y": 2813.510389193553,
+    "font_size": "97.93078891636182px",
+    "label_id": "T-122",
+    "region": "R01"
+  },
+  {
+    "text": "better to not cache 304",
+    "x": 16709.200238556907,
+    "y": 3352.7043160010026,
+    "font_size": "97.93078891636182px",
+    "label_id": "T-123",
+    "region": "R01"
+  },
+  {
+    "text": "!!!!",
+    "x": 16832.404853828608,
+    "y": 2412.339665688314,
+    "font_size": "114.47621372767897px",
+    "label_id": "T-124",
+    "region": "R01"
+  },
+  {
+    "text": "!!!!",
+    "x": 16485.73798371142,
+    "y": 3352.339665688314,
+    "font_size": "114.47621372767897px",
+    "label_id": "T-125",
+    "region": "R01"
+  }
+]
