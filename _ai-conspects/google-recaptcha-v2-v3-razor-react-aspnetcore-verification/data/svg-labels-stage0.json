@@ -1,0 +1,234 @@
+[
+  {
+    "idx": 1,
+    "x": 5920.415627804766,
+    "y": 3704.5662409192046,
+    "text": "<script src=\"https://www.google.com/recaptcha/api.js\" async defer></script>\n<form asp-action=\"Register\" method=\"post\">\n<input type=\"email\" name=\"Email\" required />\n<input type=\"password\" name=\"Password\" required />\n<div class=\"g-recaptcha\" data-sitekey=\"@ViewBag.RecaptchaSiteKey\"></div>\n<button type=\"submit\">Submit</button>\n</form>",
+    "label_id": "T-001",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 2,
+    "x": 6001.1563233342795,
+    "y": 5080.121728657865,
+    "text": "public sealed class RecaptchaVerifyResponse\n{\npublic bool success { get; set; }\npublic string[]? error-codes { get; set; } // google uses this name in JSON sometimes\npublic List<string>? error_codes { get; set; } // in case serializer maps differently\npublic double score { get; set; } // v3 only\npublic string? action { get; set; } // v3 only\npublic string? hostname { get; set; }\n}",
+    "label_id": "T-002",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 3,
+    "x": 6110.045347856848,
+    "y": 5530.492076422615,
+    "text": "using System.Net.Http;\nusing System.Text.Json;\nusing Microsoft.AspNetCore.WebUtilities;\npublic interface IRecaptchaVerifier\n{\nTask<bool> VerifyV2Async(string token, string? remoteIp = null);\n}\npublic class GoogleRecaptchaVerifier : IRecaptchaVerifier\n{\nprivate readonly HttpClient _http;\nprivate readonly IConfiguration _config;\npublic GoogleRecaptchaVerifier(HttpClient http, IConfiguration config)\n{\n_http = http;\n_config = config;\n}\npublic async Task<bool> VerifyV2Async(string token, string? remoteIp = null)\n{\nif (string.IsNullOrWhiteSpace(token)) return false;\nvar secret = _config[\"Recaptcha:SecretKey\"];\nif (string.IsNullOrWhiteSpace(secret))\nthrow new InvalidOperationException(\"Recaptcha:SecretKey is not configured.\");\n// POST https://www.google.com/recaptcha/api/siteverify\n// with form fields: secret, response, remoteip(optional)\nvar data = new Dictionary<string, string>\n{\n[\"secret\"] = secret,\n[\"response\"] = token\n};\nif (!string.IsNullOrWhiteSpace(remoteIp))\ndata[\"remoteip\"] = remoteIp;\nusing var content = new FormUrlEncodedContent(data);\nusing var resp = await _http.PostAsync(\"https://www.google.com/recaptcha/api/siteverify\", content);\nresp.EnsureSuccessStatusCode();\nvar json = await resp.Content.ReadAsStringAsync();\nvar result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json);\nreturn result?.success == true;\n}\n}",
+    "label_id": "T-003",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 4,
+    "x": 6133.7489611381,
+    "y": 7174.936520867053,
+    "text": "public class RegisterVm\n{\npublic string Email { get; set; } = \"\";\npublic string Password { get; set; } = \"\";\n// name must match form field for model binding:\npublic string? g_recaptcha_response { get; set; } // for manual binding (see note below)\n}",
+    "label_id": "T-004",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 5,
+    "x": 6220.415627804766,
+    "y": 7603.084714226399,
+    "text": "using Microsoft.AspNetCore.Mvc;\npublic class AccountController : Controller\n{\nprivate readonly IRecaptchaVerifier _recaptcha;\nprivate readonly IConfiguration _config;\npublic AccountController(IRecaptchaVerifier recaptcha, IConfiguration config)\n{\n_recaptcha = recaptcha;\n_config = config;\n}\n[HttpGet]\npublic IActionResult Register()\n{\nViewBag.RecaptchaSiteKey = _config[\"Recaptcha:SiteKey\"];\nreturn View();\n}\n[HttpPost]\n[ValidateAntiForgeryToken]\npublic async Task<IActionResult> Register(RegisterVm vm)\n{\nvar token = Request.Form[\"g-recaptcha-response\"].ToString();\nvar ip = HttpContext.Connection.RemoteIpAddress?.ToString();\nvar ok = await _recaptcha.VerifyV2Async(token, ip);\nif (!ok)\n{\nModelState.AddModelError(\"\", \"reCAPTCHA failed. Please try again.\");\nViewBag.RecaptchaSiteKey = _config[\"Recaptcha:SiteKey\"];\nreturn View(vm);\n}\n// reCAPTCHA passed -> proceed with registration\n// create user, hash password, etc.\nreturn RedirectToAction(\"RegisterSuccess\");\n}\n}",
+    "label_id": "T-005",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 6,
+    "x": 819.8901346668763,
+    "y": 3941.9655582295127,
+    "text": "import React, { useRef, useState } from \"react\";\nimport ReCAPTCHA from \"react-google-recaptcha\";\nconst SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY; // or REACT_APP_...\nexport default function RegisterV2() {\nconst recaptchaRef = useRef(null);\nconst [email, setEmail] = useState(\"\");\nconst [password, setPassword] = useState(\"\");\nconst [status, setStatus] = useState(\"\");\nconst onSubmit = async (e) => {\ne.preventDefault();\nsetStatus(\"\");\nconst token = recaptchaRef.current?.getValue();\nif (!token) {\nsetStatus(\"Please complete reCAPTCHA.\");\nreturn;\n}\nconst resp = await fetch(\"/api/auth/register\", {\nmethod: \"POST\",\nheaders: { \"Content-Type\": \"application/json\" },\nbody: JSON.stringify({ email, password, recaptchaToken: token })\n});\nif (!resp.ok) {\nsetStatus(await resp.text());\nrecaptchaRef.current?.reset(); // token is single-use-ish; reset after failure\nreturn;\n}\nsetStatus(\"Registered!\");\n};\nreturn (\n<form onSubmit={onSubmit}>\n<input type=\"email\" value={email} onChange={e => setEmail(e.target.value)} required />\n<input type=\"password\" value={password} onChange={e => setPassword(e.target.value)} required />\n<ReCAPTCHA sitekey={SITE_KEY} ref={recaptchaRef} />\n<button type=\"submit\">Register</button>\n<div>{status}</div>\n</form>\n);\n}",
+    "label_id": "T-006",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 7,
+    "x": 738.9688465655663,
+    "y": 5875.92873521295,
+    "text": "import React, { useEffect, useRef, useState } from \"react\";\nconst SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;\nfunction loadScript(src) {\nreturn new Promise((resolve, reject) => {\nconst existing = document.querySelector(`script[src=\"${src}\"]`);\nif (existing) return resolve();\nconst s = document.createElement(\"script\");\ns.src = src;\ns.async = true;\ns.defer = true;\ns.onload = resolve;\ns.onerror = reject;\ndocument.head.appendChild(s);\n});\n}\nexport default function RegisterV2NoLib() {\nconst captchaDivRef = useRef(null);\nconst widgetIdRef = useRef(null);\nconst [email, setEmail] = useState(\"\");\nconst [password, setPassword] = useState(\"\");\nconst [status, setStatus] = useState(\"\");\nuseEffect(() => {\nconst src = \"https://www.google.com/recaptcha/api.js?render=explicit\";\nloadScript(src).then(() => {\n// Wait until grecaptcha is ready\nwindow.grecaptcha.ready(() => {\nif (widgetIdRef.current !== null) return; // already rendered\nwidgetIdRef.current = window.grecaptcha.render(captchaDivRef.current, {\nsitekey: SITE_KEY,\ntheme: \"light\",\n// callback: () => {}, // optional: called on success\n// \"expired-callback\": () => {}, // optional: called on expiration\n});\n});\n});\n}, []);\nconst onSubmit = async (e) => {\ne.preventDefault();\nsetStatus(\"\");\nconst widgetId = widgetIdRef.current;\n// If you rendered explicitly, prefer getResponse(widgetId)\nconst token =\nwidgetId !== null\n? window.grecaptcha.getResponse(widgetId)\n: window.grecaptcha.getResponse(); // fallback\nif (!token) {\nsetStatus(\"Please complete reCAPTCHA.\");\nreturn;\n}\nconst resp = await fetch(\"/api/auth/register\", {\nmethod: \"POST\",\nheaders: { \"Content-Type\": \"application/json\" },\nbody: JSON.stringify({ email, password, recaptchaToken: token }),\n});\nif (!resp.ok) {\nsetStatus(await resp.text());\n// Let user retry (token may be consumed/expired)\nif (widgetId !== null) window.grecaptcha.reset(widgetId);\nelse window.grecaptcha.reset();\nreturn;\n}\nsetStatus(\"Registered!\");\n};\nreturn (\n<form onSubmit={onSubmit}>\n<input type=\"email\" value={email} onChange={(e) => setEmail(e.target.value)} required />\n<input type=\"password\" value={password} onChange={(e) => setPassword(e.target.value)} required />\n<div ref={captchaDivRef} />\n<button type=\"submit\">Register</button>\n<div>{status}</div>\n</form>\n);\n}",
+    "label_id": "T-007",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 8,
+    "x": 4171.175476658488,
+    "y": 11364.450927459697,
+    "text": "controller",
+    "label_id": "T-008",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 9,
+    "x": 3856.8636389517624,
+    "y": 5372.311146785887,
+    "text": "v3 must check action and score",
+    "label_id": "T-009",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 10,
+    "x": 3857.926486819634,
+    "y": 5723.02665429749,
+    "text": "combined v2 and v3",
+    "label_id": "T-010",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 11,
+    "x": 3579.290261899535,
+    "y": 6053.0265918751575,
+    "text": "using System.Text.Json.Serialization;\npublic sealed class RecaptchaVerifyResponse\n{\n[JsonPropertyName(\"success\")]\npublic bool Success { get; set; }\n[JsonPropertyName(\"challenge_ts\")]\npublic DateTimeOffset? ChallengeTs { get; set; }\n[JsonPropertyName(\"hostname\")]\npublic string? Hostname { get; set; }\n// v3 fields\n[JsonPropertyName(\"score\")]\npublic double? Score { get; set; }\n[JsonPropertyName(\"action\")]\npublic string? Action { get; set; }\n[JsonPropertyName(\"error-codes\")]\npublic string[]? ErrorCodes { get; set; }\n}\npublic sealed record RecaptchaV3Result(bool Success, double Score, string? Action, string? Hostname, string[]? ErrorCodes);\npublic sealed record RecaptchaV2Result(bool Success, string? Hostname, string[]? ErrorCodes);",
+    "label_id": "T-011",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 12,
+    "x": 3591.8840431217022,
+    "y": 7374.078683729607,
+    "text": "using System.Net.Http;\nusing System.Text.Json;\nusing Microsoft.Extensions.Configuration;\npublic sealed class GoogleRecaptchaService : IRecaptchaService\n{\nprivate readonly HttpClient _http;\nprivate readonly IConfiguration _config;\npublic GoogleRecaptchaService(HttpClient http, IConfiguration config)\n{\n_http = http;\n_config = config;\n}\npublic async Task<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null)\n{\nvar resp = await VerifyCoreAsync(token, remoteIp);\n// v3: must check action + score\nvar ok = resp.Success && string.Equals(resp.Action, expectedAction, StringComparison.Ordinal);\nvar score = resp.Score ?? 0.0;\nreturn new RecaptchaV3Result(ok, score, resp.Action, resp.Hostname, resp.ErrorCodes);\n}\npublic async Task<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null)\n{\nvar resp = await VerifyCoreAsync(token, remoteIp);\nreturn new RecaptchaV2Result(resp.Success, resp.Hostname, resp.ErrorCodes);\n}\nprivate async Task<RecaptchaVerifyResponse> VerifyCoreAsync(string token, string? remoteIp)\n{\nif (string.IsNullOrWhiteSpace(token))\nreturn new RecaptchaVerifyResponse { Success = false, ErrorCodes = [\"missing-input-response\"] };\nvar secret = _config[\"Recaptcha:SecretKey\"];\nif (string.IsNullOrWhiteSpace(secret))\nthrow new InvalidOperationException(\"Recaptcha:SecretKey is not configured.\");\nvar data = new Dictionary<string, string>\n{\n[\"secret\"] = secret,\n[\"response\"] = token\n};\nif (!string.IsNullOrWhiteSpace(remoteIp))\ndata[\"remoteip\"] = remoteIp;\nusing var content = new FormUrlEncodedContent(data);\nusing var httpResp = await _http.PostAsync(\"https://www.google.com/recaptcha/api/siteverify\", content);\nhttpResp.EnsureSuccessStatusCode();\nvar json = await httpResp.Content.ReadAsStringAsync();\nvar result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json, new JsonSerializerOptions\n{\nPropertyNameCaseInsensitive = true\n});\nreturn result ?? new RecaptchaVerifyResponse { Success = false, ErrorCodes = [\"invalid-json\"] };\n}\n}",
+    "label_id": "T-012",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 13,
+    "x": 3610.9316113066916,
+    "y": 6950.150221292399,
+    "text": "public interface IRecaptchaService\n{\nTask<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null);\nTask<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null);\n}",
+    "label_id": "T-013",
+    "region_candidate": "R02"
+  },
+  {
+    "idx": 14,
+    "x": 8374.503066266952,
+    "y": 10813.970783925539,
+    "text": "import React, { useEffect, useState } from \"react\";\nconst SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;\nfunction loadRecaptchaV3(siteKey) {\nreturn new Promise((resolve, reject) => {\nif (window.grecaptcha) return resolve(window.grecaptcha);\nconst script = document.createElement(\"script\");\nscript.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;\nscript.async = true;\nscript.defer = true;\nscript.onload = () => resolve(window.grecaptcha);\nscript.onerror = reject;\ndocument.head.appendChild(script);\n});\n}\nexport default function RegisterV3React() {\nconst [ready, setReady] = useState(false);\nconst [email, setEmail] = useState(\"\");\nconst [password, setPassword] = useState(\"\");\nconst [status, setStatus] = useState(\"\");\nuseEffect(() => {\nloadRecaptchaV3(SITE_KEY)\n.then((g) => g.ready(() => setReady(true)))\n.catch(() => setReady(false));\n}, []);\nconst onSubmit = async (e) => {\ne.preventDefault();\nsetStatus(\"\");\nif (!ready) {\nsetStatus(\"reCAPTCHA not ready yet.\");\nreturn;\n}\nconst token = await window.grecaptcha.execute(SITE_KEY, { action: \"register\" });\nconst resp = await fetch(\"/api/auth/register-v3\", {\nmethod: \"POST\",\nheaders: { \"Content-Type\": \"application/json\" },\nbody: JSON.stringify({ email, password, recaptchaToken: token }),\n});\nif (!resp.ok) {\nsetStatus(await resp.text());\nreturn;\n}\nsetStatus(\"Registered (React v3)!\");\n};\nreturn (\n<form onSubmit={onSubmit}>\n<input value={email} onChange={(e) => setEmail(e.target.value)} type=\"email\" required />\n<input value={password} onChange={(e) => setPassword(e.target.value)} type=\"password\" required />\n<button type=\"submit\" disabled={!ready}>Register</button>\n<div>{status}</div>\n</form>\n);\n}",
+    "label_id": "T-014",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 15,
+    "x": 3166.24704083893,
+    "y": 10355.594849604528,
+    "text": "@model RazorRegisterVm\n@{\nvar siteKey = (string)ViewBag.RecaptchaSiteKey;\n}\n<form id=\"registerForm\" method=\"post\" asp-action=\"Register\">\n@Html.AntiForgeryToken()\n<input asp-for=\"Email\" type=\"email\" required />\n<input asp-for=\"Password\" type=\"password\" required />\n<input asp-for=\"RecaptchaToken\" type=\"hidden\" />\n<button type=\"submit\">Register</button>\n<div asp-validation-summary=\"All\"></div>\n</form>\n<script src=\"https://www.google.com/recaptcha/api.js?render=@siteKey\"></script>\n<script>\n(function () {\nconst form = document.getElementById(\"registerForm\");\nconst tokenInput = document.querySelector('input[name=\"RecaptchaToken\"]');\nconst siteKey = \"@siteKey\";\nform.addEventListener(\"submit\", function (e) {\ne.preventDefault();\ngrecaptcha.ready(function () {\ngrecaptcha.execute(siteKey, { action: \"register\" }).then(function (token) {\ntokenInput.value = token;\nform.submit();\n});\n});\n});\n})();\n</script>",
+    "label_id": "T-015",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 16,
+    "x": 7674.421258470391,
+    "y": 10519.36223037638,
+    "text": "without library",
+    "label_id": "T-016",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 17,
+    "x": 6330.199141364271,
+    "y": 10504.806688384208,
+    "text": "with library",
+    "label_id": "T-017",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 18,
+    "x": 5415.91634659353,
+    "y": 10949.970840257109,
+    "text": "import React from \"react\";\nimport { GoogleReCaptchaProvider } from \"react-google-recaptcha-v3\";\nimport RegisterV3 from \"./RegisterV3\";\nconst SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;\nexport default function App() {\nreturn (\n<GoogleReCaptchaProvider\nreCaptchaKey={SITE_KEY}\nscriptProps={{ async: true, defer: true }}\n>\n<RegisterV3 />\n</GoogleReCaptchaProvider>\n);\n}",
+    "label_id": "T-018",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 19,
+    "x": 5241.749476476342,
+    "y": 11493.304199021757,
+    "text": "import React, { useState } from \"react\";\nimport { useGoogleReCaptcha } from \"react-google-recaptcha-v3\";\nexport default function RegisterV3() {\nconst { executeRecaptcha } = useGoogleReCaptcha();\nconst [email, setEmail] = useState(\"\");\nconst [password, setPassword] = useState(\"\");\nconst [status, setStatus] = useState(\"\");\nconst onSubmit = async (e) => {\ne.preventDefault();\nsetStatus(\"\");\nif (!executeRecaptcha) {\nsetStatus(\"reCAPTCHA not ready yet.\");\nreturn;\n}\n// action name must match what server expects\nconst token = await executeRecaptcha(\"register\");\nconst resp = await fetch(\"/api/auth/register-v3\", {\nmethod: \"POST\",\nheaders: { \"Content-Type\": \"application/json\" },\nbody: JSON.stringify({ email, password, recaptchaToken: token }),\n});\nsetStatus(resp.ok ? \"Registered!\" : await resp.text());\n};\nreturn (\n<form onSubmit={onSubmit}>\n<input type=\"email\" value={email} onChange={(e) => setEmail(e.target.value)} required />\n<input type=\"password\" value={password} onChange={(e) => setPassword(e.target.value)} required />\n<button type=\"submit\">Register</button>\n<div>{status}</div>\n</form>\n);\n}",
+    "label_id": "T-019",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 20,
+    "x": 5123.256783608773,
+    "y": 9416.134356919621,
+    "text": "v3",
+    "label_id": "T-020",
+    "region_candidate": "R03"
+  },
+  {
+    "idx": 21,
+    "x": 4868.977241092505,
+    "y": 14020.239835685523,
+    "text": "what is remote ip",
+    "label_id": "T-021",
+    "region_candidate": "R04"
+  },
+  {
+    "idx": 22,
+    "x": 8236.16672680511,
+    "y": 2058.667714636358,
+    "text": "we also may need to verify hostname",
+    "label_id": "T-022",
+    "region_candidate": "R01"
+  },
+  {
+    "idx": 23,
+    "x": 1837.4450018264151,
+    "y": 10.0,
+    "text": "so flow exp",
+    "label_id": "T-023",
+    "region_candidate": "R01"
+  },
+  {
+    "idx": 24,
+    "x": 1966.3212740001636,
+    "y": 2739.030452652536,
+    "text": "expected action in recapcha is just a string to put inside",
+    "label_id": "T-024",
+    "region_candidate": "R01"
+  },
+  {
+    "idx": 25,
+    "x": 2078.39730881376,
+    "y": 3106.6131941245912,
+    "text": "and to verify",
+    "label_id": "T-025",
+    "region_candidate": "R01"
+  },
+  {
+    "idx": 26,
+    "x": 1900.7474433784437,
+    "y": 235.05489669572125,
+    "text": "so, we need to give site key to client\n1 razor - from config/env variables/keystroe => viewbag\n2 react - just pass in response",
+    "label_id": "T-026",
+    "region_candidate": "R01"
+  },
+  {
+    "idx": 27,
+    "x": 1983.5348578415833,
+    "y": 785.0249883794822,
+    "text": "1 razor -> we are loading script\nin v3 - with our sitekey in qstring\nand in script tag we are manually executing recapcha,\nwith v3 we also need to set action \"register\",\"login\"\nin v2 we just set class and sitekey to div",
+    "label_id": "T-027",
+    "region_candidate": "R01"
+  },
+  {
+    "idx": 28,
+    "x": 2331.8115656753816,
+    "y": 1542.04388550546,
+    "text": "so here we prevent default and add event listener on recapchas token ready\nto execute and put token from resolved promise into the input and submit\n!!! we can do literally the same with v2",
+    "label_id": "T-028",
+    "region_candidate": "R01"
+  },
+  {
+    "idx": 29,
+    "x": 1748.718212318092,
+    "y": 1773.4204705623342,
+    "text": "using form because v2 automatically sets it\ncan do like v3",
+    "label_id": "T-029",
+    "region_candidate": "R01"
+  }
+]
