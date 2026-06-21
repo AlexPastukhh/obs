@@ -5,9 +5,9 @@ Generated: 2026-06-20 08:40:16 UTC
 This batch starts three previously unprocessed conspects:
 
 ```text
-csharp-linq-join-groupjoin-groupby-selectmany
-server-resources-multiple-instances-microservices
-aspnetcore-routing-route-parameters-custom-constraints-matching
+linq-join-groupjoin-groupby-selectmany-selectmany-second-callback
+server-resources-multipleinstances-microservices
+routing-route-params-tech-info-custom-constraints-router-matching
 ```
 
 Stage0 only: source materialization and provisional region hints.  

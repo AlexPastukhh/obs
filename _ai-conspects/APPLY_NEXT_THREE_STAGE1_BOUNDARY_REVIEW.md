@@ -3,8 +3,8 @@
 This archive contains Stage1 boundary review files for three conspects:
 
 ```text
-actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-endpoint-name-iapiendpointmetadata-ordered-metadata
-processing-data-as-stream-httpclient-endpoint-browser-websockets
+actiondescriptor-controlleractiondescriptor-endpoint-metadata-route-or-endpoint-name-iapiendpointmetadata-ordered-metadata
+processing-data-as-stream-in-dif-situations-httpclient-endpoint-browser-websockets
 returning-most-specific-passing-most-generic
 ```
 
