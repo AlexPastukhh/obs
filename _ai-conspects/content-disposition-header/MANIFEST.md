@@ -36,5 +36,5 @@ _ai-conspects/content-disposition-header/regions/R01-content-disposition-header.
 ## Does not modify
 
 ```text
-_ai-conspects/react-query-rquery/
+_ai-conspects/react query,rquery/
 ```

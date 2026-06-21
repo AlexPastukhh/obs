@@ -46,7 +46,7 @@ _ai-conspects/binding-source-attributes/
 Do not edit:
 
 ```text
-_ai-conspects/react-query-rquery/
+_ai-conspects/react query,rquery/
 ```
 
 ## Verification status

@@ -65,6 +65,6 @@ git restore -- _ai-conspects/content-disposition-header
 
 ## Notes
 
-This archive does not edit `_ai-conspects/react-query-rquery/`.
+This archive does not edit `_ai-conspects/react query,rquery/`.
 
 The transcript is based on the uploaded SVG and its visually read embedded screenshots.

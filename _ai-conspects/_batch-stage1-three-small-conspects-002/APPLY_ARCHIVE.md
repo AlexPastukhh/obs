@@ -7,9 +7,9 @@ git checkout ai-processed-conspects-text
 $zip = "C:\Users\alexa\Downloads\ai-conspects-three-small-conspects-002-stage1-transcript-v001.zip"
 
 $paths = @(
-  "_ai-conspects\scopes-and-idisposable",
-  "_ai-conspects\exception-handlers",
-  "_ai-conspects\httpcontent-custom-readasstream-buffering-compression",
+  "_ai-conspects\scopes and idisposable",
+  "_ai-conspects\EXCEPTIONHANDLERS",
+  "_ai-conspects\httpcontent,custom one, readasstream buffering, compression directly to network",
   "_ai-conspects\_batch-stage1-three-small-conspects-002"
 )
 

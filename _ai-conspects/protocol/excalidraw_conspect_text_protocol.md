@@ -977,8 +977,8 @@ Good archive paths:
 ```text
 _ai-conspects/protocol/excalidraw_conspect_text_protocol.md
 _ai-conspects/protocol/APPLY_ARCHIVE.md
-_ai-conspects/react-query-rquery/source-map.md
-_ai-conspects/react-query-rquery/regions/R05-mutations.md
+_ai-conspects/react query,rquery/source-map.md
+_ai-conspects/react query,rquery/regions/R05-mutations.md
 ```
 
 Bad archive paths:

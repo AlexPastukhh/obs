@@ -29,9 +29,9 @@ git checkout ai-processed-conspects-text
 $zip = "C:\Users\alexa\Downloads\ai-conspects-three-small-conspects-stage1-transcript-v001.zip"
 
 $paths = @(
-  "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands",
-  "_ai-conspects\lazy-lazyt-initialization",
-  "_ai-conspects\creating-base32-secret",
+  "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands",
+  "_ai-conspects\Lazy",
+  "_ai-conspects\creating base32 secret",
   "_ai-conspects\_batch-stage1-three-small-conspects"
 )
 
@@ -59,9 +59,9 @@ git push origin ai-processed-conspects-text
 ## Rollback before commit
 
 ```powershell
-git restore --staged -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage1-three-small-conspects"
-git restore -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage1-three-small-conspects"
-git clean -fd -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage1-three-small-conspects"
+git restore --staged -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage1-three-small-conspects"
+git restore -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage1-three-small-conspects"
+git clean -fd -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage1-three-small-conspects"
 ```
 
 ## Notes

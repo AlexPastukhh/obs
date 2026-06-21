@@ -35,9 +35,9 @@ git status --short
 
 Expand-Archive -Path $zip -DestinationPath . -Force
 
-git add -A -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage0-three-small-conspects"
+git add -A -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage0-three-small-conspects"
 
-git status --short -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage0-three-small-conspects"
+git status --short -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage0-three-small-conspects"
 ```
 
 ## Commit commands
@@ -50,9 +50,9 @@ git push origin ai-processed-conspects-text
 ## Rollback before commit
 
 ```powershell
-git restore --staged -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage0-three-small-conspects"
-git restore -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage0-three-small-conspects"
-git clean -fd -- "_ai-conspects\raw-connections-dbconnection-sqlconnection-commands" "_ai-conspects\lazy-lazyt-initialization" "_ai-conspects\creating-base32-secret" "_ai-conspects\_batch-stage0-three-small-conspects"
+git restore --staged -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage0-three-small-conspects"
+git restore -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage0-three-small-conspects"
+git clean -fd -- "_ai-conspects\rawconnections,dbconnection,sqlconnection,commands" "_ai-conspects\Lazy" "_ai-conspects\creating base32 secret" "_ai-conspects\_batch-stage0-three-small-conspects"
 ```
 
 ## Notes
