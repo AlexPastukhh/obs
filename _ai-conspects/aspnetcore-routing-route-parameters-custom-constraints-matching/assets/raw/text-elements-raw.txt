@@ -1,0 +1,23 @@
+T-001 @ (0.0,0.0 + 0.0,17.619999999999997): ROUTING
+T-002 @ (0.0,0.0 + 0.0,17.619999999999997): // custom constraint
+T-003 @ (0.0,0.0 + 0.0,42.62): public class EvenNumberConstraint : IRouteConstraint
+T-004 @ (0.0,0.0 + 0.0,67.62): {
+T-005 @ (0.0,0.0 + 0.0,92.62): public bool Match(HttpContext httpContext, IRouter route, string routeKey,
+T-006 @ (0.0,0.0 + 0.0,117.62): RouteValueDictionary values, RouteDirection routeDirection)
+T-007 @ (0.0,0.0 + 0.0,142.62): {
+T-008 @ (0.0,0.0 + 0.0,167.62): if (!values.TryGetValue(routeKey, out var val) || val == null) return false;
+T-009 @ (0.0,0.0 + 0.0,192.62): return int.TryParse(Convert.ToString(val), out var i) && i % 2 == 0;
+T-010 @ (0.0,0.0 + 0.0,217.62): }
+T-011 @ (0.0,0.0 + 0.0,242.62): }
+T-012 @ (0.0,0.0 + 0.0,292.62): // register in Startup / Program.cs
+T-013 @ (0.0,0.0 + 0.0,317.62): services.Configure<RouteOptions>(opts =>
+T-014 @ (0.0,0.0 + 0.0,342.62): {
+T-015 @ (0.0,0.0 + 0.0,367.62): opts.ConstraintMap.Add("even", typeof(EvenNumberConstraint));
+T-016 @ (0.0,0.0 + 0.0,392.62): });
+T-017 @ (0.0,0.0 + 0.0,442.62): // now usable:
+T-018 @ (0.0,0.0 + 0.0,467.62): app.MapGet("/nums/{id:even}", (int id) => $"even {id}");
+T-019 @ (0.0,0.0 + 0.0,17.619999999999997): Order
+T-020 @ (0.0,0.0 + 0.0,17.619999999999997): actually no
+T-021 @ (0.0,0.0 + 0.0,42.62): precedence rules
+T-022 @ (0.0,0.0 + 0.0,67.62): apply specific endpoint
+T-023 @ (0.0,0.0 + 0.0,92.62): first
