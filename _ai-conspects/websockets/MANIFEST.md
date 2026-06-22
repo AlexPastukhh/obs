@@ -1,23 +1,25 @@
-# MANIFEST - ASP.NET Core / browser WebSockets final coverage transcript v001
+# MANIFEST - WebSockets missing-screenshot recovery v002
 
-Archive type: **stage-1 final coverage transcript**  
+Archive type: **corrected source and missing-asset recovery**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-22 UTC
+Logical target: `_ai-conspects/websockets/`
 
-## Done
+## Source identity
 
-- All candidate regions processed.
-- 21 source image uses included.
-- 53 canvas text labels included.
-- Final coverage audit added.
-- Remaining unclosed: 0.
+- Uploaded source: `websockets(1).svg`
+- Logical source name: `websockets`
+- Existing conspect folder found: `_ai-conspects/websockets/`
 
-## Main transcript
+## Recovery result
 
-```text
-regions/R01R02R03-websockets-final.md
-```
+- Previous embedded screenshots: 21
+- Corrected embedded screenshots: 207
+- Recovered new screenshots: 186
+- Existing screenshots preserved by exact hash match: 21
+- Canvas labels: 53, unchanged
+- Removed previous screenshots: 0
 
-## Bundle
+## Apply behavior
 
-This conspect is delivered together with the WebSockets / IMemoryCache / JsonConverter three-conspect final-coverage bundle.
+This archive merges into the existing `websockets` folder.  
+It preserves the old transcript files and adds the corrected source, recovered images, delta ledgers and audit assets.

@@ -2,39 +2,51 @@
 
 Generated: 2026-06-22 UTC
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+## Recovery status
 
 ```text
-Stage0 source/boundary review: done
-Final combined transcript: done
-Final coverage audit: done
+Original source/boundary review: done
+Original combined transcript: preserved
+Corrected SVG source import: done
+Missing screenshot recovery: done
+Recovery coverage audit: done
+Semantic transcript refresh for recovered screenshots: pending
 ```
 
-## Counts
+## Corrected counts
 
 ```text
-unique embedded images: 21
-image uses on canvas: 21
-text labels parsed: 53
-processed image uses: 21
-processed text labels: 53
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+previous unique embedded images: 21
+corrected unique embedded images: 207
+previous image uses on canvas: 21
+corrected image uses on canvas: 207
+recovered new image uses: 186
+canvas text labels: 53
+removed old screenshot assets: 0
+duplicate image uses: 0
 ```
 
-## Completed regions
+## Authoritative source
 
 ```text
-R01, R02, R03
+source/websockets.svg
 ```
 
-## Candidate next step
+Raw received repair source:
 
 ```text
-No normal transcript regions remain. Only correction/polish if later needed.
+source/websockets(1).svg
 ```
+
+## Recovery documents
+
+```text
+01-source-recovery-and-delta-review-v002.md
+corrections/01-websockets-missing-screenshots-recovery-v002.md
+data/recovered-images-delta-v002.json
+```
+
+## Next
+
+The missing screenshots are safely present in the repository folder.  
+A later semantic refresh may extend the prose transcript from 21 screenshots to the corrected 207-screenshot source.
