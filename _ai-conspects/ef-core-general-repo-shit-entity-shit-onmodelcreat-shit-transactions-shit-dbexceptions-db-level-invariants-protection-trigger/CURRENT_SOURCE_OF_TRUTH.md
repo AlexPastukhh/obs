@@ -1,67 +1,59 @@
 # Current Source of Truth - EF Core General
 
-Generated: 2026-06-13 05:43:40 UTC
+Generated: 2026-06-22 UTC
 
 ## Current policy
 
 Do not treat the review ledger as source of truth.
 
-A region is complete only when its region file contains coverage / boundary review, included sources, candidate checks, excluded/reassigned candidates, open issues, and verified source transcript or correction addendum.
+A region is complete only when its region file contains coverage / boundary review, included sources, candidate checks, excluded or reassigned candidates, open issues, and verified source transcript or correction addendum.
 
-For large split regions, add a closure audit after the last sub-pass.
+Screenshots are primary source. Labels alone do not close coverage.
 
-## Big archive apply workflow
+## Source-repair finding
 
-```text
-Expand archive.
-git add -A -- <target>
-Review staged file list/status.
-Commit only after staged file review.
-Never use git add . when unrelated files are modified.
-```
+The original Stage0 inventory was generated from an incomplete SVG export.
 
-## Batch-size rule
+A corrected source SVG was compared by Excalidraw image `fileId`.
 
 ```text
-Default transcript batch: 80-160 images.
-Can be larger if one logical block requires it.
-Use one archive with multiple region files when themes differ.
-Do not mix different regions into one region file.
-Local visual/semantic recheck can override nearest-label grouping before transcript.
-```
+old unique image definitions: 64
+old image uses: 65
+old text groups: 132
 
-## No-placeholder-processed rule
+corrected unique image definitions: 256
+corrected image uses: 259
+corrected text groups: 132
 
-```text
-If visible transcript has OCR timeout/error, image missing, empty text, or placeholder text,
-the source stays pending and must not be marked processed.
-```
-
-## Transcript precision policy
-
-```text
-Stage1/Stage2 transcript level: source-level semantic transcript.
-For exact C# punctuation, use preserved Stage0 source PNGs.
-Precision patches can upgrade individual sources to verbatim code later.
+newly recovered unique images: 192
+newly recovered image uses: 194
+old unique images absent from corrected source: 0
 ```
 
 ## Current status
 
 ```text
-EF Core General Stage0 boundary review v001: completed
-EF Core General Stage1 R01-R03 transcript v001: completed
-EF Core General Stage2 R04-R05 transcript v001: completed
-EF Core General closure audit v001: completed
-Image uses inventoried: 65
-Stage1 processed: 54
-Stage2 processed: 11
-Pending candidates: 0
+Historical EF01-EF06 transcripts for the original 65 image uses: preserved
+Historical closure audit: superseded by Stage16 source-completion correction
+Stage16 source-completion correction v002: completed
+Newly recovered image uses pending verified transcript: 194
 Bad placeholder/OCR-error processed rows: 0
 ```
 
 ## Current processing target
 
 ```text
-EF Core General: closed by source coverage
-Next: no further EF Core General transcript work unless precision patch or repeat-material layer is requested.
+EF Core General is reopened.
+Next: review and transcribe the 194 recovered image uses in coherent batches.
+Do not redo already processed old image uses unless a direct contradiction is found.
+```
+
+## Apply workflow
+
+```text
+Extract archive with tar.exe.
+git add -A -- <target>
+Review staged file list/status.
+Commit only after staged file review.
+Never use git add . when unrelated files are modified.
 ```

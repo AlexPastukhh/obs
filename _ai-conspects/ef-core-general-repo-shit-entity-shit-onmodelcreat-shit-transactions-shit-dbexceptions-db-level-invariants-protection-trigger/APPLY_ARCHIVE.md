@@ -1,6 +1,4 @@
-# Apply archive: EF Core General closure audit
-
-Archive type: closure audit.
+# Apply archive: EF Core General source-completion correction v002
 
 Target branch:
 
@@ -8,56 +6,36 @@ Target branch:
 ai-processed-conspects-text
 ```
 
-Apply from repository root:
+Target folder:
 
-```powershell
-PS C:\Users\alexa\obs>
+```text
+_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger
 ```
 
-## Expected download path
-
-```powershell
-C:\Users\alexa\Downloads\ai-conspects-ef-core-general-closure-audit-v001.zip
-```
-
-## Apply commands
+## Apply
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
+$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-source-completion-correction-v002.zip"
 $target = "_ai-conspects\ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger"
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-closure-audit-v001.zip"
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
 git status --short
+tar.exe -xf $zip -C .
 
-Expand-Archive -Path $zip -DestinationPath . -Force
-
-# Stage ONLY this target folder.
 git add -A -- $target
-
-# Review staged file list/status.
 git status --short -- $target
 ```
 
-## Commit commands
+## Commit
 
 ```powershell
-git commit -m "Close EF Core General coverage audit"
+git commit -m "Add missing EF Core General source screenshots"
 git push origin ai-processed-conspects-text
 ```
 
-## Rollback before commit
-
-```powershell
-git restore --staged -- _ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger
-git restore -- _ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger
-git clean -fd -- _ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger
-```
-
-## Notes
-
-This archive does not add new transcripts. It closes EF Core General by source coverage after Stage1 and Stage2.
+This archive does not delete historical transcripts. It adds the corrected source, 192 recovered unique screenshots, 194 recovered placements, audit assets, inventories, and reopens coverage.
