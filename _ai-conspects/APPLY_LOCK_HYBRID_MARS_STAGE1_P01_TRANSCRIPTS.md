@@ -1,4 +1,4 @@
-# Apply archive: lock-monitor + hybridcache + sql-server-mars P01 transcripts v001
+# Apply archive: lock-monitor + hybrydcache + sql-server-mars P01 transcripts v001
 
 Generated: 2026-06-20 08:05:01 UTC
 
@@ -8,7 +8,7 @@ Target branch: `ai-processed-conspects-text`
 ## Expected download path
 
 ```powershell
-C:\Users\alexa\Downloads\ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage1-p01-transcripts-v001.zip
+C:\Users\alexa\Downloads\ai-conspects-lock-monitor-hybrydcache-sql-server-mars-stage1-p01-transcripts-v001.zip
 ```
 
 ## Apply + copy combined diff to clipboard
@@ -17,12 +17,12 @@ C:\Users\alexa\Downloads\ai-conspects-lock-monitor-hybridcache-sql-server-mars-s
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage1-p01-transcripts-v001.zip"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage1-p01-transcripts-v001.diff"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-lock-monitor-hybrydcache-sql-server-mars-stage1-p01-transcripts-v001.zip"
+$diffPath = "C:\Users\alexa\Downloads\ai-conspects-lock-monitor-hybrydcache-sql-server-mars-stage1-p01-transcripts-v001.diff"
 
 $paths = @(
   "_ai-conspects/lock-monitor",
-  "_ai-conspects/hybridcache",
+  "_ai-conspects/hybrydcache",
   "_ai-conspects/sql-server-mars"
 )
 
@@ -51,6 +51,6 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add -- $paths
-git commit -m "Add P01 transcripts for lock monitor hybridcache and sql mars"
+git commit -m "Add P01 transcripts for lock monitor hybrydcache and sql mars"
 git push origin ai-processed-conspects-text
 ```

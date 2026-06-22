@@ -8,9 +8,9 @@ Target branch: `ai-processed-conspects-text`
 ## Included conspects
 
 ```text
-qs-preference-multiple-accept-header-values-helper
+qs-preference-with-multiple-accept-header-values-helper
 redis-multiplexer-redis-lock
-automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory
+automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory
 ```
 
 ## Expected download path
@@ -31,9 +31,9 @@ $zip = "C:\Users\alexa\Downloads\ai-conspects-three-conspects-stage3-final-cover
 $diffPath = "C:\Users\alexa\Downloads\ai-conspects-three-conspects-stage3-final-coverage-audit-v001.diff"
 
 $paths = @(
-  "_ai-conspects/qs-preference-multiple-accept-header-values-helper",
+  "_ai-conspects/qs-preference-with-multiple-accept-header-values-helper",
   "_ai-conspects/redis-multiplexer-redis-lock",
-  "_ai-conspects/automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory"
+  "_ai-conspects/automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory"
 )
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()

@@ -22,8 +22,8 @@ lock-monitor: unique=25, image_uses=25, labels=22
   P01 R02: 8 :: monitor-wait-pulse-pulseall-and-condition-signaling
   P02 R03: 8 :: deadlocks-reentrancy-tryenter-timeouts-and-lock-ordering
   P02 R04: 1 :: async-locking-alternatives-and-practical-guidelines
-hybridcache: unique=21, image_uses=21, labels=7
-  P01 R01: 8 :: hybridcache-purpose-two-level-cache-and-api-shape
+hybrydcache: unique=21, image_uses=21, labels=7
+  P01 R01: 8 :: hybrydcache-purpose-two-level-cache-and-api-shape
   P01 R02: 8 :: getorcreate-stampede-protection-and-factory-flow
   P02 R03: 5 :: serialization-keys-tags-expiration-and-invalidation
   P02 R04: 0 :: registration-options-limitations-and-practical-patterns

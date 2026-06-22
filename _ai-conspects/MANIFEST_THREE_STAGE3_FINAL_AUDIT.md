@@ -17,17 +17,17 @@ _ai-conspects/APPLY_THREE_STAGE3_FINAL_AUDIT.md
 ## Conspects
 
 ```text
-qs-preference-multiple-accept-header-values-helper
+qs-preference-with-multiple-accept-header-values-helper
 redis-multiplexer-redis-lock
-automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory
+automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory
 ```
 
 ## Results
 
 ```text
-qs-preference-multiple-accept-header-values-helper: total=30, covered=30, problems=0, verdict=coverage-complete
+qs-preference-with-multiple-accept-header-values-helper: total=30, covered=30, problems=0, verdict=coverage-complete
 redis-multiplexer-redis-lock: total=24, covered=24, problems=0, verdict=coverage-complete
-automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory: total=24, covered=24, problems=0, verdict=coverage-complete
+automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory: total=24, covered=24, problems=0, verdict=coverage-complete
 ```
 
 ## Next

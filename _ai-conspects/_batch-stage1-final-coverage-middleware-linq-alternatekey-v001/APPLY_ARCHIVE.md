@@ -10,9 +10,9 @@ git checkout ai-processed-conspects-text
 
 $zip = "C:\Users\alexa\Downloads\ai-conspects-batch-stage1-final-coverage-middleware-linq-alternatekey-v001.zip"
 $targets = @(
-  "_ai-conspects\aspnetcore-middleware-writeasjson-custom-middleware-response-json",
-  "_ai-conspects\csharp-linq-query-syntax-from-where-select-join-into",
-  "_ai-conspects\efcore-alternate-key-principal-key-relationships",
+  "_ai-conspects\middleware-writeasjson",
+  "_ai-conspects\linq-query-syntax",
+  "_ai-conspects\alternate-key",
   "_ai-conspects\_batch-stage1-final-coverage-middleware-linq-alternatekey-v001"
 )
 

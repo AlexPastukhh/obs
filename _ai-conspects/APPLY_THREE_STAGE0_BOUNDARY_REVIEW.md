@@ -9,7 +9,7 @@ Target branch: `ai-processed-conspects-text`
 
 ```text
 lock-monitor
-hybridcache
+hybrydcache
 sql-server-mars
 ```
 
@@ -32,7 +32,7 @@ $diffPath = "C:\Users\alexa\Downloads\ai-conspects-three-conspects-stage0-bounda
 
 $paths = @(
   "_ai-conspects/lock-monitor",
-  "_ai-conspects/hybridcache",
+  "_ai-conspects/hybrydcache",
   "_ai-conspects/sql-server-mars"
 )
 
@@ -61,6 +61,6 @@ if ([string]::IsNullOrWhiteSpace($text)) {
 
 ```powershell
 git add -- $paths
-git commit -m "Start lock monitor hybridcache and sql mars boundary reviews"
+git commit -m "Start lock monitor hybrydcache and sql mars boundary reviews"
 git push origin ai-processed-conspects-text
 ```

@@ -3,7 +3,7 @@
 This conspect is packaged inside the combined archive:
 
 ```text
-ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage3-final-coverage-audit-v001.zip
+ai-conspects-lock-monitor-hybrydcache-sql-server-mars-stage3-final-coverage-audit-v001.zip
 ```
 
 Use the top-level apply instructions:

@@ -5,13 +5,13 @@ Generated: 2026-06-20 08:05:01 UTC
 ## Archive
 
 ```text
-ai-conspects-lock-monitor-hybridcache-sql-server-mars-stage1-p01-transcripts-v001.zip
+ai-conspects-lock-monitor-hybrydcache-sql-server-mars-stage1-p01-transcripts-v001.zip
 ```
 
 ## Results
 
 ```text
 lock-monitor: R01=8, R02=8, reserved_for_P02=9
-hybridcache: R01=8, R02=8, reserved_for_P02=5
+hybrydcache: R01=8, R02=8, reserved_for_P02=5
 sql-server-mars: R01=8, R02=8, reserved_for_P02=10
 ```

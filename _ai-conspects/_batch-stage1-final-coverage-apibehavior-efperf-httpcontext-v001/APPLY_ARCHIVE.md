@@ -6,9 +6,9 @@ git checkout ai-processed-conspects-text
 
 $zip = "C:\Users\alexa\Downloads\ai-conspects-batch-stage1-final-coverage-apibehavior-efperf-httpcontext-v001.zip"
 $targets = @(
-  "_ai-conspects\aspnetcore-apibehavioroptions-invalidmodelstate-clienterror-mapping",
-  "_ai-conspects\efcore-performance-diagnostics-compiled-linq-batching-n-plus-one",
-  "_ai-conspects\aspnetcore-httpcontext-items-features-per-request-state",
+  "_ai-conspects\apibehavioroptions",
+  "_ai-conspects\ef-core-performance-diagnostics-compiled-linq-batching-n-1",
+  "_ai-conspects\httpcontext-items-and-features",
   "_ai-conspects\_batch-stage1-final-coverage-apibehavior-efperf-httpcontext-v001"
 )
 

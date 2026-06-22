@@ -1,0 +1,21 @@
+{
+  "generated": "2026-06-13 06:20:00 UTC",
+  "conspect": "authorization-flow-autorization-options-framework-authorizationmiddlewareresulthandler",
+  "stage": "stage1-r01r02r03-final-coverage-v001",
+  "summary": "ASP.NET Core authorization flow from endpoint metadata/policy construction through AuthorizationMiddleware execution and AuthorizationMiddlewareResultHandler challenge/forbid/succeeded behavior.",
+  "regions": {
+    "R01": "Policy construction: endpoint metadata, authorize attributes/data, default/fallback policy, policy cache/combine in AuthorizationMiddleware.",
+    "R02": "Middleware execution: authenticate for policy schemes, AllowAnonymous, resource selection, PolicyEvaluator and IAuthorizationService/handlers/evaluator.",
+    "R03": "Result handling: PolicyAuthorizationResult, challenge/forbid/succeeded, failed requirements and custom AuthorizationMiddlewareResultHandler."
+  },
+  "reading_quality": {
+    "overall": "medium-high",
+    "screenshots": "medium; code punctuation preserved in PNGs",
+    "canvas_text": "high for labels, but user typos normalized in prose",
+    "coverage": "all 55 image uses plus 64 text labels closed"
+  },
+  "limitations": [
+    "This is a source-preserving semantic transcript, not a verbatim OCR of every screenshot.",
+    "Exact C# punctuation and framework version details should be corrected against preserved PNGs/source if needed."
+  ]
+}

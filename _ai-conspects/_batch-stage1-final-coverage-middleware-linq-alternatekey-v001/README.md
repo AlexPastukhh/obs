@@ -7,9 +7,9 @@ Generated: 2026-06-13 08:55:00 UTC
 This archive completes final coverage transcript passes for three conspects:
 
 ```text
-1. aspnetcore-middleware-writeasjson-custom-middleware-response-json
-2. csharp-linq-query-syntax-from-where-select-join-into
-3. efcore-alternate-key-principal-key-relationships
+1. middleware-writeasjson
+2. linq-query-syntax
+3. alternate-key
 ```
 
 ## Counts

@@ -1,0 +1,24 @@
+{
+  "conspect": "outputcache-layers-to-use-or-not-locking-outputcache-vs-cdn",
+  "stage": "stage1-r01r02r03r04-final-coverage-v001",
+  "generated": "2026-06-13 08:05:00 UTC",
+  "global_summary": "The sheet explains whether ASP.NET Core OutputCache should be used for a response, when it is safe, when it is beneficial, how locking prevents or harms cache stampede scenarios, and how OutputCache differs from CDN/browser caching and revalidation behavior.",
+  "regions": [
+    {
+      "id": "R01",
+      "summary": "Safety and benefit gate: avoid caching personal/session/user-specific responses, cookie/session state, side-effect endpoints and non-reusable responses; use OutputCache when the response is safe and reusable."
+    },
+    {
+      "id": "R02",
+      "summary": "Usefulness decision road: cache-key reuse/hotness, unused entries, expensive endpoints, large responses, freshness/dynamic data, existing cache layers, and custom server policy."
+    },
+    {
+      "id": "R03",
+      "summary": "Locking road: cache stampede prevention, concurrent cache misses, endpoint cost, expiration time, response cost, connection quality, when locking is good/bad and catastrophic locking situations."
+    },
+    {
+      "id": "R04",
+      "summary": "Text-heavy OutputCache vs CDN/browser cache road: when redundant, when useful behind CDN, CDN misses, private/internal bypass, app-level cache rules, and revalidation/304 notes."
+    }
+  ]
+}

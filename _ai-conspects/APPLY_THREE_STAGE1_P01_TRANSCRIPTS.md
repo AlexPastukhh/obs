@@ -8,9 +8,9 @@ Target branch: `ai-processed-conspects-text`
 ## Included conspects
 
 ```text
-qs-preference-multiple-accept-header-values-helper
+qs-preference-with-multiple-accept-header-values-helper
 redis-multiplexer-redis-lock
-automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory
+automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory
 ```
 
 ## Expected download path
@@ -31,9 +31,9 @@ $zip = "C:\Users\alexa\Downloads\ai-conspects-three-conspects-stage1-p01-transcr
 $diffPath = "C:\Users\alexa\Downloads\ai-conspects-three-conspects-stage1-p01-transcripts-v001.diff"
 
 $paths = @(
-  "_ai-conspects/qs-preference-multiple-accept-header-values-helper",
+  "_ai-conspects/qs-preference-with-multiple-accept-header-values-helper",
   "_ai-conspects/redis-multiplexer-redis-lock",
-  "_ai-conspects/automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory"
+  "_ai-conspects/automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory"
 )
 
 $OutputEncoding = [System.Text.UTF8Encoding]::new()
@@ -70,13 +70,13 @@ git push origin ai-processed-conspects-text
 Alternative, if you want 3 separate commits after reviewing the same combined diff:
 
 ```powershell
-git add _ai-conspects/qs-preference-multiple-accept-header-values-helper
+git add _ai-conspects/qs-preference-with-multiple-accept-header-values-helper
 git commit -m "Add accept header preference helper P01 transcript"
 
 git add _ai-conspects/redis-multiplexer-redis-lock
 git commit -m "Add redis multiplexer lock P01 transcript"
 
-git add _ai-conspects/automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory
+git add _ai-conspects/automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory
 git commit -m "Add automatic problem details modelstate P01 transcript"
 
 git push origin ai-processed-conspects-text

@@ -17,7 +17,7 @@ _ai-conspects/APPLY_THREE_STAGE1_P01_TRANSCRIPTS.md
 ### 1. QS Preference / Multiple Accept Header Values Helper
 
 ```text
-_ai-conspects/qs-preference-multiple-accept-header-values-helper
+_ai-conspects/qs-preference-with-multiple-accept-header-values-helper
 ```
 
 P01:
@@ -43,7 +43,7 @@ R02: ConnectionMultiplexer and IDatabase vs IDistributedCache
 ### 3. Automatic ProblemDetails / ModelState / ApiController
 
 ```text
-_ai-conspects/automatic-problem-details-modelstate-apicontroller-invalidmodelstateresponsefactory
+_ai-conspects/automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory
 ```
 
 P01:

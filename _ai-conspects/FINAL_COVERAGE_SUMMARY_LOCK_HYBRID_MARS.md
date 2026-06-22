@@ -25,7 +25,7 @@ R03: 8
 R04: 1
 ```
 
-### hybridcache
+### hybrydcache
 
 ```text
 verdict: coverage-complete

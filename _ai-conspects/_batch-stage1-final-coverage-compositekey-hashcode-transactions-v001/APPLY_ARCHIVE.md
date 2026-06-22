@@ -6,9 +6,9 @@ git checkout ai-processed-conspects-text
 
 $zip = "C:\Users\alexa\Downloads\ai-conspects-batch-stage1-final-coverage-compositekey-hashcode-transactions-v001.zip"
 $targets = @(
-  "_ai-conspects\efcore-composite-key-primary-foreign-key-indexes",
-  "_ai-conspects\csharp-hashcode-equals-dictionary-hashset-mutable-keys",
-  "_ai-conspects\transactions-isolation-levels-snapshot-serializable-readcommitted",
+  "_ai-conspects\composite-key",
+  "_ai-conspects\hashcode",
+  "_ai-conspects\transaction-isolation",
   "_ai-conspects\_batch-stage1-final-coverage-compositekey-hashcode-transactions-v001"
 )
 
