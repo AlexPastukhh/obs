@@ -1,42 +1,24 @@
-# Stage0 source and boundary review — hashing
+# Stage0 — source check and boundary review
 
-Generated: 2026-06-22 04:00:00 UTC
+Conspect: `hashing`  
+Source: `hashing.svg`  
+Generated: 2026-06-22 00:00:00 UTC
 
-## Source identity
-
-```text
-uploaded SVG: hashing(1).svg
-normalized conspect/source name: hashing.svg
-folder: _ai-conspects/hashing
-SHA-256: 28581ea40002bc44b585c31e6dca7835b49630fac14dfde762110e5d0df9d01f
-```
-
-The technical upload suffix `(1)` was removed from the conspect name. All other spaces, commas, capitalization and spelling are preserved from the SVG basename.
-
-## Inventory
+## Source inventory
 
 ```text
-embedded raster images: 0
-image uses on canvas: 0
-text blocks: 23
-text labels: 80
-candidate regions: 3
+viewBox: 0 0 21374.025271065828 12113.344481710374
+unique embedded images: 0
+image uses: 0
+text elements: 70
 ```
-
-This SVG is text-and-vector based. Transcript completeness must therefore be audited against text blocks and text labels rather than raster screenshots.
-
-## Candidate transcript regions
-
-- **R01 — manual PBKDF hashing, versioning, fixed-time comparison and rehash checks:** 10 text blocks, 61 text labels.
-- **R02 — ASP.NET Core Identity PasswordHasher implementation and user argument:** 5 text blocks, 6 text labels.
-- **R03 — hashing theory, salts, key stretching, cost parameters and stored format:** 8 text blocks, 13 text labels.
 
 ## Boundary decision
 
-Every detected text block is assigned to exactly one candidate region.  
-Every detected text label is present in `text-review-ledger-v001.*` with status `pending_transcript`.  
-The ledger is a checklist only; visual and semantic review of the SVG remains the source of truth.
+The uploaded SVG is treated as one coherent conspect. The exact source filename is preserved in `source/`; the conspect folder follows the agreed naming rule.
 
-## Suggested next pass
+## Reading policy
 
-Process all candidate regions for this conspect in the shared final-coverage step.
+- Native SVG text is parsed directly rather than OCR'd.
+- `canvas-preview.png` is the visual boundary reference.
+- Exact code punctuation and formatting remain governed by the original SVG and `data/text-elements.*`.

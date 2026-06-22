@@ -1,26 +1,25 @@
-# Current Source of Truth - compression,decompression,request,response
+# Current Source of Truth — compression,decompression,request,response
 
-Generated: 2026-06-22 04:00:00 UTC
+Generated: 2026-06-22 00:00:00 UTC
 
-## Current status
+## Status
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+Final transcript: done
+Final coverage audit: done
 ```
 
-## Counts
+## Coverage
 
 ```text
-embedded raster images: 0
+unique embedded images: 0
 image uses on canvas: 0
-text blocks parsed: 20
-text labels parsed: 103
-duplicate text assignments: 0
+text elements: 91
+remaining unclosed image uses: 0
+remaining unclosed text elements: 0
 ```
 
-## Candidate next step
+## Next
 
-```text
-Suggested full pass: R01 + R02 + R03 + R04 = 20 text blocks + 103 text labels.
-```
+No normal transcript regions remain. Only correction/polish if needed.
