@@ -1,6 +1,6 @@
 # Current Source of Truth — vary header
 
-Generated: 2026-06-27 13:30:00 UTC
+Generated: 2026-06-27 14:00:00 UTC
 
 ## Status
 
@@ -10,22 +10,31 @@ Embedded screenshot extraction: done
 Text-element inventory: done
 Broken v001 region markup: superseded
 Corrected v002 logical region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Regional transcripts: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
 ## Coverage
 
 ```text
-meaningful text elements: 0
-unique embedded images: 5
-image uses on canvas: 5
-repeated image placements: 0
+meaningful text elements: 0 / 0
+unique embedded images: 5 / 5
+image uses on canvas: 5 / 5
+repeated image placements retained: 0
+logical regions: 1 / 1
 remaining unprocessed text elements: 0
-remaining unprocessed image uses: 5
+remaining unprocessed image uses: 0
 ```
+
+## Authoritative transcript
+
+`02-full-combined-final-transcript.md`
+
+## Authoritative audit
+
+`03-full-conspect-final-coverage-audit.md`
 
 ## Next
 
-Process the corrected logical regions and close all text and screenshot coverage.
+No normal transcript work remains. Only correction/polish if a newer source reveals additional material.

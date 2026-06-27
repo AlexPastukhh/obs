@@ -1,0 +1,144 @@
+﻿text_id,text,x,y,region_id,status,transcript_file,authoritative_transcript
+T-001,"sorting applyed to outter facing model, we cant expose entity model,",338.80317826704686,1746.2187225381049,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-002,so we need to apply sorting to entity model manually,338.80317826704686,1771.2187225381049,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-003,basics,315.98118516278373,232.41005622361467,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-004,if (string.IsNullOrWhiteSpace(orderBy)),1520.4620338933828,1226.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-005,return query.OrderBy(a => a.LastName).ThenBy(a => a.FirstName);,1520.4620338933828,1251.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-006,"// split: ""age desc,name""",1520.4620338933828,1301.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-007,"var clauses = orderBy.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);",1520.4620338933828,1326.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-008,IOrderedQueryable<Author>? ordered = null;,1520.4620338933828,1376.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-009,foreach (var clause in clauses),1520.4620338933828,1426.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-010,{,1520.4620338933828,1451.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-011,"var parts = clause.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);",1520.4620338933828,1476.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-012,var field = parts[0].ToLowerInvariant();,1520.4620338933828,1501.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-013,"var desc = parts.Length > 1 && parts[1].Equals(""desc"", StringComparison.OrdinalIgnoreCase);",1520.4620338933828,1526.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-014,// whitelist fields,1520.4620338933828,1576.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-015,"Func<Author, object> keySelector = field switch",1520.4620338933828,1601.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-016,{,1520.4620338933828,1626.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-017,"""name"" => a => a.LastName, // could be combined name; see note below",1520.4620338933828,1651.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-018,"""age"" => a => a.DateOfBirth, // example if you sort by DOB instead of computed age",1520.4620338933828,1676.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-019,"""maincategory"" => a => a.MainCategory!,",1520.4620338933828,1701.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-020,"_ => throw new ArgumentException($""Sorting by '{field}' is not supported."")",1520.4620338933828,1726.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-021,};,1520.4620338933828,1751.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-022,if (ordered is null),1520.4620338933828,1801.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-023,{,1520.4620338933828,1826.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-024,ordered = desc ? query.OrderByDescending(keySelector) : query.OrderBy(keySelector);,1520.4620338933828,1851.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-025,},1520.4620338933828,1876.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-026,else,1520.4620338933828,1901.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-027,{,1520.4620338933828,1926.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-028,ordered = desc ? ordered.ThenByDescending(keySelector) : ordered.ThenBy(keySelector);,1520.4620338933828,1951.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-029,},1520.4620338933828,1976.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-030,},1520.4620338933828,2001.842997305277,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md
+T-031,public class AuthorsResourceParameters,2301.202865056577,595.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-032,{,2301.202865056577,620.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-033,public string? MainCategory { get; set; },2301.202865056577,645.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-034,public string? SearchQuery { get; set; },2301.202865056577,670.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-035,// Sorting,2301.202865056577,720.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-036,"public string? OrderBy { get; set; } = ""name"";",2301.202865056577,745.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-037,// Paging (often present with sorting),2301.202865056577,795.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-038,public int PageNumber { get; set; } = 1;,2301.202865056577,820.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-039,public int PageSize { get; set; } = 10;,2301.202865056577,845.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-040,},2301.202865056577,870.7318861941677,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-041,these are in foreach loop too,2788.812309106451,1761.9541429413075,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-042,using dynamic sorting helper (System.Linq.Dynamic.Core),4581.847820822381,455.4301243302608,R03,closed,03-transcript-R03-dynamic-linq-and-contract-translation.md,05-full-combined-final-transcript.md
+T-043,controller behavior,7641.419477644574,3107.6984179091514,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-044,repository,7637.78311400821,3494.9711451818866,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-045,iqueryable extension,7686.87402309912,3978.607508818269,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-046,public static IQueryable<T> ApplySort<T>(,8487.480157687189,4165.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-047,"this IQueryable<T> source,",8487.480157687189,4190.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-048,"string? orderBy,",8487.480157687189,4215.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-049,"Dictionary<string, PropertyMappingValue> mappingDictionary)",8487.480157687189,4240.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-050,{,8487.480157687189,4265.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-051,if (source is null) throw new ArgumentNullException(nameof(source));,8487.480157687189,4290.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-052,if (mappingDictionary is null) throw new ArgumentNullException(nameof(mappingDictionary));,8487.480157687189,4315.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-053,if (string.IsNullOrWhiteSpace(orderBy)) return source;,8487.480157687189,4340.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-054,var orderByString = new StringBuilder();,8487.480157687189,4390.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-055,"var clauses = orderBy.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);",8487.480157687189,4415.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-056,foreach (var clause in clauses),8487.480157687189,4465.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-057,{,8487.480157687189,4490.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-058,var trimmed = clause.Trim();,8487.480157687189,4515.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-059,"var descending = trimmed.EndsWith("" desc"", StringComparison.OrdinalIgnoreCase);",8487.480157687189,4540.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-060,"var propertyName = trimmed.Split(' ', StringSplitOptions.RemoveEmptyEntries)[0];",8487.480157687189,4590.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-061,"if (!mappingDictionary.TryGetValue(propertyName, out var mappingValue))",8487.480157687189,4640.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-062,"throw new ArgumentException($""No mapping exists for '{propertyName}'."");",8487.480157687189,4665.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-063,var effectiveDescending = mappingValue.Revert ? !descending : descending;,8487.480157687189,4715.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-064,foreach (var destinationProperty in mappingValue.DestinationProperties.Reverse()),8487.480157687189,4765.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-065,{,8487.480157687189,4790.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-066,orderByString.Append(destinationProperty);,8487.480157687189,4815.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-067,"orderByString.Append(effectiveDescending ? "" descending,"" : "" ascending,"");",8487.480157687189,4840.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-068,},8487.480157687189,4865.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-069,},8487.480157687189,4890.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-070,"var finalOrder = orderByString.ToString().TrimEnd(',');",8487.480157687189,4940.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-071,return source.OrderBy(finalOrder);,8487.480157687189,4965.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-072,},8487.480157687189,4990.274156989427,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-073,propertymappingservice,7512.051135826941,1744.8056906709526,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-074,public class PropertyMappingValue,8393.482759898368,1013.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-075,{,8393.482759898368,1038.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-076,public IEnumerable<string> DestinationProperties { get; },8393.482759898368,1063.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-077,public bool Revert { get; },8393.482759898368,1088.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-078,"public PropertyMappingValue(IEnumerable<string> destinationProperties, bool revert = false)",8393.482759898368,1138.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-079,{,8393.482759898368,1163.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-080,DestinationProperties = destinationProperties,8393.482759898368,1188.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-081,?? throw new ArgumentNullException(nameof(destinationProperties));,8393.482759898368,1213.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-082,Revert = revert;,8393.482759898368,1263.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-083,},8393.482759898368,1288.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-084,},8393.482759898368,1313.229036826705,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-085,"public class PropertyMapping<TSource, TDestination> : IPropertyMapping",8443.95900850328,1460.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-086,{,8443.95900850328,1485.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-087,"public Dictionary<string, PropertyMappingValue> MappingDictionary { get; }",8443.95900850328,1510.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-088,"public PropertyMapping(Dictionary<string, PropertyMappingValue> mappingDictionary)",8443.95900850328,1560.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-089,{,8443.95900850328,1585.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-090,MappingDictionary = mappingDictionary,8443.95900850328,1610.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-091,?? throw new ArgumentNullException(nameof(mappingDictionary));,8443.95900850328,1635.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-092,},8443.95900850328,1660.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-093,},8443.95900850328,1685.8480553813924,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-094,public interface IPropertyMappingService,8423.197045612655,1888.4670739360727,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-095,{,8423.197045612655,1913.4670739360727,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-096,"Dictionary<string, PropertyMappingValue> GetPropertyMapping<TSource, TDestination>();",8423.197045612655,1938.4670739360727,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-097,"bool ValidMappingExistsFor<TSource, TDestination>(string? fields);",8423.197045612655,1963.4670739360727,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-098,},8423.197045612655,1988.4670739360727,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-099,public class PropertyMappingService : IPropertyMappingService,8624.340181773368,2137.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-100,{,8624.340181773368,2162.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-101,private readonly IList<IPropertyMapping> _propertyMappings = new List<IPropertyMapping>();,8624.340181773368,2187.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-102,public PropertyMappingService(),8624.340181773368,2237.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-103,{,8624.340181773368,2262.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-104,"var authorMapping = new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)",8624.340181773368,2287.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-105,{,8624.340181773368,2312.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-106,"[""Id""] = new PropertyMappingValue(new[] { ""Id"" }),",8624.340181773368,2337.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-107,"[""MainCategory""] = new PropertyMappingValue(new[] { ""MainCategory"" }),",8624.340181773368,2362.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-108,"[""Name""] = new PropertyMappingValue(new[] { ""LastName"", ""FirstName"" }),",8624.340181773368,2387.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-109,"[""Age""] = new PropertyMappingValue(new[] { ""DateOfBirth"" }, revert: true)",8624.340181773368,2412.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-110,};,8624.340181773368,2437.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-111,"_propertyMappings.Add(new PropertyMapping<AuthorDto, Author>(authorMapping));",8624.340181773368,2487.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-112,},8624.340181773368,2512.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-113,"public Dictionary<string, PropertyMappingValue> GetPropertyMapping<TSource, TDestination>()",8624.340181773368,2562.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-114,{,8624.340181773368,2587.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-115,"var matchingMappings = _propertyMappings.OfType<PropertyMapping<TSource, TDestination>>().ToList();",8624.340181773368,2612.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-116,if (matchingMappings.Count == 1),8624.340181773368,2637.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-117,return matchingMappings.First().MappingDictionary;,8624.340181773368,2662.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-118,"throw new Exception($""Cannot find property mapping for <{typeof(TSource)}, {typeof(TDestination)}>"");",8624.340181773368,2712.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-119,},8624.340181773368,2737.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-120,"public bool ValidMappingExistsFor<TSource, TDestination>(string? fields)",8624.340181773368,2787.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-121,{,8624.340181773368,2812.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-122,"var mappingDictionary = GetPropertyMapping<TSource, TDestination>();",8624.340181773368,2837.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-123,if (string.IsNullOrWhiteSpace(fields)),8624.340181773368,2887.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-124,return true;,8624.340181773368,2912.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-125,"var clauses = fields.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);",8624.340181773368,2962.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-126,foreach (var clause in clauses),8624.340181773368,2987.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-127,{,8624.340181773368,3012.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-128,"var propertyName = clause.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries)[0];",8624.340181773368,3037.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-129,if (!mappingDictionary.ContainsKey(propertyName)),8624.340181773368,3062.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-130,return false;,8624.340181773368,3087.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-131,},8624.340181773368,3112.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-132,return true;,8624.340181773368,3162.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-133,},8624.340181773368,3187.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-134,},8624.340181773368,3212.408786330662,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-135,NO REVERSE(),8323.025486271148,4520.172431804086,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-136,TRANSLATE DTOS,7082.400304590951,4503.936144872226,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-137,DESCENDING,7082.400304590951,4528.936144872226,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-138,INTO ENTITYS,7082.400304590951,4553.936144872226,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-139,DESC,7082.400304590951,4578.936144872226,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-140,(BY REVERT FLAG),7082.400304590951,4603.936144872226,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-141,mappingservice,6984.363236311587,205.97039438619777,R04,closed,04-transcript-R04-property-mapping-service-and-applysort.md,05-full-combined-final-transcript.md
+T-142,dynamic linq,4197.696366194399,252.63726450338527,R02,closed,02-transcript-R02-manual-whitelist-sorting.md,05-full-combined-final-transcript.md
+T-143,whitelist sorting,2116.3078886559756,243.14592981607439,R01,closed,01-transcript-R01-sorting-basics-and-resource-fields.md,05-full-combined-final-transcript.md

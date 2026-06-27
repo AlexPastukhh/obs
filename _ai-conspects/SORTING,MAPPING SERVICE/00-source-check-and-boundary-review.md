@@ -57,3 +57,17 @@ remaining screenshot uses: 43
 
 Create semantic transcripts from these corrected logical blocks, then close the
 combined transcript and full-conspect coverage audit.
+
+
+## Final closure — 2026-06-27 14:00:00 UTC
+
+```text
+processed text elements: 143 / 143
+processed screenshot uses: 43 / 43
+processed logical regions: 4 / 4
+remaining text elements: 0
+remaining screenshot uses: 0
+```
+
+Authoritative transcript: `05-full-combined-final-transcript.md`  
+Authoritative audit: `06-full-conspect-final-coverage-audit.md`
