@@ -1,0 +1,289 @@
+{
+  "conspect": "manual account lockout,ratelimiter middleware, idatabase vs idist cache",
+  "existing_folder": "_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache",
+  "uploaded_source": "manual account lockout,ratelimiter middleware, idatabase vs idist cache(1).svg",
+  "stored_source": "source/source-complete-v002.svg",
+  "source_sha256": "7c1740a6f8f28c5e63d1d164c5f66d649403b70080f5bafbcf65300e57b76032",
+  "old_inventory": {
+    "inventory_file_sha": "4efda160d56757451bbc6b1ac87a27db3cb57f72",
+    "text_inventory_file_sha": "a61d6cdaafae2876577f13eef0835692e6043bbc",
+    "embedded_assets": 3,
+    "total_image_uses": 3,
+    "processed_image_uses": 3,
+    "svg_text_nodes": 48
+  },
+  "complete_svg": {
+    "embedded_assets": 98,
+    "total_image_uses": 98,
+    "processed_image_uses": 98,
+    "previously_processed_image_uses": 3,
+    "restored_image_uses": 95,
+    "restored_unique_assets": 95,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 49,
+    "processed_svg_text_nodes": 49,
+    "previously_present_nonempty_text_nodes": 48,
+    "restored_structural_empty_text_nodes": 1,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0,
+    "explicit_nonsemantic_image_uses": 1
+  },
+  "old_to_complete_matches": [
+    {
+      "old_idx": 1,
+      "full_source_id": "RS-005",
+      "method": "full SHA-256 prefix verified against old ledger plus exact symbol and placement"
+    },
+    {
+      "old_idx": 2,
+      "full_source_id": "RS-013",
+      "method": "full SHA-256 prefix verified against old ledger plus exact symbol and placement"
+    },
+    {
+      "old_idx": 3,
+      "full_source_id": "RS-016",
+      "method": "full SHA-256 prefix verified against old ledger plus exact symbol and placement"
+    }
+  ],
+  "matching_method": "SHA-256 of decoded embedded asset plus exact placement tuple (symbol reference, x, y, width, height)",
+  "regions": {
+    "R01": {
+      "title": "Retry-After, HTTP status codes, and RateLimitLease metadata",
+      "image_uses": [
+        "RS-002",
+        "RS-028",
+        "RS-034",
+        "RS-035",
+        "RS-037",
+        "RS-045",
+        "RS-052",
+        "RS-055",
+        "RS-060",
+        "RS-062",
+        "RS-067",
+        "RS-068",
+        "RS-072",
+        "RS-075",
+        "RS-080"
+      ],
+      "svg_text_nodes": [
+        "FT-001",
+        "FT-004",
+        "FT-005",
+        "FT-020",
+        "FT-025",
+        "FT-032"
+      ]
+    },
+    "R02": {
+      "title": "Limiter algorithms and policy composition",
+      "image_uses": [
+        "RS-007",
+        "RS-009",
+        "RS-014",
+        "RS-018",
+        "RS-021",
+        "RS-046",
+        "RS-053",
+        "RS-056",
+        "RS-070",
+        "RS-071",
+        "RS-074",
+        "RS-078",
+        "RS-081"
+      ],
+      "svg_text_nodes": [
+        "FT-008",
+        "FT-029",
+        "FT-030"
+      ]
+    },
+    "R03": {
+      "title": "ASP.NET Core RateLimiter middleware, registration, and endpoint application",
+      "image_uses": [
+        "RS-006",
+        "RS-008",
+        "RS-017",
+        "RS-024",
+        "RS-041",
+        "RS-049",
+        "RS-083",
+        "RS-084",
+        "RS-086",
+        "RS-089",
+        "RS-091"
+      ],
+      "svg_text_nodes": [
+        "FT-009",
+        "FT-031"
+      ]
+    },
+    "R04": {
+      "title": "Manual account lockout and ASP.NET Core Identity lockout",
+      "image_uses": [
+        "RS-001",
+        "RS-003",
+        "RS-004",
+        "RS-005",
+        "RS-013",
+        "RS-016",
+        "RS-020",
+        "RS-026",
+        "RS-032",
+        "RS-038",
+        "RS-039",
+        "RS-040",
+        "RS-043",
+        "RS-048",
+        "RS-054"
+      ],
+      "svg_text_nodes": [
+        "FT-002",
+        "FT-007"
+      ]
+    },
+    "R05": {
+      "title": "Redis failed-attempt counters, key design, and custom middleware",
+      "image_uses": [
+        "RS-010",
+        "RS-011",
+        "RS-012",
+        "RS-015",
+        "RS-019",
+        "RS-022",
+        "RS-023",
+        "RS-025",
+        "RS-027",
+        "RS-029",
+        "RS-030",
+        "RS-031",
+        "RS-033",
+        "RS-036",
+        "RS-042",
+        "RS-047"
+      ],
+      "svg_text_nodes": [
+        "FT-012",
+        "FT-013",
+        "FT-014",
+        "FT-015",
+        "FT-016",
+        "FT-017",
+        "FT-018",
+        "FT-019",
+        "FT-027",
+        "FT-028"
+      ]
+    },
+    "R06": {
+      "title": "IConnectionMultiplexer, IDatabase, and IDistributedCache",
+      "image_uses": [
+        "RS-044",
+        "RS-050",
+        "RS-051",
+        "RS-057",
+        "RS-058",
+        "RS-059",
+        "RS-061",
+        "RS-063",
+        "RS-064",
+        "RS-065",
+        "RS-069",
+        "RS-073",
+        "RS-076"
+      ],
+      "svg_text_nodes": [
+        "FT-023",
+        "FT-024",
+        "FT-026"
+      ]
+    },
+    "R07": {
+      "title": "Atomic counters, TTL, and race conditions",
+      "image_uses": [
+        "RS-077",
+        "RS-079",
+        "RS-082",
+        "RS-085",
+        "RS-087"
+      ],
+      "svg_text_nodes": [
+        "FT-021",
+        "FT-022",
+        "FT-033",
+        "FT-034",
+        "FT-035",
+        "FT-036",
+        "FT-037",
+        "FT-038",
+        "FT-039",
+        "FT-040",
+        "FT-041"
+      ]
+    },
+    "R08": {
+      "title": "Limiter state, multiple instances, and Redis layering",
+      "image_uses": [
+        "RS-066",
+        "RS-093",
+        "RS-094",
+        "RS-095",
+        "RS-096",
+        "RS-097",
+        "RS-098"
+      ],
+      "svg_text_nodes": [
+        "FT-003",
+        "FT-006",
+        "FT-010",
+        "FT-011",
+        "FT-047",
+        "FT-048",
+        "FT-049"
+      ]
+    },
+    "R09": {
+      "title": "Cache stampede protection and distributed locking",
+      "image_uses": [
+        "RS-088",
+        "RS-090"
+      ],
+      "svg_text_nodes": [
+        "FT-042",
+        "FT-043",
+        "FT-044",
+        "FT-045",
+        "FT-046"
+      ]
+    },
+    "X01": {
+      "title": "Explicit non-semantic browser/UI fragment",
+      "image_uses": [
+        "RS-092"
+      ],
+      "svg_text_nodes": []
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent regular-expression scan over raw SVG",
+    "pass_a_embedded_assets": 98,
+    "pass_b_embedded_assets": 98,
+    "pass_a_image_uses": 98,
+    "pass_b_image_uses": 98,
+    "pass_a_svg_text_nodes": 49,
+    "pass_b_svg_text_nodes": 49,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "all_embedded_assets_referenced": true,
+    "orphan_embedded_assets": [],
+    "missing_referenced_assets": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

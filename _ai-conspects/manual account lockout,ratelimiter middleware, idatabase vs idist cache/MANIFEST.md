@@ -1,33 +1,48 @@
-# MANIFEST — manual account lockout,ratelimiter middleware, idatabase vs idist cache final coverage transcript v001
+# MANIFEST — manual lockout / RateLimiter / Redis full SVG repair final v002
 
-Archive type: **stage1 final coverage, ten-conspect combined delivery**  
-Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-22 03:30:00 UTC
+Target branch: `ai-processed-conspects-text`
 
-## Counts
+## Target
 
-```text
-image uses: 3
-text labels: 48
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
-```
+`_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache`
 
-## Delivery batch
-
-This folder is delivered together with all ten exact SVG-named folders:
+## Source
 
 ```text
-_ai-conspects/linq to sql
-_ai-conspects/stored procedures
-_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache
-_ai-conspects/injecting into razor
-_ai-conspects/tag helpers razor,partial
-_ai-conspects/BINDING SOURCE ATTRIBUTES
-_ai-conspects/content disposition header
-_ai-conspects/CUSTOM ROUTE CONSTRAINT
-_ai-conspects/utf8 string  literal
-_ai-conspects/link generator
+uploaded filename: manual account lockout,ratelimiter middleware, idatabase vs idist cache(1).svg
+stored path: source/source-complete-v002.svg
+SHA-256: 7c1740a6f8f28c5e63d1d164c5f66d649403b70080f5bafbcf65300e57b76032
 ```
 
-Archive: `ai-conspects-10-small-stage1-final-coverage-v001.zip`
+## Coverage
+
+```text
+embedded assets: 98
+total image uses: 98
+processed image uses: 98
+previously processed image uses preserved: 3
+restored image uses: 95
+duplicate placements: 0
+SVG text nodes: 49
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
+```
+
+## Regions created or supplemented
+
+```text
+R01 Retry-After, HTTP status codes, and RateLimitLease metadata
+R02 Limiter algorithms and policy composition
+R03 ASP.NET Core RateLimiter middleware, registration, and endpoint application
+R04 Manual account lockout and ASP.NET Core Identity lockout
+R05 Redis failed-attempt counters, key design, and custom middleware
+R06 IConnectionMultiplexer, IDatabase, and IDistributedCache
+R07 Atomic counters, TTL, and race conditions
+R08 Limiter state, multiple instances, and Redis layering
+R09 Cache stampede protection and distributed locking
+X01 Explicit non-semantic browser/UI fragment
+```

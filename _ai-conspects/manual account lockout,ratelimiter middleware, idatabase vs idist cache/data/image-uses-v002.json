@@ -1,0 +1,4118 @@
+[
+  {
+    "symbol_id": "image-72b16c31cfe4b26ba421d9d4d862c7ac5dc3dbe5",
+    "sha256": "abe040fefb7fc095579912cdefba4b83bc3ba7fc0808e7cfc6d83a9eca565d31",
+    "x": 1672.7793892940608,
+    "y": 172.7603829015752,
+    "width": 856.0,
+    "height": 124.0,
+    "transform": "translate(1672.7793892940608 172.7603829015752) rotate(0 428 62)",
+    "source_id": "RS-001",
+    "image_use_id": "RIU-001",
+    "region_id": "R04",
+    "description": "Separates per-account lockout from aggregate request rate limiting.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-001__abe040fefb.png",
+    "pixel_width": 856,
+    "pixel_height": 124,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-005",
+        "text": "you should rate limit on server to avoid problems"
+      },
+      {
+        "text_id": "FT-004",
+        "text": "its just for client to show ui and not allow normal users to do requests"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-001",
+        "text": "how retry after works for rate limiting"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-02c9394904cd1b0d088da0c7d92c5c87abe575f7",
+    "sha256": "9110309d7972677161b19749037f0068918fe7114fd76e376beeffa2501450c8",
+    "x": 250.65606982945428,
+    "y": 201.11450053488807,
+    "width": 933.0,
+    "height": 482.0,
+    "transform": "translate(250.65606982945428 201.11450053488807) rotate(0 466.5 241)",
+    "source_id": "RS-002",
+    "image_use_id": "RIU-002",
+    "region_id": "R01",
+    "description": "Explains Retry-After as an advisory client wait hint rather than enforcement by itself.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-002__9110309d79.png",
+    "pixel_width": 933,
+    "pixel_height": 482,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-005",
+        "text": "you should rate limit on server to avoid problems"
+      },
+      {
+        "text_id": "FT-004",
+        "text": "its just for client to show ui and not allow normal users to do requests"
+      },
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-001",
+        "text": "how retry after works for rate limiting"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-98ea27a5ba3e8020e5fb8883960030ecd78bf07f",
+    "sha256": "cc58617eb3e6d109c846d3a6c4c8b68dade6321f9aa1e47cffa6a807485cf0f0",
+    "x": 1716.0204210145312,
+    "y": 332.86336955521983,
+    "width": 642.0,
+    "height": 482.0,
+    "transform": "translate(1716.0204210145312 332.86336955521983) rotate(0 321.055219364599 241.15625)",
+    "source_id": "RS-003",
+    "image_use_id": "RIU-003",
+    "region_id": "R04",
+    "description": "Manual account-lockout algorithm with failed-count, timestamps, lockout end, and success reset.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-003__cc58617eb3.png",
+    "pixel_width": 880,
+    "pixel_height": 661,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-005",
+        "text": "you should rate limit on server to avoid problems"
+      },
+      {
+        "text_id": "FT-004",
+        "text": "its just for client to show ui and not allow normal users to do requests"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-000c3da0d0e73c044a15586dd0cd32936322b088",
+    "sha256": "2aea2a8f7b6a341901d39687b7017ab7de20cef3c4c4ba1aaafc5ac06002f30b",
+    "x": 7696.837308331449,
+    "y": 361.9716936553741,
+    "width": 985.0,
+    "height": 266.0,
+    "transform": "translate(7696.837308331449 361.9716936553741) rotate(0 492.5 133)",
+    "source_id": "RS-004",
+    "image_use_id": "RIU-004",
+    "region_id": "R04",
+    "description": "Recommended combination: Identity lockout for failed-only account protection plus middleware for total request volume.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-004__2aea2a8f7b.png",
+    "pixel_width": 985,
+    "pixel_height": 266,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      },
+      {
+        "text_id": "FT-003",
+        "text": "rate limiting + lockout patterns"
+      },
+      {
+        "text_id": "FT-010",
+        "text": "pattern 2, add ratelimiter for all requests and cache based service to"
+      },
+      {
+        "text_id": "FT-011",
+        "text": "score failed attempts"
+      },
+      {
+        "text_id": "FT-012",
+        "text": "using custom middleware (bad)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c2a6fd40c037c159fdc1d949d4ca163cc1ccff1a",
+    "sha256": "c8e4a5bae1366dc08f5193f1a8161c41cfeca711e1ef521a6667c3845bedcb78",
+    "x": 10432.109668653433,
+    "y": 369.5610833235296,
+    "width": 859.0,
+    "height": 470.0,
+    "transform": "translate(10432.109668653433 369.5610833235296) rotate(0 429.5 235)",
+    "source_id": "RS-005",
+    "image_use_id": "RIU-005",
+    "region_id": "R04",
+    "description": "Identity built-in lockout fields and APIs.",
+    "previously_present": true,
+    "restored": false,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-005__c8e4a5bae1.png",
+    "pixel_width": 859,
+    "pixel_height": 470,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-007",
+        "text": "lockout with identity"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      },
+      {
+        "text_id": "FT-003",
+        "text": "rate limiting + lockout patterns"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-9ba0831eac020043fa162869625310ab12597c3c",
+    "sha256": "f6cb4b66fc73ce30b445e6090e3d8f4601f48bd9eabec60679b04e7e95961c72",
+    "x": 5115.513169246473,
+    "y": 425.19915807534926,
+    "width": 742.0,
+    "height": 339.0,
+    "transform": "translate(5115.513169246473 425.19915807534926) rotate(0 371.1224791821279 169.70130458328072)",
+    "source_id": "RS-006",
+    "image_use_id": "RIU-006",
+    "region_id": "R03",
+    "description": "ASP.NET Core rate-limiting rejection path and Retry-After handling.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-006__f6cb4b66fc.png",
+    "pixel_width": 936,
+    "pixel_height": 428,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-009",
+        "text": "rate limiter middleware"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-012",
+        "text": "using custom middleware (bad)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a116e709c8053b158ecd803db491f6e2b675347d",
+    "sha256": "10ab6ddc703b332ca3dd36cff7574b4d7eb0d68038af3c670a399fbc54f74bb7",
+    "x": 3983.127919281027,
+    "y": 446.45713957454427,
+    "width": 856.0,
+    "height": 482.0,
+    "transform": "translate(3983.127919281027 446.45713957454427) rotate(0 427.9163533834586 241.15625)",
+    "source_id": "RS-007",
+    "image_use_id": "RIU-007",
+    "region_id": "R02",
+    "description": "Fixed-window behavior, benefits, and boundary-burst drawback.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-007__10ab6ddc70.png",
+    "pixel_width": 944,
+    "pixel_height": 532,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-009",
+        "text": "rate limiter middleware"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-130f4a4265bb5f85501a6df47b57517f2f61374c",
+    "sha256": "cbb8bff03999d6afce9a3e43258b8e2b3211ed015078455d8a03b594c25b5918",
+    "x": 5104.612167682115,
+    "y": 755.5051143378223,
+    "width": 755.0,
+    "height": 459.0,
+    "transform": "translate(5104.612167682115 755.5051143378223) rotate(0 377.5403108960305 229.6078491210958)",
+    "source_id": "RS-008",
+    "image_use_id": "RIU-008",
+    "region_id": "R03",
+    "description": "Fixed-window policy code and rejection callback.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-008__cbb8bff039.png",
+    "pixel_width": 906,
+    "pixel_height": 551,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-009",
+        "text": "rate limiter middleware"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-012",
+        "text": "using custom middleware (bad)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-de4aa09388079356a2a788bcdaef7c38a2154b4a",
+    "sha256": "34db3a13aa828e5c2e44efc7916857fbb49d65c77bf70ca05a25acb80220c5d8",
+    "x": 2909.7655767146316,
+    "y": 809.9588867829661,
+    "width": 912.0,
+    "height": 482.0,
+    "transform": "translate(2909.7655767146316 809.9588867829661) rotate(0 456.22825255102043 241.15625)",
+    "source_id": "RS-009",
+    "image_use_id": "RIU-009",
+    "region_id": "R02",
+    "description": "Token-bucket burst semantics.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-009__34db3a13aa.png",
+    "pixel_width": 927,
+    "pixel_height": 490,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-009",
+        "text": "rate limiter middleware"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-9fb1b1a19edc13dd51595f7c2d7738a500a15e23",
+    "sha256": "07b40c9ba5ec97354dbbecf76c77bcd9aed78e663724295e8de3c2cdc5ae6ece",
+    "x": 8992.144134911792,
+    "y": 828.2836263383615,
+    "width": 771.0,
+    "height": 482.0,
+    "transform": "translate(8992.144134911792 828.2836263383615) rotate(0 385.58499313186826 241.15625)",
+    "source_id": "RS-010",
+    "image_use_id": "RIU-010",
+    "region_id": "R05",
+    "description": "Manual cached-attempt approach: strengths, fallback concerns, and key-design cautions.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-010__07b40c9ba5.png",
+    "pixel_width": 873,
+    "pixel_height": 546,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-007",
+        "text": "lockout with identity"
+      },
+      {
+        "text_id": "FT-011",
+        "text": "score failed attempts"
+      },
+      {
+        "text_id": "FT-010",
+        "text": "pattern 2, add ratelimiter for all requests and cache based service to"
+      },
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      },
+      {
+        "text_id": "FT-003",
+        "text": "rate limiting + lockout patterns"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-b8cb4929f8a663bfd07597bc3a5ac08d800883f0",
+    "sha256": "55a3e2c5403dd6f977cc0b0dc4ebe2056697a24e50278661d79ff140d541b81b",
+    "x": 7778.233497886573,
+    "y": 830.5830937081191,
+    "width": 865.0,
+    "height": 221.0,
+    "transform": "translate(7778.233497886573 830.5830937081191) rotate(0 432.5 110.5)",
+    "source_id": "RS-011",
+    "image_use_id": "RIU-011",
+    "region_id": "R05",
+    "description": "Redis failed-attempt implementation overview.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-011__55a3e2c540.png",
+    "pixel_width": 865,
+    "pixel_height": 221,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-011",
+        "text": "score failed attempts"
+      },
+      {
+        "text_id": "FT-010",
+        "text": "pattern 2, add ratelimiter for all requests and cache based service to"
+      },
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      },
+      {
+        "text_id": "FT-003",
+        "text": "rate limiting + lockout patterns"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-65f58613449fa237b1fc8cbb3b1a25b6a36173d2",
+    "sha256": "b7d6697237d7f474281f2c33a4bf1333f22fea436809cc3d62b4297f0ff750bd",
+    "x": 1689.8669815249632,
+    "y": 842.4929539736258,
+    "width": 825.0,
+    "height": 482.0,
+    "transform": "translate(1689.8669815249632 842.4929539736258) rotate(0 412.39393446180566 241.15625)",
+    "source_id": "RS-012",
+    "image_use_id": "RIU-012",
+    "region_id": "R05",
+    "description": "Windowed counter and user-table field model.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-012__b7d6697237.png",
+    "pixel_width": 985,
+    "pixel_height": 576,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-005",
+        "text": "you should rate limit on server to avoid problems"
+      },
+      {
+        "text_id": "FT-004",
+        "text": "its just for client to show ui and not allow normal users to do requests"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-5df251319def930191ee75ab752e57e66af22e65",
+    "sha256": "7f78ddf81dfe7cbd046c1ef7ca291cf0da14a0132464295720dc577e3f19b49e",
+    "x": 10435.427961444624,
+    "y": 866.7883005642943,
+    "width": 976.0,
+    "height": 341.0,
+    "transform": "translate(10435.427961444624 866.7883005642943) rotate(0 488 170.5)",
+    "source_id": "RS-013",
+    "image_use_id": "RIU-013",
+    "region_id": "R04",
+    "description": "Identity CheckPasswordSignInAsync with lockoutOnFailure and related APIs.",
+    "previously_present": true,
+    "restored": false,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-013__7f78ddf81d.png",
+    "pixel_width": 976,
+    "pixel_height": 341,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-007",
+        "text": "lockout with identity"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      },
+      {
+        "text_id": "FT-003",
+        "text": "rate limiting + lockout patterns"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-f346fa45563f63000371a57ff27a5ba867f8ed46",
+    "sha256": "5517709e008d7e2459068a1b27f2a6d9459e0a61a1dcf6623ede88545132a94b",
+    "x": 3983.938249049428,
+    "y": 936.8861723337723,
+    "width": 893.0,
+    "height": 476.0,
+    "transform": "translate(3983.938249049428 936.8861723337723) rotate(0 446.5 238)",
+    "source_id": "RS-014",
+    "image_use_id": "RIU-014",
+    "region_id": "R02",
+    "description": "Token-bucket mechanics, pros, and tradeoffs.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-014__5517709e00.png",
+    "pixel_width": 893,
+    "pixel_height": 476,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-009",
+        "text": "rate limiter middleware"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-24915dd245ee645b21771af6ea42d1b7587375b9",
+    "sha256": "72015c134e53f5966f25d7e9f20a1a0aeb8cb9a6b0b4139520c7b35660d19b4f",
+    "x": 7796.1735884348,
+    "y": 1086.128049238967,
+    "width": 931.0,
+    "height": 337.0,
+    "transform": "translate(7796.1735884348 1086.128049238967) rotate(0 465.5 168.5)",
+    "source_id": "RS-015",
+    "image_use_id": "RIU-015",
+    "region_id": "R05",
+    "description": "Redis connection and failed-login service registration.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-015__72015c134e.png",
+    "pixel_width": 931,
+    "pixel_height": 337,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-011",
+        "text": "score failed attempts"
+      },
+      {
+        "text_id": "FT-010",
+        "text": "pattern 2, add ratelimiter for all requests and cache based service to"
+      },
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      },
+      {
+        "text_id": "FT-003",
+        "text": "rate limiting + lockout patterns"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-99572c42b2dbfe4845ecf83871ca69228d577730",
+    "sha256": "228b2077b79d987603d1ec496a042cfdcf4e7d5c8c996faaea6cf1eb3badc0f3",
+    "x": 10451.246032289795,
+    "y": 1216.8337551097466,
+    "width": 988.0,
+    "height": 470.0,
+    "transform": "translate(10451.246032289795 1216.8337551097466) rotate(0 494 235)",
+    "source_id": "RS-016",
+    "image_use_id": "RIU-016",
+    "region_id": "R04",
+    "description": "Identity lockout configuration options.",
+    "previously_present": true,
+    "restored": false,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-016__228b2077b7.png",
+    "pixel_width": 988,
+    "pixel_height": 470,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-007",
+        "text": "lockout with identity"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-15e7eff87420c08478e708c1c9e6cea134919a15",
+    "sha256": "2749903db7c1c8841034d437485313f36ba82f793c02f9d70814430e3430fa14",
+    "x": 5092.492148651292,
+    "y": 1223.4758102822161,
+    "width": 972.0,
+    "height": 317.0,
+    "transform": "translate(5092.492148651292 1223.4758102822161) rotate(0 486 158.5)",
+    "source_id": "RS-017",
+    "image_use_id": "RIU-017",
+    "region_id": "R03",
+    "description": "UseRateLimiter and endpoint RequireRateLimiting usage.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-017__2749903db7.png",
+    "pixel_width": 972,
+    "pixel_height": 317,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-012",
+        "text": "using custom middleware (bad)"
+      },
+      {
+        "text_id": "FT-013",
+        "text": "it seems great for ip only throttles but to create ip + email"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-41c1b49eaf708a35b0af6c8825a5cdd7e717d633",
+    "sha256": "254848a27f8e024dac08075a8d613fd7b168ecdc7c8eb76e4983d5f113b443f6",
+    "x": 2964.7058764957656,
+    "y": 1301.43337408765,
+    "width": 885.0,
+    "height": 183.0,
+    "transform": "translate(2964.7058764957656 1301.43337408765) rotate(0 442.5 91.5)",
+    "source_id": "RS-018",
+    "image_use_id": "RIU-018",
+    "region_id": "R02",
+    "description": "Why token bucket fits controlled real-world bursts.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-018__254848a27f.png",
+    "pixel_width": 885,
+    "pixel_height": 183,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-009",
+        "text": "rate limiter middleware"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-d096aff0b1596bd5e910c6e1aab1d9e1d307bd7e",
+    "sha256": "c7f40ab5e039f263d0e7d672b79ecf4ca360eef0857c7b4e46a978c71139fed4",
+    "x": 9009.407963751957,
+    "y": 1333.5044889316596,
+    "width": 636.0,
+    "height": 482.0,
+    "transform": "translate(9009.407963751957 1333.5044889316596) rotate(0 317.79902580971657 241.15625)",
+    "source_id": "RS-019",
+    "image_use_id": "RIU-019",
+    "region_id": "R05",
+    "description": "Performance comparison between in-process RateLimiter and Redis failed counters.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-019__c7f40ab5e0.png",
+    "pixel_width": 651,
+    "pixel_height": 494,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-007",
+        "text": "lockout with identity"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-011",
+        "text": "score failed attempts"
+      },
+      {
+        "text_id": "FT-010",
+        "text": "pattern 2, add ratelimiter for all requests and cache based service to"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-7e372f21adba873740363723aeef590891bb78d3",
+    "sha256": "912e890b5e32b5e25f32f9751d0530a9df5d5f5e434b61d901d94dcddd787292",
+    "x": 1697.2119101130374,
+    "y": 1334.3448962479306,
+    "width": 860.0,
+    "height": 482.0,
+    "transform": "translate(1697.2119101130374 1334.3448962479306) rotate(0 430.23401021400787 241.15625)",
+    "source_id": "RS-020",
+    "image_use_id": "RIU-020",
+    "region_id": "R04",
+    "description": "Manual login flow: lookup, lock check, credential validation, and generic errors.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-020__912e890b5e.png",
+    "pixel_width": 917,
+    "pixel_height": 514,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-005",
+        "text": "you should rate limit on server to avoid problems"
+      },
+      {
+        "text_id": "FT-004",
+        "text": "its just for client to show ui and not allow normal users to do requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ee7628397922799131508dcaf3550cef64d54d39",
+    "sha256": "97ae100ae6fadd0250196c8b3d61a19e80521b7c9cf18061e88373a16ab8c7f9",
+    "x": 4005.3779153271616,
+    "y": 1421.0027050930003,
+    "width": 853.0,
+    "height": 482.0,
+    "transform": "translate(4005.3779153271616 1421.0027050930003) rotate(0 426.2723809523809 241.15625)",
+    "source_id": "RS-021",
+    "image_use_id": "RIU-021",
+    "region_id": "R02",
+    "description": "ConcurrencyLimiter semantics for in-flight work.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-021__97ae100ae6.png",
+    "pixel_width": 928,
+    "pixel_height": 525,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-009",
+        "text": "rate limiter middleware"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-5d59a58556aef4af501ed6a8180fb3a13185a0f9",
+    "sha256": "29d2b7bc304f923e909fc83445b507cd72d2a3df789f6cc1b2944fa7fa787695",
+    "x": 7820.034157629725,
+    "y": 1439.2856865057329,
+    "width": 780.0,
+    "height": 397.0,
+    "transform": "translate(7820.034157629725 1439.2856865057329) rotate(0 389.82099628850574 198.27102397432623)",
+    "source_id": "RS-022",
+    "image_use_id": "RIU-022",
+    "region_id": "R05",
+    "description": "FailedLoginLimiter service using IDatabase.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-022__29d2b7bc30.png",
+    "pixel_width": 928,
+    "pixel_height": 472,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-011",
+        "text": "score failed attempts"
+      },
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-010",
+        "text": "pattern 2, add ratelimiter for all requests and cache based service to"
+      },
+      {
+        "text_id": "FT-006",
+        "text": "and examples"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-cc038ce4a24e45a758d487729346c41f10069f17",
+    "sha256": "00b46b395b843fe6e830dcd346c367f1aff126060497bbb13a1985f7bd92bc4a",
+    "x": 5147.109256044709,
+    "y": 1560.2110325937829,
+    "width": 755.0,
+    "height": 354.0,
+    "transform": "translate(5147.109256044709 1560.2110325937829) rotate(0 377.2652455477604 177.0588235294117)",
+    "source_id": "RS-023",
+    "image_use_id": "RIU-023",
+    "region_id": "R05",
+    "description": "Combined IP and account key construction.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-023__00b46b395b.png",
+    "pixel_width": 929,
+    "pixel_height": 436,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-1f92c18703a42e0bf71e6d1fd6d99713c87a463c",
+    "sha256": "fdb05cae10d3c856771b00f65bcc40f76df6d88c93adf0d063b3686c8ccbaf34",
+    "x": 6041.160544497158,
+    "y": 1665.1996606427601,
+    "width": 483.0,
+    "height": 202.0,
+    "transform": "translate(6041.160544497158 1665.1996606427601) rotate(0 241.48935358574923 100.88888549804642)",
+    "source_id": "RS-024",
+    "image_use_id": "RIU-024",
+    "region_id": "R03",
+    "description": "Correct middleware placement relative to routing and endpoints.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-024__fdb05cae10.png",
+    "pixel_width": 900,
+    "pixel_height": 376,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      },
+      {
+        "text_id": "FT-014",
+        "text": "we need to read the request which is stream and it can cause issues"
+      },
+      {
+        "text_id": "FT-013",
+        "text": "it seems great for ip only throttles but to create ip + email"
+      },
+      {
+        "text_id": "FT-012",
+        "text": "using custom middleware (bad)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-38b2ab1155d54c869c3fc98ef715de44cfbe1c5b",
+    "sha256": "09b1a09d3146e41d76a6c543bdaba66ac3ddf8f25acc6b2a11de8582cd63f227",
+    "x": 6620.426614654919,
+    "y": 1670.9161092005706,
+    "width": 887.0,
+    "height": 364.0,
+    "transform": "translate(6620.426614654919 1670.9161092005706) rotate(0 443.5 182)",
+    "source_id": "RS-025",
+    "image_use_id": "RIU-025",
+    "region_id": "R05",
+    "description": "Why middleware can only partly implement failed-only lockout without post-endpoint knowledge.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-025__09b1a09d31.png",
+    "pixel_width": 887,
+    "pixel_height": 364,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      },
+      {
+        "text_id": "FT-014",
+        "text": "we need to read the request which is stream and it can cause issues"
+      },
+      {
+        "text_id": "FT-013",
+        "text": "it seems great for ip only throttles but to create ip + email"
+      },
+      {
+        "text_id": "FT-012",
+        "text": "using custom middleware (bad)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c9f74dd1dcabb9a1efabb3bbdfdeed2759d087ee",
+    "sha256": "659abbe29c3b0239efdddc23862b6d36fe7e627041661ac8fff81eff80b0b0c0",
+    "x": 1716.5571670718382,
+    "y": 1822.5567018034853,
+    "width": 884.0,
+    "height": 457.0,
+    "transform": "translate(1716.5571670718382 1822.5567018034853) rotate(0 442 228.5)",
+    "source_id": "RS-026",
+    "image_use_id": "RIU-026",
+    "region_id": "R04",
+    "description": "Manual persisted sliding-window failure logic.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-026__659abbe29c.png",
+    "pixel_width": 884,
+    "pixel_height": 457,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-005",
+        "text": "you should rate limit on server to avoid problems"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-e38df2e5cb44a1fdafd8250f6102da23f6e5152c",
+    "sha256": "8f7bfb88ed542e7fb3d561fe0d3365f42dab70d42ac96e668faa7c7747fa3594",
+    "x": 7773.5346063108245,
+    "y": 1861.108200413164,
+    "width": 964.0,
+    "height": 375.0,
+    "transform": "translate(7773.5346063108245 1861.108200413164) rotate(0 482 187.5)",
+    "source_id": "RS-027",
+    "image_use_id": "RIU-027",
+    "region_id": "R05",
+    "description": "Redis block-check and failure-registration methods.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-027__8f7bfb88ed.png",
+    "pixel_width": 964,
+    "pixel_height": 375,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-011",
+        "text": "score failed attempts"
+      },
+      {
+        "text_id": "FT-010",
+        "text": "pattern 2, add ratelimiter for all requests and cache based service to"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ca3dacfb07a706af612426dc980be129f9cf7578",
+    "sha256": "41edb61281e5590bd9cd4be9e5ce4ce69c14634429372e3e9f308fcc1cd09adb",
+    "x": 4064.271116065621,
+    "y": 2058.3964792604675,
+    "width": 898.0,
+    "height": 482.0,
+    "transform": "translate(4064.271116065621 2058.3964792604675) rotate(0 449.1349460985625 241.15625)",
+    "source_id": "RS-028",
+    "image_use_id": "RIU-028",
+    "region_id": "R01",
+    "description": "Program.cs setup with OnRejected and Retry-After forwarding.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-028__41edb61281.png",
+    "pixel_width": 907,
+    "pixel_height": 487,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c4855a02c335fd924072417d7de128a38a1c5b36",
+    "sha256": "d6086c43295856ce7ec3780ff8230b8d677ce3ef7d3e8490d2eceb8e2024fcac",
+    "x": 6643.835136451922,
+    "y": 2091.7597574753163,
+    "width": 740.0,
+    "height": 482.0,
+    "transform": "translate(6643.835136451922 2091.7597574753163) rotate(0 370.09127475247533 241.15625)",
+    "source_id": "RS-029",
+    "image_use_id": "RIU-029",
+    "region_id": "R05",
+    "description": "Route-specific failed-login middleware.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-029__d6086c4329.png",
+    "pixel_width": 930,
+    "pixel_height": 606,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      },
+      {
+        "text_id": "FT-014",
+        "text": "we need to read the request which is stream and it can cause issues"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-8a37d686376997fb4c529f09ed0671956ab1af12",
+    "sha256": "9050b8abeae06742f73b35408b5609de059cfb2844455bb1e9dfa4a471ca87ec",
+    "x": 5177.742262109288,
+    "y": 2159.2358959171142,
+    "width": 508.0,
+    "height": 202.0,
+    "transform": "translate(5177.742262109288 2159.2358959171142) rotate(0 254 101)",
+    "source_id": "RS-030",
+    "image_use_id": "RIU-030",
+    "region_id": "R05",
+    "description": "Reason for combining IP and email: balance account brute force and lockout griefing.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-030__9050b8abea.png",
+    "pixel_width": 508,
+    "pixel_height": 202,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-462bcad285004ebf438001446c33218a0df89c25",
+    "sha256": "12d0de7777c8b9d89834dec87db029779e2cb51e3696e7ba4443ae4de7e4de1f",
+    "x": 7793.249419197824,
+    "y": 2285.6044055928833,
+    "width": 847.0,
+    "height": 482.0,
+    "transform": "translate(7793.249419197824 2285.6044055928833) rotate(0 423.48294925512096 241.15625)",
+    "source_id": "RS-031",
+    "image_use_id": "RIU-031",
+    "region_id": "R05",
+    "description": "Atomic Redis increment, first-hit TTL, block key, and cleanup.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-031__12d0de7777.png",
+    "pixel_width": 943,
+    "pixel_height": 537,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-e2926c3e7c980a854a75535b05f16a5c50c9e954",
+    "sha256": "e55ce20ee26ce874901d8606c77f7bdf0b948b305ec386cceeb9bdc96bb2c1b0",
+    "x": 1719.941624585701,
+    "y": 2286.937398418071,
+    "width": 868.0,
+    "height": 482.0,
+    "transform": "translate(1719.941624585701 2286.937398418071) rotate(0 434.17123367537306 241.15625)",
+    "source_id": "RS-032",
+    "image_use_id": "RIU-032",
+    "region_id": "R04",
+    "description": "Manual account flow: threshold lockout, SaveChanges, success reset.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-032__e55ce20ee2.png",
+    "pixel_width": 965,
+    "pixel_height": 536,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-008",
+        "text": "limiter types"
+      },
+      {
+        "text_id": "FT-005",
+        "text": "you should rate limit on server to avoid problems"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-2a17307840a311668fa07665c82bd51063f18356",
+    "sha256": "cae8a73bb64680775f8b50b563bb1fbb98bb81c6c827bcc2bab0d13aa6e621a7",
+    "x": 5171.803870093541,
+    "y": 2372.4129589053955,
+    "width": 875.0,
+    "height": 482.0,
+    "transform": "translate(5171.803870093541 2372.4129589053955) rotate(0 437.2716439688716 241.15625)",
+    "source_id": "RS-033",
+    "image_use_id": "RIU-033",
+    "region_id": "R05",
+    "description": "Security tradeoffs of email-only, IP-only, and combined keys.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-033__cae8a73bb6.png",
+    "pixel_width": 932,
+    "pixel_height": 514,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-895417d8f3626e2cdce26a4a33fde01d2e903766",
+    "sha256": "83704a6e1fe333d98b07717e838a01de9691189626eac69f9cd5ed97e37c2f54",
+    "x": 2957.9458850139254,
+    "y": 2441.178669868532,
+    "width": 749.0,
+    "height": 276.0,
+    "transform": "translate(2957.9458850139254 2441.178669868532) rotate(0 374.5 138)",
+    "source_id": "RS-034",
+    "image_use_id": "RIU-034",
+    "region_id": "R01",
+    "description": "RateLimitLease acquired/rejected decision model.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-034__83704a6e1f.png",
+    "pixel_width": 749,
+    "pixel_height": 276,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-8d1f3a5f3297b15efa8f2f22621550eb8a173b97",
+    "sha256": "6169eb7108e26eef5bec80a2b2cd637004219f1d4313d19cb3d2f7a44cf1b464",
+    "x": 4096.63661495352,
+    "y": 2566.044732652321,
+    "width": 702.0,
+    "height": 401.0,
+    "transform": "translate(4096.63661495352 2566.044732652321) rotate(0 351.06849315068484 200.66666666666663)",
+    "source_id": "RS-035",
+    "image_use_id": "RIU-035",
+    "region_id": "R01",
+    "description": "OnRejected code reading optional RetryAfter metadata.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-035__6169eb7108.png",
+    "pixel_width": 894,
+    "pixel_height": 511,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-e3bcda9190091ca4a4099d6082ad64d719890526",
+    "sha256": "9ba225bd643c7672ded1e0514877894802182cad7b033cf050ad73cf2a0601ad",
+    "x": 6658.033443936845,
+    "y": 2572.870902494851,
+    "width": 812.0,
+    "height": 482.0,
+    "transform": "translate(6658.033443936845 2572.870902494851) rotate(0 405.8929672675522 241.15625)",
+    "source_id": "RS-036",
+    "image_use_id": "RIU-036",
+    "region_id": "R05",
+    "description": "Custom middleware pre-check plus post-failure registration.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-036__9ba225bd64.png",
+    "pixel_width": 887,
+    "pixel_height": 527,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      },
+      {
+        "text_id": "FT-014",
+        "text": "we need to read the request which is stream and it can cause issues"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-1534bf62b48ba9119655717133c7ea0854b89a37",
+    "sha256": "0fa038d629e170a11e6e9b0fc06cacc30c1526fda22134228e89580527feaeca",
+    "x": 2955.0876552339596,
+    "y": 2741.155870890165,
+    "width": 816.0,
+    "height": 401.0,
+    "transform": "translate(2955.0876552339596 2741.155870890165) rotate(0 407.876811594203 200.66666666666663)",
+    "source_id": "RS-037",
+    "image_use_id": "RIU-037",
+    "region_id": "R01",
+    "description": "Lease metadata retrieval with TryGetMetadata.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-037__0fa038d629.png",
+    "pixel_width": 935,
+    "pixel_height": 460,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-327840ae49a380b33d25c05e1320f7897a40e8e9",
+    "sha256": "41c2cbc42a540a0e17aa5974d635d456d6576cb81a81098b99ba39ee7e8091b5",
+    "x": 7836.950182509372,
+    "y": 2804.525245697838,
+    "width": 821.0,
+    "height": 482.0,
+    "transform": "translate(7836.950182509372 2804.525245697838) rotate(0 410.45058272394886 241.15625)",
+    "source_id": "RS-038",
+    "image_use_id": "RIU-038",
+    "region_id": "R04",
+    "description": "Identity login endpoint that increments lockout state only on credential failure.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-038__41c2cbc42a.png",
+    "pixel_width": 931,
+    "pixel_height": 547,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c0286a48d573da25d826eb86f38ad0e127e824d0",
+    "sha256": "16346be87e85c0c89f5a98c4ebfc5eef430bc4c2ce2468ef152d71ab3d3b94f7",
+    "x": 1701.5942493201019,
+    "y": 2814.1492717904694,
+    "width": 908.0,
+    "height": 299.0,
+    "transform": "translate(1701.5942493201019 2814.1492717904694) rotate(0 454 149.5)",
+    "source_id": "RS-039",
+    "image_use_id": "RIU-039",
+    "region_id": "R04",
+    "description": "Concurrency protection for simultaneous failed-login updates.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-039__16346be87e.png",
+    "pixel_width": 908,
+    "pixel_height": 299,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a116aa69ad4687d0c6c4a6fddc3b57e5286f019b",
+    "sha256": "2206e53419336f2ca3ea77bd7ff8da1833f35b62543ada30b2202bece02a4e9c",
+    "x": 5198.908888085851,
+    "y": 2875.0692699405517,
+    "width": 719.0,
+    "height": 181.0,
+    "transform": "translate(5198.908888085851 2875.0692699405517) rotate(0 359.5 90.5)",
+    "source_id": "RS-040",
+    "image_use_id": "RIU-040",
+    "region_id": "R04",
+    "description": "Why rotating IPs require account-keyed protection or Identity lockout.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-040__2206e53419.png",
+    "pixel_width": 719,
+    "pixel_height": 181,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-015",
+        "text": "we will need some manual buffering and at hot paths better to avoid it"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-93e78ea073bec9948671743df2f90e73b54727de",
+    "sha256": "953936176cc0b35279ae728fc8f7c903f85b91f9ef34817ac69732fa8ee5ef04",
+    "x": 4035.797729753899,
+    "y": 3016.5409609926683,
+    "width": 848.0,
+    "height": 482.0,
+    "transform": "translate(4035.797729753899 3016.5409609926683) rotate(0 424.05565308988764 241.15625)",
+    "source_id": "RS-041",
+    "image_use_id": "RIU-041",
+    "region_id": "R03",
+    "description": "OnRejected customizes rejection but does not create or apply a limiter.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-041__953936176c.png",
+    "pixel_width": 939,
+    "pixel_height": 534,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-256596b5b023055fae964d9ce40b043a4dc0876d",
+    "sha256": "30368bc32b1977eb99e90932b3e086dcbbe002d6c4bb613b8dfcc7edb1f27eb5",
+    "x": 6691.839249610432,
+    "y": 3067.4132658694507,
+    "width": 789.0,
+    "height": 391.0,
+    "transform": "translate(6691.839249610432 3067.4132658694507) rotate(0 394.59256998697913 195.588092049823)",
+    "source_id": "RS-042",
+    "image_use_id": "RIU-042",
+    "region_id": "R05",
+    "description": "Middleware registration and the cost of reading request bodies for account keys.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-042__30368bc32b.png",
+    "pixel_width": 924,
+    "pixel_height": 458,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-016",
+        "text": "with action service we can grab email from the deserialized payload easily"
+      },
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-163ad4ab11d922b0136f15b9a83e8c199f6d52d6",
+    "sha256": "0aec468fe6d85219a1038596c911074b1b2871bd2015dc0472783b29fc688d38",
+    "x": 1716.260915986768,
+    "y": 3107.112392992727,
+    "width": 852.0,
+    "height": 359.0,
+    "transform": "translate(1716.260915986768 3107.112392992727) rotate(0 426 179.5)",
+    "source_id": "RS-043",
+    "image_use_id": "RIU-043",
+    "region_id": "R04",
+    "description": "Separate failed-attempt table for audit, analytics, and richer security signals.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-043__0aec468fe6.png",
+    "pixel_width": 852,
+    "pixel_height": 359,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-002",
+        "text": "manual account lockout + retry after manually"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-64277fead6b7a4f54d80a5d570235607eb553118",
+    "sha256": "e72107c753f9ea02ec1ad65baea0aec355ae3f8cb42c43454357ac82b178f552",
+    "x": 10633.963424110028,
+    "y": 3118.0717182853514,
+    "width": 944.0,
+    "height": 482.0,
+    "transform": "translate(10633.963424110028 3118.0717182853514) rotate(0 471.86872539370097 241.15625)",
+    "source_id": "RS-044",
+    "image_use_id": "RIU-044",
+    "region_id": "R06",
+    "description": "Two Redis access styles: StackExchange.Redis directly or IDistributedCache abstraction.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-044__e72107c753.png",
+    "pixel_width": 994,
+    "pixel_height": 508,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-007",
+        "text": "lockout with identity"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-496575f36682014c62fa9ce6f50678d26afd03f3",
+    "sha256": "67df510e35bd68ef416139921b9eb2e17faa9480ecfeaedeb273f502b3b39836",
+    "x": 2897.941610078353,
+    "y": 3153.3236352186395,
+    "width": 963.0,
+    "height": 384.0,
+    "transform": "translate(2897.941610078353 3153.3236352186395) rotate(0 481.5 192)",
+    "source_id": "RS-045",
+    "image_use_id": "RIU-045",
+    "region_id": "R01",
+    "description": "Lease ownership and optional metadata supplied by limiter implementations.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-045__67df510e35.png",
+    "pixel_width": 963,
+    "pixel_height": 384,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-35d6436dc6d044264242d3a4a5fc8cfc3c3dc3b7",
+    "sha256": "88f74edbf76711c129cc7e05d4cd59ce6f9b45fc15cd42a97275177248d0a91b",
+    "x": 5210.381476250291,
+    "y": 3178.4944625053613,
+    "width": 737.0,
+    "height": 482.0,
+    "transform": "translate(5210.381476250291 3178.4944625053613) rotate(0 368.71317323151123 241.15625)",
+    "source_id": "RS-046",
+    "image_use_id": "RIU-046",
+    "region_id": "R02",
+    "description": "Token-bucket configuration example.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-046__88f74edbf7.png",
+    "pixel_width": 951,
+    "pixel_height": 622,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-57cf0bcae4cafc66df8711fc1295fb03eff0794e",
+    "sha256": "642bae7c8748433ad893cf1626f78adf88e56170dbf7556b0f89bbdb0948dd9f",
+    "x": 7825.604988057309,
+    "y": 3307.1288716109557,
+    "width": 868.0,
+    "height": 434.0,
+    "transform": "translate(7825.604988057309 3307.1288716109557) rotate(0 434 217)",
+    "source_id": "RS-047",
+    "image_use_id": "RIU-047",
+    "region_id": "R05",
+    "description": "Failed-login registration and clearing state on successful authentication.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-047__642bae7c87.png",
+    "pixel_width": 868,
+    "pixel_height": 434,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-fb7d0696e9f696af0f04e767cb49c3ecf95d59dd",
+    "sha256": "7de8f4420aac3a60f90bcbaeec3e8eab8cdfdae7dc069a960ba3f428ea327f87",
+    "x": 1700.7423070457953,
+    "y": 3468.83441176443,
+    "width": 806.0,
+    "height": 320.0,
+    "transform": "translate(1700.7423070457953 3468.83441176443) rotate(0 403 160)",
+    "source_id": "RS-048",
+    "image_use_id": "RIU-048",
+    "region_id": "R04",
+    "description": "Attempts-table write amplification and hybrid storage tradeoff.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-048__7de8f4420a.png",
+    "pixel_width": 806,
+    "pixel_height": 320,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c45b3d6f76f2cdffb1ff374cc05c779241e867aa",
+    "sha256": "bf2c868830ec5cc864a7262fd46bd71cbf6d1f686682a67aefe9a5689d8c758f",
+    "x": 4076.6679716024673,
+    "y": 3547.0861676983986,
+    "width": 796.0,
+    "height": 159.0,
+    "transform": "translate(4076.6679716024673 3547.0861676983986) rotate(0 398 79.5)",
+    "source_id": "RS-049",
+    "image_use_id": "RIU-049",
+    "region_id": "R03",
+    "description": "No limiter or policy means OnRejected is never invoked.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-049__bf2c868830.png",
+    "pixel_width": 796,
+    "pixel_height": 159,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      },
+      {
+        "text_id": "FT-018",
+        "text": "attacker changes ips"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-017",
+        "text": "combined key for rate limiting"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a3b2562b62d0d428d2997d43258be6f560fa2b5e",
+    "sha256": "1d202bfdf9e10b1c039791ec07fcf42e56d25e5bb18647abe4087bedaa7e6dfb",
+    "x": 10121.900029678043,
+    "y": 3622.1319990260345,
+    "width": 682.0,
+    "height": 392.0,
+    "transform": "translate(10121.900029678043 3622.1319990260345) rotate(0 341 196)",
+    "source_id": "RS-050",
+    "image_use_id": "RIU-050",
+    "region_id": "R06",
+    "description": "IConnectionMultiplexer as the shared long-lived Redis connection manager.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-050__1d202bfdf9.png",
+    "pixel_width": 682,
+    "pixel_height": 392,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-033",
+        "text": "atomic counters, race conditions with idatabase"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a99ebee07fb109821203b32d66bfe423520bbae5",
+    "sha256": "ad4bc80d5e1c04029207d8ee4b7e977973850913d2cb49f9361bef0510db04ca",
+    "x": 11207.556607035734,
+    "y": 3666.438276469129,
+    "width": 810.0,
+    "height": 482.0,
+    "transform": "translate(11207.556607035734 3666.438276469129) rotate(0 404.82908393501793 241.15625)",
+    "source_id": "RS-051",
+    "image_use_id": "RIU-051",
+    "region_id": "R06",
+    "description": "IDistributedCache capabilities and Redis-backed configuration.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-051__ad4bc80d5e.png",
+    "pixel_width": 930,
+    "pixel_height": 554,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-f8c4fa7177163d3a6a007404dda52716860d7b97",
+    "sha256": "c2df791c0e45818e234a3e4706afc6d26abe9d0d89bfe58a0fa0ff40f45ab7f2",
+    "x": 2879.5047173525127,
+    "y": 3684.9327681296163,
+    "width": 943.0,
+    "height": 475.0,
+    "transform": "translate(2879.5047173525127 3684.9327681296163) rotate(0 471.5 237.5)",
+    "source_id": "RS-052",
+    "image_use_id": "RIU-052",
+    "region_id": "R01",
+    "description": "Limiter-specific lease metadata differences.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-052__c2df791c0e.png",
+    "pixel_width": 943,
+    "pixel_height": 475,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-45f3e92152b0a8a50d626ae4309e90a6df223b1b",
+    "sha256": "4068af5c946cd5b60af705831aadb33eb94f249689bcecdfe840624af452d5a1",
+    "x": 5197.793117762434,
+    "y": 3717.3833683484663,
+    "width": 751.0,
+    "height": 482.0,
+    "transform": "translate(5197.793117762434 3717.3833683484663) rotate(0 375.74590834697216 241.15625)",
+    "source_id": "RS-053",
+    "image_use_id": "RIU-053",
+    "region_id": "R02",
+    "description": "ConcurrencyLimiter configuration example.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-053__4068af5c94.png",
+    "pixel_width": 952,
+    "pixel_height": 611,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-02a5d257ec4a23a7186155a63b6746b298d63cd0",
+    "sha256": "83fbc0b4b9716facba7a0fde72433acb465a72acf97d8d2f234d6ce85820e605",
+    "x": 7030.91865660277,
+    "y": 3725.4598104306933,
+    "width": 873.0,
+    "height": 348.0,
+    "transform": "translate(7030.91865660277 3725.4598104306933) rotate(0 436.4230769230769 173.87025487025483)",
+    "source_id": "RS-054",
+    "image_use_id": "RIU-054",
+    "region_id": "R04",
+    "description": "Why a TTL block key usually need not be deleted on success.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-054__83fbc0b4b9.png",
+    "pixel_width": 999,
+    "pixel_height": 398,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-022",
+        "text": "for it only when count is 1"
+      },
+      {
+        "text_id": "FT-021",
+        "text": "new key - set expiration"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-1441353505b1c9a8ec498e992864a672462841d4",
+    "sha256": "76f5b5834017f567e69f710527c3bfdb6db3077eaa4a3acc2d26db5c2fe0df21",
+    "x": 1698.3426731139625,
+    "y": 3780.529388749539,
+    "width": 900.0,
+    "height": 297.0,
+    "transform": "translate(1698.3426731139625 3780.529388749539) rotate(0 450 148.5)",
+    "source_id": "RS-055",
+    "image_use_id": "RIU-055",
+    "region_id": "R01",
+    "description": "429 Retry-After convention and possible 423 lock semantics.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-055__76f5b58340.png",
+    "pixel_width": 900,
+    "pixel_height": 297,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-21d24c912eede4e23ec19a2b21b4f547e82b731f",
+    "sha256": "8e8154e9be93c2dc3dbc5f517e6f43d1db42ad65cfe92656939f6000b9de686c",
+    "x": 4083.156430815183,
+    "y": 3810.538967570432,
+    "width": 766.0,
+    "height": 482.0,
+    "transform": "translate(4083.156430815183 3810.538967570432) rotate(0 383.0128676470588 241.15625)",
+    "source_id": "RS-056",
+    "image_use_id": "RIU-056",
+    "region_id": "R02",
+    "description": "Fixed-window configuration example.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-056__8e8154e9be.png",
+    "pixel_width": 945,
+    "pixel_height": 595,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-019",
+        "text": "locking other people's accounts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-68bb88e6f48ec0cd50af89c0b4960ff693d21fdd",
+    "sha256": "a1345e98c58489046b3d8cb85d80e906b71d17b27a1699f6c99070bab0152e98",
+    "x": 10122.06674720734,
+    "y": 4043.1875715358,
+    "width": 935.0,
+    "height": 281.0,
+    "transform": "translate(10122.06674720734 4043.1875715358) rotate(0 467.5 140.5)",
+    "source_id": "RS-057",
+    "image_use_id": "RIU-057",
+    "region_id": "R06",
+    "description": "Singleton multiplexer registration.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-057__a1345e98c5.png",
+    "pixel_width": 935,
+    "pixel_height": 281,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-6fbab685c092ff1d0457de1f29e956b0ee763d34",
+    "sha256": "8cabecd3e9c9b31c76433587eb0ed44b4c16712e970044130451f7d7d436c908",
+    "x": 8842.802326756691,
+    "y": 4047.989638442228,
+    "width": 701.0,
+    "height": 430.0,
+    "transform": "translate(8842.802326756691 4047.989638442228) rotate(0 350.64545454545464 215)",
+    "source_id": "RS-058",
+    "image_use_id": "RIU-058",
+    "region_id": "R06",
+    "description": "Connection multiplexing: many logical operations over a small connection pool.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-058__8cabecd3e9.png",
+    "pixel_width": 897,
+    "pixel_height": 550,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      },
+      {
+        "text_id": "FT-033",
+        "text": "atomic counters, race conditions with idatabase"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-751a5f4b75d21512e47da8285f06161af3b3f198",
+    "sha256": "1eddfcf6b08e69f2dc0cd8992d02aed1a9788d55be86eedd52b253b11e1f6d6e",
+    "x": 11226.552398327523,
+    "y": 4160.964901360621,
+    "width": 897.0,
+    "height": 466.0,
+    "transform": "translate(11226.552398327523 4160.964901360621) rotate(0 448.5 233)",
+    "source_id": "RS-059",
+    "image_use_id": "RIU-059",
+    "region_id": "R06",
+    "description": "IDistributedCache value-storage example.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-059__1eddfcf6b0.png",
+    "pixel_width": 897,
+    "pixel_height": 466,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-dcb6041ba99189d7a74f462fad3a28b2bed32ebe",
+    "sha256": "8892515b3b2ce6e90bf60413c4211afcce82f9ab2b1bb67366efb2b458747d51",
+    "x": 2916.171343329075,
+    "y": 4165.266142153054,
+    "width": 947.0,
+    "height": 261.0,
+    "transform": "translate(2916.171343329075 4165.266142153054) rotate(0 473.5 130.5)",
+    "source_id": "RS-060",
+    "image_use_id": "RIU-060",
+    "region_id": "R01",
+    "description": "Concurrency limiter may not provide meaningful Retry-After metadata.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-060__8892515b3b.png",
+    "pixel_width": 947,
+    "pixel_height": 261,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-020",
+        "text": "context.lease"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-6ae8cbf21f38b69211cdc459c3418c64bd196415",
+    "sha256": "aee258e8b35bca57152536e394ce3693fc0ed8bc3181691c9a4a399f058d3fd1",
+    "x": 10138.622167129215,
+    "y": 4322.687622398424,
+    "width": 873.0,
+    "height": 382.0,
+    "transform": "translate(10138.622167129215 4322.687622398424) rotate(0 436.5 191)",
+    "source_id": "RS-061",
+    "image_use_id": "RIU-061",
+    "region_id": "R06",
+    "description": "IDatabase as a lightweight logical Redis command surface.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-061__aee258e8b3.png",
+    "pixel_width": 873,
+    "pixel_height": 382,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-d2405dde4b6b1670bca29de8de1ef76e5fed9c4e",
+    "sha256": "2e375992ee813bb95c3aa242f5b57e5c8789b0d95c1acf724993e63358d1f01c",
+    "x": 3007.177427570441,
+    "y": 4442.609892153052,
+    "width": 733.0,
+    "height": 482.0,
+    "transform": "translate(3007.177427570441 4442.609892153052) rotate(0 366.4940378289473 241.15625)",
+    "source_id": "RS-062",
+    "image_use_id": "RIU-062",
+    "region_id": "R01",
+    "description": "Fallback Retry-After behavior when metadata is absent.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-062__2e375992ee.png",
+    "pixel_width": 924,
+    "pixel_height": 608,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-0ceb98a67719d00bc9ec14b60c086da16aaea229",
+    "sha256": "0086b1ab1bf2bde8e7d63c9563042e464cd870e628077b952536aeeb05b617c9",
+    "x": 8786.491652984934,
+    "y": 4489.529320981908,
+    "width": 909.0,
+    "height": 392.0,
+    "transform": "translate(8786.491652984934 4489.529320981908) rotate(0 454.5 196)",
+    "source_id": "RS-063",
+    "image_use_id": "RIU-063",
+    "region_id": "R06",
+    "description": "Comparison of multiplexer/IDatabase with HttpClientFactory/HttpClient.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-063__0086b1ab1b.png",
+    "pixel_width": 909,
+    "pixel_height": 392,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-033",
+        "text": "atomic counters, race conditions with idatabase"
+      },
+      {
+        "text_id": "FT-034",
+        "text": "and idistributedcache"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-d5b989884a9d7dee25d67da5eaeace20b0977f89",
+    "sha256": "d3ff1abd0561004a2f445b89aa818ce8b28008150b3f55660075d3b6fd2a7bdf",
+    "x": 10149.344355443016,
+    "y": 4718.965434084634,
+    "width": 896.0,
+    "height": 465.0,
+    "transform": "translate(10149.344355443016 4718.965434084634) rotate(0 448 232.5)",
+    "source_id": "RS-064",
+    "image_use_id": "RIU-064",
+    "region_id": "R06",
+    "description": "IDatabase command examples and logical database selection.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-064__d3ff1abd05.png",
+    "pixel_width": 896,
+    "pixel_height": 465,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-026",
+        "text": "multiplexer"
+      },
+      {
+        "text_id": "FT-024",
+        "text": "multiplexer + idatabase"
+      },
+      {
+        "text_id": "FT-023",
+        "text": "redis through idistributed cache vs"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-1a5c366f8c5451b7d6129380c5f8b55564020b2b",
+    "sha256": "35c47ca35b5cce7cd22260bd2f9b3856687e56ad139b4d8de15279700c4c695b",
+    "x": 8829.42879508381,
+    "y": 4900.629125199908,
+    "width": 863.0,
+    "height": 463.0,
+    "transform": "translate(8829.42879508381 4900.629125199908) rotate(0 431.30657284503445 231.53846153846155)",
+    "source_id": "RS-065",
+    "image_use_id": "RIU-065",
+    "region_id": "R06",
+    "description": "End-to-end multiplexer and IDatabase request flow.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-065__35c47ca35b.png",
+    "pixel_width": 896,
+    "pixel_height": 481,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-033",
+        "text": "atomic counters, race conditions with idatabase"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-034",
+        "text": "and idistributedcache"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      },
+      {
+        "text_id": "FT-037",
+        "text": "one gets  5"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-620655143a6cbc9778e4474d8cd498c2801a02a2",
+    "sha256": "7f84987e6233c2e064f97863ae9eb60b8045694de4631e1d4d786c26229d7efc",
+    "x": 6918.3371360047195,
+    "y": 4922.012586145947,
+    "width": 975.0,
+    "height": 315.0,
+    "transform": "translate(6918.3371360047195 4922.012586145947) rotate(0 487.5 157.5)",
+    "source_id": "RS-066",
+    "image_use_id": "RIU-066",
+    "region_id": "R08",
+    "description": "Layered architecture: local RateLimiter, shared Redis failed counters, and Identity lockout.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-066__7f84987e62.png",
+    "pixel_width": 975,
+    "pixel_height": 315,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-033",
+        "text": "atomic counters, race conditions with idatabase"
+      },
+      {
+        "text_id": "FT-034",
+        "text": "and idistributedcache"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-b6394026ac3557c453b8e12b612962666a41db25",
+    "sha256": "3b03914cee295ff9340ed13de967c95649587aca30c9feedad08bd53bc428cda",
+    "x": 3016.171343329075,
+    "y": 4930.0995161764895,
+    "width": 907.0,
+    "height": 214.0,
+    "transform": "translate(3016.171343329075 4930.0995161764895) rotate(0 453.5 107)",
+    "source_id": "RS-067",
+    "image_use_id": "RIU-067",
+    "region_id": "R01",
+    "description": "Lease always reports acquired/rejected; extra metadata remains optional.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-067__3b03914cee.png",
+    "pixel_width": 907,
+    "pixel_height": 214,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-e1f48ed183b72221c836b3a5e398972b32bda3f6",
+    "sha256": "0495693a3c63562d99412c85fd9a6a43b03d431fc249c22bfca9d607d96246c1",
+    "x": 3038.83809137595,
+    "y": 5170.099394106177,
+    "width": 939.0,
+    "height": 286.0,
+    "transform": "translate(3038.83809137595 5170.099394106177) rotate(0 469.5 143)",
+    "source_id": "RS-068",
+    "image_use_id": "RIU-068",
+    "region_id": "R01",
+    "description": "Custom metadata generally requires a custom limiter or response-side fallback logic.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-068__0495693a3c.png",
+    "pixel_width": 939,
+    "pixel_height": 286,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-9f0d3167e4903520381ca2734bdb0256f5b3ee68",
+    "sha256": "2c81cfaf013ba0ce01b0ae8ac6562cd1541628eba647504a22c6361221e4d2ad",
+    "x": 10743.03122812524,
+    "y": 5261.002979645209,
+    "width": 667.0,
+    "height": 482.0,
+    "transform": "translate(10743.03122812524 5261.002979645209) rotate(0 333.3504977876105 241.15625)",
+    "source_id": "RS-069",
+    "image_use_id": "RIU-069",
+    "region_id": "R06",
+    "description": "IDistributedCache strengths and why it is a poor fit for atomic rate counters.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-069__2c81cfaf01.png",
+    "pixel_width": 781,
+    "pixel_height": 565,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      },
+      {
+        "text_id": "FT-037",
+        "text": "one gets  5"
+      },
+      {
+        "text_id": "FT-038",
+        "text": "another sets  5 +1"
+      },
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-cd8be72a792655ad50332c3b049e31b4cd077769",
+    "sha256": "682cf03d17f9cee862e6050b6a950b2385208942a944feefa7213c3c49847ade",
+    "x": 8825.748110191464,
+    "y": 5382.039459860362,
+    "width": 911.0,
+    "height": 210.0,
+    "transform": "translate(8825.748110191464 5382.039459860362) rotate(0 455.5 105)",
+    "source_id": "RS-070",
+    "image_use_id": "RIU-070",
+    "region_id": "R02",
+    "description": "Global limiter plus endpoint-specific policies.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-070__682cf03d17.png",
+    "pixel_width": 911,
+    "pixel_height": 210,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-033",
+        "text": "atomic counters, race conditions with idatabase"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      },
+      {
+        "text_id": "FT-037",
+        "text": "one gets  5"
+      },
+      {
+        "text_id": "FT-034",
+        "text": "and idistributedcache"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-427b4f1eadc797d84e8110b3741dea6023492eef",
+    "sha256": "f6c306ccae3dd3cbef6802dbcc8474aeceb16bbdc604bc2301bc08d9b4ff70fa",
+    "x": 5244.195631763545,
+    "y": 5478.138161287063,
+    "width": 794.0,
+    "height": 546.0,
+    "transform": "translate(5244.195631763545 5478.138161287063) rotate(0 396.80119416187523 272.9856990719611)",
+    "source_id": "RS-071",
+    "image_use_id": "RIU-071",
+    "region_id": "R02",
+    "description": "Global partitioned limiter code.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-071__f6c306ccae.png",
+    "pixel_width": 939,
+    "pixel_height": 646,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-fb5094430656bf2d3fea41191c5eb354b7f56d34",
+    "sha256": "239c25e5c3bee81c92f7f93f2246f9e951a8306b0c97721ba183e99c2d4e1009",
+    "x": 3058.004839422825,
+    "y": 5712.099455141333,
+    "width": 938.0,
+    "height": 466.0,
+    "transform": "translate(3058.004839422825 5712.099455141333) rotate(0 469 233)",
+    "source_id": "RS-072",
+    "image_use_id": "RIU-072",
+    "region_id": "R01",
+    "description": "Possible lease metadata fields and their optional nature.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-072__239c25e5c3.png",
+    "pixel_width": 938,
+    "pixel_height": 466,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-4818ccb55838440e01d9c0c3f74a426f58a3bfd0",
+    "sha256": "f68c14119526c5002684370da0ac0984d9700c0452a9dde2135562a7be14f007",
+    "x": 10667.299751898336,
+    "y": 5744.180416118421,
+    "width": 801.0,
+    "height": 482.0,
+    "transform": "translate(10667.299751898336 5744.180416118421) rotate(0 400.66860322896264 241.15625)",
+    "source_id": "RS-073",
+    "image_use_id": "RIU-073",
+    "region_id": "R06",
+    "description": "Decision guide for StackExchange.Redis versus IDistributedCache.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-073__f68c141195.png",
+    "pixel_width": 849,
+    "pixel_height": 511,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-035",
+        "text": "this is about data being lost,"
+      },
+      {
+        "text_id": "FT-036",
+        "text": "multiple concurrent requests"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-4a75181cc8050f2d16fc97d4c176394bbfa6f18c",
+    "sha256": "52794f12617813cad133e95f03e1d348de924d0e55bf67f86e482319b3a7f9d0",
+    "x": 5247.5119497547585,
+    "y": 6039.823845145265,
+    "width": 717.0,
+    "height": 430.0,
+    "transform": "translate(5247.5119497547585 6039.823845145265) rotate(0 358.7228260869565 215)",
+    "source_id": "RS-074",
+    "image_use_id": "RIU-074",
+    "region_id": "R02",
+    "description": "Chaining multiple limiters so all must succeed.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-074__52794f1261.png",
+    "pixel_width": 921,
+    "pixel_height": 552,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a863ca97a5148f29f4e20e70de8fa1ecfb4d2666",
+    "sha256": "3e768f7f0cfac4b271dfc3ac0a2bd2ece08c062d8a19b56e0483b99c040591df",
+    "x": 3099.5605340029033,
+    "y": 6189.615444899051,
+    "width": 922.0,
+    "height": 459.0,
+    "transform": "translate(3099.5605340029033 6189.615444899051) rotate(0 461 229.5)",
+    "source_id": "RS-075",
+    "image_use_id": "RIU-075",
+    "region_id": "R01",
+    "description": "What ASP.NET Core exposes through RateLimitLease metadata.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-075__3e768f7f0c.png",
+    "pixel_width": 922,
+    "pixel_height": 459,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-4b31316a88d438ca6f3ad17535df57ccef560813",
+    "sha256": "bd2a84b1c017e416542f2669caae4dff99e96f5a2b267942c2d04b14f9b197c0",
+    "x": 10704.00940853484,
+    "y": 6213.747107435216,
+    "width": 868.0,
+    "height": 424.0,
+    "transform": "translate(10704.00940853484 6213.747107435216) rotate(0 434 212)",
+    "source_id": "RS-076",
+    "image_use_id": "RIU-076",
+    "region_id": "R06",
+    "description": "Shared Redis mental model: multiplexer, IDatabase, and IDistributedCache.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-076__bd2a84b1c0.png",
+    "pixel_width": 868,
+    "pixel_height": 424,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-041",
+        "text": ""
+      },
+      {
+        "text_id": "FT-040",
+        "text": "we have 6 instead of 7"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-3fbcd7914901abbf57587c2a3aba9dbb0c73c533",
+    "sha256": "545c0f917a6a9bddd3a92bda2be4c51b22c8ae6e52586479f0ab6449043ab8c2",
+    "x": 8777.756284784951,
+    "y": 6390.502213687245,
+    "width": 920.0,
+    "height": 417.0,
+    "transform": "translate(8777.756284784951 6390.502213687245) rotate(0 460 208.5)",
+    "source_id": "RS-077",
+    "image_use_id": "RIU-077",
+    "region_id": "R07",
+    "description": "Atomic counter and transaction flow with IDatabase.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-077__545c0f917a.png",
+    "pixel_width": 920,
+    "pixel_height": 417,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-041",
+        "text": ""
+      },
+      {
+        "text_id": "FT-040",
+        "text": "we have 6 instead of 7"
+      },
+      {
+        "text_id": "FT-039",
+        "text": "the first sets 5 + 1"
+      },
+      {
+        "text_id": "FT-038",
+        "text": "another sets  5 +1"
+      },
+      {
+        "text_id": "FT-037",
+        "text": "one gets  5"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-0e9d048ae7b08f8ba983c8516d9c18729fc70532",
+    "sha256": "73d0bf3e95036fbcc0523f188eafa2502a43fed449f9ca8ef63f1439c711a5a9",
+    "x": 5214.687229454996,
+    "y": 6475.084351911444,
+    "width": 945.0,
+    "height": 302.0,
+    "transform": "translate(5214.687229454996 6475.084351911444) rotate(0 472.5 151)",
+    "source_id": "RS-078",
+    "image_use_id": "RIU-078",
+    "region_id": "R02",
+    "description": "Code that composes fixed-window and concurrency limiters.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-078__73d0bf3e95.png",
+    "pixel_width": 945,
+    "pixel_height": 302,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a6de951e7679d670e163a78e9a6ca8fb0a6df14c",
+    "sha256": "85c947dd4e2814c85f6aa06607883c4f38dbbdfe7cbea65d4bd5bb2b8cd55e68",
+    "x": 10784.238043366326,
+    "y": 6619.413258896349,
+    "width": 639.0,
+    "height": 312.0,
+    "transform": "translate(10784.238043366326 6619.413258896349) rotate(0 319.5 156)",
+    "source_id": "RS-079",
+    "image_use_id": "RIU-079",
+    "region_id": "R07",
+    "description": "Atomic INCR, first-hit EXPIRE, and TTL-based block checks.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-079__85c947dd4e.png",
+    "pixel_width": 639,
+    "pixel_height": 312,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      },
+      {
+        "text_id": "FT-041",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-2d99798da33f9384837e36387f4f998d0e6b840b",
+    "sha256": "ca56166a8b81e973b1bc5d95c34775fb2ecf02f02595a3e85c68a89647b9a7d9",
+    "x": 3146.726946356419,
+    "y": 6698.448841810672,
+    "width": 911.0,
+    "height": 198.0,
+    "transform": "translate(3146.726946356419 6698.448841810672) rotate(0 455.5 99)",
+    "source_id": "RS-080",
+    "image_use_id": "RIU-080",
+    "region_id": "R01",
+    "description": "Practical lease-metadata discovery.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-080__ca56166a8b.png",
+    "pixel_width": 911,
+    "pixel_height": 198,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-025",
+        "text": "retry after from lease by limiter type"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-926b4f2c3316a4a953d33ba5d24a1012a18f9647",
+    "sha256": "f44da33c34219026ee96a42462ebbdc4365d0777ceebc9432f163decd03f7e15",
+    "x": 5275.163347270286,
+    "y": 6804.157193010769,
+    "width": 685.0,
+    "height": 248.0,
+    "transform": "translate(5275.163347270286 6804.157193010769) rotate(0 342.5 124)",
+    "source_id": "RS-081",
+    "image_use_id": "RIU-081",
+    "region_id": "R02",
+    "description": "Different endpoints using different limiter policies.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-081__f44da33c34.png",
+    "pixel_width": 685,
+    "pixel_height": 248,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      },
+      {
+        "text_id": "FT-028",
+        "text": "per ip attempts"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-5805f4217b7f8b24cd91b2c022b1ff27110ee4d6",
+    "sha256": "10d350324f0ec55620cbd5fa22bdb626a96107e7595071a13769f45679da7cfb",
+    "x": 8781.763370452376,
+    "y": 6839.608091518117,
+    "width": 939.0,
+    "height": 429.0,
+    "transform": "translate(8781.763370452376 6839.608091518117) rotate(0 469.5 214.5)",
+    "source_id": "RS-082",
+    "image_use_id": "RIU-082",
+    "region_id": "R07",
+    "description": "IDatabase counter code and options for atomic multi-step operations.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-082__10d350324f.png",
+    "pixel_width": 939,
+    "pixel_height": 429,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-041",
+        "text": ""
+      },
+      {
+        "text_id": "FT-040",
+        "text": "we have 6 instead of 7"
+      },
+      {
+        "text_id": "FT-039",
+        "text": "the first sets 5 + 1"
+      },
+      {
+        "text_id": "FT-038",
+        "text": "another sets  5 +1"
+      },
+      {
+        "text_id": "FT-037",
+        "text": "one gets  5"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-931d19f3dd0c394716dbea5768dd930c91878201",
+    "sha256": "69b171c5e49c035a4104f16a3445e7e65b37fb008aecf83c38bc8cb1101b5887",
+    "x": 5278.419862531012,
+    "y": 7064.152372422404,
+    "width": 924.0,
+    "height": 172.0,
+    "transform": "translate(5278.419862531012 7064.152372422404) rotate(0 462 86)",
+    "source_id": "RS-083",
+    "image_use_id": "RIU-083",
+    "region_id": "R03",
+    "description": "Overview of controller, action, and route-group policy application.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-083__69b171c5e4.png",
+    "pixel_width": 924,
+    "pixel_height": 172,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-027",
+        "text": "so the most secure approaches"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-3c7967f11f3159125961350ec646621aa6d7641b",
+    "sha256": "4d341ff8d41a8cd8d55ec3d3e704577fb51210cd8b194c17de56f8875e63224a",
+    "x": 5319.475384178148,
+    "y": 7253.3190899517085,
+    "width": 913.0,
+    "height": 447.0,
+    "transform": "translate(5319.475384178148 7253.3190899517085) rotate(0 456.50000000000006 223.5)",
+    "source_id": "RS-084",
+    "image_use_id": "RIU-084",
+    "region_id": "R03",
+    "description": "EnableRateLimiting on a single controller action.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-084__4d341ff8d4.png",
+    "pixel_width": 913,
+    "pixel_height": 447,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      },
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a20175a603e039dff76828288a383e82c1941424",
+    "sha256": "a9045f7fe833592309dfea10380a90fd72f33812cdfa8486029053b335944bd0",
+    "x": 8804.916833847292,
+    "y": 7277.475538417531,
+    "width": 951.0,
+    "height": 482.0,
+    "transform": "translate(8804.916833847292 7277.475538417531) rotate(0 475.3940829918033 241.15625)",
+    "source_id": "RS-085",
+    "image_use_id": "RIU-085",
+    "region_id": "R07",
+    "description": "Lost-update race in naive IDistributedCache get/modify/set counters.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-085__a9045f7fe8.png",
+    "pixel_width": 962,
+    "pixel_height": 488,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-041",
+        "text": ""
+      },
+      {
+        "text_id": "FT-040",
+        "text": "we have 6 instead of 7"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-15bc698d44a94a58f944600adf7979674c848cd0",
+    "sha256": "2fdc8dacbdbe6edda61b6ea929c05a9767a8b19c589a1e9b510237a358ec679a",
+    "x": 5339.260066259072,
+    "y": 7696.773984971247,
+    "width": 840.0,
+    "height": 482.0,
+    "transform": "translate(5339.260066259072 7696.773984971247) rotate(0 420.0486512524085 241.15625)",
+    "source_id": "RS-086",
+    "image_use_id": "RIU-086",
+    "region_id": "R03",
+    "description": "EnableRateLimiting at controller scope.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-086__2fdc8dacbd.png",
+    "pixel_width": 904,
+    "pixel_height": 519,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      },
+      {
+        "text_id": "FT-029",
+        "text": "global limiter"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-8c74ad939150b375934d6c922c9c40fa5eae90e8",
+    "sha256": "ab74542ce75ceb61157f3804af168936515a426a53537ed4b4f48a57c513489e",
+    "x": 8847.310916839095,
+    "y": 7775.46514718218,
+    "width": 846.0,
+    "height": 363.0,
+    "transform": "translate(8847.310916839095 7775.46514718218) rotate(0 423 181.5)",
+    "source_id": "RS-087",
+    "image_use_id": "RIU-087",
+    "region_id": "R07",
+    "description": "Why portable atomic counters require IDatabase rather than IDistributedCache.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-087__ab74542ce7.png",
+    "pixel_width": 846,
+    "pixel_height": 363,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      },
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-93299ee5dd23b25a2355b9e95f0faa6c2824e9c2",
+    "sha256": "4716b4b8b3d31c1cce1334829dc7b5efa65e0518d3df9e96e21b27686f8b828e",
+    "x": 10225.282805529152,
+    "y": 7870.684784371786,
+    "width": 901.0,
+    "height": 418.0,
+    "transform": "translate(10225.282805529152 7870.684784371786) rotate(0 450.5 209)",
+    "source_id": "RS-088",
+    "image_use_id": "RIU-088",
+    "region_id": "R09",
+    "description": "Cache stampede definition and single-flight objective.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-088__4716b4b8b3.png",
+    "pixel_width": 901,
+    "pixel_height": 418,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      },
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-08babc80100857167c1f525c9a356fe4f616f7c0",
+    "sha256": "e094b42df589e7a831fbc204f90fc951fd66284f556c647a44afec1986dcab7e",
+    "x": 5330.086529197679,
+    "y": 8169.541329128146,
+    "width": 954.0,
+    "height": 339.0,
+    "transform": "translate(5330.086529197679 8169.541329128146) rotate(0 477 169.5)",
+    "source_id": "RS-089",
+    "image_use_id": "RIU-089",
+    "region_id": "R03",
+    "description": "DisableRateLimiting for a specific action.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-089__e094b42df5.png",
+    "pixel_width": 954,
+    "pixel_height": 339,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-57295f0b1c34ff270ecc50a4a7e4ca99a623cd0e",
+    "sha256": "2b5663616a0c842ba70be81686611c4a66cc67a026e7937f3461a01229d616ab",
+    "x": 10227.480673035156,
+    "y": 8302.893627058025,
+    "width": 783.0,
+    "height": 482.0,
+    "transform": "translate(10227.480673035156 8302.893627058025) rotate(0 391.52974179536704 241.15625)",
+    "source_id": "RS-090",
+    "image_use_id": "RIU-090",
+    "region_id": "R09",
+    "description": "Per-process versus distributed stampede protection and leader/waiter behavior.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-090__2b5663616a.png",
+    "pixel_width": 841,
+    "pixel_height": 518,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      },
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      },
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-cbab6d0e18d50f997c6c148f847579738d012e0b",
+    "sha256": "bf37016a52cc840ac95ed73bab9ba68b483cd7844587c9767a9895188cd1bd9e",
+    "x": 5356.1073818894765,
+    "y": 8537.758373050203,
+    "width": 850.0,
+    "height": 482.0,
+    "transform": "translate(5356.1073818894765 8537.758373050203) rotate(0 424.7889908256881 241.15625)",
+    "source_id": "RS-091",
+    "image_use_id": "RIU-091",
+    "region_id": "R03",
+    "description": "Applying policies to mapped controllers or route groups.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-091__bf37016a52.png",
+    "pixel_width": 960,
+    "pixel_height": 545,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      },
+      {
+        "text_id": "FT-030",
+        "text": "multiple limiters for one policy"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a719634a6a04a5b35f6a75c1f84910bca602c6ba",
+    "sha256": "be39c62c9e2d24e3726dc82f528dc0cd67c2fe72f91c591edec8d6844f941d82",
+    "x": 10364.152354464375,
+    "y": 8902.518879169338,
+    "width": 239.0,
+    "height": 34.0,
+    "transform": "translate(10364.152354464375 8902.518879169338) rotate(0 119.5 17)",
+    "source_id": "RS-092",
+    "image_use_id": "RIU-092",
+    "region_id": "X01",
+    "description": "Reviewed browser/tab title fragment; no domain content beyond surrounding source context.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "reviewed-explicit-boundary-fragment",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-092__be39c62c9e.png",
+    "pixel_width": 239,
+    "pixel_height": 34,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      },
+      {
+        "text_id": "FT-044",
+        "text": "2 multiple with redis lock"
+      },
+      {
+        "text_id": "FT-043",
+        "text": "1 single instance"
+      },
+      {
+        "text_id": "FT-042",
+        "text": "stampede protection,"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-71ba6e28688866777029ae18fe2a5968cc037bc7",
+    "sha256": "7b991b07fc1a9aa34a205d6a6634854f84ec83f2521cc76ed8c62a5ceb19854c",
+    "x": 5916.269242362172,
+    "y": 10018.509269451248,
+    "width": 879.0,
+    "height": 477.0,
+    "transform": "translate(5916.269242362172 10018.509269451248) rotate(0 439.5 238.5)",
+    "source_id": "RS-093",
+    "image_use_id": "RIU-093",
+    "region_id": "R08",
+    "description": "Built-in limiter state is stored in local in-memory limiter instances.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-093__7b991b07fc.png",
+    "pixel_width": 879,
+    "pixel_height": 477,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c72905b52d2d88ddb7a03fd682e2aff0c12daa3d",
+    "sha256": "cf2aa66d1486c483fca037a11afb507b2ecac018f92fa8a840f9f68d2e69fc83",
+    "x": 3878.747952246487,
+    "y": 10490.042914501506,
+    "width": 878.0,
+    "height": 482.0,
+    "transform": "translate(3878.747952246487 10490.042914501506) rotate(0 438.9043750000001 241.15625)",
+    "source_id": "RS-094",
+    "image_use_id": "RIU-094",
+    "region_id": "R08",
+    "description": "Why synchronous partition factories are a poor place for asynchronous Redis calls.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-094__cf2aa66d14.png",
+    "pixel_width": 910,
+    "pixel_height": 500,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-748776328343b551bbe37f0cdbe96b84cd6e4506",
+    "sha256": "7f5693f14b5231c015bd4f9876bcedcf3667c375ec0063b4fc493fb6f8639db8",
+    "x": 5936.2222730549865,
+    "y": 10505.968890186463,
+    "width": 875.0,
+    "height": 375.0,
+    "transform": "translate(5936.2222730549865 10505.968890186463) rotate(0 437.5 187.5)",
+    "source_id": "RS-095",
+    "image_use_id": "RIU-095",
+    "region_id": "R08",
+    "description": "Limiter counters/tokens are ordinary in-process object fields, not implicit global static state.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-095__7f5693f14b.png",
+    "pixel_width": 875,
+    "pixel_height": 375,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-fa81a363b41a31cadee7a66d3373509cbc26de93",
+    "sha256": "f7b160ee669cc8b9bf794d05c5873209103b1e13defb40cbf2bd7dc9887f7f99",
+    "x": 5973.182222258465,
+    "y": 10938.160497543771,
+    "width": 893.0,
+    "height": 482.0,
+    "transform": "translate(5973.182222258465 10938.160497543771) rotate(0 446.3548086481113 241.15625)",
+    "source_id": "RS-096",
+    "image_use_id": "RIU-096",
+    "region_id": "R08",
+    "description": "Multi-instance local limits versus shared Redis-backed global state.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-096__f7b160ee66.png",
+    "pixel_width": 931,
+    "pixel_height": 503,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-9044c0c0ab2ad8881f262b9b115b786b646bdd64",
+    "sha256": "40b5cc5eba6521545c18aa9201ae554714fde4f4c07e623c9ba15194520d9aa9",
+    "x": 3896.152327246487,
+    "y": 10994.199225536662,
+    "width": 819.0,
+    "height": 202.0,
+    "transform": "translate(3896.152327246487 10994.199225536662) rotate(0 409.5 101)",
+    "source_id": "RS-097",
+    "image_use_id": "RIU-097",
+    "region_id": "R08",
+    "description": "Recommended split: RateLimiter for request throttling and Redis for stateful account lockout.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-097__40b5cc5eba.png",
+    "pixel_width": 819,
+    "pixel_height": 202,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-032",
+        "text": "what lease CAN include, how to discover it"
+      },
+      {
+        "text_id": "FT-031",
+        "text": "applying limiters via attributes"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-85fc303fa54042900d25bfd634fcf96c203e8325",
+    "sha256": "b8a2a58e67eea455964f74a886966612ca2ebd15e955d17581cb0576966306f6",
+    "x": 5992.634986689028,
+    "y": 11470.221232697257,
+    "width": 1007.0,
+    "height": 383.0,
+    "transform": "translate(5992.634986689028 11470.221232697257) rotate(0 503.5 191.5)",
+    "source_id": "RS-098",
+    "image_use_id": "RIU-098",
+    "region_id": "R08",
+    "description": "Why not every request decision should depend on Redis; layered protection architecture.",
+    "previously_present": false,
+    "restored": true,
+    "coverage_status": "processed-semantic-transcript",
+    "assignment_count": 1,
+    "asset_path": "assets/source-images-complete-v002/RS-098__b8a2a58e67.png",
+    "pixel_width": 1007,
+    "pixel_height": 383,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "FT-048",
+        "text": "how ratelimiter behaves with multiple instances"
+      },
+      {
+        "text_id": "FT-047",
+        "text": "where does ratelimiter stores attempt counts"
+      },
+      {
+        "text_id": "FT-049",
+        "text": "accessing redis in ratelimiter"
+      },
+      {
+        "text_id": "FT-046",
+        "text": "some lua script shit, not interested rught now"
+      },
+      {
+        "text_id": "FT-045",
+        "text": "closer to end about redis lock and redlock for stronger guarantee"
+      }
+    ]
+  }
+]
