@@ -1,0 +1,111 @@
+﻿text_id,text,x,y,font_size,sha256,region_id,node_kind,coverage_status,assignment_count
+T-001,put/patch,2997.3674390596098,155.26709916178336,164.88887532552027px,532fecef3d0034424d47a58ebb2b1cadee42a1172c662d431fbf055a5282143d,R01,semantic,processed-semantic-transcript,1
+T-002,put and patch idempotency,2892.481451837197,1283.518005002222,101.066650390625px,15ac0c04b0adb2a55ccfb7b53b0f77ed1b259a4c33de4097421c18c4e8fafedc,R01,semantic,processed-semantic-transcript,1
+T-003,status codes for put and patch,3117.0452836454438,3531.4815103625733,70.42427201704561px,2e7df3bb5020a57c27fcbfeae316f2334b16733e617db35f7f0e789ac3c4a4db,R01,semantic,processed-semantic-transcript,1
+T-004,!!!,2684.7366774123666,4184.946051669864,100.59255642361094px,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R01,semantic,processed-semantic-transcript,1
+T-005,put,3189.459612206287,4409.21365217833,84.8205003004812px,373cb2c6d4fe2778441d4f0266505b699fa518d002e5793b87f9b48836de3f62,R01,semantic,processed-semantic-transcript,1
+T-006,upsert,4739.236727098994,4546.069926112726,169.33331298828116px,4e3b92fce522aba8776072e73c107121ae9661c7787db93111edeaba3d275062,R01,semantic,processed-semantic-transcript,1
+T-007,about formats and theory in general,2141.4333716532924,5756.0911619291865,128.19046456473183px,b73c561c71246435f6708215223b7109a531be62af2df5ecc1545212c18dd0e6,R01,semantic,processed-semantic-transcript,1
+T-008,"client cant know what id will be assigned to resource, then it cant do put request with id of resource",4795.462500079977,5845.142319156978,20px,92ec9f1fdb972191fde222687cfa200c3d07e16a3d952a7e89a32697ceea5ec3,R01,semantic,processed-semantic-transcript,1
+T-009,"that doesnt exist and create resource with the id the client provided , because the client doesnt provide id here",4795.462500079977,5870.142319156978,20px,012df53ba9022b58c4a97d0c4d208cd9af852d7087854906f9933a826154dd01,R01,semantic,processed-semantic-transcript,1
+T-010,some additional notes,4743.030756467604,6686.123388411794,81.71428571428585px,689dfa8087344e53d1c4b510abcad49de575fef7d125c7265817940beaa83504,R01,semantic,processed-semantic-transcript,1
+T-011,IF CLIENT CREATES IDS AND API ALLOWS UPSERT,4809.186105772875,7609.556903140538,20px,7c37f5ef0ddcbcbc1ceec8c8d17c84c49b006ac6522757af64f4a9779fe0fe4b,R01,semantic,processed-semantic-transcript,1
+T-012,THERE IS A POSSIBLE SITUATION WHEN  CLIENT SEND PUT REQUEST,4809.186105772875,7634.556903140538,20px,fa1e7470a0d6b7ace1c7de9ac5d810d8145a2de0bf2996258cfc2c508e57f7ff,R01,semantic,processed-semantic-transcript,1
+T-013,"BUT HE DOESNT WANT TO  OVERWRITE EXISTING ID, SO HE SENDS WITH",4809.186105772875,7659.556903140538,20px,7a132793e82e5684a895f246df3b8bf485b918aceed833541abf2cb513c7ac10,R01,semantic,processed-semantic-transcript,1
+T-014,IF-NONE-MATCH:* SO IF THE RESOURCE EXISTS IN ANY VERSION - THERE WOULD BE,4809.186105772875,7684.556903140538,20px,dd868ba5ab85740789cf56b5acfd4069eaef071b438e25cb8b659d3434d0d06c,R01,semantic,processed-semantic-transcript,1
+T-015,NO UPDATE,4809.186105772875,7709.556903140538,20px,389f366470a473bd856d2f2c2495c4070be5f4e5a6e8293dd5b7e7c2103c914f,R01,semantic,processed-semantic-transcript,1
+T-016,but framework will,2446.849556719778,10157.445804589097,20px,2817bc5198fc291fdecaef332e95432d5bdba6c1d09748a0f29ff5f63867f29e,R01,semantic,processed-semantic-transcript,1
+T-017,set null to this,2446.849556719778,10182.445804589097,20px,75830dbbc5ee70d38ef1bebb01b35981848607d423738b5a10bba05a08e58e30,R01,semantic,processed-semantic-transcript,1
+T-018,MANUAL PATCH,3007.497092194989,10867.694485778498,20px,ee7283393bac246c0ad17319f7d3a608c9a04d347a8e7899146728873908f093,R02,semantic,processed-semantic-transcript,1
+T-019,JSONEL                   JSONDOC              OPTIONAL WITH JSONCONVERTER,3007.497092194989,10892.694485778498,20px,c7f8e2ca01cdd93ff914970618ac252c5d6087925b3203708954af592c219b7a,R02,semantic,processed-semantic-transcript,1
+T-020,patch with convetion of optional,4158.135102939682,12692.594363238803,97.86660156250004px,caabc4fc12874b86bc34e6441a1c6f464d15eab72c04addfcf0dc15634b58b94,R03,semantic,processed-semantic-transcript,1
+T-021,via json manipulations,406.71686954768575,12709.955322343147,20px,c38caf258e383be8ae670f59c7c5cf777487d28540a67464b9c1a16500b790b2,R02,semantic,processed-semantic-transcript,1
+T-022,jsonel<--patch via jsonpatch document newtonsoft,2992.010617472949,12786.102467503584,29.2121027166198px,9241939fc04ae7eb29400f61db6b9a41d1aa3707e0468d95065ebf6b94c29f9c,R02,semantic,processed-semantic-transcript,1
+T-023,,2992.010617472949,12822.617595899359,29.2121027166198px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-024,.net 10 text.json<-- lower,2992.010617472949,12859.132724295134,29.2121027166198px,df692b7b152de4a71b0f1356b62e44cf066d356f23ee3e10bab0cc8db568f0f3,R02,semantic,processed-semantic-transcript,1
+T-025,public readonly struct Optional<T>,5725.340584638747,12992.906339978876,20px,cc8bcf54d9922005702cecf7fad38fe610467287581e54b0920600517bde56fa,R03,semantic,processed-semantic-transcript,1
+T-026,{,5725.340584638747,13017.906339978876,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-027,public bool IsSet { get; },5725.340584638747,13042.906339978876,20px,55d9008c1c5ec996b794f0c6afea30e47392ed2b0ace3069be9d5c6bf1aecabf,R03,semantic,processed-semantic-transcript,1
+T-028,public T? Value { get; },5725.340584638747,13067.906339978876,20px,23393aa2a5200d6bc0b7797462b9fa5909b305d1ba4697542abbed1e6ca44c24,R03,semantic,processed-semantic-transcript,1
+T-029,,5725.340584638747,13092.906339978876,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-030,public Optional(T? value),5725.340584638747,13117.906339978876,20px,941862183d426d80fba98901fbf8217171fa11aed86d4eecf15a66f1cc242701,R03,semantic,processed-semantic-transcript,1
+T-031,{,5725.340584638747,13142.906339978876,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-032,IsSet = true;,5725.340584638747,13167.906339978876,20px,1e28c1f290f500b42767bdd3f0140bfd8fe746fcf9878a569d77f3edd051b900,R03,semantic,processed-semantic-transcript,1
+T-033,Value = value;,5725.340584638747,13192.906339978876,20px,c66991f50dd0b1402616a9bb9654080762f0b8b8b5d79825b1f5ff1e4ff37fb7,R03,semantic,processed-semantic-transcript,1
+T-034,},5725.340584638747,13217.906339978876,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-035,,5725.340584638747,13242.906339978876,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-036,"public override string ToString() => IsSet ? $""Set({Value})"" : ""Unset"";",5725.340584638747,13267.906339978876,20px,cb32aa7db44963fc9f94b0852a48671e158edaa7ad4718cec4a8ef20b828942f,R03,semantic,processed-semantic-transcript,1
+T-037,},5725.340584638747,13292.906339978876,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-038,doesnt wokr with,2793.9373356200404,13432.359375212855,20px,bd2d4e37330b2d20259b68e152e33dd981a73987a2e4721b54445e13e9438de1,R04,semantic,processed-semantic-transcript,1
+T-039,typed things,2793.9373356200404,13457.359375212855,20px,1f20edcbd3cbd4bc6b83d01216d806d9cbbc7c2523b3c52f329ca8c0f2c23886,R04,semantic,processed-semantic-transcript,1
+T-040,public sealed class OptionalJsonConverterFactory : JsonConverterFactory,5716.006966474684,13494.239897107782,20px,59e5511d2ab45c4e7b577d631c29fc5e4e8cd88f6de1b085a7faf3651292c84f,R03,semantic,processed-semantic-transcript,1
+T-041,{,5716.006966474684,13519.239897107782,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-042,public override bool CanConvert(Type typeToConvert) =>,5716.006966474684,13544.239897107782,20px,0ab42e48fa40872bd9b8b8994d38bd44e9cee620eb9dfc752e205f1c70f35a85,R03,semantic,processed-semantic-transcript,1
+T-043,typeToConvert.IsGenericType && typeToConvert.GetGenericTypeDefinition() == typeof(Optional<>);,5716.006966474684,13569.239897107782,20px,a6ff4e7e75da227d0acf34faae48b16c0653afd9caee2340368e563fec422a71,R03,semantic,processed-semantic-transcript,1
+T-044,,5716.006966474684,13594.239897107782,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-045,"public override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)",5716.006966474684,13619.239897107782,20px,fc5f85ad050ea31fd4c99788bd29092a4af587bdca990237b89abefd4bba04ef,R03,semantic,processed-semantic-transcript,1
+T-046,{,5716.006966474684,13644.239897107782,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-047,var innerType = typeToConvert.GetGenericArguments()[0];,5716.006966474684,13669.239897107782,20px,6ebe4e9abe82e74be875dbb71f9481a63fa8d92da5cab57b12b1fda15ba45545,R03,semantic,processed-semantic-transcript,1
+T-048,var converterType = typeof(OptionalJsonConverter<>).MakeGenericType(innerType);,5716.006966474684,13694.239897107782,20px,f8c798a311000275acdacdff8eab2045e250ad06254610640e3be6ce855ba978,R03,semantic,processed-semantic-transcript,1
+T-049,return (JsonConverter)Activator.CreateInstance(converterType)!;,5716.006966474684,13719.239897107782,20px,44488104b2b9bb51d93d61b7521f96e2d190af721c9e2eee04a66d2506c531b6,R03,semantic,processed-semantic-transcript,1
+T-050,},5716.006966474684,13744.239897107782,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-051,,5716.006966474684,13769.239897107782,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-052,private sealed class OptionalJsonConverter<T> : JsonConverter<Optional<T>>,5716.006966474684,13794.239897107782,20px,cd37bdf7125d9f7418a9885f06b0dd03804689dd7611849a8a805f1982bfd5b6,R03,semantic,processed-semantic-transcript,1
+T-053,{,5716.006966474684,13819.239897107782,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-054,"public override Optional<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)",5716.006966474684,13844.239897107782,20px,11537328fa597ed13d04e35e3265ef6ca5fe186d1a9a51e47f84efd407a62cb8,R03,semantic,processed-semantic-transcript,1
+T-055,{,5716.006966474684,13869.239897107782,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-056,"// Called only if the JSON property is PRESENT. If property is absent, Optional<T> remains default (IsSet=false).",5716.006966474684,13894.239897107782,20px,72f1649cf915d04e837b7faeb40deaf3c3669a6595f79c4b13c39233d30f8eac,R03,semantic,processed-semantic-transcript,1
+T-057,if (reader.TokenType == JsonTokenType.Null),5716.006966474684,13919.239897107782,20px,7ac5402c116691dd3c2052acace377eeae20f08bb8c14db92c6351c725d20dd4,R03,semantic,processed-semantic-transcript,1
+T-058,return new Optional<T>(default);,5716.006966474684,13944.239897107782,20px,c9e329928c50ce2c0c0ebceb3cef875ac12c080f4e55b3902e081f307ca12d34,R03,semantic,processed-semantic-transcript,1
+T-059,,5716.006966474684,13969.239897107782,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-060,"var value = JsonSerializer.Deserialize<T>(ref reader, options);",5716.006966474684,13994.239897107782,20px,c04f921ec0d3963218a10d9494b1830fa7249e0ac358b1410393db8bd3c70fc2,R03,semantic,processed-semantic-transcript,1
+T-061,return new Optional<T>(value);,5716.006966474684,14019.239897107782,20px,95fd3b1f05cb694028112e2d887c6af0bd7d0dafcc86ddf6a06d9d7f79ec477c,R03,semantic,processed-semantic-transcript,1
+T-062,},5716.006966474684,14044.239897107782,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-063,,5716.006966474684,14069.239897107782,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-064,"public override void Write(Utf8JsonWriter writer, Optional<T> value, JsonSerializerOptions options)",5716.006966474684,14094.239897107782,20px,e4ca39920a174c3a1e750a7b6998f1c9cf7fc2396399cd2993b7944feaca50b9,R03,semantic,processed-semantic-transcript,1
+T-065,{,5716.006966474684,14119.239897107782,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-066,// Not typically needed for request DTOs. Implemented for completeness.,5716.006966474684,14144.239897107782,20px,877c556ee2ce5e5837fc25e8991b4228b01e13ea12b5c27ed9b09f5a7a3d2eab,R03,semantic,processed-semantic-transcript,1
+T-067,if (!value.IsSet),5716.006966474684,14169.239897107782,20px,36cba48f1fc624f06f39a837b9a543e5486c0297c83cf76c452f3e88033fa757,R03,semantic,processed-semantic-transcript,1
+T-068,{,5716.006966474684,14194.239897107782,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R03,semantic,processed-semantic-transcript,1
+T-069,writer.WriteNullValue();,5716.006966474684,14219.239897107782,20px,4452bfe87e7b07237d21f9f362e0a22da1dfdad67561bfe2504a06f849cc6003,R03,semantic,processed-semantic-transcript,1
+T-070,return;,5716.006966474684,14244.239897107782,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R03,semantic,processed-semantic-transcript,1
+T-071,},5716.006966474684,14269.239897107782,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-072,,5716.006966474684,14294.239897107782,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-073,"JsonSerializer.Serialize(writer, value.Value, options);",5716.006966474684,14319.239897107782,20px,5f341b570d58ccc082f09bb224d51662f6f7499c75add5956ee61e79cfbf46db,R03,semantic,processed-semantic-transcript,1
+T-074,},5716.006966474684,14344.239897107782,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-075,},5716.006966474684,14369.239897107782,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-076,},5716.006966474684,14394.239897107782,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-077,with this need newtonsoft json,2929.1584668560517,14451.905639046865,20px,f9ec7c20b292d1237219d5dce53a751cc6ff8b929b478b05001e67f108c493c3,R05,semantic,processed-semantic-transcript,1
+T-078,"Can get updated object, but default output media type for our api has switched to xml",2881.2833434973836,14904.592700794256,20px,f53f62aa39c947893f4bf5ff7d3553dd59fab1714e589238f9adef7fc5cd1873,R05,semantic,processed-semantic-transcript,1
+T-079,somehow,2881.2833434973836,14929.592700794256,20px,cd8736cdd6b052cfd09abdb1976f8cacdf4884e973bc32c752ef8413dc6028cb,R05,semantic,processed-semantic-transcript,1
+T-080,system.text.json is first formatter,2989.611490407585,15742.521587619238,20px,5496ce2ec6d635f772e9f918ac657c81b82a9566ae81669f623b524c1d4f20d0,R05,semantic,processed-semantic-transcript,1
+T-081,"we have changed it to newtonsoftjson,",2989.611490407585,15767.521587619238,20px,628f1f8e43b9385ce3c502cbf144c5c834ccb94d57a9166a47accdace77c1fa7,R05,semantic,processed-semantic-transcript,1
+T-082,so the first formatter is xml formatter,2989.611490407585,15792.521587619238,20px,ff3079f086985e6f3849d241f9d4fa91306c5ee0ed6292150889e7f5d6ebdfef,R05,semantic,processed-semantic-transcript,1
+T-083,ADD TO CONTENT NEGOTIATIONS ALL THIS,2708.181881268534,15896.147149104323,45.142857142858006px,208e58a2d78a9945bf85ab7268f166bd984fb941ab5685a279428990878dd453,R05,semantic,processed-semantic-transcript,1
+T-084,then its being ovveriden,2652.9814298076017,16100.10400520165,20px,dd08dc217fc3314ea554483a50488f04410a64db8e12432bf08142e7a7bacca5,R05,semantic,processed-semantic-transcript,1
+T-085,by json.net,2652.9814298076017,16125.10400520165,20px,fd697b79f14fde09fb9c39a2f18f52f00f53e12109fa3d5cbe68962decc04145,R05,semantic,processed-semantic-transcript,1
+T-086,so xml is the first formatter,2652.9814298076017,16150.10400520165,20px,c51a47de3f61853f88af46f76c7930f03aaeec4e5fa6546ddb09f708cd7a46ba,R05,semantic,processed-semantic-transcript,1
+T-087,and the default one,2652.9814298076017,16175.10400520165,20px,f527e75d395880797ea782f719b8c4450eadddf53bee201e1cc95a56843090e1,R05,semantic,processed-semantic-transcript,1
+T-088,need to do it so,2959.2891241917787,16365.129647939077,20px,12af942249cb2d6c99d51bcb26bfd8b408cdb70f60f105b01197c598ef5a57f8,R05,semantic,processed-semantic-transcript,1
+T-089,default xml serializer doesnt have,2551.9984782766496,16643.89300248062,20px,042c16ea9d77cadf600ce4160e40a79c2322d6f3df5bc229b82ecb0e66e0fe36,R05,semantic,processed-semantic-transcript,1
+T-090,"to support all types, this - does",2551.9984782766496,16668.89300248062,20px,d239472f8b35da96f2af8b3a5cc7a9ee94724ab1a1959aeecf40976c63e94cad,R05,semantic,processed-semantic-transcript,1
+T-091,dotnet add package Microsoft.AspNetCore.JsonPatch.SystemTextJson --prerelease,1575.9787565868055,18138.979621088056,20px,6e3735f6b7ca7016c9f770cea4543478d365f1113b7d870e9a44f0cb68d4491d,R05,semantic,processed-semantic-transcript,1
+T-092,just have coursedto,2656.460042636444,19010.35073795969,20px,6768ba7fb268db0a464b4f849f6ff0d5a8d617fa75e483db1671ba7225f2dda6,R06,semantic,processed-semantic-transcript,1
+T-093,from returned from repo,2656.460042636444,19035.35073795969,20px,ab482138cbdff6d6bd7e333e156511348d308f6a21e2ee118165ef670b90bbb7,R06,semantic,processed-semantic-transcript,1
+T-094,now this dto has,2596.460042636444,19185.535912239447,20px,cf5619d4187ae716351532b74e22cec473117d08f1c428631d6ba938f3db8aaf,R06,semantic,processed-semantic-transcript,1
+T-095,partially updated,2596.460042636444,19210.535912239447,20px,023ffbd7f20aa97acbc531cc100af1741dee8c0bcaf8d6a3df3ae4a4234891b7,R06,semantic,processed-semantic-transcript,1
+T-096,values,2596.460042636444,19235.535912239447,20px,89445ea08b55421faa49919a5fd272e9a520f701b479d6084847e161ca5b7711,R06,semantic,processed-semantic-transcript,1
+T-097,mapping updated dto,2613.1267258599555,19332.33482968563,20px,5f9dd7897a24766ab35242f6a32bc6e66a3599bebc31154875f17035b0817a14,R06,semantic,processed-semantic-transcript,1
+T-098,to entity model,2613.1267258599555,19357.33482968563,20px,52a242daa7a172ec3a24ca7d8dbfe4aa530c5a4d489ce7a1cb3ff7de2966c4f3,R06,semantic,processed-semantic-transcript,1
+T-099,"We changing dto, because its outer layer model, consumer shouldnt know about real",2598.5499772966677,19444.900974650318,20px,658a812d28fd917acd80bee31e7a3799ff85ad393f084f9c1c961da2c8c42a06,R06,semantic,processed-semantic-transcript,1
+T-100,resources structure,2598.5499772966677,19469.900974650318,20px,45fe113fb5f7a68ee0ff57bf80b91aea1eb414fb6f097ee680942d0fbe84266f,R06,semantic,processed-semantic-transcript,1
+T-101,VALIDATOIN,2969.05079326649,19688.000379747748,108.38096400669596px,17bfc198b19f363ebe84726ce5f53240531473608dad15bc33899648830227ca,R07,semantic,processed-semantic-transcript,1
+T-102,validation problem,3318.367545570002,22169.748004385998,55.929828844572356px,14c46cc8821d948f141b37be07b81535daf81adc2c69a359f38d8110aba9ba26,R07,semantic,processed-semantic-transcript,1
+T-103,with reusing invalidmodelstate factory,3318.367545570002,22239.660290441712,55.929828844572356px,7f85e01c0dbd22ef5876a992b0a6a3b9426b6cf328da616fff96d7502de43c19,R07,semantic,processed-semantic-transcript,1
+T-104,for system.text.json patch,5272.762782878435,24256.529507131403,46.962958441839824px,49c9a6aa9bd6d64c7b3e66c17388b7ca862a2b1009fc4374198c92c0027ffea0,R07,semantic,processed-semantic-transcript,1
+T-105,need to check if,4525.732920400244,24257.835384982147,55.428571428571px,59555078c33853ddb0a19685d88ce98c0895fca1f7a41a94d451275ff30ea041,R07,semantic,processed-semantic-transcript,1
+T-106,(we write modelstate errors manually),5272.762782878435,24315.233205183704,46.962958441839824px,6bee8fae51e1cf385ffa50e81f128bee1a867cf4b61022cbbfe0e81a79ac95c5,R07,semantic,processed-semantic-transcript,1
+T-107,jsonpatchdoc valid first,4525.732920400244,24327.12109926786,55.428571428571px,65685fec16b79fc1fc2cfd1e0192883cd3243e48ce079e6a4b62bfdfd262d5eb,R07,semantic,processed-semantic-transcript,1
+T-108,with upsert,3652.4284614252147,25078.316320077025,61.90475027901705px,f3938418fd03a0b75d44dac06d69a15db8e96f1768d2eccb56ca4ff401210989,R01,semantic,processed-semantic-transcript,1
+T-109,create flow IF  id missing,3632.0475671729823,25180.636315787124,20px,d1a163870a7d03cdf1844a6112c36b102f090b58da6afe60eec640f0e6fc8c06,R01,semantic,processed-semantic-transcript,1
+T-110,and then update flow as normal patch,3446.523746023429,25732.90983378377,49.714285714285474px,2369b63148b9211c36d0542d760536d2e30dd06730356364c315ba38c7d4d6a4,R01,semantic,processed-semantic-transcript,1
