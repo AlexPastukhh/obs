@@ -1,0 +1,70 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,6910.587295871144,775.9114388239686,"route definition, children"
+T-002,R01,processed,4622.949832512926,1323.5902367051822,link va navlink
+T-003,R01,processed,4768.476877453016,2355.5304146999115,usenavigate
+T-004,R01,processed,7467.868923309573,2517.496444275719,useparams with route definition example
+T-005,R01,processed,3489.708959418227,2772.063746382162,uselocation
+T-006,R01,processed,4803.8304330919345,3479.579373915214,loaders
+T-007,R01,processed,7691.093890553152,3881.3168257583893,"Form,actions"
+T-008,R01,processed,4537.305145224662,5601.653168502482,loader vs useeffect
+T-009,R01,processed,2215.335232301695,5948.615387983951,testing
+T-010,R01,processed,9342.429504972395,6580.1944325847,"loaders, route state revalidation"
+T-011,R01,processed,7666.109422323215,8245.574756130372,error element userouteerror
+T-012,R01,processed,4407.265049523039,8645.265492586434,usenavigation
+T-013,R01,processed,10659.431514340236,9130.07186272995,"so by default all parent loaders rerun on navigation/action,"
+T-014,R01,processed,10659.431514340236,9130.07186272995,shouldrevalidate helps to avoid some reruns based on something
+T-015,R01,processed,9680.46993675173,9150.993155096738,should revalidate
+T-016,R01,processed,4239.875658496742,9238.070110773879,!!!
+T-017,R01,processed,1987.167491093117,9675.027627003608,to see router errors (by default it creates errorboundary)
+T-018,R02,processed,6220.74881766078,11076.018751623113,userevalidator
+T-019,R02,processed,3200.4219605912895,15758.193758941863,redirect
+T-020,R02,processed,3200.4219605912895,15758.193758941863,redirect vs navigate
+T-021,R02,processed,7959.469288995307,16169.622199580816,"usefetcher,"
+T-022,R02,processed,7959.469288995307,16169.622199580816,declarative vs imperative
+T-023,R02,processed,7959.469288995307,16169.622199580816,checking state evene with declarative
+T-024,R03,processed,4530.228233146996,17460.165907149887,userouteloaderdata and usematches
+T-025,R03,processed,7524.94795283125,17977.4046125799,can inspect action state using
+T-026,R03,processed,7524.94795283125,17977.4046125799,declarative approach too
+T-027,R03,processed,4733.512756781229,19139.176574055047,array of matches for each url that mathces current
+T-028,R03,processed,1158.1007247079415,19774.660916741494,why handle
+T-029,R03,processed,1144.7673913746075,19985.03133232309,"loaders for fetching, handle for static data per route"
+T-030,R03,processed,1144.7673913746075,19985.03133232309,"route may not have loader but still need sttic metadata,"
+T-031,R03,processed,1144.7673913746075,19985.03133232309,plus you not always want to mix something that was fetched +
+T-032,R03,processed,1144.7673913746075,19985.03133232309,something that can be hardcoded and return from loader (there is no reason to mix that )
+T-033,R03,processed,3516.6481686648094,20346.45581983814,handle
+T-034,R03,processed,2372.0085607412675,20806.061031167,what is breadcrumbs
+T-035,R03,processed,2342.778422111769,21966.23894286105,using matches to create breadcrumbes
+T-036,R03,processed,2342.778422111769,21966.23894286105,"get label, ui from handle, static or dynamic from loaders data"
+T-037,R03,processed,2342.778422111769,21966.23894286105,and get pathname for that crumb from matches pathname
+T-038,R04,processed,5862.474828431164,23791.155260916865,rhf react router zod
+T-039,R04,processed,587.5329668302675,24037.18357995026,Form vs fetcher.Form
+T-040,R04,processed,445.7862500048759,24750.064438283975,"so if we have some spinners on page load or smth,"
+T-041,R04,processed,445.7862500048759,24750.064438283975,app can think that we are navigating and show it on Form
+T-042,R04,processed,445.7862500048759,24750.064438283975,submition
+T-043,R04,processed,506.9828364181376,24837.799472541934,getcher is local to component
+T-044,R04,processed,10.0,25517.716914739205,!!!
+T-045,R04,processed,472.8026403268086,26122.289011182213,history
+T-046,R04,processed,6907.019354739386,26361.371819855227,"useactiondata, map server errors from action to rfh"
+T-047,R04,processed,5480.05679255671,26748.573421904664,has event in sec param
+T-048,R04,processed,5480.05679255671,26748.573421904664,so can get current target
+T-049,R04,processed,5480.05679255671,26748.573421904664,and submit with method
+T-050,R04,processed,3619.642973152653,26891.585574185578,useSubmit
+T-051,R04,processed,5208.172423342154,26949.9226339679,so instead of fetching manually here
+T-052,R04,processed,5208.172423342154,26949.9226339679,we are submitting form in a react router way
+T-053,R04,processed,5208.172423342154,26949.9226339679,(running action with fetch
+T-054,R04,processed,5208.172423342154,26949.9226339679,inside)
+T-055,R04,processed,1968.7455151196582,27533.462807688724,normal form doesnt have usenavigate
+T-056,R04,processed,6929.968847460828,27607.48760348051,!!!
+T-057,R04,processed,8671.055446761926,27769.69426249004,why throw response?
+T-058,R04,processed,7194.674222569021,27941.78913779399,isrouteerrorresponse
+T-059,R04,processed,1810.0788484529912,28308.12947435538,"so fetcher is like normal form with prevent default but with all route stuff like actions, loaders"
+T-060,R04,processed,1517.1900138175733,28332.573932363193,!!!
+T-061,R04,processed,1898.8061137820632,28745.361788956485,and FOrm more for some global shit
+T-062,R04,processed,8099.236774160343,29228.644944304826,so if need to show some statuscode specific
+T-063,R04,processed,8099.236774160343,29228.644944304826,shit - may return some response with data
+T-064,R04,processed,8099.236774160343,29228.644944304826,may throw response and error
+T-065,R04,processed,8099.236774160343,29228.644944304826,element will show it in a consistent
+T-066,R04,processed,8099.236774160343,29228.644944304826,way
+T-067,R04,processed,8479.031379944676,29328.906648558142,!!!
+T-068,R04,processed,8489.35315701897,29601.69527072208,!!!
+T-069,R04,processed,1470.86609671308,31883.849839715884,useSubmit
