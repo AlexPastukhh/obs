@@ -1,16 +1,6 @@
 # Stage0 source check and boundary review — Rhf react hook form
 
-Generated: 2026-06-27 15:00:00 UTC
-
-## Source decision
-
-This is a new conspect. Exact archive target:
-
-`_ai-conspects/Rhf react hook form`
-
-Complete source:
-
-`source/Rhf react hook form.svg`
+Generated: 2026-06-27 15:30:00 UTC
 
 ## Source inventory
 
@@ -23,24 +13,28 @@ missing image definitions: 0
 unused image definitions: 0
 ```
 
-## Markup policy
+## Corrected region plan
 
-The canvas is intentionally preserved as one logical region.
+The previous one-region plan is superseded. The complete source is now mapped
+to nine visual-semantic blocks identified from the canvas headings, branches
+and central flow.
 
-```text
-R01: complete React Hook Form canvas
-automatic coordinate slicing: disabled
-invented subsections: none
-```
+| Region | Visual-semantic block | Text | Uses | Unique images |
+|---|---|---:|---:|---:|
+| R01 | Registration lifecycle: register, unregister, disabled and shouldUnregister | 5 | 19 | 19 |
+| R02 | Validation errors: ErrorMessage, criteriaMode and multiple error types | 6 | 23 | 23 |
+| R03 | Watching values: watch, useWatch and callback subscriptions | 4 | 14 | 14 |
+| R04 | Core form state, reset, asynchronous defaults and controlled values | 2 | 23 | 23 |
+| R05 | Controller, useController and controlled-component lifecycle | 2 | 9 | 9 |
+| R06 | useFieldArray: operations, ordering, indexes and nested arrays | 4 | 28 | 28 |
+| R07 | FormProvider, useFormContext and deeply nested inputs | 2 | 13 | 13 |
+| R08 | Conditional fields, form-state subscriptions and performance guidance | 0 | 10 | 10 |
+| R09 | Reusable React Hook Form patterns and final examples | 1 | 6 | 6 |
 
-The source is visually interconnected: registration lifecycle, validation,
-watching, controlled inputs, field arrays, context, reset and reusable patterns
-cross-reference each other. Semantic headings will be created in the final
-transcript without reassigning screenshots to artificial spatial regions.
+## Current coverage
 
-## Current coverage boundary
-
-Stage0 preserves, extracts and inventories the source.
+Stage0 preserves and inventories the source. It does not claim transcript
+completion.
 
 ```text
 processed text elements: 0 / 26
@@ -51,5 +45,5 @@ remaining screenshot uses: 145
 
 ## Next
 
-Create one integrated semantic transcript from the complete canvas, then close
-all text and screenshot coverage.
+Create regional transcripts `R01`–`R09`, then build one combined final
+transcript and a full-conspect coverage audit.

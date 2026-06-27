@@ -1,25 +1,21 @@
 # Markup policy — Rhf react hook form
 
-Generated: 2026-06-27 15:00:00 UTC
+Generated: 2026-06-27 15:30:00 UTC
 
-## Decision
+The authoritative Stage0 plan is `manual_visual_semantic_map_v002`.
 
-The full canvas remains one logical region: `R01`.
+The plan follows visible canvas branches and headings:
 
-No automatic x/y slicing is used. Contact sheets are pagination aids only and
-do not represent semantic regions.
+1. registration lifecycle;
+2. validation and error reporting;
+3. watch/useWatch subscriptions;
+4. form state, reset and asynchronous defaults;
+5. Controller/useController;
+6. useFieldArray;
+7. FormProvider/useFormContext;
+8. conditional fields and performance;
+9. reusable patterns.
 
-## Why
-
-The canvas contains cross-linked React Hook Form topics:
-
-- `register`, `unregister`, `disabled` and `shouldUnregister`;
-- validation, `criteriaMode`, error messages and error types;
-- `watch`, `useWatch` and callback subscriptions;
-- asynchronous default values and `reset`;
-- `Controller` and `useController`;
-- `useFieldArray`, ordering and index-based registration;
-- `FormProvider`, `useFormContext` and deeply nested inputs;
-- reusable field-array and form patterns.
-
-Splitting these only by coordinates would misrepresent the source structure.
+Contact sheets are review aids. Region membership is recorded in
+`data/region-plan-stage0-v001.*`, `data/text-elements-stage0-v001.*` and
+`data/image-uses-stage0-v001.*`.
