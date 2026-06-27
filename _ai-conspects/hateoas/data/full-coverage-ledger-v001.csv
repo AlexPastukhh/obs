@@ -1,0 +1,134 @@
+﻿item_type,item_id,secondary_id,sha256,region_id,status,restored,assignment_count,evidence
+image_use,S-001,IU-001,3de2f5576bb2d78b7f2a36fe255c8fec81a98d51f945521ea4eae017e2d8124a,R04,processed-semantic-transcript,True,1,"Repeated warning: shaped fields may omit Id, so link generation cannot safely index the shaped dictionary."
+image_use,S-002,IU-002,3de2f5576bb2d78b7f2a36fe255c8fec81a98d51f945521ea4eae017e2d8124a,R04,processed-semantic-transcript,True,1,Second placement of the same data-shaping Id warning.
+image_use,S-003,IU-003,0cce589795490715dcd35fc5870dec9c34639541cd3a124162ca459a69f5229e,R02,processed-semantic-transcript,True,1,Clients still need a stable relation-name vocabulary even when they do not hardcode every URL.
+image_use,S-004,IU-004,190cf334f698c46158ad2e89d5dfce22de5fc618416bdeaa024fd1127f1cc420,R01,processed-semantic-transcript,True,1,HATEOAS is mainly machine-facing; clients use returned links to choose the next action.
+image_use,S-005,IU-005,4434bf284113cbd153d365f0b5c0709359195b871b14bdcd261c39f4146b16cb,R01,processed-semantic-transcript,True,1,Problem statement: tightly coupled clients hardcode URLs and backend workflow rules.
+image_use,S-006,IU-006,36c64fea5c7d7353aa1cb95352bc90760ad2707ceb98e5d51238c036a605f12d,R01,processed-semantic-transcript,True,1,Practical comparison of workflow knowledge without and with HATEOAS.
+image_use,S-007,IU-007,ba79787b6670e2a0411cabfb741b5366c176e68464928bebf4eb83d5a90fc057,R05,processed-semantic-transcript,True,1,Pagination metadata example separated from navigation controls.
+image_use,S-008,IU-008,7e645d3f820125afed6e8d3977b559948f2c0e4a6de7f6a52af257d1f1989cf4,R01,processed-semantic-transcript,True,1,"Goals: discoverability, lower coupling, state awareness, evolvability, and self-description."
+image_use,S-009,IU-009,28a50b9d9ef7eb5f5a3a06eeb3804ee596cd66f47db6b2de28fdd7d2ad1cfd3d,R05,processed-semantic-transcript,True,1,Example pagination links with previous-page and next-page relations.
+image_use,S-010,IU-010,d570a373ae6cfd4efb8790d984ec779663c188b6055f6d188585ee487c1aa3ca,R01,processed-semantic-transcript,True,1,Course title slide introducing HATEOAS.
+image_use,S-011,IU-011,1c0065ec581d737b69007962cf8028600d221779650b16a9c7e106fbba4f0681,R02,processed-semantic-transcript,True,1,Explanation of rel as a semantic relation label rather than merely a URL.
+image_use,S-012,IU-012,dcf77c424c305a1ecda076cedbd9f5f6b1ec14ec09b7e5cc978be7471fe3514d,R03,processed-semantic-transcript,True,1,Course demo overview: link creation depends on business rules and response-shaping style.
+image_use,S-013,IU-013,728960ed247bd1c8659c788a146eb389e2f8d11eaf8074fcab4a57fff1c0ba27,R01,processed-semantic-transcript,True,1,Hypermedia as the engine of application state and API consumption.
+image_use,S-014,IU-014,42489029fae5b190ce47c19ba75c74feb5e85dfc641bcef3847274859e56b71c,R01,processed-semantic-transcript,True,1,Road-map analogy: the server exposes currently valid roads instead of requiring clients to memorize them.
+image_use,S-015,IU-015,15826199151acf1e9945ef460ac489ff6e472dd7f2c620f7980e0d8505ce6e48,R01,processed-semantic-transcript,True,1,Client code branches on relation names and follows the supplied href.
+image_use,S-016,IU-016,a97e7dee4571ed2c88d1c25720f29d9061d815a5e244ab5f2477abf04795788e,R01,processed-semantic-transcript,True,1,URL changes can break hardcoded clients; relation-following clients use the server-provided target.
+image_use,S-017,IU-017,3b15f69056b0a624f4b2ff8a522829470b7bca249f3a27c5e182144e68e1a17e,R05,processed-semantic-transcript,True,1,Pagination guidance: expose previous/next as links instead of only metadata.
+image_use,S-018,IU-018,4e2c7dc3d3ce198343d46c436a7d579b342d2cce2c3a77678d62ae24fe8b5bb6,R02,processed-semantic-transcript,True,1,"Relation naming conventions: IANA standard relations, documented custom relations, or URI relations."
+image_use,S-019,IU-019,778f9c7633f3c6b137617d7f104859a0329e16809f88afa3d799125e18216755,R01,processed-semantic-transcript,True,1,"Issues without HATEOAS: implicit contract knowledge, additional URLs, and poor evolvability."
+image_use,S-020,IU-020,d51ef7bdaf2ca9334a76329f93b91ac8b75c244f39efb2edbd68108df8626b83,R03,processed-semantic-transcript,True,1,Statically typed LinkDto approach with strong typing and OpenAPI advantages.
+image_use,S-021,IU-021,fb10fe19e869ce6679a29d284874e7218d01de2f5e2472719d6bcdc1b5ac1875,R04,processed-semantic-transcript,True,1,Dynamic ExpandoObject approach used with variable data-shaping fields.
+image_use,S-022,IU-022,05ecb0d299403576926157f487291b1bb19554d54e4267319ad971c2d0be9409,R06,processed-semantic-transcript,True,1,Workflow changes otherwise force frontend changes; the server can omit disallowed actions.
+image_use,S-023,IU-023,de5b2e5148ed0f64b296c4e0f87311e038c552bda3ae96c328dec81b5240c4bd,R03,processed-semantic-transcript,True,1,"Representative HATEOAS payload containing update, delete, and reserve links."
+image_use,S-024,IU-024,0767dd25263dc707fd9666d67feb4b1442df044bc798b29e8b13513e0f44d6f5,R02,processed-semantic-transcript,True,1,Rules for documenting domain-specific relations and the heavier fully qualified URI-relation option.
+image_use,S-025,IU-025,54f587709d1c3734540bccbe412d643cfa3235a4d78a9a5daa7f22d5c05c97c3,R05,processed-semantic-transcript,True,1,Pagination can retain descriptive metadata while navigation is driven by relations.
+image_use,S-026,IU-026,0db0975c85f8ab179430f8dd894347ae886c407ab34b35a1e3ec45fe9f5008e8,R05,processed-semantic-transcript,True,1,"Pagination clarification: preserve filters, sorting, shaping, and page size in generated navigation URIs."
+image_use,S-027,IU-027,c71ab929a3fd1669636d01e1e5a01bc35ccbf0053240692f4dd82f0e39c13769,R06,processed-semantic-transcript,True,1,"Without server-provided actions, clients duplicate backend business rules."
+image_use,S-028,IU-028,d3bc44940353e8967012bff6a903560cf0360a9d1fe4fd9af5c564dc8a6e9735,R03,processed-semantic-transcript,True,1,Demo transition to implementing HATEOAS for a single resource.
+image_use,S-029,IU-029,f9f3ddbf599ae926f190b69a840ed3b8872ef3fbf9fecb2ca4878479fe8a3909,R03,processed-semantic-transcript,True,1,Single-resource example with action links.
+image_use,S-030,IU-030,9e26dff5df187b1784be1fde91f8b885af01c2228035c3b530c11dcf91e2a8f9,R02,processed-semantic-transcript,True,1,Practical rules: use standard navigation relations and keep relation values stable.
+image_use,S-031,IU-031,e0f368322f942e4bb9c582be11d752c341b1cbfce95c60aa5982739cfb8b313a,R01,processed-semantic-transcript,True,1,APIs without links are less discoverable and require external endpoint knowledge.
+image_use,S-032,IU-032,f3d1c897db44112c29b370554cf77c44748c33ccfaec6f2d1479c829e2274491,R03,processed-semantic-transcript,True,1,"LinkDto implementation with Href, Rel, and Method."
+image_use,S-033,IU-033,d5d2cdd342e31b91dca6273b76700f164fea0428546d210a7fd4dda289ebc35a,R02,processed-semantic-transcript,True,1,"Common pagination relation values: self, next, prev/previous, first, and last."
+image_use,S-034,IU-034,5ceccc41f7b8a05d0878676abeb634bac9f3a4b2bdc8c9e923e58ca896f8ca66,R01,processed-semantic-transcript,True,1,Roy Fielding quote about controls being learned dynamically through hypermedia.
+image_use,S-035,IU-035,bf5b23821da48b13b59bc0a72ec06305468b6b3ae68224937c9b3ce287181df5,R02,processed-semantic-transcript,True,1,Prefer intent-based action relation names and one consistent naming style.
+image_use,S-036,IU-036,d4fccd2019760c83cfe18cf0fee6dd2c479ab18b4a6d93d1167f1048bebcad4f,R05,processed-semantic-transcript,True,1,Course demo transition to pagination links.
+image_use,S-037,IU-037,d6090096f75f6e3411c3c209ea14accbee230e70499728b70e93df164a53e978,R03,processed-semantic-transcript,True,1,Start of CreateLinksForAuthor helper.
+image_use,S-038,IU-038,3b40cb74752b8ec5dc9db5ab53092ae8272f6223e38889957e5b95a29cb44f50,R01,processed-semantic-transcript,True,1,Hypermedia slide: links and forms drive application state.
+image_use,S-039,IU-039,3180478e079a2559b6e7a00d8c4ce8245ba1b67173e506f9f178ab2806244c1f,R03,processed-semantic-transcript,True,1,Self-link generation with and without selected fields.
+image_use,S-040,IU-040,e9596c87aaef8ec9ca2372dbdae8d2766bad3697541e4a5cd2339b8c99338d31,R06,processed-semantic-transcript,True,1,Rule: include an action link only when the action is allowed.
+image_use,S-041,IU-041,9fa033ced2aa4ba974876bd8cce8fad4288a9712b5abfa11ba670ead604d8232,R03,processed-semantic-transcript,True,1,Alternative LinkDto code presentation.
+image_use,S-042,IU-042,c5e058aeed06e0a40f550bebffa4b6c2507372070c5f17c086cfbfbe22c1cdab,R02,processed-semantic-transcript,True,1,"HTML anchor analogy for href, rel, and media type."
+image_use,S-043,IU-043,a4d9fa547f3d0a7304f53fc11be9ea3134c82735e1d51c5b7e98bc8a26f926fa,R02,processed-semantic-transcript,True,1,Course-specific method field explained alongside href and rel.
+image_use,S-044,IU-044,e2415996630980802fa1998af08e233a075ccda6b064014cc621e36153186439,R06,processed-semantic-transcript,True,1,"Code adding create-course, courses, and delete-course action links."
+image_use,S-045,IU-045,1a855e2e4f9c236fbaac9d693be9cdcb7d987b93ce7d163787f8112c93190520,R05,processed-semantic-transcript,True,1,"ResourceUriType enum for PreviousPage, NextPage, and Current."
+image_use,S-046,IU-046,cc20ef955d03b3b16c0b3495489cb015fb48ddf3e97307836b8356d3baf0f47c,R02,processed-semantic-transcript,True,1,"Payload explanation of method, rel, and href."
+image_use,S-047,IU-047,344e0aa99841319bfdfb1560cbe17e620fad3fed552675ba34db5aab899bcaeb,R06,processed-semantic-transcript,True,1,"Documentation requirements for custom relations, permissions, bodies, errors, and ETags."
+image_use,S-048,IU-048,22a8386c339606260d3ba013b5ff24ffec603d8fef3dde710d26fc0f163ef26a,R05,processed-semantic-transcript,True,1,"AuthorsResourceParameters with filtering, sorting, fields, page number, and page size."
+image_use,S-049,IU-049,3606668ec2a36f2e9fd74d49233cb71400768bf7d89ac51ddd7f1f9c8eb47aab,R04,processed-semantic-transcript,True,1,GetAuthor validates requested shaping fields before loading and linking the resource.
+image_use,S-050,IU-050,9b5a7f206424fc1946e95c444547afc23be98f1fdb019485972a859e727a2181,R05,processed-semantic-transcript,True,1,Collection response envelope with value and links properties.
+image_use,S-051,IU-051,3cc3378ffefe74b02c294ddf1507bc3952e8f0fafbdaf83e7acc74b9dab15dd2,R05,processed-semantic-transcript,True,1,CreateAuthorsResourceUri branch for the previous page.
+image_use,S-052,IU-052,63f18f5d2219cdc9923653e9a072022410a0578eaa2402f114ea400e5fc66116,R04,processed-semantic-transcript,True,1,"Single-author controller flow: load, create links, shape, append links, and return."
+image_use,S-053,IU-053,009218433f4bd5702166785358397e6ae38c8f7013d9107d98b239b59c8864cd,R06,processed-semantic-transcript,True,1,HATEOAS is most valuable when actions depend on permissions or current resource state.
+image_use,S-054,IU-054,4fceb3820ffb78a782873d29824f2e9f63776db5d4bd77a378229966de5d5ae5,R05,processed-semantic-transcript,True,1,CreateAuthorsResourceUri branches for next and current page.
+image_use,S-055,IU-055,b7d9e5dbc62af446efe9cdc39bc443d26d7b665cc067deacd2092e53590d6f78,R03,processed-semantic-transcript,True,1,Demo transition to HATEOAS after POST.
+image_use,S-056,IU-056,58bf910e6b40087af71f2691185e232b236e6f68ca6c87cfa2f99eb91bfebe10,R06,processed-semantic-transcript,True,1,HATEOAS improves runtime discoverability but still requires relation and error documentation.
+image_use,S-057,IU-057,2716a493b7efa98b5e67d2f81031139843fbd56ab05948cb04b4c3c1eca2002f,R05,processed-semantic-transcript,True,1,"CreateLinksForAuthors builds self, next, and previous collection links."
+image_use,S-058,IU-058,2b86bcd405732b932e818ce76d202d60dc02c55e57baca5209322b4373f5ee8b,R03,processed-semantic-transcript,True,1,CreateAuthor controller code before response links are added.
+image_use,S-059,IU-059,d12e9c722c0e51116bc80242a7fdca501a98624f951d724b0333a963246bbf5c,R06,processed-semantic-transcript,True,1,Tradeoff: added response complexity means not every public CRUD API adopts full HATEOAS.
+image_use,S-060,IU-060,8cde1da83611771fb34a4fbe051ff3d8bd41098fde2ac1f5b6d8c249fdaabdaa,R05,processed-semantic-transcript,True,1,Previous-page branch in CreateLinksForAuthors.
+image_use,S-061,IU-061,d7ad6e5f2bb1603028d6045237ddcbf576ef616d9010b5536e05b67a8c466165,R03,processed-semantic-transcript,True,1,POST response adds links and returns CreatedAtRoute.
+image_use,S-062,IU-062,0b749350a503d7007a437dee77ea669629a55cb322b82659fdf7af8a0731a544,R03,processed-semantic-transcript,True,1,"Item-level CreateLinksForAuthor helper begins with self, delete, and update actions."
+image_use,S-063,IU-063,df24be9f28386c29db4bcdcb1f2464e9b1db3de76172934d70bf67e05825b335,R05,processed-semantic-transcript,True,1,Demo transition to implementing a collection resource.
+image_use,S-064,IU-064,4f334ecbea9edf9b03929eb9f07073b8edd17d48815dfb438cfd66bfcd52dc23,R03,processed-semantic-transcript,True,1,Continuation of item-level link creation including partial update.
+image_use,S-065,IU-065,fba44a497df3d86fcee9106e497c46f00f769d4ffd5e6cec8c54d9ab0b12b30a,R04,processed-semantic-transcript,True,1,ShapeData returns an ExpandoObject containing selected fields.
+image_use,S-066,IU-066,1157adb442faf38e7faa10d10d10078674339ac2f7709812aad537b2254aff4e,R05,processed-semantic-transcript,True,1,"GetAuthors creates pagination metadata, collection links, and shaped authors."
+image_use,S-067,IU-067,05d234c263a94ac2c7c7971b58f7e9b5ec3c9ff0911ac314be4c139f348ce261,R05,processed-semantic-transcript,True,1,ResourceUriType enum used by pagination URI generation.
+image_use,S-068,IU-068,02e9c0432342597a2f6f6bbcd6783ab3d3b8c0788fd4a61e9af7d73c2e02792b,R05,processed-semantic-transcript,True,1,Current-page URI branch preserves all query parameters.
+image_use,S-069,IU-069,9a511c4224acf89dc5927f9f188505c374c87aafe075d34a9ad8421d835db681,R04,processed-semantic-transcript,True,1,Each shaped author is cast to IDictionary and receives its item-level links.
+image_use,S-070,IU-070,e9abf2c549c59b551828236bae3366bbbe57705f6ec64f0ed613758676b889ad,R04,processed-semantic-transcript,True,1,Full collection shaping flow and envelope construction.
+image_use,S-071,IU-071,1b95988d13d38aa50eb59e7f3b1c1fb2b38cd78dc1934f885633fd284ece79d2,R05,processed-semantic-transcript,True,1,Envelope rationale: return value plus collection-level links as valid JSON.
+image_use,S-072,IU-072,082014f5ab6adfcdaa94e2a722cdb12f857a706c91995a0cdf429a8affdcd819,R05,processed-semantic-transcript,True,1,Start of CreateLinksForAuthors collection helper.
+image_use,S-073,IU-073,78863f21388f149476ac4a2a59ccd0de945a80d0f956b2a88f1d8403e0e67ea9,R05,processed-semantic-transcript,True,1,Self collection link creation.
+image_use,S-074,IU-074,53a9b30a8a337d55a229cb5ee87cb12b84ee2829e5d205b7d661f49ff188ddb0,R05,processed-semantic-transcript,True,1,Complete CreateAuthorsResourceUri switch preserving query state.
+image_use,S-075,IU-075,3de2f5576bb2d78b7f2a36fe255c8fec81a98d51f945521ea4eae017e2d8124a,R04,processed-semantic-transcript,True,1,Third placement of the data-shaping Id warning.
+image_use,S-076,IU-076,3468b73cb3847cbc4b3e8597a8a06a010c9774a15b46f299fa96143d2af4b16e,R05,processed-semantic-transcript,True,1,GetAuthors endpoint signature with AuthorsResourceParameters.
+image_use,S-077,IU-077,d45e8205a73c4dfc2ddfaa969613aaa892c11c6a7088a9cd8e086cf2c39be49b,R05,processed-semantic-transcript,True,1,"Controller adds pagination header, creates collection links, shapes items, and appends item links."
+image_use,S-078,IU-078,bd394cdc923354c229bace9d67bc04d6ff20fcefbf90d55e88c9c8398dedb8f9,R05,processed-semantic-transcript,True,1,Final linkedCollectionResource envelope returned by the controller.
+svg_text_node,T-001,,c8ffb49ad668f0b839e00cbdcc24a528cabd48db1d6faec74ca4174e638c5ecb,R01,processed-semantic-transcript,True,1,need to have
+svg_text_node,T-002,,91ffd99e997ae39ff082f42981e87c72c35c0467bed2a60acb461fb3415eb0b6,R01,processed-semantic-transcript,True,1,some basic contract
+svg_text_node,T-003,,780048f1e5bef5c1cddfe1712cbb30ce5aeb5b3df00d7006700b102ad0f9330c,R01,processed-semantic-transcript,True,1,"with client, that it"
+svg_text_node,T-004,,12f73c89722e83c4a038bfa07e49acbec4bdccad74fa36aa65e8969457e7f5ea,R01,processed-semantic-transcript,True,1,can understand without
+svg_text_node,T-005,,b8936a4e5d89ac2619fd85ac19963cad2abfa37f9ce0ee0a6ada5d473c403568,R05,processed-semantic-transcript,True,1,page links
+svg_text_node,T-006,,b519bfe84c44f7898e5a0115b74b9b02a5135839dbdd29f1ccda349ebbfc3dd3,R01,processed-semantic-transcript,True,1,is it for humans
+svg_text_node,T-007,,b15f03aa08fa2896241bd4136e7b6cf2a9f192548d76e4ab371f773409695923,R01,processed-semantic-transcript,True,1,need to know exact implementation
+svg_text_node,T-008,,17c268a898a8f40c0a2790f53dff6bbbf3444c0675b670b60d0d6d0ed394a640,R01,processed-semantic-transcript,True,1,what problems
+svg_text_node,T-009,,9ac4c6e584ba9f2345dd2f05eac51f759472f11eb939bba824a241670147f2da,R01,processed-semantic-transcript,True,1,that yoiu put into returned links from
+svg_text_node,T-010,,b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06,R01,processed-semantic-transcript,True,1,server
+svg_text_node,T-011,,ebaefb66601331438e2bb49ee444c5ec92e7ba355b567d7278c14ff5285cda0c,R01,processed-semantic-transcript,True,1,or machines?
+svg_text_node,T-012,,8c0e40c66656def25ee67d3b911018f6a2d08d76d17d2a0e0098cc7c2c4d93e5,R01,processed-semantic-transcript,True,1,is it solving
+svg_text_node,T-013,,2e4dc37660ba6ade1cc783b3c1f7ce5a8de4bf958c4a6573e1339434043f78b5,R01,processed-semantic-transcript,True,1,practical diff
+svg_text_node,T-014,,d95f670932045a316cf41092d2e5e4c7c378cd7d946851f4b4d30e868b723787,R01,processed-semantic-transcript,True,1,whats the goal
+svg_text_node,T-015,,f4397b4805e00143d361f46d3819ac488c025de6a9ac52ea6b14d8a33d12700d,R01,processed-semantic-transcript,True,1,theory
+svg_text_node,T-016,,5d7b361b5ac941a8ec607e97348d33edfa5fd86a570b6055dd6209db799f743c,R05,processed-semantic-transcript,True,1,"When have hateoas, better to include prev and next page to links,not to metadata"
+svg_text_node,T-017,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R05,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-018,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R05,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-019,,cab2644828bcc1f220612fde559864da2c5bf0c6eebdcadbb4a4c88c9fcf3927,R05,processed-semantic-transcript,True,1,like
+svg_text_node,T-020,,62b45a79bfcef84b34c9db7cf8b89d84549f7112979e90825035e54304c62621,R02,processed-semantic-transcript,True,1,"rel, method"
+svg_text_node,T-021,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R05,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-022,,c9af806c007c603dec968004151faffba02608b82e29efbc9a79654361575e8e,R03,processed-semantic-transcript,True,1,basic implementation
+svg_text_node,T-023,,a0993710a9366227629655c7012ff5c18c1e164468f0d1ec41cf0f02276e1443,R01,processed-semantic-transcript,True,1,url chagnes break clients
+svg_text_node,T-024,,62461e86f16d5e6581ec523ae5a095bd0789b08234dd13a1361818545d838458,R06,processed-semantic-transcript,True,1,workflow changes require
+svg_text_node,T-025,,f54675b05b01ced1fb5437d09a05f34831a0a1c011abdd6a49a106539a8a7734,R06,processed-semantic-transcript,True,1,client changes
+svg_text_node,T-026,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R05,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-027,,3cb59acbbbc5da60f29cc43b752da9564777be59124eb784a6e85a97a527aa58,R06,processed-semantic-transcript,True,1,clients duplicate buisness rules
+svg_text_node,T-028,,5665130795eb84b5314721bc94b6832a25885a140c87f7ae1f0fcc79ad1fe91c,R06,processed-semantic-transcript,True,1,"if logic changes, server may not show some link to consumer"
+svg_text_node,T-029,,529cc6f485501c9a2cc7e03dc2614f33d6f8d0994c9019f70c68b4e14e1534bd,R01,processed-semantic-transcript,True,1,apis less discoverable
+svg_text_node,T-030,,9f5ee69c006a45dc3dd70c0f4fad48caffd43d0acb9f271218b33a8916ca24da,R03,processed-semantic-transcript,True,1,Creating link to the resource itself
+svg_text_node,T-031,,f13d06aa5af5cb1acc63188e443d633c19da1a033404226ca80d39d409f6b634,R01,processed-semantic-transcript,True,1,We are now fully driving the app state
+svg_text_node,T-032,,909ec6d1a6d2b4af5ea68e65cd79491949c802e823bbe541059b742f96da98ac,R01,processed-semantic-transcript,True,1,deciding on fucntionality of the
+svg_text_node,T-033,,6bfbd709d5fdc0618ab5ea71913d552464b1fad43b2fc34cf25e96f3d2a904dc,R01,processed-semantic-transcript,True,1,consumer
+svg_text_node,T-034,,b0eea89d283ca74cfd9db0fcd353cd96c5b4da124c687700b585fbb63d84307d,R03,processed-semantic-transcript,True,1,CONTROLLER
+svg_text_node,T-035,,ef35596f0e7d1e6ec70fd4853ca6af5de3f77cb82a8f046748a080d1ff20b1ae,R04,processed-semantic-transcript,True,1,shaping
+svg_text_node,T-036,,d9ea0358977d2028bd13e72c5f918bc0ed31f030e440bfe1f4e5c74e34e18c90,R04,processed-semantic-transcript,True,1,dto the same
+svg_text_node,T-037,,ec9adf16306ed9ad8c085591e29a660d4803fd6c525f8a71a81c7d5d7a17808b,R04,processed-semantic-transcript,True,1,"way, but with"
+svg_text_node,T-038,,427fdba65cf885ff67236699f1cf7c6a8afa425ac0e45a64754163a469fde199,R04,processed-semantic-transcript,True,1,convertation to
+svg_text_node,T-039,,59e9477d8da50e0713002cbf9aa2fc02b4913875b3724af023b187170666b557,R04,processed-semantic-transcript,True,1,IDict
+svg_text_node,T-040,,c700d453a5404571067d8a541b11e97b6bd54b3da087d9ce7411cb18ca0f1fd5,R04,processed-semantic-transcript,True,1,need to cast to expando object with
+svg_text_node,T-041,,1eb79602411ef02cf6fe117897015fff89f80face4eccd50425c45149b148408,R04,processed-semantic-transcript,True,1,this
+svg_text_node,T-042,,126fb7e8cc819fe60785ed2e4138760341573a841cc04e1b5bda3a4166bef96d,R05,processed-semantic-transcript,True,1,Creating new uri link type
+svg_text_node,T-043,,a899d6602b06d566024bbdc6f2d4ca1326cf5f35cb30ce495e3d52fb7009a172,R05,processed-semantic-transcript,True,1,previous default link
+svg_text_node,T-044,,d969dd39ebbf8f78ff6f3f26d4c62715499f3edae482c769aea3b026dac33464,R04,processed-semantic-transcript,True,1,ADDING HATEOAS TO EVERY AUTHOR
+svg_text_node,T-045,,3039918ad86c3f226d1ef30fec294299198803d90ef5d1bbf78791f0e8c90f7e,R04,processed-semantic-transcript,True,1,IN THE COLLECTION WITH CASTING EXPANDO
+svg_text_node,T-046,,00785d539558b54eb0298397e9dd237c31759adef83a21ac19a10dc91051f4dc,R04,processed-semantic-transcript,True,1,TO IDICT INTERFACE
+svg_text_node,T-047,,8724db423067796528a2f03eb3bdc8fd18e476c2359070dbd98515573ec1cdb2,R04,processed-semantic-transcript,True,1,USING ANON OBJ HERE
+svg_text_node,T-048,,88ca6fa8166af9d2ba799affa37f560a453e8104ad06598c58f039b0a67c6116,R05,processed-semantic-transcript,True,1,at this point of course only have one
+svg_text_node,T-049,,b7f55a0ec10c8384d5f245190ff140eee5f801f50efcf5569a07ed05f9f3c5c2,R05,processed-semantic-transcript,True,1,link for getauthors collection
+svg_text_node,T-050,,96f843542ae3847a879f1d1af2f5bec08c14c9602fecb85bc501b367a4c8efb8,R05,processed-semantic-transcript,True,1,selft ---> pagination hateoas links with all sorting
+svg_text_node,T-051,,81aa7968f1090015b89aec67080324d50425ff330676c0ba853606d6532067ca,R05,processed-semantic-transcript,True,1,filtering and shaping shit
+svg_text_node,T-052,,6eadcf3b8f01bdae25ed4d74861a430ec41e09ca40e2cdd3b1e9e6ddab364df2,R05,processed-semantic-transcript,True,1,"And thats it , author resource collection cannot be deleted or updated in"
+svg_text_node,T-053,,f7c4448eed0dc51fd0a3036375eddddff309f750b9ec26e5bc5b727043d04049,R05,processed-semantic-transcript,True,1,current impl
+svg_text_node,T-054,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R05,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-055,,361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8,R05,processed-semantic-transcript,True,1,end
