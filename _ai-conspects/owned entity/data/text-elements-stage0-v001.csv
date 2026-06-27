@@ -1,0 +1,24 @@
+﻿text_id,text,x,y,region_id,status
+T-001,efcore can materialise objecteven if all of its columns are null,2357.973523481046,1251.1835589114044,R02,pending_transcript
+T-002,the fact that you have ? for  your fullname  in client can be not enough,2357.973523481046,1276.1835589114044,R02,pending_transcript
+T-003,so its better to do the shit excplicitly,2357.973523481046,1301.1835589114044,R02,pending_transcript
+T-004,OWNED COLLECTIONS(COLLECTIONS OF VALUE OBJECTS),4768.324789288578,733.6526352567272,R03,pending_transcript
+T-005,we have this as,5422.566362344172,2020.2370467663523,R03,pending_transcript
+T-006,owned entity so,5422.566362344172,2045.2370467663523,R03,pending_transcript
+T-007,ef can map owners,5422.566362344172,2070.2370467663523,R03,pending_transcript
+T-008,id to this shadow,5422.566362344172,2095.2370467663523,R03,pending_transcript
+T-009,orderid,5422.566362344172,2120.2370467663523,R03,pending_transcript
+T-010,LOADING<- OWNED ENTITY --> COLLECTIONS,10.0,433.53581310063373,R01,pending_transcript
+T-011,better to set isrequired manually,2123.721175495126,578.631447237665,R02,pending_transcript
+T-012,because we can have owned type with all nulls,2123.721175495126,638.7191665359105,R02,pending_transcript
+T-013,potentially,2123.721175495126,698.806885834156,R02,pending_transcript
+T-014,nested owned types,7225.5811064602785,601.5293129882813,R04,pending_transcript
+T-015,outer optional,8548.247854507154,592.196,R04,pending_transcript
+T-016,but inner required,8548.247854507154,737.196,R04,pending_transcript
+T-017,about is required,10821.580984389966,112.196,R05,pending_transcript
+T-018,inside owned or complex,10821.580984389966,402.196,R05,pending_transcript
+T-019,ef needs some indication,8542.321883370001,1743.307145019533,R04,pending_transcript
+T-020,to know if outer exists,8542.321883370001,1888.307145019533,R04,pending_transcript
+T-021,add required prop to outer,8460.500192700743,2818.9354663496233,R04,pending_transcript
+T-022,map outer to a table,8626.426163837896,5204.794015217208,R04,pending_transcript
+T-023,can add check constraint,8601.787560356377,4565.953010072162,R04,pending_transcript
