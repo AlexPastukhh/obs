@@ -1,34 +1,30 @@
 # Current Source of Truth - ef core retry, savepoints
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-27 UTC
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+Screenshots are primary source when present. Candidate regions and nearest labels are hints only.
 
 ```text
-Stage0 source/boundary review: done
-R01 retry configuration, execution strategies, transaction replay, savepoints, multiple contexts, buffering, and ambiguous commits: transcript v001 done
-Final coverage audit: done
+source: source/source-complete-v002.svg
+SHA-256: c73ba05e069382d682f21b3ea949bf2cc13dbbadf253776a945df611590ebdad
+embedded assets: 76
+total image uses: 76
+processed image uses: 76 / 76
+previously processed image uses preserved: 6
+restored image uses: 70
+duplicate placements: 0
+SVG text nodes: 56
+processed SVG text nodes: 56 / 56
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Counts
+Closure: `Closed by complete corrected-SVG coverage.`
 
-```text
-unique embedded images: 6
-image uses on canvas: 6
-text labels parsed: 54
-R01 processed image uses: 6
-R01 processed text labels: 54
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
-```
+Authoritative transcript: `regions/full-svg-reconciliation-v002.md`
 
-## Candidate next step
-
-```text
-No normal transcript regions remain. Only correction/polish if needed.
-```
+Earlier materials remain preserved but are superseded as the current source interpretation.

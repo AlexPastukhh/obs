@@ -1,36 +1,30 @@
-# Current Source of Truth — google recapcha and recapchas
+# Current Source of Truth - google recapcha and recapchas
 
-Generated: 2026-06-22 00:20:00 UTC
+Generated: 2026-06-27 UTC
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+Screenshots are primary source when present. Candidate regions and nearest labels are hints only.
 
 ```text
-Stage0 source/boundary review: done
-R01 core flow / keys / token / server verification: transcript v001 done
-R02 v2 Razor/React + combined ASP.NET Core service: transcript v001 done
-R03 v3 Razor/React + action/score policy: transcript v001 done
-R04 remoteip / forwarded headers / proxy notes: transcript v001 done
-Final coverage audit: done
+source: source/source-complete-v002.svg
+SHA-256: f4af1c80d7062ab5bb20be22d3d6e101a0dd251dccd582861228889fd724cceb
+embedded assets: 76
+total image uses: 77
+processed image uses: 77 / 77
+previously processed image uses preserved: 77
+restored image uses: 0
+duplicate placements: 1
+SVG text nodes: 537
+processed SVG text nodes: 537 / 537
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Counts
+Closure: `Closed by complete corrected-SVG coverage.`
 
-```text
-unique embedded images: 76
-image uses on canvas: 77
-text blocks parsed: 29
-duplicate image placements resolved: 1
-remaining unclosed image uses: 0
-remaining unclosed text blocks: 0
-```
+Authoritative transcript: `regions/full-svg-reconciliation-v002.md`
 
-## Candidate next step
-
-```text
-No normal transcript regions remain. Only correction/polish or repeat-material archive if later needed.
-```
+Earlier materials remain preserved but are superseded as the current source interpretation.

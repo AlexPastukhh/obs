@@ -1,30 +1,25 @@
-# MANIFEST — ef core retry, savepoints stage1 final coverage v001
-
-Source SVG: `ef core retry, savepoints.svg`  
-Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-22 UTC
-
-## Result
+# MANIFEST — ef core retry, savepoints full SVG repair final v002
 
 ```text
-Processed image uses: 6
-Processed text labels: 54
-Remaining unclosed image uses: 0
-Remaining unclosed text labels: 0
+embedded assets: 76
+total image uses: 76
+processed image uses: 76
+restored image uses: 70
+duplicate placements: 0
+SVG text nodes: 56
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Main transcript
-
-```text
-_ai-conspects/ef core retry, savepoints/regions/R01-ef-core-retries-transactions-savepoints-final.md
-```
-
-## Evidence
-
-```text
-data/R01-sources-stage1-v001.*
-data/R01-boundary-review-stage1-v001.*
-data/R01-text-labels-stage1-v001.*
-data/final-coverage-audit-stage1-v001.*
-audit-assets/R01-source-images/*
-```
+Regions:
+- R01: Execution-strategy configuration, defaults, and diagnostics
+- R02: Retry units, automatic retries, and explicit transactions
+- R03: ExecuteInTransaction, SaveChanges(false), verification, and ambiguous commit
+- R04: Savepoints inside manual transactions
+- R05: Retry buffering and query-memory behavior
+- R06: Isolation levels, optimistic concurrency, and same-transaction retry
+- R07: Multiple DbContexts, pooling, and tenant-specific state

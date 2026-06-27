@@ -1,0 +1,538 @@
+﻿text_id,text,x,y,font_size,sha256,region_id,node_kind,coverage_status,assignment_count
+T-001,so flow exp,1837.4450018264151,88.70281005859376,89.33349609375px,31c3235bbaaf20079600507dedec986c3be5cce9d2389a453a7325427df69fad,R01,semantic,processed-semantic-transcript,1
+T-002,"so, we need to give site key to client",1900.7474433784437,252.67489669572126,20px,042d8bdf36f21e2223ec76fd2b317e93de26d6d1e27167690edecbe37276d2d1,R01,semantic,processed-semantic-transcript,1
+T-003,,1900.7474433784437,277.67489669572126,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R01,empty-structural,reviewed-empty-structural,1
+T-004,1 razor - from config/env variables/keystroe => viewbag,1900.7474433784437,302.67489669572126,20px,80a50409fb90b490ca23ffe20de2d1d57b0e130d00ce90ee5fcccd7074938461,R01,semantic,processed-semantic-transcript,1
+T-005,2 react - just pass in response,1900.7474433784437,327.67489669572126,20px,84d6fceaa3fe7d0c73046669238d1db08f4b02048676eb8401288a8c190d912d,R01,semantic,processed-semantic-transcript,1
+T-006,1 razor -> we are loading script,1983.5348578415833,802.6449883794822,20px,df9f111daf93460749c71e30f58dd480914e0da66063b83ddb133e0bc17a2d83,R01,semantic,processed-semantic-transcript,1
+T-007,in v3 - with our sitekey in qstring,1983.5348578415833,827.6449883794822,20px,57ebee9a97d6bf6656de106aae648f8b4f4a6818199fa765de9541c0324c30c2,R01,semantic,processed-semantic-transcript,1
+T-008,"and in script tag we are manually executing recapcha,",1983.5348578415833,852.6449883794822,20px,84e6ebb5ef66f8fe587f666ad3b3869ec12c0401f6258af3fa5d69f1884ae98f,R01,semantic,processed-semantic-transcript,1
+T-009,"with v3 we also need to set action ""register"",""login""",1983.5348578415833,877.6449883794822,20px,738c17c492d87c13ff2ddf245480886341032421d55a45e384f86ec76fc5747f,R01,semantic,processed-semantic-transcript,1
+T-010,in v2 we just set class and sitekey to div,1983.5348578415833,902.6449883794822,20px,b4c73ad5e130ac3bdc4a3b6f97590c79b286c5b47ae50a7328504b4af1e82120,R01,semantic,processed-semantic-transcript,1
+T-011,,1983.5348578415833,927.6449883794822,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R01,empty-structural,reviewed-empty-structural,1
+T-012,so here we prevent default and add event listener on recapchas token ready,2331.8115656753816,1559.6638855054598,20px,b9d11627376094e99b34f47cd0145b211d9686c1e09de9cbb6b8eb73d46ba3b0,R01,semantic,processed-semantic-transcript,1
+T-013,to execute and put token from resolved promise into the input and submit,2331.8115656753816,1584.6638855054598,20px,ad1bb9140cc9adeaaa39a7bce1b7eadbcaf73b17926f3365fec7dc90c8494721,R01,semantic,processed-semantic-transcript,1
+T-014,!!! we can do literally the same with v2,2331.8115656753816,1609.6638855054598,20px,44bf0a8a50f7fad4a6e729652857d4578141525af8372083b828c066108e1f0a,R01,semantic,processed-semantic-transcript,1
+T-015,using form because v2 automatically sets it,1748.718212318092,1791.0404705623341,20px,0cf607d86a31ebc07f5d52bd946c48425bd5678203967711f2884e4297d2560b,R01,semantic,processed-semantic-transcript,1
+T-016,can do like v3,1748.718212318092,1816.0404705623341,20px,9d7c5715d4589d97304f69b7f252aa745f5242300d952b0be3e840fb301e8975,R01,semantic,processed-semantic-transcript,1
+T-017,we also may need to verify hostname,8236.16672680511,2132.671714636358,84.00000000000003px,d7cc996230773fc2a20811ca3726ea20d974eaa502fe9d429e4d94dd3aa442f8,R01,semantic,processed-semantic-transcript,1
+T-018,expected action in recapcha is just a string to put inside,1966.3212740001636,2756.650452652536,20px,277cc55da8c212c1090b498ce41231d34ce23fd5204f8a683a87a98bc37252b8,R01,semantic,processed-semantic-transcript,1
+T-019,,1966.3212740001636,2781.650452652536,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R01,empty-structural,reviewed-empty-structural,1
+T-020,and to verify,2078.39730881376,3124.233194124591,20px,b102ef01bb422aeb8c18c1814f7faf357f016bad374c5881af116d340a5b0fc4,R01,semantic,processed-semantic-transcript,1
+T-021,"<script src=""https://www.google.com/recaptcha/api.js"" async defer></script>",5920.415627804766,3722.1862409192045,20px,44f7e6e3bc4488627c29f9c1f3233741985eebe325b8df9c89277e99c8219960,R02,semantic,processed-semantic-transcript,1
+T-022,,5920.415627804766,3747.1862409192045,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-023,"<form asp-action=""Register"" method=""post"">",5920.415627804766,3772.1862409192045,20px,6d27ef22565a3d05e0765a15147281a3a561edffce64c7b19c0bdf96eb3d57fa,R02,semantic,processed-semantic-transcript,1
+T-024,"<input type=""email"" name=""Email"" required />",5920.415627804766,3797.1862409192045,20px,88495aecaa0f95361ffcccc8aaac68efce99a9db7d9a4cb6b6751bca3a8d8060,R02,semantic,processed-semantic-transcript,1
+T-025,"<input type=""password"" name=""Password"" required />",5920.415627804766,3822.1862409192045,20px,d4d5034f25630f5f714bfa9f89892076ecfd030deb4372860909e5d585cfe7c9,R02,semantic,processed-semantic-transcript,1
+T-026,,5920.415627804766,3847.1862409192045,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-027,"<div class=""g-recaptcha"" data-sitekey=""@ViewBag.RecaptchaSiteKey""></div>",5920.415627804766,3872.1862409192045,20px,bb459b34ae5edf9a1db4199afdb551af68f4a176810ee5134c225e72d9ceae81,R02,semantic,processed-semantic-transcript,1
+T-028,,5920.415627804766,3897.1862409192045,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-029,"<button type=""submit"">Submit</button>",5920.415627804766,3922.1862409192045,20px,af2424dd0001d27b462e758595c92e7b027fb15c416c83705dde664e8c07da55,R02,semantic,processed-semantic-transcript,1
+T-030,</form>,5920.415627804766,3947.1862409192045,20px,e0c7bb7b72eeecfc07340f6bce5874176ae2e9d13551d2d6a6f3409e66c2f8c9,R02,semantic,processed-semantic-transcript,1
+T-031,"import React, { useRef, useState } from ""react"";",819.8901346668763,3959.5855582295126,20px,7a8b4710cf0f183f074b013405f7ef658b6c12343082e5dc91d65a2126fec633,R02,semantic,processed-semantic-transcript,1
+T-032,"import ReCAPTCHA from ""react-google-recaptcha"";",819.8901346668763,3984.5855582295126,20px,4307e7c52c5802086e38a3ed59720f45802dbba9e2bc95ea152a0be9dcf10669,R02,semantic,processed-semantic-transcript,1
+T-033,,819.8901346668763,4009.5855582295126,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-034,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY; // or REACT_APP_...,819.8901346668763,4034.5855582295126,20px,33224021d34a9be727525bdd56c9704448bf2abfddd5152d83c11e53c41e099b,R02,semantic,processed-semantic-transcript,1
+T-035,,819.8901346668763,4059.5855582295126,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-036,export default function RegisterV2() {,819.8901346668763,4084.5855582295126,20px,0b00daf55406ee278f219f23c809bf0affa61fa740496cb5897dae9fce819ed0,R02,semantic,processed-semantic-transcript,1
+T-037,const recaptchaRef = useRef(null);,819.8901346668763,4109.585558229513,20px,cfc8016e1e8c708ee796fba5d1759d5f08473d4d8cc931cf5b89e7628fc302a2,R02,semantic,processed-semantic-transcript,1
+T-038,"const [email, setEmail] = useState("""");",819.8901346668763,4134.585558229513,20px,0da1eeea29496c66fb72aa7713c17a3650f0a8719d5e62b0c78af6b73927f706,R02,semantic,processed-semantic-transcript,1
+T-039,"const [password, setPassword] = useState("""");",819.8901346668763,4159.585558229513,20px,a29857e63814f6df9d718244da56f62f3868a043039238cbe92bc925324e4450,R02,semantic,processed-semantic-transcript,1
+T-040,"const [status, setStatus] = useState("""");",819.8901346668763,4184.585558229513,20px,25c4d43572bc29a71a61515973880e14a4e547f255ef7a530fd4faa9e87400bc,R02,semantic,processed-semantic-transcript,1
+T-041,,819.8901346668763,4209.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-042,const onSubmit = async (e) => {,819.8901346668763,4234.585558229513,20px,60feb94dff28a559aea894b5377948f23823ae5b3a5e881d2afa03b8973045bc,R02,semantic,processed-semantic-transcript,1
+T-043,e.preventDefault();,819.8901346668763,4259.585558229513,20px,894c24bbd2dd531cc2cdc13ea85683503bc7a4a2629ceb09c859591e621a3804,R02,semantic,processed-semantic-transcript,1
+T-044,"setStatus("""");",819.8901346668763,4284.585558229513,20px,e8233589ea3a222b87ef1b4859d6eea0fccce29d15ba91f3f95c313992dc520b,R02,semantic,processed-semantic-transcript,1
+T-045,,819.8901346668763,4309.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-046,const token = recaptchaRef.current?.getValue();,819.8901346668763,4334.585558229513,20px,810a87919f5157476c83c3149cd6768f25268a21a40e020584b33325defc3dea,R02,semantic,processed-semantic-transcript,1
+T-047,if (!token) {,819.8901346668763,4359.585558229513,20px,8ae3495b40e4755c0e5026ce6d60f7d87e3800ce0878dcb73e560ade068c7f55,R02,semantic,processed-semantic-transcript,1
+T-048,"setStatus(""Please complete reCAPTCHA."");",819.8901346668763,4384.585558229513,20px,ddb57ac7936d164296a3d3be8afc490d636ce0e4b6e66c135ae53edae5315b63,R02,semantic,processed-semantic-transcript,1
+T-049,return;,819.8901346668763,4409.585558229513,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R02,semantic,processed-semantic-transcript,1
+T-050,},819.8901346668763,4434.585558229513,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-051,,819.8901346668763,4459.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-052,"const resp = await fetch(""/api/auth/register"", {",819.8901346668763,4484.585558229513,20px,acbe5051a143c0ee9d708f04acd378f364dc4b97367c3266a18387fa8ced638d,R02,semantic,processed-semantic-transcript,1
+T-053,"method: ""POST"",",819.8901346668763,4509.585558229513,20px,fa8f0b5ceabf772901474bc25319f2eedb1f710c45f1b586f3af334eea183b9d,R02,semantic,processed-semantic-transcript,1
+T-054,"headers: { ""Content-Type"": ""application/json"" },",819.8901346668763,4534.585558229513,20px,2b88f4d4f8f1954658367dcec28e8db230feb8ed9909edb0c54a65daf18dd9d4,R02,semantic,processed-semantic-transcript,1
+T-055,"body: JSON.stringify({ email, password, recaptchaToken: token })",819.8901346668763,4559.585558229513,20px,dccf26308684abc515823bab49b8b97558c24ec492c24b6ff66fa55d58a44be4,R02,semantic,processed-semantic-transcript,1
+T-056,});,819.8901346668763,4584.585558229513,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R02,semantic,processed-semantic-transcript,1
+T-057,,819.8901346668763,4609.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-058,if (!resp.ok) {,819.8901346668763,4634.585558229513,20px,5b8896395731649f30f078541a586b3144a2c2ef1ff7d31be57e8012e199828b,R02,semantic,processed-semantic-transcript,1
+T-059,setStatus(await resp.text());,819.8901346668763,4659.585558229513,20px,f3ecda7a1e1b696ec8bbccdc7f0c66812fbc09b1bd37af90a5875fe94183764a,R02,semantic,processed-semantic-transcript,1
+T-060,recaptchaRef.current?.reset(); // token is single-use-ish; reset after failure,819.8901346668763,4684.585558229513,20px,66d9b410bf2bca9a6ac250695dc8398dd80cbc24d934b1a315666e67ed1eb92d,R02,semantic,processed-semantic-transcript,1
+T-061,return;,819.8901346668763,4709.585558229513,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R02,semantic,processed-semantic-transcript,1
+T-062,},819.8901346668763,4734.585558229513,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-063,,819.8901346668763,4759.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-064,"setStatus(""Registered!"");",819.8901346668763,4784.585558229513,20px,2b618eb8fa2102f4c90074960da0140be5cc0a1aeedda690c1e25998275d34da,R02,semantic,processed-semantic-transcript,1
+T-065,};,819.8901346668763,4809.585558229513,20px,df3982fd610173599241fca93c7c866683f58f541eced1c2098102145477164c,R02,semantic,processed-semantic-transcript,1
+T-066,,819.8901346668763,4834.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-067,return (,819.8901346668763,4859.585558229513,20px,fc4c1868f34cfb519e76be7307878b7254a939fea0a2f13fd8029482816af74d,R02,semantic,processed-semantic-transcript,1
+T-068,<form onSubmit={onSubmit}>,819.8901346668763,4884.585558229513,20px,804b9c4c26c03470f54a3e72430146ba6176db5972e61fd585e8ee27501d0a2d,R02,semantic,processed-semantic-transcript,1
+T-069,"<input type=""email"" value={email} onChange={e => setEmail(e.target.value)} required />",819.8901346668763,4909.585558229513,20px,458b6d7d523ad29d59f054db323f5fa116da7155d2597293655bf228c8a8ab64,R02,semantic,processed-semantic-transcript,1
+T-070,"<input type=""password"" value={password} onChange={e => setPassword(e.target.value)} required />",819.8901346668763,4934.585558229513,20px,916a2cbae6dd2515901e4c315ab1812011c63c1693f497d55b00d5a4fe175aca,R02,semantic,processed-semantic-transcript,1
+T-071,,819.8901346668763,4959.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-072,<ReCAPTCHA sitekey={SITE_KEY} ref={recaptchaRef} />,819.8901346668763,4984.585558229513,20px,cc7045b1d4b625e06a437c809c1fda788c74335e0d140a3edc4e3fefc031f776,R02,semantic,processed-semantic-transcript,1
+T-073,,819.8901346668763,5009.585558229513,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-074,"<button type=""submit"">Register</button>",819.8901346668763,5034.585558229513,20px,bdc94113f57e993a757422daff019c5871a5961b53fd383f57d2695453a6cbd5,R02,semantic,processed-semantic-transcript,1
+T-075,<div>{status}</div>,819.8901346668763,5059.585558229513,20px,77bdc611bbf6f55aec1d6b5d4b1c22c32f525cbbb4a09bb6209f08396eee05a1,R02,semantic,processed-semantic-transcript,1
+T-076,</form>,819.8901346668763,5084.585558229513,20px,e0c7bb7b72eeecfc07340f6bce5874176ae2e9d13551d2d6a6f3409e66c2f8c9,R02,semantic,processed-semantic-transcript,1
+T-077,public sealed class RecaptchaVerifyResponse,6001.1563233342795,5097.741728657865,20px,a77e09550e0f8690a9d1d9763b3dba33bc7f80c04d23a23051c3a17c47899b2b,R02,semantic,processed-semantic-transcript,1
+T-078,);,819.8901346668763,5109.585558229513,20px,9d8b2b5670d18da8a99f6152f7ee75558019cd106d8032bf7c1117bd37273e37,R02,semantic,processed-semantic-transcript,1
+T-079,{,6001.1563233342795,5122.741728657865,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-080,},819.8901346668763,5134.585558229513,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-081,public bool success { get; set; },6001.1563233342795,5147.741728657865,20px,273b6ab3c04b81989f1fe5f7ec70f5a5b3fd5bd138c9f5846bac68d0f145d8ff,R02,semantic,processed-semantic-transcript,1
+T-082,public string[]? error-codes { get; set; } // google uses this name in JSON sometimes,6001.1563233342795,5172.741728657865,20px,975dff6baf58a70e36dbdee29c4d9257d8e453d84c6cd94c98a89b5fe4734f5a,R02,semantic,processed-semantic-transcript,1
+T-083,public List<string>? error_codes { get; set; } // in case serializer maps differently,6001.1563233342795,5197.741728657865,20px,0e3c55bc6ced706c6ac3c9effd41241699afec3a72d6a0e49c5319c1911f2132,R02,semantic,processed-semantic-transcript,1
+T-084,public double score { get; set; } // v3 only,6001.1563233342795,5222.741728657865,20px,650f7d00aaf62e6368e8eeb5b73239eb4f7be15a1e5814bd395c080c0569a9ec,R02,semantic,processed-semantic-transcript,1
+T-085,public string? action { get; set; } // v3 only,6001.1563233342795,5247.741728657865,20px,d999cd033c438d4fb1949a3552deaef12b58d7fe024b98c21a7b21a6c37e4329,R02,semantic,processed-semantic-transcript,1
+T-086,public string? hostname { get; set; },6001.1563233342795,5272.741728657865,20px,3007027fd13e6b580e4440a71ff4ba8cfba2c091b14cba7d0a9d933bf51c9475,R02,semantic,processed-semantic-transcript,1
+T-087,},6001.1563233342795,5297.741728657865,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-088,v3 must check action and score,3856.8636389517624,5403.665699858304,35.589731069712435px,d329b7c0c89952800d125445fd4a15f52eb3d98061f8409fb22a3050563e3425,R02,semantic,processed-semantic-transcript,1
+T-089,using System.Net.Http;,6110.045347856848,5548.112076422615,20px,d8ec01fffb11ef19bee8b97391affd498b9652466960710799cda14c1de186f3,R02,semantic,processed-semantic-transcript,1
+T-090,using System.Text.Json;,6110.045347856848,5573.112076422615,20px,732a4059a3613f473ef78b42923c4e58871fc116be8101990a55bb4ce32453d2,R02,semantic,processed-semantic-transcript,1
+T-091,using Microsoft.AspNetCore.WebUtilities;,6110.045347856848,5598.112076422615,20px,7f0b65ae6b122f5ef5e90611bba7c33bb7fe9345fe35ea2e1cb675e18344fdfe,R02,semantic,processed-semantic-transcript,1
+T-092,,6110.045347856848,5623.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-093,public interface IRecaptchaVerifier,6110.045347856848,5648.112076422615,20px,36168f2f5b965da514843d3b1d18ecd4e4bb63ba34cdbe0abe5efed5165db9c8,R02,semantic,processed-semantic-transcript,1
+T-094,{,6110.045347856848,5673.112076422615,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-095,"Task<bool> VerifyV2Async(string token, string? remoteIp = null);",6110.045347856848,5698.112076422615,20px,a2c41a812d05b09244430845a9b28645d4a1a4c14371b61a712fddefc96d7008,R02,semantic,processed-semantic-transcript,1
+T-096,},6110.045347856848,5723.112076422615,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-097,,6110.045347856848,5748.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-098,combined v2 and v3,3857.926486819634,5770.013303040166,53.33331298828121px,bc7abb91206b90cbbd7eca7363d707f43a9790a0bda789b5b687c91deb8d530f,R02,semantic,processed-semantic-transcript,1
+T-099,public class GoogleRecaptchaVerifier : IRecaptchaVerifier,6110.045347856848,5773.112076422615,20px,e37c9622f982a2ef4c46043c26cd304393a13d7a8baef5669e4c61a7d3d2096f,R02,semantic,processed-semantic-transcript,1
+T-100,{,6110.045347856848,5798.112076422615,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-101,private readonly HttpClient _http;,6110.045347856848,5823.112076422615,20px,c2ec65189398b039b666e776b84bcc8adb7f906859a78d23ef1cd5c9496c744d,R02,semantic,processed-semantic-transcript,1
+T-102,private readonly IConfiguration _config;,6110.045347856848,5848.112076422615,20px,245ba8819c99ea1b0d4a97f97fc736a4d99ff1f02387938c2bad0f446418dcbb,R02,semantic,processed-semantic-transcript,1
+T-103,,6110.045347856848,5873.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-104,"import React, { useEffect, useRef, useState } from ""react"";",738.9688465655663,5893.54873521295,20px,1f2d3fda08f031a38a55b5db63d320b62f43262cd6388b316dc0eb99dde569ad,R02,semantic,processed-semantic-transcript,1
+T-105,"public GoogleRecaptchaVerifier(HttpClient http, IConfiguration config)",6110.045347856848,5898.112076422615,20px,667dd006678f55fcd07d7f99ef87602203f62788aefe98e30d6b106b9d598f94,R02,semantic,processed-semantic-transcript,1
+T-106,,738.9688465655663,5918.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-107,{,6110.045347856848,5923.112076422615,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-108,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;,738.9688465655663,5943.54873521295,20px,e30ae75bd91b4c5f043821ca718e26aa7cff1cf997af317fd0b22e2929447957,R02,semantic,processed-semantic-transcript,1
+T-109,_http = http;,6110.045347856848,5948.112076422615,20px,13f104c2c01483b4191bd35f3c261197a7977c5708bef13ccafd7f1f9e14b894,R02,semantic,processed-semantic-transcript,1
+T-110,,738.9688465655663,5968.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-111,_config = config;,6110.045347856848,5973.112076422615,20px,0be37150bbc73220dbe49c0001bc58b8a2ce67f13b7188394ce7a904f961472a,R02,semantic,processed-semantic-transcript,1
+T-112,function loadScript(src) {,738.9688465655663,5993.54873521295,20px,e43b607bb4680295a303844c070c642cdd6a2e318a7cd6478e68d4b1ddd26c44,R02,semantic,processed-semantic-transcript,1
+T-113,},6110.045347856848,5998.112076422615,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-114,"return new Promise((resolve, reject) => {",738.9688465655663,6018.54873521295,20px,23c1643fd7629907a734653bfbaa51f1a544ba70cfb84d827f4feadb2b700129,R02,semantic,processed-semantic-transcript,1
+T-115,,6110.045347856848,6023.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-116,"const existing = document.querySelector(`script[src=""${src}""]`);",738.9688465655663,6043.54873521295,20px,42b0d363fe2b305cf28a858f2b808f511c205b6854b57700af401a649d7135a0,R02,semantic,processed-semantic-transcript,1
+T-117,"public async Task<bool> VerifyV2Async(string token, string? remoteIp = null)",6110.045347856848,6048.112076422615,20px,c71c6be0e816dfccb5b614cf6c447d2989e6a162a385c87c2baa061ae06ef2d9,R02,semantic,processed-semantic-transcript,1
+T-118,if (existing) return resolve();,738.9688465655663,6068.54873521295,20px,5994960c3cc8236567f4288e1ce2b407e87f3c8e95c5bbc9c5d38aaf20762751,R02,semantic,processed-semantic-transcript,1
+T-119,using System.Text.Json.Serialization;,3579.290261899535,6070.646591875157,20px,d20d5b43d8217dabb59f68b8bff257ddbd2d9bf0bb5ca337704fdc170781f7da,R02,semantic,processed-semantic-transcript,1
+T-120,{,6110.045347856848,6073.112076422615,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-121,,738.9688465655663,6093.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-122,,3579.290261899535,6095.646591875157,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-123,if (string.IsNullOrWhiteSpace(token)) return false;,6110.045347856848,6098.112076422615,20px,05a2220a96b1163f503aad0073009029989a6cca0b5e5b37ee775826f534f1d9,R02,semantic,processed-semantic-transcript,1
+T-124,"const s = document.createElement(""script"");",738.9688465655663,6118.54873521295,20px,68450a46e72a884ce0954f59f14a86b3045e581a4eda83bd680f67d22dfae4e8,R02,semantic,processed-semantic-transcript,1
+T-125,public sealed class RecaptchaVerifyResponse,3579.290261899535,6120.646591875157,20px,a77e09550e0f8690a9d1d9763b3dba33bc7f80c04d23a23051c3a17c47899b2b,R02,semantic,processed-semantic-transcript,1
+T-126,,6110.045347856848,6123.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-127,s.src = src;,738.9688465655663,6143.54873521295,20px,1d4c9cbec5e8b9ae7c49521ae5fb5dd315a2f6da6fc48f22f5e13e9af8d4b8c3,R02,semantic,processed-semantic-transcript,1
+T-128,{,3579.290261899535,6145.646591875157,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-129,"var secret = _config[""Recaptcha:SecretKey""];",6110.045347856848,6148.112076422615,20px,50898e0f22c78be7234e9bbcc2d3f85fbe7d72c8bdd2f8b542a3c4a5c149c82a,R02,semantic,processed-semantic-transcript,1
+T-130,s.async = true;,738.9688465655663,6168.54873521295,20px,c6c59d2d4ba50b7aaf341eaf41c45ad253d8a7bb7d8e1d9347f575077bf1052e,R02,semantic,processed-semantic-transcript,1
+T-131,"[JsonPropertyName(""success"")]",3579.290261899535,6170.646591875157,20px,b161ec5f14279f64776bb5f51541202281ac7907416904408df3cd1fc751282c,R02,semantic,processed-semantic-transcript,1
+T-132,if (string.IsNullOrWhiteSpace(secret)),6110.045347856848,6173.112076422615,20px,4dda69d90deab36911aa7bca89244028f1b57f62027489ddb2d70959c57ae468,R02,semantic,processed-semantic-transcript,1
+T-133,s.defer = true;,738.9688465655663,6193.54873521295,20px,d480978ef656de3a104058c3fd8ac914f033af9f71822067dc8e47269540f7f6,R02,semantic,processed-semantic-transcript,1
+T-134,public bool Success { get; set; },3579.290261899535,6195.646591875157,20px,c16cfaa17fc0e4bf8706fe361f90329e71c3ec4876ed1cb0b56b81b27f27c44d,R02,semantic,processed-semantic-transcript,1
+T-135,"throw new InvalidOperationException(""Recaptcha:SecretKey is not configured."");",6110.045347856848,6198.112076422615,20px,eb77b554e28e8dbeb23910d4e741943db79b494dd5119280bc5138761ddd223a,R02,semantic,processed-semantic-transcript,1
+T-136,s.onload = resolve;,738.9688465655663,6218.54873521295,20px,6e7eaaf1d5229ba9916b482e57a7d8856923a8f83c52f60d43b9ecb08701c699,R02,semantic,processed-semantic-transcript,1
+T-137,,3579.290261899535,6220.646591875157,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-138,,6110.045347856848,6223.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-139,s.onerror = reject;,738.9688465655663,6243.54873521295,20px,0b3aaa44a72b1c4ec8ede9c240fa47a2b6f30dc85215806a981aa1c0e77e6232,R02,semantic,processed-semantic-transcript,1
+T-140,"[JsonPropertyName(""challenge_ts"")]",3579.290261899535,6245.646591875157,20px,d9651c9c69c14f57495e0320d98f32abe9ea40eed240b7ccbe11ecf48aa1cb47,R02,semantic,processed-semantic-transcript,1
+T-141,// POST https://www.google.com/recaptcha/api/siteverify,6110.045347856848,6248.112076422615,20px,df817cc0be6fcb2b44ff9d9ebd830396aeb6684638bc50bf6f58e9b239c90e93,R02,semantic,processed-semantic-transcript,1
+T-142,document.head.appendChild(s);,738.9688465655663,6268.54873521295,20px,cf328489e166e0ff6c6eaede2485af2714c290169db8971aafee44fcdb0c3e44,R02,semantic,processed-semantic-transcript,1
+T-143,public DateTimeOffset? ChallengeTs { get; set; },3579.290261899535,6270.646591875157,20px,130d9efc66ae057c4b903da3dc0eae9b3c8ac045768e9295c8ac7ad4bda09d6c,R02,semantic,processed-semantic-transcript,1
+T-144,"// with form fields: secret, response, remoteip(optional)",6110.045347856848,6273.112076422615,20px,6bd0935a67be7fc56df306ab7ea4f9b4116dbf9a38a4e2ca7265d334fac13b63,R02,semantic,processed-semantic-transcript,1
+T-145,});,738.9688465655663,6293.54873521295,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R02,semantic,processed-semantic-transcript,1
+T-146,,3579.290261899535,6295.646591875157,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-147,,6110.045347856848,6298.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-148,},738.9688465655663,6318.54873521295,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-149,"[JsonPropertyName(""hostname"")]",3579.290261899535,6320.646591875157,20px,6aa66369bf6d4c2a41146a4e738d7da1772d921472ce752981c036c7e3c75628,R02,semantic,processed-semantic-transcript,1
+T-150,"var data = new Dictionary<string, string>",6110.045347856848,6323.112076422615,20px,f6e6c200d813f9f0aa4527b94f128c24824e12cb04c65796cde59ae112b324d5,R02,semantic,processed-semantic-transcript,1
+T-151,,738.9688465655663,6343.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-152,public string? Hostname { get; set; },3579.290261899535,6345.646591875157,20px,b4fd8952c89900639c26f1d1da5732fcb5ad0c93157e98d17cfdba84c935bfb2,R02,semantic,processed-semantic-transcript,1
+T-153,{,6110.045347856848,6348.112076422615,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-154,export default function RegisterV2NoLib() {,738.9688465655663,6368.54873521295,20px,8f127028e396d29525df11f2c9b83d9363555b9444379048082f1bfe3afa7897,R02,semantic,processed-semantic-transcript,1
+T-155,,3579.290261899535,6370.646591875157,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-156,"[""secret""] = secret,",6110.045347856848,6373.112076422615,20px,2a5c1a7e259cac8c4eb744cd0fa91de971e477641ca33e2873f38650dbc8df91,R02,semantic,processed-semantic-transcript,1
+T-157,const captchaDivRef = useRef(null);,738.9688465655663,6393.54873521295,20px,8a2498e4f718e8c20709867d29ab3eb36adf416f1b5ebd3d3f0d99e6eeed1db1,R02,semantic,processed-semantic-transcript,1
+T-158,// v3 fields,3579.290261899535,6395.646591875157,20px,2dae8704184f8c7c2d58897192897296c87741c2271fc21f3084802196b26b1c,R02,semantic,processed-semantic-transcript,1
+T-159,"[""response""] = token",6110.045347856848,6398.112076422615,20px,1220fc7e0a17dde74dcd64523b7c99a3792e2a460cc04ce4edd75e2c345b355e,R02,semantic,processed-semantic-transcript,1
+T-160,const widgetIdRef = useRef(null);,738.9688465655663,6418.54873521295,20px,b3a1990f68f200d20c74ceb85c0cdac397bf7053ea0f872633bb47c738caa24f,R02,semantic,processed-semantic-transcript,1
+T-161,"[JsonPropertyName(""score"")]",3579.290261899535,6420.646591875157,20px,f7bfb1de4e7c054ad57d11ad0a3925ed9faa817acda4a013dd8847d2ab706259,R02,semantic,processed-semantic-transcript,1
+T-162,};,6110.045347856848,6423.112076422615,20px,df3982fd610173599241fca93c7c866683f58f541eced1c2098102145477164c,R02,semantic,processed-semantic-transcript,1
+T-163,,738.9688465655663,6443.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-164,public double? Score { get; set; },3579.290261899535,6445.646591875157,20px,58327e79f441cfcbe5594b18ca17d0e05b9b7de90b9eef1305f050efa0ab3674,R02,semantic,processed-semantic-transcript,1
+T-165,,6110.045347856848,6448.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-166,"const [email, setEmail] = useState("""");",738.9688465655663,6468.54873521295,20px,0da1eeea29496c66fb72aa7713c17a3650f0a8719d5e62b0c78af6b73927f706,R02,semantic,processed-semantic-transcript,1
+T-167,,3579.290261899535,6470.646591875157,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-168,if (!string.IsNullOrWhiteSpace(remoteIp)),6110.045347856848,6473.112076422615,20px,588b2238fc955f094c552ce47bac8e036898d743ac595b2bee1e39ac650bf039,R02,semantic,processed-semantic-transcript,1
+T-169,"const [password, setPassword] = useState("""");",738.9688465655663,6493.54873521295,20px,a29857e63814f6df9d718244da56f62f3868a043039238cbe92bc925324e4450,R02,semantic,processed-semantic-transcript,1
+T-170,"[JsonPropertyName(""action"")]",3579.290261899535,6495.646591875157,20px,6214f1253c5b8b685fba1f0fd15ef02d57530f03f06dafc66f30415922587883,R02,semantic,processed-semantic-transcript,1
+T-171,"data[""remoteip""] = remoteIp;",6110.045347856848,6498.112076422615,20px,33a00d09b4f42ad855947d1718a46a51600e6130e54bd95aeab3afb57059e685,R02,semantic,processed-semantic-transcript,1
+T-172,"const [status, setStatus] = useState("""");",738.9688465655663,6518.54873521295,20px,25c4d43572bc29a71a61515973880e14a4e547f255ef7a530fd4faa9e87400bc,R02,semantic,processed-semantic-transcript,1
+T-173,public string? Action { get; set; },3579.290261899535,6520.646591875157,20px,05452f6acfe479e7ea7d5a6aff0c97d4f50a11e197c87cc7a36ba92a6be7f6d6,R02,semantic,processed-semantic-transcript,1
+T-174,,6110.045347856848,6523.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-175,,738.9688465655663,6543.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-176,,3579.290261899535,6545.646591875157,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-177,using var content = new FormUrlEncodedContent(data);,6110.045347856848,6548.112076422615,20px,d15682b7fae79579f7ec041fe50e5d6ab2a20a22451f016e379786c86560dd61,R02,semantic,processed-semantic-transcript,1
+T-178,useEffect(() => {,738.9688465655663,6568.54873521295,20px,f28ea927c74f4339d40c3cf0626cab7fdec954d41ef387a713650bc54eca15b3,R02,semantic,processed-semantic-transcript,1
+T-179,"[JsonPropertyName(""error-codes"")]",3579.290261899535,6570.646591875157,20px,daca856135fdf0237942b4e45428eece37d50dd9fd92a47f49c090a28ac78279,R02,semantic,processed-semantic-transcript,1
+T-180,"using var resp = await _http.PostAsync(""https://www.google.com/recaptcha/api/siteverify"", content);",6110.045347856848,6573.112076422615,20px,044aa5c9a454cfd50d47fad9a94761ab8323c0bc7d1abe69975c02df765635f8,R02,semantic,processed-semantic-transcript,1
+T-181,"const src = ""https://www.google.com/recaptcha/api.js?render=explicit"";",738.9688465655663,6593.54873521295,20px,cb024149face99dbb0a6ec8743c280cf5bd9bade83ccdbfc5ebdeea270b586d7,R02,semantic,processed-semantic-transcript,1
+T-182,public string[]? ErrorCodes { get; set; },3579.290261899535,6595.646591875157,20px,b1c22765358c2ab5fb6a18249918569a99f0498cb07c27a0f4b658cda6c2e697,R02,semantic,processed-semantic-transcript,1
+T-183,resp.EnsureSuccessStatusCode();,6110.045347856848,6598.112076422615,20px,0ae1ef40ed584a94f73974e0b515268775f7749fb67ccb4f6e1930f984cc0568,R02,semantic,processed-semantic-transcript,1
+T-184,,738.9688465655663,6618.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-185,},3579.290261899535,6620.646591875157,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-186,,6110.045347856848,6623.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-187,loadScript(src).then(() => {,738.9688465655663,6643.54873521295,20px,0693f6856d280032ca3482a177499cb84c8518c0b4c72f14d1096bbdca04a052,R02,semantic,processed-semantic-transcript,1
+T-188,,3579.290261899535,6645.646591875157,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-189,var json = await resp.Content.ReadAsStringAsync();,6110.045347856848,6648.112076422615,20px,0e0dce0d6aa2f8feaca7b34a3092686cff0ffc850432f7091bbe0625d36830dc,R02,semantic,processed-semantic-transcript,1
+T-190,// Wait until grecaptcha is ready,738.9688465655663,6668.54873521295,20px,a2b27a80b06d8999e5008cb3c073c86ced632052855aaa0906ee5b85bd87b1bd,R02,semantic,processed-semantic-transcript,1
+T-191,"public sealed record RecaptchaV3Result(bool Success, double Score, string? Action, string? Hostname, string[]? ErrorCodes);",3579.290261899535,6670.646591875157,20px,7a9852109d0048d87efe5471e944b9421840be3973e5bb0dfb63923c5d26731b,R02,semantic,processed-semantic-transcript,1
+T-192,var result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json);,6110.045347856848,6673.112076422615,20px,bf52eafd4b2e7c2f66b2a94c16b664c684145837e11f0947cbf541b09a9f5874,R02,semantic,processed-semantic-transcript,1
+T-193,window.grecaptcha.ready(() => {,738.9688465655663,6693.54873521295,20px,3723a122127f2038240f6f1bd536201412fcfdfe0b1185dca3ab58e10ff26569,R02,semantic,processed-semantic-transcript,1
+T-194,"public sealed record RecaptchaV2Result(bool Success, string? Hostname, string[]? ErrorCodes);",3579.290261899535,6695.646591875157,20px,6a79f6b3cf331e98ea07c064afed706800f27998e591afac9524099cb4bcddc3,R02,semantic,processed-semantic-transcript,1
+T-195,,6110.045347856848,6698.112076422615,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-196,if (widgetIdRef.current !== null) return; // already rendered,738.9688465655663,6718.54873521295,20px,af13d010798ce1d91366ee41f5dc0eb2727de3c010143eee473a1ed6ca00f281,R02,semantic,processed-semantic-transcript,1
+T-197,return result?.success == true;,6110.045347856848,6723.112076422615,20px,35a9d0ddf25f0e3dcc52a34ffc8834173fc82171f227affc99fec65583bbd078,R02,semantic,processed-semantic-transcript,1
+T-198,,738.9688465655663,6743.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-199,},6110.045347856848,6748.112076422615,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-200,"widgetIdRef.current = window.grecaptcha.render(captchaDivRef.current, {",738.9688465655663,6768.54873521295,20px,5142f5506751dafd2b928e6ac9b938a1489378751ba6b95d4f4b9eb13ea9691a,R02,semantic,processed-semantic-transcript,1
+T-201,},6110.045347856848,6773.112076422615,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-202,"sitekey: SITE_KEY,",738.9688465655663,6793.54873521295,20px,d71e0b0778bb71190c686d1b3deb5b6ea2892d98b31fe4bdb2567582d47a46ff,R02,semantic,processed-semantic-transcript,1
+T-203,"theme: ""light"",",738.9688465655663,6818.54873521295,20px,0789af111dcf146f942e8d3b58e8fc8128b13ba2c47817ecd7232927657cf182,R02,semantic,processed-semantic-transcript,1
+T-204,"// callback: () => {}, // optional: called on success",738.9688465655663,6843.54873521295,20px,2c75edbba1ac7052b9b0fd260c4a140e17af159f7c4739ce855af6c98e45e821,R02,semantic,processed-semantic-transcript,1
+T-205,"// ""expired-callback"": () => {}, // optional: called on expiration",738.9688465655663,6868.54873521295,20px,eb9ca2aa05e733261aefaaef79ba66bc303b522109134c69ad3265c28a45f2d9,R02,semantic,processed-semantic-transcript,1
+T-206,});,738.9688465655663,6893.54873521295,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R02,semantic,processed-semantic-transcript,1
+T-207,});,738.9688465655663,6918.54873521295,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R02,semantic,processed-semantic-transcript,1
+T-208,});,738.9688465655663,6943.54873521295,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R02,semantic,processed-semantic-transcript,1
+T-209,public interface IRecaptchaService,3610.9316113066916,6967.770221292399,20px,67d57c0e12af56b73510be588dbe1d71eca4401ab11ea8ab7c015fbbfebd3ef6,R02,semantic,processed-semantic-transcript,1
+T-210,"}, []);",738.9688465655663,6968.54873521295,20px,27c7e19d1e112eeabf093062e0e24babd319cebac309a618f8cf7a9aa324b972,R02,semantic,processed-semantic-transcript,1
+T-211,{,3610.9316113066916,6992.770221292399,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-212,,738.9688465655663,6993.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-213,"Task<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null);",3610.9316113066916,7017.770221292399,20px,0898f1e4311a9940b99544fcca70af75a78410ce5773140914fc46bcb175d3a2,R02,semantic,processed-semantic-transcript,1
+T-214,const onSubmit = async (e) => {,738.9688465655663,7018.54873521295,20px,60feb94dff28a559aea894b5377948f23823ae5b3a5e881d2afa03b8973045bc,R02,semantic,processed-semantic-transcript,1
+T-215,"Task<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null);",3610.9316113066916,7042.770221292399,20px,25dc63a2c6581ff80ecba72d576114afb91b28b6fcf9b1fd5cc99df81e041d8b,R02,semantic,processed-semantic-transcript,1
+T-216,e.preventDefault();,738.9688465655663,7043.54873521295,20px,894c24bbd2dd531cc2cdc13ea85683503bc7a4a2629ceb09c859591e621a3804,R02,semantic,processed-semantic-transcript,1
+T-217,},3610.9316113066916,7067.770221292399,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-218,"setStatus("""");",738.9688465655663,7068.54873521295,20px,e8233589ea3a222b87ef1b4859d6eea0fccce29d15ba91f3f95c313992dc520b,R02,semantic,processed-semantic-transcript,1
+T-219,,738.9688465655663,7093.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-220,const widgetId = widgetIdRef.current;,738.9688465655663,7118.54873521295,20px,bcc532b0d20a13cd5d421c5d493920ce41700fbe938866c1baaf0f7a5442efaa,R02,semantic,processed-semantic-transcript,1
+T-221,,738.9688465655663,7143.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-222,"// If you rendered explicitly, prefer getResponse(widgetId)",738.9688465655663,7168.54873521295,20px,a605c5a3d8a4d7c151f8dc4ea74fa2f14fc3cd575935657ee54ce769140afdf6,R02,semantic,processed-semantic-transcript,1
+T-223,public class RegisterVm,6133.7489611381,7192.556520867053,20px,cf5ba1872a1e8674c7bede36a25a1e9b341b28f4f3bfdc5ed3014bd9e32b5457,R02,semantic,processed-semantic-transcript,1
+T-224,const token =,738.9688465655663,7193.54873521295,20px,2a2bd19570142c92d111df759821a9fc233dde20e9f6652a57b3beb292ceb362,R02,semantic,processed-semantic-transcript,1
+T-225,{,6133.7489611381,7217.556520867053,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-226,widgetId !== null,738.9688465655663,7218.54873521295,20px,003537d6e459c25a67fce29d3e65e7655f2396b239ee153007c05cdb6c3164b3,R02,semantic,processed-semantic-transcript,1
+T-227,"public string Email { get; set; } = """";",6133.7489611381,7242.556520867053,20px,e7a3d61b6a702f3882c0431e1529601781d175ab7899c755f3522bf6c956e749,R02,semantic,processed-semantic-transcript,1
+T-228,? window.grecaptcha.getResponse(widgetId),738.9688465655663,7243.54873521295,20px,b9ea2c8ba17aa15f43112530f8fc911fecda044a106f9fbc1859e0b8aa6aac24,R02,semantic,processed-semantic-transcript,1
+T-229,"public string Password { get; set; } = """";",6133.7489611381,7267.556520867053,20px,0a6e97544d09c3d9675d8674ad5e220bd809e052d717411862733be5371de6db,R02,semantic,processed-semantic-transcript,1
+T-230,: window.grecaptcha.getResponse(); // fallback,738.9688465655663,7268.54873521295,20px,875d41cd775732f64a0805bb9bc6efa876debf0917533de80639e222b633e28d,R02,semantic,processed-semantic-transcript,1
+T-231,,6133.7489611381,7292.556520867053,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-232,,738.9688465655663,7293.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-233,// name must match form field for model binding:,6133.7489611381,7317.556520867053,20px,9922abfddfcba14073bf3f6f288dedf981af100387ed4ced86df47a8352dd925,R02,semantic,processed-semantic-transcript,1
+T-234,if (!token) {,738.9688465655663,7318.54873521295,20px,8ae3495b40e4755c0e5026ce6d60f7d87e3800ce0878dcb73e560ade068c7f55,R02,semantic,processed-semantic-transcript,1
+T-235,public string? g_recaptcha_response { get; set; } // for manual binding (see note below),6133.7489611381,7342.556520867053,20px,3bfb06f7cd9d48cfb2a172e5c96abcd1086eabcedb2ac015855bdd63e75ad61a,R02,semantic,processed-semantic-transcript,1
+T-236,"setStatus(""Please complete reCAPTCHA."");",738.9688465655663,7343.54873521295,20px,ddb57ac7936d164296a3d3be8afc490d636ce0e4b6e66c135ae53edae5315b63,R02,semantic,processed-semantic-transcript,1
+T-237,},6133.7489611381,7367.556520867053,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-238,return;,738.9688465655663,7368.54873521295,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R02,semantic,processed-semantic-transcript,1
+T-239,using System.Net.Http;,3591.8840431217022,7391.698683729607,20px,d8ec01fffb11ef19bee8b97391affd498b9652466960710799cda14c1de186f3,R02,semantic,processed-semantic-transcript,1
+T-240,},738.9688465655663,7393.54873521295,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-241,using System.Text.Json;,3591.8840431217022,7416.698683729607,20px,732a4059a3613f473ef78b42923c4e58871fc116be8101990a55bb4ce32453d2,R02,semantic,processed-semantic-transcript,1
+T-242,,738.9688465655663,7418.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-243,using Microsoft.Extensions.Configuration;,3591.8840431217022,7441.698683729607,20px,19ac6dde14fc9643fa95af76717b297e017ed8926562f04564d82ebfe00953d9,R02,semantic,processed-semantic-transcript,1
+T-244,"const resp = await fetch(""/api/auth/register"", {",738.9688465655663,7443.54873521295,20px,acbe5051a143c0ee9d708f04acd378f364dc4b97367c3266a18387fa8ced638d,R02,semantic,processed-semantic-transcript,1
+T-245,,3591.8840431217022,7466.698683729607,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-246,"method: ""POST"",",738.9688465655663,7468.54873521295,20px,fa8f0b5ceabf772901474bc25319f2eedb1f710c45f1b586f3af334eea183b9d,R02,semantic,processed-semantic-transcript,1
+T-247,public sealed class GoogleRecaptchaService : IRecaptchaService,3591.8840431217022,7491.698683729607,20px,b4be8bcf6db77369408c4c45144bc8558ad01c01b54b53e3c73cef432a604867,R02,semantic,processed-semantic-transcript,1
+T-248,"headers: { ""Content-Type"": ""application/json"" },",738.9688465655663,7493.54873521295,20px,2b88f4d4f8f1954658367dcec28e8db230feb8ed9909edb0c54a65daf18dd9d4,R02,semantic,processed-semantic-transcript,1
+T-249,{,3591.8840431217022,7516.698683729607,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-250,"body: JSON.stringify({ email, password, recaptchaToken: token }),",738.9688465655663,7518.54873521295,20px,80e550dc2adacc87940b2b16df976943f8edc2e4e5d28853c995586e3fd2f28f,R02,semantic,processed-semantic-transcript,1
+T-251,private readonly HttpClient _http;,3591.8840431217022,7541.698683729607,20px,c2ec65189398b039b666e776b84bcc8adb7f906859a78d23ef1cd5c9496c744d,R02,semantic,processed-semantic-transcript,1
+T-252,});,738.9688465655663,7543.54873521295,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R02,semantic,processed-semantic-transcript,1
+T-253,private readonly IConfiguration _config;,3591.8840431217022,7566.698683729607,20px,245ba8819c99ea1b0d4a97f97fc736a4d99ff1f02387938c2bad0f446418dcbb,R02,semantic,processed-semantic-transcript,1
+T-254,,738.9688465655663,7568.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-255,,3591.8840431217022,7591.698683729607,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-256,if (!resp.ok) {,738.9688465655663,7593.54873521295,20px,5b8896395731649f30f078541a586b3144a2c2ef1ff7d31be57e8012e199828b,R02,semantic,processed-semantic-transcript,1
+T-257,"public GoogleRecaptchaService(HttpClient http, IConfiguration config)",3591.8840431217022,7616.698683729607,20px,921cb8c8ac30a75c0d8748bda917118f795849f66bf570d435c46f696a60b9c3,R02,semantic,processed-semantic-transcript,1
+T-258,setStatus(await resp.text());,738.9688465655663,7618.54873521295,20px,f3ecda7a1e1b696ec8bbccdc7f0c66812fbc09b1bd37af90a5875fe94183764a,R02,semantic,processed-semantic-transcript,1
+T-259,using Microsoft.AspNetCore.Mvc;,6220.415627804766,7620.704714226399,20px,c40b69e8eba015c7977b3f54e5e6f4135bf785d1bdd23ab54ea23d708d029274,R02,semantic,processed-semantic-transcript,1
+T-260,{,3591.8840431217022,7641.698683729607,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-261,,738.9688465655663,7643.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-262,,6220.415627804766,7645.704714226399,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-263,_http = http;,3591.8840431217022,7666.698683729607,20px,13f104c2c01483b4191bd35f3c261197a7977c5708bef13ccafd7f1f9e14b894,R02,semantic,processed-semantic-transcript,1
+T-264,// Let user retry (token may be consumed/expired),738.9688465655663,7668.54873521295,20px,5c9584330d9e1b2d8dad763673e719759b399e2aefdcd666321df654d163d344,R02,semantic,processed-semantic-transcript,1
+T-265,public class AccountController : Controller,6220.415627804766,7670.704714226399,20px,0aa3a78388255f5deb344f96414d5c2c787e75c5852ab79e7cbef969b9f0e7bf,R02,semantic,processed-semantic-transcript,1
+T-266,_config = config;,3591.8840431217022,7691.698683729607,20px,0be37150bbc73220dbe49c0001bc58b8a2ce67f13b7188394ce7a904f961472a,R02,semantic,processed-semantic-transcript,1
+T-267,if (widgetId !== null) window.grecaptcha.reset(widgetId);,738.9688465655663,7693.54873521295,20px,ea75566fa84ee0b024892dfa45bdb64b4b4ddb5228d1f535603e847a30007e71,R02,semantic,processed-semantic-transcript,1
+T-268,{,6220.415627804766,7695.704714226399,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-269,},3591.8840431217022,7716.698683729607,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-270,else window.grecaptcha.reset();,738.9688465655663,7718.54873521295,20px,e538f5a9867798ed50135074579693361a23960bcc52291b6f2de3826c20cbb9,R02,semantic,processed-semantic-transcript,1
+T-271,private readonly IRecaptchaVerifier _recaptcha;,6220.415627804766,7720.704714226399,20px,d3b44d44453475330fe9bce330eec31ff43543aec2a01cd27eea06d11adce12e,R02,semantic,processed-semantic-transcript,1
+T-272,,3591.8840431217022,7741.698683729607,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-273,,738.9688465655663,7743.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-274,private readonly IConfiguration _config;,6220.415627804766,7745.704714226399,20px,245ba8819c99ea1b0d4a97f97fc736a4d99ff1f02387938c2bad0f446418dcbb,R02,semantic,processed-semantic-transcript,1
+T-275,"public async Task<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null)",3591.8840431217022,7766.698683729607,20px,f52cd9589ed6bd3689e3ec4a6b20c4ffbc45ac57f09139120c801902af9e1b55,R02,semantic,processed-semantic-transcript,1
+T-276,return;,738.9688465655663,7768.54873521295,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R02,semantic,processed-semantic-transcript,1
+T-277,,6220.415627804766,7770.704714226399,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-278,{,3591.8840431217022,7791.698683729607,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-279,},738.9688465655663,7793.54873521295,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-280,"public AccountController(IRecaptchaVerifier recaptcha, IConfiguration config)",6220.415627804766,7795.704714226399,20px,07ea6238aeaf04fd472d6a6ccd2cdadf924e1a89aac436468cd66ee14e90678c,R02,semantic,processed-semantic-transcript,1
+T-281,"var resp = await VerifyCoreAsync(token, remoteIp);",3591.8840431217022,7816.698683729607,20px,e82a3ed3857ff2d6fb22a848f4b3385bdbb102f2527eaca879f312f46ed9015d,R02,semantic,processed-semantic-transcript,1
+T-282,,738.9688465655663,7818.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-283,{,6220.415627804766,7820.704714226399,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-284,,3591.8840431217022,7841.698683729607,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-285,"setStatus(""Registered!"");",738.9688465655663,7843.54873521295,20px,2b618eb8fa2102f4c90074960da0140be5cc0a1aeedda690c1e25998275d34da,R02,semantic,processed-semantic-transcript,1
+T-286,_recaptcha = recaptcha;,6220.415627804766,7845.704714226399,20px,ecd510b78d7726d0c66be661b19db98edd7a0b8354fbf9017f4f944bf66cdd5a,R02,semantic,processed-semantic-transcript,1
+T-287,// v3: must check action + score,3591.8840431217022,7866.698683729607,20px,1233cf1000c9509a1a97bf9e9791fec9e48099cc03ecc52baf96bebf5277fb62,R02,semantic,processed-semantic-transcript,1
+T-288,};,738.9688465655663,7868.54873521295,20px,df3982fd610173599241fca93c7c866683f58f541eced1c2098102145477164c,R02,semantic,processed-semantic-transcript,1
+T-289,_config = config;,6220.415627804766,7870.704714226399,20px,0be37150bbc73220dbe49c0001bc58b8a2ce67f13b7188394ce7a904f961472a,R02,semantic,processed-semantic-transcript,1
+T-290,"var ok = resp.Success && string.Equals(resp.Action, expectedAction, StringComparison.Ordinal);",3591.8840431217022,7891.698683729607,20px,34d6f4e0e18a2f958a29f4cf0853d211b5241566a1d746e4648ca807dc8aeda4,R02,semantic,processed-semantic-transcript,1
+T-291,,738.9688465655663,7893.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-292,},6220.415627804766,7895.704714226399,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-293,,3591.8840431217022,7916.698683729607,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-294,return (,738.9688465655663,7918.54873521295,20px,fc4c1868f34cfb519e76be7307878b7254a939fea0a2f13fd8029482816af74d,R02,semantic,processed-semantic-transcript,1
+T-295,,6220.415627804766,7920.704714226399,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-296,var score = resp.Score ?? 0.0;,3591.8840431217022,7941.698683729607,20px,febc766cc40e6dcb751a828fa3dc3bc5fc2aada30688703ab14c4f713fda0db6,R02,semantic,processed-semantic-transcript,1
+T-297,<form onSubmit={onSubmit}>,738.9688465655663,7943.54873521295,20px,804b9c4c26c03470f54a3e72430146ba6176db5972e61fd585e8ee27501d0a2d,R02,semantic,processed-semantic-transcript,1
+T-298,[HttpGet],6220.415627804766,7945.704714226399,20px,0886af02d308ca20628b60e9f48cbae20615b09bbd83ff05095a4dd8ca74868e,R02,semantic,processed-semantic-transcript,1
+T-299,"return new RecaptchaV3Result(ok, score, resp.Action, resp.Hostname, resp.ErrorCodes);",3591.8840431217022,7966.698683729607,20px,26374c3741b2ade7f483a32745443377f5ff955d8e8b1954f3c2bfb5048c541f,R02,semantic,processed-semantic-transcript,1
+T-300,"<input type=""email"" value={email} onChange={(e) => setEmail(e.target.value)} required />",738.9688465655663,7968.54873521295,20px,eba5c12b7120461c60e5e053a415958484ccc879c71c7cee9220b61bc3674436,R02,semantic,processed-semantic-transcript,1
+T-301,public IActionResult Register(),6220.415627804766,7970.704714226399,20px,9aae1a9bd51347889944d1d0fb3bcf4754f01809cb571bb7c1f18fc9102943bd,R02,semantic,processed-semantic-transcript,1
+T-302,},3591.8840431217022,7991.698683729607,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-303,"<input type=""password"" value={password} onChange={(e) => setPassword(e.target.value)} required />",738.9688465655663,7993.54873521295,20px,4a43b621a42cac4b4db78ec516ac026357328bcd3e4e9875c6bcb8a0ee294e9e,R02,semantic,processed-semantic-transcript,1
+T-304,{,6220.415627804766,7995.704714226399,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-305,,3591.8840431217022,8016.698683729607,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-306,,738.9688465655663,8018.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-307,"ViewBag.RecaptchaSiteKey = _config[""Recaptcha:SiteKey""];",6220.415627804766,8020.704714226399,20px,383c451e3c77d9d4c4ed4bec3caf45a2747e60ae3292bbf71a8bad6de2dde4fc,R02,semantic,processed-semantic-transcript,1
+T-308,"public async Task<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null)",3591.8840431217022,8041.698683729607,20px,351b2f548aff5199299d5847741615454bd35f573bbf631b48b5075f2b380c91,R02,semantic,processed-semantic-transcript,1
+T-309,<div ref={captchaDivRef} />,738.9688465655663,8043.54873521295,20px,f28b777cc09602af6e581a2c4ce8f7a155d464d85502056e4512b73b2a15aeb3,R02,semantic,processed-semantic-transcript,1
+T-310,return View();,6220.415627804766,8045.704714226399,20px,bf0cd459880a8de56d1afaf6639f7a9a8bc88c11ebb38703643e2b33541102ba,R02,semantic,processed-semantic-transcript,1
+T-311,{,3591.8840431217022,8066.698683729607,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-312,,738.9688465655663,8068.54873521295,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-313,},6220.415627804766,8070.704714226399,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-314,"var resp = await VerifyCoreAsync(token, remoteIp);",3591.8840431217022,8091.698683729607,20px,e82a3ed3857ff2d6fb22a848f4b3385bdbb102f2527eaca879f312f46ed9015d,R02,semantic,processed-semantic-transcript,1
+T-315,"<button type=""submit"">Register</button>",738.9688465655663,8093.54873521295,20px,bdc94113f57e993a757422daff019c5871a5961b53fd383f57d2695453a6cbd5,R02,semantic,processed-semantic-transcript,1
+T-316,,6220.415627804766,8095.704714226399,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-317,"return new RecaptchaV2Result(resp.Success, resp.Hostname, resp.ErrorCodes);",3591.8840431217022,8116.698683729607,20px,0e4a671074c8c3e7d40fb6dcbe9d7e1d801425e69d77fbb0e683d3526ab71b03,R02,semantic,processed-semantic-transcript,1
+T-318,<div>{status}</div>,738.9688465655663,8118.54873521295,20px,77bdc611bbf6f55aec1d6b5d4b1c22c32f525cbbb4a09bb6209f08396eee05a1,R02,semantic,processed-semantic-transcript,1
+T-319,[HttpPost],6220.415627804766,8120.704714226399,20px,468ed26624faf3f486b8ebd31d7d7b2d5287a6781f855d3a08e5fe38b0fc7a02,R02,semantic,processed-semantic-transcript,1
+T-320,},3591.8840431217022,8141.698683729607,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-321,</form>,738.9688465655663,8143.54873521295,20px,e0c7bb7b72eeecfc07340f6bce5874176ae2e9d13551d2d6a6f3409e66c2f8c9,R02,semantic,processed-semantic-transcript,1
+T-322,[ValidateAntiForgeryToken],6220.415627804766,8145.704714226399,20px,9fca539ec6d644882c924878a363009ab59088528df10488f0459c14296a3baf,R02,semantic,processed-semantic-transcript,1
+T-323,,3591.8840431217022,8166.698683729607,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-324,);,738.9688465655663,8168.54873521295,20px,9d8b2b5670d18da8a99f6152f7ee75558019cd106d8032bf7c1117bd37273e37,R02,semantic,processed-semantic-transcript,1
+T-325,public async Task<IActionResult> Register(RegisterVm vm),6220.415627804766,8170.704714226399,20px,90de6918910a99db9f230e10e4bf9f3c19797c9c0b95e690c14c1261937813b5,R02,semantic,processed-semantic-transcript,1
+T-326,"private async Task<RecaptchaVerifyResponse> VerifyCoreAsync(string token, string? remoteIp)",3591.8840431217022,8191.698683729607,20px,4173859fe56f1c74fd711e0a1a89757b664afa7c0a7c7aa790159a1eba578988,R02,semantic,processed-semantic-transcript,1
+T-327,},738.9688465655663,8193.54873521295,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-328,{,6220.415627804766,8195.7047142264,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-329,{,3591.8840431217022,8216.698683729608,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-330,"var token = Request.Form[""g-recaptcha-response""].ToString();",6220.415627804766,8220.7047142264,20px,f794e2f09efdec49db5086340cb58ad28fbe7f011d0474a48ce365e43f5567dd,R02,semantic,processed-semantic-transcript,1
+T-331,if (string.IsNullOrWhiteSpace(token)),3591.8840431217022,8241.698683729608,20px,0904bb651be077ec10383a8493feecec1e5100afa1647a2b1a6b43601ceced99,R02,semantic,processed-semantic-transcript,1
+T-332,var ip = HttpContext.Connection.RemoteIpAddress?.ToString();,6220.415627804766,8245.7047142264,20px,f9e4663d9c1c61512d1cdcf714df16b0bf46930e53f4d5afc9f0d430fcb4bb6d,R02,semantic,processed-semantic-transcript,1
+T-333,"return new RecaptchaVerifyResponse { Success = false, ErrorCodes = [""missing-input-response""] };",3591.8840431217022,8266.698683729608,20px,0a2d885255d4145a840ba5c71d3643b1cbe332a4b65ebc7f2eccad8262e29891,R02,semantic,processed-semantic-transcript,1
+T-334,,6220.415627804766,8270.7047142264,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-335,,3591.8840431217022,8291.698683729608,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-336,"var ok = await _recaptcha.VerifyV2Async(token, ip);",6220.415627804766,8295.7047142264,20px,10ca7d83d8773d681c4044ef66d5f86d61ac8d3eccf7c1307e7463ac9e0938b3,R02,semantic,processed-semantic-transcript,1
+T-337,"var secret = _config[""Recaptcha:SecretKey""];",3591.8840431217022,8316.698683729608,20px,50898e0f22c78be7234e9bbcc2d3f85fbe7d72c8bdd2f8b542a3c4a5c149c82a,R02,semantic,processed-semantic-transcript,1
+T-338,if (!ok),6220.415627804766,8320.7047142264,20px,340023cc998fae5a2a668cc6e59ac721f03706de64064c99b16fde6f80ed2bcf,R02,semantic,processed-semantic-transcript,1
+T-339,if (string.IsNullOrWhiteSpace(secret)),3591.8840431217022,8341.698683729608,20px,4dda69d90deab36911aa7bca89244028f1b57f62027489ddb2d70959c57ae468,R02,semantic,processed-semantic-transcript,1
+T-340,{,6220.415627804766,8345.7047142264,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-341,"throw new InvalidOperationException(""Recaptcha:SecretKey is not configured."");",3591.8840431217022,8366.698683729608,20px,eb77b554e28e8dbeb23910d4e741943db79b494dd5119280bc5138761ddd223a,R02,semantic,processed-semantic-transcript,1
+T-342,"ModelState.AddModelError("""", ""reCAPTCHA failed. Please try again."");",6220.415627804766,8370.7047142264,20px,9838a4254a4aa7ae23b262cf22a43398e51933a905ef0c2c048587bf933c954e,R02,semantic,processed-semantic-transcript,1
+T-343,,3591.8840431217022,8391.698683729608,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-344,"ViewBag.RecaptchaSiteKey = _config[""Recaptcha:SiteKey""];",6220.415627804766,8395.7047142264,20px,383c451e3c77d9d4c4ed4bec3caf45a2747e60ae3292bbf71a8bad6de2dde4fc,R02,semantic,processed-semantic-transcript,1
+T-345,"var data = new Dictionary<string, string>",3591.8840431217022,8416.698683729606,20px,f6e6c200d813f9f0aa4527b94f128c24824e12cb04c65796cde59ae112b324d5,R02,semantic,processed-semantic-transcript,1
+T-346,return View(vm);,6220.415627804766,8420.7047142264,20px,b0203b6876a1e5c6c6683cb3fc6e2ab99f95985108a53a132fcbdfbfac9061ba,R02,semantic,processed-semantic-transcript,1
+T-347,{,3591.8840431217022,8441.698683729606,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-348,},6220.415627804766,8445.7047142264,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-349,"[""secret""] = secret,",3591.8840431217022,8466.698683729606,20px,2a5c1a7e259cac8c4eb744cd0fa91de971e477641ca33e2873f38650dbc8df91,R02,semantic,processed-semantic-transcript,1
+T-350,,6220.415627804766,8470.7047142264,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-351,"[""response""] = token",3591.8840431217022,8491.698683729606,20px,1220fc7e0a17dde74dcd64523b7c99a3792e2a460cc04ce4edd75e2c345b355e,R02,semantic,processed-semantic-transcript,1
+T-352,// reCAPTCHA passed -> proceed with registration,6220.415627804766,8495.7047142264,20px,8635f10d040cb821009d2cf932a17b9d5b7f55060e27e166e21a330024e8ad72,R02,semantic,processed-semantic-transcript,1
+T-353,};,3591.8840431217022,8516.698683729606,20px,df3982fd610173599241fca93c7c866683f58f541eced1c2098102145477164c,R02,semantic,processed-semantic-transcript,1
+T-354,"// create user, hash password, etc.",6220.415627804766,8520.7047142264,20px,cda49256fcf759ba8705811eaee0fcf8368a9a11bb83853e3c5f399ebb22f7e2,R02,semantic,processed-semantic-transcript,1
+T-355,,3591.8840431217022,8541.698683729606,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-356,"return RedirectToAction(""RegisterSuccess"");",6220.415627804766,8545.7047142264,20px,1d9fe7cfe07a206ac8f1cd000bc5c8634b67a8cc814ad5d22011673775cd250d,R02,semantic,processed-semantic-transcript,1
+T-357,if (!string.IsNullOrWhiteSpace(remoteIp)),3591.8840431217022,8566.698683729606,20px,588b2238fc955f094c552ce47bac8e036898d743ac595b2bee1e39ac650bf039,R02,semantic,processed-semantic-transcript,1
+T-358,},6220.415627804766,8570.7047142264,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-359,"data[""remoteip""] = remoteIp;",3591.8840431217022,8591.698683729606,20px,33a00d09b4f42ad855947d1718a46a51600e6130e54bd95aeab3afb57059e685,R02,semantic,processed-semantic-transcript,1
+T-360,},6220.415627804766,8595.7047142264,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-361,,3591.8840431217022,8616.698683729606,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-362,using var content = new FormUrlEncodedContent(data);,3591.8840431217022,8641.698683729606,20px,d15682b7fae79579f7ec041fe50e5d6ab2a20a22451f016e379786c86560dd61,R02,semantic,processed-semantic-transcript,1
+T-363,"using var httpResp = await _http.PostAsync(""https://www.google.com/recaptcha/api/siteverify"", content);",3591.8840431217022,8666.698683729606,20px,43d0593e23222dc407cd887d650d4341c50cbfd95fdc849f2f8f38ae5b4f8868,R02,semantic,processed-semantic-transcript,1
+T-364,httpResp.EnsureSuccessStatusCode();,3591.8840431217022,8691.698683729606,20px,84da9e4896be4ec03d619019b0077cba1ea389c987f0e49e034354eaf3ece446,R02,semantic,processed-semantic-transcript,1
+T-365,,3591.8840431217022,8716.698683729606,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-366,var json = await httpResp.Content.ReadAsStringAsync();,3591.8840431217022,8741.698683729606,20px,923076d56d59648a4431be8d14c1f43b28f6b3173fce510b17f3dd4f4d0271bd,R02,semantic,processed-semantic-transcript,1
+T-367,,3591.8840431217022,8766.698683729606,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-368,"var result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json, new JsonSerializerOptions",3591.8840431217022,8791.698683729606,20px,18b17c861f991fb9b1e091180631e7afd2a9b0260d3e34b1ec647c81d13a7e34,R02,semantic,processed-semantic-transcript,1
+T-369,{,3591.8840431217022,8816.698683729606,20px,021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96,R02,semantic,processed-semantic-transcript,1
+T-370,PropertyNameCaseInsensitive = true,3591.8840431217022,8841.698683729606,20px,ae18be3e8b59d4c74f4b2ad27de0b2678b53548988cd8c4095660722eb6db868,R02,semantic,processed-semantic-transcript,1
+T-371,});,3591.8840431217022,8866.698683729606,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R02,semantic,processed-semantic-transcript,1
+T-372,,3591.8840431217022,8891.698683729606,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R02,empty-structural,reviewed-empty-structural,1
+T-373,"return result ?? new RecaptchaVerifyResponse { Success = false, ErrorCodes = [""invalid-json""] };",3591.8840431217022,8916.698683729606,20px,f65b32c2f3e188316ff0c41b70a4c6184714394d379ee143f67709715f3887b2,R02,semantic,processed-semantic-transcript,1
+T-374,},3591.8840431217022,8941.698683729606,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-375,},3591.8840431217022,8966.698683729606,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R02,semantic,processed-semantic-transcript,1
+T-376,v3,5123.256783608773,9555.065374187021,157.69695490056773px,e0d2747b9ab7abb6eb65e0373fa1b428a28bd6d8a2380106dcc080f58005ee14,R03,semantic,processed-semantic-transcript,1
+T-377,@model RazorRegisterVm,3166.24704083893,10373.214849604528,20px,f97b6d2065b683b3e836fa2db38f03c0487d08d197ba3d8420d17f461277b035,R03,semantic,processed-semantic-transcript,1
+T-378,@{,3166.24704083893,10398.214849604528,20px,e45d2ae2cb4a52cd612eba81130599c1b792738febb63664f5177e0c6fa46dbe,R03,semantic,processed-semantic-transcript,1
+T-379,var siteKey = (string)ViewBag.RecaptchaSiteKey;,3166.24704083893,10423.214849604528,20px,215e00d7d5ef665604df703051960f61ecbac109242896764d8478734c14c422,R03,semantic,processed-semantic-transcript,1
+T-380,},3166.24704083893,10448.214849604528,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-381,,3166.24704083893,10473.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-382,"<form id=""registerForm"" method=""post"" asp-action=""Register"">",3166.24704083893,10498.214849604528,20px,9fbf683015f4f6069fd4dfbddb9de175ce75f6ed8b6be7a99ed6ea3e21f25977,R03,semantic,processed-semantic-transcript,1
+T-383,with library,6330.199141364271,10522.426688384208,20px,cbe3209c2ad7cb64842d0fd02e5254eee5f83f67c48c96540e5b8240466968da,R03,semantic,processed-semantic-transcript,1
+T-384,@Html.AntiForgeryToken(),3166.24704083893,10523.214849604528,20px,7d4ac0759a1384e82d0b70a631c21becf04d78780dd4becdf8a10f9e943e052c,R03,semantic,processed-semantic-transcript,1
+T-385,without library,7674.421258470391,10536.982230376381,20px,2d00afbe7c942f261178eceae0dfa28017ee1d0d25a395b7b8b5005211e79c8b,R03,semantic,processed-semantic-transcript,1
+T-386,,3166.24704083893,10548.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-387,"<input asp-for=""Email"" type=""email"" required />",3166.24704083893,10573.214849604528,20px,cb41f558823b108bd4b600f16643e3d11a5ed2566be5c7cb9f586ec4fcf6c672,R03,semantic,processed-semantic-transcript,1
+T-388,"<input asp-for=""Password"" type=""password"" required />",3166.24704083893,10598.214849604528,20px,f550fd60c35bca9cf5bb2410d7074f9c6ca2feaf2928769acde246d87df50619,R03,semantic,processed-semantic-transcript,1
+T-389,,3166.24704083893,10623.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-390,"<input asp-for=""RecaptchaToken"" type=""hidden"" />",3166.24704083893,10648.214849604528,20px,d8d9c40bbc0d56948a7364e543a5b135965ec6c28ffe02edd15ff65283496f95,R03,semantic,processed-semantic-transcript,1
+T-391,,3166.24704083893,10673.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-392,"<button type=""submit"">Register</button>",3166.24704083893,10698.214849604528,20px,bdc94113f57e993a757422daff019c5871a5961b53fd383f57d2695453a6cbd5,R03,semantic,processed-semantic-transcript,1
+T-393,,3166.24704083893,10723.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-394,"<div asp-validation-summary=""All""></div>",3166.24704083893,10748.214849604528,20px,35994747b8dc5cc332f87c06c77eb3e86b64fa1b808f2458506df1c77c7c1648,R03,semantic,processed-semantic-transcript,1
+T-395,</form>,3166.24704083893,10773.214849604528,20px,e0c7bb7b72eeecfc07340f6bce5874176ae2e9d13551d2d6a6f3409e66c2f8c9,R03,semantic,processed-semantic-transcript,1
+T-396,,3166.24704083893,10798.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-397,"<script src=""https://www.google.com/recaptcha/api.js?render=@siteKey""></script>",3166.24704083893,10823.214849604528,20px,fc78622275aaa2a52ec341d3e6b3706be21ef38d7d0000a3dcbaaa3751fbc848,R03,semantic,processed-semantic-transcript,1
+T-398,"import React, { useEffect, useState } from ""react"";",8374.503066266952,10831.59078392554,20px,195c97e22ca18e0c760abab7baed962741405ae3b6cf9a587c8402a32f9511ff,R03,semantic,processed-semantic-transcript,1
+T-399,<script>,3166.24704083893,10848.214849604528,20px,5b63e5b2097fc6906601e85e381d998a7db971aca73c9213dc2b107ccab734d4,R03,semantic,processed-semantic-transcript,1
+T-400,,8374.503066266952,10856.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-401,(function () {,3166.24704083893,10873.214849604528,20px,bcfa2f6db808b089b588ad81c5dc6b42f5a323be52bc934134e6cbc0eaf5f487,R03,semantic,processed-semantic-transcript,1
+T-402,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;,8374.503066266952,10881.59078392554,20px,e30ae75bd91b4c5f043821ca718e26aa7cff1cf997af317fd0b22e2929447957,R03,semantic,processed-semantic-transcript,1
+T-403,"const form = document.getElementById(""registerForm"");",3166.24704083893,10898.214849604528,20px,3848022000f55c58ba09b7244147bbdd3eeb2e4930f2291d2d3a8734b1a2baea,R03,semantic,processed-semantic-transcript,1
+T-404,,8374.503066266952,10906.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-405,"const tokenInput = document.querySelector('input[name=""RecaptchaToken""]');",3166.24704083893,10923.214849604528,20px,3d488995206793e443421a859516e578c49440a97580acb1c3db6c6fe3c59693,R03,semantic,processed-semantic-transcript,1
+T-406,function loadRecaptchaV3(siteKey) {,8374.503066266952,10931.59078392554,20px,086ceb062be696388e39eb609e764f24c10c44c9c0e52b3891410edb2cbe3d04,R03,semantic,processed-semantic-transcript,1
+T-407,"const siteKey = ""@siteKey"";",3166.24704083893,10948.214849604528,20px,f694fea8732bc42da66bdf1b3d69b113a97b8f4ec595a318dde7c7f5ce558d7b,R03,semantic,processed-semantic-transcript,1
+T-408,"return new Promise((resolve, reject) => {",8374.503066266952,10956.59078392554,20px,23c1643fd7629907a734653bfbaa51f1a544ba70cfb84d827f4feadb2b700129,R03,semantic,processed-semantic-transcript,1
+T-409,"import React from ""react"";",5415.91634659353,10967.59084025711,20px,9abf3e6700d98954fe8bbe11cbda048f525400b21632402972b47c423c1be127,R03,semantic,processed-semantic-transcript,1
+T-410,,3166.24704083893,10973.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-411,if (window.grecaptcha) return resolve(window.grecaptcha);,8374.503066266952,10981.59078392554,20px,67204937079c4494b1129d0cb90706fad977e54d82042e4bff246d704df0340e,R03,semantic,processed-semantic-transcript,1
+T-412,"import { GoogleReCaptchaProvider } from ""react-google-recaptcha-v3"";",5415.91634659353,10992.59084025711,20px,32db0cbe3930a7b90beb8289528808a9eda8636d357717e40b66fd98677ec540,R03,semantic,processed-semantic-transcript,1
+T-413,"form.addEventListener(""submit"", function (e) {",3166.24704083893,10998.214849604528,20px,f023d4a3fa60925c9bcfc77ab886f69150ed1035d4d756992b2b211c15f54169,R03,semantic,processed-semantic-transcript,1
+T-414,,8374.503066266952,11006.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-415,"import RegisterV3 from ""./RegisterV3"";",5415.91634659353,11017.59084025711,20px,8a48bc03581ad926cf9aaf873cb225b3967e5bb74dfccfe35d4e43aec927e9b6,R03,semantic,processed-semantic-transcript,1
+T-416,e.preventDefault();,3166.24704083893,11023.214849604528,20px,894c24bbd2dd531cc2cdc13ea85683503bc7a4a2629ceb09c859591e621a3804,R03,semantic,processed-semantic-transcript,1
+T-417,"const script = document.createElement(""script"");",8374.503066266952,11031.59078392554,20px,e81f8b7ffd01a5d377e850c249922aafd98a311784ded33b375a977791debc32,R03,semantic,processed-semantic-transcript,1
+T-418,,5415.91634659353,11042.59084025711,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-419,,3166.24704083893,11048.214849604528,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-420,script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;,8374.503066266952,11056.59078392554,20px,9113abd5e9a5c931924434198b49840a985e55fba4f2d95e85ce46347f47c839,R03,semantic,processed-semantic-transcript,1
+T-421,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;,5415.91634659353,11067.59084025711,20px,e30ae75bd91b4c5f043821ca718e26aa7cff1cf997af317fd0b22e2929447957,R03,semantic,processed-semantic-transcript,1
+T-422,grecaptcha.ready(function () {,3166.24704083893,11073.214849604528,20px,81b0bb6f74e439646ce6c46d586fff0ce21a5ee905123ceda7e0f3d133c58b8a,R03,semantic,processed-semantic-transcript,1
+T-423,script.async = true;,8374.503066266952,11081.59078392554,20px,0a9c8e45016e0717dfb14c248294d0d5e2737e2a54da45e597bed4ab2e11a392,R03,semantic,processed-semantic-transcript,1
+T-424,,5415.91634659353,11092.59084025711,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-425,"grecaptcha.execute(siteKey, { action: ""register"" }).then(function (token) {",3166.24704083893,11098.214849604528,20px,fb0762bee99c476a00b87077b774311bd807fc4f0f9a2f9be0125a8cf91ab9ef,R03,semantic,processed-semantic-transcript,1
+T-426,script.defer = true;,8374.503066266952,11106.59078392554,20px,d036f5d4a880571c6ef068c0455aeaa80e7a7c3c7a828b5058c4a3873c5090f5,R03,semantic,processed-semantic-transcript,1
+T-427,export default function App() {,5415.91634659353,11117.59084025711,20px,9b15f943d5e45c6262c1fb9264c7b1ffb09569bdbeb511e0ae530d490a4cde6a,R03,semantic,processed-semantic-transcript,1
+T-428,tokenInput.value = token;,3166.24704083893,11123.214849604528,20px,2d6d4d52fc62d9b90652cec95573e533cc5fb5ee7f8c61677a1f603b753d3162,R03,semantic,processed-semantic-transcript,1
+T-429,script.onload = () => resolve(window.grecaptcha);,8374.503066266952,11131.59078392554,20px,f34db00bde449bb948b79dab685143c110f1b95d9c3118b1af5ece27b84f32cd,R03,semantic,processed-semantic-transcript,1
+T-430,return (,5415.91634659353,11142.59084025711,20px,fc4c1868f34cfb519e76be7307878b7254a939fea0a2f13fd8029482816af74d,R03,semantic,processed-semantic-transcript,1
+T-431,form.submit();,3166.24704083893,11148.214849604528,20px,21885c0199e98f91f48f98516ea157bdda4dc0a084f54b42f977a7698c9ca529,R03,semantic,processed-semantic-transcript,1
+T-432,script.onerror = reject;,8374.503066266952,11156.59078392554,20px,bfc83c17410e0f6f096b1bcc0e3f6cea2d850366914cf96c13ecebc5723a9fa5,R03,semantic,processed-semantic-transcript,1
+T-433,<GoogleReCaptchaProvider,5415.91634659353,11167.59084025711,20px,7c10eaf34c59bc02c02a4741494bfced7065525f85ada0c3bc32e2724e943eb9,R03,semantic,processed-semantic-transcript,1
+T-434,});,3166.24704083893,11173.214849604528,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R03,semantic,processed-semantic-transcript,1
+T-435,document.head.appendChild(script);,8374.503066266952,11181.59078392554,20px,b38fe1f7ba04b2f0e83a5f85d929147bed50445919556209d9d1915e135f4209,R03,semantic,processed-semantic-transcript,1
+T-436,reCaptchaKey={SITE_KEY},5415.91634659353,11192.59084025711,20px,02c9cc6c318ba60b15c15483b2348431d7e9eda0e48b3c364f6ff3c5fa1bf440,R03,semantic,processed-semantic-transcript,1
+T-437,});,3166.24704083893,11198.214849604528,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R03,semantic,processed-semantic-transcript,1
+T-438,});,8374.503066266952,11206.59078392554,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R03,semantic,processed-semantic-transcript,1
+T-439,"scriptProps={{ async: true, defer: true }}",5415.91634659353,11217.59084025711,20px,84c1e80ff78ac0120b87352cb51282ae51e3b701644c26860473c9b417783109,R03,semantic,processed-semantic-transcript,1
+T-440,});,3166.24704083893,11223.214849604528,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R03,semantic,processed-semantic-transcript,1
+T-441,},8374.503066266952,11231.59078392554,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-442,>,5415.91634659353,11242.59084025711,20px,62b67e1f685b7fef51102005dddd27774be3fee38c42965c53aab035d0b6b221,R03,semantic,processed-semantic-transcript,1
+T-443,})();,3166.24704083893,11248.214849604528,20px,9f49d5ddded342f8184c0ae9ad7394e52a1f8f41ac7ced56607bafeae43fb26e,R03,semantic,processed-semantic-transcript,1
+T-444,,8374.503066266952,11256.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-445,<RegisterV3 />,5415.91634659353,11267.59084025711,20px,9247b991e0ac8757a01313df58d090a21f79541be40ed555ab1da98e1e43fca6,R03,semantic,processed-semantic-transcript,1
+T-446,</script>,3166.24704083893,11273.214849604528,20px,6c9656210a0202719c1cc3f33bba512135c26bb8d970d2350552e75d257631ca,R03,semantic,processed-semantic-transcript,1
+T-447,export default function RegisterV3React() {,8374.503066266952,11281.59078392554,20px,5f9ebe15d1d2181f562a5db3ff6c181c4811a9985d171f865705a45c2e09161e,R03,semantic,processed-semantic-transcript,1
+T-448,</GoogleReCaptchaProvider>,5415.91634659353,11292.59084025711,20px,9e702df5d58386bfaf5240cab8cde48a83533f93aa9af4111ab90ea296a2da47,R03,semantic,processed-semantic-transcript,1
+T-449,"const [ready, setReady] = useState(false);",8374.503066266952,11306.59078392554,20px,2a4206a2c44d9851d657b31ce81c480693cdc3d1c8142e2537c179f6506bdb79,R03,semantic,processed-semantic-transcript,1
+T-450,);,5415.91634659353,11317.59084025711,20px,9d8b2b5670d18da8a99f6152f7ee75558019cd106d8032bf7c1117bd37273e37,R03,semantic,processed-semantic-transcript,1
+T-451,"const [email, setEmail] = useState("""");",8374.503066266952,11331.59078392554,20px,0da1eeea29496c66fb72aa7713c17a3650f0a8719d5e62b0c78af6b73927f706,R03,semantic,processed-semantic-transcript,1
+T-452,},5415.91634659353,11342.59084025711,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-453,"const [password, setPassword] = useState("""");",8374.503066266952,11356.59078392554,20px,a29857e63814f6df9d718244da56f62f3868a043039238cbe92bc925324e4450,R03,semantic,processed-semantic-transcript,1
+T-454,"const [status, setStatus] = useState("""");",8374.503066266952,11381.59078392554,20px,25c4d43572bc29a71a61515973880e14a4e547f255ef7a530fd4faa9e87400bc,R03,semantic,processed-semantic-transcript,1
+T-455,controller,4171.175476658488,11382.070927459697,20px,c1472135b14c77c8bef98e73f70208325fa0dcf1e6bd668ae9b31a9cea295fe7,R03,semantic,processed-semantic-transcript,1
+T-456,,8374.503066266952,11406.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-457,useEffect(() => {,8374.503066266952,11431.59078392554,20px,f28ea927c74f4339d40c3cf0626cab7fdec954d41ef387a713650bc54eca15b3,R03,semantic,processed-semantic-transcript,1
+T-458,loadRecaptchaV3(SITE_KEY),8374.503066266952,11456.59078392554,20px,c0ed5da140de702efd371ed458a56137d7c2f6003bd1ae7b9db58626854a57f6,R03,semantic,processed-semantic-transcript,1
+T-459,.then((g) => g.ready(() => setReady(true))),8374.503066266952,11481.59078392554,20px,523ff0e45e5dfc5c6d5f24f81dbbdc211d617fdee5f6446bc3d851913c5daa87,R03,semantic,processed-semantic-transcript,1
+T-460,.catch(() => setReady(false));,8374.503066266952,11506.59078392554,20px,8197f5827cff15b433b75d91170a2b6c101c1a96f96927b94b7143ac28f057da,R03,semantic,processed-semantic-transcript,1
+T-461,"import React, { useState } from ""react"";",5241.749476476342,11510.924199021758,20px,c9b136889491a3b5ba9eed54af93a2376470cfeb9283b4df09a11895e775f337,R03,semantic,processed-semantic-transcript,1
+T-462,"}, []);",8374.503066266952,11531.59078392554,20px,27c7e19d1e112eeabf093062e0e24babd319cebac309a618f8cf7a9aa324b972,R03,semantic,processed-semantic-transcript,1
+T-463,"import { useGoogleReCaptcha } from ""react-google-recaptcha-v3"";",5241.749476476342,11535.924199021758,20px,e9b6ba928a7da690213c888f6504f3478432141080e70ba64f0b5f354c56b779,R03,semantic,processed-semantic-transcript,1
+T-464,,8374.503066266952,11556.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-465,,5241.749476476342,11560.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-466,const onSubmit = async (e) => {,8374.503066266952,11581.59078392554,20px,60feb94dff28a559aea894b5377948f23823ae5b3a5e881d2afa03b8973045bc,R03,semantic,processed-semantic-transcript,1
+T-467,export default function RegisterV3() {,5241.749476476342,11585.924199021758,20px,4329d650150141bea0adc6f4979e388cfff6a608f7c77d8afcebf080ec6f1fa9,R03,semantic,processed-semantic-transcript,1
+T-468,e.preventDefault();,8374.503066266952,11606.59078392554,20px,894c24bbd2dd531cc2cdc13ea85683503bc7a4a2629ceb09c859591e621a3804,R03,semantic,processed-semantic-transcript,1
+T-469,const { executeRecaptcha } = useGoogleReCaptcha();,5241.749476476342,11610.924199021758,20px,067723cc43dfd8054933d34f9f7d8f3640c1b453048b5dbbf1099bcf748f6776,R03,semantic,processed-semantic-transcript,1
+T-470,"setStatus("""");",8374.503066266952,11631.59078392554,20px,e8233589ea3a222b87ef1b4859d6eea0fccce29d15ba91f3f95c313992dc520b,R03,semantic,processed-semantic-transcript,1
+T-471,,5241.749476476342,11635.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-472,,8374.503066266952,11656.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-473,"const [email, setEmail] = useState("""");",5241.749476476342,11660.924199021758,20px,0da1eeea29496c66fb72aa7713c17a3650f0a8719d5e62b0c78af6b73927f706,R03,semantic,processed-semantic-transcript,1
+T-474,if (!ready) {,8374.503066266952,11681.59078392554,20px,adf57a1edfedb3beb9c4160eb1e523967005045ee66d23312db7e385de427b04,R03,semantic,processed-semantic-transcript,1
+T-475,"const [password, setPassword] = useState("""");",5241.749476476342,11685.924199021758,20px,a29857e63814f6df9d718244da56f62f3868a043039238cbe92bc925324e4450,R03,semantic,processed-semantic-transcript,1
+T-476,"setStatus(""reCAPTCHA not ready yet."");",8374.503066266952,11706.59078392554,20px,1b344bbe9397120867e5866743a83dec0221afdcfe89f92f3bc0afd4a1154b51,R03,semantic,processed-semantic-transcript,1
+T-477,"const [status, setStatus] = useState("""");",5241.749476476342,11710.924199021758,20px,25c4d43572bc29a71a61515973880e14a4e547f255ef7a530fd4faa9e87400bc,R03,semantic,processed-semantic-transcript,1
+T-478,return;,8374.503066266952,11731.59078392554,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R03,semantic,processed-semantic-transcript,1
+T-479,,5241.749476476342,11735.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-480,},8374.503066266952,11756.59078392554,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-481,const onSubmit = async (e) => {,5241.749476476342,11760.924199021758,20px,60feb94dff28a559aea894b5377948f23823ae5b3a5e881d2afa03b8973045bc,R03,semantic,processed-semantic-transcript,1
+T-482,,8374.503066266952,11781.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-483,e.preventDefault();,5241.749476476342,11785.924199021758,20px,894c24bbd2dd531cc2cdc13ea85683503bc7a4a2629ceb09c859591e621a3804,R03,semantic,processed-semantic-transcript,1
+T-484,"const token = await window.grecaptcha.execute(SITE_KEY, { action: ""register"" });",8374.503066266952,11806.59078392554,20px,1c5c6d91e155605a46b6421b1614576c0a43c7aa411e23261915f96bf4f26a2f,R03,semantic,processed-semantic-transcript,1
+T-485,"setStatus("""");",5241.749476476342,11810.924199021758,20px,e8233589ea3a222b87ef1b4859d6eea0fccce29d15ba91f3f95c313992dc520b,R03,semantic,processed-semantic-transcript,1
+T-486,,8374.503066266952,11831.59078392554,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-487,,5241.749476476342,11835.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-488,"const resp = await fetch(""/api/auth/register-v3"", {",8374.503066266952,11856.590783925538,20px,7cbc411141265080b67511c23f5082d4ef4f9ff73977d96896b0b00ce2427aa1,R03,semantic,processed-semantic-transcript,1
+T-489,if (!executeRecaptcha) {,5241.749476476342,11860.924199021758,20px,c420f7fd46b5d1adf2434e0738370ca27bdd7a0feadb040edea1b9d69b1726c2,R03,semantic,processed-semantic-transcript,1
+T-490,"method: ""POST"",",8374.503066266952,11881.590783925538,20px,fa8f0b5ceabf772901474bc25319f2eedb1f710c45f1b586f3af334eea183b9d,R03,semantic,processed-semantic-transcript,1
+T-491,"setStatus(""reCAPTCHA not ready yet."");",5241.749476476342,11885.924199021758,20px,1b344bbe9397120867e5866743a83dec0221afdcfe89f92f3bc0afd4a1154b51,R03,semantic,processed-semantic-transcript,1
+T-492,"headers: { ""Content-Type"": ""application/json"" },",8374.503066266952,11906.590783925538,20px,2b88f4d4f8f1954658367dcec28e8db230feb8ed9909edb0c54a65daf18dd9d4,R03,semantic,processed-semantic-transcript,1
+T-493,return;,5241.749476476342,11910.924199021758,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R03,semantic,processed-semantic-transcript,1
+T-494,"body: JSON.stringify({ email, password, recaptchaToken: token }),",8374.503066266952,11931.590783925538,20px,80e550dc2adacc87940b2b16df976943f8edc2e4e5d28853c995586e3fd2f28f,R03,semantic,processed-semantic-transcript,1
+T-495,},5241.749476476342,11935.924199021758,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-496,});,8374.503066266952,11956.590783925538,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R03,semantic,processed-semantic-transcript,1
+T-497,,5241.749476476342,11960.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-498,,8374.503066266952,11981.590783925538,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-499,// action name must match what server expects,5241.749476476342,11985.924199021758,20px,7ea7b894ca53db0263d43ae58510649a56a26dcee825b1265dd7d65fbb5d9c99,R03,semantic,processed-semantic-transcript,1
+T-500,if (!resp.ok) {,8374.503066266952,12006.590783925538,20px,5b8896395731649f30f078541a586b3144a2c2ef1ff7d31be57e8012e199828b,R03,semantic,processed-semantic-transcript,1
+T-501,"const token = await executeRecaptcha(""register"");",5241.749476476342,12010.924199021758,20px,4867dfad9cc2770d38b1427533734fe5955ea7582a52c65e12b03a535438bab0,R03,semantic,processed-semantic-transcript,1
+T-502,setStatus(await resp.text());,8374.503066266952,12031.590783925538,20px,f3ecda7a1e1b696ec8bbccdc7f0c66812fbc09b1bd37af90a5875fe94183764a,R03,semantic,processed-semantic-transcript,1
+T-503,,5241.749476476342,12035.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-504,return;,8374.503066266952,12056.590783925538,20px,8beaabe25ab7e0a80d1e25bada55a2f5a227101c2210eadf0b368d3c2be4a83f,R03,semantic,processed-semantic-transcript,1
+T-505,"const resp = await fetch(""/api/auth/register-v3"", {",5241.749476476342,12060.924199021758,20px,7cbc411141265080b67511c23f5082d4ef4f9ff73977d96896b0b00ce2427aa1,R03,semantic,processed-semantic-transcript,1
+T-506,},8374.503066266952,12081.590783925538,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-507,"method: ""POST"",",5241.749476476342,12085.924199021758,20px,fa8f0b5ceabf772901474bc25319f2eedb1f710c45f1b586f3af334eea183b9d,R03,semantic,processed-semantic-transcript,1
+T-508,,8374.503066266952,12106.590783925538,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-509,"headers: { ""Content-Type"": ""application/json"" },",5241.749476476342,12110.924199021758,20px,2b88f4d4f8f1954658367dcec28e8db230feb8ed9909edb0c54a65daf18dd9d4,R03,semantic,processed-semantic-transcript,1
+T-510,"setStatus(""Registered (React v3)!"");",8374.503066266952,12131.590783925538,20px,515d0fad5781888ecc9534112fe4d6e770f5d5232a1c7a44a3b9a62813c1f98f,R03,semantic,processed-semantic-transcript,1
+T-511,"body: JSON.stringify({ email, password, recaptchaToken: token }),",5241.749476476342,12135.924199021758,20px,80e550dc2adacc87940b2b16df976943f8edc2e4e5d28853c995586e3fd2f28f,R03,semantic,processed-semantic-transcript,1
+T-512,};,8374.503066266952,12156.590783925538,20px,df3982fd610173599241fca93c7c866683f58f541eced1c2098102145477164c,R03,semantic,processed-semantic-transcript,1
+T-513,});,5241.749476476342,12160.924199021758,20px,29576b54e255e3c948eea5b5904fa38b81682fdd3cbd9ae841ff0e7bd80d394c,R03,semantic,processed-semantic-transcript,1
+T-514,,8374.503066266952,12181.590783925538,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-515,,5241.749476476342,12185.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-516,return (,8374.503066266952,12206.590783925538,20px,fc4c1868f34cfb519e76be7307878b7254a939fea0a2f13fd8029482816af74d,R03,semantic,processed-semantic-transcript,1
+T-517,"setStatus(resp.ok ? ""Registered!"" : await resp.text());",5241.749476476342,12210.924199021758,20px,a50b174fc055a1678cffb4f4b6a2ffa6d0aa1f6653f085df29001b375b6c2751,R03,semantic,processed-semantic-transcript,1
+T-518,<form onSubmit={onSubmit}>,8374.503066266952,12231.590783925538,20px,804b9c4c26c03470f54a3e72430146ba6176db5972e61fd585e8ee27501d0a2d,R03,semantic,processed-semantic-transcript,1
+T-519,};,5241.749476476342,12235.924199021758,20px,df3982fd610173599241fca93c7c866683f58f541eced1c2098102145477164c,R03,semantic,processed-semantic-transcript,1
+T-520,"<input value={email} onChange={(e) => setEmail(e.target.value)} type=""email"" required />",8374.503066266952,12256.590783925538,20px,8adda46c907947446fd548d7212d563931f9081a67ca3cbfb5b1c4b122a51027,R03,semantic,processed-semantic-transcript,1
+T-521,,5241.749476476342,12260.924199021758,20px,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,R03,empty-structural,reviewed-empty-structural,1
+T-522,"<input value={password} onChange={(e) => setPassword(e.target.value)} type=""password"" required />",8374.503066266952,12281.590783925538,20px,d70ccfb8fa401103ec73e819679c94f939c9899858ce58fef53bdd35d225dd83,R03,semantic,processed-semantic-transcript,1
+T-523,return (,5241.749476476342,12285.924199021758,20px,fc4c1868f34cfb519e76be7307878b7254a939fea0a2f13fd8029482816af74d,R03,semantic,processed-semantic-transcript,1
+T-524,"<button type=""submit"" disabled={!ready}>Register</button>",8374.503066266952,12306.590783925538,20px,ba1489b56e77a4b8a6b92174c2b4c434e058829565b8729a785c948cebeb0e98,R03,semantic,processed-semantic-transcript,1
+T-525,<form onSubmit={onSubmit}>,5241.749476476342,12310.924199021758,20px,804b9c4c26c03470f54a3e72430146ba6176db5972e61fd585e8ee27501d0a2d,R03,semantic,processed-semantic-transcript,1
+T-526,<div>{status}</div>,8374.503066266952,12331.590783925538,20px,77bdc611bbf6f55aec1d6b5d4b1c22c32f525cbbb4a09bb6209f08396eee05a1,R03,semantic,processed-semantic-transcript,1
+T-527,"<input type=""email"" value={email} onChange={(e) => setEmail(e.target.value)} required />",5241.749476476342,12335.924199021758,20px,eba5c12b7120461c60e5e053a415958484ccc879c71c7cee9220b61bc3674436,R03,semantic,processed-semantic-transcript,1
+T-528,</form>,8374.503066266952,12356.590783925538,20px,e0c7bb7b72eeecfc07340f6bce5874176ae2e9d13551d2d6a6f3409e66c2f8c9,R03,semantic,processed-semantic-transcript,1
+T-529,"<input type=""password"" value={password} onChange={(e) => setPassword(e.target.value)} required />",5241.749476476342,12360.924199021758,20px,4a43b621a42cac4b4db78ec516ac026357328bcd3e4e9875c6bcb8a0ee294e9e,R03,semantic,processed-semantic-transcript,1
+T-530,);,8374.503066266952,12381.590783925538,20px,9d8b2b5670d18da8a99f6152f7ee75558019cd106d8032bf7c1117bd37273e37,R03,semantic,processed-semantic-transcript,1
+T-531,"<button type=""submit"">Register</button>",5241.749476476342,12385.924199021758,20px,bdc94113f57e993a757422daff019c5871a5961b53fd383f57d2695453a6cbd5,R03,semantic,processed-semantic-transcript,1
+T-532,},8374.503066266952,12406.590783925538,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-533,<div>{status}</div>,5241.749476476342,12410.924199021758,20px,77bdc611bbf6f55aec1d6b5d4b1c22c32f525cbbb4a09bb6209f08396eee05a1,R03,semantic,processed-semantic-transcript,1
+T-534,</form>,5241.749476476342,12435.924199021758,20px,e0c7bb7b72eeecfc07340f6bce5874176ae2e9d13551d2d6a6f3409e66c2f8c9,R03,semantic,processed-semantic-transcript,1
+T-535,);,5241.749476476342,12460.924199021758,20px,9d8b2b5670d18da8a99f6152f7ee75558019cd106d8032bf7c1117bd37273e37,R03,semantic,processed-semantic-transcript,1
+T-536,},5241.749476476342,12485.924199021758,20px,d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2,R03,semantic,processed-semantic-transcript,1
+T-537,what is remote ip,4868.977241092505,14180.386034009087,181.7777506510378px,aeb67aa0a79acb07591922b4db0e4875fd67e837a98ac159291730555f96c902,R04,semantic,processed-semantic-transcript,1
