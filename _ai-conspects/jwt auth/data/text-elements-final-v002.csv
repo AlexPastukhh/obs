@@ -1,0 +1,113 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R02,processed,4332.703227280919,229.04763721284326,refresh tokens strategies
+T-002,R02,processed,4332.703227280919,229.04763721284326,token family
+T-003,R02,processed,4332.703227280919,229.04763721284326,redis
+T-004,R01,processed,10.0,903.8107591915268,react query  with singletone query client
+T-005,R04,processed,22409.095282579045,1071.8946089160181,KID
+T-006,R04,processed,16970.93722182495,1123.2760637942683,jwt auth and token descriptor
+T-007,R03,processed,13447.148669860733,1169.532630226524,"END TO END JWT, REFRESH"
+T-008,R03,processed,13447.148669860733,1169.532630226524,REACT
+T-009,R03,processed,10100.776448971606,1207.119728670974,react implementation
+T-010,R04,processed,19789.56646885778,1391.585052725587,symmetric/ assymetric keys
+T-011,R02,processed,4487.488496787077,1880.7559547445508,refresh token family
+T-012,R01,processed,1695.137125651041,2120.7963142250055,// src/auth/tokenCache.ts
+T-013,R01,processed,1695.137125651041,2120.7963142250055,"import { queryClient, TOKEN_KEY } from ""../queryClient"";"
+T-014,R01,processed,1695.137125651041,2120.7963142250055,export function getAccessToken(): string | null {
+T-015,R01,processed,1695.137125651041,2120.7963142250055,return (queryClient.getQueryData(TOKEN_KEY) as string | null) ?? null;
+T-016,R01,processed,1695.137125651041,2120.7963142250055,}
+T-017,R01,processed,1695.137125651041,2120.7963142250055,export function setAccessToken(token: string | null) {
+T-018,R01,processed,1695.137125651041,2120.7963142250055,"queryClient.setQueryData(TOKEN_KEY, token);"
+T-019,R01,processed,1695.137125651041,2120.7963142250055,}
+T-020,R01,processed,1689.2112901475684,2590.4260342770876,// src/auth/refresh.ts
+T-021,R01,processed,1689.2112901475684,2590.4260342770876,"import { setAccessToken } from ""./tokenCache"";"
+T-022,R01,processed,1689.2112901475684,2590.4260342770876,export async function refreshAccessToken(): Promise<string> {
+T-023,R01,processed,1689.2112901475684,2590.4260342770876,"const res = await fetch(""/api/auth/refresh"", {"
+T-024,R01,processed,1689.2112901475684,2590.4260342770876,"method: ""POST"","
+T-025,R01,processed,1689.2112901475684,2590.4260342770876,"credentials: ""include"", // sends refresh cookie"
+T-026,R01,processed,1689.2112901475684,2590.4260342770876,});
+T-027,R01,processed,1689.2112901475684,2590.4260342770876,"if (!res.ok) throw new Error(""Refresh failed"");"
+T-028,R01,processed,1689.2112901475684,2590.4260342770876,const data = (await res.json()) as { accessToken: string };
+T-029,R01,processed,1689.2112901475684,2590.4260342770876,setAccessToken(data.accessToken); // <-- update React Query cache
+T-030,R01,processed,1689.2112901475684,2590.4260342770876,return data.accessToken;
+T-031,R01,processed,1689.2112901475684,2590.4260342770876,}
+T-032,R01,processed,1797.3594835069434,3214.129715375181,// src/api/fetchWithAuth.ts
+T-033,R01,processed,1797.3594835069434,3214.129715375181,"import { getAccessToken, setAccessToken } from ""../auth/tokenCache"";"
+T-034,R01,processed,1797.3594835069434,3214.129715375181,"import { refreshAccessToken } from ""../auth/refresh"";"
+T-035,R01,processed,1797.3594835069434,3214.129715375181,let refreshPromise: Promise<string> | null = null;
+T-036,R01,processed,1797.3594835069434,3214.129715375181,async function refreshOnce(): Promise<string> {
+T-037,R01,processed,1797.3594835069434,3214.129715375181,if (!refreshPromise) {
+T-038,R01,processed,1797.3594835069434,3214.129715375181,refreshPromise = refreshAccessToken().finally(() => {
+T-039,R01,processed,1797.3594835069434,3214.129715375181,refreshPromise = null;
+T-040,R01,processed,1797.3594835069434,3214.129715375181,});
+T-041,R01,processed,1797.3594835069434,3214.129715375181,}
+T-042,R01,processed,1797.3594835069434,3214.129715375181,return refreshPromise;
+T-043,R01,processed,1797.3594835069434,3214.129715375181,}
+T-044,R01,processed,1797.3594835069434,3214.129715375181,"export async function fetchWithAuth(input: RequestInfo, init: RequestInit = {}) {"
+T-045,R01,processed,1797.3594835069434,3214.129715375181,const headers = new Headers(init.headers);
+T-046,R01,processed,1797.3594835069434,3214.129715375181,const token = getAccessToken(); // <-- read from React Query cache
+T-047,R01,processed,1797.3594835069434,3214.129715375181,"if (token) headers.set(""Authorization"", `Bearer ${token}`);"
+T-048,R01,processed,1797.3594835069434,3214.129715375181,const doReq = () =>
+T-049,R01,processed,1797.3594835069434,3214.129715375181,"fetch(input, { ...init, headers, credentials: ""include"" });"
+T-050,R01,processed,1797.3594835069434,3214.129715375181,let res = await doReq();
+T-051,R01,processed,1797.3594835069434,3214.129715375181,if (res.status !== 401) return res;
+T-052,R01,processed,1797.3594835069434,3214.129715375181,// 401 -> refresh -> retry once
+T-053,R01,processed,1797.3594835069434,3214.129715375181,try {
+T-054,R01,processed,1797.3594835069434,3214.129715375181,const fresh = await refreshOnce();
+T-055,R01,processed,1797.3594835069434,3214.129715375181,"headers.set(""Authorization"", `Bearer ${fresh}`);"
+T-056,R01,processed,1797.3594835069434,3214.129715375181,res = await doReq();
+T-057,R01,processed,1797.3594835069434,3214.129715375181,return res;
+T-058,R01,processed,1797.3594835069434,3214.129715375181,} catch {
+T-059,R01,processed,1797.3594835069434,3214.129715375181,// Refresh failed: clear token so UI switches to login
+T-060,R01,processed,1797.3594835069434,3214.129715375181,setAccessToken(null);
+T-061,R01,processed,1797.3594835069434,3214.129715375181,return res; // still 401
+T-062,R01,processed,1797.3594835069434,3214.129715375181,}
+T-063,R01,processed,1797.3594835069434,3214.129715375181,}
+T-064,R03,processed,10137.856847456169,3979.883116918829,if there is an existing promise
+T-065,R03,processed,10137.856847456169,3979.883116918829,we just return it
+T-066,R02,processed,4980.287134565919,4128.457473781986,rotation pattern
+T-067,R02,processed,4980.287134565919,4128.457473781986,flow
+T-068,R03,processed,10152.327406198605,4245.000479130356,we should refresh if
+T-069,R03,processed,10152.327406198605,4245.000479130356,there is no token or
+T-070,R03,processed,10152.327406198605,4245.000479130356,if there is some problem
+T-071,R03,processed,10152.327406198605,4245.000479130356,(401)
+T-072,R01,processed,1801.0630967881934,4433.388952028826,// src/auth/login.ts
+T-073,R01,processed,1801.0630967881934,4433.388952028826,"import { setAccessToken } from ""./tokenCache"";"
+T-074,R01,processed,1801.0630967881934,4433.388952028826,"export async function login(username: string, password: string) {"
+T-075,R01,processed,1801.0630967881934,4433.388952028826,"const res = await fetch(""/api/auth/login"", {"
+T-076,R01,processed,1801.0630967881934,4433.388952028826,"method: ""POST"","
+T-077,R01,processed,1801.0630967881934,4433.388952028826,"credentials: ""include"","
+T-078,R01,processed,1801.0630967881934,4433.388952028826,"headers: { ""Content-Type"": ""application/json"" },"
+T-079,R01,processed,1801.0630967881934,4433.388952028826,"body: JSON.stringify({ username, password }),"
+T-080,R01,processed,1801.0630967881934,4433.388952028826,});
+T-081,R01,processed,1801.0630967881934,4433.388952028826,if (!res.ok) throw new Error(await res.text());
+T-082,R01,processed,1801.0630967881934,4433.388952028826,const data = (await res.json()) as { accessToken: string };
+T-083,R01,processed,1801.0630967881934,4433.388952028826,setAccessToken(data.accessToken); // updates cache -> UI re-renders
+T-084,R01,processed,1801.0630967881934,4433.388952028826,}
+T-085,R04,processed,16887.53932747269,4584.472787598847,!
+T-086,R01,processed,1833.6555989583321,4914.8704109047,// src/auth/logout.ts
+T-087,R01,processed,1833.6555989583321,4914.8704109047,"import { setAccessToken } from ""./tokenCache"";"
+T-088,R01,processed,1833.6555989583321,4914.8704109047,"import { queryClient } from ""../queryClient"";"
+T-089,R01,processed,1833.6555989583321,4914.8704109047,export async function logout() {
+T-090,R01,processed,1833.6555989583321,4914.8704109047,"await fetch(""/api/auth/logout"", { method: ""POST"", credentials: ""include"" });"
+T-091,R01,processed,1833.6555989583321,4914.8704109047,setAccessToken(null);
+T-092,R01,processed,1833.6555989583321,4914.8704109047,queryClient.clear(); // optional: clear all cached server data
+T-093,R01,processed,1833.6555989583321,4914.8704109047,}
+T-094,R02,processed,4612.050443490401,4992.6757102116935,how can theft happen
+T-095,R02,processed,4612.050443490401,4992.6757102116935,and only of the old token?
+T-096,R02,processed,5088.062459686022,6413.6503182620845,why revoke the whole familiy
+T-097,R02,processed,3678.5394035462105,6455.777370205912,what does the use of an old token tells us
+T-098,R04,processed,18165.71884356161,6709.934270021276,jwt token handler
+T-099,R04,processed,20226.69348901232,6954.674279151033,jwt headers
+T-100,R04,processed,21018.813293087915,6992.67574637277,jwt headers vs payload/claims vs signature
+T-101,R04,processed,16819.02364321507,7910.949409313638,jwtsecuritytoken
+T-102,R02,processed,6111.663785727749,8007.75165509494,example flows with redis
+T-103,R02,processed,4433.537812863471,8621.173955662844,mb make sense to
+T-104,R02,processed,4433.537812863471,8621.173955662844,check if token was revoked
+T-105,R02,processed,4433.537812863471,8621.173955662844,and store revoked tokens
+T-106,R02,processed,4433.537812863471,8621.173955662844,there(or at least not too old
+T-107,R02,processed,4433.537812863471,8621.173955662844,revoked tokens)
+T-108,R02,processed,4496.977017972598,9029.904119237064,!!!!
+T-109,R02,processed,6884.9456838566,9160.170467204262,setnx
+T-110,R02,processed,6271.985141467019,9384.746797383004,return issuccesss
+T-111,R02,processed,6341.458825677544,9538.43100790932,the value to store
+T-112,R02,processed,4568.352672889512,9911.544303427603,!!!

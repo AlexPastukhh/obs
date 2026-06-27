@@ -1,0 +1,898 @@
+[
+  {
+    "x": 4332.703227280919,
+    "y": 229.04763721284326,
+    "text": "refresh tokens strategies",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 4332.703227280919,
+    "y": 229.04763721284326,
+    "text": "token family",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 4332.703227280919,
+    "y": 229.04763721284326,
+    "text": "redis",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 10.0,
+    "y": 903.8107591915268,
+    "text": "react query  with singletone query client",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 22409.095282579045,
+    "y": 1071.8946089160181,
+    "text": "KID",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 16970.93722182495,
+    "y": 1123.2760637942683,
+    "text": "jwt auth and token descriptor",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 13447.148669860733,
+    "y": 1169.532630226524,
+    "text": "END TO END JWT, REFRESH",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 13447.148669860733,
+    "y": 1169.532630226524,
+    "text": "REACT",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 10100.776448971606,
+    "y": 1207.119728670974,
+    "text": "react implementation",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 19789.56646885778,
+    "y": 1391.585052725587,
+    "text": "symmetric/ assymetric keys",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 4487.488496787077,
+    "y": 1880.7559547445508,
+    "text": "refresh token family",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "// src/auth/tokenCache.ts",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "import { queryClient, TOKEN_KEY } from \"../queryClient\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "export function getAccessToken(): string | null {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "return (queryClient.getQueryData(TOKEN_KEY) as string | null) ?? null;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "export function setAccessToken(token: string | null) {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "queryClient.setQueryData(TOKEN_KEY, token);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 1695.137125651041,
+    "y": 2120.7963142250055,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "// src/auth/refresh.ts",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "import { setAccessToken } from \"./tokenCache\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "export async function refreshAccessToken(): Promise<string> {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "const res = await fetch(\"/api/auth/refresh\", {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "method: \"POST\",",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "credentials: \"include\", // sends refresh cookie",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "});",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "if (!res.ok) throw new Error(\"Refresh failed\");",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "const data = (await res.json()) as { accessToken: string };",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "setAccessToken(data.accessToken); // <-- update React Query cache",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "return data.accessToken;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 1689.2112901475684,
+    "y": 2590.4260342770876,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "// src/api/fetchWithAuth.ts",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "import { getAccessToken, setAccessToken } from \"../auth/tokenCache\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "import { refreshAccessToken } from \"../auth/refresh\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "let refreshPromise: Promise<string> | null = null;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "async function refreshOnce(): Promise<string> {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "if (!refreshPromise) {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "refreshPromise = refreshAccessToken().finally(() => {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "refreshPromise = null;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "});",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "return refreshPromise;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "export async function fetchWithAuth(input: RequestInfo, init: RequestInit = {}) {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-044"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "const headers = new Headers(init.headers);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-045"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "const token = getAccessToken(); // <-- read from React Query cache",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-046"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "if (token) headers.set(\"Authorization\", `Bearer ${token}`);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-047"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "const doReq = () =>",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-048"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "fetch(input, { ...init, headers, credentials: \"include\" });",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-049"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "let res = await doReq();",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-050"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "if (res.status !== 401) return res;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-051"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "// 401 -> refresh -> retry once",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-052"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "try {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-053"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "const fresh = await refreshOnce();",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-054"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "headers.set(\"Authorization\", `Bearer ${fresh}`);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-055"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "res = await doReq();",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-056"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "return res;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-057"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "} catch {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-058"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "// Refresh failed: clear token so UI switches to login",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-059"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "setAccessToken(null);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-060"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "return res; // still 401",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-061"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-062"
+  },
+  {
+    "x": 1797.3594835069434,
+    "y": 3214.129715375181,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-063"
+  },
+  {
+    "x": 10137.856847456169,
+    "y": 3979.883116918829,
+    "text": "if there is an existing promise",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-064"
+  },
+  {
+    "x": 10137.856847456169,
+    "y": 3979.883116918829,
+    "text": "we just return it",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-065"
+  },
+  {
+    "x": 4980.287134565919,
+    "y": 4128.457473781986,
+    "text": "rotation pattern",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-066"
+  },
+  {
+    "x": 4980.287134565919,
+    "y": 4128.457473781986,
+    "text": "flow",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-067"
+  },
+  {
+    "x": 10152.327406198605,
+    "y": 4245.000479130356,
+    "text": "we should refresh if",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-068"
+  },
+  {
+    "x": 10152.327406198605,
+    "y": 4245.000479130356,
+    "text": "there is no token or",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-069"
+  },
+  {
+    "x": 10152.327406198605,
+    "y": 4245.000479130356,
+    "text": "if there is some problem",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-070"
+  },
+  {
+    "x": 10152.327406198605,
+    "y": 4245.000479130356,
+    "text": "(401)",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-071"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "// src/auth/login.ts",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-072"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "import { setAccessToken } from \"./tokenCache\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-073"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "export async function login(username: string, password: string) {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-074"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "const res = await fetch(\"/api/auth/login\", {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-075"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "method: \"POST\",",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-076"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "credentials: \"include\",",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-077"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "headers: { \"Content-Type\": \"application/json\" },",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-078"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "body: JSON.stringify({ username, password }),",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-079"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "});",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-080"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "if (!res.ok) throw new Error(await res.text());",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-081"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "const data = (await res.json()) as { accessToken: string };",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-082"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "setAccessToken(data.accessToken); // updates cache -> UI re-renders",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-083"
+  },
+  {
+    "x": 1801.0630967881934,
+    "y": 4433.388952028826,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-084"
+  },
+  {
+    "x": 16887.53932747269,
+    "y": 4584.472787598847,
+    "text": "!",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-085"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "// src/auth/logout.ts",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-086"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "import { setAccessToken } from \"./tokenCache\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-087"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "import { queryClient } from \"../queryClient\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-088"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "export async function logout() {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-089"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "await fetch(\"/api/auth/logout\", { method: \"POST\", credentials: \"include\" });",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-090"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "setAccessToken(null);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-091"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "queryClient.clear(); // optional: clear all cached server data",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-092"
+  },
+  {
+    "x": 1833.6555989583321,
+    "y": 4914.8704109047,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-093"
+  },
+  {
+    "x": 4612.050443490401,
+    "y": 4992.6757102116935,
+    "text": "how can theft happen",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-094"
+  },
+  {
+    "x": 4612.050443490401,
+    "y": 4992.6757102116935,
+    "text": "and only of the old token?",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-095"
+  },
+  {
+    "x": 5088.062459686022,
+    "y": 6413.6503182620845,
+    "text": "why revoke the whole familiy",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-096"
+  },
+  {
+    "x": 3678.5394035462105,
+    "y": 6455.777370205912,
+    "text": "what does the use of an old token tells us",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-097"
+  },
+  {
+    "x": 18165.71884356161,
+    "y": 6709.934270021276,
+    "text": "jwt token handler",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-098"
+  },
+  {
+    "x": 20226.69348901232,
+    "y": 6954.674279151033,
+    "text": "jwt headers",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-099"
+  },
+  {
+    "x": 21018.813293087915,
+    "y": 6992.67574637277,
+    "text": "jwt headers vs payload/claims vs signature",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-100"
+  },
+  {
+    "x": 16819.02364321507,
+    "y": 7910.949409313638,
+    "text": "jwtsecuritytoken",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-101"
+  },
+  {
+    "x": 6111.663785727749,
+    "y": 8007.75165509494,
+    "text": "example flows with redis",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-102"
+  },
+  {
+    "x": 4433.537812863471,
+    "y": 8621.173955662844,
+    "text": "mb make sense to",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-103"
+  },
+  {
+    "x": 4433.537812863471,
+    "y": 8621.173955662844,
+    "text": "check if token was revoked",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-104"
+  },
+  {
+    "x": 4433.537812863471,
+    "y": 8621.173955662844,
+    "text": "and store revoked tokens",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-105"
+  },
+  {
+    "x": 4433.537812863471,
+    "y": 8621.173955662844,
+    "text": "there(or at least not too old",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-106"
+  },
+  {
+    "x": 4433.537812863471,
+    "y": 8621.173955662844,
+    "text": "revoked tokens)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-107"
+  },
+  {
+    "x": 4496.977017972598,
+    "y": 9029.904119237064,
+    "text": "!!!!",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-108"
+  },
+  {
+    "x": 6884.9456838566,
+    "y": 9160.170467204262,
+    "text": "setnx",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-109"
+  },
+  {
+    "x": 6271.985141467019,
+    "y": 9384.746797383004,
+    "text": "return issuccesss",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-110"
+  },
+  {
+    "x": 6341.458825677544,
+    "y": 9538.43100790932,
+    "text": "the value to store",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-111"
+  },
+  {
+    "x": 4568.352672889512,
+    "y": 9911.544303427603,
+    "text": "!!!",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-112"
+  }
+]
