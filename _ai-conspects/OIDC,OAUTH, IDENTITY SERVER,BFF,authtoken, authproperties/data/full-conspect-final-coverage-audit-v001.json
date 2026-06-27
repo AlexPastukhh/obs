@@ -1,0 +1,105 @@
+{
+  "conspect": "OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties",
+  "generated_utc": "2026-06-27 01:00:00 UTC",
+  "authoritative_transcript": "13-full-combined-final-transcript.md",
+  "legacy_text_only_transcript": {
+    "file": "01-final-transcript.md",
+    "status": "incomplete_superseded",
+    "historical_text_elements": 227,
+    "historical_image_uses": 0
+  },
+  "full_source": {
+    "text_elements": 227,
+    "unique_embedded_images": 263,
+    "image_uses": 269,
+    "duplicate_image_uses": 6
+  },
+  "coverage": {
+    "processed_text_elements": 227,
+    "processed_image_uses": 269,
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "regions": [
+      {
+        "region_id": "R01",
+        "title": "Architecture, schemes, tickets, cookies and production basics",
+        "uses": 44,
+        "unique": 44,
+        "duplicates": 0,
+        "summary": "OAuth 2.0 and OpenID Connect roles, authorization-code with PKCE, ID/access/refresh tokens, API validation, ASP.NET Core authentication schemes, authentication tickets, cookies, logout and production key handling."
+      },
+      {
+        "region_id": "R02",
+        "title": "Authorization code, PKCE, MVC/API integration, refresh and server-side token storage",
+        "uses": 91,
+        "unique": 91,
+        "duplicates": 0,
+        "summary": "The complete browser-to-IdP authorization-code flow, MVC client and API configuration, token redemption, SaveTokens trade-offs, refresh services, retry-after-401 and distributed server-side token storage."
+      },
+      {
+        "region_id": "R03",
+        "title": "Identity resources, profile service, UserInfo, claims and refresh rotation",
+        "uses": 39,
+        "unique": 34,
+        "duplicates": 5,
+        "summary": "Identity resources and custom identity scopes, IProfileService, claim emission into ID/access tokens, UserInfo, API user claims and single-use refresh-token rotation."
+      },
+      {
+        "region_id": "R04",
+        "title": "IdentityServer resources, clients, lifetimes, production configuration and OIDC options",
+        "uses": 34,
+        "unique": 34,
+        "duplicates": 0,
+        "summary": "IdentityServer resources and clients, token lifetimes, offline access, persistent stores, production signing certificates, reverse-proxy settings, OIDC options and event hooks."
+      },
+      {
+        "region_id": "R05",
+        "title": "Client types, grant types, secrets and claim mapping",
+        "uses": 13,
+        "unique": 13,
+        "duplicates": 1,
+        "summary": "Public and confidential clients, AllowedGrantTypes, client secrets, client-credentials flow and explicit JWT name/role claim mapping."
+      },
+      {
+        "region_id": "R06",
+        "title": "BFF, public/confidential clients and the SPA threat model",
+        "uses": 3,
+        "unique": 3,
+        "duplicates": 0,
+        "summary": "Why browser code cannot protect a client secret and how a Backend-for-Frontend keeps access and refresh tokens on the server behind a same-origin cookie session."
+      },
+      {
+        "region_id": "R07",
+        "title": "API resource UserClaims, scopes, PKCE and client validation",
+        "uses": 17,
+        "unique": 17,
+        "duplicates": 0,
+        "summary": "The distinction between identity resources, API scopes and API-resource UserClaims, plus PKCE mechanics, client scope validation and API policies."
+      },
+      {
+        "region_id": "R08",
+        "title": "Confidential-client PKCE, client secrets and step-up scopes",
+        "uses": 12,
+        "unique": 12,
+        "duplicates": 0,
+        "summary": "Using PKCE and client authentication together, code redemption by a confidential client and requesting extra scopes only when a privileged operation needs them."
+      },
+      {
+        "region_id": "R09",
+        "title": "OIDC events and handler contexts",
+        "uses": 16,
+        "unique": 16,
+        "duplicates": 0,
+        "summary": "ASP.NET Core OpenID Connect event order and context data for redirects, message receipt, authorization-code receipt, token response, token validation, UserInfo, ticket creation and remote failures."
+      }
+    ]
+  },
+  "validation": {
+    "text_processed_equals_source": true,
+    "image_uses_processed_equals_source": true,
+    "all_regions_closed": true,
+    "remaining_is_zero": true,
+    "legacy_files_marked_incomplete": true,
+    "combined_transcript_present": true
+  }
+}

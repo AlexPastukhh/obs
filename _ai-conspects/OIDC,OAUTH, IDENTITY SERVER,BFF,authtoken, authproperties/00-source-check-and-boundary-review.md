@@ -1,25 +1,42 @@
-# Stage0 — source check and boundary review
+# Legacy source check and boundary review — incomplete SVG
 
 Conspect: `OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties`  
-Source: `OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties.svg`  
-Generated: 2026-06-22 00:00:00 UTC
+Original review generated: 2026-06-22 00:00:00 UTC  
+Status corrected: 2026-06-27 01:00:00 UTC
 
-## Source inventory
+> **Legacy/incomplete source notice**
+>
+> The SVG used by this review contained 227 meaningful text elements but no
+> embedded screenshots. A later complete SVG recovered 263 unique screenshots
+> in 269 canvas placements. Therefore the inventory below is valid only for the
+> incomplete historical upload and is not the full-conspect source inventory.
+
+## Historical incomplete-source inventory
 
 ```text
-viewBox: 0 0 17481.345288110868 23646.131315445076
 unique embedded images: 0
 image uses: 0
 text elements: 227
 ```
 
-## Boundary decision
+## Correct complete-source inventory
 
-The uploaded SVG is treated as one coherent conspect. Its semantic roads are documented in the final transcript while the original SVG, every embedded image and every SVG text element remain preserved for correction/audit.
+```text
+unique embedded images: 263
+image uses: 269
+duplicate image placements: 6
+text elements: 227
+```
+
+## Correct boundary decision
+
+The complete recovered SVG is the authoritative source. The historical
+text-only SVG and this review are retained only to explain why the first
+transcript omitted screenshot content.
 
 ## Reading policy
 
-- SVG text is parsed directly rather than OCR'd.
-- Embedded screenshots are preserved separately.
-- `canvas-preview.png` is the visual boundary reference.
-- Exact code punctuation remains governed by the original SVG/source images.
+- SVG text is parsed directly.
+- Recovered screenshots remain authoritative for exact code and punctuation.
+- All 269 screenshot uses are represented by `R01`–`R09`.
+- The unified final transcript is `13-full-combined-final-transcript.md`.

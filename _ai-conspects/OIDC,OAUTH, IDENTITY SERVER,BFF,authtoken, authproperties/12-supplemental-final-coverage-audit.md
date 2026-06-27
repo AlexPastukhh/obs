@@ -1,9 +1,17 @@
-# Supplemental screenshot final coverage audit
+# Supplemental screenshot-layer coverage audit
 
 Conspect: `OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties`  
-Generated: 2026-06-22 05:30:00 UTC
+Generated: 2026-06-22 05:30:00 UTC  
+Scope wording corrected: 2026-06-27 01:00:00 UTC
 
-## Result
+## Scope
+
+This audit proves that the recovered screenshot layer was processed. It does
+not describe the historical text-only transcript as a complete final transcript.
+The integrated full-conspect result is audited separately in
+`14-full-conspect-final-coverage-audit.md`.
+
+## Screenshot-layer result
 
 ```text
 unique embedded images: 263
@@ -11,7 +19,6 @@ image uses on canvas: 269
 duplicate image uses: 6
 processed supplemental image uses: 269
 remaining unclosed image uses: 0
-remaining unclosed text elements: 0
 ```
 
 ## Regions
@@ -30,8 +37,12 @@ remaining unclosed text elements: 0
 
 ## Closure rule
 
-A screenshot use is closed only when it appears in the recovered use ledger, belongs to a reviewed regional contact sheet and is represented by a regional semantic transcript. Duplicate placements remain separate ledger entries so canvas coverage is not understated.
+A screenshot placement is closed only when it appears in the recovered ledger,
+belongs to a reviewed regional contact sheet and is represented in the
+corresponding regional transcript.
 
 ## Conclusion
 
-The earlier text-only processing remains valid, and the previously omitted screenshot layer is now fully represented. No supplemental transcript regions remain.
+The screenshot layer is fully covered. The old text-only transcript remains a
+legacy incomplete artifact; the authoritative integrated transcript is
+`13-full-combined-final-transcript.md`.

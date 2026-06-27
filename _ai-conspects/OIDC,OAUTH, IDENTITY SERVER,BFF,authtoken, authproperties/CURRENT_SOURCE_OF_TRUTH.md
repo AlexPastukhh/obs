@@ -1,35 +1,39 @@
 # Current Source of Truth — OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties
 
-Generated: 2026-06-22 05:30:00 UTC
+Generated: 2026-06-27 01:00:00 UTC
 
 ## Status
 
 ```text
-Original Stage0 source/boundary review: done
-Original text transcript: done
-Original text coverage audit: done
-Supplemental complete SVG recovery: done
-Supplemental screenshot transcript R01–R09: done
-Supplemental screenshot coverage audit: done
+Legacy incomplete SVG boundary review: incomplete / superseded
+Legacy text-only transcript: incomplete / superseded
+Legacy text-only coverage audit: incomplete / superseded
+Complete SVG recovery: done
+Screenshot transcripts R01–R09: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
 ## Coverage
 
 ```text
-unique embedded images: 263
-image uses on canvas: 269
-duplicate image uses: 6
-non-empty text elements: 227
-processed supplemental image uses: 269
-remaining unclosed image uses: 0
+meaningful text elements: 227 / 227
+unique embedded images: 263 / 263
+image uses on canvas: 269 / 269
+duplicate image uses retained: 6
 remaining unclosed text elements: 0
+remaining unclosed image uses: 0
 ```
 
-## Recovery conclusion
+## Authoritative transcript
 
-The previous source preserved all meaningful text but omitted the complete embedded screenshot layer.  
-The recovered SVG, all screenshots, nine supplemental transcripts and final coverage audit now represent the full source.
+`13-full-combined-final-transcript.md`
+
+## Authoritative audit
+
+`14-full-conspect-final-coverage-audit.md`
 
 ## Next
 
-No normal or supplemental transcript regions remain. Only correction/polish or another source-recovery patch if a newer SVG reveals additional material.
+No source-recovery or transcript regions remain. Only correction/polish if a
+newer source reveals additional material.
