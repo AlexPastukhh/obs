@@ -1,0 +1,38 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R03,processed,10648.968894050711,10.0,e tag for aggregate
+T-002,R04,processed,13606.277724698373,174.52364297414533,"etag flow, can browser store for later use"
+T-003,R04,processed,13606.277724698373,174.52364297414533,or it needs to get etag on each response from server?
+T-004,R03,processed,11009.39561255747,378.57926722478805,so in situation with aggregate cuncurrency token
+T-005,R03,processed,11009.39561255747,378.57926722478805,ifs better to have some dedicated interseptor for
+T-006,R03,processed,11009.39561255747,378.57926722478805,some aggregate and some type of child entity
+T-007,R03,processed,11009.39561255747,378.57926722478805,and we check if some changed entity is of this type
+T-008,R03,processed,11009.39561255747,378.57926722478805,and we get its aggregate and bump its token
+T-009,R01,processed,223.3918623253685,932.643214862107,e-tag with outputcache
+T-010,R01,processed,4213.3918623253685,1187.6430622742164,e-tag basics
+T-011,R04,processed,13898.134231065891,1616.5914648171456,!!!!
+T-012,R04,processed,14745.346229268669,3059.5201265456317,if match at client
+T-013,R01,processed,3462.276279619441,3060.0689213935584,FLOW
+T-014,R04,processed,14198.718934143517,3377.9458502973757,"if match, client"
+T-015,R04,processed,14241.585838662339,3557.3397157093023,with spa and not api's you usually get e tag from the
+T-016,R04,processed,14241.585838662339,3557.3397157093023,response and store it to do a fetch with it
+T-017,R02,processed,2322.6985272898773,3672.244344309436,helpers
+T-018,R04,processed,15895.421360224564,3706.9679904572804,you need to do calls with if-match yourself
+T-019,R04,processed,15895.421360224564,3706.9679904572804,browser does nothing with it
+T-020,R04,processed,15895.421360224564,3706.9679904572804,you are handlinkg concurrency
+T-021,R02,processed,5103.236066149213,3926.6496578496626,ef core
+T-022,R02,processed,3668.530845734619,4036.3188372424875,here we first get rowversion from db
+T-023,R02,processed,3668.530845734619,4036.3188372424875,but better to check if there is a none match header first
+T-024,R04,processed,14201.585838662339,4077.339771195806,so the e tag flow is
+T-025,R04,processed,14201.585838662339,4077.339771195806,from response to request
+T-026,R04,processed,14201.585838662339,4077.339771195806,without storing for later requests?
+T-027,R02,processed,4845.343899207571,4129.595151513993,automatic row version with attribute
+T-028,R03,processed,11395.480290186315,4232.113950456893,getting modified child entities aggregate id
+T-029,R03,processed,11395.480290186315,4232.113950456893,+ modified aggregate id
+T-030,R03,processed,11395.480290186315,4232.113950456893,(need to have some list of child entities  types and aggregates ffor this)
+T-031,R02,processed,277.15613957672076,4505.492589651287,IF CLIENT CREATES IDS AND API ALLOWS UPSERT
+T-032,R02,processed,277.15613957672076,4505.492589651287,THERE IS A POSSIBLE SITUATION WHEN  CLIENT SEND PUT REQUEST
+T-033,R02,processed,277.15613957672076,4505.492589651287,"BUT HE DOESNT WANT TO  OVERWRITE EXISTING ID, SO HE SENDS WITH"
+T-034,R02,processed,277.15613957672076,4505.492589651287,IF-NONE-MATCH:* SO IF THE RESOURCE EXISTS IN ANY VERSION - THERE WOULD BE
+T-035,R02,processed,277.15613957672076,4505.492589651287,NO UPDATE
+T-036,R02,processed,5181.554345746479,4754.215880805438,excplicit with onmodelcreating
+T-037,R03,processed,12377.480290186315,4978.113950456893,so need to wrap and act

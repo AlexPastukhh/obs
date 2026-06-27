@@ -1,0 +1,298 @@
+[
+  {
+    "x": 10648.968894050711,
+    "y": 10.0,
+    "text": "e tag for aggregate",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 13606.277724698373,
+    "y": 174.52364297414533,
+    "text": "etag flow, can browser store for later use",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 13606.277724698373,
+    "y": 174.52364297414533,
+    "text": "or it needs to get etag on each response from server?",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 11009.39561255747,
+    "y": 378.57926722478805,
+    "text": "so in situation with aggregate cuncurrency token",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 11009.39561255747,
+    "y": 378.57926722478805,
+    "text": "ifs better to have some dedicated interseptor for",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 11009.39561255747,
+    "y": 378.57926722478805,
+    "text": "some aggregate and some type of child entity",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 11009.39561255747,
+    "y": 378.57926722478805,
+    "text": "and we check if some changed entity is of this type",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 11009.39561255747,
+    "y": 378.57926722478805,
+    "text": "and we get its aggregate and bump its token",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 223.3918623253685,
+    "y": 932.643214862107,
+    "text": "e-tag with outputcache",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 4213.3918623253685,
+    "y": 1187.6430622742164,
+    "text": "e-tag basics",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 13898.134231065891,
+    "y": 1616.5914648171456,
+    "text": "!!!!",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 14745.346229268669,
+    "y": 3059.5201265456317,
+    "text": "if match at client",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 3462.276279619441,
+    "y": 3060.0689213935584,
+    "text": "FLOW",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 14198.718934143517,
+    "y": 3377.9458502973757,
+    "text": "if match, client",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 14241.585838662339,
+    "y": 3557.3397157093023,
+    "text": "with spa and not api's you usually get e tag from the",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 14241.585838662339,
+    "y": 3557.3397157093023,
+    "text": "response and store it to do a fetch with it",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 2322.6985272898773,
+    "y": 3672.244344309436,
+    "text": "helpers",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 15895.421360224564,
+    "y": 3706.9679904572804,
+    "text": "you need to do calls with if-match yourself",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 15895.421360224564,
+    "y": 3706.9679904572804,
+    "text": "browser does nothing with it",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 15895.421360224564,
+    "y": 3706.9679904572804,
+    "text": "you are handlinkg concurrency",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 5103.236066149213,
+    "y": 3926.6496578496626,
+    "text": "ef core",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 3668.530845734619,
+    "y": 4036.3188372424875,
+    "text": "here we first get rowversion from db",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 3668.530845734619,
+    "y": 4036.3188372424875,
+    "text": "but better to check if there is a none match header first",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 14201.585838662339,
+    "y": 4077.339771195806,
+    "text": "so the e tag flow is",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 14201.585838662339,
+    "y": 4077.339771195806,
+    "text": "from response to request",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 14201.585838662339,
+    "y": 4077.339771195806,
+    "text": "without storing for later requests?",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 4845.343899207571,
+    "y": 4129.595151513993,
+    "text": "automatic row version with attribute",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 11395.480290186315,
+    "y": 4232.113950456893,
+    "text": "getting modified child entities aggregate id",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 11395.480290186315,
+    "y": 4232.113950456893,
+    "text": "+ modified aggregate id",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 11395.480290186315,
+    "y": 4232.113950456893,
+    "text": "(need to have some list of child entities  types and aggregates ffor this)",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 277.15613957672076,
+    "y": 4505.492589651287,
+    "text": "IF CLIENT CREATES IDS AND API ALLOWS UPSERT",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 277.15613957672076,
+    "y": 4505.492589651287,
+    "text": "THERE IS A POSSIBLE SITUATION WHEN  CLIENT SEND PUT REQUEST",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 277.15613957672076,
+    "y": 4505.492589651287,
+    "text": "BUT HE DOESNT WANT TO  OVERWRITE EXISTING ID, SO HE SENDS WITH",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 277.15613957672076,
+    "y": 4505.492589651287,
+    "text": "IF-NONE-MATCH:* SO IF THE RESOURCE EXISTS IN ANY VERSION - THERE WOULD BE",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 277.15613957672076,
+    "y": 4505.492589651287,
+    "text": "NO UPDATE",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 5181.554345746479,
+    "y": 4754.215880805438,
+    "text": "excplicit with onmodelcreating",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 12377.480290186315,
+    "y": 4978.113950456893,
+    "text": "so need to wrap and act",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  }
+]
