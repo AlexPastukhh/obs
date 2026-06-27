@@ -1,0 +1,6 @@
+﻿region_id,title,axis,range_min,range_max,image_use_count,unique_image_count,duplicate_placement_count,canvas_min_x,canvas_max_x,canvas_min_y,canvas_max_y,representative_captions,status,remaining_image_uses
+R01,"Redis setup, connection options, strings and keys",y,0,2800,7,7,0,3232.0174147375847,5679.115837291132,452.6778975359848,2830.4643516991237,setup|strings|options/args|keys|lists,planned,7
+R02,"Hashes, lists, sets and sorted sets",y,2800,5200,13,13,0,1989.7211106968407,7661.41136599818,3090.529074690143,5496.973133327223,lists|keys|sortedsets|Hashes|sets,planned,13
+R03,"RedisValue conversions, null/value semantics and typed access",y,5200,8000,9,9,0,2526.9592175606795,7811.221022534948,5340.013246239621,8173.461134530591,sortedsets|lists|sets|redisvalue|!!!|!!!!,planned,9
+R04,"IDatabase command patterns, warnings and execution semantics",y,8000,10500,12,12,0,1886.9074338811952,7252.709262416971,8159.608714034275,10579.105272370283,!!!|!!!!|iserver,planned,12
+R05,"IServer operations, key scanning and overloaded operators",y,10500,,15,15,0,10.0,5770.177641294607,10638.802205076248,14324.620951790232,iserver|!!!|this type of shit works because of overriden == != and|implicit operators|!!!!,planned,15

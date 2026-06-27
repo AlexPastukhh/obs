@@ -1,31 +1,26 @@
-# MANIFEST — objectpool,arraypool,memorypool final coverage v001
+# MANIFEST — objectpool,arraypool,memorypool full-source recovery
 
-Generated: 2026-06-27 UTC
+Generated: 2026-06-27 07:00:00 UTC
 
-## Source
+## Legacy incomplete material
 
-```text
-original SVG filename: objectpool,arraypool,memorypool(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
-```
+- historical transcript files marked incomplete/superseded
+- historical coverage audits marked incomplete/superseded
 
-## Final counts
+## Complete recovered source
 
-```text
-text labels: 30 / 30 covered
-vector paths: 3 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
-```
+- `source/objectpool,arraypool,memorypool.svg`
+- 54 extracted screenshots under `source/recovered-images-v002/`
+- `03-full-source-recovery-boundary-review.md`
+- `data/full-recovery-*`
+- 5 regional contact sheets
+- complete canvas preview
 
-## Final files
+## Current coverage
 
 ```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
+complete-source text elements: 30
+complete-source image uses: 54
+remaining text elements: 30
+remaining image uses: 54
 ```

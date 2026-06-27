@@ -1,25 +1,33 @@
 # Current Source of Truth — usecookiepolicy
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-27 07:00:00 UTC
 
 ## Status
 
 ```text
-Stage0 source/boundary review: done
-Final transcript: done
-Final coverage audit: done
+Legacy incomplete-source transcript: incomplete / superseded
+Legacy incomplete-source coverage audit: incomplete / superseded
+Complete SVG recovery: done
+Complete-source screenshot extraction: done
+Complete-source text-element inventory: done
+Complete-source region plan: done
+Complete-source regional transcripts: not started
+Full combined transcript: not started
+Full-conspect coverage audit: not started
 ```
 
-## Coverage
+## Complete-source coverage
 
 ```text
-unique embedded images: 2
-image uses on canvas: 2
-text elements: 42
-remaining unclosed image uses: 0
-remaining unclosed text elements: 0
+meaningful text elements: 42
+unique embedded images: 49
+image uses on canvas: 49
+repeated image placements: 0
+remaining unprocessed text elements: 42
+remaining unprocessed image uses: 49
 ```
 
 ## Next
 
-No normal transcript regions remain. Only correction/polish if needed.
+Process every planned region and rebuild the authoritative transcript from the
+complete source.

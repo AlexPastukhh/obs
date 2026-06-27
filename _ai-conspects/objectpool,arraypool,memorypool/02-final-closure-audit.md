@@ -1,31 +1,20 @@
-# Final closure audit — objectpool,arraypool,memorypool
+# Legacy incomplete-source artifact — objectpool,arraypool,memorypool
 
-Generated: 2026-06-27 UTC
+Original source status: historical  
+Status corrected: 2026-06-27 07:00:00 UTC
 
-## Source
+> **Status: incomplete and superseded for full-source completeness.**
+>
+> The historical vector/text transcript covered 30 labels and no embedded screenshots.
+> The newly supplied complete SVG contains 30 text elements and
+> 54 screenshot uses.
+>
+> Keep this file only as historical reference. A new authoritative combined
+> transcript must be built from the complete source.
 
-```text
-source kind: vector/text SVG without embedded raster images
-text labels: 30
-vector paths: 3
-embedded images: 0
-image uses: 0
-```
+## Replacement path
 
-## Coverage verdict
-
-```text
-labels accounted: 30 / 30
-labels covered by semantic transcript: 30
-unresolved labels: 0
-unmapped labels: 0
-placeholder/error rows: 0
-```
-
-All candidate regions have a verified semantic transcript. Vector paths were checked as grouping/flow evidence and do not contain an additional text payload.
-
-## Verdict
-
-```text
-objectpool,arraypool,memorypool: closed by complete vector/text source coverage
-```
+- Recovery review: `03-full-source-recovery-boundary-review.md`
+- Complete-source regional transcripts: not started
+- Full combined transcript: not started
+- Full-conspect audit: not started

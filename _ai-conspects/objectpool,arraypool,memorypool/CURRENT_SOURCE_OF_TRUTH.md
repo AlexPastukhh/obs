@@ -1,36 +1,33 @@
-# Current Source of Truth - objectpool,arraypool,memorypool
+# Current Source of Truth — objectpool,arraypool,memorypool
 
-Generated: 2026-06-27 UTC
+Generated: 2026-06-27 07:00:00 UTC
 
-## Policy
-
-The SVG text labels are the primary semantic source because this source contains no embedded raster screenshots. Vector paths are boundary/flow evidence. Inventory alone does not close coverage.
-
-## Current status
+## Status
 
 ```text
-Stage0 source/boundary review: done
-All candidate transcript regions: done
-Final coverage audit: done
+Legacy incomplete-source transcript: incomplete / superseded
+Legacy incomplete-source coverage audit: incomplete / superseded
+Complete SVG recovery: done
+Complete-source screenshot extraction: done
+Complete-source text-element inventory: done
+Complete-source region plan: done
+Complete-source regional transcripts: not started
+Full combined transcript: not started
+Full-conspect coverage audit: not started
 ```
 
-## Counts
+## Complete-source coverage
 
 ```text
-unique embedded images: 0
-image uses on canvas: 0
-text labels parsed: 30
-text labels covered: 30
-vector paths reviewed: 3
-remaining unclosed labels: 0
+meaningful text elements: 30
+unique embedded images: 54
+image uses on canvas: 54
+repeated image placements: 0
+remaining unprocessed text elements: 30
+remaining unprocessed image uses: 54
 ```
 
-## Closure verdict
+## Next
 
-```text
-Closed by complete vector/text source coverage.
-```
-
-## Final transcript
-
-`regions/R01R02R03-final-coverage.md`
+Process every planned region and rebuild the authoritative transcript from the
+complete source.

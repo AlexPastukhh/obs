@@ -1,20 +1,20 @@
-# Final coverage transcript
+# Legacy incomplete-source artifact — objectpool,arraypool,memorypool
 
-Generated: 2026-06-27 UTC
+Original source status: historical  
+Status corrected: 2026-06-27 07:00:00 UTC
 
-## Done
+> **Status: incomplete and superseded for full-source completeness.**
+>
+> The historical vector/text transcript covered 30 labels and no embedded screenshots.
+> The newly supplied complete SVG contains 30 text elements and
+> 54 screenshot uses.
+>
+> Keep this file only as historical reference. A new authoritative combined
+> transcript must be built from the complete source.
 
-- All candidate regions processed.
-- Vector/text source reviewed: yes.
-- Text labels closed: 30.
-- Vector paths retained as boundary/flow evidence: 3.
-- Remaining unclosed text labels: 0.
-- Embedded image uses: 0.
+## Replacement path
 
-## Transcript
-
-See `regions/R01R02R03-final-coverage.md`.
-
-## Next
-
-No normal transcript regions remain. Only correction or precision-polish work if a later source revision is supplied.
+- Recovery review: `03-full-source-recovery-boundary-review.md`
+- Complete-source regional transcripts: not started
+- Full combined transcript: not started
+- Full-conspect audit: not started

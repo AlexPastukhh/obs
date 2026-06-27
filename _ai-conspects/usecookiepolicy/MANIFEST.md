@@ -1,21 +1,26 @@
-# MANIFEST — usecookiepolicy
+# MANIFEST — usecookiepolicy full-source recovery
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-27 07:00:00 UTC
 
-## Included
+## Legacy incomplete material
 
-- original SVG: `source/usecookiepolicy.svg`
-- extracted embedded images: `source/images/`
-- visual preview: `audit-assets/canvas-preview.png`
-- source/text/image ledgers: `data/`
-- source review: `00-source-check-and-boundary-review.md`
-- final transcript: `01-final-transcript.md`
-- final coverage audit: `data/final-coverage-audit.*`
+- historical transcript files marked incomplete/superseded
+- historical coverage audits marked incomplete/superseded
 
-## Coverage
+## Complete recovered source
+
+- `source/usecookiepolicy.svg`
+- 49 extracted screenshots under `source/recovered-images-v002/`
+- `02-full-source-recovery-boundary-review.md`
+- `data/full-recovery-*`
+- 5 regional contact sheets
+- complete canvas preview
+
+## Current coverage
 
 ```text
-image uses: 2
-text elements: 42
-remaining: 0
+complete-source text elements: 42
+complete-source image uses: 49
+remaining text elements: 42
+remaining image uses: 49
 ```
