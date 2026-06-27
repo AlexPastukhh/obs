@@ -1,0 +1,181 @@
+{
+  "conspect": "processing data as stream in dif situations, httpclient,endpoint,browser,websockets",
+  "existing_ai_conspects_folder_found": false,
+  "source_sha256": "8c8023001337f24076e9394776b18acadf45597cd7f8979fcf9cb9f42cfd4307",
+  "stored_source": "source/source-complete-v002.svg",
+  "old_inventory": {
+    "folder_found": false,
+    "embedded_assets": 0,
+    "image_uses": 0,
+    "text_nodes": 0,
+    "vector_paths": 0
+  },
+  "legacy_image_match": null,
+  "complete_svg": {
+    "embedded_assets": 23,
+    "total_image_uses": 23,
+    "processed_image_uses": 23,
+    "previously_processed_image_uses": 0,
+    "restored_image_uses": 23,
+    "restored_unique_assets": 23,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 59,
+    "processed_svg_text_nodes": 59,
+    "semantic_text_nodes": 52,
+    "empty_structural_text_nodes": 7,
+    "vector_paths": 13,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "old_text_inventory_available": false,
+  "exact_text_matches": null,
+  "whitespace_normalized_text_matches": null,
+  "matching_method": "decoded full-source asset SHA-256 plus exact full-source placement; legacy inventories are compared using every field they recorded",
+  "regions": {
+    "R01": {
+      "title": "ASP.NET Core request-body streams, loops, and PipeReader",
+      "image_uses": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-005",
+        "S-006",
+        "S-007",
+        "S-009"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-002",
+        "T-003",
+        "T-004",
+        "T-006",
+        "T-007",
+        "T-009",
+        "T-010",
+        "T-012",
+        "T-013",
+        "T-014",
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-018",
+        "T-019",
+        "T-020",
+        "T-021"
+      ]
+    },
+    "R02": {
+      "title": "IOException, HttpRequestException, cancellation, and failure boundaries",
+      "image_uses": [
+        "S-004",
+        "S-008",
+        "S-010"
+      ],
+      "svg_text_nodes": [
+        "T-005",
+        "T-008",
+        "T-011"
+      ]
+    },
+    "R03": {
+      "title": "HttpClient response streaming, ResponseHeadersRead, and CopyToAsync",
+      "image_uses": [
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023"
+      ],
+      "svg_text_nodes": [
+        "T-058",
+        "T-059"
+      ]
+    },
+    "R04": {
+      "title": "ASP.NET Core response BodyWriter and PipeWriter",
+      "image_uses": [
+        "S-011",
+        "S-012"
+      ],
+      "svg_text_nodes": [
+        "T-022",
+        "T-023"
+      ]
+    },
+    "R05": {
+      "title": "Browser Fetch ReadableStream, reader loops, and TextDecoder",
+      "image_uses": [
+        "S-013",
+        "S-016"
+      ],
+      "svg_text_nodes": [
+        "T-024",
+        "T-025",
+        "T-026",
+        "T-027",
+        "T-028",
+        "T-029",
+        "T-030",
+        "T-031"
+      ]
+    },
+    "R06": {
+      "title": "WebSocket message framing, server receive loops, and browser message events",
+      "image_uses": [
+        "S-014",
+        "S-015",
+        "S-017",
+        "S-018",
+        "S-019"
+      ],
+      "svg_text_nodes": [
+        "T-032",
+        "T-033",
+        "T-034",
+        "T-035",
+        "T-036",
+        "T-037",
+        "T-038",
+        "T-039",
+        "T-040",
+        "T-041",
+        "T-042",
+        "T-043",
+        "T-044",
+        "T-045",
+        "T-046",
+        "T-047",
+        "T-048",
+        "T-049",
+        "T-050",
+        "T-051",
+        "T-052",
+        "T-053",
+        "T-054",
+        "T-055",
+        "T-056",
+        "T-057"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent raw-SVG regex scanner",
+    "dom_embedded_assets": 23,
+    "regex_embedded_assets": 23,
+    "dom_image_uses": 23,
+    "regex_image_uses": 23,
+    "dom_svg_text_nodes": 59,
+    "regex_svg_text_nodes": 59,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_assets": [],
+    "missing_references": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

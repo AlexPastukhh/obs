@@ -1,0 +1,168 @@
+{
+  "conspect": "interlocked,interlocked.read",
+  "existing_ai_conspects_folder_found": true,
+  "source_sha256": "fcb1c8883692e31c01dcb256ed09e39070b087ad37e5d182b94fa0db9cc1e766",
+  "stored_source": "source/source-complete-v002.svg",
+  "old_inventory": {
+    "folder_found": true,
+    "embedded_assets": 1,
+    "image_uses": 1,
+    "text_nodes": 21,
+    "vector_paths": null
+  },
+  "legacy_image_match": {
+    "old_use_id": "S-001",
+    "old_symbol_id": "image-41877fb3841acfb60f1b65f003b4b16c28a29785",
+    "old_width": 922.0,
+    "old_height": 482.0,
+    "old_x": null,
+    "old_y": null,
+    "old_asset_sha": null,
+    "full_source_id": "S-035",
+    "full_symbol_id": "image-41877fb3841acfb60f1b65f003b4b16c28a29785",
+    "full_x": 1105.9751829546603,
+    "full_y": 5132.2763354314375,
+    "full_width": 922.0,
+    "full_height": 482.0,
+    "full_asset_sha256": "280afed3d94e52eadf65436fca0162bbb2dec7445eb0200e8393389fbe32d353",
+    "status": "unique legacy symbol-and-dimensions match",
+    "limitation": "legacy inventory did not record asset SHA or x/y coordinates, so a historical SHA+placement proof is unavailable"
+  },
+  "complete_svg": {
+    "embedded_assets": 39,
+    "total_image_uses": 39,
+    "processed_image_uses": 39,
+    "previously_processed_image_uses": 1,
+    "restored_image_uses": 38,
+    "restored_unique_assets": 38,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 21,
+    "processed_svg_text_nodes": 21,
+    "semantic_text_nodes": 21,
+    "empty_structural_text_nodes": 0,
+    "vector_paths": 13,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "old_text_inventory_available": true,
+  "exact_text_matches": 20,
+  "whitespace_normalized_text_matches": 21,
+  "matching_method": "decoded full-source asset SHA-256 plus exact full-source placement; legacy inventories are compared using every field they recorded",
+  "regions": {
+    "R01": {
+      "title": "Interlocked versus lock, process bitness, and atomic reads",
+      "image_uses": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-005",
+        "S-010",
+        "S-014",
+        "S-018",
+        "S-021",
+        "S-024"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-002",
+        "T-003",
+        "T-007"
+      ]
+    },
+    "R02": {
+      "title": "Increment, Decrement, and Add counters",
+      "image_uses": [
+        "S-004",
+        "S-011",
+        "S-017",
+        "S-019",
+        "S-022",
+        "S-025"
+      ],
+      "svg_text_nodes": [
+        "T-004",
+        "T-006",
+        "T-009"
+      ]
+    },
+    "R03": {
+      "title": "Exchange, CompareExchange, and compare-and-swap loops",
+      "image_uses": [
+        "S-006",
+        "S-012",
+        "S-016",
+        "S-020",
+        "S-023",
+        "S-026",
+        "S-028"
+      ],
+      "svg_text_nodes": [
+        "T-005",
+        "T-008"
+      ]
+    },
+    "R04": {
+      "title": "Atomic Or/And flag manipulation and XOR mental model",
+      "image_uses": [
+        "S-027",
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038",
+        "S-039"
+      ],
+      "svg_text_nodes": [
+        "T-010",
+        "T-011",
+        "T-012",
+        "T-013",
+        "T-014",
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-018",
+        "T-019",
+        "T-020",
+        "T-021"
+      ]
+    },
+    "R05": {
+      "title": "MemoryBarrier, process-wide barriers, and speculation barriers",
+      "image_uses": [
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-013",
+        "S-015"
+      ],
+      "svg_text_nodes": []
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent raw-SVG regex scanner",
+    "dom_embedded_assets": 39,
+    "regex_embedded_assets": 39,
+    "dom_image_uses": 39,
+    "regex_image_uses": 39,
+    "dom_svg_text_nodes": 21,
+    "regex_svg_text_nodes": 21,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_assets": [],
+    "missing_references": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

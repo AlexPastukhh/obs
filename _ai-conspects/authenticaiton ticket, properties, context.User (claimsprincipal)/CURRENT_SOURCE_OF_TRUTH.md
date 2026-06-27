@@ -2,35 +2,28 @@
 
 Generated: 2026-06-27 UTC
 
-## Policy
-
-The SVG text labels are the primary semantic source because this source contains no embedded raster screenshots. Vector paths are boundary/flow evidence. Inventory alone does not close coverage.
-
-## Current status
+Screenshots are the primary source when present. Candidate regions, vector paths, and nearest labels are hints only.
 
 ```text
-Stage0 source/boundary review: done
-All candidate transcript regions: done
-Final coverage audit: done
+source: source/source-complete-v002.svg
+SHA-256: b3123695b5f6f7a29503de23ad1e6a028dfcd1f0ca464770c3db94d852edb0a2
+embedded assets: 43
+total image uses: 43
+processed image uses: 43 / 43
+previously processed image uses preserved: 0
+restored image uses: 43
+duplicate placements: 0
+SVG text nodes: 31
+processed SVG text nodes: 31 / 31
+vector paths: 9
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Counts
+Closure: `Closed by complete corrected-SVG coverage.`
 
-```text
-unique embedded images: 0
-image uses on canvas: 0
-text labels parsed: 31
-text labels covered: 31
-vector paths reviewed: 9
-remaining unclosed labels: 0
-```
-
-## Closure verdict
-
-```text
-Closed by complete vector/text source coverage.
-```
-
-## Final transcript
-
-`regions/R01R02R03-final-coverage.md`
+Authoritative transcript: `regions/full-svg-reconciliation-v002.md`

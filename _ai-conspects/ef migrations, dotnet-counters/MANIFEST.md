@@ -1,31 +1,25 @@
-# MANIFEST — ef migrations, dotnet-counters final coverage v001
-
-Generated: 2026-06-27 UTC
-
-## Source
+# MANIFEST — ef migrations, dotnet-counters full SVG repair final v002
 
 ```text
-original SVG filename: ef migrations, dotnet-counters(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
+embedded assets: 37
+total image uses: 37
+processed image uses: 37
+restored image uses: 37
+duplicate placements: 0
+SVG text nodes: 27
+vector paths: 3
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Final counts
-
-```text
-text labels: 27 / 27 covered
-vector paths: 3 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
-```
-
-## Final files
-
-```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
-```
+Regions:
+- R01: Applying migrations from code and production safety
+- R02: EF migration CLI workflow: add, update, remove, and list
+- R03: SQL migration scripts and idempotent deployment
+- R04: Migration bundles and deployment flow
+- R05: dotnet-counters installation, process selection, and monitoring
+- R06: EF Core runtime counters and diagnostic interpretation

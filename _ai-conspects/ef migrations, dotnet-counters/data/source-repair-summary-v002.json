@@ -1,0 +1,163 @@
+{
+  "conspect": "ef migrations, dotnet-counters",
+  "existing_ai_conspects_folder_found": true,
+  "source_sha256": "37801249f8d68e59cd78804f810042d5f6f70fe0277f61c65b0f59c96c2a3a88",
+  "stored_source": "source/source-complete-v002.svg",
+  "old_inventory": {
+    "folder_found": true,
+    "embedded_assets": 0,
+    "image_uses": 0,
+    "text_nodes": 27,
+    "vector_paths": 3
+  },
+  "legacy_image_match": null,
+  "complete_svg": {
+    "embedded_assets": 37,
+    "total_image_uses": 37,
+    "processed_image_uses": 37,
+    "previously_processed_image_uses": 0,
+    "restored_image_uses": 37,
+    "restored_unique_assets": 37,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 27,
+    "processed_svg_text_nodes": 27,
+    "semantic_text_nodes": 27,
+    "empty_structural_text_nodes": 0,
+    "vector_paths": 3,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "old_text_inventory_available": true,
+  "exact_text_matches": 27,
+  "whitespace_normalized_text_matches": 27,
+  "matching_method": "decoded full-source asset SHA-256 plus exact full-source placement; legacy inventories are compared using every field they recorded",
+  "regions": {
+    "R01": {
+      "title": "Applying migrations from code and production safety",
+      "image_uses": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-004",
+        "S-005",
+        "S-006"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-002",
+        "T-003",
+        "T-004",
+        "T-005"
+      ]
+    },
+    "R02": {
+      "title": "EF migration CLI workflow: add, update, remove, and list",
+      "image_uses": [
+        "S-007",
+        "S-008",
+        "S-009",
+        "S-010",
+        "S-011"
+      ],
+      "svg_text_nodes": [
+        "T-006",
+        "T-007",
+        "T-008",
+        "T-009",
+        "T-010",
+        "T-011",
+        "T-012",
+        "T-013"
+      ]
+    },
+    "R03": {
+      "title": "SQL migration scripts and idempotent deployment",
+      "image_uses": [
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017"
+      ],
+      "svg_text_nodes": [
+        "T-014",
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-018",
+        "T-019"
+      ]
+    },
+    "R04": {
+      "title": "Migration bundles and deployment flow",
+      "image_uses": [
+        "S-018",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028"
+      ],
+      "svg_text_nodes": [
+        "T-020",
+        "T-021",
+        "T-022"
+      ]
+    },
+    "R05": {
+      "title": "dotnet-counters installation, process selection, and monitoring",
+      "image_uses": [
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032"
+      ],
+      "svg_text_nodes": [
+        "T-023",
+        "T-024"
+      ]
+    },
+    "R06": {
+      "title": "EF Core runtime counters and diagnostic interpretation",
+      "image_uses": [
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037"
+      ],
+      "svg_text_nodes": [
+        "T-025",
+        "T-026",
+        "T-027"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent raw-SVG regex scanner",
+    "dom_embedded_assets": 37,
+    "regex_embedded_assets": 37,
+    "dom_image_uses": 37,
+    "regex_image_uses": 37,
+    "dom_svg_text_nodes": 27,
+    "regex_svg_text_nodes": 27,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_assets": [],
+    "missing_references": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

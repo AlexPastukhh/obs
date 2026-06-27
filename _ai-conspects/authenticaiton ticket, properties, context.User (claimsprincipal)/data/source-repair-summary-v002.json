@@ -1,0 +1,166 @@
+{
+  "conspect": "authenticaiton ticket, properties, context.User (claimsprincipal)",
+  "existing_ai_conspects_folder_found": true,
+  "source_sha256": "b3123695b5f6f7a29503de23ad1e6a028dfcd1f0ca464770c3db94d852edb0a2",
+  "stored_source": "source/source-complete-v002.svg",
+  "old_inventory": {
+    "folder_found": true,
+    "embedded_assets": 0,
+    "image_uses": 0,
+    "text_nodes": 31,
+    "vector_paths": 9
+  },
+  "legacy_image_match": null,
+  "complete_svg": {
+    "embedded_assets": 43,
+    "total_image_uses": 43,
+    "processed_image_uses": 43,
+    "previously_processed_image_uses": 0,
+    "restored_image_uses": 43,
+    "restored_unique_assets": 43,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 31,
+    "processed_svg_text_nodes": 31,
+    "semantic_text_nodes": 31,
+    "empty_structural_text_nodes": 0,
+    "vector_paths": 9,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "old_text_inventory_available": true,
+  "exact_text_matches": 31,
+  "whitespace_normalized_text_matches": 31,
+  "matching_method": "decoded full-source asset SHA-256 plus exact full-source placement; legacy inventories are compared using every field they recorded",
+  "regions": {
+    "R01": {
+      "title": "HttpContext.User, ClaimsPrincipal, ClaimsIdentity, claims, and multiple identities",
+      "image_uses": [
+        "S-001",
+        "S-004",
+        "S-006",
+        "S-008",
+        "S-009",
+        "S-012",
+        "S-015"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-003",
+        "T-006",
+        "T-007",
+        "T-009",
+        "T-012",
+        "T-015"
+      ]
+    },
+    "R02": {
+      "title": "AuthenticationTicket structure, scheme, principal, and authentication flow",
+      "image_uses": [
+        "S-002",
+        "S-003",
+        "S-005",
+        "S-007",
+        "S-013",
+        "S-017",
+        "S-019",
+        "S-020"
+      ],
+      "svg_text_nodes": [
+        "T-002",
+        "T-004",
+        "T-005",
+        "T-008",
+        "T-013",
+        "T-016"
+      ]
+    },
+    "R03": {
+      "title": "AuthenticationProperties lifetime, persistence, and refresh semantics",
+      "image_uses": [
+        "S-010",
+        "S-011",
+        "S-014",
+        "S-016",
+        "S-018",
+        "S-021",
+        "S-022",
+        "S-023",
+        "S-024",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028"
+      ],
+      "svg_text_nodes": [
+        "T-010",
+        "T-011",
+        "T-014",
+        "T-017",
+        "T-018",
+        "T-019",
+        "T-020",
+        "T-021"
+      ]
+    },
+    "R04": {
+      "title": "RedirectUri, Items, Parameters, and handler-specific behavior",
+      "image_uses": [
+        "S-029",
+        "S-030",
+        "S-031",
+        "S-032",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-036",
+        "S-037",
+        "S-038"
+      ],
+      "svg_text_nodes": [
+        "T-022",
+        "T-023",
+        "T-024",
+        "T-025",
+        "T-026",
+        "T-027",
+        "T-028",
+        "T-029"
+      ]
+    },
+    "R05": {
+      "title": "Token storage helpers and JWT SaveToken behavior",
+      "image_uses": [
+        "S-039",
+        "S-040",
+        "S-041",
+        "S-042",
+        "S-043"
+      ],
+      "svg_text_nodes": [
+        "T-030",
+        "T-031"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent raw-SVG regex scanner",
+    "dom_embedded_assets": 43,
+    "regex_embedded_assets": 43,
+    "dom_image_uses": 43,
+    "regex_image_uses": 43,
+    "dom_svg_text_nodes": 31,
+    "regex_svg_text_nodes": 31,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_assets": [],
+    "missing_references": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

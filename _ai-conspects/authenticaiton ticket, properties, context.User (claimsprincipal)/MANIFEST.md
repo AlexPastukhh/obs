@@ -1,31 +1,24 @@
-# MANIFEST — authenticaiton ticket, properties, context.User (claimsprincipal) final coverage v001
-
-Generated: 2026-06-27 UTC
-
-## Source
+# MANIFEST — authenticaiton ticket, properties, context.User (claimsprincipal) full SVG repair final v002
 
 ```text
-original SVG filename: authenticaiton ticket, properties, context.User (claimsprincipal)(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
+embedded assets: 43
+total image uses: 43
+processed image uses: 43
+restored image uses: 43
+duplicate placements: 0
+SVG text nodes: 31
+vector paths: 9
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Final counts
-
-```text
-text labels: 31 / 31 covered
-vector paths: 9 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
-```
-
-## Final files
-
-```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
-```
+Regions:
+- R01: HttpContext.User, ClaimsPrincipal, ClaimsIdentity, claims, and multiple identities
+- R02: AuthenticationTicket structure, scheme, principal, and authentication flow
+- R03: AuthenticationProperties lifetime, persistence, and refresh semantics
+- R04: RedirectUri, Items, Parameters, and handler-specific behavior
+- R05: Token storage helpers and JWT SaveToken behavior
