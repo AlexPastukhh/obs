@@ -1,0 +1,354 @@
+[
+  {
+    "x": 7199.2660880094045,
+    "y": 10.0,
+    "text": "some nested collecitons rows counts",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 7199.2660880094045,
+    "y": 10.0,
+    "text": "assinglequery vs assplitquery",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 10801.233840048832,
+    "y": 273.9225397828088,
+    "text": "how row looks like when some",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 10801.233840048832,
+    "y": 273.9225397828088,
+    "text": "collection items have their own collection",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 975.9085690322918,
+    "y": 377.01264787447985,
+    "text": "If you are loading a lot of one to many relationships,",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 975.9085690322918,
+    "y": 377.01264787447985,
+    "text": "rows will be multiplied and this can lead to cartesian",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 975.9085690322918,
+    "y": 377.01264787447985,
+    "text": "explosion, to awoid this there are two options:",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 975.9085690322918,
+    "y": 377.01264787447985,
+    "text": "1 Splitted queries(ugly sql queries and some warnings from",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 975.9085690322918,
+    "y": 377.01264787447985,
+    "text": "microsoft about data consistency)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 4516.911727486559,
+    "y": 401.3203305128893,
+    "text": "with split query",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 2174.599041034287,
+    "y": 408.7028646225747,
+    "text": "assplitqueries",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 3293.9828960898603,
+    "y": 445.32039154804556,
+    "text": "includes joins without split query",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 12766.03544371693,
+    "y": 451.4583093968306,
+    "text": "formula to compute",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 12766.03544371693,
+    "y": 451.4583093968306,
+    "text": "rows count",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 7716.248355262625,
+    "y": 491.1096209571433,
+    "text": "so when we need to get rows count we just multiply items, not matter what is the deep level of the collection",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 984.9085690322918,
+    "y": 535.3029461864946,
+    "text": "a) remove autoincludes",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 984.9085690322918,
+    "y": 535.3029461864946,
+    "text": "b)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 7745.267987041118,
+    "y": 566.2076721405069,
+    "text": "the shit is that splitqueries helpful in muiltiple sibling collection cases",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 7745.267987041118,
+    "y": 566.2076721405069,
+    "text": "its not about sibling collections being more dangrous than deep collections when",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 7745.267987041118,
+    "y": 566.2076721405069,
+    "text": "there is no siblings but every collection item has its own collection",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 11466.659035352774,
+    "y": 627.5696579935586,
+    "text": "when we have grandchild of only one collection of parent",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 11466.659035352774,
+    "y": 627.5696579935586,
+    "text": "we will get rows like this, so there wont be null because",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 11466.659035352774,
+    "y": 627.5696579935586,
+    "text": "another child doesnt have collection,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 7736.426420543913,
+    "y": 668.209568077104,
+    "text": "split query just cant help in the deep nesting without siblings scenario",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 977.9085690322918,
+    "y": 778.448095342502,
+    "text": "2) explicit loading of related collections",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 977.9085690322918,
+    "y": 778.448095342502,
+    "text": "a) if you need some related collections of related collectons",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 977.9085690322918,
+    "y": 778.448095342502,
+    "text": "(thenincludes) you may need to turn on autoincludes for them=)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 977.9085690322918,
+    "y": 778.448095342502,
+    "text": "b)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 978.9085690322918,
+    "y": 1116.7383936545168,
+    "text": "Above and splitting will end up with 3 calls to db",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 8189.089182596217,
+    "y": 1969.0678631633054,
+    "text": "!!!",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 7803.037145857152,
+    "y": 1973.5065867637895,
+    "text": "when we fetch with splitquery",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 7803.037145857152,
+    "y": 1973.5065867637895,
+    "text": "we fetch collection (row count",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 7803.037145857152,
+    "y": 1973.5065867637895,
+    "text": "just the count of the elements)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 7803.037145857152,
+    "y": 1973.5065867637895,
+    "text": "with foreighkeys",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 5584.383275547738,
+    "y": 2969.02490199325,
+    "text": "what is per query overhead",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 5584.383275547738,
+    "y": 2969.02490199325,
+    "text": "cartesian explosion problem",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 2432.5482131932354,
+    "y": 3040.3102023760484,
+    "text": "assplitqueries and findasync + load issue",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 2432.5482131932354,
+    "y": 3040.3102023760484,
+    "text": "with consistency",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 3901.8814651463604,
+    "y": 3058.9769504229234,
+    "text": "assplitqueries vs findasync + load",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 10.0,
+    "y": 3060.023923307609,
+    "text": "assplit query buffering",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 5448.827642002816,
+    "y": 4366.747151342207,
+    "text": "!!!",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 2247.322909634745,
+    "y": 4640.189941844251,
+    "text": "how to avoid consistency issues with multiple",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 2247.322909634745,
+    "y": 4640.189941844251,
+    "text": "sql queries",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  },
+  {
+    "x": 7995.279629722332,
+    "y": 5745.734471701216,
+    "text": "!!!",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-044"
+  }
+]

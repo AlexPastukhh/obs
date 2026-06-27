@@ -1,20 +1,11 @@
-# MANIFEST — antiforgerytoken
+# MANIFEST — antiforgerytoken corrected final v002
 
-Generated: 2026-06-22 00:00:00 UTC
-
-## Included
-
-- original SVG: `source/antiforgerytoken(2).svg`
-- visual preview: `audit-assets/canvas-preview.png`
-- source and text ledgers: `data/`
-- source review: `00-source-check-and-boundary-review.md`
-- final transcript: `01-final-transcript.md`
-- final coverage audit: `data/final-coverage-audit.*`
-
-## Coverage
-
-```text
-image uses: 0
-text elements: 51
-remaining: 0
-```
+- target: `_ai-conspects/antiforgerytoken/`
+- uploaded source: `antiforgerytoken(3).svg`
+- authoritative source: `source/antiforgerytoken.svg`
+- unique screenshots: 58
+- screenshot uses: 58
+- native SVG labels: 51
+- recovered screenshot uses: 58
+- duplicate extra placements: 0
+- remaining: 0

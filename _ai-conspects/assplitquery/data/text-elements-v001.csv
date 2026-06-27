@@ -1,0 +1,45 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R02,processed,7199.2660880094045,10.0,some nested collecitons rows counts
+T-002,R02,processed,7199.2660880094045,10.0,assinglequery vs assplitquery
+T-003,R02,processed,10801.233840048832,273.9225397828088,how row looks like when some
+T-004,R02,processed,10801.233840048832,273.9225397828088,collection items have their own collection
+T-005,R01,processed,975.9085690322918,377.01264787447985,"If you are loading a lot of one to many relationships,"
+T-006,R01,processed,975.9085690322918,377.01264787447985,rows will be multiplied and this can lead to cartesian
+T-007,R01,processed,975.9085690322918,377.01264787447985,"explosion, to awoid this there are two options:"
+T-008,R01,processed,975.9085690322918,377.01264787447985,1 Splitted queries(ugly sql queries and some warnings from
+T-009,R01,processed,975.9085690322918,377.01264787447985,microsoft about data consistency)
+T-010,R01,processed,4516.911727486559,401.3203305128893,with split query
+T-011,R01,processed,2174.599041034287,408.7028646225747,assplitqueries
+T-012,R01,processed,3293.9828960898603,445.32039154804556,includes joins without split query
+T-013,R02,processed,12766.03544371693,451.4583093968306,formula to compute
+T-014,R02,processed,12766.03544371693,451.4583093968306,rows count
+T-015,R02,processed,7716.248355262625,491.1096209571433,"so when we need to get rows count we just multiply items, not matter what is the deep level of the collection"
+T-016,R01,processed,984.9085690322918,535.3029461864946,a) remove autoincludes
+T-017,R01,processed,984.9085690322918,535.3029461864946,b)
+T-018,R02,processed,7745.267987041118,566.2076721405069,the shit is that splitqueries helpful in muiltiple sibling collection cases
+T-019,R02,processed,7745.267987041118,566.2076721405069,its not about sibling collections being more dangrous than deep collections when
+T-020,R02,processed,7745.267987041118,566.2076721405069,there is no siblings but every collection item has its own collection
+T-021,R02,processed,11466.659035352774,627.5696579935586,when we have grandchild of only one collection of parent
+T-022,R02,processed,11466.659035352774,627.5696579935586,"we will get rows like this, so there wont be null because"
+T-023,R02,processed,11466.659035352774,627.5696579935586,"another child doesnt have collection,"
+T-024,R02,processed,7736.426420543913,668.209568077104,split query just cant help in the deep nesting without siblings scenario
+T-025,R01,processed,977.9085690322918,778.448095342502,2) explicit loading of related collections
+T-026,R01,processed,977.9085690322918,778.448095342502,a) if you need some related collections of related collectons
+T-027,R01,processed,977.9085690322918,778.448095342502,(thenincludes) you may need to turn on autoincludes for them=)
+T-028,R01,processed,977.9085690322918,778.448095342502,b)
+T-029,R01,processed,978.9085690322918,1116.7383936545168,Above and splitting will end up with 3 calls to db
+T-030,R02,processed,8189.089182596217,1969.0678631633054,!!!
+T-031,R02,processed,7803.037145857152,1973.5065867637895,when we fetch with splitquery
+T-032,R02,processed,7803.037145857152,1973.5065867637895,we fetch collection (row count
+T-033,R02,processed,7803.037145857152,1973.5065867637895,just the count of the elements)
+T-034,R02,processed,7803.037145857152,1973.5065867637895,with foreighkeys
+T-035,R03,processed,5584.383275547738,2969.02490199325,what is per query overhead
+T-036,R03,processed,5584.383275547738,2969.02490199325,cartesian explosion problem
+T-037,R03,processed,2432.5482131932354,3040.3102023760484,assplitqueries and findasync + load issue
+T-038,R03,processed,2432.5482131932354,3040.3102023760484,with consistency
+T-039,R03,processed,3901.8814651463604,3058.9769504229234,assplitqueries vs findasync + load
+T-040,R03,processed,10.0,3060.023923307609,assplit query buffering
+T-041,R03,processed,5448.827642002816,4366.747151342207,!!!
+T-042,R03,processed,2247.322909634745,4640.189941844251,how to avoid consistency issues with multiple
+T-043,R03,processed,2247.322909634745,4640.189941844251,sql queries
+T-044,R04,processed,7995.279629722332,5745.734471701216,!!!
