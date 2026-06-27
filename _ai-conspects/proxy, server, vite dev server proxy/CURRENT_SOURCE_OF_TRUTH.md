@@ -4,33 +4,51 @@ Generated: 2026-06-27 UTC
 
 ## Policy
 
-The SVG text labels are the primary semantic source because this source contains no embedded raster screenshots. Vector paths are boundary/flow evidence. Inventory alone does not close coverage.
+Screenshots are the primary source when present. Candidate regions, vector paths, and nearest SVG labels are hints only.
 
-## Current status
+## Corrected source
 
 ```text
-Stage0 source/boundary review: done
-All candidate transcript regions: done
-Final coverage audit: done
+source: source/source-complete-v002.svg
+SHA-256: 4988d37a8d2fa56f111a902f3ade024e32f8585b35381875293069e7df598b12
+embedded assets: 54
+total image uses: 54
+SVG text nodes: 25
+vector paths: 21
 ```
 
-## Counts
+## Source repair
 
 ```text
-unique embedded images: 0
-image uses on canvas: 0
-text labels parsed: 25
-text labels covered: 25
-vector paths reviewed: 21
-remaining unclosed labels: 0
+old embedded assets: 0
+old image uses: 0
+restored unique screenshots: 54
+restored image uses: 54
+old processed materials preserved: yes
+```
+
+## Final status
+
+```text
+processed image uses: 54 / 54
+duplicate placements: 0
+processed SVG text nodes: 25 / 25
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
 ## Closure verdict
 
 ```text
-Closed by complete vector/text source coverage.
+Closed by complete corrected-SVG coverage.
 ```
 
-## Final transcript
+## Authoritative transcript
 
-`regions/R01R02R03-final-coverage.md`
+`regions/full-svg-reconciliation-v002.md`
+
+The earlier label-only transcript remains preserved but is superseded by this full-source reconciliation.

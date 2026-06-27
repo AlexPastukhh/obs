@@ -1,31 +1,27 @@
-# MANIFEST — dbcontext interseptors savechanges , dbcommand final coverage v001
+# MANIFEST — dbcontext interseptors savechanges , dbcommand full SVG repair final v002
 
-Generated: 2026-06-27 UTC
-
-## Source
+Target branch: `ai-processed-conspects-text`
 
 ```text
-original SVG filename: dbcontext interseptors savechanges , dbcommand(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
+embedded assets: 59
+total image uses: 59
+processed image uses: 59
+restored image uses: 59
+duplicate placements: 0
+SVG text nodes: 18
+vector paths: 21
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Final counts
+## Regions
 
-```text
-text labels: 18 / 18 covered
-vector paths: 21 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
-```
-
-## Final files
-
-```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
-```
+- R01: SaveChanges lifecycle, event data, and successful-save auditing
+- R02: Save suppression, alternate results, and side-channel outcome reporting
+- R03: Save failure, optimistic-concurrency, and cancellation callbacks
+- R04: DbCommand categories, callbacks, and result shapes
+- R05: DbCommand event data, logging, SQL mutation, suppression, and registration

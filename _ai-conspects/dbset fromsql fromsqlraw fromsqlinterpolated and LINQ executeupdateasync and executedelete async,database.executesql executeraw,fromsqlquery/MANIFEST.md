@@ -1,31 +1,27 @@
-# MANIFEST — dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery final coverage v001
+# MANIFEST — dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery full SVG repair final v002
 
-Generated: 2026-06-27 UTC
-
-## Source
+Target branch: `ai-processed-conspects-text`
 
 ```text
-original SVG filename: dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
+embedded assets: 51
+total image uses: 52
+processed image uses: 52
+restored image uses: 52
+duplicate placements: 1
+SVG text nodes: 19
+vector paths: 18
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Final counts
+## Regions
 
-```text
-text labels: 19 / 19 covered
-vector paths: 18 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
-```
-
-## Final files
-
-```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
-```
+- R01: API families, immediate execution, and transaction boundaries
+- R02: FromSql entity queries, tracking, and parameterized values
+- R03: Dynamic SQL structure and safe raw construction
+- R04: Database.SqlQuery for scalar, DTO, and non-entity results
+- R05: ExecuteUpdateAsync and ExecuteDeleteAsync set-based DML

@@ -1,0 +1,163 @@
+{
+  "conspect": "dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery",
+  "existing_folder": "_ai-conspects/dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery",
+  "uploaded_source": "dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery(2).svg",
+  "stored_source": "source/source-complete-v002.svg",
+  "source_sha256": "6cd7d851e1faf6da4ebadbdd509713f7a552b5b52769d44c084ccc10da70ab8d",
+  "old_inventory": {
+    "embedded_assets": 0,
+    "total_image_uses": 0,
+    "svg_text_nodes": 19,
+    "vector_paths": 18
+  },
+  "complete_svg": {
+    "embedded_assets": 51,
+    "total_image_uses": 52,
+    "processed_image_uses": 52,
+    "previously_processed_image_uses": 0,
+    "restored_image_uses": 52,
+    "restored_unique_assets": 51,
+    "duplicate_placements": 1,
+    "duplicate_asset_groups": 1,
+    "svg_text_nodes": 19,
+    "processed_svg_text_nodes": 19,
+    "vector_paths": 18,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "text_inventory_comparison": {
+    "old_text_nodes": 19,
+    "complete_svg_text_nodes": 19,
+    "exact_text_matches": 18,
+    "whitespace_normalized_matches": 19,
+    "unmatched_after_normalization": 0
+  },
+  "matching_method": "decoded asset SHA-256 plus exact placement tuple (symbol reference, x, y, width, height); old image inventory was empty",
+  "regions": {
+    "R01": {
+      "title": "API families, immediate execution, and transaction boundaries",
+      "image_uses": [
+        "S-001",
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-048"
+      ],
+      "svg_text_nodes": []
+    },
+    "R02": {
+      "title": "FromSql entity queries, tracking, and parameterized values",
+      "image_uses": [
+        "S-002",
+        "S-003",
+        "S-008",
+        "S-010",
+        "S-011",
+        "S-012",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-017",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-037",
+        "S-039"
+      ],
+      "svg_text_nodes": [
+        "T-004",
+        "T-005",
+        "T-009"
+      ]
+    },
+    "R03": {
+      "title": "Dynamic SQL structure and safe raw construction",
+      "image_uses": [
+        "S-007",
+        "S-009",
+        "S-018",
+        "S-022",
+        "S-025",
+        "S-028",
+        "S-029",
+        "S-031",
+        "S-033",
+        "S-034",
+        "S-035",
+        "S-038"
+      ],
+      "svg_text_nodes": [
+        "T-006",
+        "T-007",
+        "T-008",
+        "T-010"
+      ]
+    },
+    "R04": {
+      "title": "Database.SqlQuery for scalar, DTO, and non-entity results",
+      "image_uses": [
+        "S-023",
+        "S-024",
+        "S-026",
+        "S-027",
+        "S-030",
+        "S-032",
+        "S-036"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-002",
+        "T-003",
+        "T-011",
+        "T-012",
+        "T-013"
+      ]
+    },
+    "R05": {
+      "title": "ExecuteUpdateAsync and ExecuteDeleteAsync set-based DML",
+      "image_uses": [
+        "S-040",
+        "S-041",
+        "S-042",
+        "S-043",
+        "S-044",
+        "S-045",
+        "S-046",
+        "S-047",
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052"
+      ],
+      "svg_text_nodes": [
+        "T-014",
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-018",
+        "T-019"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent regex scan over raw SVG",
+    "dom_embedded_assets": 51,
+    "regex_embedded_assets": 51,
+    "dom_image_uses": 52,
+    "regex_image_uses": 52,
+    "dom_svg_text_nodes": 19,
+    "regex_svg_text_nodes": 19,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_embedded_assets": [],
+    "missing_referenced_assets": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

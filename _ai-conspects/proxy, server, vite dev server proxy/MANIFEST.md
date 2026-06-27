@@ -1,31 +1,29 @@
-# MANIFEST — proxy, server, vite dev server proxy final coverage v001
+# MANIFEST — proxy, server, vite dev server proxy full SVG repair final v002
 
-Generated: 2026-06-27 UTC
-
-## Source
+Target branch: `ai-processed-conspects-text`
 
 ```text
-original SVG filename: proxy, server, vite dev server proxy(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
+embedded assets: 54
+total image uses: 54
+processed image uses: 54
+restored image uses: 54
+duplicate placements: 0
+SVG text nodes: 25
+vector paths: 21
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
+independent repeat audit: PASS
 ```
 
-## Final counts
+## Regions
 
-```text
-text labels: 25 / 25 covered
-vector paths: 21 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
-```
-
-## Final files
-
-```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
-```
+- R01: Server/client roles, listening endpoints, and request flow
+- R02: Forward proxies and HttpClient outbound proxy configuration
+- R03: Reverse-proxy architecture, YARP, routing, and infrastructure management
+- R04: TLS termination, load balancing, backend isolation, and edge offload
+- R05: Vite development-server proxy, SpaProxyServerUrl, and CORS
+- R06: Forwarded headers, trusted proxies, and preserving original request data
+- X01: Punctuation-only navigation label

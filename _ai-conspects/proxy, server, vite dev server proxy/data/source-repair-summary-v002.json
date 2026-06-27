@@ -1,0 +1,185 @@
+{
+  "conspect": "proxy, server, vite dev server proxy",
+  "existing_folder": "_ai-conspects/proxy, server, vite dev server proxy",
+  "uploaded_source": "proxy, server, vite dev server proxy(2).svg",
+  "stored_source": "source/source-complete-v002.svg",
+  "source_sha256": "4988d37a8d2fa56f111a902f3ade024e32f8585b35381875293069e7df598b12",
+  "old_inventory": {
+    "embedded_assets": 0,
+    "total_image_uses": 0,
+    "svg_text_nodes": 25,
+    "vector_paths": 21
+  },
+  "complete_svg": {
+    "embedded_assets": 54,
+    "total_image_uses": 54,
+    "processed_image_uses": 54,
+    "previously_processed_image_uses": 0,
+    "restored_image_uses": 54,
+    "restored_unique_assets": 54,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 25,
+    "processed_svg_text_nodes": 25,
+    "vector_paths": 21,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "text_inventory_comparison": {
+    "old_text_nodes": 25,
+    "complete_svg_text_nodes": 25,
+    "exact_text_matches": 25,
+    "whitespace_normalized_matches": 25,
+    "unmatched_after_normalization": 0
+  },
+  "matching_method": "decoded asset SHA-256 plus exact placement tuple (symbol reference, x, y, width, height); old image inventory was empty",
+  "regions": {
+    "R01": {
+      "title": "Server/client roles, listening endpoints, and request flow",
+      "image_uses": [
+        "S-007",
+        "S-010",
+        "S-022",
+        "S-027",
+        "S-036",
+        "S-040",
+        "S-046"
+      ],
+      "svg_text_nodes": [
+        "T-023"
+      ]
+    },
+    "R02": {
+      "title": "Forward proxies and HttpClient outbound proxy configuration",
+      "image_uses": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-005",
+        "S-006",
+        "S-008",
+        "S-023"
+      ],
+      "svg_text_nodes": [
+        "T-004",
+        "T-019",
+        "T-020"
+      ]
+    },
+    "R03": {
+      "title": "Reverse-proxy architecture, YARP, routing, and infrastructure management",
+      "image_uses": [
+        "S-012",
+        "S-015",
+        "S-017",
+        "S-018",
+        "S-024",
+        "S-031",
+        "S-035",
+        "S-037",
+        "S-042",
+        "S-047",
+        "S-050",
+        "S-051",
+        "S-052",
+        "S-053",
+        "S-054"
+      ],
+      "svg_text_nodes": [
+        "T-005",
+        "T-006",
+        "T-007",
+        "T-010",
+        "T-011",
+        "T-012",
+        "T-013",
+        "T-014",
+        "T-021"
+      ]
+    },
+    "R04": {
+      "title": "TLS termination, load balancing, backend isolation, and edge offload",
+      "image_uses": [
+        "S-013",
+        "S-014",
+        "S-016",
+        "S-019",
+        "S-020",
+        "S-021",
+        "S-028",
+        "S-030",
+        "S-043",
+        "S-044",
+        "S-045",
+        "S-049"
+      ],
+      "svg_text_nodes": [
+        "T-002",
+        "T-003",
+        "T-008",
+        "T-009"
+      ]
+    },
+    "R05": {
+      "title": "Vite development-server proxy, SpaProxyServerUrl, and CORS",
+      "image_uses": [
+        "S-004",
+        "S-009",
+        "S-011",
+        "S-025",
+        "S-026",
+        "S-029",
+        "S-033"
+      ],
+      "svg_text_nodes": [
+        "T-022"
+      ]
+    },
+    "R06": {
+      "title": "Forwarded headers, trusted proxies, and preserving original request data",
+      "image_uses": [
+        "S-032",
+        "S-034",
+        "S-038",
+        "S-039",
+        "S-041",
+        "S-048"
+      ],
+      "svg_text_nodes": [
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-018",
+        "T-024",
+        "T-025"
+      ]
+    },
+    "X01": {
+      "title": "Punctuation-only navigation label",
+      "image_uses": [],
+      "svg_text_nodes": [
+        "T-001"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent regex scan over raw SVG",
+    "dom_embedded_assets": 54,
+    "regex_embedded_assets": 54,
+    "dom_image_uses": 54,
+    "regex_image_uses": 54,
+    "dom_svg_text_nodes": 25,
+    "regex_svg_text_nodes": 25,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_embedded_assets": [],
+    "missing_referenced_assets": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

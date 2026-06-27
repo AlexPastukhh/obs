@@ -1,0 +1,170 @@
+{
+  "conspect": "dbcontext interseptors savechanges , dbcommand",
+  "existing_folder": "_ai-conspects/dbcontext interseptors savechanges , dbcommand",
+  "uploaded_source": "dbcontext interseptors savechanges , dbcommand(2).svg",
+  "stored_source": "source/source-complete-v002.svg",
+  "source_sha256": "682df0c96fa3ccb319f210c211cff4b5f99c7a8494211f25900e050c25dbd412",
+  "old_inventory": {
+    "embedded_assets": 0,
+    "total_image_uses": 0,
+    "svg_text_nodes": 18,
+    "vector_paths": 21
+  },
+  "complete_svg": {
+    "embedded_assets": 59,
+    "total_image_uses": 59,
+    "processed_image_uses": 59,
+    "previously_processed_image_uses": 0,
+    "restored_image_uses": 59,
+    "restored_unique_assets": 59,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 18,
+    "processed_svg_text_nodes": 18,
+    "vector_paths": 21,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "text_inventory_comparison": {
+    "old_text_nodes": 18,
+    "complete_svg_text_nodes": 18,
+    "exact_text_matches": 18,
+    "whitespace_normalized_matches": 18,
+    "unmatched_after_normalization": 0
+  },
+  "matching_method": "decoded asset SHA-256 plus exact placement tuple (symbol reference, x, y, width, height); old image inventory was empty",
+  "regions": {
+    "R01": {
+      "title": "SaveChanges lifecycle, event data, and successful-save auditing",
+      "image_uses": [
+        "S-003",
+        "S-004",
+        "S-008",
+        "S-009",
+        "S-013",
+        "S-015",
+        "S-018",
+        "S-019",
+        "S-021"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-009"
+      ]
+    },
+    "R02": {
+      "title": "Save suppression, alternate results, and side-channel outcome reporting",
+      "image_uses": [
+        "S-001",
+        "S-005",
+        "S-007",
+        "S-014",
+        "S-030",
+        "S-037",
+        "S-056",
+        "S-057"
+      ],
+      "svg_text_nodes": [
+        "T-003",
+        "T-004",
+        "T-005",
+        "T-006",
+        "T-011",
+        "T-016"
+      ]
+    },
+    "R03": {
+      "title": "Save failure, optimistic-concurrency, and cancellation callbacks",
+      "image_uses": [
+        "S-017",
+        "S-022",
+        "S-025",
+        "S-026",
+        "S-027",
+        "S-028",
+        "S-034",
+        "S-040",
+        "S-044",
+        "S-049",
+        "S-050",
+        "S-051",
+        "S-052",
+        "S-053"
+      ],
+      "svg_text_nodes": [
+        "T-010",
+        "T-012",
+        "T-013",
+        "T-017",
+        "T-018"
+      ]
+    },
+    "R04": {
+      "title": "DbCommand categories, callbacks, and result shapes",
+      "image_uses": [
+        "S-002",
+        "S-006",
+        "S-010",
+        "S-012",
+        "S-023",
+        "S-024",
+        "S-029",
+        "S-032",
+        "S-033",
+        "S-035",
+        "S-039",
+        "S-041",
+        "S-043",
+        "S-045",
+        "S-055"
+      ],
+      "svg_text_nodes": [
+        "T-002",
+        "T-014"
+      ]
+    },
+    "R05": {
+      "title": "DbCommand event data, logging, SQL mutation, suppression, and registration",
+      "image_uses": [
+        "S-011",
+        "S-016",
+        "S-020",
+        "S-031",
+        "S-036",
+        "S-038",
+        "S-042",
+        "S-046",
+        "S-047",
+        "S-048",
+        "S-054",
+        "S-058",
+        "S-059"
+      ],
+      "svg_text_nodes": [
+        "T-007",
+        "T-008",
+        "T-015"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent regex scan over raw SVG",
+    "dom_embedded_assets": 59,
+    "regex_embedded_assets": 59,
+    "dom_image_uses": 59,
+    "regex_image_uses": 59,
+    "dom_svg_text_nodes": 18,
+    "regex_svg_text_nodes": 18,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_embedded_assets": [],
+    "missing_referenced_assets": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}
