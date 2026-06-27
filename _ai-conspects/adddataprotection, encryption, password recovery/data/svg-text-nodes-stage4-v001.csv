@@ -1,0 +1,78 @@
+﻿text_id,text,x,y,font_size,region
+T-001,public class SendResetLinkHandler :,12371.675374,630.560724,20px,R03
+T-002,"IRequestHandler<SendResetLinkCommand, UnitResult<Error>>",12371.675374,655.560724,20px,R03
+T-003,{,12371.675374,680.560724,20px,R03
+T-004,private readonly IEmailService _email;,12371.675374,705.560724,20px,R03
+T-005,private readonly IDataProtectionProvider _protectionProvider;,12371.675374,730.560724,20px,R03
+T-006,private readonly IHttpContextAccessor _contextAccessor;,12371.675374,755.560724,20px,R03
+T-007,private readonly IVerificationLinkFactory _linkFactory;,12371.675374,780.560724,20px,R03
+T-008,"public SendResetLinkHandler(IEmailService email,",12371.675374,805.560724,20px,R03
+T-009,"IDataProtectionProvider protector,",12371.675374,830.560724,20px,R03
+T-010,"IHttpContextAccessor contextAccessor,",12371.675374,855.560724,20px,R03
+T-011,IVerificationLinkFactory linkFactory),12371.675374,880.560724,20px,R03
+T-012,{,12371.675374,905.560724,20px,R03
+T-013,_email = email;,12371.675374,930.560724,20px,R03
+T-014,_protectionProvider = protector;,12371.675374,955.560724,20px,R03
+T-015,_contextAccessor = contextAccessor;,12371.675374,980.560724,20px,R03
+T-016,_linkFactory = linkFactory;,12371.675374,1005.560724,20px,R03
+T-017,},12371.675374,1030.560724,20px,R03
+T-018,"public async Task<UnitResult<Error>> Handle(SendResetLinkCommand request,",12371.675374,1055.560724,20px,R03
+T-019,CancellationToken cancellationToken),12371.675374,1080.560724,20px,R03
+T-020,{,12371.675374,1105.560724,20px,R03
+T-021,var emailStr = _contextAccessor.HttpContext!.User.Claims.,12371.675374,1130.560724,20px,R03
+T-022,FirstOrDefault(c => c.Type == ClaimTypes.Email)!.Value;,12371.675374,1155.560724,20px,R03
+T-023,var protector = _protectionProvider.CreateProtector(,12371.675374,1230.560724,20px,R03
+T-024,"purpose: ""Password reset"");",12371.675374,1255.560724,20px,R03
+T-025,var code = protector.Protect(emailStr);,12371.675374,1305.560724,20px,R03
+T-026,var email = Email.Create(emailStr).Value;,12371.675374,1330.560724,20px,R03
+T-027,"var sendLink = await SendResetLinkAsync(email,code,cancellationToken);",12371.675374,1380.560724,20px,R03
+T-028,if (sendLink.IsFailure),12371.675374,1405.560724,20px,R03
+T-029,{,12371.675374,1430.560724,20px,R03
+T-030,return sendLink.Error;,12371.675374,1455.560724,20px,R03
+T-031,},12371.675374,1480.560724,20px,R03
+T-032,return UnitResult.Success<Error>();,12371.675374,1530.560724,20px,R03
+T-033,},12371.675374,1580.560724,20px,R03
+T-034,"private async Task<UnitResult<Error>> SendResetLinkAsync(Email email,",12371.675374,1630.560724,20px,R03
+T-035,"string code,",12371.675374,1655.560724,20px,R03
+T-036,CancellationToken cancellation),12371.675374,1680.560724,20px,R03
+T-037,{,12371.675374,1705.560724,20px,R03
+T-038,"var link = _linkFactory.CreateLink(""ResetPassword"",""Account"",code);",12371.675374,1730.560724,20px,R03
+T-039,"var message = $""To reset password click on <a href=\""{link}\"">link</a>"";",12371.675374,1780.560724,20px,R03
+T-040,"var sendEmail =await _email.SendEmailAsync(email,",12371.675374,1830.560724,20px,R03
+T-041,"""Reset password"",",12371.675374,1855.560724,20px,R03
+T-042,"message,",12371.675374,1880.560724,20px,R03
+T-043,cancellation);,12371.675374,1905.560724,20px,R03
+T-044,if (sendEmail.IsFailure),12371.675374,1930.560724,20px,R03
+T-045,{,12371.675374,1955.560724,20px,R03
+T-046,return sendEmail.Error;,12371.675374,1980.560724,20px,R03
+T-047,},12371.675374,2005.560724,20px,R03
+T-048,return UnitResult.Success<Error>();,12371.675374,2055.560724,20px,R03
+T-049,},12371.675374,2080.560724,20px,R03
+T-050,},12371.675374,2130.560724,20px,R03
+T-051,password recovery,11128.373789,175.292371,187.61903599330356px,R03
+T-052,hashing vs encryption/dataprotection,6935.040049,4841.959241,187.61903599330356px,R04
+T-053,newer flow,10733.358124,1542.085147,117.52378627232143px,R03
+T-054,when hashing,6897.32628,5276.28606,117.52378627232143px,R04
+T-055,"hashing,",7761.0187,5172.491213,117.52378627232143px,R04
+T-056,need to verify,7761.0187,5319.395946,117.52378627232143px,R04
+T-057,"encryptoin,",8865.01851,5169.824465,117.52378627232143px,R04
+T-058,when need data back,8865.01851,5316.729198,117.52378627232143px,R04
+T-059,when encryption/dataprot,10143.537146,5265.231868,117.52378627232143px,R04
+T-060,dp token design,8908.537146,5783.565227,117.52378627232143px,R04
+T-061,with data in payload,8908.537146,5930.469959,117.52378627232143px,R04
+T-062,jwt signature is a hash?,8270.251484,7588.327094,117.52378627232143px,R04
+T-063,hashing style token,7591.203755,5804.708145,117.52378627232143px,R04
+T-064,"design, with cols in db",7591.203755,5951.612878,117.52378627232143px,R04
+T-065,dataprotector,7409.962302,104.905686,92.06201806715053px,R02
+T-066,so maybe better to create,557.195388,1348.969166,20px,R01
+T-067,some dadaprotector interfaces,557.195388,1373.969166,20px,R01
+T-068,that derive from idataprotector,557.195388,1398.969166,20px,R01
+T-069,and create those separate singletons,557.195388,1423.969166,20px,R01
+T-070,and inject them without hardcoding purpose,557.195388,1448.969166,20px,R01
+T-071,everywhere,557.195388,1473.969166,20px,R01
+T-072,so better to create protector services and mb implement catching inside instead of doing it everywhere,294.261846,1532.005734,20px,R01
+T-073,purpose chains,2735.994103,2792.660181,126.66669921874998px,R01
+T-074,itimellimiteddataprotector,1469.89323,3407.459962,58.40000000000003px,R01
+T-075,protector services,10.0,1140.27331,134.90276801228464px,R01
+T-076,"named protectors logic, are they weaker(not named)",297.25692,375.146114,109.9238457431362px,R01
+T-077,unprotect can throw,4464.144243,510.458817,106.93094144449029px,R02

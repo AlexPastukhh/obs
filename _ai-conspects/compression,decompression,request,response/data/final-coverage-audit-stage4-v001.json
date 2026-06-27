@@ -1,0 +1,80 @@
+{
+  "conspect": "compression,decompression,request,response",
+  "generated": "2026-06-27 UTC",
+  "source_received": "compression,decompression,request,response(2).svg",
+  "canonical_source": "compression,decompression,request,response.svg",
+  "legacy": {
+    "image_uses": 0,
+    "text_nodes": 91
+  },
+  "complete_svg": {
+    "embedded_assets": 74,
+    "image_uses": 74,
+    "non_empty_text_nodes": 91,
+    "unique_image_content_hashes": 74
+  },
+  "coverage": {
+    "processed_image_uses": 74,
+    "processed_text_nodes": 91,
+    "missing_image_uses": 0,
+    "unreviewed_image_uses": 0,
+    "unassigned_image_uses": 0,
+    "multiply_assigned_image_uses": 0,
+    "missing_text_nodes": 0,
+    "unreviewed_text_nodes": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0
+  },
+  "duplicate_image_hash_groups": {},
+  "regions": {
+    "R01": {
+      "title": "HTTP compression and automatic client/server behavior",
+      "image_uses": 34,
+      "text_nodes": 17
+    },
+    "R02": {
+      "title": "Manual request decompression and stream ownership",
+      "image_uses": 17,
+      "text_nodes": 4
+    },
+    "R03": {
+      "title": "Multiple Content-Encoding values, registry and DI-aware middleware",
+      "image_uses": 23,
+      "text_nodes": 70
+    }
+  },
+  "checks": [
+    {
+      "name": "all SVG use elements inventoried",
+      "passed": true
+    },
+    {
+      "name": "all non-empty SVG text nodes inventoried",
+      "passed": true
+    },
+    {
+      "name": "each image use assigned exactly once",
+      "passed": true
+    },
+    {
+      "name": "each text node assigned exactly once",
+      "passed": true
+    },
+    {
+      "name": "all embedded assets extracted",
+      "passed": true
+    },
+    {
+      "name": "all region transcripts present",
+      "passed": true
+    },
+    {
+      "name": "contact sheets generated and reviewed",
+      "passed": true
+    },
+    {
+      "name": "final missing and unreviewed counts are zero",
+      "passed": true
+    }
+  ]
+}

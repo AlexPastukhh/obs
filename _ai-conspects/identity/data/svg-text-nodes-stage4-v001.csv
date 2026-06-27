@@ -1,0 +1,93 @@
+﻿text_id,text,x,y,font_size,region
+T-001,lockout with identity,7727.893494,3825.939078,113.3333740234375px,R03
+T-002,iemailsender,4476.081737,896.747574,110.40417944686818px,R02
+T-003,url safety of identities tokens,8874.128032,2920.157761,91.77880165955283px,R03
+T-004,so we can login with external login only if we have,6071.022934,8327.116533,37.000000000000014px,R03
+T-005,account for user and if we added login with info from,6071.022934,8373.366533,37.000000000000014px,R03
+T-006,actual google login,6071.022934,8419.616533,37.000000000000014px,R03
+T-007,"default ui, api endpoints",5974.729674,14452.382305,94.66666666666715px,R05
+T-008,"basics, min setup",2539.571688,663.56177,121.333251953125px,R01
+T-009,methods,6399.571688,121.593297,126.66662597656249px,R02
+T-010,email confirmation password reset,6120.164868,3298.587053,94.6666666666668px,R02
+T-011,external login,7740.990312,5589.39475,150.13330078125px,R03
+T-012,Challenge method,6438.990312,6093.329961,89.33331298828125px,R03
+T-013,jwt + identity implementation,3500.79117,4207.727291,94.07397460937501px,R04
+T-014,so just an normal jswt endpoint but with manager that verifies password,3699.990322,4351.191892,20px,R04
+T-015,build jwt ourselves,3699.990322,4401.191892,20px,R04
+T-016,using System.IdentityModel.Tokens.Jwt;,1795.557831,5247.843778,20px,R04
+T-017,using System.Security.Claims;,1795.557831,5272.843778,20px,R04
+T-018,using System.Text;,1795.557831,5297.843778,20px,R04
+T-019,using Microsoft.AspNetCore.Identity;,1795.557831,5322.843778,20px,R04
+T-020,using Microsoft.Extensions.Options;,1795.557831,5347.843778,20px,R04
+T-021,using Microsoft.IdentityModel.Tokens;,1795.557831,5372.843778,20px,R04
+T-022,public sealed class JwtOptions,1795.557831,5422.843778,20px,R04
+T-023,{,1795.557831,5447.843778,20px,R04
+T-024,"public string Issuer { get; init; } = """";",1795.557831,5472.843778,20px,R04
+T-025,"public string Audience { get; init; } = """";",1795.557831,5497.843778,20px,R04
+T-026,"public string SigningKey { get; init; } = """"; // store in secrets",1795.557831,5522.843778,20px,R04
+T-027,public int ExpMinutes { get; init; } = 60;,1795.557831,5547.843778,20px,R04
+T-028,},1795.557831,5572.843778,20px,R04
+T-029,public sealed class JwtTokenService<TUser> where TUser : IdentityUser,1795.557831,5622.843778,20px,R04
+T-030,{,1795.557831,5647.843778,20px,R04
+T-031,private readonly UserManager<TUser> _userManager;,1795.557831,5672.843778,20px,R04
+T-032,private readonly RoleManager<IdentityRole> _roleManager;,1795.557831,5697.843778,20px,R04
+T-033,private readonly JwtOptions _jwt;,1795.557831,5722.843778,20px,R04
+T-034,public JwtTokenService(,1795.557831,5772.843778,20px,R04
+T-035,"UserManager<TUser> userManager,",1795.557831,5797.843778,20px,R04
+T-036,"RoleManager<IdentityRole> roleManager,",1795.557831,5822.843778,20px,R04
+T-037,IOptions<JwtOptions> jwtOptions),1795.557831,5847.843778,20px,R04
+T-038,{,1795.557831,5872.843778,20px,R04
+T-039,_userManager = userManager;,1795.557831,5897.843778,20px,R04
+T-040,_roleManager = roleManager;,1795.557831,5922.843778,20px,R04
+T-041,_jwt = jwtOptions.Value;,1795.557831,5947.843778,20px,R04
+T-042,},1795.557831,5972.843778,20px,R04
+T-043,"public async Task<string> CreateTokenAsync(TUser user, CancellationToken ct = default)",1795.557831,6022.843778,20px,R04
+T-044,{,1795.557831,6047.843778,20px,R04
+T-045,// Base identity claims,1795.557831,6072.843778,20px,R04
+T-046,var claims = new List<Claim>,1795.557831,6097.843778,20px,R04
+T-047,{,1795.557831,6122.843778,20px,R04
+T-048,"new(JwtRegisteredClaimNames.Sub, user.Id),",1795.557831,6147.843778,20px,R04
+T-049,"new(JwtRegisteredClaimNames.UniqueName, user.UserName ?? """"),",1795.557831,6172.843778,20px,R04
+T-050,"new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),",1795.557831,6197.843778,20px,R04
+T-051,};,1795.557831,6222.843778,20px,R04
+T-052,// User claims (from AspNetUserClaims),1795.557831,6272.843778,20px,R04
+T-053,var userClaims = await _userManager.GetClaimsAsync(user);,1795.557831,6297.843778,20px,R04
+T-054,claims.AddRange(userClaims);,1795.557831,6322.843778,20px,R04
+T-055,// Roles + role claims (AspNetUserRoles + AspNetRoleClaims),1795.557831,6372.843778,20px,R04
+T-056,var roles = await _userManager.GetRolesAsync(user);,1795.557831,6397.843778,20px,R04
+T-057,foreach (var roleName in roles),1795.557831,6422.843778,20px,R04
+T-058,{,1795.557831,6447.843778,20px,R04
+T-059,"// Add role claim recognized by [Authorize(Roles=""..."")]",1795.557831,6472.843778,20px,R04
+T-060,"claims.Add(new Claim(ClaimTypes.Role, roleName));",1795.557831,6497.843778,20px,R04
+T-061,"// If you also store claims on roles, include them",1795.557831,6547.843778,20px,R04
+T-062,var role = await _roleManager.FindByNameAsync(roleName);,1795.557831,6572.843778,20px,R04
+T-063,if (role != null),1795.557831,6597.843778,20px,R04
+T-064,{,1795.557831,6622.843778,20px,R04
+T-065,var roleClaims = await _roleManager.GetClaimsAsync(role);,1795.557831,6647.843778,20px,R04
+T-066,claims.AddRange(roleClaims);,1795.557831,6672.843778,20px,R04
+T-067,},1795.557831,6697.843778,20px,R04
+T-068,},1795.557831,6722.843778,20px,R04
+T-069,// Optional: remove duplicates (common when role+user claims overlap),1795.557831,6772.843778,20px,R04
+T-070,claims = claims,1795.557831,6797.843778,20px,R04
+T-071,".GroupBy(c => new { c.Type, c.Value })",1795.557831,6822.843778,20px,R04
+T-072,.Select(g => g.First()),1795.557831,6847.843778,20px,R04
+T-073,.ToList();,1795.557831,6872.843778,20px,R04
+T-074,var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.SigningKey));,1795.557831,6922.843778,20px,R04
+T-075,"var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);",1795.557831,6947.843778,20px,R04
+T-076,var token = new JwtSecurityToken(,1795.557831,6997.843778,20px,R04
+T-077,"issuer: _jwt.Issuer,",1795.557831,7022.843778,20px,R04
+T-078,"audience: _jwt.Audience,",1795.557831,7047.843778,20px,R04
+T-079,"claims: claims,",1795.557831,7072.843778,20px,R04
+T-080,"notBefore: DateTime.UtcNow,",1795.557831,7097.843778,20px,R04
+T-081,"expires: DateTime.UtcNow.AddMinutes(_jwt.ExpMinutes),",1795.557831,7122.843778,20px,R04
+T-082,signingCredentials: creds);,1795.557831,7147.843778,20px,R04
+T-083,return new JwtSecurityTokenHandler().WriteToken(token);,1795.557831,7197.843778,20px,R04
+T-084,},1795.557831,7222.843778,20px,R04
+T-085,},1795.557831,7247.843778,20px,R04
+T-086,can have role related claims so may need,29.557831,6147.843839,20px,R04
+T-087,to fetch claims for the role that user has,29.557831,6172.843839,20px,R04
+T-088,identity schema,1176.66687,762.367286,99.99999999999994px,R01
+T-089,jwt claims + token creator service,10.0,4134.815328,174.66665649414062px,R04
+T-090,that creates fro user claims,10.0,4353.148649,174.66665649414062px,R04
+T-091,and from role claims,10.0,4571.481969,174.66665649414062px,R04
+T-092,of roles tht user hhas,10.0,4789.81529,174.66665649414062px,R04

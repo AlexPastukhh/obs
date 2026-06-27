@@ -1,0 +1,922 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "lockout with identity",
+    "x": 7727.893493772448,
+    "y": 3825.939077824619,
+    "font_size": "113.3333740234375px",
+    "region": "R03",
+    "status": "reviewed",
+    "transcript": "regions/R03.md"
+  },
+  {
+    "text_id": "T-002",
+    "text": "iemailsender",
+    "x": 4476.081737090864,
+    "y": 896.7475737538249,
+    "font_size": "110.40417944686818px",
+    "region": "R02",
+    "status": "reviewed",
+    "transcript": "regions/R02.md"
+  },
+  {
+    "text_id": "T-003",
+    "text": "url safety of identities tokens",
+    "x": 8874.12803156026,
+    "y": 2920.1577609242127,
+    "font_size": "91.77880165955283px",
+    "region": "R03",
+    "status": "reviewed",
+    "transcript": "regions/R03.md"
+  },
+  {
+    "text_id": "T-004",
+    "text": "so we can login with external login only if we have",
+    "x": 6071.022933677497,
+    "y": 8327.116533364513,
+    "font_size": "37.000000000000014px",
+    "region": "R03",
+    "status": "reviewed",
+    "transcript": "regions/R03.md"
+  },
+  {
+    "text_id": "T-005",
+    "text": "account for user and if we added login with info from",
+    "x": 6071.022933677497,
+    "y": 8373.366533364513,
+    "font_size": "37.000000000000014px",
+    "region": "R03",
+    "status": "reviewed",
+    "transcript": "regions/R03.md"
+  },
+  {
+    "text_id": "T-006",
+    "text": "actual google login",
+    "x": 6071.022933677497,
+    "y": 8419.616533364513,
+    "font_size": "37.000000000000014px",
+    "region": "R03",
+    "status": "reviewed",
+    "transcript": "regions/R03.md"
+  },
+  {
+    "text_id": "T-007",
+    "text": "default ui, api endpoints",
+    "x": 5974.729674069093,
+    "y": 14452.382304863086,
+    "font_size": "94.66666666666715px",
+    "region": "R05",
+    "status": "reviewed",
+    "transcript": "regions/R05.md"
+  },
+  {
+    "text_id": "T-008",
+    "text": "basics, min setup",
+    "x": 2539.5716876251718,
+    "y": 663.5617702636719,
+    "font_size": "121.333251953125px",
+    "region": "R01",
+    "status": "reviewed",
+    "transcript": "regions/R01.md"
+  },
+  {
+    "text_id": "T-009",
+    "text": "methods",
+    "x": 6399.571687625172,
+    "y": 121.59329748535154,
+    "font_size": "126.66662597656249px",
+    "region": "R02",
+    "status": "reviewed",
+    "transcript": "regions/R02.md"
+  },
+  {
+    "text_id": "T-010",
+    "text": "email confirmation password reset",
+    "x": 6120.164867963714,
+    "y": 3298.5870531412775,
+    "font_size": "94.6666666666668px",
+    "region": "R02",
+    "status": "reviewed",
+    "transcript": "regions/R02.md"
+  },
+  {
+    "text_id": "T-011",
+    "text": "external login",
+    "x": 7740.9903117764925,
+    "y": 5589.394749815929,
+    "font_size": "150.13330078125px",
+    "region": "R03",
+    "status": "reviewed",
+    "transcript": "regions/R03.md"
+  },
+  {
+    "text_id": "T-012",
+    "text": "Challenge method",
+    "x": 6438.9903117764925,
+    "y": 6093.329960570323,
+    "font_size": "89.33331298828125px",
+    "region": "R03",
+    "status": "reviewed",
+    "transcript": "regions/R03.md"
+  },
+  {
+    "text_id": "T-013",
+    "text": "jwt + identity implementation",
+    "x": 3500.791169878821,
+    "y": 4207.727291474938,
+    "font_size": "94.07397460937501px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-014",
+    "text": "so just an normal jswt endpoint but with manager that verifies password",
+    "x": 3699.990321949019,
+    "y": 4351.1918919057725,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-015",
+    "text": "build jwt ourselves",
+    "x": 3699.990321949019,
+    "y": 4401.1918919057725,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-016",
+    "text": "using System.IdentityModel.Tokens.Jwt;",
+    "x": 1795.5578308105469,
+    "y": 5247.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-017",
+    "text": "using System.Security.Claims;",
+    "x": 1795.5578308105469,
+    "y": 5272.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-018",
+    "text": "using System.Text;",
+    "x": 1795.5578308105469,
+    "y": 5297.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-019",
+    "text": "using Microsoft.AspNetCore.Identity;",
+    "x": 1795.5578308105469,
+    "y": 5322.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-020",
+    "text": "using Microsoft.Extensions.Options;",
+    "x": 1795.5578308105469,
+    "y": 5347.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-021",
+    "text": "using Microsoft.IdentityModel.Tokens;",
+    "x": 1795.5578308105469,
+    "y": 5372.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-022",
+    "text": "public sealed class JwtOptions",
+    "x": 1795.5578308105469,
+    "y": 5422.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-023",
+    "text": "{",
+    "x": 1795.5578308105469,
+    "y": 5447.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-024",
+    "text": "public string Issuer { get; init; } = \"\";",
+    "x": 1795.5578308105469,
+    "y": 5472.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-025",
+    "text": "public string Audience { get; init; } = \"\";",
+    "x": 1795.5578308105469,
+    "y": 5497.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-026",
+    "text": "public string SigningKey { get; init; } = \"\"; // store in secrets",
+    "x": 1795.5578308105469,
+    "y": 5522.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-027",
+    "text": "public int ExpMinutes { get; init; } = 60;",
+    "x": 1795.5578308105469,
+    "y": 5547.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-028",
+    "text": "}",
+    "x": 1795.5578308105469,
+    "y": 5572.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-029",
+    "text": "public sealed class JwtTokenService<TUser> where TUser : IdentityUser",
+    "x": 1795.5578308105469,
+    "y": 5622.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-030",
+    "text": "{",
+    "x": 1795.5578308105469,
+    "y": 5647.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-031",
+    "text": "private readonly UserManager<TUser> _userManager;",
+    "x": 1795.5578308105469,
+    "y": 5672.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-032",
+    "text": "private readonly RoleManager<IdentityRole> _roleManager;",
+    "x": 1795.5578308105469,
+    "y": 5697.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-033",
+    "text": "private readonly JwtOptions _jwt;",
+    "x": 1795.5578308105469,
+    "y": 5722.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-034",
+    "text": "public JwtTokenService(",
+    "x": 1795.5578308105469,
+    "y": 5772.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-035",
+    "text": "UserManager<TUser> userManager,",
+    "x": 1795.5578308105469,
+    "y": 5797.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-036",
+    "text": "RoleManager<IdentityRole> roleManager,",
+    "x": 1795.5578308105469,
+    "y": 5822.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-037",
+    "text": "IOptions<JwtOptions> jwtOptions)",
+    "x": 1795.5578308105469,
+    "y": 5847.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-038",
+    "text": "{",
+    "x": 1795.5578308105469,
+    "y": 5872.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-039",
+    "text": "_userManager = userManager;",
+    "x": 1795.5578308105469,
+    "y": 5897.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-040",
+    "text": "_roleManager = roleManager;",
+    "x": 1795.5578308105469,
+    "y": 5922.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-041",
+    "text": "_jwt = jwtOptions.Value;",
+    "x": 1795.5578308105469,
+    "y": 5947.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-042",
+    "text": "}",
+    "x": 1795.5578308105469,
+    "y": 5972.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-043",
+    "text": "public async Task<string> CreateTokenAsync(TUser user, CancellationToken ct = default)",
+    "x": 1795.5578308105469,
+    "y": 6022.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-044",
+    "text": "{",
+    "x": 1795.5578308105469,
+    "y": 6047.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-045",
+    "text": "// Base identity claims",
+    "x": 1795.5578308105469,
+    "y": 6072.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-046",
+    "text": "var claims = new List<Claim>",
+    "x": 1795.5578308105469,
+    "y": 6097.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-047",
+    "text": "{",
+    "x": 1795.5578308105469,
+    "y": 6122.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-048",
+    "text": "new(JwtRegisteredClaimNames.Sub, user.Id),",
+    "x": 1795.5578308105469,
+    "y": 6147.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-049",
+    "text": "new(JwtRegisteredClaimNames.UniqueName, user.UserName ?? \"\"),",
+    "x": 1795.5578308105469,
+    "y": 6172.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-050",
+    "text": "new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),",
+    "x": 1795.5578308105469,
+    "y": 6197.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-051",
+    "text": "};",
+    "x": 1795.5578308105469,
+    "y": 6222.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-052",
+    "text": "// User claims (from AspNetUserClaims)",
+    "x": 1795.5578308105469,
+    "y": 6272.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-053",
+    "text": "var userClaims = await _userManager.GetClaimsAsync(user);",
+    "x": 1795.5578308105469,
+    "y": 6297.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-054",
+    "text": "claims.AddRange(userClaims);",
+    "x": 1795.5578308105469,
+    "y": 6322.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-055",
+    "text": "// Roles + role claims (AspNetUserRoles + AspNetRoleClaims)",
+    "x": 1795.5578308105469,
+    "y": 6372.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-056",
+    "text": "var roles = await _userManager.GetRolesAsync(user);",
+    "x": 1795.5578308105469,
+    "y": 6397.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-057",
+    "text": "foreach (var roleName in roles)",
+    "x": 1795.5578308105469,
+    "y": 6422.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-058",
+    "text": "{",
+    "x": 1795.5578308105469,
+    "y": 6447.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-059",
+    "text": "// Add role claim recognized by [Authorize(Roles=\"...\")]",
+    "x": 1795.5578308105469,
+    "y": 6472.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-060",
+    "text": "claims.Add(new Claim(ClaimTypes.Role, roleName));",
+    "x": 1795.5578308105469,
+    "y": 6497.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-061",
+    "text": "// If you also store claims on roles, include them",
+    "x": 1795.5578308105469,
+    "y": 6547.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-062",
+    "text": "var role = await _roleManager.FindByNameAsync(roleName);",
+    "x": 1795.5578308105469,
+    "y": 6572.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-063",
+    "text": "if (role != null)",
+    "x": 1795.5578308105469,
+    "y": 6597.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-064",
+    "text": "{",
+    "x": 1795.5578308105469,
+    "y": 6622.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-065",
+    "text": "var roleClaims = await _roleManager.GetClaimsAsync(role);",
+    "x": 1795.5578308105469,
+    "y": 6647.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-066",
+    "text": "claims.AddRange(roleClaims);",
+    "x": 1795.5578308105469,
+    "y": 6672.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-067",
+    "text": "}",
+    "x": 1795.5578308105469,
+    "y": 6697.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-068",
+    "text": "}",
+    "x": 1795.5578308105469,
+    "y": 6722.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-069",
+    "text": "// Optional: remove duplicates (common when role+user claims overlap)",
+    "x": 1795.5578308105469,
+    "y": 6772.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-070",
+    "text": "claims = claims",
+    "x": 1795.5578308105469,
+    "y": 6797.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-071",
+    "text": ".GroupBy(c => new { c.Type, c.Value })",
+    "x": 1795.5578308105469,
+    "y": 6822.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-072",
+    "text": ".Select(g => g.First())",
+    "x": 1795.5578308105469,
+    "y": 6847.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-073",
+    "text": ".ToList();",
+    "x": 1795.5578308105469,
+    "y": 6872.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-074",
+    "text": "var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.SigningKey));",
+    "x": 1795.5578308105469,
+    "y": 6922.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-075",
+    "text": "var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);",
+    "x": 1795.5578308105469,
+    "y": 6947.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-076",
+    "text": "var token = new JwtSecurityToken(",
+    "x": 1795.5578308105469,
+    "y": 6997.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-077",
+    "text": "issuer: _jwt.Issuer,",
+    "x": 1795.5578308105469,
+    "y": 7022.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-078",
+    "text": "audience: _jwt.Audience,",
+    "x": 1795.5578308105469,
+    "y": 7047.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-079",
+    "text": "claims: claims,",
+    "x": 1795.5578308105469,
+    "y": 7072.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-080",
+    "text": "notBefore: DateTime.UtcNow,",
+    "x": 1795.5578308105469,
+    "y": 7097.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-081",
+    "text": "expires: DateTime.UtcNow.AddMinutes(_jwt.ExpMinutes),",
+    "x": 1795.5578308105469,
+    "y": 7122.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-082",
+    "text": "signingCredentials: creds);",
+    "x": 1795.5578308105469,
+    "y": 7147.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-083",
+    "text": "return new JwtSecurityTokenHandler().WriteToken(token);",
+    "x": 1795.5578308105469,
+    "y": 7197.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-084",
+    "text": "}",
+    "x": 1795.5578308105469,
+    "y": 7222.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-085",
+    "text": "}",
+    "x": 1795.5578308105469,
+    "y": 7247.84377833764,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-086",
+    "text": "can have role related claims so may need",
+    "x": 29.557830810546875,
+    "y": 6147.8438393727965,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-087",
+    "text": "to fetch claims for the role that user has",
+    "x": 29.557830810546875,
+    "y": 6172.8438393727965,
+    "font_size": "20px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-088",
+    "text": "identity schema",
+    "x": 1176.6668701171875,
+    "y": 762.3672862315266,
+    "font_size": "99.99999999999994px",
+    "region": "R01",
+    "status": "reviewed",
+    "transcript": "regions/R01.md"
+  },
+  {
+    "text_id": "T-089",
+    "text": "jwt claims + token creator service",
+    "x": 10.0,
+    "y": 4134.815328132161,
+    "font_size": "174.66665649414062px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-090",
+    "text": "that creates fro user claims",
+    "x": 10.0,
+    "y": 4353.148648749837,
+    "font_size": "174.66665649414062px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-091",
+    "text": "and from role claims",
+    "x": 10.0,
+    "y": 4571.481969367513,
+    "font_size": "174.66665649414062px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  },
+  {
+    "text_id": "T-092",
+    "text": "of roles tht user hhas",
+    "x": 10.0,
+    "y": 4789.815289985188,
+    "font_size": "174.66665649414062px",
+    "region": "R04",
+    "status": "reviewed",
+    "transcript": "regions/R04.md"
+  }
+]

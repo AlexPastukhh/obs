@@ -1,0 +1,90 @@
+{
+  "conspect": "identity",
+  "generated": "2026-06-27 UTC",
+  "source_received": "identity(2).svg",
+  "canonical_source": "identity.svg",
+  "legacy": {
+    "image_uses": 0,
+    "text_nodes": 92
+  },
+  "complete_svg": {
+    "embedded_assets": 64,
+    "image_uses": 64,
+    "non_empty_text_nodes": 92,
+    "unique_image_content_hashes": 64
+  },
+  "coverage": {
+    "processed_image_uses": 64,
+    "processed_text_nodes": 92,
+    "missing_image_uses": 0,
+    "unreviewed_image_uses": 0,
+    "unassigned_image_uses": 0,
+    "multiply_assigned_image_uses": 0,
+    "missing_text_nodes": 0,
+    "unreviewed_text_nodes": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0
+  },
+  "duplicate_image_hash_groups": {},
+  "regions": {
+    "R01": {
+      "title": "Identity model, schema and minimal setup",
+      "image_uses": 6,
+      "text_nodes": 2
+    },
+    "R02": {
+      "title": "Managers, common operations, email confirmation and password reset",
+      "image_uses": 14,
+      "text_nodes": 3
+    },
+    "R03": {
+      "title": "Token URL safety, lockout, external login and challenge flow",
+      "image_uses": 26,
+      "text_nodes": 7
+    },
+    "R04": {
+      "title": "Identity-backed JWT issuance and SPA/API integration",
+      "image_uses": 15,
+      "text_nodes": 79
+    },
+    "R05": {
+      "title": "Default Identity UI versus Identity API endpoints",
+      "image_uses": 3,
+      "text_nodes": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "all SVG use elements inventoried",
+      "passed": true
+    },
+    {
+      "name": "all non-empty SVG text nodes inventoried",
+      "passed": true
+    },
+    {
+      "name": "each image use assigned exactly once",
+      "passed": true
+    },
+    {
+      "name": "each text node assigned exactly once",
+      "passed": true
+    },
+    {
+      "name": "all embedded assets extracted",
+      "passed": true
+    },
+    {
+      "name": "all region transcripts present",
+      "passed": true
+    },
+    {
+      "name": "contact sheets generated and reviewed",
+      "passed": true
+    },
+    {
+      "name": "final missing and unreviewed counts are zero",
+      "passed": true
+    }
+  ]
+}

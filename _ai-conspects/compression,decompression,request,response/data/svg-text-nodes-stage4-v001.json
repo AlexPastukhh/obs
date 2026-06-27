@@ -1,0 +1,730 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "some problems with implementation",
+    "x": 5430.325112,
+    "y": 5302.582826,
+    "font_size": "20px",
+    "region": "R02"
+  },
+  {
+    "text_id": "T-002",
+    "text": "about leaveopen false and ownershitp, disposal responsibility(!!!!!!!!!!!!)",
+    "x": 4476.25089,
+    "y": 7895.117886,
+    "font_size": "145.3332519531249px",
+    "region": "R02"
+  },
+  {
+    "text_id": "T-003",
+    "text": "using System.IO;",
+    "x": 3007.798151,
+    "y": 12245.826626,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-004",
+    "text": "public interface IRequestBodyDecompressor",
+    "x": 3007.798151,
+    "y": 12295.826626,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-005",
+    "text": "{",
+    "x": 3007.798151,
+    "y": 12320.826626,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-006",
+    "text": "string EncodingName { get; }",
+    "x": 3007.798151,
+    "y": 12345.826626,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-007",
+    "text": "Stream WrapDecompressionStream(Stream input);",
+    "x": 3007.798151,
+    "y": 12395.826626,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-008",
+    "text": "}",
+    "x": 3007.798151,
+    "y": 12420.826626,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-009",
+    "text": "using System.IO;",
+    "x": 3034.464817,
+    "y": 12554.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-010",
+    "text": "using System.IO.Compression;",
+    "x": 3034.464817,
+    "y": 12579.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-011",
+    "text": "public sealed class GzipRequestBodyDecompressor",
+    "x": 3034.464817,
+    "y": 12629.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-012",
+    "text": ": IRequestBodyDecompressor",
+    "x": 3034.464817,
+    "y": 12654.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-013",
+    "text": "{",
+    "x": 3034.464817,
+    "y": 12679.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-014",
+    "text": "public string EncodingName => \"gzip\";",
+    "x": 3034.464817,
+    "y": 12704.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-015",
+    "text": "public Stream WrapDecompressionStream(Stream input)",
+    "x": 3034.464817,
+    "y": 12754.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-016",
+    "text": "{",
+    "x": 3034.464817,
+    "y": 12779.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-017",
+    "text": "return new GZipStream(",
+    "x": 3034.464817,
+    "y": 12804.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-018",
+    "text": "input,",
+    "x": 3034.464817,
+    "y": 12829.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-019",
+    "text": "CompressionMode.Decompress,",
+    "x": 3034.464817,
+    "y": 12854.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-020",
+    "text": "leaveOpen: true);",
+    "x": 3034.464817,
+    "y": 12879.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-021",
+    "text": "}",
+    "x": 3034.464817,
+    "y": 12904.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-022",
+    "text": "}",
+    "x": 3034.464817,
+    "y": 12929.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-023",
+    "text": "public sealed class BrotliRequestBodyDecompressor",
+    "x": 3034.464817,
+    "y": 12979.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-024",
+    "text": ": IRequestBodyDecompressor",
+    "x": 3034.464817,
+    "y": 13004.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-025",
+    "text": "{",
+    "x": 3034.464817,
+    "y": 13029.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-026",
+    "text": "public string EncodingName => \"br\";",
+    "x": 3034.464817,
+    "y": 13054.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-027",
+    "text": "public Stream WrapDecompressionStream(Stream input)",
+    "x": 3034.464817,
+    "y": 13104.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-028",
+    "text": "{",
+    "x": 3034.464817,
+    "y": 13129.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-029",
+    "text": "return new BrotliStream(",
+    "x": 3034.464817,
+    "y": 13154.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-030",
+    "text": "input,",
+    "x": 3034.464817,
+    "y": 13179.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-031",
+    "text": "CompressionMode.Decompress,",
+    "x": 3034.464817,
+    "y": 13204.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-032",
+    "text": "leaveOpen: true);",
+    "x": 3034.464817,
+    "y": 13229.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-033",
+    "text": "}",
+    "x": 3034.464817,
+    "y": 13254.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-034",
+    "text": "}",
+    "x": 3034.464817,
+    "y": 13279.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-035",
+    "text": "public sealed class DeflateRequestBodyDecompressor",
+    "x": 3034.464817,
+    "y": 13329.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-036",
+    "text": ": IRequestBodyDecompressor",
+    "x": 3034.464817,
+    "y": 13354.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-037",
+    "text": "{",
+    "x": 3034.464817,
+    "y": 13379.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-038",
+    "text": "public string EncodingName => \"deflate\";",
+    "x": 3034.464817,
+    "y": 13404.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-039",
+    "text": "public Stream WrapDecompressionStream(Stream input)",
+    "x": 3034.464817,
+    "y": 13454.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-040",
+    "text": "{",
+    "x": 3034.464817,
+    "y": 13479.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-041",
+    "text": "return new DeflateStream(",
+    "x": 3034.464817,
+    "y": 13504.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-042",
+    "text": "input,",
+    "x": 3034.464817,
+    "y": 13529.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-043",
+    "text": "CompressionMode.Decompress,",
+    "x": 3034.464817,
+    "y": 13554.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-044",
+    "text": "leaveOpen: true);",
+    "x": 3034.464817,
+    "y": 13579.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-045",
+    "text": "}",
+    "x": 3034.464817,
+    "y": 13604.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-046",
+    "text": "}",
+    "x": 3034.464817,
+    "y": 13629.715481,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-047",
+    "text": "public interface IRequestBodyDecompressorRegistry",
+    "x": 3019.25801,
+    "y": 13699.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-048",
+    "text": "{",
+    "x": 3019.25801,
+    "y": 13724.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-049",
+    "text": "bool TryGet(string encoding, out IRequestBodyDecompressor decompressor);",
+    "x": 3019.25801,
+    "y": 13749.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-050",
+    "text": "}",
+    "x": 3019.25801,
+    "y": 13774.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-051",
+    "text": "public sealed class RequestBodyDecompressorRegistry",
+    "x": 3019.25801,
+    "y": 13824.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-052",
+    "text": ": IRequestBodyDecompressorRegistry",
+    "x": 3019.25801,
+    "y": 13849.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-053",
+    "text": "{",
+    "x": 3019.25801,
+    "y": 13874.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-054",
+    "text": "private readonly Dictionary<string, IRequestBodyDecompressor> _map;",
+    "x": 3019.25801,
+    "y": 13899.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-055",
+    "text": "public RequestBodyDecompressorRegistry(",
+    "x": 3019.25801,
+    "y": 13949.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-056",
+    "text": "IEnumerable<IRequestBodyDecompressor> decompressors)",
+    "x": 3019.25801,
+    "y": 13974.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-057",
+    "text": "{",
+    "x": 3019.25801,
+    "y": 13999.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-058",
+    "text": "_map = decompressors.ToDictionary(",
+    "x": 3019.25801,
+    "y": 14024.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-059",
+    "text": "d => d.EncodingName,",
+    "x": 3019.25801,
+    "y": 14049.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-060",
+    "text": "d => d,",
+    "x": 3019.25801,
+    "y": 14074.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-061",
+    "text": "StringComparer.OrdinalIgnoreCase);",
+    "x": 3019.25801,
+    "y": 14099.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-062",
+    "text": "}",
+    "x": 3019.25801,
+    "y": 14124.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-063",
+    "text": "public bool TryGet(",
+    "x": 3019.25801,
+    "y": 14174.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-064",
+    "text": "string encoding,",
+    "x": 3019.25801,
+    "y": 14199.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-065",
+    "text": "out IRequestBodyDecompressor decompressor)",
+    "x": 3019.25801,
+    "y": 14224.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-066",
+    "text": "{",
+    "x": 3019.25801,
+    "y": 14249.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-067",
+    "text": "return _map.TryGetValue(encoding, out decompressor!);",
+    "x": 3019.25801,
+    "y": 14274.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-068",
+    "text": "}",
+    "x": 3019.25801,
+    "y": 14299.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-069",
+    "text": "}",
+    "x": 3019.25801,
+    "y": 14324.557506,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-070",
+    "text": "middleware",
+    "x": 5416.893342,
+    "y": 12198.096357,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-071",
+    "text": "!!!!!",
+    "x": 3778.22635,
+    "y": 13532.010922,
+    "font_size": "228.00000000000003px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-072",
+    "text": "theory",
+    "x": 7554.253953,
+    "y": 428.667726,
+    "font_size": "168.26669921875003px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-073",
+    "text": "automatic",
+    "x": 4416.47604,
+    "y": 264.223146,
+    "font_size": "168.26669921875003px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-074",
+    "text": "decompression on",
+    "x": 4416.47604,
+    "y": 474.55652,
+    "font_size": "168.26669921875003px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-075",
+    "text": "httpclient",
+    "x": 4416.47604,
+    "y": 684.889894,
+    "font_size": "168.26669921875003px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-076",
+    "text": "compression",
+    "x": 167.587592,
+    "y": 199.778566,
+    "font_size": "168.26669921875003px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-077",
+    "text": "with httpclient and on server",
+    "x": 167.587592,
+    "y": 410.11194,
+    "font_size": "168.26669921875003px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-078",
+    "text": "leaveopen, managing",
+    "x": 2747.1393,
+    "y": 138.038649,
+    "font_size": "145.33331298828122px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-079",
+    "text": "the wrapped stream",
+    "x": 2747.1393,
+    "y": 319.70529,
+    "font_size": "145.33331298828122px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-080",
+    "text": "compression level",
+    "x": 2264.790465,
+    "y": 1606.521247,
+    "font_size": "75.08376113140255px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-081",
+    "text": "wrapping with compression/decompression stream",
+    "x": 10.0,
+    "y": 837.9828,
+    "font_size": "42.153846153846835px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-082",
+    "text": "decompression",
+    "x": 4571.3358,
+    "y": 3200.474059,
+    "font_size": "128.44441731770826px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-083",
+    "text": "handling multiple encodings (rarely implemented)",
+    "x": 4153.952939,
+    "y": 10666.2918,
+    "font_size": "94.66669921875001px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-084",
+    "text": "when to compress",
+    "x": 7493.349657,
+    "y": 1857.274,
+    "font_size": "85.33337402343753px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-085",
+    "text": "ACCEPT ENCODING",
+    "x": 2186.960101,
+    "y": 3513.158865,
+    "font_size": "112.44449869791643px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-086",
+    "text": "VARY ACCEPT ENCODING",
+    "x": 2186.960101,
+    "y": 3653.714488,
+    "font_size": "112.44449869791643px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-087",
+    "text": "just explicitness",
+    "x": 2090.798653,
+    "y": 4628.965251,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-088",
+    "text": "True implementation of",
+    "x": 5755.987752,
+    "y": 5074.318384,
+    "font_size": "98.2222493489583px",
+    "region": "R02"
+  },
+  {
+    "text_id": "T-089",
+    "text": "decompressoin",
+    "x": 5755.987752,
+    "y": 5197.096196,
+    "font_size": "98.2222493489583px",
+    "region": "R02"
+  },
+  {
+    "text_id": "T-090",
+    "text": "do i always need to conf",
+    "x": 284.509276,
+    "y": 3123.533608,
+    "font_size": "100px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-091",
+    "text": "compression provider options",
+    "x": 284.509276,
+    "y": 3248.533608,
+    "font_size": "100px",
+    "region": "R01"
+  }
+]

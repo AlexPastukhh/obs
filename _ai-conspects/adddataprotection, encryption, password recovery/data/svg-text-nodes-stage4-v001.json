@@ -1,0 +1,618 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "public class SendResetLinkHandler :",
+    "x": 12371.675374,
+    "y": 630.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-002",
+    "text": "IRequestHandler<SendResetLinkCommand, UnitResult<Error>>",
+    "x": 12371.675374,
+    "y": 655.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-003",
+    "text": "{",
+    "x": 12371.675374,
+    "y": 680.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-004",
+    "text": "private readonly IEmailService _email;",
+    "x": 12371.675374,
+    "y": 705.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-005",
+    "text": "private readonly IDataProtectionProvider _protectionProvider;",
+    "x": 12371.675374,
+    "y": 730.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-006",
+    "text": "private readonly IHttpContextAccessor _contextAccessor;",
+    "x": 12371.675374,
+    "y": 755.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-007",
+    "text": "private readonly IVerificationLinkFactory _linkFactory;",
+    "x": 12371.675374,
+    "y": 780.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-008",
+    "text": "public SendResetLinkHandler(IEmailService email,",
+    "x": 12371.675374,
+    "y": 805.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-009",
+    "text": "IDataProtectionProvider protector,",
+    "x": 12371.675374,
+    "y": 830.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-010",
+    "text": "IHttpContextAccessor contextAccessor,",
+    "x": 12371.675374,
+    "y": 855.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-011",
+    "text": "IVerificationLinkFactory linkFactory)",
+    "x": 12371.675374,
+    "y": 880.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-012",
+    "text": "{",
+    "x": 12371.675374,
+    "y": 905.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-013",
+    "text": "_email = email;",
+    "x": 12371.675374,
+    "y": 930.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-014",
+    "text": "_protectionProvider = protector;",
+    "x": 12371.675374,
+    "y": 955.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-015",
+    "text": "_contextAccessor = contextAccessor;",
+    "x": 12371.675374,
+    "y": 980.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-016",
+    "text": "_linkFactory = linkFactory;",
+    "x": 12371.675374,
+    "y": 1005.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-017",
+    "text": "}",
+    "x": 12371.675374,
+    "y": 1030.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-018",
+    "text": "public async Task<UnitResult<Error>> Handle(SendResetLinkCommand request,",
+    "x": 12371.675374,
+    "y": 1055.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-019",
+    "text": "CancellationToken cancellationToken)",
+    "x": 12371.675374,
+    "y": 1080.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-020",
+    "text": "{",
+    "x": 12371.675374,
+    "y": 1105.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-021",
+    "text": "var emailStr = _contextAccessor.HttpContext!.User.Claims.",
+    "x": 12371.675374,
+    "y": 1130.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-022",
+    "text": "FirstOrDefault(c => c.Type == ClaimTypes.Email)!.Value;",
+    "x": 12371.675374,
+    "y": 1155.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-023",
+    "text": "var protector = _protectionProvider.CreateProtector(",
+    "x": 12371.675374,
+    "y": 1230.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-024",
+    "text": "purpose: \"Password reset\");",
+    "x": 12371.675374,
+    "y": 1255.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-025",
+    "text": "var code = protector.Protect(emailStr);",
+    "x": 12371.675374,
+    "y": 1305.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-026",
+    "text": "var email = Email.Create(emailStr).Value;",
+    "x": 12371.675374,
+    "y": 1330.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-027",
+    "text": "var sendLink = await SendResetLinkAsync(email,code,cancellationToken);",
+    "x": 12371.675374,
+    "y": 1380.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-028",
+    "text": "if (sendLink.IsFailure)",
+    "x": 12371.675374,
+    "y": 1405.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-029",
+    "text": "{",
+    "x": 12371.675374,
+    "y": 1430.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-030",
+    "text": "return sendLink.Error;",
+    "x": 12371.675374,
+    "y": 1455.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-031",
+    "text": "}",
+    "x": 12371.675374,
+    "y": 1480.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-032",
+    "text": "return UnitResult.Success<Error>();",
+    "x": 12371.675374,
+    "y": 1530.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-033",
+    "text": "}",
+    "x": 12371.675374,
+    "y": 1580.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-034",
+    "text": "private async Task<UnitResult<Error>> SendResetLinkAsync(Email email,",
+    "x": 12371.675374,
+    "y": 1630.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-035",
+    "text": "string code,",
+    "x": 12371.675374,
+    "y": 1655.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-036",
+    "text": "CancellationToken cancellation)",
+    "x": 12371.675374,
+    "y": 1680.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-037",
+    "text": "{",
+    "x": 12371.675374,
+    "y": 1705.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-038",
+    "text": "var link = _linkFactory.CreateLink(\"ResetPassword\",\"Account\",code);",
+    "x": 12371.675374,
+    "y": 1730.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-039",
+    "text": "var message = $\"To reset password click on <a href=\\\"{link}\\\">link</a>\";",
+    "x": 12371.675374,
+    "y": 1780.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-040",
+    "text": "var sendEmail =await _email.SendEmailAsync(email,",
+    "x": 12371.675374,
+    "y": 1830.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-041",
+    "text": "\"Reset password\",",
+    "x": 12371.675374,
+    "y": 1855.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-042",
+    "text": "message,",
+    "x": 12371.675374,
+    "y": 1880.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-043",
+    "text": "cancellation);",
+    "x": 12371.675374,
+    "y": 1905.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-044",
+    "text": "if (sendEmail.IsFailure)",
+    "x": 12371.675374,
+    "y": 1930.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-045",
+    "text": "{",
+    "x": 12371.675374,
+    "y": 1955.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-046",
+    "text": "return sendEmail.Error;",
+    "x": 12371.675374,
+    "y": 1980.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-047",
+    "text": "}",
+    "x": 12371.675374,
+    "y": 2005.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-048",
+    "text": "return UnitResult.Success<Error>();",
+    "x": 12371.675374,
+    "y": 2055.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-049",
+    "text": "}",
+    "x": 12371.675374,
+    "y": 2080.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-050",
+    "text": "}",
+    "x": 12371.675374,
+    "y": 2130.560724,
+    "font_size": "20px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-051",
+    "text": "password recovery",
+    "x": 11128.373789,
+    "y": 175.292371,
+    "font_size": "187.61903599330356px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-052",
+    "text": "hashing vs encryption/dataprotection",
+    "x": 6935.040049,
+    "y": 4841.959241,
+    "font_size": "187.61903599330356px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-053",
+    "text": "newer flow",
+    "x": 10733.358124,
+    "y": 1542.085147,
+    "font_size": "117.52378627232143px",
+    "region": "R03"
+  },
+  {
+    "text_id": "T-054",
+    "text": "when hashing",
+    "x": 6897.32628,
+    "y": 5276.28606,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-055",
+    "text": "hashing,",
+    "x": 7761.0187,
+    "y": 5172.491213,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-056",
+    "text": "need to verify",
+    "x": 7761.0187,
+    "y": 5319.395946,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-057",
+    "text": "encryptoin,",
+    "x": 8865.01851,
+    "y": 5169.824465,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-058",
+    "text": "when need data back",
+    "x": 8865.01851,
+    "y": 5316.729198,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-059",
+    "text": "when encryption/dataprot",
+    "x": 10143.537146,
+    "y": 5265.231868,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-060",
+    "text": "dp token design",
+    "x": 8908.537146,
+    "y": 5783.565227,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-061",
+    "text": "with data in payload",
+    "x": 8908.537146,
+    "y": 5930.469959,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-062",
+    "text": "jwt signature is a hash?",
+    "x": 8270.251484,
+    "y": 7588.327094,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-063",
+    "text": "hashing style token",
+    "x": 7591.203755,
+    "y": 5804.708145,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-064",
+    "text": "design, with cols in db",
+    "x": 7591.203755,
+    "y": 5951.612878,
+    "font_size": "117.52378627232143px",
+    "region": "R04"
+  },
+  {
+    "text_id": "T-065",
+    "text": "dataprotector",
+    "x": 7409.962302,
+    "y": 104.905686,
+    "font_size": "92.06201806715053px",
+    "region": "R02"
+  },
+  {
+    "text_id": "T-066",
+    "text": "so maybe better to create",
+    "x": 557.195388,
+    "y": 1348.969166,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-067",
+    "text": "some dadaprotector interfaces",
+    "x": 557.195388,
+    "y": 1373.969166,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-068",
+    "text": "that derive from idataprotector",
+    "x": 557.195388,
+    "y": 1398.969166,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-069",
+    "text": "and create those separate singletons",
+    "x": 557.195388,
+    "y": 1423.969166,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-070",
+    "text": "and inject them without hardcoding purpose",
+    "x": 557.195388,
+    "y": 1448.969166,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-071",
+    "text": "everywhere",
+    "x": 557.195388,
+    "y": 1473.969166,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-072",
+    "text": "so better to create protector services and mb implement catching inside instead of doing it everywhere",
+    "x": 294.261846,
+    "y": 1532.005734,
+    "font_size": "20px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-073",
+    "text": "purpose chains",
+    "x": 2735.994103,
+    "y": 2792.660181,
+    "font_size": "126.66669921874998px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-074",
+    "text": "itimellimiteddataprotector",
+    "x": 1469.89323,
+    "y": 3407.459962,
+    "font_size": "58.40000000000003px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-075",
+    "text": "protector services",
+    "x": 10.0,
+    "y": 1140.27331,
+    "font_size": "134.90276801228464px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-076",
+    "text": "named protectors logic, are they weaker(not named)",
+    "x": 297.25692,
+    "y": 375.146114,
+    "font_size": "109.9238457431362px",
+    "region": "R01"
+  },
+  {
+    "text_id": "T-077",
+    "text": "unprotect can throw",
+    "x": 4464.144243,
+    "y": 510.458817,
+    "font_size": "106.93094144449029px",
+    "region": "R02"
+  }
+]

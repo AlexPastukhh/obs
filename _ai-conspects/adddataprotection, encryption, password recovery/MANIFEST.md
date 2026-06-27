@@ -1,20 +1,23 @@
-# MANIFEST — adddataprotection, encryption, password recovery
+# MANIFEST — adddataprotection, encryption, password recovery Stage4 completeness correction
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-27 UTC
 
 ## Included
 
-- original SVG: `source/adddataprotection, encryption, password recovery.svg`
-- visual preview: `audit-assets/canvas-preview.png`
-- source and text ledgers: `data/`
-- source review: `00-source-check-and-boundary-review.md`
-- final transcript: `01-final-transcript.md`
-- final coverage audit: `data/final-coverage-audit.*`
+- canonical complete source: `source/adddataprotection, encryption, password recovery.svg`
+- extracted embedded assets: `source/images/`
+- full-canvas preview and region contact sheets: `audit-assets/`
+- full image/text/asset inventories: `data/`
+- one-to-one image and text ledgers: `data/`
+- screenshot-backed region transcripts: `regions/`
+- independent final coverage audit: `data/final-coverage-audit-stage4-v001.json`
 
-## Coverage
+## Final coverage
 
 ```text
-image uses: 0
-text elements: 77
-remaining: 0
+embedded assets: 71
+image uses: 72
+text nodes: 77
+missing: 0
+unreviewed: 0
 ```
