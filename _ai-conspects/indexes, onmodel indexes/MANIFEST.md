@@ -1,21 +1,27 @@
 # MANIFEST — indexes, onmodel indexes
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-27 05:00:00 UTC
 
-## Included
+## Complete source
 
-- original SVG: `source/indexes, onmodel indexes.svg`
-- extracted embedded images: `source/images/`
-- visual preview: `audit-assets/canvas-preview.png`
-- source/text/image ledgers: `data/`
-- source review: `00-source-check-and-boundary-review.md`
-- final transcript: `01-final-transcript.md`
-- final coverage audit: `data/final-coverage-audit.*`
+- `source/indexes, onmodel indexes.svg`
+- 133 extracted screenshots under `source/images/`
+
+## Stage0
+
+- `00-source-check-and-boundary-review.md`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `TRANSCRIPT_STATUS.md`
+- `APPLY_STAGE0_ARCHIVE.md`
+- `data/stage0-*`
+- 10 regional contact sheets
+- complete canvas preview
 
 ## Coverage
 
 ```text
-image uses: 0
-text elements: 80
-remaining: 0
+text elements inventoried: 80
+image uses inventoried: 134
+remaining text elements: 80
+remaining image uses: 134
 ```

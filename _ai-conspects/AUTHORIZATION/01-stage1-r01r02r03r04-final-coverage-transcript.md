@@ -1,22 +1,26 @@
-# Stage 1 — R01/R02/R03/R04 final coverage transcript v001
+# Legacy partial transcript — AUTHORIZATION
 
-Generated: 2026-06-22 UTC
+Original generation: 2026-06-22 UTC  
+Status corrected: 2026-06-27 05:00:00 UTC
 
-## Done
+> **Status: incomplete and superseded for full-source completeness.**
+>
+> This document covered the older authorization SVG: 110 text labels and 75
+> screenshot placements. The newly supplied complete SVG contains 112 text
+> elements and 120 screenshot placements in a different layout.
+>
+> Keep this file only as historical authorization material. A new authoritative
+> combined transcript must be built from the complete source.
 
-- Combined authorization transcript created.
-- 75 image uses processed.
-- 110 canvas labels processed.
-- Seven duplicate placements reviewed and retained as placement evidence.
-- Final coverage audit added.
-- Remaining unclosed image/text-label uses: 0.
+## Historical completed scope
 
-## Now
+```text
+historical text labels: 110
+historical screenshot uses: 75
+historical regions: R01–R04
+complete-source transcript status: not started
+```
 
-- Apply and review the archive.
-- Commit the target folder.
-
-## Next
-
-- No normal transcript regions remain.
-- Only correction/polish or optional repeat-material work remains.
+The old transcript described authorization policies, requirements, handlers and
+`AuthorizationHandlerContext`, but it does not prove complete coverage of the
+new full source.

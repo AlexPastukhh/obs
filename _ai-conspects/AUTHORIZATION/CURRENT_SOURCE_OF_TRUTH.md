@@ -1,37 +1,33 @@
-# Current Source of Truth - AUTHORIZATION
+# Current Source of Truth — AUTHORIZATION
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-27 05:00:00 UTC
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+## Status
 
 ```text
-Stage0 source/boundary review: done
-R01 AddAuthorization/basic-global policies: transcript v001 done
-R02 custom requirements/handlers/resource authorization: transcript v001 done
-R03 AuthorizationHandlerContext semantics: transcript v001 done
-R04 generic/non-generic/multiple-requirement/batching patterns: transcript v001 done
-Final coverage audit: done
+Legacy older-source boundary review: incomplete / superseded
+Legacy R01–R04 transcript: incomplete / superseded
+Legacy final coverage audit: incomplete / superseded
+Complete SVG recovery: done
+Complete-source screenshot extraction: done
+Complete-source region plan R01–R07: done
+Complete-source regional transcripts: not started
+Full combined transcript: not started
+Full-conspect coverage audit: not started
 ```
 
-## Counts
+## Complete-source coverage
 
 ```text
-embedded symbols: 69
-unique embedded images: 68
-image uses on canvas: 75
-text labels parsed: 110
-duplicate extra placements: 7
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+meaningful text elements: 112
+unique embedded images: 119
+image uses on canvas: 120
+repeated image placements: 1
+remaining unprocessed text elements: 112
+remaining unprocessed image uses: 120
 ```
 
-## Candidate next step
+## Next
 
-```text
-No normal transcript regions remain. Only correction/polish or optional repeat-material archive if needed.
-```
+Process `R01`–`R07` and rebuild the authoritative transcript from the complete
+source.

@@ -1,25 +1,31 @@
 # Current Source of Truth — indexes, onmodel indexes
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-27 05:00:00 UTC
 
 ## Status
 
 ```text
 Stage0 source/boundary review: done
-Final transcript: done
-Final coverage audit: done
+Complete SVG preservation: done
+Embedded screenshot extraction: done
+Text-element inventory: done
+Region plan: done
+Regional transcripts: not started
+Full combined transcript: not started
+Full-conspect coverage audit: not started
 ```
 
 ## Coverage
 
 ```text
-unique embedded images: 0
-image uses on canvas: 0
-text elements: 80
-remaining unclosed image uses: 0
-remaining unclosed text elements: 0
+meaningful text elements: 80
+unique embedded images: 133
+image uses on canvas: 134
+repeated image placements: 1
+remaining unprocessed text elements: 80
+remaining unprocessed image uses: 134
 ```
 
 ## Next
 
-No normal transcript regions remain. Only correction/polish if needed.
+Process every planned region and close all text and screenshot coverage.
