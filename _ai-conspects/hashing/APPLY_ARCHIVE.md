@@ -1,22 +1,11 @@
-# Apply combined stage0 archive
+# Apply archive
 
-This folder is one member of the shared five-conspect archive.
+The user-facing response supplies a single physical PowerShell line. One paste and one Enter performs checkout, archive expansion, staging, commit and push.
 
-```powershell
-cd C:\Users\alexa\obs
-git checkout ai-processed-conspects-text
+The target is:
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-headers-identity-searching-compression-hashing-stage0-boundary-review-v001.zip"
-
-$targets = @(
-  "_ai-conspects\headers"
-  "_ai-conspects\identity"
-  "_ai-conspects\searching impl, ef core, full text search,sql server"
-  "_ai-conspects\compression,decompression,request,response"
-  "_ai-conspects\hashing"
-)
-
-Expand-Archive -Path $zip -DestinationPath . -Force
-git add -A -- $targets
-git status --short -- $targets
+```text
+_ai-conspects\hashing
 ```
+
+Before expansion, remove only generated image/contact-sheet directories so stale files from an older correction cannot survive. Preserve all legacy transcript and audit files outside those generated directories.
