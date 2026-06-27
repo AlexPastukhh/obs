@@ -1,0 +1,555 @@
+﻿text_id,text,x,y,status
+T-001,configure formatters,2735.4391496087637,951.4068889529145,pending_transcript
+T-002,configure supported media types(will return 406),2865.525604826994,2364.4740393250604,pending_transcript
+T-003,for,2896.3051308139766,2411.354797882238,pending_transcript
+T-004,full content negotiation basics flow,2862.3785538688353,633.7862071580413,pending_transcript
+T-005,+ validation problem details (can name sheet like this),2862.3785538688353,658.7862071580413,pending_transcript
+T-006,add exception handler middleware so youll return problemdetails with 500 status code on exception,2782.7032346280153,4906.954528645294,pending_transcript
+T-007,from anywhere(where they werent handled),2782.7032346280153,4933.065622802195,pending_transcript
+T-008,create action filter for trying to parse value from accept header,2941.1123642653447,8385.239075176672,pending_transcript
+T-009,and return 400 with proper problem details                                  or                 do this in every controller action,2941.1123642653447,8410.239075176672,pending_transcript
+T-010,you can check if accept headers value is valid,2912.9454783609262,7201.665453413886,pending_transcript
+T-011,and return proper problemdetails,2912.9454783609262,7226.665453413886,pending_transcript
+T-012,if you wont - framework will return just status code,2912.9454783609262,7251.665453413886,pending_transcript
+T-013,in controller return badrequest with,3951.4117626459038,9405.805133154048,pending_transcript
+T-014,use consumes,1880.7981466374813,16487.74359685438,pending_transcript
+T-015,ausing Microsoft.AspNetCore.Diagnostics;,1398.425313187362,5026.293647444006,pending_transcript
+T-016,using Microsoft.AspNetCore.Mvc;,1398.425313187362,5051.293647444006,pending_transcript
+T-017,using Microsoft.AspNetCore.WebUtilities;,1398.425313187362,5076.293647444006,pending_transcript
+T-018,if (app.Environment.IsDevelopment()),1398.425313187362,5126.293647444006,pending_transcript
+T-019,{,1398.425313187362,5151.293647444006,pending_transcript
+T-020,app.UseDeveloperExceptionPage();,1398.425313187362,5176.293647444006,pending_transcript
+T-021,},1398.425313187362,5201.293647444006,pending_transcript
+T-022,else,1398.425313187362,5226.293647444006,pending_transcript
+T-023,{,1398.425313187362,5251.293647444006,pending_transcript
+T-024,app.UseExceptionHandler(errorApp =>,1398.425313187362,5276.293647444006,pending_transcript
+T-025,{,1398.425313187362,5301.293647444006,pending_transcript
+T-026,errorApp.Run(async context =>,1398.425313187362,5326.293647444006,pending_transcript
+T-027,{,1398.425313187362,5351.293647444006,pending_transcript
+T-028,"// If the response already started, we can't write our problem details",1398.425313187362,5376.293647444006,pending_transcript
+T-029,if (context.Response.HasStarted),1398.425313187362,5401.293647444006,pending_transcript
+T-030,{,1398.425313187362,5426.293647444006,pending_transcript
+T-031,return;,1398.425313187362,5451.293647444006,pending_transcript
+T-032,},1398.425313187362,5476.293647444006,pending_transcript
+T-033,var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();,1398.425313187362,5526.293647444006,pending_transcript
+T-034,var ex = exceptionHandlerFeature?.Error;,1398.425313187362,5551.293647444006,pending_transcript
+T-035,// Resolve ProblemDetailsFactory from DI,1398.425313187362,5601.293647444006,pending_transcript
+T-036,var problemDetailsFactory = context.RequestServices.GetRequiredService<ProblemDetailsFactory>();,1398.425313187362,5626.293647444006,pending_transcript
+T-037,// You can map exception types to status codes if you want,1398.425313187362,5676.293647444006,pending_transcript
+T-038,var statusCode = StatusCodes.Status500InternalServerError;,1398.425313187362,5701.293647444006,pending_transcript
+T-039,// Create ProblemDetails using the factory (consistent defaults),1398.425313187362,5751.293647444006,pending_transcript
+T-040,var problem = problemDetailsFactory.CreateProblemDetails(,1398.425313187362,5776.293647444006,pending_transcript
+T-041,"context,",1398.425313187362,5801.293647444006,pending_transcript
+T-042,"statusCode: statusCode,",1398.425313187362,5826.293647444006,pending_transcript
+T-043,"title: ""An unexpected error occurred."",",1398.425313187362,5851.293647444006,pending_transcript
+T-044,"type: ""https://httpstatuses.com/500"",",1398.425313187362,5876.293647444006,pending_transcript
+T-045,"detail: app.Environment.IsDevelopment() ? ex?.ToString() : null,",1398.425313187362,5901.293647444006,pending_transcript
+T-046,instance: context.Request.Path,1398.425313187362,5926.293647444006,pending_transcript
+T-047,);,1398.425313187362,5951.293647444006,pending_transcript
+T-048,// Optionally attach extra info (extensions),1398.425313187362,6001.293647444006,pending_transcript
+T-049,"problem.Extensions[""traceId""] = context.TraceIdentifier;",1398.425313187362,6026.293647444006,pending_transcript
+T-050,context.Response.Clear();,1398.425313187362,6076.293647444006,pending_transcript
+T-051,context.Response.StatusCode = statusCode;,1398.425313187362,6101.293647444006,pending_transcript
+T-052,"context.Response.ContentType = ""application/problem+json"";",1398.425313187362,6126.293647444006,pending_transcript
+T-053,await context.Response.WriteAsJsonAsync(problem);,1398.425313187362,6176.293647444006,pending_transcript
+T-054,});,1398.425313187362,6201.293647444006,pending_transcript
+T-055,});,1398.425313187362,6226.293647444006,pending_transcript
+T-056,},1398.425313187362,6251.293647444006,pending_transcript
+T-057,using Microsoft.AspNetCore.Mvc;,1246.1472195158958,8805.754796537956,pending_transcript
+T-058,using Microsoft.AspNetCore.Mvc.Filters;,1246.1472195158958,8830.754796537956,pending_transcript
+T-059,using Microsoft.Net.Http.Headers;,1246.1472195158958,8855.754796537956,pending_transcript
+T-060,[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)],1246.1472195158958,8905.754796537956,pending_transcript
+T-061,"public sealed class ValidateAcceptHeaderAttribute : Attribute, IAsyncActionFilter",1246.1472195158958,8930.754796537956,pending_transcript
+T-062,{,1246.1472195158958,8955.754796537956,pending_transcript
+T-063,"public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)",1246.1472195158958,8980.754796537956,pending_transcript
+T-064,{,1246.1472195158958,9005.754796537956,pending_transcript
+T-065,// No Accept header => treat as */* (valid). Let MVC pick default output.,1246.1472195158958,9030.754796537956,pending_transcript
+T-066,"if (!context.HttpContext.Request.Headers.TryGetValue(HeaderNames.Accept, out var acceptValues) ||",1246.1472195158958,9055.754796537956,pending_transcript
+T-067,string.IsNullOrWhiteSpace(acceptValues.ToString())),1246.1472195158958,9080.754796537956,pending_transcript
+T-068,{,1246.1472195158958,9105.754796537956,pending_transcript
+T-069,await next();,1246.1472195158958,9130.754796537956,pending_transcript
+T-070,return;,1246.1472195158958,9155.754796537956,pending_transcript
+T-071,},1246.1472195158958,9180.754796537956,pending_transcript
+T-072,// Accept can be a comma-separated list; TryParseList handles typical Accept syntax.,1246.1472195158958,9230.754796537956,pending_transcript
+T-073,"// If it's malformed (cannot be parsed), return 400 ProblemDetails.",1246.1472195158958,9255.754796537956,pending_transcript
+T-074,"if (!MediaTypeHeaderValue.TryParseList(acceptValues, out var parsed))",1246.1472195158958,9280.754796537956,pending_transcript
+T-075,{,1246.1472195158958,9305.754796537956,pending_transcript
+T-076,// Use ProblemDetailsFactory for consistent API error responses,1246.1472195158958,9330.754796537956,pending_transcript
+T-077,var pdf = context.HttpContext.RequestServices.GetRequiredService<ProblemDetailsFactory>();,1246.1472195158958,9355.754796537956,pending_transcript
+T-078,var problem = pdf.CreateProblemDetails(,1246.1472195158958,9405.754796537956,pending_transcript
+T-079,"context.HttpContext,",1246.1472195158958,9430.754796537956,pending_transcript
+T-080,"statusCode: StatusCodes.Status400BadRequest,",1246.1472195158958,9455.754796537956,pending_transcript
+T-081,"title: ""Invalid Accept header."",",1246.1472195158958,9480.754796537956,pending_transcript
+T-082,"detail: $""The '{HeaderNames.Accept}' header value is not a valid media type list."",",1246.1472195158958,9505.754796537956,pending_transcript
+T-083,"type: ""https://httpstatuses.com/400"",",1246.1472195158958,9530.754796537956,pending_transcript
+T-084,instance: context.HttpContext.Request.Path,1246.1472195158958,9555.754796537956,pending_transcript
+T-085,);,1246.1472195158958,9580.754796537956,pending_transcript
+T-086,context.Result = new BadRequestObjectResult(problem),1246.1472195158958,9630.754796537956,pending_transcript
+T-087,{,1246.1472195158958,9655.754796537956,pending_transcript
+T-088,"ContentTypes = { ""application/problem+json"" }",1246.1472195158958,9680.754796537956,pending_transcript
+T-089,};,1246.1472195158958,9705.754796537956,pending_transcript
+T-090,return;,1246.1472195158958,9730.754796537956,pending_transcript
+T-091,},1246.1472195158958,9755.754796537956,pending_transcript
+T-092,await next();,1246.1472195158958,9805.754796537956,pending_transcript
+T-093,},1246.1472195158958,9830.754796537956,pending_transcript
+T-094,},1246.1472195158958,9855.754796537956,pending_transcript
+T-095,OR,2582.6584069271075,16480.620788162094,pending_transcript
+T-096,IACTIONCONSTRAINT,3182.3320135353565,16435.71390549386,pending_transcript
+T-097,FROM COURSE WITH PLAIN IACTIONCONSTAINT ATTR,6070.67476006112,19463.9968252144,pending_transcript
+T-098,NEED TO VALIDATE,2511.9390295343774,19562.300224859606,pending_transcript
+T-099,INPUTTED BY DEVELOPER,2511.9390295343774,19587.300224859606,pending_transcript
+T-100,VALUES,2511.9390295343774,19612.300224859606,pending_transcript
+T-101,BUT NOT ONLY HEADERS MB,2929.1569276168348,21034.680057773967,pending_transcript
+T-102,WITH VALIDATION OF DEVELOPERS INPUT AND MULTIPLE CTORS,6244.728888852171,21055.19298042081,pending_transcript
+T-103,using Microsoft.AspNetCore.Mvc.ActionConstraints;,7233.081820744226,22287.112736469746,pending_transcript
+T-104,using Microsoft.Net.Http.Headers;,7233.081820744226,22312.112736469746,pending_transcript
+T-105,using Microsoft.Extensions.Primitives;,7233.081820744226,22337.112736469746,pending_transcript
+T-106,"[AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = true)]",7233.081820744226,22387.112736469746,pending_transcript
+T-107,"public sealed class RequestMatchesAttribute : Attribute, IActionConstraintFactory",7233.081820744226,22412.112736469746,pending_transcript
+T-108,{,7233.081820744226,22437.112736469746,pending_transcript
+T-109,// Lower runs earlier,7233.081820744226,22462.112736469746,pending_transcript
+T-110,public int Order { get; set; } = 0;,7233.081820744226,22487.112736469746,pending_transcript
+T-111,public bool IsReusable => true;,7233.081820744226,22537.112736469746,pending_transcript
+T-112,// Optional: match method,7233.081820744226,22587.112736469746,pending_transcript
+T-113,public string? HttpMethod { get; },7233.081820744226,22612.112736469746,pending_transcript
+T-114,// Optional: match a single header against allowed media types,7233.081820744226,22662.112736469746,pending_transcript
+T-115,// (Typical for Content-Type selection),7233.081820744226,22687.112736469746,pending_transcript
+T-116,public string? HeaderToMatch { get; },7233.081820744226,22712.112736469746,pending_transcript
+T-117,private readonly MediaTypeHeaderValue[]? _allowedHeaderMediaTypes;,7233.081820744226,22737.112736469746,pending_transcript
+T-118,// Optional: query string rules (presence or exact match),7233.081820744226,22787.112736469746,pending_transcript
+T-119,public string? RequiredQueryKey { get; },7233.081820744226,22812.112736469746,pending_transcript
+T-120,public string? RequiredQueryValue { get; },7233.081820744226,22837.112736469746,pending_transcript
+T-121,// Optional: route value rules,7233.081820744226,22887.112736469746,pending_transcript
+T-122,public string? RequiredRouteKey { get; },7233.081820744226,22912.112736469746,pending_transcript
+T-123,public string? RequiredRouteValue { get; },7233.081820744226,22937.112736469746,pending_transcript
+T-124,// Example ctor: match by Content-Type list,7233.081820744226,22987.112736469746,pending_transcript
+T-125,public RequestMatchesAttribute(,7233.081820744226,23012.112736469746,pending_transcript
+T-126,"string headerToMatch,",7233.081820744226,23037.112736469746,pending_transcript
+T-127,"string mediaType,",7233.081820744226,23062.112736469746,pending_transcript
+T-128,params string[] otherMediaTypes),7233.081820744226,23087.112736469746,pending_transcript
+T-129,{,7233.081820744226,23112.112736469746,pending_transcript
+T-130,if (string.IsNullOrWhiteSpace(headerToMatch)),7233.081820744226,23137.112736469746,pending_transcript
+T-131,throw new ArgumentNullException(nameof(headerToMatch));,7233.081820744226,23162.112736469746,pending_transcript
+T-132,HeaderToMatch = headerToMatch;,7233.081820744226,23212.112736469746,pending_transcript
+T-133,var all = new List<string> { mediaType };,7233.081820744226,23262.112736469746,pending_transcript
+T-134,if (otherMediaTypes is { Length: > 0 }),7233.081820744226,23287.112736469746,pending_transcript
+T-135,all.AddRange(otherMediaTypes);,7233.081820744226,23312.112736469746,pending_transcript
+T-136,_allowedHeaderMediaTypes = all.Select(mt =>,7233.081820744226,23362.112736469746,pending_transcript
+T-137,{,7233.081820744226,23387.112736469746,pending_transcript
+T-138,// Validate DEV-provided media type strings,7233.081820744226,23412.112736469746,pending_transcript
+T-139,"if (!MediaTypeHeaderValue.TryParse(mt, out var parsed))",7233.081820744226,23437.112736469746,pending_transcript
+T-140,"throw new ArgumentException($""Invalid media type configured: '{mt}'"", nameof(mediaType));",7233.081820744226,23462.112736469746,pending_transcript
+T-141,return parsed!;,7233.081820744226,23487.112736469746,pending_transcript
+T-142,}).ToArray();,7233.081820744226,23512.112736469746,pending_transcript
+T-143,},7233.081820744226,23537.112736469746,pending_transcript
+T-144,// Example ctor: match by query (presence or exact),7233.081820744226,23587.112736469746,pending_transcript
+T-145,"public RequestMatchesAttribute(string requiredQueryKey, string? requiredQueryValue = null, bool query = true)",7233.081820744226,23612.112736469746,pending_transcript
+T-146,{,7233.081820744226,23637.112736469746,pending_transcript
+T-147,"if (!query) throw new ArgumentException(""Use the query ctor overload."", nameof(query));",7233.081820744226,23662.112736469746,pending_transcript
+T-148,if (string.IsNullOrWhiteSpace(requiredQueryKey)),7233.081820744226,23687.112736469746,pending_transcript
+T-149,throw new ArgumentNullException(nameof(requiredQueryKey));,7233.081820744226,23712.112736469746,pending_transcript
+T-150,RequiredQueryKey = requiredQueryKey;,7233.081820744226,23762.112736469746,pending_transcript
+T-151,RequiredQueryValue = requiredQueryValue;,7233.081820744226,23787.112736469746,pending_transcript
+T-152,},7233.081820744226,23812.112736469746,pending_transcript
+T-153,// Example ctor: match by route value,7233.081820744226,23862.112736469746,pending_transcript
+T-154,"public RequestMatchesAttribute(string requiredRouteKey, string requiredRouteValue, bool route = true)",7233.081820744226,23887.112736469746,pending_transcript
+T-155,{,7233.081820744226,23912.112736469746,pending_transcript
+T-156,"if (!route) throw new ArgumentException(""Use the route ctor overload."", nameof(route));",7233.081820744226,23937.112736469746,pending_transcript
+T-157,if (string.IsNullOrWhiteSpace(requiredRouteKey)),7233.081820744226,23962.112736469746,pending_transcript
+T-158,throw new ArgumentNullException(nameof(requiredRouteKey));,7233.081820744226,23987.112736469746,pending_transcript
+T-159,if (string.IsNullOrWhiteSpace(requiredRouteValue)),7233.081820744226,24012.112736469746,pending_transcript
+T-160,throw new ArgumentNullException(nameof(requiredRouteValue));,7233.081820744226,24037.112736469746,pending_transcript
+T-161,RequiredRouteKey = requiredRouteKey;,7233.081820744226,24087.112736469746,pending_transcript
+T-162,RequiredRouteValue = requiredRouteValue;,7233.081820744226,24112.112736469746,pending_transcript
+T-163,},7233.081820744226,24137.112736469746,pending_transcript
+T-164,public IActionConstraint CreateInstance(IServiceProvider services),7233.081820744226,24187.112736469746,pending_transcript
+T-165,=> new RequestMatchesConstraint(,7233.081820744226,24212.112736469746,pending_transcript
+T-166,"order: Order,",7233.081820744226,24237.112736469746,pending_transcript
+T-167,"httpMethod: HttpMethod,",7233.081820744226,24262.112736469746,pending_transcript
+T-168,"headerToMatch: HeaderToMatch,",7233.081820744226,24287.112736469746,pending_transcript
+T-169,"allowedHeaderMediaTypes: _allowedHeaderMediaTypes,",7233.081820744226,24312.112736469746,pending_transcript
+T-170,"requiredQueryKey: RequiredQueryKey,",7233.081820744226,24337.112736469746,pending_transcript
+T-171,"requiredQueryValue: RequiredQueryValue,",7233.081820744226,24362.112736469746,pending_transcript
+T-172,"requiredRouteKey: RequiredRouteKey,",7233.081820744226,24387.112736469746,pending_transcript
+T-173,requiredRouteValue: RequiredRouteValue);,7233.081820744226,24412.112736469746,pending_transcript
+T-174,private sealed class RequestMatchesConstraint : IActionConstraint,7233.081820744226,24462.112736469746,pending_transcript
+T-175,{,7233.081820744226,24487.112736469746,pending_transcript
+T-176,private readonly int _order;,7233.081820744226,24512.112736469746,pending_transcript
+T-177,private readonly string? _httpMethod;,7233.081820744226,24537.112736469746,pending_transcript
+T-178,private readonly string? _headerToMatch;,7233.081820744226,24587.112736469746,pending_transcript
+T-179,private readonly MediaTypeHeaderValue[]? _allowedHeaderMediaTypes;,7233.081820744226,24612.112736469746,pending_transcript
+T-180,private readonly string? _requiredQueryKey;,7233.081820744226,24662.112736469746,pending_transcript
+T-181,private readonly string? _requiredQueryValue;,7233.081820744226,24687.112736469746,pending_transcript
+T-182,private readonly string? _requiredRouteKey;,7233.081820744226,24737.112736469746,pending_transcript
+T-183,private readonly string? _requiredRouteValue;,7233.081820744226,24762.112736469746,pending_transcript
+T-184,public RequestMatchesConstraint(,7233.081820744226,24812.112736469746,pending_transcript
+T-185,"int order,",7233.081820744226,24837.112736469746,pending_transcript
+T-186,"string? httpMethod,",7233.081820744226,24862.112736469746,pending_transcript
+T-187,"string? headerToMatch,",7233.081820744226,24887.112736469746,pending_transcript
+T-188,"MediaTypeHeaderValue[]? allowedHeaderMediaTypes,",7233.081820744226,24912.112736469746,pending_transcript
+T-189,"string? requiredQueryKey,",7233.081820744226,24937.112736469746,pending_transcript
+T-190,"string? requiredQueryValue,",7233.081820744226,24962.112736469746,pending_transcript
+T-191,"string? requiredRouteKey,",7233.081820744226,24987.112736469746,pending_transcript
+T-192,string? requiredRouteValue),7233.081820744226,25012.112736469746,pending_transcript
+T-193,{,7233.081820744226,25037.112736469746,pending_transcript
+T-194,_order = order;,7233.081820744226,25062.112736469746,pending_transcript
+T-195,_httpMethod = httpMethod;,7233.081820744226,25087.112736469746,pending_transcript
+T-196,_headerToMatch = headerToMatch;,7233.081820744226,25112.112736469746,pending_transcript
+T-197,_allowedHeaderMediaTypes = allowedHeaderMediaTypes;,7233.081820744226,25137.112736469746,pending_transcript
+T-198,_requiredQueryKey = requiredQueryKey;,7233.081820744226,25162.112736469746,pending_transcript
+T-199,_requiredQueryValue = requiredQueryValue;,7233.081820744226,25187.112736469746,pending_transcript
+T-200,_requiredRouteKey = requiredRouteKey;,7233.081820744226,25212.112736469746,pending_transcript
+T-201,_requiredRouteValue = requiredRouteValue;,7233.081820744226,25237.112736469746,pending_transcript
+T-202,},7233.081820744226,25262.112736469746,pending_transcript
+T-203,public int Order => _order;,7233.081820744226,25312.112736469746,pending_transcript
+T-204,public bool Accept(ActionConstraintContext context),7233.081820744226,25362.112736469746,pending_transcript
+T-205,{,7233.081820744226,25387.112736469746,pending_transcript
+T-206,var http = context.RouteContext.HttpContext;,7233.081820744226,25412.112736469746,pending_transcript
+T-207,var req = http.Request;,7233.081820744226,25437.112736469746,pending_transcript
+T-208,// Method (optional),7233.081820744226,25487.112736469746,pending_transcript
+T-209,if (!string.IsNullOrWhiteSpace(_httpMethod) &&,7233.081820744226,25512.112736469746,pending_transcript
+T-210,"!HttpMethods.IsMethod(req.Method, _httpMethod))",7233.081820744226,25537.112736469746,pending_transcript
+T-211,{,7233.081820744226,25562.112736469746,pending_transcript
+T-212,return false;,7233.081820744226,25587.112736469746,pending_transcript
+T-213,},7233.081820744226,25612.112736469746,pending_transcript
+T-214,// Route rule (optional),7233.081820744226,25662.112736469746,pending_transcript
+T-215,if (_requiredRouteKey != null),7233.081820744226,25687.112736469746,pending_transcript
+T-216,{,7233.081820744226,25712.112736469746,pending_transcript
+T-217,"if (!context.RouteContext.RouteData.Values.TryGetValue(_requiredRouteKey, out var obj))",7233.081820744226,25737.112736469746,pending_transcript
+T-218,return false;,7233.081820744226,25762.112736469746,pending_transcript
+T-219,var actual = Convert.ToString(obj);,7233.081820744226,25812.112736469746,pending_transcript
+T-220,"if (!string.Equals(actual, _requiredRouteValue, StringComparison.OrdinalIgnoreCase))",7233.081820744226,25837.112736469746,pending_transcript
+T-221,return false;,7233.081820744226,25862.112736469746,pending_transcript
+T-222,},7233.081820744226,25887.112736469746,pending_transcript
+T-223,// Query rule (optional),7233.081820744226,25937.112736469746,pending_transcript
+T-224,if (_requiredQueryKey != null),7233.081820744226,25962.112736469746,pending_transcript
+T-225,{,7233.081820744226,25987.112736469746,pending_transcript
+T-226,"if (!req.Query.TryGetValue(_requiredQueryKey, out var values))",7233.081820744226,26012.112736469746,pending_transcript
+T-227,return false;,7233.081820744226,26037.112736469746,pending_transcript
+T-228,"if (_requiredQueryValue != null && !AnyEquals(values, _requiredQueryValue))",7233.081820744226,26087.112736469746,pending_transcript
+T-229,return false;,7233.081820744226,26112.112736469746,pending_transcript
+T-230,},7233.081820744226,26137.112736469746,pending_transcript
+T-231,// Header media type rule (optional),7233.081820744226,26187.112736469746,pending_transcript
+T-232,if (_headerToMatch != null && _allowedHeaderMediaTypes != null),7233.081820744226,26212.112736469746,pending_transcript
+T-233,{,7233.081820744226,26237.112736469746,pending_transcript
+T-234,"if (!req.Headers.TryGetValue(_headerToMatch, out var raw))",7233.081820744226,26262.112736469746,pending_transcript
+T-235,return false;,7233.081820744226,26287.112736469746,pending_transcript
+T-236,// IMPORTANT: client header might be malformed -> don't throw,7233.081820744226,26337.112736469746,pending_transcript
+T-237,"if (!MediaTypeHeaderValue.TryParse(raw.ToString(), out var parsedRequest))",7233.081820744226,26362.112736469746,pending_transcript
+T-238,return false;,7233.081820744226,26387.112736469746,pending_transcript
+T-239,var requestMediaType = parsedRequest!.MediaType?.Value;,7233.081820744226,26437.112736469746,pending_transcript
+T-240,if (string.IsNullOrWhiteSpace(requestMediaType)),7233.081820744226,26462.112736469746,pending_transcript
+T-241,return false;,7233.081820744226,26487.112736469746,pending_transcript
+T-242,foreach (var allowed in _allowedHeaderMediaTypes),7233.081820744226,26537.112736469746,pending_transcript
+T-243,{,7233.081820744226,26562.112736469746,pending_transcript
+T-244,"if (string.Equals(requestMediaType, allowed.MediaType?.Value, StringComparison.OrdinalIgnoreCase))",7233.081820744226,26587.112736469746,pending_transcript
+T-245,return true;,7233.081820744226,26612.112736469746,pending_transcript
+T-246,},7233.081820744226,26637.112736469746,pending_transcript
+T-247,return false;,7233.081820744226,26687.112736469746,pending_transcript
+T-248,},7233.081820744226,26712.112736469746,pending_transcript
+T-249,"// If no header rule configured, and other configured rules passed, accept.",7233.081820744226,26762.112736469746,pending_transcript
+T-250,return true;,7233.081820744226,26787.112736469746,pending_transcript
+T-251,},7233.081820744226,26812.112736469746,pending_transcript
+T-252,"private static bool AnyEquals(StringValues values, string expected)",7233.081820744226,26862.112736469746,pending_transcript
+T-253,{,7233.081820744226,26887.112736469746,pending_transcript
+T-254,foreach (var v in values),7233.081820744226,26912.112736469746,pending_transcript
+T-255,{,7233.081820744226,26937.112736469746,pending_transcript
+T-256,"if (string.Equals(v, expected, StringComparison.OrdinalIgnoreCase))",7233.081820744226,26962.112736469746,pending_transcript
+T-257,return true;,7233.081820744226,26987.112736469746,pending_transcript
+T-258,},7233.081820744226,27012.112736469746,pending_transcript
+T-259,return false;,7233.081820744226,27037.112736469746,pending_transcript
+T-260,},7233.081820744226,27062.112736469746,pending_transcript
+T-261,},7233.081820744226,27087.112736469746,pending_transcript
+T-262,},7233.081820744226,27112.112736469746,pending_transcript
+T-263,CAN SPLIT OUR ACTION THAT PRODUCES 4 DIFFERENT VARIANTS(APPJSON/HATEMARVIN,1296.2678594167883,25806.154264224333,pending_transcript
+T-264,= FRENDLYJSON/FRENDLYHATE),1296.2678594167883,25832.416511518462,pending_transcript
+T-265,CAN CHECK REQUESTS FOR INVALID CONTENT-TYPE HEADER WITH MIDDLEWARE,2647.2425358630553,9976.476539179559,pending_transcript
+T-266,can framework handle this by itslef?,1851.0521759300195,10474.167967750987,pending_transcript
+T-267,checking that there is a,576.3856720237695,11756.834471657237,pending_transcript
+T-268,body,576.3856720237695,11896.120185942951,pending_transcript
+T-269,transfer encoding with chunked,576.3856720237695,12035.405900228667,pending_transcript
+T-270,transfer,576.3856720237695,12174.69161451438,pending_transcript
+T-271,middleware,2578.6078603375718,12065.723326637706,pending_transcript
+T-272,BETTER:MULTIPLE ACCEPT HEADER VALUES WITH,3836.9438552948977,8116.412984187111,pending_transcript
+T-273,QS PREFERENCE,3836.9438552948977,8190.301900202736,pending_transcript
+T-274,CONSUMES,1491.8668876055299,16344.308198852137,pending_transcript
+T-275,CONTENT TYPE CHECK MIDDLEWARE,2203.2419667919316,9855.755029507463,pending_transcript
+T-276,ACCEPT HEADER CHECK,2248.4341121133803,7087.466906847443,pending_transcript
+T-277,EXCEPTIONHANDLER MIVVLEWARE,1963.8880510232011,4826.7154550004225,pending_transcript
+T-278,!!!,10501.69539004431,11968.53125803354,pending_transcript
+T-279,in controller,8111.947241629983,13633.828420554913,pending_transcript
+T-280,using Microsoft.Net.Http.Headers;,6469.199403087175,8659.676460481527,pending_transcript
+T-281,using Microsoft.Extensions.Primitives;,6469.199403087175,8684.676460481527,pending_transcript
+T-282,public static class AcceptHeaderSelectionHelper,6469.199403087175,8734.676460481527,pending_transcript
+T-283,{,6469.199403087175,8759.676460481527,pending_transcript
+T-284,// Define server preference order (first = most preferred when q ties),6469.199403087175,8784.676460481527,pending_transcript
+T-285,// Put the variants you support here in the exact preference order you want.,6469.199403087175,8809.676460481527,pending_transcript
+T-286,private static readonly string[] SupportedByPreference =,6469.199403087175,8834.676460481527,pending_transcript
+T-287,{,6469.199403087175,8859.676460481527,pending_transcript
+T-288,"""application/vnd.marvin.author.full.hateoas+json"",",6469.199403087175,8884.676460481527,pending_transcript
+T-289,"""application/vnd.marvin.author.full+json"",",6469.199403087175,8909.676460481527,pending_transcript
+T-290,"""application/vnd.marvin.author.friendly.hateoas+json"",",6469.199403087175,8934.676460481527,pending_transcript
+T-291,"""application/vnd.marvin.author.friendly+json"",",6469.199403087175,8959.676460481527,pending_transcript
+T-292,"""application/json"",",6469.199403087175,8984.676460481527,pending_transcript
+T-293,"""application/*"",",6469.199403087175,9009.676460481527,pending_transcript
+T-294,"""*/*""",6469.199403087175,9034.676460481527,pending_transcript
+T-295,};,6469.199403087175,9059.676460481527,pending_transcript
+T-296,public sealed record NegotiationResult(,6469.199403087175,9109.676460481527,pending_transcript
+T-297,"string MediaType,",6469.199403087175,9134.676460481527,pending_transcript
+T-298,"string PrimaryMediaType,  // e.g. vnd.marvin.author.full / vnd.marvin.author.friendly / application",6469.199403087175,9159.676460481527,pending_transcript
+T-299,bool IncludeLinks          // true if hateoas requested,6469.199403087175,9184.676460481527,pending_transcript
+T-300,);,6469.199403087175,9209.676460481527,pending_transcript
+T-301,/// <summary>,6469.199403087175,9259.676460481527,pending_transcript
+T-302,/// Picks the best matching media type from Accept header using:,6469.199403087175,9284.676460481527,pending_transcript
+T-303,/// 1) q weight (descending),6469.199403087175,9309.676460481527,pending_transcript
+T-304,/// 2) specificity (exact > type/* > */*),6469.199403087175,9334.676460481527,pending_transcript
+T-305,/// 3) server preference order (SupportedByPreference),6469.199403087175,9359.676460481527,pending_transcript
+T-306,/// 4) header order as a final tie-breaker (stable by index),6469.199403087175,9384.676460481527,pending_transcript
+T-307,/// </summary>,6469.199403087175,9409.676460481527,pending_transcript
+T-308,public static bool TrySelect(,6469.199403087175,9434.676460481527,pending_transcript
+T-309,"StringValues acceptHeader,",6469.199403087175,9459.676460481527,pending_transcript
+T-310,out NegotiationResult? result),6469.199403087175,9484.676460481527,pending_transcript
+T-311,{,6469.199403087175,9509.676460481527,pending_transcript
+T-312,result = null;,6469.199403087175,9534.676460481527,pending_transcript
+T-313,// Missing Accept => treat as */* (client accepts anything),6469.199403087175,9584.676460481527,pending_transcript
+T-314,if (StringValues.IsNullOrEmpty(acceptHeader)),6469.199403087175,9609.676460481527,pending_transcript
+T-315,{,6469.199403087175,9634.676460481527,pending_transcript
+T-316,// choose your default representation here,6469.199403087175,9659.676460481527,pending_transcript
+T-317,"var defaultMt = ""application/vnd.marvin.author.friendly+json"";",6469.199403087175,9684.676460481525,pending_transcript
+T-318,result = BuildResult(defaultMt);,6469.199403087175,9709.676460481525,pending_transcript
+T-319,return true;,6469.199403087175,9734.676460481525,pending_transcript
+T-320,},6469.199403087175,9759.676460481525,pending_transcript
+T-321,"if (!MediaTypeHeaderValue.TryParseList(acceptHeader, out var parsedList))",6469.199403087175,9809.676460481525,pending_transcript
+T-322,{,6469.199403087175,9834.676460481525,pending_transcript
+T-323,return false; // invalid syntax -> caller should return 400 ProblemDetails,6469.199403087175,9859.676460481525,pending_transcript
+T-324,},6469.199403087175,9884.676460481525,pending_transcript
+T-325,// Build candidates from Accept values,6469.199403087175,9934.676460481525,pending_transcript
+T-326,var candidates = parsedList,6469.199403087175,9959.676460481525,pending_transcript
+T-327,".Select((mt, index) => new Candidate(mt, index))",6469.199403087175,9984.676460481525,pending_transcript
+T-328,".Where(c => c.Q > 0) // q=0 means ""not acceptable""",6469.199403087175,10009.676460481525,pending_transcript
+T-329,.ToList();,6469.199403087175,10034.676460481525,pending_transcript
+T-330,if (candidates.Count == 0),6469.199403087175,10084.676460481525,pending_transcript
+T-331,{,6469.199403087175,10109.676460481525,pending_transcript
+T-332,return false;,6469.199403087175,10134.676460481525,pending_transcript
+T-333,},6469.199403087175,10159.676460481525,pending_transcript
+T-334,"// For each Accept candidate, find best supported match based on:",6469.199403087175,10209.676460481525,pending_transcript
+T-335,// - exact match in SupportedByPreference,6469.199403087175,10234.676460481525,pending_transcript
+T-336,"// - or ""application/*"" / ""*/*"" wildcard",6469.199403087175,10259.676460481525,pending_transcript
+T-337,var supportedMatches = new List<SupportedMatch>();,6469.199403087175,10284.676460481525,pending_transcript
+T-338,foreach (var c in candidates),6469.199403087175,10334.676460481525,pending_transcript
+T-339,{,6469.199403087175,10359.676460481525,pending_transcript
+T-340,foreach (var supported in SupportedByPreference),6469.199403087175,10384.676460481525,pending_transcript
+T-341,{,6469.199403087175,10409.676460481525,pending_transcript
+T-342,"if (Matches(c, supported))",6469.199403087175,10434.676460481525,pending_transcript
+T-343,{,6469.199403087175,10459.676460481525,pending_transcript
+T-344,supportedMatches.Add(new SupportedMatch(,6469.199403087175,10484.676460481525,pending_transcript
+T-345,"supportedMediaType: Normalize(supported),",6469.199403087175,10509.676460481525,pending_transcript
+T-346,"q: c.Q,",6469.199403087175,10534.676460481525,pending_transcript
+T-347,"specificity: c.Specificity,",6469.199403087175,10559.676460481525,pending_transcript
+T-348,"supportedPreferenceRank: Array.IndexOf(SupportedByPreference, supported),",6469.199403087175,10584.676460481525,pending_transcript
+T-349,acceptHeaderIndex: c.Index));,6469.199403087175,10609.676460481525,pending_transcript
+T-350,},6469.199403087175,10634.676460481525,pending_transcript
+T-351,},6469.199403087175,10659.676460481525,pending_transcript
+T-352,},6469.199403087175,10684.676460481525,pending_transcript
+T-353,if (supportedMatches.Count == 0),6469.199403087175,10734.676460481525,pending_transcript
+T-354,{,6469.199403087175,10759.676460481525,pending_transcript
+T-355,// No overlap between Accept and what we can produce -> 406 scenario,6469.199403087175,10784.676460481525,pending_transcript
+T-356,return false;,6469.199403087175,10809.676460481525,pending_transcript
+T-357,},6469.199403087175,10834.676460481525,pending_transcript
+T-358,var winner = supportedMatches,6469.199403087175,10884.676460481525,pending_transcript
+T-359,.OrderByDescending(m => m.Q),6469.199403087175,10909.676460481525,pending_transcript
+T-360,.ThenByDescending(m => m.Specificity),6469.199403087175,10934.676460481525,pending_transcript
+T-361,.ThenBy(m => m.SupportedPreferenceRank),6469.199403087175,10959.676460481525,pending_transcript
+T-362,.ThenBy(m => m.AcceptHeaderIndex),6469.199403087175,10984.676460481525,pending_transcript
+T-363,.First();,6469.199403087175,11009.676460481525,pending_transcript
+T-364,result = BuildResult(winner.SupportedMediaType);,6469.199403087175,11059.676460481525,pending_transcript
+T-365,return true;,6469.199403087175,11084.676460481525,pending_transcript
+T-366,},6469.199403087175,11109.676460481525,pending_transcript
+T-367,private static NegotiationResult BuildResult(string mediaType),6469.199403087175,11159.676460481525,pending_transcript
+T-368,{,6469.199403087175,11184.676460481525,pending_transcript
+T-369,"// your course logic: include links if subtype ends with ""hateoas""",6469.199403087175,11209.676460481525,pending_transcript
+T-370,"var includeLinks = mediaType.Contains(""hateoas"", StringComparison.OrdinalIgnoreCase);",6469.199403087175,11234.676460481525,pending_transcript
+T-371,"// derive ""primary"" type similar to course:",6469.199403087175,11284.676460481525,pending_transcript
+T-372,// application/vnd.marvin.author.full.hateoas+json -> vnd.marvin.author.full,6469.199403087175,11309.676460481525,pending_transcript
+T-373,// application/vnd.marvin.author.friendly+json -> vnd.marvin.author.friendly,6469.199403087175,11334.676460481525,pending_transcript
+T-374,// application/json -> application,6469.199403087175,11359.676460481525,pending_transcript
+T-375,var parsed = MediaTypeHeaderValue.Parse(mediaType);,6469.199403087175,11384.676460481525,pending_transcript
+T-376,var subType = parsed.SubTypeWithoutSuffix.Value; // e.g. vnd.marvin.author.full.hateoas or json,6469.199403087175,11409.676460481525,pending_transcript
+T-377,"var primary = subType.EndsWith("".hateoas"", StringComparison.OrdinalIgnoreCase)",6469.199403087175,11434.676460481525,pending_transcript
+T-378,"? subType[..^("".hateoas"".Length)]",6469.199403087175,11459.676460481525,pending_transcript
+T-379,: subType;,6469.199403087175,11484.676460481525,pending_transcript
+T-380,"return new NegotiationResult(mediaType, primary, includeLinks);",6469.199403087175,11534.676460481525,pending_transcript
+T-381,},6469.199403087175,11559.676460481525,pending_transcript
+T-382,private static string Normalize(string mediaType) => mediaType.Trim();,6469.199403087175,11609.676460481525,pending_transcript
+T-383,"private sealed record Candidate(MediaTypeHeaderValue Value, int Index)",6469.199403087175,11659.676460481525,pending_transcript
+T-384,{,6469.199403087175,11684.676460481525,pending_transcript
+T-385,public double Q,6469.199403087175,11709.676460481525,pending_transcript
+T-386,{,6469.199403087175,11734.676460481525,pending_transcript
+T-387,get,6469.199403087175,11759.676460481525,pending_transcript
+T-388,{,6469.199403087175,11784.676460481525,pending_transcript
+T-389,// If q is absent => 1.0,6469.199403087175,11809.676460481525,pending_transcript
+T-390,var qParam = Value.Parameters.FirstOrDefault(p =>,6469.199403087175,11834.676460481525,pending_transcript
+T-391,"string.Equals(p.Name.Value, ""q"", StringComparison.OrdinalIgnoreCase));",6469.199403087175,11859.676460481525,pending_transcript
+T-392,if (qParam?.Value is null) return 1.0;,6469.199403087175,11909.676460481525,pending_transcript
+T-393,"// q is a StringSegment like ""0.9""",6469.199403087175,11959.676460481525,pending_transcript
+T-394,"if (double.TryParse(qParam.Value.Value, System.Globalization.NumberStyles.AllowDecimalPoint,",6469.199403087175,11984.676460481525,pending_transcript
+T-395,"System.Globalization.CultureInfo.InvariantCulture, out var q))",6469.199403087175,12009.676460481525,pending_transcript
+T-396,{,6469.199403087175,12034.676460481525,pending_transcript
+T-397,return q;,6469.199403087175,12059.676460481525,pending_transcript
+T-398,},6469.199403087175,12084.676460481525,pending_transcript
+T-399,// Malformed q -> treat as invalid by making it unacceptable,6469.199403087175,12134.676460481525,pending_transcript
+T-400,return 0;,6469.199403087175,12159.676460481525,pending_transcript
+T-401,},6469.199403087175,12184.676460481525,pending_transcript
+T-402,},6469.199403087175,12209.676460481525,pending_transcript
+T-403,"// exact = 2, type/* = 1, */* = 0",6469.199403087175,12259.676460481525,pending_transcript
+T-404,public int Specificity =>,6469.199403087175,12284.676460481525,pending_transcript
+T-405,"Value.MediaType?.Value == ""*/*"" ? 0 :",6469.199403087175,12309.676460481525,pending_transcript
+T-406,"Value.SubType?.Value == ""*"" ? 1 :",6469.199403087175,12334.676460481525,pending_transcript
+T-407,2;,6469.199403087175,12359.676460481525,pending_transcript
+T-408,},6469.199403087175,12384.676460481525,pending_transcript
+T-409,private sealed record SupportedMatch(,6469.199403087175,12434.676460481525,pending_transcript
+T-410,"string SupportedMediaType,",6469.199403087175,12459.676460481525,pending_transcript
+T-411,"double Q,",6469.199403087175,12484.676460481525,pending_transcript
+T-412,"int Specificity,",6469.199403087175,12509.676460481525,pending_transcript
+T-413,"int SupportedPreferenceRank,",6469.199403087175,12534.676460481525,pending_transcript
+T-414,int AcceptHeaderIndex);,6469.199403087175,12559.676460481525,pending_transcript
+T-415,"private static bool Matches(Candidate accept, string supported)",6469.199403087175,12609.676460481525,pending_transcript
+T-416,{,6469.199403087175,12634.676460481525,pending_transcript
+T-417,supported = Normalize(supported);,6469.199403087175,12659.676460481525,pending_transcript
+T-418,// wildcard supported entries are just there for preference list;,6469.199403087175,12709.676460481525,pending_transcript
+T-419,// treat them as matching in the obvious way.,6469.199403087175,12734.676460481525,pending_transcript
+T-420,"if (supported == ""*/*"")",6469.199403087175,12759.676460481525,pending_transcript
+T-421,return true;,6469.199403087175,12784.676460481525,pending_transcript
+T-422,// Parse supported into type/subtype,6469.199403087175,12834.676460481525,pending_transcript
+T-423,"if (!MediaTypeHeaderValue.TryParse(supported, out var supportedMt))",6469.199403087175,12859.676460481525,pending_transcript
+T-424,{,6469.199403087175,12884.676460481525,pending_transcript
+T-425,// developer error; should never happen because SupportedByPreference is ours,6469.199403087175,12909.676460481525,pending_transcript
+T-426,return false;,6469.199403087175,12934.676460481525,pending_transcript
+T-427,},6469.199403087175,12959.676460481525,pending_transcript
+T-428,// If accept is */* it matches anything,6469.199403087175,13009.676460481525,pending_transcript
+T-429,"if (accept.Value.MediaType?.Value == ""*/*"")",6469.199403087175,13034.676460481525,pending_transcript
+T-430,return true;,6469.199403087175,13059.676460481525,pending_transcript
+T-431,// If accept is type/* it matches any subtype for that type,6469.199403087175,13109.676460481525,pending_transcript
+T-432,"if (accept.Value.SubType?.Value == ""*"")",6469.199403087175,13134.676460481525,pending_transcript
+T-433,{,6469.199403087175,13159.676460481525,pending_transcript
+T-434,return string.Equals(,6469.199403087175,13184.676460481525,pending_transcript
+T-435,"accept.Value.Type?.Value,",6469.199403087175,13209.676460481525,pending_transcript
+T-436,"supportedMt!.Type?.Value,",6469.199403087175,13234.676460481525,pending_transcript
+T-437,StringComparison.OrdinalIgnoreCase);,6469.199403087175,13259.676460481525,pending_transcript
+T-438,},6469.199403087175,13284.676460481525,pending_transcript
+T-439,// Otherwise exact compare by media type (ignore parameters),6469.199403087175,13334.676460481525,pending_transcript
+T-440,return string.Equals(,6469.199403087175,13359.676460481525,pending_transcript
+T-441,"accept.Value.MediaType?.Value,",6469.199403087175,13384.676460481525,pending_transcript
+T-442,"supportedMt!.MediaType?.Value,",6469.199403087175,13409.676460481525,pending_transcript
+T-443,StringComparison.OrdinalIgnoreCase);,6469.199403087175,13434.676460481525,pending_transcript
+T-444,},6469.199403087175,13459.676460481525,pending_transcript
+T-445,},6469.199403087175,13484.676460481525,pending_transcript
+T-446,using Microsoft.AspNetCore.Mvc;,6538.38377689961,13718.437280071395,pending_transcript
+T-447,[ApiController],6538.38377689961,13768.437280071395,pending_transcript
+T-448,"[Route(""api/authors"")]",6538.38377689961,13793.437280071395,pending_transcript
+T-449,public class AuthorsController : ControllerBase,6538.38377689961,13818.437280071395,pending_transcript
+T-450,{,6538.38377689961,13843.437280071395,pending_transcript
+T-451,"[HttpGet(""{authorId}"")]",6538.38377689961,13868.437280071395,pending_transcript
+T-452,"public IActionResult GetAuthor(Guid authorId, [FromHeader(Name = ""Accept"")] string? accept)",6538.38377689961,13893.437280071395,pending_transcript
+T-453,{,6538.38377689961,13918.437280071395,pending_transcript
+T-454,"if (!AcceptHeaderSelectionHelper.TrySelect(accept, out var selected))",6538.38377689961,13943.437280071395,pending_transcript
+T-455,{,6538.38377689961,13968.437280071395,pending_transcript
+T-456,// Could be invalid Accept syntax (400) OR no supported match (406).,6538.38377689961,13993.437280071395,pending_transcript
+T-457,"// If you want to distinguish, check TryParseList separately.",6538.38377689961,14018.437280071395,pending_transcript
+T-458,return StatusCode(StatusCodes.Status406NotAcceptable);,6538.38377689961,14043.437280071395,pending_transcript
+T-459,},6538.38377689961,14068.437280071395,pending_transcript
+T-460,// selected.IncludeLinks -> add HATEOAS,6538.38377689961,14118.437280071395,pending_transcript
+T-461,"// selected.PrimaryMediaType -> ""vnd.marvin.author.full"" / ""vnd.marvin.author.friendly""",6538.38377689961,14143.437280071395,pending_transcript
+T-462,"if (string.Equals(selected!.PrimaryMediaType, ""vnd.marvin.author.full"", StringComparison.OrdinalIgnoreCase))",6538.38377689961,14168.437280071395,pending_transcript
+T-463,{,6538.38377689961,14193.437280071395,pending_transcript
+T-464,// build full representation,6538.38377689961,14218.437280071395,pending_transcript
+T-465,"return Ok(new { kind = ""full"", links = selected.IncludeLinks });",6538.38377689961,14243.437280071395,pending_transcript
+T-466,},6538.38377689961,14268.437280071395,pending_transcript
+T-467,// build friendly representation,6538.38377689961,14318.437280071395,pending_transcript
+T-468,"return Ok(new { kind = ""friendly"", links = selected.IncludeLinks });",6538.38377689961,14343.437280071395,pending_transcript
+T-469,},6538.38377689961,14368.437280071395,pending_transcript
+T-470,},6538.38377689961,14393.437280071395,pending_transcript
+T-471,better,3021.5929850087227,13934.051216200307,pending_transcript
+T-472,ADD STATUSCODEPAGES FOR 406/415 ETC,2057.093399244739,3028.015910960945,pending_transcript
+T-473,OR,3682.9576325838707,3057.91992496788,pending_transcript
+T-474,CREATE SOME ENDPOINTS FOR STATUS CODES,4040.327585264037,3057.1251171795852,pending_transcript
+T-475,can add check for status code and add more info about,4033.236679940236,4012.2506447043133,pending_transcript
+T-476,the initial path and what client does need to do,4033.236679940236,4037.2506447043133,pending_transcript
+T-477,(406 check accept 415 check content tyep),4033.236679940236,4062.2506447043133,pending_transcript
+T-478,cant add the exact,3421.520195937407,4090.263173144337,pending_transcript
+T-479,reason to problem,3421.520195937407,4115.263173144337,pending_transcript
+T-480,but can add useful details,3421.520195937407,4140.263173144337,pending_transcript
+T-481,using Microsoft.AspNetCore.Mvc;,1398.1439906894511,2991.970773917272,pending_transcript
+T-482,using Microsoft.AspNetCore.WebUtilities;,1398.1439906894511,3011.107320102011,pending_transcript
+T-483,var builder = WebApplication.CreateBuilder(args);,1398.1439906894511,3049.3804124714884,pending_transcript
+T-484,// MVC (or minimal APIs + services),1398.1439906894511,3087.6535048409664,pending_transcript
+T-485,builder.Services.AddControllers();,1398.1439906894511,3106.7900510257055,pending_transcript
+T-486,// ProblemDetails infrastructure,1398.1439906894511,3145.063143395183,pending_transcript
+T-487,builder.Services.AddProblemDetails();,1398.1439906894511,3164.199689579922,pending_transcript
+T-488,var app = builder.Build();,1398.1439906894511,3202.4727819494,pending_transcript
+T-489,app.UseRouting();,1398.1439906894511,3240.745874318878,pending_transcript
+T-490,app.UseWhen(,1398.1439906894511,3279.0189666883557,pending_transcript
+T-491,"ctx => ctx.Request.Path.StartsWithSegments(""/api""),",1398.1439906894511,3298.1555128730947,pending_transcript
+T-492,apiApp =>,1398.1439906894511,3317.2920590578337,pending_transcript
+T-493,{,1398.1439906894511,3336.4286052425728,pending_transcript
+T-494,apiApp.UseStatusCodePages(async statusCodeContext =>,1398.1439906894511,3355.565151427312,pending_transcript
+T-495,{,1398.1439906894511,3374.701697612051,pending_transcript
+T-496,var http = statusCodeContext.HttpContext;,1398.1439906894511,3393.8382437967894,pending_transcript
+T-497,"// If headers/body already started, can't write a body safely",1398.1439906894511,3432.1113361662674,pending_transcript
+T-498,if (http.Response.HasStarted),1398.1439906894511,3451.2478823510064,pending_transcript
+T-499,return;,1398.1439906894511,3470.3844285357454,pending_transcript
+T-500,var code = http.Response.StatusCode;,1398.1439906894511,3508.6575209052235,pending_transcript
+T-501,// Only handle selected status codes,1398.1439906894511,3546.930613274701,pending_transcript
+T-502,if (code is not (,1398.1439906894511,3566.06715945944,pending_transcript
+T-503,StatusCodes.Status404NotFound or,1398.1439906894511,3585.203705644179,pending_transcript
+T-504,StatusCodes.Status405MethodNotAllowed or,1398.1439906894511,3604.340251828918,pending_transcript
+T-505,StatusCodes.Status406NotAcceptable or,1398.1439906894511,3623.4767980136567,pending_transcript
+T-506,StatusCodes.Status415UnsupportedMediaType)),1398.1439906894511,3642.6133441983957,pending_transcript
+T-507,{,1398.1439906894511,3661.7498903831347,pending_transcript
+T-508,return;,1398.1439906894511,3680.8864365678737,pending_transcript
+T-509,},1398.1439906894511,3700.0229827526127,pending_transcript
+T-510,var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();,1398.1439906894511,3738.2960751220908,pending_transcript
+T-511,var pdService = http.RequestServices.GetRequiredService<IProblemDetailsService>();,1398.1439906894511,3757.43262130683,pending_transcript
+T-512,var detail = code switch,1398.1439906894511,3795.7057136763074,pending_transcript
+T-513,{,1398.1439906894511,3814.8422598610464,pending_transcript
+T-514,StatusCodes.Status404NotFound =>,1398.1439906894511,3833.9788060457854,pending_transcript
+T-515,"""Endpoint not found."",",1398.1439906894511,3853.1153522305244,pending_transcript
+T-516,StatusCodes.Status405MethodNotAllowed =>,1398.1439906894511,3872.251898415263,pending_transcript
+T-517,"""HTTP method not allowed for this endpoint."",",1398.1439906894511,3891.388444600002,pending_transcript
+T-518,StatusCodes.Status406NotAcceptable =>,1398.1439906894511,3910.524990784741,pending_transcript
+T-519,"""The requested response media type is not acceptable. Check the Accept header."",",1398.1439906894511,3929.66153696948,pending_transcript
+T-520,StatusCodes.Status415UnsupportedMediaType =>,1398.1439906894511,3948.798083154219,pending_transcript
+T-521,"""The request media type is unsupported. Check the Content-Type header."",",1398.1439906894511,3967.934629338958,pending_transcript
+T-522,_ => null,1398.1439906894511,3987.071175523697,pending_transcript
+T-523,};,1398.1439906894511,4006.207721708436,pending_transcript
+T-524,var pd = factory.CreateProblemDetails(,1398.1439906894511,4044.480814077914,pending_transcript
+T-525,"httpContext: http,",1398.1439906894511,4063.6173602626527,pending_transcript
+T-526,"statusCode: code,",1398.1439906894511,4082.7539064473917,pending_transcript
+T-527,"title: ReasonPhrases.GetReasonPhrase(code),",1398.1439906894511,4101.890452632131,pending_transcript
+T-528,"type: $""https://httpstatuses.com/{code}"",",1398.1439906894511,4121.026998816869,pending_transcript
+T-529,"detail: detail,",1398.1439906894511,4140.163545001608,pending_transcript
+T-530,instance: http.Request.Path,1398.1439906894511,4159.300091186347,pending_transcript
+T-531,);,1398.1439906894511,4178.436637371086,pending_transcript
+T-532,// Safe writer (content-negotiates across registered ProblemDetails writers),1398.1439906894511,4216.709729740564,pending_transcript
+T-533,var written = await pdService.TryWriteAsync(new ProblemDetailsContext,1398.1439906894511,4235.846275925303,pending_transcript
+T-534,{,1398.1439906894511,4254.982822110042,pending_transcript
+T-535,"HttpContext = http,",1398.1439906894511,4274.119368294781,pending_transcript
+T-536,ProblemDetails = pd,1398.1439906894511,4293.2559144795205,pending_transcript
+T-537,});,1398.1439906894511,4312.3924606642595,pending_transcript
+T-538,if (!written),1398.1439906894511,4350.6655530337375,pending_transcript
+T-539,{,1398.1439906894511,4369.802099218476,pending_transcript
+T-540,// Fallback if no ProblemDetails writer is registered for the request,1398.1439906894511,4388.938645403215,pending_transcript
+T-541,"http.Response.ContentType = ""application/problem+json; charset=utf-8"";",1398.1439906894511,4408.075191587954,pending_transcript
+T-542,await http.Response.WriteAsJsonAsync(pd);,1398.1439906894511,4427.211737772693,pending_transcript
+T-543,},1398.1439906894511,4446.348283957432,pending_transcript
+T-544,});,1398.1439906894511,4465.484830142171,pending_transcript
+T-545,});,1398.1439906894511,4484.62137632691,pending_transcript
+T-546,app.MapControllers();,1398.1439906894511,4522.894468696388,pending_transcript
+T-547,app.Run();,1398.1439906894511,4561.167561065866,pending_transcript
+T-548,configure system.text.json options,3665.525662830062,623.0644405297036,pending_transcript
+T-549,produces attribute,2478.2467350347397,25769.813769547098,pending_transcript
+T-550,helper to check accept,8281.870831594895,7699.095381822723,pending_transcript
+T-551,values with q,8281.870831594895,7883.792383886821,pending_transcript
+T-552,input/output formatters,2704.056102358475,106.71423417154949,pending_transcript
+T-553,supported media types,2704.056102358475,243.9364733479818,pending_transcript
+T-554,configure 406,2704.056102358475,381.1587125244141,pending_transcript
