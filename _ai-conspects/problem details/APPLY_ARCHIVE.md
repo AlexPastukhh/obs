@@ -1,9 +1,6 @@
-# APPLY ARCHIVE - problem details final coverage v001
+# Apply archive
 
-This folder is delivered inside the combined three-conspect archive.
+Target branch: `ai-processed-conspects-text`  
+Target folder: `_ai-conspects/problem details`
 
-```powershell
-$target = "_ai-conspects\problem details"
-git add -A -- $target
-git status --short -- $target
-```
+Use the bundle-level one-line PowerShell command supplied with the archive response. It performs checkout, extraction, staging, commit and push after one Enter.

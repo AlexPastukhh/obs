@@ -1,20 +1,29 @@
-# MANIFEST — headers
+# MANIFEST — headers Stage4 completeness correction
 
-Generated: 2026-06-22 00:00:00 UTC
-
-## Included
-
-- original SVG: `source/headers.svg`
-- visual preview: `audit-assets/canvas-preview.png`
-- source and text ledgers: `data/`
-- source review: `00-source-check-and-boundary-review.md`
-- final transcript: `01-final-transcript.md`
-- final coverage audit: `data/final-coverage-audit.*`
+Generated: 2026-06-27 UTC
 
 ## Coverage
 
 ```text
-image uses: 0
-text elements: 81
-remaining: 0
+Embedded assets: 110
+Image uses: 110
+SVG text nodes: 81
+Duplicate placement groups: 0
+Remaining: 0
 ```
+
+## Included
+
+- `source/headers.svg`
+- `source/images/` — one preserved file per physical image use
+- `audit-assets/full-canvas-preview-stage4.png`
+- `audit-assets/contact-sheets/`
+- `regions/` — verified screenshot-backed transcripts
+- `data/image-uses-stage4-v001.*`
+- `data/svg-text-nodes-stage4-v001.*`
+- `data/image-review-ledger-stage4-v001.*`
+- `data/text-review-ledger-stage4-v001.*`
+- `data/region-plan-stage4-v001.json`
+- `data/final-coverage-audit-stage4-v001.json`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `04-stage4-complete-svg-reconciliation.md`

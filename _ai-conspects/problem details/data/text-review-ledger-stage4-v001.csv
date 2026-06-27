@@ -1,0 +1,119 @@
+﻿label_id,text,x,y,font_size,region,status,transcript_status
+T-001,"ADDITON TO PD SERVICE,",16605.786971,212.042667,229.333333,R03,reviewed,closed
+T-002,TRYWRITEASYNC,16605.786971,498.709333,229.333333,R03,reviewed,closed
+T-003,PROBLEMDETAILS WRITERS,16605.786971,785.376,229.333333,R03,reviewed,closed
+T-004,PROBLEM DETAILS config,481.096352,918.774576,277.333496,R01,reviewed,closed
+T-005,PROBLEM DETAILS SERVICE,12380.091588,1340.824578,112.0,R02,reviewed,closed
+T-006,PROBLEM DETAILS,6605.785751,1349.782789,112.0,R01,reviewed,closed
+T-007,PROBLEMDETAILS ,19844.34869,1384.132192,228.0,R04,reviewed,closed
+T-008,PROBLEM DETAILS Factory,10045.785751,1453.116071,112.0,R02,reviewed,closed
+T-009,WHAT ISSUES WITHOUT IT,12380.091588,1480.824578,112.0,R02,reviewed,closed
+T-010,a,15704.032238,1491.963377,20.0,R03,reviewed,closed
+T-011,CUSTOMIZE PROBLEMDETAILS,3215.649649,1515.473259,124.888835,R01,reviewed,closed
+T-012,APIBEH OPTIONS PD CONFIGURATIONS,10.0,1527.250432,113.866797,R01,reviewed,closed
+T-013,T,19707.683041,1587.550757,20.0,R04,reviewed,closed
+T-014,EXAMPLE WITH EXPL,15244.34869,1590.799062,228.0,R03,reviewed,closed
+T-015,WHEN TO USE ,12380.091588,1620.824578,112.0,R02,reviewed,closed
+T-016,"WRITERS CHAIN,CONTENT NEG",19844.34869,1669.132192,228.0,R04,reviewed,closed
+T-017,BUT WHY PROBLEMDETAILS FACTORY,10118.917967,1760.883363,20.0,R02,reviewed,closed
+T-018,like that you force xml,4465.973248,1767.722049,20.0,R01,reviewed,closed
+T-019,on all pd that is produced via,4465.973248,1792.722049,20.0,R01,reviewed,closed
+T-020,problemdetails frwrks pipeline,4465.973248,1817.722049,20.0,R01,reviewed,closed
+T-021,auto in controllers or via iproblemdetailsservice,4465.973248,1842.722049,20.0,R01,reviewed,closed
+T-022,configuring problem details,3945.217074,1846.838032,20.0,R01,reviewed,closed
+T-023,last action (callback) in pipeline,3469.084332,2102.833133,20.0,R01,reviewed,closed
+T-024,CUTOMIZEPROBLEMDETAILS,10698.326314,2109.43545,20.0,R02,reviewed,closed
+T-025,before response,3469.084332,2127.833133,20.0,R01,reviewed,closed
+T-026,!!,13578.456576,2159.251218,102.285714,R02,reviewed,closed
+T-027,ALL TITLE AND DETAILS ,5801.496162,2341.032413,20.0,R01,reviewed,closed
+T-028,AND REFERENCES TO ,5801.496162,2366.032413,20.0,R01,reviewed,closed
+T-029,A DOCUMENTATION,5801.496162,2391.032413,20.0,R01,reviewed,closed
+T-030,!!!!,5607.55662,2412.581514,126.666637,R01,reviewed,closed
+T-031,CAN RELATE ,5801.496162,2416.032413,20.0,R01,reviewed,closed
+T-032,THE DEFAULT WRITER = ADDPROBLEMDETAL,22542.830978,2431.067783,65.278091,R04,reviewed,closed
+T-033,TO YOUR API AND YOUR API'S DOCUMENTATION,5801.496162,2441.032413,20.0,R01,reviewed,closed
+T-034,NOT JUST SOME DOCS WITH EXPL,5801.496162,2466.032413,20.0,R01,reviewed,closed
+T-035,WHAT IS THIS STATUS CODE,5801.496162,2491.032413,20.0,R01,reviewed,closed
+T-036,JSON WRITER,22542.830978,2512.665397,65.278091,R04,reviewed,closed
+T-037,NO DEFAULT WRITING BEHAVIOR,20419.375002,2669.393751,20.0,R04,reviewed,closed
+T-038,IF NO MATCHING WRITER,20419.375002,2694.393751,20.0,R04,reviewed,closed
+T-039,TRACE ID,6094.834268,2708.312685,56.444499,R01,reviewed,closed
+T-040,THEN NEED TO ADD ,20419.375002,2719.393751,20.0,R04,reviewed,closed
+T-041,CALLBACK ON !WRITTEN,20419.375002,2744.393751,20.0,R04,reviewed,closed
+T-042,WHAT IS PROBLEMDETAILSCONTEXT,16550.731244,2798.763876,20.0,R03,reviewed,closed
+T-043,whats wrong with this implementation?,12911.13435,2840.030445,20.0,R03,reviewed,closed
+T-044,USING PROBLEMDETAILSCONTEXT.EXCEPTION,17610.41592,2854.544754,20.0,R03,reviewed,closed
+T-045,FOR CUSTOM WRITER TO ACCESS,17610.41592,2879.544754,20.0,R03,reviewed,closed
+T-046,cookies auth ON REDIRECT ,9701.422668,3059.759078,60.888835,R03,reviewed,closed
+T-047,probmem details returning ,9701.422668,3135.870122,60.888835,R03,reviewed,closed
+T-048,WHEN DOES CUST PD RUNS/,3631.679635,3229.071905,73.333333,R01,reviewed,closed
+T-049,!!,3106.124012,3261.064953,146.222249,R01,reviewed,closed
+T-050,using Microsoft.AspNetCore.Mvc;,10861.284112,3305.020443,20.0,R03,reviewed,closed
+T-051,options.Events.OnRedirectToLogin = async ctx =>,10861.284112,3355.020443,20.0,R03,reviewed,closed
+T-052,{,10861.284112,3380.020443,20.0,R03,reviewed,closed
+T-053,"    if (!ctx.Request.Path.StartsWithSegments(""/api""))",10861.284112,3405.020443,20.0,R03,reviewed,closed
+T-054,    {,10861.284112,3430.020443,20.0,R03,reviewed,closed
+T-055,        ctx.Response.Redirect(ctx.RedirectUri);,10861.284112,3455.020443,20.0,R03,reviewed,closed
+T-056,TRYWRITEASYNC CHECKS IF THERE IS A SUITABLE WRITER,16528.879728,3459.077621,20.0,R03,reviewed,closed
+T-057,        return;,10861.284112,3480.020443,20.0,R03,reviewed,closed
+T-058,"FOR CLIENTS ACCEPT HEADER, IF NO THEN WE CANT WRITE ",16528.879728,3484.077621,20.0,R03,reviewed,closed
+T-059,    },10861.284112,3505.020443,20.0,R03,reviewed,closed
+T-060,AND MUST HAVE CALLBACK,16528.879728,3509.077621,20.0,R03,reviewed,closed
+T-061,TO PROCESS AS TEXT,16528.879728,3534.077621,20.0,R03,reviewed,closed
+T-062,    ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;,10861.284112,3555.020443,20.0,R03,reviewed,closed
+T-063,    var http = ctx.HttpContext;,10861.284112,3605.020443,20.0,R03,reviewed,closed
+T-064,    var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();,10861.284112,3630.020443,20.0,R03,reviewed,closed
+T-065,    var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();,10861.284112,3655.020443,20.0,R03,reviewed,closed
+T-066,    var pd = factory.CreateProblemDetails(,10861.284112,3705.020443,20.0,R03,reviewed,closed
+T-067,"        httpContext: http,",10861.284112,3730.020443,20.0,R03,reviewed,closed
+T-068,"        statusCode: StatusCodes.Status401Unauthorized,",10861.284112,3755.020443,20.0,R03,reviewed,closed
+T-069,"        title: ""Unauthorized"",",10861.284112,3780.020443,20.0,R03,reviewed,closed
+T-070,"        type: ""https://httpstatuses.com/401"",",10861.284112,3805.020443,20.0,R03,reviewed,closed
+T-071,XML WRITER (CAN WRITE CALLBACK AND MANUALLY ,21933.079231,3814.877701,37.333344,R04,reviewed,closed
+T-072,"        detail: ""Authentication is required to access this resource."",",10861.284112,3830.020443,20.0,R03,reviewed,closed
+T-073,        instance: http.Request.Path);,10861.284112,3855.020443,20.0,R03,reviewed,closed
+T-074,SER TO XML IF DONT WANT WRITER),21933.079231,3861.544381,37.333344,R04,reviewed,closed
+T-075,WHAT IS PROBLEMDETAILSCONTEXT,20699.364368,3898.700679,49.035008,R04,reviewed,closed
+T-076,"    await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });",10861.284112,3905.020443,20.0,R03,reviewed,closed
+T-077,WHAT IF NEED TO HAVE SOME PD OPTIONS CONFIGURATION FOR ,731.975024,3927.945298,49.333293,R01,reviewed,closed
+T-078,};,10861.284112,3930.020443,20.0,R03,reviewed,closed
+T-079,options.Events.OnRedirectToAccessDenied = async ctx =>,10861.284112,3980.020443,20.0,R03,reviewed,closed
+T-080,ALL PROBLEMDETAILS?,731.975024,3989.611914,49.333293,R01,reviewed,closed
+T-081,{,10861.284112,4005.020443,20.0,R03,reviewed,closed
+T-082,"    if (!ctx.Request.Path.StartsWithSegments(""/api""))",10861.284112,4030.020443,20.0,R03,reviewed,closed
+T-083,    {,10861.284112,4055.020443,20.0,R03,reviewed,closed
+T-084,        ctx.Response.Redirect(ctx.RedirectUri);,10861.284112,4080.020443,20.0,R03,reviewed,closed
+T-085,problemdetailsservice will do everything can being done in controller ,13882.657859,4098.0589,20.0,R03,reviewed,closed
+T-086,JUST CONFIGURE CUSTOMIZEPROBLEMDETAILS AND USE FACTORY,1075.48555,4104.394443,20.0,R01,reviewed,closed
+T-087,        return;,10861.284112,4105.020443,20.0,R03,reviewed,closed
+T-088,"automatically, so you need to use it everywhere in middlewares,",13882.657859,4123.0589,20.0,R03,reviewed,closed
+T-089,    },10861.284112,4130.020443,20.0,R03,reviewed,closed
+T-090,non mvc land,13882.657859,4148.0589,20.0,R03,reviewed,closed
+T-091,    ctx.Response.StatusCode = StatusCodes.Status403Forbidden;,10861.284112,4180.020443,20.0,R03,reviewed,closed
+T-092,    var http = ctx.HttpContext;,10861.284112,4230.020443,20.0,R03,reviewed,closed
+T-093,    var factory = http.RequestServices.GetRequiredService<ProblemDetailsFactory>();,10861.284112,4255.020443,20.0,R03,reviewed,closed
+T-094,    var pds = http.RequestServices.GetRequiredService<IProblemDetailsService>();,10861.284112,4280.020443,20.0,R03,reviewed,closed
+T-095,    var pd = factory.CreateProblemDetails(,10861.284112,4330.020443,20.0,R03,reviewed,closed
+T-096,"        httpContext: http,",10861.284112,4355.020443,20.0,R03,reviewed,closed
+T-097,"        statusCode: StatusCodes.Status403Forbidden,",10861.284112,4380.020443,20.0,R03,reviewed,closed
+T-098,"        title: ""Forbidden"",",10861.284112,4405.020443,20.0,R03,reviewed,closed
+T-099,WITH TRYWRITE(CAN RETURN PALIN TEXT IN THIS CASE TOO),9981.828809,4413.2945,20.0,R03,reviewed,closed
+T-100,!!!,6039.278738,4427.011301,172.888896,R01,reviewed,closed
+T-101,"        type: ""https://httpstatuses.com/403"",",10861.284112,4430.020443,20.0,R03,reviewed,closed
+T-102,"        detail: ""You do not have permission to access this resource."",",10861.284112,4455.020443,20.0,R03,reviewed,closed
+T-103,!!!,16340.671755,4474.982651,69.571438,R03,reviewed,closed
+T-104,        instance: http.Request.Path);,10861.284112,4480.020443,20.0,R03,reviewed,closed
+T-105,"    await pds.WriteAsync(new ProblemDetailsContext { HttpContext = http, ProblemDetails = pd });",10861.284112,4530.020443,20.0,R03,reviewed,closed
+T-106,};,10861.284112,4555.020443,20.0,R03,reviewed,closed
+T-107,CONFIGURE<PROBLEMDETAILSOPTIONS>,3768.351655,4790.084775,57.33335,R01,reviewed,closed
+T-108,ISSUES WITH XML WRITER AND XML PROBLEM DETAILS,13888.400759,4990.397051,32.048224,R03,reviewed,closed
+T-109,ex order of pd writer and customize pd,1061.992149,5013.854647,121.333496,R01,reviewed,closed
+T-110,WHERE NOT TO USE THE SERVICE/,12450.357964,5240.25996,65.968207,R02,reviewed,closed
+T-111, IMPLICIT PROBLEMDETAILS PIPELINE,12450.357964,5322.72022,65.968207,R02,reviewed,closed
+T-112,controller issue,1211.865059,6458.556058,116.507952,R01,reviewed,closed
+T-113,customize pd can see pdcontext,1211.865059,6604.190998,116.507952,R01,reviewed,closed
+T-114,but in controller path it cant,1211.865059,6749.825938,116.507952,R01,reviewed,closed
+T-115,the main issue,1737.699878,8163.971546,20.0,R01,reviewed,closed
+T-116,so the writer wont see context too,1764.972605,8793.062455,20.0,R01,reviewed,closed
+T-117,but controller uses default writer,1764.972605,8818.062455,20.0,R01,reviewed,closed
+T-118,so its not the issue,1764.972605,8843.062455,20.0,R01,reviewed,closed

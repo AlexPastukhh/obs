@@ -1,0 +1,55 @@
+{
+  "conspect": "headers",
+  "status": "complete",
+  "generated": "2026-06-27 UTC",
+  "expected_embedded_assets": 110,
+  "processed_embedded_assets": 110,
+  "expected_image_uses": 110,
+  "processed_image_uses": 110,
+  "expected_text_nodes": 81,
+  "processed_text_nodes": 81,
+  "missing_image_uses": 0,
+  "unreviewed_image_uses": 0,
+  "unassigned_image_uses": 0,
+  "multiply_assigned_image_uses": 0,
+  "missing_text_nodes": 0,
+  "unreviewed_text_nodes": 0,
+  "unassigned_text_nodes": 0,
+  "multiply_assigned_text_nodes": 0,
+  "duplicate_placement_groups_preserved": 0,
+  "checks": [
+    {
+      "name": "all SVG symbols decoded",
+      "passed": true
+    },
+    {
+      "name": "every use resolves to an embedded symbol",
+      "passed": true
+    },
+    {
+      "name": "every image use has exactly one region",
+      "passed": true
+    },
+    {
+      "name": "every non-empty text node has exactly one region",
+      "passed": true
+    },
+    {
+      "name": "all image ledger rows closed",
+      "passed": true
+    },
+    {
+      "name": "all text ledger rows closed",
+      "passed": true
+    },
+    {
+      "name": "region image totals equal SVG image uses",
+      "passed": true
+    },
+    {
+      "name": "region text totals equal SVG text nodes",
+      "passed": true
+    }
+  ],
+  "failed_checks": 0
+}
