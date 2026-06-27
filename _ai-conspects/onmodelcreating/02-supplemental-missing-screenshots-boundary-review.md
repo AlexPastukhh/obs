@@ -53,10 +53,11 @@ old transcript as incomplete until a full combined transcript is rebuilt.
 - Nearby SVG captions attached to the placement ledger for orientation.
 - Regional and all-use contact sheets generated for visual audit.
 - The previous text-only transcript is retained only as a legacy draft and is marked incomplete.
-- A new combined transcript must be rebuilt from the text layer and all screenshots.
-- Supplemental screenshot transcription is pending.
+- Regional screenshot transcripts `R01`–`R09` are complete.
+- The new combined transcript is `13-full-combined-final-transcript.md`.
+- The full-conspect coverage audit is complete.
 
-## Next step
+## Closure
 
-Process supplemental regions `R01`–`R09`, close all 220 image uses and
-produce a supplemental final coverage audit.
+All 220 screenshot uses are closed, all 153 text elements are mapped to the
+combined transcript, and no coverage remains open.

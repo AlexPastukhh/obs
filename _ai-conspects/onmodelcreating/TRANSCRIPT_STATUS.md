@@ -1,14 +1,19 @@
 # Transcript status — onmodelcreating
 
+Generated: 2026-06-27 02:00:00 UTC
+
 ```text
-legacy text-only transcript: incomplete
+legacy text-only transcript: incomplete / superseded
 complete SVG recovery: done
-recovered screenshots: 220
-full combined transcript: not started
+regional screenshot transcripts R01–R09: done
+full combined transcript: done
+full-conspect coverage audit: done
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
-`01-final-transcript.md` is retained as a historical text-layer draft only.
-It is explicitly superseded for completeness.
+## Authoritative files
 
-The authoritative next task is to process `R01`–`R09` and generate a new
-combined transcript from all 153 text elements and all 220 screenshot uses.
+- `13-full-combined-final-transcript.md`
+- `14-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`

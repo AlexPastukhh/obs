@@ -1,0 +1,154 @@
+﻿text_id,text,combined_transcript_section,status,authoritative_transcript
+T-001,has sequence,02 Model-level relational configuration,closed,13-full-combined-final-transcript.md
+T-002,has dbfunction,02 Model-level relational configuration,closed,13-full-combined-final-transcript.md
+T-003,"set schema,setdefault schema","05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-004,"persisted,",02 Model-level relational configuration,closed,13-full-combined-final-transcript.md
+T-005,nonpersisted,02 Model-level relational configuration,closed,13-full-combined-final-transcript.md
+T-006,computed,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-007,default,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-008,field,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-009,prop,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-010,fieldDuringConstruciton,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-011,construction/normal ef access,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-012,preferfield,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-013,preferprop,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-014,always need prop logic,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-015,readonly wrapper collection,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-016,setter has buisness logic,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-017,!!!configuring collation,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-018,nvarchar vs varchar,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-019,with utf8 collation,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-020,varchar,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-021,with utf8 collation,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-022,collations,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-023,when to use nvarchar,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-024,unicode,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-025,when to use varchar,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-026,no repeated function generate calls,13 Remaining model notes and cross-cutting rules,closed,13-full-combined-final-transcript.md
+T-027,!!!,13 Remaining model notes and cross-cutting rules,closed,13-full-combined-final-transcript.md
+T-028,many to many,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-029,join table,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-030,ientitytypeConfiguration,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-031,configureConventions,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-032,"Savebehavior, can we mutate","05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-033,"added entity, can we even update it?","05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-034,value generation,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-035,value generated on add,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-036,on add or update,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-037,never,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-038,custom value generators,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-039,database trigger for last modified,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-040,default values,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-041,computed values,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-042,ignore property,"06 Relational metadata, functions, schemas, precision and indexes",closed,13-full-combined-final-transcript.md
+T-043,entity.Navigation,"06 Relational metadata, functions, schemas, precision and indexes",closed,13-full-combined-final-transcript.md
+T-044,index,"06 Relational metadata, functions, schemas, precision and indexes",closed,13-full-combined-final-transcript.md
+T-045,hasdatabasename,"06 Relational metadata, functions, schemas, precision and indexes",closed,13-full-combined-final-transcript.md
+T-046,hasprecision,"06 Relational metadata, functions, schemas, precision and indexes",closed,13-full-combined-final-transcript.md
+T-047,IsUnicode,"03 Text storage, Unicode and collations",closed,13-full-combined-final-transcript.md
+T-048,aftersave,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-049,beforsave,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-050,examples,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-051,configuring custom jointable name,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-052,Fk names,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-053,explicit many to many config,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-054,(not needed can do auto),"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-055,many to many,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-056,with custom join table config,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-057,with clr class,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-058,and extra columns to,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-059,have logic with them,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-060,in code,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-061,hidden vs,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-062,dedicated class,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-063,!!!!,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-064,ondelete rules,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-065,clientnoaction,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-066,noaction,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-067,restrict,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-068,client setnull,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-069,setnull,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-070,client cascade,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-071,cascade,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-072,!!!!,"08 Relationships, many-to-many and delete behavior",closed,13-full-combined-final-transcript.md
+T-073,"so when set field, its not",07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-074,default beh dude,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-075,!!!!,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-076,!!!,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-077,1!!!,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-078,Hilo,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-079,is it internal,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-080,optimisation,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-081,when is it approap,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-082,benefits of hilo,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-083,setup,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-084,usage,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-085,dont need it,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-086,only if a key,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-087,value generated on add,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-088,hasdefaultvalue,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-089,manually set wins,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-090,defaults,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-091,can we query base type,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-092,and then safely cast it without loosing,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-093,data?,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-094,!!!,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-095,"cast - its about compiler,",10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-096,not runtime,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-097,so tpt is kinda always bad with perf,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-098,and we may thing about tpc over tph when,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-099,"there is a lot of nulls with tph, really wide tables",10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-100,and we really dont need to query base type at all or a lot,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-101,or if there are some optimisations with it,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-102,inheritance,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-103,hasbasetype,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-104,TPH,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-105,----------------concrete queries----------------,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-106,----------------polymorphic----------------,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-107,polymorphic queries,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-108,TPT,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-109,queries cost,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-110,TPC,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-111,remove inheritance,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-112,"strategies, pros cons",10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-113,when to use what,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-114,!!!,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-115,mapping readonly,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-116,collection that has backing,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-117,private field,07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-118,"map property, can set access mode",07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-119,"if cant find, can do navigation.hasfield",07 Backing fields and property access modes,closed,13-full-combined-final-transcript.md
+T-120,conventions +,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-121,explicit configurations,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-122,valuegenerated on add is needed mostly when,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-123,"you have some id mapping to shadowprop, then there wont be","05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-124,an automatic generatedonadd,"05 Value generation, defaults, computed values and save behavior",closed,13-full-combined-final-transcript.md
+T-125,custom converters,11 Value converters,closed,13-full-combined-final-transcript.md
+T-126,enum to string conver,11 Value converters,closed,13-full-combined-final-transcript.md
+T-127,when enum to string,11 Value converters,closed,13-full-combined-final-transcript.md
+T-128,can be good/bad,11 Value converters,closed,13-full-combined-final-transcript.md
+T-129,careful with comparisons,11 Value converters,closed,13-full-combined-final-transcript.md
+T-130,when you ve converted enums,11 Value converters,closed,13-full-combined-final-transcript.md
+T-131,convertions,11 Value converters,closed,13-full-combined-final-transcript.md
+T-132,!!!!,13 Remaining model notes and cross-cutting rules,closed,13-full-combined-final-transcript.md
+T-133,!!!,13 Remaining model notes and cross-cutting rules,closed,13-full-combined-final-transcript.md
+T-134,!!!,13 Remaining model notes and cross-cutting rules,closed,13-full-combined-final-transcript.md
+T-135,what is the default behavior,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-136,with inheritance,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-137,how to avoid it,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-138,when to use hasbasetype(type null),10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-139,things that can map shared base class,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-140,"default tph behavior, discriminator",10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-141,how to say this entity shouldnt,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-142,be part of inheritance,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-143,when to use hasbasetype(type null),10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-144,changing from tph to independent tables,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-145,in c# you have some domain inheritance for,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-146,"buisness rules, but you dont want to persist",10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-147,with this hierarchy,10 Inheritance mapping and polymorphic queries,closed,13-full-combined-final-transcript.md
+T-148,dbset,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-149,rel/navigation discovery,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-150,has... configurations,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-151,applyconfiguration,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-152,apply config from ass,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md
+T-153,shared type entity config,12 Configuration organization and model discovery,closed,13-full-combined-final-transcript.md

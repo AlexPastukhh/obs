@@ -1,41 +1,39 @@
 # Current Source of Truth — onmodelcreating
 
-Generated: 2026-06-27 00:15:00 UTC
+Generated: 2026-06-27 02:00:00 UTC
 
 ## Status
 
 ```text
-Original incomplete SVG boundary review: done
+Legacy incomplete SVG boundary review: incomplete / superseded
 Legacy text-only transcript: incomplete / superseded
-Legacy text-only coverage audit: not valid as full-conspect coverage
-Supplemental complete SVG recovery: done
-Recovered screenshot inventory: done
-Full combined transcript: not started
-Full combined coverage audit: not started
+Legacy text-only coverage audit: incomplete / superseded
+Complete SVG recovery: done
+Screenshot transcripts R01–R09: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
 ## Coverage
 
 ```text
-text elements preserved: 153
-unique embedded images recovered: 220
-image uses on canvas recovered: 220
-duplicate image uses: 0
-remaining unprocessed screenshot uses: 220
-full-conspect transcript completeness: incomplete
+meaningful text elements: 153 / 153
+unique embedded images: 220 / 220
+image uses on canvas: 220 / 220
+duplicate image uses retained: 0
+remaining unclosed text elements: 0
+remaining unclosed image uses: 0
 ```
 
-## Corrected conclusion
+## Authoritative transcript
 
-The earlier transcript described only the text layer of an incomplete SVG.
-It could summarize topic labels, but it could not contain all code,
-examples, diagrams and explanations from the missing screenshots.
+`13-full-combined-final-transcript.md`
 
-The recovered SVG and all 220 screenshots are now preserved, but the
-conspect is not complete until a new combined transcript is produced from
-both the text layer and every recovered screenshot.
+## Authoritative audit
+
+`14-full-conspect-final-coverage-audit.md`
 
 ## Next
 
-Process `R01`–`R09`, rebuild the final transcript and then perform a new
-full-conspect coverage audit.
+No source-recovery or transcript regions remain. Only correction/polish if a
+newer source reveals additional material.
