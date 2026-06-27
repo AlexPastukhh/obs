@@ -1,45 +1,37 @@
-# Stage0 - dbcontextpool, queryfilter source check and boundary review v001
+# Stage4 complete SVG source and boundary review — dbcontextpool, queryfilter
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-27 UTC
 
-## Source/folder naming
-
-```text
-Uploaded SVG: dbcontextpool, queryfilter(1).svg
-Conspect folder: _ai-conspects/dbcontextpool, queryfilter
-```
-
-The technical upload suffix `(1)` is excluded from the conspect name.
-
-## Source form
-
-This SVG contains vector paths and text, but no embedded raster screenshots/images.
-The readable source is therefore the original SVG plus rendered canvas/region overviews and the extracted text-label inventory.
-
-## Counts
+## Source naming
 
 ```text
-unique embedded images: 0
-image uses on canvas: 0
-text labels parsed: 38
-vector paths: 16
-vector groups: 35
+Received SVG: dbcontextpool, queryfilter(2).svg
+Canonical source name: dbcontextpool, queryfilter.svg
+Canonical conspect folder: _ai-conspects/dbcontextpool, queryfilter
 ```
 
-## Candidate regions
+## Complete source inventory
 
-| Region | Labels | Name | Meaning |
-|---|---:|---|---|
-| R01 | 6 | pooled-factory-di-disposal-limits | AddPooledDbContextFactory, IDbContextFactory, DI/disposal and pool limit behavior |
-| R02 | 17 | multitenancy-wrapper-queryfilters-onmodelcreating | request-aware wrapper pattern, multitenancy properties, query filters and OnModelCreating cautions |
-| R03 | 15 | ado-connection-state-reset-pooling | ADO.NET connection state, manual reset/close requirements and avoiding pool exhaustion |
+```text
+Embedded SVG image symbols: 36
+Image uses on canvas: 36
+Unique image-content hashes: 36
+Duplicate image-content hash groups: 0
+Physical SVG text nodes: 41
+Non-empty SVG text nodes: 38
+Empty SVG text nodes: 3
+```
 
-## Rule
+## Boundary policy
 
-Candidate regions and label ledgers are checklists, not final semantic truth. A transcript pass must re-check the rendered source and nearby/parallel areas before completion.
+Candidate coordinate regions were used only as a checklist. Every region was checked against the rendered full canvas and its contact sheets. Image content, neighboring labels, and semantic continuity determined the final boundaries.
 
-## Next
+## Verified boundaries
 
-Start the transcript/final-coverage pass after this ten-conspect stage0 bundle is committed.
+- `R01` — DbContext pooling, factory choices, disposal and suitability: 19 image uses / 7 non-empty text nodes
+- `R02` — Multitenancy wrapper, query filters and model lifecycle: 8 image uses / 16 non-empty text nodes
+- `R03` — Raw DbConnection state, ADO.NET pooling and manual cleanup: 9 image uses / 15 non-empty text nodes
 
-Internal source path: `source/source.svg` (original uploaded filename is recorded above).
+## Verdict
+
+The complete SVG is represented by the canonical source file, extracted embedded assets, the image-use ledger, the physical text-node ledger, rendered preview, contact sheets, and screenshot-backed region transcripts. No normal region remains open.

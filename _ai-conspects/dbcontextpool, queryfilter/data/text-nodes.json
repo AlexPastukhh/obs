@@ -1,0 +1,412 @@
+[
+  {
+    "text_node_id": "T-001",
+    "text": "pattern to enable multitenancy or",
+    "x": 4745.236123,
+    "y": 2043.039121,
+    "font_size": 103.35234026227684,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-002",
+    "text": "some dbcontext instance property based shit",
+    "x": 4745.236123,
+    "y": 2172.229546,
+    "font_size": 103.35234026227684,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-003",
+    "text": "so when we register pooledfactory we dont get dbcontext from di",
+    "x": 4725.568218,
+    "y": 2406.843938,
+    "font_size": 20.0,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-004",
+    "text": "we get factory from di and we create context with it",
+    "x": 4725.568218,
+    "y": 2431.843938,
+    "font_size": 20.0,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-005",
+    "text": "",
+    "x": 4725.568218,
+    "y": 2456.843938,
+    "font_size": 20.0,
+    "region": "",
+    "is_empty": true,
+    "status": "ignored-empty"
+  },
+  {
+    "text_node_id": "T-006",
+    "text": "so we need to create wrapper that will get some request info from registered scoped service",
+    "x": 4725.568218,
+    "y": 2481.843938,
+    "font_size": 20.0,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-007",
+    "text": "and set props on dbcontext",
+    "x": 4725.568218,
+    "y": 2506.843938,
+    "font_size": 20.0,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-008",
+    "text": "",
+    "x": 4725.568218,
+    "y": 2531.843938,
+    "font_size": 20.0,
+    "region": "",
+    "is_empty": true,
+    "status": "ignored-empty"
+  },
+  {
+    "text_node_id": "T-009",
+    "text": "and then we will return dbcontext with rep request state",
+    "x": 4725.568218,
+    "y": 2556.843938,
+    "font_size": 20.0,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-010",
+    "text": "but we wont use this wrapper manuallly",
+    "x": 4725.568218,
+    "y": 2581.843938,
+    "font_size": 20.0,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-011",
+    "text": "we will register scoped instance service - we will get wraper and we will create dbcontext with our method",
+    "x": 4725.568218,
+    "y": 2606.843938,
+    "font_size": 20.0,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-012",
+    "text": "about dbcontext allocatjions",
+    "x": 4778.589413,
+    "y": 656.674216,
+    "font_size": 55.7333374023437,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-013",
+    "text": "and setup pressure",
+    "x": 4778.589413,
+    "y": 726.340888,
+    "font_size": 55.7333374023437,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-014",
+    "text": "50kb vs 4kb",
+    "x": 4778.589413,
+    "y": 796.00756,
+    "font_size": 55.7333374023437,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-015",
+    "text": "and x2 faster",
+    "x": 4778.589413,
+    "y": 865.674232,
+    "font_size": 55.7333374023437,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-016",
+    "text": "need to dispose manually",
+    "x": 10.0,
+    "y": 1153.31299,
+    "font_size": 89.39408337683922,
+    "region": "R01",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-017",
+    "text": "the dbcontext from factory",
+    "x": 10.0,
+    "y": 1265.055594,
+    "font_size": 89.39408337683922,
+    "region": "R01",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-018",
+    "text": "",
+    "x": 10.0,
+    "y": 1376.798198,
+    "font_size": 89.39408337683922,
+    "region": "",
+    "is_empty": true,
+    "status": "ignored-empty"
+  },
+  {
+    "text_node_id": "T-019",
+    "text": "dont need the dbcontext from di",
+    "x": 10.0,
+    "y": 1488.540802,
+    "font_size": 89.39408337683922,
+    "region": "R01",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-020",
+    "text": "addpooleddbcontextfactory",
+    "x": 1705.461835,
+    "y": 1376.810338,
+    "font_size": 106.58558744912656,
+    "region": "R01",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-021",
+    "text": "idcontextfactory<dbcontexgt>",
+    "x": 1705.461835,
+    "y": 1510.042323,
+    "font_size": 106.58558744912656,
+    "region": "R01",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-022",
+    "text": "onmodelcreating, when it runs,",
+    "x": 4713.42168,
+    "y": 4280.69307,
+    "font_size": 49.03704155816011,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-023",
+    "text": "what is better not to do there",
+    "x": 4713.42168,
+    "y": 4341.989372,
+    "font_size": 49.03704155816011,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-024",
+    "text": "props for queryfilters",
+    "x": 4713.42168,
+    "y": 4403.285674,
+    "font_size": 49.03704155816011,
+    "region": "R02",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-025",
+    "text": "!!!",
+    "x": 6285.947193,
+    "y": 4689.203322,
+    "font_size": 61.71177438320738,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-026",
+    "text": "!!!",
+    "x": 8256.95785,
+    "y": 5068.527028,
+    "font_size": 33.82143739493622,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-027",
+    "text": "so when we do shit with raw conneciton",
+    "x": 7391.966192,
+    "y": 3534.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-028",
+    "text": "1 we need to reset all connection state changes - to avoid same state for",
+    "x": 7391.966192,
+    "y": 3559.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-029",
+    "text": "polled contexts + for polled connections on db provider level (without reset it returns connection with same session",
+    "x": 7391.966192,
+    "y": 3584.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-030",
+    "text": "state that we have set to the connection pool)",
+    "x": 7391.966192,
+    "y": 3609.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-031",
+    "text": "2 and we need to close the connection so it actually returns to the connection pool,",
+    "x": 7391.966192,
+    "y": 3634.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-032",
+    "text": "we can have pool exhaustion without it even if we kinda reuse the connection in case we do cleanup",
+    "x": 7391.966192,
+    "y": 3659.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-033",
+    "text": "we may just not reuse that same instance that has long running(endless connection) and reuse",
+    "x": 7391.966192,
+    "y": 3684.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-034",
+    "text": "another contexts - and we will end up with some connections just being open and doing nothing",
+    "x": 7391.966192,
+    "y": 3709.264522,
+    "font_size": 20.0,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-035",
+    "text": "what eef core resets by itself",
+    "x": 6498.449129,
+    "y": 3097.326951,
+    "font_size": 147.99995930989593,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-036",
+    "text": "what and when you need to reset manually",
+    "x": 6498.449129,
+    "y": 3282.3269,
+    "font_size": 147.99995930989593,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-037",
+    "text": "di disposes disposable",
+    "x": 3732.343997,
+    "y": 3916.6027,
+    "font_size": 69.87864347903539,
+    "region": "R01",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-038",
+    "text": "what if you exceeded pool limits",
+    "x": 2551.20152,
+    "y": 51.149019,
+    "font_size": 46.70717254502671,
+    "region": "R01",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-039",
+    "text": "operating dbconnection",
+    "x": 6456.511988,
+    "y": 3552.110801,
+    "font_size": 58.32098162615737,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-040",
+    "text": "with ado.net",
+    "x": 6456.511988,
+    "y": 3625.012028,
+    "font_size": 58.32098162615737,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  },
+  {
+    "text_node_id": "T-041",
+    "text": "and context pools",
+    "x": 6456.511988,
+    "y": 3697.913255,
+    "font_size": 58.32098162615737,
+    "region": "R03",
+    "is_empty": false,
+    "status": "verified"
+  }
+]

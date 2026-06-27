@@ -1,36 +1,53 @@
-# Current Source of Truth - records
+# Current Source of Truth — records
 
 Generated: 2026-06-27 UTC
 
-## Policy
+## Naming
 
-The SVG text labels are the primary semantic source because this source contains no embedded raster screenshots. Vector paths are boundary/flow evidence. Inventory alone does not close coverage.
+```text
+Received SVG: records(2).svg
+Canonical source name: records.svg
+Canonical conspect folder: _ai-conspects/records
+```
 
 ## Current status
 
 ```text
-Stage0 source/boundary review: done
-All candidate transcript regions: done
-Final coverage audit: done
+Complete SVG reconciliation: done
+Screenshot-backed transcripts: done
+Independent final coverage audit: done
+Status: complete
 ```
 
-## Counts
+## Final coverage
 
 ```text
-unique embedded images: 0
-image uses on canvas: 0
-text labels parsed: 22
-text labels covered: 22
-vector paths reviewed: 12
-remaining unclosed labels: 0
+Complete embedded assets: 43
+Complete image uses: 43
+Processed image uses: 43
+Physical SVG text nodes: 22
+Physical non-empty SVG text nodes: 22
+Processed non-empty text nodes: 22
+Empty SVG text nodes recorded: 0
+Missing image uses: 0
+Unreviewed image uses: 0
+Unassigned image uses: 0
+Multiply assigned image uses: 0
+Missing text nodes: 0
+Unreviewed text nodes: 0
+Unassigned text nodes: 0
+Multiply assigned text nodes: 0
+Unique image-content hashes: 43
+Duplicate image-hash groups preserved: 0
 ```
 
-## Closure verdict
+## Verified regions
 
-```text
-Closed by complete vector/text source coverage.
-```
+- `R01` — Record semantics, generated members and record-versus-entity choice: 11 images / 5 non-empty text nodes
+- `R02` — Record class, positional syntax, non-positional syntax and with expressions: 14 images / 10 non-empty text nodes
+- `R03` — Record structs, copying, ref/in/out and value-type storage: 14 images / 6 non-empty text nodes
+- `R04` — Reference-type value objects and EF complex-type modeling: 4 images / 1 non-empty text nodes
 
-## Final transcript
+## Current next step
 
-`regions/R01R02R03-final-coverage.md`
+No normal transcript regions remain. Only correction/polish if a newer complete source export adds material.

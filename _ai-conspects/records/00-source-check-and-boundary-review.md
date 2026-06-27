@@ -1,45 +1,38 @@
-# Stage0 - records source check and boundary review v001
+# Stage4 complete SVG source and boundary review — records
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-27 UTC
 
-## Source/folder naming
-
-```text
-Uploaded SVG: records(1).svg
-Conspect folder: _ai-conspects/records
-```
-
-The technical upload suffix `(1)` is excluded from the conspect name.
-
-## Source form
-
-This SVG contains vector paths and text, but no embedded raster screenshots/images.
-The readable source is therefore the original SVG plus rendered canvas/region overviews and the extracted text-label inventory.
-
-## Counts
+## Source naming
 
 ```text
-unique embedded images: 0
-image uses on canvas: 0
-text labels parsed: 22
-vector paths: 12
-vector groups: 31
+Received SVG: records(2).svg
+Canonical source name: records.svg
+Canonical conspect folder: _ai-conspects/records
 ```
 
-## Candidate regions
+## Complete source inventory
 
-| Region | Labels | Name | Meaning |
-|---|---:|---|---|
-| R01 | 6 | record-basics-equality-members-decision | record built-ins, equality/operators, positional properties, methods/private members and record-vs-class decision |
-| R02 | 12 | record-class-record-struct-copying-with | record class vs record struct, copying costs, WITH expressions and immutable complex members |
-| R03 | 4 | struct-passing-ref-stack-value-objects | passing structs, ref/in/out, stack-vs-heap nuances and value-object guidance |
+```text
+Embedded SVG image symbols: 43
+Image uses on canvas: 43
+Unique image-content hashes: 43
+Duplicate image-content hash groups: 0
+Physical SVG text nodes: 22
+Non-empty SVG text nodes: 22
+Empty SVG text nodes: 0
+```
 
-## Rule
+## Boundary policy
 
-Candidate regions and label ledgers are checklists, not final semantic truth. A transcript pass must re-check the rendered source and nearby/parallel areas before completion.
+Candidate coordinate regions were used only as a checklist. Every region was checked against the rendered full canvas and its contact sheets. Image content, neighboring labels, and semantic continuity determined the final boundaries.
 
-## Next
+## Verified boundaries
 
-Start the transcript/final-coverage pass after this ten-conspect stage0 bundle is committed.
+- `R01` — Record semantics, generated members and record-versus-entity choice: 11 image uses / 5 non-empty text nodes
+- `R02` — Record class, positional syntax, non-positional syntax and with expressions: 14 image uses / 10 non-empty text nodes
+- `R03` — Record structs, copying, ref/in/out and value-type storage: 14 image uses / 6 non-empty text nodes
+- `R04` — Reference-type value objects and EF complex-type modeling: 4 image uses / 1 non-empty text nodes
 
-Internal source path: `source/source.svg` (original uploaded filename is recorded above).
+## Verdict
+
+The complete SVG is represented by the canonical source file, extracted embedded assets, the image-use ledger, the physical text-node ledger, rendered preview, contact sheets, and screenshot-backed region transcripts. No normal region remains open.

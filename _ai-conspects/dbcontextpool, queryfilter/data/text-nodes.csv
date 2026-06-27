@@ -1,0 +1,42 @@
+﻿text_node_id,text,x,y,font_size,region,is_empty,status
+T-001,pattern to enable multitenancy or,4745.236123,2043.039121,103.35234026227684,R02,False,verified
+T-002,some dbcontext instance property based shit,4745.236123,2172.229546,103.35234026227684,R02,False,verified
+T-003,so when we register pooledfactory we dont get dbcontext from di,4725.568218,2406.843938,20.0,R02,False,verified
+T-004,we get factory from di and we create context with it,4725.568218,2431.843938,20.0,R02,False,verified
+T-005,,4725.568218,2456.843938,20.0,,True,ignored-empty
+T-006,so we need to create wrapper that will get some request info from registered scoped service,4725.568218,2481.843938,20.0,R02,False,verified
+T-007,and set props on dbcontext,4725.568218,2506.843938,20.0,R02,False,verified
+T-008,,4725.568218,2531.843938,20.0,,True,ignored-empty
+T-009,and then we will return dbcontext with rep request state,4725.568218,2556.843938,20.0,R02,False,verified
+T-010,but we wont use this wrapper manuallly,4725.568218,2581.843938,20.0,R02,False,verified
+T-011,we will register scoped instance service - we will get wraper and we will create dbcontext with our method,4725.568218,2606.843938,20.0,R02,False,verified
+T-012,about dbcontext allocatjions,4778.589413,656.674216,55.7333374023437,R02,False,verified
+T-013,and setup pressure,4778.589413,726.340888,55.7333374023437,R02,False,verified
+T-014,50kb vs 4kb,4778.589413,796.00756,55.7333374023437,R02,False,verified
+T-015,and x2 faster,4778.589413,865.674232,55.7333374023437,R02,False,verified
+T-016,need to dispose manually,10.0,1153.31299,89.39408337683922,R01,False,verified
+T-017,the dbcontext from factory,10.0,1265.055594,89.39408337683922,R01,False,verified
+T-018,,10.0,1376.798198,89.39408337683922,,True,ignored-empty
+T-019,dont need the dbcontext from di,10.0,1488.540802,89.39408337683922,R01,False,verified
+T-020,addpooleddbcontextfactory,1705.461835,1376.810338,106.58558744912656,R01,False,verified
+T-021,idcontextfactory<dbcontexgt>,1705.461835,1510.042323,106.58558744912656,R01,False,verified
+T-022,"onmodelcreating, when it runs,",4713.42168,4280.69307,49.03704155816011,R02,False,verified
+T-023,what is better not to do there,4713.42168,4341.989372,49.03704155816011,R02,False,verified
+T-024,props for queryfilters,4713.42168,4403.285674,49.03704155816011,R02,False,verified
+T-025,!!!,6285.947193,4689.203322,61.71177438320738,R03,False,verified
+T-026,!!!,8256.95785,5068.527028,33.82143739493622,R03,False,verified
+T-027,so when we do shit with raw conneciton,7391.966192,3534.264522,20.0,R03,False,verified
+T-028,1 we need to reset all connection state changes - to avoid same state for,7391.966192,3559.264522,20.0,R03,False,verified
+T-029,polled contexts + for polled connections on db provider level (without reset it returns connection with same session,7391.966192,3584.264522,20.0,R03,False,verified
+T-030,state that we have set to the connection pool),7391.966192,3609.264522,20.0,R03,False,verified
+T-031,"2 and we need to close the connection so it actually returns to the connection pool,",7391.966192,3634.264522,20.0,R03,False,verified
+T-032,we can have pool exhaustion without it even if we kinda reuse the connection in case we do cleanup,7391.966192,3659.264522,20.0,R03,False,verified
+T-033,we may just not reuse that same instance that has long running(endless connection) and reuse,7391.966192,3684.264522,20.0,R03,False,verified
+T-034,another contexts - and we will end up with some connections just being open and doing nothing,7391.966192,3709.264522,20.0,R03,False,verified
+T-035,what eef core resets by itself,6498.449129,3097.326951,147.99995930989593,R03,False,verified
+T-036,what and when you need to reset manually,6498.449129,3282.3269,147.99995930989593,R03,False,verified
+T-037,di disposes disposable,3732.343997,3916.6027,69.87864347903539,R01,False,verified
+T-038,what if you exceeded pool limits,2551.20152,51.149019,46.70717254502671,R01,False,verified
+T-039,operating dbconnection,6456.511988,3552.110801,58.32098162615737,R03,False,verified
+T-040,with ado.net,6456.511988,3625.012028,58.32098162615737,R03,False,verified
+T-041,and context pools,6456.511988,3697.913255,58.32098162615737,R03,False,verified

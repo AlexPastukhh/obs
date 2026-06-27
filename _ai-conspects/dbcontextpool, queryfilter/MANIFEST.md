@@ -1,31 +1,24 @@
-# MANIFEST — dbcontextpool, queryfilter final coverage v001
+# MANIFEST — dbcontextpool, queryfilter
 
 Generated: 2026-06-27 UTC
 
-## Source
+## Included
+
+- canonical source SVG: `source/dbcontextpool, queryfilter.svg`
+- extracted embedded images: `source/images/`
+- full rendered preview: `audit-assets/full-preview.png`
+- region contact sheets: `audit-assets/contact-sheets/`
+- source/boundary review: `00-source-check-and-boundary-review.md`
+- combined screenshot-backed transcript: `01-final-transcript.md`
+- independent audit: `02-independent-final-audit.md`
+- region transcripts: `regions/`
+- image, asset, text, region, mapping and audit ledgers: `data/`
+- current source of truth: `CURRENT_SOURCE_OF_TRUTH.md`
+
+## Coverage
 
 ```text
-original SVG filename: dbcontextpool, queryfilter(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
-```
-
-## Final counts
-
-```text
-text labels: 38 / 38 covered
-vector paths: 16 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
-```
-
-## Final files
-
-```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
+image uses: 36 / 36
+non-empty text nodes: 38 / 38
+remaining: 0
 ```
