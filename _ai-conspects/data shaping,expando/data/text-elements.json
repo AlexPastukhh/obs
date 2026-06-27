@@ -1,0 +1,506 @@
+[
+  {
+    "x": 4982.140248801441,
+    "y": 10.0,
+    "text": "impl",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 3728.806508567066,
+    "y": 30.0,
+    "text": "expl",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 1055.4733786842535,
+    "y": 76.666259765625,
+    "text": "theoru",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 1131.3801832349177,
+    "y": 446.00441708287144,
+    "text": "to basics",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "public class AuthorsResourceParameters",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "{",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "private const int MaxPageSize = 20;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "private int _pageSize = 10;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "public string? MainCategory { get; set; }",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "public string? SearchQuery { get; set; }",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "public int PageNumber { get; set; } = 1;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "public int PageSize",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "{",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "get => _pageSize;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "set => _pageSize = (value > MaxPageSize) ? MaxPageSize : value;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "public string OrderBy { get; set; } = \"Name\";",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "// Data shaping",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "public string? Fields { get; set; }",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 5462.156491721215,
+    "y": 550.8357010705458,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 94.87314170263744,
+    "y": 1223.9782989397336,
+    "text": "can mean just some variants of representations (may ask)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "using System.Reflection;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "public class PropertyCheckerService : IPropertyCheckerService",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "{",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "public bool TypeHasProperties<T>(string? fields)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "{",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "if (string.IsNullOrWhiteSpace(fields))",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "return true;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "var fieldsAfterSplit = fields.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "foreach (var field in fieldsAfterSplit)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "{",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "var propertyName = field.Trim();",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "var propertyInfo = typeof(T).GetProperty(",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "propertyName,",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "if (propertyInfo is null)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "return false;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "return true;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 5755.755849577715,
+    "y": 1277.0179119565673,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 2889.0440106655924,
+    "y": 2899.1117191158683,
+    "text": "ADD TO EXANDOOBJECT,",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 2889.0440106655924,
+    "y": 2899.1117191158683,
+    "text": "DYNAMIC PROPERTIES",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  },
+  {
+    "x": 2889.0440106655924,
+    "y": 2899.1117191158683,
+    "text": "SHEET",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-044"
+  },
+  {
+    "x": 5688.806508567066,
+    "y": 2949.9996948242197,
+    "text": "can prevent shaping",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-045"
+  },
+  {
+    "x": 5688.806508567066,
+    "y": 2949.9996948242197,
+    "text": "of any class",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-046"
+  },
+  {
+    "x": 2458.5562904866892,
+    "y": 4123.128040089121,
+    "text": "!!!",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-047"
+  },
+  {
+    "x": 2907.163068399176,
+    "y": 4593.111404974798,
+    "text": "WE DONT",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-048"
+  },
+  {
+    "x": 2907.163068399176,
+    "y": 4593.111404974798,
+    "text": "HAVE TYPE FOR",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-049"
+  },
+  {
+    "x": 2907.163068399176,
+    "y": 4593.111404974798,
+    "text": "RETURN TYPE",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-050"
+  },
+  {
+    "x": 2907.163068399176,
+    "y": 4593.111404974798,
+    "text": "SO WE ARE RETURNING",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-051"
+  },
+  {
+    "x": 2907.163068399176,
+    "y": 4593.111404974798,
+    "text": "SOMETHING",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-052"
+  },
+  {
+    "x": 4096.091346119878,
+    "y": 5058.554478758257,
+    "text": "RELATED LOGIC IN CONTROLLER",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-053"
+  },
+  {
+    "x": 4592.338052355437,
+    "y": 6045.64301666706,
+    "text": "OR FOR SINGLE",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-054"
+  },
+  {
+    "x": 3725.026112410753,
+    "y": 7060.46700703488,
+    "text": "EXPANDOOBJECT PERSONAL SHEET",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-055"
+  },
+  {
+    "x": 2923.489082158025,
+    "y": 7811.467957269578,
+    "text": "cast to dict",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-056"
+  },
+  {
+    "x": 3030.66334698431,
+    "y": 8955.177088835977,
+    "text": "!!!",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-057"
+  },
+  {
+    "x": 4275.988929570134,
+    "y": 11795.634732019334,
+    "text": "why datashaping",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-058"
+  },
+  {
+    "x": 4529.322127269787,
+    "y": 12066.745910947284,
+    "text": "RELATED TO DATA SHAPING",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-059"
+  },
+  {
+    "x": 4529.322127269787,
+    "y": 12066.745910947284,
+    "text": "WHY THIS APPROACH WITH EXTENSION ON IENUMERABLE OR",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-060"
+  },
+  {
+    "x": 4529.322127269787,
+    "y": 12066.745910947284,
+    "text": "OBJECT, WHY NOT FETCHING FIELDS THAT WE NEED TO,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-061"
+  },
+  {
+    "x": 4529.322127269787,
+    "y": 12066.745910947284,
+    "text": "WHY NO PROJECTIONS ?",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-062"
+  },
+  {
+    "x": 4261.740852358925,
+    "y": 13989.852574083909,
+    "text": "!!!!",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-063"
+  }
+]
