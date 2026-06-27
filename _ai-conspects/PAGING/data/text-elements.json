@@ -1,0 +1,346 @@
+[
+  {
+    "x": 2785.6532142942356,
+    "y": 10.0,
+    "text": "implementation",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 253.78940288158014,
+    "y": 94.20525158666078,
+    "text": "to some basics",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 2502.3853748259444,
+    "y": 1140.3769142609917,
+    "text": "count of resource",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 2502.3853748259444,
+    "y": 1140.3769142609917,
+    "text": "entities",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 3449.0520294512685,
+    "y": 1705.8314416535677,
+    "text": "will round to bigger",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 2618.1429566041897,
+    "y": 1725.8314416535677,
+    "text": "method of list class",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 549.0298353786334,
+    "y": 2318.030707994002,
+    "text": "pagination/pagination metadata",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "private string? CreateAuthorsResourceUri(",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "AuthorsResourceParameters p,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "ResourceUriType type)",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "{",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "return type switch",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "{",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "ResourceUriType.PreviousPage => Url.Link(\"GetAuthors\", new",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "{",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "fields = p.Fields,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "orderBy = p.OrderBy,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "pageNumber = p.PageNumber - 1,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "pageSize = p.PageSize,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "mainCategory = p.MainCategory,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "searchQuery = p.SearchQuery",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "}),",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "ResourceUriType.NextPage => Url.Link(\"GetAuthors\", new",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "{",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "fields = p.Fields,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "orderBy = p.OrderBy,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "pageNumber = p.PageNumber + 1,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "pageSize = p.PageSize,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "mainCategory = p.MainCategory,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "searchQuery = p.SearchQuery",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "}),",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "_ => Url.Link(\"GetAuthors\", new",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "{",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "fields = p.Fields,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "orderBy = p.OrderBy,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "pageNumber = p.PageNumber,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "pageSize = p.PageSize,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "mainCategory = p.MainCategory,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "searchQuery = p.SearchQuery",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "})",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "};",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 4615.74172130155,
+    "y": 3570.1426342264813,
+    "text": "}",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 3346.2370152544618,
+    "y": 4231.163214274172,
+    "text": "prev and next page should be sorted too",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  }
+]
