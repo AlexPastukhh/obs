@@ -1,25 +1,42 @@
-# Stage0 — source check and boundary review
+# Corrected source and boundary review — primary httphandler optoins, socket v002
 
-Conspect: `primary httphandler optoins, socket`  
-Source: `primary httphandler optoins, socket.svg`  
-Generated: 2026-06-22 00:00:00 UTC
+## Source mapping
 
-## Source inventory
+- Uploaded repaired source: `primary httphandler optoins, socket(1).svg`
+- Existing logical folder: `_ai-conspects/primary httphandler optoins, socket/`
+- Authoritative corrected source: `source/primary httphandler optoins, socket.svg`
+- Raw uploaded source preserved: `source/primary httphandler optoins, socket(1).svg`
+
+## Verified delta
 
 ```text
-viewBox: 0 0 14450.996907858651 14040.962810925106
-unique embedded images: 2
-image uses: 2
-text elements: 47
+previous unique embedded images: 2
+corrected unique embedded images: 108
+previous image uses: 2
+corrected image uses: 108
+recovered missing image uses: 106
+unchanged existing image uses: 2
+text labels: 47 (unchanged)
+duplicate image placements: 0
 ```
 
-## Boundary decision
+Both images from the previous source are present in the repaired SVG by exact SHA-256. No previous screenshot was removed.
 
-The uploaded SVG is treated as one coherent conspect. Its semantic roads are documented in the final transcript while the original SVG, every embedded image and every SVG text element remain preserved for correction/audit.
+## Semantic regions
 
-## Reading policy
+| Region | Images | Labels | Scope |
+|---|---:|---:|---|
+| R01 | 22 | 15 | primary-handler patterns, redirects, decompression, cookies and top-level option selection |
+| R02 | 44 | 16 | CookieContainer behavior, HttpClientFactory pooling, credential cache and endpoint-specific auth |
+| R03 | 23 | 6 | Basic, NTLM, Kerberos, Negotiate, DefaultCredentials, JWT distinction and proxy behavior |
+| R04 | 11 | 10 | ConnectTimeout, pool lifetime/idle timeout, MaxConnectionsPerServer and concurrency boundaries |
+| R05 | 8 | 0 | Expect: 100-continue, Expect100ContinueTimeout, SslOptions, HttpClientHandler compatibility and browser WebSocket limits |
 
-- SVG text is parsed directly rather than OCR'd.
-- Embedded screenshots are preserved separately.
-- `canvas-preview.png` is the visual boundary reference.
-- Exact code punctuation remains governed by the original SVG/source images.
+## Audit assets
+
+- `audit-assets/primary-httphandler-options-socket-corrected-full-preview-v002.png`
+- `audit-assets/contact-sheet-01.png` through `contact-sheet-08.png`
+
+## Result
+
+All restored screenshots are preserved, indexed and incorporated into the corrected semantic transcript.
