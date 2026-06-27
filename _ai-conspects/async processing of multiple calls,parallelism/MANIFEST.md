@@ -1,42 +1,48 @@
 # MANIFEST — async processing of multiple calls,parallelism
 
-Generated: 2026-06-27 03:00:00 UTC
+Generated: 2026-06-27 04:00:00 UTC
 
-## Source
+## Preserved complete source
 
 - `source/async processing of multiple calls,parallelism.svg`
 - 62 extracted screenshots under `source/images/`
+- original Stage0 ledgers and contact sheets
 
-## Stage0 documents
+## Regional transcripts
 
-- `00-source-check-and-boundary-review.md`
+- `01-transcript-R01-task-creation-hot-tasks-and-when-work-starts.md`
+- `02-transcript-R02-semaphoreslim-throttling-and-bounded-concurrency.md`
+- `03-transcript-R03-whenall-semaphore-versus-parallel-foreachasync.md`
+- `04-transcript-R04-parallel-foreachasync-behavior-and-result-collection.md`
+- `05-transcript-R05-parallel-foreach-task-waitall-and-sync-over-async.md`
+- `06-transcript-R06-server-concurrency-ordering-and-resource-limits.md`
+- `07-transcript-R07-failures-cancellation-ordering-and-selection-guide.md`
+- `08-transcript-R08-end-to-end-implementations-and-result-aggregation.md`
+
+## Closed ledgers
+
+- `data/image-uses-v002-closed.json`
+- `data/image-uses-v002-closed.csv`
+- `data/text-elements-v002-closed.json`
+- `data/text-elements-v002-closed.csv`
+- `data/region-plan-v002-closed.json`
+- `data/region-plan-v002-closed.csv`
+
+## Authoritative integrated result
+
+- `09-full-combined-final-transcript.md`
+- `10-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.json`
+- `data/full-conspect-final-coverage-audit-v001.csv`
 - `CURRENT_SOURCE_OF_TRUTH.md`
-- `MANIFEST.md`
-- `APPLY_STAGE0_ARCHIVE.md`
+- `TRANSCRIPT_STATUS.md`
 
-## Ledgers
-
-- `data/source-summary.json`
-- `data/embedded-images.json`
-- `data/embedded-images.csv`
-- `data/image-uses.json`
-- `data/image-uses.csv`
-- `data/text-elements.json`
-- `data/text-elements.csv`
-- `data/region-plan.json`
-- `data/region-plan.csv`
-
-## Audit assets
-
-- `audit-assets/complete-canvas-preview-v001.png`
-- 10 regional contact-sheet files
-
-## Current coverage
+## Final coverage
 
 ```text
-text elements inventoried: 30
-image uses inventoried: 83
-regional transcripts completed: 0 / 8
-remaining text elements: 30
-remaining image uses: 83
+text elements: 30 / 30
+image uses: 83 / 83
+repeated placements: 21 / 21
+remaining text elements: 0
+remaining image uses: 0
 ```

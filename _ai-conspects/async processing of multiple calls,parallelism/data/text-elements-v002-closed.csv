@@ -1,0 +1,31 @@
+﻿text_id,text,x,y,status,combined_transcript_section,authoritative_transcript
+T-001,For demo purposes reverse results order(performing some operations with when all operations completed),13729.713698144504,4774.997940129876,closed,11 Result ordering and post-processing,09-full-combined-final-transcript.md
+T-002,Can be used on a client but cant be used on a server,9644.413198322582,864.5211043504797,closed,07 Server-side consequences of blocking,09-full-combined-final-transcript.md
+T-003,TaskWailtAll,8049.968787786556,1264.5324663567737,closed,07 Server-side consequences of blocking,09-full-combined-final-transcript.md
+T-004,THread is being blocked,8049.968787786556,1399.9028141215306,closed,07 Server-side consequences of blocking,09-full-combined-final-transcript.md
+T-005,Parallel.Foreach,6883.301917669369,337.86590141536743,closed,06 Why synchronous Parallel.ForEach is wrong for I/O,09-full-combined-final-transcript.md
+T-006,"for parallel work,",6883.301917669369,473.2362491801243,closed,06 Why synchronous Parallel.ForEach is wrong for I/O,09-full-combined-final-transcript.md
+T-007,not parallel lack of work in case,6883.301917669369,608.6065969448812,closed,06 Why synchronous Parallel.ForEach is wrong for I/O,09-full-combined-final-transcript.md
+T-008,of db calls,6883.301917669369,743.976944709638,closed,09 Database and downstream-resource constraints,09-full-combined-final-transcript.md
+T-009,Parallel.Foreachasync,5334.968482610775,911.1993364739611,closed,05 Parallel.ForEachAsync,09-full-combined-final-transcript.md
+T-010,"PARALLEL.FOREACH NEED FOR MULTIPLE THREADS WORKING,",3620.79620526882,746.518128852923,closed,02 Concurrency versus parallelism,09-full-combined-final-transcript.md
+T-011,"IN I/O CALLS THERE IS NO WORK, SO THREADS ARE BEING BLOCKED",3620.79620526882,771.518128852923,closed,06 Why synchronous Parallel.ForEach is wrong for I/O,09-full-combined-final-transcript.md
+T-012,Sumary,3679.5152779814052,443.13662500770806,closed,12 Selection guide,09-full-combined-final-transcript.md
+T-013,NEED TO USE SEMAPHORESLIM + WHENALL                        NEED TO USE PARALLEL.FOREACHASYNC,3672.705015339201,890.7072736951478,closed,12 Selection guide,09-full-combined-final-transcript.md
+T-014,1 IF YOU NEED TO PRESERVE TASK ORDER,3568.5420420819864,996.6499823967271,closed,04 SemaphoreSlim plus Task.WhenAll,09-full-combined-final-transcript.md
+T-015,2 IF YOU NEED SIMPLE COLLECTION OF RESULTS OF PAR TASKS,3568.5420420819864,1021.6499823967271,closed,04 SemaphoreSlim plus Task.WhenAll,09-full-combined-final-transcript.md
+T-016,3 IF YOU WANT BEST EFFORT(NO CANCELLATOIN OF FURTHER TASKS ON,3568.5420420819864,1046.649982396727,closed,10 Failure and cancellation semantics,09-full-combined-final-transcript.md
+T-017,FAIL),3568.5420420819864,1071.649982396727,closed,10 Failure and cancellation semantics,09-full-combined-final-transcript.md
+T-018,4 IF THE NUMBER OF TASKS NOT TOO LARGE(ALLOCATES EACH TASK),3568.5420420819864,1096.649982396727,closed,08 Allocation shape and backpressure,09-full-combined-final-transcript.md
+T-019,1 IF YOU DONT NEED TO PRESERVE ORDER,4380.979061188476,1011.6866487835315,closed,05 Parallel.ForEachAsync,09-full-combined-final-transcript.md
+T-020,2 IF YOU DONT NEED COLLECTION OF RESULTS,4380.979061188476,1036.6866487835314,closed,05 Parallel.ForEachAsync,09-full-combined-final-transcript.md
+T-021,(YOU MIGHT NEED THREAD SAFE COLLECTION OF RESULTS IF YOU NEED ),4380.979061188476,1061.6866487835314,closed,05 Parallel.ForEachAsync,09-full-combined-final-transcript.md
+T-022,3 IF YOU NEED TO RUN A LOT OF TASKS,4380.979061188476,1086.6866487835314,closed,08 Allocation shape and backpressure,09-full-combined-final-transcript.md
+T-023,4 IF YOU NEED CANCEL FURTHER TASKS ON FIRST FAIL,4380.979061188476,1111.6866487835314,closed,10 Failure and cancellation semantics,09-full-combined-final-transcript.md
+T-024,Sepaphoreslim,2605.3948963307575,696.2887069855148,closed,04 SemaphoreSlim plus Task.WhenAll,09-full-combined-final-transcript.md
+T-025,parallel calls,2605.3948963307575,774.0664932403976,closed,03 Starting asynchronous operations,09-full-combined-final-transcript.md
+T-026,when does the work,1212.182815808741,607.8038048637114,closed,03 Starting asynchronous operations,09-full-combined-final-transcript.md
+T-027,for tasks start?,1212.182815808741,685.5815911185942,closed,03 Starting asynchronous operations,09-full-combined-final-transcript.md
+T-028,create collection with,1150.364633990559,805.379543943967,closed,03 Starting asynchronous operations,09-full-combined-final-transcript.md
+T-029,some async code inside (Task inside),1150.364633990559,883.1573301988498,closed,03 Starting asynchronous operations,09-full-combined-final-transcript.md
+T-030,started in foreach,1186.1466208386973,1742.5803419590825,closed,03 Starting asynchronous operations,09-full-combined-final-transcript.md

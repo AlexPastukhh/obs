@@ -1,0 +1,179 @@
+[
+  {
+    "region_id": "R01",
+    "title": "Task collection creation, execution start and sequential foreach timing",
+    "min_x": 0,
+    "max_x": 2200,
+    "image_use_count": 3,
+    "unique_image_count": 3,
+    "duplicate_placement_count": 3,
+    "canvas_min_x": 1155.7867807852126,
+    "canvas_max_x": 1995.1806461971446,
+    "canvas_min_y": 1009.658534123866,
+    "canvas_max_y": 2275.672693267272,
+    "representative_captions": [
+      "some async code inside (Task inside)",
+      "create collection with",
+      "started in foreach"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "01-transcript-R01-task-creation-hot-tasks-and-when-work-starts.md"
+  },
+  {
+    "region_id": "R02",
+    "title": "SemaphoreSlim throttling and bounded parallel calls",
+    "min_x": 2200,
+    "max_x": 3400,
+    "image_use_count": 3,
+    "unique_image_count": 3,
+    "duplicate_placement_count": 3,
+    "canvas_min_x": 2490.929700009423,
+    "canvas_max_x": 3316.929700009423,
+    "canvas_min_y": 839.3067726081881,
+    "canvas_max_y": 1911.9580920381795,
+    "representative_captions": [
+      "parallel calls",
+      "Sepaphoreslim",
+      "1 IF YOU NEED TO PRESERVE TASK ORDER",
+      "4 IF THE NUMBER OF TASKS NOT TOO LARGE(ALLOCATES EACH TASK)",
+      "FAIL)",
+      "3 IF YOU WANT BEST EFFORT(NO CANCELLATOIN OF FURTHER TASKS ON"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "02-transcript-R02-semaphoreslim-throttling-and-bounded-concurrency.md"
+  },
+  {
+    "region_id": "R03",
+    "title": "Decision matrix: WhenAll plus SemaphoreSlim versus Parallel.ForEachAsync",
+    "min_x": 3400,
+    "max_x": 5300,
+    "image_use_count": 8,
+    "unique_image_count": 8,
+    "duplicate_placement_count": 8,
+    "canvas_min_x": 3441.2469751544377,
+    "canvas_max_x": 5148.731352845571,
+    "canvas_min_y": 1129.3207334439849,
+    "canvas_max_y": 4434.656324742746,
+    "representative_captions": [
+      "4 IF YOU NEED CANCEL FURTHER TASKS ON FIRST FAIL",
+      "3 IF YOU NEED TO RUN A LOT OF TASKS",
+      "(YOU MIGHT NEED THREAD SAFE COLLECTION OF RESULTS IF YOU NEED )",
+      "4 IF THE NUMBER OF TASKS NOT TOO LARGE(ALLOCATES EACH TASK)",
+      "FAIL)"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "03-transcript-R03-whenall-semaphore-versus-parallel-foreachasync.md"
+  },
+  {
+    "region_id": "R04",
+    "title": "Parallel.ForEachAsync behavior and result collection",
+    "min_x": 5300,
+    "max_x": 6500,
+    "image_use_count": 3,
+    "unique_image_count": 3,
+    "duplicate_placement_count": 3,
+    "canvas_min_x": 5612.072635758113,
+    "canvas_max_x": 6363.961470393529,
+    "canvas_min_y": 1109.901455194271,
+    "canvas_max_y": 1536.5681625510515,
+    "representative_captions": [
+      "Parallel.Foreachasync",
+      "of db calls",
+      "not parallel lack of work in case"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "04-transcript-R04-parallel-foreachasync-behavior-and-result-collection.md"
+  },
+  {
+    "region_id": "R05",
+    "title": "Parallel.ForEach, Task.WaitAll, blocking and the I/O mismatch",
+    "min_x": 6500,
+    "max_x": 9000,
+    "image_use_count": 4,
+    "unique_image_count": 4,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 6935.765022269712,
+    "canvas_max_x": 7776.431688936378,
+    "canvas_min_y": 884.4371700085121,
+    "canvas_max_y": 2232.3816280162664,
+    "representative_captions": [
+      "of db calls",
+      "not parallel lack of work in case",
+      "TaskWailtAll",
+      "THread is being blocked"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "05-transcript-R05-parallel-foreach-task-waitall-and-sync-over-async.md"
+  },
+  {
+    "region_id": "R06",
+    "title": "Client-side multiple-call concurrency, server constraints and ordering",
+    "min_x": 9000,
+    "max_x": 10700,
+    "image_use_count": 8,
+    "unique_image_count": 8,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 9406.191541096017,
+    "canvas_max_x": 10710.870148776106,
+    "canvas_min_y": 894.6188930467688,
+    "canvas_max_y": 11095.650795252564,
+    "representative_captions": [
+      "Can be used on a client but cant be used on a server",
+      "TaskWailtAll",
+      "THread is being blocked",
+      "For demo purposes reverse results order(performing some operations with when all operations completed)"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "06-transcript-R06-server-concurrency-ordering-and-resource-limits.md"
+  },
+  {
+    "region_id": "R07",
+    "title": "WhenAll, SemaphoreSlim and Parallel.ForEachAsync implementation, failures and cancellation",
+    "min_x": 10700,
+    "max_x": 12800,
+    "image_use_count": 28,
+    "unique_image_count": 28,
+    "duplicate_placement_count": 4,
+    "canvas_min_x": 10701.548343193343,
+    "canvas_max_x": 12419.92456280701,
+    "canvas_min_y": 1001.2856538622818,
+    "canvas_max_y": 11518.396203019649,
+    "representative_captions": [
+      "Can be used on a client but cant be used on a server",
+      "TaskWailtAll",
+      "THread is being blocked",
+      "For demo purposes reverse results order(performing some operations with when all operations completed)"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "07-transcript-R07-failures-cancellation-ordering-and-selection-guide.md"
+  },
+  {
+    "region_id": "R08",
+    "title": "End-to-end demos, preserved ordering and result aggregation",
+    "min_x": 12800,
+    "max_x": 16000,
+    "image_use_count": 26,
+    "unique_image_count": 26,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 13531.017837081066,
+    "canvas_max_x": 15324.161028569903,
+    "canvas_min_y": 1143.8860955081564,
+    "canvas_max_y": 9998.371016851373,
+    "representative_captions": [
+      "For demo purposes reverse results order(performing some operations with when all operations completed)",
+      "Can be used on a client but cant be used on a server",
+      "TaskWailtAll",
+      "THread is being blocked"
+    ],
+    "status": "closed",
+    "remaining_image_uses": 0,
+    "transcript_file": "08-transcript-R08-end-to-end-implementations-and-result-aggregation.md"
+  }
+]

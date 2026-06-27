@@ -30,14 +30,14 @@ tracked separately during transcription.
 
 ## Reading boundary
 
-Stage0 preserves and inventories the source. It does not yet claim semantic
-transcript coverage.
+Stage0 preserved and inventoried the source. Regional and combined transcript
+coverage has now been completed.
 
 ```text
-processed text elements: 0 / 30
-processed screenshot uses: 0 / 83
-remaining text elements: 30
-remaining screenshot uses: 83
+processed text elements: 30 / 30
+processed screenshot uses: 83 / 83
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -53,7 +53,7 @@ remaining screenshot uses: 83
 | R07 | WhenAll, SemaphoreSlim and Parallel.ForEachAsync implementation, failures and cancellation | 28 | 28 | 4 |
 | R08 | End-to-end demos, preserved ordering and result aggregation | 26 | 26 | 0 |
 
-## Next
+## Closure
 
-Review the regional contact sheets, create semantic transcripts for `R01`–`R08`,
-then build one combined final transcript and a full-conspect coverage audit.
+Regional transcripts `R01`–`R08`, the combined final transcript and the
+full-conspect coverage audit are complete.

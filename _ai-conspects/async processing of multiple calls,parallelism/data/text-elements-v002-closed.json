@@ -1,0 +1,362 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "For demo purposes reverse results order(performing some operations with when all operations completed)",
+    "x": 13729.713698144504,
+    "y": 4774.997940129876,
+    "transform_chain": [
+      "translate(13729.713698144504 4757.377940129876) rotate(0 510.2696228027344 12.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "11 Result ordering and post-processing",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-002",
+    "text": "Can be used on a client but cant be used on a server",
+    "x": 9644.413198322582,
+    "y": 864.5211043504797,
+    "transform_chain": [
+      "translate(9644.413198322582 846.9011043504797) rotate(0 259.5498352050781 12.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "07 Server-side consequences of blocking",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-003",
+    "text": "TaskWailtAll",
+    "x": 8049.968787786556,
+    "y": 1264.5324663567737,
+    "transform_chain": [
+      "translate(8049.968787786556 1169.123445252173) rotate(0 622.829833984375 135.37034776475684)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "07 Server-side consequences of blocking",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-004",
+    "text": "THread is being blocked",
+    "x": 8049.968787786556,
+    "y": 1399.9028141215306,
+    "transform_chain": [
+      "translate(8049.968787786556 1169.123445252173) rotate(0 622.829833984375 135.37034776475684)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "07 Server-side consequences of blocking",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-005",
+    "text": "Parallel.Foreach",
+    "x": 6883.301917669369,
+    "y": 337.86590141536743,
+    "transform_chain": [
+      "translate(6883.301917669369 242.4568803107668) rotate(0 836.8109130859375 270.7406955295137)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "06 Why synchronous Parallel.ForEach is wrong for I/O",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-006",
+    "text": "for parallel work,",
+    "x": 6883.301917669369,
+    "y": 473.2362491801243,
+    "transform_chain": [
+      "translate(6883.301917669369 242.4568803107668) rotate(0 836.8109130859375 270.7406955295137)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "06 Why synchronous Parallel.ForEach is wrong for I/O",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-007",
+    "text": "not parallel lack of work in case",
+    "x": 6883.301917669369,
+    "y": 608.6065969448812,
+    "transform_chain": [
+      "translate(6883.301917669369 242.4568803107668) rotate(0 836.8109130859375 270.7406955295137)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "06 Why synchronous Parallel.ForEach is wrong for I/O",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-008",
+    "text": "of db calls",
+    "x": 6883.301917669369,
+    "y": 743.976944709638,
+    "transform_chain": [
+      "translate(6883.301917669369 242.4568803107668) rotate(0 836.8109130859375 270.7406955295137)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "09 Database and downstream-resource constraints",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-009",
+    "text": "Parallel.Foreachasync",
+    "x": 5334.968482610775,
+    "y": 911.1993364739611,
+    "transform_chain": [
+      "translate(5334.968482610775 815.7903153693605) rotate(0 549.7882690429688 67.68517388237888)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "05 Parallel.ForEachAsync",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-010",
+    "text": "PARALLEL.FOREACH NEED FOR MULTIPLE THREADS WORKING,",
+    "x": 3620.79620526882,
+    "y": 746.518128852923,
+    "transform_chain": [
+      "translate(3620.79620526882 728.898128852923) rotate(0 367.3098449707031 25)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "02 Concurrency versus parallelism",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-011",
+    "text": "IN I/O CALLS THERE IS NO WORK, SO THREADS ARE BEING BLOCKED",
+    "x": 3620.79620526882,
+    "y": 771.518128852923,
+    "transform_chain": [
+      "translate(3620.79620526882 728.898128852923) rotate(0 367.3098449707031 25)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "06 Why synchronous Parallel.ForEach is wrong for I/O",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-012",
+    "text": "Sumary",
+    "x": 3679.5152779814052,
+    "y": 443.13662500770806,
+    "transform_chain": [
+      "translate(3679.5152779814052 138.8979762650324) rotate(0 578.6004028320312 215.83332061767578)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "12 Selection guide",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-013",
+    "text": "NEED TO USE SEMAPHORESLIM + WHENALL                        NEED TO USE PARALLEL.FOREACHASYNC",
+    "x": 3672.705015339201,
+    "y": 890.7072736951478,
+    "transform_chain": [
+      "translate(3672.705015339201 873.0872736951478) rotate(0 525.8297729492188 12.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "12 Selection guide",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-014",
+    "text": "1 IF YOU NEED TO PRESERVE TASK ORDER",
+    "x": 3568.5420420819864,
+    "y": 996.6499823967271,
+    "transform_chain": [
+      "translate(3568.5420420819864 979.0299823967271) rotate(0 386.64984130859375 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "04 SemaphoreSlim plus Task.WhenAll",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-015",
+    "text": "2 IF YOU NEED SIMPLE COLLECTION OF RESULTS OF PAR TASKS",
+    "x": 3568.5420420819864,
+    "y": 1021.6499823967271,
+    "transform_chain": [
+      "translate(3568.5420420819864 979.0299823967271) rotate(0 386.64984130859375 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "04 SemaphoreSlim plus Task.WhenAll",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-016",
+    "text": "3 IF YOU WANT BEST EFFORT(NO CANCELLATOIN OF FURTHER TASKS ON",
+    "x": 3568.5420420819864,
+    "y": 1046.649982396727,
+    "transform_chain": [
+      "translate(3568.5420420819864 979.0299823967271) rotate(0 386.64984130859375 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "10 Failure and cancellation semantics",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-017",
+    "text": "FAIL)",
+    "x": 3568.5420420819864,
+    "y": 1071.649982396727,
+    "transform_chain": [
+      "translate(3568.5420420819864 979.0299823967271) rotate(0 386.64984130859375 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "10 Failure and cancellation semantics",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-018",
+    "text": "4 IF THE NUMBER OF TASKS NOT TOO LARGE(ALLOCATES EACH TASK)",
+    "x": 3568.5420420819864,
+    "y": 1096.649982396727,
+    "transform_chain": [
+      "translate(3568.5420420819864 979.0299823967271) rotate(0 386.64984130859375 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "08 Allocation shape and backpressure",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-019",
+    "text": "1 IF YOU DONT NEED TO PRESERVE ORDER",
+    "x": 4380.979061188476,
+    "y": 1011.6866487835315,
+    "transform_chain": [
+      "translate(4380.979061188476 994.0666487835315) rotate(0 394.4198303222656 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "05 Parallel.ForEachAsync",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-020",
+    "text": "2 IF YOU DONT NEED COLLECTION OF RESULTS",
+    "x": 4380.979061188476,
+    "y": 1036.6866487835314,
+    "transform_chain": [
+      "translate(4380.979061188476 994.0666487835315) rotate(0 394.4198303222656 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "05 Parallel.ForEachAsync",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-021",
+    "text": "(YOU MIGHT NEED THREAD SAFE COLLECTION OF RESULTS IF YOU NEED )",
+    "x": 4380.979061188476,
+    "y": 1061.6866487835314,
+    "transform_chain": [
+      "translate(4380.979061188476 994.0666487835315) rotate(0 394.4198303222656 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "05 Parallel.ForEachAsync",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-022",
+    "text": "3 IF YOU NEED TO RUN A LOT OF TASKS",
+    "x": 4380.979061188476,
+    "y": 1086.6866487835314,
+    "transform_chain": [
+      "translate(4380.979061188476 994.0666487835315) rotate(0 394.4198303222656 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "08 Allocation shape and backpressure",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-023",
+    "text": "4 IF YOU NEED CANCEL FURTHER TASKS ON FIRST FAIL",
+    "x": 4380.979061188476,
+    "y": 1111.6866487835314,
+    "transform_chain": [
+      "translate(4380.979061188476 994.0666487835315) rotate(0 394.4198303222656 62.5)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "10 Failure and cancellation semantics",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-024",
+    "text": "Sepaphoreslim",
+    "x": 2605.3948963307575,
+    "y": 696.2887069855148,
+    "transform_chain": [
+      "translate(2605.3948963307575 641.4709232330733) rotate(0 217.14776611328125 77.77778625488281)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "04 SemaphoreSlim plus Task.WhenAll",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-025",
+    "text": "parallel calls",
+    "x": 2605.3948963307575,
+    "y": 774.0664932403976,
+    "transform_chain": [
+      "translate(2605.3948963307575 641.4709232330733) rotate(0 217.14776611328125 77.77778625488281)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "03 Starting asynchronous operations",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-026",
+    "text": "when does the work",
+    "x": 1212.182815808741,
+    "y": 607.8038048637114,
+    "transform_chain": [
+      "translate(1212.182815808741 552.98602111127) rotate(0 301.8603210449219 77.77778625488281)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "03 Starting asynchronous operations",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-027",
+    "text": "for tasks start?",
+    "x": 1212.182815808741,
+    "y": 685.5815911185942,
+    "transform_chain": [
+      "translate(1212.182815808741 552.98602111127) rotate(0 301.8603210449219 77.77778625488281)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "03 Starting asynchronous operations",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-028",
+    "text": "create collection with",
+    "x": 1150.364633990559,
+    "y": 805.379543943967,
+    "transform_chain": [
+      "translate(1150.364633990559 750.5617601915255) rotate(0 557.4288940429688 77.77778625488281)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "03 Starting asynchronous operations",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-029",
+    "text": "some async code inside (Task inside)",
+    "x": 1150.364633990559,
+    "y": 883.1573301988498,
+    "transform_chain": [
+      "translate(1150.364633990559 750.5617601915255) rotate(0 557.4288940429688 77.77778625488281)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "03 Starting asynchronous operations",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-030",
+    "text": "started in foreach",
+    "x": 1186.1466208386973,
+    "y": 1742.5803419590825,
+    "transform_chain": [
+      "translate(1186.1466208386973 1687.7625582066412) rotate(0 281.607666015625 38.888893127441406)"
+    ],
+    "status": "closed",
+    "combined_transcript_section": "03 Starting asynchronous operations",
+    "authoritative_transcript": "09-full-combined-final-transcript.md"
+  }
+]
