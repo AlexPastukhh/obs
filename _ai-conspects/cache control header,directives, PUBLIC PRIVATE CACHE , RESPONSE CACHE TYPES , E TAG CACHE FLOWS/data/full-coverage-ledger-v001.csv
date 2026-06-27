@@ -1,0 +1,109 @@
+﻿item_type,item_id,secondary_id,sha256,region_id,status,restored,assignment_count,evidence
+image_use,S-001,IU-001,2d4613f7e7ff6d83137ec8969db89428c8f6350cd3f44cac4358e4ed69e26874,R01,processed-semantic-transcript,True,1,Browser-generated request Cache-Control max-age=0 versus application-generated request headers.
+image_use,S-002,IU-002,fc01d79549049302a21573b073bc9b216a7e106a724ed8d69e0aaa26af963c8f,R01,processed-semantic-transcript,True,1,"Client request directives: max-age, max-stale, min-fresh, no-cache, no-store, and only-if-cached."
+image_use,S-003,IU-003,9f0511a395d5233bf7bc9069dd72aeb61fdfe2e9902fa11d3baceac958a9a892,R01,processed-semantic-transcript,True,1,Overview of Cache-Control on requests and responses across private and shared caches.
+image_use,S-004,IU-004,94e193f6f0fd62f04d3c43413737196c69603baed07b0618c21ca3b85a6bb12f,R02,processed-semantic-transcript,True,1,"Freshness flow for public max-age=60 across first, fresh, and stale requests."
+image_use,S-005,IU-005,395590526c55662db468d23c40ef786671fce6c0c772cbce7dde5ffea0da8deb,R03,processed-semantic-transcript,True,1,ETag or Last-Modified without explicit Cache-Control may still permit heuristic storage and later validation.
+image_use,S-006,IU-006,f4b75da0d363bd74501ebb0b1e33dd5652cdc60287ac78d2de7f5b7a97a1b377,R03,processed-semantic-transcript,True,1,Always-revalidate pattern: validator plus Cache-Control no-cache.
+image_use,S-007,IU-007,4377b7cac1370799b4da6f9f0fa852af0840514f05e72443d7c5adb5a0062cab,R02,processed-semantic-transcript,True,1,Browser heuristic decisions when validators exist but explicit freshness does not.
+image_use,S-008,IU-008,5e4956c7fed264b1706b965ccb1f8720fba04df806ddbe7daf30ef740978e2b3,R04,processed-semantic-transcript,True,1,no-store as the primary directive for sensitive data.
+image_use,S-009,IU-009,79af126eef6d231932abecf1aeea56b98ab92a5eef2c58d97ca0a21c7c7d3ad3,R06,processed-semantic-transcript,True,1,Output Cache described as server-side shared caching whose key and policies must prevent personalized leaks.
+image_use,S-010,IU-010,e9dac0146f59f966762c5f832330787e8414863eaaaf90d119ec45ab5ae8d4e1,R06,processed-semantic-transcript,True,1,Nuance that Output Cache is shared server-side caching even though policies can vary by dimensions.
+image_use,S-011,IU-011,ce9971f8b3b920fa19ee95e41fc7b6d1136ac330bbee8bde4ea53c5069a35a4c,R04,processed-semantic-transcript,True,1,Guidance for public content that is identical for every user.
+image_use,S-012,IU-012,4d1d565e379323fcae3c2110625f71c834e0a4cd9210ab4256f84d672d080023,R03,processed-semantic-transcript,True,1,Classic no-cache plus ETag flow from cached response to conditional request and 304.
+image_use,S-013,IU-013,5bd2a88b3354575232aa4ffc6a373475c76787f8e0694c11cfb601f1dfd8aac7,R01,processed-semantic-transcript,True,1,Distinction between request Cache-Control and response Cache-Control.
+image_use,S-014,IU-014,b4bf6a85305872efd1c9a39d229974b1636e4d9b863db321c7f5559aa3d9cb88,R02,processed-semantic-transcript,True,1,No max-age or Expires: response is not safely predictable as cacheable and APIs should usually be called again.
+image_use,S-015,IU-015,7fd5ebc6e07e33f977400e35ac980312109e875d0d7fa83f4cac699a1cdeec27,R06,processed-semantic-transcript,True,1,Output Cache safety rule: cache only effectively public content for the selected key.
+image_use,S-016,IU-016,95982c8fd75e592d7a127448874240684ffcf0b736ad3f2b4434d1cf4196035c,R02,processed-semantic-transcript,True,1,Heuristic caching example using ETag without explicit freshness.
+image_use,S-017,IU-017,d355af4fa2911f694b72316fac1def12036ba6993a1fbc37d5f9386b4cff4fc0,R04,processed-semantic-transcript,True,1,Private browser caching guidance for personalized content.
+image_use,S-018,IU-018,e87e635d13be925867565d0553f1c000773484a8cfd3ea560336b02136b2f373,R03,processed-semantic-transcript,True,1,must-revalidate behavior after a max-age lifetime expires.
+image_use,S-019,IU-019,04f15953da683da24d6b67f093a808e699d3919ec5f02a3abb75741785d7e452,R02,processed-semantic-transcript,True,1,max-age as the central performance-oriented freshness directive.
+image_use,S-020,IU-020,273800646d4c2f57b7086d659e175bc740e34aa5eaaaf946d5142aa5e382122c,R02,processed-semantic-transcript,True,1,"max-age without validators gives fresh reuse, then usually a full fetch after expiry."
+image_use,S-021,IU-021,dee706f5e900f6de62ab247c2c40cf574c3c0497958aea9b21fba1c9a76bccb6,R03,processed-semantic-transcript,True,1,Last-Modified with no-cache and conditional If-Modified-Since validation.
+image_use,S-022,IU-022,8ddec5daccf98b4fc7c18f4830c02329c75644fb84be0f077605797dafc97b05,R04,processed-semantic-transcript,True,1,Browser cache is private and can safely hold user-specific responses when policy allows.
+image_use,S-023,IU-023,33d7d4f803f74516d0b99529174c3b37cac4797bebe4e168156fedbee7751def,R01,processed-semantic-transcript,True,1,Combined request and response directives use the stricter effective rule.
+image_use,S-024,IU-024,ff21b4e4134a44a7414698fc84cf94c870ffc984fc251b9f7de39f40e7612d14,R04,processed-semantic-transcript,True,1,Sensitive personalized content should generally use no-store and avoid shared caching.
+image_use,S-025,IU-025,e7b3fa02e57dcb9f457e59879371bfc24573961d778ebc94cb700000c07b2f37,R01,processed-semantic-transcript,True,1,Client no-cache can force validation even when the response advertises max-age.
+image_use,S-026,IU-026,6022a6be14097d7a4712334fd459e3c4f58998d0195dd7c451d987caba0a0f3d,R03,processed-semantic-transcript,True,1,"Without must-revalidate, some caches can serve stale content in limited policy-defined situations."
+image_use,S-027,IU-027,3ee2002640a4c9d5ca395a33ed04d672143833c48303e3face65ea496f03dbe5,R04,processed-semantic-transcript,True,1,public versus private determines whether shared caches may store the representation.
+image_use,S-028,IU-028,6f1f64d2c27f49d2456660cac819398bfae67314b2de82613b239eb5f540860f,R03,processed-semantic-transcript,True,1,Combined ETag and max-age flow: fresh reuse followed by conditional validation.
+image_use,S-029,IU-029,501d19899153677adf0f71c6c030e7f0c2837698f9a59899b42ea7c7cb23af22,R04,processed-semantic-transcript,True,1,"Shared caches can expose personalized content unless responses are private, no-store, or correctly varied."
+image_use,S-030,IU-030,1a02d11b7b9b9d0231b13dcb13ca2cf84c9be03f6c2d6121bcef80bdf4d8aa3d,R03,processed-semantic-transcript,True,1,no-cache plus ETag revalidation example with 304 and 200 outcomes.
+image_use,S-031,IU-031,78eaf303fc779872930acc19fe9404f3dfa67aa1076ec51d8d8f5de47ea3a20e,R04,processed-semantic-transcript,True,1,private max-age example for user-specific data cacheable only on the client.
+image_use,S-032,IU-032,0986cfc87e11fa2c710ac71cb0e094fa3bdfcc75b1a9c4651739bc734e9d8fa0,R01,processed-semantic-transcript,True,1,Client request no-store overrides a response that would otherwise permit public storage.
+image_use,S-033,IU-033,7a0e82b4a7becbcf80702c3a516abaa563efefa500410753b1917dd55b122d8a,R02,processed-semantic-transcript,True,1,"After max-age expiry, ETag validation determines 304 versus a new 200 response."
+image_use,S-034,IU-034,84f419caecae0ad52e025a32d286a4d7e570abe4bc425cacdbcd314bc2a91fc2,R03,processed-semantic-transcript,True,1,no-cache allows storage but requires validation before every reuse.
+image_use,S-035,IU-035,6f9c873b7ac68ebda1a0836209b2593b3b0932a00cff872940a311e7bbfaa3bf,R02,processed-semantic-transcript,True,1,"Without no-cache, freshness directives decide whether a cached response can be reused directly."
+image_use,S-036,IU-036,49811a669c7d6d36dd96fffba712680210286534e32b1cee7944b0025ff62196,R03,processed-semantic-transcript,True,1,must-revalidate is useful when serving stale content is unacceptable after expiry.
+image_use,S-037,IU-037,552fa8c96bc17cc5bd8c0a7ff2c43d642252910680ef4e3b714466e2174ccaa0,R04,processed-semantic-transcript,True,1,"no-store prevents storage and is appropriate for tokens, PII, and banking data."
+image_use,S-038,IU-038,18b2a1f75320401fcbb9c971457293a7771c46964f29f09a2c6eb6aa96aab7b1,R01,processed-semantic-transcript,True,1,Directive precedence is rule-specific rather than one universal override mechanism.
+image_use,S-039,IU-039,01440e8e7a3a434905972deb133534d6ac667c6e9a294112dcfd8e8b8e746c36,R03,processed-semantic-transcript,True,1,must-revalidate prohibits stale reuse once a response becomes stale.
+image_use,S-040,IU-040,d3436ee3117b49ec94a7ef50cc586c2aac463c758d13a67da73772fca7619800,R04,processed-semantic-transcript,True,1,"Response directive list covering max-age, s-maxage, cacheability, validation, and stale-serving policies."
+image_use,S-041,IU-041,9e30162b385098b0f92a64333b59e713631d7959d51458899b14b404351970fc,R04,processed-semantic-transcript,True,1,public/private safety examples for browser and shared caches.
+image_use,S-042,IU-042,298756daa31f081a60897f38ab3d3c9e5203a5425870e83b777d91a17dcb583b,R06,processed-semantic-transcript,True,1,ResponseCache attribute controls HTTP headers and influences browser/proxy caching and Response Caching Middleware.
+image_use,S-043,IU-043,59872095f4deb748b0c42ae3ac53115c682c2ecefd97e876a5a8f9f2e9c8c73a,R04,processed-semantic-transcript,True,1,"Omitting public/private can be ambiguous for shared caches, so explicit scope is recommended."
+image_use,S-044,IU-044,b4e99bd8d65439ecf9b62d32fea246268b224da2b58fc3c2637b1d9bce4ec87d,R01,processed-semantic-transcript,True,1,"Directive categories: cacheability, validation/revalidation, and advanced stale serving."
+image_use,S-045,IU-045,05d6a49869e2a67b983700c158d9c643cf13392b025d911130b972aa6f4012e8,R06,processed-semantic-transcript,True,1,Client max-age=0 can force a browser/proxy cache or Response Caching Middleware to revalidate.
+image_use,S-046,IU-046,ce6b2a79a6b1cb40a92b70390a61bbe3d6719616ae52bc3ad179470326054122,R06,processed-semantic-transcript,True,1,"SPA, browser cache, CDN, and Response Caching Middleware can create several independent caching layers."
+image_use,S-047,IU-047,8b2371238b4885d6c08553c09308ac9c361b7a2f1736b59892bdb04c83fac778,R05,processed-semantic-transcript,True,1,s-maxage overrides shared-cache freshness while browser max-age remains separate.
+image_use,S-048,IU-048,451953bc49391fdc86100b85342687364f4c7fdc2d1feab9d9e74110dd60aee4,R06,processed-semantic-transcript,True,1,Response Caching Middleware stores HTTP responses and follows HTTP request and response caching semantics.
+image_use,S-049,IU-049,0c75657486e6ae9d4766bfd94b8ab8851bfa82e2b82110420d1cf0478b9677f8,R06,processed-semantic-transcript,True,1,Multi-layer caching is not inherently wrong; each layer follows its own policy and key.
+image_use,S-050,IU-050,d068065efed3ac082e52efe5e9602dd7381ae8722f6fe790d65302e46e2333df,R05,processed-semantic-transcript,True,1,Vary: Accept prevents a cache from returning the wrong media type or API version.
+image_use,S-051,IU-051,2d4613f7e7ff6d83137ec8969db89428c8f6350cd3f44cac4358e4ed69e26874,R01,processed-semantic-transcript,True,1,Repeated placement of the browser-generated max-age=0 explanation.
+image_use,S-052,IU-052,3dad1795a21c46a8efa92cecb7d4997aa563d6113625e42978a56c1fef3378ff,R06,processed-semantic-transcript,True,1,Output Cache uses server policies and does not need client cache directives to decide reuse.
+image_use,S-053,IU-053,bcfa70c2fefa4fe60560f54d19cca176df0984471aa620ec8dfab21ca7ebac71,R05,processed-semantic-transcript,True,1,immutable for long-lived fingerprinted assets that do not change at the same URL.
+image_use,S-054,IU-054,3ff029798b1994bde861ec9e70dd995b50e0a8980a359bd1ece1e7bf1b36791e,R02,processed-semantic-transcript,True,1,"No caching directives: browsers may use heuristics, but APIs should not rely on them."
+image_use,S-055,IU-055,1e3be6231f9181b61ab800912e91e1fc760c01b2ceddb9e3250b75d42396501f,R02,processed-semantic-transcript,True,1,"Without immutable, a long-lived fresh response may still be revalidated on reload or by policy."
+image_use,S-056,IU-056,5c219de05772a121d9250bba2029429076ddebb5a4d2738f10f3667e07ad3516,R06,processed-semantic-transcript,True,1,Response Caching Middleware is appropriate for standards-based public HTTP caching.
+image_use,S-057,IU-057,806aa25eed43c7d71f38068fd9094b9e9e906e434b9e81dde35db0d4c512e016,R03,processed-semantic-transcript,True,1,"After freshness expires, validators drive conditional requests; no-cache requires validation every reuse."
+image_use,S-058,IU-058,24e4b96b65e168b738e19eb262a1b4f436765b23c42963bd5b872d5946e343fe,R06,processed-semantic-transcript,True,1,Response Caching Middleware is less suitable when the server must override client cache directives.
+image_use,S-059,IU-059,63b6b05364556d7faa173bb4c6e852dd098abf4cd0fb445c03e4d0676660ecd4,R05,processed-semantic-transcript,True,1,immutable mainly affects validation during the fresh period and remains dependent on freshness.
+image_use,S-060,IU-060,1bda5d5bdccdf816f1872849984815214db3274091f77080e19da1041cec2868,R04,processed-semantic-transcript,True,1,Other directives include no-transform and immutable.
+image_use,S-061,IU-061,5ee255e2f1b1386c8f5b514fb4186a4089450e7b3825522ebb14499eb3650b3a,R01,processed-semantic-transcript,True,1,Full request-directive list and only-if-cached example.
+image_use,S-062,IU-062,3b7d60634349fcef88329fd4250acba8b07f48922334814563bd4f2d9937cc4e,R04,processed-semantic-transcript,True,1,"Recipe for public catalog data using public, max-age, and s-maxage."
+image_use,S-063,IU-063,91f36a631a346bb75738b923981284b94fd8e7ecac8d6bda7180bef0d3e3886d,R04,processed-semantic-transcript,True,1,Recipe for user-specific data using private and a short max-age.
+image_use,S-064,IU-064,1f43fabe688a3747623d5e3d724e1a005b7d477296923b3ecf5849f3d058a6dd,R04,processed-semantic-transcript,True,1,Recipe for sensitive endpoints using no-store.
+image_use,S-065,IU-065,384053fa4cc1a82ac8e9038235805be5682e3c7199f0be3dcaf872030d10c3c8,R03,processed-semantic-transcript,True,1,Recipe for always validating with no-cache and ETag.
+image_use,S-066,IU-066,7923ea1d10c6c421f32627ca01790a627aef6cbb2927ab779b10f3bfdd538ca6,R03,processed-semantic-transcript,True,1,Recipe for prohibiting stale delivery with max-age and must-revalidate.
+image_use,S-067,IU-067,4d27c907e0663104fbbeadee9081cbe45d785e62b77ca2b9e0f3caaf8bc64a1f,R05,processed-semantic-transcript,True,1,CDN resilience recipe using stale-while-revalidate and stale-if-error.
+image_use,S-068,IU-068,bb9d593022fe6e5e3fd1d975e0767c4bcbf576a56d1d41b26bbc80e026eac95a,R07,processed-semantic-transcript,True,1,"Final checklist for safety, scope, freshness, validators, shared-cache lifetime, and cache-key correctness."
+svg_text_node,T-001,,778a93f8f1e8bf2623aba3ba0b812f86063457015565d4b6a0d6670aa17354b5,R01,processed-semantic-transcript,True,1,REQUEST CACHE CONTROL
+svg_text_node,T-002,,c032d87b14925f326903c890af27ecce48a1a8a8d1a5cede07ec2eeb7f020676,R05,processed-semantic-transcript,True,1,directives
+svg_text_node,T-003,,337b7e27ddaeb5cf03a903c7e0d292d6c1563b5135a430ca1d5ec820fae20494,R03,processed-semantic-transcript,True,1,SOME CACHE CONTROL - ETAG FLOWS
+svg_text_node,T-004,,ad3693c522e820cc2122d624cd3fad562e657c38ed2ca877fb34adc899fcd9c6,R07,processed-semantic-transcript,True,1,some useful flows for clarification
+svg_text_node,T-005,,c59e214610cf26fbbee79868f7364651b7e81d7c885f84e644311c5a2d992ee5,R04,processed-semantic-transcript,True,1,PUBLIC/PRIVATE CACHES
+svg_text_node,T-006,,ee9d40fc38677147adf01415364c19f0a02db7b6720c0780d02ea69383cf7a8f,R02,processed-semantic-transcript,True,1,NO CACHE CONTROL
+svg_text_node,T-007,,5952dc827606d67977d49c6e45749b595edc19dba758127971699a7ab1fd265c,R03,processed-semantic-transcript,True,1,etag + no cache
+svg_text_node,T-008,,1fac2989c234f657f6e55496e51686bd1c534290fdebba40a1ca9f9cfac22631,R03,processed-semantic-transcript,True,1,BUT WITH ETAG/LASTMOD
+svg_text_node,T-009,,f10080bdb71e852310196a177c1caab07e8d036eae1968e040c54a48503d3ffa,R03,processed-semantic-transcript,True,1,for just etag revalidation
+svg_text_node,T-010,,8dd2062be9e87f1da423898d69ff7af3f10bfc042037b9ce1e79962910825619,R02,processed-semantic-transcript,True,1,how does the browser dicides when
+svg_text_node,T-011,,adaafc99d5667267c4b5be1c54803d3b003f294c18e370ca335e4c2d0716736b,R06,processed-semantic-transcript,True,1,output cache can be
+svg_text_node,T-012,,2fadebf22c9a5fd8f182595f6d24a4dbb124fd998f0fb55307249db9609aebe6,R02,processed-semantic-transcript,True,1,it needs to revalidate/cache lifetime
+svg_text_node,T-013,,d132460a0ce02335f854741566ae8c05a5dc22cee6d7f659e75397359d45d0a3,R06,processed-semantic-transcript,True,1,output cache
+svg_text_node,T-014,,4dbc2ab3f7c9d548779686f0359b367e392056a3d8b28191838378e953b5f309,R02,processed-semantic-transcript,True,1,when we havent setage or no cache (gandon)
+svg_text_node,T-015,,dfa5d0442212be5c03c2a96f6a546539d2461f86f3093ec22cbf4bd6c27cbcdd,R07,processed-semantic-transcript,True,1,GUIDANCE
+svg_text_node,T-016,,51b2966c4f9950faf72f8e8f73063326e77f0a7a8318f2726493725c09dfb453,R06,processed-semantic-transcript,True,1,"private, but"
+svg_text_node,T-017,,de226277503d42191df7f846a8e5f91339e222e7b70b8e0765b30549bc09c373,R01,processed-semantic-transcript,True,1,REQUEST AND RESPONSE CACHE CONTROL
+svg_text_node,T-018,,bbf02a4a90e5f0c5591474b7b6c8734ec427aefa387dfeadd0af4331abc282bf,R01,processed-semantic-transcript,True,1,APPLYING TO CACHE ENTRY
+svg_text_node,T-019,,abe682eda2e0bc53d6d801020369d477499d33df859fa18fa0c9c93f53b48d72,R01,processed-semantic-transcript,True,1,COMBINATION
+svg_text_node,T-020,,5240feb67a764482628e95daa07e8ba80c9db01e69b0f326b42a6dfb71af4848,R01,processed-semantic-transcript,True,1,"OVERRIDING,MERGING"
+svg_text_node,T-021,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R01,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-022,,b84be38bd3d80b4c97282cb9e95db5db4a847a333a1d6a48b9c07588a3f5447f,R02,processed-semantic-transcript,True,1,NO ETAG
+svg_text_node,T-023,,bf19e3224d443fde4fc13e65b30660155dda505e55769594462461ed11912cef,R02,processed-semantic-transcript,True,1,WITH CACHE CONTROL
+svg_text_node,T-024,,b7aecdb2509a8bce0307e9f027582a501db06e51a52e5a53e90173bb0921e635,R04,processed-semantic-transcript,True,1,browser cache
+svg_text_node,T-025,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R04,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-026,,0a82d7d707ff55b8b45102c8dc91803dd285d20c1ab026e68791e06e0e14a7fb,R03,processed-semantic-transcript,True,1,ETAG AND CACHE CONTROL
+svg_text_node,T-027,,111a0320cfd59e18a658e4cb7c18f522b739f56e6a177bd007758ebd9a34f865,R04,processed-semantic-transcript,True,1,shared proxy/cdn/resp cache middleware
+svg_text_node,T-028,,81467a48274949f6411be1325b897746b0cab70abd0868a54dad2831edb23c89,R04,processed-semantic-transcript,True,1,RESPONSE CACHE TYPES
+svg_text_node,T-029,,3301f5d63cc291a663dc4d0aa50d8968fe67c2c9e17b5d8c089b30e5649af1dd,R06,processed-semantic-transcript,True,1,MAX AGE 0
+svg_text_node,T-030,,6b307747a05248ed22f3f4ee22a4ec932a398d3803728b139981be3103469bde,R06,processed-semantic-transcript,True,1,DUPLICATION
+svg_text_node,T-031,,97d9ead639ce509aed143ff0f5d3cf95dab1223a6d7c664ae18767139ba9f0af,R06,processed-semantic-transcript,True,1,LAST WORD IN SERVING FROM CACHE
+svg_text_node,T-032,,27e4d6f07c7be85d0eb45f66ab103fe727be2d77cce0015ecc0d9df55e08d5a9,R06,processed-semantic-transcript,True,1,BROWSER/PROXY
+svg_text_node,T-033,,18f7c2560b9d7a264e4f0d83e6658ffe94a47aab3799097ff7850f6d4452ddef,R06,processed-semantic-transcript,True,1,IN CASE OF BROWSER/PROXY AND RESPONSE CACHE MIDDLEWARE
+svg_text_node,T-034,,8fe9ce3b861734dd5e5281187f52204316a62064639e0072d659ba0da8822634,R06,processed-semantic-transcript,True,1,"SPA,RESPONSE CACHE MIDDLEWARE"
+svg_text_node,T-035,,aed06281159285740b66953d2e58b7de50a19e3f0b48872597b1dab182e3b1be,R06,processed-semantic-transcript,True,1,RESPONSE CACHEING MIDDLEWARE
+svg_text_node,T-036,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R06,processed-semantic-transcript,True,1,!!!
+svg_text_node,T-037,,c4ab3925f1b22f5c50216da553f36ab13d3ec7be5a5ac6bd4ed74cc87d589488,R06,processed-semantic-transcript,True,1,BROWSER CAN SEND SHIT RANDOMLY
+svg_text_node,T-038,,98b080033ec5edcec7b9139748c95543514499b2efd92fa25394e8c56ee5991c,R06,processed-semantic-transcript,True,1,"SO FOR SPA, OUTPUTCACHE BETTER"
+svg_text_node,T-039,,148394b6525feaae1bca9dd55841e22c89b1758eb8b4d7b24e80bc6692574448,R06,processed-semantic-transcript,True,1,OUTPUT CACHE
+svg_text_node,T-040,,5541d8a5e4f23c525bf878c181aefc0399de50822ac54ec0ce4cd87e9f234360,R06,processed-semantic-transcript,True,1,WHEN RESPONSE CACHING MIDDLEWARE

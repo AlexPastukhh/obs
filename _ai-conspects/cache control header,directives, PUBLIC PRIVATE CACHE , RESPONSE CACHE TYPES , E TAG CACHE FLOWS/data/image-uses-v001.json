@@ -1,0 +1,2926 @@
+[
+  {
+    "symbol_id": "image-6cb60d9180e1ed6e04f690946331ab68d5f5c6f8",
+    "sha256": "2d4613f7e7ff6d83137ec8969db89428c8f6350cd3f44cac4358e4ed69e26874",
+    "sha1": "0895e475125d552854e801d9f7e32ed8b49eba5b",
+    "x": 10.0,
+    "y": 278.72333799866374,
+    "width": 869.0,
+    "height": 482.0,
+    "transform": "translate(10 278.72333799866374) rotate(0 434.36891153081524 241.15625)",
+    "source_id": "S-001",
+    "image_use_id": "IU-001",
+    "region_id": "R01",
+    "description": "Browser-generated request Cache-Control max-age=0 versus application-generated request headers.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-001__2d4613f7e7.png",
+    "pixel_width": 906,
+    "pixel_height": 503,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-001",
+        "text": "REQUEST CACHE CONTROL"
+      },
+      {
+        "text_id": "T-017",
+        "text": "REQUEST AND RESPONSE CACHE CONTROL"
+      },
+      {
+        "text_id": "T-018",
+        "text": "APPLYING TO CACHE ENTRY"
+      },
+      {
+        "text_id": "T-019",
+        "text": "COMBINATION"
+      },
+      {
+        "text_id": "T-020",
+        "text": "OVERRIDING,MERGING"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-2b5802638012dd43ec87d3b9ec5be53948da680a",
+    "sha256": "fc01d79549049302a21573b073bc9b216a7e106a724ed8d69e0aaa26af963c8f",
+    "sha1": "de2df479706943f5efa23f850ed949083f3b8031",
+    "x": 986.3398886471241,
+    "y": 282.17700721758774,
+    "width": 960.0,
+    "height": 461.0,
+    "transform": "translate(986.3398886471241 282.17700721758774) rotate(0 480 230.5)",
+    "source_id": "S-002",
+    "image_use_id": "IU-002",
+    "region_id": "R01",
+    "description": "Client request directives: max-age, max-stale, min-fresh, no-cache, no-store, and only-if-cached.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-002__fc01d79549.png",
+    "pixel_width": 960,
+    "pixel_height": 461,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-017",
+        "text": "REQUEST AND RESPONSE CACHE CONTROL"
+      },
+      {
+        "text_id": "T-018",
+        "text": "APPLYING TO CACHE ENTRY"
+      },
+      {
+        "text_id": "T-019",
+        "text": "COMBINATION"
+      },
+      {
+        "text_id": "T-020",
+        "text": "OVERRIDING,MERGING"
+      },
+      {
+        "text_id": "T-001",
+        "text": "REQUEST CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-0a0147ced3ed0e25941eaeb3a0c6a841bf47b356",
+    "sha256": "9f0511a395d5233bf7bc9069dd72aeb61fdfe2e9902fa11d3baceac958a9a892",
+    "sha1": "b28d342437952a311ea38724fa5704bd64e0335c",
+    "x": 12495.481664765653,
+    "y": 353.65328556493205,
+    "width": 925.0,
+    "height": 373.0,
+    "transform": "translate(12495.481664765653 353.65328556493205) rotate(0 462.5 186.5)",
+    "source_id": "S-003",
+    "image_use_id": "IU-003",
+    "region_id": "R01",
+    "description": "Overview of Cache-Control on requests and responses across private and shared caches.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-003__9f0511a395.png",
+    "pixel_width": 925,
+    "pixel_height": 373,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-d87cdacdb96132f89c6c3f721cadd81ca0efae21",
+    "sha256": "94e193f6f0fd62f04d3c43413737196c69603baed07b0618c21ca3b85a6bb12f",
+    "sha1": "cd2eb691d7dd9343b08ea87f7f2612ee0b13ea23",
+    "x": 14258.400157681932,
+    "y": 391.95099306322936,
+    "width": 795.0,
+    "height": 482.0,
+    "transform": "translate(14258.400157681932 391.95099306322936) rotate(0 397.59493512974063 241.15625)",
+    "source_id": "S-004",
+    "image_use_id": "IU-004",
+    "region_id": "R02",
+    "description": "Freshness flow for public max-age=60 across first, fresh, and stale requests.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-004__94e193f6f0.png",
+    "pixel_width": 826,
+    "pixel_height": 501,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-70add8d785c0fa89043bd86e33170496e4916cd1",
+    "sha256": "395590526c55662db468d23c40ef786671fce6c0c772cbce7dde5ffea0da8deb",
+    "sha1": "9544119e1f3db3c6f795885b5c3dcbf5d67828e6",
+    "x": 7717.7647738785545,
+    "y": 690.4766468092284,
+    "width": 795.0,
+    "height": 482.0,
+    "transform": "translate(7717.7647738785545 690.4766468092284) rotate(0 397.4095557851242 241.15625)",
+    "source_id": "S-005",
+    "image_use_id": "IU-005",
+    "region_id": "R03",
+    "description": "ETag or Last-Modified without explicit Cache-Control may still permit heuristic storage and later validation.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-005__395590526c.png",
+    "pixel_width": 997,
+    "pixel_height": 605,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      },
+      {
+        "text_id": "T-006",
+        "text": "NO CACHE CONTROL"
+      },
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-254a64fdc304ed29f956e98b4c027751e10a1375",
+    "sha256": "f4b75da0d363bd74501ebb0b1e33dd5652cdc60287ac78d2de7f5b7a97a1b377",
+    "sha1": "8631419a00da4ebd81db494ef7bed5d0e9fc5d05",
+    "x": 6442.02318817949,
+    "y": 732.5545089417365,
+    "width": 627.0,
+    "height": 168.0,
+    "transform": "translate(6442.02318817949 732.5545089417365) rotate(0 313.5 84)",
+    "source_id": "S-006",
+    "image_use_id": "IU-006",
+    "region_id": "R03",
+    "description": "Always-revalidate pattern: validator plus Cache-Control no-cache.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-006__f4b75da0d3.png",
+    "pixel_width": 627,
+    "pixel_height": 168,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-009",
+        "text": "for just etag revalidation"
+      },
+      {
+        "text_id": "T-007",
+        "text": "etag + no cache"
+      },
+      {
+        "text_id": "T-003",
+        "text": "SOME CACHE CONTROL - ETAG FLOWS"
+      },
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-6794b5b7a7050d4f1cc0c287d503eb91f09157c6",
+    "sha256": "4377b7cac1370799b4da6f9f0fa852af0840514f05e72443d7c5adb5a0062cab",
+    "sha1": "75e7efb7ee518c152b3d31313bfc8954d1d04948",
+    "x": 9136.431562225283,
+    "y": 778.2295080843769,
+    "width": 978.0,
+    "height": 468.0,
+    "transform": "translate(9136.431562225283 778.2295080843769) rotate(0 489 234)",
+    "source_id": "S-007",
+    "image_use_id": "IU-007",
+    "region_id": "R02",
+    "description": "Browser heuristic decisions when validators exist but explicit freshness does not.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-007__4377b7cac1.png",
+    "pixel_width": 978,
+    "pixel_height": 468,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      },
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      },
+      {
+        "text_id": "T-006",
+        "text": "NO CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-b25bed1de2add6acad629821cc8baf7b9e5aad0e",
+    "sha256": "5e4956c7fed264b1706b965ccb1f8720fba04df806ddbe7daf30ef740978e2b3",
+    "sha1": "4af57828f1f135a0949f7fd7d0cc85b4904cb6ac",
+    "x": 12505.959783777547,
+    "y": 778.997035564932,
+    "width": 812.0,
+    "height": 482.0,
+    "transform": "translate(12505.959783777547 778.997035564932) rotate(0 406.0961811183144 241.15625)",
+    "source_id": "S-008",
+    "image_use_id": "IU-008",
+    "region_id": "R04",
+    "description": "no-store as the primary directive for sensitive data.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-008__5e4956c7fe.png",
+    "pixel_width": 1039,
+    "pixel_height": 617,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-64b121b3447dc5c1330e8908b7e0c296d7922c4b",
+    "sha256": "79af126eef6d231932abecf1aeea56b98ab92a5eef2c58d97ca0a21c7c7d3ad3",
+    "sha1": "12d439aa82b187f62e3f6fd75256f86338d8f8b9",
+    "x": 3713.691922726497,
+    "y": 807.8632301506923,
+    "width": 909.0,
+    "height": 379.0,
+    "transform": "translate(3713.691922726497 807.8632301506923) rotate(0 454.5 189.5)",
+    "source_id": "S-009",
+    "image_use_id": "IU-009",
+    "region_id": "R06",
+    "description": "Output Cache described as server-side shared caching whose key and policies must prevent personalized leaks.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-009__79af126eef.png",
+    "pixel_width": 909,
+    "pixel_height": 379,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-013",
+        "text": "output cache"
+      },
+      {
+        "text_id": "T-024",
+        "text": "browser cache"
+      },
+      {
+        "text_id": "T-015",
+        "text": "GUIDANCE"
+      },
+      {
+        "text_id": "T-027",
+        "text": "shared proxy/cdn/resp cache middleware"
+      },
+      {
+        "text_id": "T-016",
+        "text": "private, but"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-01a9816e060948dd947459b2b611c6c8ee30359d",
+    "sha256": "e9dac0146f59f966762c5f832330787e8414863eaaaf90d119ec45ab5ae8d4e1",
+    "sha1": "4e30c24088781ccf4dc7aed159657ae138b56620",
+    "x": 2721.7171741602124,
+    "y": 823.9846901116371,
+    "width": 824.0,
+    "height": 482.0,
+    "transform": "translate(2721.7171741602124 823.9846901116371) rotate(0 412.0301684881606 241.15625)",
+    "source_id": "S-010",
+    "image_use_id": "IU-010",
+    "region_id": "R06",
+    "description": "Nuance that Output Cache is shared server-side caching even though policies can vary by dimensions.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-010__e9dac0146f.png",
+    "pixel_width": 938,
+    "pixel_height": 549,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-016",
+        "text": "private, but"
+      },
+      {
+        "text_id": "T-021",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-011",
+        "text": "output cache can be"
+      },
+      {
+        "text_id": "T-005",
+        "text": "PUBLIC/PRIVATE CACHES"
+      },
+      {
+        "text_id": "T-024",
+        "text": "browser cache"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-148a6fbfcaffbef1eaa10f081b18ce70abf11f84",
+    "sha256": "ce9971f8b3b920fa19ee95e41fc7b6d1136ac330bbee8bde4ea53c5069a35a4c",
+    "sha1": "837231cd19f8561788e133eaee3fb0386a6fc6b8",
+    "x": 5109.485437886467,
+    "y": 837.1806565597481,
+    "width": 619.0,
+    "height": 401.0,
+    "transform": "translate(5109.485437886467 837.1806565597481) rotate(0 309.5 200.5)",
+    "source_id": "S-011",
+    "image_use_id": "IU-011",
+    "region_id": "R04",
+    "description": "Guidance for public content that is identical for every user.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-011__ce9971f8b3.png",
+    "pixel_width": 619,
+    "pixel_height": 401,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-015",
+        "text": "GUIDANCE"
+      },
+      {
+        "text_id": "T-009",
+        "text": "for just etag revalidation"
+      },
+      {
+        "text_id": "T-007",
+        "text": "etag + no cache"
+      },
+      {
+        "text_id": "T-003",
+        "text": "SOME CACHE CONTROL - ETAG FLOWS"
+      },
+      {
+        "text_id": "T-013",
+        "text": "output cache"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-1c430412ef6440418580e828556b895adba5cd14",
+    "sha256": "4d1d565e379323fcae3c2110625f71c834e0a4cd9210ab4256f84d672d080023",
+    "sha1": "66d528b02fd91912905b5905dadab83e82a28cd0",
+    "x": 6455.874994820115,
+    "y": 948.480412262049,
+    "width": 943.0,
+    "height": 388.0,
+    "transform": "translate(6455.874994820115 948.480412262049) rotate(0 471.5 194)",
+    "source_id": "S-012",
+    "image_use_id": "IU-012",
+    "region_id": "R03",
+    "description": "Classic no-cache plus ETag flow from cached response to conditional request and 304.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-012__4d1d565e37.png",
+    "pixel_width": 943,
+    "pixel_height": 388,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      },
+      {
+        "text_id": "T-009",
+        "text": "for just etag revalidation"
+      },
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-007",
+        "text": "etag + no cache"
+      },
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-09fd464866a4d5e3096dd8d35fed88cdfb9cc95a",
+    "sha256": "5bd2a88b3354575232aa4ffc6a373475c76787f8e0694c11cfb601f1dfd8aac7",
+    "sha1": "16553515c9e07e727e43a3b083446be3119354b2",
+    "x": 948.4078480347525,
+    "y": 1035.533362692835,
+    "width": 1000.0,
+    "height": 460.0,
+    "transform": "translate(948.4078480347525 1035.533362692835) rotate(0 500 230)",
+    "source_id": "S-013",
+    "image_use_id": "IU-013",
+    "region_id": "R01",
+    "description": "Distinction between request Cache-Control and response Cache-Control.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-013__5bd2a88b33.png",
+    "pixel_width": 1000,
+    "pixel_height": 460,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-020",
+        "text": "OVERRIDING,MERGING"
+      },
+      {
+        "text_id": "T-019",
+        "text": "COMBINATION"
+      },
+      {
+        "text_id": "T-018",
+        "text": "APPLYING TO CACHE ENTRY"
+      },
+      {
+        "text_id": "T-017",
+        "text": "REQUEST AND RESPONSE CACHE CONTROL"
+      },
+      {
+        "text_id": "T-025",
+        "text": "!!!"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-6f7485bb33420cbcafd58a462bbddb40d28fc61d",
+    "sha256": "b4bf6a85305872efd1c9a39d229974b1636e4d9b863db321c7f5559aa3d9cb88",
+    "sha1": "b39cad50650c0e7d533eff255097d983f6b0addb",
+    "x": 14163.046945927867,
+    "y": 1050.6767613498405,
+    "width": 864.0,
+    "height": 194.0,
+    "transform": "translate(14163.046945927867 1050.6767613498405) rotate(0 432 97)",
+    "source_id": "S-014",
+    "image_use_id": "IU-014",
+    "region_id": "R02",
+    "description": "No max-age or Expires: response is not safely predictable as cacheable and APIs should usually be called again.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-014__b4bf6a8530.png",
+    "pixel_width": 864,
+    "pixel_height": 194,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-e71fa500d1b98e32b8e7e53d38e62894b01b1fdf",
+    "sha256": "7fd5ebc6e07e33f977400e35ac980312109e875d0d7fa83f4cac699a1cdeec27",
+    "sha1": "203d2871d556f72a5a18c8619eeeac80a7ea42f8",
+    "x": 3714.7475460988917,
+    "y": 1180.5853676018678,
+    "width": 898.0,
+    "height": 278.0,
+    "transform": "translate(3714.7475460988917 1180.5853676018678) rotate(0 449 139)",
+    "source_id": "S-015",
+    "image_use_id": "IU-015",
+    "region_id": "R06",
+    "description": "Output Cache safety rule: cache only effectively public content for the selected key.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-015__7fd5ebc6e0.png",
+    "pixel_width": 898,
+    "pixel_height": 278,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-024",
+        "text": "browser cache"
+      },
+      {
+        "text_id": "T-013",
+        "text": "output cache"
+      },
+      {
+        "text_id": "T-027",
+        "text": "shared proxy/cdn/resp cache middleware"
+      },
+      {
+        "text_id": "T-015",
+        "text": "GUIDANCE"
+      },
+      {
+        "text_id": "T-016",
+        "text": "private, but"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-d8cc2da72f34bf608a79f2a10817659692f82875",
+    "sha256": "95982c8fd75e592d7a127448874240684ffcf0b736ad3f2b4434d1cf4196035c",
+    "sha1": "2ba38667dec36d741dc1205e5baa82278d86c149",
+    "x": 9133.021356677658,
+    "y": 1268.8705591567204,
+    "width": 702.0,
+    "height": 238.0,
+    "transform": "translate(9133.021356677658 1268.8705591567204) rotate(0 351 119)",
+    "source_id": "S-016",
+    "image_use_id": "IU-016",
+    "region_id": "R02",
+    "description": "Heuristic caching example using ETag without explicit freshness.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-016__95982c8fd7.png",
+    "pixel_width": 702,
+    "pixel_height": 238,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      },
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c0c0ac7f891ea42e45b891146da046e86ccf2af0",
+    "sha256": "d355af4fa2911f694b72316fac1def12036ba6993a1fbc37d5f9386b4cff4fc0",
+    "sha1": "4d025846628ccec2b2d404bb6b7e5090083c2d43",
+    "x": 5085.771227739517,
+    "y": 1269.4584173833146,
+    "width": 635.0,
+    "height": 376.0,
+    "transform": "translate(5085.771227739517 1269.4584173833146) rotate(0 317.5 188)",
+    "source_id": "S-017",
+    "image_use_id": "IU-017",
+    "region_id": "R04",
+    "description": "Private browser caching guidance for personalized content.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-017__d355af4fa2.png",
+    "pixel_width": 635,
+    "pixel_height": 376,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-015",
+        "text": "GUIDANCE"
+      },
+      {
+        "text_id": "T-009",
+        "text": "for just etag revalidation"
+      },
+      {
+        "text_id": "T-007",
+        "text": "etag + no cache"
+      },
+      {
+        "text_id": "T-024",
+        "text": "browser cache"
+      },
+      {
+        "text_id": "T-003",
+        "text": "SOME CACHE CONTROL - ETAG FLOWS"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-0901cb1e5aceeb3c4784dbc22cb7cd412c060998",
+    "sha256": "e87e635d13be925867565d0553f1c000773484a8cfd3ea560336b02136b2f373",
+    "sha1": "f09faa91ccffd89079aa3e2cc3b85ce7d88d0026",
+    "x": 14194.15842201688,
+    "y": 1309.7533640379143,
+    "width": 951.0,
+    "height": 458.0,
+    "transform": "translate(14194.15842201688 1309.7533640379143) rotate(0 475.5 229)",
+    "source_id": "S-018",
+    "image_use_id": "IU-018",
+    "region_id": "R03",
+    "description": "must-revalidate behavior after a max-age lifetime expires.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-018__e87e635d13.png",
+    "pixel_width": 951,
+    "pixel_height": 458,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-396a87a642b56166c459fd404c058b56b8136435",
+    "sha256": "04f15953da683da24d6b67f093a808e699d3919ec5f02a3abb75741785d7e452",
+    "sha1": "49125690e423bb11e2f5b665e21fcbe71dab3eff",
+    "x": 12422.352215980929,
+    "y": 1312.8014111074635,
+    "width": 1012.0,
+    "height": 431.0,
+    "transform": "translate(12422.352215980929 1312.8014111074635) rotate(0 506 215.5)",
+    "source_id": "S-019",
+    "image_use_id": "IU-019",
+    "region_id": "R02",
+    "description": "max-age as the central performance-oriented freshness directive.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-019__04f15953da.png",
+    "pixel_width": 1012,
+    "pixel_height": 431,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-3fe13da8d45da0e5d2aba2a376d76e12758d39e9",
+    "sha256": "273800646d4c2f57b7086d659e175bc740e34aa5eaaaf946d5142aa5e382122c",
+    "sha1": "399efefd1e0e98ac3dadd58a742e718fa1513a6c",
+    "x": 7682.414794824763,
+    "y": 1342.7245265294441,
+    "width": 981.0,
+    "height": 375.0,
+    "transform": "translate(7682.414794824763 1342.7245265294441) rotate(0 490.5 187.5)",
+    "source_id": "S-020",
+    "image_use_id": "IU-020",
+    "region_id": "R02",
+    "description": "max-age without validators gives fresh reuse, then usually a full fetch after expiry.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-020__273800646d.png",
+    "pixel_width": 981,
+    "pixel_height": 375,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      },
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      },
+      {
+        "text_id": "T-006",
+        "text": "NO CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-97f1517c927d4debcee98c3c918753ed441e5c6a",
+    "sha256": "dee706f5e900f6de62ab247c2c40cf574c3c0497958aea9b21fba1c9a76bccb6",
+    "sha1": "f27d19514c69367ec3f73b489a9ee5d6dc343dc4",
+    "x": 6434.93068600935,
+    "y": 1366.25819003983,
+    "width": 976.0,
+    "height": 228.0,
+    "transform": "translate(6434.93068600935 1366.25819003983) rotate(0 488 114)",
+    "source_id": "S-021",
+    "image_use_id": "IU-021",
+    "region_id": "R03",
+    "description": "Last-Modified with no-cache and conditional If-Modified-Since validation.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-021__dee706f5e9.png",
+    "pixel_width": 976,
+    "pixel_height": 228,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      },
+      {
+        "text_id": "T-009",
+        "text": "for just etag revalidation"
+      },
+      {
+        "text_id": "T-007",
+        "text": "etag + no cache"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ea9a06975f99867829c107565e01f5c2acec1f76",
+    "sha256": "8ddec5daccf98b4fc7c18f4830c02329c75644fb84be0f077605797dafc97b05",
+    "sha1": "ff5a5e6f0ba040ca643000c241cd67ed26cce0af",
+    "x": 3722.747444373632,
+    "y": 1607.8076067783013,
+    "width": 902.0,
+    "height": 308.0,
+    "transform": "translate(3722.747444373632 1607.8076067783013) rotate(0 451 154)",
+    "source_id": "S-022",
+    "image_use_id": "IU-022",
+    "region_id": "R04",
+    "description": "Browser cache is private and can safely hold user-specific responses when policy allows.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-022__8ddec5dacc.png",
+    "pixel_width": 902,
+    "pixel_height": 308,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-024",
+        "text": "browser cache"
+      },
+      {
+        "text_id": "T-027",
+        "text": "shared proxy/cdn/resp cache middleware"
+      },
+      {
+        "text_id": "T-013",
+        "text": "output cache"
+      },
+      {
+        "text_id": "T-028",
+        "text": "RESPONSE CACHE TYPES"
+      },
+      {
+        "text_id": "T-015",
+        "text": "GUIDANCE"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-7ed5591cf9dd68b9b2b54eacbc8a60b11e74089d",
+    "sha256": "33d7d4f803f74516d0b99529174c3b37cac4797bebe4e168156fedbee7751def",
+    "sha1": "f9d31d2367c0d30f864f9e6fbc6b653ee0c2e319",
+    "x": 999.6908913057723,
+    "y": 1634.2713884186733,
+    "width": 947.0,
+    "height": 121.0,
+    "transform": "translate(999.6908913057723 1634.2713884186733) rotate(0 473.5 60.5)",
+    "source_id": "S-023",
+    "image_use_id": "IU-023",
+    "region_id": "R01",
+    "description": "Combined request and response directives use the stricter effective rule.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-023__33d7d4f803.png",
+    "pixel_width": 947,
+    "pixel_height": 121,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-025",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-020",
+        "text": "OVERRIDING,MERGING"
+      },
+      {
+        "text_id": "T-019",
+        "text": "COMBINATION"
+      },
+      {
+        "text_id": "T-018",
+        "text": "APPLYING TO CACHE ENTRY"
+      },
+      {
+        "text_id": "T-017",
+        "text": "REQUEST AND RESPONSE CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-cadc996446e5e123564dacf4658727acb22052db",
+    "sha256": "ff21b4e4134a44a7414698fc84cf94c870ffc984fc251b9f7de39f40e7612d14",
+    "sha1": "fb2c3d7cacaa032133c12d87f7f2f638eb2c5b39",
+    "x": 5076.390275358565,
+    "y": 1676.6648092173955,
+    "width": 525.0,
+    "height": 404.0,
+    "transform": "translate(5076.390275358565 1676.6648092173955) rotate(0 262.5 202)",
+    "source_id": "S-024",
+    "image_use_id": "IU-024",
+    "region_id": "R04",
+    "description": "Sensitive personalized content should generally use no-store and avoid shared caching.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-024__ff21b4e413.png",
+    "pixel_width": 525,
+    "pixel_height": 404,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-015",
+        "text": "GUIDANCE"
+      },
+      {
+        "text_id": "T-024",
+        "text": "browser cache"
+      },
+      {
+        "text_id": "T-009",
+        "text": "for just etag revalidation"
+      },
+      {
+        "text_id": "T-027",
+        "text": "shared proxy/cdn/resp cache middleware"
+      },
+      {
+        "text_id": "T-007",
+        "text": "etag + no cache"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-a90b7499e35b58627005c2d028f56620872ca942",
+    "sha256": "e7b3fa02e57dcb9f457e59879371bfc24573961d778ebc94cb700000c07b2f37",
+    "sha1": "666bee4c8046f75f0114006e13ac3b73142830f4",
+    "x": 1010.2731343549094,
+    "y": 1751.4247026760995,
+    "width": 866.0,
+    "height": 482.0,
+    "transform": "translate(1010.2731343549094 1751.4247026760995) rotate(0 432.8331215341959 241.15625)",
+    "source_id": "S-025",
+    "image_use_id": "IU-025",
+    "region_id": "R01",
+    "description": "Client no-cache can force validation even when the response advertises max-age.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-025__e7b3fa02e5.png",
+    "pixel_width": 971,
+    "pixel_height": 541,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-025",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-020",
+        "text": "OVERRIDING,MERGING"
+      },
+      {
+        "text_id": "T-019",
+        "text": "COMBINATION"
+      },
+      {
+        "text_id": "T-018",
+        "text": "APPLYING TO CACHE ENTRY"
+      },
+      {
+        "text_id": "T-017",
+        "text": "REQUEST AND RESPONSE CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-e7149b25b5947c75e057715c2c424d9cb9fe7665",
+    "sha256": "6022a6be14097d7a4712334fd459e3c4f58998d0195dd7c451d987caba0a0f3d",
+    "sha1": "02cc7fb4bf7368d59854b828768c908b371c0855",
+    "x": 14278.931149289609,
+    "y": 1783.980636765179,
+    "width": 876.0,
+    "height": 295.0,
+    "transform": "translate(14278.931149289609 1783.980636765179) rotate(0 438 147.5)",
+    "source_id": "S-026",
+    "image_use_id": "IU-026",
+    "region_id": "R03",
+    "description": "Without must-revalidate, some caches can serve stale content in limited policy-defined situations.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-026__6022a6be14.png",
+    "pixel_width": 876,
+    "pixel_height": 295,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-824f1bdf70ae9b9d08b9e8b76461603475492dd1",
+    "sha256": "3ee2002640a4c9d5ca395a33ed04d672143833c48303e3face65ea496f03dbe5",
+    "sha1": "635b5b36dbb6b3e437f6abfcd7d6a5aba3417d88",
+    "x": 12424.389162595513,
+    "y": 1784.4309955258695,
+    "width": 922.0,
+    "height": 347.0,
+    "transform": "translate(12424.389162595513 1784.4309955258695) rotate(0 461 173.5)",
+    "source_id": "S-027",
+    "image_use_id": "IU-027",
+    "region_id": "R04",
+    "description": "public versus private determines whether shared caches may store the representation.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-027__3ee2002640.png",
+    "pixel_width": 922,
+    "pixel_height": 347,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-9a18607db3ef7ba308c7cac17ca0c42961912edd",
+    "sha256": "6f1f64d2c27f49d2456660cac819398bfae67314b2de82613b239eb5f540860f",
+    "sha1": "a329514e3985fac0dce36f37f917eec74d30c387",
+    "x": 7712.527375605132,
+    "y": 1891.6560187500609,
+    "width": 855.0,
+    "height": 482.0,
+    "transform": "translate(7712.527375605132 1891.6560187500609) rotate(0 427.4002609108161 241.15625)",
+    "source_id": "S-028",
+    "image_use_id": "IU-028",
+    "region_id": "R03",
+    "description": "Combined ETag and max-age flow: fresh reuse followed by conditional validation.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-028__6f1f64d2c2.png",
+    "pixel_width": 934,
+    "pixel_height": 527,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      },
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      },
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      },
+      {
+        "text_id": "T-006",
+        "text": "NO CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-8ad48851221e3161fbf13137be2bfd35b4a08671",
+    "sha256": "501d19899153677adf0f71c6c030e7f0c2837698f9a59899b42ea7c7cb23af22",
+    "sha1": "44913ddaf238c8970b1389eb308f77577144f3d4",
+    "x": 3708.435575070247,
+    "y": 2075.679401650098,
+    "width": 919.0,
+    "height": 342.0,
+    "transform": "translate(3708.435575070247 2075.679401650098) rotate(0 459.5 171)",
+    "source_id": "S-029",
+    "image_use_id": "IU-029",
+    "region_id": "R04",
+    "description": "Shared caches can expose personalized content unless responses are private, no-store, or correctly varied.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-029__501d198991.png",
+    "pixel_width": 919,
+    "pixel_height": 342,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-027",
+        "text": "shared proxy/cdn/resp cache middleware"
+      },
+      {
+        "text_id": "T-024",
+        "text": "browser cache"
+      },
+      {
+        "text_id": "T-028",
+        "text": "RESPONSE CACHE TYPES"
+      },
+      {
+        "text_id": "T-032",
+        "text": "BROWSER/PROXY"
+      },
+      {
+        "text_id": "T-013",
+        "text": "output cache"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-bb2219a5fe95f2db5867c21f257b62f4ae20a5f9",
+    "sha256": "1a02d11b7b9b9d0231b13dcb13ca2cf84c9be03f6c2d6121bcef80bdf4d8aa3d",
+    "sha1": "44c52614ab19e242b8ece5b765857b19563d2852",
+    "x": 14335.771729310733,
+    "y": 2118.2031376529585,
+    "width": 707.0,
+    "height": 482.0,
+    "transform": "translate(14335.771729310733 2118.2031376529585) rotate(0 353.2805581180812 241.15625)",
+    "source_id": "S-030",
+    "image_use_id": "IU-030",
+    "region_id": "R03",
+    "description": "no-cache plus ETag revalidation example with 304 and 200 outcomes.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-030__1a02d11b7b.png",
+    "pixel_width": 794,
+    "pixel_height": 542,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-05bcaba8a00d3fca64b07cfdc7e5bfdd522b0dc8",
+    "sha256": "78eaf303fc779872930acc19fe9404f3dfa67aa1076ec51d8d8f5de47ea3a20e",
+    "sha1": "512cbcf45f6a56fab4e1f2eaefeb226643bed06c",
+    "x": 12353.74110486982,
+    "y": 2156.153285564932,
+    "width": 1007.0,
+    "height": 288.0,
+    "transform": "translate(12353.74110486982 2156.153285564932) rotate(0 503.5 144)",
+    "source_id": "S-031",
+    "image_use_id": "IU-031",
+    "region_id": "R04",
+    "description": "private max-age example for user-specific data cacheable only on the client.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-031__78eaf303fc.png",
+    "pixel_width": 1007,
+    "pixel_height": 288,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-beb40b4f421259b81a3060eabae5ae1984a83614",
+    "sha256": "0986cfc87e11fa2c710ac71cb0e094fa3bdfcc75b1a9c4651739bc734e9d8fa0",
+    "sha1": "e7ba249f2233d7a49882322d5890bed555bed214",
+    "x": 996.8021380505652,
+    "y": 2349.2714392812986,
+    "width": 955.0,
+    "height": 431.0,
+    "transform": "translate(996.8021380505652 2349.2714392812986) rotate(0 477.5 215.5)",
+    "source_id": "S-032",
+    "image_use_id": "IU-032",
+    "region_id": "R01",
+    "description": "Client request no-store overrides a response that would otherwise permit public storage.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-032__0986cfc87e.png",
+    "pixel_width": 955,
+    "pixel_height": 431,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-025",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-030",
+        "text": "DUPLICATION"
+      },
+      {
+        "text_id": "T-034",
+        "text": "SPA,RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-020",
+        "text": "OVERRIDING,MERGING"
+      },
+      {
+        "text_id": "T-019",
+        "text": "COMBINATION"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-126ad83e459b56e0d42ef200739699015c3fe6dc",
+    "sha256": "7a0e82b4a7becbcf80702c3a516abaa563efefa500410753b1917dd55b122d8a",
+    "sha1": "81ee89770e13b8c93145b0b24d7d6c283523a4eb",
+    "x": 7717.594340173619,
+    "y": 2400.766758718094,
+    "width": 978.0,
+    "height": 235.0,
+    "transform": "translate(7717.594340173619 2400.766758718094) rotate(0 489 117.5)",
+    "source_id": "S-033",
+    "image_use_id": "IU-033",
+    "region_id": "R02",
+    "description": "After max-age expiry, ETag validation determines 304 versus a new 200 response.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-033__7a0e82b4a7.png",
+    "pixel_width": 978,
+    "pixel_height": 235,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      },
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      },
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ccdac27ac9d55f30a39daf4630bee7e172325c88",
+    "sha256": "84f419caecae0ad52e025a32d286a4d7e570abe4bc425cacdbcd314bc2a91fc2",
+    "sha1": "99524d0420aae24b6fe322cb076b3086b9b022eb",
+    "x": 12377.407771536487,
+    "y": 2491.7829378001743,
+    "width": 933.0,
+    "height": 396.0,
+    "transform": "translate(12377.407771536487 2491.7829378001743) rotate(0 466.5 198)",
+    "source_id": "S-034",
+    "image_use_id": "IU-034",
+    "region_id": "R03",
+    "description": "no-cache allows storage but requires validation before every reuse.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-034__84f419caec.png",
+    "pixel_width": 933,
+    "pixel_height": 396,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-cdcd250fe55bbcd46ff9e2ab5ad39c638a4f5787",
+    "sha256": "6f9c873b7ac68ebda1a0836209b2593b3b0932a00cff872940a311e7bbfaa3bf",
+    "sha1": "032a2170f9895f83f94f1e5150cb839d2085fbea",
+    "x": 14313.385694744155,
+    "y": 2656.480636765179,
+    "width": 938.0,
+    "height": 150.0,
+    "transform": "translate(14313.385694744155 2656.480636765179) rotate(0 469 75)",
+    "source_id": "S-035",
+    "image_use_id": "IU-035",
+    "region_id": "R02",
+    "description": "Without no-cache, freshness directives decide whether a cached response can be reused directly.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-035__6f9c873b7a.png",
+    "pixel_width": 938,
+    "pixel_height": 150,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ffa7717ccbe5da64c44bdc59da9b8c36932d06ac",
+    "sha256": "49811a669c7d6d36dd96fffba712680210286534e32b1cee7944b0025ff62196",
+    "sha1": "bf771020ac54dd6d71f6ed67ac247a5782a58eea",
+    "x": 7749.0488856281645,
+    "y": 2661.509201456024,
+    "width": 886.0,
+    "height": 482.0,
+    "transform": "translate(7749.0488856281645 2661.509201456024) rotate(0 443 241)",
+    "source_id": "S-036",
+    "image_use_id": "IU-036",
+    "region_id": "R03",
+    "description": "must-revalidate is useful when serving stale content is unacceptable after expiry.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-036__49811a669c.png",
+    "pixel_width": 886,
+    "pixel_height": 482,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      },
+      {
+        "text_id": "T-023",
+        "text": "WITH CACHE CONTROL"
+      },
+      {
+        "text_id": "T-022",
+        "text": "NO ETAG"
+      },
+      {
+        "text_id": "T-008",
+        "text": "BUT WITH ETAG/LASTMOD"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-4839eb855ee339f3a41fad7623494dbc5671a7a9",
+    "sha256": "552fa8c96bc17cc5bd8c0a7ff2c43d642252910680ef4e3b714466e2174ccaa0",
+    "sha1": "dd6aa0e70c963238d3f6fc2f708bab927ddcd7ae",
+    "x": 14352.707106452383,
+    "y": 2850.3243867651645,
+    "width": 818.0,
+    "height": 482.0,
+    "transform": "translate(14352.707106452383 2850.3243867651645) rotate(0 409.07245370370356 241.15625)",
+    "source_id": "S-037",
+    "image_use_id": "IU-037",
+    "region_id": "R04",
+    "description": "no-store prevents storage and is appropriate for tokens, PII, and banking data.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-037__552fa8c96b.png",
+    "pixel_width": 916,
+    "pixel_height": 540,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-8606ff4cb37dcb11161331ae297f1f19f924e543",
+    "sha256": "18b2a1f75320401fcbb9c971457293a7771c46964f29f09a2c6eb6aa96aab7b1",
+    "sha1": "c27e0feb15e734ae51760aaec606c4dea0dda639",
+    "x": 1026.524326364366,
+    "y": 2864.8825843008376,
+    "width": 880.0,
+    "height": 182.0,
+    "transform": "translate(1026.524326364366 2864.8825843008376) rotate(0 440 91)",
+    "source_id": "S-038",
+    "image_use_id": "IU-038",
+    "region_id": "R01",
+    "description": "Directive precedence is rule-specific rather than one universal override mechanism.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-038__18b2a1f753.png",
+    "pixel_width": 880,
+    "pixel_height": 182,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-030",
+        "text": "DUPLICATION"
+      },
+      {
+        "text_id": "T-034",
+        "text": "SPA,RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-025",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-036",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-020",
+        "text": "OVERRIDING,MERGING"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-8ea20f5b7ebca58c358f5a2316257158303f12be",
+    "sha256": "01440e8e7a3a434905972deb133534d6ac667c6e9a294112dcfd8e8b8e746c36",
+    "sha1": "c8aee4a597acda717e45bdccd1b602a4f5d909f5",
+    "x": 12315.592911510445,
+    "y": 2933.745855551916,
+    "width": 947.0,
+    "height": 318.0,
+    "transform": "translate(12315.592911510445 2933.745855551916) rotate(0 473.5 159)",
+    "source_id": "S-039",
+    "image_use_id": "IU-039",
+    "region_id": "R03",
+    "description": "must-revalidate prohibits stale reuse once a response becomes stale.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-039__01440e8e7a.png",
+    "pixel_width": 947,
+    "pixel_height": 318,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-f72edbda1306bd98702d1835c3474809b57cdd2c",
+    "sha256": "d3436ee3117b49ec94a7ef50cc586c2aac463c758d13a67da73772fca7619800",
+    "sha1": "dcc6ec87230a1017cf1d70a9cc168389dd8b8d5f",
+    "x": 12343.7152209927,
+    "y": 3279.7377310944476,
+    "width": 855.0,
+    "height": 482.0,
+    "transform": "translate(12343.7152209927 3279.7377310944476) rotate(0 427.5999127399651 241.15625)",
+    "source_id": "S-040",
+    "image_use_id": "IU-040",
+    "region_id": "R04",
+    "description": "Response directive list covering max-age, s-maxage, cacheability, validation, and stale-serving policies.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-040__d3436ee311.png",
+    "pixel_width": 1016,
+    "pixel_height": 573,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ff05c79346c8576816127ec9f53c797a55c81d3a",
+    "sha256": "9e30162b385098b0f92a64333b59e713631d7959d51458899b14b404351970fc",
+    "sha1": "0f5edc530668d19cbac5b924d22596d60f40fa01",
+    "x": 14355.824959215035,
+    "y": 3345.5260358241094,
+    "width": 761.0,
+    "height": 441.0,
+    "transform": "translate(14355.824959215035 3345.5260358241094) rotate(0 380.5 220.5)",
+    "source_id": "S-041",
+    "image_use_id": "IU-041",
+    "region_id": "R04",
+    "description": "public/private safety examples for browser and shared caches.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-041__9e30162b38.png",
+    "pixel_width": 761,
+    "pixel_height": 441,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-eaf7dbb601424f28349bcdcb7653d90aa35b207d",
+    "sha256": "298756daa31f081a60897f38ab3d3c9e5203a5425870e83b777d91a17dcb583b",
+    "sha1": "0b20f0b50aef027f37da9e00af3ecdc2a489944d",
+    "x": 4095.7288452293924,
+    "y": 3751.1667436273647,
+    "width": 957.0,
+    "height": 339.0,
+    "transform": "translate(4095.7288452293924 3751.1667436273647) rotate(0 478.5 169.5)",
+    "source_id": "S-042",
+    "image_use_id": "IU-042",
+    "region_id": "R06",
+    "description": "ResponseCache attribute controls HTTP headers and influences browser/proxy caching and Response Caching Middleware.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-042__298756daa3.png",
+    "pixel_width": 957,
+    "pixel_height": 339,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-032",
+        "text": "BROWSER/PROXY"
+      },
+      {
+        "text_id": "T-035",
+        "text": "RESPONSE CACHEING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-039",
+        "text": "OUTPUT CACHE"
+      },
+      {
+        "text_id": "T-033",
+        "text": "IN CASE OF BROWSER/PROXY AND RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-031",
+        "text": "LAST WORD IN SERVING FROM CACHE"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ad301dd97249f222d3bd8692de40df09c7ed4f14",
+    "sha256": "59872095f4deb748b0c42ae3ac53115c682c2ecefd97e876a5a8f9f2e9c8c73a",
+    "sha1": "667883d3eedd7d38d333787195a4f234612cd270",
+    "x": 14278.665256977009,
+    "y": 3780.6307140895688,
+    "width": 930.0,
+    "height": 225.0,
+    "transform": "translate(14278.665256977009 3780.6307140895688) rotate(0 464.8746257829057 112.44447835286405)",
+    "source_id": "S-043",
+    "image_use_id": "IU-043",
+    "region_id": "R04",
+    "description": "Omitting public/private can be ambiguous for shared caches, so explicit scope is recommended.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-043__59872095f4.png",
+    "pixel_width": 893,
+    "pixel_height": 216,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-797b55ab4bcc915cfcc53fef546192f6770d372b",
+    "sha256": "b4e99bd8d65439ecf9b62d32fea246268b224da2b58fc3c2637b1d9bce4ec87d",
+    "sha1": "a2b766096b15a108fa0c0d6bce9b2ee10902f9a9",
+    "x": 12321.867815725005,
+    "y": 3789.7906572942347,
+    "width": 872.0,
+    "height": 482.0,
+    "transform": "translate(12321.867815725005 3789.7906572942347) rotate(0 436.1139846743295 241.15625)",
+    "source_id": "S-044",
+    "image_use_id": "IU-044",
+    "region_id": "R01",
+    "description": "Directive categories: cacheability, validation/revalidation, and advanced stale serving.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-044__b4e99bd8d6.png",
+    "pixel_width": 944,
+    "pixel_height": 522,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-964903d31bebb32befbe746f1a9c4d39503f03d9",
+    "sha256": "05d6a49869e2a67b983700c158d9c643cf13392b025d911130b972aa6f4012e8",
+    "sha1": "8466f1dc18fa2885d76eba1383724a9f918be550",
+    "x": 5805.354314919621,
+    "y": 3811.7324498036332,
+    "width": 850.0,
+    "height": 482.0,
+    "transform": "translate(5805.354314919621 3811.7324498036332) rotate(0 425.03270223752133 241.15625)",
+    "source_id": "S-045",
+    "image_use_id": "IU-045",
+    "region_id": "R06",
+    "description": "Client max-age=0 can force a browser/proxy cache or Response Caching Middleware to revalidate.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-045__05d6a49869.png",
+    "pixel_width": 1024,
+    "pixel_height": 581,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-033",
+        "text": "IN CASE OF BROWSER/PROXY AND RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-031",
+        "text": "LAST WORD IN SERVING FROM CACHE"
+      },
+      {
+        "text_id": "T-029",
+        "text": "MAX AGE 0"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-6a66b9b9eca224483a84939f30bbed45d2567df6",
+    "sha256": "ce6b2a79a6b1cb40a92b70390a61bbe3d6719616ae52bc3ad179470326054122",
+    "sha1": "4a930b45368a51f7efd47af4fe9dbbec803142af",
+    "x": 2292.0066772606424,
+    "y": 3815.817471398951,
+    "width": 944.0,
+    "height": 421.0,
+    "transform": "translate(2292.0066772606424 3815.817471398951) rotate(0 472 210.5)",
+    "source_id": "S-046",
+    "image_use_id": "IU-046",
+    "region_id": "R06",
+    "description": "SPA, browser cache, CDN, and Response Caching Middleware can create several independent caching layers.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-046__ce6b2a79a6.png",
+    "pixel_width": 944,
+    "pixel_height": 421,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-034",
+        "text": "SPA,RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-030",
+        "text": "DUPLICATION"
+      },
+      {
+        "text_id": "T-036",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-028",
+        "text": "RESPONSE CACHE TYPES"
+      },
+      {
+        "text_id": "T-035",
+        "text": "RESPONSE CACHEING MIDDLEWARE"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-b62cd8b6ad71f15ede3d2cdd9dba7c490326d7ae",
+    "sha256": "8b2371238b4885d6c08553c09308ac9c361b7a2f1736b59892bdb04c83fac778",
+    "sha1": "6f37b7493793a682cb3b81dcf5367fb42ed40c1e",
+    "x": 14211.726227055267,
+    "y": 4015.879759985898,
+    "width": 955.0,
+    "height": 341.0,
+    "transform": "translate(14211.726227055267 4015.879759985898) rotate(0 477.5 170.5)",
+    "source_id": "S-047",
+    "image_use_id": "IU-047",
+    "region_id": "R05",
+    "description": "s-maxage overrides shared-cache freshness while browser max-age remains separate.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-047__8b2371238b.png",
+    "pixel_width": 955,
+    "pixel_height": 341,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-d765d907add000112c6747cb98f6acc2495f419f",
+    "sha256": "451953bc49391fdc86100b85342687364f4c7fdc2d1feab9d9e74110dd60aee4",
+    "sha1": "afca245c9f0aeab559132fd5ce8cffc36a43325c",
+    "x": 4085.5066772606424,
+    "y": 4210.650784387232,
+    "width": 869.0,
+    "height": 210.0,
+    "transform": "translate(4085.5066772606424 4210.650784387232) rotate(0 434.5 105)",
+    "source_id": "S-048",
+    "image_use_id": "IU-048",
+    "region_id": "R06",
+    "description": "Response Caching Middleware stores HTTP responses and follows HTTP request and response caching semantics.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-048__451953bc49.png",
+    "pixel_width": 869,
+    "pixel_height": 210,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-039",
+        "text": "OUTPUT CACHE"
+      },
+      {
+        "text_id": "T-035",
+        "text": "RESPONSE CACHEING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-032",
+        "text": "BROWSER/PROXY"
+      },
+      {
+        "text_id": "T-040",
+        "text": "WHEN RESPONSE CACHING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-83f31868dc6271f63379795711c386387621ab00",
+    "sha256": "0c75657486e6ae9d4766bfd94b8ab8851bfa82e2b82110420d1cf0478b9677f8",
+    "sha1": "0ae564a65e3ba260eed820630996d475aea7444a",
+    "x": 2271.84005128408,
+    "y": 4303.650784387232,
+    "width": 931.0,
+    "height": 144.0,
+    "transform": "translate(2271.84005128408 4303.650784387232) rotate(0 465.5 72)",
+    "source_id": "S-049",
+    "image_use_id": "IU-049",
+    "region_id": "R06",
+    "description": "Multi-layer caching is not inherently wrong; each layer follows its own policy and key.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-049__0c75657486.png",
+    "pixel_width": 931,
+    "pixel_height": 144,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-036",
+        "text": "!!!"
+      },
+      {
+        "text_id": "T-034",
+        "text": "SPA,RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-030",
+        "text": "DUPLICATION"
+      },
+      {
+        "text_id": "T-040",
+        "text": "WHEN RESPONSE CACHING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-035",
+        "text": "RESPONSE CACHEING MIDDLEWARE"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-604f5437f7320a372d774123e4dcd167156df398",
+    "sha256": "d068065efed3ac082e52efe5e9602dd7381ae8722f6fe790d65302e46e2333df",
+    "sha1": "125d6f140e436a4418ecb1d17b8c118336a26649",
+    "x": 14286.256629143143,
+    "y": 4435.728437187604,
+    "width": 791.0,
+    "height": 482.0,
+    "transform": "translate(14286.256629143143 4435.728437187604) rotate(0 395.6968336483933 241.15625)",
+    "source_id": "S-050",
+    "image_use_id": "IU-050",
+    "region_id": "R05",
+    "description": "Vary: Accept prevents a cache from returning the wrong media type or API version.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-050__d068065efe.png",
+    "pixel_width": 868,
+    "pixel_height": 529,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-6cb60d9180e1ed6e04f690946331ab68d5f5c6f8",
+    "sha256": "2d4613f7e7ff6d83137ec8969db89428c8f6350cd3f44cac4358e4ed69e26874",
+    "sha1": "0895e475125d552854e801d9f7e32ed8b49eba5b",
+    "x": 5761.111043294275,
+    "y": 4458.723337998663,
+    "width": 869.0,
+    "height": 482.0,
+    "transform": "translate(5761.111043294275 4458.723337998663) rotate(0 434.36891153081524 241.15625)",
+    "source_id": "S-051",
+    "image_use_id": "IU-051",
+    "region_id": "R01",
+    "description": "Repeated placement of the browser-generated max-age=0 explanation.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-051__2d4613f7e7.png",
+    "pixel_width": 906,
+    "pixel_height": 503,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-033",
+        "text": "IN CASE OF BROWSER/PROXY AND RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-031",
+        "text": "LAST WORD IN SERVING FROM CACHE"
+      },
+      {
+        "text_id": "T-029",
+        "text": "MAX AGE 0"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-68402504f52304932e52daeee0bfa2198a900b82",
+    "sha256": "3dad1795a21c46a8efa92cecb7d4997aa563d6113625e42978a56c1fef3378ff",
+    "sha1": "e55620f19ff822f4d8eed569d25828f570f502ca",
+    "x": 4104.340173354392,
+    "y": 4606.317623986842,
+    "width": 892.0,
+    "height": 243.0,
+    "transform": "translate(4104.340173354392 4606.317623986842) rotate(0 446 121.5)",
+    "source_id": "S-052",
+    "image_use_id": "IU-052",
+    "region_id": "R06",
+    "description": "Output Cache uses server policies and does not need client cache directives to decide reuse.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-052__3dad1795a2.png",
+    "pixel_width": 892,
+    "pixel_height": 243,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-039",
+        "text": "OUTPUT CACHE"
+      },
+      {
+        "text_id": "T-035",
+        "text": "RESPONSE CACHEING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-040",
+        "text": "WHEN RESPONSE CACHING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-032",
+        "text": "BROWSER/PROXY"
+      },
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-b66ab812f99c98c75f875df5077b599879f389c9",
+    "sha256": "bcfa70c2fefa4fe60560f54d19cca176df0984471aa620ec8dfab21ca7ebac71",
+    "sha1": "5ac134d0582e89ecce7eb26737d22e82fd129878",
+    "x": 12267.824117676731,
+    "y": 4678.661024607007,
+    "width": 931.0,
+    "height": 381.0,
+    "transform": "translate(12267.824117676731 4678.661024607007) rotate(0 465.5 190.5)",
+    "source_id": "S-053",
+    "image_use_id": "IU-053",
+    "region_id": "R05",
+    "description": "immutable for long-lived fingerprinted assets that do not change at the same URL.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-053__bcfa70c2fe.png",
+    "pixel_width": 931,
+    "pixel_height": 381,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-56e28d66d8678d5a162348d008fe53d5d37546d7",
+    "sha256": "3ff029798b1994bde861ec9e70dd995b50e0a8980a359bd1ece1e7bf1b36791e",
+    "sha1": "1a33a15843904a177fc0b0d64564d648e80c9418",
+    "x": 14237.841809145702,
+    "y": 4949.0513538542755,
+    "width": 986.0,
+    "height": 309.0,
+    "transform": "translate(14237.841809145702 4949.0513538542755) rotate(0 493 154.5)",
+    "source_id": "S-054",
+    "image_use_id": "IU-054",
+    "region_id": "R02",
+    "description": "No caching directives: browsers may use heuristics, but APIs should not rely on them.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-054__3ff029798b.png",
+    "pixel_width": 986,
+    "pixel_height": 309,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c702114b9704a8c1b9d76bbf1ba245f049889ccd",
+    "sha256": "1e3be6231f9181b61ab800912e91e1fc760c01b2ceddb9e3250b75d42396501f",
+    "sha1": "aebc286153934294e8e3daf96b29d3ed18f4cb73",
+    "x": 12312.808260850892,
+    "y": 5107.366121512054,
+    "width": 675.0,
+    "height": 463.0,
+    "transform": "translate(12312.808260850892 5107.366121512054) rotate(0 337.4388398486759 231.53846153846155)",
+    "source_id": "S-055",
+    "image_use_id": "IU-055",
+    "region_id": "R02",
+    "description": "Without immutable, a long-lived fresh response may still be revalidated on reload or by policy.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-055__1e3be6231f.png",
+    "pixel_width": 889,
+    "pixel_height": 610,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-76f31fc42c29725be696d556d60a5b1caf3b2663",
+    "sha256": "5c219de05772a121d9250bba2029429076ddebb5a4d2738f10f3667e07ad3516",
+    "sha1": "0a992a15bdd9e40ce98a11ba2fa09c453028b974",
+    "x": 4137.403041464995,
+    "y": 5312.326979178281,
+    "width": 905.0,
+    "height": 401.0,
+    "transform": "translate(4137.403041464995 5312.326979178281) rotate(0 452.5 200.5)",
+    "source_id": "S-056",
+    "image_use_id": "IU-056",
+    "region_id": "R06",
+    "description": "Response Caching Middleware is appropriate for standards-based public HTTP caching.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-056__5c219de057.png",
+    "pixel_width": 905,
+    "pixel_height": 401,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-040",
+        "text": "WHEN RESPONSE CACHING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-039",
+        "text": "OUTPUT CACHE"
+      },
+      {
+        "text_id": "T-035",
+        "text": "RESPONSE CACHEING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-b5ca630d86a6f69165dec12be9f62e76b025353b",
+    "sha256": "806aa25eed43c7d71f38068fd9094b9e9e906e434b9e81dde35db0d4c512e016",
+    "sha1": "6e1c0ebddce060f6b2dce618e668626b67d2ce98",
+    "x": 12276.824117676733,
+    "y": 5596.584054579966,
+    "width": 833.0,
+    "height": 459.0,
+    "transform": "translate(12276.824117676733 5596.584054579966) rotate(0 416.5 229.5)",
+    "source_id": "S-057",
+    "image_use_id": "IU-057",
+    "region_id": "R03",
+    "description": "After freshness expires, validators drive conditional requests; no-cache requires validation every reuse.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-057__806aa25eed.png",
+    "pixel_width": 833,
+    "pixel_height": 459,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-d55b223b5979b820c97d1210125a88d957a0a452",
+    "sha256": "24e4b96b65e168b738e19eb262a1b4f436765b23c42963bd5b872d5946e343fe",
+    "sha1": "f223e7e68866a4434776656b4a6747c06988e672",
+    "x": 4125.251563304484,
+    "y": 5810.720844590204,
+    "width": 939.0,
+    "height": 323.0,
+    "transform": "translate(4125.251563304484 5810.720844590204) rotate(0 469.5 161.5)",
+    "source_id": "S-058",
+    "image_use_id": "IU-058",
+    "region_id": "R06",
+    "description": "Response Caching Middleware is less suitable when the server must override client cache directives.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-058__24e4b96b65.png",
+    "pixel_width": 939,
+    "pixel_height": 323,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-040",
+        "text": "WHEN RESPONSE CACHING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-039",
+        "text": "OUTPUT CACHE"
+      },
+      {
+        "text_id": "T-035",
+        "text": "RESPONSE CACHEING MIDDLEWARE"
+      },
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-155e22796f22fb159ab75963d3f2c4e94f540457",
+    "sha256": "63b6b05364556d7faa173bb4c6e852dd098abf4cd0fb445c03e4d0676660ecd4",
+    "sha1": "b48483eca2347bb755a5001690bbcd8620812911",
+    "x": 12233.301075199795,
+    "y": 6071.468669964582,
+    "width": 869.0,
+    "height": 463.0,
+    "transform": "translate(12233.301075199795 6071.468669964582) rotate(0 434.38198553583163 231.53846153846152)",
+    "source_id": "S-059",
+    "image_use_id": "IU-059",
+    "region_id": "R05",
+    "description": "immutable mainly affects validation during the fresh period and remains dependent on freshness.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-059__63b6b05364.png",
+    "pixel_width": 878,
+    "pixel_height": 468,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-b53d22b3369e0e24c2d9b333f31cdea56cc9a3dc",
+    "sha256": "1bda5d5bdccdf816f1872849984815214db3274091f77080e19da1041cec2868",
+    "sha1": "8dde31edc8aabc1f29d68f6808104a124e9a0587",
+    "x": 12447.944541827284,
+    "y": 6833.724746107165,
+    "width": 882.0,
+    "height": 214.0,
+    "transform": "translate(12447.944541827284 6833.724746107165) rotate(0 441 107)",
+    "source_id": "S-060",
+    "image_use_id": "IU-060",
+    "region_id": "R04",
+    "description": "Other directives include no-transform and immutable.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-060__1bda5d5bdc.png",
+    "pixel_width": 882,
+    "pixel_height": 214,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-010",
+        "text": "how does the browser dicides when"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-68223b8f8002d18e420417b36b9f53012bf8f2d5",
+    "sha256": "5ee255e2f1b1386c8f5b514fb4186a4089450e7b3825522ebb14499eb3650b3a",
+    "sha1": "d4dea77aab29e62d12e8f4e687ec5f1890621643",
+    "x": 12489.096912898825,
+    "y": 7139.568563924008,
+    "width": 782.0,
+    "height": 482.0,
+    "transform": "translate(12489.096912898825 7139.568563924008) rotate(0 390.95887567324957 241.15625)",
+    "source_id": "S-061",
+    "image_use_id": "IU-061",
+    "region_id": "R01",
+    "description": "Full request-directive list and only-if-cached example.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-061__5ee255e2f1.png",
+    "pixel_width": 903,
+    "pixel_height": 557,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-014",
+        "text": "when we havent setage or no cache (gandon)"
+      },
+      {
+        "text_id": "T-012",
+        "text": "it needs to revalidate/cache lifetime"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-5a63e80a5e5ec3c664bfc8e4874e77ddb8f34c11",
+    "sha256": "3b7d60634349fcef88329fd4250acba8b07f48922334814563bd4f2d9937cc4e",
+    "sha1": "b9a75000d81f149f243e6f3c9ab4aa3a3fc363f1",
+    "x": 12431.814957408882,
+    "y": 7786.687731675743,
+    "width": 855.0,
+    "height": 394.0,
+    "transform": "translate(12431.814957408882 7786.687731675743) rotate(0 427.49999999999994 197)",
+    "source_id": "S-062",
+    "image_use_id": "IU-062",
+    "region_id": "R04",
+    "description": "Recipe for public catalog data using public, max-age, and s-maxage.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-062__3b7d606343.png",
+    "pixel_width": 855,
+    "pixel_height": 394,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-927544a893c7bb4d5c3ea70afa213f19604d4e82",
+    "sha256": "91f36a631a346bb75738b923981284b94fd8e7ecac8d6bda7180bef0d3e3886d",
+    "sha1": "7ae76c7df5d05e6baae8aa54f1e494eb8af4764e",
+    "x": 12411.314957408882,
+    "y": 8225.409953897968,
+    "width": 896.0,
+    "height": 281.0,
+    "transform": "translate(12411.314957408882 8225.409953897968) rotate(0 448 140.5)",
+    "source_id": "S-063",
+    "image_use_id": "IU-063",
+    "region_id": "R04",
+    "description": "Recipe for user-specific data using private and a short max-age.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-063__91f36a631a.png",
+    "pixel_width": 896,
+    "pixel_height": 281,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-ccb3dd685722c66e1c4308531ec7aacf277fc518",
+    "sha256": "1f43fabe688a3747623d5e3d724e1a005b7d477296923b3ecf5849f3d058a6dd",
+    "sha1": "6cd63517108306b6d1ce0bbcf343f7fba16c739a",
+    "x": 12391.092735186661,
+    "y": 8523.502523884945,
+    "width": 892.0,
+    "height": 230.0,
+    "transform": "translate(12391.092735186661 8523.502523884945) rotate(0 446 115)",
+    "source_id": "S-064",
+    "image_use_id": "IU-064",
+    "region_id": "R04",
+    "description": "Recipe for sensitive endpoints using no-store.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-064__1f43fabe68.png",
+    "pixel_width": 892,
+    "pixel_height": 230,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-e74a53b5dfc6d84cf19693e1457f597c4352c2ca",
+    "sha256": "384053fa4cc1a82ac8e9038235805be5682e3c7199f0be3dcaf872030d10c3c8",
+    "sha1": "c4534559cd1d01fa8494d27d8300907e94324290",
+    "x": 12386.745655938294,
+    "y": 8770.679675035117,
+    "width": 892.0,
+    "height": 482.0,
+    "transform": "translate(12386.745655938294 8770.679675035117) rotate(0 445.9026348039216 241.15625)",
+    "source_id": "S-065",
+    "image_use_id": "IU-065",
+    "region_id": "R03",
+    "description": "Recipe for always validating with no-cache and ETag.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-065__384053fa4c.png",
+    "pixel_width": 943,
+    "pixel_height": 510,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-002",
+        "text": "directives"
+      },
+      {
+        "text_id": "T-004",
+        "text": "some useful flows for clarification"
+      },
+      {
+        "text_id": "T-026",
+        "text": "ETAG AND CACHE CONTROL"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-1cdb79d758e53422220a9b9d33671d54b13c8ebd",
+    "sha256": "7923ea1d10c6c421f32627ca01790a627aef6cbb2927ab779b10f3bfdd538ca6",
+    "sha1": "4b0d409d7380641bdb5d5b5bea1b369fb6714ef9",
+    "x": 12384.26216296754,
+    "y": 9401.89965622652,
+    "width": 660.0,
+    "height": 211.0,
+    "transform": "translate(12384.26216296754 9401.89965622652) rotate(0 330 105.5)",
+    "source_id": "S-066",
+    "image_use_id": "IU-066",
+    "region_id": "R03",
+    "description": "Recipe for prohibiting stale delivery with max-age and must-revalidate.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-066__7923ea1d10.png",
+    "pixel_width": 660,
+    "pixel_height": 211,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-033",
+        "text": "IN CASE OF BROWSER/PROXY AND RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-031",
+        "text": "LAST WORD IN SERVING FROM CACHE"
+      },
+      {
+        "text_id": "T-029",
+        "text": "MAX AGE 0"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-c532c017988d9555cbfd3f101510469174730439",
+    "sha256": "4d27c907e0663104fbbeadee9081cbe45d785e62b77ca2b9e0f3caaf8bc64a1f",
+    "sha1": "4274ca2f1f1e66cd52f3d2cd1c685a865dcbae2a",
+    "x": 12383.770579559086,
+    "y": 9668.421261106825,
+    "width": 835.0,
+    "height": 293.0,
+    "transform": "translate(12383.770579559086 9668.421261106825) rotate(0 417.5 146.5)",
+    "source_id": "S-067",
+    "image_use_id": "IU-067",
+    "region_id": "R05",
+    "description": "CDN resilience recipe using stale-while-revalidate and stale-if-error.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-067__4d27c907e0.png",
+    "pixel_width": 835,
+    "pixel_height": 293,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-033",
+        "text": "IN CASE OF BROWSER/PROXY AND RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-031",
+        "text": "LAST WORD IN SERVING FROM CACHE"
+      },
+      {
+        "text_id": "T-029",
+        "text": "MAX AGE 0"
+      }
+    ]
+  },
+  {
+    "symbol_id": "image-4894105d1f666e990ce821f712fc508e790751c9",
+    "sha256": "bb9d593022fe6e5e3fd1d975e0767c4bcbf576a56d1d41b26bbc80e026eac95a",
+    "sha1": "61de183d9e828dc4459cd814a802865d54fb7286",
+    "x": 12396.843396065497,
+    "y": 10015.37834087195,
+    "width": 828.0,
+    "height": 289.0,
+    "transform": "translate(12396.843396065497 10015.37834087195) rotate(0 414 144.5)",
+    "source_id": "S-068",
+    "image_use_id": "IU-068",
+    "region_id": "R07",
+    "description": "Final checklist for safety, scope, freshness, validators, shared-cache lifetime, and cache-key correctness.",
+    "previously_present": false,
+    "restored": true,
+    "assignment_count": 1,
+    "coverage_status": "processed-semantic-transcript",
+    "asset_path": "assets/source-images-v001/S-068__bb9d593022.png",
+    "pixel_width": 828,
+    "pixel_height": 289,
+    "nearest_text_nodes_hint_only": [
+      {
+        "text_id": "T-038",
+        "text": "SO FOR SPA, OUTPUTCACHE BETTER"
+      },
+      {
+        "text_id": "T-037",
+        "text": "BROWSER CAN SEND SHIT RANDOMLY"
+      },
+      {
+        "text_id": "T-033",
+        "text": "IN CASE OF BROWSER/PROXY AND RESPONSE CACHE MIDDLEWARE"
+      },
+      {
+        "text_id": "T-031",
+        "text": "LAST WORD IN SERVING FROM CACHE"
+      },
+      {
+        "text_id": "T-029",
+        "text": "MAX AGE 0"
+      }
+    ]
+  }
+]
