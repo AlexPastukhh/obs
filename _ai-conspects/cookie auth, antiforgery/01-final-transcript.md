@@ -1,81 +1,38 @@
 # Final transcript — cookie auth, antiforgery
 
-Generated: 2026-06-22 00:00:00 UTC
+Generated: 2026-06-27 UTC
 
-## 0.1 Area understanding / reading quality
+## Full-source correction
 
-**Overall:** ASP.NET Core cookie authentication combined with antiforgery: login/logout, claims and auth tickets, safe returnUrl handling, SPA cookie/antiforgery flow, ITicketStore, OnValidatePrincipal, sliding renewal, cookie policy/options and secure cookie prefixes.
-
-**Reading quality:** high for text/code elements; exact code is retained in the SVG/text ledger.
+The previous transcript was created from an incomplete text-only export. The corrected SVG contains 127 embedded screenshots and 135 physical SVG text nodes. Stage4 reprocessed the complete canvas and rewrote the semantic transcript from the screenshot evidence.
 
 ```text
-processed image uses: 0
-processed text elements: 124
-remaining unclosed image uses: 0
-remaining unclosed text elements: 0
+Complete embedded assets: 127
+Complete image uses: 127
+Physical SVG text nodes: 135
+Processed image uses: 127
+Processed text nodes: 135
+Missing: 0
+Unreviewed: 0
 ```
 
-## Structured transcript
+## Reading order
 
-### Login/logout flow
+1. [R02 — Cookie authentication basics and browser semantics](regions/R02-cookie-authentication-basics-and-browser-semantics.md)
+2. [R03 — SPA antiforgery, authentication setup, and cookie policy](regions/R03-spa-antiforgery-and-cookie-policy.md)
+3. [R04 — Cookie options, scope, secure prefixes, and ticket format](regions/R04-cookie-options-domain-path-prefixes-and-format.md)
+4. [R05 — ITicketStore, principal validation, and claims renewal](regions/R05-ticket-store-principal-validation-and-claims-renewal.md)
 
-Cookie SignInAsync/SignOutAsync, claims principal creation, ValidateAntiForgeryToken and local return URL validation.
+## Consolidated model
 
-### Antiforgery
+Cookie authentication first recovers and validates an authentication ticket, then populates `HttpContext.User`; authorization evaluates the accepted principal afterward. Persistent browser-cookie behavior is controlled through sign-in properties and cookie attributes, while ticket validity, sliding renewal, and app-level principal validation remain server-side concerns.
 
-Two-token antiforgery model, SPA integration and error behavior.
+For SPAs, HttpOnly auth cookies require deliberate SameSite/CORS/credentials configuration and CSRF protection. ASP.NET Core antiforgery uses a cookie token plus a request token returned to the client and sent in a header on unsafe requests.
 
-### Ticket lifecycle
+Cookie scope is governed by name, host/domain, and path. `__Host-` and `__Secure-` names let the browser enforce security invariants. `TicketDataFormat` normally stays on the Data Protection-backed default.
 
-Auth ticket encryption, AuthenticateAsync, ITicketStore, renewal and sliding expiration.
+`ITicketStore` moves ticket payloads server-side and leaves a key in the browser. Claims stored in an issued ticket remain a snapshot until the app re-signs the user or principal validation replaces the principal and requests renewal.
 
-### Principal validation
+## Evidence
 
-OnValidatePrincipal, avoiding a database call on every request, claim refresh strategies and cache-backed tickets.
-
-### Cookie options
-
-Name, domain/path, SameSite, Secure, HttpOnly, prefixes __Host-/__Secure-, TicketDataFormat and CookiePolicy interaction.
-
-### SPA/CORS
-
-Credentials mode, proxy setups and distinction between browser cookies, auth/session cookies and business validity.
-
-## Source-preserving element sample
-
-The full source text is stored in `data/text-elements.json` and `data/text-elements.csv`.
-
-- `T-001` using System.Security.Claims;
-- `T-002` using Microsoft.AspNetCore.Authentication;
-- `T-003` using Microsoft.AspNetCore.Authentication.Cookies;
-- `T-004` using Microsoft.AspNetCore.Mvc;
-- `T-006` public class AccountController : Controller
-- `T-007` {
-- `T-008` [HttpGet]
-- `T-009` public IActionResult Login(string? returnUrl = null)
-- `T-010` {
-- `T-011` ViewData["ReturnUrl"] = returnUrl ?? Url.Action("Index", "Home");
-- `T-012` return View();
-- `T-013` }
-- `T-015` [HttpPost]
-- `T-016` [ValidateAntiForgeryToken]
-- `T-017` public async Task<IActionResult> Login(string username, string password, string? returnUrl)
-- `T-018` {
-- `T-019` // Demo auth check (replace with DB/Identity)
-- `T-020` if (username != "alice" || password != "pass123")
-- `T-021` {
-- `T-022` ModelState.AddModelError("", "Invalid credentials");
-- `T-023` ViewData["ReturnUrl"] = returnUrl;
-- `T-024` return View();
-- `T-025` }
-- `T-027` var claims = new List<Claim>
-- `T-028` {
-- `T-029` new(ClaimTypes.Name, "alice"),
-- `T-030` new(ClaimTypes.Role, "Admin"),
-- `T-031` new("permission", "products.edit")
-- `T-032` };
-- `T-034` var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-## Practical conclusion
-
-Use this conspect as a conceptual map, then return to the preserved SVG or embedded screenshots for exact code/API spellings before copying implementation details.
+Exact source coordinates, hashes, extracted images, text nodes, region assignments, and closure state are preserved in `data/` and `source/images/`.

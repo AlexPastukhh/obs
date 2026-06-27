@@ -1,0 +1,117 @@
+{
+  "audit": "Stage4 independent full-SVG reconciliation",
+  "generated": "2026-06-27 UTC",
+  "status": "pass",
+  "counts": {
+    "legacy_image_uses": 0,
+    "legacy_text_elements": 124,
+    "complete_embedded_assets": 127,
+    "complete_image_uses": 127,
+    "complete_physical_svg_text_nodes": 135,
+    "processed_image_uses": 127,
+    "processed_text_nodes": 135,
+    "missing_image_uses": 0,
+    "unreviewed_image_uses": 0,
+    "unassigned_image_uses": 0,
+    "multiply_assigned_image_uses": 0,
+    "missing_text_nodes": 0,
+    "unreviewed_text_nodes": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "duplicate_asset_shas": 0
+  },
+  "checks": [
+    {
+      "check": "source SVG exists",
+      "passed": true
+    },
+    {
+      "check": "source SHA-256 recorded",
+      "passed": true
+    },
+    {
+      "check": "all image symbols have data URLs",
+      "passed": true
+    },
+    {
+      "check": "image-use count matches symbol count",
+      "passed": true
+    },
+    {
+      "check": "all image hrefs resolve to symbols",
+      "passed": true
+    },
+    {
+      "check": "no orphan image symbols",
+      "passed": true
+    },
+    {
+      "check": "all embedded images decode",
+      "passed": true
+    },
+    {
+      "check": "all embedded assets unique by SHA-1",
+      "passed": true
+    },
+    {
+      "check": "all source IDs unique",
+      "passed": true
+    },
+    {
+      "check": "all use IDs unique",
+      "passed": true
+    },
+    {
+      "check": "all image uses assigned exactly one region",
+      "passed": true
+    },
+    {
+      "check": "all image uses closed",
+      "passed": true
+    },
+    {
+      "check": "physical SVG text-node count",
+      "passed": true
+    },
+    {
+      "check": "all text IDs unique",
+      "passed": true
+    },
+    {
+      "check": "all text nodes assigned exactly one region",
+      "passed": true
+    },
+    {
+      "check": "all text nodes closed",
+      "passed": true
+    },
+    {
+      "check": "contact sheets generated",
+      "passed": true
+    },
+    {
+      "check": "R02 image count",
+      "passed": true
+    },
+    {
+      "check": "R03 image count",
+      "passed": true
+    },
+    {
+      "check": "R04 image count",
+      "passed": true
+    },
+    {
+      "check": "R05 image count",
+      "passed": true
+    },
+    {
+      "check": "regional image total",
+      "passed": true
+    },
+    {
+      "check": "regional text total",
+      "passed": true
+    }
+  ]
+}

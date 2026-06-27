@@ -1,0 +1,1352 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "using System.Security.Claims;",
+    "x": 9705.8774200366,
+    "y": 2687.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-002",
+    "text": "using Microsoft.AspNetCore.Authentication;",
+    "x": 9705.8774200366,
+    "y": 2712.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-003",
+    "text": "using Microsoft.AspNetCore.Authentication.Cookies;",
+    "x": 9705.8774200366,
+    "y": 2737.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-004",
+    "text": "using Microsoft.AspNetCore.Mvc;",
+    "x": 9705.8774200366,
+    "y": 2762.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-005",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 2787.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-006",
+    "text": "public class AccountController : Controller",
+    "x": 9705.8774200366,
+    "y": 2812.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-007",
+    "text": "{",
+    "x": 9705.8774200366,
+    "y": 2837.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-008",
+    "text": "[HttpGet]",
+    "x": 9705.8774200366,
+    "y": 2862.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-009",
+    "text": "public IActionResult Login(string? returnUrl = null)",
+    "x": 9705.8774200366,
+    "y": 2887.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-010",
+    "text": "{",
+    "x": 9705.8774200366,
+    "y": 2912.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-011",
+    "text": "ViewData[\"ReturnUrl\"] = returnUrl ?? Url.Action(\"Index\", \"Home\");",
+    "x": 9705.8774200366,
+    "y": 2937.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-012",
+    "text": "return View();",
+    "x": 9705.8774200366,
+    "y": 2962.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-013",
+    "text": "}",
+    "x": 9705.8774200366,
+    "y": 2987.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-014",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 3012.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-015",
+    "text": "[HttpPost]",
+    "x": 9705.8774200366,
+    "y": 3037.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-016",
+    "text": "[ValidateAntiForgeryToken]",
+    "x": 9705.8774200366,
+    "y": 3062.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-017",
+    "text": "public async Task<IActionResult> Login(string username, string password, string? returnUrl)",
+    "x": 9705.8774200366,
+    "y": 3087.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-018",
+    "text": "{",
+    "x": 9705.8774200366,
+    "y": 3112.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-019",
+    "text": "// Demo auth check (replace with DB/Identity)",
+    "x": 9705.8774200366,
+    "y": 3137.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-020",
+    "text": "if (username != \"alice\" || password != \"pass123\")",
+    "x": 9705.8774200366,
+    "y": 3162.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-021",
+    "text": "{",
+    "x": 9705.8774200366,
+    "y": 3187.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-022",
+    "text": "ModelState.AddModelError(\"\", \"Invalid credentials\");",
+    "x": 9705.8774200366,
+    "y": 3212.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-023",
+    "text": "ViewData[\"ReturnUrl\"] = returnUrl;",
+    "x": 9705.8774200366,
+    "y": 3237.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-024",
+    "text": "return View();",
+    "x": 9705.8774200366,
+    "y": 3262.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-025",
+    "text": "}",
+    "x": 9705.8774200366,
+    "y": 3287.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-026",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 3312.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-027",
+    "text": "var claims = new List<Claim>",
+    "x": 9705.8774200366,
+    "y": 3337.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-028",
+    "text": "{",
+    "x": 9705.8774200366,
+    "y": 3362.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-029",
+    "text": "new(ClaimTypes.Name, \"alice\"),",
+    "x": 9705.8774200366,
+    "y": 3387.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-030",
+    "text": "new(ClaimTypes.Role, \"Admin\"),",
+    "x": 9705.8774200366,
+    "y": 3412.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-031",
+    "text": "new(\"permission\", \"products.edit\")",
+    "x": 9705.8774200366,
+    "y": 3437.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-032",
+    "text": "};",
+    "x": 9705.8774200366,
+    "y": 3462.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-033",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 3487.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-034",
+    "text": "var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);",
+    "x": 9705.8774200366,
+    "y": 3512.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-035",
+    "text": "var principal = new ClaimsPrincipal(identity);",
+    "x": 9705.8774200366,
+    "y": 3537.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-036",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 3562.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-037",
+    "text": "await HttpContext.SignInAsync(",
+    "x": 9705.8774200366,
+    "y": 3587.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-038",
+    "text": "CookieAuthenticationDefaults.AuthenticationScheme,",
+    "x": 9705.8774200366,
+    "y": 3612.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-039",
+    "text": "principal);",
+    "x": 9705.8774200366,
+    "y": 3637.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-040",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 3662.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-041",
+    "text": "if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))",
+    "x": 9705.8774200366,
+    "y": 3687.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-042",
+    "text": "return Redirect(returnUrl);",
+    "x": 9705.8774200366,
+    "y": 3712.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-043",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 3737.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-044",
+    "text": "return RedirectToAction(\"Index\", \"Home\");",
+    "x": 9705.8774200366,
+    "y": 3762.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-045",
+    "text": "}",
+    "x": 9705.8774200366,
+    "y": 3787.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-046",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 3812.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-047",
+    "text": "[HttpPost]",
+    "x": 9705.8774200366,
+    "y": 3837.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-048",
+    "text": "[ValidateAntiForgeryToken]",
+    "x": 9705.8774200366,
+    "y": 3862.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-049",
+    "text": "public async Task<IActionResult> Logout()",
+    "x": 9705.8774200366,
+    "y": 3887.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-050",
+    "text": "{",
+    "x": 9705.8774200366,
+    "y": 3912.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-051",
+    "text": "await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);",
+    "x": 9705.8774200366,
+    "y": 3937.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-052",
+    "text": "return RedirectToAction(\"Index\", \"Home\");",
+    "x": 9705.8774200366,
+    "y": 3962.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-053",
+    "text": "}",
+    "x": 9705.8774200366,
+    "y": 3987.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-054",
+    "text": "",
+    "x": 9705.8774200366,
+    "y": 4012.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-055",
+    "text": "public IActionResult Denied() => View();",
+    "x": 9705.8774200366,
+    "y": 4037.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-056",
+    "text": "}",
+    "x": 9705.8774200366,
+    "y": 4062.8984522485,
+    "font_size": "20px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-057",
+    "text": "!!!",
+    "x": 8451.8293277294,
+    "y": 3861.6063316365,
+    "font_size": "62.80947930983914px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-058",
+    "text": "BASIC",
+    "x": 8722.4750924335,
+    "y": 1129.0009920915,
+    "font_size": "167.9405520169852px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-059",
+    "text": "SPA WITH COOKIES, REACT,",
+    "x": 6379.1209345787,
+    "y": 952.0849734575,
+    "font_size": "106.34109659053209px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-060",
+    "text": "ANTIFORGERY",
+    "x": 6379.1209345787,
+    "y": 1085.0113441957,
+    "font_size": "106.34109659053209px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-061",
+    "text": "how setandstoretokens works,",
+    "x": 5615.9649222837,
+    "y": 3432.8016872557,
+    "font_size": "40.993655979583636px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-062",
+    "text": "2 tokens antiforgery",
+    "x": 5615.9649222837,
+    "y": 3484.0437572302,
+    "font_size": "40.993655979583636px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-063",
+    "text": "may throw?",
+    "x": 3773.3076236094,
+    "y": 1238.2477340927,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-064",
+    "text": "paths on events",
+    "x": 3857.3662672269,
+    "y": 816.8574400836,
+    "font_size": "73.06728816123186px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-065",
+    "text": "what if you dont have them?",
+    "x": 3857.3662672269,
+    "y": 908.1915502852,
+    "font_size": "73.06728816123186px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-066",
+    "text": "ispersistent",
+    "x": 2278.0120886329,
+    "y": 594.0353768672,
+    "font_size": "77.79475725841623px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-067",
+    "text": "expires on setcookie",
+    "x": 2278.0120886329,
+    "y": 691.2788234402,
+    "font_size": "77.79475725841623px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-068",
+    "text": "when do we have httpcontext.user",
+    "x": 425.456763493,
+    "y": 528.254245061,
+    "font_size": "53.333312988281236px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-069",
+    "text": "it depends on what? authorize attr",
+    "x": 425.456763493,
+    "y": 594.9208862964,
+    "font_size": "53.333312988281236px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-070",
+    "text": "or whether we have auth cookie attached that",
+    "x": 425.456763493,
+    "y": 661.5875275317,
+    "font_size": "53.333312988281236px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-071",
+    "text": "has valid authticket that we can decrypt and read",
+    "x": 425.456763493,
+    "y": 728.2541687671,
+    "font_size": "53.333312988281236px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-072",
+    "text": "iticketstore",
+    "x": 19924.4692724445,
+    "y": 2683.0096801758,
+    "font_size": "529.3334960937501px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-073",
+    "text": "iticketstore",
+    "x": 19924.4692724445,
+    "y": 2676.3428100586,
+    "font_size": "529.3334960937501px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-074",
+    "text": "auth cookie options",
+    "x": 15931.1355322101,
+    "y": 476.3428100586,
+    "font_size": "529.3334960937501px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-075",
+    "text": "defaults",
+    "x": 15931.1355322101,
+    "y": 1138.0096801758,
+    "font_size": "529.3334960937501px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-076",
+    "text": "usecookiepolicy",
+    "x": 10925.3130845004,
+    "y": 5112.2620396294,
+    "font_size": "170.22226969400995px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-077",
+    "text": "cookie.name",
+    "x": 12545.1900406363,
+    "y": 7029.9542262138,
+    "font_size": "156.0001627604166px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-078",
+    "text": "just cookie optons",
+    "x": 8463.9067482807,
+    "y": 5083.4980295303,
+    "font_size": "141.59999999999994px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-079",
+    "text": "to add ticketstore to",
+    "x": 20454.9033503471,
+    "y": 6255.9650242964,
+    "font_size": "124.88883463541669px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-080",
+    "text": "authcookie options",
+    "x": 20454.9033503471,
+    "y": 6412.0760675906,
+    "font_size": "124.88883463541669px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-081",
+    "text": "need to use options pattern",
+    "x": 20454.9033503471,
+    "y": 6568.1871108849,
+    "font_size": "124.88883463541669px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-082",
+    "text": "some little flow",
+    "x": 21917.7523160786,
+    "y": 3579.6491920284,
+    "font_size": "116.00000000000001px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-083",
+    "text": "renewal occurs when we have some sliding exp and",
+    "x": 21942.9039237076,
+    "y": 3730.2247719141,
+    "font_size": "20px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-084",
+    "text": "framework does retrieve and decides to update expiration",
+    "x": 21942.9039237076,
+    "y": 3755.2247719141,
+    "font_size": "20px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-085",
+    "text": "!!!",
+    "x": 17993.8729897007,
+    "y": 10246.0008466398,
+    "font_size": "97.71428571428989px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-086",
+    "text": "dbcall on every request",
+    "x": 18209.8630241126,
+    "y": 7368.8876250289,
+    "font_size": "52px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-087",
+    "text": "that needs cookie validation",
+    "x": 18209.8630241126,
+    "y": 7433.8876250289,
+    "font_size": "52px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-088",
+    "text": "how to avoid",
+    "x": 18209.8630241126,
+    "y": 7498.8876250289,
+    "font_size": "52px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-089",
+    "text": "onvalidateprincipal",
+    "x": 19306.2959964137,
+    "y": 7408.0554503776,
+    "font_size": "103.20000000000003px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-090",
+    "text": "onvalidateprincipal",
+    "x": 20779.6291262965,
+    "y": 9121.3888854362,
+    "font_size": "103.20000000000003px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-091",
+    "text": "renewal without ticketstore",
+    "x": 20779.6291262965,
+    "y": 9250.3888854362,
+    "font_size": "103.20000000000003px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-092",
+    "text": "!!!",
+    "x": 18010.9626630804,
+    "y": 8040.076759362,
+    "font_size": "106.75556640624998px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-093",
+    "text": "what has been done before onvalidateprincipal",
+    "x": 16578.8819024714,
+    "y": 7145.0133857561,
+    "font_size": "55.5555419921875px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-094",
+    "text": "",
+    "x": 16578.8819024714,
+    "y": 7214.4578132463,
+    "font_size": "55.5555419921875px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-095",
+    "text": "onvalidateprincipal and authorizatoin",
+    "x": 16718.8819024714,
+    "y": 8252.8915640601,
+    "font_size": "53.77779134114388px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-096",
+    "text": "how renew async gets called",
+    "x": 20815.1216221096,
+    "y": 6997.3263649742,
+    "font_size": "111.02223307291666px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-097",
+    "text": "how to change claims so",
+    "x": 20815.1216221096,
+    "y": 7136.1041563153,
+    "font_size": "111.02223307291666px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-098",
+    "text": "they will be updated in cache",
+    "x": 20815.1216221096,
+    "y": 7274.8819476565,
+    "font_size": "111.02223307291666px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-099",
+    "text": "some strats to avoid db call on every request",
+    "x": 17965.725375451,
+    "y": 9910.026619606,
+    "font_size": "43.05719144193902px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-100",
+    "text": "that checks whether the user has the same claims",
+    "x": 17965.725375451,
+    "y": 9963.8481089084,
+    "font_size": "43.05719144193902px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-101",
+    "text": "!!!",
+    "x": 19228.0749801812,
+    "y": 8644.2815436443,
+    "font_size": "157.77775065104217px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-102",
+    "text": "!!!",
+    "x": 19180.8263455429,
+    "y": 10886.7731970569,
+    "font_size": "100.7619047619046px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-103",
+    "text": "lax option",
+    "x": 2426.6601125612,
+    "y": 3989.0750076667,
+    "font_size": "127.48719200721153px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-104",
+    "text": "spa vs classic mbc",
+    "x": 2426.6601125612,
+    "y": 4148.4339976757,
+    "font_size": "127.48719200721153px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-105",
+    "text": "(lax is default)",
+    "x": 2426.6601125612,
+    "y": 4307.7929876847,
+    "font_size": "127.48719200721153px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-106",
+    "text": "when have proxy for spa",
+    "x": 3700.5424388734,
+    "y": 4166.9652406819,
+    "font_size": "69.77775065104161px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-107",
+    "text": "confgured",
+    "x": 3700.5424388734,
+    "y": 4254.1874289957,
+    "font_size": "69.77775065104161px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-108",
+    "text": "whats the visual difference",
+    "x": 238.6001626547,
+    "y": 5722.5254962034,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-109",
+    "text": "between a normal cookie and auth/session cookie",
+    "x": 238.6001626547,
+    "y": 5747.5254962034,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-110",
+    "text": "auth cookies and session cookies",
+    "x": 260.4183444729,
+    "y": 5169.7982234761,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-111",
+    "text": "crypto valid and buisness valid",
+    "x": 176.7819808365,
+    "y": 4695.2527689306,
+    "font_size": "20px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-112",
+    "text": "some low(high) level cookie",
+    "x": 10.0,
+    "y": 3535.958349013,
+    "font_size": "117.14285714285717px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-113",
+    "text": "auth/verification flow",
+    "x": 10.0,
+    "y": 3682.3869204416,
+    "font_size": "117.14285714285717px",
+    "region": "R02",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-114",
+    "text": "when include credentials",
+    "x": 5109.4053069991,
+    "y": 746.600866236,
+    "font_size": "56.533325195312536px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-115",
+    "text": "need to catch network error",
+    "x": 5109.4053069991,
+    "y": 817.2675227301,
+    "font_size": "56.533325195312536px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-116",
+    "text": "from not allowed creditials somewhere",
+    "x": 5109.4053069991,
+    "y": 887.9341792242,
+    "font_size": "56.533325195312536px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-117",
+    "text": "(cors issue)",
+    "x": 5109.4053069991,
+    "y": 958.6008357184,
+    "font_size": "56.533325195312536px",
+    "region": "R03",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-118",
+    "text": "adding claims to authenticatied user",
+    "x": 17496.3093920645,
+    "y": 6605.0806155014,
+    "font_size": "127.42858014787954px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-119",
+    "text": "iticketstore cases",
+    "x": 17496.3093920645,
+    "y": 6764.3663406862,
+    "font_size": "127.42858014787954px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-120",
+    "text": "normal cases have 2 options too",
+    "x": 17496.3093920645,
+    "y": 6923.6520658711,
+    "font_size": "127.42858014787954px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-121",
+    "text": "",
+    "x": 17496.3093920645,
+    "y": 7082.9377910559,
+    "font_size": "127.42858014787954px",
+    "region": "R05",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-122",
+    "text": "domain option",
+    "x": 13899.3736330814,
+    "y": 1155.7834003169,
+    "font_size": "69.31426103584235px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-123",
+    "text": "TicketDataFormat",
+    "x": 16323.1722350698,
+    "y": 3280.0904937226,
+    "font_size": "69.31426103584235px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-124",
+    "text": "why usually do not set",
+    "x": 17413.8006227811,
+    "y": 3311.4815175179,
+    "font_size": "69.31426103584235px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-125",
+    "text": "when you would customize",
+    "x": 18448.8515155822,
+    "y": 3312.1106750743,
+    "font_size": "69.31426103584235px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-126",
+    "text": "domain vs host",
+    "x": 12579.1397380413,
+    "y": 1174.9345816203,
+    "font_size": "69.31426103584235px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-127",
+    "text": "path vs domain",
+    "x": 11542.5824712066,
+    "y": 1189.2979881449,
+    "font_size": "69.31426103584235px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-128",
+    "text": "WWW",
+    "x": 12547.7863050488,
+    "y": 2270.6582432101,
+    "font_size": "91.11112467447526px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-129",
+    "text": "!!!",
+    "x": 14908.7577041111,
+    "y": 6356.6341522593,
+    "font_size": "108.66668701171876px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-130",
+    "text": "Holding invariants (options consistency)",
+    "x": 13630.357408439,
+    "y": 2770.6906521757,
+    "font_size": "53.0666748046875px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-131",
+    "text": "with __Host and __Secure names of cookies",
+    "x": 13630.357408439,
+    "y": 2837.0239956815,
+    "font_size": "53.0666748046875px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-132",
+    "text": "forcing host cookie",
+    "x": 13652.5796306613,
+    "y": 3040.5775122017,
+    "font_size": "120.62223036024308px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-133",
+    "text": "_Secure",
+    "x": 13925.9128826144,
+    "y": 4837.9108862251,
+    "font_size": "120.62223036024308px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-134",
+    "text": "Why name prefixes",
+    "x": 13659.2462159477,
+    "y": 5568.2812339899,
+    "font_size": "120.62223036024308px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  },
+  {
+    "text_id": "T-135",
+    "text": "both host and secure?",
+    "x": 14958.5053847845,
+    "y": 5516.4293595324,
+    "font_size": "120.62223036024308px",
+    "region": "R04",
+    "status": "closed",
+    "evidence": "physical SVG text node reviewed and included in regional transcript/ledger"
+  }
+]

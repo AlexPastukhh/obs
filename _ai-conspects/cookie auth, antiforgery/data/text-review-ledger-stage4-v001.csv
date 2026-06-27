@@ -1,0 +1,136 @@
+﻿text_id,text,x,y,font_size,region,status,evidence
+T-001,using System.Security.Claims;,9705.877420036639,2687.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-002,using Microsoft.AspNetCore.Authentication;,9705.877420036639,2712.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-003,using Microsoft.AspNetCore.Authentication.Cookies;,9705.877420036639,2737.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-004,using Microsoft.AspNetCore.Mvc;,9705.877420036639,2762.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-005,,9705.877420036639,2787.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-006,public class AccountController : Controller,9705.877420036639,2812.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-007,{,9705.877420036639,2837.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-008,[HttpGet],9705.877420036639,2862.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-009,public IActionResult Login(string? returnUrl = null),9705.877420036639,2887.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-010,{,9705.877420036639,2912.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-011,"ViewData[""ReturnUrl""] = returnUrl ?? Url.Action(""Index"", ""Home"");",9705.877420036639,2937.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-012,return View();,9705.877420036639,2962.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-013,},9705.877420036639,2987.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-014,,9705.877420036639,3012.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-015,[HttpPost],9705.877420036639,3037.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-016,[ValidateAntiForgeryToken],9705.877420036639,3062.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-017,"public async Task<IActionResult> Login(string username, string password, string? returnUrl)",9705.877420036639,3087.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-018,{,9705.877420036639,3112.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-019,// Demo auth check (replace with DB/Identity),9705.877420036639,3137.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-020,"if (username != ""alice"" || password != ""pass123"")",9705.877420036639,3162.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-021,{,9705.877420036639,3187.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-022,"ModelState.AddModelError("""", ""Invalid credentials"");",9705.877420036639,3212.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-023,"ViewData[""ReturnUrl""] = returnUrl;",9705.877420036639,3237.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-024,return View();,9705.877420036639,3262.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-025,},9705.877420036639,3287.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-026,,9705.877420036639,3312.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-027,var claims = new List<Claim>,9705.877420036639,3337.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-028,{,9705.877420036639,3362.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-029,"new(ClaimTypes.Name, ""alice""),",9705.877420036639,3387.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-030,"new(ClaimTypes.Role, ""Admin""),",9705.877420036639,3412.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-031,"new(""permission"", ""products.edit"")",9705.877420036639,3437.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-032,};,9705.877420036639,3462.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-033,,9705.877420036639,3487.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-034,"var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);",9705.877420036639,3512.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-035,var principal = new ClaimsPrincipal(identity);,9705.877420036639,3537.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-036,,9705.877420036639,3562.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-037,await HttpContext.SignInAsync(,9705.877420036639,3587.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-038,"CookieAuthenticationDefaults.AuthenticationScheme,",9705.877420036639,3612.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-039,principal);,9705.877420036639,3637.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-040,,9705.877420036639,3662.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-041,if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl)),9705.877420036639,3687.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-042,return Redirect(returnUrl);,9705.877420036639,3712.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-043,,9705.877420036639,3737.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-044,"return RedirectToAction(""Index"", ""Home"");",9705.877420036639,3762.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-045,},9705.877420036639,3787.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-046,,9705.877420036639,3812.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-047,[HttpPost],9705.877420036639,3837.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-048,[ValidateAntiForgeryToken],9705.877420036639,3862.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-049,public async Task<IActionResult> Logout(),9705.877420036639,3887.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-050,{,9705.877420036639,3912.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-051,await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);,9705.877420036639,3937.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-052,"return RedirectToAction(""Index"", ""Home"");",9705.877420036639,3962.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-053,},9705.877420036639,3987.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-054,,9705.877420036639,4012.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-055,public IActionResult Denied() => View();,9705.877420036639,4037.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-056,},9705.877420036639,4062.898452248454,20px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-057,!!!,8451.829327729432,3861.6063316364803,62.80947930983914px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-058,BASIC,8722.475092433473,1129.00099209151,167.9405520169852px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-059,"SPA WITH COOKIES, REACT,",6379.120934578676,952.0849734575155,106.34109659053209px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-060,ANTIFORGERY,6379.120934578676,1085.0113441956805,106.34109659053209px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-061,"how setandstoretokens works,",5615.964922283666,3432.8016872557096,40.993655979583636px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-062,2 tokens antiforgery,5615.964922283666,3484.043757230189,40.993655979583636px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-063,may throw?,3773.307623609392,1238.2477340926903,20px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-064,paths on events,3857.36626722694,816.857440083635,73.06728816123186px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-065,what if you dont have them?,3857.36626722694,908.1915502851748,73.06728816123186px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-066,ispersistent,2278.0120886328987,594.0353768671515,77.79475725841623px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-067,expires on setcookie,2278.0120886328987,691.2788234401718,77.79475725841623px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-068,when do we have httpcontext.user,425.4567634929954,528.2542450610373,53.333312988281236px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-069,it depends on what? authorize attr,425.4567634929954,594.9208862963887,53.333312988281236px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-070,or whether we have auth cookie attached that,425.4567634929954,661.5875275317403,53.333312988281236px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-071,has valid authticket that we can decrypt and read,425.4567634929954,728.2541687670919,53.333312988281236px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-072,iticketstore,19924.469272444472,2683.0096801757813,529.3334960937501px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-073,iticketstore,19924.469272444472,2676.342810058594,529.3334960937501px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-074,auth cookie options,15931.135532210097,476.34281005859384,529.3334960937501px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-075,defaults,15931.135532210097,1138.0096801757813,529.3334960937501px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-076,usecookiepolicy,10925.313084500398,5112.262039629361,170.22226969400995px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-077,cookie.name,12545.1900406363,7029.954226213833,156.0001627604166px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-078,just cookie optons,8463.906748280719,5083.498029530283,141.59999999999994px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-079,to add ticketstore to,20454.90335034707,6255.9650242963535,124.88883463541669px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-080,authcookie options,20454.90335034707,6412.076067590624,124.88883463541669px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-081,need to use options pattern,20454.90335034707,6568.1871108848945,124.88883463541669px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-082,some little flow,21917.752316078604,3579.6491920283606,116.00000000000001px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-083,renewal occurs when we have some sliding exp and,21942.90392370763,3730.2247719141324,20px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-084,framework does retrieve and decides to update expiration,21942.90392370763,3755.2247719141324,20px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-085,!!!,17993.87298970069,10246.000846639847,97.71428571428989px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-086,dbcall on every request,18209.863024112587,7368.887625028869,52px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-087,that needs cookie validation,18209.863024112587,7433.887625028869,52px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-088,how to avoid,18209.863024112587,7498.887625028869,52px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-089,onvalidateprincipal,19306.295996413723,7408.0554503776475,103.20000000000003px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-090,onvalidateprincipal,20779.629126296535,9121.388885436241,103.20000000000003px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-091,renewal without ticketstore,20779.629126296535,9250.388885436241,103.20000000000003px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-092,!!!,18010.96266308039,8040.076759361993,106.75556640624998px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-093,what has been done before onvalidateprincipal,16578.88190247137,7145.013385756071,55.5555419921875px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-094,,16578.88190247137,7214.457813246306,55.5555419921875px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-095,onvalidateprincipal and authorizatoin,16718.88190247137,8252.89156406008,53.77779134114388px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-096,how renew async gets called,20815.121622109626,6997.326364974199,111.02223307291666px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-097,how to change claims so,20815.121622109626,7136.104156315345,111.02223307291666px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-098,they will be updated in cache,20815.121622109626,7274.881947656491,111.02223307291666px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-099,some strats to avoid db call on every request,17965.725375450966,9910.026619605962,43.05719144193902px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-100,that checks whether the user has the same claims,17965.725375450966,9963.848108908385,43.05719144193902px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-101,!!!,19228.07498018119,8644.281543644314,157.77775065104217px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-102,!!!,19180.826345542853,10886.773197056888,100.7619047619046px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-103,lax option,2426.660112561155,3989.07500766666,127.48719200721153px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-104,spa vs classic mbc,2426.660112561155,4148.433997675675,127.48719200721153px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-105,(lax is default),2426.660112561155,4307.792987684689,127.48719200721153px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-106,when have proxy for spa,3700.5424388733536,4166.965240681916,69.77775065104161px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-107,confgured,3700.5424388733536,4254.187428995718,69.77775065104161px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-108,whats the visual difference,238.6001626547295,5722.525496203355,20px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-109,between a normal cookie and auth/session cookie,238.6001626547295,5747.525496203355,20px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-110,auth cookies and session cookies,260.4183444729115,5169.798223476076,20px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-111,crypto valid and buisness valid,176.78198083654752,4695.252768930634,20px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-112,some low(high) level cookie,10.0,3535.95834901299,117.14285714285717px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-113,auth/verification flow,10.0,3682.3869204415614,117.14285714285717px,R02,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-114,when include credentials,5109.405306999135,746.6008662359541,56.533325195312536px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-115,need to catch network error,5109.405306999135,817.2675227300948,56.533325195312536px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-116,from not allowed creditials somewhere,5109.405306999135,887.9341792242354,56.533325195312536px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-117,(cors issue),5109.405306999135,958.6008357183762,56.533325195312536px,R03,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-118,adding claims to authenticatied user,17496.30939206452,6605.080615501367,127.42858014787954px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-119,iticketstore cases,17496.30939206452,6764.366340686216,127.42858014787954px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-120,normal cases have 2 options too,17496.30939206452,6923.652065871065,127.42858014787954px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-121,,17496.30939206452,7082.937791055915,127.42858014787954px,R05,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-122,domain option,13899.373633081368,1155.7834003169155,69.31426103584235px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-123,TicketDataFormat,16323.172235069831,3280.0904937226333,69.31426103584235px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-124,why usually do not set,17413.800622781062,3311.4815175179137,69.31426103584235px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-125,when you would customize,18448.851515582162,3312.1106750743384,69.31426103584235px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-126,domain vs host,12579.139738041256,1174.9345816203459,69.31426103584235px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-127,path vs domain,11542.582471206591,1189.2979881448882,69.31426103584235px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-128,WWW,12547.786305048812,2270.6582432100527,91.11112467447526px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-129,!!!,14908.757704111144,6356.634152259307,108.66668701171876px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-130,Holding invariants (options consistency),13630.35740843903,2770.690652175654,53.0666748046875px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-131,with __Host and __Secure names of cookies,13630.35740843903,2837.0239956815135,53.0666748046875px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-132,forcing host cookie,13652.57963066125,3040.5775122016953,120.62223036024308px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-133,_Secure,13925.912882614375,4837.910886225132,120.62223036024308px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-134,Why name prefixes,13659.24621594771,5568.281233989889,120.62223036024308px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
+T-135,both host and secure?,14958.505384784516,5516.429359532423,120.62223036024308px,R04,closed,physical SVG text node reviewed and included in regional transcript/ledger
