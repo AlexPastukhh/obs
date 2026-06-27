@@ -1,0 +1,410 @@
+[
+  {
+    "x": 4316.029170795291,
+    "y": 10.0,
+    "text": "some flow clarifications",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 4316.029170795291,
+    "y": 10.0,
+    "text": "+",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 4316.029170795291,
+    "y": 10.0,
+    "text": "formats of last modified",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 4316.029170795291,
+    "y": 10.0,
+    "text": "if modified since",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 1061.3775681620905,
+    "y": 363.91443167200805,
+    "text": "managing expirational model with last modified",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 5439.033566973554,
+    "y": 1821.0711989103804,
+    "text": "rfc 1123 format",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 5791.256330405196,
+    "y": 3793.5411893170576,
+    "text": "just in case",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "using Microsoft.AspNetCore.Mvc;",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "using Microsoft.EntityFrameworkCore;",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "[ApiController]",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "[Route(\"api/authors\")]",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "public class AuthorsController : ControllerBase",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "{",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "private readonly AppDbContext _db;",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "public AuthorsController(AppDbContext db) => _db = db;",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "[HttpGet(\"{id:guid}\")]",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "public async Task<IActionResult> Get(Guid id, CancellationToken ct)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "{",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "var data = await _db.Authors.AsNoTracking()",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": ".Where(a => a.Id == id)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": ".Select(a => new",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "{",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "a.Id,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "a.Name,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "LastModified = EF.Property<DateTimeOffset>(a, \"LastModified\")",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "})",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": ".SingleOrDefaultAsync(ct);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "if (data is null) return NotFound();",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "Response.Headers.LastModified = data.LastModified.UtcDateTime.ToString(\"R\");",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "// Basic If-Modified-Since check (seconds precision)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "if (Request.Headers.IfModifiedSince.Count > 0 &&",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "DateTimeOffset.TryParse(Request.Headers.IfModifiedSince.ToString(), out var ims))",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "{",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "var lmSeconds = new DateTimeOffset(",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "data.LastModified.UtcDateTime.AddTicks(-(data.LastModified.UtcDateTime.Ticks % TimeSpan.TicksPerSecond)),",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "TimeSpan.Zero);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "if (lmSeconds <= ims.ToUniversalTime())",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "return StatusCode(StatusCodes.Status304NotModified);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "return Ok(new { data.Id, data.Name });",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 2585.7863921018234,
+    "y": 3967.914431672008,
+    "text": "}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 4421.333389701014,
+    "y": 4067.6189688804984,
+    "text": "why lastmodified and if modified since dont use unix time",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  },
+  {
+    "x": 4421.333389701014,
+    "y": 4067.6189688804984,
+    "text": "about rfc 1123 format",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-044"
+  },
+  {
+    "x": 2333.737424172962,
+    "y": 4561.401979244332,
+    "text": "just in case",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-045"
+  },
+  {
+    "x": 291.73030068121716,
+    "y": 5828.792043315389,
+    "text": "why do we include lastmodified for both paths",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-046"
+  },
+  {
+    "x": 291.73030068121716,
+    "y": 5828.792043315389,
+    "text": "browser cant use the old cached lastmodified? (it can)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-047"
+  },
+  {
+    "x": 1331.2843560585382,
+    "y": 6287.683483770688,
+    "text": "need to reat metadata addition to request as shared path for all status codes",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-048"
+  },
+  {
+    "x": 1538.986410457745,
+    "y": 7442.0910601430405,
+    "text": "304 can return new resource metadata too, its a valid reponse",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-049"
+  },
+  {
+    "x": 1538.986410457745,
+    "y": 7442.0910601430405,
+    "text": "so its better to design such things, so there is no shit branching,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-050"
+  },
+  {
+    "x": 1538.986410457745,
+    "y": 7442.0910601430405,
+    "text": "because the metadata path should be the same for both 200 and 304",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-051"
+  }
+]

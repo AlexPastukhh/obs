@@ -1,0 +1,52 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R03,processed,4316.029170795291,10.0,some flow clarifications
+T-002,R03,processed,4316.029170795291,10.0,+
+T-003,R03,processed,4316.029170795291,10.0,formats of last modified
+T-004,R03,processed,4316.029170795291,10.0,if modified since
+T-005,R01,processed,1061.3775681620905,363.91443167200805,managing expirational model with last modified
+T-006,R03,processed,5439.033566973554,1821.0711989103804,rfc 1123 format
+T-007,R03,processed,5791.256330405196,3793.5411893170576,just in case
+T-008,R02,processed,2585.7863921018234,3967.914431672008,using Microsoft.AspNetCore.Mvc;
+T-009,R02,processed,2585.7863921018234,3967.914431672008,using Microsoft.EntityFrameworkCore;
+T-010,R02,processed,2585.7863921018234,3967.914431672008,[ApiController]
+T-011,R02,processed,2585.7863921018234,3967.914431672008,"[Route(""api/authors"")]"
+T-012,R02,processed,2585.7863921018234,3967.914431672008,public class AuthorsController : ControllerBase
+T-013,R02,processed,2585.7863921018234,3967.914431672008,{
+T-014,R02,processed,2585.7863921018234,3967.914431672008,private readonly AppDbContext _db;
+T-015,R02,processed,2585.7863921018234,3967.914431672008,public AuthorsController(AppDbContext db) => _db = db;
+T-016,R02,processed,2585.7863921018234,3967.914431672008,"[HttpGet(""{id:guid}"")]"
+T-017,R02,processed,2585.7863921018234,3967.914431672008,"public async Task<IActionResult> Get(Guid id, CancellationToken ct)"
+T-018,R02,processed,2585.7863921018234,3967.914431672008,{
+T-019,R02,processed,2585.7863921018234,3967.914431672008,var data = await _db.Authors.AsNoTracking()
+T-020,R02,processed,2585.7863921018234,3967.914431672008,.Where(a => a.Id == id)
+T-021,R02,processed,2585.7863921018234,3967.914431672008,.Select(a => new
+T-022,R02,processed,2585.7863921018234,3967.914431672008,{
+T-023,R02,processed,2585.7863921018234,3967.914431672008,"a.Id,"
+T-024,R02,processed,2585.7863921018234,3967.914431672008,"a.Name,"
+T-025,R02,processed,2585.7863921018234,3967.914431672008,"LastModified = EF.Property<DateTimeOffset>(a, ""LastModified"")"
+T-026,R02,processed,2585.7863921018234,3967.914431672008,})
+T-027,R02,processed,2585.7863921018234,3967.914431672008,.SingleOrDefaultAsync(ct);
+T-028,R02,processed,2585.7863921018234,3967.914431672008,if (data is null) return NotFound();
+T-029,R02,processed,2585.7863921018234,3967.914431672008,"Response.Headers.LastModified = data.LastModified.UtcDateTime.ToString(""R"");"
+T-030,R02,processed,2585.7863921018234,3967.914431672008,// Basic If-Modified-Since check (seconds precision)
+T-031,R02,processed,2585.7863921018234,3967.914431672008,if (Request.Headers.IfModifiedSince.Count > 0 &&
+T-032,R02,processed,2585.7863921018234,3967.914431672008,"DateTimeOffset.TryParse(Request.Headers.IfModifiedSince.ToString(), out var ims))"
+T-033,R02,processed,2585.7863921018234,3967.914431672008,{
+T-034,R02,processed,2585.7863921018234,3967.914431672008,var lmSeconds = new DateTimeOffset(
+T-035,R02,processed,2585.7863921018234,3967.914431672008,"data.LastModified.UtcDateTime.AddTicks(-(data.LastModified.UtcDateTime.Ticks % TimeSpan.TicksPerSecond)),"
+T-036,R02,processed,2585.7863921018234,3967.914431672008,TimeSpan.Zero);
+T-037,R02,processed,2585.7863921018234,3967.914431672008,if (lmSeconds <= ims.ToUniversalTime())
+T-038,R02,processed,2585.7863921018234,3967.914431672008,return StatusCode(StatusCodes.Status304NotModified);
+T-039,R02,processed,2585.7863921018234,3967.914431672008,}
+T-040,R02,processed,2585.7863921018234,3967.914431672008,"return Ok(new { data.Id, data.Name });"
+T-041,R02,processed,2585.7863921018234,3967.914431672008,}
+T-042,R02,processed,2585.7863921018234,3967.914431672008,}
+T-043,R03,processed,4421.333389701014,4067.6189688804984,why lastmodified and if modified since dont use unix time
+T-044,R03,processed,4421.333389701014,4067.6189688804984,about rfc 1123 format
+T-045,R02,processed,2333.737424172962,4561.401979244332,just in case
+T-046,R02,processed,291.73030068121716,5828.792043315389,why do we include lastmodified for both paths
+T-047,R02,processed,291.73030068121716,5828.792043315389,browser cant use the old cached lastmodified? (it can)
+T-048,R04,processed,1331.2843560585382,6287.683483770688,need to reat metadata addition to request as shared path for all status codes
+T-049,R04,processed,1538.986410457745,7442.0910601430405,"304 can return new resource metadata too, its a valid reponse"
+T-050,R04,processed,1538.986410457745,7442.0910601430405,"so its better to design such things, so there is no shit branching,"
+T-051,R04,processed,1538.986410457745,7442.0910601430405,because the metadata path should be the same for both 200 and 304
