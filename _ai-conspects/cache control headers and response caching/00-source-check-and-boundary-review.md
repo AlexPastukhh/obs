@@ -25,13 +25,13 @@ unused image definitions: 0
 
 ## Current coverage boundary
 
-Stage0 only preserves, extracts and inventories the source.
+Stage0 preserved, extracted and inventoried the source. Regional and combined transcript coverage is now complete.
 
 ```text
-processed text elements: 0 / 8
-processed screenshot uses: 0 / 91
-remaining text elements: 8
-remaining screenshot uses: 91
+processed text elements: 8 / 8
+processed screenshot uses: 91 / 91
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -47,7 +47,6 @@ remaining screenshot uses: 91
 | R07 | When server response caching is unnecessary or harmful | 1 | 25 | 25 |
 | R08 | When server response caching is useful and how to apply it safely | 1 | 19 | 19 |
 
-## Next
+## Closure
 
-Review every regional contact sheet, create semantic transcripts for `R01`–`R08`,
-then build one combined final transcript and a full-conspect coverage audit.
+Regional transcripts `R01`–`R08`, the combined final transcript and the full-conspect coverage audit are complete.

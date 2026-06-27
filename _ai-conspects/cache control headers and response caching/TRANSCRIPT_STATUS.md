@@ -1,12 +1,18 @@
 # Transcript status — cache control headers and response caching
 
-Generated: 2026-06-27 11:00:00 UTC
+Generated: 2026-06-27 12:00:00 UTC
 
 ```text
 source inventory: done
-regional transcripts R01–R08: not started
-full combined transcript: not started
-full-conspect coverage audit: not started
-remaining text elements: 8
-remaining screenshot uses: 91
+regional transcripts R01–R08: done
+full combined transcript: done
+full-conspect coverage audit: done
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
+
+## Authoritative files
+
+- `09-full-combined-final-transcript.md`
+- `10-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
