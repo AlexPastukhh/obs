@@ -1,0 +1,75 @@
+﻿i,text,x,y,w,h,cy,text_id,region,transcript_file,is_empty,review_status,assignment_count
+1,All necessary state is contained within the request itself,5468.475935436816,2118.928461690989,0,20.0,2128.928461690989,T-001,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+2,request should contain all info to service the request,5455.142602103483,2187.261795024321,0,20.0,2197.261795024321,T-002,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+3,"headers, body ect",5486.80926877015,2238.928461690989,0,20.0,2248.928461690989,T-003,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+4,it knows only the single outer layer,4812.178354954362,3871.893073320057,0,20.0,3881.893073320057,T-004,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+5,"more about web applications, not apis",5355.791546698612,4692.152160140875,0,25.659595630786974,4704.981957956268,T-005,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+6,when server can give some js to the client ,5355.791546698612,4692.152160140875,0,25.659595630786974,4704.981957956268,T-006,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+7,to extend its functionality,5355.791546698612,4692.152160140875,0,25.659595630786974,4704.981957956268,T-007,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+8,using different dtos/shapes to accept data and to return data,5172.692863665217,8384.638491352478,0,20.0,8394.638491352478,T-008,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+9,method safety/ idempotency,3549.0249888265053,1381.1748861248543,0,57.475257510230584,1409.9125148799696,T-009,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+10,can expose all couses via api/courses,6770.834275722235,3755.4986879339203,0,20.0,3765.4986879339203,T-010,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+11,"should return number, not ",7574.537939866115,4529.387509800706,0,20.0,4539.387509800706,T-011,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+12,list of resources,7574.537939866115,4529.387509800706,0,20.0,4539.387509800706,T-012,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+13,what id? what will be returned?,7536.204606532783,4647.720843134034,0,20.0,4657.720843134034,T-013,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+14,some basic things,6641.624491688077,1751.367922445088,0,61.091378348214505,1781.9136116191953,T-014,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+15,FULL OVERVIEW OF METHODS,8270.29674445468,1532.6414781181365,0,118.66662597656246,1591.9747911064178,T-015,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+16,some general base things,4741.359139766361,1416.0316640924048,0,82.92134915865317,1457.4923386717314,T-016,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+17,PATCH VALIDATION,1982.3701269641278,1119.93393428742,0,98.22233072916642,1169.0450996520033,T-017,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+18,PROBLEM DET LOWER,1982.3701269641278,1119.93393428742,0,98.22233072916642,1169.0450996520033,T-018,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+19,Validation,599.7831798976586,426.23334100998363,0,152.52013113839268,502.49340657918,T-019,R01,regions/R01-rest-constraints-methods-validation.md,False,reviewed,1
+20,FILTERING SEARCHING,4969.146588350864,9861.338018877817,0,70.33708496093753,9896.506561358286,T-020,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+21,you filter by existing things,4809.2267989818065,13169.363144454284,0,20.0,13179.363144454284,T-021,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+22,search is wider as was told,4809.2267989818065,13169.363144454284,0,20.0,13179.363144454284,T-022,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+23,simple search/ filtering can be impl with ,5036.741906107753,13823.12071327604,0,20.0,13833.12071327604,T-023,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+24,"simple params,",5036.741906107753,13823.12071327604,0,20.0,13833.12071327604,T-024,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+25,but when there ar a lot of them ,5036.741906107753,13823.12071327604,0,20.0,13833.12071327604,T-025,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+26,it is better to use some objects and bind from query ,5036.741906107753,13823.12071327604,0,20.0,13833.12071327604,T-026,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+27,"sorting applyed to outter facing model, we cant expose entity model,",4892.8033638368515,20571.739465656105,0,20.0,20581.739465656105,T-027,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+28,so we need to apply sorting to entity model manually,4892.8033638368515,20571.739465656105,0,20.0,20581.739465656105,T-028,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+29,basics,4980.013022511457,19141.857533244773,0,71.93511284722187,19177.825089668382,T-029,R03,regions/R03-filtering-searching-pagination-sorting.md,False,reviewed,1
+30,to basics,5033.325898005209,23367.042696962886,0,20.0,23377.042696962886,T-030,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+31,can mean just some variants of representations (may ask),3996.8188564729285,24145.01657881975,0,20.0,24155.01657881975,T-031,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+32,"if logic changes, server may not show some link to consumer",4974.884908756836,27013.221458675827,0,20.0,27023.221458675827,T-032,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+33,"ADD TO BASICS , TO HATEOAS THEORY",4859.487280728718,25405.89228914145,0,20.0,25415.89228914145,T-033,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+34,returning links for consumer to start interaction with our api,5049.610526648815,38467.35216341986,0,20.0,38477.35216341986,T-034,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+35,"When have hateoas, better to include prev and next page to links,not to metadata",4813.830781180022,35199.62670093505,0,20.0,35209.62670093505,T-035,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+36,like ,4813.830781180022,35199.62670093505,0,20.0,35209.62670093505,T-036,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+37,!!!,4720.572018610805,36598.59610396695,0,91.38457782451876,36644.28839287921,T-037,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+38,there are a lot of ways to impl hateoas,5120.130228727006,41140.254691273745,0,20.0,41150.254691273745,T-038,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+39,Expired,4986.887514989854,41682.890943897844,0,20.0,41692.890943897844,T-039,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+40,goes way beyond hateoas,4959.962813025593,42783.351791557376,0,20.0,42793.351791557376,T-040,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+41,ORIGINAL,6214.909714689209,43629.45047766064,0,20.0,43639.45047766064,T-041,R04,regions/R04-data-shaping-hateoas-content-negotiation.md,False,reviewed,1
+42,PROBLEM DETAILS,1814.9856629916367,8019.942971426962,0,111.99999999999997,8075.942971426962,T-042,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+43,ALL TITLE AND DETAILS ,814.029509313124,9055.577877577842,0,20.0,9065.577877577842,T-043,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+44,AND REFERENCES TO ,814.029509313124,9055.577877577842,0,20.0,9065.577877577842,T-044,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+45,A DOCUMENTATION,814.029509313124,9055.577877577842,0,20.0,9065.577877577842,T-045,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+46,CAN RELATE ,814.029509313124,9055.577877577842,0,20.0,9065.577877577842,T-046,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+47,TO YOUR API AND YOUR API'S DOCUMENTATION,814.029509313124,9055.577877577842,0,20.0,9065.577877577842,T-047,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+48,NOT JUST SOME DOCS WITH EXPL,814.029509313124,9055.577877577842,0,20.0,9065.577877577842,T-048,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+49,WHAT IS THIS STATUS CODE,814.029509313124,9055.577877577842,0,20.0,9065.577877577842,T-049,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+50,!!!!,620.0899674097141,9033.153672144603,0,126.66663707386334,9096.486990681535,T-050,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+51,TRACE ID,1107.3676152949483,9390.750546552308,0,56.4444986979168,9418.972795901267,T-051,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+52,!!!,1051.8120851707067,11006.86164918631,0,172.88889567057285,11093.306097021597,T-052,R02,regions/R02-problem-details-error-contracts.md,False,reviewed,1
+53,Cant be applied to all apps so we ,5128.954835451686,48657.829210883836,0,20.0,48667.829210883836,T-053,R05,regions/R05-versioning-deprecation.md,False,reviewed,1
+54,can do the following:,5128.954835451686,48657.829210883836,0,20.0,48667.829210883836,T-054,R05,regions/R05-versioning-deprecation.md,False,reviewed,1
+55,version 1 still supported,5699.132581563394,48827.06006049113,0,20.0,48837.06006049113,T-055,R05,regions/R05-versioning-deprecation.md,False,reviewed,1
+56,VERSIONING,5029.302133941722,46876.640676286566,0,69.33331298828122,46911.30733278071,T-056,R05,regions/R05-versioning-deprecation.md,False,reviewed,1
+57,"If cache is private, and the same request is send by another client, then ",7107.6246816071525,54207.98420144546,0,20.0,54217.98420144546,T-057,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+58,it will stiil hit the api,7107.6246816071525,54207.98420144546,0,20.0,54217.98420144546,T-058,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+59,Better to use both etags and last-modified,7181.5773326770195,55668.54608113201,0,20.0,55678.54608113201,T-059,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+60,,7181.5773326770195,55668.54608113201,0,20.0,55678.54608113201,T-060,R06,regions/R06-http-caching-validators.md,True,recorded-empty,1
+61,but response caching attr doesnt support etags,7181.5773326770195,55668.54608113201,0,20.0,55678.54608113201,T-061,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+62,need to do something,7181.5773326770195,55668.54608113201,0,20.0,55678.54608113201,T-062,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+63,responce wont be stale for specified time in seconds,7143.247171059398,59638.58906314745,0,20.0,59648.58906314745,T-063,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+64,age is not greater than ,6696.575388414281,59703.02695966019,0,20.0,59713.02695966019,T-064,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+65,spec time in sec,6696.575388414281,59703.02695966019,0,20.0,59713.02695966019,T-065,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+66,is stale for specified max time in sec,7558.188166481328,59791.38497957437,0,20.0,59801.38497957437,T-066,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+67,cache will be revalidated,6619.445188651049,58327.86372636644,0,20.0,58337.86372636644,T-067,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+68,on every request,6619.445188651049,58327.86372636644,0,20.0,58337.86372636644,T-068,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+69,will revalidated only ,6561.51619043746,58443.396335979414,0,20.0,58453.396335979414,T-069,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+70,if cache is stale,6561.51619043746,58443.396335979414,0,20.0,58453.396335979414,T-070,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+71,,6561.51619043746,58443.396335979414,0,20.0,58453.396335979414,T-071,R06,regions/R06-http-caching-validators.md,True,recorded-empty,1
+72,usually used when there is a very poor network,7385.865605048528,60140.911741868666,0,20.0,60150.911741868666,T-072,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+73,connection,7385.865605048528,60140.911741868666,0,20.0,60150.911741868666,T-073,R06,regions/R06-http-caching-validators.md,False,reviewed,1
+74,some original shit,7059.589804743326,52605.58235687461,0,20.0,52615.58235687461,T-074,R06,regions/R06-http-caching-validators.md,False,reviewed,1
