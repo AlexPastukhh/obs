@@ -1,20 +1,31 @@
-# MANIFEST - proxy, server, vite dev server proxy stage0 v001
+# MANIFEST — proxy, server, vite dev server proxy final coverage v001
 
-Source: `proxy, server, vite dev server proxy(1).svg`  
-Target: `_ai-conspects/proxy, server, vite dev server proxy`  
-Generated: 2026-06-22 UTC
+Generated: 2026-06-27 UTC
 
-- Original SVG preserved.
-- Technical `(1)` upload suffix removed from the target folder name.
-- Text labels indexed with coordinates.
-- Vector/source element counts recorded.
-- Full canvas and region overviews rendered.
-- Candidate regions and text-review ledger initialized.
+## Source
 
 ```text
-labels: 25
-embedded raster images: 0
-vector paths: 21
+original SVG filename: proxy, server, vite dev server proxy(1).svg
+stored source: source/source.svg
+source kind: vector/text SVG without embedded raster images
 ```
 
-Stored source copy: `source/source.svg` (short internal filename for Windows path compatibility).
+## Final counts
+
+```text
+text labels: 25 / 25 covered
+vector paths: 21 reviewed as boundary/flow evidence
+image uses: 0
+unresolved: 0
+```
+
+## Final files
+
+```text
+01-final-coverage-transcript.md
+02-final-closure-audit.md
+regions/R01R02R03-final-coverage.md
+data/final-coverage-audit-v001.json
+data/final-coverage-audit-v001.csv
+CURRENT_SOURCE_OF_TRUTH.md
+```

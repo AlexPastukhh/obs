@@ -1,10 +1,11 @@
-# APPLY ARCHIVE - objectpool,arraypool,memorypool stage0 v001
+# Apply archive
 
-This target is included in the combined ten-conspect archive.
+Target branch: `ai-processed-conspects-text`
+
+Target folder:
 
 ```text
-Source: objectpool,arraypool,memorypool(1).svg
-Target: _ai-conspects/objectpool,arraypool,memorypool
+_ai-conspects/objectpool,arraypool,memorypool
 ```
 
-Windows path note: the bundled SVG is stored as `source/source.svg` to avoid `MAX_PATH` extraction failures.
+Extract the bundle at repository root, stage only this target and the final bundle folder, review status, then commit.

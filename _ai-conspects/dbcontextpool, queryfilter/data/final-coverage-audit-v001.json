@@ -1,0 +1,358 @@
+{
+  "generated": "2026-06-27 UTC",
+  "conspect": "dbcontextpool, queryfilter",
+  "source_svg": "dbcontextpool, queryfilter(1).svg",
+  "source_kind": "vector/text SVG without embedded raster images",
+  "text_labels_total": 38,
+  "text_labels_covered": 38,
+  "vector_paths_reviewed": 16,
+  "image_uses_total": 0,
+  "unresolved_labels": 0,
+  "unmapped_labels": 0,
+  "placeholder_or_error_rows": 0,
+  "status": "closed-by-complete-vector-text-source-coverage",
+  "rows": [
+    {
+      "label_id": "T-014",
+      "text": "need to dispose manually",
+      "candidate_region": "R01",
+      "final_region": "R01",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-015",
+      "text": "the dbcontext from factory",
+      "candidate_region": "R01",
+      "final_region": "R01",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-016",
+      "text": "dont need the dbcontext from di",
+      "candidate_region": "R01",
+      "final_region": "R01",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-017",
+      "text": "addpooleddbcontextfactory",
+      "candidate_region": "R01",
+      "final_region": "R01",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-018",
+      "text": "idcontextfactory<dbcontexgt>",
+      "candidate_region": "R01",
+      "final_region": "R01",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-035",
+      "text": "what if you exceeded pool limits",
+      "candidate_region": "R01",
+      "final_region": "R01",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-001",
+      "text": "pattern to enable multitenancy or",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-002",
+      "text": "some dbcontext instance property based shit",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-003",
+      "text": "so when we register pooledfactory we dont get dbcontext from di",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-004",
+      "text": "we get factory from di and we create context with it",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-005",
+      "text": "so we need to create wrapper that will get some request info from registered scoped service",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-006",
+      "text": "and set props on dbcontext",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-007",
+      "text": "and then we will return dbcontext with rep request state",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-008",
+      "text": "but we wont use this wrapper manuallly",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-009",
+      "text": "we will register scoped instance service - we will get wraper and we will create dbcontext with our method",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-010",
+      "text": "about dbcontext allocatjions",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-011",
+      "text": "and setup pressure",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-012",
+      "text": "50kb vs 4kb",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-013",
+      "text": "and x2 faster",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-019",
+      "text": "onmodelcreating, when it runs,",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-020",
+      "text": "what is better not to do there",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-021",
+      "text": "props for queryfilters",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-034",
+      "text": "di disposes disposable",
+      "candidate_region": "R02",
+      "final_region": "R02",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-022",
+      "text": "!!!",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-023",
+      "text": "!!!",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-024",
+      "text": "so when we do shit with raw conneciton",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-025",
+      "text": "1 we need to reset all connection state changes - to avoid same state for",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-026",
+      "text": "polled contexts + for polled connections on db provider level (without reset it returns connection with same session",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-027",
+      "text": "state that we have set to the connection pool)",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-028",
+      "text": "2 and we need to close the connection so it actually returns to the connection pool,",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-029",
+      "text": "we can have pool exhaustion without it even if we kinda reuse the connection in case we do cleanup",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-030",
+      "text": "we may just not reuse that same instance that has long running(endless connection) and reuse",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-031",
+      "text": "another contexts - and we will end up with some connections just being open and doing nothing",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-032",
+      "text": "what eef core resets by itself",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-033",
+      "text": "what and when you need to reset manually",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-036",
+      "text": "operating dbconnection",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-037",
+      "text": "with ado.net",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    },
+    {
+      "label_id": "T-038",
+      "text": "and context pools",
+      "candidate_region": "R03",
+      "final_region": "R03",
+      "status": "covered-by-verified-semantic-transcript",
+      "transcript_file": "regions/R01R02R03-final-coverage.md",
+      "open_issue": ""
+    }
+  ]
+}

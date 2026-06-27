@@ -1,17 +1,17 @@
 # Current Source of Truth - authenticaiton ticket, properties, context.User (claimsprincipal)
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-27 UTC
 
 ## Policy
 
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
+The SVG text labels are the primary semantic source because this source contains no embedded raster screenshots. Vector paths are boundary/flow evidence. Inventory alone does not close coverage.
 
 ## Current status
 
 ```text
 Stage0 source/boundary review: done
-Normal transcript regions: not started
+All candidate transcript regions: done
+Final coverage audit: done
 ```
 
 ## Counts
@@ -20,12 +20,17 @@ Normal transcript regions: not started
 unique embedded images: 0
 image uses on canvas: 0
 text labels parsed: 31
-vector paths: 9
+text labels covered: 31
+vector paths reviewed: 9
+remaining unclosed labels: 0
 ```
 
-## Candidate next step
+## Closure verdict
 
 ```text
-Candidate regions: R01, R02, R03.
-Suggested next pass: all regions together, because the source is vector/text and contains no embedded raster images.
+Closed by complete vector/text source coverage.
 ```
+
+## Final transcript
+
+`regions/R01R02R03-final-coverage.md`
