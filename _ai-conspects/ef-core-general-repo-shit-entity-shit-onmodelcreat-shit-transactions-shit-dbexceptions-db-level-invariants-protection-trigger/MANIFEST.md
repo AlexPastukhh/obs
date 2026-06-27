@@ -1,45 +1,47 @@
-# MANIFEST - EF Core General Closure Audit
+# MANIFEST - EF Core General full SVG reconciliation final v002
 
-Archive type: **closure audit**<br>
-Target branch: `ai-processed-conspects-text`<br>
-Generated: 2026-06-13 05:43:40 UTC
+Archive type: **full-source reconciliation and final coverage**  
+Target branch: `ai-processed-conspects-text`  
+Generated: 2026-06-27 UTC
 
-## Direction check
+## Important
 
-Goal:
-Close EF Core General after Stage1 and Stage2.
-
-Done:
-Stage1 and Stage2 processed all 65 source image-use records.
-
-This step:
-Add EF Core General closure audit.
-
-Why:
-The conspect must be checked at closure level before being considered closed.
-
-Next:
-1. review staged file list/status;
-2. commit;
-3. stop EF Core General transcript work unless a precision patch or repeat-material layer is needed.
-
-## Files included / updated
+This archive supersedes the unapplied:
 
 ```text
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/04-closure-audit.md
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/data/EFCoreGeneral-closure-audit-v001.csv
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/data/EFCoreGeneral-closure-audit-v001.json
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/data/ef-core-general-image-review-ledger-v1.csv
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/data/ef-core-general-image-review-ledger-v1.json
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/MANIFEST.md
-_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/APPLY_ARCHIVE.md
+ai-conspects-ef-core-general-recovered-transcript-pass-a-v001.zip
 ```
 
-## Status
+Do not apply that older archive separately.
+
+## Coverage
 
 ```text
-EF Core General sources audited: 65 / 65
-Pending candidates: 0
-Next: closed by source coverage
+complete SVG image definitions: 256
+complete SVG image uses: 259
+complete SVG text groups: 132
+
+image uses accounted: 259
+text groups accounted: 132
+unresolved: 0
+```
+
+## Included
+
+```text
+17-full-svg-reconciliation-final-v002.md
+CURRENT_SOURCE_OF_TRUTH.md
+MANIFEST.md
+APPLY_ARCHIVE.md
+transcripts/
+data/full-use-coverage-v002.*
+data/full-label-coverage-v002.*
+data/full-duplicate-use-crosswalk-v002.json
+data/full-closure-audit-v002.*
+```
+
+## Verdict
+
+```text
+closed by complete-source coverage
 ```

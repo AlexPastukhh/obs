@@ -1,59 +1,69 @@
 # Current Source of Truth - EF Core General
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-27 UTC
 
 ## Current policy
 
-Do not treat the review ledger as source of truth.
+Screenshots are primary source. Labels are navigation/context only.
 
-A region is complete only when its region file contains coverage / boundary review, included sources, candidate checks, excluded or reassigned candidates, open issues, and verified source transcript or correction addendum.
+A source is closed only when every complete-SVG image use is:
+- covered by a verified semantic transcript;
+- linked as an exact-fileId duplicate placement; or
+- explicitly excluded and reassigned at the source boundary.
 
-Screenshots are primary source. Labels alone do not close coverage.
-
-## Source-repair finding
-
-The original Stage0 inventory was generated from an incomplete SVG export.
-
-A corrected source SVG was compared by Excalidraw image `fileId`.
+## Corrected source
 
 ```text
-old unique image definitions: 64
-old image uses: 65
-old text groups: 132
-
-corrected unique image definitions: 256
-corrected image uses: 259
-corrected text groups: 132
-
-newly recovered unique images: 192
-newly recovered image uses: 194
-old unique images absent from corrected source: 0
+source SVG: source/source-complete-v002.svg
+source SHA-256: 3f1f8d3f0594043679772ad71c5b40c553fea90716fc781ccf9241542a196efd
+unique image definitions: 256
+image uses: 259
+text groups: 132
 ```
 
-## Current status
+## Final status
 
 ```text
-Historical EF01-EF06 transcripts for the original 65 image uses: preserved
-Historical closure audit: superseded by Stage16 source-completion correction
-Stage16 source-completion correction v002: completed
-Newly recovered image uses pending verified transcript: 194
-Bad placeholder/OCR-error processed rows: 0
+Full SVG reconciliation final v002: completed
+
+Original image uses rechecked: 65 / 65
+Recovered image uses reviewed: 194 / 194
+Total image uses accounted: 259 / 259
+
+Direct verified transcript uses: 255
+Duplicate placements covered: 3
+Explicit boundary exclusions: 1
+
+Text groups covered: 132 / 132
+Unresolved image uses: 0
+Unmapped image uses: 0
+Unresolved labels: 0
+Bad placeholder/OCR-error image rows: 0
 ```
 
-## Current processing target
+## Closure verdict
 
 ```text
-EF Core General is reopened.
-Next: review and transcribe the 194 recovered image uses in coherent batches.
-Do not redo already processed old image uses unless a direct contradiction is found.
+EF Core General is closed by complete-source coverage.
 ```
 
-## Apply workflow
+Historical closure against the incomplete 65-use SVG is superseded.
+The unapplied recovered-transcript-pass-a-v001 archive is superseded and must not be applied separately.
+
+## Final transcript set
 
 ```text
-Extract archive with tar.exe.
-git add -A -- <target>
-Review staged file list/status.
-Commit only after staged file review.
-Never use git add . when unrelated files are modified.
+FR01 tracking/query materialization
+FR02 constructors/Attach/detached graphs
+FR03 model configuration/owned/complex/relationships
+FR04 transactions/execution strategies/raw SQL
+FR05 invariants/constraints/keys/indexed views/triggers
+FR06 concurrency/provider exceptions/SQL Server codes
+FR07 query shape/cartesian row counts
+X01 explicit boundary exclusion/reassignment
 ```
+
+## Precision
+
+Source-level semantic transcript: complete.
+Exact code punctuation: preserved in source PNGs and the complete SVG.

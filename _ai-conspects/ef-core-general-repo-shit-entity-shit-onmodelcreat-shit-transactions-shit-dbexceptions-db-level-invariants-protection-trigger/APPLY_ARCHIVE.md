@@ -1,41 +1,17 @@
-# Apply archive: EF Core General source-completion correction v002
+# Apply archive
 
-Target branch:
-
-```text
-ai-processed-conspects-text
-```
-
-Target folder:
+Target:
 
 ```text
 _ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger
 ```
 
-## Apply
+Bundle:
 
-```powershell
-cd C:\Users\alexa\obs
-git checkout ai-processed-conspects-text
-
-$zip = "C:\Users\alexa\Downloads\ai-conspects-ef-core-general-source-completion-correction-v002.zip"
-$target = "_ai-conspects\ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger"
-
-$OutputEncoding = [System.Text.UTF8Encoding]::new()
-[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
-
-git status --short
-tar.exe -xf $zip -C .
-
-git add -A -- $target
-git status --short -- $target
+```text
+_ai-conspects/_bundles/ef-core-general-full-svg-reconciliation-final-v002
 ```
 
-## Commit
+Use `tar.exe` for extraction and add files from inside each directory so Windows command-line and path-length limits are not exceeded.
 
-```powershell
-git commit -m "Add missing EF Core General source screenshots"
-git push origin ai-processed-conspects-text
-```
-
-This archive does not delete historical transcripts. It adds the corrected source, 192 recovered unique screenshots, 194 recovered placements, audit assets, inventories, and reopens coverage.
+The archive does not stage `.obsidian/workspace.json` or unrelated manifests.

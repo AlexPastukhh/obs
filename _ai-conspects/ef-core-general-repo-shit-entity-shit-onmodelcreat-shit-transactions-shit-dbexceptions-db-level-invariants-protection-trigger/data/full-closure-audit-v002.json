@@ -1,0 +1,110 @@
+{
+  "generated": "2026-06-27 UTC",
+  "source_svg": "source/source-complete-v002.svg",
+  "source_sha256": "3f1f8d3f0594043679772ad71c5b40c553fea90716fc781ccf9241542a196efd",
+  "counts": {
+    "total_image_definitions": 256,
+    "total_image_uses": 259,
+    "original_image_uses_rechecked": 65,
+    "recovered_image_uses_reviewed": 194,
+    "unique_image_fileIds": 256,
+    "direct_verified_transcript_uses": 255,
+    "duplicate_placements_covered": 3,
+    "explicit_boundary_exclusions": 1,
+    "total_text_groups": 132,
+    "text_groups_covered": 132,
+    "navigation_placeholder_labels_covered_by_sources": 7,
+    "unresolved_uses": 0,
+    "unmapped_uses": 0,
+    "unresolved_labels": 0,
+    "placeholder_or_ocr_error_image_rows": 0
+  },
+  "regions": [
+    {
+      "region": "FR01",
+      "title": "Tracking, query materialization, identity resolution, and warm-context reads",
+      "transcript_file": "transcripts/fr01-tracking-query-materialization-v002.md",
+      "image_uses": 32,
+      "original_uses": 20,
+      "recovered_uses": 12,
+      "labels": 13,
+      "unresolved": 0
+    },
+    {
+      "region": "FR02",
+      "title": "Entity materialization, constructors, Attach, and detached graphs",
+      "transcript_file": "transcripts/fr02-constructors-attach-graphs-v002.md",
+      "image_uses": 8,
+      "original_uses": 8,
+      "recovered_uses": 0,
+      "labels": 6,
+      "unresolved": 0
+    },
+    {
+      "region": "FR03",
+      "title": "Model configuration, owned/complex values, keys, and aggregate relationships",
+      "transcript_file": "transcripts/fr03-model-owned-complex-relationships-v002.md",
+      "image_uses": 16,
+      "original_uses": 13,
+      "recovered_uses": 3,
+      "labels": 9,
+      "unresolved": 0
+    },
+    {
+      "region": "FR04",
+      "title": "Transactions, execution strategies, raw SQL, isolation, and whole-operation retry",
+      "transcript_file": "transcripts/fr04-transactions-retries-rawsql-v002.md",
+      "image_uses": 62,
+      "original_uses": 7,
+      "recovered_uses": 55,
+      "labels": 25,
+      "unresolved": 0
+    },
+    {
+      "region": "FR05",
+      "title": "Database invariants, constraints, keys, indexed views, procedures, and triggers",
+      "transcript_file": "transcripts/fr05-invariants-constraints-triggers-v002.md",
+      "image_uses": 85,
+      "original_uses": 5,
+      "recovered_uses": 80,
+      "labels": 37,
+      "unresolved": 0
+    },
+    {
+      "region": "FR06",
+      "title": "Optimistic concurrency, provider exceptions, SQL Server codes, and savepoints",
+      "transcript_file": "transcripts/fr06-concurrency-provider-errors-v002.md",
+      "image_uses": 43,
+      "original_uses": 4,
+      "recovered_uses": 39,
+      "labels": 37,
+      "unresolved": 0
+    },
+    {
+      "region": "FR07",
+      "title": "Query shape, Include/Load choices, cartesian expansion, and row-count reasoning",
+      "transcript_file": "transcripts/fr07-query-shape-row-count-v002.md",
+      "image_uses": 12,
+      "original_uses": 7,
+      "recovered_uses": 5,
+      "labels": 5,
+      "unresolved": 0
+    },
+    {
+      "region": "X01",
+      "title": "Explicit source-boundary exclusions and reassignment",
+      "transcript_file": "transcripts/x01-boundary-exclusions-v002.md",
+      "image_uses": 1,
+      "original_uses": 1,
+      "recovered_uses": 0,
+      "labels": 0,
+      "unresolved": 0
+    }
+  ],
+  "verdict": "closed-by-complete-svg-source-coverage",
+  "supersedes": [
+    "historical closure against incomplete 65-use SVG",
+    "unapplied recovered-transcript-pass-a-v001 archive"
+  ],
+  "precision": "source-level semantic transcript; exact code punctuation remains in preserved source assets"
+}
