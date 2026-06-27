@@ -1,11 +1,17 @@
 # Transcript status — indexes, onmodel indexes
 
-Generated: 2026-06-27 05:00:00 UTC
+Generated: 2026-06-27 06:00:00 UTC
 
 ```text
-source inventory: done
-regional transcripts: not started
-full combined transcript: not started
-remaining text elements: 80
-remaining screenshot uses: 134
+regional transcripts: done
+full combined transcript: done
+full-conspect coverage audit: done
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
+
+## Authoritative files
+
+- `09-full-combined-final-transcript.md`
+- `10-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`

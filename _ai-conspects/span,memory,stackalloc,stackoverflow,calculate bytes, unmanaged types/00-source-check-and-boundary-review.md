@@ -49,3 +49,16 @@ remaining screenshot uses: 111
 
 Review the regional contact sheets, create regional transcripts, then produce
 one combined final transcript and a full-conspect coverage audit.
+
+
+## Final closure — 2026-06-27 06:00:00 UTC
+
+```text
+processed text elements: 41 / 41
+processed screenshot uses: 111 / 111
+remaining text elements: 0
+remaining screenshot uses: 0
+```
+
+Authoritative transcript: `06-full-combined-final-transcript.md`  
+Authoritative audit: `07-full-conspect-final-coverage-audit.md`

@@ -1,27 +1,39 @@
 # MANIFEST — span,memory,stackalloc,stackoverflow,calculate bytes, unmanaged types
 
-Generated: 2026-06-27 05:00:00 UTC
+Generated: 2026-06-27 06:00:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/span,memory,stackalloc,stackoverflow,calculate bytes, unmanaged types.svg`
-- 110 extracted screenshots under `source/images/`
+- `01-transcript-R01-span-memory-ownership-and-pipelines.md`
+- `02-transcript-R02-stackalloc-basics-thresholds-and-stack-pressure.md`
+- `03-transcript-R03-stackalloc-lifetimes-loops-and-async-boundaries.md`
+- `04-transcript-R04-unmanaged-types-pooling-and-size-calculation.md`
+- `05-transcript-R05-struct-layout-padding-alignment-and-guidelines.md`
 
-## Stage0
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
+- `data/image-uses-v002-closed.json`
+- `data/image-uses-v002-closed.csv`
+- `data/text-elements-v002-closed.json`
+- `data/text-elements-v002-closed.csv`
+- `data/region-plan-v002-closed.json`
+- `data/region-plan-v002-closed.csv`
+
+## Authoritative integrated result
+
+- `06-full-combined-final-transcript.md`
+- `07-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.json`
+- `data/full-conspect-final-coverage-audit-v001.csv`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-- `data/stage0-*`
-- 8 regional contact sheets
-- complete canvas preview
 
-## Coverage
+## Final coverage
 
 ```text
-text elements inventoried: 41
-image uses inventoried: 111
-remaining text elements: 41
-remaining image uses: 111
+text elements: 41 / 41
+image uses: 111 / 111
+repeated placements: 1 / 1
+remaining text elements: 0
+remaining image uses: 0
 ```

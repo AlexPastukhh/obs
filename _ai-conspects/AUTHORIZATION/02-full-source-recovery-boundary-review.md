@@ -57,3 +57,16 @@ remaining complete-source screenshot uses: 120
 
 Process `R01`–`R07`, build a new combined final transcript and issue a new
 full-conspect coverage audit.
+
+
+## Final closure — 2026-06-27 06:00:00 UTC
+
+```text
+processed text elements: 112 / 112
+processed screenshot uses: 120 / 120
+remaining text elements: 0
+remaining screenshot uses: 0
+```
+
+Authoritative transcript: `10-full-combined-final-transcript.md`  
+Authoritative audit: `11-full-conspect-final-coverage-audit.md`

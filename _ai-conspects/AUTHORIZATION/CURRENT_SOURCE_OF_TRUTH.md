@@ -1,33 +1,37 @@
 # Current Source of Truth — AUTHORIZATION
 
-Generated: 2026-06-27 05:00:00 UTC
+Generated: 2026-06-27 06:00:00 UTC
 
 ## Status
 
 ```text
-Legacy older-source boundary review: incomplete / superseded
-Legacy R01–R04 transcript: incomplete / superseded
-Legacy final coverage audit: incomplete / superseded
-Complete SVG recovery: done
-Complete-source screenshot extraction: done
-Complete-source region plan R01–R07: done
-Complete-source regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Legacy incomplete-source transcript: incomplete / superseded
+Legacy incomplete-source coverage audit: incomplete / superseded
+Complete SVG preservation/recovery: done
+Regional transcripts: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
-## Complete-source coverage
+## Coverage
 
 ```text
-meaningful text elements: 112
-unique embedded images: 119
-image uses on canvas: 120
-repeated image placements: 1
-remaining unprocessed text elements: 112
-remaining unprocessed image uses: 120
+meaningful text elements: 112 / 112
+unique embedded images: 119 / 119
+image uses on canvas: 120 / 120
+repeated image placements retained: 1
+remaining unprocessed text elements: 0
+remaining unprocessed image uses: 0
 ```
+
+## Authoritative transcript
+
+`10-full-combined-final-transcript.md`
+
+## Authoritative audit
+
+`11-full-conspect-final-coverage-audit.md`
 
 ## Next
 
-Process `R01`–`R07` and rebuild the authoritative transcript from the complete
-source.
+No normal transcript work remains. Only correction/polish if a newer source reveals additional material.
