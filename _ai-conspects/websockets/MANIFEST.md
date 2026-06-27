@@ -1,25 +1,25 @@
-# MANIFEST - WebSockets missing-screenshot recovery v002
+# MANIFEST - WebSockets corrected final semantic coverage v003
 
-Archive type: **corrected source and missing-asset recovery**  
+Archive type: **semantic refresh after missing-screenshot recovery**  
 Target branch: `ai-processed-conspects-text`  
-Logical target: `_ai-conspects/websockets/`
+Target folder: `_ai-conspects/websockets/`
 
-## Source identity
+## Completed
 
-- Uploaded source: `websockets(1).svg`
-- Logical source name: `websockets`
-- Existing conspect folder found: `_ai-conspects/websockets/`
+- Corrected SVG source: 207 screenshot uses.
+- Recovered screenshot assets: 186.
+- Canvas labels: 53.
+- All 207 screenshot uses semantically reviewed.
+- Final corrected transcript added.
+- Final corrected coverage audit added.
+- Remaining unclosed image/text items: 0.
 
-## Recovery result
+## Current transcript
 
-- Previous embedded screenshots: 21
-- Corrected embedded screenshots: 207
-- Recovered new screenshots: 186
-- Existing screenshots preserved by exact hash match: 21
-- Canvas labels: 53, unchanged
-- Removed previous screenshots: 0
+```text
+regions/R01R02R03-websockets-corrected-final-v003.md
+```
 
-## Apply behavior
+## Historical files preserved
 
-This archive merges into the existing `websockets` folder.  
-It preserves the old transcript files and adds the corrected source, recovered images, delta ledgers and audit assets.
+The archive does not remove the original transcript or v002 recovery evidence.
