@@ -1,9 +1,18 @@
-# APPLY ARCHIVE — next ten small conspects stage1 final coverage v001
+# APPLY ARCHIVE
 
-This folder is delivered inside one combined archive:
+```powershell
+cd C:\Users\alexa\obs
+git checkout ai-processed-conspects-text
 
-```text
-ai-conspects-next-ten-small-stage1-final-coverage-v001.zip
+$zip = "C:\Users\alexa\Downloads\ai-conspects-outputcache-response-cache-comparison-stage5-independent-full-svg-audit-v002.zip"
+$target = "_ai-conspects\outputcache, response cache comparison"
+
+git status --short
+Expand-Archive -Path $zip -DestinationPath . -Force
+
+git add -A -- $target
+git status --short -- $target
+
+git commit -m "Audit complete output cache comparison SVG"
+git push origin ai-processed-conspects-text
 ```
-
-Apply all ten target folders together. See `_ai-conspects/APPLY_NEXT_TEN_STAGE1.md`.

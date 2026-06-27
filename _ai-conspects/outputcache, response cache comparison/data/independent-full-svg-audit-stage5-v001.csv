@@ -1,0 +1,48 @@
+check,status,detail
+full symbol count,pass,150
+full use count,pass,154
+full text count,pass,127
+all use refs resolved,pass,
+all asset images decode,pass,
+all use dimensions positive,pass,
+all uses zero rotation,pass,[0.0]
+all texts zero rotation,pass,[0.0]
+150 unique use hashes,pass,150
+4 duplicate extra placements,pass,4
+duplicate groups exactly four pairs,pass,"Counter({1: 146, 2: 4})"
+old incomplete export has five uses,pass,5
+all old uses exactly contained in full export,pass,[]
+exact legacy tuple count is five,pass,5
+inventory row count,pass,154
+source ids unique,pass,
+source ids contiguous,pass,
+inventory exactly matches all SVG uses,pass,missing=0 extra=0
+text inventory row count,pass,127
+text inventory exactly matches SVG text nodes,pass,missing=0 extra=0
+text ids unique and contiguous,pass,
+150 extracted unique asset files,pass,150
+extracted asset hashes exactly match SVG assets,pass,missing=0
+149 per-use restored evidence files,pass,149
+coverage split 5 legacy + 149 restored,pass,5+149
+restored evidence IDs exactly all new IDs,pass,missing=[] extra=[]
+region plan covers all 154 exactly once,pass,rows=154 unique=154
+region counts 5/47/56/33/13,pass,"{'R01': 5, 'R02': 47, 'R03': 56, 'R04': 33, 'R05': 13}"
+ledger has 154 rows,pass,154
+ledger all final,pass,
+ledger region assignments match plan,pass,
+ledger source IDs exact,pass,
+text region counts sum to 127,pass,"Counter({'R03': 39, 'R02': 34, 'R04': 27, 'R05': 27})"
+text region counts match plan declarations,pass,"Counter({'R03': 39, 'R02': 34, 'R04': 27, 'R05': 27})"
+R02 transcript source list matches plan,pass,missing=[] extra=[]
+R03 transcript source list matches plan,pass,missing=[] extra=[]
+R04 transcript source list matches plan,pass,missing=[] extra=[]
+R05 transcript source list matches plan,pass,missing=[] extra=[]
+duplicate report exact,pass,"reported={'1a7d5e2e46b4653a6428352e893ea9e6f35feab9': {'S-033', 'S-032'}, 'c69c5a6c8db0089098230a29e64300d371e6f34c': {'S-084', 'S-085'}, 'd1693e25e0ddba75045411d8de3ce59672a29760': {'S-082', 'S-083'}, 'ef7d61baef3ee1f5ae46179f624dff68873615e1': {'S-140', 'S-146'}} actual={'1a7d5e2e46b4653a6428352e893ea9e6f35feab9': {'S-033', 'S-032'}, 'd1693e25e0ddba75045411d8de3ce59672a29760': {'S-082', 'S-083'}, 'c69c5a6c8db0089098230a29e64300d371e6f34c': {'S-084', 'S-085'}, 'ef7d61baef3ee1f5ae46179f624dff68873615e1': {'S-140', 'S-146'}}"
+legacy match report has five,pass,5
+legacy IDs are R01 plan,pass,
+zip readable,pass,
+zip no path traversal,pass,
+zip contains canonical target only,pass,
+zip file set exactly matches workdir,pass,zip=340 disk=340 missing=0 extra=0
+zip file bytes exactly match workdir,pass,[]
+all major source concepts represented in transcripts,pass,[]

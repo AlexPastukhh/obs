@@ -1,0 +1,272 @@
+{
+  "checks": [
+    {
+      "check": "full symbol count",
+      "status": "pass",
+      "detail": "150"
+    },
+    {
+      "check": "full use count",
+      "status": "pass",
+      "detail": "154"
+    },
+    {
+      "check": "full text count",
+      "status": "pass",
+      "detail": "127"
+    },
+    {
+      "check": "all use refs resolved",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "all asset images decode",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "all use dimensions positive",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "all uses zero rotation",
+      "status": "pass",
+      "detail": "[0.0]"
+    },
+    {
+      "check": "all texts zero rotation",
+      "status": "pass",
+      "detail": "[0.0]"
+    },
+    {
+      "check": "150 unique use hashes",
+      "status": "pass",
+      "detail": "150"
+    },
+    {
+      "check": "4 duplicate extra placements",
+      "status": "pass",
+      "detail": "4"
+    },
+    {
+      "check": "duplicate groups exactly four pairs",
+      "status": "pass",
+      "detail": "Counter({1: 146, 2: 4})"
+    },
+    {
+      "check": "old incomplete export has five uses",
+      "status": "pass",
+      "detail": "5"
+    },
+    {
+      "check": "all old uses exactly contained in full export",
+      "status": "pass",
+      "detail": "[]"
+    },
+    {
+      "check": "exact legacy tuple count is five",
+      "status": "pass",
+      "detail": "5"
+    },
+    {
+      "check": "inventory row count",
+      "status": "pass",
+      "detail": "154"
+    },
+    {
+      "check": "source ids unique",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "source ids contiguous",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "inventory exactly matches all SVG uses",
+      "status": "pass",
+      "detail": "missing=0 extra=0"
+    },
+    {
+      "check": "text inventory row count",
+      "status": "pass",
+      "detail": "127"
+    },
+    {
+      "check": "text inventory exactly matches SVG text nodes",
+      "status": "pass",
+      "detail": "missing=0 extra=0"
+    },
+    {
+      "check": "text ids unique and contiguous",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "150 extracted unique asset files",
+      "status": "pass",
+      "detail": "150"
+    },
+    {
+      "check": "extracted asset hashes exactly match SVG assets",
+      "status": "pass",
+      "detail": "missing=0"
+    },
+    {
+      "check": "149 per-use restored evidence files",
+      "status": "pass",
+      "detail": "149"
+    },
+    {
+      "check": "coverage split 5 legacy + 149 restored",
+      "status": "pass",
+      "detail": "5+149"
+    },
+    {
+      "check": "restored evidence IDs exactly all new IDs",
+      "status": "pass",
+      "detail": "missing=[] extra=[]"
+    },
+    {
+      "check": "region plan covers all 154 exactly once",
+      "status": "pass",
+      "detail": "rows=154 unique=154"
+    },
+    {
+      "check": "region counts 5/47/56/33/13",
+      "status": "pass",
+      "detail": "{'R01': 5, 'R02': 47, 'R03': 56, 'R04': 33, 'R05': 13}"
+    },
+    {
+      "check": "ledger has 154 rows",
+      "status": "pass",
+      "detail": "154"
+    },
+    {
+      "check": "ledger all final",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "ledger region assignments match plan",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "ledger source IDs exact",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "text region counts sum to 127",
+      "status": "pass",
+      "detail": "Counter({'R03': 39, 'R02': 34, 'R04': 27, 'R05': 27})"
+    },
+    {
+      "check": "text region counts match plan declarations",
+      "status": "pass",
+      "detail": "Counter({'R03': 39, 'R02': 34, 'R04': 27, 'R05': 27})"
+    },
+    {
+      "check": "R02 transcript source list matches plan",
+      "status": "pass",
+      "detail": "missing=[] extra=[]"
+    },
+    {
+      "check": "R03 transcript source list matches plan",
+      "status": "pass",
+      "detail": "missing=[] extra=[]"
+    },
+    {
+      "check": "R04 transcript source list matches plan",
+      "status": "pass",
+      "detail": "missing=[] extra=[]"
+    },
+    {
+      "check": "R05 transcript source list matches plan",
+      "status": "pass",
+      "detail": "missing=[] extra=[]"
+    },
+    {
+      "check": "duplicate report exact",
+      "status": "pass",
+      "detail": "reported={'1a7d5e2e46b4653a6428352e893ea9e6f35feab9': {'S-033', 'S-032'}, 'c69c5a6c8db0089098230a29e64300d371e6f34c': {'S-084', 'S-085'}, 'd1693e25e0ddba75045411d8de3ce59672a29760': {'S-082', 'S-083'}, 'ef7d61baef3ee1f5ae46179f624dff68873615e1': {'S-140', 'S-146'}} actual={'1a7d5e2e46b4653a6428352e893ea9e6f35feab9': {'S-033', 'S-032'}, 'd1693e25e0ddba75045411d8de3ce59672a29760': {'S-082', 'S-083'}, 'c69c5a6c8db0089098230a29e64300d371e6f34c': {'S-084', 'S-085'}, 'ef7d61baef3ee1f5ae46179f624dff68873615e1': {'S-140', 'S-146'}}"
+    },
+    {
+      "check": "legacy match report has five",
+      "status": "pass",
+      "detail": "5"
+    },
+    {
+      "check": "legacy IDs are R01 plan",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "zip readable",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "zip no path traversal",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "zip contains canonical target only",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "check": "zip file set exactly matches workdir",
+      "status": "pass",
+      "detail": "zip=340 disk=340 missing=0 extra=0"
+    },
+    {
+      "check": "zip file bytes exactly match workdir",
+      "status": "pass",
+      "detail": "[]"
+    },
+    {
+      "check": "all major source concepts represented in transcripts",
+      "status": "pass",
+      "detail": "[]"
+    }
+  ],
+  "metrics": {
+    "full_symbols": 150,
+    "full_uses": 154,
+    "full_texts": 127,
+    "old_symbols": 5,
+    "old_uses": 5,
+    "old_texts": 127
+  },
+  "warnings": [],
+  "generated": "2026-06-27 UTC",
+  "audit_stage": "Stage5 independent full-SVG audit",
+  "source_svg": "outputcache, response cache comparison(1).svg",
+  "canonical_source": "source/outputcache, response cache comparison.svg",
+  "summary": {
+    "checks_passed": 47,
+    "checks_failed": 0,
+    "image_uses_verified": 154,
+    "unique_assets_verified": 150,
+    "physical_text_nodes_verified": 127,
+    "legacy_uses_verified": 5,
+    "restored_uses_verified": 149,
+    "duplicate_extra_placements_verified": 4,
+    "remaining_unclosed": 0
+  },
+  "resolved_findings": [
+    {
+      "type": "semantic-wording",
+      "file": "regions/R03-custom-policy-store-tags-context-responsecache-etag.md",
+      "before": "product-details:<built-in function id>",
+      "after": "product-details:{id} (for example, product-details:123)",
+      "status": "fixed-in-v002"
+    }
+  ]
+}
