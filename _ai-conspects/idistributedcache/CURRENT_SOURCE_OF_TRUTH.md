@@ -1,36 +1,66 @@
-# Current Source of Truth - idistributedcache
+# Current Source of Truth — idistributedcache
 
 Generated: 2026-06-27 UTC
-
-## Policy
-
-The SVG text labels are the primary semantic source because this source contains no embedded raster screenshots. Vector paths are boundary/flow evidence. Inventory alone does not close coverage.
 
 ## Current status
 
 ```text
-Stage0 source/boundary review: done
-All candidate transcript regions: done
-Final coverage audit: done
+Corrected SVG source import: done
+Missing screenshot recovery: done
+Corrected semantic transcript: done
+Final corrected coverage audit: done
 ```
 
-## Counts
+## Coverage
 
 ```text
-unique embedded images: 0
-image uses on canvas: 0
-text labels parsed: 23
-text labels covered: 23
-vector paths reviewed: 9
-remaining unclosed labels: 0
+previous unique images: 0
+corrected unique images: 70
+previous image uses: 0
+corrected image uses: 72
+recovered missing unique images: 70
+recovered missing image uses: 72
+native SVG labels: 23
+duplicate extra placements: 2
+processed image uses: 72
+processed text labels: 23
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
 
-## Closure verdict
+## Authoritative source
 
 ```text
-Closed by complete vector/text source coverage.
+source/idistributedcache.svg
 ```
 
-## Final transcript
+Raw uploaded source:
 
-`regions/R01R02R03-final-coverage.md`
+```text
+source/idistributedcache(2).svg
+```
+
+## Current transcript
+
+```text
+02-corrected-semantic-transcript-v002.md
+regions/R01R02R03-idistributedcache-corrected-final-v002.md
+```
+
+## Historical transcripts retained
+
+- `01-final-coverage-transcript.md`
+- `regions/R01R02R03-final-coverage.md`
+
+## Evidence
+
+```text
+data/image-uses-v002.json
+data/text-elements-v002.json
+data/duplicate-image-uses-v002.json
+data/final-coverage-audit-v002.json
+```
+
+## Next
+
+No normal screenshot recovery or semantic transcript work remains. Only targeted correction/polish if later needed.

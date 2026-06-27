@@ -1,0 +1,24 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R02,processed,966.0634918231563,10.0,caveat in stampede protection with semaphoreslim
+T-002,R02,processed,966.0634918231563,10.0,stampede protection impelmentation with lazy
+T-003,R01,processed,8636.632768162666,61.297249485111024,basic theo
+T-004,R02,processed,3745.0388891446983,62.248543411648825,getor add with stampede protection simaphoreslim
+T-005,R01,processed,6967.400815402711,235.19130782259617,methods
+T-006,R01,processed,9647.142781581508,1006.4136764783348,remove from cache
+T-007,R01,processed,8690.323134410872,1139.5881016361832,setup
+T-008,R02,processed,235.67316317686436,1170.0676227798695,in sem slim implementation
+T-009,R02,processed,235.67316317686436,1170.0676227798695,how we can end up with 2 sem slims
+T-010,R02,processed,235.67316317686436,1170.0676227798695,and 2 factory calls
+T-011,R02,processed,278.5877198818407,1396.9927911304958,"after the first factory call,"
+T-012,R02,processed,278.5877198818407,1396.9927911304958,after someone acquired the gate
+T-013,R02,processed,278.5877198818407,1396.9927911304958,we will check for cache
+T-014,R02,processed,278.5877198818407,1396.9927911304958,but there will be a cache only if there was no error
+T-015,R02,processed,3147.7456237194174,1524.9790378979578,!!!!
+T-016,R02,processed,2804.0174975194705,1782.489916729528,can run in parallel
+T-017,R02,processed,2804.0174975194705,1782.489916729528,2 factories
+T-018,R02,processed,2804.0174975194705,1782.489916729528,but only in case of error because
+T-019,R02,processed,2804.0174975194705,1782.489916729528,when one frees the shit and
+T-020,R02,processed,2804.0174975194705,1782.489916729528,removes it means that it
+T-021,R02,processed,2804.0174975194705,1782.489916729528,has ran the factory once
+T-022,R03,processed,1208.1050804369743,3834.606273454999,lazy strampede protection
+T-023,R03,processed,1272.700336242453,7941.119210212831,!!!

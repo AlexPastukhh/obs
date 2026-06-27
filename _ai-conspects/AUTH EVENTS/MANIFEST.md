@@ -1,30 +1,30 @@
-# MANIFEST — AUTH EVENTS stage1 final coverage v001
+# MANIFEST — AUTH EVENTS corrected final v002
 
-Source SVG: `AUTH EVENTS.svg`  
+Archive type: **screenshot recovery + corrected semantic transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-22 UTC
+Target folder: `_ai-conspects/AUTH EVENTS/`
 
-## Result
+## Source
 
-```text
-Processed image uses: 6
-Processed text labels: 38
-Remaining unclosed image uses: 0
-Remaining unclosed text labels: 0
-```
+- uploaded: `AUTH EVENTS(1).svg`
+- authoritative: `source/AUTH EVENTS.svg`
 
-## Main transcript
+## Coverage
 
 ```text
-_ai-conspects/AUTH EVENTS/regions/R01-cookie-jwt-authentication-events-final.md
+unique screenshots: 93
+screenshot uses: 94
+native SVG labels: 38
+recovered screenshot uses: 88
+duplicate extra placements: 1
+remaining: 0
 ```
 
-## Evidence
+## Included
 
-```text
-data/R01-sources-stage1-v001.*
-data/R01-boundary-review-stage1-v001.*
-data/R01-text-labels-stage1-v001.*
-data/final-coverage-audit-stage1-v001.*
-audit-assets/R01-source-images/*
-```
+- corrected and raw SVG source names;
+- extracted unique screenshot assets;
+- image/text/duplicate/coverage ledgers;
+- full-canvas preview and contact sheets;
+- corrected semantic transcript;
+- current-source-of-truth update.

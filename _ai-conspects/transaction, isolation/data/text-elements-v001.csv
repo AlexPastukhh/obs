@@ -1,0 +1,72 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,560.6680062779151,288.3891638749956,you can get all applied or all rolled back(atomicity)
+T-002,R01,processed,560.6680062779151,288.3891638749956,with any isolation level
+T-003,R02,processed,4046.216767780148,526.9596596225124,when reads are part of
+T-004,R02,processed,4046.216767780148,526.9596596225124,transaction
+T-005,R02,processed,4046.216767780148,526.9596596225124,when the query runs (linq/sql api to get smth)
+T-006,R01,processed,57.031104170724575,529.1863950045881,readcommited
+T-007,R02,processed,8761.0775570011,541.5014059423575,isolaton levels
+T-008,R02,processed,8761.0775570011,541.5014059423575,how can help to avoid inconsistency
+T-009,R02,processed,8761.0775570011,541.5014059423575,with multiple queries
+T-010,R02,processed,8761.0775570011,541.5014059423575,with snapshot/serializable
+T-011,R01,processed,10.0,738.8160292422835,so readcommited is ok when
+T-012,R01,processed,10.0,738.8160292422835,we cant have some state changes from
+T-013,R01,processed,10.0,738.8160292422835,other transaction
+T-014,R01,processed,10.0,738.8160292422835,like when we have some
+T-015,R01,processed,10.0,738.8160292422835,e tags that will prevent
+T-016,R01,processed,10.0,738.8160292422835,update with incons stae
+T-017,R01,processed,10.0,738.8160292422835,like when we change e tag on some
+T-018,R01,processed,10.0,738.8160292422835,children changes
+T-019,R02,processed,11156.763984640194,1112.6636574017639,"other isolaton levels, default"
+T-020,R02,processed,7306.384837873156,1585.5570259550632,"snapshot,"
+T-021,R02,processed,7306.384837873156,1585.5570259550632,snapshot exception with code
+T-022,R02,processed,7306.384837873156,1585.5570259550632,when you update/delete/insert
+T-023,R02,processed,7306.384837873156,1585.5570259550632,based on old data
+T-024,R02,processed,11133.871214681882,2083.5766199607006,why serializable
+T-025,R02,processed,5155.252049357265,2212.4650968916435,reading your own
+T-026,R02,processed,5155.252049357265,2212.4650968916435,uncommited changes
+T-027,R01,processed,175.50052580916508,2475.504239122624,dbcontext about transactions strategies
+T-028,R02,processed,11135.266249409578,2587.4276749757514,readuncommited
+T-029,R01,processed,886.6998292747485,2758.004646023666,so i have some scenarios when i may need some
+T-030,R01,processed,886.6998292747485,2758.004646023666,transaction or when i may think that i need them
+T-031,R01,processed,886.6998292747485,2758.004646023666,"1 when i query something from db, look at it and chose to change it"
+T-032,R01,processed,886.6998292747485,2758.004646023666,but at the same time i may have another request that
+T-033,R01,processed,886.6998292747485,2758.004646023666,changes the same thing
+T-034,R01,processed,886.6998292747485,2758.004646023666,"dont need manual transaction, can configure rowversion or"
+T-035,R01,processed,886.6998292747485,2758.004646023666,isconcurencytoken and ef will throw exceptions
+T-036,R01,processed,886.6998292747485,2758.004646023666,2 when i have multiple queries to get data
+T-037,R01,processed,886.6998292747485,2758.004646023666,may need transaction with isolationlevel snapshot
+T-038,R01,processed,886.6998292747485,2758.004646023666,3 when i have some possible nesting of methods that mutate
+T-039,R01,processed,886.6998292747485,2758.004646023666,queried entity and each may call savechanges
+T-040,R01,processed,886.6998292747485,2758.004646023666,one savechanges succeds another fails and we get inconsistency
+T-041,R01,processed,886.6998292747485,2758.004646023666,need to wrap everything in one transaction with any isolatoin level but usually with default
+T-042,R01,processed,886.6998292747485,2758.004646023666,4 when i have some database.executesql  or other like dbset.executeupdate (that is
+T-043,R01,processed,886.6998292747485,2758.004646023666,linq based but everything else like executesql) - they all dont care about savechanges
+T-044,R01,processed,886.6998292747485,2758.004646023666,so if i want them to be in a traqnsaction i need to create transaction
+T-045,R02,processed,11139.752948520343,3089.749460933655,readcommited
+T-046,R02,processed,12065.360455571448,3704.033653036074,repeatableread vs serialized
+T-047,R02,processed,12065.360455571448,3704.033653036074,repeatableread vs serialized
+T-048,R02,processed,11120.64888578658,3733.8325793113763,repeatableread
+T-049,R03,processed,3500.7781012048154,6709.020365429745,isolation level
+T-050,R03,processed,3500.7781012048154,6709.020365429745,in manual retries from same tranaction
+T-051,R03,processed,3500.7781012048154,6709.020365429745,using savepoints cases
+T-052,R03,processed,6892.832934560564,7920.096474344875,when we use execute (not in transaction)
+T-053,R03,processed,6892.832934560564,7920.096474344875,method
+T-054,R03,processed,6892.832934560564,7920.096474344875,and there is some ambigous outcome of
+T-055,R03,processed,6892.832934560564,7920.096474344875,the transaction
+T-056,R03,processed,6892.832934560564,7920.096474344875,by default - we will retry
+T-057,R03,processed,6698.7589735145575,8059.170469299297,!!!
+T-058,R04,processed,8197.96198490367,8246.058914601435,"locks with readcommited,"
+T-059,R04,processed,8197.96198490367,8246.058914601435,"rcsi,serializable"
+T-060,R04,processed,10014.62581363777,8546.770858109481,when locks are acquired
+T-061,R04,processed,10014.62581363777,8546.770858109481,on start of transaction
+T-062,R04,processed,10014.62581363777,8546.770858109481,or on data touch?
+T-063,R04,processed,8458.467207937509,8733.224384410754,read commited
+T-064,R04,processed,8327.800459890634,10370.557880504504,rcsi
+T-065,R04,processed,8335.419391252242,12050.557880504504,serializable
+T-066,R04,processed,9585.504383497195,12471.819773972386,serializable protects the
+T-067,R04,processed,9585.504383497195,12471.819773972386,range relevant to predicate
+T-068,R03,processed,6359.220617565442,12642.139839218773,when both trans need to have isolation
+T-069,R03,processed,6359.220617565442,12642.139839218773,serializable
+T-070,R03,processed,6359.220617565442,12642.139839218773,to keep invariants
+T-071,R03,processed,6219.959635916203,13786.701939989627,!!!

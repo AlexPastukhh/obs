@@ -1,31 +1,30 @@
-# MANIFEST — idistributedcache final coverage v001
+# MANIFEST — idistributedcache corrected final v002
 
-Generated: 2026-06-27 UTC
+Archive type: **screenshot recovery + corrected semantic transcript**  
+Target branch: `ai-processed-conspects-text`  
+Target folder: `_ai-conspects/idistributedcache/`
 
 ## Source
 
-```text
-original SVG filename: idistributedcache(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
-```
+- uploaded: `idistributedcache(2).svg`
+- authoritative: `source/idistributedcache.svg`
 
-## Final counts
+## Coverage
 
 ```text
-text labels: 23 / 23 covered
-vector paths: 9 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
+unique screenshots: 70
+screenshot uses: 72
+native SVG labels: 23
+recovered screenshot uses: 72
+duplicate extra placements: 2
+remaining: 0
 ```
 
-## Final files
+## Included
 
-```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
-```
+- corrected and raw SVG source names;
+- extracted unique screenshot assets;
+- image/text/duplicate/coverage ledgers;
+- full-canvas preview and contact sheets;
+- corrected semantic transcript;
+- current-source-of-truth update.

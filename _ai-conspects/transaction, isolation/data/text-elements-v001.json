@@ -1,0 +1,570 @@
+[
+  {
+    "x": 560.6680062779151,
+    "y": 288.3891638749956,
+    "text": "you can get all applied or all rolled back(atomicity)",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 560.6680062779151,
+    "y": 288.3891638749956,
+    "text": "with any isolation level",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 4046.216767780148,
+    "y": 526.9596596225124,
+    "text": "when reads are part of",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 4046.216767780148,
+    "y": 526.9596596225124,
+    "text": "transaction",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 4046.216767780148,
+    "y": 526.9596596225124,
+    "text": "when the query runs (linq/sql api to get smth)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 57.031104170724575,
+    "y": 529.1863950045881,
+    "text": "readcommited",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 8761.0775570011,
+    "y": 541.5014059423575,
+    "text": "isolaton levels",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 8761.0775570011,
+    "y": 541.5014059423575,
+    "text": "how can help to avoid inconsistency",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 8761.0775570011,
+    "y": 541.5014059423575,
+    "text": "with multiple queries",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 8761.0775570011,
+    "y": 541.5014059423575,
+    "text": "with snapshot/serializable",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "so readcommited is ok when",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "we cant have some state changes from",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "other transaction",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "like when we have some",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "e tags that will prevent",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "update with incons stae",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "like when we change e tag on some",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 10.0,
+    "y": 738.8160292422835,
+    "text": "children changes",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 11156.763984640194,
+    "y": 1112.6636574017639,
+    "text": "other isolaton levels, default",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 7306.384837873156,
+    "y": 1585.5570259550632,
+    "text": "snapshot,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 7306.384837873156,
+    "y": 1585.5570259550632,
+    "text": "snapshot exception with code",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 7306.384837873156,
+    "y": 1585.5570259550632,
+    "text": "when you update/delete/insert",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 7306.384837873156,
+    "y": 1585.5570259550632,
+    "text": "based on old data",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 11133.871214681882,
+    "y": 2083.5766199607006,
+    "text": "why serializable",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 5155.252049357265,
+    "y": 2212.4650968916435,
+    "text": "reading your own",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 5155.252049357265,
+    "y": 2212.4650968916435,
+    "text": "uncommited changes",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 175.50052580916508,
+    "y": 2475.504239122624,
+    "text": "dbcontext about transactions strategies",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 11135.266249409578,
+    "y": 2587.4276749757514,
+    "text": "readuncommited",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "so i have some scenarios when i may need some",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "transaction or when i may think that i need them",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "1 when i query something from db, look at it and chose to change it",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "but at the same time i may have another request that",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "changes the same thing",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "dont need manual transaction, can configure rowversion or",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "isconcurencytoken and ef will throw exceptions",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "2 when i have multiple queries to get data",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "may need transaction with isolationlevel snapshot",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "3 when i have some possible nesting of methods that mutate",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "queried entity and each may call savechanges",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "one savechanges succeds another fails and we get inconsistency",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "need to wrap everything in one transaction with any isolatoin level but usually with default",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "4 when i have some database.executesql  or other like dbset.executeupdate (that is",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "linq based but everything else like executesql) - they all dont care about savechanges",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  },
+  {
+    "x": 886.6998292747485,
+    "y": 2758.004646023666,
+    "text": "so if i want them to be in a traqnsaction i need to create transaction",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-044"
+  },
+  {
+    "x": 11139.752948520343,
+    "y": 3089.749460933655,
+    "text": "readcommited",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-045"
+  },
+  {
+    "x": 12065.360455571448,
+    "y": 3704.033653036074,
+    "text": "repeatableread vs serialized",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-046"
+  },
+  {
+    "x": 12065.360455571448,
+    "y": 3704.033653036074,
+    "text": "repeatableread vs serialized",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-047"
+  },
+  {
+    "x": 11120.64888578658,
+    "y": 3733.8325793113763,
+    "text": "repeatableread",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-048"
+  },
+  {
+    "x": 3500.7781012048154,
+    "y": 6709.020365429745,
+    "text": "isolation level",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-049"
+  },
+  {
+    "x": 3500.7781012048154,
+    "y": 6709.020365429745,
+    "text": "in manual retries from same tranaction",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-050"
+  },
+  {
+    "x": 3500.7781012048154,
+    "y": 6709.020365429745,
+    "text": "using savepoints cases",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-051"
+  },
+  {
+    "x": 6892.832934560564,
+    "y": 7920.096474344875,
+    "text": "when we use execute (not in transaction)",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-052"
+  },
+  {
+    "x": 6892.832934560564,
+    "y": 7920.096474344875,
+    "text": "method",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-053"
+  },
+  {
+    "x": 6892.832934560564,
+    "y": 7920.096474344875,
+    "text": "and there is some ambigous outcome of",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-054"
+  },
+  {
+    "x": 6892.832934560564,
+    "y": 7920.096474344875,
+    "text": "the transaction",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-055"
+  },
+  {
+    "x": 6892.832934560564,
+    "y": 7920.096474344875,
+    "text": "by default - we will retry",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-056"
+  },
+  {
+    "x": 6698.7589735145575,
+    "y": 8059.170469299297,
+    "text": "!!!",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-057"
+  },
+  {
+    "x": 8197.96198490367,
+    "y": 8246.058914601435,
+    "text": "locks with readcommited,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-058"
+  },
+  {
+    "x": 8197.96198490367,
+    "y": 8246.058914601435,
+    "text": "rcsi,serializable",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-059"
+  },
+  {
+    "x": 10014.62581363777,
+    "y": 8546.770858109481,
+    "text": "when locks are acquired",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-060"
+  },
+  {
+    "x": 10014.62581363777,
+    "y": 8546.770858109481,
+    "text": "on start of transaction",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-061"
+  },
+  {
+    "x": 10014.62581363777,
+    "y": 8546.770858109481,
+    "text": "or on data touch?",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-062"
+  },
+  {
+    "x": 8458.467207937509,
+    "y": 8733.224384410754,
+    "text": "read commited",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-063"
+  },
+  {
+    "x": 8327.800459890634,
+    "y": 10370.557880504504,
+    "text": "rcsi",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-064"
+  },
+  {
+    "x": 8335.419391252242,
+    "y": 12050.557880504504,
+    "text": "serializable",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-065"
+  },
+  {
+    "x": 9585.504383497195,
+    "y": 12471.819773972386,
+    "text": "serializable protects the",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-066"
+  },
+  {
+    "x": 9585.504383497195,
+    "y": 12471.819773972386,
+    "text": "range relevant to predicate",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-067"
+  },
+  {
+    "x": 6359.220617565442,
+    "y": 12642.139839218773,
+    "text": "when both trans need to have isolation",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-068"
+  },
+  {
+    "x": 6359.220617565442,
+    "y": 12642.139839218773,
+    "text": "serializable",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-069"
+  },
+  {
+    "x": 6359.220617565442,
+    "y": 12642.139839218773,
+    "text": "to keep invariants",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-070"
+  },
+  {
+    "x": 6219.959635916203,
+    "y": 13786.701939989627,
+    "text": "!!!",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-071"
+  }
+]
