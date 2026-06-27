@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-22 UTC",
+  "stage": "4",
+  "audit_type": "complete-svg-reconciliation-and-missing-screenshot-restoration",
+  "status": "complete",
+  "before": {
+    "source_image_uses": 40,
+    "processed_image_uses": 40,
+    "assessment": "complete only relative to incomplete source SVG"
+  },
+  "after": {
+    "source_image_uses": 91,
+    "preserved_previous_uses": 40,
+    "restored_missing_uses": 51,
+    "processed_image_uses": 91,
+    "missing": 0,
+    "duplicates": 0,
+    "unreviewed": 0
+  },
+  "regions": {
+    "OPT01": 6,
+    "OPT02": 11,
+    "OPT03": 13,
+    "OPT04": 10,
+    "OPT05": 30,
+    "OPT06": 5,
+    "OPT07": 16
+  },
+  "text_context": {
+    "physical_svg_text_nodes": 30,
+    "status": "reviewed and linked to the full image layout"
+  },
+  "folder_rename": {
+    "from": "_ai-conspects/options-pattern",
+    "to": "_ai-conspects/options pattern",
+    "reason": "exact SVG basename after ignoring technical upload suffix (1)"
+  },
+  "conclusion": "The complete SVG is now represented: all 91 image uses are preserved and covered by the original transcripts plus OPT05-OPT07 correction transcripts."
+}
