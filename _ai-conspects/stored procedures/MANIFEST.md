@@ -1,33 +1,27 @@
-# MANIFEST — stored procedures final coverage transcript v001
+# MANIFEST — stored procedures corrected final v002
 
-Archive type: **stage1 final coverage, ten-conspect combined delivery**  
+Archive type: **missing-screenshot recovery + corrected semantic transcript**  
 Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-22 03:30:00 UTC
+Target folder: `_ai-conspects/stored procedures/`
 
-## Counts
+## Source identity
 
-```text
-image uses: 3
-text labels: 108
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
-```
+- Uploaded repaired source: `stored procedures(1).svg`
+- Authoritative corrected source: `source/stored procedures.svg`
 
-## Delivery batch
+## Corrected coverage
 
-This folder is delivered together with all ten exact SVG-named folders:
+- Previous embedded images: 3
+- Corrected embedded images: 154
+- Recovered missing images: 151
+- Text labels retained: 108
+- Remaining unclosed image/text items: 0
 
-```text
-_ai-conspects/linq to sql
-_ai-conspects/stored procedures
-_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache
-_ai-conspects/injecting into razor
-_ai-conspects/tag helpers razor,partial
-_ai-conspects/BINDING SOURCE ATTRIBUTES
-_ai-conspects/content disposition header
-_ai-conspects/CUSTOM ROUTE CONSTRAINT
-_ai-conspects/utf8 string  literal
-_ai-conspects/link generator
-```
+## Included
 
-Archive: `ai-conspects-10-small-stage1-final-coverage-v001.zip`
+- corrected and raw SVG sources;
+- 154 extracted screenshot assets;
+- image/text/coverage ledgers;
+- full-canvas preview and eight contact sheets;
+- corrected semantic transcript;
+- final corrected coverage audit.
