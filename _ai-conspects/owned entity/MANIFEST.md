@@ -1,33 +1,35 @@
 # MANIFEST — owned entity
 
-Generated: 2026-06-27 14:30:00 UTC
+Generated: 2026-06-27 15:30:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/owned entity.svg`
-- 40 extracted screenshots under `source/images/`
+- `01-transcript-R01-owned-references-owned-collections-and-loading-behavior.md`
+- `02-transcript-R02-optional-owned-references-and-explicit-requiredness.md`
+- `03-transcript-R03-owned-collections-shadow-keys-and-relational-mapping.md`
+- `04-transcript-R04-nested-owned-types-and-detecting-optional-outer-values.md`
+- `05-transcript-R05-required-members-inside-optional-owned-or-complex-values.md`
 
-## Stage0
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
+- `data/image-uses-v002-closed.*`
+- `data/text-elements-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `06-full-combined-final-transcript.md`
+- `07-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `MANIFEST.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-- complete canvas preview
-- 5 regional contact sheets
 
-## Coverage
+## Final coverage
 
 ```text
-text elements inventoried: 23
-image uses inventoried: 40
-logical regions: 5
-remaining text elements: 23
-remaining image uses: 40
+text elements: 23 / 23
+image uses: 40 / 40
+regions: 5 / 5
+remaining text elements: 0
+remaining image uses: 0
 ```

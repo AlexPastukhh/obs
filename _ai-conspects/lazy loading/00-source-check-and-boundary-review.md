@@ -30,13 +30,13 @@ semantic columns/roads, not arbitrary equal coordinate slices.
 
 ## Current coverage boundary
 
-Stage0 preserves and inventories the source. No semantic transcript is claimed yet.
+Stage0 preserved and inventoried the source. Regional and combined semantic coverage is now complete.
 
 ```text
-processed text elements: 0 / 11
-processed screenshot uses: 0 / 40
-remaining text elements: 11
-remaining screenshot uses: 40
+processed text elements: 11 / 11
+processed screenshot uses: 40 / 40
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -48,7 +48,6 @@ remaining screenshot uses: 40
 | R03 | Why lazy loading conflicts with DDD and aggregate boundaries | 0 | 2 | 2 |
 | R04 | Proxy limitations, hidden backing fields and navigation configuration | 3 | 12 | 12 |
 
-## Next
+## Closure
 
-Create regional semantic transcripts, then one combined transcript and a
-full-conspect coverage audit.
+Regional transcripts, the combined transcript and the full-conspect coverage audit are complete.

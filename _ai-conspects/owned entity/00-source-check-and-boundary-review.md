@@ -30,13 +30,13 @@ semantic columns/roads, not arbitrary equal coordinate slices.
 
 ## Current coverage boundary
 
-Stage0 preserves and inventories the source. No semantic transcript is claimed yet.
+Stage0 preserved and inventoried the source. Regional and combined semantic coverage is now complete.
 
 ```text
-processed text elements: 0 / 23
-processed screenshot uses: 0 / 40
-remaining text elements: 23
-remaining screenshot uses: 40
+processed text elements: 23 / 23
+processed screenshot uses: 40 / 40
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -49,7 +49,6 @@ remaining screenshot uses: 40
 | R04 | Nested owned types, optional outer values and required inner values | 8 | 14 | 14 |
 | R05 | Required properties inside owned or complex types | 2 | 4 | 4 |
 
-## Next
+## Closure
 
-Create regional semantic transcripts, then one combined transcript and a
-full-conspect coverage audit.
+Regional transcripts, the combined transcript and the full-conspect coverage audit are complete.

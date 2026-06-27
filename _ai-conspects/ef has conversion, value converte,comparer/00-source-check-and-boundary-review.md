@@ -30,13 +30,13 @@ semantic columns/roads, not arbitrary equal coordinate slices.
 
 ## Current coverage boundary
 
-Stage0 preserves and inventories the source. No semantic transcript is claimed yet.
+Stage0 preserved and inventoried the source. Regional and combined semantic coverage is now complete.
 
 ```text
-processed text elements: 0 / 14
-processed screenshot uses: 0 / 60
-remaining text elements: 14
-remaining screenshot uses: 60
+processed text elements: 14 / 14
+processed screenshot uses: 60 / 60
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -49,7 +49,6 @@ remaining screenshot uses: 60
 | R04 | Querying with lists of primitives | 1 | 9 | 9 |
 | R05 | Primitive-list query translation, Contains and provider behavior | 0 | 13 | 13 |
 
-## Next
+## Closure
 
-Create regional semantic transcripts, then one combined transcript and a
-full-conspect coverage audit.
+Regional transcripts, the combined transcript and the full-conspect coverage audit are complete.

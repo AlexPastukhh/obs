@@ -1,13 +1,19 @@
 # Transcript status — lazy loading
 
-Generated: 2026-06-27 14:30:00 UTC
+Generated: 2026-06-27 15:30:00 UTC
 
 ```text
 source inventory: done
 visual region plan: done
-regional transcripts: not started
-full combined transcript: not started
-full-conspect coverage audit: not started
-remaining text elements: 11
-remaining screenshot uses: 40
+regional transcripts: done
+full combined transcript: done
+full-conspect coverage audit: done
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
+
+## Authoritative files
+
+- `05-full-combined-final-transcript.md`
+- `06-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
