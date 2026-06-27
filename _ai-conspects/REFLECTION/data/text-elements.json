@@ -1,0 +1,714 @@
+[
+  {
+    "x": 5418.20329348278,
+    "y": 10.0,
+    "text": "some general yapping",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get type  === so typeof() or gettype()",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get memberinfo == type.getmembers",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get ctor == type.getconstructor or getconstructors",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "or Activator.createinstance(typeof(),new obj[])",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get method  === type.getmethods().where() or t.getmethod(\"name\")",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "invoke method minfo.invoke(instance,new object[]{})",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get parameters ===ctor.getparameters or method.getparameters",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get props  === type.getproperty() or getproperties",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get fileds === type.getfileds or getfield",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get events === type.getevents or getevent(name)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get interfaces === type.getinterfaces or get interface",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get nested types == type.getnestedtypes or getnestedtype",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "ATTRIBUTES",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "to get attributes === type/method/prop etc .getcustomattributes() or",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "getcustomattribute",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "GENERICS",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "isgenerictypedefinition isgenericmethoddefinition",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "getgenerictype definition getgenericmethoddefinition",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "getgenericarguments - both",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "TO INVOKE METHOD OR CREATE INSTANCE NEED",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "get methodinfo",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "method.makegenericmethod(gentypearg1,gentypearg2)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "method.invoke",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "___",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "getgenerictypedefinitoin",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "gentypedef.makegenerictype(gentypearg)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 5542.391382036072,
+    "y": 248.2141331263956,
+    "text": "activator.createinstance(gentype)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 585.7830753316703,
+    "y": 761.5968757650262,
+    "text": "binding flags",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 6401.97466880859,
+    "y": 1570.8317720839577,
+    "text": "using gen method",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 6401.97466880859,
+    "y": 1570.8317720839577,
+    "text": "and gen type that",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 6401.97466880859,
+    "y": 1570.8317720839577,
+    "text": "we ve just created",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 6164.0491258895245,
+    "y": 1867.8578160292177,
+    "text": "member",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 8959.87410256105,
+    "y": 2005.3444484853057,
+    "text": "methods",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 4981.892161181344,
+    "y": 2017.0727234045617,
+    "text": "general shit",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 4981.892161181344,
+    "y": 2017.0727234045617,
+    "text": "type",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 4981.892161181344,
+    "y": 2017.0727234045617,
+    "text": "assembly",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 3402.832511778554,
+    "y": 2047.670858820171,
+    "text": "properties",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 10056.364600421435,
+    "y": 2053.200781711172,
+    "text": "parameterinfo",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 2394.4990767199606,
+    "y": 2101.004141290874,
+    "text": "fields",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 7678.4722551596315,
+    "y": 2156.253532788861,
+    "text": "constructors",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 7678.4722551596315,
+    "y": 2156.253532788861,
+    "text": "activator.createinstance",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 6188.9070570300555,
+    "y": 2174.5885176959905,
+    "text": "member info",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  },
+  {
+    "x": 6188.9070570300555,
+    "y": 2174.5885176959905,
+    "text": "getmemberinfo",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-044"
+  },
+  {
+    "x": 6188.9070570300555,
+    "y": 2174.5885176959905,
+    "text": "getmembers",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-045"
+  },
+  {
+    "x": 893.7919710052092,
+    "y": 2222.91349595266,
+    "text": "declaredonly",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-046"
+  },
+  {
+    "x": 893.7919710052092,
+    "y": 2222.91349595266,
+    "text": "flattenhierarchy",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-047"
+  },
+  {
+    "x": 8514.085305873361,
+    "y": 2629.4831666420428,
+    "text": "not type",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-048"
+  },
+  {
+    "x": 8514.085305873361,
+    "y": 2629.4831666420428,
+    "text": "real instance",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-049"
+  },
+  {
+    "x": 720.5966632688878,
+    "y": 3772.2237370095568,
+    "text": "attributes",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-050"
+  },
+  {
+    "x": 5893.780483259128,
+    "y": 3898.9306873298765,
+    "text": "nested types",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-051"
+  },
+  {
+    "x": 1504.381724063554,
+    "y": 4113.0886287886915,
+    "text": "??? about safety",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-052"
+  },
+  {
+    "x": 7596.43107399989,
+    "y": 4223.3747587817,
+    "text": "interfaces",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-053"
+  },
+  {
+    "x": 9158.327390951139,
+    "y": 4228.205578148214,
+    "text": "declaring type",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-054"
+  },
+  {
+    "x": 9158.327390951139,
+    "y": 4228.205578148214,
+    "text": "reflected type",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-055"
+  },
+  {
+    "x": 2378.543894276102,
+    "y": 4869.099617241716,
+    "text": "isdefined",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-056"
+  },
+  {
+    "x": 1143.7636044520596,
+    "y": 4943.037118578711,
+    "text": "safety??",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-057"
+  },
+  {
+    "x": 3508.1737499618657,
+    "y": 5406.877089843714,
+    "text": "getmethod",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-058"
+  },
+  {
+    "x": 3508.1737499618657,
+    "y": 5406.877089843714,
+    "text": "setmethod",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-059"
+  },
+  {
+    "x": 5975.840790016889,
+    "y": 5584.5621420932075,
+    "text": "eventinfo",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-060"
+  },
+  {
+    "x": 2400.430433879144,
+    "y": 5756.3705129472,
+    "text": "inherit",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-061"
+  },
+  {
+    "x": 943.2549807878404,
+    "y": 5794.847244543085,
+    "text": "!!!!",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-062"
+  },
+  {
+    "x": 126.40969394874628,
+    "y": 5865.4261850706025,
+    "text": "getcustomattribute and",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-063"
+  },
+  {
+    "x": 126.40969394874628,
+    "y": 5865.4261850706025,
+    "text": "no attributes - throws",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-064"
+  },
+  {
+    "x": 2100.5044686613323,
+    "y": 6674.733521570747,
+    "text": "!!!",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-065"
+  },
+  {
+    "x": 7573.877270016383,
+    "y": 6717.835520077326,
+    "text": "generic types and methods",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-066"
+  },
+  {
+    "x": 8776.352628136112,
+    "y": 6987.593981922239,
+    "text": "generic",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-067"
+  },
+  {
+    "x": 2258.20814384008,
+    "y": 7283.037179613867,
+    "text": "static attribute shit",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-068"
+  },
+  {
+    "x": 2258.20814384008,
+    "y": 7283.037179613867,
+    "text": "that others doent have",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-069"
+  },
+  {
+    "x": 8970.169482893758,
+    "y": 8316.035346102632,
+    "text": "makegenericmethod",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-070"
+  },
+  {
+    "x": 8970.169482893758,
+    "y": 8316.035346102632,
+    "text": "invoking",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-071"
+  },
+  {
+    "x": 7686.67302499481,
+    "y": 8399.9507053575,
+    "text": "generictypedefinition",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-072"
+  },
+  {
+    "x": 8997.39170511598,
+    "y": 9017.172910625512,
+    "text": "makegenerictype",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-073"
+  },
+  {
+    "x": 828.9248948310524,
+    "y": 9180.432663241594,
+    "text": "isassignablefrom",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-074"
+  },
+  {
+    "x": 828.9248948310524,
+    "y": 9180.432663241594,
+    "text": "is/isinstanceeoftype",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-075"
+  },
+  {
+    "x": 828.9248948310524,
+    "y": 9180.432663241594,
+    "text": "obj.gettype == typeof",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-076"
+  },
+  {
+    "x": 2068.5713123139876,
+    "y": 9225.230660995625,
+    "text": "type checking",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-077"
+  },
+  {
+    "x": 2068.5713123139876,
+    "y": 9225.230660995625,
+    "text": "inheritance checking",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-078"
+  },
+  {
+    "x": 852.0948995392991,
+    "y": 10054.189879114132,
+    "text": "is   isinstance of",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-079"
+  },
+  {
+    "x": 3743.503015083055,
+    "y": 11230.686535032735,
+    "text": "byref types",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-080"
+  },
+  {
+    "x": 738.0293416257919,
+    "y": 11437.701941786436,
+    "text": "getelement type",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-081"
+  },
+  {
+    "x": 2457.0378877391317,
+    "y": 11486.686160970621,
+    "text": "pointers",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-082"
+  },
+  {
+    "x": 540.9062569128055,
+    "y": 12115.657934337447,
+    "text": "nullable.getunderlyingtype",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-083"
+  },
+  {
+    "x": 3923.503015083055,
+    "y": 13817.353405149923,
+    "text": "byref types",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-084"
+  },
+  {
+    "x": 4005.003939507579,
+    "y": 15065.555643606358,
+    "text": "props/methods",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-085"
+  },
+  {
+    "x": 5729.980083204973,
+    "y": 16565.530969653435,
+    "text": "almost never seen in c#",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-086"
+  },
+  {
+    "x": 4556.29792472983,
+    "y": 17272.746571472915,
+    "text": "example outputs",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-087"
+  },
+  {
+    "x": 3910.155497250984,
+    "y": 17423.617772590907,
+    "text": "when is in may be enough",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-088"
+  },
+  {
+    "x": 5094.735724763456,
+    "y": 17435.781760672515,
+    "text": "when you may need required custom modifiers",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-089"
+  }
+]
