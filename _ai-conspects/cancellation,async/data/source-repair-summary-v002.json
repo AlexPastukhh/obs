@@ -1,0 +1,166 @@
+{
+  "conspect": "cancellation,async",
+  "source_svg": "cancellation,async(2).svg",
+  "stored_source": "source/source-complete-v002.svg",
+  "source_sha256": "487451e42016099dcc13e99ea343759e0b0febbaf104fb31ffbf22ab55c0bdb4",
+  "old_inventory": {
+    "embedded_assets": 0,
+    "total_image_uses": 0,
+    "svg_text_nodes": 37,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  "complete_svg": {
+    "embedded_assets": 42,
+    "total_image_uses": 42,
+    "processed_image_uses": 42,
+    "restored_image_uses": 42,
+    "restored_unique_assets": 42,
+    "duplicate_placements": 0,
+    "duplicate_asset_groups": 0,
+    "svg_text_nodes": 37,
+    "processed_svg_text_nodes": 37,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "matching": {
+    "method": "SHA-256 of decoded embedded PNG plus exact canvas placement tuple (symbol ref, x, y, width, height)",
+    "old_image_inventory_was_empty": true,
+    "restored_by_absence_from_old_inventory": 42,
+    "all_embedded_assets_referenced": true,
+    "orphan_embedded_assets": [],
+    "missing_referenced_assets": []
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent regex scanner over raw SVG",
+    "pass_a_embedded_assets": 42,
+    "pass_b_embedded_assets": 42,
+    "pass_a_image_uses": 42,
+    "pass_b_image_uses": 42,
+    "pass_a_svg_text_nodes": 37,
+    "pass_b_svg_text_nodes": 37,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "result": "pass"
+  },
+  "regions": {
+    "R01": {
+      "title": "Cancellation fundamentals and why cancellation matters",
+      "image_uses": [
+        "RS-003",
+        "RS-010",
+        "RS-014",
+        "RS-018"
+      ],
+      "svg_text_nodes": []
+    },
+    "R02": {
+      "title": "Linked CancellationTokenSource and multi-reason cancellation",
+      "image_uses": [
+        "RS-001",
+        "RS-004",
+        "RS-005",
+        "RS-006",
+        "RS-007",
+        "RS-008",
+        "RS-009",
+        "RS-012",
+        "RS-013",
+        "RS-016",
+        "RS-017",
+        "RS-020"
+      ],
+      "svg_text_nodes": [
+        "T-004",
+        "T-005",
+        "T-006",
+        "T-007",
+        "T-008",
+        "T-009",
+        "T-010",
+        "T-011",
+        "T-012",
+        "T-013",
+        "T-014",
+        "T-015",
+        "T-016",
+        "T-017",
+        "T-034",
+        "T-035",
+        "T-036",
+        "T-037"
+      ]
+    },
+    "R03": {
+      "title": "Cooperative cancellation for CPU-bound work",
+      "image_uses": [
+        "RS-026",
+        "RS-029",
+        "RS-031",
+        "RS-034",
+        "RS-035"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-002",
+        "T-003",
+        "T-020",
+        "T-021",
+        "T-022"
+      ]
+    },
+    "R04": {
+      "title": "ASP.NET Core request aborts, disconnects, and when to catch",
+      "image_uses": [
+        "RS-002",
+        "RS-025",
+        "RS-028",
+        "RS-030",
+        "RS-032",
+        "RS-036",
+        "RS-038",
+        "RS-039",
+        "RS-040",
+        "RS-041",
+        "RS-042"
+      ],
+      "svg_text_nodes": [
+        "T-018",
+        "T-019",
+        "T-023",
+        "T-024",
+        "T-025"
+      ]
+    },
+    "R05": {
+      "title": "Async exception propagation and cancellation exception hierarchy",
+      "image_uses": [
+        "RS-011",
+        "RS-015",
+        "RS-019",
+        "RS-021",
+        "RS-022",
+        "RS-023",
+        "RS-024",
+        "RS-027",
+        "RS-033",
+        "RS-037"
+      ],
+      "svg_text_nodes": [
+        "T-026",
+        "T-027",
+        "T-028",
+        "T-029",
+        "T-030",
+        "T-031",
+        "T-032",
+        "T-033"
+      ]
+    }
+  },
+  "closure": "complete"
+}

@@ -1,0 +1,80 @@
+﻿item_type,item_id,secondary_id,sha256,region_id,status,restored,assignment_count,evidence
+image_use,RS-001,RIU-001,bed413c1e6ec386b29fca387468ab6001a371b4143ad363480bb2706d276bb71,R02,processed,True,1,"Catch linked-token cancellation, inspect original request-abort and timeout tokens to identify likely cause, then rethrow."
+image_use,RS-002,RIU-002,6104ead578a358da02e8fa98b68bf73668459db79001574be9c022a8590b66ed,R04,processed,True,1,ASP.NET Core request-cancellation guidance: normally do not catch or log as an error; pass the request token and use async/await throughout.
+image_use,RS-003,RIU-003,bf689c38d5c8c6f921b1ac014a9e8a79206e249debe273e5dea30ebaad6bbec9,R01,processed,True,1,"Why cancellation matters: releases I/O resources, improves scalability, and avoids wasting CPU on abandoned work."
+image_use,RS-004,RIU-004,58247c6285dc82a29eeb341564740f4a620c6993b7631267f6cfc9e41a98ee6a,R02,processed,True,1,CreateLinkedTokenSource(requestCt) creates a new CTS whose token cancels when any linked token cancels.
+image_use,RS-005,RIU-005,592939fc7a7431a1ea2510a7f681fef64bc5d3ad439b068be573c03cb9e52a2f,R02,processed,True,1,BookCoversClient example creates an internal CTS and links it with the external request token.
+image_use,RS-006,RIU-006,e01e2509dbad5b5051d2d597ad400557a56a03688743e448b993caab6fc227f2,R02,processed,True,1,Demo boundary: one operation listens to multiple cancellation tokens.
+image_use,RS-007,RIU-007,d9201075f52474c2aaef9c4498ab36cef4f3569e7e23258d4b6cb2a536886ea8,R02,processed,True,1,Manual ThrowIfCancellationRequested before an async call is mainly for prompt fail-fast behavior and clarity.
+image_use,RS-008,RIU-008,f403dc9e8b10526c7edf103f9ce26e81715c58fa7bbaffaa12f09b5defdbcb02,R02,processed,True,1,Loop uses the linked token for HTTP and content reads; internal CTS can abort the batch on a downstream failure.
+image_use,RS-009,RIU-009,e1f8a3c32629e102749efb643fc4f327e8803ac13380aee4c66d1b578c35765d,R02,processed,True,1,Why not pass requestCt directly: the operation has both caller cancellation and an internal abort condition.
+image_use,RS-010,RIU-010,e40252578d55026da1cf844aafec0c7d1bf77150139968851aa9ee9f13d9de86,R01,processed,True,1,CancellationTokenSource is the controller/producer that owns cancellation and notifies token listeners.
+image_use,RS-011,RIU-011,4ebcd1148d80e4886c9522573fefdef20478d6cfbf1936cc36ac0c6c4efd7b68,R05,processed,True,1,Older async patterns could hide or wrap failures; try/catch around Task.Run and multiple tasks required special handling.
+image_use,RS-012,RIU-012,0eae214c1d95d11b558cdc688a740a32d006b6309aaa83c0c3b05e2d5dd862e0,R02,processed,True,1,Code creates a local CancellationTokenSource and prepares multiple book-cover URLs.
+image_use,RS-013,RIU-013,bb02ee45f8df664e4b66bda1681c5f0af61410804fb6de29ecded719c086eed6,R02,processed,True,1,"Manual checks are not always required, but avoid extra work and cover steps that do not accept a token."
+image_use,RS-014,RIU-014,d8169c5d1c05332aaf93adef0710133ef77f1fbcf38c3431308e2924299c3f9c,R01,processed,True,1,"CancellationToken is a lightweight value passed to consumers/listeners, usually as a method parameter."
+image_use,RS-015,RIU-015,1ae1c97d48bddc196608cac372a3d145ce1fb80cac584aef9895c524076aac71,R05,processed,True,1,Using async/await all the way through makes asynchronous exception flow behave like normal structured code.
+image_use,RS-016,RIU-016,3a908d65bb0d1a7c0166144315735aa7de8dec905e7e4b37edef5512e9c8d1e4,R02,processed,True,1,"CancellationTokenSource is IDisposable and should be disposed, commonly with using."
+image_use,RS-017,RIU-017,3de4aac580b47c78265ed62645fec733d17beb4cc5deed8a749f2f9448e4ef9d,R02,processed,True,1,Code nests a local CTS and a linked CTS; CreateLinkedTokenSource can accept one or multiple tokens.
+image_use,RS-018,RIU-018,97fdf65eb092c1ca189b98749b61aa2555e6d07c200b08f7065d6f4911d48f6f,R01,processed,True,1,"Comparison of CancellationToken and CancellationTokenSource, including caller, timeout, and linked-cancellation patterns."
+image_use,RS-019,RIU-019,f250c43d77c4faacc25bacbd823de99a9009866213baada9cddbf98879f9e175,R05,processed,True,1,"General async exception options: catch near the operation, exception filters, and exception-handler middleware."
+image_use,RS-020,RIU-020,be19b148c19b04d9795a762243f118e53abb2614289e8127189b00654d629560,R02,processed,True,1,Linked token is passed consistently to GetAsync and ReadAsStringAsync.
+image_use,RS-021,RIU-021,d4645d9ded8c492aa63e29b6c78331505f5bacdfbb7baf0bdfb14cbc03dfb0b9,R05,processed,True,1,Catch OperationCanceledException; TaskCanceledException derives from it.
+image_use,RS-022,RIU-022,38094a80c76d6a3094323744b082e2052f31683365efdb1587a2a0cba42c6cfb,R05,processed,True,1,Execute multiple tasks asynchronously with await/WhenAll/WhenAny rather than confusing concurrency with parallelism.
+image_use,RS-023,RIU-023,2b9890fe381bf2212d82c93117569ab41a42bdb77f55ec4b2f9d03764aa267b8,R05,processed,True,1,"Summary: a CTS signals cancellation to tokens/listeners, including request-abort scenarios."
+image_use,RS-024,RIU-024,78b95113dd75458edfad18e0c021a6a398d8f425c603f7281b0e0e24dfc90d79,R05,processed,True,1,Summary: OperationCanceledException covers cancellation; TaskCanceledException is a derived type.
+image_use,RS-025,RIU-025,20c7e9ad8e1cba8eeaae7c2390acc733cd2fc3330ebf905c2d65584771c3a622,R04,processed,True,1,RequestAborted can be received as an action parameter and must be passed to every cancellable downstream operation.
+image_use,RS-026,RIU-026,48ca5eaab20d6464144f9ca39e069a5e07aa3b8ee5e721f043a4541e7bb6cf42,R03,processed,True,1,CPU-bound work must observe the token; one option is IsCancellationRequested.
+image_use,RS-027,RIU-027,fc8bb90f447d559d586655d7e52570b3d73e147131fcf39cfea1f09ecd9f1165,R05,processed,True,1,Async/await surfaces failures at the await point and allows ordinary try/catch.
+image_use,RS-028,RIU-028,dd297affec3b8b9eba52d14ac19405b1bda293c7355eb2484c0e2d334276eed8,R04,processed,True,1,Let request cancellation bubble so ASP.NET Core stops processing and aborts the response when the client is gone.
+image_use,RS-029,RIU-029,9affa32639f3226dbe672016740605cef1b265cd17483c5530a1b0cf1fa3bd9b,R03,processed,True,1,CPU loop checks IsCancellationRequested and exits with break.
+image_use,RS-030,RIU-030,689f2e6897c9adb481a6929a1ed9065bd43d92dc8be169fa4fc5005e7410bcf0,R04,processed,True,1,Controller receives CancellationToken and passes it into the service/client method.
+image_use,RS-031,RIU-031,e468a8499f8a372240213975795515ad6ca022cbf04260cc451da51557e88830,R03,processed,True,1,ThrowIfCancellationRequested is preferred when cancellation should be represented as an exception.
+image_use,RS-032,RIU-032,fd08db6714a10ebf358cef2f4f130ca6deff62065bef495a771da423b44fd8d3,R04,processed,True,1,"After propagation ASP.NET Core knows the request is aborted, stops writing the response, and does not treat it as a client-visible 500."
+image_use,RS-033,RIU-033,3df1be74cb816198cf14a03d8617f1584c7c0e2aa06ae7887bb00dafa1080e31,R05,processed,True,1,Awaited HTTP failures can be caught with normal try/catch for HttpRequestException.
+image_use,RS-034,RIU-034,e57ae14dbfaedb61068027dbc60b029e6828d5a0059d4bb1f0bb6478c5440a58,R03,processed,True,1,CPU loop calls ThrowIfCancellationRequested before each unit of work.
+image_use,RS-035,RIU-035,2561344f86b204473d05575872f227a720724016a1ad239495939a63575e5d00,R03,processed,True,1,ThrowIfCancellationRequested is consistent with other cancellable APIs because it throws OperationCanceledException.
+image_use,RS-036,RIU-036,7201ccf8093e2d9ba011e8ac5e11c6996faa6098ba80a1244737c2cea8ce0965,R04,processed,True,1,Do not try to return a response to a disconnected client; treat request cancellation as normal control flow.
+image_use,RS-037,RIU-037,84f63b7d363a0dbc25cc9b4376b177f886c78bd049ee42300cd4969586d3ba17,R05,processed,True,1,Cancellation is represented by OperationCanceledException/TaskCanceledException; request cancellation normally need not be caught.
+image_use,RS-038,RIU-038,717be4ed20e5cf9a62939585ee4d61b17c0386fee507d0439b3025afafdc69e0,R04,processed,True,1,"When a client disconnects, RequestAborted cancels and awaited operations stop early."
+image_use,RS-039,RIU-039,40ae120195b8780683f864eb5409babac04554ac41025432e75b27aab32ff190,R04,processed,True,1,Minimal controller passes its CancellationToken directly into the asynchronous service.
+image_use,RS-040,RIU-040,ff47f93525098bbed2fc81d89628aa8f8246b3dedb04cfbc29729b03a7b687c8,R04,processed,True,1,"Catch cancellation only for extra work such as metrics, cleanup, controlled logging, or rare translation while still connected."
+image_use,RS-041,RIU-041,44458ebda804ae46c7bed9a7ad4d916a4231b5e1d04cd7b759cf0d61d8711896,R04,processed,True,1,"Filtered catch verifies the expected token was canceled, records telemetry, and rethrows."
+image_use,RS-042,RIU-042,90a1329ef578a93e1e5a5dc997b424f19b2ea839ed160b4708cbb6d247651204,R04,processed,True,1,Distinguish request cancellation from internal timeout/abort cancellation; linked tokens may require different handling.
+svg_text_node,T-001,,b2bc8b7ca62feb90b527f44ceb2fd56152b78cb9b18a38a6e2f6cfc57977d9d0,R03,processed,False,1,so we can imagine if there are a lot of work
+svg_text_node,T-002,,d176081942e74747e4b3b4fcfcc4e6beb4f6c1855fface8806083c2bd9916f39,R03,processed,False,1,in the begginning of each loop and before
+svg_text_node,T-003,,e660d85f19bd6d356fbf829582610c3d76ac587ac3f28557e6812256e0c46473,R03,processed,False,1,async api thing
+svg_text_node,T-004,,0d9b51fe4451d939ed7b33b174f37039a512e97b53fd14c62c2a1028d73ed3d8,R02,processed,False,1,Operation should be cancelled if user navigates away OR if you cant fetch something from ext api
+svg_text_node,T-005,,39c3249026fc10a45791ecc1f431810b46c53de69924a5a8206acec4d5678fb6,R02,processed,False,1,Have token passed from controller and our source with using
+svg_text_node,T-006,,8cf1dfaf2250f2ddb0632bbea4f3c55dd3bc2473d890f1f2327f5d0ab1343da2,R02,processed,False,1,Creating linked cancellation token source by passing our two tokens
+svg_text_node,T-007,,148e01724f3dfec5164b97b974c13fca932abae1af386fb6790e8d705c36ee9f,R02,processed,False,1,Note that you can pass one token or more tokens as well
+svg_text_node,T-008,,2bc3f85747eec6316b69def4181908cd15e3959a8c2754b57e8cd9c8733c3110,R02,processed,False,1,Passing token from linked source
+svg_text_node,T-009,,1342eaa91d51f1289f00aef69fca9847c44a70baffc998b3a194f8f743c23dbd,R02,processed,False,1,!!!!!!! you are subscribing
+svg_text_node,T-010,,31121a774c73607634cdf9c8588e471869d5166f8d5769675fcef2cb068ccd3b,R02,processed,False,1,new token source
+svg_text_node,T-011,,4b116136814de0929fb6aee537a6948189141bb2e17f4cfc67d42c7e54d88359,R02,processed,False,1,to 2 tokens
+svg_text_node,T-012,,651b428512255c5dfd8088690ca6cdece86974e1d49289ae4896b1d140879732,R02,processed,False,1,so produces by this source
+svg_text_node,T-013,,7c4e0147b6b5aea14c5b34877dafa629fc91d476c1f018a567cc9e9e17bc1637,R02,processed,False,1,tokens will be cancelled on
+svg_text_node,T-014,,6d6cd9cb430a89ea7cc0322ab67d21b20a829cb48641369ade01eb22f4d93858,R02,processed,False,1,either of 2 tokens
+svg_text_node,T-015,,a498144f47d24b74a398b488666d365b2db50625b2759f8acc66063164559d02,R02,processed,False,1,being cancelled
+svg_text_node,T-016,,1ac19908a64064ffa42e491e50e87b44eafeb59411be756a8ec2aed969813499,R02,processed,False,1,createlinkedtokensource
+svg_text_node,T-017,,442b8f2922b713f2ebaaf445647ae68539636befb123645328770afd70014da8,R02,processed,False,1,linkedtokensource
+svg_text_node,T-018,,ddad44b39d9602b8f2ae782f26a2eaa0737fb27136e52a05cfb6b719dd56c056,R04,processed,False,1,cancellation for
+svg_text_node,T-019,,13371da9b89ce0ddb40e6fc5c2e51ce915c2aa44cd1cfa9f58a3488b3932dd1e,R04,processed,False,1,"disconnect,abotrion"
+svg_text_node,T-020,,e315da8aa4cef36863fc72669d5e1302c7ae7df7b1819040b6f8f3ca2a4a41ae,R03,processed,False,1,cpu bound
+svg_text_node,T-021,,abd4861148109e739a7eb4f059e58ad25042c156111a6b82ab982ae8853cf56e,R03,processed,False,1,manual cancellatoin
+svg_text_node,T-022,,479c310f81383138b9cd50294e47e04757092709f91013812f1f1de63f5b4ea6,R03,processed,False,1,throwifcancrequested
+svg_text_node,T-023,,c8bb528ae6616daa1de9086934b84a5d0f1ad235355efb4374d62f614e3364b2,R04,processed,False,1,let it bubble for
+svg_text_node,T-024,,4f935a0f03deea2fa71a98679eebce744bf19bd38379dece9d64ccc92a167834,R04,processed,False,1,disconnect
+svg_text_node,T-025,,b10097e46b37ca4060c0b8f191d5c4d66eba9e497d1e0676e0ab64b97bb5e19a,R04,processed,False,1,dont catch
+svg_text_node,T-026,,e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8,R05,processed,False,1,!!!
+svg_text_node,T-027,,09341676bd9bf4d0c95ff32dd75900edf7b17f042dbc473981d769fd7c111544,R05,processed,False,1,Handling exceptions in async code
+svg_text_node,T-028,,cfac235b4d41a250b362ecef1c9a55b3871c2216a67af994dd9ecc65dff0ba87,R05,processed,False,1,Old async issues
+svg_text_node,T-029,,13e7e6452c48534e26675045ea7b512f7f5b8cc82790788dc425f56cc43d7282,R05,processed,False,1,Now just
+svg_text_node,T-030,,20d6d48e9b74b1300ecd511c04b8ef5287e54567a2cd71252d1c3309076c7895,R05,processed,False,1,occures when call throwifcancellationrequested
+svg_text_node,T-031,,876be54e87a51f1796609c0afbfc376bb0330e6734796d1ec9a29739a4e3ba45,R05,processed,False,1,occurs when task cancelled regularly(?)
+svg_text_node,T-032,,74697891c2046d675dd675dc069f32d69b677a07df4f8ca332fda0509c63e6f9,R05,processed,False,1,OperationCancelledException covers both types
+svg_text_node,T-033,,194c83009770d2fdbe512bfce326d805d8db7a7defb8f5e0e4efe2d695b536d7,R05,processed,False,1,EXCEPTIONS
+svg_text_node,T-034,,0e127cc96882525707bab20dec47fac2dacbbf3ef0cc504fd9822ee005407f6a,R02,processed,False,1,how to know what caused
+svg_text_node,T-035,,80812d7992dd498c03bbb6b797f4ac179be160f921c462b0b8a4a9bd1ca3b4be,R02,processed,False,1,cancellation
+svg_text_node,T-036,,838074b87b954a93ad9874b804c3d5aa53db1e46925b8101031f4cd561db9563,R02,processed,False,1,when have linkedtokensource
+svg_text_node,T-037,,1ac19908a64064ffa42e491e50e87b44eafeb59411be756a8ec2aed969813499,R02,processed,False,1,createlinkedtokensource

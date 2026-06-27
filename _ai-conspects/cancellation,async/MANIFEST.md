@@ -1,31 +1,43 @@
-# MANIFEST — cancellation,async final coverage v001
+# MANIFEST — cancellation,async full SVG repair final v002
 
-Generated: 2026-06-27 UTC
+Target branch: `ai-processed-conspects-text`
+
+## Target
+
+`_ai-conspects/cancellation,async`
 
 ## Source
 
 ```text
-original SVG filename: cancellation,async(1).svg
-stored source: source/source.svg
-source kind: vector/text SVG without embedded raster images
+uploaded filename: cancellation,async(2).svg
+stored path: source/source-complete-v002.svg
+SHA-256: 487451e42016099dcc13e99ea343759e0b0febbaf104fb31ffbf22ab55c0bdb4
 ```
 
-## Final counts
+## Coverage
 
 ```text
-text labels: 37 / 37 covered
-vector paths: 12 reviewed as boundary/flow evidence
-image uses: 0
-unresolved: 0
+embedded assets: 42
+total image uses: 42
+processed image uses: 42
+restored image uses: 42
+duplicate placements: 0
+SVG text nodes: 37
+unassigned images: 0
+multiply assigned images: 0
+unassigned text nodes: 0
+missing: 0
+unreviewed: 0
 ```
 
-## Final files
+## Regions created or supplemented
 
 ```text
-01-final-coverage-transcript.md
-02-final-closure-audit.md
-regions/R01R02R03-final-coverage.md
-data/final-coverage-audit-v001.json
-data/final-coverage-audit-v001.csv
-CURRENT_SOURCE_OF_TRUTH.md
+R01 Cancellation fundamentals and why cancellation matters
+R02 Linked CancellationTokenSource and multi-reason cancellation
+R03 Cooperative cancellation for CPU-bound work
+R04 ASP.NET Core request aborts, disconnects, and when to catch
+R05 Async exception propagation and cancellation exception hierarchy
 ```
+
+The archive preserves existing processed files and overlays only the complete source, restored screenshots, new reconciliation transcript, ledgers, and final audit.
