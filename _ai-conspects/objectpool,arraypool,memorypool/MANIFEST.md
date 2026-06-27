@@ -1,26 +1,44 @@
-# MANIFEST — objectpool,arraypool,memorypool full-source recovery
+# MANIFEST — objectpool,arraypool,memorypool
 
-Generated: 2026-06-27 07:00:00 UTC
+Generated: 2026-06-27 08:00:00 UTC
 
 ## Legacy incomplete material
 
-- historical transcript files marked incomplete/superseded
-- historical coverage audits marked incomplete/superseded
+- `01-final-coverage-transcript.md`
+- `02-final-closure-audit.md`
+- legacy incomplete-source coverage audit files
 
-## Complete recovered source
+## Regional transcripts
 
-- `source/objectpool,arraypool,memorypool.svg`
-- 54 extracted screenshots under `source/recovered-images-v002/`
-- `03-full-source-recovery-boundary-review.md`
-- `data/full-recovery-*`
-- 5 regional contact sheets
-- complete canvas preview
+- `04-transcript-R01-objectpoolprovider-registration-policies-and-di.md`
+- `05-transcript-R02-custom-object-pools-policies-and-ownership.md`
+- `06-transcript-R03-objectpool-basics-stringbuilder-and-reset.md`
+- `07-transcript-R04-arraypool-rent-return-clear-and-request-buffers.md`
+- `08-transcript-R05-memorypool-ownership-imemoryowner-and-disposal.md`
 
-## Current coverage
+## Closed ledgers
+
+- `data/image-uses-v002-closed.json`
+- `data/image-uses-v002-closed.csv`
+- `data/text-elements-v002-closed.json`
+- `data/text-elements-v002-closed.csv`
+- `data/region-plan-v002-closed.json`
+- `data/region-plan-v002-closed.csv`
+
+## Authoritative result
+
+- `09-full-combined-final-transcript.md`
+- `10-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.json`
+- `data/full-conspect-final-coverage-audit-v001.csv`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `TRANSCRIPT_STATUS.md`
+
+## Final coverage
 
 ```text
-complete-source text elements: 30
-complete-source image uses: 54
-remaining text elements: 30
-remaining image uses: 54
+text elements: 30 / 30
+image uses: 54 / 54
+remaining text elements: 0
+remaining image uses: 0
 ```

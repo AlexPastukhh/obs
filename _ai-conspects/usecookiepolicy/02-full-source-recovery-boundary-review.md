@@ -60,3 +60,16 @@ remaining complete-source screenshot uses: 49
 
 Process every planned region, build one new combined transcript and issue a new
 full-conspect coverage audit.
+
+
+## Final closure — 2026-06-27 08:00:00 UTC
+
+```text
+processed text elements: 42 / 42
+processed screenshot uses: 49 / 49
+remaining text elements: 0
+remaining screenshot uses: 0
+```
+
+Authoritative transcript: `08-full-combined-final-transcript.md`  
+Authoritative audit: `09-full-conspect-final-coverage-audit.md`

@@ -1,12 +1,17 @@
 # Transcript status — usecookiepolicy
 
-Generated: 2026-06-27 07:00:00 UTC
+Generated: 2026-06-27 08:00:00 UTC
 
 ```text
-legacy incomplete-source transcript: incomplete / superseded
-complete SVG recovery: done
-complete-source regional transcripts: not started
-full combined transcript: not started
-remaining text elements: 42
-remaining screenshot uses: 49
+regional transcripts: done
+full combined transcript: done
+full-conspect coverage audit: done
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
+
+## Authoritative files
+
+- `08-full-combined-final-transcript.md`
+- `09-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`

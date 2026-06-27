@@ -1,6 +1,6 @@
 # Current Source of Truth — objectpool,arraypool,memorypool
 
-Generated: 2026-06-27 07:00:00 UTC
+Generated: 2026-06-27 08:00:00 UTC
 
 ## Status
 
@@ -8,26 +8,30 @@ Generated: 2026-06-27 07:00:00 UTC
 Legacy incomplete-source transcript: incomplete / superseded
 Legacy incomplete-source coverage audit: incomplete / superseded
 Complete SVG recovery: done
-Complete-source screenshot extraction: done
-Complete-source text-element inventory: done
-Complete-source region plan: done
-Complete-source regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Regional transcripts: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
-## Complete-source coverage
+## Coverage
 
 ```text
-meaningful text elements: 30
-unique embedded images: 54
-image uses on canvas: 54
-repeated image placements: 0
-remaining unprocessed text elements: 30
-remaining unprocessed image uses: 54
+meaningful text elements: 30 / 30
+unique embedded images: 54 / 54
+image uses on canvas: 54 / 54
+repeated image placements retained: 0
+remaining unprocessed text elements: 0
+remaining unprocessed image uses: 0
 ```
+
+## Authoritative transcript
+
+`09-full-combined-final-transcript.md`
+
+## Authoritative audit
+
+`10-full-conspect-final-coverage-audit.md`
 
 ## Next
 
-Process every planned region and rebuild the authoritative transcript from the
-complete source.
+No normal transcript work remains. Only correction/polish if a newer source reveals additional material.

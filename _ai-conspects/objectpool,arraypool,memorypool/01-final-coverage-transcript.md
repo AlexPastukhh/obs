@@ -18,3 +18,11 @@ Status corrected: 2026-06-27 07:00:00 UTC
 - Complete-source regional transcripts: not started
 - Full combined transcript: not started
 - Full-conspect audit: not started
+
+
+## Authoritative replacement
+
+This legacy incomplete-source artifact is superseded by:
+
+- `09-full-combined-final-transcript.md`
+- `10-full-conspect-final-coverage-audit.md`
