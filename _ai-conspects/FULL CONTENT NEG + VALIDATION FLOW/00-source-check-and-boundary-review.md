@@ -25,13 +25,13 @@ unused image definitions: 0
 
 ## Current coverage boundary
 
-Stage0 only preserves and inventories the complete source.
+Stage0 preserved and inventoried the complete source. Regional and combined transcript coverage is now complete.
 
 ```text
-processed text elements: 0 / 554
-processed screenshot uses: 0 / 144
-remaining text elements: 554
-remaining screenshot uses: 144
+processed text elements: 554 / 554
+processed screenshot uses: 144 / 144
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -47,7 +47,6 @@ remaining screenshot uses: 144
 | R07 | Course IActionConstraint patterns and validation of developer-provided configuration | 27 | 26 | 1 |
 | R08 | RequestMatchesAttribute factory for method, header, query, route and media-type matching | 21 | 21 | 0 |
 
-## Next
+## Closure
 
-Review every regional contact sheet, create semantic transcripts for `R01`–`R08`,
-then build one combined final transcript and a full-conspect coverage audit.
+Regional transcripts `R01`–`R08`, the combined final transcript and the full-conspect coverage audit are complete.
