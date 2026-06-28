@@ -1,0 +1,44 @@
+﻿text_id,text,x,y,region_id,status
+T-001,textdecoderstream,136.26164791421797,4335.478599657588,R01,pending_transcript
+T-002,pipethrough,2842.652744642684,4246.592640016086,R01,pending_transcript
+T-003,pipeto,5153.127328195117,7261.993748836284,R06,pending_transcript
+T-004,transform of transformstream,1192.1847896909658,8300.113709240277,R05,pending_transcript
+T-005,class or instance?,3781.31076320561,8137.711916862446,R05,pending_transcript
+T-006,writablestream,6537.943845597666,7149.9017420940045,R06,pending_transcript
+T-007,chunks type,1418.6805385972525,7184.4240557733065,R05,pending_transcript
+T-008,writablestream examples,8012.246127037811,7034.89388930269,R06,pending_transcript
+T-009,filewritablestream,9661.838792584884,7022.176301897889,R06,pending_transcript
+T-010,why over simple processing with getreader,4625.538747801218,9485.578222735101,R05,pending_transcript
+T-011,nultiple pipetrhough chaingin,3456.7869900968935,7668.432681941853,R05,pending_transcript
+T-012,does pipethrough buffer,3595.3794564209884,8874.38902876163,R05,pending_transcript
+T-013,flush of transformstream,10.0,10730.330961878053,R05,pending_transcript
+T-014,readablestream,5474.936693814255,544.4731899414063,R01,pending_transcript
+T-015,readablestream,6644.953042320025,951.734930875108,R01,pending_transcript
+T-016,"overview,callbacks",6644.953042320025,1105.0682896397564,R01,pending_transcript
+T-017,tee(),5465.930742606217,1049.2689740988055,R01,pending_transcript
+T-018,manual construction,6740.314367220031,3880.5854094389674,R01,pending_transcript
+T-019,of readablestream,6740.314367220031,3942.3356766056095,R01,pending_transcript
+T-020,and how networkstream works,6740.314367220031,4004.0859437722515,R01,pending_transcript
+T-021,at low lwvel,6740.314367220031,4065.8362109388936,R01,pending_transcript
+T-022,readablestream as request body,7953.192891444785,1051.121200273581,R01,pending_transcript
+T-023,so it seems that 2 streams produced by tee() kind of read network data,5372.298143202319,2088.9402244393323,R01,pending_transcript
+T-024,at the same time (the fastest stream read data and the amount of,5372.298143202319,2113.9402244393323,R01,pending_transcript
+T-025,data that fastest have read and slowest havent is being buffered ) so,5372.298143202319,2138.9402244393323,R01,pending_transcript
+T-026,"the fastest stream kindo of drives the reading of the request, because we",5372.298143202319,2163.9402244393323,R01,pending_transcript
+T-027,cant reread the request stream 0 we buffer data for the slowest,5372.298143202319,2188.9402244393323,R01,pending_transcript
+T-028,readablestream benefits without awaiting part,9205.588413309728,974.2096218995579,R02,pending_transcript
+T-029,same allocations eventually but incrementally,9205.588413309728,1142.1725735597142,R02,pending_transcript
+T-030,!!!,9160.683609522483,3347.615830911771,R02,pending_transcript
+T-031,benefits (even without awaiting),9540.086147519287,1953.5280767263268,R02,pending_transcript
+T-032,ndjson,12726.207834898683,1077.4032058069306,R02,pending_transcript
+T-033,async awaiting inside readable stream,12726.207834898683,1316.4032464970337,R02,pending_transcript
+T-034,+,9178.262413589408,2906.0109286340407,R02,pending_transcript
+T-035,cancel,17262.71870456219,4797.513323019361,R06,pending_transcript
+T-036,pull,17343.39516580163,2739.5884311798036,R03,pending_transcript
+T-037,generatorfunc.return,18998.569748631184,5598.4344415703135,R06,pending_transcript
+T-038,finally runs always,18998.569748631184,5675.878899578126,R06,pending_transcript
+T-039,readablestream with pull,20203.013915473726,1396.4754014745477,R03,pending_transcript
+T-040,as request body,20203.013915473726,1551.2397132939136,R03,pending_transcript
+T-041,possible less buffering benefits,22006.96329874562,1394.583678742116,R03,pending_transcript
+T-042,start vs pull,16724.91495869708,1378.8666428582872,R03,pending_transcript
+T-043,when using stream as body,16724.91495869708,1580.2302930935498,R03,pending_transcript
