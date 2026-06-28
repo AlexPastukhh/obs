@@ -1,39 +1,45 @@
 # MANIFEST — sheet hashset
 
-Generated: 2026-06-28 01:00:00 UTC
+Generated: 2026-06-28 02:00:00 UTC
 
-## Complete source
+## Preserved source
 
 - `source/sheet hashset.svg`
 - 47 extracted screenshots under `source/images/`
+- Stage0 ledgers, preview and contact sheets
 
-## Stage0 documents
+## Regional transcripts
 
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
+- `01-transcript-R01-hashset-construction-methods-and-capacity.md`
+- `02-transcript-R02-mutating-and-relational-set-operations.md`
+- `03-transcript-R03-linq-set-operations.md`
+- `04-transcript-R04-linq-versus-hashset.md`
+
+## Closed ledgers
+
+- `data/image-uses-v002-closed.json`
+- `data/image-uses-v002-closed.csv`
+- `data/text-elements-v002-closed.json`
+- `data/text-elements-v002-closed.csv`
+- `data/region-plan-v002-closed.json`
+- `data/region-plan-v002-closed.csv`
+
+## Authoritative result
+
+- `05-full-combined-final-transcript.md`
+- `06-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.json`
+- `data/full-conspect-final-coverage-audit-v001.csv`
+- `MARKDOWN_LAYOUT_AUDIT.md`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `APPLY_STAGE0_ARCHIVE.md`
 
-## Ledgers
-
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-
-## Audit assets
-
-- complete canvas preview
-- 4 regional contact sheets
-
-## Current coverage
+## Final coverage
 
 ```text
-text elements inventoried: 21
-image uses inventoried: 47
-logical regions: 4
-remaining text elements: 21
-remaining image uses: 47
+text elements: 21 / 21
+image uses: 47 / 47
+visual-semantic regions: 4 / 4
+remaining text elements: 0
+remaining image uses: 0
 ```
