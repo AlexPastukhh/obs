@@ -1,0 +1,71 @@
+﻿text_id,text,x,y,region_id,status
+T-001,recursion smell,4811.236311038421,75.69773689859471,R01,pending_transcript
+T-002,need : give true if there is all combinations,4789.339022007031,128.9896454811182,R01,pending_transcript
+T-003,of 1 and 0 of the length k as substring,4789.339022007031,153.9896454811182,R01,pending_transcript
+T-004,of the inputted string,4789.339022007031,178.9896454811182,R01,pending_transcript
+T-005,bf,4830.797884666741,366.3639191122129,R01,pending_transcript
+T-006,ok if k > string length = false,4830.797884666741,416.3639191122129,R01,pending_transcript
+T-007,problem : get all comb,4795.4285443855415,479.09340176176084,R01,pending_transcript
+T-008,we build string,4795.4285443855415,504.09340176176084,R01,pending_transcript
+T-009,"func(built,nextadd)",4795.4285443855415,554.0934017617608,R01,pending_transcript
+T-010,if(built.length == k){,4795.4285443855415,579.0934017617608,R01,pending_transcript
+T-011,combs.add(built),4795.4285443855415,604.0934017617608,R01,pending_transcript
+T-012,},4795.4285443855415,629.0934017617608,R01,pending_transcript
+T-013,funcadd 0,4795.4285443855415,654.0934017617608,R01,pending_transcript
+T-014,bt,4795.4285443855415,679.0934017617608,R01,pending_transcript
+T-015,funcadd 1,4795.4285443855415,704.0934017617608,R01,pending_transcript
+T-016,how to check?,4830.307821401504,866.27265078059,R01,pending_transcript
+T-017,get all combs,5625.121509155525,493.760418255486,R01,pending_transcript
+T-018,11 10 01 00,5807.895366617178,495.2784641306332,R01,pending_transcript
+T-019,sliding window?,5388.9885427860945,693.7091030793232,R01,pending_transcript
+T-020,1 check all windows for presence of not finded combs?,5388.9885427860945,718.7091030793232,R01,pending_transcript
+T-021,"w: iterate whole input with sw, check each window for",5388.9885427860945,743.7091030793232,R01,pending_transcript
+T-022,"each comb in not founded combs, discard founded combs",5388.9885427860945,768.7091030793232,R01,pending_transcript
+T-023,2 process the input and put it,5388.9885427860945,818.7091030793232,R01,pending_transcript
+T-024,into hashtable with el length of k and check for all,5388.9885427860945,843.7091030793232,R01,pending_transcript
+T-025,not founded combs?,5388.9885427860945,868.7091030793232,R01,pending_transcript
+T-026,"work: iterate whole input with s w, iterate combs and check for each",5388.9885427860945,893.7091030793232,R01,pending_transcript
+T-027,need to find sit when we dont need to check,5348.799135110791,1019.722116897297,R01,pending_transcript
+T-028,1,5337.702397163657,1092.6759862022502,R01,pending_transcript
+T-029,01002,5694.59610377216,255.7788971864935,R01,pending_transcript
+T-030,010 100 002,5689.517388304773,297.49412246091964,R01,pending_transcript
+T-031,hs400  10 400 no discard if not found ->false,6191.485853536962,299.48265290476724,R01,pending_transcript
+T-032,hs1000 400 max1000 no discard -> if not found false,6191.485853536962,324.48265290476724,R01,pending_transcript
+T-033,hs400 10 maxx5 with discard -> if found hs5remove,6191.485853536962,349.48265290476724,R01,pending_transcript
+T-034,hs1000 400 maxx1000 with discard v-> if found hs1000remove,6191.485853536962,374.48265290476724,R01,pending_transcript
+T-035,00 01 11 10,5633.653860786735,602.5518072627082,R01,pending_transcript
+T-036,need to downgrade implementation to fucking ground suka,4094.1441344851005,4533.5281258446,R02,pending_transcript
+T-037,Ask: what can cause any issue/resources being wasted?,4094.1441344851005,4558.5281258446,R02,pending_transcript
+T-038,Can you get rid of it completely and leave just a number or count or anything?,4094.1441344851005,4583.5281258446,R02,pending_transcript
+T-039,so here we can avoid,4870.71723439322,5039.416002603571,R02,pending_transcript
+T-040,further processing,4870.71723439322,5064.416002603571,R02,pending_transcript
+T-041,pattern : if there is a situation when we can have all needed combinations,4182.136980011712,4707.728003055232,R02,pending_transcript
+T-042,or their count and can collect distinct combinations in hashtable - we can just compare,4182.136980011712,4732.728003055232,R02,pending_transcript
+T-043,numbers,4182.136980011712,4757.728003055232,R02,pending_transcript
+T-044,could have come to this solution here,5139.802874390953,4716.633878606147,R02,pending_transcript
+T-045,what is inside of hashset,5797.841396963812,5076.535814237151,R02,pending_transcript
+T-046,WITH BITS,4225.708845996992,5467.314791713745,R04,pending_transcript
+T-047,SHIFT BY ONE TO <<,3460.673292782493,6225.796069309486,R04,pending_transcript
+T-048,001 << 1,3439.813701981792,6312.5280521124005,R04,pending_transcript
+T-049,010,3439.813701981792,6337.5280521124005,R04,pending_transcript
+T-050,ADD BIT,3474.945644382972,6406.945147315574,R04,pending_transcript
+T-051,010 | S[I] WHERE S[I]==1,3474.945644382972,6431.945147315574,R04,pending_transcript
+T-052,011,3474.945644382972,6456.945147315574,R04,pending_transcript
+T-053,1101 & 0111 (111),3528.0182458120485,7172.780568670655,R04,pending_transcript
+T-054,101,3528.0182458120485,7197.780568670655,R04,pending_transcript
+T-055,SO WE HAVE SLIDING WINDOW,3474.2148632384465,7373.36075087319,R04,pending_transcript
+T-056,WE DO THIS BECAUSE WE HAVE ARRAY OF CHARS HERE (STRING),4890.124019198083,5542.219946187963,R04,pending_transcript
+T-057,array of bools vs hashset,387.8633932567436,5067.952148912831,R03,pending_transcript
+T-058,to check occurencies,387.8633932567436,5186.2855076774795,R03,pending_transcript
+T-059,mask explaination,3920.5909669729044,8009.783087878905,R05,pending_transcript
+T-060,how we can limit window,3920.5909669729044,8143.11640849658,R05,pending_transcript
+T-061,need mask need -1 so we can add,4979.771349523198,8621.464809402862,R05,pending_transcript
+T-062,new bit and get needed length,4979.771349523198,8646.562020547073,R05,pending_transcript
+T-063,classic convertion to int from char,5085.95219823689,8962.529875494165,R05,pending_transcript
+T-064,so when we need to keep 3 bits window,3585.8560349886075,8463.453905312137,R05,pending_transcript
+T-065,we put 1 3 times and then we do -1,3585.8560349886075,8513.64832760056,R05,pending_transcript
+T-066,so 111 will be 011,3585.8560349886075,8538.745538744772,R05,pending_transcript
+T-067,and its true for every count of pushes,3585.8560349886075,8588.939961033193,R05,pending_transcript
+T-068,with 4 1111 -1 = 0111,3585.8560349886075,8664.231594465828,R05,pending_transcript
+T-069,with 5 11111 -1 = 01111,3585.8560349886075,8689.32880561004,R05,pending_transcript
+T-070,1 << 0 by the way is 01,4974.3446445460095,8369.62949750719,R05,pending_transcript
