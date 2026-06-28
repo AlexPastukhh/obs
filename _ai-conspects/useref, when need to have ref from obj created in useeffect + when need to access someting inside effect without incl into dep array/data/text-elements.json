@@ -1,0 +1,42 @@
+[
+  {
+    "label_id": "T-001",
+    "x": 122.77903247420818,
+    "y": 10.0,
+    "text": "!!! you can use useref to have some state that wont cause rerenders",
+    "region": "R01",
+    "semantic_review_status": "processed"
+  },
+  {
+    "label_id": "T-002",
+    "x": 122.77903247420818,
+    "y": 10.0,
+    "text": "so here we have such state",
+    "region": "R01",
+    "semantic_review_status": "processed"
+  },
+  {
+    "label_id": "T-003",
+    "x": 122.77903247420818,
+    "y": 10.0,
+    "text": "when we create something in useeffect and we need it outside of it and we dont",
+    "region": "R01",
+    "semantic_review_status": "processed"
+  },
+  {
+    "label_id": "T-004",
+    "x": 122.77903247420818,
+    "y": 10.0,
+    "text": "want to cause rerender - we use useref",
+    "region": "R01",
+    "semantic_review_status": "processed"
+  },
+  {
+    "label_id": "T-005",
+    "x": 122.77903247420818,
+    "y": 10.0,
+    "text": "(we use ref here in sendjson outside of useeffect where the ws is being created)",
+    "region": "R01",
+    "semantic_review_status": "processed"
+  }
+]

@@ -1,0 +1,6 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,122.77903247420818,10.0,!!! you can use useref to have some state that wont cause rerenders
+T-002,R01,processed,122.77903247420818,10.0,so here we have such state
+T-003,R01,processed,122.77903247420818,10.0,when we create something in useeffect and we need it outside of it and we dont
+T-004,R01,processed,122.77903247420818,10.0,want to cause rerender - we use useref
+T-005,R01,processed,122.77903247420818,10.0,(we use ref here in sendjson outside of useeffect where the ws is being created)
