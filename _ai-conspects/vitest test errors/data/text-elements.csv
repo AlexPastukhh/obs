@@ -1,0 +1,21 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,864.744708291768,781.2856886121881,"/// <reference types=""vitest"" />"
+T-002,R01,processed,864.744708291768,781.2856886121881,"import { describe, it, expect, beforeEach, vi } from ""vitest"";"
+T-003,R01,processed,864.744708291768,781.2856886121881,// Tell Vitest to use jsdom for this file
+T-004,R01,processed,864.744708291768,781.2856886121881,"import { config } from ""vitest/config"";"
+T-005,R01,processed,864.744708291768,781.2856886121881,declare global {
+T-006,R01,processed,864.744708291768,781.2856886121881,var testEnvironment: string;
+T-007,R01,processed,864.744708291768,781.2856886121881,}
+T-008,R01,processed,864.744708291768,781.2856886121881,// Or add this comment directive:
+T-009,R01,processed,864.744708291768,781.2856886121881,/**
+T-010,R01,processed,864.744708291768,781.2856886121881,* @vitest environment jsdom
+T-011,R01,processed,864.744708291768,781.2856886121881,*/
+T-012,R01,processed,864.744708291768,781.2856886121881,"import { render, screen } from ""@testing-library/react"";"
+T-013,R01,processed,864.744708291768,781.2856886121881,// ...rest of imports...
+T-014,R01,processed,681.5688457065507,1309.411267559859,I ACTUALLY DIDNT HAVE VITEST CONFIG AT ROOT WHRE PACKAEGS WHERE SO DKNOW
+T-015,R01,processed,681.5688457065507,1309.411267559859,IF I NEED TO ADD COMMENTS
+T-016,R02,processed,761.5688457065507,1667.7446008931875,ALWAYS
+T-017,R02,processed,134.10250150240404,1785.759656954353,!!!!
+T-018,R02,processed,587.1243950969388,2256.229449378021,some svg errors while testing
+T-019,R02,processed,10.0,2929.349416194138,!!!!
+T-020,R03,processed,548.5519862639089,3415.198069557213,to see router errors (by default it creates errorboundary)

@@ -1,0 +1,23 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,353.29768694575773,901.6488816686785,or better
+T-002,R04,processed,30.74089898003467,3535.298033782705,"vi.mock(""react-router-dom"", () => {"
+T-003,R04,processed,30.74089898003467,3535.298033782705,const navigateMock = vi.fn();
+T-004,R04,processed,30.74089898003467,3535.298033782705,return {
+T-005,R04,processed,30.74089898003467,3535.298033782705,"useNavigate: () => navigateMock,"
+T-006,R04,processed,30.74089898003467,3535.298033782705,"__esModule: true,"
+T-007,R04,processed,30.74089898003467,3535.298033782705,"__mockedNavigate: navigateMock,"
+T-008,R04,processed,30.74089898003467,3535.298033782705,};
+T-009,R04,processed,30.74089898003467,3535.298033782705,});
+T-010,R04,processed,29.25944010416663,3888.26101935128,const getMocks = async () => {
+T-011,R04,processed,29.25944010416663,3888.26101935128,"const reg = await import(""../MutationFns/registerIndClient"");"
+T-012,R04,processed,29.25944010416663,3888.26101935128,"const rr = await import(""react-router-dom"");"
+T-013,R04,processed,29.25944010416663,3888.26101935128,return {
+T-014,R04,processed,29.25944010416663,3888.26101935128,"mockedRegisterInd: reg.__mockedRegisterInd as ReturnType<typeof vi.fn>,"
+T-015,R04,processed,29.25944010416663,3888.26101935128,"mockedNavigate: rr.__mockedNavigate as ReturnType<typeof vi.fn>,"
+T-016,R04,processed,29.25944010416663,3888.26101935128,};
+T-017,R04,processed,29.25944010416663,3888.26101935128,};
+T-018,R04,processed,10.0,4109.001647063955,beforeEach(async () => {
+T-019,R04,processed,10.0,4109.001647063955,"const { mockedRegisterInd, mockedNavigate } = await getMocks();"
+T-020,R04,processed,10.0,4109.001647063955,mockedRegisterInd.mockReset();
+T-021,R04,processed,10.0,4109.001647063955,mockedNavigate.mockReset();
+T-022,R04,processed,10.0,4109.001647063955,});

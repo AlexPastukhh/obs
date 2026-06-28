@@ -1,0 +1,29 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,287.7222362572684,10.0,js custom set types
+T-002,R01,processed,1386.7381243024554,573.4619434624772,"function union<T>(a: Set<T>, b: Set<T>): Set<T> {"
+T-003,R01,processed,1386.7381243024554,573.4619434624772,"return new Set([...a, ...b]);"
+T-004,R01,processed,1386.7381243024554,573.4619434624772,}
+T-005,R01,processed,1386.7381243024554,573.4619434624772,"function intersection<T>(a: Set<T>, b: Set<T>): Set<T> {"
+T-006,R01,processed,1386.7381243024554,573.4619434624772,return new Set([...a].filter(x => b.has(x)));
+T-007,R01,processed,1386.7381243024554,573.4619434624772,}
+T-008,R01,processed,1386.7381243024554,573.4619434624772,"function difference<T>(a: Set<T>, b: Set<T>): Set<T> {"
+T-009,R01,processed,1386.7381243024554,573.4619434624772,return new Set([...a].filter(x => !b.has(x)));
+T-010,R01,processed,1386.7381243024554,573.4619434624772,}
+T-011,R01,processed,1386.7381243024554,573.4619434624772,"function symmetricDifference<T>(a: Set<T>, b: Set<T>): Set<T> {"
+T-012,R01,processed,1386.7381243024554,573.4619434624772,return new Set([
+T-013,R01,processed,1386.7381243024554,573.4619434624772,"...[...a].filter(x => !b.has(x)),"
+T-014,R01,processed,1386.7381243024554,573.4619434624772,"...[...b].filter(x => !a.has(x)),"
+T-015,R01,processed,1386.7381243024554,573.4619434624772,]);
+T-016,R01,processed,1386.7381243024554,573.4619434624772,}
+T-017,R01,processed,1386.7381243024554,573.4619434624772,"function isSubsetOf<T>(a: Set<T>, b: Set<T>): boolean {"
+T-018,R01,processed,1386.7381243024554,573.4619434624772,return [...a].every(x => b.has(x));
+T-019,R01,processed,1386.7381243024554,573.4619434624772,}
+T-020,R01,processed,1386.7381243024554,573.4619434624772,"function isProperSubsetOf<T>(a: Set<T>, b: Set<T>): boolean {"
+T-021,R01,processed,1386.7381243024554,573.4619434624772,"return a.size < b.size && isSubsetOf(a, b);"
+T-022,R01,processed,1386.7381243024554,573.4619434624772,}
+T-023,R01,processed,1386.7381243024554,573.4619434624772,"function setEquals<T>(a: Set<T>, b: Set<T>): boolean {"
+T-024,R01,processed,1386.7381243024554,573.4619434624772,"return a.size === b.size && isSubsetOf(a, b);"
+T-025,R01,processed,1386.7381243024554,573.4619434624772,}
+T-026,R01,processed,1386.7381243024554,573.4619434624772,"function overlaps<T>(a: Set<T>, b: Set<T>): boolean {"
+T-027,R01,processed,1386.7381243024554,573.4619434624772,return [...a].some(x => b.has(x));
+T-028,R01,processed,1386.7381243024554,573.4619434624772,}

@@ -1,0 +1,178 @@
+[
+  {
+    "x": 353.29768694575773,
+    "y": 901.6488816686785,
+    "text": "or better",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "vi.mock(\"react-router-dom\", () => {",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "const navigateMock = vi.fn();",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "return {",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "useNavigate: () => navigateMock,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "__esModule: true,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "__mockedNavigate: navigateMock,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "};",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 30.74089898003467,
+    "y": 3535.298033782705,
+    "text": "});",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "const getMocks = async () => {",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "const reg = await import(\"../MutationFns/registerIndClient\");",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "const rr = await import(\"react-router-dom\");",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "return {",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "mockedRegisterInd: reg.__mockedRegisterInd as ReturnType<typeof vi.fn>,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "mockedNavigate: rr.__mockedNavigate as ReturnType<typeof vi.fn>,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "};",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 29.25944010416663,
+    "y": 3888.26101935128,
+    "text": "};",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 10.0,
+    "y": 4109.001647063955,
+    "text": "beforeEach(async () => {",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 10.0,
+    "y": 4109.001647063955,
+    "text": "const { mockedRegisterInd, mockedNavigate } = await getMocks();",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 10.0,
+    "y": 4109.001647063955,
+    "text": "mockedRegisterInd.mockReset();",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 10.0,
+    "y": 4109.001647063955,
+    "text": "mockedNavigate.mockReset();",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 10.0,
+    "y": 4109.001647063955,
+    "text": "});",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  }
+]
