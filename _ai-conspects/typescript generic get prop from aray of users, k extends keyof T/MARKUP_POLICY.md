@@ -1,0 +1,9 @@
+# Markup policy — typescript generic get prop from aray of users, k extends keyof T
+
+Generated: 2026-06-28 06:00:00 UTC
+
+```text
+policy: manual visible canvas blocks
+raw source-label Markdown blocks: disabled
+source coverage modified: no
+```
