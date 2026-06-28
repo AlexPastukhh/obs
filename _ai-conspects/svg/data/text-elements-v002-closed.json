@@ -1,0 +1,41 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "const s = document.querySelector('.inner-search-container .link-primary svg');",
+    "x": 10.0,
+    "y": 27.619999999999997,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(10 10) rotate(0 368.59967041015625 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-svg-element-geometry-with-getbbox.md",
+    "authoritative_transcript": "02-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-002",
+    "text": "const b = s.getBBox(); // { x, y, width, height }",
+    "x": 10.0,
+    "y": 52.62,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(10 10) rotate(0 368.59967041015625 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-svg-element-geometry-with-getbbox.md",
+    "authoritative_transcript": "02-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-003",
+    "text": "console.log(b.x, b.y, b.width, b.height);",
+    "x": 10.0,
+    "y": 77.62,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(10 10) rotate(0 368.59967041015625 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-svg-element-geometry-with-getbbox.md",
+    "authoritative_transcript": "02-full-combined-final-transcript.md"
+  }
+]

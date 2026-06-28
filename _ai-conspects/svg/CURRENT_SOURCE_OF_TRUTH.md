@@ -1,6 +1,6 @@
 # Current Source of Truth — svg
 
-Generated: 2026-06-28 08:00:00 UTC
+Generated: 2026-06-28 09:00:00 UTC
 
 ## Status
 
@@ -10,23 +10,32 @@ Complete SVG preservation: done
 Embedded screenshot extraction: done
 Text-element inventory: done
 Visible canvas region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Regional transcripts: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
 ## Coverage
 
 ```text
-meaningful text elements: 3
-embedded image definitions: 0
-unique image-content hashes: 0
-image uses on canvas: 0
-logical regions: 1
-remaining unprocessed text elements: 3
+meaningful text elements: 3 / 3
+embedded image definitions: 0 / 0
+unique image-content hashes: 0 / 0
+image uses on canvas: 0 / 0
+repeated image placements retained: 0
+regions: 1 / 1
+remaining unprocessed text elements: 0
 remaining unprocessed image uses: 0
 ```
 
+## Authoritative transcript
+
+`02-full-combined-final-transcript.md`
+
+## Authoritative audit
+
+`03-full-conspect-final-coverage-audit.md`
+
 ## Next
 
-Process every planned region and close all source coverage.
+No normal transcript work remains. Only correction or polish if a newer source reveals additional material.
