@@ -1,6 +1,6 @@
 # Current Source of Truth — Rhf react hook form
 
-Generated: 2026-06-27 15:30:00 UTC
+Generated: 2026-06-28 00:30:00 UTC
 
 ## Status
 
@@ -10,24 +10,32 @@ Complete SVG preservation: done
 Embedded screenshot extraction: done
 Text-element inventory: done
 One-region v001 plan: superseded
-Corrected visual-semantic region plan R01–R09: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Corrected visual-semantic plan R01–R09: done
+Regional transcripts: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
 ## Coverage
 
 ```text
-meaningful text elements: 26
-unique embedded images: 144
-image uses on canvas: 145
-repeated image placements: 1
-logical regions: 9
-remaining unprocessed text elements: 26
-remaining unprocessed image uses: 145
+meaningful text elements: 26 / 26
+unique embedded images: 144 / 144
+image uses on canvas: 145 / 145
+repeated image placements retained: 1
+visual-semantic regions: 9 / 9
+remaining unprocessed text elements: 0
+remaining unprocessed image uses: 0
 ```
+
+## Authoritative transcript
+
+`10-full-combined-final-transcript.md`
+
+## Authoritative audit
+
+`11-full-conspect-final-coverage-audit.md`
 
 ## Next
 
-Process `R01`–`R09` and close all source coverage.
+No normal transcript work remains. Only correction or polish if a newer source reveals additional material.
