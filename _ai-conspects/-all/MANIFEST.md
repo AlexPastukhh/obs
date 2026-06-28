@@ -1,39 +1,27 @@
 # MANIFEST — -all
 
-Generated: 2026-06-28 00:37:28 UTC
+Generated: 2026-06-28 03:00:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/-all.svg`
-- 12 extracted screenshots under `source/images/`
+- `01-transcript-R01-linq-flattening-and-ordering.md`
+- `02-transcript-R02-linq-grouping-and-joining.md`
+- `03-transcript-R03-linq-aggregation-and-quantifiers.md`
+- `04-transcript-R04-linq-element-selection-and-set-operations.md`
+- `05-transcript-R05-linq-partitioning-and-sequence-construction.md`
+- `06-transcript-R06-linq-materialization-casting-and-typing.md`
 
-## Stage0 documents
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
+- `data/image-uses-v002-closed.*`
+- `data/text-elements-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `07-full-combined-final-transcript.md`
+- `08-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
+- `MARKDOWN_LAYOUT_AUDIT.md`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-
-## Ledgers
-
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-
-## Audit assets
-
-- complete canvas preview
-- 6 regional contact sheets
-
-## Current coverage
-
-```text
-text elements inventoried: 0
-image uses inventoried: 12
-logical regions: 6
-remaining text elements: 0
-remaining image uses: 12
-```

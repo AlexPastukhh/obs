@@ -1,39 +1,25 @@
 # MANIFEST — splice
 
-Generated: 2026-06-28 00:37:28 UTC
+Generated: 2026-06-28 03:00:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/splice.svg`
-- 19 extracted screenshots under `source/images/`
+- `01-transcript-R01-splice-removal-insertion-replacement.md`
+- `02-transcript-R02-inserting-array-contents.md`
+- `03-transcript-R03-mutation-return-value-and-slice.md`
+- `04-transcript-R04-iteration-index-shifts-and-performance.md`
 
-## Stage0 documents
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
+- `data/image-uses-v002-closed.*`
+- `data/text-elements-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `05-full-combined-final-transcript.md`
+- `06-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
+- `MARKDOWN_LAYOUT_AUDIT.md`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-
-## Ledgers
-
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-
-## Audit assets
-
-- complete canvas preview
-- 4 regional contact sheets
-
-## Current coverage
-
-```text
-text elements inventoried: 12
-image uses inventoried: 19
-logical regions: 4
-remaining text elements: 12
-remaining image uses: 19
-```

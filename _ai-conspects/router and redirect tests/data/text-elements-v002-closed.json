@@ -1,0 +1,470 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "import { RouterProvider, createMemoryRouter } from \"react-router-dom\";",
+    "x": 158.60785210883068,
+    "y": 451.78656494140625,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-002",
+    "text": "import { render, screen } from \"@testing-library/react\";",
+    "x": 158.60785210883068,
+    "y": 476.78656494140625,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-003",
+    "text": "import { expect } from \"vitest\";",
+    "x": 158.60785210883068,
+    "y": 501.78656494140625,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-004",
+    "text": "import { Register } from \"../../views/RegisterView/Register\";",
+    "x": 158.60785210883068,
+    "y": 526.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-005",
+    "text": "it(\"redirects to /login after successful register\", async () => {",
+    "x": 158.60785210883068,
+    "y": 576.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-006",
+    "text": "const routes = [",
+    "x": 158.60785210883068,
+    "y": 601.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-007",
+    "text": "{ path: \"/register\", element: <Register setRootError={() => {}} /> },",
+    "x": 158.60785210883068,
+    "y": 626.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-008",
+    "text": "{ path: \"/login\", element: <div>Login page</div> },",
+    "x": 158.60785210883068,
+    "y": 651.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-009",
+    "text": "];",
+    "x": 158.60785210883068,
+    "y": 676.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-010",
+    "text": "const router = createMemoryRouter(routes, {",
+    "x": 158.60785210883068,
+    "y": 726.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-011",
+    "text": "initialEntries: [\"/register\"],",
+    "x": 158.60785210883068,
+    "y": 751.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-012",
+    "text": "});",
+    "x": 158.60785210883068,
+    "y": 776.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-013",
+    "text": "render(<RouterProvider router={router} />);",
+    "x": 158.60785210883068,
+    "y": 826.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-014",
+    "text": "// ...fill form + submit...",
+    "x": 158.60785210883068,
+    "y": 876.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-015",
+    "text": "// Assert navigation happened (URL)",
+    "x": 158.60785210883068,
+    "y": 926.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-016",
+    "text": "expect(router.state.location.pathname).toBe(\"/login\");",
+    "x": 158.60785210883068,
+    "y": 951.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-017",
+    "text": "// Or assert the new page rendered",
+    "x": 158.60785210883068,
+    "y": 1001.7865649414063,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-018",
+    "text": "expect(await screen.findByText(\"Login page\")).toBeInTheDocument();",
+    "x": 158.60785210883068,
+    "y": 1026.7865649414061,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-019",
+    "text": "});",
+    "x": 158.60785210883068,
+    "y": 1051.7865649414061,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(158.60785210883068 434.16656494140625) rotate(0 356.21978759765625 312.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-creatememoryrouter-routerprovider-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-020",
+    "text": "import { MemoryRouter, Routes, Route, useLocation } from \"react-router-dom\";",
+    "x": 10.0,
+    "y": 2954.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-021",
+    "text": "function LocationDisplay() {",
+    "x": 10.0,
+    "y": 3004.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-022",
+    "text": "const loc = useLocation();",
+    "x": 10.0,
+    "y": 3029.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-023",
+    "text": "return <div data-testid=\"location\">{loc.pathname}</div>;",
+    "x": 10.0,
+    "y": 3054.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-024",
+    "text": "}",
+    "x": 10.0,
+    "y": 3079.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-025",
+    "text": "render(",
+    "x": 10.0,
+    "y": 3129.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-026",
+    "text": "<MemoryRouter initialEntries={[\"/register\"]}>",
+    "x": 10.0,
+    "y": 3154.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-027",
+    "text": "<LocationDisplay />",
+    "x": 10.0,
+    "y": 3179.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-028",
+    "text": "<Routes>",
+    "x": 10.0,
+    "y": 3204.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-029",
+    "text": "<Route path=\"/register\" element={<Register setRootError={() => {}} />} />",
+    "x": 10.0,
+    "y": 3229.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-030",
+    "text": "<Route path=\"/login\" element={<div>Login page</div>} />",
+    "x": 10.0,
+    "y": 3254.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-031",
+    "text": "</Routes>",
+    "x": 10.0,
+    "y": 3279.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-032",
+    "text": "</MemoryRouter>",
+    "x": 10.0,
+    "y": 3304.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-033",
+    "text": ");",
+    "x": 10.0,
+    "y": 3329.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-034",
+    "text": "// ...submit...",
+    "x": 10.0,
+    "y": 3379.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-035",
+    "text": "expect(screen.getByTestId(\"location\").textContent).toBe(\"/login\");",
+    "x": 10.0,
+    "y": 3404.371066502812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(10 2936.751066502812) rotate(0 399.019775390625 237.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-memoryrouter-locationdisplay-tests.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-036",
+    "text": "!!!",
+    "x": 393.03028453480147,
+    "y": 4661.684753109714,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(393.03028453480147 4541.426150439383) rotate(0 64.29148864746094 85.31399167872519)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-choosing-router-test-style.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  }
+]

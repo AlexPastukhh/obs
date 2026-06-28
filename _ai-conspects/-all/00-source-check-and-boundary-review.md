@@ -50,3 +50,17 @@ remaining screenshot uses: 12
 
 Create regional semantic transcripts, then build one combined final transcript
 and a full-conspect coverage audit.
+
+
+## Final closure — 2026-06-28 03:00:00 UTC
+
+```text
+processed text elements: 0 / 0
+processed screenshot uses: 12 / 12
+processed regions: 6 / 6
+remaining text elements: 0
+remaining screenshot uses: 0
+```
+
+Authoritative transcript: `07-full-combined-final-transcript.md`  
+Authoritative audit: `08-full-conspect-final-coverage-audit.md`

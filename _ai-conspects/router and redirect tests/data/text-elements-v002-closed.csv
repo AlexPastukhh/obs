@@ -1,0 +1,37 @@
+﻿text_id,text,x,y,region_id,status,transcript_file,authoritative_transcript
+T-001,"import { RouterProvider, createMemoryRouter } from ""react-router-dom"";",158.60785210883068,451.78656494140625,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-002,"import { render, screen } from ""@testing-library/react"";",158.60785210883068,476.78656494140625,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-003,"import { expect } from ""vitest"";",158.60785210883068,501.78656494140625,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-004,"import { Register } from ""../../views/RegisterView/Register"";",158.60785210883068,526.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-005,"it(""redirects to /login after successful register"", async () => {",158.60785210883068,576.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-006,const routes = [,158.60785210883068,601.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-007,"{ path: ""/register"", element: <Register setRootError={() => {}} /> },",158.60785210883068,626.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-008,"{ path: ""/login"", element: <div>Login page</div> },",158.60785210883068,651.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-009,];,158.60785210883068,676.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-010,"const router = createMemoryRouter(routes, {",158.60785210883068,726.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-011,"initialEntries: [""/register""],",158.60785210883068,751.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-012,});,158.60785210883068,776.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-013,render(<RouterProvider router={router} />);,158.60785210883068,826.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-014,// ...fill form + submit...,158.60785210883068,876.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-015,// Assert navigation happened (URL),158.60785210883068,926.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-016,"expect(router.state.location.pathname).toBe(""/login"");",158.60785210883068,951.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-017,// Or assert the new page rendered,158.60785210883068,1001.7865649414063,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-018,"expect(await screen.findByText(""Login page"")).toBeInTheDocument();",158.60785210883068,1026.7865649414061,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-019,});,158.60785210883068,1051.7865649414061,R01,closed,01-transcript-R01-creatememoryrouter-routerprovider-tests.md,04-full-combined-final-transcript.md
+T-020,"import { MemoryRouter, Routes, Route, useLocation } from ""react-router-dom"";",10.0,2954.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-021,function LocationDisplay() {,10.0,3004.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-022,const loc = useLocation();,10.0,3029.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-023,"return <div data-testid=""location"">{loc.pathname}</div>;",10.0,3054.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-024,},10.0,3079.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-025,render(,10.0,3129.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-026,"<MemoryRouter initialEntries={[""/register""]}>",10.0,3154.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-027,<LocationDisplay />,10.0,3179.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-028,<Routes>,10.0,3204.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-029,"<Route path=""/register"" element={<Register setRootError={() => {}} />} />",10.0,3229.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-030,"<Route path=""/login"" element={<div>Login page</div>} />",10.0,3254.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-031,</Routes>,10.0,3279.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-032,</MemoryRouter>,10.0,3304.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-033,);,10.0,3329.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-034,// ...submit...,10.0,3379.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-035,"expect(screen.getByTestId(""location"").textContent).toBe(""/login"");",10.0,3404.371066502812,R02,closed,02-transcript-R02-memoryrouter-locationdisplay-tests.md,04-full-combined-final-transcript.md
+T-036,!!!,393.03028453480147,4661.684753109714,R03,closed,03-transcript-R03-choosing-router-test-style.md,04-full-combined-final-transcript.md

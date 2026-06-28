@@ -1,6 +1,6 @@
 # Current Source of Truth — xor operator
 
-Generated: 2026-06-28 00:37:28 UTC
+Generated: 2026-06-28 03:00:00 UTC
 
 ## Status
 
@@ -10,23 +10,31 @@ Complete SVG preservation: done
 Embedded screenshot extraction: done
 Text-element inventory: done
 Visible canvas region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Regional transcripts: done
+Full combined transcript: done
+Full-conspect coverage audit: done
 ```
 
 ## Coverage
 
 ```text
-meaningful text elements: 2
-unique embedded images: 17
-image uses on canvas: 17
-repeated image placements: 0
-logical regions: 3
-remaining unprocessed text elements: 2
-remaining unprocessed image uses: 17
+meaningful text elements: 2 / 2
+unique embedded images: 17 / 17
+image uses on canvas: 17 / 17
+repeated image placements retained: 0
+regions: 3 / 3
+remaining unprocessed text elements: 0
+remaining unprocessed image uses: 0
 ```
+
+## Authoritative transcript
+
+`04-full-combined-final-transcript.md`
+
+## Authoritative audit
+
+`05-full-conspect-final-coverage-audit.md`
 
 ## Next
 
-Process every planned region and close all source coverage.
+No normal transcript work remains. Only correction or polish if a newer source reveals additional material.

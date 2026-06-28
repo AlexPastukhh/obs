@@ -1,13 +1,11 @@
 # Transcript status — -all
 
-Generated: 2026-06-28 00:37:28 UTC
+Generated: 2026-06-28 03:00:00 UTC
 
 ```text
-source inventory: done
-visible canvas region plan: done
-regional transcripts: not started
-full combined transcript: not started
-full-conspect coverage audit: not started
+regional transcripts: done
+full combined transcript: done
+full-conspect coverage audit: done
 remaining text elements: 0
-remaining screenshot uses: 12
+remaining screenshot uses: 0
 ```
