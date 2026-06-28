@@ -1,0 +1,76 @@
+﻿label_id,region,semantic_topic,semantic_review_status,x,y,text
+T-001,R01,"React Query persistence, dehydration, hydration and filtering",processed,4212.53735557427,10.0,rquery
+T-002,R02,"Zustand persist core, storage versioning and migration",processed,8412.705151391328,66.11120096842569,state in memory and persistance
+T-003,R02,"Zustand persist core, storage versioning and migration",processed,8412.705151391328,66.11120096842569,for
+T-004,R02,"Zustand persist core, storage versioning and migration",processed,9705.418628338712,218.40108575667182,explicit zustand store.persist methods
+T-005,R02,"Zustand persist core, storage versioning and migration",processed,9705.418628338712,218.40108575667182,clearstorage
+T-006,R02,"Zustand persist core, storage versioning and migration",processed,9705.418628338712,218.40108575667182,hashydrated
+T-007,R02,"Zustand persist core, storage versioning and migration",processed,9705.418628338712,218.40108575667182,onhydrate
+T-008,R02,"Zustand persist core, storage versioning and migration",processed,9705.418628338712,218.40108575667182,onfinishgydration
+T-009,R02,"Zustand persist core, storage versioning and migration",processed,9705.418628338712,218.40108575667182,setoptions
+T-010,R01,"React Query persistence, dehydration, hydration and filtering",processed,6342.475376698541,255.43710944665872,"the flow, when version get bumped?"
+T-011,R02,"Zustand persist core, storage versioning and migration",processed,7429.430932007492,264.2823674465835,version and migrate
+T-012,R01,"React Query persistence, dehydration, hydration and filtering",processed,10.0,281.6029355395476,meta for dehydraton
+T-013,R01,"React Query persistence, dehydration, hydration and filtering",processed,10.0,281.6029355395476,filtering to avoid overpopulaton
+T-014,R01,"React Query persistence, dehydration, hydration and filtering",processed,10.0,281.6029355395476,of the store + acessing metha in queryfn
+T-015,R01,"React Query persistence, dehydration, hydration and filtering",processed,2965.463294619605,306.8408589346145,hydrate/dehydrate options
+T-016,R01,"React Query persistence, dehydration, hydration and filtering",processed,2965.463294619605,306.8408589346145,buster
+T-017,R02,"Zustand persist core, storage versioning and migration",processed,8446.149619571666,318.6114756266288,zustand
+T-018,R03,"Redux Persist configuration, transforms and reconciliation",processed,12529.094199649791,345.88947041829306,redux
+T-019,R01,"React Query persistence, dehydration, hydration and filtering",processed,1976.717365611683,405.9909978336327,useIsRestoring
+T-020,R01,"React Query persistence, dehydration, hydration and filtering",processed,5783.0981073004605,580.9488560940445,cant convert from old version
+T-021,R01,"React Query persistence, dehydration, hydration and filtering",processed,5783.0981073004605,580.9488560940445,start clean
+T-022,R01,"React Query persistence, dehydration, hydration and filtering",processed,4379.5238327752995,1107.8211035257373,implement example
+T-023,R03,"Redux Persist configuration, transforms and reconciliation",processed,15688.238012576634,1766.720135717991,nested persist config
+T-024,R03,"Redux Persist configuration, transforms and reconciliation",processed,14482.61948375641,1800.8471658635444,how whitelist works
+T-025,R01,"React Query persistence, dehydration, hydration and filtering",processed,5681.25300527927,1820.2147532861745,what if have version but
+T-026,R01,"React Query persistence, dehydration, hydration and filtering",processed,5681.25300527927,1820.2147532861745,no migrate path for it
+T-027,R03,"Redux Persist configuration, transforms and reconciliation",processed,13583.113085150771,1847.8442529989443,"persistor,"
+T-028,R03,"Redux Persist configuration, transforms and reconciliation",processed,13583.113085150771,1847.8442529989443,persistgate
+T-029,R03,"Redux Persist configuration, transforms and reconciliation",processed,12410.047678626273,1924.1282454650227,core fields
+T-030,R03,"Redux Persist configuration, transforms and reconciliation",processed,11527.521537264225,2542.0877122264974,version and migrate works the same
+T-031,R02,"Zustand persist core, storage versioning and migration",processed,8129.994333837921,2595.7351415662715,uf change name of storage
+T-032,R02,"Zustand persist core, storage versioning and migration",processed,8129.994333837921,2595.7351415662715,you can loose all persisted
+T-033,R02,"Zustand persist core, storage versioning and migration",processed,8129.994333837921,2595.7351415662715,data and start clean
+T-034,R01,"React Query persistence, dehydration, hydration and filtering",processed,4484.188046664036,2778.7095883353377,with maxage and buster
+T-035,R02,"Zustand persist core, storage versioning and migration",processed,7516.097680054367,2782.2823674465835,may need to change part of the state
+T-036,R03,"Redux Persist configuration, transforms and reconciliation",processed,15860.613817867661,3341.6169662932703,when need to store some nested shit
+T-037,R03,"Redux Persist configuration, transforms and reconciliation",processed,15860.613817867661,3341.6169662932703,but dont want to do nested persistreducers
+T-038,R01,"React Query persistence, dehydration, hydration and filtering",processed,4216.896296317487,3511.4704346201743,why gctime >= maxage
+T-039,R01,"React Query persistence, dehydration, hydration and filtering",processed,2944.1796280743056,3583.1779276522193,react query persist throttling
+T-040,R02,"Zustand persist core, storage versioning and migration",processed,8448.596456224317,3726.5116933839563,Zustand throttling strategies
+T-041,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,6797.620971720438,4145.059919499847,rquery/zustaqnd/redux
+T-042,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,6797.620971720438,4145.059919499847,mappings
+T-043,R01,"React Query persistence, dehydration, hydration and filtering",processed,2927.2411669661833,4641.607362543024,force persist
+T-044,R03,"Redux Persist configuration, transforms and reconciliation",processed,13466.11734605838,4696.6129110856,transform
+T-045,R03,"Redux Persist configuration, transforms and reconciliation",processed,14539.879533965655,4718.650092426581,partialize analogue
+T-046,R03,"Redux Persist configuration, transforms and reconciliation",processed,11458.09976418855,4768.144076950704,statereconciler
+T-047,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8558.596456224317,4789.84512844255,to force writes like flush
+T-048,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8558.596456224317,4789.84512844255,may beed some nethod
+T-049,R03,"Redux Persist configuration, transforms and reconciliation",processed,12322.849780125605,4821.767547970581,less common but important
+T-050,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,7038.2813673147375,5156.406541399912,synchstoragepersister vs asyncstoragepersister
+T-051,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,7279.160243971935,5242.093394982123,!!!
+T-052,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,7192.493475580008,5732.6489674918885,maxage
+T-053,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,6863.8271547792265,6317.093293256859,partial dehydration/whether dehydrate or not
+T-054,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8426.420461879708,7014.010078407378,how maxage works in rquery
+T-055,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8426.420461879708,7014.010078407378,and how to implement ttl
+T-056,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8426.420461879708,7014.010078407378,with partialize and transform
+T-057,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8426.420461879708,7014.010078407378,providing new values to stored state
+T-058,R05,"Redux Persist TTL, throttling, flush and cleanup",processed,13600.667846747856,7231.039131174777,redux throttling
+T-059,R05,"Redux Persist TTL, throttling, flush and cleanup",processed,13600.667846747856,7231.039131174777,flush
+T-060,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,11462.8904419627,7572.149940500949,hydration
+T-061,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,11462.8904419627,7572.149940500949,dehydration
+T-062,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,11462.8904419627,7572.149940500949,for rquey zustand redux
+T-063,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,7143.784178204207,7595.862599146281,how buster works
+T-064,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8487.372784703368,7612.105258373895,ttl for zustand
+T-065,R05,"Redux Persist TTL, throttling, flush and cleanup",processed,13595.35531317953,8875.098885374733,avoid some pending throttled writes
+T-066,R05,"Redux Persist TTL, throttling, flush and cleanup",processed,13595.35531317953,8875.098885374733,when you clear the state
+T-067,R04,"Cross-library lifecycle mapping, maxAge, buster and TTL",processed,8486.42057813715,9911.470386179575,ttl for redux
+T-068,R06,Selective persistence and general throttling strategies,processed,8214.568635862843,10913.692676218638,!!!
+T-069,R06,Selective persistence and general throttling strategies,processed,8429.856130296585,11502.73403937191,general throttling
+T-070,R06,Selective persistence and general throttling strategies,processed,8429.856130296585,11502.73403937191,strategies
+T-071,R06,Selective persistence and general throttling strategies,processed,8497.523528493926,11781.127703964774,if dont need to throttle everything
+T-072,R06,Selective persistence and general throttling strategies,processed,8497.523528493926,11781.127703964774,with redux can have persist config for
+T-073,R06,Selective persistence and general throttling strategies,processed,8497.523528493926,11781.127703964774,specific state
+T-074,R06,Selective persistence and general throttling strategies,processed,8497.523528493926,11781.127703964774,with zustand may need to create separate store
+T-075,R06,Selective persistence and general throttling strategies,processed,8482.579824838369,12680.263804431484,can i have throttling only for some queries not for the whole persister
