@@ -1,0 +1,16 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,28.353819131579485,10.0,how usetransition work
+T-002,R01,processed,28.353819131579485,10.0,what state the remained page has
+T-003,R01,processed,28.353819131579485,10.0,multiiple cllicks case
+T-004,R03,processed,3006.0099121376606,242.78435301338686,cancelling queries
+T-005,R01,processed,88.53996904381336,285.05253299272135,with usetransition
+T-006,R01,processed,88.53996904381336,285.05253299272135,the rerender that is tied to that state change
+T-007,R01,processed,88.53996904381336,285.05253299272135,that is not urgent
+T-008,R01,processed,88.53996904381336,285.05253299272135,will be delayed
+T-009,R01,processed,88.53996904381336,285.05253299272135,in this time - other rerenders may happen
+T-010,R04,processed,5664.6936379756135,361.76892660121666,different transitions from different components
+T-011,R04,processed,5664.6936379756135,361.76892660121666,in one batch
+T-012,R04,processed,5664.6936379756135,361.76892660121666,with some failures
+T-013,R04,processed,5664.6936379756135,361.76892660121666,when one of them interrupts with another
+T-014,R03,processed,4281.50191314135,391.98516424811805,batching transitions
+T-015,R02,processed,1554.7055989513897,392.61452656636993,cant cancel suspensequeries
