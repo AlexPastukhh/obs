@@ -1,0 +1,322 @@
+[
+  {
+    "x": 10.0,
+    "y": 10.0,
+    "text": "content disposition in both cases",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 10.0,
+    "y": 10.0,
+    "text": "blob and window",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 3748.7699494793137,
+    "y": 12.268288535966349,
+    "text": "anchor element",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 3748.7699494793137,
+    "y": 12.268288535966349,
+    "text": "content disposition",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 3748.7699494793137,
+    "y": 12.268288535966349,
+    "text": "download",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 3748.7699494793137,
+    "y": 12.268288535966349,
+    "text": "when opening can choose target",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 10794.955209855489,
+    "y": 162.5169712969614,
+    "text": "showsavefilepicker createwritable pipeto",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 6465.517177321374,
+    "y": 162.79339817592245,
+    "text": "blob",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 5097.517177321374,
+    "y": 194.79339817592245,
+    "text": "window",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 7627.767196109821,
+    "y": 304.66143861044793,
+    "text": "choosing target for opening with blob link",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 6308.777389278237,
+    "y": 374.8211351722807,
+    "text": "with blob we are buffering in browser memory the whole content so mb better to",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 6308.777389278237,
+    "y": 374.8211351722807,
+    "text": "use link or window or savepicker",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 1659.2766164099694,
+    "y": 567.4431867138242,
+    "text": "how can i choose target for wondow?",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 1659.2766164099694,
+    "y": 567.4431867138242,
+    "text": "does content disp matter with window.oopen?",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 10249.800069255722,
+    "y": 1445.287780725232,
+    "text": "anchor with href is the same as",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 10249.800069255722,
+    "y": 1445.287780725232,
+    "text": "window.location and may",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 10249.800069255722,
+    "y": 1445.287780725232,
+    "text": "be better",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 3610.2577290997715,
+    "y": 1474.903136647907,
+    "text": "!!!",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "const res = await api.get(\"/report\", { responseType: \"blob\" });",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "const blob = res.data as Blob;",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "// Optional: get filename from Content-Disposition",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "const cd = res.headers[\"content-disposition\"] as string | undefined;",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "const fileName =",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "cd?.match(/filename\\*=UTF-8''([^;]+)|filename=\"?([^\"]+)\"?/i)?.slice(1).find(Boolean)",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "? decodeURIComponent(cd.match(/filename\\*=UTF-8''([^;]+)/i)?.[1] ?? cd.match(/filename=\"?([^\"]+)\"?/i)![1])",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": ": \"report.pdf\";",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "const url = URL.createObjectURL(blob);",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "const a = document.createElement(\"a\");",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "a.href = url;",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "a.download = fileName;",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "document.body.appendChild(a);",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "a.click();",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "a.remove();",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "// Revoke after the click has been processed",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 8448.08253055652,
+    "y": 1869.8777270848373,
+    "text": "setTimeout(() => URL.revokeObjectURL(url), 0);",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 10734.990747429554,
+    "y": 1893.0913538130292,
+    "text": "createwritable options writable seek write",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 1417.96157720047,
+    "y": 2944.6823919387098,
+    "text": "showing vs donloading in blob scenarioi +",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 1417.96157720047,
+    "y": 2944.6823919387098,
+    "text": "how to open using window",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 5464.306019769591,
+    "y": 4023.8154792236205,
+    "text": "add to cors",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 5451.880839522234,
+    "y": 4145.293411133072,
+    "text": "!!!",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  }
+]

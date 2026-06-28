@@ -1,0 +1,41 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,10.0,10.0,content disposition in both cases
+T-002,R01,processed,10.0,10.0,blob and window
+T-003,R02,processed,3748.7699494793137,12.268288535966349,anchor element
+T-004,R02,processed,3748.7699494793137,12.268288535966349,content disposition
+T-005,R02,processed,3748.7699494793137,12.268288535966349,download
+T-006,R02,processed,3748.7699494793137,12.268288535966349,when opening can choose target
+T-007,R04,processed,10794.955209855489,162.5169712969614,showsavefilepicker createwritable pipeto
+T-008,R02,processed,6465.517177321374,162.79339817592245,blob
+T-009,R02,processed,5097.517177321374,194.79339817592245,window
+T-010,R03,processed,7627.767196109821,304.66143861044793,choosing target for opening with blob link
+T-011,R02,processed,6308.777389278237,374.8211351722807,with blob we are buffering in browser memory the whole content so mb better to
+T-012,R02,processed,6308.777389278237,374.8211351722807,use link or window or savepicker
+T-013,R01,processed,1659.2766164099694,567.4431867138242,how can i choose target for wondow?
+T-014,R01,processed,1659.2766164099694,567.4431867138242,does content disp matter with window.oopen?
+T-015,R03,processed,10249.800069255722,1445.287780725232,anchor with href is the same as
+T-016,R03,processed,10249.800069255722,1445.287780725232,window.location and may
+T-017,R03,processed,10249.800069255722,1445.287780725232,be better
+T-018,R02,processed,3610.2577290997715,1474.903136647907,!!!
+T-019,R03,processed,8448.08253055652,1869.8777270848373,"const res = await api.get(""/report"", { responseType: ""blob"" });"
+T-020,R03,processed,8448.08253055652,1869.8777270848373,const blob = res.data as Blob;
+T-021,R03,processed,8448.08253055652,1869.8777270848373,// Optional: get filename from Content-Disposition
+T-022,R03,processed,8448.08253055652,1869.8777270848373,"const cd = res.headers[""content-disposition""] as string | undefined;"
+T-023,R03,processed,8448.08253055652,1869.8777270848373,const fileName =
+T-024,R03,processed,8448.08253055652,1869.8777270848373,"cd?.match(/filename\*=UTF-8''([^;]+)|filename=""?([^""]+)""?/i)?.slice(1).find(Boolean)"
+T-025,R03,processed,8448.08253055652,1869.8777270848373,"? decodeURIComponent(cd.match(/filename\*=UTF-8''([^;]+)/i)?.[1] ?? cd.match(/filename=""?([^""]+)""?/i)![1])"
+T-026,R03,processed,8448.08253055652,1869.8777270848373,": ""report.pdf"";"
+T-027,R03,processed,8448.08253055652,1869.8777270848373,const url = URL.createObjectURL(blob);
+T-028,R03,processed,8448.08253055652,1869.8777270848373,"const a = document.createElement(""a"");"
+T-029,R03,processed,8448.08253055652,1869.8777270848373,a.href = url;
+T-030,R03,processed,8448.08253055652,1869.8777270848373,a.download = fileName;
+T-031,R03,processed,8448.08253055652,1869.8777270848373,document.body.appendChild(a);
+T-032,R03,processed,8448.08253055652,1869.8777270848373,a.click();
+T-033,R03,processed,8448.08253055652,1869.8777270848373,a.remove();
+T-034,R03,processed,8448.08253055652,1869.8777270848373,// Revoke after the click has been processed
+T-035,R03,processed,8448.08253055652,1869.8777270848373,"setTimeout(() => URL.revokeObjectURL(url), 0);"
+T-036,R04,processed,10734.990747429554,1893.0913538130292,createwritable options writable seek write
+T-037,R01,processed,1417.96157720047,2944.6823919387098,showing vs donloading in blob scenarioi +
+T-038,R01,processed,1417.96157720047,2944.6823919387098,how to open using window
+T-039,R02,processed,5464.306019769591,4023.8154792236205,add to cors
+T-040,R02,processed,5451.880839522234,4145.293411133072,!!!

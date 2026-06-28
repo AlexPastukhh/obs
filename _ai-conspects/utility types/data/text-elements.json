@@ -1,0 +1,298 @@
+[
+  {
+    "x": 5784.8005383523905,
+    "y": 584.4738729725177,
+    "text": "Pick / Omit vs Exclude / Extract",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 2566.8170784925787,
+    "y": 1824.7130349267668,
+    "text": "instance type",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 21.70597416315195,
+    "y": 1863.601971287444,
+    "text": "ctor type vs instance type",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 2587.039287151433,
+    "y": 3216.935345310881,
+    "text": "awaited",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 5866.565962624399,
+    "y": 3633.5862851311886,
+    "text": "value of",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 2716.2171194933144,
+    "y": 4887.293247818254,
+    "text": "prettify",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 5895.372136242637,
+    "y": 5206.0863995721065,
+    "text": "deeppartial",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 3773.7760225259544,
+    "y": 5463.007777708101,
+    "text": "keyof produces",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 3773.7760225259544,
+    "y": 5463.007777708101,
+    "text": "union",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "type Primitive =",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "| string",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "| number",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "| boolean",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "| bigint",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "| symbol",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "| null",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "| undefined;",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "// DeepPartial that:",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "// - leaves functions as-is",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "// - handles arrays/tuples",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "// - handles Map/Set",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "// - leaves Date as Date",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "export type DeepPartial<T> =",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends Primitive ? T :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends Date ? T :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends (...args: any[]) => any ? T :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends Map<infer K, infer V> ? Map<DeepPartial<K>, DeepPartial<V>> :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends Set<infer U> ? Set<DeepPartial<U>> :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>> :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends Array<infer U> ? Array<DeepPartial<U>> :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T extends object ? { [K in keyof T]?: DeepPartial<T[K]> } :",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 8008.536597850095,
+    "y": 5665.926895731145,
+    "text": "T;",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 2777.2193964116263,
+    "y": 5746.892594235065,
+    "text": "without",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 1695.407653812511,
+    "y": 6364.745745028078,
+    "text": "type Pretty<T> = T extends object ? { [K in keyof T]: T[K] } & {} : T;",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 2751.7696244699714,
+    "y": 7354.374967889649,
+    "text": "xor, literals",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 2751.7696244699714,
+    "y": 7354.374967889649,
+    "text": "vs varialbes",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 10.0,
+    "y": 9456.86207722293,
+    "text": "!!!",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  }
+]
