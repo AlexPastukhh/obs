@@ -1,56 +1,122 @@
-{
-  "conspect": "data shaping,expando",
-  "uploaded_source": "data shaping,expando(1).svg",
-  "authoritative_source": "source/data shaping,expando.svg",
-  "viewBox": "0 0 7102.456899192066 18167.997184571766",
-  "unique_embedded_images": 67,
-  "image_uses": 72,
-  "text_labels": 63,
-  "duplicate_extra_placements": 5,
-  "processed_image_uses": 72,
-  "processed_text_labels": 63,
-  "remaining_image_uses": 0,
-  "remaining_text_labels": 0,
-  "regions": [
-    {
-      "region": "R01",
-      "topic": "data-shaping theory, fields query parameter, resource parameters and PropertyCheckerService validation",
-      "image_uses": 21,
-      "processed_image_uses": 21,
-      "text_labels": 46,
-      "processed_text_labels": 46,
-      "remaining_image_uses": 0,
-      "remaining_text_labels": 0
-    },
-    {
-      "region": "R02",
-      "topic": "IEnumerable and single-object ShapeData extensions, reflection, ExpandoObject and IDictionary<string, object?>",
-      "image_uses": 32,
-      "processed_image_uses": 32,
-      "text_labels": 11,
-      "processed_text_labels": 11,
-      "remaining_image_uses": 0,
-      "remaining_text_labels": 0
-    },
-    {
-      "region": "R03",
-      "topic": "controller integration, IActionResult, DI, ProblemDetails and preserving fields in pagination/HATEOAS links",
-      "image_uses": 5,
-      "processed_image_uses": 5,
-      "text_labels": 5,
-      "processed_text_labels": 5,
-      "remaining_image_uses": 0,
-      "remaining_text_labels": 0
-    },
-    {
-      "region": "R04",
-      "topic": "why shape after mapping, response shaping versus database projection, trade-offs and field-selection mapping",
-      "image_uses": 14,
-      "processed_image_uses": 14,
-      "text_labels": 1,
-      "processed_text_labels": 1,
-      "remaining_image_uses": 0,
-      "remaining_text_labels": 0
-    }
-  ]
-}
+[
+  {
+    "check": "Source SVG exists",
+    "passed": true,
+    "detail": "/mnt/data/data shaping,expando.svg"
+  },
+  {
+    "check": "Source copy hash matches",
+    "passed": true,
+    "detail": "39485ba7e12ab8f326f7f81700e5b9c3bc34a79d98dd77163228b86fd6b76b59"
+  },
+  {
+    "check": "Embedded asset count",
+    "passed": true,
+    "detail": "67"
+  },
+  {
+    "check": "Extracted image file count",
+    "passed": true,
+    "detail": "67"
+  },
+  {
+    "check": "Image use count",
+    "passed": true,
+    "detail": "72"
+  },
+  {
+    "check": "All image hrefs resolved",
+    "passed": true,
+    "detail": "all resolved"
+  },
+  {
+    "check": "Unique image hashes",
+    "passed": true,
+    "detail": "67"
+  },
+  {
+    "check": "Duplicate placement groups",
+    "passed": true,
+    "detail": "5"
+  },
+  {
+    "check": "Duplicate asset-content groups",
+    "passed": true,
+    "detail": "0"
+  },
+  {
+    "check": "Physical text node count",
+    "passed": true,
+    "detail": "74"
+  },
+  {
+    "check": "Non-empty text node count",
+    "passed": true,
+    "detail": "63"
+  },
+  {
+    "check": "Empty text node count",
+    "passed": true,
+    "detail": "11"
+  },
+  {
+    "check": "Every image use assigned once",
+    "passed": true,
+    "detail": "72/72"
+  },
+  {
+    "check": "Every text node assigned once",
+    "passed": true,
+    "detail": "74/74"
+  },
+  {
+    "check": "No unreviewed image uses",
+    "passed": true,
+    "detail": "0"
+  },
+  {
+    "check": "No unreviewed non-empty text nodes",
+    "passed": true,
+    "detail": "0"
+  },
+  {
+    "check": "Empty text nodes explicitly recorded",
+    "passed": true,
+    "detail": "11/11"
+  },
+  {
+    "check": "Region image total",
+    "passed": true,
+    "detail": "72"
+  },
+  {
+    "check": "Region text total",
+    "passed": true,
+    "detail": "74"
+  },
+  {
+    "check": "Regional transcript files exist",
+    "passed": true,
+    "detail": "4/4"
+  },
+  {
+    "check": "Contact sheets exist",
+    "passed": true,
+    "detail": "19"
+  },
+  {
+    "check": "Source-to-transcript map rows",
+    "passed": true,
+    "detail": "146"
+  },
+  {
+    "check": "All map transcript files exist",
+    "passed": true,
+    "detail": "all exist"
+  },
+  {
+    "check": "No missing extracted image files",
+    "passed": true,
+    "detail": "all exist"
+  }
+]

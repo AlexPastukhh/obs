@@ -2,60 +2,54 @@
 
 Generated: 2026-06-27 UTC
 
-## Status
+## Naming
 
 ```text
-SVG source import: done
-Screenshot extraction: done
-Semantic transcript: done
-Final coverage audit: done
+Received SVG: data shaping,expando.svg
+Canonical source name: data shaping,expando.svg
+Canonical conspect folder: _ai-conspects/data shaping,expando
 ```
 
-## Coverage
+## Current status
 
 ```text
-unique embedded screenshots: 67
-image uses on canvas: 72
-native SVG labels: 63
-duplicate extra placements: 5
-processed image uses: 72
-processed text labels: 63
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+New source ingestion: done
+Complete SVG reconciliation: done
+Screenshot-backed transcripts R01–R04: done
+Independent final coverage audit: done
+Status: complete
 ```
 
-## Authoritative source
+## Final coverage
 
 ```text
-source/data shaping,expando.svg
+Complete embedded assets: 67
+Complete image uses: 72
+Processed image uses: 72
+Physical SVG text nodes: 74
+Physical non-empty SVG text nodes: 63
+Processed non-empty text nodes: 63
+Empty SVG text nodes recorded: 11
+Missing image uses: 0
+Unreviewed image uses: 0
+Unassigned image uses: 0
+Multiply assigned image uses: 0
+Missing text nodes: 0
+Unreviewed text nodes: 0
+Unassigned text nodes: 0
+Multiply assigned text nodes: 0
+Unique image-content hashes: 67
+Duplicate placement groups preserved: 5
+Duplicate asset-content groups: 0
 ```
 
-Raw uploaded source:
+## Verified regions
 
-```text
-source/data shaping,expando(1).svg
-```
+- `R01` — Data-shaping contract, fields parameter and field validation: 13 images / 51 physical text nodes
+- `R02` — Collection/single shaping extensions and controller flow: 24 images / 10 physical text nodes
+- `R03` — ExpandoObject, dictionary/dynamic semantics and alternatives: 20 images / 6 physical text nodes
+- `R04` — Why data shaping differs from database projection: 15 images / 7 physical text nodes
 
-## Current transcript
+## Current next step
 
-```text
-01-final-transcript.md
-regions/final-transcript.md
-regions/R01R02R03R04-data-shaping-expando-final-v001.md
-```
-
-## Evidence
-
-```text
-data/source-summary.json
-data/embedded-images.json
-data/image-uses.json
-data/text-elements.json
-data/duplicate-image-uses.json
-data/final-coverage-audit.json
-audit-assets/canvas-preview.png
-```
-
-## Next
-
-No normal screenshot recovery or semantic transcript work remains.
+No normal transcript regions remain. Only correction/polish if a newer complete source export adds material.
