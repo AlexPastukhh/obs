@@ -1,0 +1,21 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,4735.470004337305,31.787923441306702,npm i zod
+T-002,R01,processed,4735.470004337305,31.787923441306702,# with RHF resolver:
+T-003,R01,processed,4735.470004337305,31.787923441306702,npm i @hookform/resolvers
+T-004,R01,processed,2114.6131534351944,1042.1790599527785,"literal,enum,nativeenum"
+T-005,R01,processed,5383.946893669569,1176.8458079996535,array tuple map set record
+T-006,R01,processed,5627.280227002902,2567.9568004312937,default trim transform
+T-007,R01,processed,2652.390904086236,2672.179034521463,"url, uuid"
+T-008,R02,processed,10.0,3151.4443334613,"input values, do we need to coerce always,"
+T-009,R02,processed,10.0,3151.4443334613,"rfh coersion, handling edgecases with preprocess"
+T-010,R02,processed,2097.4934145779725,3354.306281690865,"coerce, preprocess"
+T-011,R03,processed,7782.622078480383,4053.3485015028027,suberrefine
+T-012,R03,processed,7782.622078480383,4053.3485015028027,object destructuing
+T-013,R03,processed,5042.951395157443,4239.014539695661,"refine, options,"
+T-014,R03,processed,5042.951395157443,4239.014539695661,multiple issues
+T-015,R05,processed,5277.798852898084,6074.940883092272,unions discr unions
+T-016,R04,processed,6854.523640326455,6241.399672443009,so whats the difference if unio has to check all type values(try all schemas)
+T-017,R04,processed,6854.523640326455,6241.399672443009,and descr union has to check all type values (looks like it has to try all schemas)
+T-018,R04,processed,8621.202719343295,8052.443987815113,union/disc union errors
+T-019,R05,processed,5342.743930785108,8318.28833798756,Pick / omit / extend / merge / partial / deepPartial
+T-020,R05,processed,3981.7986087574595,8568.274135045398,zod rhf

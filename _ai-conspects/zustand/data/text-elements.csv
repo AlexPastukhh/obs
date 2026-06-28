@@ -1,0 +1,28 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,259.7032088355354,2016.8298513761692,immer middleware
+T-002,R01,processed,259.7032088355354,2016.8298513761692,variants of immer usage
+T-003,R04,processed,7855.029553479797,2146.204070094165,multiple rerenders issue
+T-004,R01,processed,2169.589696836856,2147.1441153673222,"shallow merge, differences with immer"
+T-005,R01,processed,4205.914072700243,2155.8569103723203,updating in zustand
+T-006,R04,processed,9256.682538579953,2810.6062726475284,this is not like when we do multiple state updates that
+T-007,R04,processed,9256.682538579953,2810.6062726475284,is related to only the component at which we update the state
+T-008,R04,processed,9256.682538579953,2810.6062726475284,it triggers rerendering of other components that have no clue about
+T-009,R04,processed,9256.682538579953,2810.6062726475284,the fact that there is multiple updates
+T-010,R04,processed,9256.682538579953,2810.6062726475284,"in one component, while updating to that component related state,"
+T-011,R04,processed,9256.682538579953,2810.6062726475284,it wont rerender until the whole code was executed
+T-012,R04,processed,9254.837839942033,3138.0081633748996,"so we need one set, maby with params"
+T-013,R04,processed,7761.812336364808,4495.750573103716,get() and preventing multiple fetches
+T-014,R04,processed,7882.994473445278,4623.787215570323,"so loading is a flag on store's state, its better to have loadingproducts and check inside related fetch func"
+T-015,R02,processed,10.0,4713.207608005863,persist middleware
+T-016,R03,processed,4522.339419825579,5490.130198810446,"useStoreHook(, shallow)"
+T-017,R03,processed,2904.875722474897,5729.215686890406,"zustand running selectors on every store update,"
+T-018,R03,processed,2904.875722474897,5729.215686890406,why dont create object inside selector
+T-019,R03,processed,3275.253519659882,6047.278726625336,"so, when something changes in the store, zustand runs all selectors"
+T-020,R03,processed,3275.253519659882,6047.278726625336,thats why we dont do multiiple sets in chain
+T-021,R03,processed,3275.253519659882,6047.278726625336,"and thats why we dont build object inside store's hook, because it will create"
+T-022,R03,processed,3275.253519659882,6047.278726625336,new object on any store update and cause rerender
+T-023,R04,processed,10108.14351851437,6196.673406652051,subscribe
+T-024,R04,processed,7966.698688413626,7003.104412687288,middleware
+T-025,R05,processed,9061.522847619111,8948.567041729926,zustand wrapped get middleware
+T-026,R05,processed,10236.157017624591,9242.515131592067,can also add to log in usestroehook().getstate()
+T-027,R05,processed,10236.157017624591,9242.515131592067,scenarios

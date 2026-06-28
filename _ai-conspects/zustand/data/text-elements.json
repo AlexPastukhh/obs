@@ -1,0 +1,218 @@
+[
+  {
+    "x": 259.7032088355354,
+    "y": 2016.8298513761692,
+    "text": "immer middleware",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 259.7032088355354,
+    "y": 2016.8298513761692,
+    "text": "variants of immer usage",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 7855.029553479797,
+    "y": 2146.204070094165,
+    "text": "multiple rerenders issue",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 2169.589696836856,
+    "y": 2147.1441153673222,
+    "text": "shallow merge, differences with immer",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 4205.914072700243,
+    "y": 2155.8569103723203,
+    "text": "updating in zustand",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 9256.682538579953,
+    "y": 2810.6062726475284,
+    "text": "this is not like when we do multiple state updates that",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 9256.682538579953,
+    "y": 2810.6062726475284,
+    "text": "is related to only the component at which we update the state",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 9256.682538579953,
+    "y": 2810.6062726475284,
+    "text": "it triggers rerendering of other components that have no clue about",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 9256.682538579953,
+    "y": 2810.6062726475284,
+    "text": "the fact that there is multiple updates",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 9256.682538579953,
+    "y": 2810.6062726475284,
+    "text": "in one component, while updating to that component related state,",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 9256.682538579953,
+    "y": 2810.6062726475284,
+    "text": "it wont rerender until the whole code was executed",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 9254.837839942033,
+    "y": 3138.0081633748996,
+    "text": "so we need one set, maby with params",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 7761.812336364808,
+    "y": 4495.750573103716,
+    "text": "get() and preventing multiple fetches",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 7882.994473445278,
+    "y": 4623.787215570323,
+    "text": "so loading is a flag on store's state, its better to have loadingproducts and check inside related fetch func",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 10.0,
+    "y": 4713.207608005863,
+    "text": "persist middleware",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 4522.339419825579,
+    "y": 5490.130198810446,
+    "text": "useStoreHook(, shallow)",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 2904.875722474897,
+    "y": 5729.215686890406,
+    "text": "zustand running selectors on every store update,",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 2904.875722474897,
+    "y": 5729.215686890406,
+    "text": "why dont create object inside selector",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 3275.253519659882,
+    "y": 6047.278726625336,
+    "text": "so, when something changes in the store, zustand runs all selectors",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 3275.253519659882,
+    "y": 6047.278726625336,
+    "text": "thats why we dont do multiiple sets in chain",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 3275.253519659882,
+    "y": 6047.278726625336,
+    "text": "and thats why we dont build object inside store's hook, because it will create",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 3275.253519659882,
+    "y": 6047.278726625336,
+    "text": "new object on any store update and cause rerender",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 10108.14351851437,
+    "y": 6196.673406652051,
+    "text": "subscribe",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 7966.698688413626,
+    "y": 7003.104412687288,
+    "text": "middleware",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 9061.522847619111,
+    "y": 8948.567041729926,
+    "text": "zustand wrapped get middleware",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 10236.157017624591,
+    "y": 9242.515131592067,
+    "text": "can also add to log in usestroehook().getstate()",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 10236.157017624591,
+    "y": 9242.515131592067,
+    "text": "scenarios",
+    "region": "R05",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  }
+]
