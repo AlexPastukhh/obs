@@ -1,0 +1,73 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,4891.68280174342,68.12187165815703,"actions, payload, reducers action param with"
+T-002,R01,processed,4891.68280174342,68.12187165815703,"rtk, action param in addcase's callback"
+T-003,R01,processed,6721.18876462544,148.54884901180958,so action in rtk and in classic is the same thing
+T-004,R02,processed,2694.796220506989,1719.9753044196113,rtk
+T-005,R02,processed,2036.8067833904897,2350.4214240574875,here we add slices(their reducers that we export from slice files)
+T-006,R02,processed,2049.7591643428714,2817.278566914618,here we define state and actions on it
+T-007,R02,processed,4180.887650866487,4090.2472753846523,just an api call
+T-008,R04,processed,5261.15640398231,4129.059372136966,extra reducers with reaction to others slice actions
+T-009,R03,processed,262.07223225392954,4198.594597987838,createasyncthunk
+T-010,R03,processed,10.0,6045.493592583181,builder
+T-011,R03,processed,10.0,6045.493592583181,".addCase(fetchProducts.pending,   (state) => { state.loading = true })"
+T-012,R03,processed,10.0,6045.493592583181,".addCase(fetchProducts.fulfilled, (state, action) => { state.loading = false; state.products = action.payload })"
+T-013,R03,processed,10.0,6045.493592583181,".addCase(fetchProducts.rejected,  (state, action) => { state.loading = false; state.error = action.error.message })"
+T-014,R02,processed,4038.3128134079016,6441.27034107496,"import React, { useEffect, useState } from ""react"";"
+T-015,R02,processed,4038.3128134079016,6441.27034107496,"import { useDispatch, useSelector } from ""react-redux"";"
+T-016,R02,processed,4038.3128134079016,6441.27034107496,"import { pizza_order, pizza_add } from ""./features/pizza/pizzaSlice"";"
+T-017,R02,processed,4038.3128134079016,6441.27034107496,"import { burger_orderAmount } from ""./features/burger/burgerSlice"";"
+T-018,R02,processed,4038.3128134079016,6441.27034107496,"import { fetchProducts } from ""./features/product/productThunks"";"
+T-019,R02,processed,4038.3128134079016,6441.27034107496,import {
+T-020,R02,processed,4038.3128134079016,6441.27034107496,"selectPizzaBase,"
+T-021,R02,processed,4038.3128134079016,6441.27034107496,"selectBurgerBuns,"
+T-022,R02,processed,4038.3128134079016,6441.27034107496,"selectProductLoading,"
+T-023,R02,processed,4038.3128134079016,6441.27034107496,"selectProductError,"
+T-024,R02,processed,4038.3128134079016,6441.27034107496,"selectProductTitles,"
+T-025,R02,processed,4038.3128134079016,6441.27034107496,"} from ""./features/selectors"";"
+T-026,R02,processed,4038.3128134079016,6441.27034107496,export default function App() {
+T-027,R02,processed,4038.3128134079016,6441.27034107496,const dispatch = useDispatch();
+T-028,R02,processed,4038.3128134079016,6441.27034107496,// selectors keep component clean
+T-029,R02,processed,4038.3128134079016,6441.27034107496,const pizzaBase = useSelector(selectPizzaBase);
+T-030,R02,processed,4038.3128134079016,6441.27034107496,const burgerBuns = useSelector(selectBurgerBuns);
+T-031,R02,processed,4038.3128134079016,6441.27034107496,const loading = useSelector(selectProductLoading);
+T-032,R02,processed,4038.3128134079016,6441.27034107496,const error = useSelector(selectProductError);
+T-033,R02,processed,4038.3128134079016,6441.27034107496,const products = useSelector(selectProductTitles);
+T-034,R02,processed,4038.3128134079016,6441.27034107496,"const [amount, setAmount] = useState(2);"
+T-035,R02,processed,4038.3128134079016,6441.27034107496,useEffect(() => {
+T-036,R02,processed,4038.3128134079016,6441.27034107496,dispatch(fetchProducts()); // triggers pending -> fulfilled/rejected
+T-037,R02,processed,4038.3128134079016,6441.27034107496,"}, [dispatch]);"
+T-038,R02,processed,4038.3128134079016,6441.27034107496,return (
+T-039,R02,processed,4038.3128134079016,6441.27034107496,<div style={{ padding: 16 }}>
+T-040,R02,processed,4038.3128134079016,6441.27034107496,<h2>Pizza base: {pizzaBase}</h2>
+T-041,R02,processed,4038.3128134079016,6441.27034107496,<button onClick={() => dispatch(pizza_order())}>Order Pizza</button>
+T-042,R02,processed,4038.3128134079016,6441.27034107496,<button onClick={() => dispatch(pizza_add(5))}>Add +5 Pizza Base</button>
+T-043,R02,processed,4038.3128134079016,6441.27034107496,<hr />
+T-044,R02,processed,4038.3128134079016,6441.27034107496,<h2>Burger buns: {burgerBuns}</h2>
+T-045,R02,processed,4038.3128134079016,6441.27034107496,<input
+T-046,R02,processed,4038.3128134079016,6441.27034107496,"type=""number"""
+T-047,R02,processed,4038.3128134079016,6441.27034107496,min={1}
+T-048,R02,processed,4038.3128134079016,6441.27034107496,value={amount}
+T-049,R02,processed,4038.3128134079016,6441.27034107496,onChange={(e) => setAmount(Number(e.target.value))}
+T-050,R02,processed,4038.3128134079016,6441.27034107496,/>
+T-051,R02,processed,4038.3128134079016,6441.27034107496,<button onClick={() => dispatch(burger_orderAmount(amount))}>
+T-052,R02,processed,4038.3128134079016,6441.27034107496,Order {amount} Burger(s)
+T-053,R02,processed,4038.3128134079016,6441.27034107496,</button>
+T-054,R02,processed,4038.3128134079016,6441.27034107496,<p style={{ marginTop: 10 }}>
+T-055,R02,processed,4038.3128134079016,6441.27034107496,Ordering a pizza also decreases burger buns (burger listens to pizza
+T-056,R02,processed,4038.3128134079016,6441.27034107496,action via extraReducers).
+T-057,R02,processed,4038.3128134079016,6441.27034107496,</p>
+T-058,R02,processed,4038.3128134079016,6441.27034107496,<hr />
+T-059,R02,processed,4038.3128134079016,6441.27034107496,<h2>Products (Async Thunk)</h2>
+T-060,R02,processed,4038.3128134079016,6441.27034107496,<button onClick={() => dispatch(fetchProducts())}>Refetch</button>
+T-061,R02,processed,4038.3128134079016,6441.27034107496,{loading && <p>Loading...</p>}
+T-062,R02,processed,4038.3128134079016,6441.27034107496,{error && <p>Error: {error}</p>}
+T-063,R02,processed,4038.3128134079016,6441.27034107496,{!loading && !error && (
+T-064,R02,processed,4038.3128134079016,6441.27034107496,<div>
+T-065,R02,processed,4038.3128134079016,6441.27034107496,{products.map((title) => (
+T-066,R02,processed,4038.3128134079016,6441.27034107496,<p key={title}>{title}</p>
+T-067,R02,processed,4038.3128134079016,6441.27034107496,))}
+T-068,R02,processed,4038.3128134079016,6441.27034107496,</div>
+T-069,R02,processed,4038.3128134079016,6441.27034107496,)}
+T-070,R02,processed,4038.3128134079016,6441.27034107496,</div>
+T-071,R02,processed,4038.3128134079016,6441.27034107496,);
+T-072,R02,processed,4038.3128134079016,6441.27034107496,}

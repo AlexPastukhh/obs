@@ -1,0 +1,578 @@
+[
+  {
+    "x": 4891.68280174342,
+    "y": 68.12187165815703,
+    "text": "actions, payload, reducers action param with",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 4891.68280174342,
+    "y": 68.12187165815703,
+    "text": "rtk, action param in addcase's callback",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 6721.18876462544,
+    "y": 148.54884901180958,
+    "text": "so action in rtk and in classic is the same thing",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 2694.796220506989,
+    "y": 1719.9753044196113,
+    "text": "rtk",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 2036.8067833904897,
+    "y": 2350.4214240574875,
+    "text": "here we add slices(their reducers that we export from slice files)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 2049.7591643428714,
+    "y": 2817.278566914618,
+    "text": "here we define state and actions on it",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 4180.887650866487,
+    "y": 4090.2472753846523,
+    "text": "just an api call",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 5261.15640398231,
+    "y": 4129.059372136966,
+    "text": "extra reducers with reaction to others slice actions",
+    "region": "R04",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 262.07223225392954,
+    "y": 4198.594597987838,
+    "text": "createasyncthunk",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 10.0,
+    "y": 6045.493592583181,
+    "text": "builder",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 10.0,
+    "y": 6045.493592583181,
+    "text": ".addCase(fetchProducts.pending,   (state) => { state.loading = true })",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 10.0,
+    "y": 6045.493592583181,
+    "text": ".addCase(fetchProducts.fulfilled, (state, action) => { state.loading = false; state.products = action.payload })",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 10.0,
+    "y": 6045.493592583181,
+    "text": ".addCase(fetchProducts.rejected,  (state, action) => { state.loading = false; state.error = action.error.message })",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "import React, { useEffect, useState } from \"react\";",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "import { useDispatch, useSelector } from \"react-redux\";",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "import { pizza_order, pizza_add } from \"./features/pizza/pizzaSlice\";",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "import { burger_orderAmount } from \"./features/burger/burgerSlice\";",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-017"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "import { fetchProducts } from \"./features/product/productThunks\";",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-018"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "import {",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-019"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "selectPizzaBase,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-020"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "selectBurgerBuns,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-021"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "selectProductLoading,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-022"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "selectProductError,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-023"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "selectProductTitles,",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-024"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "} from \"./features/selectors\";",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-025"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "export default function App() {",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-026"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "const dispatch = useDispatch();",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-027"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "// selectors keep component clean",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-028"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "const pizzaBase = useSelector(selectPizzaBase);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-029"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "const burgerBuns = useSelector(selectBurgerBuns);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-030"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "const loading = useSelector(selectProductLoading);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-031"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "const error = useSelector(selectProductError);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-032"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "const products = useSelector(selectProductTitles);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-033"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "const [amount, setAmount] = useState(2);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-034"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "useEffect(() => {",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-035"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "dispatch(fetchProducts()); // triggers pending -> fulfilled/rejected",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-036"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "}, [dispatch]);",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-037"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "return (",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-038"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<div style={{ padding: 16 }}>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-039"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<h2>Pizza base: {pizzaBase}</h2>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-040"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<button onClick={() => dispatch(pizza_order())}>Order Pizza</button>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-041"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<button onClick={() => dispatch(pizza_add(5))}>Add +5 Pizza Base</button>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-042"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<hr />",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-043"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<h2>Burger buns: {burgerBuns}</h2>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-044"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<input",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-045"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "type=\"number\"",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-046"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "min={1}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-047"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "value={amount}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-048"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "onChange={(e) => setAmount(Number(e.target.value))}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-049"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "/>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-050"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<button onClick={() => dispatch(burger_orderAmount(amount))}>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-051"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "Order {amount} Burger(s)",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-052"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "</button>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-053"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<p style={{ marginTop: 10 }}>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-054"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "Ordering a pizza also decreases burger buns (burger listens to pizza",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-055"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "action via extraReducers).",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-056"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "</p>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-057"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<hr />",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-058"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<h2>Products (Async Thunk)</h2>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-059"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<button onClick={() => dispatch(fetchProducts())}>Refetch</button>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-060"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "{loading && <p>Loading...</p>}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-061"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "{error && <p>Error: {error}</p>}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-062"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "{!loading && !error && (",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-063"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<div>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-064"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "{products.map((title) => (",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-065"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "<p key={title}>{title}</p>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-066"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "))}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-067"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "</div>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-068"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": ")}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-069"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "</div>",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-070"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": ");",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-071"
+  },
+  {
+    "x": 4038.3128134079016,
+    "y": 6441.27034107496,
+    "text": "}",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-072"
+  }
+]
