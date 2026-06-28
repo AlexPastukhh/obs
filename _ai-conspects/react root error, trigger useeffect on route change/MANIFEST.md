@@ -1,33 +1,35 @@
 # MANIFEST — react root error, trigger useeffect on route change
 
-Generated: 2026-06-28 11:30:00 UTC
+Generated: 2026-06-28 12:30:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/react root error, trigger useeffect on route change.svg`
-- 10 extracted screenshots under `source/images/`
+- `01-transcript-R01-root-error-state-and-clearing-on-route-or-action.md`
+- `02-transcript-R02-useeffect-versus-uselayouteffect-and-clear-before-navigation.md`
+- `03-transcript-R03-context-api-stable-setters-and-dependency-arrays.md`
+- `04-transcript-R04-page-local-errors-and-page-specific-layout-styles.md`
 
-## Stage0
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
+- `data/text-elements-v002-closed.*`
+- `data/image-uses-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `05-full-combined-final-transcript.md`
+- `06-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `MANIFEST.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-- complete canvas preview
-- 4 regional contact sheets
 
-## Coverage
+## Final coverage
 
 ```text
-text elements inventoried: 19
-image uses inventoried: 10
-logical regions: 4
-remaining text elements: 19
-remaining image uses: 10
+text elements: 19 / 19
+image uses: 10 / 10
+repeated placements: 0
+regions: 4 / 4
+remaining text elements: 0
+remaining image uses: 0
 ```

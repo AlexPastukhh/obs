@@ -1,13 +1,19 @@
 # Transcript status — explicit interface inplementation
 
-Generated: 2026-06-28 11:30:00 UTC
+Generated: 2026-06-28 12:30:00 UTC
 
 ```text
 source inventory: done
 manual semantic-anchor region plan: done
-regional transcripts: not started
-full combined transcript: not started
-full-conspect coverage audit: not started
-remaining text elements: 3
-remaining screenshot uses: 20
+regional transcripts: done
+full combined transcript: done
+full-conspect coverage audit: done
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
+
+## Authoritative files
+
+- `05-full-combined-final-transcript.md`
+- `06-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`

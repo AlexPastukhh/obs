@@ -1,0 +1,145 @@
+[
+  {
+    "region_id": "R01",
+    "title": "Root error state and clearing on route or action",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 1000,
+        "y": 450
+      },
+      {
+        "x": 1000,
+        "y": 850
+      }
+    ],
+    "text_element_count": 5,
+    "image_use_count": 2,
+    "unique_image_count": 2,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 585.4364132016517,
+    "canvas_max_x": 1424.4364132016517,
+    "canvas_min_y": 337.3333740234375,
+    "canvas_max_y": 1026.1666870117188,
+    "representative_captions": [
+      "MESSAGE",
+      "THEN I NEED TO USE CONTEXT FUNC INSUDE USELAYOUT EFFECT TO GET RID OF ERROR",
+      "BUT IF I NEED THEM TO BE REMOVED ON SOME ACTION/ON NEXT RENDER/ON ROUTE CHANGE"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "01-transcript-R01-root-error-state-and-clearing-on-route-or-action.md"
+  },
+  {
+    "region_id": "R02",
+    "title": "useEffect versus useLayoutEffect and clear-before-navigation",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 1000,
+        "y": 1250
+      },
+      {
+        "x": 1000,
+        "y": 1700
+      },
+      {
+        "x": 1000,
+        "y": 2150
+      },
+      {
+        "x": 1000,
+        "y": 2550
+      }
+    ],
+    "text_element_count": 0,
+    "image_use_count": 4,
+    "unique_image_count": 4,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 630.4365352719642,
+    "canvas_max_x": 1739.4365352719642,
+    "canvas_min_y": 1114.5001220703125,
+    "canvas_max_y": 2729.9733268207874,
+    "representative_captions": [
+      "MESSAGE",
+      "THEN I NEED TO USE CONTEXT FUNC INSUDE USELAYOUT EFFECT TO GET RID OF ERROR",
+      "BUT IF I NEED THEM TO BE REMOVED ON SOME ACTION/ON NEXT RENDER/ON ROUTE CHANGE",
+      "fucntion from usestate hook",
+      "never changes identity",
+      "so with this dep arr"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "02-transcript-R02-useeffect-versus-uselayouteffect-and-clear-before-navigation.md"
+  },
+  {
+    "region_id": "R03",
+    "title": "Context API, stable setters and dependency arrays",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 1000,
+        "y": 3100
+      },
+      {
+        "x": 1000,
+        "y": 3600
+      },
+      {
+        "x": 1000,
+        "y": 4000
+      }
+    ],
+    "text_element_count": 13,
+    "image_use_count": 3,
+    "unique_image_count": 3,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 429.9759578393605,
+    "canvas_max_x": 1843.9759578393605,
+    "canvas_min_y": 2896.137449220128,
+    "canvas_max_y": 4264.198073776239,
+    "representative_captions": [
+      "fucntion from usestate hook",
+      "never changes identity",
+      "so with this dep arr",
+      "on every rerender",
+      "and i wont get useeffect exec",
+      "i dont have dep",
+      "will have page content styles per page"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "03-transcript-R03-context-api-stable-setters-and-dependency-arrays.md"
+  },
+  {
+    "region_id": "R04",
+    "title": "Page-local errors and page-specific layout styles",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 1000,
+        "y": 4550
+      }
+    ],
+    "text_element_count": 1,
+    "image_use_count": 1,
+    "unique_image_count": 1,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 502.7222900390616,
+    "canvas_max_x": 1521.7222900390616,
+    "canvas_min_y": 4432.503595606289,
+    "canvas_max_y": 4797.503595606289,
+    "representative_captions": [
+      "will have page content styles per page",
+      "putting it into dep array",
+      "to avoid problems from"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "04-transcript-R04-page-local-errors-and-page-specific-layout-styles.md"
+  }
+]
