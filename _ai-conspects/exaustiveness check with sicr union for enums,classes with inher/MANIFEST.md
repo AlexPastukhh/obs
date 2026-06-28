@@ -1,39 +1,23 @@
 # MANIFEST — exaustiveness check with sicr union for enums,classes with inher
 
-Generated: 2026-06-28 04:00:00 UTC
+Generated: 2026-06-28 05:00:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/exaustiveness check with sicr union for enums,classes with inher.svg`
-- 6 extracted screenshots under `source/images/`
+- `01-transcript-R01-enum-and-switch-exhaustiveness-checks.md`
+- `02-transcript-R02-sealed-hierarchies-and-discriminated-union-style-exhaustiveness.md`
 
-## Stage0 documents
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
+- `data/text-elements-v002-closed.*`
+- `data/image-uses-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `03-full-combined-final-transcript.md`
+- `04-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
+- `MARKDOWN_LAYOUT_AUDIT.md`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-
-## Ledgers
-
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-
-## Audit assets
-
-- complete canvas preview
-- 2 regional contact sheets
-
-## Current coverage
-
-```text
-text elements inventoried: 0
-image uses inventoried: 6
-logical regions: 2
-remaining text elements: 0
-remaining image uses: 6
-```

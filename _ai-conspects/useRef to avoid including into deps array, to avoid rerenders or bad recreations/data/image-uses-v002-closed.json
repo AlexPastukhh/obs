@@ -1,0 +1,176 @@
+[
+  {
+    "use_id": "IU-001",
+    "image_id": "image-08043463a81f572808083174b54bf83685207037",
+    "filename": "029a8dc52348.png",
+    "sha256_12": "029a8dc52348",
+    "region_id": "R01",
+    "x": 153.66671752929688,
+    "y": 594.3334350585938,
+    "width": 926.0,
+    "height": 188.0,
+    "opacity": 1.0,
+    "transform_chain": [
+      "translate(153.66671752929688 594.3334350585938) rotate(0 463 94)"
+    ],
+    "duplicate_of_use_id": null,
+    "nearest_text_ids": [
+      "T-004",
+      "T-003",
+      "T-002"
+    ],
+    "nearest_captions": [
+      "!!!",
+      "or we dont want to wrap it",
+      "but this approach is needed when we cant rely on the callers code to wrap func into usecallback"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-callback-dependency-problem-and-useref-motivation.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "use_id": "IU-002",
+    "image_id": "image-27909c3e06216728d506af4f0dcb56d7578b0d85",
+    "filename": "3f3811f9cfc3.png",
+    "sha256_12": "3f3811f9cfc3",
+    "region_id": "R01",
+    "x": 161.83328247070312,
+    "y": 141.83328247070312,
+    "width": 913.0,
+    "height": 433.0,
+    "opacity": 1.0,
+    "transform_chain": [
+      "translate(161.83328247070312 141.83328247070312) rotate(0 456.5 216.5)"
+    ],
+    "duplicate_of_use_id": null,
+    "nearest_text_ids": [
+      "T-003",
+      "T-002",
+      "T-001"
+    ],
+    "nearest_captions": [
+      "or we dont want to wrap it",
+      "but this approach is needed when we cant rely on the callers code to wrap func into usecallback",
+      "so its another way in react to inclue func into eddect without triggering effect"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-callback-dependency-problem-and-useref-motivation.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "use_id": "IU-003",
+    "image_id": "image-798c9f6c3bdfbdecb2081246d33861065f784cfc",
+    "filename": "f911c9d4b7e8.png",
+    "sha256_12": "f911c9d4b7e8",
+    "region_id": "R02",
+    "x": 1405.6902523839772,
+    "y": 27.70819794823001,
+    "width": 989.0,
+    "height": 482.0,
+    "opacity": 1.0,
+    "transform_chain": [
+      "translate(1405.6902523839772 27.70819794823001) rotate(0 494.6163903061224 241.15625)"
+    ],
+    "duplicate_of_use_id": null,
+    "nearest_text_ids": [
+      "T-005",
+      "T-006",
+      "T-007"
+    ],
+    "nearest_captions": [
+      "when onmessage changes, we add new onmessage",
+      "to the ref",
+      "here we register a callback that says: read from messageref"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-updating-the-current-callback-ref.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "use_id": "IU-004",
+    "image_id": "image-e6ec5b407cd421859a185245bd6086e209725f4a",
+    "filename": "8b0b185cdb20.png",
+    "sha256_12": "8b0b185cdb20",
+    "region_id": "R02",
+    "x": 1449.9838562028053,
+    "y": 514.374686595691,
+    "width": 827.0,
+    "height": 482.0,
+    "opacity": 1.0,
+    "transform_chain": [
+      "translate(1449.9838562028053 514.374686595691) rotate(0 413.65591637010675 241.15625)"
+    ],
+    "duplicate_of_use_id": null,
+    "nearest_text_ids": [
+      "T-007",
+      "T-008",
+      "T-009"
+    ],
+    "nearest_captions": [
+      "here we register a callback that says: read from messageref",
+      "so we are not storing delegate into ws.onmessage using ref.current that",
+      "kinda points to ref no matter what it stores"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-updating-the-current-callback-ref.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "use_id": "IU-005",
+    "image_id": "image-6273ed1e9f6bb87bd1a265daed77a5e078fcd4ec",
+    "filename": "4f703a630ec4.png",
+    "sha256_12": "4f703a630ec4",
+    "region_id": "R03",
+    "x": 1454.4730550436152,
+    "y": 1002.6978067128775,
+    "width": 935.0,
+    "height": 339.0,
+    "opacity": 1.0,
+    "transform_chain": [
+      "translate(1454.4730550436152 1002.6978067128775) rotate(0 467.5 169.5)"
+    ],
+    "duplicate_of_use_id": null,
+    "nearest_text_ids": [
+      "T-010",
+      "T-009",
+      "T-008"
+    ],
+    "nearest_captions": [
+      "we just saying to read from that ref on message and onmessage change we update the ref",
+      "kinda points to ref no matter what it stores",
+      "so we are not storing delegate into ws.onmessage using ref.current that"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-stable-registered-handler-reading-the-latest-ref-value.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "use_id": "IU-006",
+    "image_id": "image-58d70700d6176da7e742d18dd3a493e0b15112b8",
+    "filename": "28b7ed5c86af.png",
+    "sha256_12": "28b7ed5c86af",
+    "region_id": "R03",
+    "x": 1445.8063375143183,
+    "y": 1356.864447948229,
+    "width": 919.0,
+    "height": 244.0,
+    "opacity": 1.0,
+    "transform_chain": [
+      "translate(1445.8063375143183 1356.864447948229) rotate(0 459.5 122)"
+    ],
+    "duplicate_of_use_id": null,
+    "nearest_text_ids": [
+      "T-010",
+      "T-009",
+      "T-008"
+    ],
+    "nearest_captions": [
+      "we just saying to read from that ref on message and onmessage change we update the ref",
+      "kinda points to ref no matter what it stores",
+      "so we are not storing delegate into ws.onmessage using ref.current that"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-stable-registered-handler-reading-the-latest-ref-value.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  }
+]

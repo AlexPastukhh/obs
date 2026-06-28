@@ -1,0 +1,860 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "WITH AggData AS (",
+    "x": 3569.5563589823646,
+    "y": 380.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-002",
+    "text": "-- Step 1: Pre-aggregate",
+    "x": 3569.5563589823646,
+    "y": 405.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-003",
+    "text": "SELECT",
+    "x": 3569.5563589823646,
+    "y": 430.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-004",
+    "text": "Product,",
+    "x": 3569.5563589823646,
+    "y": 455.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-005",
+    "text": "Region,",
+    "x": 3569.5563589823646,
+    "y": 480.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-006",
+    "text": "Quarter,",
+    "x": 3569.5563589823646,
+    "y": 505.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-007",
+    "text": "SUM(SalesAmount)  AS TotalSales,",
+    "x": 3569.5563589823646,
+    "y": 530.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-008",
+    "text": "COUNT(*)          AS SalesCount,",
+    "x": 3569.5563589823646,
+    "y": 555.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-009",
+    "text": "AVG(SalesAmount)  AS AvgSales",
+    "x": 3569.5563589823646,
+    "y": 580.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-010",
+    "text": "FROM Sales",
+    "x": 3569.5563589823646,
+    "y": 605.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-011",
+    "text": "GROUP BY Product, Region, Quarter",
+    "x": 3569.5563589823646,
+    "y": 630.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-012",
+    "text": "),",
+    "x": 3569.5563589823646,
+    "y": 655.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-013",
+    "text": "Unpivoted AS (",
+    "x": 3569.5563589823646,
+    "y": 680.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-014",
+    "text": "-- Step 2: Convert metrics into rows",
+    "x": 3569.5563589823646,
+    "y": 705.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-015",
+    "text": "SELECT",
+    "x": 3569.5563589823646,
+    "y": 730.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-016",
+    "text": "Product,",
+    "x": 3569.5563589823646,
+    "y": 755.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-017",
+    "text": "Region,",
+    "x": 3569.5563589823646,
+    "y": 780.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-018",
+    "text": "Quarter,",
+    "x": 3569.5563589823646,
+    "y": 805.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-019",
+    "text": "Metric,",
+    "x": 3569.5563589823646,
+    "y": 830.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-020",
+    "text": "Value",
+    "x": 3569.5563589823646,
+    "y": 855.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-021",
+    "text": "FROM AggData",
+    "x": 3569.5563589823646,
+    "y": 880.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-022",
+    "text": "UNPIVOT",
+    "x": 3569.5563589823646,
+    "y": 905.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-023",
+    "text": "(",
+    "x": 3569.5563589823646,
+    "y": 930.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-024",
+    "text": "Value FOR Metric IN (TotalSales, SalesCount, AvgSales)",
+    "x": 3569.5563589823646,
+    "y": 955.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-025",
+    "text": ") u",
+    "x": 3569.5563589823646,
+    "y": 980.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-026",
+    "text": "),",
+    "x": 3569.5563589823646,
+    "y": 1005.3826225929171,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-027",
+    "text": "PrepForPivot AS (",
+    "x": 3569.5563589823646,
+    "y": 1030.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-028",
+    "text": "-- Step 3: Build pivot column names",
+    "x": 3569.5563589823646,
+    "y": 1055.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-029",
+    "text": "SELECT",
+    "x": 3569.5563589823646,
+    "y": 1080.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-030",
+    "text": "Product,",
+    "x": 3569.5563589823646,
+    "y": 1105.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-031",
+    "text": "Region,",
+    "x": 3569.5563589823646,
+    "y": 1130.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-032",
+    "text": "CONCAT(Quarter, '_', Metric) AS PivotCol,",
+    "x": 3569.5563589823646,
+    "y": 1155.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-033",
+    "text": "Value",
+    "x": 3569.5563589823646,
+    "y": 1180.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-034",
+    "text": "FROM Unpivoted",
+    "x": 3569.5563589823646,
+    "y": 1205.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-035",
+    "text": ")",
+    "x": 3569.5563589823646,
+    "y": 1230.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-036",
+    "text": "-- Step 4: Pivot to final report",
+    "x": 3569.5563589823646,
+    "y": 1255.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-037",
+    "text": "SELECT",
+    "x": 3569.5563589823646,
+    "y": 1280.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-038",
+    "text": "Product,",
+    "x": 3569.5563589823646,
+    "y": 1305.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-039",
+    "text": "Region,",
+    "x": 3569.5563589823646,
+    "y": 1330.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-040",
+    "text": "[Q1_TotalSales],",
+    "x": 3569.5563589823646,
+    "y": 1355.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-041",
+    "text": "[Q1_SalesCount],",
+    "x": 3569.5563589823646,
+    "y": 1380.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-042",
+    "text": "[Q1_AvgSales],",
+    "x": 3569.5563589823646,
+    "y": 1405.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-043",
+    "text": "[Q2_TotalSales],",
+    "x": 3569.5563589823646,
+    "y": 1430.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-044",
+    "text": "[Q2_SalesCount],",
+    "x": 3569.5563589823646,
+    "y": 1455.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-045",
+    "text": "[Q2_AvgSales]",
+    "x": 3569.5563589823646,
+    "y": 1480.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-046",
+    "text": "FROM PrepForPivot",
+    "x": 3569.5563589823646,
+    "y": 1505.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-047",
+    "text": "PIVOT",
+    "x": 3569.5563589823646,
+    "y": 1530.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-048",
+    "text": "(",
+    "x": 3569.5563589823646,
+    "y": 1555.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-049",
+    "text": "MAX(Value)",
+    "x": 3569.5563589823646,
+    "y": 1580.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-050",
+    "text": "FOR PivotCol IN (",
+    "x": 3569.5563589823646,
+    "y": 1605.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-051",
+    "text": "[Q1_TotalSales],",
+    "x": 3569.5563589823646,
+    "y": 1630.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-052",
+    "text": "[Q1_SalesCount],",
+    "x": 3569.5563589823646,
+    "y": 1655.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-053",
+    "text": "[Q1_AvgSales],",
+    "x": 3569.5563589823646,
+    "y": 1680.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-054",
+    "text": "[Q2_TotalSales],",
+    "x": 3569.5563589823646,
+    "y": 1705.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-055",
+    "text": "[Q2_SalesCount],",
+    "x": 3569.5563589823646,
+    "y": 1730.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-056",
+    "text": "[Q2_AvgSales]",
+    "x": 3569.5563589823646,
+    "y": 1755.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-057",
+    "text": ")",
+    "x": 3569.5563589823646,
+    "y": 1780.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-058",
+    "text": ") p",
+    "x": 3569.5563589823646,
+    "y": 1805.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-059",
+    "text": "ORDER BY Product, Region;",
+    "x": 3569.5563589823646,
+    "y": 1830.382622592917,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3569.5563589823646 362.76262259291707) rotate(0 305.83984375 750)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-060",
+    "text": "UNPIVOT",
+    "x": 1879.8538906681283,
+    "y": 185.5628652750652,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(1879.8538906681283 54.00016276041674) rotate(0 358.4666442871094 93.33335876464844)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-sql-unpivot-syntax-and-examples.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-061",
+    "text": "PIVOT",
+    "x": 536.2983486759408,
+    "y": 141.56270251464846,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(536.2983486759408 10) rotate(0 258.2662353515625 93.33335876464844)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-sql-pivot-syntax-and-examples.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-062",
+    "text": "CAN BE USED WITHOUT",
+    "x": 10.0,
+    "y": 1086.6873396526912,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(10 1069.0673396526913) rotate(0 149.63992309570312 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-sql-pivot-syntax-and-examples.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-063",
+    "text": "PURPOSE,JUST TO SATISFY",
+    "x": 10.0,
+    "y": 1111.6873396526912,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(10 1069.0673396526913) rotate(0 149.63992309570312 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-sql-pivot-syntax-and-examples.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-064",
+    "text": "PIVOT SYNTAX",
+    "x": 10.0,
+    "y": 1136.6873396526912,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(10 1069.0673396526913) rotate(0 149.63992309570312 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-sql-pivot-syntax-and-examples.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-065",
+    "text": "WE CANT DO MULTIPLE AGG IN PIVOT/UNPIVOT,",
+    "x": 3006.102142811616,
+    "y": 113.67777366040755,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3006.102142811616 18.84298464673566) rotate(0 1391.462158203125 134.55560302734375)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-066",
+    "text": "SO CAN DO THEM BEFORE",
+    "x": 3006.102142811616,
+    "y": 248.23337668775133,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(3006.102142811616 18.84298464673566) rotate(0 1391.462158203125 134.55560302734375)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-pre-aggregation-and-multiple-measure-pivot-workflow.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  }
+]

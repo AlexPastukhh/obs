@@ -1,0 +1,11 @@
+﻿text_id,text,x,y,region_id,status,transcript_file,authoritative_transcript
+T-001,so its another way in react to inclue func into eddect without triggering effect,200.0,27.619999999999997,R01,closed,01-transcript-R01-callback-dependency-problem-and-useref-motivation.md,04-full-combined-final-transcript.md
+T-002,but this approach is needed when we cant rely on the callers code to wrap func into usecallback,200.0,52.62,R01,closed,01-transcript-R01-callback-dependency-problem-and-useref-motivation.md,04-full-combined-final-transcript.md
+T-003,or we dont want to wrap it,200.0,77.62,R01,closed,01-transcript-R01-callback-dependency-problem-and-useref-motivation.md,04-full-combined-final-transcript.md
+T-004,!!!,10.0,661.1226412353516,R01,closed,01-transcript-R01-callback-dependency-problem-and-useref-motivation.md,04-full-combined-final-transcript.md
+T-005,"when onmessage changes, we add new onmessage",2676.733735413457,384.885298432889,R02,closed,02-transcript-R02-updating-the-current-callback-ref.md,04-full-combined-final-transcript.md
+T-006,to the ref,2676.733735413457,409.885298432889,R02,closed,02-transcript-R02-updating-the-current-callback-ref.md,04-full-combined-final-transcript.md
+T-007,here we register a callback that says: read from messageref,2678.272196951919,747.962221509812,R02,closed,02-transcript-R02-updating-the-current-callback-ref.md,04-full-combined-final-transcript.md
+T-008,so we are not storing delegate into ws.onmessage using ref.current that,2678.272196951919,772.962221509812,R02,closed,02-transcript-R02-updating-the-current-callback-ref.md,04-full-combined-final-transcript.md
+T-009,kinda points to ref no matter what it stores,2678.272196951919,797.962221509812,R02,closed,02-transcript-R02-updating-the-current-callback-ref.md,04-full-combined-final-transcript.md
+T-010,we just saying to read from that ref on message and onmessage change we update the ref,2678.272196951919,847.962221509812,R03,closed,03-transcript-R03-stable-registered-handler-reading-the-latest-ref-value.md,04-full-combined-final-transcript.md

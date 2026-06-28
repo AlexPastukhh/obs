@@ -1,0 +1,132 @@
+[
+  {
+    "text_id": "T-001",
+    "text": "so its another way in react to inclue func into eddect without triggering effect",
+    "x": 200.0,
+    "y": 27.619999999999997,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(200 10) rotate(0 469.07965087890625 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-callback-dependency-problem-and-useref-motivation.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-002",
+    "text": "but this approach is needed when we cant rely on the callers code to wrap func into usecallback",
+    "x": 200.0,
+    "y": 52.62,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(200 10) rotate(0 469.07965087890625 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-callback-dependency-problem-and-useref-motivation.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-003",
+    "text": "or we dont want to wrap it",
+    "x": 200.0,
+    "y": 77.62,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(200 10) rotate(0 469.07965087890625 37.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-callback-dependency-problem-and-useref-motivation.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-004",
+    "text": "!!!",
+    "x": 10.0,
+    "y": 661.1226412353516,
+    "region_id": "R01",
+    "transform_chain": [
+      "translate(10 594.1666412353516) rotate(0 35.795997619628906 47.50000000000003)"
+    ],
+    "status": "closed",
+    "transcript_file": "01-transcript-R01-callback-dependency-problem-and-useref-motivation.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-005",
+    "text": "when onmessage changes, we add new onmessage",
+    "x": 2676.733735413457,
+    "y": 384.885298432889,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(2676.733735413457 367.265298432889) rotate(0 241.19981384277344 25)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-updating-the-current-callback-ref.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-006",
+    "text": "to the ref",
+    "x": 2676.733735413457,
+    "y": 409.885298432889,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(2676.733735413457 367.265298432889) rotate(0 241.19981384277344 25)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-updating-the-current-callback-ref.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-007",
+    "text": "here we register a callback that says: read from messageref",
+    "x": 2678.272196951919,
+    "y": 747.962221509812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(2678.272196951919 730.342221509812) rotate(0 444.8696594238281 62.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-updating-the-current-callback-ref.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-008",
+    "text": "so we are not storing delegate into ws.onmessage using ref.current that",
+    "x": 2678.272196951919,
+    "y": 772.962221509812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(2678.272196951919 730.342221509812) rotate(0 444.8696594238281 62.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-updating-the-current-callback-ref.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-009",
+    "text": "kinda points to ref no matter what it stores",
+    "x": 2678.272196951919,
+    "y": 797.962221509812,
+    "region_id": "R02",
+    "transform_chain": [
+      "translate(2678.272196951919 730.342221509812) rotate(0 444.8696594238281 62.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "02-transcript-R02-updating-the-current-callback-ref.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  },
+  {
+    "text_id": "T-010",
+    "text": "we just saying to read from that ref on message and onmessage change we update the ref",
+    "x": 2678.272196951919,
+    "y": 847.962221509812,
+    "region_id": "R03",
+    "transform_chain": [
+      "translate(2678.272196951919 730.342221509812) rotate(0 444.8696594238281 62.5)"
+    ],
+    "status": "closed",
+    "transcript_file": "03-transcript-R03-stable-registered-handler-reading-the-latest-ref-value.md",
+    "authoritative_transcript": "04-full-combined-final-transcript.md"
+  }
+]

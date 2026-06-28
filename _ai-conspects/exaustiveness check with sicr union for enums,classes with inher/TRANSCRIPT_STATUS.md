@@ -1,13 +1,11 @@
 # Transcript status — exaustiveness check with sicr union for enums,classes with inher
 
-Generated: 2026-06-28 04:00:00 UTC
+Generated: 2026-06-28 05:00:00 UTC
 
 ```text
-source inventory: done
-visible canvas region plan: done
-regional transcripts: not started
-full combined transcript: not started
-full-conspect coverage audit: not started
+regional transcripts: done
+full combined transcript: done
+full-conspect coverage audit: done
 remaining text elements: 0
-remaining screenshot uses: 6
+remaining screenshot uses: 0
 ```
