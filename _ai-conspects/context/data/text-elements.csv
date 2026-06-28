@@ -1,0 +1,9 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,189.8918085356488,10.0,/* eslint-disable react-refresh/only-export-components */
+T-002,R02,processed,34.26873464151049,1055.6625008054702,so when you use useContext(mycontext) you can get value object that can have actual value
+T-003,R02,processed,34.26873464151049,1055.6625008054702,Actual value need to pass to component that need to be changed
+T-004,R02,processed,34.26873464151049,1055.6625008054702,and fucntion that we need for custom hook that will return callbacks that will change this
+T-005,R02,processed,34.26873464151049,1055.6625008054702,value onFocus and blur
+T-006,R02,processed,34.26873464151049,1055.6625008054702,!!! All consumers of context value rerender when this shit changes
+T-007,R03,processed,253.5715165763727,2277.756346053718,OR
+T-008,R03,processed,247.41566981028268,2807.1096822157965,with check if you are wrapped with this

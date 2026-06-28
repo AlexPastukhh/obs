@@ -1,0 +1,17 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,371.03176977985197,10.0,declare module '*.svg' {
+T-002,R01,processed,371.03176977985197,10.0,const src: string;
+T-003,R01,processed,371.03176977985197,10.0,export default src;
+T-004,R01,processed,371.03176977985197,10.0,}
+T-005,R01,processed,371.03176977985197,10.0,declare module '*.svg?react' {
+T-006,R01,processed,371.03176977985197,10.0,import * as React from 'react';
+T-007,R01,processed,371.03176977985197,10.0,const Component: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
+T-008,R01,processed,371.03176977985197,10.0,export default Component;
+T-009,R01,processed,371.03176977985197,10.0,}
+T-010,R01,processed,391.63906189103244,824.5436292454333,npm install -D vite-plugin-svgr
+T-011,R02,processed,492.7288275824653,1879.5789388321741,but this is working
+T-012,R03,processed,325.0343017578125,3651.802912355094,TRYING TO RENDER SVG COMP BUT PUTTING A STRING
+T-013,R03,processed,973.0343017578125,3659.802924811248,as icon
+T-014,R03,processed,157.0208740234375,4096.401538939517,KIND OF HAVE EXPORT OF SOURCE OF SVG ON MODULE *SVG AND
+T-015,R03,processed,157.0208740234375,4096.401538939517,HAVE INVALID DECLARATION OF CUSTOM MODULLE ?REACT(CAN HAVE ANY NAME)
+T-016,R03,processed,299.0343017578125,4333.802937267402,need to import type into module declaration

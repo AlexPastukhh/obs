@@ -1,0 +1,76 @@
+﻿label_id,region,semantic_review_status,x,y,text
+T-001,R01,processed,287.82357408013536,10.0,rerenders
+T-002,R02,processed,1733.4515457496773,209.81330759087905,example with singleton query client to use it in fetch functions outside of react
+T-003,R02,processed,3217.601169480746,1267.0097682912146,// src/auth/tokenCache.ts
+T-004,R02,processed,3217.601169480746,1267.0097682912146,"import { queryClient, TOKEN_KEY } from ""../queryClient"";"
+T-005,R02,processed,3217.601169480746,1267.0097682912146,export function getAccessToken(): string | null {
+T-006,R02,processed,3217.601169480746,1267.0097682912146,return (queryClient.getQueryData(TOKEN_KEY) as string | null) ?? null;
+T-007,R02,processed,3217.601169480746,1267.0097682912146,}
+T-008,R02,processed,3217.601169480746,1267.0097682912146,export function setAccessToken(token: string | null) {
+T-009,R02,processed,3217.601169480746,1267.0097682912146,"queryClient.setQueryData(TOKEN_KEY, token);"
+T-010,R02,processed,3217.601169480746,1267.0097682912146,}
+T-011,R02,processed,3211.6753339772745,1736.6394883432968,// src/auth/refresh.ts
+T-012,R02,processed,3211.6753339772745,1736.6394883432968,"import { setAccessToken } from ""./tokenCache"";"
+T-013,R02,processed,3211.6753339772745,1736.6394883432968,export async function refreshAccessToken(): Promise<string> {
+T-014,R02,processed,3211.6753339772745,1736.6394883432968,"const res = await fetch(""/api/auth/refresh"", {"
+T-015,R02,processed,3211.6753339772745,1736.6394883432968,"method: ""POST"","
+T-016,R02,processed,3211.6753339772745,1736.6394883432968,"credentials: ""include"", // sends refresh cookie"
+T-017,R02,processed,3211.6753339772745,1736.6394883432968,});
+T-018,R02,processed,3211.6753339772745,1736.6394883432968,"if (!res.ok) throw new Error(""Refresh failed"");"
+T-019,R02,processed,3211.6753339772745,1736.6394883432968,const data = (await res.json()) as { accessToken: string };
+T-020,R02,processed,3211.6753339772745,1736.6394883432968,setAccessToken(data.accessToken); // <-- update React Query cache
+T-021,R02,processed,3211.6753339772745,1736.6394883432968,return data.accessToken;
+T-022,R02,processed,3211.6753339772745,1736.6394883432968,}
+T-023,R02,processed,3319.8235273366495,2360.3431694413903,// src/api/fetchWithAuth.ts
+T-024,R02,processed,3319.8235273366495,2360.3431694413903,"import { getAccessToken, setAccessToken } from ""../auth/tokenCache"";"
+T-025,R02,processed,3319.8235273366495,2360.3431694413903,"import { refreshAccessToken } from ""../auth/refresh"";"
+T-026,R02,processed,3319.8235273366495,2360.3431694413903,let refreshPromise: Promise<string> | null = null;
+T-027,R02,processed,3319.8235273366495,2360.3431694413903,async function refreshOnce(): Promise<string> {
+T-028,R02,processed,3319.8235273366495,2360.3431694413903,if (!refreshPromise) {
+T-029,R02,processed,3319.8235273366495,2360.3431694413903,refreshPromise = refreshAccessToken().finally(() => {
+T-030,R02,processed,3319.8235273366495,2360.3431694413903,refreshPromise = null;
+T-031,R02,processed,3319.8235273366495,2360.3431694413903,});
+T-032,R02,processed,3319.8235273366495,2360.3431694413903,}
+T-033,R02,processed,3319.8235273366495,2360.3431694413903,return refreshPromise;
+T-034,R02,processed,3319.8235273366495,2360.3431694413903,}
+T-035,R02,processed,3319.8235273366495,2360.3431694413903,"export async function fetchWithAuth(input: RequestInfo, init: RequestInit = {}) {"
+T-036,R02,processed,3319.8235273366495,2360.3431694413903,const headers = new Headers(init.headers);
+T-037,R02,processed,3319.8235273366495,2360.3431694413903,const token = getAccessToken(); // <-- read from React Query cache
+T-038,R02,processed,3319.8235273366495,2360.3431694413903,"if (token) headers.set(""Authorization"", `Bearer ${token}`);"
+T-039,R02,processed,3319.8235273366495,2360.3431694413903,const doReq = () =>
+T-040,R02,processed,3319.8235273366495,2360.3431694413903,"fetch(input, { ...init, headers, credentials: ""include"" });"
+T-041,R02,processed,3319.8235273366495,2360.3431694413903,let res = await doReq();
+T-042,R02,processed,3319.8235273366495,2360.3431694413903,if (res.status !== 401) return res;
+T-043,R02,processed,3319.8235273366495,2360.3431694413903,// 401 -> refresh -> retry once
+T-044,R02,processed,3319.8235273366495,2360.3431694413903,try {
+T-045,R02,processed,3319.8235273366495,2360.3431694413903,const fresh = await refreshOnce();
+T-046,R02,processed,3319.8235273366495,2360.3431694413903,"headers.set(""Authorization"", `Bearer ${fresh}`);"
+T-047,R02,processed,3319.8235273366495,2360.3431694413903,res = await doReq();
+T-048,R02,processed,3319.8235273366495,2360.3431694413903,return res;
+T-049,R02,processed,3319.8235273366495,2360.3431694413903,} catch {
+T-050,R02,processed,3319.8235273366495,2360.3431694413903,// Refresh failed: clear token so UI switches to login
+T-051,R02,processed,3319.8235273366495,2360.3431694413903,setAccessToken(null);
+T-052,R02,processed,3319.8235273366495,2360.3431694413903,return res; // still 401
+T-053,R02,processed,3319.8235273366495,2360.3431694413903,}
+T-054,R02,processed,3319.8235273366495,2360.3431694413903,}
+T-055,R03,processed,3323.5271406178995,3579.602406095035,// src/auth/login.ts
+T-056,R03,processed,3323.5271406178995,3579.602406095035,"import { setAccessToken } from ""./tokenCache"";"
+T-057,R03,processed,3323.5271406178995,3579.602406095035,"export async function login(username: string, password: string) {"
+T-058,R03,processed,3323.5271406178995,3579.602406095035,"const res = await fetch(""/api/auth/login"", {"
+T-059,R03,processed,3323.5271406178995,3579.602406095035,"method: ""POST"","
+T-060,R03,processed,3323.5271406178995,3579.602406095035,"credentials: ""include"","
+T-061,R03,processed,3323.5271406178995,3579.602406095035,"headers: { ""Content-Type"": ""application/json"" },"
+T-062,R03,processed,3323.5271406178995,3579.602406095035,"body: JSON.stringify({ username, password }),"
+T-063,R03,processed,3323.5271406178995,3579.602406095035,});
+T-064,R03,processed,3323.5271406178995,3579.602406095035,if (!res.ok) throw new Error(await res.text());
+T-065,R03,processed,3323.5271406178995,3579.602406095035,const data = (await res.json()) as { accessToken: string };
+T-066,R03,processed,3323.5271406178995,3579.602406095035,setAccessToken(data.accessToken); // updates cache -> UI re-renders
+T-067,R03,processed,3323.5271406178995,3579.602406095035,}
+T-068,R03,processed,3356.119642788038,4061.0838649709094,// src/auth/logout.ts
+T-069,R03,processed,3356.119642788038,4061.0838649709094,"import { setAccessToken } from ""./tokenCache"";"
+T-070,R03,processed,3356.119642788038,4061.0838649709094,"import { queryClient } from ""../queryClient"";"
+T-071,R03,processed,3356.119642788038,4061.0838649709094,export async function logout() {
+T-072,R03,processed,3356.119642788038,4061.0838649709094,"await fetch(""/api/auth/logout"", { method: ""POST"", credentials: ""include"" });"
+T-073,R03,processed,3356.119642788038,4061.0838649709094,setAccessToken(null);
+T-074,R03,processed,3356.119642788038,4061.0838649709094,queryClient.clear(); // optional: clear all cached server data
+T-075,R03,processed,3356.119642788038,4061.0838649709094,}

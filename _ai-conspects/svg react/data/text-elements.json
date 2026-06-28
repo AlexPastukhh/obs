@@ -1,0 +1,130 @@
+[
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "declare module '*.svg' {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "const src: string;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "export default src;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "declare module '*.svg?react' {",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "import * as React from 'react';",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "const Component: React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "export default Component;",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 371.03176977985197,
+    "y": 10.0,
+    "text": "}",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 391.63906189103244,
+    "y": 824.5436292454333,
+    "text": "npm install -D vite-plugin-svgr",
+    "region": "R01",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 492.7288275824653,
+    "y": 1879.5789388321741,
+    "text": "but this is working",
+    "region": "R02",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  },
+  {
+    "x": 325.0343017578125,
+    "y": 3651.802912355094,
+    "text": "TRYING TO RENDER SVG COMP BUT PUTTING A STRING",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-012"
+  },
+  {
+    "x": 973.0343017578125,
+    "y": 3659.802924811248,
+    "text": "as icon",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-013"
+  },
+  {
+    "x": 157.0208740234375,
+    "y": 4096.401538939517,
+    "text": "KIND OF HAVE EXPORT OF SOURCE OF SVG ON MODULE *SVG AND",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-014"
+  },
+  {
+    "x": 157.0208740234375,
+    "y": 4096.401538939517,
+    "text": "HAVE INVALID DECLARATION OF CUSTOM MODULLE ?REACT(CAN HAVE ANY NAME)",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-015"
+  },
+  {
+    "x": 299.0343017578125,
+    "y": 4333.802937267402,
+    "text": "need to import type into module declaration",
+    "region": "R03",
+    "semantic_review_status": "processed",
+    "label_id": "T-016"
+  }
+]
