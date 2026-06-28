@@ -1,33 +1,37 @@
 # MANIFEST — redux basics
 
-Generated: 2026-06-27 16:30:00 UTC
+Generated: 2026-06-27 17:30:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/redux basics.svg`
-- 105 extracted screenshots under `source/images/`
+- `01-transcript-R01-classic-redux-flow-principles-and-connect.md`
+- `02-transcript-R02-store-provider-selectors-preloaded-state-and-getstate.md`
+- `03-transcript-R03-middleware-custom-middleware-and-thunk.md`
+- `04-transcript-R04-action-creators-thunk-action-creators-and-async-flow.md`
+- `05-transcript-R05-immer-draft-state-and-immutability.md`
+- `06-transcript-R06-immutable-update-examples-and-redux-toolkit-integration.md`
 
-## Stage0
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
+- `data/text-elements-v002-closed.*`
+- `data/image-uses-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `07-full-combined-final-transcript.md`
+- `08-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `MANIFEST.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-- complete canvas preview
-- 8 regional contact sheets
 
-## Coverage
+## Final coverage
 
 ```text
-text elements inventoried: 19
-image uses inventoried: 108
-logical regions: 6
-remaining text elements: 19
-remaining image uses: 108
+text elements: 19 / 19
+image uses: 108 / 108
+repeated placements: 3
+regions: 6 / 6
+remaining text elements: 0
+remaining image uses: 0
 ```

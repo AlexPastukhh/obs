@@ -31,14 +31,13 @@ follow visible knowledge roads rather than equal coordinate strips.
 
 ## Current coverage boundary
 
-Stage0 preserves, extracts and inventories the source. No semantic transcript
-is claimed yet.
+Stage0 preserved, extracted and inventoried the source. Regional and combined semantic coverage is now complete.
 
 ```text
-processed text elements: 0 / 19
-processed screenshot uses: 0 / 108
-remaining text elements: 19
-remaining screenshot uses: 108
+processed text elements: 19 / 19
+processed screenshot uses: 108 / 108
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -52,7 +51,6 @@ remaining screenshot uses: 108
 | R05 | Immer, draft state and immutability | 3 | 18 | 18 |
 | R06 | Redux and Redux Toolkit examples | 2 | 10 | 10 |
 
-## Next
+## Closure
 
-Review the regional contact sheets, create semantic transcripts and then issue
-a combined transcript with a full-conspect coverage audit.
+Regional transcripts, the combined transcript and the full-conspect coverage audit are complete.
