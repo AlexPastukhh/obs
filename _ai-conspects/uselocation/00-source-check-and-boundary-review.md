@@ -1,0 +1,52 @@
+# Stage0 source check and boundary review — uselocation
+
+Generated: 2026-06-28 04:00:00 UTC
+
+## Source decision
+
+This is a new conspect. Exact archive target:
+
+`_ai-conspects/uselocation`
+
+Complete source:
+
+`source/uselocation.svg`
+
+## Source inventory
+
+```text
+meaningful text elements: 1
+unique embedded screenshots: 5
+screenshot uses on canvas: 5
+repeated screenshot placements: 0
+missing image definitions: 0
+unused image definitions: 0
+source SVG SHA-256: 35e1b0fdf38b31c77996d9643bdc65452565732787d8207da0be750445c1d840
+```
+
+## Region plan
+
+The plan follows visible columns, vertical sections and canvas headings. Raw SVG
+labels remain in the ledgers and are not rendered as Markdown bullet lists.
+
+| Region | Visual-semantic block | Text | Uses | Unique images |
+|---|---|---:|---:|---:|
+| R01 | useLocation and the location object | 1 | 1 | 1 |
+| R02 | pathname, search, hash and navigation state | 0 | 2 | 2 |
+| R03 | Rerenders, effects and testing patterns | 0 | 2 | 2 |
+
+## Current coverage
+
+Stage0 preserves, extracts and inventories the source.
+
+```text
+processed text elements: 0 / 1
+processed screenshot uses: 0 / 5
+remaining text elements: 1
+remaining screenshot uses: 5
+```
+
+## Next
+
+Create regional semantic transcripts, one combined final transcript and a
+full-conspect coverage audit.
