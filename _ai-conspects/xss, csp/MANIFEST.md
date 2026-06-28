@@ -1,33 +1,36 @@
 # MANIFEST — xss, csp
 
-Generated: 2026-06-28 09:00:00 UTC
+Generated: 2026-06-28 10:30:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/xss, csp.svg`
-- 29 extracted screenshots under `source/images/`
+- `01-transcript-R01-sanitizing-untrusted-html.md`
+- `02-transcript-R02-contextual-escaping-and-encoding.md`
+- `03-transcript-R03-dangerous-dom-sinks-and-untrusted-input-boundaries.md`
+- `04-transcript-R04-csp-trusted-types-and-storage-considerations.md`
+- `05-transcript-R05-stored-reflected-and-dom-based-xss-flows.md`
 
-## Stage0
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
+- `data/text-elements-v002-closed.*`
+- `data/image-uses-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `06-full-combined-final-transcript.md`
+- `07-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `MANIFEST.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-- complete canvas preview
-- 5 regional contact sheets
 
-## Coverage
+## Final coverage
 
 ```text
-text elements inventoried: 11
-image uses inventoried: 29
-logical regions: 5
-remaining text elements: 11
-remaining image uses: 29
+text elements: 11 / 11
+image uses: 29 / 29
+repeated placements: 0
+regions: 5 / 5
+remaining text elements: 0
+remaining image uses: 0
 ```

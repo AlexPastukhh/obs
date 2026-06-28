@@ -1,13 +1,19 @@
 # Transcript status — problem2
 
-Generated: 2026-06-28 09:00:00 UTC
+Generated: 2026-06-28 10:30:00 UTC
 
 ```text
 source inventory: done
 manual semantic-anchor region plan: done
-regional transcripts: not started
-full combined transcript: not started
-full-conspect coverage audit: not started
-remaining text elements: 70
-remaining screenshot uses: 44
+regional transcripts: done
+full combined transcript: done
+full-conspect coverage audit: done
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
+
+## Authoritative files
+
+- `06-full-combined-final-transcript.md`
+- `07-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`

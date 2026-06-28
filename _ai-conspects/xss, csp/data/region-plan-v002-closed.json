@@ -1,0 +1,173 @@
+[
+  {
+    "region_id": "R01",
+    "title": "Sanitizing untrusted HTML",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 400,
+        "y": 900
+      },
+      {
+        "x": 500,
+        "y": 1700
+      }
+    ],
+    "text_element_count": 1,
+    "image_use_count": 2,
+    "unique_image_count": 2,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 10.0,
+    "canvas_max_x": 959.0,
+    "canvas_min_y": 1071.1805318567494,
+    "canvas_max_y": 1987.1169913526392,
+    "representative_captions": [
+      "sanitizing",
+      "escaping user content",
+      "innerhtml or dangerouslysetinnerhtml from user input"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "01-transcript-R01-sanitizing-untrusted-html.md"
+  },
+  {
+    "region_id": "R02",
+    "title": "Escaping and encoding user content",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 1300,
+        "y": 900
+      },
+      {
+        "x": 1500,
+        "y": 1700
+      }
+    ],
+    "text_element_count": 1,
+    "image_use_count": 3,
+    "unique_image_count": 3,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 1071.7938929966513,
+    "canvas_max_x": 2058.174787248883,
+    "canvas_min_y": 996.9343160364369,
+    "canvas_max_y": 1997.600968170911,
+    "representative_captions": [
+      "escaping user content",
+      "innerhtml or dangerouslysetinnerhtml from user input",
+      "sanitizing"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "02-transcript-R02-contextual-escaping-and-encoding.md"
+  },
+  {
+    "region_id": "R03",
+    "title": "innerHTML, dangerouslySetInnerHTML and untrusted input boundaries",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 2600,
+        "y": 900
+      },
+      {
+        "x": 3000,
+        "y": 1800
+      },
+      {
+        "x": 2600,
+        "y": 4200
+      }
+    ],
+    "text_element_count": 5,
+    "image_use_count": 3,
+    "unique_image_count": 3,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 2201.9842529296866,
+    "canvas_max_x": 3171.936750139509,
+    "canvas_min_y": 1135.672462137154,
+    "canvas_max_y": 2115.934250641614,
+    "representative_captions": [
+      "innerhtml or dangerouslysetinnerhtml from user input",
+      "escaping user content",
+      "when we store in memory we lose on refresh",
+      "The main rule - dont put anything from user's input"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "03-transcript-R03-dangerous-dom-sinks-and-untrusted-input-boundaries.md"
+  },
+  {
+    "region_id": "R04",
+    "title": "CSP, Trusted Types and storage considerations",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 5000,
+        "y": 1000
+      },
+      {
+        "x": 5700,
+        "y": 2200
+      },
+      {
+        "x": 6300,
+        "y": 3500
+      }
+    ],
+    "text_element_count": 3,
+    "image_use_count": 14,
+    "unique_image_count": 14,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 3627.069303311331,
+    "canvas_max_x": 7181.240653562339,
+    "canvas_min_y": 10.0,
+    "canvas_max_y": 4018.7508644706977,
+    "representative_captions": [
+      "when we store in memory we lose on refresh",
+      "csp",
+      "innerhtml or dangerouslysetinnerhtml from user input",
+      "!!!!",
+      "types of xss"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "04-transcript-R04-csp-trusted-types-and-storage-considerations.md"
+  },
+  {
+    "region_id": "R05",
+    "title": "XSS categories and attack flows",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 3600,
+        "y": 5200
+      },
+      {
+        "x": 4200,
+        "y": 6500
+      }
+    ],
+    "text_element_count": 1,
+    "image_use_count": 7,
+    "unique_image_count": 7,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 2635.4977477188686,
+    "canvas_max_x": 4387.630307269046,
+    "canvas_min_y": 5118.095160781235,
+    "canvas_max_y": 7117.872870742172,
+    "representative_captions": [
+      "types of xss",
+      "but also some route params/query string params",
+      "not only literal input"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "05-transcript-R05-stored-reflected-and-dom-based-xss-flows.md"
+  }
+]

@@ -1,0 +1,175 @@
+[
+  {
+    "region_id": "R01",
+    "title": "JavaScript semaphore analogue and permit model",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 900,
+        "y": 500
+      },
+      {
+        "x": 1000,
+        "y": 1200
+      }
+    ],
+    "text_element_count": 1,
+    "image_use_count": 4,
+    "unique_image_count": 4,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 888.8036727025628,
+    "canvas_max_x": 1889.8036727025628,
+    "canvas_min_y": 216.65584354540397,
+    "canvas_max_y": 2263.879118430426,
+    "representative_captions": [
+      "js analogue of semaphoreslim",
+      "so when we do acquire we reduce count of permits and if there is no perimts",
+      "we give permit directly to",
+      "the enqueeued waiter,"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "01-transcript-R01-javascript-semaphore-analogue-and-permit-model.md"
+  },
+  {
+    "region_id": "R02",
+    "title": "Acquire/release queue and direct waiter handoff",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 500,
+        "y": 1900
+      },
+      {
+        "x": 2200,
+        "y": 1700
+      },
+      {
+        "x": 3000,
+        "y": 2300
+      },
+      {
+        "x": 3500,
+        "y": 3200
+      }
+    ],
+    "text_element_count": 5,
+    "image_use_count": 13,
+    "unique_image_count": 13,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 10.0,
+    "canvas_max_x": 3844.071828689378,
+    "canvas_min_y": 1466.0716656509444,
+    "canvas_max_y": 4761.525476516761,
+    "representative_captions": [
+      "pending promise",
+      "so when we do acquire we reduce count of permits and if there is no perimts",
+      "with settimeout and promise",
+      "we give permit directly to",
+      "direct waiters",
+      "we incr permits only if there is no",
+      "the enqueeued waiter,"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "02-transcript-R02-acquirerelease-queue-and-direct-waiter-handoff.md"
+  },
+  {
+    "region_id": "R03",
+    "title": "Pending Promise mechanics",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 4500,
+        "y": 1300
+      },
+      {
+        "x": 4600,
+        "y": 2600
+      }
+    ],
+    "text_element_count": 1,
+    "image_use_count": 5,
+    "unique_image_count": 5,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 4253.813001970668,
+    "canvas_max_x": 5152.194106373778,
+    "canvas_min_y": 1406.0473027334933,
+    "canvas_max_y": 3658.3520754024917,
+    "representative_captions": [
+      "pending promise",
+      "with settimeout and promise",
+      "waiting asynchronously"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "03-transcript-R03-pending-promise-mechanics.md"
+  },
+  {
+    "region_id": "R04",
+    "title": "Asynchronous waiting with setTimeout and Promise",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 6200,
+        "y": 1300
+      },
+      {
+        "x": 6200,
+        "y": 2400
+      }
+    ],
+    "text_element_count": 2,
+    "image_use_count": 4,
+    "unique_image_count": 4,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 5749.348571836246,
+    "canvas_max_x": 6852.348571836246,
+    "canvas_min_y": 1389.019094232317,
+    "canvas_max_y": 3188.6754052674733,
+    "representative_captions": [
+      "with settimeout and promise",
+      "waiting asynchronously",
+      "why do we need promise here"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "04-transcript-R04-asynchronous-waiting-with-settimeout-and-promise.md"
+  },
+  {
+    "region_id": "R05",
+    "title": "Event loop, threads and why Promise is needed",
+    "assignment_method": "nearest_manual_semantic_anchor",
+    "anchors": [
+      {
+        "x": 7800,
+        "y": 1300
+      },
+      {
+        "x": 8000,
+        "y": 2600
+      }
+    ],
+    "text_element_count": 2,
+    "image_use_count": 6,
+    "unique_image_count": 6,
+    "duplicate_placement_count": 0,
+    "canvas_min_x": 7526.903191603948,
+    "canvas_max_x": 8561.685570134432,
+    "canvas_min_y": 1357.9083477335912,
+    "canvas_max_y": 3904.8257993649454,
+    "representative_captions": [
+      "why do we need promise here",
+      "js threads, does setimeout block",
+      "with settimeout and promise"
+    ],
+    "status": "closed",
+    "remaining_text_elements": 0,
+    "remaining_image_uses": 0,
+    "transcript_file": "05-transcript-R05-event-loop-threads-and-why-promise-is-needed.md"
+  }
+]

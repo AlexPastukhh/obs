@@ -1,33 +1,36 @@
 # MANIFEST — problem2
 
-Generated: 2026-06-28 09:00:00 UTC
+Generated: 2026-06-28 10:30:00 UTC
 
-## Complete source
+## Regional transcripts
 
-- `source/problem2.svg`
-- 42 extracted screenshots under `source/images/`
+- `01-transcript-R01-problem-statement-brute-force-and-recursion-smell.md`
+- `02-transcript-R02-reducing-the-problem-to-counts-and-distinct-windows.md`
+- `03-transcript-R03-boolean-array-versus-hashset-occurrence-tracking.md`
+- `04-transcript-R04-bitwise-sliding-window-encoding.md`
+- `05-transcript-R05-mask-construction-and-fixed-width-bit-window.md`
 
-## Stage0
+## Closed ledgers
 
-- `00-source-check-and-boundary-review.md`
+- `data/text-elements-v002-closed.*`
+- `data/image-uses-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+
+## Authoritative result
+
+- `06-full-combined-final-transcript.md`
+- `07-full-conspect-final-coverage-audit.md`
+- `data/full-conspect-final-coverage-audit-v001.*`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
-- `MANIFEST.md`
-- `APPLY_STAGE0_ARCHIVE.md`
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-- complete canvas preview
-- 5 regional contact sheets
 
-## Coverage
+## Final coverage
 
 ```text
-text elements inventoried: 70
-image uses inventoried: 44
-logical regions: 5
-remaining text elements: 70
-remaining image uses: 44
+text elements: 70 / 70
+image uses: 44 / 44
+repeated placements: 2
+regions: 5 / 5
+remaining text elements: 0
+remaining image uses: 0
 ```

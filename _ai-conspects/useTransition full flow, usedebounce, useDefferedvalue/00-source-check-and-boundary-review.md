@@ -31,14 +31,13 @@ visible knowledge roads rather than equal coordinate strips.
 
 ## Current coverage boundary
 
-Stage0 preserves, extracts and inventories the source. No semantic transcript
-is claimed yet.
+Stage0 preserved, extracted and inventoried the source. Regional and combined semantic coverage is now complete.
 
 ```text
-processed text elements: 0 / 19
-processed screenshot uses: 0 / 32
-remaining text elements: 19
-remaining screenshot uses: 32
+processed text elements: 19 / 19
+processed screenshot uses: 32 / 32
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -52,7 +51,6 @@ remaining screenshot uses: 32
 | R05 | Debounce fundamentals and timing | 2 | 4 | 4 |
 | R06 | Debounce implementation pattern | 1 | 1 | 1 |
 
-## Next
+## Closure
 
-Review every regional contact sheet, create semantic transcripts and then issue
-a combined transcript with a full-conspect coverage audit.
+Regional transcripts, the combined transcript and the full-conspect coverage audit are complete.

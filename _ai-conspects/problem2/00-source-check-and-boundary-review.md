@@ -31,14 +31,13 @@ visible knowledge roads rather than equal coordinate strips.
 
 ## Current coverage boundary
 
-Stage0 preserves, extracts and inventories the source. No semantic transcript
-is claimed yet.
+Stage0 preserved, extracted and inventoried the source. Regional and combined semantic coverage is now complete.
 
 ```text
-processed text elements: 0 / 70
-processed screenshot uses: 0 / 44
-remaining text elements: 70
-remaining screenshot uses: 44
+processed text elements: 70 / 70
+processed screenshot uses: 44 / 44
+remaining text elements: 0
+remaining screenshot uses: 0
 ```
 
 ## Planned regions
@@ -51,7 +50,6 @@ remaining screenshot uses: 44
 | R04 | Bitwise sliding-window encoding | 11 | 7 | 7 |
 | R05 | Mask construction and fixed-width bit window | 12 | 3 | 3 |
 
-## Next
+## Closure
 
-Review every regional contact sheet, create semantic transcripts and then issue
-a combined transcript with a full-conspect coverage audit.
+Regional transcripts, the combined transcript and the full-conspect coverage audit are complete.
