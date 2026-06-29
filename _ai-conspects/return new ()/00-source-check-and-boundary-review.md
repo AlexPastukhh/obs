@@ -29,15 +29,15 @@ source SVG SHA-256: f4008a4da3404636435d0f478a940509283c9a20c409a189a08ff8665c92
 | R01 | Target-typed new expressions | 0 | 1 | 1 |
 | R02 | Returning newly constructed values | 0 | 1 | 1 |
 
-## Current coverage
+## Final closure — 2026-06-29 00:00:00 UTC
 
 ```text
 processed text elements: 0 / 0
-processed screenshot uses: 0 / 2
+processed screenshot uses: 2 / 2
+processed regions: 2 / 2
 remaining text elements: 0
-remaining screenshot uses: 2
+remaining screenshot uses: 0
 ```
 
-## Next
-
-Create regional semantic transcripts, then one combined transcript and final coverage audit.
+Authoritative transcript: `03-full-combined-final-transcript.md`  
+Authoritative audit: `04-full-conspect-final-coverage-audit.md`
