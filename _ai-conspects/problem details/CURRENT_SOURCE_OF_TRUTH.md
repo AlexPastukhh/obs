@@ -1,53 +1,38 @@
 # Current Source of Truth — problem details
 
-Generated: 2026-06-27 UTC
+Generated: 2026-06-30
 
-## Naming
-
-```text
-Received SVG: problem details(1).svg
-Canonical source name: problem details.svg
-Canonical conspect folder: _ai-conspects/problem details
-```
-
-## Current status
+## Source-accounting status
 
 ```text
-Complete SVG reconciliation: done
-Screenshot-backed transcripts: done
-Independent final coverage audit: done
-Status: complete
+Stage4 complete SVG reconciliation: complete
+complete embedded assets: 77
+complete image uses: 86
+processed image uses: 86
+physical non-empty SVG text nodes: 118
+processed text nodes: 118
+duplicate placement groups: 9
+coverage failures: 0
 ```
 
-## Final coverage
+## Transcript-quality status
 
 ```text
-Complete embedded assets: 77
-Complete image uses: 86
-Processed image uses: 86
-Physical non-empty SVG text nodes: 118
-Processed text nodes: 118
-Missing image uses: 0
-Unreviewed image uses: 0
-Unassigned image uses: 0
-Multiply assigned image uses: 0
-Missing text nodes: 0
-Unreviewed text nodes: 0
-Unassigned text nodes: 0
-Multiply assigned text nodes: 0
-Unique image-content hashes: 77
-Duplicate placement groups preserved: 9
+coverage completion: confirmed
+actual near-literal fidelity: pending independent region-text audit
+repetition readiness: not yet certified
+question-generation readiness: not yet certified source-by-source
 ```
 
-## Verified regions
+## Active quality-gate files
 
 ```text
-R01: ProblemDetails configuration, standard fields, client-error mapping and CustomizeProblemDetails — 32 images / 35 text nodes
-R02: ProblemDetailsFactory, IProblemDetailsService and implicit versus explicit pipeline — 12 images / 9 text nodes
-R03: Worked examples, authentication redirect events, TryWriteAsync and integration flow — 24 images / 62 text nodes
-R04: IProblemDetailsWriter chain, default JSON writer and content negotiation — 18 images / 12 text nodes
+05-stage5-transcript-quality-gate-v001.md
+06-repetition-readiness-plan-v001.md
+TRANSCRIPT_QUALITY_STATUS.md
+data/legacy-25-use-source-audit-v001.json
 ```
 
-## Current next step
+## Important boundary
 
-No normal transcript regions remain. Only correction/polish if a newer complete source export adds material.
+The supplied `problem details(2).svg` is the historical 25-use export. It is preserved under `audit-assets/legacy-source-v001/` and must not replace the 86-use Stage4 source.

@@ -1,9 +1,9 @@
-# MANIFEST - Scopes And IDisposable Closure Audit
+# MANIFEST — Scopes and IDisposable correction v002
 
-Generated: 2026-06-20 08:07:06 UTC
-
-```text
-Sources audited: 22 / 22
-Pending candidates: 0
-Final verdict: Scopes And IDisposable S-001..S-022 is closed
-```
+- exact full SVG;
+- 21 unique source transcripts;
+- one explicit duplicate-placement record;
+- five corrected regions;
+- code blocks and source limitations;
+- recall questions and repetition guide;
+- old misleading entry points superseded.

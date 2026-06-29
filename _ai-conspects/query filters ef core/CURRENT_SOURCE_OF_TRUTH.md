@@ -1,34 +1,34 @@
-# Current Source of Truth - query filters ef core
+# Current Source of Truth — query filters ef core
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-30
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+## Source
 
 ```text
-Stage0 source/boundary review: done
-R01 required navigation inner-join data-loss trap: transcript done
-R02 HasQueryFilter / IgnoreQueryFilters / multiple filters: transcript done
-R03 mitigations / multitenancy / context pooling: transcript done
-Final coverage audit: done
+source/query filters ef core.svg
+Git blob SHA: b27a55e96e1c93ad1b1530e958969da1f21c47ae
+viewBox: 0 0 4791.23692451849 4572.183713599312
+unique images: 15
+image uses: 15
+SVG labels: 15
 ```
 
-## Counts
+## Active status
 
 ```text
-image uses on canvas: 15
-text labels parsed: 15
-duplicate image uses by extracted content: 0
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+Stage0 inventory: preserved
+old coverage-only wrapper: superseded
+source-preserving transcript v002: complete
+repetition guide v002: complete
+processed source uses: 15 / 15
+missing source uses: 0
 ```
 
-## Candidate next step
+## Authoritative files
 
 ```text
-No normal transcript regions remain. Only correction/polish if later needed.
+02-stage2-corrected-source-preserving-transcript-v002.md
+03-repetition-guide-v002.md
+regions-v002/
+data/source-preserving-coverage-v002.csv
 ```

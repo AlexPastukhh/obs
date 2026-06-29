@@ -1,15 +1,13 @@
-# Stage 1 — query filters ef core final coverage transcript v001
+# Stage1 final coverage transcript v001 — superseded
 
-Generated: 2026-06-22 UTC
+Generated: 2026-06-30
 
-## Done
+The old file proved source-ID closure but did not contain the actual screenshot transcript.
 
-- All candidate regions processed.
-- 15 image uses included.
-- 15 text labels included.
-- Remaining unclosed image uses: 0.
-- Remaining unclosed text labels: 0.
+Active replacement:
 
-## Next
-
-No normal transcript regions remain.
+```text
+02-stage2-corrected-source-preserving-transcript-v002.md
+regions-v002/
+03-repetition-guide-v002.md
+```
