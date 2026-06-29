@@ -1,55 +1,32 @@
-# Current Source of Truth - Raw Connections DbConnection SqlConnection Commands
+# Current Source of Truth — rawconnections,dbconnection,sqlconnection,commands
 
-Generated: 2026-06-13 08:48:07 UTC
+Generated: 2026-06-29 06:06:52 UTC
 
-## Current policy
-
-Do not treat the review ledger as source of truth.
-
-A region is complete only when its region file contains coverage / boundary review, included sources, candidate checks, excluded/reassigned candidates, open issues, and verified source transcript or correction addendum.
-
-For small conspects, one transcript pass may process all Stage0 groups, then closure audit.
-
-## Big archive apply workflow
+## Status
 
 ```text
-Expand archive.
-git add -A -- <target>
-Review staged file list/status.
-Commit only after staged file review.
-Never use git add . when unrelated files are modified.
+Previous source-level semantic transcript: preserved
+Previous closure audit: preserved
+Authoritative source SVG: restored from current upload
+Detailed near-literal transcript v002: done
+Detailed transcript coverage audit: done
+Review questions: intentionally not included
 ```
 
-## No-placeholder-processed rule
+## Coverage
 
 ```text
-If visible transcript has OCR timeout/error, image missing, empty text, or placeholder text,
-the source stays pending and must not be marked processed.
+SVG text elements: 11 / 11
+embedded images: 36 / 36
+image uses: 36 / 36
+regions: 3 / 3
+remaining: 0
 ```
 
-## Transcript precision policy
+## Authoritative detailed transcript
 
-```text
-Stage1 transcript level: source-level semantic transcript.
-For exact code punctuation, use preserved Stage0 source PNGs.
-Precision patches can upgrade individual sources to verbatim code later.
-```
+`04-detailed-near-literal-transcript-v002.md`
 
-## Current status
+## Policy
 
-```text
-Raw Connections DbConnection SqlConnection Commands Stage0 boundary review v001: completed
-Raw Connections DbConnection SqlConnection Commands Stage1 transcript v001: completed
-Raw Connections DbConnection SqlConnection Commands closure audit v001: completed
-Image uses inventoried: 36
-Stage1 processed: 36
-Pending candidates: 0
-Bad placeholder/OCR-error processed rows: 0
-```
-
-## Current processing target
-
-```text
-Raw Connections DbConnection SqlConnection Commands: closed by source coverage
-Next: no further transcript work unless precision patch or repeat-material layer is requested.
-```
+The transcript is detailed enough to reconstruct and repeat the conspect. It does not collapse distinct examples or caveats merely because they discuss the same API.

@@ -1,13 +1,10 @@
 # Transcript status — parse string to int, convert char
 
-Generated: 2026-06-28 06:00:00 UTC
+Generated: 2026-06-29 06:06:52 UTC
 
 ```text
-source inventory: done
-visible canvas region plan: done
-regional transcripts: not started
-full combined transcript: not started
-full-conspect coverage audit: not started
-remaining text elements: 1
-remaining screenshot uses: 3
+detailed near-literal transcript: done
+coverage audit: done
+remaining source units: 0
+review questions: not included
 ```

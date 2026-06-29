@@ -1,28 +1,11 @@
 # MANIFEST — parse string to int, convert char
 
-Generated: 2026-06-28 06:00:00 UTC
+Generated: 2026-06-29 06:06:52 UTC
 
-## Complete source
-
-- `source/parse string to int, convert char.svg`
-- 3 extracted screenshots under `source/images/`
-
-## Stage0 documents
-
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
+- `01-detailed-near-literal-transcript.md`
+- `DETAILED_TRANSCRIPT_COVERAGE_AUDIT.md`
 - `CURRENT_SOURCE_OF_TRUTH.md`
 - `TRANSCRIPT_STATUS.md`
+- `data/detailed-transcript-coverage-audit-v001.json`
 
-## Ledgers
-
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-
-## Audit assets
-
-- complete canvas preview
-- 2 regional contact sheets
+Source SVG SHA-256: `b5e180494418df4d92e12ae3cabdfe39ded86197f28733e80a4eb691fcbefd78`
