@@ -1,0 +1,60 @@
+﻿source_id,region_file,title,near_literal_block,study_meaning,recall_questions,known_limits_recorded
+S-001,R02-save-suppression-alternate-results-and-outcome-reporting.md,Where SaveChanges suppression is possible,yes,yes,yes,no-limit
+S-002,R04-dbcommand-categories-callbacks-and-result-shapes.md,SaveChangesInterceptor versus DbCommandInterceptor,yes,yes,yes,no-limit
+S-003,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Purpose and phases of SaveChangesInterceptor,yes,yes,yes,no-limit
+S-004,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Event data types by interceptor method,yes,yes,yes,no-limit
+S-005,R02-save-suppression-alternate-results-and-outcome-reporting.md,SuppressWithResult can replace only the integer result,yes,yes,yes,no-limit
+S-006,R04-dbcommand-categories-callbacks-and-result-shapes.md,Three DbCommand result categories,yes,yes,yes,no-limit
+S-007,R02-save-suppression-alternate-results-and-outcome-reporting.md,SavingChanges suppression semantics,yes,yes,yes,no-limit
+S-008,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Inspect ChangeTracker in SavingChangesAsync,yes,yes,yes,no-limit
+S-009,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Primary pre-save methods,yes,yes,yes,no-limit
+S-010,R04-dbcommand-categories-callbacks-and-result-shapes.md,Suppress a scalar command with an object result,yes,yes,yes,no-limit
+S-011,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Start of SQL logging interceptor,yes,yes,yes,yes
+S-012,R04-dbcommand-categories-callbacks-and-result-shapes.md,ReaderExecuting logging example,yes,yes,yes,no-limit
+S-013,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Event data after successful SaveChanges,yes,yes,yes,no-limit
+S-014,R02-save-suppression-alternate-results-and-outcome-reporting.md,How to report richer suppression information,yes,yes,yes,no-limit
+S-015,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Pre-save audit timestamp interceptor,yes,yes,yes,yes
+S-016,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Modify SQL text before execution,yes,yes,yes,no-limit
+S-017,R03-failure-concurrency-and-cancellation.md,SaveChangesFailed event data and example,yes,yes,yes,no-limit
+S-018,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Successful-save method signatures,yes,yes,yes,yes
+S-019,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,What to return from post-save callbacks,yes,yes,yes,no-limit
+S-020,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Legitimate and risky SQL mutation use cases,yes,yes,yes,no-limit
+S-021,R01-savechanges-lifecycle-event-data-and-successful-auditing.md,Log after successful SaveChangesAsync,yes,yes,yes,yes
+S-022,R03-failure-concurrency-and-cancellation.md,Concurrency callback event data,yes,yes,yes,no-limit
+S-023,R04-dbcommand-categories-callbacks-and-result-shapes.md,ScalarExecuting logging interceptor,yes,yes,yes,yes
+S-024,R04-dbcommand-categories-callbacks-and-result-shapes.md,What ScalarExecuting means,yes,yes,yes,no-limit
+S-025,R03-failure-concurrency-and-cancellation.md,Failure and concurrency callbacks in the lifecycle,yes,yes,yes,no-limit
+S-026,R03-failure-concurrency-and-cancellation.md,Inspect exception and conflicting entries,yes,yes,yes,no-limit
+S-027,R03-failure-concurrency-and-cancellation.md,SaveChangesFailedAsync logging interceptor,yes,yes,yes,no-limit
+S-028,R03-failure-concurrency-and-cancellation.md,Relationship between concurrency callback and normal failure callback,yes,yes,yes,no-limit
+S-029,R04-dbcommand-categories-callbacks-and-result-shapes.md,ScalarExecuted result inspection,yes,yes,yes,no-limit
+S-030,R02-save-suppression-alternate-results-and-outcome-reporting.md,Changing the post-save returned row count,yes,yes,yes,no-limit
+S-031,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Register an interceptor,yes,yes,yes,no-limit
+S-032,R04-dbcommand-categories-callbacks-and-result-shapes.md,Possible CLR values of a scalar command,yes,yes,yes,no-limit
+S-033,R04-dbcommand-categories-callbacks-and-result-shapes.md,Command event data types,yes,yes,yes,no-limit
+S-034,R03-failure-concurrency-and-cancellation.md,Return values for cancellation callbacks,yes,yes,yes,no-limit
+S-035,R04-dbcommand-categories-callbacks-and-result-shapes.md,NonQueryExecuting logging interceptor,yes,yes,yes,no-limit
+S-036,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Common command event-data properties,yes,yes,yes,no-limit
+S-037,R02-save-suppression-alternate-results-and-outcome-reporting.md,Consequences of modifying SavedChanges result,yes,yes,yes,no-limit
+S-038,R05-dbcommand-metadata-registration-mutation-and-suppression.md,"Meaning of command identifiers, connection, and source",yes,yes,yes,no-limit
+S-039,R04-dbcommand-categories-callbacks-and-result-shapes.md,ScalarExecuting and ScalarExecuted together,yes,yes,yes,no-limit
+S-040,R03-failure-concurrency-and-cancellation.md,ThrowingConcurrencyException callback purpose,yes,yes,yes,no-limit
+S-041,R04-dbcommand-categories-callbacks-and-result-shapes.md,NonQueryExecuted result,yes,yes,yes,no-limit
+S-042,R05-dbcommand-metadata-registration-mutation-and-suppression.md,CommandSource values,yes,yes,yes,no-limit
+S-043,R04-dbcommand-categories-callbacks-and-result-shapes.md,Commands commonly handled as non-query,yes,yes,yes,no-limit
+S-044,R03-failure-concurrency-and-cancellation.md,Log concurrency conflict and let the exception continue,yes,yes,yes,yes
+S-045,R04-dbcommand-categories-callbacks-and-result-shapes.md,"Reader, scalar, and non-query result-type comparison",yes,yes,yes,no-limit
+S-046,R05-dbcommand-metadata-registration-mutation-and-suppression.md,DbCommandInterceptor can suppress execution,yes,yes,yes,no-limit
+S-047,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Use CommandSource to distinguish SaveChanges and migrations,yes,yes,yes,no-limit
+S-048,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Conceptual command-deny suppression,yes,yes,yes,no-limit
+S-049,R03-failure-concurrency-and-cancellation.md,Suppress the optimistic-concurrency exception,yes,yes,yes,no-limit
+S-050,R03-failure-concurrency-and-cancellation.md,Why concurrency suppression exists,yes,yes,yes,no-limit
+S-051,R03-failure-concurrency-and-cancellation.md,Advanced scenarios for suppressing a concurrency exception,yes,yes,yes,no-limit
+S-052,R03-failure-concurrency-and-cancellation.md,SaveChanges cancellation callbacks,yes,yes,yes,no-limit
+S-053,R03-failure-concurrency-and-cancellation.md,Required follow-up after suppressing concurrency,yes,yes,yes,no-limit
+S-054,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Main DbCommand properties,yes,yes,yes,no-limit
+S-055,R04-dbcommand-categories-callbacks-and-result-shapes.md,Core DbCommand execution methods,yes,yes,yes,no-limit
+S-056,R02-save-suppression-alternate-results-and-outcome-reporting.md,SaveChanges suppression is broader than concurrency suppression,yes,yes,yes,no-limit
+S-057,R02-save-suppression-alternate-results-and-outcome-reporting.md,Example suppressing the whole save,yes,yes,yes,no-limit
+S-058,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Five command properties usually inspected in EF Core,yes,yes,yes,no-limit
+S-059,R05-dbcommand-metadata-registration-mutation-and-suppression.md,Practical meaning of DbCommand properties,yes,yes,yes,no-limit

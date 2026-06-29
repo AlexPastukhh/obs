@@ -1,54 +1,56 @@
 # Current Source of Truth - dbcontext interseptors savechanges , dbcommand
 
-Generated: 2026-06-27 UTC
+Generated: 2026-06-29
 
 ## Policy
 
-Screenshots are the primary source when present. Candidate regions, vector paths, and nearest SVG labels are hints only.
+Screenshots are the primary source. The active transcript must preserve readable source text and code close to the screenshot; regional summaries alone are not sufficient for closure.
 
 ## Corrected source
 
 ```text
 source: source/source-complete-v002.svg
-SHA-256: 682df0c96fa3ccb319f210c211cff4b5f99c7a8494211f25900e050c25dbd412
 embedded assets: 59
 total image uses: 59
 SVG text nodes: 18
-vector paths: 21
 ```
 
-## Source repair
+## Active transcript status
 
 ```text
-old embedded assets: 0
-old image uses: 0
-restored unique screenshots: 59
-restored image uses: 59
-old processed materials preserved: yes
+previous semantic reconciliation v002: preserved but superseded
+corrected source-preserving transcript v003: completed
+near-literal source blocks: 59 / 59
+processed SVG text labels: 18 / 18
+uncovered images: 0
+generic region-only summaries used as active transcript: 0
+repetition guide: completed
 ```
 
-## Final status
+## Authoritative transcript
 
 ```text
-processed image uses: 59 / 59
-duplicate placements: 0
-processed SVG text nodes: 18 / 18
-unassigned images: 0
-multiply assigned images: 0
-unassigned text nodes: 0
-missing: 0
-unreviewed: 0
-independent repeat audit: PASS
+06-stage6-corrected-source-preserving-transcript-v003.md
+```
+
+## Active region files
+
+```text
+regions/R01-savechanges-lifecycle-event-data-and-successful-auditing.md
+regions/R02-save-suppression-alternate-results-and-outcome-reporting.md
+regions/R03-failure-concurrency-and-cancellation.md
+regions/R04-dbcommand-categories-callbacks-and-result-shapes.md
+regions/R05-dbcommand-metadata-registration-mutation-and-suppression.md
+```
+
+## Repetition layer
+
+```text
+07-repetition-guide-v003.md
 ```
 
 ## Closure verdict
 
 ```text
-Closed by complete corrected-SVG coverage.
+Closed by complete corrected-SVG coverage and source-preserving text coverage.
 ```
-
-## Authoritative transcript
-
-`regions/full-svg-reconciliation-v002.md`
-
-The earlier label-only transcript remains preserved but is superseded by this full-source reconciliation.
