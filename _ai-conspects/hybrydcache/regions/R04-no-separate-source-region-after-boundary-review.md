@@ -1,20 +1,13 @@
-# R04 - No separate source region after boundary review
+# HybridCache — R04 boundary result
 
-Generated: 2026-06-21 14:45:12 UTC
+Generated: 2026-06-29
 
-## Decision
+No separate R04 source region exists after the corrected source-order review.
 
 ```text
-source image uses assigned to R04: 0
+R01: S-001..S-004
+R02: S-005..S-017
+R03: S-018..S-021
+R04: none
+total: 21
 ```
-
-The Stage0 plan reserved an R04 concept for registration/options/limitations, but no screenshot was ultimately owned by a separate R04 region.
-
-The available option-related screenshots belong semantically with R03 because they explain local-cache read/write flags as part of invalidation and consistency behavior.
-
-## Result
-
-R04 is closed as an empty region after boundary review.
-
-No unsupported transcript content was invented, and all five remaining HybridCache source images are covered by R03.
-

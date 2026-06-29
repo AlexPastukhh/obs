@@ -1,36 +1,43 @@
-# Current Source of Truth - HybridCache
+# Current Source of Truth — HybridCache
 
-Generated: 2026-06-21 14:48:11 UTC
+Generated: 2026-06-29
 
 ## Current status
 
 ```text
 Stage0 boundary review: done
-P01/R01R02 transcript: done
-P02/R03R04 transcript: done
-Final coverage audit: done
-Verdict: coverage-complete
+Original summary-level transcript: superseded
+Corrected source-order boundary review: done
+Corrected source-preserving transcript: done
+Repetition guide: done
+Verdict: source-complete and repetition-ready
 ```
 
-## Final coverage
+## Corrected source coverage
 
 ```text
 total image uses: 21
-covered image uses: 21
+near-literal source blocks: 21
 problem image uses: 0
+uncovered image uses: 0
+
+R01 setup/API/stampede: S-001..S-004 = 4
+R02 invalidation/multi-instance coherence: S-005..S-017 = 13
+R03 tags/flags: S-018..S-021 = 4
+R04: none
 ```
 
-## Final region counts
+## Active transcript files
 
 ```text
-R01: 8
-R02: 8
-R03: 5
-R04: 0
+regions/R01-hybrydcache-purpose-two-level-cache-and-api-shape.md
+regions/R02-getorcreate-stampede-protection-and-factory-flow.md
+regions/R03-tag-invalidation-local-cache-coherence-and-entry-flags.md
+regions/R04-no-separate-source-region-after-boundary-review.md
+04-stage4-corrected-source-preserving-transcript.md
+05-repetition-guide.md
 ```
 
-## Next
+## Fidelity rule
 
-No next transcript block.
-
-Only create a targeted correction archive if a concrete issue is found, or create a separate repetition-material layer.
+The transcript is close to the readable source, with normalized punctuation and cleaned screenshot UI artifacts. Cropped code is marked. The source image remains authoritative for any hidden edge.
