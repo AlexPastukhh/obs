@@ -1,18 +1,17 @@
 # Current Source of Truth — find index array string
 
-Generated: 2026-06-28 06:00:00 UTC
+Generated: 2026-06-30
 
 ## Status
 
 ```text
-Stage0 source/boundary review: done
-Complete SVG preservation: done
-Embedded screenshot extraction: done
-Text-element inventory: done
-Visible canvas region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+complete SVG preservation: done
+source identity verification: exact match
+embedded screenshot extraction: done
+regional transcripts: done
+full source-preserving transcript: done
+repetition guide: done
+coverage audit: done
 ```
 
 ## Coverage
@@ -21,11 +20,25 @@ Full-conspect coverage audit: not started
 meaningful text elements: 0
 unique embedded images: 2
 image uses on canvas: 2
-logical regions: 2
-remaining unprocessed text elements: 0
-remaining unprocessed image uses: 2
+processed image uses: 2
+remaining image uses: 0
 ```
 
-## Next
+## Authoritative files
 
-Process every planned region and close all source coverage.
+```text
+source/find index array string.svg
+00-source-verification-v001.md
+01-source-preserving-transcript-v001.md
+02-repetition-guide-v001.md
+regions-v001/
+data/source-preserving-coverage-v001.csv
+```
+
+## Verdict
+
+```text
+SOURCE COMPLETE
+TRANSCRIPT SOURCE-PRESERVING
+REPETITION READY
+```
