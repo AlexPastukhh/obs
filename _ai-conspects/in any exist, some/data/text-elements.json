@@ -1,0 +1,101 @@
+[
+  {
+    "x": 1501.1110927180027,
+    "y": 10.0,
+    "text": "in",
+    "region": "R02",
+    "semantic_topic": "IN membership, literal lists, subqueries and three-valued logic",
+    "semantic_review_status": "processed",
+    "label_id": "T-001"
+  },
+  {
+    "x": 10.0,
+    "y": 272.6183009092104,
+    "text": "EXISTS",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-002"
+  },
+  {
+    "x": 1624.4865708354268,
+    "y": 489.00451788412795,
+    "text": "ANY",
+    "region": "R03",
+    "semantic_topic": "ANY/SOME comparisons, operator semantics and NULL behavior",
+    "semantic_review_status": "processed",
+    "label_id": "T-003"
+  },
+  {
+    "x": 162.4865068851343,
+    "y": 625.9530840656782,
+    "text": "SELECT ID,NAME",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-004"
+  },
+  {
+    "x": 162.4865068851343,
+    "y": 625.9530840656782,
+    "text": "FROM TAB1 AS T",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-005"
+  },
+  {
+    "x": 162.4865068851343,
+    "y": 625.9530840656782,
+    "text": "WHERE EXISTS (",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-006"
+  },
+  {
+    "x": 162.4865068851343,
+    "y": 625.9530840656782,
+    "text": "SELECT 1",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-007"
+  },
+  {
+    "x": 162.4865068851343,
+    "y": 625.9530840656782,
+    "text": "FROM TAB2 AS T1",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-008"
+  },
+  {
+    "x": 162.4865068851343,
+    "y": 625.9530840656782,
+    "text": "WHERE T.NAME = T1.NAME)",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-009"
+  },
+  {
+    "x": 138.58905846962762,
+    "y": 787.6448381967068,
+    "text": "what are caveats with nulls",
+    "region": "R01",
+    "semantic_topic": "EXISTS, correlated subqueries and NULL-safe anti-semi joins",
+    "semantic_review_status": "processed",
+    "label_id": "T-010"
+  },
+  {
+    "x": 1615.9365398822024,
+    "y": 989.7486351029248,
+    "text": "SOME = ANY",
+    "region": "R03",
+    "semantic_topic": "ANY/SOME comparisons, operator semantics and NULL behavior",
+    "semantic_review_status": "processed",
+    "label_id": "T-011"
+  }
+]

@@ -1,7 +1,7 @@
-# Current Source of Truth — in any exist, some
+# Current Source of Truth — server resources,multipleinstances,microservices
 
 Generated: 2026-06-29 UTC  
-Version: v002
+Version: v001
 
 ## Status
 
@@ -18,12 +18,12 @@ final coverage audit: done
 ## Coverage
 
 ```text
-unique embedded screenshots: 2
-image uses on canvas: 2
-native SVG labels: 11
+unique embedded screenshots: 30
+image uses on canvas: 30
+native SVG labels: 20
 duplicate extra placements: 0
-processed image uses: 2
-processed text labels: 11
+processed image uses: 30
+processed text labels: 20
 remaining unclosed image uses: 0
 remaining unclosed text labels: 0
 ```
@@ -31,7 +31,7 @@ remaining unclosed text labels: 0
 ## Authoritative source
 
 ```text
-source/in any exist, some(1).svg
+source/server resources,multipleinstances,microservices(1).svg
 ```
 
 ## Current transcript

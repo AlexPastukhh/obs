@@ -1,0 +1,21 @@
+﻿label_id,region,semantic_topic,semantic_review_status,x,y,text
+T-001,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1317.885079020731,10.0,what limited resources the
+T-002,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1317.885079020731,10.0,server does have to server requests
+T-003,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,3307.451035847347,339.8955614491151,cpus can process one work at a time
+T-004,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,3307.451035847347,339.8955614491151,but they do work across all threads/requests
+T-005,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,3307.451035847347,339.8955614491151,a little bit here a little bit there
+T-006,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1692.8383229163092,412.5538996343239,cpu
+T-007,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1688.3938784718646,708.1095230067199,memory
+T-008,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1508.0235476613177,1023.1094890982995,netwrk bandwidth
+T-009,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,287.8205342061797,1171.7999474700637,so server really has some limit of how much
+T-010,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,287.8205342061797,1171.7999474700637,shit it can process in s across all requests
+T-011,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1496.0293243519393,1300.9869889313659,"open cons,sockets"
+T-012,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1365.7729766956893,1581.7847184235534,threads/wrkr cap
+T-013,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1673.5792897131842,1839.2206002094103,disk i/o
+T-014,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1091.7478147103222,2189.25723248176,database/dwn str con pools
+T-015,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1383.664728498574,2521.4998407442663,kernel/os limits
+T-016,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1426.5136409251231,2925.3745141800964,tsl/crypto cap
+T-017,R01,"finite server resources, shared capacity, saturation and application bottlenecks",processed,1241.1932533049307,3208.900161563566,app specific pools/queues
+T-018,R02,"vertical versus horizontal scaling, multiple instances and externalized state",processed,1618.6525597886007,5162.829871535318,addding another machine
+T-019,R02,"vertical versus horizontal scaling, multiple instances and externalized state",processed,1618.6525597886007,5162.829871535318,is it microservices
+T-020,R03,"what microservices are, what they are not, independent deployment and scaling trade-offs",processed,1682.3976380189497,7536.414513837077,about microservices

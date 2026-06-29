@@ -1,44 +1,49 @@
-# Stage0 source check and boundary review — in any exist, some
+# Source check and boundary review — in any exist, some
 
-Generated: 2026-06-28 06:00:00 UTC
+Generated: 2026-06-29 UTC
 
-## Source decision
 
-New conspect target:
+## Previous state
 
-`_ai-conspects/in any exist, some`
-
-Complete source:
-
-`source/in any exist, some.svg`
-
-## Source inventory
+The existing target already preserved the same source boundary:
 
 ```text
-meaningful text elements: 11
+unique images: 2
+image uses: 2
+native labels: 11
+```
+
+However, its regional transcripts, combined transcript and final coverage audit
+were still marked as not started. This archive closes that work without changing
+the source counts.
+
+
+## Authoritative source
+
+```text
+source/in any exist, some(1).svg
+viewBox: 0 0 2291.920558398806 1024.7486351029247
 unique embedded screenshots: 2
-screenshot uses on canvas: 2
-repeated screenshot placements: 0
-source SVG SHA-256: 8ce5aeb8af0e45a18ae0d8c5278de36f8eb51883ca3f462090272f716c614644
+image uses: 2
+native SVG labels: 11
+duplicate extra placements: 0
 ```
 
-## Region plan
+## Semantic regions
 
-| Region | Visual-semantic block | Text | Uses | Unique images |
-|---|---|---:|---:|---:|
-| R01 | SQL IN membership | 1 | 1 | 1 |
-| R02 | SQL EXISTS correlated existence checks | 8 | 0 | 0 |
-| R03 | ANY, SOME and null caveats | 2 | 1 | 1 |
+| Region | Image uses | Labels | Topic |
+|---|---:|---:|---|
+| R01 | 0 | 8 | EXISTS, correlated subqueries and NULL-safe anti-semi joins |
+| R02 | 1 | 1 | IN membership, literal lists, subqueries and three-valued logic |
+| R03 | 1 | 2 | ANY/SOME comparisons, operator semantics and NULL behavior |
 
-## Current coverage
+## Visual review
+
+The complete canvas preview and all contact sheets were reviewed. Every embedded
+image decodes correctly, every `<use>` points to a valid image definition, and
+every meaningful SVG text element is assigned to a semantic region.
 
 ```text
-processed text elements: 0 / 11
-processed screenshot uses: 0 / 2
-remaining text elements: 11
-remaining screenshot uses: 2
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
-
-## Next
-
-Create regional semantic transcripts, then one combined transcript and final coverage audit.

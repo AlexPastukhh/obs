@@ -1,0 +1,12 @@
+﻿label_id,region,semantic_topic,semantic_review_status,x,y,text
+T-001,R02,"IN membership, literal lists, subqueries and three-valued logic",processed,1501.1110927180027,10.0,in
+T-002,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,10.0,272.6183009092104,EXISTS
+T-003,R03,"ANY/SOME comparisons, operator semantics and NULL behavior",processed,1624.4865708354268,489.00451788412795,ANY
+T-004,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,162.4865068851343,625.9530840656782,"SELECT ID,NAME"
+T-005,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,162.4865068851343,625.9530840656782,FROM TAB1 AS T
+T-006,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,162.4865068851343,625.9530840656782,WHERE EXISTS (
+T-007,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,162.4865068851343,625.9530840656782,SELECT 1
+T-008,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,162.4865068851343,625.9530840656782,FROM TAB2 AS T1
+T-009,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,162.4865068851343,625.9530840656782,WHERE T.NAME = T1.NAME)
+T-010,R01,"EXISTS, correlated subqueries and NULL-safe anti-semi joins",processed,138.58905846962762,787.6448381967068,what are caveats with nulls
+T-011,R03,"ANY/SOME comparisons, operator semantics and NULL behavior",processed,1615.9365398822024,989.7486351029248,SOME = ANY

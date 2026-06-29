@@ -1,23 +1,23 @@
-# MANIFEST — in any exist, some v002
+# MANIFEST — server resources,multipleinstances,microservices v001
 
 ## Target
 
 ```text
-_ai-conspects/in any exist, some/
+_ai-conspects/server resources,multipleinstances,microservices/
 ```
 
 ## Source
 
 ```text
-in any exist, some(1).svg
+server resources,multipleinstances,microservices(1).svg
 ```
 
 ## Coverage
 
 ```text
-unique screenshots: 2
-image uses: 2
-native SVG labels: 11
+unique screenshots: 30
+image uses: 30
+native SVG labels: 20
 duplicate extra placements: 0
 remaining unclosed: 0
 ```
@@ -25,9 +25,9 @@ remaining unclosed: 0
 ## Included
 
 - original complete SVG;
-- 2 extracted screenshot assets;
+- 30 extracted screenshot assets;
 - full-canvas preview;
-- 1 contact sheet(s);
+- 3 contact sheet(s);
 - source, image-use, text and duplicate ledgers;
 - regional semantic transcripts;
 - combined final transcript;
