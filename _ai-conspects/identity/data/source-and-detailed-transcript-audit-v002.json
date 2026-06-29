@@ -1,0 +1,173 @@
+{
+  "conspect": "identity",
+  "generated_utc": "2026-06-29 06:30:30 UTC",
+  "decision": "source-recovery-plus-detailed-transcript-upgrade",
+  "stage0_rebuild_required": false,
+  "repository_before_correction": {
+    "metadata_claimed_canonical_source": "source/identity.svg",
+    "direct_remote_fetch_result": "404-not-found",
+    "previous_stage4_counts": {
+      "embedded_assets": 64,
+      "image_uses": 64,
+      "text_nodes": 92,
+      "regions": 5
+    }
+  },
+  "current_uploaded_source": {
+    "uploaded_filename": "identity(3).svg",
+    "canonical_repository_path": "_ai-conspects/identity/source/identity.svg",
+    "bytes": 3351046,
+    "sha256": "d34a00268ef3532318e20b9adffcc99d5073b9be102695307782aaefd51e403a",
+    "git_blob_sha": "920acc2dabcbcf2e570bca84a88d8e88794cc4a8",
+    "view_box": "0 0 10297.018778630572 15623.629080118077",
+    "embedded_assets": 64,
+    "unique_image_content_hashes": 64,
+    "image_uses": 64,
+    "nonempty_text_nodes": 92
+  },
+  "structural_match_to_stage4_counts": true,
+  "detailed_transcript": {
+    "authoritative_file": "06-detailed-near-literal-full-transcript-v002.md",
+    "policy": "detailed-near-literal; only genuine repetitions consolidated",
+    "review_questions_included": false,
+    "region_files": [
+      {
+        "region_id": "R01",
+        "title": "Identity purpose, database schema and minimal setup",
+        "file": "regions-detailed-v002/R01-identity-purpose-database-schema-and-minimal-setup.md",
+        "image_uses": 6,
+        "text_nodes": 2,
+        "source_ids": [
+          "S-003",
+          "S-004",
+          "S-007",
+          "S-009",
+          "S-011",
+          "S-015"
+        ],
+        "remaining": 0
+      },
+      {
+        "region_id": "R02",
+        "title": "Core managers, users, roles, claims, email sender and URL-safe tokens",
+        "file": "regions-detailed-v002/R02-core-managers-users-roles-claims-email-sender-and-url-safe-tokens.md",
+        "image_uses": 14,
+        "text_nodes": 3,
+        "source_ids": [
+          "S-001",
+          "S-002",
+          "S-005",
+          "S-006",
+          "S-008",
+          "S-010",
+          "S-012",
+          "S-013",
+          "S-014",
+          "S-016",
+          "S-017",
+          "S-018",
+          "S-019",
+          "S-021"
+        ],
+        "remaining": 0
+      },
+      {
+        "region_id": "R03",
+        "title": "Email confirmation, password reset, lockout and external login",
+        "file": "regions-detailed-v002/R03-email-confirmation-password-reset-lockout-and-external-login.md",
+        "image_uses": 26,
+        "text_nodes": 7,
+        "source_ids": [
+          "S-020",
+          "S-022",
+          "S-023",
+          "S-024",
+          "S-025",
+          "S-027",
+          "S-028",
+          "S-030",
+          "S-032",
+          "S-036",
+          "S-037",
+          "S-039",
+          "S-040",
+          "S-042",
+          "S-044",
+          "S-046",
+          "S-047",
+          "S-049",
+          "S-050",
+          "S-052",
+          "S-053",
+          "S-055",
+          "S-056",
+          "S-058",
+          "S-060",
+          "S-061"
+        ],
+        "remaining": 0
+      },
+      {
+        "region_id": "R04",
+        "title": "Identity-backed JWT issuing, API login and SPA bearer-token flow",
+        "file": "regions-detailed-v002/R04-identity-backed-jwt-issuing-api-login-and-spa-bearer-token-flow.md",
+        "image_uses": 15,
+        "text_nodes": 79,
+        "source_ids": [
+          "S-026",
+          "S-029",
+          "S-031",
+          "S-033",
+          "S-034",
+          "S-035",
+          "S-038",
+          "S-041",
+          "S-043",
+          "S-045",
+          "S-048",
+          "S-051",
+          "S-054",
+          "S-057",
+          "S-059"
+        ],
+        "remaining": 0
+      },
+      {
+        "region_id": "R05",
+        "title": "Default Identity UI versus Identity API endpoints",
+        "file": "regions-detailed-v002/R05-default-identity-ui-versus-identity-api-endpoints.md",
+        "image_uses": 3,
+        "text_nodes": 1,
+        "source_ids": [
+          "S-062",
+          "S-063",
+          "S-064"
+        ],
+        "remaining": 0
+      }
+    ]
+  },
+  "coverage": {
+    "embedded_assets": {
+      "source": 64,
+      "processed": 64,
+      "remaining": 0
+    },
+    "image_uses": {
+      "source": 64,
+      "processed": 64,
+      "remaining": 0
+    },
+    "text_nodes": {
+      "source": 92,
+      "processed": 92,
+      "remaining": 0
+    },
+    "regions": {
+      "source": 5,
+      "processed": 5,
+      "remaining": 0
+    }
+  },
+  "final_status": "complete-after-applying-v002-correction"
+}

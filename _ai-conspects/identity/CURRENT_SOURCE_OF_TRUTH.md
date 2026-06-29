@@ -1,53 +1,51 @@
 # Current Source of Truth — identity
 
-Generated: 2026-06-27 UTC
+Generated: 2026-06-29 06:30:30 UTC
 
-## Naming
-
-```text
-Received SVG: identity(2).svg
-Canonical source name: identity.svg
-Canonical conspect folder: _ai-conspects/identity
-```
-
-## Current status
+## Corrected status
 
 ```text
-Legacy text-only/incomplete transcript: preserved historically, superseded semantically
-Stage4 complete SVG reconciliation: done
-Screenshot-backed transcripts: done
-Independent final coverage audit: done
-Status: complete
+Previous Stage4 structural inventory: retained
+Previous extracted screenshot assets: retained
+Previous image/text ledgers: retained
+Previous region transcripts: retained as historical coverage layer
+Canonical complete source SVG: restored from current upload
+Detailed near-literal regional transcripts v002: done
+Detailed near-literal full transcript v002: done
+Source and transcript correction audit v002: done
+Review questions: intentionally not included
 ```
 
-## Final coverage
+## Current authoritative source
+
+`source/identity.svg`
 
 ```text
-Complete embedded assets: 64
-Complete image uses: 64
-Processed image uses: 64
-Physical non-empty SVG text nodes: 92
-Processed text nodes: 92
-Missing image uses: 0
-Unreviewed image uses: 0
-Unassigned image uses: 0
-Multiply assigned image uses: 0
-Missing text nodes: 0
-Unreviewed text nodes: 0
-Unassigned text nodes: 0
-Multiply assigned text nodes: 0
-Unique image-content hashes: 64
-Duplicate image-hash groups preserved: 0
+SHA-256: d34a00268ef3532318e20b9adffcc99d5073b9be102695307782aaefd51e403a
+Git blob SHA: 920acc2dabcbcf2e570bca84a88d8e88794cc4a8
+embedded assets: 64
+image uses: 64
+non-empty text nodes: 92
 ```
 
-## Verified regions
+## Current authoritative transcript
 
-- `R01` — Identity model, schema and minimal setup: 6 images / 2 text nodes
-- `R02` — Managers, common operations, email confirmation and password reset: 14 images / 3 text nodes
-- `R03` — Token URL safety, lockout, external login and challenge flow: 26 images / 7 text nodes
-- `R04` — Identity-backed JWT issuance and SPA/API integration: 15 images / 79 text nodes
-- `R05` — Default Identity UI versus Identity API endpoints: 3 images / 1 text nodes
+`06-detailed-near-literal-full-transcript-v002.md`
 
-## Current next step
+## Coverage
 
-No normal transcript regions remain. Only correction/polish if a newer complete source export adds material.
+```text
+embedded assets: 64 / 64
+image uses: 64 / 64
+text nodes: 92 / 92
+regions: 5 / 5
+remaining source units: 0
+```
+
+## Transcript policy
+
+The transcript is deliberately detailed and close to the source. Only genuinely repeated explanations are consolidated. Distinct examples, code, APIs, security warnings and architecture choices remain explicit.
+
+## Next
+
+No normal Stage0 or transcript work remains after this correction is applied.
