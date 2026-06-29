@@ -1,0 +1,476 @@
+﻿text_id,text,x,y,region_id,status,transcript_file,authoritative_transcript
+T-0001,HTTPCLIENT CONTENT TYPES CHEAT SHEET,816.1491456538024,2427.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0002,────────────────────────────────────────────────────────────,816.1491456538024,2477.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0003,1) JsonContent,816.1491456538024,2502.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0004,────────────────────────────────────────────────────────────,816.1491456538024,2527.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0005,Use when:,816.1491456538024,2552.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0006,- You have a .NET object (DTO) and want to send JSON,816.1491456538024,2577.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0007,Client:,816.1491456538024,2627.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0008,- JsonContent.Create(dto),816.1491456538024,2652.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0009,Content-Type sent:,816.1491456538024,2702.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0010,- application/json,816.1491456538024,2727.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0011,Server (ASP.NET Core):,816.1491456538024,2777.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0012,- [FromBody] MyDto dto,816.1491456538024,2802.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0013,Why use it:,816.1491456538024,2852.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0014,- Cleanest for JSON APIs,816.1491456538024,2877.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0015,- No manual JSON serialization,816.1491456538024,2902.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0016,- Supports JsonSerializerOptions,816.1491456538024,2927.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0017,Good default for:,816.1491456538024,2977.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0018,- Most POST/PUT/PATCH JSON requests,816.1491456538024,3002.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0019,────────────────────────────────────────────────────────────,816.1491456538024,3077.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0020,2) StringContent,816.1491456538024,3102.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0021,────────────────────────────────────────────────────────────,816.1491456538024,3127.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0022,Use when:,816.1491456538024,3152.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0023,- You already have a string payload,816.1491456538024,3177.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0024,"(JSON string, XML string, plain text)",816.1491456538024,3202.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0025,Client:,816.1491456538024,3252.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0026,"- new StringContent(payload, Encoding.UTF8, ""application/json"")",816.1491456538024,3277.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0027,"- or ""application/xml""",816.1491456538024,3302.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0028,"- or ""text/plain""",816.1491456538024,3327.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0029,Content-Type sent:,816.1491456538024,3377.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0030,- Whatever you set (important!),816.1491456538024,3402.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0031,"- If not set, default is text/plain (usually not what you want for JSON)",816.1491456538024,3427.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0032,Server (ASP.NET Core):,816.1491456538024,3477.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0033,- JSON string + application/json  -> [FromBody] MyDto,816.1491456538024,3502.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0034,- plain text                      -> read raw body or bind as string,816.1491456538024,3527.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0035,Why use it:,816.1491456538024,3577.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0036,- You already have the exact text payload,816.1491456538024,3602.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0037,- Simple and explicit,816.1491456538024,3627.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0038,Best for:,816.1491456538024,3677.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0039,- Small/medium prebuilt strings,816.1491456538024,3702.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0040,────────────────────────────────────────────────────────────,816.1491456538024,3777.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0041,3) ByteArrayContent,816.1491456538024,3802.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0042,────────────────────────────────────────────────────────────,816.1491456538024,3827.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0043,Use when:,816.1491456538024,3852.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0044,- You already have byte[] in memory,816.1491456538024,3877.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0045,Client:,816.1491456538024,3927.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0046,- new ByteArrayContent(bytes),816.1491456538024,3952.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0047,Content-Type sent:,816.1491456538024,4002.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0048,- Set it manually (important),816.1491456538024,4027.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0049,e.g. application/pdf,816.1491456538024,4052.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0050,e.g. application/octet-stream,816.1491456538024,4077.8839250167157,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0051,e.g. image/png,816.1491456538024,4102.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0052,Server (ASP.NET Core):,816.1491456538024,4152.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0053,- Read Request.Body as raw bytes/stream,816.1491456538024,4177.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0054,Why use it:,816.1491456538024,4227.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0055,- You already loaded bytes into memory,816.1491456538024,4252.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0056,Best for:,816.1491456538024,4302.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0057,- In-memory binary payloads,816.1491456538024,4327.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0058,- Small/medium files already in byte[],816.1491456538024,4352.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0059,────────────────────────────────────────────────────────────,816.1491456538024,4427.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0060,4) StreamContent,816.1491456538024,4452.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0061,────────────────────────────────────────────────────────────,816.1491456538024,4477.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0062,Use when:,816.1491456538024,4502.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0063,"- You have a Stream (FileStream, MemoryStream, etc.)",816.1491456538024,4527.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0064,Client:,816.1491456538024,4577.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0065,- new StreamContent(stream),816.1491456538024,4602.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0066,Content-Type sent:,816.1491456538024,4652.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0067,- Set it manually (important),816.1491456538024,4677.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0068,e.g. video/mp4,816.1491456538024,4702.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0069,e.g. application/pdf,816.1491456538024,4727.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0070,e.g. application/json,816.1491456538024,4752.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0071,Server (ASP.NET Core):,816.1491456538024,4802.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0072,- Read Request.Body stream,816.1491456538024,4827.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0073,Why use it:,816.1491456538024,4877.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0074,- Better for large payloads,816.1491456538024,4902.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0075,- Avoids loading file fully into byte[],816.1491456538024,4927.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0076,Best for:,816.1491456538024,4977.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0077,- Large file uploads (raw body),816.1491456538024,5002.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0078,- Streaming scenarios,816.1491456538024,5027.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0079,- Large JSON when serialized into a stream first,816.1491456538024,5052.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0080,────────────────────────────────────────────────────────────,816.1491456538024,5127.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0081,5) FormUrlEncodedContent,816.1491456538024,5152.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0082,────────────────────────────────────────────────────────────,816.1491456538024,5177.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0083,Use when:,816.1491456538024,5202.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0084,- You need simple key/value form fields (NO files),816.1491456538024,5227.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0085,Client:,816.1491456538024,5277.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0086,- new FormUrlEncodedContent(dict),816.1491456538024,5302.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0087,Content-Type sent:,816.1491456538024,5352.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0088,- application/x-www-form-urlencoded,816.1491456538024,5377.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0089,Server (ASP.NET Core):,816.1491456538024,5427.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0090,- [FromForm] LoginRequest request,816.1491456538024,5452.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0091,"- [FromForm] string username, [FromForm] string password",816.1491456538024,5477.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0092,Why use it:,816.1491456538024,5527.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0093,- Matches classic HTML form posts,816.1491456538024,5552.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0094,- Common for OAuth/token endpoints,816.1491456538024,5577.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0095,Best for:,816.1491456538024,5627.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0096,- Login/token requests,816.1491456538024,5652.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0097,- Legacy form-style APIs,816.1491456538024,5677.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0098,Important note:,816.1491456538024,5727.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0099,- A normal HTML form submit (without file upload),816.1491456538024,5752.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0100,typically uses application/x-www-form-urlencoded,816.1491456538024,5777.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0101,────────────────────────────────────────────────────────────,816.1491456538024,5852.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0102,6) MultipartFormDataContent,816.1491456538024,5877.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0103,────────────────────────────────────────────────────────────,816.1491456538024,5902.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0104,Use when:,816.1491456538024,5927.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0105,- You need to send files,816.1491456538024,5952.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0106,- You may also send extra text fields with the files,816.1491456538024,5977.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0107,Client:,816.1491456538024,6027.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0108,- var mp = new MultipartFormDataContent(),816.1491456538024,6052.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0109,"- mp.Add(new StreamContent(fileStream), ""file"", ""photo.png"")",816.1491456538024,6077.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0110,"- mp.Add(new StringContent(""John""), ""displayName"")",816.1491456538024,6102.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0111,Content-Type sent:,816.1491456538024,6152.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0112,- multipart/form-data (with boundary),816.1491456538024,6177.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0113,Server (ASP.NET Core):,816.1491456538024,6227.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0114,- [FromForm] IFormFile file,816.1491456538024,6252.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0115,- [FromForm] UploadRequest request (with IFormFile + other fields),816.1491456538024,6277.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0116,Why use it:,816.1491456538024,6327.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0117,- Standard format for file uploads,816.1491456538024,6352.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0118,- Works like browser file upload forms,816.1491456538024,6377.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0119,Best for:,816.1491456538024,6427.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0120,- File upload endpoints,816.1491456538024,6452.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0121,────────────────────────────────────────────────────────────,816.1491456538024,6527.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0122,7) ObjectContent (Legacy),816.1491456538024,6552.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0123,────────────────────────────────────────────────────────────,816.1491456538024,6577.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0124,Use when:,816.1491456538024,6602.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0125,- Old ASP.NET Web API codebases (legacy),816.1491456538024,6627.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0126,Modern replacement:,816.1491456538024,6677.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0127,- JsonContent (for object -> JSON),816.1491456538024,6702.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0128,Note:,816.1491456538024,6752.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0129,- Usually not used in modern .NET / HttpClient code,816.1491456538024,6777.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0130,────────────────────────────────────────────────────────────,816.1491456538024,6852.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0131,HOW TO CHOOSE QUICKLY,816.1491456538024,6877.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0132,────────────────────────────────────────────────────────────,816.1491456538024,6902.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0133,If you have...,816.1491456538024,6927.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0134,- DTO object           -> JsonContent,816.1491456538024,6952.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0135,- JSON/XML string      -> StringContent,816.1491456538024,6977.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0136,- byte[]               -> ByteArrayContent,816.1491456538024,7002.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0137,- Stream / FileStream  -> StreamContent,816.1491456538024,7027.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0138,- Form fields only     -> FormUrlEncodedContent,816.1491456538024,7052.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0139,- Files (+ fields)     -> MultipartFormDataContent,816.1491456538024,7077.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0140,────────────────────────────────────────────────────────────,816.1491456538024,7152.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0141,SERVER BINDING QUICK MAP (ASP.NET Core),816.1491456538024,7177.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0142,────────────────────────────────────────────────────────────,816.1491456538024,7202.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0143,application/json,816.1491456538024,7227.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0144,"- Client: JsonContent / StringContent(json,...)",816.1491456538024,7252.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0145,- Server: [FromBody] MyDto,816.1491456538024,7277.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0146,application/x-www-form-urlencoded,816.1491456538024,7327.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0147,- Client: FormUrlEncodedContent,816.1491456538024,7352.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0148,- Server: [FromForm] MyFormDto,816.1491456538024,7377.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0149,multipart/form-data,816.1491456538024,7427.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0150,- Client: MultipartFormDataContent,816.1491456538024,7452.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0151,- Server: [FromForm] + IFormFile,816.1491456538024,7477.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0152,application/octet-stream (or other raw binary),816.1491456538024,7527.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0153,- Client: ByteArrayContent / StreamContent,816.1491456538024,7552.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0154,- Server: Read Request.Body,816.1491456538024,7577.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0155,────────────────────────────────────────────────────────────,816.1491456538024,7652.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0156,LARGE PAYLOAD NOTES,816.1491456538024,7677.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0157,────────────────────────────────────────────────────────────,816.1491456538024,7702.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0158,Large object JSON:,816.1491456538024,7727.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0159,- JsonContent is usually fine,816.1491456538024,7752.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0160,- For tighter allocations:,816.1491456538024,7777.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0161,SerializeAsync -> MemoryStream -> StreamContent,816.1491456538024,7802.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0162,(avoids big UTF-16 JSON string),816.1491456538024,7827.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0163,Large file on disk:,816.1491456538024,7877.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0164,- Prefer FileStream + StreamContent,816.1491456538024,7902.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0165,Large prebuilt string:,816.1491456538024,7952.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0166,"- StringContent works, but:",816.1491456538024,7977.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0167,"string is UTF-16 in memory, then encoded to UTF-8 for HTTP",816.1491456538024,8002.883925016716,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0168,"can use jsoncontent with big object, too, if dont need compression",1976.7923285910892,3049.2219462456205,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0169,!!!,2758.736764558429,3062.8981385139423,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0170,types,2056.2327034085993,2297.7567434709295,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0171,when reading response,1092.2132612583282,9283.041790983905,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0172,deserializing stream on headers arrive in server indpoint,602.7870735688266,12317.945656194184,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0173,default behavior,602.7870735688266,12392.885059381328,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0174,case 3,766.3204353727106,10609.914418841998,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0175,when deserializing async enumerable,1969.2501093093424,9542.654464658095,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0176,downloading file,2033.6944859369469,10499.735217913301,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0177,when deserializing json,871.4721958978844,9447.795848854059,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0178,SENDING FILE AS ENCODED IN BASE64 STRING/,23463.27647234323,2497.7501047762757,R05,closed,05-R05-base64-multipart.md,14-full-transcript.md
+T-0179,BINDING DTO WITH FILE FROM FORM,23463.27647234323,2584.5682865944577,R05,closed,05-R05-base64-multipart.md,14-full-transcript.md
+T-0180,ADD TO REQUEST MEDIA TYPES,23723.904735432545,2772.3767557224255,R05,closed,05-R05-base64-multipart.md,14-full-transcript.md
+T-0181,BASE64 STRING,23734.126971218135,2849.662955118738,R05,closed,05-R05-base64-multipart.md,14-full-transcript.md
+T-0182,sream reader,16949.327294997773,4999.428393252494,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0183,can be useful too if you want line by line reading somewhere,16852.17939684829,5073.294339782755,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0184,buffering,14786.161664225228,2493.595374767375,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0185,WHAT RESPONSEHEADERSREAD,14360.825667431222,3135.8316826934674,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0186,GIVES US,14360.825667431222,3209.720537673936,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0187,CAVEATS WHEN YOU DONT BUFFER,14049.468813163689,5472.46416732289,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0188,"AND ALSO YOU CANT READASSTRING ON SERVER ENDPOINT,",16856.560409459024,5129.2215851844685,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0189,YOU NEED TO USE THIS,16856.560409459024,5154.2215851844685,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0190,CONDITIONAL BUFFERING,16694.803369806166,2960.463081806283,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0191,new buffering  sheet,10806.49985733836,2461.578834425371,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0192,when you generally buffer full bytes of response using httpclient,10806.49985733836,2588.8010430842255,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0193,when you dont buffer full response and process as stream,10806.49985733836,2716.0232517430795,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0194,!!!,3801.9701186850834,11114.919667769562,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0195,Stream Reader vs readasstring,11199.748337272324,5459.397280847364,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0196,!!!,11357.817511902627,2239.951782843108,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0197,!!!,13513.965613709268,7069.609677242599,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0198,using delegate handler to fix streaming issues + retries,11293.634436951455,7380.2350825899375,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0199,making request with pipeline.execute,11678.19232547047,8824.102572563137,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0200,"the pipeline, not handler, you cant use handler for manual execution",11629.520772051903,8901.762106721215,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0201,contenttype headers on,3091.183156668113,2437.0360381477535,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0202,content type,3091.183156668113,2562.035987285123,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0203,not requestmessage,3091.183156668113,2687.0359364224933,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0204,need to dispose,2202.0498058465837,11514.853429638351,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0205,readasstreamasync too,2202.0498058465837,11696.422763032402,R03,closed,03-R03-response-consumption.md,14-full-transcript.md
+T-0206,readfromjson need responseheadersread too,15478.115055862845,3768.1620606444226,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0207,but you buffer bytes in memory,3564.233534656425,7359.3904189566,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0208,memorystream is still better,6153.618190324554,2401.504768634934,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0209,that seialize to string,6153.618190324554,2500.671438480515,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0210,jsoncontent.create/content-length issue,4984.3332837737435,5836.761726527836,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0211,transfer-encoding: chuncked,4984.3332837737435,6021.761726527836,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0212,"issue, what jsoncontent can set",5117.66719001033,6374.517662401962,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0213,in headers,5117.66719001033,6452.851005907822,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0214,request with content-length,6423.0065402602595,6327.985626120542,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0215,without transfer-encoding,6423.0065402602595,6403.938014339012,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0216,request with transfer-encoding: chunked,7574.461455624843,6301.572797680496,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0217,memorystream fits content-length,5102.746780122936,7804.634301348367,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0218,compression and 2 flows,6741.37506663135,7940.8292695208875,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0219,so what is the practical difference,5312.536076120179,8726.05065067369,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0220,are there difference in bodystream usage?,5312.536076120179,8910.495129026554,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0221,crlf,9169.240556430621,6326.782548710723,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0222,memorystream + stream content,7500.751493043665,2044.6584615717788,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0223,vs,7500.751493043665,2269.658481916831,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0224,jsoncontent.create,7500.751493043665,2494.6585022618833,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0225,sending json,5062.618570172053,2039.2590321376051,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0226,!!!,7516.248915978054,7562.615521762838,R02,closed,02-R02-json-length-chunking.md,14-full-transcript.md
+T-0227,httpclient part,3252.349211750554,751.2145949707028,R01,closed,01-R01-httpcontent-binding.md,14-full-transcript.md
+T-0228,server,15345.682341633366,9931.214289794922,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0229,about new .net overload,22451.279434970274,15432.302484345599,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0230,does it make sense to think,23798.613060857733,10865.629887011291,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0231,about using stream for normal json read,23798.613060857733,10964.569280950685,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0232,write,23798.613060857733,11063.50867489008,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0233,trying to inprove,22490.085231454475,10018.609194084665,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0234,performance /memory,22490.085231454475,10152.942507072947,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0235,through streams/pipes,22490.085231454475,10287.275820061228,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0236,in server endpoint for,22490.085231454475,10421.60913304951,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0237,plain json,22490.085231454475,10555.94244603779,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0238,writing,16700.80620566222,10161.664705690151,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0239,reading,19738.584119073676,11279.442110475307,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0240,typed model,19876.91740154438,12275.339496125942,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0241,pipereader,19850.80630738748,13646.524441163783,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0242,custom delimiter/protocol,19850.80630738748,13787.41334192062,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0243,cursor api,19850.80630738748,13928.302242677453,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0244,body/stream,19882.809997916775,12911.826622222376,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0245,normal json api,10129.804745986905,17207.49342428052,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0246,normal json api,16626.47131092831,10474.16059957349,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0247,"raw upload,raw donwload",10216.47135452485,17889.398200717464,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0248,"raw upload,raw donwload",16629.804484407665,11212.731940951839,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0249,utf8writer,16629.804484407665,11353.620841708675,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0250,plaintext response,10216.47135452485,19064.63632501992,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0251,"plaintext response, response.write",16372.026570996204,12426.858971097397,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0252,ndjson sse,16372.026570996204,12567.747871854233,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0253,write bytes to body,17892.026774446724,11416.4885555158,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0254,"expl json write,but high level",10177.582601269643,22087.96963292193,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0255,"expl json write,but high level",16673.138021191517,16065.74754633339,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0256,many text writes /n lines,10246.947515936681,19735.112530028295,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0257,"many text writes /n lines,",16680.280645819494,13208.445965086888,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0258,no frequent flushes,16680.280645819494,13349.334865843724,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0259,why pipewriter over,16578.545699598882,22768.823599545623,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0260,streamwriter,16578.545699598882,22909.71250030246,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0261,stream writer,7349.804310021504,18945.02338717115,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0262,use when,6241.182040476357,18802.578298187706,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0263,dont use when,6241.182040476357,18964.41960896128,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0264,ndjson,6159.700513783649,21626.282047102643,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0265,sse,6156.737596031912,22884.05982488042,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0266,write,7487.40418131837,20804.948618825732,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0267,writeline,7422.959601240245,21802.72632878667,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0268,flush,7380.737311201183,22956.059662120006,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0269,dispose/close,7349.968080431952,23880.162234047595,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0270,basestream,7392.0193311831545,24496.57247480781,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0271,autoflush,7369.455291219212,24999.136608671994,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0272,pipewriter,13230.422711219866,19968.171228793002,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0273,when can be valid,14746.422894325335,19890.960480257847,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0274,Buffer size,4998.2189192741,18895.91163152104,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0275,construct custom binary,10225.995105919941,20723.683958599726,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0276,or framed output,10225.995105919941,20864.572859356562,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0277,1 construct custom binary,16457.10614921421,14143.683958599726,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0278,"or framed output,may need to",16457.10614921421,14284.572859356562,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0279,2 write in memory and in resp,16457.10614921421,14425.461760113396,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0280,or test (ibuf case),16457.10614921421,14566.350660870232,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0281,3 use utf8writer with ability to write in,16457.10614921421,14707.239561627068,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0282,memory for something/tests,16457.10614921421,14848.128462383904,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0283,readresult,20440.942475911568,18457.909424424888,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0284,readonlysequence,20408.561494466256,18884.57612015591,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0285,readonlysequence,18912.197871974247,18246.09129016657,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0286,readresult,18838.864589503544,17437.99793140192,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0287,positionof,18924.319010113453,19157.60643243397,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0288,slice,18922.864431367,19563.182227000736,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0289,"getposition, toarray",18898.86432807674,20109.0283808469,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0290,sequenceposition,18846.86432807674,20801.028411364478,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0291,advanceto(consumed),20344.19782417049,20813.028411364478,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0292,"advanceto(consumed,examined)",20238.642200798095,21418.583933011596,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0293,complete,20444.197722445228,22379.695027168487,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0294,cancelpendingread,20453.086577425696,22991.917215482285,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0295,cancelpendingread,22353.08718777726,22685.25065054088,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0296,copyto,20375.3087657395,23368.58390758027,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0297,consumed vs examined,20338.642099072833,23875.250574246933,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0298,newline-delimited text,20325.3087657395,24825.25062510955,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0299,example,20325.3087657395,24935.964910823834,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0300,tryread,20432.19782417049,20199.91731720757,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0301,tryread,22186.483712842364,19737.060174350434,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0302,readasync,20405.531076123614,19659.91731720758,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0303,sequenceposition,20408.86436876684,19238.583978787985,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0304,-----------methods--------------,20221.408185708366,19533.117962837412,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0305,issinglesegment,21987.12352562222,24661.783382622856,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0306,toarray,21987.12352562222,24797.735759942192,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0307,ways to avoid toarray,23510.771538610974,25881.501702238387,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0308,sequencereader,23656.623521575384,27298.686984627708,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0309,so we get unprocessed,19999.63967217162,27223.212253168735,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0310,buffer for next iteration,19999.63967217162,27248.212253168735,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0311,and we pass its start,19999.63967217162,27273.212253168735,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0312,and end,19999.63967217162,27298.212253168735,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0313,when stream,18192.73371127399,22383.4556424353,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0314,when pipereader,18192.73371127399,22491.12232944702,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0315,pipereader,23004.192798164768,17559.649753792404,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0316,stream reader,26278.574206856174,15111.934910042404,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0317,stream reader,19804.192798164768,15243.83179920256,R07,closed,07-R07-server-request-body.md,14-full-transcript.md
+T-0318,stream reader,26677.525317696018,2612.9834940267788,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0319,writing bytes,13039.059435350555,26404.80467307211,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0320,writing text,13012.022420919133,26521.471339738782,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0321,here may need to use pooled array,12074.240581098931,26282.334296412162,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0322,flushresult,13214.496848269262,20818.767560185082,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0323,memory/span,13240.211133983548,21130.196131613655,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0324,getspan/getmemory,13312.59202823578,21420.67233662203,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0325,advance,13374.496761076181,22034.00568448754,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0326,flush,13392.27457276238,22628.450111977774,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0327,write,13416.719051115244,23252.894590330634,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0328,complete,13441.16352946811,23775.116778644435,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0329,cancelpendingflush,13453.66352946811,24148.45009926211,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0330,example,13471.815184723051,24507.755608948206,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0331,!!!,5924.400610001063,22607.886243748784,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0332,!!!!,14721.924585720171,24964.782632610983,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0333,!!!!,16589.504877336105,30104.39454862869,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0334,!!! when send all events,15891.257837673296,21951.370345599265,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0335,after some disconnect may,15891.257837673296,21999.036971575828,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0336,need to send them in one,15891.257837673296,22046.70359755239,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0337,round istead of many events,15891.257837673296,22094.370223528953,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0338,to reduce everything,15891.257837673296,22142.036849505515,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0339,!!!!,16422.14637136677,23736.66226282944,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0340,can use arraypool but okay,15956.44684090592,25613.140761568055,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0341,with writer we can,15956.44684090592,25670.362983790274,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0342,avoid that and write directly,15956.44684090592,25727.585206012496,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0343,!!!,16516.64402095839,27607.781774334868,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0344,many little writes/,16222.515423223402,23750.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0345,"operations, especially when",16222.515423223402,23775.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0346,you dont win any allocations,16222.515423223402,23800.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0347,can cost cpu and sometimes,16222.515423223402,23825.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0348,"memory too,so dont see",16222.515423223402,23850.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0349,frequent writes as something,16222.515423223402,23875.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0350,"to use for optimisation,not for",16222.515423223402,23900.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0351,buisness rules,16222.515423223402,23925.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0352,(but we actually may save some,16222.515423223402,23950.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0353,bandwidth with it maybe),16222.515423223402,23975.486727136537,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0354,writers advance vs,11759.771773264469,21819.144240068952,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0355,readers advanceto,11759.771773264469,21926.922026323835,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0356,when you ve advanced and call,11923.789317152417,23365.457828715087,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0357,getspan again(without flushing yet),11923.789317152417,23390.457828715087,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0358,!!!!,16278.470377447351,25052.843968665544,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0359,flush every something,16126.400299232537,24835.664580317243,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0360,kb,16126.400299232537,24899.382230419615,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0361,can get,14194.741799043964,21571.45545448446,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0362,stackalloc span,14194.741799043964,21642.096487950508,R10,closed,10-R10-pipewriter.md,14-full-transcript.md
+T-0363,just plain text writes,10339.820267670037,22938.258050738907,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0364,with different approaches,10339.820267670037,23052.146959972848,R09,closed,09-R09-streamwriter.md,14-full-transcript.md
+T-0365,just plain text writes,14999.819657318474,12338.258355914688,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0366,with different approaches,14999.819657318474,12452.14726514863,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0367,async enumerable type of,13583.844537982375,16289.24594324843,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0368,optimisation without some ndjson or someting,13583.844537982375,16357.023729503313,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0369,just a very big amount of objects,13583.844537982375,16424.801515758198,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0370,so its,13642.562658850766,16547.109025002675,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0371,1 avoid array alloc,13642.562658850766,16572.109025002675,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0372,2 faster first object result (we dont materialize the huge list),13642.562658850766,16597.109025002675,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0373,not about bandwidth at all,13642.562658850766,16647.109025002675,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0374,CAN COST MORE CPU,13642.562658850766,16697.109025002675,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0375,returning async enumerable,14923.747784180758,17140.963419130825,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0376,from endpoint to optimize,14923.747784180758,17257.391990559398,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0377,somethign,14923.747784180758,17373.82056198797,R06,closed,06-R06-server-response-writing.md,14-full-transcript.md
+T-0378,can have overloads with pos,21312.310982593397,26749.778560598086,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0379,of count of bytes form start,21312.310982593397,26774.778560598086,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0380,or some sequenceposition,21312.310982593397,26799.778560598086,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0381,dont need sequencereader,19394.44035593273,27813.208834202247,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0382,or something to get string from,19394.44035593273,27838.208834202247,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0383,multisegment sequence,19394.44035593273,27863.208834202247,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0384,can getstring from sequence,19035.868927361298,28333.625502685434,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0385,!!!!,18653.25509761607,28161.88405998811,R12,closed,12-R12-pipereader-parsing.md,14-full-transcript.md
+T-0386,custom protocols,23611.67441226952,18322.278140166396,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0387,with big endian,23611.67441226952,18442.278140166396,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md
+T-0388,important concepts,31245.21537153874,4038.6945542211492,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0389,encoding,31635.308358145336,4227.699339621539,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0390,buffering,31566.736929573904,4882.937463923997,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0391,read,31488.641662414306,7088.6517496382885,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0392,peek,31541.736798784284,7799.1279982432,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0393,read(char buffer),31581.737016766987,8592.540746307515,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0394,readblock,31528.641662414306,9498.916317664396,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0395,readline,31574.355948128592,10122.937463924009,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0396,readtoend,31564.832196733503,11103.889873940752,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0397,discardbuffereddata,31532.07023384288,11791.961301422269,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0398,endofstream,31551.498805271447,12877.22313461319,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0399,current encoding,31526.736842380822,13817.342180415717,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0400,base stream,31551.498805271447,14242.937463924018,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0401,streamreader usecases,30450.546482447786,15031.508805302366,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0402,pipereader >,29180.07023384288,14991.508805302366,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0403,pipereader,28102.292456065097,16092.990162452972,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0404,possible better,28102.292456065097,16243.492888689952,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0405,for big lines,28102.292456065097,16393.99561492693,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0406,for text,31547.689252397566,5258.175501033372,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0407,common constructions,31250.548623491864,5766.694615256305,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0408,methods (use async),31063.72308328229,6844.694615256303,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0409,properties,31540.259956443308,12637.94136850306,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0410,readasync vs,30061.82653432208,8384.971328899494,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0411,readblockasync,30061.82653432208,8481.486471166894,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0412,can skip not needed,27105.70389475741,16240.120244908618,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0413,lines with pipereader,27105.70389475741,16330.517075149502,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0414,(cursor api),27105.70389475741,16420.91390539039,R08,closed,08-R08-streamreader.md,14-full-transcript.md
+T-0415,end,29374.656880795974,20299.903335758117,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0416,multibyte delimiter,30698.75947619862,20438.364866394637,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0417,"decoding to string, can decode",32648.388958891763,20216.512991937172,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0418,sequence btw,32648.388958891763,20318.655849080027,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0419,checking prefix across segments(cant with firstspan),32567.648365087513,21403.550091139645,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0420,finding positionof multybyte delimiter,32697.277576513294,22606.142559401364,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0421,across spans,32697.277576513294,22708.28541654422,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0422,parse length prefixed protocol,30647.648365087505,21249.47597750575,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0423,check prefixes without advancing,30553.14680768797,22569.628143411792,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0424,unless matched,30553.14680768797,22671.771000554647,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0425,look ahead without consuming,30627.648365087505,23677.809259976453,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0426,escaped delimiter (ignore del in,30643.169763908954,19418.467438322223,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0427,some cases),30643.169763908954,19520.610295465078,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0428,cursor api,28093.170069084736,19435.134079557574,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0429,sequencereader,28792.961867349342,19300.43242069538,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0430,remaining,29391.296825858317,20767.384118532795,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0431,currentspan,26583.07461719946,20846.495110964435,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0432,unreadspan,26569.741243176024,22171.828484987873,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0433,consumed,27999.83644058116,21865.161797976158,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0434,remaining,27965.741243176024,20936.210116878057,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0435,consumed,29385.58254014403,21120.71746639831,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0436,position,29381.13812282632,21527.82859107279,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0437,currentspan,29439.804789492988,22055.82861141784,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0438,unreadspan,29403.36029079507,22534.988740859648,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0439,advance,29381.13812282632,23509.161741300653,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0440,rewind,29424.471456159656,24144.71731381042,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0441,advancepast,29404.471456159656,24750.27286088887,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0442,advancepastany,29426.693746198718,25341.38395504577,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0443,reading  methods,26598.915731062,23484.717390104364,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0444,integer reading,25563.35990423908,23573.60614335957,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0445,methods,25563.35990423908,23675.749000502426,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0446,tryread,26584.471252709132,23615.828484261267,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0447,trypeek,26571.1379193758,24221.384056771032,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0448,trycodyto,26589.47127814045,24823.05071707987,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0449,searching/delimiter methods,27827.804840355617,23490.272918109327,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0450,tryfeadto,27832.804840355617,23738.606276873976,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0451,tryreadto,27831.97148159097,24342.925157626523,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0452,tryreadto delimiterescape,27803.346028155836,24905.513341963262,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0453,isnext,27823.108075917073,25571.8492234248,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0454,isnext,27838.947109102486,26215.288858509823,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0455,!!!!,29149.774827942452,19935.324382932624,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0456,we advance sequence reader,31603.98419568847,22145.023526044235,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0457,to just pass its position to,31603.98419568847,22197.28713750249,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0458,advanceto later,31603.98419568847,22249.550748960744,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0459,adv,27064.868531107022,23632.12514224682,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0460,adv,27066.8663525843,23634.12287227388,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0461,adv on sucess,28515.242478806183,23650.104803940594,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0462,no adv on failure,28515.242478806183,23727.05448522091,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0463,no adv at all,27013.86337533586,24231.90800693136,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0464,no adv at all,27101.70558805286,24832.635397125054,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0465,about not contiguous,32694.78615376829,19388.221047059586,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0466,sequences,32694.78615376829,19493.221047059586,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0467,+ big reasons,32694.78615376829,19598.221047059586,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0468,why sequence reader,32694.78615376829,19703.221047059586,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0469,parsing fixed size header,32709.62206953851,24035.744626541178,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0470,but its across segments,32709.62206953851,24100.744626541178,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0471,(can do manually with stackalloc and  sequence.copyto),32709.62206953851,24165.744626541178,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0472,reading text with some custom,32767.449104490534,25309.96429223027,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0473,delimiters,32767.449104490534,25374.96429223027,R13,closed,13-R13-sequencereader.md,14-full-transcript.md
+T-0474,enable buffering,16103.67091640572,6535.696084978393,R04,closed,04-R04-buffering-retries.md,14-full-transcript.md
+T-0475,first vs firstspan,18157.793800553372,18992.17815864346,R11,closed,11-R11-pipereader-core.md,14-full-transcript.md

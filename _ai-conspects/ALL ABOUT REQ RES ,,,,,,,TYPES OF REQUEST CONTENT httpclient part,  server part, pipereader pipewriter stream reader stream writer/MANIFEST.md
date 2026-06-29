@@ -1,31 +1,37 @@
-# MANIFEST — ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part,  server part, pipereader pipewriter stream reader stream writer
+# MANIFEST — transcript v002 — ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part,  server part, pipereader pipewriter stream reader stream writer
 
-Generated: 2026-06-29 05:00:32 UTC
+Generated: 2026-06-29 05:48:53 UTC
 
-## Complete source
+## Detailed regional transcripts
 
-- canonical Git path: `_ai-conspects/ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part,  server part, pipereader pipewriter stream reader stream writer/source/ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part,  server part, pipereader pipewriter stream reader stream writer.svg`
-- source payload inside apply archive: `_payload/authoritative-source.svg`
-- source SHA-256: `f5dfd46fa16d2afef9c4fe00e01e90fab0de9b3dec0a7013041ba90be8b9ef62`
-- source Git blob SHA: `f94ea4b6553de8aea1dc9975f723041efd702a7c`
-- 405 extracted unique screenshot files under `source/images/`
+- `01-R01-httpcontent-binding.md`
+- `02-R02-json-length-chunking.md`
+- `03-R03-response-consumption.md`
+- `04-R04-buffering-retries.md`
+- `05-R05-base64-multipart.md`
+- `06-R06-server-response-writing.md`
+- `07-R07-server-request-body.md`
+- `08-R08-streamreader.md`
+- `09-R09-streamwriter.md`
+- `10-R10-pipewriter.md`
+- `11-R11-pipereader-core.md`
+- `12-R12-pipereader-parsing.md`
+- `13-R13-sequencereader.md`
 
-## Stage0 documents
+## Whole-conspect study files
 
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
-- `CURRENT_SOURCE_OF_TRUTH.md`
-- `TRANSCRIPT_STATUS.md`
+- `14-full-transcript.md`
+- `15-coverage-audit.md`
+- `16-repetition-map.md`
+- `17-question-bank.md` — 92 questions
 
-## Ledgers
+## Closed ledgers
 
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
+- `data/text-elements-v002-closed.*`
+- `data/image-uses-v002-closed.*`
+- `data/region-plan-v002-closed.*`
+- `data/full-conspect-final-coverage-audit-v002.*`
 
-## Audit assets
+## Policy
 
-- complete canvas preview
-- 32 regional contact sheets
+Repeated source lines are semantically consolidated rather than copied verbatim. Coverage remains placement-complete through the ledgers.
