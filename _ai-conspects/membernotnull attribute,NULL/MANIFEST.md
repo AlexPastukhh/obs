@@ -1,15 +1,15 @@
-# MANIFEST — typescript generic get prop from aray of users, k extends keyof T v002
+# MANIFEST — membernotnull attribute,NULL v001
 
 ## Target
 
 ```text
-_ai-conspects/typescript generic get prop from aray of users, k extends keyof T/
+_ai-conspects/membernotnull attribute,NULL/
 ```
 
 ## Source
 
 ```text
-typescript generic get prop from aray of users, k extends keyof T(2).svg
+membernotnull attribute,NULL.svg
 ```
 
 ## Coverage
@@ -17,7 +17,7 @@ typescript generic get prop from aray of users, k extends keyof T(2).svg
 ```text
 unique screenshots: 2
 image uses: 2
-native SVG labels: 0
+native SVG labels: 1
 duplicate extra placements: 0
 remaining unclosed: 0
 ```

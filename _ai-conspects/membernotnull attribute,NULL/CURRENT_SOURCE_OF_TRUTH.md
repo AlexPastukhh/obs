@@ -1,7 +1,7 @@
-# Current Source of Truth — typescript generic get prop from aray of users, k extends keyof T
+# Current Source of Truth — membernotnull attribute,NULL
 
 Generated: 2026-06-29 UTC  
-Version: v002
+Version: v001
 
 ## Status
 
@@ -20,10 +20,10 @@ final coverage audit: done
 ```text
 unique embedded screenshots: 2
 image uses on canvas: 2
-native SVG labels: 0
+native SVG labels: 1
 duplicate extra placements: 0
 processed image uses: 2
-processed text labels: 0
+processed text labels: 1
 remaining unclosed image uses: 0
 remaining unclosed text labels: 0
 ```
@@ -31,7 +31,7 @@ remaining unclosed text labels: 0
 ## Authoritative source
 
 ```text
-source/typescript generic get prop from aray of users, k extends keyof T(2).svg
+source/membernotnull attribute,NULL.svg
 ```
 
 ## Current transcript

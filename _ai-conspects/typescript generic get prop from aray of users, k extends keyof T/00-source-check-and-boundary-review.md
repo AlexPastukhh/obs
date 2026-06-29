@@ -1,43 +1,37 @@
-# Stage0 source check and boundary review — typescript generic get prop from aray of users, k extends keyof T
+# Source check and boundary review — typescript generic get prop from aray of users, k extends keyof T
 
-Generated: 2026-06-28 06:00:00 UTC
+Generated: 2026-06-29 UTC
 
-## Source decision
+## Previous state
 
-New conspect target:
+The previous target preserved the same `2/2` source boundary,
+but it stopped at Stage0. Regional transcripts, the combined transcript and the
+final coverage audit were all marked as not started.
 
-`_ai-conspects/typescript generic get prop from aray of users, k extends keyof T`
-
-Complete source:
-
-`source/typescript generic get prop from aray of users, k extends keyof T.svg`
-
-## Source inventory
+## Authoritative source
 
 ```text
-meaningful text elements: 0
+source/typescript generic get prop from aray of users, k extends keyof T(2).svg
+viewBox: 0 0 947 643.8040407138906
 unique embedded screenshots: 2
-screenshot uses on canvas: 2
-repeated screenshot placements: 0
-source SVG SHA-256: 988ffa8b0ecf8d1b094c26f89f160781cc75f0bd353110901e02242d39788133
+image uses: 2
+native SVG labels: 0
+duplicate extra placements: 0
 ```
 
-## Region plan
+## Semantic regions
 
-| Region | Visual-semantic block | Text | Uses | Unique images |
-|---|---|---:|---:|---:|
-| R01 | Generic property selection from arrays | 0 | 1 | 1 |
-| R02 | K extends keyof T constraints | 0 | 1 | 1 |
+| Region | Image uses | Labels | Topic |
+|---|---:|---:|---|
+| R01 | 1 | 0 | generic property extraction with T, K extends keyof T and indexed access T[K] |
+| R02 | 1 | 0 | type inference, IntelliSense key choices and optional-property consequences |
 
-## Current coverage
+## Result
+
+Every screenshot placement and every meaningful native SVG label is indexed,
+assigned to a semantic region and represented in the final transcript.
 
 ```text
-processed text elements: 0 / 0
-processed screenshot uses: 0 / 2
-remaining text elements: 0
-remaining screenshot uses: 2
+remaining unclosed image uses: 0
+remaining unclosed text labels: 0
 ```
-
-## Next
-
-Create regional semantic transcripts, then one combined transcript and final coverage audit.
