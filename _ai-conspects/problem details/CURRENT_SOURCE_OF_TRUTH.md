@@ -2,41 +2,60 @@
 
 Generated: 2026-06-30
 
-## Source-accounting status
+## Canonical source accounting
 
 ```text
-complete embedded assets: 77
-complete image uses: 86
-non-empty SVG text nodes: 118
+embedded assets: 77
+physical image uses: 86
+native SVG text nodes: 118
 duplicate placement groups: 9
-missing/unreviewed/unassigned coverage items: 0
+source-accounting failures: 0
 ```
 
-## Transcript-quality status
+## Transcript layers
 
 ```text
-Stage4 semantic region summaries: retained
-Stage4 source-ID accounting: complete
-source-preserving transcript pass 1: complete
-exact unique screenshot transcripts: 27 / 77
-exact placement coverage: 35 / 86
-native SVG labels preserved: 118 / 118
-pending exact unique screenshots: 50 / 77
-final repetition-ready certification: pending
+Stage4 semantic region summaries:
+  complete for major concepts
+  not source-preserving
+
+source-preserving pass 1 v002:
+  27 / 77 exact unique screenshot transcripts
+  35 / 86 exact placement coverage
+  118 / 118 SVG labels preserved
+
+integrated study transcript v003:
+  complete conceptual study model
+  repetition/question readiness: YES for concepts and application
+  literal screenshot certification: still partial
+
+remaining literal work:
+  50 unique screenshot contents
+  51 physical placements
 ```
 
-## Active files
+## Active study files
 
 ```text
-05-stage5-actual-transcript-quality-audit-v002.md
 06-stage6-source-preserving-transcript-pass1-v002.md
 07-all-svg-text-labels-appendix-v002.md
-08-repetition-guide-v002.md
-CANONICAL_FULL_SOURCE_REQUIRED.md
-regions-source-preserving-v002/
-data/source-preserving-pass1-coverage-v002.csv
+09-stage9-integrated-study-transcript-v003.md
+10-question-bank-v003.md
+11-remaining-literal-source-gap-v003.md
 ```
 
-## Boundary
+## Source-export path
 
-The available `problem details(2).svg` is the legacy 25-use source. It must not replace the canonical 86-use source.
+```text
+EXPORT_CANONICAL_PROBLEM_DETAILS_SOURCE.ps1
+12-export-canonical-source-instructions-v003.md
+```
+
+## Honest readiness
+
+```text
+conceptual repetition: READY
+scenario/coding questions: READY
+source-specific literal questions for all 86 placements: PENDING
+final near-literal closure: PENDING CANONICAL PNG EXPORT
+```
