@@ -1,10 +1,11 @@
-# Problem Details — transcript quality status
+# Problem Details — transcript quality status v002
 
 ```text
-Stage4 source reconciliation: complete
-86 / 86 image-use accounting: complete
-118 / 118 text-node accounting: complete
-source-preserving transcript fidelity: pending independent review
-repetition-ready certification: pending
-legacy 25-use upload: retained as audit evidence only
+source coverage: COMPLETE
+semantic topic coverage: GOOD
+source-preserving pass 1: 27 / 77 unique assets
+placement coverage in pass 1: 35 / 86
+remaining unique screenshot contents: 50
+all SVG labels preserved: 118 / 118
+final detailed repetition readiness: PENDING
 ```

@@ -5,34 +5,38 @@ Generated: 2026-06-30
 ## Source-accounting status
 
 ```text
-Stage4 complete SVG reconciliation: complete
 complete embedded assets: 77
 complete image uses: 86
-processed image uses: 86
-physical non-empty SVG text nodes: 118
-processed text nodes: 118
+non-empty SVG text nodes: 118
 duplicate placement groups: 9
-coverage failures: 0
+missing/unreviewed/unassigned coverage items: 0
 ```
 
 ## Transcript-quality status
 
 ```text
-coverage completion: confirmed
-actual near-literal fidelity: pending independent region-text audit
-repetition readiness: not yet certified
-question-generation readiness: not yet certified source-by-source
+Stage4 semantic region summaries: retained
+Stage4 source-ID accounting: complete
+source-preserving transcript pass 1: complete
+exact unique screenshot transcripts: 27 / 77
+exact placement coverage: 35 / 86
+native SVG labels preserved: 118 / 118
+pending exact unique screenshots: 50 / 77
+final repetition-ready certification: pending
 ```
 
-## Active quality-gate files
+## Active files
 
 ```text
-05-stage5-transcript-quality-gate-v001.md
-06-repetition-readiness-plan-v001.md
-TRANSCRIPT_QUALITY_STATUS.md
-data/legacy-25-use-source-audit-v001.json
+05-stage5-actual-transcript-quality-audit-v002.md
+06-stage6-source-preserving-transcript-pass1-v002.md
+07-all-svg-text-labels-appendix-v002.md
+08-repetition-guide-v002.md
+CANONICAL_FULL_SOURCE_REQUIRED.md
+regions-source-preserving-v002/
+data/source-preserving-pass1-coverage-v002.csv
 ```
 
-## Important boundary
+## Boundary
 
-The supplied `problem details(2).svg` is the historical 25-use export. It is preserved under `audit-assets/legacy-source-v001/` and must not replace the 86-use Stage4 source.
+The available `problem details(2).svg` is the legacy 25-use source. It must not replace the canonical 86-use source.
