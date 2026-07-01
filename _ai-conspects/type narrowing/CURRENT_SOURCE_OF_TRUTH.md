@@ -1,31 +1,43 @@
 # Current Source of Truth — type narrowing
 
-Generated: 2026-06-28 06:00:00 UTC
+Generated: 2026-06-30
+
+## Source
+
+```text
+source/type narrowing.svg
+Git blob SHA: 3f3649d51ff9e50e457125850ee44a20046c04bf
+unique screenshots: 3
+image uses: 3
+SVG labels: 0
+```
 
 ## Status
 
 ```text
-Stage0 source/boundary review: done
-Complete SVG preservation: done
-Embedded screenshot extraction: done
-Text-element inventory: done
-Visible canvas region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Stage0 source review: retained
+regional transcripts: complete
+combined source-preserving transcript: complete
+repetition guide: complete
+coverage audit: complete
+
+processed image uses: 3 / 3
+remaining image uses: 0
 ```
 
-## Coverage
+## Authoritative study files
 
 ```text
-meaningful text elements: 0
-unique embedded images: 3
-image uses on canvas: 3
-logical regions: 3
-remaining unprocessed text elements: 0
-remaining unprocessed image uses: 3
+01-source-preserving-transcript-v001.md
+02-repetition-guide-v001.md
+regions-v001/
 ```
 
-## Next
+## Verdict
 
-Process every planned region and close all source coverage.
+```text
+SOURCE COMPLETE
+TRANSCRIPT SOURCE-PRESERVING
+REPETITION READY
+QUESTION GENERATION READY
+```

@@ -1,28 +1,13 @@
-# MANIFEST — type narrowing
+# MANIFEST — type narrowing correction v001
 
-Generated: 2026-06-28 06:00:00 UTC
+Included:
 
-## Complete source
-
-- `source/type narrowing.svg`
-- 3 extracted screenshots under `source/images/`
-
-## Stage0 documents
-
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
-- `CURRENT_SOURCE_OF_TRUTH.md`
-- `TRANSCRIPT_STATUS.md`
-
-## Ledgers
-
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-
-## Audit assets
-
-- complete canvas preview
-- 3 regional contact sheets
+- exact complete SVG;
+- three exact extracted screenshots;
+- three source-preserving transcript blocks;
+- preserved TypeScript examples;
+- two logical region files;
+- comparison/repetition guide;
+- source coverage CSV/JSON;
+- updated Current Source of Truth;
+- validation file.
