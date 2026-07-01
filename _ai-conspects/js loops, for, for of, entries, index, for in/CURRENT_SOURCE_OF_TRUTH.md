@@ -1,18 +1,17 @@
 # Current Source of Truth — js loops, for, for of, entries, index, for in
 
-Generated: 2026-06-28 06:00:00 UTC
+Generated: 2026-07-01
 
 ## Status
 
 ```text
-Stage0 source/boundary review: done
-Complete SVG preservation: done
-Embedded screenshot extraction: done
-Text-element inventory: done
-Visible canvas region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+complete SVG preservation: done
+source verification: exact SHA-256 match with Stage0
+embedded screenshot extraction: done
+text-element inventory: done
+source-preserving transcript: done
+repetition guide: done
+coverage audit: done
 ```
 
 ## Coverage
@@ -20,12 +19,27 @@ Full-conspect coverage audit: not started
 ```text
 meaningful text elements: 2
 unique embedded images: 2
-image uses on canvas: 2
-logical regions: 2
-remaining unprocessed text elements: 2
-remaining unprocessed image uses: 2
+image uses: 2
+processed text elements: 2 / 2
+processed image uses: 2 / 2
+remaining: 0
 ```
 
-## Next
+## Active files
 
-Process every planned region and close all source coverage.
+```text
+source/js loops, for, for of, entries, index, for in.svg
+00-source-verification-v001.md
+01-source-preserving-transcript-v001.md
+02-repetition-guide-v001.md
+regions-v001/
+data/source-preserving-coverage-v001.csv
+```
+
+## Verdict
+
+```text
+SOURCE COMPLETE
+TRANSCRIPT SOURCE-PRESERVING
+REPETITION READY
+```

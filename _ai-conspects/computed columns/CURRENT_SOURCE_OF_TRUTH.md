@@ -1,29 +1,40 @@
-# Current Source of Truth - computed columns
+# Current Source of Truth — computed columns
 
-Generated: 2026-06-22 UTC
+Generated: 2026-07-01  
+Version: v002
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+## Status
 
 ```text
-Stage0 source/boundary review: done
-Stage1 all-region final coverage transcript: done
-Final coverage audit: done
+raw SVG preservation: restored
+unique screenshots: 18
+image uses: 18
+SVG labels: 10
+existing integrated semantic summary: preserved
+source-preserving transcript: completed
+repetition guide: completed
+remaining sources: 0
 ```
 
-## Counts
+## Active files
 
 ```text
-image uses on canvas: 18
-text labels parsed: 10
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+source/computed columns.svg
+regions/R01R02R03-final-coverage.md
+    existing integrated semantic summary
+
+00-source-verification-and-restoration-v002.md
+02-source-preserving-transcript-v002.md
+03-repetition-guide-v002.md
+regions-v002/
+data/source-preserving-coverage-v002.csv
 ```
 
-## Next
+## Verdict
 
-No normal transcript regions remain. Only correction/polish if needed.
+```text
+SOURCE COMPLETE
+RAW SVG PATH RESTORED
+SQL SOURCE-PRESERVING TRANSCRIPT COMPLETE
+REPETITION READY
+```
