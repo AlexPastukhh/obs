@@ -1,37 +1,49 @@
-# Current Source of Truth - hashcode
+# Current Source of Truth — hashcode
 
-Generated: 2026-06-13 09:50:00 UTC
+Generated: 2026-06-30
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+## Source
 
 ```text
-Stage0 source/boundary review: done
-Normal transcript regions: done
-Final coverage audit: done
+source/hashcode.svg
+Git blob SHA: 0eaf471525a9cf3056a6815b07a7c1c266ed210c
+unique screenshots: 24
+image uses: 24
+native SVG labels: 19
+duplicates: 0
 ```
 
-## Counts
+## Status
 
 ```text
-unique embedded images: 24
-image uses on canvas: 24
-text labels parsed: 19
-duplicate image uses by extracted file/content: 0
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+old semantic Stage1: superseded
+source-preserving transcript v002: complete
+regional source blocks: complete
+native labels appendix: complete
+repetition guide: complete
+quality audit: complete
+
+processed image uses: 24 / 24
+processed labels: 19 / 19
+remaining sources: 0
 ```
 
-## Completed transcript pass
+## Authoritative files
 
 ```text
-R01+R02+R03+R04 final coverage transcript: done
+02-source-preserving-transcript-v002.md
+03-repetition-guide-v002.md
+04-native-svg-labels-v002.md
+05-transcript-quality-correction-audit-v002.md
+regions-v002/
+data/source-coverage-v002.csv
 ```
 
-## Final note
+## Verdict
 
-This is a source-preserving semantic transcript and coverage audit. Exact code punctuation should be corrected from preserved screenshots/source if a verbatim study sheet is needed.
+```text
+SOURCE COMPLETE
+TRANSCRIPT SOURCE-PRESERVING
+CODE-LEVEL REPETITION READY
+QUESTION GENERATION READY
+```

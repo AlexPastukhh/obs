@@ -1,0 +1,25 @@
+﻿source_id,title,region_file,image_sha256,transcript,visible_code_or_example,recall_questions,status
+S-001,Hash codes are not security primitives; records generate equality,R01-foundations-security-records-and-equality.md,2bdb071dfa1b5075e5846f900a46d930e3e3d8b0a345886c8a014a5d68beaa8f,complete,preserved,complete,closed
+S-002,Hash codes are not stable IDs,R01-foundations-security-records-and-equality.md,019ee46f5227ce32bce94497619463c5d924a6a7079f3f648d3b6f9f35e8a57f,complete,preserved,complete,closed
+S-003,Mutable dictionary keys and HashSet elements,R01-foundations-security-records-and-equality.md,845f1ebb84ff4ee5b0c6e86749b7e3f15644edb60c5a4a93948e8a7f10510ebb,complete,preserved,complete,closed
+S-004,"IEquatable<T>, Equals, and GetHashCode",R01-foundations-security-records-and-equality.md,17c74710d93f1a5724bb42eca4928dbdfd66eda98ed6820628a066ebcfb4c17d,complete,preserved,complete,closed
+S-005,HashCode.Add with an explicit comparer,R01-foundations-security-records-and-equality.md,3b6683154e23c7afc542d2f396822137e9af74cce0cba2fb22496a20e2d86601,complete,preserved,complete,closed
+S-006,Conditional HashCode accumulation,R02-combine-add-null-and-field-contract.md,56412f01fa494bb78b88d6466f55ee8dc645b6af23ba03ebcc18dff48c643d11,complete,preserved,complete,closed
+S-007,Incremental HashCode.Add,R02-combine-add-null-and-field-contract.md,28d299ae5b648e3f644988447b04534e5bd0e78f592cec9bcd7dbc841bc6dba8,complete,preserved,complete,closed
+S-008,Collection hashing with the HashCode accumulator,R02-combine-add-null-and-field-contract.md,96b6409db9a8b5170f45f85ed0238286343815c13ddf5995f5ed9289276a2497,complete,preserved,complete,closed
+S-009,HashCode struct for many fields,R02-combine-add-null-and-field-contract.md,e56a152988adc5a2f2c41f3a5b2b807b9d2f3f12a8c7e1bd614469300c9f596f,complete,preserved,complete,closed
+S-010,HashCode.Combine is for a small fixed set,R02-combine-add-null-and-field-contract.md,24297fc92538fa9781f389962280fb5cbd77e017f3683c4d9d3da3de323019c3,complete,preserved,complete,closed
+S-011,Nulls with HashCode.Combine,R02-combine-add-null-and-field-contract.md,0050babbfe716a7ac0634d81a4756d822a0bd0ebf343be5142b2df8b648d4991,complete,preserved,complete,closed
+S-012,Why equality/hash field mismatch is invalid,R02-combine-add-null-and-field-contract.md,4f7e835c0db330be154f0e56817b25737d56e08a05edeeb7c2e6b1f891aadfc5,complete,preserved,complete,closed
+S-013,Use the same fields as equality,R02-combine-add-null-and-field-contract.md,77f7dadc3c99c6ed68f4111633d57ba34bdd5b9f8e75a40e34ca04acb70516ce,complete,preserved,complete,closed
+S-014,Manual unchecked hash formula versus HashCode.Combine,R02-combine-add-null-and-field-contract.md,457a91fe12d1d8151e2b98e6f0dc2e486c3c5feeb0f223b3170b55e8d9fd42b8,complete,preserved,complete,closed
+S-015,Typical HashCode.Combine implementation,R02-combine-add-null-and-field-contract.md,bfa2fa934fbfe681d3e50b679554cb59a2afc07de6e2a89a8c4280857c0e17d6,complete,preserved,complete,closed
+S-016,Why hash codes exist,R02-combine-add-null-and-field-contract.md,7f1a25235a1a59eb81798953a92476b61bf245fb82ffc39741ed857d70f28da9,complete,preserved,complete,closed
+S-017,Original order-independent loop snippet,R03-collection-and-loop-hashing.md,809a6807b1e55a6df8ed819f4bbc85f52406d1604f47d9c2fac6929806c8b51a,complete,preserved,complete,closed
+S-018,Intent of the sorted collection hash,R03-collection-and-loop-hashing.md,69d5458eff01407102f3760e3e7e53c0539849efc46afeb00d805bf9a2955981,complete,preserved,complete,closed
+S-019,Manual null handling is often unnecessary,R03-collection-and-loop-hashing.md,7a6da7130b0459e2531e2ef496a6d67039649340b0f2eb1e017846b96933e70b,complete,preserved,complete,closed
+S-020,Repeated Combine in a loop is not ideal,R03-collection-and-loop-hashing.md,2673389a698ce1b12232f1b34eab200bd95a723729f3d96bd943e90616e533fe,complete,preserved,complete,closed
+S-021,Improved set-like collection hash,R03-collection-and-loop-hashing.md,165b1b052c04131458f7959da26b1ae67e2bd828970f1d43c8d301b09b1ea8d2,complete,preserved,complete,closed
+S-022,HashSet uses the same hashing principle,R04-mutable-keys-dictionary-and-hashset-flow.md,2969d41e3381467e7e16e21e47f3bdd5e0f9cd7344ac7a57351da8c90ae090c1,complete,preserved,complete,closed
+S-023,Dictionary flow before mutation,R04-mutable-keys-dictionary-and-hashset-flow.md,d6d2ce3a2dfe545094ca849a7345d88f21cbc6cac237cc4a8c3da672dd0b7b49,complete,preserved,complete,closed
+S-024,Dictionary flow after key mutation,R04-mutable-keys-dictionary-and-hashset-flow.md,00dafaaabd8b4fc7fb69f909998eda4a27daab1c4177aa0167a7407fdfa51535,complete,preserved,complete,closed

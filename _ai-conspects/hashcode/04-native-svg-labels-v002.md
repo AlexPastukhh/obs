@@ -1,0 +1,21 @@
+# HashCode — native SVG labels
+
+- `T-001` — hashcode struct
+- `T-002` — incr adding
+- `T-003` — hashcode in a loop
+- `T-004` — example
+- `T-005` — handles null fine
+- `T-006` — hashcode,hashcode
+- `T-007` — combine
+- `T-008` — conditional logic
+- `T-009` — some considerations
+- `T-010` — dont use mutable fields if obj
+- `T-011` — is dict key
+- `T-012` — compute hash once
+- `T-013` — place in bucket
+- `T-014` — dont recompute on mutation
+- `T-015` — hashtable gets different hash
+- `T-016` — when we pass mutated obj as key
+- `T-017` — searches different bucket
+- `T-018` — DONT MAKE OBJECTS WITH MUTABLE
+- `T-019` — PROPS - KEY OF DICT/EL OF HASHSET

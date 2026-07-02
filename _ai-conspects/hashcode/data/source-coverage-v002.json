@@ -1,0 +1,242 @@
+[
+  {
+    "source_id": "S-001",
+    "title": "Hash codes are not security primitives; records generate equality",
+    "region_file": "R01-foundations-security-records-and-equality.md",
+    "image_sha256": "2bdb071dfa1b5075e5846f900a46d930e3e3d8b0a345886c8a014a5d68beaa8f",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-002",
+    "title": "Hash codes are not stable IDs",
+    "region_file": "R01-foundations-security-records-and-equality.md",
+    "image_sha256": "019ee46f5227ce32bce94497619463c5d924a6a7079f3f648d3b6f9f35e8a57f",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-003",
+    "title": "Mutable dictionary keys and HashSet elements",
+    "region_file": "R01-foundations-security-records-and-equality.md",
+    "image_sha256": "845f1ebb84ff4ee5b0c6e86749b7e3f15644edb60c5a4a93948e8a7f10510ebb",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-004",
+    "title": "IEquatable<T>, Equals, and GetHashCode",
+    "region_file": "R01-foundations-security-records-and-equality.md",
+    "image_sha256": "17c74710d93f1a5724bb42eca4928dbdfd66eda98ed6820628a066ebcfb4c17d",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-005",
+    "title": "HashCode.Add with an explicit comparer",
+    "region_file": "R01-foundations-security-records-and-equality.md",
+    "image_sha256": "3b6683154e23c7afc542d2f396822137e9af74cce0cba2fb22496a20e2d86601",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-006",
+    "title": "Conditional HashCode accumulation",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "56412f01fa494bb78b88d6466f55ee8dc645b6af23ba03ebcc18dff48c643d11",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-007",
+    "title": "Incremental HashCode.Add",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "28d299ae5b648e3f644988447b04534e5bd0e78f592cec9bcd7dbc841bc6dba8",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-008",
+    "title": "Collection hashing with the HashCode accumulator",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "96b6409db9a8b5170f45f85ed0238286343815c13ddf5995f5ed9289276a2497",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-009",
+    "title": "HashCode struct for many fields",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "e56a152988adc5a2f2c41f3a5b2b807b9d2f3f12a8c7e1bd614469300c9f596f",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-010",
+    "title": "HashCode.Combine is for a small fixed set",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "24297fc92538fa9781f389962280fb5cbd77e017f3683c4d9d3da3de323019c3",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-011",
+    "title": "Nulls with HashCode.Combine",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "0050babbfe716a7ac0634d81a4756d822a0bd0ebf343be5142b2df8b648d4991",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-012",
+    "title": "Why equality/hash field mismatch is invalid",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "4f7e835c0db330be154f0e56817b25737d56e08a05edeeb7c2e6b1f891aadfc5",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-013",
+    "title": "Use the same fields as equality",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "77f7dadc3c99c6ed68f4111633d57ba34bdd5b9f8e75a40e34ca04acb70516ce",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-014",
+    "title": "Manual unchecked hash formula versus HashCode.Combine",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "457a91fe12d1d8151e2b98e6f0dc2e486c3c5feeb0f223b3170b55e8d9fd42b8",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-015",
+    "title": "Typical HashCode.Combine implementation",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "bfa2fa934fbfe681d3e50b679554cb59a2afc07de6e2a89a8c4280857c0e17d6",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-016",
+    "title": "Why hash codes exist",
+    "region_file": "R02-combine-add-null-and-field-contract.md",
+    "image_sha256": "7f1a25235a1a59eb81798953a92476b61bf245fb82ffc39741ed857d70f28da9",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-017",
+    "title": "Original order-independent loop snippet",
+    "region_file": "R03-collection-and-loop-hashing.md",
+    "image_sha256": "809a6807b1e55a6df8ed819f4bbc85f52406d1604f47d9c2fac6929806c8b51a",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-018",
+    "title": "Intent of the sorted collection hash",
+    "region_file": "R03-collection-and-loop-hashing.md",
+    "image_sha256": "69d5458eff01407102f3760e3e7e53c0539849efc46afeb00d805bf9a2955981",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-019",
+    "title": "Manual null handling is often unnecessary",
+    "region_file": "R03-collection-and-loop-hashing.md",
+    "image_sha256": "7a6da7130b0459e2531e2ef496a6d67039649340b0f2eb1e017846b96933e70b",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-020",
+    "title": "Repeated Combine in a loop is not ideal",
+    "region_file": "R03-collection-and-loop-hashing.md",
+    "image_sha256": "2673389a698ce1b12232f1b34eab200bd95a723729f3d96bd943e90616e533fe",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-021",
+    "title": "Improved set-like collection hash",
+    "region_file": "R03-collection-and-loop-hashing.md",
+    "image_sha256": "165b1b052c04131458f7959da26b1ae67e2bd828970f1d43c8d301b09b1ea8d2",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-022",
+    "title": "HashSet uses the same hashing principle",
+    "region_file": "R04-mutable-keys-dictionary-and-hashset-flow.md",
+    "image_sha256": "2969d41e3381467e7e16e21e47f3bdd5e0f9cd7344ac7a57351da8c90ae090c1",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-023",
+    "title": "Dictionary flow before mutation",
+    "region_file": "R04-mutable-keys-dictionary-and-hashset-flow.md",
+    "image_sha256": "d6d2ce3a2dfe545094ca849a7345d88f21cbc6cac237cc4a8c3da672dd0b7b49",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  },
+  {
+    "source_id": "S-024",
+    "title": "Dictionary flow after key mutation",
+    "region_file": "R04-mutable-keys-dictionary-and-hashset-flow.md",
+    "image_sha256": "00dafaaabd8b4fc7fb69f909998eda4a27daab1c4177aa0167a7407fdfa51535",
+    "transcript": "complete",
+    "visible_code_or_example": "preserved",
+    "recall_questions": "complete",
+    "status": "closed"
+  }
+]
