@@ -1,43 +1,19 @@
-# Lazy LazyT Initialization - Stage 1 Transcript v001
+# Lazy Stage1 transcript v001 — superseded
 
-Generated: 2026-06-13 08:38:25 UTC
+Generated: 2026-07-01
 
-## Direction check
+The old Stage1 pass had complete source-ID accounting but used generic semantic text and did not preserve the distinct content of the 38 screenshots.
 
-Goal:
-Process all Stage0 candidates for this small conspect in one Stage1 transcript pass.
-
-Done:
-Stage0 boundary review exists and is committed.
-
-This step:
-Process every source image-use record for this conspect.
-
-Why:
-Small conspect: one transcript pass is enough before closure audit.
-
-Next:
-Apply, review staged diff/status, commit, then run closure audit batch.
-
-## Transcript level
+Active detailed transcript:
 
 ```text
-Source-level semantic transcript: yes
-Verbatim exact code punctuation transcript: no
-Preserved PNGs remain source of truth for exact code punctuation.
-No OCR-timeout / image-missing / placeholder processed source: yes
+04-source-preserving-transcript-v002.md
 ```
 
-## Counts
+Active repetition guide:
 
 ```text
-Total sources: 38
-Stage1 processed: 38
-Remaining pending: 0
+05-repetition-guide-v002.md
 ```
 
-By region:
-```text
-LAZY-R01: 23
-LAZY-R02: 15
-```
+The old region files under `regions/` remain historical evidence only. Active detailed regions are under `regions-v002/`.

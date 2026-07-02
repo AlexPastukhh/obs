@@ -1,55 +1,52 @@
-# Current Source of Truth - Lazy LazyT Initialization
+# Current Source of Truth — Lazy<T> initialization
 
-Generated: 2026-06-13 08:48:07 UTC
+Generated: 2026-07-01  
+Version: v002
 
-## Current policy
-
-Do not treat the review ledger as source of truth.
-
-A region is complete only when its region file contains coverage / boundary review, included sources, candidate checks, excluded/reassigned candidates, open issues, and verified source transcript or correction addendum.
-
-For small conspects, one transcript pass may process all Stage0 groups, then closure audit.
-
-## Big archive apply workflow
+## Source
 
 ```text
-Expand archive.
-git add -A -- <target>
-Review staged file list/status.
-Commit only after staged file review.
-Never use git add . when unrelated files are modified.
+source/Lazy.svg
+SHA-256: 5fa85b1287db8dc0f11b109673f07118175fdab070c5a144cd35f942f71efe6f
+Git blob SHA: 61bcdd37d8a715fb3db9736ccf87e3bd19baafdd
+unique screenshots: 38
+image uses: 38
+SVG labels: 21
 ```
 
-## No-placeholder-processed rule
+## Transcript status
 
 ```text
-If visible transcript has OCR timeout/error, image missing, empty text, or placeholder text,
-the source stays pending and must not be marked processed.
+Stage0 boundary review v001: preserved as historical
+Stage1 semantic transcript v001: superseded
+closure audit v001: superseded
+source verification v002: completed
+source-preserving transcript v002: completed
+repetition guide v002: completed
+corrected closure audit v002: completed
 ```
 
-## Transcript precision policy
+## Active files
 
 ```text
-Stage1 transcript level: source-level semantic transcript.
-For exact code punctuation, use preserved Stage0 source PNGs.
-Precision patches can upgrade individual sources to verbatim code later.
+03-source-verification-and-quality-correction-v002.md
+04-source-preserving-transcript-v002.md
+05-repetition-guide-v002.md
+06-corrected-closure-audit-v002.md
+regions-v002/
+data/source-preserving-coverage-v002.csv
 ```
 
-## Current status
+## Coverage
 
 ```text
-Lazy LazyT Initialization Stage0 boundary review v001: completed
-Lazy LazyT Initialization Stage1 transcript v001: completed
-Lazy LazyT Initialization closure audit v001: completed
-Image uses inventoried: 38
-Stage1 processed: 38
-Pending candidates: 0
-Bad placeholder/OCR-error processed rows: 0
+source blocks: 38 / 38
+recall-question sets: 38 / 38
+uncovered screenshots: 0
 ```
 
-## Current processing target
+## Verdict
 
 ```text
-Lazy LazyT Initialization: closed by source coverage
-Next: no further transcript work unless precision patch or repeat-material layer is requested.
+Closed by complete SVG preservation and source-preserving transcript quality.
 ```
