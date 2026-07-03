@@ -1,37 +1,85 @@
-# APPLY ARCHIVE — Google reCAPTCHA v2/v3 final coverage transcript v001
+# Apply Google reCAPTCHA transcript correction v003
 
-Target branch: `ai-processed-conspects-text`
+Target branch:
 
-## Apply
-
-```powershell
-cd C:\Users\alexa\obs
-git checkout ai-processed-conspects-text
-
-$zip = "C:\Users\alexa\Downloads\ai-conspects-google recapcha and recapchas-stage1-r01r02r03r04-final-coverage-v001.zip"
-$target = "_ai-conspects\google recapcha and recapchas"
-
-$OutputEncoding = [System.Text.UTF8Encoding]::new()
-[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
-
-git status --short
-Expand-Archive -Path $zip -DestinationPath . -Force
-
-git add -A -- $target
-
-git status --short -- $target
+```text
+ai-processed-conspects-text
 ```
 
-## Commit after review
+## Complete PowerShell application
 
 ```powershell
-git commit -m "Complete Google reCAPTCHA v2 v3 conspect final coverage"
-git push origin ai-processed-conspects-text
+$ErrorActionPreference = "Stop"
+
+function Run-Git {
+    param(
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]] $GitArgs
+    )
+
+    & git @GitArgs
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "Git command failed: git $($GitArgs -join ' ')"
+    }
+}
+
+$repo = "C:\Users\alexa\obs"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-google-recaptcha-corrected-v003.zip"
+$temp = Join-Path $env:TEMP "ai-conspects-google-recaptcha-v003"
+$targetPath = "_ai-conspects/google recapcha and recapchas"
+
+Set-Location -LiteralPath $repo
+
+$alreadyStaged = @(git diff --cached --name-only)
+if ($alreadyStaged.Count -gt 0) {
+    $alreadyStaged | ForEach-Object { Write-Host $_ }
+    throw "Staging area is not empty."
+}
+
+Run-Git checkout ai-processed-conspects-text
+Run-Git pull --ff-only origin ai-processed-conspects-text
+
+if (Test-Path -LiteralPath $temp) {
+    Remove-Item -LiteralPath $temp -Recurse -Force
+}
+
+Expand-Archive -LiteralPath $zip -DestinationPath $temp -Force
+
+$from = Join-Path $temp "_ai-conspects\google recapcha and recapchas"
+$to = Join-Path $repo "_ai-conspects\google recapcha and recapchas"
+
+New-Item -ItemType Directory -Path $to -Force | Out-Null
+
+Copy-Item `
+    -Path (Join-Path $from "*") `
+    -Destination $to `
+    -Recurse `
+    -Force
+
+Run-Git add -A -- $targetPath
+
+$staged = @(git diff --cached --name-only)
+$unexpected = @(
+    $staged | Where-Object {
+        $_ -notlike "$targetPath/*"
+    }
+)
+
+if ($unexpected.Count -gt 0) {
+    $unexpected | ForEach-Object { Write-Host $_ }
+    throw "Unrelated files are staged."
+}
+
+Run-Git diff --cached --name-status
+Run-Git diff --cached --stat
+
+Run-Git commit -m "Add source-preserving Google reCAPTCHA transcript"
+Run-Git push origin ai-processed-conspects-text
+
+Run-Git status --short -- $targetPath
+
+Remove-Item -LiteralPath $temp -Recurse -Force
 ```
 
-## Rollback staged target only
-
-```powershell
-git restore --staged -- $target
-git restore -- $target
-```
+Do not use `git add .` because unrelated working-tree changes may exist.

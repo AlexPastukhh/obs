@@ -1,0 +1,538 @@
+﻿text_id,text,non_empty,x,y
+T-001,"<script src=""https://www.google.com/recaptcha/api.js"" async defer></script>",True,0,17.619999999999997
+T-002,,False,0,42.62
+T-003,"<form asp-action=""Register"" method=""post"">",True,0,67.62
+T-004,"<input type=""email"" name=""Email"" required />",True,0,92.62
+T-005,"<input type=""password"" name=""Password"" required />",True,0,117.62
+T-006,,False,0,142.62
+T-007,"<div class=""g-recaptcha"" data-sitekey=""@ViewBag.RecaptchaSiteKey""></div>",True,0,167.62
+T-008,,False,0,192.62
+T-009,"<button type=""submit"">Submit</button>",True,0,217.62
+T-010,</form>,True,0,242.62
+T-011,public sealed class RecaptchaVerifyResponse,True,0,17.619999999999997
+T-012,{,True,0,42.62
+T-013,public bool success { get; set; },True,0,67.62
+T-014,public string[]? error-codes { get; set; } // google uses this name in JSON sometimes,True,0,92.62
+T-015,public List<string>? error_codes { get; set; } // in case serializer maps differently,True,0,117.62
+T-016,public double score { get; set; } // v3 only,True,0,142.62
+T-017,public string? action { get; set; } // v3 only,True,0,167.62
+T-018,public string? hostname { get; set; },True,0,192.62
+T-019,},True,0,217.62
+T-020,using System.Net.Http;,True,0,17.619999999999997
+T-021,using System.Text.Json;,True,0,42.62
+T-022,using Microsoft.AspNetCore.WebUtilities;,True,0,67.62
+T-023,,False,0,92.62
+T-024,public interface IRecaptchaVerifier,True,0,117.62
+T-025,{,True,0,142.62
+T-026,"Task<bool> VerifyV2Async(string token, string? remoteIp = null);",True,0,167.62
+T-027,},True,0,192.62
+T-028,,False,0,217.62
+T-029,public class GoogleRecaptchaVerifier : IRecaptchaVerifier,True,0,242.62
+T-030,{,True,0,267.62
+T-031,private readonly HttpClient _http;,True,0,292.62
+T-032,private readonly IConfiguration _config;,True,0,317.62
+T-033,,False,0,342.62
+T-034,"public GoogleRecaptchaVerifier(HttpClient http, IConfiguration config)",True,0,367.62
+T-035,{,True,0,392.62
+T-036,_http = http;,True,0,417.62
+T-037,_config = config;,True,0,442.62
+T-038,},True,0,467.62
+T-039,,False,0,492.62
+T-040,"public async Task<bool> VerifyV2Async(string token, string? remoteIp = null)",True,0,517.62
+T-041,{,True,0,542.62
+T-042,if (string.IsNullOrWhiteSpace(token)) return false;,True,0,567.62
+T-043,,False,0,592.62
+T-044,"var secret = _config[""Recaptcha:SecretKey""];",True,0,617.62
+T-045,if (string.IsNullOrWhiteSpace(secret)),True,0,642.62
+T-046,"throw new InvalidOperationException(""Recaptcha:SecretKey is not configured."");",True,0,667.62
+T-047,,False,0,692.62
+T-048,// POST https://www.google.com/recaptcha/api/siteverify,True,0,717.62
+T-049,"// with form fields: secret, response, remoteip(optional)",True,0,742.62
+T-050,,False,0,767.62
+T-051,"var data = new Dictionary<string, string>",True,0,792.62
+T-052,{,True,0,817.62
+T-053,"[""secret""] = secret,",True,0,842.62
+T-054,"[""response""] = token",True,0,867.62
+T-055,};,True,0,892.62
+T-056,,False,0,917.62
+T-057,if (!string.IsNullOrWhiteSpace(remoteIp)),True,0,942.62
+T-058,"data[""remoteip""] = remoteIp;",True,0,967.62
+T-059,,False,0,992.62
+T-060,using var content = new FormUrlEncodedContent(data);,True,0,1017.62
+T-061,"using var resp = await _http.PostAsync(""https://www.google.com/recaptcha/api/siteverify"", content);",True,0,1042.62
+T-062,resp.EnsureSuccessStatusCode();,True,0,1067.62
+T-063,,False,0,1092.62
+T-064,var json = await resp.Content.ReadAsStringAsync();,True,0,1117.62
+T-065,var result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json);,True,0,1142.62
+T-066,,False,0,1167.62
+T-067,return result?.success == true;,True,0,1192.62
+T-068,},True,0,1217.62
+T-069,},True,0,1242.62
+T-070,public class RegisterVm,True,0,17.619999999999997
+T-071,{,True,0,42.62
+T-072,"public string Email { get; set; } = """";",True,0,67.62
+T-073,"public string Password { get; set; } = """";",True,0,92.62
+T-074,,False,0,117.62
+T-075,// name must match form field for model binding:,True,0,142.62
+T-076,public string? g_recaptcha_response { get; set; } // for manual binding (see note below),True,0,167.62
+T-077,},True,0,192.62
+T-078,using Microsoft.AspNetCore.Mvc;,True,0,17.619999999999997
+T-079,,False,0,42.62
+T-080,public class AccountController : Controller,True,0,67.62
+T-081,{,True,0,92.62
+T-082,private readonly IRecaptchaVerifier _recaptcha;,True,0,117.62
+T-083,private readonly IConfiguration _config;,True,0,142.62
+T-084,,False,0,167.62
+T-085,"public AccountController(IRecaptchaVerifier recaptcha, IConfiguration config)",True,0,192.62
+T-086,{,True,0,217.62
+T-087,_recaptcha = recaptcha;,True,0,242.62
+T-088,_config = config;,True,0,267.62
+T-089,},True,0,292.62
+T-090,,False,0,317.62
+T-091,[HttpGet],True,0,342.62
+T-092,public IActionResult Register(),True,0,367.62
+T-093,{,True,0,392.62
+T-094,"ViewBag.RecaptchaSiteKey = _config[""Recaptcha:SiteKey""];",True,0,417.62
+T-095,return View();,True,0,442.62
+T-096,},True,0,467.62
+T-097,,False,0,492.62
+T-098,[HttpPost],True,0,517.62
+T-099,[ValidateAntiForgeryToken],True,0,542.62
+T-100,public async Task<IActionResult> Register(RegisterVm vm),True,0,567.62
+T-101,{,True,0,592.62
+T-102,"var token = Request.Form[""g-recaptcha-response""].ToString();",True,0,617.62
+T-103,var ip = HttpContext.Connection.RemoteIpAddress?.ToString();,True,0,642.62
+T-104,,False,0,667.62
+T-105,"var ok = await _recaptcha.VerifyV2Async(token, ip);",True,0,692.62
+T-106,if (!ok),True,0,717.62
+T-107,{,True,0,742.62
+T-108,"ModelState.AddModelError("""", ""reCAPTCHA failed. Please try again."");",True,0,767.62
+T-109,"ViewBag.RecaptchaSiteKey = _config[""Recaptcha:SiteKey""];",True,0,792.62
+T-110,return View(vm);,True,0,817.62
+T-111,},True,0,842.62
+T-112,,False,0,867.62
+T-113,// reCAPTCHA passed -> proceed with registration,True,0,892.62
+T-114,"// create user, hash password, etc.",True,0,917.62
+T-115,"return RedirectToAction(""RegisterSuccess"");",True,0,942.62
+T-116,},True,0,967.62
+T-117,},True,0,992.62
+T-118,"import React, { useRef, useState } from ""react"";",True,0,17.619999999999997
+T-119,"import ReCAPTCHA from ""react-google-recaptcha"";",True,0,42.62
+T-120,,False,0,67.62
+T-121,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY; // or REACT_APP_...,True,0,92.62
+T-122,,False,0,117.62
+T-123,export default function RegisterV2() {,True,0,142.62
+T-124,const recaptchaRef = useRef(null);,True,0,167.62
+T-125,"const [email, setEmail] = useState("""");",True,0,192.62
+T-126,"const [password, setPassword] = useState("""");",True,0,217.62
+T-127,"const [status, setStatus] = useState("""");",True,0,242.62
+T-128,,False,0,267.62
+T-129,const onSubmit = async (e) => {,True,0,292.62
+T-130,e.preventDefault();,True,0,317.62
+T-131,"setStatus("""");",True,0,342.62
+T-132,,False,0,367.62
+T-133,const token = recaptchaRef.current?.getValue();,True,0,392.62
+T-134,if (!token) {,True,0,417.62
+T-135,"setStatus(""Please complete reCAPTCHA."");",True,0,442.62
+T-136,return;,True,0,467.62
+T-137,},True,0,492.62
+T-138,,False,0,517.62
+T-139,"const resp = await fetch(""/api/auth/register"", {",True,0,542.62
+T-140,"method: ""POST"",",True,0,567.62
+T-141,"headers: { ""Content-Type"": ""application/json"" },",True,0,592.62
+T-142,"body: JSON.stringify({ email, password, recaptchaToken: token })",True,0,617.62
+T-143,});,True,0,642.62
+T-144,,False,0,667.62
+T-145,if (!resp.ok) {,True,0,692.62
+T-146,setStatus(await resp.text());,True,0,717.62
+T-147,recaptchaRef.current?.reset(); // token is single-use-ish; reset after failure,True,0,742.62
+T-148,return;,True,0,767.62
+T-149,},True,0,792.62
+T-150,,False,0,817.62
+T-151,"setStatus(""Registered!"");",True,0,842.62
+T-152,};,True,0,867.62
+T-153,,False,0,892.62
+T-154,return (,True,0,917.62
+T-155,<form onSubmit={onSubmit}>,True,0,942.62
+T-156,"<input type=""email"" value={email} onChange={e => setEmail(e.target.value)} required />",True,0,967.62
+T-157,"<input type=""password"" value={password} onChange={e => setPassword(e.target.value)} required />",True,0,992.62
+T-158,,False,0,1017.62
+T-159,<ReCAPTCHA sitekey={SITE_KEY} ref={recaptchaRef} />,True,0,1042.62
+T-160,,False,0,1067.62
+T-161,"<button type=""submit"">Register</button>",True,0,1092.62
+T-162,<div>{status}</div>,True,0,1117.62
+T-163,</form>,True,0,1142.62
+T-164,);,True,0,1167.62
+T-165,},True,0,1192.62
+T-166,"import React, { useEffect, useRef, useState } from ""react"";",True,0,17.619999999999997
+T-167,,False,0,42.62
+T-168,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;,True,0,67.62
+T-169,,False,0,92.62
+T-170,function loadScript(src) {,True,0,117.62
+T-171,"return new Promise((resolve, reject) => {",True,0,142.62
+T-172,"const existing = document.querySelector(`script[src=""${src}""]`);",True,0,167.62
+T-173,if (existing) return resolve();,True,0,192.62
+T-174,,False,0,217.62
+T-175,"const s = document.createElement(""script"");",True,0,242.62
+T-176,s.src = src;,True,0,267.62
+T-177,s.async = true;,True,0,292.62
+T-178,s.defer = true;,True,0,317.62
+T-179,s.onload = resolve;,True,0,342.62
+T-180,s.onerror = reject;,True,0,367.62
+T-181,document.head.appendChild(s);,True,0,392.62
+T-182,});,True,0,417.62
+T-183,},True,0,442.62
+T-184,,False,0,467.62
+T-185,export default function RegisterV2NoLib() {,True,0,492.62
+T-186,const captchaDivRef = useRef(null);,True,0,517.62
+T-187,const widgetIdRef = useRef(null);,True,0,542.62
+T-188,,False,0,567.62
+T-189,"const [email, setEmail] = useState("""");",True,0,592.62
+T-190,"const [password, setPassword] = useState("""");",True,0,617.62
+T-191,"const [status, setStatus] = useState("""");",True,0,642.62
+T-192,,False,0,667.62
+T-193,useEffect(() => {,True,0,692.62
+T-194,"const src = ""https://www.google.com/recaptcha/api.js?render=explicit"";",True,0,717.62
+T-195,,False,0,742.62
+T-196,loadScript(src).then(() => {,True,0,767.62
+T-197,// Wait until grecaptcha is ready,True,0,792.62
+T-198,window.grecaptcha.ready(() => {,True,0,817.62
+T-199,if (widgetIdRef.current !== null) return; // already rendered,True,0,842.62
+T-200,,False,0,867.62
+T-201,"widgetIdRef.current = window.grecaptcha.render(captchaDivRef.current, {",True,0,892.62
+T-202,"sitekey: SITE_KEY,",True,0,917.62
+T-203,"theme: ""light"",",True,0,942.62
+T-204,"// callback: () => {}, // optional: called on success",True,0,967.62
+T-205,"// ""expired-callback"": () => {}, // optional: called on expiration",True,0,992.62
+T-206,});,True,0,1017.62
+T-207,});,True,0,1042.62
+T-208,});,True,0,1067.62
+T-209,"}, []);",True,0,1092.62
+T-210,,False,0,1117.62
+T-211,const onSubmit = async (e) => {,True,0,1142.62
+T-212,e.preventDefault();,True,0,1167.62
+T-213,"setStatus("""");",True,0,1192.62
+T-214,,False,0,1217.62
+T-215,const widgetId = widgetIdRef.current;,True,0,1242.62
+T-216,,False,0,1267.62
+T-217,"// If you rendered explicitly, prefer getResponse(widgetId)",True,0,1292.62
+T-218,const token =,True,0,1317.62
+T-219,widgetId !== null,True,0,1342.62
+T-220,? window.grecaptcha.getResponse(widgetId),True,0,1367.62
+T-221,: window.grecaptcha.getResponse(); // fallback,True,0,1392.62
+T-222,,False,0,1417.62
+T-223,if (!token) {,True,0,1442.62
+T-224,"setStatus(""Please complete reCAPTCHA."");",True,0,1467.62
+T-225,return;,True,0,1492.62
+T-226,},True,0,1517.62
+T-227,,False,0,1542.62
+T-228,"const resp = await fetch(""/api/auth/register"", {",True,0,1567.62
+T-229,"method: ""POST"",",True,0,1592.62
+T-230,"headers: { ""Content-Type"": ""application/json"" },",True,0,1617.62
+T-231,"body: JSON.stringify({ email, password, recaptchaToken: token }),",True,0,1642.62
+T-232,});,True,0,1667.62
+T-233,,False,0,1692.62
+T-234,if (!resp.ok) {,True,0,1717.62
+T-235,setStatus(await resp.text());,True,0,1742.62
+T-236,,False,0,1767.62
+T-237,// Let user retry (token may be consumed/expired),True,0,1792.62
+T-238,if (widgetId !== null) window.grecaptcha.reset(widgetId);,True,0,1817.62
+T-239,else window.grecaptcha.reset();,True,0,1842.62
+T-240,,False,0,1867.62
+T-241,return;,True,0,1892.62
+T-242,},True,0,1917.62
+T-243,,False,0,1942.62
+T-244,"setStatus(""Registered!"");",True,0,1967.62
+T-245,};,True,0,1992.62
+T-246,,False,0,2017.62
+T-247,return (,True,0,2042.62
+T-248,<form onSubmit={onSubmit}>,True,0,2067.62
+T-249,"<input type=""email"" value={email} onChange={(e) => setEmail(e.target.value)} required />",True,0,2092.62
+T-250,"<input type=""password"" value={password} onChange={(e) => setPassword(e.target.value)} required />",True,0,2117.62
+T-251,,False,0,2142.62
+T-252,<div ref={captchaDivRef} />,True,0,2167.62
+T-253,,False,0,2192.62
+T-254,"<button type=""submit"">Register</button>",True,0,2217.62
+T-255,<div>{status}</div>,True,0,2242.62
+T-256,</form>,True,0,2267.62
+T-257,);,True,0,2292.62
+T-258,},True,0,2317.62
+T-259,controller,True,0,17.619999999999997
+T-260,v3 must check action and score,True,0,31.354553072416657
+T-261,combined v2 and v3,True,0,46.98664874267574
+T-262,using System.Text.Json.Serialization;,True,0,17.619999999999997
+T-263,,False,0,42.62
+T-264,public sealed class RecaptchaVerifyResponse,True,0,67.62
+T-265,{,True,0,92.62
+T-266,"[JsonPropertyName(""success"")]",True,0,117.62
+T-267,public bool Success { get; set; },True,0,142.62
+T-268,,False,0,167.62
+T-269,"[JsonPropertyName(""challenge_ts"")]",True,0,192.62
+T-270,public DateTimeOffset? ChallengeTs { get; set; },True,0,217.62
+T-271,,False,0,242.62
+T-272,"[JsonPropertyName(""hostname"")]",True,0,267.62
+T-273,public string? Hostname { get; set; },True,0,292.62
+T-274,,False,0,317.62
+T-275,// v3 fields,True,0,342.62
+T-276,"[JsonPropertyName(""score"")]",True,0,367.62
+T-277,public double? Score { get; set; },True,0,392.62
+T-278,,False,0,417.62
+T-279,"[JsonPropertyName(""action"")]",True,0,442.62
+T-280,public string? Action { get; set; },True,0,467.62
+T-281,,False,0,492.62
+T-282,"[JsonPropertyName(""error-codes"")]",True,0,517.62
+T-283,public string[]? ErrorCodes { get; set; },True,0,542.62
+T-284,},True,0,567.62
+T-285,,False,0,592.62
+T-286,"public sealed record RecaptchaV3Result(bool Success, double Score, string? Action, string? Hostname, string[]? ErrorCodes);",True,0,617.62
+T-287,"public sealed record RecaptchaV2Result(bool Success, string? Hostname, string[]? ErrorCodes);",True,0,642.62
+T-288,using System.Net.Http;,True,0,17.619999999999997
+T-289,using System.Text.Json;,True,0,42.62
+T-290,using Microsoft.Extensions.Configuration;,True,0,67.62
+T-291,,False,0,92.62
+T-292,public sealed class GoogleRecaptchaService : IRecaptchaService,True,0,117.62
+T-293,{,True,0,142.62
+T-294,private readonly HttpClient _http;,True,0,167.62
+T-295,private readonly IConfiguration _config;,True,0,192.62
+T-296,,False,0,217.62
+T-297,"public GoogleRecaptchaService(HttpClient http, IConfiguration config)",True,0,242.62
+T-298,{,True,0,267.62
+T-299,_http = http;,True,0,292.62
+T-300,_config = config;,True,0,317.62
+T-301,},True,0,342.62
+T-302,,False,0,367.62
+T-303,"public async Task<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null)",True,0,392.62
+T-304,{,True,0,417.62
+T-305,"var resp = await VerifyCoreAsync(token, remoteIp);",True,0,442.62
+T-306,,False,0,467.62
+T-307,// v3: must check action + score,True,0,492.62
+T-308,"var ok = resp.Success && string.Equals(resp.Action, expectedAction, StringComparison.Ordinal);",True,0,517.62
+T-309,,False,0,542.62
+T-310,var score = resp.Score ?? 0.0;,True,0,567.62
+T-311,"return new RecaptchaV3Result(ok, score, resp.Action, resp.Hostname, resp.ErrorCodes);",True,0,592.62
+T-312,},True,0,617.62
+T-313,,False,0,642.62
+T-314,"public async Task<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null)",True,0,667.62
+T-315,{,True,0,692.62
+T-316,"var resp = await VerifyCoreAsync(token, remoteIp);",True,0,717.62
+T-317,"return new RecaptchaV2Result(resp.Success, resp.Hostname, resp.ErrorCodes);",True,0,742.62
+T-318,},True,0,767.62
+T-319,,False,0,792.62
+T-320,"private async Task<RecaptchaVerifyResponse> VerifyCoreAsync(string token, string? remoteIp)",True,0,817.62
+T-321,{,True,0,842.62
+T-322,if (string.IsNullOrWhiteSpace(token)),True,0,867.62
+T-323,"return new RecaptchaVerifyResponse { Success = false, ErrorCodes = [""missing-input-response""] };",True,0,892.62
+T-324,,False,0,917.62
+T-325,"var secret = _config[""Recaptcha:SecretKey""];",True,0,942.62
+T-326,if (string.IsNullOrWhiteSpace(secret)),True,0,967.62
+T-327,"throw new InvalidOperationException(""Recaptcha:SecretKey is not configured."");",True,0,992.62
+T-328,,False,0,1017.62
+T-329,"var data = new Dictionary<string, string>",True,0,1042.62
+T-330,{,True,0,1067.62
+T-331,"[""secret""] = secret,",True,0,1092.62
+T-332,"[""response""] = token",True,0,1117.62
+T-333,};,True,0,1142.62
+T-334,,False,0,1167.62
+T-335,if (!string.IsNullOrWhiteSpace(remoteIp)),True,0,1192.62
+T-336,"data[""remoteip""] = remoteIp;",True,0,1217.62
+T-337,,False,0,1242.62
+T-338,using var content = new FormUrlEncodedContent(data);,True,0,1267.62
+T-339,"using var httpResp = await _http.PostAsync(""https://www.google.com/recaptcha/api/siteverify"", content);",True,0,1292.62
+T-340,httpResp.EnsureSuccessStatusCode();,True,0,1317.62
+T-341,,False,0,1342.62
+T-342,var json = await httpResp.Content.ReadAsStringAsync();,True,0,1367.62
+T-343,,False,0,1392.62
+T-344,"var result = JsonSerializer.Deserialize<RecaptchaVerifyResponse>(json, new JsonSerializerOptions",True,0,1417.62
+T-345,{,True,0,1442.62
+T-346,PropertyNameCaseInsensitive = true,True,0,1467.62
+T-347,});,True,0,1492.62
+T-348,,False,0,1517.62
+T-349,"return result ?? new RecaptchaVerifyResponse { Success = false, ErrorCodes = [""invalid-json""] };",True,0,1542.62
+T-350,},True,0,1567.62
+T-351,},True,0,1592.62
+T-352,public interface IRecaptchaService,True,0,17.619999999999997
+T-353,{,True,0,42.62
+T-354,"Task<RecaptchaV3Result> VerifyV3Async(string token, string expectedAction, string? remoteIp = null);",True,0,67.62
+T-355,"Task<RecaptchaV2Result> VerifyV2Async(string token, string? remoteIp = null);",True,0,92.62
+T-356,},True,0,117.62
+T-357,"import React, { useEffect, useState } from ""react"";",True,0,17.619999999999997
+T-358,,False,0,42.62
+T-359,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;,True,0,67.62
+T-360,,False,0,92.62
+T-361,function loadRecaptchaV3(siteKey) {,True,0,117.62
+T-362,"return new Promise((resolve, reject) => {",True,0,142.62
+T-363,if (window.grecaptcha) return resolve(window.grecaptcha);,True,0,167.62
+T-364,,False,0,192.62
+T-365,"const script = document.createElement(""script"");",True,0,217.62
+T-366,script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;,True,0,242.62
+T-367,script.async = true;,True,0,267.62
+T-368,script.defer = true;,True,0,292.62
+T-369,script.onload = () => resolve(window.grecaptcha);,True,0,317.62
+T-370,script.onerror = reject;,True,0,342.62
+T-371,document.head.appendChild(script);,True,0,367.62
+T-372,});,True,0,392.62
+T-373,},True,0,417.62
+T-374,,False,0,442.62
+T-375,export default function RegisterV3React() {,True,0,467.62
+T-376,"const [ready, setReady] = useState(false);",True,0,492.62
+T-377,"const [email, setEmail] = useState("""");",True,0,517.62
+T-378,"const [password, setPassword] = useState("""");",True,0,542.62
+T-379,"const [status, setStatus] = useState("""");",True,0,567.62
+T-380,,False,0,592.62
+T-381,useEffect(() => {,True,0,617.62
+T-382,loadRecaptchaV3(SITE_KEY),True,0,642.62
+T-383,.then((g) => g.ready(() => setReady(true))),True,0,667.62
+T-384,.catch(() => setReady(false));,True,0,692.62
+T-385,"}, []);",True,0,717.62
+T-386,,False,0,742.62
+T-387,const onSubmit = async (e) => {,True,0,767.62
+T-388,e.preventDefault();,True,0,792.62
+T-389,"setStatus("""");",True,0,817.62
+T-390,,False,0,842.62
+T-391,if (!ready) {,True,0,867.62
+T-392,"setStatus(""reCAPTCHA not ready yet."");",True,0,892.62
+T-393,return;,True,0,917.62
+T-394,},True,0,942.62
+T-395,,False,0,967.62
+T-396,"const token = await window.grecaptcha.execute(SITE_KEY, { action: ""register"" });",True,0,992.62
+T-397,,False,0,1017.62
+T-398,"const resp = await fetch(""/api/auth/register-v3"", {",True,0,1042.62
+T-399,"method: ""POST"",",True,0,1067.62
+T-400,"headers: { ""Content-Type"": ""application/json"" },",True,0,1092.62
+T-401,"body: JSON.stringify({ email, password, recaptchaToken: token }),",True,0,1117.62
+T-402,});,True,0,1142.62
+T-403,,False,0,1167.62
+T-404,if (!resp.ok) {,True,0,1192.62
+T-405,setStatus(await resp.text());,True,0,1217.62
+T-406,return;,True,0,1242.62
+T-407,},True,0,1267.62
+T-408,,False,0,1292.62
+T-409,"setStatus(""Registered (React v3)!"");",True,0,1317.62
+T-410,};,True,0,1342.62
+T-411,,False,0,1367.62
+T-412,return (,True,0,1392.62
+T-413,<form onSubmit={onSubmit}>,True,0,1417.62
+T-414,"<input value={email} onChange={(e) => setEmail(e.target.value)} type=""email"" required />",True,0,1442.62
+T-415,"<input value={password} onChange={(e) => setPassword(e.target.value)} type=""password"" required />",True,0,1467.62
+T-416,"<button type=""submit"" disabled={!ready}>Register</button>",True,0,1492.62
+T-417,<div>{status}</div>,True,0,1517.62
+T-418,</form>,True,0,1542.62
+T-419,);,True,0,1567.62
+T-420,},True,0,1592.62
+T-421,@model RazorRegisterVm,True,0,17.619999999999997
+T-422,@{,True,0,42.62
+T-423,var siteKey = (string)ViewBag.RecaptchaSiteKey;,True,0,67.62
+T-424,},True,0,92.62
+T-425,,False,0,117.62
+T-426,"<form id=""registerForm"" method=""post"" asp-action=""Register"">",True,0,142.62
+T-427,@Html.AntiForgeryToken(),True,0,167.62
+T-428,,False,0,192.62
+T-429,"<input asp-for=""Email"" type=""email"" required />",True,0,217.62
+T-430,"<input asp-for=""Password"" type=""password"" required />",True,0,242.62
+T-431,,False,0,267.62
+T-432,"<input asp-for=""RecaptchaToken"" type=""hidden"" />",True,0,292.62
+T-433,,False,0,317.62
+T-434,"<button type=""submit"">Register</button>",True,0,342.62
+T-435,,False,0,367.62
+T-436,"<div asp-validation-summary=""All""></div>",True,0,392.62
+T-437,</form>,True,0,417.62
+T-438,,False,0,442.62
+T-439,"<script src=""https://www.google.com/recaptcha/api.js?render=@siteKey""></script>",True,0,467.62
+T-440,<script>,True,0,492.62
+T-441,(function () {,True,0,517.62
+T-442,"const form = document.getElementById(""registerForm"");",True,0,542.62
+T-443,"const tokenInput = document.querySelector('input[name=""RecaptchaToken""]');",True,0,567.62
+T-444,"const siteKey = ""@siteKey"";",True,0,592.62
+T-445,,False,0,617.62
+T-446,"form.addEventListener(""submit"", function (e) {",True,0,642.62
+T-447,e.preventDefault();,True,0,667.62
+T-448,,False,0,692.62
+T-449,grecaptcha.ready(function () {,True,0,717.62
+T-450,"grecaptcha.execute(siteKey, { action: ""register"" }).then(function (token) {",True,0,742.62
+T-451,tokenInput.value = token;,True,0,767.62
+T-452,form.submit();,True,0,792.62
+T-453,});,True,0,817.62
+T-454,});,True,0,842.62
+T-455,});,True,0,867.62
+T-456,})();,True,0,892.62
+T-457,</script>,True,0,917.62
+T-458,without library,True,0,17.619999999999997
+T-459,with library,True,0,17.619999999999997
+T-460,"import React from ""react"";",True,0,17.619999999999997
+T-461,"import { GoogleReCaptchaProvider } from ""react-google-recaptcha-v3"";",True,0,42.62
+T-462,"import RegisterV3 from ""./RegisterV3"";",True,0,67.62
+T-463,,False,0,92.62
+T-464,const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;,True,0,117.62
+T-465,,False,0,142.62
+T-466,export default function App() {,True,0,167.62
+T-467,return (,True,0,192.62
+T-468,<GoogleReCaptchaProvider,True,0,217.62
+T-469,reCaptchaKey={SITE_KEY},True,0,242.62
+T-470,"scriptProps={{ async: true, defer: true }}",True,0,267.62
+T-471,>,True,0,292.62
+T-472,<RegisterV3 />,True,0,317.62
+T-473,</GoogleReCaptchaProvider>,True,0,342.62
+T-474,);,True,0,367.62
+T-475,},True,0,392.62
+T-476,"import React, { useState } from ""react"";",True,0,17.619999999999997
+T-477,"import { useGoogleReCaptcha } from ""react-google-recaptcha-v3"";",True,0,42.62
+T-478,,False,0,67.62
+T-479,export default function RegisterV3() {,True,0,92.62
+T-480,const { executeRecaptcha } = useGoogleReCaptcha();,True,0,117.62
+T-481,,False,0,142.62
+T-482,"const [email, setEmail] = useState("""");",True,0,167.62
+T-483,"const [password, setPassword] = useState("""");",True,0,192.62
+T-484,"const [status, setStatus] = useState("""");",True,0,217.62
+T-485,,False,0,242.62
+T-486,const onSubmit = async (e) => {,True,0,267.62
+T-487,e.preventDefault();,True,0,292.62
+T-488,"setStatus("""");",True,0,317.62
+T-489,,False,0,342.62
+T-490,if (!executeRecaptcha) {,True,0,367.62
+T-491,"setStatus(""reCAPTCHA not ready yet."");",True,0,392.62
+T-492,return;,True,0,417.62
+T-493,},True,0,442.62
+T-494,,False,0,467.62
+T-495,// action name must match what server expects,True,0,492.62
+T-496,"const token = await executeRecaptcha(""register"");",True,0,517.62
+T-497,,False,0,542.62
+T-498,"const resp = await fetch(""/api/auth/register-v3"", {",True,0,567.62
+T-499,"method: ""POST"",",True,0,592.62
+T-500,"headers: { ""Content-Type"": ""application/json"" },",True,0,617.62
+T-501,"body: JSON.stringify({ email, password, recaptchaToken: token }),",True,0,642.62
+T-502,});,True,0,667.62
+T-503,,False,0,692.62
+T-504,"setStatus(resp.ok ? ""Registered!"" : await resp.text());",True,0,717.62
+T-505,};,True,0,742.62
+T-506,,False,0,767.62
+T-507,return (,True,0,792.62
+T-508,<form onSubmit={onSubmit}>,True,0,817.62
+T-509,"<input type=""email"" value={email} onChange={(e) => setEmail(e.target.value)} required />",True,0,842.62
+T-510,"<input type=""password"" value={password} onChange={(e) => setPassword(e.target.value)} required />",True,0,867.62
+T-511,"<button type=""submit"">Register</button>",True,0,892.62
+T-512,<div>{status}</div>,True,0,917.62
+T-513,</form>,True,0,942.62
+T-514,);,True,0,967.62
+T-515,},True,0,992.62
+T-516,v3,True,0,138.9310172674002
+T-517,what is remote ip,True,0,160.1461983235643
+T-518,we also may need to verify hostname,True,0,74.00400000000002
+T-519,so flow exp,True,0,78.70281005859376
+T-520,expected action in recapcha is just a string to put inside,True,0,17.619999999999997
+T-521,,False,0,42.62
+T-522,and to verify,True,0,17.619999999999997
+T-523,"so, we need to give site key to client",True,0,17.619999999999997
+T-524,,False,0,42.62
+T-525,1 razor - from config/env variables/keystroe => viewbag,True,0,67.62
+T-526,2 react - just pass in response,True,0,92.62
+T-527,1 razor -> we are loading script,True,0,17.619999999999997
+T-528,in v3 - with our sitekey in qstring,True,0,42.62
+T-529,"and in script tag we are manually executing recapcha,",True,0,67.62
+T-530,"with v3 we also need to set action ""register"",""login""",True,0,92.62
+T-531,in v2 we just set class and sitekey to div,True,0,117.62
+T-532,,False,0,142.62
+T-533,so here we prevent default and add event listener on recapchas token ready,True,0,17.619999999999997
+T-534,to execute and put token from resolved promise into the input and submit,True,0,42.62
+T-535,!!! we can do literally the same with v2,True,0,67.62
+T-536,using form because v2 automatically sets it,True,0,17.619999999999997
+T-537,can do like v3,True,0,42.62
