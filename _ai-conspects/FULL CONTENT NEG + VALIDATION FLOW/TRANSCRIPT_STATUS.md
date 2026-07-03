@@ -1,18 +1,13 @@
 # Transcript status — FULL CONTENT NEG + VALIDATION FLOW
 
-Generated: 2026-06-27 10:00:00 UTC
+Generated: 2026-07-03
 
 ```text
-source inventory: done
-regional transcripts R01–R08: done
-full combined transcript: done
-full-conspect coverage audit: done
-remaining text elements: 0
-remaining screenshot uses: 0
+old semantic-only transcript: superseded
+raw SVG restoration: complete in archive
+exact canvas-text transcript: complete
+screenshot evidence cards: complete
+corrected study transcript: complete
+repetition guide: complete
+corrected closure audit: complete
 ```
-
-## Authoritative files
-
-- `09-full-combined-final-transcript.md`
-- `10-full-conspect-final-coverage-audit.md`
-- `data/full-conspect-final-coverage-audit-v001.*`
