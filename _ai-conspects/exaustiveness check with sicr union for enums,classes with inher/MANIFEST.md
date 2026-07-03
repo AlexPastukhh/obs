@@ -1,23 +1,17 @@
-# MANIFEST — exaustiveness check with sicr union for enums,classes with inher
+# MANIFEST — Exhaustiveness source-preserving correction v002
 
-Generated: 2026-06-28 05:00:00 UTC
+Included:
 
-## Regional transcripts
-
-- `01-transcript-R01-enum-and-switch-exhaustiveness-checks.md`
-- `02-transcript-R02-sealed-hierarchies-and-discriminated-union-style-exhaustiveness.md`
-
-## Closed ledgers
-
-- `data/text-elements-v002-closed.*`
-- `data/image-uses-v002-closed.*`
-- `data/region-plan-v002-closed.*`
-
-## Authoritative result
-
-- `03-full-combined-final-transcript.md`
-- `04-full-conspect-final-coverage-audit.md`
-- `data/full-conspect-final-coverage-audit-v001.*`
-- `MARKDOWN_LAYOUT_AUDIT.md`
-- `CURRENT_SOURCE_OF_TRUTH.md`
-- `TRANSCRIPT_STATUS.md`
+- exact full SVG;
+- all six extracted screenshots;
+- large audit contact sheet;
+- six screenshot-specific transcript blocks;
+- enum and record code;
+- catch-all diagnostic trade-off;
+- correction of open-hierarchy exhaustiveness overclaim;
+- two logical region files;
+- repetition guide;
+- 40-question bank;
+- coverage CSV/JSON;
+- updated Current Source of Truth;
+- old combined transcript marked superseded.
