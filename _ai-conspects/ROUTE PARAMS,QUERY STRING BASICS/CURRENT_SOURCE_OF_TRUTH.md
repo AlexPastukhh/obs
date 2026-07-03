@@ -1,40 +1,50 @@
 # Current Source of Truth — ROUTE PARAMS,QUERY STRING BASICS
 
-Generated: 2026-06-27 14:00:00 UTC
+Generated: 2026-07-03
+
+## Source
+
+```text
+source/ROUTE PARAMS,QUERY STRING BASICS.svg
+viewBox: 0 0 1491.4472556522107 3357.374541349484
+Git blob SHA: cdfa6901289e473fda7053d1ae42a250bd6ae04f
+unique screenshots: 8
+image uses: 8
+native non-empty SVG labels: 7
+broken/external/dangling: 0
+```
 
 ## Status
 
 ```text
-Complete SVG preservation: done
-Embedded screenshot extraction: done
-Text-element inventory: done
-Broken v001 region markup: superseded
-Corrected v002 logical region plan: done
-Regional transcripts: done
-Full combined transcript: done
-Full-conspect coverage audit: done
+legacy semantic transcript: retained as overview
+source-preserving transcript v002: complete
+code reference: complete
+repetition guide: complete
+question bank: complete
+technical correction: complete
+source placement ledger: 8 / 8
+remaining sources: 0
 ```
 
-## Coverage
+## Authoritative files
 
 ```text
-meaningful text elements: 7 / 7
-unique embedded images: 8 / 8
-image uses on canvas: 8 / 8
-repeated image placements retained: 0
-logical regions: 1 / 1
-remaining unprocessed text elements: 0
-remaining unprocessed image uses: 0
+04-source-preserving-transcript-v002.md
+05-code-reference-v002.md
+06-repetition-guide-v002.md
+07-question-bank-v002.md
+08-technical-correction-notice-v002.md
+09-native-svg-labels-v002.md
+regions-v002/
+data/source-placement-ledger-v002.csv
 ```
 
-## Authoritative transcript
+## Verdict
 
-`02-full-combined-final-transcript.md`
-
-## Authoritative audit
-
-`03-full-conspect-final-coverage-audit.md`
-
-## Next
-
-No normal transcript work remains. Only correction/polish if a newer source reveals additional material.
+```text
+SOURCE COMPLETE
+TECHNICAL WORDING CORRECTED
+CODE-LEVEL REPETITION READY
+QUESTION GENERATION READY
+```
