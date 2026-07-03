@@ -1,40 +1,53 @@
 # Current Source of Truth — HEAD REQUEST
 
-Generated: 2026-06-27 14:00:00 UTC
+Generated: 2026-07-03
+
+## Source
+
+```text
+source/HEAD REQUEST.svg
+Git blob SHA: 37d4eafff1d79f51e4b268ea6ca9b8a7cad87892
+SHA-256: 749d37b62536c7ae088075dabbf1fa2f8d6f363b024e315fec3f00829a495893
+unique screenshots: 9
+image uses: 9
+SVG labels: 0
+duplicates: 0
+```
 
 ## Status
 
 ```text
-Complete SVG preservation: done
-Embedded screenshot extraction: done
-Text-element inventory: done
-Broken v001 region markup: superseded
-Corrected v002 logical region plan: done
-Regional transcripts: done
-Full combined transcript: done
-Full-conspect coverage audit: done
+old v002 semantic transcript: superseded
+source-preserving transcript v003: complete
+protocol corrections: complete
+ASP.NET Core corrections: complete
+corrected implementation: complete
+repetition guide: complete
+question bank: complete
+
+processed screenshots: 9 / 9
+remaining screenshots: 0
 ```
 
-## Coverage
+## Authoritative files
 
 ```text
-meaningful text elements: 0 / 0
-unique embedded images: 9 / 9
-image uses on canvas: 9 / 9
-repeated image placements retained: 0
-logical regions: 1 / 1
-remaining unprocessed text elements: 0
-remaining unprocessed image uses: 0
+04-source-preserving-corrected-transcript-v003.md
+05-corrected-aspnet-core-implementation-v003.md
+06-repetition-guide-v003.md
+07-question-bank-v003.md
+08-correction-audit-v003.md
+regions-v003/
+data/source-coverage-v003.csv
 ```
 
-## Authoritative transcript
+## Verdict
 
-`02-full-combined-final-transcript.md`
-
-## Authoritative audit
-
-`03-full-conspect-final-coverage-audit.md`
-
-## Next
-
-No normal transcript work remains. Only correction/polish if a newer source reveals additional material.
+```text
+SOURCE COMPLETE
+TRANSCRIPT SOURCE-PRESERVING
+TECHNICALLY CORRECTED
+SAFE FOR STUDY
+REPETITION READY
+QUESTION GENERATION READY
+```

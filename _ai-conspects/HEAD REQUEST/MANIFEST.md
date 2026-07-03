@@ -1,42 +1,15 @@
-# MANIFEST — HEAD REQUEST
+# MANIFEST — HEAD REQUEST corrected v003
 
-Generated: 2026-06-27 14:00:00 UTC
+Included:
 
-## Preserved complete source
-
-- `source/HEAD REQUEST.svg`
-- 9 extracted screenshots under `source/images/`
-- corrected Stage0 ledgers, contact sheets and canvas preview
-
-## Regional transcripts
-
-- `01-transcript-R01-head-semantics-metadata-and-conditional-requests.md`
-
-## Closed ledgers
-
-- `data/image-uses-v002-closed.json`
-- `data/image-uses-v002-closed.csv`
-- `data/text-elements-v002-closed.json`
-- `data/text-elements-v002-closed.csv`
-- `data/region-plan-v002-closed.json`
-- `data/region-plan-v002-closed.csv`
-
-## Authoritative result
-
-- `02-full-combined-final-transcript.md`
-- `03-full-conspect-final-coverage-audit.md`
-- `data/full-conspect-final-coverage-audit-v001.json`
-- `data/full-conspect-final-coverage-audit-v001.csv`
-- `CURRENT_SOURCE_OF_TRUTH.md`
-- `TRANSCRIPT_STATUS.md`
-
-## Final coverage
-
-```text
-text elements: 0 / 0
-image uses: 9 / 9
-logical regions: 1 / 1
-remaining text elements: 0
-remaining image uses: 0
-```
-- `MARKDOWN_LAYOUT_AUDIT.md`
+- exact uploaded full SVG;
+- nine exact embedded PNG files;
+- nine source-specific transcript blocks;
+- nine technical correction sections;
+- corrected ASP.NET Core implementation;
+- two corrected region files;
+- repetition guide;
+- 32-question bank;
+- coverage CSV/JSON;
+- updated Current Source of Truth;
+- old entry points marked superseded.
