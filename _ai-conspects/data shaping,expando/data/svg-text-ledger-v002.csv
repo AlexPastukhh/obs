@@ -1,0 +1,75 @@
+﻿physical_id,text,empty
+TP-001,to basics,False
+TP-002,public class AuthorsResourceParameters,False
+TP-003,{,False
+TP-004,private const int MaxPageSize = 20;,False
+TP-005,private int _pageSize = 10;,False
+TP-006,,True
+TP-007,public string? MainCategory { get; set; },False
+TP-008,public string? SearchQuery { get; set; },False
+TP-009,,True
+TP-010,public int PageNumber { get; set; } = 1;,False
+TP-011,public int PageSize,False
+TP-012,{,False
+TP-013,get => _pageSize;,False
+TP-014,set => _pageSize = (value > MaxPageSize) ? MaxPageSize : value;,False
+TP-015,},False
+TP-016,,True
+TP-017,"public string OrderBy { get; set; } = ""Name"";",False
+TP-018,,True
+TP-019,// Data shaping,False
+TP-020,public string? Fields { get; set; },False
+TP-021,},False
+TP-022,using System.Reflection;,False
+TP-023,,True
+TP-024,public class PropertyCheckerService : IPropertyCheckerService,False
+TP-025,{,False
+TP-026,public bool TypeHasProperties<T>(string? fields),False
+TP-027,{,False
+TP-028,if (string.IsNullOrWhiteSpace(fields)),False
+TP-029,return true;,False
+TP-030,,True
+TP-031,"var fieldsAfterSplit = fields.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);",False
+TP-032,,True
+TP-033,foreach (var field in fieldsAfterSplit),False
+TP-034,{,False
+TP-035,var propertyName = field.Trim();,False
+TP-036,,True
+TP-037,var propertyInfo = typeof(T).GetProperty(,False
+TP-038,"propertyName,",False
+TP-039,BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);,False
+TP-040,,True
+TP-041,if (propertyInfo is null),False
+TP-042,return false;,False
+TP-043,},False
+TP-044,,True
+TP-045,return true;,False
+TP-046,},False
+TP-047,},False
+TP-048,RELATED LOGIC IN CONTROLLER,False
+TP-049,OR FOR SINGLE,False
+TP-050,"ADD TO EXANDOOBJECT,",False
+TP-051,DYNAMIC PROPERTIES,False
+TP-052,SHEET,False
+TP-053,WE DONT,False
+TP-054,HAVE TYPE FOR,False
+TP-055,RETURN TYPE,False
+TP-056,SO WE ARE RETURNING,False
+TP-057,SOMETHING,False
+TP-058,EXPANDOOBJECT PERSONAL SHEET,False
+TP-059,RELATED TO DATA SHAPING,False
+TP-060,WHY THIS APPROACH WITH EXTENSION ON IENUMERABLE OR,False
+TP-061,"OBJECT, WHY NOT FETCHING FIELDS THAT WE NEED TO,",False
+TP-062,WHY NO PROJECTIONS ?,False
+TP-063,,True
+TP-064,why datashaping,False
+TP-065,cast to dict,False
+TP-066,can prevent shaping,False
+TP-067,of any class,False
+TP-068,theoru,False
+TP-069,expl,False
+TP-070,impl,False
+TP-071,!!!,False
+TP-072,can mean just some variants of representations (may ask),False
+TP-073,!!!!,False
+TP-074,!!!,False

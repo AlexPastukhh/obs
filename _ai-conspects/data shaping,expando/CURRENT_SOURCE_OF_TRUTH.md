@@ -1,55 +1,51 @@
 # Current Source of Truth — data shaping,expando
 
-Generated: 2026-06-27 UTC
+Generated: 2026-07-03
 
-## Naming
-
-```text
-Received SVG: data shaping,expando.svg
-Canonical source name: data shaping,expando.svg
-Canonical conspect folder: _ai-conspects/data shaping,expando
-```
-
-## Current status
+## Source
 
 ```text
-New source ingestion: done
-Complete SVG reconciliation: done
-Screenshot-backed transcripts R01–R04: done
-Independent final coverage audit: done
-Status: complete
+source/data shaping,expando.svg
+viewBox: 0 0 7102.456899192066 18167.997184571766
+Git blob SHA: d4a57e8bd064cede03d2b2803e5fe3ec700953e5
+unique screenshots: 67
+image uses: 72
+intentional duplicate placements: 5
+native non-empty SVG labels: 63
+empty SVG text nodes: 11
+broken/external/dangling: 0
 ```
 
-## Final coverage
+## Status
 
 ```text
-Complete embedded assets: 67
-Complete image uses: 72
-Processed image uses: 72
-Physical SVG text nodes: 74
-Physical non-empty SVG text nodes: 63
-Processed non-empty text nodes: 63
-Empty SVG text nodes recorded: 11
-Missing image uses: 0
-Unreviewed image uses: 0
-Unassigned image uses: 0
-Multiply assigned image uses: 0
-Missing text nodes: 0
-Unreviewed text nodes: 0
-Unassigned text nodes: 0
-Multiply assigned text nodes: 0
-Unique image-content hashes: 67
-Duplicate placement groups preserved: 5
-Duplicate asset-content groups: 0
+source accounting: COMPLETE
+legacy semantic overview: RETAINED
+code-preserving integrated transcript v002: COMPLETE
+implementation reference: COMPLETE
+repetition guide: COMPLETE
+question bank: COMPLETE
+source placement ledger: 72 / 72
+exact duplicate references: 5 / 5
+remaining coverage items: 0
 ```
 
-## Verified regions
+## Authoritative files
 
-- `R01` — Data-shaping contract, fields parameter and field validation: 13 images / 51 physical text nodes
-- `R02` — Collection/single shaping extensions and controller flow: 24 images / 10 physical text nodes
-- `R03` — ExpandoObject, dictionary/dynamic semantics and alternatives: 20 images / 6 physical text nodes
-- `R04` — Why data shaping differs from database projection: 15 images / 7 physical text nodes
+```text
+02-code-preserving-integrated-transcript-v002.md
+03-implementation-reference-v002.md
+04-repetition-guide-v002.md
+05-question-bank-v002.md
+06-source-coverage-and-duplicate-map-v002.md
+data/source-placement-ledger-v002.csv
+```
 
-## Current next step
+## Verdict
 
-No normal transcript regions remain. Only correction/polish if a newer complete source export adds material.
+```text
+CONCEPTUAL REPETITION READY
+CODE RECONSTRUCTION READY
+QUESTION GENERATION READY
+SOURCE ACCOUNTING COMPLETE
+```

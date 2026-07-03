@@ -1,0 +1,372 @@
+[
+  {
+    "physical_id": "TP-001",
+    "text": "to basics",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-002",
+    "text": "public class AuthorsResourceParameters",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-003",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-004",
+    "text": "private const int MaxPageSize = 20;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-005",
+    "text": "private int _pageSize = 10;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-006",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-007",
+    "text": "public string? MainCategory { get; set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-008",
+    "text": "public string? SearchQuery { get; set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-009",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-010",
+    "text": "public int PageNumber { get; set; } = 1;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-011",
+    "text": "public int PageSize",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-012",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-013",
+    "text": "get => _pageSize;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-014",
+    "text": "set => _pageSize = (value > MaxPageSize) ? MaxPageSize : value;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-015",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-016",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-017",
+    "text": "public string OrderBy { get; set; } = \"Name\";",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-018",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-019",
+    "text": "// Data shaping",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-020",
+    "text": "public string? Fields { get; set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-021",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-022",
+    "text": "using System.Reflection;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-023",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-024",
+    "text": "public class PropertyCheckerService : IPropertyCheckerService",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-025",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-026",
+    "text": "public bool TypeHasProperties<T>(string? fields)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-027",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-028",
+    "text": "if (string.IsNullOrWhiteSpace(fields))",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-029",
+    "text": "return true;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-030",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-031",
+    "text": "var fieldsAfterSplit = fields.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-032",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-033",
+    "text": "foreach (var field in fieldsAfterSplit)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-034",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-035",
+    "text": "var propertyName = field.Trim();",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-036",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-037",
+    "text": "var propertyInfo = typeof(T).GetProperty(",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-038",
+    "text": "propertyName,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-039",
+    "text": "BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-040",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-041",
+    "text": "if (propertyInfo is null)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-042",
+    "text": "return false;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-043",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-044",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-045",
+    "text": "return true;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-046",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-047",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-048",
+    "text": "RELATED LOGIC IN CONTROLLER",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-049",
+    "text": "OR FOR SINGLE",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-050",
+    "text": "ADD TO EXANDOOBJECT,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-051",
+    "text": "DYNAMIC PROPERTIES",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-052",
+    "text": "SHEET",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-053",
+    "text": "WE DONT",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-054",
+    "text": "HAVE TYPE FOR",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-055",
+    "text": "RETURN TYPE",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-056",
+    "text": "SO WE ARE RETURNING",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-057",
+    "text": "SOMETHING",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-058",
+    "text": "EXPANDOOBJECT PERSONAL SHEET",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-059",
+    "text": "RELATED TO DATA SHAPING",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-060",
+    "text": "WHY THIS APPROACH WITH EXTENSION ON IENUMERABLE OR",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-061",
+    "text": "OBJECT, WHY NOT FETCHING FIELDS THAT WE NEED TO,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-062",
+    "text": "WHY NO PROJECTIONS ?",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-063",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-064",
+    "text": "why datashaping",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-065",
+    "text": "cast to dict",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-066",
+    "text": "can prevent shaping",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-067",
+    "text": "of any class",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-068",
+    "text": "theoru",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-069",
+    "text": "expl",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-070",
+    "text": "impl",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-071",
+    "text": "!!!",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-072",
+    "text": "can mean just some variants of representations (may ask)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-073",
+    "text": "!!!!",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-074",
+    "text": "!!!",
+    "empty": false
+  }
+]

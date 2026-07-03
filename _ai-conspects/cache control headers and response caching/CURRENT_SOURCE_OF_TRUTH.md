@@ -1,38 +1,54 @@
 # Current Source of Truth — cache control headers and response caching
 
-Generated: 2026-06-27 12:00:00 UTC
+Generated: 2026-07-03
+
+## Source
+
+```text
+source/cache control headers and response caching.svg
+viewBox: 0 0 9986.217104224095 12025.595432353028
+Git blob SHA: ff2589e63889fc0a020163a30e1295fc028e3929
+unique screenshots: 91
+image uses: 91
+native non-empty SVG labels: 8
+broken/external/dangling: 0
+```
 
 ## Status
 
 ```text
-Stage0 source/boundary review: done
-Complete SVG preservation: done
-Embedded screenshot extraction: done
-Text-element inventory: done
-Regional transcripts R01–R08: done
-Full combined transcript: done
-Full-conspect coverage audit: done
+source accounting: COMPLETE
+legacy semantic transcript: RETAINED AS OVERVIEW
+technical corrections: COMPLETE
+corrected code-preserving integrated transcript: COMPLETE
+code/header reference: COMPLETE
+repetition guide: COMPLETE
+question bank: COMPLETE
+source placement ledger: 91 / 91
+remaining coverage items: 0
 ```
 
-## Coverage
+## Authoritative files
 
 ```text
-meaningful text elements: 8 / 8
-unique embedded images: 91 / 91
-image uses on canvas: 91 / 91
-repeated image placements retained: 0
-remaining unprocessed text elements: 0
-remaining unprocessed image uses: 0
+11-corrected-code-preserving-transcript-v002.md
+12-code-and-header-reference-v002.md
+13-repetition-guide-v002.md
+14-question-bank-v002.md
+15-technical-correction-notice-v002.md
+data/source-placement-ledger-v002.csv
 ```
 
-## Authoritative transcript
+## Superseded claims
 
-`09-full-combined-final-transcript.md`
+- two `[ResponseCache]` attributes on one action;
+- `ResponseCacheLocation.None` described as no-store.
 
-## Authoritative audit
+## Verdict
 
-`10-full-conspect-final-coverage-audit.md`
-
-## Next
-
-No normal transcript work remains. Only correction/polish if a newer source reveals additional material.
+```text
+CONCEPTUAL REPETITION READY
+CODE/HEADER REPETITION READY
+QUESTION GENERATION READY
+TECHNICAL ERRORS CORRECTED
+```
