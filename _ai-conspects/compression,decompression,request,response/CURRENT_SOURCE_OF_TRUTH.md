@@ -1,51 +1,30 @@
 # Current Source of Truth — compression,decompression,request,response
 
-Generated: 2026-06-27 UTC
-
-## Naming
+Generated: 2026-07-04 UTC
 
 ```text
-Received SVG: compression,decompression,request,response(2).svg
-Canonical source name: compression,decompression,request,response.svg
-Canonical conspect folder: _ai-conspects/compression,decompression,request,response
+Stage0 complete-SVG reconciliation: done
+embedded screenshots: 74 / 74
+image uses: 74 / 74
+native SVG text nodes: 91 / 91
+source-preserving regional transcript v002: done
+combined final transcript: done
+repetition questions: done
+source-fidelity audit: done
+remaining source work: 0
+readiness: READY_NEAR_LITERAL
 ```
 
-## Current status
+Authoritative files:
 
 ```text
-Legacy text-only/incomplete transcript: preserved historically, superseded semantically
-Stage4 complete SVG reconciliation: done
-Screenshot-backed transcripts: done
-Independent final coverage audit: done
-Status: complete
+regions/R01.md
+regions/R02.md
+regions/R03.md
+FINAL_TRANSCRIPT.md
+NATIVE_CANVAS_TEXT.md
+QUESTIONS.md
+SOURCE_FIDELITY_AUDIT.md
 ```
 
-## Final coverage
-
-```text
-Complete embedded assets: 74
-Complete image uses: 74
-Processed image uses: 74
-Physical non-empty SVG text nodes: 91
-Processed text nodes: 91
-Missing image uses: 0
-Unreviewed image uses: 0
-Unassigned image uses: 0
-Multiply assigned image uses: 0
-Missing text nodes: 0
-Unreviewed text nodes: 0
-Unassigned text nodes: 0
-Multiply assigned text nodes: 0
-Unique image-content hashes: 74
-Duplicate image-hash groups preserved: 0
-```
-
-## Verified regions
-
-- `R01` — HTTP compression and automatic client/server behavior: 34 images / 17 text nodes
-- `R02` — Manual request decompression and stream ownership: 17 images / 4 text nodes
-- `R03` — Multiple Content-Encoding values, registry and DI-aware middleware: 23 images / 70 text nodes
-
-## Current next step
-
-No normal transcript regions remain. Only correction/polish if a newer complete source export adds material.
+The Stage4 inventory and extracted source images remain authoritative for source identifiers and exact screenshot typography.
