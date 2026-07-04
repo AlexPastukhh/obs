@@ -1,15 +1,23 @@
-# Current Source of Truth - HttpContent Custom ReadAsStream Buffering Compression
+# Current Source of Truth — HttpContent Custom ReadAsStream Buffering Compression
 
-Generated: 2026-06-20 08:07:06 UTC
+Generated: 2026-07-04 UTC
 
 ```text
-HttpContent Custom ReadAsStream Buffering Compression Stage0 boundary review v001: completed
-HttpContent Custom ReadAsStream Buffering Compression Stage1 transcript v001: completed
-HttpContent Custom ReadAsStream Buffering Compression closure audit v001: completed
-Image uses inventoried: 26
-Stage1 processed: 26
-Pending candidates: 0
-Bad placeholder/OCR-error processed rows: 0
+source Git blob: b60a03cb5e636a78781bc8c44538fcb77e35d58f
+unique screenshots: 26 / 26
+image uses: 26 / 26
+native text nodes: 19 / 19
+source-preserving transcript: complete
+question bank: complete
+remaining: 0
+readiness: READY_NEAR_LITERAL
 ```
 
-HttpContent Custom ReadAsStream Buffering Compression: closed by source coverage.
+Authoritative files:
+
+```text
+source/httpcontent,custom one, readasstream buffering, compression directly to network.svg
+FINAL_TRANSCRIPT.md
+QUESTIONS.md
+SOURCE_FIDELITY_AUDIT.md
+```

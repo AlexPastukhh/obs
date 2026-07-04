@@ -1,33 +1,18 @@
-# MANIFEST — injecting into razor final coverage transcript v001
-
-Archive type: **stage1 final coverage, ten-conspect combined delivery**  
-Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-22 03:30:00 UTC
-
-## Counts
+# MANIFEST — injecting into razor source update v002
 
 ```text
-image uses: 3
-text labels: 0
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+source Git blob: 3215f4f2c67627ccb5a974c34a95b42718c9accf
+screenshots: 3 / 3
+native text: 0 / 0
+remaining: 0
 ```
 
-## Delivery batch
+Added/updated:
 
-This folder is delivered together with all ten exact SVG-named folders:
-
-```text
-_ai-conspects/linq to sql
-_ai-conspects/stored procedures
-_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache
-_ai-conspects/injecting into razor
-_ai-conspects/tag helpers razor,partial
-_ai-conspects/BINDING SOURCE ATTRIBUTES
-_ai-conspects/content disposition header
-_ai-conspects/CUSTOM ROUTE CONSTRAINT
-_ai-conspects/utf8 string  literal
-_ai-conspects/link generator
-```
-
-Archive: `ai-conspects-10-small-stage1-final-coverage-v001.zip`
+- `source/injecting into razor.svg`
+- `source/images/*`
+- `FINAL_TRANSCRIPT.md`
+- `QUESTIONS.md`
+- `SOURCE_FIDELITY_AUDIT.md`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `TRANSCRIPT_STATUS.md`
