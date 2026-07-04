@@ -1,4 +1,4 @@
-# Current Source of Truth - cancellation,async
+﻿# Current Source of Truth - cancellation,async
 
 Generated: 2026-06-27 UTC
 
@@ -48,6 +48,7 @@ Closed by complete corrected-SVG coverage.
 
 ## Authoritative transcript
 
-`regions/R01R05-full-svg-reconciliation-v002.md`
+`regions/R01R05-full-source-near-literal-v003.md`
 
 The earlier label-only transcript is preserved for history but superseded by this full-source reconciliation.
+

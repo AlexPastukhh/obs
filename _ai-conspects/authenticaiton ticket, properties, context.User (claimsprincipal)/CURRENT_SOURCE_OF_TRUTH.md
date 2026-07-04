@@ -1,4 +1,4 @@
-# Current Source of Truth - authenticaiton ticket, properties, context.User (claimsprincipal)
+﻿# Current Source of Truth - authenticaiton ticket, properties, context.User (claimsprincipal)
 
 Generated: 2026-06-27 UTC
 
@@ -26,4 +26,5 @@ independent repeat audit: PASS
 
 Closure: `Closed by complete corrected-SVG coverage.`
 
-Authoritative transcript: `regions/full-svg-reconciliation-v002.md`
+Authoritative transcript: `regions/full-source-near-literal-v003.md`
+

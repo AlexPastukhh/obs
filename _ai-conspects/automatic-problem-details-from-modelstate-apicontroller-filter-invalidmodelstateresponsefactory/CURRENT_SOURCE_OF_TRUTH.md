@@ -1,4 +1,4 @@
-# Current Source of Truth - Automatic ProblemDetails from ModelState / ApiController / InvalidModelStateResponseFactory
+﻿# Current Source of Truth - Automatic ProblemDetails from ModelState / ApiController / InvalidModelStateResponseFactory
 
 Generated: 2026-06-13 08:09:52 UTC
 
@@ -31,3 +31,4 @@ Checked-not-P01 / reserved for P02: 9 image uses
 ```text
 P02/R03R04 transcript.
 ```
+

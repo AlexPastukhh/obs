@@ -1,0 +1,877 @@
+[
+  {
+    "physical_id": "TP-001",
+    "text": "Account activation",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-002",
+    "text": "For random generation berter to use this",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-003",
+    "text": "In register redirect user to checkemail page, not signin",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-004",
+    "text": "public class Activation : Entity",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-005",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-006",
+    "text": "public string SecurityCode { get; private set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-007",
+    "text": "public DateTimeOffset CodeExpirationTime { get; private set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-008",
+    "text": "public bool IsActivated { get; private set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-009",
+    "text": "public Maybe<DateTimeOffset> ActivatedAt { get; private set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-010",
+    "text": "public bool IsActivationAttempted { get; private set; }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-011",
+    "text": "public User User { get; internal set; } = default!;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-012",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-013",
+    "text": "#region Empty Constructor",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-014",
+    "text": "#pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-015",
+    "text": "private Activation() { }",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-016",
+    "text": "#pragma warning restore CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-017",
+    "text": "#endregion",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-018",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-019",
+    "text": "private Activation(",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-020",
+    "text": "string securityCode,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-021",
+    "text": "DateTimeOffset securityCodeExpiration,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-022",
+    "text": "bool isActive,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-023",
+    "text": "Maybe<DateTimeOffset> activatedAt,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-024",
+    "text": "bool isActivationAttempted )",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-025",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-026",
+    "text": "SecurityCode = securityCode;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-027",
+    "text": "CodeExpirationTime = securityCodeExpiration;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-028",
+    "text": "ActivatedAt = activatedAt;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-029",
+    "text": "IsActivated = isActive;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-030",
+    "text": "IsActivationAttempted = isActivationAttempted;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-031",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-032",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-033",
+    "text": "internal UnitResult<Error> ActivateAccount(",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-034",
+    "text": "string inputCode,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-035",
+    "text": "DateTimeOffset utcNow)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-036",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-037",
+    "text": "Guard.IsNotNull(inputCode);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-038",
+    "text": "Guard.IsNotNull(utcNow);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-039",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-040",
+    "text": "if (inputCode != SecurityCode)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-041",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-042",
+    "text": "IsActivationAttempted = true;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-043",
+    "text": "return Errors.Account.InValidActivationCode(SecurityCode, inputCode);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-044",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-045",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-046",
+    "text": "if(utcNow > CodeExpirationTime)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-047",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-048",
+    "text": "IsActivationAttempted = true;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-049",
+    "text": "return Errors.Account.ActivationCodeHasExpired(inputCode, CodeExpirationTime);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-050",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-051",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-052",
+    "text": "IsActivationAttempted = true;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-053",
+    "text": "IsActivated = true;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-054",
+    "text": "return UnitResult.Success<Error>();",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-055",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-056",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-057",
+    "text": "internal static Activation StartAccountActivation(DateTimeOffset utcNow)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-058",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-059",
+    "text": "var code = Convert.ToHexString(RandomNumberGenerator.GetBytes(128));",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-060",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-061",
+    "text": "var expirationDate = utcNow.AddHours(1);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-062",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-063",
+    "text": "var aaInfo =new Activation(code!, expirationDate,false,Maybe.None,false);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-064",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-065",
+    "text": "return aaInfo;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-066",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-067",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-068",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-069",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-070",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-071",
+    "text": "In user:",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-072",
+    "text": "modelBuilder.Entity<Activation>(ab =>",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-073",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-074",
+    "text": "ab.ToTable(\"AccountActivations\").HasKey(a => a.Id);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-075",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-076",
+    "text": "ab.Property(a => a.Id).HasColumnName(\"ActivationsIds\");",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-077",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-078",
+    "text": "ab.Property<long>(\"UserId\");",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-079",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-080",
+    "text": "ab.Property(a => a.ActivatedAt)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-081",
+    "text": ".HasConversion(",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-082",
+    "text": "maybe => maybe.GetValueOrDefault(),",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-083",
+    "text": "value => Maybe.From(value)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-084",
+    "text": ");",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-085",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-086",
+    "text": "ab.Property(a => a.SecurityCode)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-087",
+    "text": ".HasMaxLength(100);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-088",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-089",
+    "text": "ab.Property<byte[]>(\"Version\")",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-090",
+    "text": ".IsRowVersion();",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-091",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-092",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-093",
+    "text": "});",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-094",
+    "text": "ub.HasMany<Activation>(\"_accountActivations\")",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-095",
+    "text": ".WithOne(aa => aa.User)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-096",
+    "text": ".HasForeignKey(\"UserId\")",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-097",
+    "text": ".OnDelete(DeleteBehavior.Cascade);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-098",
+    "text": "In RegisterHandler",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-099",
+    "text": "var securityCode = user.LastAccountActivation.SecurityCode;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-100",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-101",
+    "text": "var link = _linkFactory.CreateLink(\"ActivateAccount\",",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-102",
+    "text": "\"Account\",",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-103",
+    "text": "securityCode);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-104",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-105",
+    "text": "var message = $\"To activate your account click on <a href=\\\"{link}\\\">link</a>:\";",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-106",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-107",
+    "text": "var sendEmail = await _email.SendEmailAsync(",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-108",
+    "text": "user.Email,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-109",
+    "text": "\"Activate your account\",",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-110",
+    "text": "message,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-111",
+    "text": "cancellationToken);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-112",
+    "text": "if (sendEmail.IsFailure)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-113",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-114",
+    "text": "return sendEmail.Error;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-115",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-116",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-117",
+    "text": "public sealed class VerificationLinkFactory: IVerificationLinkFactory",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-118",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-119",
+    "text": "private readonly IHttpContextAccessor _contextAccessor;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-120",
+    "text": "private readonly LinkGenerator _link;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-121",
+    "text": "public VerificationLinkFactory(IHttpContextAccessor contextAccessor, LinkGenerator link)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-122",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-123",
+    "text": "_contextAccessor = contextAccessor;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-124",
+    "text": "_link = link;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-125",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-126",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-127",
+    "text": "public string CreateLink(string action, string controller, string code, string scheme = \"https\")",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-128",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-129",
+    "text": "var link = _link.GetUriByAction(",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-130",
+    "text": "_contextAccessor.HttpContext!,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-131",
+    "text": "action,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-132",
+    "text": "controller,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-133",
+    "text": "new { code },",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-134",
+    "text": "scheme);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-135",
+    "text": "if (link is null)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-136",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-137",
+    "text": "throw new InvalidOperationException(\"Can't create verification link\");",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-138",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-139",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-140",
+    "text": "return link;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-141",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-142",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-143",
+    "text": "public class ActivateAccountHandler : IRequestHandler<ActivateAccountCommand, UnitResult<Error>>",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-144",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-145",
+    "text": "private readonly IUserRepository _users;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-146",
+    "text": "private readonly ILogger _logger;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-147",
+    "text": "private readonly TimeProvider _time;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-148",
+    "text": "public ActivateAccountHandler(IUserRepository users, ILogger logger, TimeProvider time)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-149",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-150",
+    "text": "_users = users;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-151",
+    "text": "_logger = logger;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-152",
+    "text": "_time = time;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-153",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-154",
+    "text": "public async Task<UnitResult<Error>> Handle(ActivateAccountCommand request,",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-155",
+    "text": "CancellationToken cancellationToken)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-156",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-157",
+    "text": "var userOrNothing = await _users.GetBySecurityCodeAsync(request.code,cancellationToken);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-158",
+    "text": "if (userOrNothing.HasNoValue)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-159",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-160",
+    "text": "var error= Errors.User.NotFoundForRequestedCode();",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-161",
+    "text": "_logger.LogWarning(error.Message,request.code);",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-162",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-163",
+    "text": "var user = userOrNothing.Value;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-164",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-165",
+    "text": "var result = user.ActivateAccount(request.code,_time.GetUtcNow());",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-166",
+    "text": "if (result.IsFailure)",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-167",
+    "text": "{",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-168",
+    "text": "return result.Error;",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-169",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-170",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-171",
+    "text": "return UnitResult.Success<Error>();",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-172",
+    "text": "",
+    "empty": true
+  },
+  {
+    "physical_id": "TP-173",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-174",
+    "text": "}",
+    "empty": false
+  },
+  {
+    "physical_id": "TP-175",
+    "text": "Make sure that activate link leads to get endpoint",
+    "empty": false
+  }
+]

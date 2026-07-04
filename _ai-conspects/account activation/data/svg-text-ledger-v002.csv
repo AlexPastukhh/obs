@@ -1,0 +1,176 @@
+﻿physical_id,text,empty
+TP-001,Account activation,False
+TP-002,For random generation berter to use this,False
+TP-003,"In register redirect user to checkemail page, not signin",False
+TP-004,public class Activation : Entity,False
+TP-005,{,False
+TP-006,public string SecurityCode { get; private set; },False
+TP-007,public DateTimeOffset CodeExpirationTime { get; private set; },False
+TP-008,public bool IsActivated { get; private set; },False
+TP-009,public Maybe<DateTimeOffset> ActivatedAt { get; private set; },False
+TP-010,public bool IsActivationAttempted { get; private set; },False
+TP-011,public User User { get; internal set; } = default!;,False
+TP-012,,True
+TP-013,#region Empty Constructor,False
+TP-014,"#pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.",False
+TP-015,private Activation() { },False
+TP-016,"#pragma warning restore CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.",False
+TP-017,#endregion,False
+TP-018,,True
+TP-019,private Activation(,False
+TP-020,"string securityCode,",False
+TP-021,"DateTimeOffset securityCodeExpiration,",False
+TP-022,"bool isActive,",False
+TP-023,"Maybe<DateTimeOffset> activatedAt,",False
+TP-024,bool isActivationAttempted ),False
+TP-025,{,False
+TP-026,SecurityCode = securityCode;,False
+TP-027,CodeExpirationTime = securityCodeExpiration;,False
+TP-028,ActivatedAt = activatedAt;,False
+TP-029,IsActivated = isActive;,False
+TP-030,IsActivationAttempted = isActivationAttempted;,False
+TP-031,},False
+TP-032,,True
+TP-033,internal UnitResult<Error> ActivateAccount(,False
+TP-034,"string inputCode,",False
+TP-035,DateTimeOffset utcNow),False
+TP-036,{,False
+TP-037,Guard.IsNotNull(inputCode);,False
+TP-038,Guard.IsNotNull(utcNow);,False
+TP-039,,True
+TP-040,if (inputCode != SecurityCode),False
+TP-041,{,False
+TP-042,IsActivationAttempted = true;,False
+TP-043,"return Errors.Account.InValidActivationCode(SecurityCode, inputCode);",False
+TP-044,},False
+TP-045,,True
+TP-046,if(utcNow > CodeExpirationTime),False
+TP-047,{,False
+TP-048,IsActivationAttempted = true;,False
+TP-049,"return Errors.Account.ActivationCodeHasExpired(inputCode, CodeExpirationTime);",False
+TP-050,},False
+TP-051,,True
+TP-052,IsActivationAttempted = true;,False
+TP-053,IsActivated = true;,False
+TP-054,return UnitResult.Success<Error>();,False
+TP-055,},False
+TP-056,,True
+TP-057,internal static Activation StartAccountActivation(DateTimeOffset utcNow),False
+TP-058,{,False
+TP-059,var code = Convert.ToHexString(RandomNumberGenerator.GetBytes(128));,False
+TP-060,,True
+TP-061,var expirationDate = utcNow.AddHours(1);,False
+TP-062,,True
+TP-063,"var aaInfo =new Activation(code!, expirationDate,false,Maybe.None,false);",False
+TP-064,,True
+TP-065,return aaInfo;,False
+TP-066,},False
+TP-067,,True
+TP-068,,True
+TP-069,,True
+TP-070,},False
+TP-071,In user:,False
+TP-072,modelBuilder.Entity<Activation>(ab =>,False
+TP-073,{,False
+TP-074,"ab.ToTable(""AccountActivations"").HasKey(a => a.Id);",False
+TP-075,,True
+TP-076,"ab.Property(a => a.Id).HasColumnName(""ActivationsIds"");",False
+TP-077,,True
+TP-078,"ab.Property<long>(""UserId"");",False
+TP-079,,True
+TP-080,ab.Property(a => a.ActivatedAt),False
+TP-081,.HasConversion(,False
+TP-082,"maybe => maybe.GetValueOrDefault(),",False
+TP-083,value => Maybe.From(value),False
+TP-084,);,False
+TP-085,,True
+TP-086,ab.Property(a => a.SecurityCode),False
+TP-087,.HasMaxLength(100);,False
+TP-088,,True
+TP-089,"ab.Property<byte[]>(""Version"")",False
+TP-090,.IsRowVersion();,False
+TP-091,,True
+TP-092,,True
+TP-093,});,False
+TP-094,"ub.HasMany<Activation>(""_accountActivations"")",False
+TP-095,.WithOne(aa => aa.User),False
+TP-096,".HasForeignKey(""UserId"")",False
+TP-097,.OnDelete(DeleteBehavior.Cascade);,False
+TP-098,In RegisterHandler,False
+TP-099,var securityCode = user.LastAccountActivation.SecurityCode;,False
+TP-100,,True
+TP-101,"var link = _linkFactory.CreateLink(""ActivateAccount"",",False
+TP-102,"""Account"",",False
+TP-103,securityCode);,False
+TP-104,,True
+TP-105,"var message = $""To activate your account click on <a href=\""{link}\"">link</a>:"";",False
+TP-106,,True
+TP-107,var sendEmail = await _email.SendEmailAsync(,False
+TP-108,"user.Email,",False
+TP-109,"""Activate your account"",",False
+TP-110,"message,",False
+TP-111,cancellationToken);,False
+TP-112,if (sendEmail.IsFailure),False
+TP-113,{,False
+TP-114,return sendEmail.Error;,False
+TP-115,},False
+TP-116,,True
+TP-117,public sealed class VerificationLinkFactory: IVerificationLinkFactory,False
+TP-118,{,False
+TP-119,private readonly IHttpContextAccessor _contextAccessor;,False
+TP-120,private readonly LinkGenerator _link;,False
+TP-121,"public VerificationLinkFactory(IHttpContextAccessor contextAccessor, LinkGenerator link)",False
+TP-122,{,False
+TP-123,_contextAccessor = contextAccessor;,False
+TP-124,_link = link;,False
+TP-125,},False
+TP-126,,True
+TP-127,"public string CreateLink(string action, string controller, string code, string scheme = ""https"")",False
+TP-128,{,False
+TP-129,var link = _link.GetUriByAction(,False
+TP-130,"_contextAccessor.HttpContext!,",False
+TP-131,"action,",False
+TP-132,"controller,",False
+TP-133,"new { code },",False
+TP-134,scheme);,False
+TP-135,if (link is null),False
+TP-136,{,False
+TP-137,"throw new InvalidOperationException(""Can't create verification link"");",False
+TP-138,},False
+TP-139,,True
+TP-140,return link;,False
+TP-141,},False
+TP-142,},False
+TP-143,"public class ActivateAccountHandler : IRequestHandler<ActivateAccountCommand, UnitResult<Error>>",False
+TP-144,{,False
+TP-145,private readonly IUserRepository _users;,False
+TP-146,private readonly ILogger _logger;,False
+TP-147,private readonly TimeProvider _time;,False
+TP-148,"public ActivateAccountHandler(IUserRepository users, ILogger logger, TimeProvider time)",False
+TP-149,{,False
+TP-150,_users = users;,False
+TP-151,_logger = logger;,False
+TP-152,_time = time;,False
+TP-153,},False
+TP-154,"public async Task<UnitResult<Error>> Handle(ActivateAccountCommand request,",False
+TP-155,CancellationToken cancellationToken),False
+TP-156,{,False
+TP-157,"var userOrNothing = await _users.GetBySecurityCodeAsync(request.code,cancellationToken);",False
+TP-158,if (userOrNothing.HasNoValue),False
+TP-159,{,False
+TP-160,var error= Errors.User.NotFoundForRequestedCode();,False
+TP-161,"_logger.LogWarning(error.Message,request.code);",False
+TP-162,},False
+TP-163,var user = userOrNothing.Value;,False
+TP-164,,True
+TP-165,"var result = user.ActivateAccount(request.code,_time.GetUtcNow());",False
+TP-166,if (result.IsFailure),False
+TP-167,{,False
+TP-168,return result.Error;,False
+TP-169,},False
+TP-170,,True
+TP-171,return UnitResult.Success<Error>();,False
+TP-172,,True
+TP-173,},False
+TP-174,},False
+TP-175,Make sure that activate link leads to get endpoint,False

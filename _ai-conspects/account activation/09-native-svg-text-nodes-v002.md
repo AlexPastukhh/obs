@@ -1,0 +1,148 @@
+# Account activation — native SVG text nodes v002
+
+- `T-001` — Account activation
+- `T-002` — For random generation berter to use this
+- `T-003` — In register redirect user to checkemail page, not signin
+- `T-004` — public class Activation : Entity
+- `T-005` — {
+- `T-006` — public string SecurityCode { get; private set; }
+- `T-007` — public DateTimeOffset CodeExpirationTime { get; private set; }
+- `T-008` — public bool IsActivated { get; private set; }
+- `T-009` — public Maybe<DateTimeOffset> ActivatedAt { get; private set; }
+- `T-010` — public bool IsActivationAttempted { get; private set; }
+- `T-011` — public User User { get; internal set; } = default!;
+- `T-012` — #region Empty Constructor
+- `T-013` — #pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
+- `T-014` — private Activation() { }
+- `T-015` — #pragma warning restore CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
+- `T-016` — #endregion
+- `T-017` — private Activation(
+- `T-018` — string securityCode,
+- `T-019` — DateTimeOffset securityCodeExpiration,
+- `T-020` — bool isActive,
+- `T-021` — Maybe<DateTimeOffset> activatedAt,
+- `T-022` — bool isActivationAttempted )
+- `T-023` — {
+- `T-024` — SecurityCode = securityCode;
+- `T-025` — CodeExpirationTime = securityCodeExpiration;
+- `T-026` — ActivatedAt = activatedAt;
+- `T-027` — IsActivated = isActive;
+- `T-028` — IsActivationAttempted = isActivationAttempted;
+- `T-029` — }
+- `T-030` — internal UnitResult<Error> ActivateAccount(
+- `T-031` — string inputCode,
+- `T-032` — DateTimeOffset utcNow)
+- `T-033` — {
+- `T-034` — Guard.IsNotNull(inputCode);
+- `T-035` — Guard.IsNotNull(utcNow);
+- `T-036` — if (inputCode != SecurityCode)
+- `T-037` — {
+- `T-038` — IsActivationAttempted = true;
+- `T-039` — return Errors.Account.InValidActivationCode(SecurityCode, inputCode);
+- `T-040` — }
+- `T-041` — if(utcNow > CodeExpirationTime)
+- `T-042` — {
+- `T-043` — IsActivationAttempted = true;
+- `T-044` — return Errors.Account.ActivationCodeHasExpired(inputCode, CodeExpirationTime);
+- `T-045` — }
+- `T-046` — IsActivationAttempted = true;
+- `T-047` — IsActivated = true;
+- `T-048` — return UnitResult.Success<Error>();
+- `T-049` — }
+- `T-050` — internal static Activation StartAccountActivation(DateTimeOffset utcNow)
+- `T-051` — {
+- `T-052` — var code = Convert.ToHexString(RandomNumberGenerator.GetBytes(128));
+- `T-053` — var expirationDate = utcNow.AddHours(1);
+- `T-054` — var aaInfo =new Activation(code!, expirationDate,false,Maybe.None,false);
+- `T-055` — return aaInfo;
+- `T-056` — }
+- `T-057` — }
+- `T-058` — In user:
+- `T-059` — modelBuilder.Entity<Activation>(ab =>
+- `T-060` — {
+- `T-061` — ab.ToTable("AccountActivations").HasKey(a => a.Id);
+- `T-062` — ab.Property(a => a.Id).HasColumnName("ActivationsIds");
+- `T-063` — ab.Property<long>("UserId");
+- `T-064` — ab.Property(a => a.ActivatedAt)
+- `T-065` — .HasConversion(
+- `T-066` — maybe => maybe.GetValueOrDefault(),
+- `T-067` — value => Maybe.From(value)
+- `T-068` — );
+- `T-069` — ab.Property(a => a.SecurityCode)
+- `T-070` — .HasMaxLength(100);
+- `T-071` — ab.Property<byte[]>("Version")
+- `T-072` — .IsRowVersion();
+- `T-073` — });
+- `T-074` — ub.HasMany<Activation>("_accountActivations")
+- `T-075` — .WithOne(aa => aa.User)
+- `T-076` — .HasForeignKey("UserId")
+- `T-077` — .OnDelete(DeleteBehavior.Cascade);
+- `T-078` — In RegisterHandler
+- `T-079` — var securityCode = user.LastAccountActivation.SecurityCode;
+- `T-080` — var link = _linkFactory.CreateLink("ActivateAccount",
+- `T-081` — "Account",
+- `T-082` — securityCode);
+- `T-083` — var message = $"To activate your account click on <a href=\"{link}\">link</a>:";
+- `T-084` — var sendEmail = await _email.SendEmailAsync(
+- `T-085` — user.Email,
+- `T-086` — "Activate your account",
+- `T-087` — message,
+- `T-088` — cancellationToken);
+- `T-089` — if (sendEmail.IsFailure)
+- `T-090` — {
+- `T-091` — return sendEmail.Error;
+- `T-092` — }
+- `T-093` — public sealed class VerificationLinkFactory: IVerificationLinkFactory
+- `T-094` — {
+- `T-095` — private readonly IHttpContextAccessor _contextAccessor;
+- `T-096` — private readonly LinkGenerator _link;
+- `T-097` — public VerificationLinkFactory(IHttpContextAccessor contextAccessor, LinkGenerator link)
+- `T-098` — {
+- `T-099` — _contextAccessor = contextAccessor;
+- `T-100` — _link = link;
+- `T-101` — }
+- `T-102` — public string CreateLink(string action, string controller, string code, string scheme = "https")
+- `T-103` — {
+- `T-104` — var link = _link.GetUriByAction(
+- `T-105` — _contextAccessor.HttpContext!,
+- `T-106` — action,
+- `T-107` — controller,
+- `T-108` — new { code },
+- `T-109` — scheme);
+- `T-110` — if (link is null)
+- `T-111` — {
+- `T-112` — throw new InvalidOperationException("Can't create verification link");
+- `T-113` — }
+- `T-114` — return link;
+- `T-115` — }
+- `T-116` — }
+- `T-117` — public class ActivateAccountHandler : IRequestHandler<ActivateAccountCommand, UnitResult<Error>>
+- `T-118` — {
+- `T-119` — private readonly IUserRepository _users;
+- `T-120` — private readonly ILogger _logger;
+- `T-121` — private readonly TimeProvider _time;
+- `T-122` — public ActivateAccountHandler(IUserRepository users, ILogger logger, TimeProvider time)
+- `T-123` — {
+- `T-124` — _users = users;
+- `T-125` — _logger = logger;
+- `T-126` — _time = time;
+- `T-127` — }
+- `T-128` — public async Task<UnitResult<Error>> Handle(ActivateAccountCommand request,
+- `T-129` — CancellationToken cancellationToken)
+- `T-130` — {
+- `T-131` — var userOrNothing = await _users.GetBySecurityCodeAsync(request.code,cancellationToken);
+- `T-132` — if (userOrNothing.HasNoValue)
+- `T-133` — {
+- `T-134` — var error= Errors.User.NotFoundForRequestedCode();
+- `T-135` — _logger.LogWarning(error.Message,request.code);
+- `T-136` — }
+- `T-137` — var user = userOrNothing.Value;
+- `T-138` — var result = user.ActivateAccount(request.code,_time.GetUtcNow());
+- `T-139` — if (result.IsFailure)
+- `T-140` — {
+- `T-141` — return result.Error;
+- `T-142` — }
+- `T-143` — return UnitResult.Success<Error>();
+- `T-144` — }
+- `T-145` — }
+- `T-146` — Make sure that activate link leads to get endpoint

@@ -1,15 +1,14 @@
-# MANIFEST — ASP.NET Core account activation / email confirmation / Data Protection / Identity final coverage v001
+# MANIFEST — Account activation comprehensive correction v002
 
-Archive type: **superseding stage0 + stage1 final coverage**  
-Generated: 2026-06-22 00:00:00 UTC
+Included:
 
-## Done
-
-- Stage0 source inventory preserved.
-- R01/R02/R03 final transcript added.
-- 22 image uses and 9 grouped text blocks closed.
-- Remaining coverage: 0.
-
-## Main final file
-
-`regions/R01R02R03-account-activation-final.md`
+- exact SVG;
+- 16 extracted screenshots;
+- 4 contact sheets;
+- 16 source-specific transcript blocks;
+- corrected/risk-aware domain code reference;
+- repetition guide;
+- 90-question bank;
+- 146 native SVG text nodes;
+- source/text ledgers;
+- updated CSoT and validation.
