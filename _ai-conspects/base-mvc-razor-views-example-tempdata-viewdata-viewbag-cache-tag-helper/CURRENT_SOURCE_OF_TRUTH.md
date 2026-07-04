@@ -1,57 +1,26 @@
-# Current Source of Truth - Base MVC Razor Views / TempData ViewData ViewBag / Cache Tag Helper
+# Current Source of Truth — Base MVC Razor Views / TempData / ViewData / ViewBag / Tag Helpers
 
-Generated: 2026-06-13 08:09:52 UTC
-
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.
-
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+Generated: 2026-07-04 UTC
+Correction version: near-literal v002
 
 ```text
-Stage0 boundary review: done
-R01 base MVC/Razor Products app, views, layouts, partials/view components: transcript v001 done
-R02 ViewData/ViewBag/TempData/validation flow: transcript v001 done
-R03 built-in tag helpers/forms/selects/infrastructure: transcript v001 done
-R04 cache tag helper/view components/display templates/validation helpers: transcript v001 done
-Final coverage audit: done
-Verdict: coverage-complete
+authoritative SVG: source/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper.svg
+SHA-256: d237fbbba1e3e5420995201ca15ef70d339b94208dedcab1071cdf917b778a76
+Git blob SHA: fe93832db61833da3bd5454b80eee523132fbece
+unique embedded images: 43 / 43
+image uses: 43 / 43
+native SVG text lines: 4 / 4
+source blocks: 43 / 43
+question bank: complete
+technical corrections: complete
+remaining: 0
+quality: READY_NEAR_LITERAL_NORMALIZED
 ```
 
-## Final coverage audit
+Authoritative files:
 
-```text
-total image uses: 41
-covered image uses: 41
-problem image uses: 0
-```
-
-## Coverage by region
-
-```text
-R01: 13
-R02: 10
-R03: 10
-R04: 8
-```
-
-## Important note
-
-This directory is now complete as an AI source-processing/transcript-coverage package.
-
-It is not yet a polished direct-repeat package unless a later archive adds:
-
-```text
-FINAL_TRANSCRIPT.md
-REPEAT_MATERIAL_DRAFT.md
-QUESTIONS.md
-LOOKUP_INDEX.md
-```
-
-## Next
-
-No next transcript block.
-
-Only create targeted correction archives if a concrete issue is found later, or create a separate repeat-material layer if needed.
+- `10-full-source-preserving-transcript-v002.md`
+- `11-technical-corrections-v002.md`
+- `12-repetition-question-bank-v002.md`
+- `13-final-near-literal-coverage-audit-v002.md`
+- `data/source-ledger-near-literal-v002.*`

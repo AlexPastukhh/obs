@@ -1,29 +1,10 @@
-# MANIFEST - Base MVC Razor Views Final Coverage Audit v001
+# MANIFEST — Base MVC Razor Views / TempData / ViewData / ViewBag / Tag Helpers near-literal correction v002
 
-Archive type: **stage-3 final coverage audit**
-Target branch: `ai-processed-conspects-text`
-Generated: 2026-06-13 08:09:52 UTC
-
-## Done
-
-- Final coverage audit created.
-- Checked all 41 image uses.
-- Problem image uses: 0.
-- Verdict: coverage-complete.
-
-## Files included / updated
+Included: authoritative SVG, 43 extracted screenshots, source-preserving transcript, technical corrections, question bank, coverage audit, source ledger.
 
 ```text
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/03-stage3-final-coverage-audit.md
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/data/final-coverage-audit-stage3-v001.csv
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/data/final-coverage-audit-stage3-v001.json
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/data/image-review-ledger-v001.csv
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/data/image-review-ledger-v001.json
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/MANIFEST.md
-_ai-conspects/base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper/APPLY_ARCHIVE.md
+unique screenshots: 43 / 43
+image uses: 43 / 43
+remaining: 0
+READY_NEAR_LITERAL_NORMALIZED
 ```
-
-## Next
-
-No next transcript block. This conspect is complete unless later targeted corrections or a repeat-material layer are needed.

@@ -1,13 +1,10 @@
-# MANIFEST — hexadecimal base16 how  to convert to bytes easily
+# MANIFEST — Hexadecimal base16 near-literal correction v002
 
-Source: `hexadecimal base16 how  to convert to bytes easily.svg`
+Included: authoritative SVG, 14 extracted screenshots, source-preserving transcript, technical corrections, question bank, coverage audit, source ledger.
 
 ```text
-unique images: 14
-image uses: 15
-text labels: 1
-duplicate placements: 1
-remaining unclosed: 0
+unique screenshots: 14 / 14
+image uses: 15 / 15
+remaining: 0
+READY_NEAR_LITERAL_NORMALIZED
 ```
-
-Included: source SVG, extracted images, canvas render/contact sheet, source ledgers, semantic transcript, final coverage audit and current source of truth.

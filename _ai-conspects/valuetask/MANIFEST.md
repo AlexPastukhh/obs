@@ -1,26 +1,10 @@
-# MANIFEST — valuetask final coverage v001
+# MANIFEST — ValueTask near-literal correction v002
 
-Exact folder name:
-
-```text
-_ai-conspects/valuetask/
-```
-
-Source SVG:
+Included: authoritative SVG, 18 extracted screenshots, source-preserving transcript, technical corrections, question bank, coverage audit, source ledger.
 
 ```text
-valuetask.svg
+unique screenshots: 18 / 18
+image uses: 18 / 18
+remaining: 0
+READY_NEAR_LITERAL_NORMALIZED
 ```
-
-Included:
-
-- source SVG;
-- extracted source images;
-- contact sheet;
-- stage0 source/boundary review;
-- final region transcript;
-- image and text-label ledgers;
-- duplicate-use audit;
-- final coverage status.
-
-Coverage: 18 image uses + 5 text labels; remaining 0.

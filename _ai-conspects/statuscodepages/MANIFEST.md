@@ -1,9 +1,10 @@
-# MANIFEST — statuscodepages final coverage v001
+# MANIFEST — StatusCodePages / ProblemDetails near-literal correction v002
 
-Generated: 2026-06-22 UTC
+Included: authoritative SVG, 12 extracted screenshots, source-preserving transcript, technical corrections, question bank, coverage audit, source ledger.
 
-- Final transcript: `regions/R01R02R03-final-coverage.md`
-- Image uses closed: 12
-- Text labels closed: 77
-- Remaining unclosed: 0
-- Source SVG and extracted images preserved.
+```text
+unique screenshots: 12 / 12
+image uses: 12 / 12
+remaining: 0
+READY_NEAR_LITERAL_NORMALIZED
+```
