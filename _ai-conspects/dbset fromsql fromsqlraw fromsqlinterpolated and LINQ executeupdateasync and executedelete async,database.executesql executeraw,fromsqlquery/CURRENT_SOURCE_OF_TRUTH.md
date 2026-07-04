@@ -1,54 +1,56 @@
-# Current Source of Truth - dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery
+# Current Source of Truth - EF Core SQL query and command APIs
 
-Generated: 2026-06-27 UTC
+Updated: 2026-07-04 UTC
 
 ## Policy
 
-Screenshots are the primary source when present. Candidate regions, vector paths, and nearest SVG labels are hints only.
+Screenshots in the corrected SVG are the primary source.
 
-## Corrected source
+The authoritative readable layer is a complete semantic transcript. It preserves all material API categories,
+tracking behavior, parameterization rules, dynamic-SQL constraints, transaction requirements, and set-based
+DML limitations without retaining OCR artifacts.
+
+## Verified source
 
 ```text
-source: source/source-complete-v002.svg
+repository source: source/source-complete-v002.svg
 SHA-256: 6cd7d851e1faf6da4ebadbdd509713f7a552b5b52769d44c084ccc10da70ab8d
-embedded assets: 51
-total image uses: 52
+Git blob: 38a2d5583e5fda228cfcb9e511297aaf0c86a989
+unique embedded images: 51
+image uses: 52
+duplicate placement: 1
 SVG text nodes: 19
-vector paths: 18
-```
-
-## Source repair
-
-```text
-old embedded assets: 0
-old image uses: 0
-restored unique screenshots: 51
-restored image uses: 52
-old processed materials preserved: yes
-```
-
-## Final status
-
-```text
-processed image uses: 52 / 52
-duplicate placements: 1
-processed SVG text nodes: 19 / 19
-unassigned images: 0
-multiply assigned images: 0
-unassigned text nodes: 0
-missing: 0
-unreviewed: 0
-independent repeat audit: PASS
-```
-
-## Closure verdict
-
-```text
-Closed by complete corrected-SVG coverage.
+Stage0 rebuild required: no
 ```
 
 ## Authoritative transcript
 
-`regions/full-svg-reconciliation-v002.md`
+```text
+regions/full-semantic-transcript-v001.md
+image-use coverage: 52 / 52
+SVG text-node review: 19 / 19
+```
 
-The earlier label-only transcript remains preserved but is superseded by this full-source reconciliation.
+The transcript covers `FromSql`, `FromSqlRaw`, interpolated SQL, `Database.SqlQuery<T>`, immediate
+`ExecuteSql` commands, parameterization, safe dynamic SQL, entity tracking, non-entity projections,
+`ExecuteUpdateAsync`, `ExecuteDeleteAsync`, `SetProperty`, stale tracked state, transactions, and domain
+logic boundaries.
+
+The older `regions/full-svg-reconciliation-v002.md` remains a secondary regional overview. It is superseded
+as the authoritative study transcript.
+
+## Repetition material
+
+```text
+QUESTIONS.md
+```
+
+## Closure
+
+```text
+corrected source SVG verified
+semantic content coverage complete
+authoritative semantic transcript present
+question bank present
+known mojibake or OCR placeholders: none
+```

@@ -1,67 +1,54 @@
-# Current Source of Truth - Encoding UTF8 Chunk Processing
+# Current Source of Truth - Encoding.UTF8 and chunk processing
 
-Generated: 2026-06-13 06:20:09 UTC
+Updated: 2026-07-04 UTC
 
-## Current policy
+## Policy
 
-Do not treat the review ledger as source of truth.
+Embedded screenshots are the primary source.
 
-A region is complete only when its region file contains coverage / boundary review, included sources, candidate checks, excluded/reassigned candidates, open issues, and verified source transcript or correction addendum.
+The authoritative readable layer is a full semantic transcript rather than a character-by-character OCR dump.
+Code is normalized into readable C# when the meaning is clear. The transcript preserves all important API
+differences, buffer rules, state transitions, fallback behavior, and streaming constraints.
 
-For large split regions, add a closure audit after the last sub-pass.
-
-## Big archive apply workflow
+## Verified source
 
 ```text
-Expand archive.
-git add -A -- <target>
-Review staged file list/status.
-Commit only after staged file review.
-Never use git add . when unrelated files are modified.
+repository source: SVG under source/ matched by Git blob
+SHA-256: 64be648e24f24d7af5cda1b560cc1b64c28ad47d1c55e431bfac33f1fcc95253
+Git blob: 5763263be84e2e28658314edf49351c6b07ec35e
+unique embedded images: 54
+image uses: 55
+SVG text nodes: 48
+Stage0 rebuild required: no
 ```
 
-## Batch-size rule
+## Authoritative transcript
 
 ```text
-Default transcript batch: 80-160 images.
-Can be larger if one logical block requires it.
-Use one archive with multiple region files when themes differ.
-Do not mix different regions into one region file.
-Local visual/semantic recheck can override nearest-label grouping before transcript.
+regions/full-semantic-transcript-v001.md
+image-use coverage: 55 / 55
+SVG text-node review: 48 / 48
 ```
 
-## No-placeholder-processed rule
+The transcript covers complete-value `Encoding` APIs, array and span overloads, buffer sizing, stateful
+`Decoder` and `Encoder`, `GetChars` versus `Convert`, `bytesUsed`, `charsUsed`, `completed`, WebSocket
+fragments, `flush`, fallback policies, truncated final input, and stream-decoding patterns.
+
+Existing Stage1 and Stage2 regional transcripts remain secondary source-coverage records. Their older
+semantic wording is superseded by the consolidated transcript above.
+
+## Repetition material
 
 ```text
-If visible transcript has OCR timeout/error, image missing, empty text, or placeholder text,
-the source stays pending and must not be marked processed.
+QUESTIONS.md
 ```
 
-## Transcript precision policy
+## Closure
 
 ```text
-Stage1/Stage2 transcript level: source-level semantic transcript.
-For exact C# punctuation, use preserved Stage0 source PNGs.
-Precision patches can upgrade individual sources to verbatim code later.
-```
-
-## Current status
-
-```text
-Encoding UTF8 Chunk Stage0 boundary review v001: completed
-Encoding UTF8 Chunk Stage1 R01/R03 transcript v001: completed
-Encoding UTF8 Chunk Stage2 R02 transcript v001: completed
-Encoding UTF8 Chunk closure audit v001: completed
-Image uses inventoried: 55
-Stage1 processed: 25
-Stage2 processed: 30
-Pending candidates: 0
-Bad placeholder/OCR-error processed rows: 0
-```
-
-## Current processing target
-
-```text
-Encoding UTF8 Chunk Processing: closed by source coverage
-Next: no further Encoding UTF8 Chunk transcript work unless precision patch or repeat-material layer is requested.
+source SVG verified
+semantic content coverage complete
+authoritative semantic transcript present
+question bank present
+known mojibake or OCR placeholders: none
 ```
