@@ -1,28 +1,17 @@
-# MANIFEST — CONCATENATE MULT ROWS AS AGGR,STUFF,STRING_AGG
+# MANIFEST — concatenate rows final transcript v001
 
-Generated: 2026-06-28 06:00:00 UTC
+Source SVG Git blob SHA:
 
-## Complete source
+```text
+4b41b83caf3655a4dd84af57109648b78c5296f8
+```
 
-- `source/CONCATENATE MULT ROWS AS AGGR,STUFF,STRING_AGG.svg`
-- 4 extracted screenshots under `source/images/`
+The uploaded source exactly matches the repository source. Stage0 replacement is not required.
 
-## Stage0 documents
+Added:
 
-- `00-source-check-and-boundary-review.md`
-- `MARKUP_POLICY.md`
-- `CURRENT_SOURCE_OF_TRUTH.md`
-- `TRANSCRIPT_STATUS.md`
-
-## Ledgers
-
-- `data/source-summary-stage0-v001.json`
-- `data/image-definitions-stage0-v001.*`
-- `data/image-uses-stage0-v001.*`
-- `data/text-elements-stage0-v001.*`
-- `data/region-plan-stage0-v001.*`
-
-## Audit assets
-
-- complete canvas preview
-- 4 regional contact sheets
+- `FINAL_TRANSCRIPT.md`
+- `regions/R01R02R03R04-final-transcript.md`
+- `QUESTIONS.md`
+- `REPEAT_MATERIAL_DRAFT.md`
+- `FINAL_COVERAGE_AUDIT.md`

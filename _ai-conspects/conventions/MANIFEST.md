@@ -1,29 +1,20 @@
-# MANIFEST - ASP.NET Core Application Model Conventions Final Coverage Audit v001
+# MANIFEST — conventions source-fidelity completion v002
 
-Archive type: **stage-3 final coverage audit**
 Target branch: `ai-processed-conspects-text`
-Generated: 2026-06-13 07:36:43 UTC
 
-## Done
+## Updated source
 
-- Final coverage audit created.
-- Checked all 50 image uses.
-- Problem image uses: 0.
-- Verdict: coverage-complete.
+- `source/conventions.svg`
+- `source/images/` rebuilt from the cleaned current source
+- new Stage0 v002 source/image/label ledgers
+- source-comparison audit
 
-## Files included / updated
+## Added study layer
 
-```text
-_ai-conspects/conventions/03-stage3-final-coverage-audit.md
-_ai-conspects/conventions/data/final-coverage-audit-stage3-v001.csv
-_ai-conspects/conventions/data/final-coverage-audit-stage3-v001.json
-_ai-conspects/conventions/data/image-review-ledger-v001.csv
-_ai-conspects/conventions/data/image-review-ledger-v001.json
-_ai-conspects/conventions/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/conventions/MANIFEST.md
-_ai-conspects/conventions/APPLY_ARCHIVE.md
-```
+- `FINAL_TRANSCRIPT.md`
+- `REPEAT_MATERIAL_DRAFT.md`
+- `QUESTIONS.md`
 
-## Next
+## Important
 
-No next transcript block. This conspect is complete unless later targeted corrections or a repeat-material layer are needed.
+The uploaded SVG contained two unrelated SqlBulkCopy screenshots. The archive intentionally does not import those into the conventions source.

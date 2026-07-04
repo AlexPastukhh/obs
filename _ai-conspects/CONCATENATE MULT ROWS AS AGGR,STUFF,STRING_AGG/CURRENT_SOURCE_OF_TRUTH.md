@@ -1,31 +1,29 @@
 # Current Source of Truth — CONCATENATE MULT ROWS AS AGGR,STUFF,STRING_AGG
 
-Generated: 2026-06-28 06:00:00 UTC
-
-## Status
+Generated: 2026-07-04 UTC
 
 ```text
-Stage0 source/boundary review: done
-Complete SVG preservation: done
-Embedded screenshot extraction: done
-Text-element inventory: done
-Visible canvas region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Stage0: done
+source exact-match verification: done
+regional transcript: done
+full combined transcript: done
+questions: done
+coverage audit: done
+readiness: READY_NEAR_LITERAL
 ```
 
-## Coverage
+Coverage:
 
 ```text
-meaningful text elements: 7
-unique embedded images: 4
-image uses on canvas: 4
-logical regions: 4
-remaining unprocessed text elements: 7
-remaining unprocessed image uses: 4
+unique screenshots: 4 / 4
+image uses: 4 / 4
+native text elements: 7 / 7
+remaining: 0
 ```
 
-## Next
+Authoritative transcript:
 
-Process every planned region and close all source coverage.
+```text
+FINAL_TRANSCRIPT.md
+regions/R01R02R03R04-final-transcript.md
+```

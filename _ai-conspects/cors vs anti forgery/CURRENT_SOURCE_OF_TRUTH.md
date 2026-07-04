@@ -1,27 +1,28 @@
 # Current Source of Truth — cors vs anti forgery
 
-Generated: 2026-06-22 00:00:00 UTC
-
-## Current status
+Generated: 2026-07-04 UTC
 
 ```text
-Stage0 source/boundary review: done
-R01 attacker-capabilities-cors-boundaries: transcript v001 done
-R02 simple-requests-preflight-why-cors-is-not-enough: transcript v001 done
-R03 xhr-fetch-practical-defense: transcript v001 done
-Final coverage audit: done
+Stage0: done
+source screenshots: 20 / 20
+grouped canvas labels: 5 / 5
+near-literal transcript: done
+repetition material: done
+questions: done
+remaining source work: 0
+readiness: READY_NEAR_LITERAL
 ```
 
-## Counts
+Authoritative transcript:
 
 ```text
-unique embedded images: 20
-image uses on canvas: 20
-grouped text blocks: 5
-remaining unclosed image uses: 0
-remaining unclosed text blocks: 0
+FINAL_TRANSCRIPT.md
+regions/R01R02R03-cors-vs-antiforgery-final.md
 ```
 
-## Next
+Repetition files:
 
-No normal transcript regions remain; only later correction/polish or repeat-material work.
+```text
+REPEAT_MATERIAL_DRAFT.md
+QUESTIONS.md
+```

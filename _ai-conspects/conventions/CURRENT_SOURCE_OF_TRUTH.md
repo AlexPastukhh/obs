@@ -1,57 +1,44 @@
-# Current Source of Truth - ASP.NET Core Application Model Conventions
+# Current Source of Truth — ASP.NET Core Application Model Conventions
 
-Generated: 2026-06-13 07:36:43 UTC
+Generated: 2026-07-04 UTC
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.
-
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+## Source
 
 ```text
-Stage0 boundary review: done
-R01 application model conventions overview / attributes: transcript v001 done
-R02 convention interfaces / app-controller-action-parameter: transcript v001 done
-R03 ApplicationModel / ControllerModel / ActionModel / ParameterModel: transcript v001 done
-R04 ParameterModelBase / PropertyModel / SelectorModel / ApiExplorerModel / BindingInfo: transcript v001 done
-Final coverage audit: done
-Verdict: coverage-complete
+source/conventions.svg
+cleaned current source Git blob SHA:
+b72e4c883c1890e60a27856e8af9e7ce3ad79e9f
 ```
 
-## Final coverage audit
+The uploaded SVG had two unrelated SqlBulkCopy screenshots. They were excluded from the cleaned source and documented in `SOURCE_COMPARISON_AUDIT_v002.md`.
+
+## Coverage
 
 ```text
-total image uses: 50
-covered image uses: 50
-problem image uses: 0
+relevant image uses: 50 / 50
+grouped canvas labels: 18 / 18
+foreign unrelated screenshots excluded: 2
+remaining relevant image uses: 0
 ```
 
-## Coverage by region
-
-```text
-R01: 7
-R02: 13
-R03: 15
-R04: 15
-```
-
-## Important note
-
-This directory is now complete as an AI source-processing/transcript-coverage package.
-
-It is not yet a polished direct-repeat package unless a later archive adds:
+## Authoritative transcript
 
 ```text
 FINAL_TRANSCRIPT.md
-REPEAT_MATERIAL_DRAFT.md
-QUESTIONS.md
-LOOKUP_INDEX.md
 ```
 
-## Next
+## Repetition material
 
-No next transcript block.
+```text
+REPEAT_MATERIAL_DRAFT.md
+QUESTIONS.md
+```
 
-Only create targeted correction archives if a concrete issue is found later, or create a separate repeat-material layer if needed.
+## Status
+
+```text
+Stage0 current-source repair: complete
+source-preserving transcript: complete
+questions: complete
+readiness: READY_NEAR_LITERAL
+```

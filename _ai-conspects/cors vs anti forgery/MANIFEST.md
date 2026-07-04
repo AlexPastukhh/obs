@@ -1,15 +1,16 @@
-# MANIFEST — ASP.NET Core CORS vs antiforgery / simple requests / preflight / credentials final coverage v001
+# MANIFEST — cors vs antiforgery source-fidelity completion v002
 
-Archive type: **superseding stage0 + stage1 final coverage**  
-Generated: 2026-06-22 00:00:00 UTC
+Updated:
 
-## Done
+- `regions/R01R02R03-cors-vs-antiforgery-final.md`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `MANIFEST.md`
 
-- Stage0 source inventory preserved.
-- R01/R02/R03 final transcript added.
-- 20 image uses and 5 grouped text blocks closed.
-- Remaining coverage: 0.
+Added:
 
-## Main final file
+- `FINAL_TRANSCRIPT.md`
+- `REPEAT_MATERIAL_DRAFT.md`
+- `QUESTIONS.md`
+- `TRANSCRIPT_QUALITY_AUDIT_v002.md`
 
-`regions/R01R02R03-cors-vs-antiforgery-final.md`
+Coverage remains 20 screenshots and 5 grouped canvas labels.

@@ -1,14 +1,18 @@
 # Current Source of Truth — CONTAINS STARTSWITH ENDSWITH
 
-Generated: 2026-06-28 UTC
+Generated: 2026-07-04 UTC
 
 ## Status
 
 ```text
 SVG source import: done
 Screenshot extraction: done
-Semantic transcript: done
+Source SVG exact-match verification: done
+Near-literal source-preserving transcript: done
+Technical correction note: done
+Repetition questions: done
 Final coverage audit: done
+Readiness: READY_NEAR_LITERAL
 ```
 
 ## Coverage
@@ -30,26 +34,37 @@ remaining unclosed text labels: 0
 source/CONTAINS STARTSWITH ENDSWITH.svg
 ```
 
-## Current transcript
+Uploaded and repository source Git blob SHA:
+
+```text
+277be1c00cd0ca289016d517b15a5d1d78189f0d
+```
+
+## Authoritative transcript
 
 ```text
 01-final-transcript.md
+```
+
+Aliases containing the same corrected transcript:
+
+```text
 regions/final-transcript.md
 regions/R01-semantic-transcript-final-v001.md
 ```
 
-## Evidence
+## Repetition material
 
 ```text
-data/source-summary.json
-data/embedded-images.json
-data/image-uses.json
-data/text-elements.json
-data/duplicate-image-uses.json
-data/final-coverage-audit.json
-audit-assets/canvas-preview.png
+02-repetition-questions.md
+```
+
+## Correction audit
+
+```text
+03-source-fidelity-correction-audit.md
 ```
 
 ## Next
 
-No normal screenshot recovery or semantic transcript work remains.
+No normal transcript work remains. Only targeted factual or wording corrections if a concrete issue is found later.
