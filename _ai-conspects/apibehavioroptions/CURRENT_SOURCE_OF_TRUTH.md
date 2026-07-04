@@ -1,37 +1,48 @@
-# Current Source of Truth - apibehavioroptions
+# Current Source of Truth — apibehavioroptions
 
-Generated: 2026-06-13 09:35:00 UTC
+Generated: 2026-07-04
 
-## Policy
-
-Inventory/ledger is checklist only, not source of truth.  
-A region is complete only after visual/semantic boundary review and verified transcript.
-
-## Current status
+## Source
 
 ```text
-Stage0 source/boundary review: done
-Normal transcript regions: done
-Final coverage audit: done
+source/apibehavioroptions.svg
+viewBox: 0 0 3621.398364727314 11510.399022081021
+Git blob SHA: f1f96c69fe80e965c4ca7a5b71ef974b33898314
+unique screenshots: 26
+image uses: 26
+native non-empty SVG labels: 13
+broken/external/dangling: 0
 ```
 
-## Counts
+## Status
 
 ```text
-unique embedded images: 26
-image uses on canvas: 26
-text labels parsed: 13
-duplicate image uses by extracted file/content: 0
-remaining unclosed image uses: 0
-remaining unclosed text labels: 0
+source-preserving transcript v002: complete
+code reference: complete
+repetition guide: complete
+question bank: complete
+technical corrections: complete
+source placement ledger: 26 / 26
+remaining sources: 0
 ```
 
-## Completed transcript pass
+## Authoritative files
 
 ```text
-R01+R02+R03 final coverage transcript: done
+04-source-preserving-transcript-v002.md
+05-code-reference-v002.md
+06-repetition-guide-v002.md
+07-question-bank-v002.md
+08-technical-correction-notice-v002.md
+09-native-svg-labels-v002.md
+regions-v002/
+data/source-placement-ledger-v002.csv
 ```
 
-## Final note
+## Verdict
 
-This is a source-preserving semantic transcript and coverage audit. Exact code punctuation should be corrected from preserved screenshots/source if a verbatim study sheet is needed.
+```text
+SOURCE COMPLETE
+CODE-LEVEL REPETITION READY
+QUESTION GENERATION READY
+```
