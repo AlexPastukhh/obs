@@ -1,6 +1,6 @@
-# Final near-literal coverage audit v001 — Hashing
+# Final semantic source coverage audit v002 — Hashing
 
-## Source
+## Source inventory
 
 ```text
 unique screenshots: 104
@@ -10,25 +10,54 @@ native SVG text lines: 70
 regions: 6
 ```
 
-## Result
+## Authoritative transcript decision
+
+The previous `10-full-source-preserving-transcript-v001.md` attempted screenshot-level near-literal
+transcription. It preserved source IDs and image hashes, but contained substantial OCR noise in prose and code.
+It remains available only as a historical traceability artifact.
+
+The authoritative source-aligned transcript is now:
 
 ```text
-source blocks: 104 / 104
-image uses represented: 106 / 106
-regions complete: 6 / 6
+10-semantic-source-transcript-v002.md
+```
+
+Its policy is meaning-preserving rather than character-perfect. Neighboring screenshots are combined where
+they form one explanation or code example. Literal repetition is allowed, but OCR artifacts are not carried
+forward.
+
+## Coverage result
+
+```text
+source IDs represented: S-001 through S-104
+unique source coverage: 104 / 104
+image uses represented through source ledger: 106 / 106
+regions represented: 6 / 6
+semantic blocks: 18 / 18
 technical notes: present
 question bank: present
-remaining source blocks: 0
+remaining semantic blocks: 0
 ```
 
 ## Quality boundary
 
-The transcript is OCR-assisted and normalized, with code-heavy source blocks manually cleaned; it is not character-perfect. Exact code punctuation,
-line wrapping and version-sensitive security recommendations remain authoritative in the source
-screenshots and current platform/security documentation.
+The semantic transcript:
+
+- preserves the source's teaching sequence and technical intent;
+- retains source-range references for every block;
+- reconstructs code into readable C#;
+- removes interface labels, broken OCR characters and accidental fragments;
+- does not claim exact screenshot punctuation or line wrapping;
+- does not treat source-era numeric work factors as timeless recommendations.
+
+Exact visual wording remains available in `source/hashing.svg` and its extracted images. Current security
+recommendations remain external and time-sensitive.
 
 ## Verdict
 
 ```text
-READY_NEAR_LITERAL_NORMALIZED
+SOURCE_COMPLETE
+SEMANTIC_COVERAGE_COMPLETE
+READY_SEMANTIC_CLOSE_SOURCE_ALIGNED
+OLD_OCR_TRANSCRIPT_NON_AUTHORITATIVE
 ```
