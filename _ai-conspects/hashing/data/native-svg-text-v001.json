@@ -1,0 +1,422 @@
+[
+  {
+    "line_id": "L-001",
+    "x": 10386.684300585099,
+    "y": 782.1217682735542,
+    "text": "implementing full identity"
+  },
+  {
+    "line_id": "L-002",
+    "x": 1581.67457620824,
+    "y": 144.93235391600592,
+    "text": "manual hashing"
+  },
+  {
+    "line_id": "L-003",
+    "x": 2713.5659232674216,
+    "y": 723.2549596770941,
+    "text": "In ddd style"
+  },
+  {
+    "line_id": "L-004",
+    "x": 2150.8124715223967,
+    "y": 1385.7534131473694,
+    "text": "Doesnt depends on how long it takes"
+  },
+  {
+    "line_id": "L-005",
+    "x": 2150.8124715223967,
+    "y": 1385.7534131473694,
+    "text": "to actually verify password"
+  },
+  {
+    "line_id": "L-006",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "using System.Security.Cryptography;"
+  },
+  {
+    "line_id": "L-007",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "public static class PasswordKdf"
+  },
+  {
+    "line_id": "L-008",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "{"
+  },
+  {
+    "line_id": "L-009",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "// tune this based on perf tests"
+  },
+  {
+    "line_id": "L-010",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "private const int Iterations = 210_000;"
+  },
+  {
+    "line_id": "L-011",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "private const int SaltSize = 16; // 128-bit"
+  },
+  {
+    "line_id": "L-012",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "private const int KeySize = 32; // 256-bit"
+  },
+  {
+    "line_id": "L-013",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "private const string Algo = \"PBKDF2-SHA256\";"
+  },
+  {
+    "line_id": "L-014",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "private const int Version = 1;"
+  },
+  {
+    "line_id": "L-015",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "public static string Hash(string password)"
+  },
+  {
+    "line_id": "L-016",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "{"
+  },
+  {
+    "line_id": "L-017",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);"
+  },
+  {
+    "line_id": "L-018",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "byte[] key = Rfc2898DeriveBytes.Pbkdf2("
+  },
+  {
+    "line_id": "L-019",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "password,"
+  },
+  {
+    "line_id": "L-020",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "salt,"
+  },
+  {
+    "line_id": "L-021",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "Iterations,"
+  },
+  {
+    "line_id": "L-022",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "HashAlgorithmName.SHA256,"
+  },
+  {
+    "line_id": "L-023",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "KeySize);"
+  },
+  {
+    "line_id": "L-024",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "// Store: v:algo:iter:saltB64:hashB64"
+  },
+  {
+    "line_id": "L-025",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "return $\"{Version}:{Algo}:{Iterations}:{Convert.ToBase64String(salt)}:{Convert.ToBase64String(key)}\";"
+  },
+  {
+    "line_id": "L-026",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "}"
+  },
+  {
+    "line_id": "L-027",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "public static bool Verify(string password, string stored)"
+  },
+  {
+    "line_id": "L-028",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "{"
+  },
+  {
+    "line_id": "L-029",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "var parts = stored.Split(':');"
+  },
+  {
+    "line_id": "L-030",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "if (parts.Length != 5) return false;"
+  },
+  {
+    "line_id": "L-031",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "if (!int.TryParse(parts[0], out var version) || version != Version) return false;"
+  },
+  {
+    "line_id": "L-032",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "var algo = parts[1];"
+  },
+  {
+    "line_id": "L-033",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "if (algo != Algo) return false;"
+  },
+  {
+    "line_id": "L-034",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "if (!int.TryParse(parts[2], out var iterations)) return false;"
+  },
+  {
+    "line_id": "L-035",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "byte[] salt = Convert.FromBase64String(parts[3]);"
+  },
+  {
+    "line_id": "L-036",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "byte[] expected = Convert.FromBase64String(parts[4]);"
+  },
+  {
+    "line_id": "L-037",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "byte[] actual = Rfc2898DeriveBytes.Pbkdf2("
+  },
+  {
+    "line_id": "L-038",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "password,"
+  },
+  {
+    "line_id": "L-039",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "salt,"
+  },
+  {
+    "line_id": "L-040",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "iterations,"
+  },
+  {
+    "line_id": "L-041",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "HashAlgorithmName.SHA256,"
+  },
+  {
+    "line_id": "L-042",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "expected.Length);"
+  },
+  {
+    "line_id": "L-043",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "return CryptographicOperations.FixedTimeEquals(actual, expected);"
+  },
+  {
+    "line_id": "L-044",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "}"
+  },
+  {
+    "line_id": "L-045",
+    "x": 2721.0332805562375,
+    "y": 2945.165155044956,
+    "text": "}"
+  },
+  {
+    "line_id": "L-046",
+    "x": 13967.311732851162,
+    "y": 1302.5987428394683,
+    "text": "how key stretching works"
+  },
+  {
+    "line_id": "L-047",
+    "x": 14566.823347277068,
+    "y": 1857.4958469854273,
+    "text": "basically kdf is a deterministic functions, it produces same hash on each input"
+  },
+  {
+    "line_id": "L-048",
+    "x": 14566.823347277068,
+    "y": 1857.4958469854273,
+    "text": "and when you hash with iterations - you always will get same hash for each input"
+  },
+  {
+    "line_id": "L-049",
+    "x": 14566.823347277068,
+    "y": 1857.4958469854273,
+    "text": ", psw -> hash1 -> hash2 -> hash300000"
+  },
+  {
+    "line_id": "L-050",
+    "x": 16360.445652157718,
+    "y": 286.0565963458821,
+    "text": "hasging"
+  },
+  {
+    "line_id": "L-051",
+    "x": 18280.7629768415,
+    "y": 571.2952438068269,
+    "text": "flow"
+  },
+  {
+    "line_id": "L-052",
+    "x": 18986.23932571845,
+    "y": 240.26323014076024,
+    "text": "what we are storing in db"
+  },
+  {
+    "line_id": "L-053",
+    "x": 18986.23932571845,
+    "y": 240.26323014076024,
+    "text": "how it looks"
+  },
+  {
+    "line_id": "L-054",
+    "x": 18986.23932571845,
+    "y": 240.26323014076024,
+    "text": "why do we store it in one place"
+  },
+  {
+    "line_id": "L-055",
+    "x": 18986.23932571845,
+    "y": 240.26323014076024,
+    "text": "for what salt"
+  },
+  {
+    "line_id": "L-056",
+    "x": 13761.725895562045,
+    "y": 1526.8827878393286,
+    "text": "different algorythms cost params"
+  },
+  {
+    "line_id": "L-057",
+    "x": 6645.989142040501,
+    "y": 10.0,
+    "text": "implementations->theo"
+  },
+  {
+    "line_id": "L-058",
+    "x": 4539.164205400808,
+    "y": 2842.5394112723225,
+    "text": "version"
+  },
+  {
+    "line_id": "L-059",
+    "x": 16545.422438365218,
+    "y": 3928.2648392934616,
+    "text": "cost params values"
+  },
+  {
+    "line_id": "L-060",
+    "x": 3251.4432738123223,
+    "y": 7152.453651747484,
+    "text": "migrating to automatic versioning with password hasher"
+  },
+  {
+    "line_id": "L-061",
+    "x": 5925.212431982811,
+    "y": 2867.7583941580624,
+    "text": "does identityhash adds literal string verion"
+  },
+  {
+    "line_id": "L-062",
+    "x": 5925.212431982811,
+    "y": 2867.7583941580624,
+    "text": "rehashis needed from identity hasher"
+  },
+  {
+    "line_id": "L-063",
+    "x": 45.20497347935634,
+    "y": 5070.225455671074,
+    "text": "fixed time equals"
+  },
+  {
+    "line_id": "L-064",
+    "x": 105.10154522464109,
+    "y": 2859.969042806324,
+    "text": "pbkdf"
+  },
+  {
+    "line_id": "L-065",
+    "x": 7546.802843697145,
+    "y": 796.5002769446683,
+    "text": "PASSWORDHASHER"
+  },
+  {
+    "line_id": "L-066",
+    "x": 5871.1795869456,
+    "y": 4211.967522491509,
+    "text": "rehashneeded"
+  },
+  {
+    "line_id": "L-067",
+    "x": 10719.24357504084,
+    "y": 3529.4914046762187,
+    "text": "about user arg"
+  },
+  {
+    "line_id": "L-068",
+    "x": 10401.886882765986,
+    "y": 4860.876719455427,
+    "text": "why is user there, what to do?"
+  },
+  {
+    "line_id": "L-069",
+    "x": 10856.788867485655,
+    "y": 5109.111941767008,
+    "text": "can pot, create excplicit hasher class that uses the default"
+  },
+  {
+    "line_id": "L-070",
+    "x": 10856.788867485655,
+    "y": 5109.111941767008,
+    "text": "hasher and doesnt need user"
+  }
+]
