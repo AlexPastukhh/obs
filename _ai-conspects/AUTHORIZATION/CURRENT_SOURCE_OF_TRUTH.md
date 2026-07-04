@@ -1,48 +1,52 @@
 # Current Source of Truth — AUTHORIZATION
 
 Generated: 2026-07-04 UTC  
-Correction: source-identity / Stage0 v002
+Source correction: Stage0 v002  
+Transcript: all-regions near-literal v001
 
-## Authoritative source
-
-```text
-source/AUTHORIZATION.svg
-SHA-256: 1736c127c36e6cb6aa6416067669adc34a0491f473bf6d67ac4772200aef9106
-Git blob SHA: 6ea0f2d4afdc0d6f39252b25661172b4de7adc80
-```
-
-## Source status
+## Source
 
 ```text
-complete SVG preservation: done
+authoritative SVG: source/AUTHORIZATION.svg
 unique embedded images: 112 / 112
 image uses: 119 / 119
-duplicate extra placements retained: 7
+duplicate extra placements: 7 / 7
 native SVG text lines: 110 / 110
-native SVG text groups: 35 / 35
-Stage0 visual source review: done
+regions: 7 / 7
 ```
 
-## Transcript status
+## Transcript
 
 ```text
-legacy semantic transcript from older 68/75 source: superseded as coverage proof
-foreign authorization-flow transcript previously placed here: removed by apply procedure
-integrated semantic study draft: present
-near-literal source blocks: 0 / 112
-repetition readiness: NOT_READY_SOURCE_TRANSCRIPT_PENDING
+near-literal source blocks: 112 / 112
+regional transcripts: 7 / 7
+full combined transcript: done
+technical correction notes: done
+full question bank: done
+final coverage audit: done
+remaining source blocks: 0
 ```
+
+## Authoritative files
+
+- `10-full-combined-final-transcript.md`
+- `11-technical-corrections-and-risk-notes.md`
+- `12-full-repetition-question-bank.md`
+- `13-full-conspect-final-coverage-audit.md`
+- regional files under `regions/`
+
+## Quality level
+
+```text
+READY_NEAR_LITERAL_NORMALIZED
+```
+
+The transcript is deliberately not described as character-perfect. Exact punctuation and provider/version-specific formatting remain authoritative in the preserved screenshots.
 
 ## Source identity
 
-`AUTHORIZATION` and
-`authorization-flow-autorization-options-framework-authorizationmiddlewareresulthandler`
-are separate conspects with zero embedded-image-content overlap.
-
-The authorization-flow source and transcript remain in their own folder and are
-not authoritative for this folder.
+The separate authorization-flow / PolicyEvaluator / middleware-result-handler canvas remains in its own repository folder and is not authoritative for this conspect.
 
 ## Next
 
-Create the full 112-source near-literal transcript, final coverage audit and
-question bank. Do not mark this folder complete before that pass.
+Only targeted corrections discovered during repetition or future source updates.

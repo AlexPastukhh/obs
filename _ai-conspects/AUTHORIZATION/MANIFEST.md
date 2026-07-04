@@ -1,30 +1,27 @@
-# MANIFEST — AUTHORIZATION Stage0 source-identity correction v002
+# MANIFEST — AUTHORIZATION all-regions near-literal transcript v001
 
 ## Included
 
-- complete authoritative `source/AUTHORIZATION.svg`;
-- 112 extracted unique screenshots;
-- 119 placement records;
-- 110 native SVG text-line records;
-- 35 text groups;
-- duplicate-placement audit;
-- seven-region visual source plan;
-- canvas preview and 28 contact sheets;
-- source-identity correction report;
-- source review map;
-- semantic study draft clearly marked non-authoritative;
-- near-literal transcript work plan;
-- updated status documents.
+- authoritative `source/AUTHORIZATION.svg`;
+- seven regional source-preserving transcripts covering `S-001..S-112`;
+- full combined transcript;
+- technical correction and risk notes;
+- full source-linked repetition question bank;
+- full coverage JSON/CSV;
+- final coverage audit;
+- updated status documents;
+- application instructions.
 
-## Replacement behavior
+## Coverage
 
-The apply commands replace the entire `_ai-conspects/AUTHORIZATION/` folder.
+```text
+unique sources: 112 / 112
+image uses represented: 119 / 119
+native SVG text lines inventoried: 110 / 110
+regions: 7 / 7
+remaining: 0
+```
 
-This is intentional. The previous folder mixed the separate authorization-flow
-source/transcript into AUTHORIZATION.
+## Application model
 
-## Not completed in this archive
-
-- 112 near-literal source transcript blocks;
-- final transcript coverage closure;
-- final repetition question bank.
+This is an overlay archive. It preserves Stage0 data/images already present and adds or replaces transcript/status files. The raw SVG is included so it can be force-added if repository ignore rules previously omitted it.
