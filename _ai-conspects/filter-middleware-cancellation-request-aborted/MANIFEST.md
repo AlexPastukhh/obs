@@ -1,4 +1,4 @@
-# MANIFEST — Equality / IEquatable / GetHashCode / ValueObject near-literal v001
+# MANIFEST — Filter, Middleware cancellation, RequestAborted near-literal v001
 
 ## Included
 
@@ -16,8 +16,8 @@
 ## Coverage
 
 ```text
-unique screenshots: 18 / 18
-image uses: 18 / 18
+unique screenshots: 10 / 10
+image uses: 10 / 10
 native SVG text lines: 6 / 6
 remaining: 0
 ```

@@ -1,16 +1,16 @@
-# Current Source of Truth — Equality / IEquatable / GetHashCode / ValueObject
+# Current Source of Truth — Filter, Middleware cancellation, RequestAborted
 
 Generated: 2026-07-04 UTC  
 Correction version: near-literal v001
 
 ```text
-authoritative SVG: source/equality.svg
-SHA-256: 73853021447ae9b656b8bb9cf137bdb6f673849c28342ac0dd62052d9251f399
-Git blob SHA: 02906f4e05e6e444ad07a4de26cd17d1255aac5c
-unique embedded screenshots: 18 / 18
-image uses: 18 / 18
+authoritative SVG: source/FILTER,MIDDLEWARE CANCELLATION,REQUEST ABORTED.svg
+SHA-256: a394ec2cbdbbc8c5bc77db3e828fa5c52bf83d4413bd17c60e70d90cbbc9edb0
+Git blob SHA: 57aa65e0b618f209c6481f5ae786e9776bd553a6
+unique embedded screenshots: 10 / 10
+image uses: 10 / 10
 native SVG text lines: 6 / 6
-source blocks: 18 / 18
+source blocks: 10 / 10
 question bank: complete
 technical corrections: complete
 remaining: 0

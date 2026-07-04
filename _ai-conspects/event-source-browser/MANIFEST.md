@@ -1,4 +1,4 @@
-# MANIFEST — Equality / IEquatable / GetHashCode / ValueObject near-literal v001
+# MANIFEST — EventSource browser / Server-Sent Events near-literal v001
 
 ## Included
 
@@ -16,9 +16,9 @@
 ## Coverage
 
 ```text
-unique screenshots: 18 / 18
-image uses: 18 / 18
-native SVG text lines: 6 / 6
+unique screenshots: 20 / 20
+image uses: 20 / 20
+native SVG text lines: 8 / 8
 remaining: 0
 ```
 

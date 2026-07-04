@@ -1,4 +1,4 @@
-# MANIFEST — Equality / IEquatable / GetHashCode / ValueObject near-literal v001
+# MANIFEST — Events, delegates, Action near-literal v001
 
 ## Included
 
@@ -16,9 +16,9 @@
 ## Coverage
 
 ```text
-unique screenshots: 18 / 18
-image uses: 18 / 18
-native SVG text lines: 6 / 6
+unique screenshots: 51 / 51
+image uses: 51 / 51
+native SVG text lines: 47 / 47
 remaining: 0
 ```
 

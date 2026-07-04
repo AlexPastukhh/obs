@@ -1,16 +1,16 @@
-# Current Source of Truth — Equality / IEquatable / GetHashCode / ValueObject
+# Current Source of Truth — EventSource browser / Server-Sent Events
 
 Generated: 2026-07-04 UTC  
 Correction version: near-literal v001
 
 ```text
-authoritative SVG: source/equality.svg
-SHA-256: 73853021447ae9b656b8bb9cf137bdb6f673849c28342ac0dd62052d9251f399
-Git blob SHA: 02906f4e05e6e444ad07a4de26cd17d1255aac5c
-unique embedded screenshots: 18 / 18
-image uses: 18 / 18
-native SVG text lines: 6 / 6
-source blocks: 18 / 18
+authoritative SVG: source/event source browser.svg
+SHA-256: e2fe30a13873b066a835fcec4a9c48d2335b0f156d723845e95dfb6f4590dbd6
+Git blob SHA: dc7da4f7343e594bf75ff99e4396300e468ebe6e
+unique embedded screenshots: 20 / 20
+image uses: 20 / 20
+native SVG text lines: 8 / 8
+source blocks: 20 / 20
 question bank: complete
 technical corrections: complete
 remaining: 0
