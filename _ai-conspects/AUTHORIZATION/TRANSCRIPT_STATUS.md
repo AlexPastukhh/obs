@@ -1,17 +1,16 @@
 # Transcript status — AUTHORIZATION
 
-Generated: 2026-06-27 06:00:00 UTC
+Generated: 2026-07-04 UTC
 
 ```text
-regional transcripts: done
-full combined transcript: done
-full-conspect coverage audit: done
-remaining text elements: 0
-remaining screenshot uses: 0
+source identity corrected: yes
+complete current SVG inventoried: yes
+visual review: 112 / 112 unique screenshots
+placement inventory: 119 / 119 uses
+canvas text inventory: 110 / 110 lines
+near-literal source transcripts: 0 / 112
+final combined transcript: pending
+final coverage audit: pending
+repetition questions: pending
+readiness: NOT_READY_SOURCE_TRANSCRIPT_PENDING
 ```
-
-## Authoritative files
-
-- `10-full-combined-final-transcript.md`
-- `11-full-conspect-final-coverage-audit.md`
-- `data/full-conspect-final-coverage-audit-v001.*`

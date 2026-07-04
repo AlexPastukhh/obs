@@ -1,0 +1,111 @@
+﻿group_id,x,y,text,line_count,root_child_index
+TG-001,16473.016985786882,1214.0998376900789,BASIC POLICIES IN ADDAUTHORIZATION,1,28
+TG-002,12430.443175036215,1261.67709232352,RESOURCE BASED AUTHORIZATION,1,35
+TG-003,10043.52873923612,1178.155336482905,"CUSTOM POLICIES WITH AUTHORIZATION
+HANDLERS WITH REQUIREMENTS",2,36
+TG-004,5526.861869118933,5181.488618953608,NON Generic AuthorizationHandler,1,37
+TG-005,14754.270011140014,1305.021365326872,"BASIC,
+GLOBAL AUTHORIZATION",2,45
+TG-006,10789.74456640815,4932.083917470715,"why to not use context.fail everywhere, multiple handlers registered
+for one requirement",2,46
+TG-007,9520.170063169822,7444.60424484384,"using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+public sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>
+{
+protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)
+{
+if (HasScope(context.User, requirement.Scope))
+context.Succeed(requirement);
+return Task.CompletedTask; // do nothing => not satisfied
+}
+private static bool HasScope(ClaimsPrincipal user, string needed)
+{
+// gather all possible scope strings
+var values = user.FindAll(""scope"").Select(c => c.Value)
+.Concat(user.FindAll(""scp"").Select(c => c.Value));
+foreach (var v in values)
+{
+// handle both ""a b c"" and single-value
+var scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+if (scopes.Contains(needed, StringComparer.Ordinal))
+return true;
+}
+return false;
+}
+}",25,79
+TG-008,10790.95060900991,6666.812974751127,scope claims,1,82
+TG-009,13771.914019023612,5527.160665631993,"when policy might succeed when
+one handler didnt call success",2,83
+TG-010,13872.5789669295,6067.768662310836,"can edit requirement
+admincanedithandler
+scopehandler (IAuthorizaitonHandler not gen)",3,84
+TG-011,12172.6581376805,7881.558173365969,"better to add fallbackpolicy
+and mark allowanonymus where you dont have
+it",3,85
+TG-012,6876.141995066686,1866.6731524896586,"but with min apis context.resource is usually either
+httpcontext or endpoint
+so dont give a fuck about it
+unless you are using non generic handler
+then you need to check wnat is the type of resource",5,97
+TG-013,4497.588418652813,1917.224933463849,"IAuthoriazationHandler
+multiple requirements (usually of one type,
+like scope requirement)",3,112
+TG-014,2780.6024592249632,383.3995297988786,"its requirements, not handlers
+if there was no handler tthat ve
+called success on requirement
+requirement is failed and policy is failed",4,114
+TG-015,17587.798036712396,5404.511459067329,IAuthorizationRequirementData,1,115
+TG-016,18035.144339166887,5860.269016329406,example,1,116
+TG-017,16912.71996727413,5459.056858126281,"case in authoriz
+middleware",2,117
+TG-018,267.0511745653821,4652.870635905821,"using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+public sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>
+{
+protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)
+{
+if (HasScope(context.User, requirement.Scope))
+context.Succeed(requirement);
+return Task.CompletedTask; // do nothing => not satisfied
+}
+private static bool HasScope(ClaimsPrincipal user, string needed)
+{
+// gather all possible scope strings
+var values = user.FindAll(""scope"").Select(c => c.Value)
+.Concat(user.FindAll(""scp"").Select(c => c.Value));
+foreach (var v in values)
+{
+// handle both ""a b c"" and single-value
+var scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+if (scopes.Contains(needed, StringComparer.Ordinal))
+return true;
+}
+return false;
+}
+}",25,132
+TG-019,1311.1648502882817,3781.7462359302945,scope claims,1,133
+TG-020,5851.8653605550935,1230.0001525878906,requirements,1,135
+TG-021,3641.8653605550935,296.6667175292969,"requirements vs
+pending requirements",2,136
+TG-022,5075.198795613687,10.0,authorizationhandlercontext,1,137
+TG-023,7851.865564005615,887.7778625488281,user,1,138
+TG-024,7838.532267663286,1528.9900207519531,resource,1,139
+TG-025,7821.804994936012,3122.6870089444246,succeed(req),1,140
+TG-026,7104.633142130613,5399.25279189601,When non generic,1,141
+TG-027,4449.394407476595,6600.205245509292,"different requirement types
+one logical domain",2,142
+TG-028,5849.530940848368,9635.761072332209,"when need to succeed all
+fail all based on one thing",2,143
+TG-029,5990.864436942118,11651.761072332209,"auth rule dispatcher
+(switch inside)",2,144
+TG-030,6059.023924078156,6613.807777790107,"batching, when we can
+check all permissions in
+one call to api/method",3,145
+TG-031,7679.023924078156,6673.807777790107,"requirements need
+to be considered
+together",3,146
+TG-032,6066.324418420525,5860.480769046375,"even if there is some inher
+can use generic handler",2,147
+TG-033,7820.027162904762,3800.9091769131746,fail,1,148
+TG-034,5773.53207808439,1945.0001525878906,Pendingrequirements,1,149
+TG-035,7544.988496461472,8130.193918894269,!!!!,1,176

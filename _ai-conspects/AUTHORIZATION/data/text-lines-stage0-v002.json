@@ -1,0 +1,772 @@
+[
+  {
+    "line_id": "L-001",
+    "group_id": "TG-001",
+    "x": 16473.016985786882,
+    "y": 1214.0998376900789,
+    "text": "BASIC POLICIES IN ADDAUTHORIZATION"
+  },
+  {
+    "line_id": "L-002",
+    "group_id": "TG-002",
+    "x": 12430.443175036215,
+    "y": 1261.67709232352,
+    "text": "RESOURCE BASED AUTHORIZATION"
+  },
+  {
+    "line_id": "L-003",
+    "group_id": "TG-003",
+    "x": 10043.52873923612,
+    "y": 1178.155336482905,
+    "text": "CUSTOM POLICIES WITH AUTHORIZATION"
+  },
+  {
+    "line_id": "L-004",
+    "group_id": "TG-003",
+    "x": 10043.52873923612,
+    "y": 1178.155336482905,
+    "text": "HANDLERS WITH REQUIREMENTS"
+  },
+  {
+    "line_id": "L-005",
+    "group_id": "TG-004",
+    "x": 5526.861869118933,
+    "y": 5181.488618953608,
+    "text": "NON Generic AuthorizationHandler"
+  },
+  {
+    "line_id": "L-006",
+    "group_id": "TG-005",
+    "x": 14754.270011140014,
+    "y": 1305.021365326872,
+    "text": "BASIC,"
+  },
+  {
+    "line_id": "L-007",
+    "group_id": "TG-005",
+    "x": 14754.270011140014,
+    "y": 1305.021365326872,
+    "text": "GLOBAL AUTHORIZATION"
+  },
+  {
+    "line_id": "L-008",
+    "group_id": "TG-006",
+    "x": 10789.74456640815,
+    "y": 4932.083917470715,
+    "text": "why to not use context.fail everywhere, multiple handlers registered"
+  },
+  {
+    "line_id": "L-009",
+    "group_id": "TG-006",
+    "x": 10789.74456640815,
+    "y": 4932.083917470715,
+    "text": "for one requirement"
+  },
+  {
+    "line_id": "L-010",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "using Microsoft.AspNetCore.Authorization;"
+  },
+  {
+    "line_id": "L-011",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "using System.Security.Claims;"
+  },
+  {
+    "line_id": "L-012",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "public sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>"
+  },
+  {
+    "line_id": "L-013",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "{"
+  },
+  {
+    "line_id": "L-014",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)"
+  },
+  {
+    "line_id": "L-015",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "{"
+  },
+  {
+    "line_id": "L-016",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "if (HasScope(context.User, requirement.Scope))"
+  },
+  {
+    "line_id": "L-017",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "context.Succeed(requirement);"
+  },
+  {
+    "line_id": "L-018",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "return Task.CompletedTask; // do nothing => not satisfied"
+  },
+  {
+    "line_id": "L-019",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "}"
+  },
+  {
+    "line_id": "L-020",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "private static bool HasScope(ClaimsPrincipal user, string needed)"
+  },
+  {
+    "line_id": "L-021",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "{"
+  },
+  {
+    "line_id": "L-022",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "// gather all possible scope strings"
+  },
+  {
+    "line_id": "L-023",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "var values = user.FindAll(\"scope\").Select(c => c.Value)"
+  },
+  {
+    "line_id": "L-024",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": ".Concat(user.FindAll(\"scp\").Select(c => c.Value));"
+  },
+  {
+    "line_id": "L-025",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "foreach (var v in values)"
+  },
+  {
+    "line_id": "L-026",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "{"
+  },
+  {
+    "line_id": "L-027",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "// handle both \"a b c\" and single-value"
+  },
+  {
+    "line_id": "L-028",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "var scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);"
+  },
+  {
+    "line_id": "L-029",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "if (scopes.Contains(needed, StringComparer.Ordinal))"
+  },
+  {
+    "line_id": "L-030",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "return true;"
+  },
+  {
+    "line_id": "L-031",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "}"
+  },
+  {
+    "line_id": "L-032",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "return false;"
+  },
+  {
+    "line_id": "L-033",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "}"
+  },
+  {
+    "line_id": "L-034",
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "}"
+  },
+  {
+    "line_id": "L-035",
+    "group_id": "TG-008",
+    "x": 10790.95060900991,
+    "y": 6666.812974751127,
+    "text": "scope claims"
+  },
+  {
+    "line_id": "L-036",
+    "group_id": "TG-009",
+    "x": 13771.914019023612,
+    "y": 5527.160665631993,
+    "text": "when policy might succeed when"
+  },
+  {
+    "line_id": "L-037",
+    "group_id": "TG-009",
+    "x": 13771.914019023612,
+    "y": 5527.160665631993,
+    "text": "one handler didnt call success"
+  },
+  {
+    "line_id": "L-038",
+    "group_id": "TG-010",
+    "x": 13872.5789669295,
+    "y": 6067.768662310836,
+    "text": "can edit requirement"
+  },
+  {
+    "line_id": "L-039",
+    "group_id": "TG-010",
+    "x": 13872.5789669295,
+    "y": 6067.768662310836,
+    "text": "admincanedithandler"
+  },
+  {
+    "line_id": "L-040",
+    "group_id": "TG-010",
+    "x": 13872.5789669295,
+    "y": 6067.768662310836,
+    "text": "scopehandler (IAuthorizaitonHandler not gen)"
+  },
+  {
+    "line_id": "L-041",
+    "group_id": "TG-011",
+    "x": 12172.6581376805,
+    "y": 7881.558173365969,
+    "text": "better to add fallbackpolicy"
+  },
+  {
+    "line_id": "L-042",
+    "group_id": "TG-011",
+    "x": 12172.6581376805,
+    "y": 7881.558173365969,
+    "text": "and mark allowanonymus where you dont have"
+  },
+  {
+    "line_id": "L-043",
+    "group_id": "TG-011",
+    "x": 12172.6581376805,
+    "y": 7881.558173365969,
+    "text": "it"
+  },
+  {
+    "line_id": "L-044",
+    "group_id": "TG-012",
+    "x": 6876.141995066686,
+    "y": 1866.6731524896586,
+    "text": "but with min apis context.resource is usually either"
+  },
+  {
+    "line_id": "L-045",
+    "group_id": "TG-012",
+    "x": 6876.141995066686,
+    "y": 1866.6731524896586,
+    "text": "httpcontext or endpoint"
+  },
+  {
+    "line_id": "L-046",
+    "group_id": "TG-012",
+    "x": 6876.141995066686,
+    "y": 1866.6731524896586,
+    "text": "so dont give a fuck about it"
+  },
+  {
+    "line_id": "L-047",
+    "group_id": "TG-012",
+    "x": 6876.141995066686,
+    "y": 1866.6731524896586,
+    "text": "unless you are using non generic handler"
+  },
+  {
+    "line_id": "L-048",
+    "group_id": "TG-012",
+    "x": 6876.141995066686,
+    "y": 1866.6731524896586,
+    "text": "then you need to check wnat is the type of resource"
+  },
+  {
+    "line_id": "L-049",
+    "group_id": "TG-013",
+    "x": 4497.588418652813,
+    "y": 1917.224933463849,
+    "text": "IAuthoriazationHandler"
+  },
+  {
+    "line_id": "L-050",
+    "group_id": "TG-013",
+    "x": 4497.588418652813,
+    "y": 1917.224933463849,
+    "text": "multiple requirements (usually of one type,"
+  },
+  {
+    "line_id": "L-051",
+    "group_id": "TG-013",
+    "x": 4497.588418652813,
+    "y": 1917.224933463849,
+    "text": "like scope requirement)"
+  },
+  {
+    "line_id": "L-052",
+    "group_id": "TG-014",
+    "x": 2780.6024592249632,
+    "y": 383.3995297988786,
+    "text": "its requirements, not handlers"
+  },
+  {
+    "line_id": "L-053",
+    "group_id": "TG-014",
+    "x": 2780.6024592249632,
+    "y": 383.3995297988786,
+    "text": "if there was no handler tthat ve"
+  },
+  {
+    "line_id": "L-054",
+    "group_id": "TG-014",
+    "x": 2780.6024592249632,
+    "y": 383.3995297988786,
+    "text": "called success on requirement"
+  },
+  {
+    "line_id": "L-055",
+    "group_id": "TG-014",
+    "x": 2780.6024592249632,
+    "y": 383.3995297988786,
+    "text": "requirement is failed and policy is failed"
+  },
+  {
+    "line_id": "L-056",
+    "group_id": "TG-015",
+    "x": 17587.798036712396,
+    "y": 5404.511459067329,
+    "text": "IAuthorizationRequirementData"
+  },
+  {
+    "line_id": "L-057",
+    "group_id": "TG-016",
+    "x": 18035.144339166887,
+    "y": 5860.269016329406,
+    "text": "example"
+  },
+  {
+    "line_id": "L-058",
+    "group_id": "TG-017",
+    "x": 16912.71996727413,
+    "y": 5459.056858126281,
+    "text": "case in authoriz"
+  },
+  {
+    "line_id": "L-059",
+    "group_id": "TG-017",
+    "x": 16912.71996727413,
+    "y": 5459.056858126281,
+    "text": "middleware"
+  },
+  {
+    "line_id": "L-060",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "using Microsoft.AspNetCore.Authorization;"
+  },
+  {
+    "line_id": "L-061",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "using System.Security.Claims;"
+  },
+  {
+    "line_id": "L-062",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "public sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>"
+  },
+  {
+    "line_id": "L-063",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "{"
+  },
+  {
+    "line_id": "L-064",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)"
+  },
+  {
+    "line_id": "L-065",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "{"
+  },
+  {
+    "line_id": "L-066",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "if (HasScope(context.User, requirement.Scope))"
+  },
+  {
+    "line_id": "L-067",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "context.Succeed(requirement);"
+  },
+  {
+    "line_id": "L-068",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "return Task.CompletedTask; // do nothing => not satisfied"
+  },
+  {
+    "line_id": "L-069",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "}"
+  },
+  {
+    "line_id": "L-070",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "private static bool HasScope(ClaimsPrincipal user, string needed)"
+  },
+  {
+    "line_id": "L-071",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "{"
+  },
+  {
+    "line_id": "L-072",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "// gather all possible scope strings"
+  },
+  {
+    "line_id": "L-073",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "var values = user.FindAll(\"scope\").Select(c => c.Value)"
+  },
+  {
+    "line_id": "L-074",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": ".Concat(user.FindAll(\"scp\").Select(c => c.Value));"
+  },
+  {
+    "line_id": "L-075",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "foreach (var v in values)"
+  },
+  {
+    "line_id": "L-076",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "{"
+  },
+  {
+    "line_id": "L-077",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "// handle both \"a b c\" and single-value"
+  },
+  {
+    "line_id": "L-078",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "var scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);"
+  },
+  {
+    "line_id": "L-079",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "if (scopes.Contains(needed, StringComparer.Ordinal))"
+  },
+  {
+    "line_id": "L-080",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "return true;"
+  },
+  {
+    "line_id": "L-081",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "}"
+  },
+  {
+    "line_id": "L-082",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "return false;"
+  },
+  {
+    "line_id": "L-083",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "}"
+  },
+  {
+    "line_id": "L-084",
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "}"
+  },
+  {
+    "line_id": "L-085",
+    "group_id": "TG-019",
+    "x": 1311.1648502882817,
+    "y": 3781.7462359302945,
+    "text": "scope claims"
+  },
+  {
+    "line_id": "L-086",
+    "group_id": "TG-020",
+    "x": 5851.8653605550935,
+    "y": 1230.0001525878906,
+    "text": "requirements"
+  },
+  {
+    "line_id": "L-087",
+    "group_id": "TG-021",
+    "x": 3641.8653605550935,
+    "y": 296.6667175292969,
+    "text": "requirements vs"
+  },
+  {
+    "line_id": "L-088",
+    "group_id": "TG-021",
+    "x": 3641.8653605550935,
+    "y": 296.6667175292969,
+    "text": "pending requirements"
+  },
+  {
+    "line_id": "L-089",
+    "group_id": "TG-022",
+    "x": 5075.198795613687,
+    "y": 10.0,
+    "text": "authorizationhandlercontext"
+  },
+  {
+    "line_id": "L-090",
+    "group_id": "TG-023",
+    "x": 7851.865564005615,
+    "y": 887.7778625488281,
+    "text": "user"
+  },
+  {
+    "line_id": "L-091",
+    "group_id": "TG-024",
+    "x": 7838.532267663286,
+    "y": 1528.9900207519531,
+    "text": "resource"
+  },
+  {
+    "line_id": "L-092",
+    "group_id": "TG-025",
+    "x": 7821.804994936012,
+    "y": 3122.6870089444246,
+    "text": "succeed(req)"
+  },
+  {
+    "line_id": "L-093",
+    "group_id": "TG-026",
+    "x": 7104.633142130613,
+    "y": 5399.25279189601,
+    "text": "When non generic"
+  },
+  {
+    "line_id": "L-094",
+    "group_id": "TG-027",
+    "x": 4449.394407476595,
+    "y": 6600.205245509292,
+    "text": "different requirement types"
+  },
+  {
+    "line_id": "L-095",
+    "group_id": "TG-027",
+    "x": 4449.394407476595,
+    "y": 6600.205245509292,
+    "text": "one logical domain"
+  },
+  {
+    "line_id": "L-096",
+    "group_id": "TG-028",
+    "x": 5849.530940848368,
+    "y": 9635.761072332209,
+    "text": "when need to succeed all"
+  },
+  {
+    "line_id": "L-097",
+    "group_id": "TG-028",
+    "x": 5849.530940848368,
+    "y": 9635.761072332209,
+    "text": "fail all based on one thing"
+  },
+  {
+    "line_id": "L-098",
+    "group_id": "TG-029",
+    "x": 5990.864436942118,
+    "y": 11651.761072332209,
+    "text": "auth rule dispatcher"
+  },
+  {
+    "line_id": "L-099",
+    "group_id": "TG-029",
+    "x": 5990.864436942118,
+    "y": 11651.761072332209,
+    "text": "(switch inside)"
+  },
+  {
+    "line_id": "L-100",
+    "group_id": "TG-030",
+    "x": 6059.023924078156,
+    "y": 6613.807777790107,
+    "text": "batching, when we can"
+  },
+  {
+    "line_id": "L-101",
+    "group_id": "TG-030",
+    "x": 6059.023924078156,
+    "y": 6613.807777790107,
+    "text": "check all permissions in"
+  },
+  {
+    "line_id": "L-102",
+    "group_id": "TG-030",
+    "x": 6059.023924078156,
+    "y": 6613.807777790107,
+    "text": "one call to api/method"
+  },
+  {
+    "line_id": "L-103",
+    "group_id": "TG-031",
+    "x": 7679.023924078156,
+    "y": 6673.807777790107,
+    "text": "requirements need"
+  },
+  {
+    "line_id": "L-104",
+    "group_id": "TG-031",
+    "x": 7679.023924078156,
+    "y": 6673.807777790107,
+    "text": "to be considered"
+  },
+  {
+    "line_id": "L-105",
+    "group_id": "TG-031",
+    "x": 7679.023924078156,
+    "y": 6673.807777790107,
+    "text": "together"
+  },
+  {
+    "line_id": "L-106",
+    "group_id": "TG-032",
+    "x": 6066.324418420525,
+    "y": 5860.480769046375,
+    "text": "even if there is some inher"
+  },
+  {
+    "line_id": "L-107",
+    "group_id": "TG-032",
+    "x": 6066.324418420525,
+    "y": 5860.480769046375,
+    "text": "can use generic handler"
+  },
+  {
+    "line_id": "L-108",
+    "group_id": "TG-033",
+    "x": 7820.027162904762,
+    "y": 3800.9091769131746,
+    "text": "fail"
+  },
+  {
+    "line_id": "L-109",
+    "group_id": "TG-034",
+    "x": 5773.53207808439,
+    "y": 1945.0001525878906,
+    "text": "Pendingrequirements"
+  },
+  {
+    "line_id": "L-110",
+    "group_id": "TG-035",
+    "x": 7544.988496461472,
+    "y": 8130.193918894269,
+    "text": "!!!!"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "region_id": "R01",
+    "source_range": "S-001..S-020",
+    "unique_sources": 20,
+    "image_uses": 20,
+    "meaning": "Core authorization model, policies, claims and resource-based authorization",
+    "stage0_status": "visually-reviewed",
+    "transcript_status": "pending-near-literal"
+  },
+  {
+    "region_id": "R02",
+    "source_range": "S-021..S-040",
+    "unique_sources": 20,
+    "image_uses": 20,
+    "meaning": "PendingRequirements lifecycle, policy composition, registration and resource handlers",
+    "stage0_status": "visually-reviewed",
+    "transcript_status": "pending-near-literal"
+  },
+  {
+    "region_id": "R03",
+    "source_range": "S-041..S-060",
+    "unique_sources": 20,
+    "image_uses": 23,
+    "meaning": "Requirement types, Succeed/Fail, claims, scopes and handler design",
+    "stage0_status": "visually-reviewed",
+    "transcript_status": "pending-near-literal"
+  },
+  {
+    "region_id": "R04",
+    "source_range": "S-061..S-076",
+    "unique_sources": 16,
+    "image_uses": 20,
+    "meaning": "IAuthorizationRequirementData, explicit Fail cases and multiple handlers",
+    "stage0_status": "visually-reviewed",
+    "transcript_status": "pending-near-literal"
+  },
+  {
+    "region_id": "R05",
+    "source_range": "S-077..S-092",
+    "unique_sources": 16,
+    "image_uses": 16,
+    "meaning": "Alternative handlers, OAuth scopes, non-generic handlers and batching",
+    "stage0_status": "visually-reviewed",
+    "transcript_status": "pending-near-literal"
+  },
+  {
+    "region_id": "R06",
+    "source_range": "S-093..S-104",
+    "unique_sources": 12,
+    "image_uses": 12,
+    "meaning": "FallbackPolicy, AllowAnonymous, combined rules and the AND/OR mental model",
+    "stage0_status": "visually-reviewed",
+    "transcript_status": "pending-near-literal"
+  },
+  {
+    "region_id": "R07",
+    "source_range": "S-105..S-112",
+    "unique_sources": 8,
+    "image_uses": 8,
+    "meaning": "Cross-requirement success, custom failure and dynamic authorization engines",
+    "stage0_status": "visually-reviewed",
+    "transcript_status": "pending-near-literal"
+  }
+]

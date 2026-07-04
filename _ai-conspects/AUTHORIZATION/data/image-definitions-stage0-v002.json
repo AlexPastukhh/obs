@@ -1,0 +1,2802 @@
+[
+  {
+    "source_id": "S-001",
+    "sha256": "a069135767561fd52284f5ddd8e3f4793bc90d9c6feb7f4aff2f9fad63a7b0a4",
+    "sha256_12": "a06913576756",
+    "image_file": "source/images/S-001__a06913576756.png",
+    "pixel_width": 967,
+    "pixel_height": 575,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Policy success requires every requirement; pending requirement means failure",
+    "first_x": 2574.900251358791,
+    "first_y": 520.6783650673151,
+    "nearest_text_groups": [
+      "TG-014",
+      "TG-021",
+      "TG-013"
+    ],
+    "nearest_canvas_text": [
+      "its requirements, not handlers\nif there was no handler tthat ve\ncalled success on requirement\nrequirement is failed and policy is failed",
+      "requirements vs\npending requirements",
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-002",
+    "sha256": "0a92c3d4014fd07a9898b2a95100f39751b33e8387602f8c1f6301fdcce50ebb",
+    "sha256_12": "0a92c3d4014f",
+    "image_file": "source/images/S-002__0a92c3d4014f.png",
+    "pixel_width": 986,
+    "pixel_height": 444,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Requirements versus PendingRequirements in a multi-requirement policy",
+    "first_x": 3516.278618954406,
+    "first_y": 601.4597876295065,
+    "nearest_text_groups": [
+      "TG-021",
+      "TG-014",
+      "TG-013"
+    ],
+    "nearest_canvas_text": [
+      "requirements vs\npending requirements",
+      "its requirements, not handlers\nif there was no handler tthat ve\ncalled success on requirement\nrequirement is failed and policy is failed",
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-003",
+    "sha256": "e5465384da8ea4d7771bfeec512d020f3c78871eb61ae77d6184e5101aeaa054",
+    "sha256_12": "e5465384da8e",
+    "image_file": "source/images/S-003__e5465384da8e.png",
+    "pixel_width": 983,
+    "pixel_height": 372,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Policy example: authenticated user, Admin role, and permission requirement",
+    "first_x": 3499.5968007725896,
+    "first_y": 1045.9446176188558,
+    "nearest_text_groups": [
+      "TG-021",
+      "TG-014",
+      "TG-013"
+    ],
+    "nearest_canvas_text": [
+      "requirements vs\npending requirements",
+      "its requirements, not handlers\nif there was no handler tthat ve\ncalled success on requirement\nrequirement is failed and policy is failed",
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-004",
+    "sha256": "fcdcba7f11bf03d1401c9511d3704a1861dbd0f5410a9f94b3cf6687218e8d11",
+    "sha256_12": "fcdcba7f11bf",
+    "image_file": "source/images/S-004__fcdcba7f11bf.png",
+    "pixel_width": 960,
+    "pixel_height": 606,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "AuthorizationHandlerContext.User and reading ClaimsPrincipal",
+    "first_x": 7827.76254139244,
+    "first_y": 1072.1408675049151,
+    "nearest_text_groups": [
+      "TG-023",
+      "TG-024",
+      "TG-012"
+    ],
+    "nearest_canvas_text": [
+      "user",
+      "resource",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-005",
+    "sha256": "4e32e1ce50a3ec8c4ccef0af8d30c0452b6675d179f5d1512709c8c18034a230",
+    "sha256_12": "4e32e1ce50a3",
+    "image_file": "source/images/S-005__4e32e1ce50a3.png",
+    "pixel_width": 969,
+    "pixel_height": 163,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "PendingRequirements contains requirements not yet succeeded",
+    "first_x": 3495.283740358882,
+    "first_y": 1482.4647703177234,
+    "nearest_text_groups": [
+      "TG-013",
+      "TG-021",
+      "TG-014"
+    ],
+    "nearest_canvas_text": [
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+      "requirements vs\npending requirements",
+      "its requirements, not handlers\nif there was no handler tthat ve\ncalled success on requirement\nrequirement is failed and policy is failed"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-006",
+    "sha256": "6c1f61979aa51fc94a0cd54ecd6107d62a1828769c659ae80ef4a73b2c5f704c",
+    "sha256_12": "6c1f61979aa5",
+    "image_file": "source/images/S-006__6c1f61979aa5.png",
+    "pixel_width": 914,
+    "pixel_height": 403,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Parameterized MinimumAgeRequirement and handler registration",
+    "first_x": 10984.165862077418,
+    "first_y": 1493.8602276272122,
+    "nearest_text_groups": [
+      "TG-003",
+      "TG-002",
+      "TG-024"
+    ],
+    "nearest_canvas_text": [
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS",
+      "RESOURCE BASED AUTHORIZATION",
+      "resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-007",
+    "sha256": "917b8dbf4cc7241e2ec48ef6aae5d89d3f398d62ecc049116cffa73163acdc73",
+    "sha256_12": "917b8dbf4cc7",
+    "image_file": "source/images/S-007__917b8dbf4cc7.png",
+    "pixel_width": 910,
+    "pixel_height": 627,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "AuthorizationHandlerContext.Requirements versus typed handler parameter",
+    "first_x": 5760.992608347029,
+    "first_y": 1508.8962841328303,
+    "nearest_text_groups": [
+      "TG-020",
+      "TG-034",
+      "TG-012"
+    ],
+    "nearest_canvas_text": [
+      "requirements",
+      "Pendingrequirements",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-008",
+    "sha256": "37d31569241c43ec3e7f57cd5f1401d9e25c13063f1c2b6450bb592a6b2a4cfa",
+    "sha256_12": "37d31569241c",
+    "image_file": "source/images/S-008__37d31569241c.png",
+    "pixel_width": 1034,
+    "pixel_height": 456,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Resource-based authorization and a requirement tied to a domain object",
+    "first_x": 12802.874644212912,
+    "first_y": 1540.0111349593517,
+    "nearest_text_groups": [
+      "TG-002",
+      "TG-005",
+      "TG-003"
+    ],
+    "nearest_canvas_text": [
+      "RESOURCE BASED AUTHORIZATION",
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-009",
+    "sha256": "8d5a0c8efcf5f1bc038ab225120305ca3d67254d4b98c04a7810d082b3f94333",
+    "sha256_12": "8d5a0c8efcf5",
+    "image_file": "source/images/S-009__8d5a0c8efcf5.png",
+    "pixel_width": 911,
+    "pixel_height": 507,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "AddAuthorization named policies with claims, roles, and authenticated user",
+    "first_x": 17185.2079903411,
+    "first_y": 1542.5192934624865,
+    "nearest_text_groups": [
+      "TG-001",
+      "TG-005",
+      "TG-015"
+    ],
+    "nearest_canvas_text": [
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "IAuthorizationRequirementData"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-010",
+    "sha256": "0bc7ca7a1b04835c0ad0c1f659161fbe672e5d6ccfd5c166bae6319e7e05d23d",
+    "sha256_12": "0bc7ca7a1b04",
+    "image_file": "source/images/S-010__0bc7ca7a1b04.png",
+    "pixel_width": 893,
+    "pixel_height": 338,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "AuthorizationHandlerContext.Resource with a Document example",
+    "first_x": 7826.069985325659,
+    "first_y": 1653.4347278041587,
+    "nearest_text_groups": [
+      "TG-024",
+      "TG-023",
+      "TG-012"
+    ],
+    "nearest_canvas_text": [
+      "resource",
+      "user",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-011",
+    "sha256": "10d25105b7f525a73f52a83c4625cd81da6e576cb0d3e7732b2e9b49a4b97c0e",
+    "sha256_12": "10d25105b7f5",
+    "image_file": "source/images/S-011__10d25105b7f5.png",
+    "pixel_width": 936,
+    "pixel_height": 154,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Manual IAuthorizationService.AuthorizeAsync with user, resource, and policy",
+    "first_x": 6777.372791126094,
+    "first_y": 1662.786689953171,
+    "nearest_text_groups": [
+      "TG-012",
+      "TG-020",
+      "TG-034"
+    ],
+    "nearest_canvas_text": [
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource",
+      "requirements",
+      "Pendingrequirements"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-012",
+    "sha256": "ba4b8bcd14b1af86dd345ba38231bd2ed239fe784a51361314c5113c23b9870f",
+    "sha256_12": "ba4b8bcd14b1",
+    "image_file": "source/images/S-012__ba4b8bcd14b1.png",
+    "pixel_width": 665,
+    "pixel_height": 340,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Authentication versus authorization; challenge/401 versus forbid/403",
+    "first_x": 14928.517336477707,
+    "first_y": 1686.421477286529,
+    "nearest_text_groups": [
+      "TG-005",
+      "TG-001",
+      "TG-002"
+    ],
+    "nearest_canvas_text": [
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "RESOURCE BASED AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-013",
+    "sha256": "2307c5de3315beff916b51fcd0d7d4a558aa55eb47d86ce928e758be532fd219",
+    "sha256_12": "2307c5de3315",
+    "image_file": "source/images/S-013__2307c5de3315.png",
+    "pixel_width": 902,
+    "pixel_height": 310,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Initial Requirements and PendingRequirements before handlers run",
+    "first_x": 3480.541168152442,
+    "first_y": 1754.2174327452212,
+    "nearest_text_groups": [
+      "TG-013",
+      "TG-021",
+      "TG-014"
+    ],
+    "nearest_canvas_text": [
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+      "requirements vs\npending requirements",
+      "its requirements, not handlers\nif there was no handler tthat ve\ncalled success on requirement\nrequirement is failed and policy is failed"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-014",
+    "sha256": "f6d50d1202a081b72cd51bc53ccace9d5a1a2d9c57bf9ff63e4847644850040c",
+    "sha256_12": "f6d50d1202a0",
+    "image_file": "source/images/S-014__f6d50d1202a0.png",
+    "pixel_width": 960,
+    "pixel_height": 600,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "MinimumAgeHandler using a date-of-birth claim",
+    "first_x": 11008.649297136013,
+    "first_y": 1916.4262168036348,
+    "nearest_text_groups": [
+      "TG-003",
+      "TG-002",
+      "TG-006"
+    ],
+    "nearest_canvas_text": [
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS",
+      "RESOURCE BASED AUTHORIZATION",
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-015",
+    "sha256": "c2fe17547122144c8f246eb8d0708c49be5694133d02be8ef11d35a8e8a28ba4",
+    "sha256_12": "c2fe17547122",
+    "image_file": "source/images/S-015__c2fe17547122.png",
+    "pixel_width": 914,
+    "pixel_height": 596,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Claim issuer meaning and why issuer may matter",
+    "first_x": 20617.325230991148,
+    "first_y": 1941.9924494911465,
+    "nearest_text_groups": [
+      "TG-001",
+      "TG-015",
+      "TG-016"
+    ],
+    "nearest_canvas_text": [
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "IAuthorizationRequirementData",
+      "example"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-016",
+    "sha256": "d3db066d4dd0a85ee288cd0f807b3f51cbfc6ff6cf1e4b3a4bcf46d67f1a9b33",
+    "sha256_12": "d3db066d4dd0",
+    "image_file": "source/images/S-016__d3db066d4dd0.png",
+    "pixel_width": 963,
+    "pixel_height": 525,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Typed resource handler AuthorizationHandler<TRequirement,TResource>",
+    "first_x": 12862.710285992736,
+    "first_y": 1998.808056198106,
+    "nearest_text_groups": [
+      "TG-002",
+      "TG-005",
+      "TG-003"
+    ],
+    "nearest_canvas_text": [
+      "RESOURCE BASED AUTHORIZATION",
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-017",
+    "sha256": "ce06053a65986d6c029f55f8403d7513bc24a21e987ce3d01467b921a2fbac8c",
+    "sha256_12": "ce06053a6598",
+    "image_file": "source/images/S-017__ce06053a6598.png",
+    "pixel_width": 927,
+    "pixel_height": 580,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Document-owner authorization handler",
+    "first_x": 7816.469145987026,
+    "first_y": 2009.2784167690024,
+    "nearest_text_groups": [
+      "TG-024",
+      "TG-012",
+      "TG-025"
+    ],
+    "nearest_canvas_text": [
+      "resource",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource",
+      "succeed(req)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-018",
+    "sha256": "d6ea2afe3923871a06aa9b39c0b4fb073ffa25e03fc52cced57e9cbd819fbed0",
+    "sha256_12": "d6ea2afe3923",
+    "image_file": "source/images/S-018__d6ea2afe3923.png",
+    "pixel_width": 967,
+    "pixel_height": 553,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "RequireClaim: claim type and optional allowed values",
+    "first_x": 19240.206820831103,
+    "first_y": 2014.674883400592,
+    "nearest_text_groups": [
+      "TG-001",
+      "TG-015",
+      "TG-016"
+    ],
+    "nearest_canvas_text": [
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "IAuthorizationRequirementData",
+      "example"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-019",
+    "sha256": "f36d3a05733956e07ee993cc39dbc0c5a90fc7e01adb7521277afeebdac5a270",
+    "sha256_12": "f36d3a057339",
+    "image_file": "source/images/S-019__f36d3a057339.png",
+    "pixel_width": 963,
+    "pixel_height": 461,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Authorize and AllowAnonymous attributes",
+    "first_x": 14912.8505367857,
+    "first_y": 2042.7162982187638,
+    "nearest_text_groups": [
+      "TG-005",
+      "TG-001",
+      "TG-002"
+    ],
+    "nearest_canvas_text": [
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "RESOURCE BASED AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-020",
+    "sha256": "56d37ae8eae7b62bd2e3367359af98144acf774dd525b6b590f2d73b3cc2a670",
+    "sha256_12": "56d37ae8eae7",
+    "image_file": "source/images/S-020__56d37ae8eae7.png",
+    "pixel_width": 976,
+    "pixel_height": 426,
+    "placement_count": 1,
+    "region_id": "R01",
+    "title": "Built-in requirements: RequireClaim and RequireRole",
+    "first_x": 17191.269026139402,
+    "first_y": 2055.119987906939,
+    "nearest_text_groups": [
+      "TG-001",
+      "TG-005",
+      "TG-015"
+    ],
+    "nearest_canvas_text": [
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "IAuthorizationRequirementData"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-021",
+    "sha256": "cb0e5c4c52b34c4a245e3dcb3b15c708f7da001d7dd52aab670ee3002d207885",
+    "sha256_12": "cb0e5c4c52b3",
+    "image_file": "source/images/S-021__cb0e5c4c52b3.png",
+    "pixel_width": 934,
+    "pixel_height": 270,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "PendingRequirements lifecycle as handlers call Succeed",
+    "first_x": 5767.885003025853,
+    "first_y": 2123.3858928974714,
+    "nearest_text_groups": [
+      "TG-034",
+      "TG-020",
+      "TG-012"
+    ],
+    "nearest_canvas_text": [
+      "Pendingrequirements",
+      "requirements",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-022",
+    "sha256": "3dc9924ba9522cb28a346c96e255b99e0eeaf3560c67f80ad20ccdce9d0a027c",
+    "sha256_12": "3dc9924ba952",
+    "image_file": "source/images/S-022__3dc9924ba952.png",
+    "pixel_width": 931,
+    "pixel_height": 501,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Policy succeeds only when PendingRequirements becomes empty",
+    "first_x": 3481.1823665296142,
+    "first_y": 2126.9500377256754,
+    "nearest_text_groups": [
+      "TG-013",
+      "TG-021",
+      "TG-014"
+    ],
+    "nearest_canvas_text": [
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+      "requirements vs\npending requirements",
+      "its requirements, not handlers\nif there was no handler tthat ve\ncalled success on requirement\nrequirement is failed and policy is failed"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-023",
+    "sha256": "a4f06df799efa56865d0c36dd958bd4bfb14c7191c239a7df2770273be300348",
+    "sha256_12": "a4f06df799ef",
+    "image_file": "source/images/S-023__a4f06df799ef.png",
+    "pixel_width": 955,
+    "pixel_height": 551,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Non-generic SuperAdmin handler processes all pending requirements",
+    "first_x": 4642.576337665465,
+    "first_y": 2154.574994855733,
+    "nearest_text_groups": [
+      "TG-013",
+      "TG-034",
+      "TG-020"
+    ],
+    "nearest_canvas_text": [
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+      "Pendingrequirements",
+      "requirements"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-024",
+    "sha256": "35f5407c018802b65abe0dd9afafc82aae05c725a9cbff5b92c0dee7442cb6bc",
+    "sha256_12": "35f5407c0188",
+    "image_file": "source/images/S-024__35f5407c0188.png",
+    "pixel_width": 942,
+    "pixel_height": 358,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Snapshot PendingRequirements with ToList because Succeed mutates it",
+    "first_x": 5770.55177141778,
+    "first_y": 2404.941414544597,
+    "nearest_text_groups": [
+      "TG-034",
+      "TG-020",
+      "TG-012"
+    ],
+    "nearest_canvas_text": [
+      "Pendingrequirements",
+      "requirements",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-025",
+    "sha256": "bf6c594ffc14d775b582b131836e969ef01020f202364540c9b12b0efb3f2a56",
+    "sha256_12": "bf6c594ffc14",
+    "image_file": "source/images/S-025__bf6c594ffc14.png",
+    "pixel_width": 996,
+    "pixel_height": 505,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Register handler and configure AtLeast18 policy",
+    "first_x": 10990.142310795723,
+    "first_y": 2418.0928955804393,
+    "nearest_text_groups": [
+      "TG-003",
+      "TG-002",
+      "TG-006"
+    ],
+    "nearest_canvas_text": [
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS",
+      "RESOURCE BASED AUTHORIZATION",
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-026",
+    "sha256": "d15243009307770416ee20f127c6270c45e69d3cbcc05b7174a821527b8aca97",
+    "sha256_12": "d15243009307",
+    "image_file": "source/images/S-026__d15243009307.png",
+    "pixel_width": 786,
+    "pixel_height": 380,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "RequireClaim allowed values are OR inside one requirement",
+    "first_x": 19276.529009331556,
+    "first_y": 2503.0444540873796,
+    "nearest_text_groups": [
+      "TG-001",
+      "TG-015",
+      "TG-016"
+    ],
+    "nearest_canvas_text": [
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "IAuthorizationRequirementData",
+      "example"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-027",
+    "sha256": "04bd6e4af1cfb692da267a7a3e731548c4ac0c8fde0bfde21eab828729ca442a",
+    "sha256_12": "04bd6e4af1cf",
+    "image_file": "source/images/S-027__04bd6e4af1cf.png",
+    "pixel_width": 1020,
+    "pixel_height": 575,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Role and policy authorization attributes",
+    "first_x": 14974.89375445299,
+    "first_y": 2520.393406983412,
+    "nearest_text_groups": [
+      "TG-005",
+      "TG-001",
+      "TG-002"
+    ],
+    "nearest_canvas_text": [
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "RESOURCE BASED AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-028",
+    "sha256": "578b715430cbe7f1115c0c0db34f19fb298bb6fd31bd627bb0db059f2afa19c0",
+    "sha256_12": "578b715430cb",
+    "image_file": "source/images/S-028__578b715430cb.png",
+    "pixel_width": 952,
+    "pixel_height": 423,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "RequireAuthenticatedUser and RequireAssertion",
+    "first_x": 17215.120832780027,
+    "first_y": 2524.768181266314,
+    "nearest_text_groups": [
+      "TG-001",
+      "TG-005",
+      "TG-015"
+    ],
+    "nearest_canvas_text": [
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "IAuthorizationRequirementData"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-029",
+    "sha256": "95c2aee6e001a72f6dc8416147d054fe34736120b6fa3b18141a394661400020",
+    "sha256_12": "95c2aee6e001",
+    "image_file": "source/images/S-029__95c2aee6e001.png",
+    "pixel_width": 774,
+    "pixel_height": 311,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Resource-based owner-edit code continuation",
+    "first_x": 12904.378443958374,
+    "first_y": 2544.956907600852,
+    "nearest_text_groups": [
+      "TG-002",
+      "TG-005",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "RESOURCE BASED AUTHORIZATION",
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-030",
+    "sha256": "80cf7dd51367416c7e384b0d5f593bc053c6848e243b2e0e30e1db2766e31154",
+    "sha256_12": "80cf7dd51367",
+    "image_file": "source/images/S-030__80cf7dd51367.png",
+    "pixel_width": 998,
+    "pixel_height": 217,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Constructing claims and default issuer LOCAL AUTHORITY",
+    "first_x": 20616.229599180904,
+    "first_y": 2583.673308549267,
+    "nearest_text_groups": [
+      "TG-015",
+      "TG-016",
+      "TG-001"
+    ],
+    "nearest_canvas_text": [
+      "IAuthorizationRequirementData",
+      "example",
+      "BASIC POLICIES IN ADDAUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-031",
+    "sha256": "86a439b9108da448042d34f8f50a93f150e1d00f26d0ad43e90b69ffc4a083dc",
+    "sha256_12": "86a439b9108d",
+    "image_file": "source/images/S-031__86a439b9108d.png",
+    "pixel_width": 936,
+    "pixel_height": 525,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Generic resource handler signature and typed resource access",
+    "first_x": 7785.2894684450785,
+    "first_y": 2607.945073263143,
+    "nearest_text_groups": [
+      "TG-025",
+      "TG-024",
+      "TG-012"
+    ],
+    "nearest_canvas_text": [
+      "succeed(req)",
+      "resource",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-032",
+    "sha256": "86f8496e2860021ad12d0afe1217525e26126393c2c2ff78b0556b211f3cc43e",
+    "sha256_12": "86f8496e2860",
+    "image_file": "source/images/S-032__86f8496e2860.png",
+    "pixel_width": 941,
+    "pixel_height": 368,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Why PendingRequirements.ToList is required during iteration",
+    "first_x": 4616.84070073588,
+    "first_y": 2663.7196081464917,
+    "nearest_text_groups": [
+      "TG-013",
+      "TG-034",
+      "TG-020"
+    ],
+    "nearest_canvas_text": [
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+      "Pendingrequirements",
+      "requirements"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-033",
+    "sha256": "6748221317fe1b4ad3c517459111c28ad9d0938da0a40e3d6da3e3c78c14263d",
+    "sha256_12": "6748221317fe",
+    "image_file": "source/images/S-033__6748221317fe.png",
+    "pixel_width": 957,
+    "pixel_height": 487,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Claim issuer as a trust boundary with multiple schemes",
+    "first_x": 20661.57829317355,
+    "first_y": 2830.1113695537133,
+    "nearest_text_groups": [
+      "TG-015",
+      "TG-016",
+      "TG-001"
+    ],
+    "nearest_canvas_text": [
+      "IAuthorizationRequirementData",
+      "example",
+      "BASIC POLICIES IN ADDAUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-034",
+    "sha256": "2ec2a6ee24c7dcd7711644b656511f0a6355f155e7a0a87d2960a8bf260e912b",
+    "sha256_12": "2ec2a6ee24c7",
+    "image_file": "source/images/S-034__2ec2a6ee24c7.png",
+    "pixel_width": 971,
+    "pixel_height": 319,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Custom requirement, handler, DI registration, and policy registration",
+    "first_x": 12878.100632272177,
+    "first_y": 2873.1791467772746,
+    "nearest_text_groups": [
+      "TG-002",
+      "TG-005",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "RESOURCE BASED AUTHORIZATION",
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-035",
+    "sha256": "cac23e96cd0d201015f8a4cc15e18336ee8da8156a9fb9630943238a2bcd484e",
+    "sha256_12": "cac23e96cd0d",
+    "image_file": "source/images/S-035__cac23e96cd0d.png",
+    "pixel_width": 867,
+    "pixel_height": 352,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Multiple requirements in one policy use AND semantics",
+    "first_x": 11057.4544309677,
+    "first_y": 2932.13803446933,
+    "nearest_text_groups": [
+      "TG-006",
+      "TG-003",
+      "TG-002"
+    ],
+    "nearest_canvas_text": [
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement",
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS",
+      "RESOURCE BASED AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-036",
+    "sha256": "8f6b3f5c49795b66b6e7c7d68cbf4d0afd4e65d73e6cadd0cb7a7f2b07f96657",
+    "sha256_12": "8f6b3f5c4979",
+    "image_file": "source/images/S-036__8f6b3f5c4979.png",
+    "pixel_width": 833,
+    "pixel_height": 208,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Manual OR logic versus multiple requirement calls",
+    "first_x": 19301.325924352197,
+    "first_y": 2937.290226614765,
+    "nearest_text_groups": [
+      "TG-015",
+      "TG-016",
+      "TG-001"
+    ],
+    "nearest_canvas_text": [
+      "IAuthorizationRequirementData",
+      "example",
+      "BASIC POLICIES IN ADDAUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-037",
+    "sha256": "62f3d35cb6a400058e4af1cff22c797710582dbb539e818dd9832b42c5fab00e",
+    "sha256_12": "62f3d35cb6a4",
+    "image_file": "source/images/S-037__62f3d35cb6a4.png",
+    "pixel_width": 996,
+    "pixel_height": 313,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Policy-specific authentication schemes",
+    "first_x": 17214.073271861133,
+    "first_y": 2985.455934852849,
+    "nearest_text_groups": [
+      "TG-001",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-038",
+    "sha256": "95f772551bc86e47ba6fbc89032243828c6793691eb7768aa1a71daeedbdf024",
+    "sha256_12": "95f772551bc8",
+    "image_file": "source/images/S-038__95f772551bc8.png",
+    "pixel_width": 971,
+    "pixel_height": 219,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Minimal API RequireAuthorization",
+    "first_x": 14995.73949349143,
+    "first_y": 3045.4942523203263,
+    "nearest_text_groups": [
+      "TG-005",
+      "TG-001",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-039",
+    "sha256": "9847653a571c676eff71d34f9ea6c9f0f1ff29b430bbdd68fa5a05a5720466bd",
+    "sha256_12": "9847653a571c",
+    "image_file": "source/images/S-039__9847653a571c.png",
+    "pixel_width": 697,
+    "pixel_height": 275,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "RequireClaim without allowed values accepts any value for that claim type",
+    "first_x": 19328.263205711206,
+    "first_y": 3154.094486062175,
+    "nearest_text_groups": [
+      "TG-015",
+      "TG-016",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "IAuthorizationRequirementData",
+      "example",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-040",
+    "sha256": "6e4115c897c897819931adb7433978199daca86c4d86bfdb18c13c8c59b73838",
+    "sha256_12": "6e4115c897c8",
+    "image_file": "source/images/S-040__6e4115c897c8.png",
+    "pixel_width": 917,
+    "pixel_height": 462,
+    "placement_count": 1,
+    "region_id": "R02",
+    "title": "Controller flow for resource-based authorization",
+    "first_x": 12910.656153919312,
+    "first_y": 3199.4569584634773,
+    "nearest_text_groups": [
+      "TG-002",
+      "TG-009",
+      "TG-005"
+    ],
+    "nearest_canvas_text": [
+      "RESOURCE BASED AUTHORIZATION",
+      "when policy might succeed when\none handler didnt call success",
+      "BASIC,\nGLOBAL AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-041",
+    "sha256": "4b4872b88aa54984a85a8a21ba7d58cfe1f7c124cf257743997ee9f6d2d735a4",
+    "sha256_12": "4b4872b88aa5",
+    "image_file": "source/images/S-041__4b4872b88aa5.png",
+    "pixel_width": 911,
+    "pixel_height": 398,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "PermissionRequirement carrying a permission name",
+    "first_x": 4627.766855947313,
+    "first_y": 3238.7990252994914,
+    "nearest_text_groups": [
+      "TG-013",
+      "TG-034",
+      "TG-004"
+    ],
+    "nearest_canvas_text": [
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+      "Pendingrequirements",
+      "NON Generic AuthorizationHandler"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-042",
+    "sha256": "100267b21ad03fbec0f235a32739cd3cdc1932063eb3eeeac3a19e27781d4110",
+    "sha256_12": "100267b21ad0",
+    "image_file": "source/images/S-042__100267b21ad0.png",
+    "pixel_width": 762,
+    "pixel_height": 354,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Inspecting claim issuer",
+    "first_x": 20629.334759284244,
+    "first_y": 3273.361846317588,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-043",
+    "sha256": "50dd27627c2565f7df2d12fdf46606ff08c442fec4111f53bbdd393bd8d0b1f8",
+    "sha256_12": "50dd27627c25",
+    "image_file": "source/images/S-043__50dd27627c25.png",
+    "pixel_width": 666,
+    "pixel_height": 447,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Claims and roles basics",
+    "first_x": 15096.255594178125,
+    "first_y": 3289.2718278586017,
+    "nearest_text_groups": [
+      "TG-005",
+      "TG-001",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "BASIC,\nGLOBAL AUTHORIZATION",
+      "BASIC POLICIES IN ADDAUTHORIZATION",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-044",
+    "sha256": "03d12685fe2e43b320e18c64af52c42a29de519a8967fe9c770ce54033d5e28b",
+    "sha256_12": "03d12685fe2e",
+    "image_file": "source/images/S-044__03d12685fe2e.png",
+    "pixel_width": 956,
+    "pixel_height": 521,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Succeed removes one specific requirement from PendingRequirements",
+    "first_x": 7786.0644670914935,
+    "first_y": 3293.2784778041587,
+    "nearest_text_groups": [
+      "TG-025",
+      "TG-033",
+      "TG-012"
+    ],
+    "nearest_canvas_text": [
+      "succeed(req)",
+      "fail",
+      "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-045",
+    "sha256": "02286505fe9f9a3b546f4e25cd8a2f4a415a1fc14f410fd32fc80d1ed8caf093",
+    "sha256_12": "02286505fe9f",
+    "image_file": "source/images/S-045__02286505fe9f.png",
+    "pixel_width": 821,
+    "pixel_height": 292,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Handler outcomes: succeed, do nothing, or fail",
+    "first_x": 11068.602624327075,
+    "first_y": 3302.8787299988307,
+    "nearest_text_groups": [
+      "TG-006",
+      "TG-003",
+      "TG-002"
+    ],
+    "nearest_canvas_text": [
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement",
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS",
+      "RESOURCE BASED AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-046",
+    "sha256": "4176eefdb469a5ddf011c17cbe263a62c36ea202de74de715b591b9c57f2387f",
+    "sha256_12": "4176eefdb469",
+    "image_file": "source/images/S-046__4176eefdb469.png",
+    "pixel_width": 785,
+    "pixel_height": 328,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "One RequireClaim with several values is OR; separate calls are AND",
+    "first_x": 19325.802528771623,
+    "first_y": 3450.2395957104964,
+    "nearest_text_groups": [
+      "TG-015",
+      "TG-016",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "IAuthorizationRequirementData",
+      "example",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-047",
+    "sha256": "b0ab22b9993ef63bd6419966512069f05f19b1196c40bdb7f97da7d19a174291",
+    "sha256_12": "b0ab22b9993e",
+    "image_file": "source/images/S-047__b0ab22b9993e.png",
+    "pixel_width": 926,
+    "pixel_height": 536,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Scope APIs, fallback secure default, and quick AuthorizeAsync reference",
+    "first_x": 11093.589250643734,
+    "first_y": 3601.7965766785182,
+    "nearest_text_groups": [
+      "TG-006",
+      "TG-003",
+      "TG-002"
+    ],
+    "nearest_canvas_text": [
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement",
+      "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS",
+      "RESOURCE BASED AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-048",
+    "sha256": "950135defd9233056277fac563c444b9507661421b682997d8ea5ec147def505",
+    "sha256_12": "950135defd92",
+    "image_file": "source/images/S-048__950135defd92.png",
+    "pixel_width": 783,
+    "pixel_height": 438,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "RequireClaim does not validate issuer; custom assertion example",
+    "first_x": 20712.6881878328,
+    "first_y": 3678.5457872816114,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-049",
+    "sha256": "511bad35c0ba61e61c89492a03641ca5f8563259f0549e6e2b755b8a51d14156",
+    "sha256_12": "511bad35c0ba",
+    "image_file": "source/images/S-049__511bad35c0ba.png",
+    "pixel_width": 1014,
+    "pixel_height": 411,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Controller resource-based edit flow and forbid result",
+    "first_x": 12943.267400664103,
+    "first_y": 3686.068001757743,
+    "nearest_text_groups": [
+      "TG-009",
+      "TG-002",
+      "TG-006"
+    ],
+    "nearest_canvas_text": [
+      "when policy might succeed when\none handler didnt call success",
+      "RESOURCE BASED AUTHORIZATION",
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-050",
+    "sha256": "83102e372542aacaaacb6aafe59ae492ce287ca79788e59babc5793aaa147aaf",
+    "sha256_12": "83102e372542",
+    "image_file": "source/images/S-050__83102e372542.png",
+    "pixel_width": 926,
+    "pixel_height": 344,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Policy containing multiple PermissionRequirement instances",
+    "first_x": 4642.345917304116,
+    "first_y": 3722.994722175694,
+    "nearest_text_groups": [
+      "TG-004",
+      "TG-013",
+      "TG-034"
+    ],
+    "nearest_canvas_text": [
+      "NON Generic AuthorizationHandler",
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+      "Pendingrequirements"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-051",
+    "sha256": "77bb64bdf22182a3aecc25459760eacb8915ae51b336693bbb59b93513cca4ba",
+    "sha256_12": "77bb64bdf221",
+    "image_file": "source/images/S-051__77bb64bdf221.png",
+    "pixel_width": 824,
+    "pixel_height": 135,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Roles are commonly represented as claims",
+    "first_x": 15095.774067485416,
+    "first_y": 3771.197798995743,
+    "nearest_text_groups": [
+      "TG-009",
+      "TG-017",
+      "TG-005"
+    ],
+    "nearest_canvas_text": [
+      "when policy might succeed when\none handler didnt call success",
+      "case in authoriz\nmiddleware",
+      "BASIC,\nGLOBAL AUTHORIZATION"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-052",
+    "sha256": "ca3340ce0142ac8bb6e8ce5576000fc66f8aa7e8f84eed14dcb407e47c2803e7",
+    "sha256_12": "ca3340ce0142",
+    "image_file": "source/images/S-052__ca3340ce0142.png",
+    "pixel_width": 934,
+    "pixel_height": 437,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Fail is stronger than leaving a requirement unsatisfied",
+    "first_x": 7778.810723240698,
+    "first_y": 3925.404106805361,
+    "nearest_text_groups": [
+      "TG-033",
+      "TG-025",
+      "TG-026"
+    ],
+    "nearest_canvas_text": [
+      "fail",
+      "succeed(req)",
+      "When non generic"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-053",
+    "sha256": "ba2327778ece8b2c63189f4592b4861cbeb93f0f5954dc2d320694ff546baa9b",
+    "sha256_12": "ba2327778ece",
+    "image_file": "source/images/S-053__ba2327778ece.png",
+    "pixel_width": 1001,
+    "pixel_height": 258,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Authorization pitfalls and practical checklist",
+    "first_x": 11084.973039908673,
+    "first_y": 4128.471286422426,
+    "nearest_text_groups": [
+      "TG-006",
+      "TG-008",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement",
+      "scope claims",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-054",
+    "sha256": "356780cb4a6c35c6d565b3717aaaf50f59e7664a32e041ecbb812336a969dfad",
+    "sha256_12": "356780cb4a6c",
+    "image_file": "source/images/S-054__356780cb4a6c.png",
+    "pixel_width": 977,
+    "pixel_height": 398,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "JWT issuer notes and validation rules",
+    "first_x": 20711.38176736547,
+    "first_y": 4134.68827477724,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-055",
+    "sha256": "7d5c2fc156338e1971b19d7e16267ebb9eeececafb7dadcdb9e3ff5a0279c931",
+    "sha256_12": "7d5c2fc15633",
+    "image_file": "source/images/S-055__7d5c2fc15633.png",
+    "pixel_width": 916,
+    "pixel_height": 655,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "MultiPermissionHandler batches pending permission checks",
+    "first_x": 4642.169538345919,
+    "first_y": 4148.124186461389,
+    "nearest_text_groups": [
+      "TG-004",
+      "TG-032",
+      "TG-013"
+    ],
+    "nearest_canvas_text": [
+      "NON Generic AuthorizationHandler",
+      "even if there is some inher\ncan use generic handler",
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-056",
+    "sha256": "961faf90010b0b753658d41108eb82beeadc05d3f197219748d4115e7a63dcca",
+    "sha256_12": "961faf90010b",
+    "image_file": "source/images/S-056__961faf90010b.png",
+    "pixel_width": 976,
+    "pixel_height": 355,
+    "placement_count": 2,
+    "region_id": "R03",
+    "title": "ScopeRequirement definition and required scope value",
+    "first_x": 1484.1149682410542,
+    "first_y": 4225.7839313997365,
+    "nearest_text_groups": [
+      "TG-019",
+      "TG-018",
+      "TG-013"
+    ],
+    "nearest_canvas_text": [
+      "scope claims",
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+      "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-057",
+    "sha256": "a58a93244dc482f65cc02e01a081a16278f796f6d3797da8698776b6c72ce339",
+    "sha256_12": "a58a93244dc4",
+    "image_file": "source/images/S-057__a58a93244dc4.png",
+    "pixel_width": 981,
+    "pixel_height": 535,
+    "placement_count": 2,
+    "region_id": "R03",
+    "title": "ScopeRequirementHandler supports scope/scp and repeated claims",
+    "first_x": 1519.1839501790928,
+    "first_y": 4626.088727296589,
+    "nearest_text_groups": [
+      "TG-019",
+      "TG-018",
+      "TG-027"
+    ],
+    "nearest_canvas_text": [
+      "scope claims",
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+      "different requirement types\none logical domain"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-058",
+    "sha256": "d9fa3dcf0f55d0568e451661f01a58b33e86bb8a2233c6929807c4c7dc7dcc37",
+    "sha256_12": "d9fa3dcf0f55",
+    "image_file": "source/images/S-058__d9fa3dcf0f55.png",
+    "pixel_width": 947,
+    "pixel_height": 442,
+    "placement_count": 2,
+    "region_id": "R03",
+    "title": "HasScope helper parses space-separated scope values",
+    "first_x": 1502.4245448948677,
+    "first_y": 5148.063159114766,
+    "nearest_text_groups": [
+      "TG-018",
+      "TG-019",
+      "TG-027"
+    ],
+    "nearest_canvas_text": [
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+      "scope claims",
+      "different requirement types\none logical domain"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-059",
+    "sha256": "b3d3860e13e13e5c5210c87249094d77347462c24700a04aecb95c8865550142",
+    "sha256_12": "b3d3860e13e1",
+    "image_file": "source/images/S-059__b3d3860e13e1.png",
+    "pixel_width": 928,
+    "pixel_height": 253,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "When a non-generic authorization handler is useful",
+    "first_x": 7075.807743533769,
+    "first_y": 5567.458452533756,
+    "nearest_text_groups": [
+      "TG-026",
+      "TG-032",
+      "TG-031"
+    ],
+    "nearest_canvas_text": [
+      "When non generic",
+      "even if there is some inher\ncan use generic handler",
+      "requirements need\nto be considered\ntogether"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-060",
+    "sha256": "2e29e7d75841efcd6920fc3f2938c734016ba5562c0e2c4a3aa7ad6db9407ede",
+    "sha256_12": "2e29e7d75841",
+    "image_file": "source/images/S-060__2e29e7d75841.png",
+    "pixel_width": 976,
+    "pixel_height": 235,
+    "placement_count": 1,
+    "region_id": "R03",
+    "title": "Generic handler is usually enough for one requirement type",
+    "first_x": 6047.245141808509,
+    "first_y": 5579.106621848986,
+    "nearest_text_groups": [
+      "TG-032",
+      "TG-004",
+      "TG-030"
+    ],
+    "nearest_canvas_text": [
+      "even if there is some inher\ncan use generic handler",
+      "NON Generic AuthorizationHandler",
+      "batching, when we can\ncheck all permissions in\none call to api/method"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-061",
+    "sha256": "f3ec0ebfd96d9822d53308aa26254fee18fba61ff289459b683c0ad1393d7011",
+    "sha256_12": "f3ec0ebfd96d",
+    "image_file": "source/images/S-061__f3ec0ebfd96d.png",
+    "pixel_width": 952,
+    "pixel_height": 351,
+    "placement_count": 2,
+    "region_id": "R04",
+    "title": "Register ScopeRequirementHandler and ProductsRead/ProductsWrite policies",
+    "first_x": 1476.8942048735626,
+    "first_y": 5631.138898195027,
+    "nearest_text_groups": [
+      "TG-018",
+      "TG-019",
+      "TG-027"
+    ],
+    "nearest_canvas_text": [
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+      "scope claims",
+      "different requirement types\none logical domain"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-062",
+    "sha256": "53992f53f0e515fedb2f59f427eed34b9fc152e7ab6da2a218e63503a796b120",
+    "sha256_12": "53992f53f0e5",
+    "image_file": "source/images/S-062__53992f53f0e5.png",
+    "pixel_width": 939,
+    "pixel_height": 147,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "IAuthorizationRequirementData produces requirements from endpoint metadata",
+    "first_x": 17893.53430045916,
+    "first_y": 5635.636239024952,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-063",
+    "sha256": "add7639454fb0d2bff8f7a1329a7f33ab80f63b8d623afbd0dd6a9c289a42892",
+    "sha256_12": "add7639454fb",
+    "image_file": "source/images/S-063__add7639454fb.png",
+    "pixel_width": 945,
+    "pixel_height": 583,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "Middleware code combines IAuthorizationRequirementData into effective policy",
+    "first_x": 16908.804574425703,
+    "first_y": 5640.20217733875,
+    "nearest_text_groups": [
+      "TG-017",
+      "TG-015",
+      "TG-016"
+    ],
+    "nearest_canvas_text": [
+      "case in authoriz\nmiddleware",
+      "IAuthorizationRequirementData",
+      "example"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-064",
+    "sha256": "33f8b19af7d10d5d9a335100a965d7eb58397f5ea72341bb4d0c79cb93ac9d9f",
+    "sha256_12": "33f8b19af7d1",
+    "image_file": "source/images/S-064__33f8b19af7d1.png",
+    "pixel_width": 1033,
+    "pixel_height": 282,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "Why a policy can still succeed when one handler does nothing",
+    "first_x": 13913.376895639407,
+    "first_y": 5766.794175504916,
+    "nearest_text_groups": [
+      "TG-009",
+      "TG-010",
+      "TG-011"
+    ],
+    "nearest_canvas_text": [
+      "when policy might succeed when\none handler didnt call success",
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-065",
+    "sha256": "d4e2dff67ec6851fa6b8a0beb3cdbe4625057d0e9a33ee6500260e3cb249d5ab",
+    "sha256_12": "d4e2dff67ec6",
+    "image_file": "source/images/S-065__d4e2dff67ec6.png",
+    "pixel_width": 1107,
+    "pixel_height": 403,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "Succeed, do nothing, and Fail semantics in authorization handlers",
+    "first_x": 11864.056838450162,
+    "first_y": 5871.94361965309,
+    "nearest_text_groups": [
+      "TG-008",
+      "TG-006",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "scope claims",
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-066",
+    "sha256": "feb930e951d0b4842bfa6653d58ac9504bffcff2ba2e8656145245ce70dfef49",
+    "sha256_12": "feb930e951d0",
+    "image_file": "source/images/S-066__feb930e951d0.png",
+    "pixel_width": 997,
+    "pixel_height": 319,
+    "placement_count": 2,
+    "region_id": "R04",
+    "title": "Using ProductsRead and ProductsWrite policies in controllers",
+    "first_x": 1451.9698884673126,
+    "first_y": 6013.199522751148,
+    "nearest_text_groups": [
+      "TG-018",
+      "TG-019",
+      "TG-027"
+    ],
+    "nearest_canvas_text": [
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+      "scope claims",
+      "different requirement types\none logical domain"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-067",
+    "sha256": "eb7f882e6cb1d68641ee24948ff2696ce80fce932ffb1f9afc19e27d29bff61d",
+    "sha256_12": "eb7f882e6cb1",
+    "image_file": "source/images/S-067__eb7f882e6cb1.png",
+    "pixel_width": 939,
+    "pixel_height": 312,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "MinimumAge attribute as requirement metadata",
+    "first_x": 17923.53418420172,
+    "first_y": 6030.913883591067,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-068",
+    "sha256": "dc5cf22cf3cb22486313e419da963202bbbf8463ba9d06f2de4893c495607bcb",
+    "sha256_12": "dc5cf22cf3cb",
+    "image_file": "source/images/S-068__dc5cf22cf3cb.png",
+    "pixel_width": 913,
+    "pixel_height": 366,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "Shared IPermissionRequirement interface can enable a generic handler",
+    "first_x": 6040.56683777205,
+    "first_y": 6079.8643637578125,
+    "nearest_text_groups": [
+      "TG-032",
+      "TG-030",
+      "TG-004"
+    ],
+    "nearest_canvas_text": [
+      "even if there is some inher\ncan use generic handler",
+      "batching, when we can\ncheck all permissions in\none call to api/method",
+      "NON Generic AuthorizationHandler"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-069",
+    "sha256": "ea0842f7788b6e858a027765f18eeee234c035081518dd8d42eaf3e05901f500",
+    "sha256_12": "ea0842f7788b",
+    "image_file": "source/images/S-069__ea0842f7788b.png",
+    "pixel_width": 966,
+    "pixel_height": 217,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "Endpoint metadata requirements are added to the normal policy",
+    "first_x": 16870.03440218442,
+    "first_y": 6130.636137299694,
+    "nearest_text_groups": [
+      "TG-017",
+      "TG-015",
+      "TG-016"
+    ],
+    "nearest_canvas_text": [
+      "case in authoriz\nmiddleware",
+      "IAuthorizationRequirementData",
+      "example"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-070",
+    "sha256": "0e8228f66e5dbdbcea6775b0d65be82ffbc00e3f9b84316a1124afb077fe01ac",
+    "sha256_12": "0e8228f66e5d",
+    "image_file": "source/images/S-070__0e8228f66e5d.png",
+    "pixel_width": 919,
+    "pixel_height": 559,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "Legitimate explicit Fail cases: blocked account, revoked token, tenant violation, MFA, malformed claims",
+    "first_x": 12022.422652212004,
+    "first_y": 6296.319037565054,
+    "nearest_text_groups": [
+      "TG-008",
+      "TG-011",
+      "TG-006"
+    ],
+    "nearest_canvas_text": [
+      "scope claims",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-071",
+    "sha256": "53bb0e186368c1f80cf487617c6a6c98c1e807a133ecc86e36965284a43da113",
+    "sha256_12": "53bb0e186368",
+    "image_file": "source/images/S-071__53bb0e186368.png",
+    "pixel_width": 973,
+    "pixel_height": 501,
+    "placement_count": 3,
+    "region_id": "R04",
+    "title": "Policy config with one CanEditProductRequirement and two alternative handlers",
+    "first_x": 1462.7225562939457,
+    "first_y": 6338.816000023869,
+    "nearest_text_groups": [
+      "TG-018",
+      "TG-019",
+      "TG-027"
+    ],
+    "nearest_canvas_text": [
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+      "scope claims",
+      "different requirement types\none logical domain"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-072",
+    "sha256": "a88dbef74a0d2f9fbff6bb6171bbcf407eff3a0790b46e7670ea476eca17cb54",
+    "sha256_12": "a88dbef74a0d",
+    "image_file": "source/images/S-072__a88dbef74a0d.png",
+    "pixel_width": 910,
+    "pixel_height": 493,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "MinimumAgeAttribute implements IAuthorizationRequirementData",
+    "first_x": 17923.136112735796,
+    "first_y": 6340.04334787677,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-073",
+    "sha256": "57a1c9463450016e47cb70ed0b9b0b6e18302e7b733fe7abd54c8bf883d34742",
+    "sha256_12": "57a1c9463450",
+    "image_file": "source/images/S-073__57a1c9463450.png",
+    "pixel_width": 848,
+    "pixel_height": 284,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "Same requirement with multiple handlers gives OR-style satisfaction",
+    "first_x": 13911.393787339286,
+    "first_y": 6377.655591915766,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-009",
+      "TG-011"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "when policy might succeed when\none handler didnt call success",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-074",
+    "sha256": "04334976e0ab409d65f1599c860b494445dbe5e1a4090343df64126e21267d61",
+    "sha256_12": "04334976e0ab",
+    "image_file": "source/images/S-074__04334976e0ab.png",
+    "pixel_width": 909,
+    "pixel_height": 162,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "CanEditProductRequirement marker type",
+    "first_x": 13936.131911641742,
+    "first_y": 6686.274610470457,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-009",
+      "TG-011"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "when policy might succeed when\none handler didnt call success",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-075",
+    "sha256": "a5869fcb8619295b0c76fc4f8cbe9718ab8c5ce48e1f1038ed949a35e39411c5",
+    "sha256_12": "a5869fcb8619",
+    "image_file": "source/images/S-075__a5869fcb8619.png",
+    "pixel_width": 822,
+    "pixel_height": 195,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "When not to call Fail for a missing permission",
+    "first_x": 12073.45561924497,
+    "first_y": 6746.200019010366,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-008",
+      "TG-010"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "scope claims",
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-076",
+    "sha256": "176e59d437a2b1a22cd4d4dd9a9b80ac6faf106e20fd3498773079ce9bd0fac6",
+    "sha256_12": "176e59d437a2",
+    "image_file": "source/images/S-076__176e59d437a2.png",
+    "pixel_width": 952,
+    "pixel_height": 357,
+    "placement_count": 1,
+    "region_id": "R04",
+    "title": "MinimumAgeRequirement class with Age",
+    "first_x": 17913.224718520916,
+    "first_y": 6838.890045002885,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-077",
+    "sha256": "a5e708f3becbc7b46134df4bfeecfbc64b76e3d725867ec83cdabc26419720ee",
+    "sha256_12": "a5e708f3becb",
+    "image_file": "source/images/S-077__a5e708f3becb.png",
+    "pixel_width": 936,
+    "pixel_height": 493,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "AdminCanEditHandler role-based alternative",
+    "first_x": 13994.207460868833,
+    "first_y": 6876.985133340929,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-009",
+      "TG-011"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "when policy might succeed when\none handler didnt call success",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-078",
+    "sha256": "6c9ff652a3d2fcbbe4fb6b6b6d506bf27082969b35e3e3dfdb84fbcf70ca39cd",
+    "sha256_12": "6c9ff652a3d2",
+    "image_file": "source/images/S-078__6c9ff652a3d2.png",
+    "pixel_width": 918,
+    "pixel_height": 663,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "OAuth scopes: meaning, claim formats, least privilege, and roles comparison",
+    "first_x": 12105.81140990139,
+    "first_y": 6963.845397002055,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-008",
+      "TG-010"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "scope claims",
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-079",
+    "sha256": "141bd552a656db71554842ca6ef47e0c1e6e3fa98f95621294ef1e66df484f9e",
+    "sha256_12": "141bd552a656",
+    "image_file": "source/images/S-079__141bd552a656.png",
+    "pixel_width": 897,
+    "pixel_height": 606,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Non-generic handler for unrelated requirement types in one domain",
+    "first_x": 4658.848617750587,
+    "first_y": 6981.89306723546,
+    "nearest_text_groups": [
+      "TG-027",
+      "TG-030",
+      "TG-032"
+    ],
+    "nearest_canvas_text": [
+      "different requirement types\none logical domain",
+      "batching, when we can\ncheck all permissions in\none call to api/method",
+      "even if there is some inher\ncan use generic handler"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-080",
+    "sha256": "4c0e5676fdb97848cc02690d01c08d38993b89938459d55e67843aff6f30aa76",
+    "sha256_12": "4c0e5676fdb9",
+    "image_file": "source/images/S-080__4c0e5676fdb9.png",
+    "pixel_width": 1043,
+    "pixel_height": 368,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Batching is a strong reason for a non-generic handler",
+    "first_x": 6090.307499393144,
+    "first_y": 7105.7159432120225,
+    "nearest_text_groups": [
+      "TG-030",
+      "TG-032",
+      "TG-031"
+    ],
+    "nearest_canvas_text": [
+      "batching, when we can\ncheck all permissions in\none call to api/method",
+      "even if there is some inher\ncan use generic handler",
+      "requirements need\nto be considered\ntogether"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-081",
+    "sha256": "88a5bc258634527089b2b85eef986f893b5f821d006354628c7ba9ca110a0bcb",
+    "sha256_12": "88a5bc258634",
+    "image_file": "source/images/S-081__88a5bc258634.png",
+    "pixel_width": 883,
+    "pixel_height": 136,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Requirements sometimes need to be considered together",
+    "first_x": 7734.307865604082,
+    "first_y": 7199.049500340929,
+    "nearest_text_groups": [
+      "TG-031",
+      "TG-035",
+      "TG-030"
+    ],
+    "nearest_canvas_text": [
+      "requirements need\nto be considered\ntogether",
+      "!!!!",
+      "batching, when we can\ncheck all permissions in\none call to api/method"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-082",
+    "sha256": "b73360104c71252199f6ff5238e3f1ac61bd2506f18b0fcb396e663f68c5b645",
+    "sha256_12": "b73360104c71",
+    "image_file": "source/images/S-082__b73360104c71.png",
+    "pixel_width": 983,
+    "pixel_height": 316,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "AuthorizationMiddleware reads requirement-producing endpoint metadata",
+    "first_x": 17919.470759955067,
+    "first_y": 7224.786824381135,
+    "nearest_text_groups": [
+      "TG-016",
+      "TG-015",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "example",
+      "IAuthorizationRequirementData",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-083",
+    "sha256": "cfa71fe6f7a4018639ce7d4876848cd608f83083bc12e6e2a98f1cbddbc5f6de",
+    "sha256_12": "cfa71fe6f7a4",
+    "image_file": "source/images/S-083__cfa71fe6f7a4.png",
+    "pixel_width": 935,
+    "pixel_height": 462,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "ScopeCanEditHandler as alternative to AdminCanEditHandler",
+    "first_x": 13999.815320833055,
+    "first_y": 7271.151812723253,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-009",
+      "TG-011"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "when policy might succeed when\none handler didnt call success",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-084",
+    "sha256": "0b2dd4897d203b398315b02ff79223faab97ea9bfc2ebebe01726e190f2e312e",
+    "sha256_12": "0b2dd4897d20",
+    "image_file": "source/images/S-084__0b2dd4897d20.png",
+    "pixel_width": 918,
+    "pixel_height": 536,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Policy with SameTenant, DocumentSensitivity, and Clearance requirements",
+    "first_x": 7728.116047594522,
+    "first_y": 7356.5599373526475,
+    "nearest_text_groups": [
+      "TG-031",
+      "TG-035",
+      "TG-007"
+    ],
+    "nearest_canvas_text": [
+      "requirements need\nto be considered\ntogether",
+      "!!!!",
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-085",
+    "sha256": "da475ed8995fd901e4596ca8f5e9f936f4c0f8daa26f0599ae80c226b404de4e",
+    "sha256_12": "da475ed8995f",
+    "image_file": "source/images/S-085__da475ed8995f.png",
+    "pixel_width": 772,
+    "pixel_height": 280,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Scope versus role",
+    "first_x": 12116.577206604687,
+    "first_y": 7455.477808413883,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-008",
+      "TG-010"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "scope claims",
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-086",
+    "sha256": "79ddc4a4a1078df08091061d93646804a0d11a3581463617d05be64da98a0a23",
+    "sha256_12": "79ddc4a4a107",
+    "image_file": "source/images/S-086__79ddc4a4a107.png",
+    "pixel_width": 960,
+    "pixel_height": 229,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Unrelated document requirements still belong to one authorization domain",
+    "first_x": 4635.807499393144,
+    "first_y": 7485.8826912588975,
+    "nearest_text_groups": [
+      "TG-027",
+      "TG-030",
+      "TG-032"
+    ],
+    "nearest_canvas_text": [
+      "different requirement types\none logical domain",
+      "batching, when we can\ncheck all permissions in\none call to api/method",
+      "even if there is some inher\ncan use generic handler"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-087",
+    "sha256": "4eefadefe8e9795e36998ce74117618550401c3e94ffa6d5e63b33dd0cc01d55",
+    "sha256_12": "4eefadefe8e9",
+    "image_file": "source/images/S-087__4eefadefe8e9.png",
+    "pixel_width": 971,
+    "pixel_height": 313,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "BatchedPermissionHandler dependency and constructor",
+    "first_x": 6076.974125369707,
+    "first_y": 7489.215882176866,
+    "nearest_text_groups": [
+      "TG-030",
+      "TG-035",
+      "TG-032"
+    ],
+    "nearest_canvas_text": [
+      "batching, when we can\ncheck all permissions in\none call to api/method",
+      "!!!!",
+      "even if there is some inher\ncan use generic handler"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-088",
+    "sha256": "66d9fafd09036d02080b65bac805a18ae46363781741bc382860d944a72e54b6",
+    "sha256_12": "66d9fafd0903",
+    "image_file": "source/images/S-088__66d9fafd0903.png",
+    "pixel_width": 905,
+    "pixel_height": 219,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "HasScope helper implementation",
+    "first_x": 14027.793102870355,
+    "first_y": 7660.297674004037,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-011",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-089",
+    "sha256": "36072269a0f45756017d61343182a4adecf32c83f4dc1d5e52d7b49c04af7d8d",
+    "sha256_12": "36072269a0f4",
+    "image_file": "source/images/S-089__36072269a0f4.png",
+    "pixel_width": 1007,
+    "pixel_height": 527,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "DocumentAuthorizationHandler loads a document once",
+    "first_x": 4637.669041083285,
+    "first_y": 7728.559754247179,
+    "nearest_text_groups": [
+      "TG-027",
+      "TG-030",
+      "TG-028"
+    ],
+    "nearest_canvas_text": [
+      "different requirement types\none logical domain",
+      "batching, when we can\ncheck all permissions in\none call to api/method",
+      "when need to succeed all\nfail all based on one thing"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-090",
+    "sha256": "cf0a31a01f5c6b285fe2379a6eb59706b37466818f906f8b76a0b71c7655bea7",
+    "sha256_12": "cf0a31a01f5c",
+    "image_file": "source/images/S-090__cf0a31a01f5c.png",
+    "pixel_width": 969,
+    "pixel_height": 430,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Batched permission check over all pending IPermissionRequirement items",
+    "first_x": 6092.640873416582,
+    "first_y": 7789.3826912588975,
+    "nearest_text_groups": [
+      "TG-030",
+      "TG-035",
+      "TG-028"
+    ],
+    "nearest_canvas_text": [
+      "batching, when we can\ncheck all permissions in\none call to api/method",
+      "!!!!",
+      "when need to succeed all\nfail all based on one thing"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-091",
+    "sha256": "033de3a3aff9857dd7110df6479324480e9803eb62c3164943e36d2eaf4071d2",
+    "sha256_12": "033de3a3aff9",
+    "image_file": "source/images/S-091__033de3a3aff9.png",
+    "pixel_width": 960,
+    "pixel_height": 453,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "Non-generic handler sees the full pending requirement set",
+    "first_x": 7712.750015593734,
+    "first_y": 7852.811445792939,
+    "nearest_text_groups": [
+      "TG-035",
+      "TG-031",
+      "TG-007"
+    ],
+    "nearest_canvas_text": [
+      "!!!!",
+      "requirements need\nto be considered\ntogether",
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-092",
+    "sha256": "5bbc661ec82d1bd546e11c00de9d2cfd822dab459952d79c9c87e61494c8f472",
+    "sha256_12": "5bbc661ec82d",
+    "image_file": "source/images/S-092__5bbc661ec82d.png",
+    "pixel_width": 927,
+    "pixel_height": 524,
+    "placement_count": 1,
+    "region_id": "R05",
+    "title": "ClaimsPrincipal can satisfy a claim across multiple identities",
+    "first_x": 15336.48021050772,
+    "first_y": 8007.873720051795,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-009",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "when policy might succeed when\none handler didnt call success",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-093",
+    "sha256": "e275ce3b3e5dfd7addeee0359f9e7ea1ab77cf0ac5c3d97289311e6a12a4c88b",
+    "sha256_12": "e275ce3b3e5d",
+    "image_file": "source/images/S-093__e275ce3b3e5d.png",
+    "pixel_width": 867,
+    "pixel_height": 387,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Secure-by-default authorization and why AllowAnonymous matters",
+    "first_x": 12182.601237017632,
+    "first_y": 8162.073254319295,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-008",
+      "TG-010"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "scope claims",
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-094",
+    "sha256": "1c3aff5862e87cbb3ee8d34ac98dbf2dc8699fc81682288f754084bd0731be7a",
+    "sha256_12": "1c3aff5862e8",
+    "image_file": "source/images/S-094__1c3aff5862e8.png",
+    "pixel_width": 917,
+    "pixel_height": 433,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Switch over pending document requirements",
+    "first_x": 4642.640873416582,
+    "first_y": 8217.216004247179,
+    "nearest_text_groups": [
+      "TG-027",
+      "TG-028",
+      "TG-030"
+    ],
+    "nearest_canvas_text": [
+      "different requirement types\none logical domain",
+      "when need to succeed all\nfail all based on one thing",
+      "batching, when we can\ncheck all permissions in\none call to api/method"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-095",
+    "sha256": "fda2f4c382892c653c304a8cda969db96d808202f1711ce1fdcbfb652d14dd2c",
+    "sha256_12": "fda2f4c38289",
+    "image_file": "source/images/S-095__fda2f4c38289.png",
+    "pixel_width": 875,
+    "pixel_height": 237,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Succeed every granted permission requirement after one batch lookup",
+    "first_x": 6082.307499393144,
+    "first_y": 8239.215943212022,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-035",
+      "TG-030"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "!!!!",
+      "batching, when we can\ncheck all permissions in\none call to api/method"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-096",
+    "sha256": "ed7d40e607c1e45608faf4210423ba369a00d11f31c207f61e65830bddf7f680",
+    "sha256_12": "ed7d40e607c1",
+    "image_file": "source/images/S-096__ed7d40e607c1.png",
+    "pixel_width": 941,
+    "pixel_height": 294,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Three requirements become one permission-service call",
+    "first_x": 6095.974247440019,
+    "first_y": 8473.382569188585,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-035",
+      "TG-030"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "!!!!",
+      "batching, when we can\ncheck all permissions in\none call to api/method"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-097",
+    "sha256": "40395a24e3fd029965020c1888cbfe22796fbe0a5497e06bfd230eb38a4f184a",
+    "sha256_12": "40395a24e3fd",
+    "image_file": "source/images/S-097__40395a24e3fd.png",
+    "pixel_width": 901,
+    "pixel_height": 229,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Claim can come from an external identity even when app cookie lacks it",
+    "first_x": 15345.939148989874,
+    "first_y": 8511.196611287147,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-011",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-098",
+    "sha256": "50c168b40e3513a894259ed6ce234e0827cfcf7a151b4d943b53c43a38d0c3cf",
+    "sha256_12": "50c168b40e35",
+    "image_file": "source/images/S-098__50c168b40e35.png",
+    "pixel_width": 1016,
+    "pixel_height": 528,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "FallbackPolicy secure-by-default configuration",
+    "first_x": 12201.58190129151,
+    "first_y": 8590.607451445418,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-008",
+      "TG-007"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "scope claims",
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-099",
+    "sha256": "7978e250ab4ebe05fe97ea6b60edfca4a5a81d7358ece8fa04c4209dc49003fe",
+    "sha256_12": "7978e250ab4e",
+    "image_file": "source/images/S-099__7978e250ab4e.png",
+    "pixel_width": 953,
+    "pixel_height": 406,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Dispatcher code for DocumentNotLocked and CanOverrideLock",
+    "first_x": 4672.640873416582,
+    "first_y": 8660.04931723546,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-027",
+      "TG-030"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "different requirement types\none logical domain",
+      "batching, when we can\ncheck all permissions in\none call to api/method"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-100",
+    "sha256": "01803b7cd13f0942efd807a86e4bab3fb1a5123a99f9cf28bea35848366358b9",
+    "sha256_12": "01803b7cd13f",
+    "image_file": "source/images/S-100__01803b7cd13f.png",
+    "pixel_width": 991,
+    "pixel_height": 529,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Policy AND across requirements; OR across handlers for one requirement",
+    "first_x": 15369.114648255145,
+    "first_y": 8777.318071248084,
+    "nearest_text_groups": [
+      "TG-010",
+      "TG-011",
+      "TG-009"
+    ],
+    "nearest_canvas_text": [
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "when policy might succeed when\none handler didnt call success"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-101",
+    "sha256": "ddf8f9ad7ec85ab70b3254045766416e9c5d07b01b1b9a96af5de9b3c60134ef",
+    "sha256_12": "ddf8f9ad7ec8",
+    "image_file": "source/images/S-101__ddf8f9ad7ec8.png",
+    "pixel_width": 980,
+    "pixel_height": 266,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Non-generic handler advantage: load document and user data once",
+    "first_x": 4653.807499393144,
+    "first_y": 9070.049378270616,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-027",
+      "TG-030"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "different requirement types\none logical domain",
+      "batching, when we can\ncheck all permissions in\none call to api/method"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-102",
+    "sha256": "a312e122724a5c99db4fad55e0e1e15c2cd6a12c9492007fd18816c193186216",
+    "sha256_12": "a312e122724a",
+    "image_file": "source/images/S-102__a312e122724a.png",
+    "pixel_width": 933,
+    "pixel_height": 428,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "AllowAnonymous escape hatch with fallback policy",
+    "first_x": 12242.934628479687,
+    "first_y": 9101.573254319295,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-008",
+      "TG-007"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "scope claims",
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-103",
+    "sha256": "2e8974dda879c85c079b39a35be7566b1b10be9e0a533a4ecbafa008cbf20134",
+    "sha256_12": "2e8974dda879",
+    "image_file": "source/images/S-103__2e8974dda879.png",
+    "pixel_width": 668,
+    "pixel_height": 498,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Quick mental model: policy AND, requirement OR across handlers",
+    "first_x": 15466.293817664573,
+    "first_y": 9312.873694620483,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-010",
+      "TG-017"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+      "case in authoriz\nmiddleware"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-104",
+    "sha256": "736c6f4be959d50b7d60fee00c55720568f7349871da4bad86fc17ac06959441",
+    "sha256_12": "736c6f4be959",
+    "image_file": "source/images/S-104__736c6f4be959.png",
+    "pixel_width": 1021,
+    "pixel_height": 291,
+    "placement_count": 1,
+    "region_id": "R06",
+    "title": "Scopes plus handler behavior and when Fail makes sense",
+    "first_x": 12250.93447153214,
+    "first_y": 9559.787644665279,
+    "nearest_text_groups": [
+      "TG-011",
+      "TG-008",
+      "TG-007"
+    ],
+    "nearest_canvas_text": [
+      "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+      "scope claims",
+      "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-105",
+    "sha256": "57e3e044a64aaa64ba5c0115a22b353387b905e89752dc587ad1249b1bc1f046",
+    "sha256_12": "57e3e044a64a",
+    "image_file": "source/images/S-105__57e3e044a64a.png",
+    "pixel_width": 966,
+    "pixel_height": 239,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "One condition can succeed several different requirements",
+    "first_x": 5527.934744614966,
+    "first_y": 10162.771738790745,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-029",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "auth rule dispatcher\n(switch inside)",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-106",
+    "sha256": "750d44b30fa966e8af90e4cb6673ed984e5d2f73ccb255a49fa76904c34bba7c",
+    "sha256_12": "750d44b30fa9",
+    "image_file": "source/images/S-106__750d44b30fa9.png",
+    "pixel_width": 979,
+    "pixel_height": 367,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "Custom failure logic based on a combination",
+    "first_x": 6665.475271033942,
+    "first_y": 10163.483848674367,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-029",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "auth rule dispatcher\n(switch inside)",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-107",
+    "sha256": "9a5c66cbccd505101ab5a9ae5bb3fc1c04d4b96559909bdff2e58c5124f7045b",
+    "sha256_12": "9a5c66cbccd5",
+    "image_file": "source/images/S-107__9a5c66cbccd5.png",
+    "pixel_width": 922,
+    "pixel_height": 636,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "SystemAdmin bypass succeeds all document requirements",
+    "first_x": 5546.819032358071,
+    "first_y": 10420.660954895893,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-029",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "auth rule dispatcher\n(switch inside)",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-108",
+    "sha256": "55098e98a0c8783b8a5f499337cc415bad01831a8852259072f40a4bc787d025",
+    "sha256_12": "55098e98a0c8",
+    "image_file": "source/images/S-108__55098e98a0c8.png",
+    "pixel_width": 922,
+    "pixel_height": 349,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "Archived document causes explicit authorization failure",
+    "first_x": 6668.0227389468855,
+    "first_y": 10531.77754112693,
+    "nearest_text_groups": [
+      "TG-028",
+      "TG-029",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "when need to succeed all\nfail all based on one thing",
+      "auth rule dispatcher\n(switch inside)",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-109",
+    "sha256": "4ee0dddd572980c14d65afb763779eee1fa04636b8e41fb8079ec660886a45b9",
+    "sha256_12": "4ee0dddd5729",
+    "image_file": "source/images/S-109__4ee0dddd5729.png",
+    "pixel_width": 1041,
+    "pixel_height": 483,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "Central document authorization switch with owner and tenant checks",
+    "first_x": 6669.263738346392,
+    "first_y": 10897.12129112693,
+    "nearest_text_groups": [
+      "TG-029",
+      "TG-028",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "auth rule dispatcher\n(switch inside)",
+      "when need to succeed all\nfail all based on one thing",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-110",
+    "sha256": "c573f91f9ea22f47a9991af435dd554d0346fe53cb0723736fce43d1cdb64000",
+    "sha256_12": "c573f91f9ea2",
+    "image_file": "source/images/S-110__c573f91f9ea2.png",
+    "pixel_width": 984,
+    "pixel_height": 374,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "Dynamic dispatch from metadata using OperationRequirement",
+    "first_x": 6097.615308933866,
+    "first_y": 11990.092109540561,
+    "nearest_text_groups": [
+      "TG-029",
+      "TG-028",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "auth rule dispatcher\n(switch inside)",
+      "when need to succeed all\nfail all based on one thing",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-111",
+    "sha256": "1e8edf2cad3b0f45e6572036c227d4be27efdce2eab5e7951d79cdc7583be51a",
+    "sha256_12": "1e8edf2cad3b",
+    "image_file": "source/images/S-111__1e8edf2cad3b.png",
+    "pixel_width": 789,
+    "pixel_height": 273,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "Mixed requirement marker types in a domain authorization engine",
+    "first_x": 6128.448642267198,
+    "first_y": 12360.592109540561,
+    "nearest_text_groups": [
+      "TG-029",
+      "TG-028",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "auth rule dispatcher\n(switch inside)",
+      "when need to succeed all\nfail all based on one thing",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  },
+  {
+    "source_id": "S-112",
+    "sha256": "22c7ea3c7fe0b9d96c0f9b3d28af0cf56b1c2709efa571ca717c9fa8ca0042da",
+    "sha256_12": "22c7ea3c7fe0",
+    "image_file": "source/images/S-112__22c7ea3c7fe0.png",
+    "pixel_width": 1015,
+    "pixel_height": 619,
+    "placement_count": 1,
+    "region_id": "R07",
+    "title": "DomainAuthorizationHandler delegates heterogeneous requirements to a rule evaluator",
+    "first_x": 6131.959306755663,
+    "first_y": 12669.269396324413,
+    "nearest_text_groups": [
+      "TG-029",
+      "TG-028",
+      "TG-035"
+    ],
+    "nearest_canvas_text": [
+      "auth rule dispatcher\n(switch inside)",
+      "when need to succeed all\nfail all based on one thing",
+      "!!!!"
+    ],
+    "status": "visually-reviewed-stage0-v002",
+    "transcript_status": "pending-near-literal-source-block"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "group_id": "TG-001",
+    "x": 16473.016985786882,
+    "y": 1214.0998376900789,
+    "text": "BASIC POLICIES IN ADDAUTHORIZATION",
+    "line_count": 1,
+    "root_child_index": 28
+  },
+  {
+    "group_id": "TG-002",
+    "x": 12430.443175036215,
+    "y": 1261.67709232352,
+    "text": "RESOURCE BASED AUTHORIZATION",
+    "line_count": 1,
+    "root_child_index": 35
+  },
+  {
+    "group_id": "TG-003",
+    "x": 10043.52873923612,
+    "y": 1178.155336482905,
+    "text": "CUSTOM POLICIES WITH AUTHORIZATION\nHANDLERS WITH REQUIREMENTS",
+    "line_count": 2,
+    "root_child_index": 36
+  },
+  {
+    "group_id": "TG-004",
+    "x": 5526.861869118933,
+    "y": 5181.488618953608,
+    "text": "NON Generic AuthorizationHandler",
+    "line_count": 1,
+    "root_child_index": 37
+  },
+  {
+    "group_id": "TG-005",
+    "x": 14754.270011140014,
+    "y": 1305.021365326872,
+    "text": "BASIC,\nGLOBAL AUTHORIZATION",
+    "line_count": 2,
+    "root_child_index": 45
+  },
+  {
+    "group_id": "TG-006",
+    "x": 10789.74456640815,
+    "y": 4932.083917470715,
+    "text": "why to not use context.fail everywhere, multiple handlers registered\nfor one requirement",
+    "line_count": 2,
+    "root_child_index": 46
+  },
+  {
+    "group_id": "TG-007",
+    "x": 9520.170063169822,
+    "y": 7444.60424484384,
+    "text": "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+    "line_count": 25,
+    "root_child_index": 79
+  },
+  {
+    "group_id": "TG-008",
+    "x": 10790.95060900991,
+    "y": 6666.812974751127,
+    "text": "scope claims",
+    "line_count": 1,
+    "root_child_index": 82
+  },
+  {
+    "group_id": "TG-009",
+    "x": 13771.914019023612,
+    "y": 5527.160665631993,
+    "text": "when policy might succeed when\none handler didnt call success",
+    "line_count": 2,
+    "root_child_index": 83
+  },
+  {
+    "group_id": "TG-010",
+    "x": 13872.5789669295,
+    "y": 6067.768662310836,
+    "text": "can edit requirement\nadmincanedithandler\nscopehandler (IAuthorizaitonHandler not gen)",
+    "line_count": 3,
+    "root_child_index": 84
+  },
+  {
+    "group_id": "TG-011",
+    "x": 12172.6581376805,
+    "y": 7881.558173365969,
+    "text": "better to add fallbackpolicy\nand mark allowanonymus where you dont have\nit",
+    "line_count": 3,
+    "root_child_index": 85
+  },
+  {
+    "group_id": "TG-012",
+    "x": 6876.141995066686,
+    "y": 1866.6731524896586,
+    "text": "but with min apis context.resource is usually either\nhttpcontext or endpoint\nso dont give a fuck about it\nunless you are using non generic handler\nthen you need to check wnat is the type of resource",
+    "line_count": 5,
+    "root_child_index": 97
+  },
+  {
+    "group_id": "TG-013",
+    "x": 4497.588418652813,
+    "y": 1917.224933463849,
+    "text": "IAuthoriazationHandler\nmultiple requirements (usually of one type,\nlike scope requirement)",
+    "line_count": 3,
+    "root_child_index": 112
+  },
+  {
+    "group_id": "TG-014",
+    "x": 2780.6024592249632,
+    "y": 383.3995297988786,
+    "text": "its requirements, not handlers\nif there was no handler tthat ve\ncalled success on requirement\nrequirement is failed and policy is failed",
+    "line_count": 4,
+    "root_child_index": 114
+  },
+  {
+    "group_id": "TG-015",
+    "x": 17587.798036712396,
+    "y": 5404.511459067329,
+    "text": "IAuthorizationRequirementData",
+    "line_count": 1,
+    "root_child_index": 115
+  },
+  {
+    "group_id": "TG-016",
+    "x": 18035.144339166887,
+    "y": 5860.269016329406,
+    "text": "example",
+    "line_count": 1,
+    "root_child_index": 116
+  },
+  {
+    "group_id": "TG-017",
+    "x": 16912.71996727413,
+    "y": 5459.056858126281,
+    "text": "case in authoriz\nmiddleware",
+    "line_count": 2,
+    "root_child_index": 117
+  },
+  {
+    "group_id": "TG-018",
+    "x": 267.0511745653821,
+    "y": 4652.870635905821,
+    "text": "using Microsoft.AspNetCore.Authorization;\nusing System.Security.Claims;\npublic sealed class ScopeRequirementHandler : AuthorizationHandler<ScopeRequirement>\n{\nprotected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ScopeRequirement requirement)\n{\nif (HasScope(context.User, requirement.Scope))\ncontext.Succeed(requirement);\nreturn Task.CompletedTask; // do nothing => not satisfied\n}\nprivate static bool HasScope(ClaimsPrincipal user, string needed)\n{\n// gather all possible scope strings\nvar values = user.FindAll(\"scope\").Select(c => c.Value)\n.Concat(user.FindAll(\"scp\").Select(c => c.Value));\nforeach (var v in values)\n{\n// handle both \"a b c\" and single-value\nvar scopes = v.Split(' ', StringSplitOptions.RemoveEmptyEntries);\nif (scopes.Contains(needed, StringComparer.Ordinal))\nreturn true;\n}\nreturn false;\n}\n}",
+    "line_count": 25,
+    "root_child_index": 132
+  },
+  {
+    "group_id": "TG-019",
+    "x": 1311.1648502882817,
+    "y": 3781.7462359302945,
+    "text": "scope claims",
+    "line_count": 1,
+    "root_child_index": 133
+  },
+  {
+    "group_id": "TG-020",
+    "x": 5851.8653605550935,
+    "y": 1230.0001525878906,
+    "text": "requirements",
+    "line_count": 1,
+    "root_child_index": 135
+  },
+  {
+    "group_id": "TG-021",
+    "x": 3641.8653605550935,
+    "y": 296.6667175292969,
+    "text": "requirements vs\npending requirements",
+    "line_count": 2,
+    "root_child_index": 136
+  },
+  {
+    "group_id": "TG-022",
+    "x": 5075.198795613687,
+    "y": 10.0,
+    "text": "authorizationhandlercontext",
+    "line_count": 1,
+    "root_child_index": 137
+  },
+  {
+    "group_id": "TG-023",
+    "x": 7851.865564005615,
+    "y": 887.7778625488281,
+    "text": "user",
+    "line_count": 1,
+    "root_child_index": 138
+  },
+  {
+    "group_id": "TG-024",
+    "x": 7838.532267663286,
+    "y": 1528.9900207519531,
+    "text": "resource",
+    "line_count": 1,
+    "root_child_index": 139
+  },
+  {
+    "group_id": "TG-025",
+    "x": 7821.804994936012,
+    "y": 3122.6870089444246,
+    "text": "succeed(req)",
+    "line_count": 1,
+    "root_child_index": 140
+  },
+  {
+    "group_id": "TG-026",
+    "x": 7104.633142130613,
+    "y": 5399.25279189601,
+    "text": "When non generic",
+    "line_count": 1,
+    "root_child_index": 141
+  },
+  {
+    "group_id": "TG-027",
+    "x": 4449.394407476595,
+    "y": 6600.205245509292,
+    "text": "different requirement types\none logical domain",
+    "line_count": 2,
+    "root_child_index": 142
+  },
+  {
+    "group_id": "TG-028",
+    "x": 5849.530940848368,
+    "y": 9635.761072332209,
+    "text": "when need to succeed all\nfail all based on one thing",
+    "line_count": 2,
+    "root_child_index": 143
+  },
+  {
+    "group_id": "TG-029",
+    "x": 5990.864436942118,
+    "y": 11651.761072332209,
+    "text": "auth rule dispatcher\n(switch inside)",
+    "line_count": 2,
+    "root_child_index": 144
+  },
+  {
+    "group_id": "TG-030",
+    "x": 6059.023924078156,
+    "y": 6613.807777790107,
+    "text": "batching, when we can\ncheck all permissions in\none call to api/method",
+    "line_count": 3,
+    "root_child_index": 145
+  },
+  {
+    "group_id": "TG-031",
+    "x": 7679.023924078156,
+    "y": 6673.807777790107,
+    "text": "requirements need\nto be considered\ntogether",
+    "line_count": 3,
+    "root_child_index": 146
+  },
+  {
+    "group_id": "TG-032",
+    "x": 6066.324418420525,
+    "y": 5860.480769046375,
+    "text": "even if there is some inher\ncan use generic handler",
+    "line_count": 2,
+    "root_child_index": 147
+  },
+  {
+    "group_id": "TG-033",
+    "x": 7820.027162904762,
+    "y": 3800.9091769131746,
+    "text": "fail",
+    "line_count": 1,
+    "root_child_index": 148
+  },
+  {
+    "group_id": "TG-034",
+    "x": 5773.53207808439,
+    "y": 1945.0001525878906,
+    "text": "Pendingrequirements",
+    "line_count": 1,
+    "root_child_index": 149
+  },
+  {
+    "group_id": "TG-035",
+    "x": 7544.988496461472,
+    "y": 8130.193918894269,
+    "text": "!!!!",
+    "line_count": 1,
+    "root_child_index": 176
+  }
+]

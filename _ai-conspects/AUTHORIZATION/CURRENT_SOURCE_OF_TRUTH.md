@@ -1,37 +1,48 @@
 # Current Source of Truth — AUTHORIZATION
 
-Generated: 2026-06-27 06:00:00 UTC
+Generated: 2026-07-04 UTC  
+Correction: source-identity / Stage0 v002
 
-## Status
-
-```text
-Legacy incomplete-source transcript: incomplete / superseded
-Legacy incomplete-source coverage audit: incomplete / superseded
-Complete SVG preservation/recovery: done
-Regional transcripts: done
-Full combined transcript: done
-Full-conspect coverage audit: done
-```
-
-## Coverage
+## Authoritative source
 
 ```text
-meaningful text elements: 112 / 112
-unique embedded images: 119 / 119
-image uses on canvas: 120 / 120
-repeated image placements retained: 1
-remaining unprocessed text elements: 0
-remaining unprocessed image uses: 0
+source/AUTHORIZATION.svg
+SHA-256: 1736c127c36e6cb6aa6416067669adc34a0491f473bf6d67ac4772200aef9106
+Git blob SHA: 6ea0f2d4afdc0d6f39252b25661172b4de7adc80
 ```
 
-## Authoritative transcript
+## Source status
 
-`10-full-combined-final-transcript.md`
+```text
+complete SVG preservation: done
+unique embedded images: 112 / 112
+image uses: 119 / 119
+duplicate extra placements retained: 7
+native SVG text lines: 110 / 110
+native SVG text groups: 35 / 35
+Stage0 visual source review: done
+```
 
-## Authoritative audit
+## Transcript status
 
-`11-full-conspect-final-coverage-audit.md`
+```text
+legacy semantic transcript from older 68/75 source: superseded as coverage proof
+foreign authorization-flow transcript previously placed here: removed by apply procedure
+integrated semantic study draft: present
+near-literal source blocks: 0 / 112
+repetition readiness: NOT_READY_SOURCE_TRANSCRIPT_PENDING
+```
+
+## Source identity
+
+`AUTHORIZATION` and
+`authorization-flow-autorization-options-framework-authorizationmiddlewareresulthandler`
+are separate conspects with zero embedded-image-content overlap.
+
+The authorization-flow source and transcript remain in their own folder and are
+not authoritative for this folder.
 
 ## Next
 
-No normal transcript work remains. Only correction/polish if a newer source reveals additional material.
+Create the full 112-source near-literal transcript, final coverage audit and
+question bank. Do not mark this folder complete before that pass.
