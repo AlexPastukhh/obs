@@ -1,40 +1,16 @@
-# Apply archive: ASP.NET Core filters R02/R03 final coverage transcript v001
-
-Archive type: stage-2 final coverage transcript.
-
-Target branch:
-
-```text
-ai-processed-conspects-text
-```
-
-Apply from repository root:
-
-```powershell
-PS C:\Users\alexa\obs>
-```
-
-## Expected download path
-
-```powershell
-C:\Users\alexa\Downloads\ai-conspects-filters-stage2-r02r03-final-coverage-v001.zip
-```
-
-## Apply + staged diff review commands
+# Apply archive — ASP.NET Core filters source-fidelity correction v002
 
 ```powershell
 cd C:\Users\alexa\obs
 git checkout ai-processed-conspects-text
 
-$zip = "C:\Users\alexa\Downloads\ai-conspects-filters-stage2-r02r03-final-coverage-v001.zip"
+$zip = "C:\Users\alexa\Downloads\ai-conspects-filters-source-fidelity-v002.zip"
 $target = "_ai-conspects\filters"
-$diffPath = "C:\Users\alexa\Downloads\ai-conspects-filters-stage2-r02r03-final-coverage.cached.diff"
 
-$OutputEncoding = [System.Text.UTF8Encoding]::new()
-[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
+Expand-Archive -LiteralPath $zip -DestinationPath . -Force
 
-git status --short
-Expand-Archive -Path $zip -DestinationPath . -Force
+git status --short -- $target
+git diff --stat -- $target
 
 git add -A -- $target
 
@@ -42,22 +18,16 @@ git status --short -- $target
 git diff --cached --stat -- $target
 git diff --cached --name-status -- $target
 
-git --no-pager diff --cached -- $target > $diffPath
-Get-Content $diffPath -Raw | Set-Clipboard
-Write-Host "Cached diff saved to $diffPath"
-Write-Host "Clipboard length:" (Get-Content $diffPath -Raw).Length
-```
+git commit -m "Complete source-preserving ASP.NET Core filters transcript"
 
-## Commit commands after review
-
-```powershell
-git commit -m "Complete ASP.NET Core filters conspect final coverage"
 git push origin ai-processed-conspects-text
 ```
 
-## Rollback before commit
+Verification:
 
 ```powershell
-git restore --staged -- _ai-conspects\filters
-git restore -- _ai-conspects\filters
+git status --short
+git log -1 --oneline
+
+git ls-tree -r --name-only HEAD -- "_ai-conspects/filters"
 ```

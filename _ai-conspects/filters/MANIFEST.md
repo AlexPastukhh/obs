@@ -1,43 +1,46 @@
-# MANIFEST - ASP.NET Core filters R02/R03 final coverage transcript v001
+# MANIFEST — ASP.NET Core filters source-fidelity correction v002
 
-Archive type: **stage-2 final coverage transcript**  
-Target branch: `ai-processed-conspects-text`  
-Generated: 2026-06-02 13:31:40 UTC
-
-## Done
-
-- R02/R03 combined final transcript created.
-- 38 source image uses included.
-- Final coverage audit added.
-- Ledger updated to zero remaining unprocessed image uses.
-
-## Counts
+Target branch:
 
 ```text
-R01 sources: 93
-R02 sources: 27
-R03 sources: 11
-Total image uses in conspect: 131
-Remaining unclosed: 0
+ai-processed-conspects-text
 ```
 
-## Files included / updated
+Target folder:
 
 ```text
-_ai-conspects/filters/regions/R02R03-concrete-examples-lower-addendum-final.md
-_ai-conspects/filters/data/R02R03-sources-stage2-v001.*
-_ai-conspects/filters/data/R02R03-boundary-review-stage2-v001.*
-_ai-conspects/filters/data/R02R03-area-understanding-stage2-v001.json
-_ai-conspects/filters/data/final-coverage-audit-stage2-v001.*
-_ai-conspects/filters/data/image-review-ledger-v001.*
-_ai-conspects/filters/audit-assets/contact-sheet-R02R03-final-coverage-v001.png
-_ai-conspects/filters/audit-assets/R02R03-source-images/*.png
-_ai-conspects/filters/02-stage2-r02r03-final-coverage-transcript.md
-_ai-conspects/filters/CURRENT_SOURCE_OF_TRUTH.md
-_ai-conspects/filters/MANIFEST.md
-_ai-conspects/filters/APPLY_ARCHIVE.md
+_ai-conspects/filters/
 ```
 
-## Next
+## Source verification
 
-No normal transcript regions remain after this archive.
+```text
+uploaded SVG blob: a5c62548788a9a338b53de87a1f6c04fb7e78e47
+repository SVG blob: a5c62548788a9a338b53de87a1f6c04fb7e78e47
+Stage0 replacement: not required
+```
+
+## Updated
+
+- `regions/R01-main-filters-theory-ordering-exception-di-factories.md`
+- `regions/R02R03-concrete-examples-lower-addendum-final.md`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `MANIFEST.md`
+- `APPLY_ARCHIVE.md`
+
+## Added
+
+- `NATIVE_CANVAS_TEXT.md`
+- `FINAL_TRANSCRIPT.md`
+- `QUESTIONS.md`
+- `SOURCE_FIDELITY_AUDIT.md`
+- `TRANSCRIPT_STATUS.md`
+
+## Final coverage
+
+```text
+131 / 131 image uses
+188 / 188 native text nodes
+0 remaining
+READY_NEAR_LITERAL
+```
