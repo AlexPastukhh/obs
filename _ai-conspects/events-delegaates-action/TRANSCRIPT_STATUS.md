@@ -6,6 +6,8 @@ Generated: 2026-07-04 UTC
 source inventory: complete
 near-literal source blocks: 51 / 51
 image uses represented: 51 / 51
+Markdown correction: complete
+OCR/code cleanup: complete
 question bank: complete
 technical corrections: complete
 remaining: 0

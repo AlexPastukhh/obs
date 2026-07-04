@@ -1,29 +1,27 @@
-# MANIFEST — Equality / IEquatable / GetHashCode / ValueObject near-literal v001
+# MANIFEST — Equality / IEquatable / GetHashCode / ValueObject transcript quality correction v002
 
-## Included
+## Added or updated
 
-- authoritative source SVG;
-- extracted screenshots under `source/images-near-literal-v001/`;
-- contact sheets under `audit-assets/`;
-- Stage0 source check;
-- source-by-source near-literal normalized transcript;
-- technical correction notes;
-- repetition question bank;
-- final coverage audit;
-- JSON/CSV source ledger;
-- current source of truth and transcript status.
+- `10-full-source-preserving-transcript-v002.md`
+- `11-technical-corrections-v002.md`
+- `12-repetition-question-bank-v002.md`
+- `13-final-near-literal-coverage-audit-v002.md`
+- `14-transcript-quality-correction-v002.md`
+- `data/source-ledger-near-literal-v002.json`
+- `data/source-ledger-near-literal-v002.csv`
+- `CURRENT_SOURCE_OF_TRUTH.md`
+- `TRANSCRIPT_STATUS.md`
+- `MANIFEST.md`
 
 ## Coverage
 
 ```text
 unique screenshots: 18 / 18
 image uses: 18 / 18
-native SVG text lines: 6 / 6
 remaining: 0
 ```
 
-## Status
+## Correction
 
-```text
-READY_NEAR_LITERAL_NORMALIZED
-```
+The v001 source inventory and screenshots remain valid. This overlay replaces the authoritative
+reading transcript because v001 contained accidental Markdown indentation and residual OCR damage.
