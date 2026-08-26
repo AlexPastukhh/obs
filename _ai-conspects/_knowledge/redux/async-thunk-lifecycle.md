@@ -4,15 +4,149 @@ Knowledge ID: `redux.async-thunk-lifecycle`
 
 Topic: `redux`
 
-## Core model
+## Creating a thunk
 
-`createAsyncThunk` derives `pending`, `fulfilled`, and `rejected` actions from a type prefix. Dispatch immediately emits pending; the payload creator then resolves to fulfilled payload or throws/rejects.
+`createAsyncThunk` wraps async work in a thunk action creator:
 
-Lifecycle metadata includes the original argument, request ID, and status. Use `rejectWithValue` for controlled domain failures; otherwise inspect serialized `action.error`. Request state commonly clears errors on pending, stores data on fulfilled, and records controlled or unexpected errors on rejected.
+```js
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+export const fetchProducts = createAsyncThunk(
+  "product/fetchProducts",
+  async (categoryId, thunkApi) => {
+    const response = await axios.get("/products", {
+      params: { categoryId },
+      signal: thunkApi.signal,
+    });
+
+    return response.data;
+  },
+);
+```
+
+`product/fetchProducts` is an action-type prefix, not a URL. Toolkit derives three ordinary Redux action types:
+
+```text
+product/fetchProducts/pending
+product/fetchProducts/fulfilled
+product/fetchProducts/rejected
+```
+
+The payload creator receives the dispatched argument and `thunkApi`. Passing `thunkApi.signal` into the request allows cancellation to propagate to the HTTP client.
+
+## Dispatch flow
+
+```js
+dispatch(fetchProducts(categoryId));
+```
+
+The sequence is:
+
+```text
+1. pending is dispatched immediately
+2. the payload creator runs
+3. its resolved return value becomes fulfilled action.payload
+4. a thrown or rejected failure creates a rejected action
+```
+
+Reducers do not watch a Promise. They react to the normal lifecycle actions dispatched around the async work.
+
+## Lifecycle action shapes
+
+Pending carries request metadata:
+
+```js
+{
+  type: "product/fetchProducts/pending",
+  meta: {
+    arg: categoryId,
+    requestId: "...",
+    requestStatus: "pending"
+  }
+}
+```
+
+Fulfilled also carries the returned data:
+
+```js
+{
+  type: "product/fetchProducts/fulfilled",
+  payload: result,
+  meta: {
+    arg: categoryId,
+    requestId: "...",
+    requestStatus: "fulfilled"
+  }
+}
+```
+
+Rejected commonly carries serialized error information:
+
+```js
+{
+  type: "product/fetchProducts/rejected",
+  error: { message: "Network Error" },
+  meta: {
+    arg: categoryId,
+    requestId: "...",
+    requestStatus: "rejected"
+  }
+}
+```
+
+`meta.arg` is the original argument, `requestId` identifies this request instance, and `requestStatus` records its lifecycle phase.
+
+## Controlled and unexpected failures
+
+When the server supplies a deliberate domain error, return `rejectWithValue`:
+
+```js
+return thunkApi.rejectWithValue({
+  message: "Validation failed",
+});
+```
+
+The controlled failure is available as `action.payload`. Unexpected or thrown failures are represented through `action.error`, so rejected handling commonly covers both:
+
+```js
+state.error = action.payload ?? action.error.message;
+```
+
+## Request state transitions
+
+```js
+const initialState = {
+  loading: false,
+  products: [],
+  error: null,
+};
+```
+
+```text
+pending
+    loading = true
+    error = null
+
+fulfilled
+    loading = false
+    products = action.payload
+
+rejected
+    loading = false
+    error = action.payload ?? action.error.message
+```
+
+A component can dispatch the thunk on mount and render loading, error, or data state.
 
 ## What should be recallable
 
-- Type prefix versus URL; lifecycle order and action shapes; thunk signal; `rejectWithValue`; loading/error/data transitions.
+- How to declare and dispatch a thunk, pass its argument into a request, and propagate `thunkApi.signal`.
+- Why the first string is a type prefix and which lifecycle types it generates.
+- The exact dispatch order and why reducers observe actions rather than a Promise.
+- The meaningful fields in pending, fulfilled, and rejected action shapes.
+- The distinction between controlled `rejectWithValue` payloads and unexpected `action.error` failures.
+- The loading/error/data state transitions for all three lifecycle cases.
 
 ## Sources
 

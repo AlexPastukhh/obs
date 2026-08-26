@@ -4,6 +4,26 @@ Status: active production-migration protocol
 
 Scope: extracting independently reviewable knowledge units from the source-preserving workspaces under `_ai-conspects/`.
 
+## 0. Content-preservation invariant
+
+Knowledge migration is a semantic partition of the authoritative learning content, not a summarization pass.
+
+For one source workspace, the union of its knowledge units must preserve approximately all meaningful learning content from the authoritative processed source. A learner must not need to reopen the full transcript to recover a caveat, API limitation, important distinction, meaningful example or code mechanic, failure mode, performance tradeoff, lifecycle detail, subtle semantic, or the reason behind a rule that belonged to the unit.
+
+Preferred operations are:
+
+```text
+CUT source-grounded material by meaning
+MOVE it into the appropriate unit
+CONSOLIDATE only exact or genuinely redundant repetition
+REORDER for a coherent independent explanation
+LIGHTLY NORMALIZE wording and formatting
+```
+
+Do not compress the material into a short recap, rewrite it from memory, or replace concrete mechanics with a list of keywords. Longer content-preserving units are preferable to short lossy units. A unit may be 30, 80, or 150 lines when its semantic boundary requires that much material.
+
+The source workspace remains unchanged and is still the source of truth.
+
 ## 1. Architecture and ownership
 
 ```text
@@ -144,11 +164,15 @@ Provenance must identify at least:
 - the relevant section or region when available;
 - the original SVG path when reliably established by repository evidence.
 
+The `What should be recallable` section is a verification contract: every listed recall item must be fully answerable from the body of that same unit. It must not merely name details removed during extraction.
+
+Preserve source-backed examples when they demonstrate syntax, object shape, control flow, state transitions, ownership boundaries, or a failure condition. Consolidate examples only when they teach the same mechanic without losing a distinct claim.
+
 Do not copy processing status, screenshot inventory, OCR mechanics, manifests, or audit bookkeeping into learning content.
 
 ## 8. No silent omission
 
-Every substantial source claim or meaningful area must have an auditable disposition.
+Every substantial source claim or meaningful area must have an auditable disposition. Section-level routing alone is insufficient when a rich section contains several independently checkable claims.
 
 If a source statement is not carried into a unit because it appears disputed, incorrect, ambiguous, unsupported, or outside the intended boundary, do not omit it silently. Record it in the workspace `KNOWLEDGE_REGISTRY.md` with an explanation.
 
@@ -186,6 +210,8 @@ Every migrated workspace requires `KNOWLEDGE_REGISTRY.md` containing:
 
 The registry answers whether meaningful knowledge was lost. It is not the navigation index for a whole topic.
 
+Coverage must be checked at claim level. The registry may group closely related claims in one row, but each row must name enough concrete content to verify that the destination unit actually contains it. Statements such as "section mapped" or "all screenshots represented" do not prove knowledge preservation by themselves.
+
 Zero `UNRESOLVED` is desirable but must never be achieved by silently dropping or misclassifying uncertain material.
 
 ## 10. Index updates
@@ -214,6 +240,18 @@ Before finishing one migration:
 8. check that unit boundaries follow meaning rather than headings;
 9. confirm repetition state was not mass-created or migrated;
 10. inspect the scoped diff and avoid unrelated changes.
+
+Also perform a loss audit:
+
+1. compare each unit body against its routed source claims;
+2. confirm caveats, edge cases, examples with unique mechanics, limitations, failure modes, tradeoffs, lifecycle details, and explanations of why were retained;
+3. confirm every recall item is answered in the same unit;
+4. confirm every intentional exclusion is explicit in the registry;
+5. reject a superficially complete registry when its units strongly compress a rich transcript.
+
+Existing units are not automatically trusted. Audit and repair them only when comparison with their authoritative source demonstrates concrete information loss. Preserve their Knowledge ID, topic, path, and registry identity when the semantic boundary is still valid; add source-grounded material rather than redesigning taxonomy without need.
+
+Batch processing does not relax these requirements. Every workspace in a batch still requires separate source resolution, semantic partitioning, duplicate search, full content-preservation review, registry update, coverage check, and unresolved-item check.
 
 ## 12. Validated boundary patterns
 
