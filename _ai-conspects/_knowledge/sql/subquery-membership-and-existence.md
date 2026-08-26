@@ -61,6 +61,8 @@ x > ALL(subquery)
   -> greater than every returned value.
 ```
 
+For an empty subquery, `comparison ANY (empty set)` is false. With nullable results, one true comparison makes `ANY` true; otherwise an unknown comparison can make the result unknown instead of false.
+
 ## NOT IN and NULL
 
 `NOT IN` can produce surprising unknown results when the subquery contains `NULL`. A correlated `NOT EXISTS` expresses an anti-join without that particular trap:
@@ -93,3 +95,6 @@ Modern optimizers often transform logically equivalent forms into semi-joins. Se
 - Workspace: `_ai-conspects/any in exists/`
 - Processed source: `01-final-transcript.md`, complete semantic region
 - Original SVG: `source/any in exists.svg`
+- Additional workspace: `_ai-conspects/in any exist, some/`
+- Additional processed source: `01-final-transcript.md`, R01–R03
+- Additional SVG: `source/in any exist, some(1).svg`

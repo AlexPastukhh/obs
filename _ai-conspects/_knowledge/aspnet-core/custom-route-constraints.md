@@ -1,0 +1,68 @@
+# Custom route constraints and endpoint matching
+
+Knowledge ID: `aspnet-core.custom-route-constraints`
+
+Topic: `aspnet-core`
+
+## Core model
+
+A route constraint participates in endpoint matching by deciding whether a route value satisfies a rule. A custom `IRouteConstraint` can represent a domain-specific matcher when built-in constraints such as `int`, `guid`, `alpha`, or `datetime` are insufficient.
+
+```csharp
+public sealed class EvenIntRouteConstraint : IRouteConstraint
+{
+    public bool Match(
+        HttpContext? httpContext,
+        IRouter? route,
+        string routeKey,
+        RouteValueDictionary values,
+        RouteDirection routeDirection)
+    {
+        if (!values.TryGetValue(routeKey, out var raw) || raw is null)
+            return false;
+
+        if (raw is int number)
+            return number % 2 == 0;
+
+        return int.TryParse(raw.ToString(), out var parsed)
+            && parsed % 2 == 0;
+    }
+}
+```
+
+Register the symbolic constraint name:
+
+```csharp
+builder.Services.Configure<RouteOptions>(options =>
+{
+    options.ConstraintMap["even"] = typeof(EvenIntRouteConstraint);
+});
+```
+
+Use it in a route:
+
+```csharp
+app.MapGet("/numbers/{n:even}", (int n) => $"Even: {n}");
+```
+
+When the constraint returns `false`, routing continues searching for another endpoint and otherwise produces 404.
+
+## Matching boundary
+
+A constraint is not input validation or authorization. If a value belongs to the selected endpoint but violates a business rule, match the endpoint and return an appropriate validation response instead.
+
+Constraints should be deterministic, inexpensive, and free of database access or side effects. Prefer built-in constraints where possible.
+
+## What should be recallable
+
+- What question does an `IRouteConstraint` answer?
+- How is a custom symbolic name registered and used in a route template?
+- What happens when `Match` returns `false`?
+- Why is a route constraint not input validation or authorization?
+- What operational properties should a matcher have?
+
+## Sources
+
+- Workspace: `_ai-conspects/CUSTOM ROUTE CONSTRAINT/`
+- Processed source: `regions/R01-final-coverage-transcript.md`, complete region
+- Original SVG: `source/CUSTOM ROUTE CONSTRAINT.svg`

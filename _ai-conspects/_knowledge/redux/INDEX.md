@@ -1,0 +1,7 @@
+# Redux Knowledge Registry
+
+| Knowledge ID | Unit | File |
+|---|---|---|
+| `redux.actions-slices-and-store` | Actions, slices, store, Provider, and selectors | [[actions-slices-and-store]] |
+| `redux.async-thunk-lifecycle` | createAsyncThunk lifecycle and request state | [[async-thunk-lifecycle]] |
+| `redux.extra-reducers` | Cross-slice and async reactions with extraReducers | [[extra-reducers]] |

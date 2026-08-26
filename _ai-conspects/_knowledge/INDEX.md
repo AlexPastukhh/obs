@@ -6,6 +6,10 @@ This layer contains independently reviewable knowledge units extracted from the 
 |---|---|
 | ASP.NET Core | [[aspnet-core/INDEX]] |
 | .NET | [[dotnet/INDEX]] |
+| EF Core | [[ef-core/INDEX]] |
 | HTTP | [[http/INDEX]] |
 | JavaScript | [[javascript/INDEX]] |
+| Redux | [[redux/INDEX]] |
 | SQL | [[sql/INDEX]] |
+| SQL Server | [[sql-server/INDEX]] |
+| TypeScript | [[typescript/INDEX]] |
