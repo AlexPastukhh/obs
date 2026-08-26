@@ -38,11 +38,62 @@ string? displayName =
 
 A repository operation should create/open late, parameterize, execute asynchronously with cancellation, cache ordinals, return `null` when no optional row exists, handle `DBNull`, and promptly dispose reader/command/connection.
 
+## Integrated repository read
+
+The complete flow is visible in one method:
+
+```csharp
+public async Task<UserRow?> GetByEmailAsync(
+    string email,
+    CancellationToken ct = default)
+{
+    await using var conn =
+        new SqlConnection(_connectionString);
+
+    await conn.OpenAsync(ct);
+
+    await using var cmd = new SqlCommand(
+        """
+        SELECT TOP (1) Id, Email, DisplayName
+        FROM dbo.Users
+        WHERE Email = @email
+        """,
+        conn);
+
+    cmd.Parameters
+       .Add("@email", SqlDbType.NVarChar, 256)
+       .Value = email;
+
+    await using var reader =
+        await cmd.ExecuteReaderAsync(ct);
+
+    if (!await reader.ReadAsync(ct))
+        return null;
+
+    int idOrd = reader.GetOrdinal("Id");
+    int emailOrd = reader.GetOrdinal("Email");
+    int displayNameOrd = reader.GetOrdinal("DisplayName");
+
+    return new UserRow
+    {
+        Id = reader.GetInt32(idOrd),
+        Email = reader.GetString(emailOrd),
+        DisplayName =
+            await reader.IsDBNullAsync(displayNameOrd, ct)
+                ? null
+                : reader.GetString(displayNameOrd)
+    };
+}
+```
+
+This representative method ties together one connection per operation, cancellation-aware open/read, explicit parameter metadata, an optional no-row result, ordinal caching, typed getters, `DBNull` handling, mapping, and deterministic disposal.
+
 ## What should be recallable
 
 - How reader, scalar, and non-query execution differ and how single-row/many-row flows work.
 - Why parameters are mandatory for untrusted input and when explicit metadata improves on inference.
 - Stored-procedure setup, ordinal caching, typed getters, and the `DBNull` check sequence.
+- How those mechanics compose in a cancellation-aware repository method returning an optional typed row.
 
 ## Sources
 

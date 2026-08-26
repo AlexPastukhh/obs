@@ -12,7 +12,7 @@ Source: `04-detailed-near-literal-transcript-v002.md`; SVG: `source/rawconnectio
 | Sections 20–21: raw command enlistment, connection ownership, session-state reset, two pooling mechanisms | `dotnet.ado-net-transactions-and-ef-core-state` | `dotnet` | `../_knowledge/dotnet/ado-net-transactions-and-ef-core-state.md` | MAPPED |
 | Transcript policy, screenshot/label counts, exact-layout note | — | — | — | NON_LEARNING |
 
-The repeated execution examples were consolidated by result shape, while their distinct parameter, null, ordinal, transaction, and EF Core mechanics were retained. No learning claim was intentionally excluded.
+The repeated execution examples were consolidated by result shape. The representative repository read and plain two-command transaction remain in full because they demonstrate composition that isolated rules do not replace; distinct parameter, null, ordinal, transaction, and EF Core mechanics are retained. No learning claim was intentionally excluded.
 
 | Status | Count |
 |---|---:|

@@ -6,6 +6,56 @@ Topic: `dotnet`
 
 Several operations succeed or fail together only when their commands share the same open connection and transaction. Begin the transaction, associate every command, commit after all succeed, or rollback and rethrow on failure; then dispose it. `System.Data.IsolationLevel` is the common ADO.NET isolation abstraction and is also accepted by relevant EF Core integration paths.
 
+## Plain ADO.NET transaction
+
+```csharp
+await using var conn =
+    new SqlConnection(connectionString);
+
+await conn.OpenAsync();
+
+await using var tx =
+    await conn.BeginTransactionAsync();
+
+try
+{
+    await using var cmd1 = new SqlCommand(
+        """
+        UPDATE dbo.Accounts
+        SET Balance = Balance - @amount
+        WHERE Id = @id
+        """,
+        conn,
+        (SqlTransaction)tx);
+
+    cmd1.Parameters.AddWithValue("@amount", 100);
+    cmd1.Parameters.AddWithValue("@id", fromId);
+    await cmd1.ExecuteNonQueryAsync();
+
+    await using var cmd2 = new SqlCommand(
+        """
+        UPDATE dbo.Accounts
+        SET Balance = Balance + @amount
+        WHERE Id = @id
+        """,
+        conn,
+        (SqlTransaction)tx);
+
+    cmd2.Parameters.AddWithValue("@amount", 100);
+    cmd2.Parameters.AddWithValue("@id", toId);
+    await cmd2.ExecuteNonQueryAsync();
+
+    await tx.CommitAsync();
+}
+catch
+{
+    await tx.RollbackAsync();
+    throw;
+}
+```
+
+Both balance changes use the same connection and the same transaction. Only successful completion commits; any exception rolls back and is rethrown, and disposal closes the transaction lifetime.
+
 ## Raw commands inside an EF Core transaction
 
 EF and raw ADO.NET work can share one transaction:
@@ -42,6 +92,7 @@ EF Core does not reset arbitrary driver/session state changed manually. Restore 
 ## What should be recallable
 
 - Same-connection/same-transaction, commit/rollback/rethrow, disposal, and isolation-level rules.
+- How two commands are explicitly composed into one plain ADO.NET transaction.
 - How to enlist a raw command in an EF Core transaction and why the shared connection alone is insufficient.
 - Connection ownership and which manually changed state must be restored, especially with pooled contexts.
 

@@ -17,3 +17,5 @@
 | `javascript.web-storage-api` | Web Storage API and string serialization | [[web-storage-api]] |
 | `javascript.browser-storage-lifetimes-and-security` | Memory, sessionStorage, and localStorage lifetimes | [[browser-storage-lifetimes-and-security]] |
 | `javascript.web-storage-events-and-failures` | Storage events, quotas, and failure handling | [[web-storage-events-and-failures]] |
+| `javascript.eventsource-client-lifecycle` | Browser EventSource client lifecycle | [[eventsource-client-lifecycle]] |
+| `javascript.array-index-iteration` | JavaScript array index iteration | [[array-index-iteration]] |

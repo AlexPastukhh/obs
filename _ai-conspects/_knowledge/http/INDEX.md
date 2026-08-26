@@ -8,5 +8,7 @@
 | `http.location-header` | Location header semantics | [[location-header]] |
 | `http.cache-validation-headers` | HTTP cache freshness and validation headers | [[cache-validation-headers]] |
 | `http.cookie-and-set-cookie` | Cookie and Set-Cookie header models | [[cookie-and-set-cookie]] |
+| `http.sse-event-stream-reconnection` | SSE event framing, retry, and reconnection | [[sse-event-stream-reconnection]] |
+| `http.content-disposition-filenames` | Content-Disposition behavior and safe filenames | [[content-disposition-filenames]] |
 | `http.options-and-cors-preflight` | OPTIONS and browser CORS preflight | [[options-and-cors-preflight]] |
 | `http.vary-origin-cache-variants` | Vary: Origin and CORS cache variants | [[vary-origin-cache-variants]] |

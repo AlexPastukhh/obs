@@ -12,7 +12,7 @@ Source: `09-full-combined-final-transcript.md`; SVG: `source/async processing of
 | Sections 10–11: best-effort/fail-fast behavior, cooperative cancellation, loop failure, four order concepts | `dotnet.async-failure-ordering-and-server-safety` | `dotnet` | `../_knowledge/dotnet/async-failure-ordering-and-server-safety.md` | MAPPED |
 | Source inventory, regional coverage map, exactness note | — | — | — | NON_LEARNING |
 
-The eight source regions were regrouped around task-start semantics, bounded execution, and production failure/ordering behavior. No learning claim was intentionally excluded.
+The eight source regions were regrouped around task-start semantics, bounded execution, and production failure/ordering behavior. Section 13's representative end-to-end HTTP example is retained because its combined client, semaphore, response, deserialization, release, aggregation, and filtering mechanics are not replaceable by prose alone. No learning claim was intentionally excluded.
 
 | Status | Count |
 |---|---:|

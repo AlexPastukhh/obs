@@ -6,6 +6,7 @@ This layer contains independently reviewable knowledge units extracted from the 
 |---|---|
 | ASP.NET Core | [[aspnet-core/INDEX]] |
 | Architecture | [[architecture/INDEX]] |
+| CSS | [[css/INDEX]] |
 | .NET | [[dotnet/INDEX]] |
 | EF Core | [[ef-core/INDEX]] |
 | HTTP | [[http/INDEX]] |

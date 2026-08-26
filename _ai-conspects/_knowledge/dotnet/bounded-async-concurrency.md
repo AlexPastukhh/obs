@@ -42,11 +42,67 @@ Choose semaphore + `WhenAll` for ordered returned results, non-enormous input, p
 
 Maximum useful concurrency comes from the tightest HTTP limit, remote quota, database pool/locks, memory, or other downstream resource—not CPU count alone. For EF Core, never use one `DbContext` concurrently; create an independent context/unit of work per active operation using a factory or DI scope.
 
+## Integrated bounded HTTP example
+
+This example connects the complete execution path: client reuse through `IHttpClientFactory`, semaphore admission, response disposal and validation, JSON reading, guaranteed permit release, ordered aggregation, and null filtering.
+
+```csharp
+public sealed record BookCoverDto(string Url, int BookId);
+
+public sealed class BookCoverClient
+{
+    private readonly IHttpClientFactory _httpClientFactory;
+
+    public BookCoverClient(IHttpClientFactory httpClientFactory)
+        => _httpClientFactory = httpClientFactory;
+
+    public async Task<IReadOnlyList<BookCoverDto>> GetCoversAsync(
+        IReadOnlyList<string> urls,
+        int maxConcurrency,
+        CancellationToken cancellationToken)
+    {
+        var client = _httpClientFactory.CreateClient();
+        using var gate = new SemaphoreSlim(maxConcurrency);
+
+        var tasks = urls.Select(async url =>
+        {
+            await gate.WaitAsync(cancellationToken);
+
+            try
+            {
+                using var response =
+                    await client.GetAsync(url, cancellationToken);
+
+                response.EnsureSuccessStatusCode();
+
+                return await response.Content
+                    .ReadFromJsonAsync<BookCoverDto>(
+                        cancellationToken: cancellationToken);
+            }
+            finally
+            {
+                gate.Release();
+            }
+        }).ToArray();
+
+        var results = await Task.WhenAll(tasks);
+
+        return results
+            .Where(result => result is not null)
+            .Cast<BookCoverDto>()
+            .ToArray();
+    }
+}
+```
+
+The calls overlap, but only `maxConcurrency` requests are active. No thread is synchronously blocked, `Task.WhenAll` keeps results aligned with input-task order, each response is disposed, HTTP failures are surfaced, cancellation reaches both admission and I/O, and `finally` prevents a leaked semaphore permit.
+
 ## What should be recallable
 
 - Correct semaphore admission/release/cancellation and its per-input allocation tradeoff.
 - Worker-driven `Parallel.ForEachAsync`, result aggregation choices, and ordering limitation.
 - When to choose each approach, when a channel is needed, and how downstream/DbContext constraints set concurrency.
+- How the integrated HTTP implementation composes client reuse, admission, response handling, deserialization, release, aggregation, and filtering.
 
 ## Sources
 
