@@ -4,4 +4,5 @@ This layer contains independently reviewable knowledge units extracted from the 
 
 | Topic | Registry |
 |---|---|
+| HTTP | [[http/INDEX]] |
 | JavaScript | [[javascript/INDEX]] |
