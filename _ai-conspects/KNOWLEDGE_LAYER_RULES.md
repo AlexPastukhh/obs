@@ -66,7 +66,7 @@ one conspect
 -> next conspect
 ```
 
-Process exactly one workspace per migration iteration unless a later repository-owned rule explicitly authorizes a batch. Do not infer batch safety merely because several previous migrations succeeded.
+Process an explicitly selected batch of one or more workspaces per migration iteration. Batch size is an execution choice, not permission to merge workspace audits: resolve and verify every workspace independently. Reduce the batch size whenever source quality, semantic overlap, or unresolved claims make the full batch unsafe to complete.
 
 Do not change the repetition system during an ordinary knowledge migration.
 
@@ -230,7 +230,7 @@ Update `_ai-conspects/_knowledge/INDEX.md` only when a topic is first introduced
 
 Before finishing one migration:
 
-1. confirm exactly one source workspace was processed;
+1. confirm every workspace selected for the iteration was processed and audited independently;
 2. confirm original source/evidence files were not altered by the migration;
 3. confirm all Knowledge IDs are unique;
 4. confirm every topic and unit link resolves;
