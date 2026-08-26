@@ -26,6 +26,14 @@ _ai-conspects/css-stacking-contexts-zindex/
 
 Do not edit another conspect folder unless the user explicitly asks.
 
+Knowledge-layer extraction is governed separately by:
+
+```text
+_ai-conspects/KNOWLEDGE_LAYER_RULES.md
+```
+
+Read that protocol before creating or updating knowledge units, topic indexes, or a workspace `KNOWLEDGE_REGISTRY.md`.
+
 ---
 
 ## 2. Source availability
