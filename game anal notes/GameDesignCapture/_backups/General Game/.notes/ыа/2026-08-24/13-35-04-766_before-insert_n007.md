@@ -1,0 +1,32 @@
+# ыа
+
+<!-- gdcapture:begin -->
+<!-- gdcapture:item id=20260824001413205-178522886194600-6265 type=text -->
+ывыв
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260824002937123-179446812793200-9264 type=screenshot path=assets/javaw_3Z8KXQuDsS.png -->
+![](<assets/javaw_3Z8KXQuDsS.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260824002924296-179433989611000-8063 type=text -->
+кп
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260824002945071-179454761344100-1726 type=screenshot path=assets/javaw_sz7Mp5iRbN.png -->
+![](<assets/javaw_sz7Mp5iRbN.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260824123323962-222877421173400-6609 type=screenshot path=assets/WindowsTerminal_iRdsY7hdAa.png -->
+![](<assets/WindowsTerminal_iRdsY7hdAa.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260824123634100-223067560655700-1227 type=screenshot path=assets/WindowsTerminal_isIg8AqjvD.png -->
+![](<assets/WindowsTerminal_isIg8AqjvD.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260824124228419-223421880419000-4040 type=screenshot path=assets/javaw_t1gH1ZDw9E.png -->
+![](<assets/javaw_t1gH1ZDw9E.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:end -->

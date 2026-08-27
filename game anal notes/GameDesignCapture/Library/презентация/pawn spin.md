@@ -1,0 +1,50 @@
+﻿# pawn spin
+
+<!-- gdcapture:begin -->
+
+<!-- gdcapture:item id=20260818134835-378001906-4343 type=text -->
+23:00 начало
+
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818134847-378014640-5866 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_mRkvASVSbN.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_mRkvASVSbN.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818134900-378027390-6486 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_KJHo1bbYho.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_KJHo1bbYho.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818134916-378043406-8063 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_5opULit92M.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_5opULit92M.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818134926-378053671-2855 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_55AoxWarLq.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_55AoxWarLq.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818134940-378067187-3880 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_WYVAn6OGuh.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_WYVAn6OGuh.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818134947-378074171-2448 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_O7zVTLIIhY.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_O7zVTLIIhY.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818134958-378085453-7884 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_81ZS7DWEik.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_81ZS7DWEik.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818142901-380428250-5092 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_AjkWvh508E.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_AjkWvh508E.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818151054-382941703-7201 type=screenshot path=GameDesignCapture/Games/презентация/assets/Replacement_Package_App_ndYWy7DIyK.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/Replacement_Package_App_ndYWy7DIyK.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:item id=20260818182405-394532453-1452 type=screenshot path=GameDesignCapture/Games/презентация/assets/msedge_tcx4JphNFP.png -->
+![](<assets/GameDesignCapture/Games/презентация/assets/msedge_tcx4JphNFP.png>)
+<!-- /gdcapture:item -->
+
+<!-- gdcapture:end -->
