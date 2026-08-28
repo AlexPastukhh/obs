@@ -5,6 +5,7 @@ This layer contains independently reviewable knowledge units extracted from the 
 | Topic | Registry |
 |---|---|
 | ASP.NET Core | [[aspnet-core/INDEX]] |
+| Axios | [[axios/INDEX]] |
 | Architecture | [[architecture/INDEX]] |
 | CSS | [[css/INDEX]] |
 | .NET | [[dotnet/INDEX]] |
