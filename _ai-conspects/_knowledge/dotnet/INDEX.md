@@ -109,3 +109,7 @@
 | `dotnet.finalizer-lifecycle-costs-and-failure-boundaries` | Finalizer lifecycle, costs, and failure boundaries | [[finalizer-lifecycle-costs-and-failure-boundaries]] |
 | `dotnet.unmanaged-ownership-safehandle-and-finalizer-decisions` | Unmanaged ownership, SafeHandle, and finalizer decisions | [[unmanaged-ownership-safehandle-and-finalizer-decisions]] |
 | `dotnet.gc-roots-reachability-and-disposal-state` | GC roots, reachability, and disposal state | [[gc-roots-reachability-and-disposal-state]] |
+| `dotnet.hybridcache-registration-getorcreate-and-single-flight` | HybridCache registration, GetOrCreateAsync, and single-flight | [[hybridcache-registration-getorcreate-and-single-flight]] |
+| `dotnet.hybridcache-key-tag-invalidation` | HybridCache key and tag invalidation | [[hybridcache-key-tag-invalidation]] |
+| `dotnet.hybridcache-multi-instance-l1-l2-coherence` | HybridCache multi-instance L1/L2 coherence | [[hybridcache-multi-instance-l1-l2-coherence]] |
+| `dotnet.hybridcache-local-cache-flags` | HybridCache local-cache read/write flags | [[hybridcache-local-cache-flags]] |
