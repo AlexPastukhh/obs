@@ -20,5 +20,6 @@ This layer contains independently reviewable knowledge units extracted from the 
 | React | [[react/INDEX]] |
 | Testing | [[testing/INDEX]] |
 | React Query | [[react-query/INDEX]] |
+| React Hook Form | [[react-hook-form/INDEX]] |
 | Algorithms | [[algorithms/INDEX]] |
 | Security | [[security/INDEX]] |
