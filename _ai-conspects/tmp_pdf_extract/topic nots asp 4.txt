@@ -1,0 +1,126 @@
+day 1
+Topic note : interlocked,interlocked.read; objectpool,arraypool,memorypool;dbcontextpool,
+queryfilter;query filters ef core;
+details:
+block:
+day 2
+Topic note :stored procedures;rawconnections,dbconnection,sqlconnection,commands
+details:
+block:
+day 3
+Topic note : REFLECTION;time;problem2; jsondocument, jsonnode, jsonelement, utf8jsonwriter
+details:
+block: without utf8jsonwriter part
+day 4
+Topic note : return new ();headers;basic auth;server resources,multipleinstances,microservices;
+ascii;
+details:
+block:
+day 5
+Topic note :CORS
+details:
+block:
+day 6
+Topic note : ef core context.database, transaction object, savechanges,
+dbconnection,dbtransaction
+details:
+block:
+day 7
+Topic note : filters
+details:
+block: what wasnt covered before
+day 7
+Topic note : - EF CORE GENERAL repo shit entity shit onmodelcreat shit transactions shit
+dbexceptions db level invariants,protection, trigger
+
+-- 1 of 4 --
+
+details:
+block:db exceptions
+concur;different sql server error codes, what can do with each;db/sql shit
+day 8
+Topic note : server browser threads,memory, webworkers , runtime vs compiler , es;pointers;
+redis, idatabase,iserver;implicit operators explicit operators;
+details:
+block:
+day 9
+Topic note :proxy, server, vite dev server proxy; sheet hashset; sheet dict; cache control
+header,directives, PUBLIC PRIVATE CACHE , RESPONSE CACHE TYPES , E TAG CACHE
+FLOWS;outputcache layers, to use or not,locking, outputcache vs cdn
+details:
+block:
+day 10
+Topic note :SQL SERVER MARS;
+details:
+block:
+day 11
+Topic note :ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part, server
+part, pipereader pipewriter stream reader stream writer
+details:
+block:server - trying to inprove
+performance /memory
+through streams/pipes
+in server endpoint for
+plain json;writing;async enumerable type of
+optimisation without some ndjson or someting
+just a very big amount of objects;reading;stream reader;pipereader;sequencereader;stream
+writer;pipewriter;IBufferwriter, arraybufferwriter
+note: some duplication in server writing to the left bottom of it, but it shows logical branching to
+stream writer and pipewriter
+day
+Topic note :jsondocument, jsonnode, jsonelement, utf8jsonwriter
+details:
+block:utf8jsonwriter
+
+-- 2 of 4 --
+
+day 12
+Topic note :sql syntax. sql server
+details:
+block:
+day 13
+Topic note :onmodelcreating
+details:
+block:
+day 14
+Topic note :binary primitives;utf8 string literal;implicit operators explicit
+operators;actiondescriptor,controlleractiondescriptor,endpoint,metadata, route or endpoint
+name, iapiendpointmetadata, ordered metadata;apibehavioroptions;xss, csp
+details:
+block:
+day 15
+Topic note :cookies, general theo, plain cookie options,;cookies vs tokens sheet jswt in
+cookies;usecookiepolicy;cookies auth ON REDIRECT probmem details returning
+details:
+block:
+day 16
+Topic note :
+principles,practises,patterns;events,delegaates,action;conventions;claimstransformation;ef
+migrations, dotnet-counters;keyless entity type;composite key;alternate key;ef core
+performance, diagnostics , compiled linq, batching, n + 1
+details:
+block:
+day 17
+Topic note :indexes, onmodel indexes;views, idexed views;searching impl, ef core, full text
+search,sql server;
+details:
+block:
+day
+Topic note :computed columns;sqlserver,efcore, bulk,sqlbulkcopy;
+details:
+block:
+
+-- 3 of 4 --
+
+day
+Topic note : - EF CORE GENERAL repo shit entity shit onmodelcreat shit transactions shit
+dbexceptions db level invariants,protection, trigger
+details:
+block:db invariant handling
+strategies;uniqueindex on computed column;handle invariants with triggers
+note: make sure that at this point there is no unnoticed and unprocessed data left in all given
+conspects, at this point we should have all conspects fully processed into questions and
+everything, this part was the last one when big conspect could have some unprocessed area
+
+-- 4 of 4 --
+

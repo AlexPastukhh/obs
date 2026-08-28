@@ -26,3 +26,8 @@ Generated: 2026-06-28 06:00:00 UTC
 
 - complete canvas preview
 - 3 regional contact sheets
+
+## Authoritative reconstructed transcript
+
+- `regions/R01-strict-mode-effect-cleanup-final-transcript-v001.md`
+- coverage recorded in the transcript: 3 / 3 source screenshots visually checked

@@ -26,3 +26,8 @@ Generated: 2026-06-28 06:00:00 UTC
 
 - complete canvas preview
 - 2 regional contact sheets
+
+## Authoritative reconstructed transcript
+
+- `regions/R01-any-vs-unknown-final-transcript-v001.md`
+- coverage recorded in the transcript: 2 / 2 source screenshots visually checked

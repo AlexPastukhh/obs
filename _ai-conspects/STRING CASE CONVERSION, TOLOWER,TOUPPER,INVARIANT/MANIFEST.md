@@ -26,3 +26,8 @@ Generated: 2026-06-28 06:00:00 UTC
 
 - complete canvas preview
 - 4 regional contact sheets
+
+## Authoritative reconstructed transcript
+
+- `regions/R01-string-case-conversion-final-transcript-v001.md`
+- coverage recorded in the transcript: 4 / 4 source screenshots visually checked

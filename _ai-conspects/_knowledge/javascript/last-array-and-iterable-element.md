@@ -18,7 +18,7 @@ The older indexed form is also O(1):
 const last = values[values.length - 1];
 ```
 
-`pop()` returns the last element but mutates the source. `slice(-1)[0]` avoids mutation but copies and is unnecessary for simple access.
+`pop()` returns the last element in O(1) time but mutates the source. `slice(-1)[0]` avoids mutation but copies and therefore does O(n) copying work; it is unnecessary for simple access.
 
 ## Generic iterables
 
@@ -38,6 +38,8 @@ Spreading a `Set` or another iterable is convenient but allocates:
 const last = [...set].at(-1);
 ```
 
+That spread traverses the iterable and creates an intermediate array, so it costs O(n) time and memory. Prefer the one-pass loop when copying only to read the last value is undesirable.
+
 ## What should be recallable
 
 - What does `.at(-1)` return for a non-empty and an empty array?
@@ -51,3 +53,6 @@ const last = [...set].at(-1);
 - Workspace: `_ai-conspects/last element/`
 - Processed source: `01-final-transcript.md`, complete semantic region
 - Original SVG: `source/last element.svg`
+- Additional workspace: `_ai-conspects/last element sharp/`
+- Additional processed source: `regions/R01-semantic-transcript-final-v001.md`, complete transcript
+- Additional original SVG: `source/last element sharp.svg` (content is byte-identical to the original `last element` source)

@@ -1,4 +1,4 @@
-# Final semantic transcript — `System.Linq.Enumerable` static methods
+﻿# Final semantic transcript вЂ” `System.Linq.Enumerable` static methods
 
 Authoritative source: `source/Enumerable static methods.svg`
 
@@ -28,8 +28,7 @@ Some methods create sequences without an existing source.
 ### `Empty`
 
 ```csharp
-IEnumerable<int> values =
-    Enumerable.Empty<int>();
+var empty = Enumerable.Empty<string>();
 ```
 
 Useful instead of allocating a new empty list when an enumerable is required.
@@ -37,11 +36,7 @@ Useful instead of allocating a new empty list when an enumerable is required.
 ### `Range`
 
 ```csharp
-IEnumerable<int> values =
-    Enumerable.Range(
-        start: 1,
-        count: 10
-    );
+var numbers = Enumerable.Range(1, 10);
 ```
 
 Produces consecutive integers.
@@ -49,11 +44,7 @@ Produces consecutive integers.
 ### `Repeat`
 
 ```csharp
-IEnumerable<string> values =
-    Enumerable.Repeat(
-        "x",
-        5
-    );
+var blanks = Enumerable.Repeat("N/A", 5);
 ```
 
 Repeats the same value.
@@ -108,3 +99,4 @@ processed text labels: 3
 remaining unclosed image uses: 0
 remaining unclosed text labels: 0
 ```
+

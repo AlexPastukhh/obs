@@ -15,6 +15,8 @@ Vary: Origin
 
 Without `Vary: Origin`, a shared cache may reuse a response produced for one origin while serving another origin.
 
+The reflected value is one exact allowed origin, not a comma-separated list. A disallowed origin receives no permissive `Access-Control-Allow-Origin` value.
+
 ```text
 same URL
 same controller/action
@@ -55,3 +57,6 @@ Use an explicit allowed origin when credentials are enabled.
 - Workspace: `_ai-conspects/options requ/`
 - Processed source: `01-final-transcript.md`, R03 — `Vary: Origin`
 - Original SVG: `source/options requ.svg`
+- Workspace: `_ai-conspects/CORS/`
+- Authoritative processed source: `regions/R03R04R05-policy-builder-headers-middleware.md`, R04 and R05
+- Original SVG: `source/CORS.svg`

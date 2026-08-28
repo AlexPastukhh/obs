@@ -139,6 +139,8 @@ rejected
 
 A component can dispatch the thunk on mount and render loading, error, or data state.
 
+Choose the async abstraction by responsibility. `createAsyncThunk` standardizes pending/fulfilled/rejected lifecycle actions. RTK Query is often a better fit for server fetching, caching, invalidation, and deduplication. A manual thunk remains useful for conditional dispatch, chained or multi-step workflows, and async work that is not naturally a server-cache query.
+
 ## What should be recallable
 
 - How to declare and dispatch a thunk, pass its argument into a request, and propagate `thunkApi.signal`.
@@ -153,3 +155,6 @@ A component can dispatch the thunk on mount and render loading, error, or data s
 - Workspace: `_ai-conspects/redux rtk/`
 - Processed source: `01-final-transcript.md`, R03
 - Original SVG: `source/redux rtk.svg`
+- Workspace: `_ai-conspects/redux basics/`
+- Authoritative processed source: `07-full-combined-final-transcript.md`, R04
+- Original SVG: `source/redux basics.svg`

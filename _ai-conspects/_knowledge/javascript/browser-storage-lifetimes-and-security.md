@@ -48,3 +48,6 @@ Persistent bearer or refresh tokens in `localStorage` increase XSS impact becaus
 - Workspace: `_ai-conspects/memory vs localstorage vs sessionstorage, session storage and local storage api methods/`
 - Processed source: `01-final-transcript.md`, R02 and lifetime-specific examples from R03
 - Original SVG: `source/memory vs localstorage vs sessionstorage, session storage and local storage api methods.svg`
+- Workspace: `_ai-conspects/jwt auth/`
+- Authoritative processed source: `01-final-transcript.md`, R03 (short-lived in-memory access token and protected-cookie renewal boundary)
+- Original SVG: `source/jwt auth.svg`

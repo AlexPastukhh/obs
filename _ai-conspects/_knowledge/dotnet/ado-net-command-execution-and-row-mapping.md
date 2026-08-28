@@ -22,6 +22,40 @@ cmd.Parameters.Add("@email", SqlDbType.NVarChar, 256).Value = email;
 
 For stored procedures, set the procedure name as `CommandText`, set `CommandType.StoredProcedure`, add parameters, and choose execution by its result shape; procedure conventions remain provider-specific.
 
+Plain ADO.NET can also use `CommandType.Text` with raw command text such as `EXEC dbo.GetCustomerSummary @CustomerId`; that works, but the caller is then authoring SQL text and still must parameterize values. `CommandType.StoredProcedure` expresses the procedure contract directly.
+
+A procedure can expose three distinct channels:
+
+```text
+result set             -> rows read with ExecuteReader
+OUTPUT parameter       -> a named parameter whose Direction is Output/InputOutput
+procedure RETURN code  -> an integer status captured with Direction.ReturnValue
+```
+
+```csharp
+cmd.CommandType = CommandType.StoredProcedure;
+cmd.CommandText = "dbo.GetCustomerSummary";
+
+var total = cmd.Parameters.Add("@Total", SqlDbType.Int);
+total.Direction = ParameterDirection.Output;
+
+var returnCode = cmd.Parameters.Add("@ReturnCode", SqlDbType.Int);
+returnCode.Direction = ParameterDirection.ReturnValue;
+
+await using (var reader = await cmd.ExecuteReaderAsync(ct))
+{
+    while (await reader.ReadAsync(ct))
+    {
+        // map the result set
+    }
+}
+
+int totalValue = (int)total.Value;
+int status = (int)returnCode.Value;
+```
+
+Output and return values are reliably populated only after command execution has completed; with a reader, consume and close/dispose it before reading those parameters. A return code is not a result-set scalar and not the `ExecuteNonQuery` affected-row count.
+
 ## Typed mapping and database null
 
 Resolve column names with `GetOrdinal`, preferably once before a hot loop, then use typed getters such as `GetInt32`, `GetString`, and `GetDateTime`. `GetOrdinal` first tries case-sensitive lookup and then case-insensitive lookup.
@@ -100,3 +134,6 @@ This representative method ties together one connection per operation, cancellat
 - Workspace: `_ai-conspects/rawconnections,dbconnection,sqlconnection,commands/`
 - Processed source: `04-detailed-near-literal-transcript-v002.md`, sections 6, 9–14, 16–19
 - Original SVG: `source/rawconnections,dbconnection,sqlconnection,commands.svg`
+- Workspace: `_ai-conspects/stored procedures/`
+- Authoritative processed source: `01-final-transcript.md`, sections 2-3
+- Original SVG: `source/stored procedures.svg`

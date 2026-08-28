@@ -26,3 +26,8 @@ Generated: 2026-06-28 06:00:00 UTC
 
 - complete canvas preview
 - 3 regional contact sheets
+
+## Authoritative reconstructed transcript
+
+- `regions/R01-string-format-interpolation-final-transcript-v001.md`
+- coverage recorded in the transcript: 1 / 1 SVG label and 3 / 3 source screenshots checked

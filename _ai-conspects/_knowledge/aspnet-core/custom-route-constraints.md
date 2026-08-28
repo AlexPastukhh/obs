@@ -53,6 +53,8 @@ A constraint is not input validation or authorization. If a value belongs to the
 
 Constraints should be deterministic, inexpensive, and free of database access or side effects. Prefer built-in constraints where possible.
 
+When an identifier type is already known, express it in the route (`{clientId:guid}`, `{id:int}`). This narrows endpoint matching, avoids otherwise ambiguous candidates, and documents the path contract; it does not replace later business validation or authorization.
+
 ## What should be recallable
 
 - What question does an `IRouteConstraint` answer?
@@ -66,3 +68,6 @@ Constraints should be deterministic, inexpensive, and free of database access or
 - Workspace: `_ai-conspects/CUSTOM ROUTE CONSTRAINT/`
 - Processed source: `regions/R01-final-coverage-transcript.md`, complete region
 - Original SVG: `source/CUSTOM ROUTE CONSTRAINT.svg`
+- Workspace: `_ai-conspects/ROUTING,ROUTE DESIGN, RESOURCES,ROUTING ALL GOOD PRACT IN GENERAL EXPLAINED/`
+- Authoritative processed source: `01-final-transcript.md`, R01 and R03 (typed identifier constraints and route-design checklist)
+- Original SVG: `source/ROUTING,ROUTE DESIGN, RESOURCES,ROUTING ALL GOOD PRACT IN GENERAL EXPLAINED.svg`

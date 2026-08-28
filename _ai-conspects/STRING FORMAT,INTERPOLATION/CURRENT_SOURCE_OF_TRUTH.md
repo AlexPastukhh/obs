@@ -10,22 +10,28 @@ Complete SVG preservation: done
 Embedded screenshot extraction: done
 Text-element inventory: done
 Visible canvas region plan: done
-Regional transcripts: not started
-Full combined transcript: not started
-Full-conspect coverage audit: not started
+Authoritative source-reconstructed transcript: done
+Coverage closure in authoritative transcript: done
+Separate full-conspect audit artifact: not produced
 ```
 
 ## Coverage
 
 ```text
-meaningful text elements: 1
-unique embedded images: 3
-image uses on canvas: 3
+meaningful text elements represented: 1 / 1
+unique embedded images represented: 3 / 3
+image uses represented: 3 / 3
 logical regions: 3
-remaining unprocessed text elements: 1
-remaining unprocessed image uses: 3
+remaining unprocessed text elements: 0
+remaining unprocessed image uses: 0
 ```
+
+## Authoritative transcript
+
+`regions/R01-string-format-interpolation-final-transcript-v001.md`
+
+This post-Stage0 reconstruction closes the SVG text label and visually checks all three local source screenshots, superseding the earlier `not started` status.
 
 ## Next
 
-Process every planned region and close all source coverage.
+No normal transcript work remains. Produce a separate audit artifact only if a later repository-wide policy requires one.

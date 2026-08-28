@@ -25,6 +25,18 @@ builder.Services.AddCors(options =>
 
 The policy explicitly controls allowed origins, methods, request headers, credentials, and preflight cache duration.
 
+`WithHeaders(...)` permits selected request headers; `WithExposedHeaders(...)` makes selected response headers readable to cross-origin JavaScript. They control opposite directions and are not interchangeable:
+
+```csharp
+policy
+    .WithHeaders("Content-Type", "If-Match")
+    .WithExposedHeaders("ETag", "Content-Disposition");
+```
+
+The builder also supports predicates and explicit reversals such as `SetIsOriginAllowed(...)`, `AllowAnyOrigin()`, and `DisallowCredentials()`. Never combine wildcard origin with credentials. When a response reflects an allowed origin, it must emit exactly one origin value and append `Origin` to `Vary`; a comma-separated origin list is not a valid substitute.
+
+During local SPA development, a dev-server proxy can present the page and API through one browser-visible origin even when it forwards to a separate backend. That changes the browser topology; it does not remove the need for a deliberate deployed-origin policy.
+
 ## Pipeline placement
 
 ```csharp
@@ -41,7 +53,9 @@ In ordinary controller applications, a dedicated `[HttpOptions]` action is unnec
 
 ## Manual-handling risk
 
-Manual code would need to process `Origin`, requested method and headers, allowed origins/methods/headers, credentials policy, preflight cache duration, and cache variation. Omitting one dimension can produce policy or caching errors.
+Manual code would need to process `Origin`, requested method and headers, allowed origins/methods/headers, credentials policy, preflight cache duration, and cache variation. Omitting one dimension can produce policy or caching errors. A handwritten example can explain the control flow, but built-in middleware is the production default.
+
+Conceptually, an approved preflight is answered and short-circuited by the CORS layer. An approved actual request continues through the application and receives the appropriate CORS response headers on the way out; CORS does not replace the endpoint.
 
 ## What should be recallable
 
@@ -61,3 +75,6 @@ Manual code would need to process `Origin`, requested method and headers, allowe
 - Workspace: `_ai-conspects/options requ/`
 - Processed source: `01-final-transcript.md`, R02 — ASP.NET Core handling
 - Original SVG: `source/options requ.svg`
+- Workspace: `_ai-conspects/CORS/`
+- Authoritative processed source: `regions/R01R02-origin-preflight-aspnet-usecases.md` and `regions/R03R04R05-policy-builder-headers-middleware.md`, R02-R05
+- Original SVG: `source/CORS.svg`

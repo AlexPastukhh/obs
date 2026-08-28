@@ -49,3 +49,6 @@ It enumerates enumerable property keys as strings and can include additional enu
 - Workspace: `_ai-conspects/js loops, for, for of, entries, index, for in/`
 - Processed source: `01-source-preserving-transcript-v001.md`, S-001–S-002
 - Original SVG: `source/js loops, for, for of, entries, index, for in.svg`
+- Workspace: `_ai-conspects/js iterate, index/`
+- Authoritative reconstructed source: `regions/R01-array-index-iteration-final-transcript-v001.md`, complete transcript
+- Original SVG: `source/js iterate, index.svg`

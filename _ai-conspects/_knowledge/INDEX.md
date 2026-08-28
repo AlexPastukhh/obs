@@ -12,6 +12,12 @@ This layer contains independently reviewable knowledge units extracted from the 
 | HTTP | [[http/INDEX]] |
 | JavaScript | [[javascript/INDEX]] |
 | Redux | [[redux/INDEX]] |
+| Redis | [[redis/INDEX]] |
 | SQL | [[sql/INDEX]] |
 | SQL Server | [[sql-server/INDEX]] |
 | TypeScript | [[typescript/INDEX]] |
+| React | [[react/INDEX]] |
+| Testing | [[testing/INDEX]] |
+| React Query | [[react-query/INDEX]] |
+| Algorithms | [[algorithms/INDEX]] |
+| Security | [[security/INDEX]] |

@@ -1,4 +1,4 @@
-topic notes 
+*topic* notes 
 day 7
 Topic note : middleware, writeasjson
 details: some basics of middleware, what u can capture in ctore from di as services? 

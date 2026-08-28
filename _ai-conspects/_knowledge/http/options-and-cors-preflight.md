@@ -28,7 +28,9 @@ Access-Control-Max-Age: 600
 Vary: Origin
 ```
 
-The browser evaluates this response before sending the actual request.
+The browser evaluates this response before sending the actual request. A failed required preflight prevents that non-simple request; failure while reading an actual response is different because the server may already have processed the request. Fetch commonly exposes either case as a rejected promise with a network-style `TypeError`, not as a normal application `4xx`/`5xx` response that script can inspect.
+
+`Access-Control-Max-Age` lets the browser reuse a successful preflight decision for a limited time. Treat that cache as constrained by the browser, origin, method, and requested-header shape rather than as a global permission cache.
 
 ## OPTIONS capability versus CORS permission
 
@@ -58,3 +60,6 @@ Allow: GET, HEAD, POST, OPTIONS
 - Workspace: `_ai-conspects/options requ/`
 - Processed source: `01-final-transcript.md`, R01 — OPTIONS and CORS preflight
 - Original SVG: `source/options requ.svg`
+- Workspace: `_ai-conspects/CORS/`
+- Authoritative processed source: `regions/R01R02-origin-preflight-aspnet-usecases.md` and `regions/R03R04R05-policy-builder-headers-middleware.md`, R01, R04 and R05
+- Original SVG: `source/CORS.svg`

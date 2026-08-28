@@ -30,7 +30,7 @@ For preview, use the correct media type and inline disposition when needed. File
 
 Never copy CR/LF or arbitrary user input into a header. Strip path components, expose only a safe filename, set the correct `Content-Type`, and do not treat disposition as authorization. Separate intentional preview and download endpoints when their policies differ.
 
-Cross-origin JavaScript `fetch()` can read this response header only if CORS exposes it. Native browser navigation/download behavior is separate from script visibility.
+Cross-origin JavaScript `fetch()` can read this response header only if CORS exposes it, for example with `Access-Control-Expose-Headers: Content-Disposition`. Allowing request headers is a separate policy dimension. Native browser navigation/download behavior is also separate from script visibility.
 
 ## What should be recallable
 
@@ -44,3 +44,9 @@ Cross-origin JavaScript `fetch()` can read this response header only if CORS exp
 - Workspace: `_ai-conspects/content disposition header/`
 - Processed source: `regions/R01-final-coverage-transcript.md`, R01
 - Original SVG: `source/content disposition header.svg`
+- Workspace: `_ai-conspects/CORS/`
+- Authoritative processed source: `regions/R03R04R05-policy-builder-headers-middleware.md`, R03
+- Original SVG: `source/CORS.svg`
+- Workspace: `_ai-conspects/donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable/`
+- Authoritative processed source: `01-final-transcript.md`, R01-R03 (`inline`/`attachment`, MIME types, ASP.NET Core file responses and browser visibility after fetch)
+- Original SVG: `source/donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable.svg`

@@ -1,4 +1,4 @@
-# Final semantic transcript — SQL logical query processing order
+﻿# Final semantic transcript вЂ” SQL logical query processing order
 
 Authoritative source: `source/sheet exec order.svg`
 
@@ -11,14 +11,17 @@ A SQL query is written in one order but logically evaluated in another.
 2. WHERE
 3. GROUP BY
 4. HAVING
-5. window-function evaluation area
-6. SELECT
-7. DISTINCT
-8. ORDER BY
-9. OFFSET / FETCH / LIMIT / TOP
+   - window functions are evaluated after WHERE/GROUP BY/HAVING and before SELECT output is finalized
+5. SELECT
+   - expressions
+   - CASE statements
+   - scalar functions
+6. DISTINCT
+7. ORDER BY
+8. LIMIT / OFFSET / TOP / FETCH
 ```
 
-The exact placement of vendor-specific features should be checked against the database engine, but this model explains most alias and filtering behavior.
+This source diagram is a semantic model: vendor-specific details can vary, but the key ordering point is that row filtering happens before SELECT aliases, window-function source rows are determined after WHERE/GROUP BY/HAVING, and pagination is last.
 
 ## Consequences
 
@@ -90,3 +93,4 @@ processed text labels: 5
 remaining unclosed image uses: 0
 remaining unclosed text labels: 0
 ```
+

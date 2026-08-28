@@ -8,6 +8,17 @@ Topic: `redux`
 
 Redux actions are ordinary plain objects describing something that happened. Their minimum shape is `{ type: "counter/increment" }`; domain data is normally carried in `payload`, while `error` can carry failure information and `meta` can carry details such as a thunk argument and request identifier. Middleware and reducers receive the same object: Toolkit generates conventional creators and type strings, but dispatch still sends an ordinary Redux action.
 
+Redux uses one-way data flow:
+
+```text
+UI dispatches an action
+-> reducers calculate the next state
+-> the store publishes it
+-> subscribed UI reads the result
+```
+
+The store is the single source of truth only for state deliberately placed there. Application code treats that state as read-only and requests changes with actions; classic reducers are pure and do not perform I/O or mutate previous state. Redux is useful when widely shared state, explicit workflows, middleware, and DevTools matter. Context can be sufficient for small or slowly changing cross-cutting values, so the choice follows workflow complexity rather than component count.
+
 ## Action creators and generated types
 
 ```js
@@ -26,6 +37,15 @@ dispatch(pizzaAdded(5));
 conceptually dispatches `{ type: "pizza/pizzaAdded", payload: 5 }`. Generated types follow `sliceName/reducerName`, reducing collisions and making DevTools output easier to read.
 
 ## Store composition and middleware
+
+Classic Redux can build a root reducer and hydrate controlled initial state:
+
+```js
+const rootReducer = combineReducers({ pizza, product });
+const store = createStore(rootReducer, preloadedState);
+```
+
+`createStore` accepts a reducer and optional preloaded state; `combineReducers` makes its map keys the root-state keys. Preloaded state supports SSR hydration, persistence, and tests. The store exposes `dispatch`, `getState`, and `subscribe`; `subscribe(listener)` returns an unsubscribe function. `store.getState()` returns a snapshot outside React but is not reactive by itself.
 
 ```js
 export const store = configureStore({
@@ -68,6 +88,19 @@ export default pizzaSlice.reducer;
 
 Toolkit uses Immer, so these apparent mutations produce an immutable next state. Do not both mutate the draft and return an unrelated replacement value from the same case reducer; use one update style consistently.
 
+In TypeScript, type the case reducer's payload explicitly, for example `PayloadAction<number>`, so the generated action creator and reducer agree on the payload contract. A partial-update action should also define which fields are allowed instead of accepting arbitrary state-shaped input.
+
+Immer creates a temporary proxy draft from the base state, records writes, and produces an immutable result with structural sharing: unchanged branches retain their references. Read current recipe values from the draft, and never leak or store the draft outside the recipe. Mutation-like syntax is safe only inside an Immer-enabled recipe/reducer; Redux state remains read-only elsewhere.
+
+```js
+const nextState = produce(state, draft => {
+  draft.items.push(newItem);
+  draft.user.profile.address.city = "Paris";
+});
+```
+
+Without Immer, copy every changed path level and use new arrays such as `[...items, value]` or `filter(...)`. Assigning a filtered array to a draft field is valid. To replace the entire state, return the replacement object; rebinding the local `draft` variable does nothing. Large graphs can still be expensive, so normalization remains useful.
+
 ## Root paths, Provider, hooks, and selectors
 
 The keys in `configureStore.reducer` define the root shape. Registering under `pizza` produces `state.pizza.pizzaBase`; reading `state.pizzaBase` is a frequent path bug.
@@ -81,6 +114,29 @@ root.render(
 ```
 
 Components use `const dispatch = useDispatch()` and `const value = useSelector(selector)`. Dispatch creator results—`dispatch(pizzaOrdered())` or `dispatch(pizzaAdded(5))`—not an uncalled creator function, unless middleware explicitly expects a function as thunk middleware does.
+
+`useSelector` subscribes and rerenders according to equality of the selected result. Returning a fresh object on every run can therefore cause avoidable rerenders; select scalars separately, use an appropriate equality function, or memoize derived objects. Multiple React-Redux Providers create independent store contexts, and hooks/connected components use the nearest Provider.
+
+The classic `connect` API remains valid:
+
+```js
+const mapStateToProps = state => ({
+  pizzaBase: state.pizza.pizzaBase,
+});
+
+const mapDispatchToProps = dispatch => ({
+  orderPizza: () => dispatch(orderPizza()),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(PizzaBox);
+```
+
+`mapStateToProps` selects state into props; `mapDispatchToProps` supplies dispatching callbacks; `connect(...)` subscribes the component. Hooks are more common in current code, but do not change those Redux data-flow rules.
+
+Only the React-Redux `<Provider store={store}>` supplies the store context. Passing a value named `state` or `store` through an ordinary React component/provider prop does not integrate that value with Redux.
 
 ```js
 export const selectPizzaBase =
@@ -107,3 +163,6 @@ Selectors keep components focused on rendering, centralize state paths, ease ref
 - Workspace: `_ai-conspects/redux rtk/`
 - Processed source: `01-final-transcript.md`, R01–R02
 - Original SVG: `source/redux rtk.svg`
+- Workspace: `_ai-conspects/redux basics/`
+- Authoritative processed source: `07-full-combined-final-transcript.md`, R01, R02, R05 and R06
+- Original SVG: `source/redux basics.svg`

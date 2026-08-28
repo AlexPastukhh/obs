@@ -38,6 +38,14 @@ regions/final-transcript.md
 regions/R01R02R03R04R05-semantic-transcript-final-v001.md
 ```
 
+## Authoritative technical corrections
+
+```text
+02-technical-corrections-v001.md
+```
+
+TC-001 corrects the branch-order interpretation of the R04 `DeepPartial` example without changing screenshot or transcript coverage.
+
 ## Evidence
 
 ```text

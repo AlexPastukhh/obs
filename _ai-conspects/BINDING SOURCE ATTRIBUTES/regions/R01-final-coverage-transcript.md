@@ -1,10 +1,10 @@
-# BINDING SOURCE ATTRIBUTES — final coverage transcript v001
+﻿# BINDING SOURCE ATTRIBUTES вЂ” final coverage transcript v001
 
 Source SVG: `BINDING SOURCE ATTRIBUTES(1).svg`  
 Conspect folder: `BINDING SOURCE ATTRIBUTES`  
 Stage: combined ten-conspect final coverage
 
-## R01 — explicit ASP.NET Core model-binding sources
+## R01 вЂ” explicit ASP.NET Core model-binding sources
 
 Binding source attributes state where an action parameter or property must come from:
 
@@ -40,10 +40,10 @@ public IActionResult Get([FromHeader(Name = "X-Correlation-Id")] string id)
 With `[ApiController]`, common inference rules reduce the need for explicit attributes:
 
 ```text
-- complex DTO/class parameter → usually [FromBody];
-- IFormFile/IFormFileCollection → [FromForm];
-- parameter name matching a route token → [FromRoute];
-- other simple values → [FromQuery].
+- complex DTO/class parameter -> usually [FromBody];
+- IFormFile/IFormFileCollection -> [FromForm];
+- parameter name matching a route token -> [FromRoute];
+- other simple values -> [FromQuery].
 ```
 
 Use an explicit attribute when the source is ambiguous or when the API contract should be obvious to readers and OpenAPI tooling.
@@ -60,3 +60,4 @@ R01 processed text labels: 0
 Remaining unclosed image uses: 0
 Remaining unclosed text labels: 0
 ```
+

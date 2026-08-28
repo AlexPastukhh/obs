@@ -10,6 +10,23 @@ Topic: `dotnet`
 
 On servers, blocked request threads cannot serve others; under load this can starve the pool, increase latency, and collapse throughput. Keep I/O async end-to-end, bound fan-out, propagate cancellation, reuse `HttpClient` rather than constructing one per request, and coordinate retries with the concurrency limit.
 
+A `try/catch` around starting `Task.Run` or another asynchronous operation does not observe an exception that occurs later when the returned task is never awaited. Awaiting returns the exception to a structured catch point:
+
+```csharp
+try
+{
+    await DoWorkAsync(cancellationToken);
+}
+catch (Exception ex)
+{
+    // Handle at the local, action, or global layer that owns the policy.
+}
+```
+
+This is another reason to keep async end-to-end instead of using `.Result`, `.Wait()`, or `Task.WaitAll`, which block and may expose aggregate-wrapped failure shapes.
+
+Handle a failure at the layer that owns its policy: locally, in an action/filter, or through global exception handling. An exception filter can narrow handling when the action/MVC boundary is the intended owner.
+
 ## Failure and cancellation policy
 
 A semaphore controls admission, not failure policy. If one task in `Task.WhenAll` fails, siblings continue unless cancellation is explicitly requested. Best-effort processing catches per item and returns an outcome containing success/value/error. Do not convert `OperationCanceledException` into an ordinary failure.
@@ -33,3 +50,6 @@ Distinguish input order, operation start order, completion order, and returned-r
 - Workspace: `_ai-conspects/async processing of multiple calls,parallelism/`
 - Processed source: `09-full-combined-final-transcript.md`, sections 06–07, 10–11
 - Original SVG: `source/async processing of multiple calls,parallelism.svg`
+- Workspace: `_ai-conspects/cancellation,async/`
+- Authoritative processed source: `regions/full-source-near-literal-v003.md`, S-027–S-030, S-032, and S-035–S-036
+- Original SVG: `source/source-complete-v002.svg`
