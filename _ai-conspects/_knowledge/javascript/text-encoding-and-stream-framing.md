@@ -18,7 +18,15 @@ text += decoder.decode();
 
 Character decoding does not solve message framing. A line parser retains the incomplete tail; a length-prefixed parser accumulates bytes, reads a complete numeric header with explicit endianness, waits for the declared body, consumes exactly it, and retains the remainder.
 
-`TextDecoderStream` performs incremental byte-to-text decoding, but its output chunks remain arbitrary. Compose responsibilities:
+`TextDecoderStream` performs incremental byte-to-text decoding, but its output chunks remain arbitrary. It can be placed directly after a Fetch body:
+
+```js
+const textStream = response.body.pipeThrough(
+  new TextDecoderStream()
+);
+```
+
+Compose responsibilities:
 
 ```text
 byte stream → TextDecoderStream → text chunks
@@ -26,7 +34,7 @@ byte stream → TextDecoderStream → text chunks
 → JSON parser TransformStream → objects
 ```
 
-A line splitter stores pending text in `transform` and emits its final tail in `flush`. `TextEncoderStream` provides the reverse streaming direction. With `{ fatal: true }`, malformed input throws; otherwise replacement characters may be produced.
+A line splitter stores pending text in `transform` and emits its final tail in `flush` when the framing protocol permits an unterminated final line. If the protocol requires a complete delimiter-terminated frame, closing with a partial tail should instead be treated as incomplete input. `TextEncoderStream` provides the reverse streaming direction. With `{ fatal: true }`, malformed input throws; otherwise replacement characters may be produced.
 
 ## Browser Fetch integration
 
@@ -55,3 +63,6 @@ Binary protocols can process each `Uint8Array` as bytes, but must still apply th
 - Workspace: `_ai-conspects/processing-data-as-stream-in-dif-situations-httpclient-endpoint-browser-websockets/`
 - Authoritative processed source: `regions/PDS02-browser-fetch-websocket-utf8-decoding.md`, browser Fetch and incremental decoding claims
 - Source preservation: regional evidence and materialized source images recorded by the workspace coverage audit
+- Workspace: `_ai-conspects/pipethrough,transformstream,pipeto,writablestream, readablestream/`
+- Authoritative processed source: `07-full-combined-final-transcript.md`, R04 plus decoder/framing mechanics used by the R05 line-splitting example
+- Original SVG: `source/pipethrough,transformstream,pipeto,writablestream, readablestream.svg`

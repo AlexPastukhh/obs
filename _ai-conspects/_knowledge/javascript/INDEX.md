@@ -46,3 +46,8 @@
 | `javascript.file-system-access-save-and-streaming` | File System Access save, streaming, and writer lifecycle | [[file-system-access-save-and-streaming]] |
 | `javascript.websocket-client-lifecycle-backpressure-and-reconnect` | Browser WebSocket lifecycle, backpressure, and reconnect | [[websocket-client-lifecycle-backpressure-and-reconnect]] |
 | `javascript.etag-write-precondition-lifecycle` | Browser ETag lifecycle for write preconditions | [[etag-write-precondition-lifecycle]] |
+| `javascript.readable-stream-consumption-and-tee` | ReadableStream consumption, locking, and tee branching | [[readable-stream-consumption-and-tee]] |
+| `javascript.readable-stream-producers-backpressure-and-cancellation` | ReadableStream producers, backpressure, and cancellation | [[readable-stream-producers-backpressure-and-cancellation]] |
+| `javascript.incremental-streaming-and-ndjson` | Incremental streaming, peak memory, and NDJSON | [[incremental-streaming-and-ndjson]] |
+| `javascript.transformstream-pipelines-and-flush` | TransformStream pipelines, buffering, and flush | [[transformstream-pipelines-and-flush]] |
+| `javascript.writablestream-pipeto-and-sink-lifecycle` | WritableStream, pipeTo, and sink lifecycle | [[writablestream-pipeto-and-sink-lifecycle]] |

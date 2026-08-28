@@ -72,6 +72,8 @@ await writable.write("CHANGED");
 await writable.close();
 ```
 
+`FileSystemWritableFileStream` also supports file-oriented positioning and truncation operations before final `close()`, so a sink can do more than append or replace one whole value.
+
 ## Writer concurrency modes
 
 An exclusive writer prevents a second writer from opening the same file concurrently:
@@ -111,3 +113,6 @@ The API is not universal. It normally requires a secure context, user activation
 - Authoritative processed source: `regions/R01R02R03R04R05-semantic-transcript-final-v001.md`, R04 and the File System Access decision/checklist claims
 - Original SVG: `source/donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable.svg`
 
+- Workspace: `_ai-conspects/pipethrough,transformstream,pipeto,writablestream, readablestream/`
+- Authoritative processed source: `07-full-combined-final-transcript.md`, R06 file-writing claims
+- Original SVG: `source/pipethrough,transformstream,pipeto,writablestream, readablestream.svg`
