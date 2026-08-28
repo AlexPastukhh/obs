@@ -76,3 +76,5 @@
 | `aspnet-core.json-xml-formatters-and-default-order` | ASP.NET Core JSON/XML formatters and default order | [[json-xml-formatters-and-default-order]] |
 | `aspnet-core.semantic-media-types-and-formatter-contracts` | ASP.NET Core semantic media types and formatter contracts | [[semantic-media-types-and-formatter-contracts]] |
 | `aspnet-core.di-scope-lifetime-and-disposal` | DI scope lifetime and disposal ownership | [[di-scope-lifetime-and-disposal]] |
+| `aspnet-core.exception-middleware-response-lifecycle` | Exception middleware response lifecycle and status mapping | [[exception-middleware-response-lifecycle]] |
+| `aspnet-core.problem-details-writers-context-and-metadata` | Problem Details writers, context, and endpoint metadata | [[problem-details-writers-context-and-metadata]] |
