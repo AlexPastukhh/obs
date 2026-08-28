@@ -104,3 +104,8 @@
 | `dotnet.deferred-enumeration-replay-and-materialization` | Deferred enumeration, replay, and materialization | [[deferred-enumeration-replay-and-materialization]] |
 | `dotnet.async-enumerable-replay-and-single-use-streams` | Async-enumerable replay and single-use streams | [[async-enumerable-replay-and-single-use-streams]] |
 | `dotnet.iterator-disposal-and-finally-cleanup` | Iterator disposal and finally cleanup | [[iterator-disposal-and-finally-cleanup]] |
+| `dotnet.disposable-ownership-and-deterministic-cleanup` | Disposable ownership and deterministic cleanup | [[disposable-ownership-and-deterministic-cleanup]] |
+| `dotnet.dispose-pattern-and-suppress-finalize` | Dispose pattern and SuppressFinalize | [[dispose-pattern-and-suppress-finalize]] |
+| `dotnet.finalizer-lifecycle-costs-and-failure-boundaries` | Finalizer lifecycle, costs, and failure boundaries | [[finalizer-lifecycle-costs-and-failure-boundaries]] |
+| `dotnet.unmanaged-ownership-safehandle-and-finalizer-decisions` | Unmanaged ownership, SafeHandle, and finalizer decisions | [[unmanaged-ownership-safehandle-and-finalizer-decisions]] |
+| `dotnet.gc-roots-reachability-and-disposal-state` | GC roots, reachability, and disposal state | [[gc-roots-reachability-and-disposal-state]] |

@@ -75,3 +75,4 @@
 | `aspnet-core.options-monitor-reload-and-background-services` | ASP.NET Core options monitoring, reload, and background services | [[options-monitor-reload-and-background-services]] |
 | `aspnet-core.json-xml-formatters-and-default-order` | ASP.NET Core JSON/XML formatters and default order | [[json-xml-formatters-and-default-order]] |
 | `aspnet-core.semantic-media-types-and-formatter-contracts` | ASP.NET Core semantic media types and formatter contracts | [[semantic-media-types-and-formatter-contracts]] |
+| `aspnet-core.di-scope-lifetime-and-disposal` | DI scope lifetime and disposal ownership | [[di-scope-lifetime-and-disposal]] |
