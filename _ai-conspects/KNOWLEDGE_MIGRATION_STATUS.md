@@ -2,15 +2,15 @@
 
 Generated inventory for `_ai-conspects` knowledge migration.
 
-Current remote snapshot checked on branch `ai-processed-conspects-text` at `b097357a21e468a832765290a52c661ef88eb81e`:
+Package base checked on branch `ai-processed-conspects-text` at `9c0542e444f129f419c5e1ef17844054ea656a94`. The counts below describe the intended post-Apply migration state:
 
 | Metric | Count |
 |---|---:|
 | Top-level directories included by the baseline scan (`name` not starting with `_`) | 321 |
-| Migrated (`KNOWLEDGE_REGISTRY.md` present) | 273 |
-| Pending (`CURRENT_SOURCE_OF_TRUTH.md` present, registry absent) | 42 |
+| Migrated (`KNOWLEDGE_REGISTRY.md` present) | 274 |
+| Pending (`CURRENT_SOURCE_OF_TRUTH.md` present, registry absent) | 41 |
 
-The baseline handoff at `477a7ab6ffe69869d97c772062838fd29b66af32` recorded `267` migrated and `48` pending. Since then six registries were added: `pipethrough,transformstream,pipeto,writablestream, readablestream`, `axios`, `Rhf react hook form`, `scopes and idisposable`, `hybrydcache`, and `EXCEPTIONHANDLERS`.
+The baseline handoff at `477a7ab6ffe69869d97c772062838fd29b66af32` recorded `267` migrated and `48` pending. Since then seven registries are included: `pipethrough,transformstream,pipeto,writablestream, readablestream`, `axios`, `Rhf react hook form`, `scopes and idisposable`, `hybrydcache`, `EXCEPTIONHANDLERS`, and `ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part,  server part, pipereader pipewriter stream reader stream writer`.
 
 ## How to read this status
 

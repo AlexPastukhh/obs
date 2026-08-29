@@ -78,3 +78,5 @@
 | `aspnet-core.di-scope-lifetime-and-disposal` | DI scope lifetime and disposal ownership | [[di-scope-lifetime-and-disposal]] |
 | `aspnet-core.exception-middleware-response-lifecycle` | Exception middleware response lifecycle and status mapping | [[exception-middleware-response-lifecycle]] |
 | `aspnet-core.problem-details-writers-context-and-metadata` | Problem Details writers, context, and endpoint metadata | [[problem-details-writers-context-and-metadata]] |
+| `aspnet-core.response-body-shapes-and-streaming-output` | Response body shapes and streaming output choices | [[response-body-shapes-and-streaming-output]] |
+| `aspnet-core.request-body-binding-raw-access-and-replay-buffering` | Request-body binding, raw access, and replay buffering | [[request-body-binding-raw-access-and-replay-buffering]] |

@@ -113,3 +113,11 @@
 | `dotnet.hybridcache-key-tag-invalidation` | HybridCache key and tag invalidation | [[hybridcache-key-tag-invalidation]] |
 | `dotnet.hybridcache-multi-instance-l1-l2-coherence` | HybridCache multi-instance L1/L2 coherence | [[hybridcache-multi-instance-l1-l2-coherence]] |
 | `dotnet.hybridcache-local-cache-flags` | HybridCache local-cache read/write flags | [[hybridcache-local-cache-flags]] |
+| `dotnet.httpclient-request-content-and-representation` | HttpClient request content types and representation costs | [[httpclient-request-content-and-representation]] |
+| `dotnet.httpclient-body-length-framing-and-compression` | HttpClient body length, transfer framing, and compression | [[httpclient-body-length-framing-and-compression]] |
+| `dotnet.httpclient-request-replayability-and-retries` | HttpClient request replayability and retries | [[httpclient-request-replayability-and-retries]] |
+| `dotnet.streamreader-decoding-buffering-and-read-contracts` | StreamReader decoding, buffering, and read contracts | [[streamreader-decoding-buffering-and-read-contracts]] |
+| `dotnet.streamwriter-encoding-buffering-and-flush-contracts` | StreamWriter encoding, buffering, and flush contracts | [[streamwriter-encoding-buffering-and-flush-contracts]] |
+| `dotnet.pipewriter-buffer-advance-flush-and-batching` | PipeWriter buffer ownership, Advance, Flush, and batching | [[pipewriter-buffer-advance-flush-and-batching]] |
+| `dotnet.pipereader-consumed-examined-and-segmented-framing` | PipeReader consumed/examined positions and segmented framing | [[pipereader-consumed-examined-and-segmented-framing]] |
+| `dotnet.sequencereader-segmented-protocol-parsing` | SequenceReader segmented protocol parsing | [[sequencereader-segmented-protocol-parsing]] |
