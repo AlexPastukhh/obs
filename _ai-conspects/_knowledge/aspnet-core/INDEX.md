@@ -7,6 +7,7 @@
 | `aspnet-core.httpcontext-features` | HttpContext.Features and typed capability contracts | [[httpcontext-features]] |
 | `aspnet-core.exception-handler-features` | Exception-handler features and original request context | [[exception-handler-features]] |
 | `aspnet-core.razor-service-injection` | Service injection and request context in Razor views | [[razor-service-injection]] |
+| `aspnet-core.razor-layouts-viewdata-tempdata-tag-helpers-and-fragments` | Razor layouts, ViewData, TempData, tag helpers, and reusable view fragments | [[razor-layouts-viewdata-tempdata-tag-helpers-and-fragments]] |
 | `aspnet-core.cross-property-model-validation` | Cross-property validation with IValidatableObject and ValidationAttribute | [[cross-property-model-validation]] |
 | `aspnet-core.localizer-resource-resolution` | IStringLocalizer and IViewLocalizer resource resolution | [[localizer-resource-resolution]] |
 | `aspnet-core.request-aborted-propagation` | RequestAborted propagation in middleware and filters | [[request-aborted-propagation]] |
@@ -55,6 +56,8 @@
 | `aspnet-core.rate-limiter-policies-and-endpoint-middleware` | Rate-limiter policies and endpoint middleware | [[rate-limiter-policies-and-endpoint-middleware]] |
 | `aspnet-core.account-lockout-and-failed-login-throttling` | Account lockout and failed-login throttling | [[account-lockout-and-failed-login-throttling]] |
 | `aspnet-core.account-activation-email-confirmation-flow` | Account activation email confirmation flow | [[account-activation-email-confirmation-flow]] |
+| `aspnet-core.authorization-policy-requirements-and-pending-lifecycle` | Authorization policy requirements and the PendingRequirements lifecycle | [[authorization-policy-requirements-and-pending-lifecycle]] |
+| `aspnet-core.authorization-middleware-policy-evaluator-and-result-handler` | Authorization middleware, policy evaluator, and result-handler flow | [[authorization-middleware-policy-evaluator-and-result-handler]] |
 | `aspnet-core.authentication-schemes-oidc-events-and-tickets` | Authentication schemes, OIDC events, and tickets | [[authentication-schemes-oidc-events-and-tickets]] |
 | `aspnet-core.status-code-pages-and-problem-details` | Status Code Pages and Problem Details responses | [[status-code-pages-and-problem-details]] |
 | `aspnet-core.createdat-route-generation` | CreatedAt route generation for creation endpoints | [[createdat-route-generation]] |

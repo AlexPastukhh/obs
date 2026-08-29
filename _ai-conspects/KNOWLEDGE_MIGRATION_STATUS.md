@@ -3,16 +3,16 @@
 Generated inventory. Do not edit workspace rows by hand; regenerate them with `KNOWLEDGE_MIGRATION_STATUS.ps1`.
 
 - Branch: `ai-processed-conspects-text`
-- HEAD: `82208c2bca830378f304d9b5b1037a0dff00dbee`
-- Generated: 2026-08-30 03:34:32 +07:00
+- HEAD: `2e34dcae5963a59b3f48fa4242f1e489f53f60f1`
+- Generated: 2026-08-30 04:24:33 +07:00
 
 ## Summary
 
 | Metric | Count |
 |---|---:|
 | Top-level directories included by the scan (name not starting with _) | 318 |
-| Migrated (KNOWLEDGE_REGISTRY.md present) | 276 |
-| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 39 |
+| Migrated (KNOWLEDGE_REGISTRY.md present) | 280 |
+| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 35 |
 | No SOT and no registry | 3 |
 | Registry present but SOT absent | 0 |
 | Migrated workspaces with UNRESOLVED > 0 | 0 |
@@ -24,10 +24,6 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 
 | Workspace | SOT | Registry | Status | Units | Mapping rows | Unresolved |
 |---|:---:|:---:|---|---:|---:|---:|
-| authentication-oidc-flows-handlers-forwarding-auth-events | yes | no | PENDING | unknown | unknown | unknown |
-| AUTHORIZATION | yes | no | PENDING | unknown | unknown | unknown |
-| authorization-flow-autorization-options-framework-authorizationmiddlewareresulthandler | yes | no | PENDING | unknown | unknown | unknown |
-| base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper | yes | no | PENDING | unknown | unknown | unknown |
 | cache control headers and response caching | yes | no | PENDING | unknown | unknown | unknown |
 | changetracker | yes | no | PENDING | unknown | unknown | unknown |
 | creating base32 secret | yes | no | PENDING | unknown | unknown | unknown |
@@ -83,9 +79,13 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | async processing of multiple calls,parallelism | yes | yes | MIGRATED | 3 | 7 | 0 |
 | AUTH EVENTS | yes | yes | MIGRATED | 5 | 11 | 0 |
 | authenticaiton ticket, properties, context.User (claimsprincipal) | yes | yes | MIGRATED | 1 | 11 | 0 |
+| authentication-oidc-flows-handlers-forwarding-auth-events | yes | yes | MIGRATED | 6 | 7 | 0 |
+| AUTHORIZATION | yes | yes | MIGRATED | 1 | 9 | 0 |
+| authorization-flow-autorization-options-framework-authorizationmiddlewareresulthandler | yes | yes | MIGRATED | 2 | 8 | 0 |
 | automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory | yes | yes | MIGRATED | 1 | 7 | 0 |
 | axios | yes | yes | MIGRATED | 6 | 20 | 0 |
 | BALANCING GROUPS .NET | yes | yes | MIGRATED | 1 | 1 | 0 |
+| base-mvc-razor-views-example-tempdata-viewdata-viewbag-cache-tag-helper | yes | yes | MIGRATED | 1 | 6 | 0 |
 | basic auth | yes | yes | MIGRATED | 2 | 7 | 0 |
 | BEM | yes | yes | MIGRATED | 1 | 2 | 0 |
 | binary primitives | yes | yes | MIGRATED | 1 | 4 | 0 |
