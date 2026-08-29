@@ -3,16 +3,16 @@
 Generated inventory. Do not edit workspace rows by hand; regenerate them with `KNOWLEDGE_MIGRATION_STATUS.ps1`.
 
 - Branch: `ai-processed-conspects-text`
-- HEAD: `2e34dcae5963a59b3f48fa4242f1e489f53f60f1`
-- Generated: 2026-08-30 04:24:33 +07:00
+- HEAD: `c3fc9dfe61ff2caa75236ca79dd921e4a9ac9a5c`
+- Generated: 2026-08-30 06:26:29 +07:00
 
 ## Summary
 
 | Metric | Count |
 |---|---:|
 | Top-level directories included by the scan (name not starting with _) | 318 |
-| Migrated (KNOWLEDGE_REGISTRY.md present) | 280 |
-| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 35 |
+| Migrated (KNOWLEDGE_REGISTRY.md present) | 281 |
+| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 34 |
 | No SOT and no registry | 3 |
 | Registry present but SOT absent | 0 |
 | Migrated workspaces with UNRESOLVED > 0 | 0 |
@@ -24,7 +24,6 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 
 | Workspace | SOT | Registry | Status | Units | Mapping rows | Unresolved |
 |---|:---:|:---:|---|---:|---:|---:|
-| cache control headers and response caching | yes | no | PENDING | unknown | unknown | unknown |
 | changetracker | yes | no | PENDING | unknown | unknown | unknown |
 | creating base32 secret | yes | no | PENDING | unknown | unknown | unknown |
 | dbcontext interseptors savechanges , dbcommand | yes | no | PENDING | unknown | unknown | unknown |
@@ -92,6 +91,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | BINDING SOURCE ATTRIBUTES | yes | yes | MIGRATED | 1 | 4 | 0 |
 | Bitwise checking for all combinations | yes | yes | MIGRATED | 1 | 1 | 0 |
 | cache control header,directives, PUBLIC PRIVATE CACHE , RESPONSE CACHE TYPES , E TAG CACHE FLOWS | yes | yes | MIGRATED | 4 | 13 | 0 |
+| cache control headers and response caching | yes | yes | MIGRATED | 4 | 25 | 0 |
 | cancellation,async | yes | yes | MIGRATED | 2 | 8 | 0 |
 | CASE INSENS,collate | yes | yes | MIGRATED | 1 | 4 | 0 |
 | channel | yes | yes | MIGRATED | 1 | 2 | 0 |

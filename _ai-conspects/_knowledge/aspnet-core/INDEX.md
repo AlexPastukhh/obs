@@ -58,6 +58,7 @@
 | `aspnet-core.account-activation-email-confirmation-flow` | Account activation email confirmation flow | [[account-activation-email-confirmation-flow]] |
 | `aspnet-core.authorization-policy-requirements-and-pending-lifecycle` | Authorization policy requirements and the PendingRequirements lifecycle | [[authorization-policy-requirements-and-pending-lifecycle]] |
 | `aspnet-core.authorization-middleware-policy-evaluator-and-result-handler` | Authorization middleware, policy evaluator, and result-handler flow | [[authorization-middleware-policy-evaluator-and-result-handler]] |
+| `aspnet-core.cache-control-headers-responsecache-attribute-and-middleware` | Cache-Control headers, ResponseCacheAttribute, and Response Caching middleware | [[cache-control-headers-responsecache-attribute-and-middleware]] |
 | `aspnet-core.authentication-schemes-oidc-events-and-tickets` | Authentication schemes, OIDC events, and tickets | [[authentication-schemes-oidc-events-and-tickets]] |
 | `aspnet-core.status-code-pages-and-problem-details` | Status Code Pages and Problem Details responses | [[status-code-pages-and-problem-details]] |
 | `aspnet-core.createdat-route-generation` | CreatedAt route generation for creation endpoints | [[createdat-route-generation]] |
