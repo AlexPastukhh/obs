@@ -11,12 +11,13 @@ Exact source: `source/ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclie
 | R01: HttpContent/body-header ownership; JsonContent, StringContent, ByteArrayContent, StreamContent, form-url-encoded and multipart selection; representation and stream-ownership costs | `dotnet.httpclient-request-content-and-representation` | `dotnet` | `../_knowledge/dotnet/httpclient-request-content-and-representation.md` | MAPPED |
 | R02: JSON construction paths; known/unknown byte length; exact Content-Length requirement; HTTP/1.1 chunked framing; compression versus transfer framing | `dotnet.httpclient-body-length-framing-and-compression` | `dotnet` | `../_knowledge/dotnet/httpclient-body-length-framing-and-compression.md` | MAPPED |
 | R03: ResponseContentRead versus ResponseHeadersRead, full-string versus stream deserialization, file copy, incremental JSON arrays, disposal and connection occupation | `dotnet.httpclient-response-streaming` | `dotnet` | `../_knowledge/dotnet/httpclient-response-streaming.md` | MERGED |
-| R04 response side: headers-read completion, later materializing APIs, body-stage failure/cancellation, decompression layering | `dotnet.httpclient-response-streaming`; `http.content-coding-direction-and-negotiation` | `dotnet`; `http` | existing units | MERGED |
+| R04 response side: headers-read completion, later materializing APIs, body-stage failure/cancellation, decompression layering | `dotnet.httpclient-response-streaming`; `http.content-coding-direction-and-negotiation` | `dotnet`; `http` | `../_knowledge/dotnet/httpclient-response-streaming.md`; `../_knowledge/http/content-coding-direction-and-negotiation.md` | MERGED |
 | R04 request side: one-shot request bodies, fresh request/source per retry, replayable byte buffering, retry ownership | `dotnet.httpclient-request-replayability-and-retries` | `dotnet` | `../_knowledge/dotnet/httpclient-request-replayability-and-retries.md` | MAPPED |
 | R04 server replay: `EnableBuffering`, reset position, memory/disk replay cost | `aspnet-core.request-body-binding-raw-access-and-replay-buffering` | `aspnet-core` | `../_knowledge/aspnet-core/request-body-binding-raw-access-and-replay-buffering.md` | MAPPED |
 | R05: Base64-in-JSON representation/cost and multipart/raw-file alternatives | `dotnet.httpclient-request-content-and-representation` | `dotnet` | `../_knowledge/dotnet/httpclient-request-content-and-representation.md` | MAPPED |
 | R06: ASP.NET Core JSON/raw/text/NDJSON/SSE/IAsyncEnumerable output choices and custom binary/Utf8JsonWriter boundary | `aspnet-core.response-body-shapes-and-streaming-output` | `aspnet-core` | `../_knowledge/aspnet-core/response-body-shapes-and-streaming-output.md` | MAPPED |
-| R06 low-level BodyWriter Advance/Flush ownership basics | `aspnet-core.request-response-streams-and-pipelines`; `dotnet.pipewriter-buffer-advance-flush-and-batching` | `aspnet-core`; `dotnet` | existing ASP.NET unit + new generic PipeWriter unit | MERGED |
+| R06 low-level framework `BodyWriter` usage/ownership basics | `aspnet-core.request-response-streams-and-pipelines` | `aspnet-core` | `../_knowledge/aspnet-core/request-response-streams-and-pipelines.md` | MERGED |
+| R06 low-level generic `PipeWriter` Advance/Flush mechanics consolidated with the dedicated PipeWriter model | `dotnet.pipewriter-buffer-advance-flush-and-batching` | `dotnet` | `../_knowledge/dotnet/pipewriter-buffer-advance-flush-and-batching.md` | MAPPED |
 | R07: model-binding versus raw-body memory model, direct copy/progressive parsing/selective processing, Body versus BodyReader, request ownership | `aspnet-core.request-body-binding-raw-access-and-replay-buffering` | `aspnet-core` | `../_knowledge/aspnet-core/request-body-binding-raw-access-and-replay-buffering.md` | MAPPED |
 | R07 basic PipeReader loop and existing request-stream short-read contract | `aspnet-core.request-response-streams-and-pipelines` | `aspnet-core` | `../_knowledge/aspnet-core/request-response-streams-and-pipelines.md` | MERGED |
 | R08: StreamReader decoding layers, constructors/ownership, Read/Peek/ReadAsync/ReadBlockAsync/lines/ReadToEnd, BaseStream and DiscardBufferedData | `dotnet.streamreader-decoding-buffering-and-read-contracts` | `dotnet` | `../_knowledge/dotnet/streamreader-decoding-buffering-and-read-contracts.md` | MAPPED |
@@ -39,7 +40,7 @@ Exact source: `source/ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclie
 
 | Status | Count |
 |---|---:|
-| MAPPED | 11 |
+| MAPPED | 13 |
 | MERGED | 4 |
 | NON_LEARNING | 1 |
 | UNRESOLVED | 0 |
