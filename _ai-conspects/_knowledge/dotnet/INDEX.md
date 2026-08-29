@@ -121,3 +121,6 @@
 | `dotnet.pipewriter-buffer-advance-flush-and-batching` | PipeWriter buffer ownership, Advance, Flush, and batching | [[pipewriter-buffer-advance-flush-and-batching]] |
 | `dotnet.pipereader-consumed-examined-and-segmented-framing` | PipeReader consumed/examined positions and segmented framing | [[pipereader-consumed-examined-and-segmented-framing]] |
 | `dotnet.sequencereader-segmented-protocol-parsing` | SequenceReader segmented protocol parsing | [[sequencereader-segmented-protocol-parsing]] |
+| `dotnet.stream-whole-content-buffering-and-byte-arrays` | Stream whole-content buffering and byte arrays | [[stream-whole-content-buffering-and-byte-arrays]] |
+| `dotnet.stream-partial-reads-and-bounded-loops` | Stream partial reads and bounded read loops | [[stream-partial-reads-and-bounded-loops]] |
+| `dotnet.stream-readexactly-readatleast-fixed-count-reads` | Stream ReadExactly, ReadAtLeast, and fixed-count reads | [[stream-readexactly-readatleast-fixed-count-reads]] |

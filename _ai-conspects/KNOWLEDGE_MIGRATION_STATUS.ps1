@@ -124,10 +124,14 @@ function Read-RegistryStats([string]$RegistryPath) {
 
 # Match the established migration scan: top-level directories whose names do
 # not start with underscore. Directories such as `_knowledge`, `_batches`, and
-# `_bundles` are therefore excluded; ordinary source workspaces such as `-all`
-# remain included when they carry their own SOT/registry.
+# `_bundles` are excluded; ordinary source workspaces such as `-all` remain
+# included when they carry their own SOT/registry.
+# Also exclude repository/service directories that are not source workspaces.
+$excludedWorkspaceNames = @('.git', '.agents', 'tmp_pdf_extract')
 $workspaceDirs = Get-ChildItem -LiteralPath $conspectsRoot -Directory |
-    Where-Object { $_.Name -notlike '_*' }
+    Where-Object {
+        $_.Name -notlike '_*' -and $_.Name -notin $excludedWorkspaceNames
+    }
 
 $rows = foreach ($dir in $workspaceDirs) {
     $sotPath = Join-Path $dir.FullName 'CURRENT_SOURCE_OF_TRUTH.md'
@@ -193,15 +197,15 @@ $out.Add('## Summary')
 $out.Add('')
 $out.Add('| Metric | Count |')
 $out.Add('|---|---:|')
-$out.Add("| Top-level directories included by the scan (`name` not starting with `_`) | $total |")
-$out.Add("| Migrated (`KNOWLEDGE_REGISTRY.md` present) | $migrated |")
-$out.Add("| Pending (`CURRENT_SOURCE_OF_TRUTH.md` present, registry absent) | $pending |")
+$out.Add("| Top-level directories included by the scan (name not starting with _) | $total |")
+$out.Add("| Migrated (KNOWLEDGE_REGISTRY.md present) | $migrated |")
+$out.Add("| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | $pending |")
 $out.Add("| No SOT and no registry | $noSot |")
 $out.Add("| Registry present but SOT absent | $registryNoSot |")
-$out.Add("| Migrated workspaces with `UNRESOLVED > 0` | $withUnresolved |")
+$out.Add("| Migrated workspaces with UNRESOLVED > 0 | $withUnresolved |")
 $out.Add('')
-$out.Add('Status meaning: `MIGRATED` = already partitioned/mapped into knowledge units; `PENDING` = ready candidate by the normal migration heuristic; `NO_SOT` = not ready by that heuristic; `MIGRATED_NO_SOT` = provenance anomaly worth checking.')
-$out.Add('For rows without a registry, `Units`, `Mapping rows`, and `Unresolved` are `—` because those values have not been established yet.')
+$out.Add('Status meaning: MIGRATED = already partitioned/mapped into knowledge units; PENDING = ready candidate by the normal migration heuristic; NO_SOT = not ready by that heuristic; MIGRATED_NO_SOT = provenance anomaly worth checking.')
+$out.Add('For rows without a registry, Units, Mapping rows, and Unresolved are unknown because those values have not been established yet.')
 $out.Add('')
 $out.Add('## Workspaces')
 $out.Add('')
@@ -209,10 +213,10 @@ $out.Add('| Workspace | SOT | Registry | Status | Units | Mapping rows | Unresol
 $out.Add('|---|:---:|:---:|---|---:|---:|---:|')
 foreach ($row in $rows) {
     $name = Escape-MarkdownCell $row.Workspace
-    $units = if ($null -ne $row.Units) { [string]$row.Units } else { '—' }
-    $mappingRows = if ($null -ne $row.MappingRows) { [string]$row.MappingRows } else { '—' }
-    $unresolved = if ($null -ne $row.Unresolved) { [string]$row.Unresolved } else { '—' }
-    $out.Add("| ``$name`` | $($row.SOT) | $($row.Registry) | $($row.Status) | $units | $mappingRows | $unresolved |")
+    $units = if ($null -ne $row.Units) { [string]$row.Units } else { 'unknown' }
+    $mappingRows = if ($null -ne $row.MappingRows) { [string]$row.MappingRows } else { 'unknown' }
+    $unresolved = if ($null -ne $row.Unresolved) { [string]$row.Unresolved } else { 'unknown' }
+    $out.Add("| $name | $($row.SOT) | $($row.Registry) | $($row.Status) | $units | $mappingRows | $unresolved |")
 }
 $out.Add('')
 $out.Add('## Regenerate')
@@ -220,7 +224,7 @@ $out.Add('')
 $out.Add('From the repository root:')
 $out.Add('')
 $out.Add('```powershell')
-$out.Add('powershell -ExecutionPolicy Bypass -File .\\_ai-conspects\\KNOWLEDGE_MIGRATION_STATUS.ps1')
+$out.Add('powershell -ExecutionPolicy Bypass -File .\_ai-conspects\KNOWLEDGE_MIGRATION_STATUS.ps1')
 $out.Add('```')
 $out.Add('')
 $out.Add('The registry is the migration marker. The status file is only a generated view; current workspace files remain the authority.')

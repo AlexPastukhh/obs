@@ -54,6 +54,7 @@
 | `aspnet-core.endpoint-metadata-and-mvc-action-descriptors` | Endpoint metadata and MVC action descriptors | [[endpoint-metadata-and-mvc-action-descriptors]] |
 | `aspnet-core.rate-limiter-policies-and-endpoint-middleware` | Rate-limiter policies and endpoint middleware | [[rate-limiter-policies-and-endpoint-middleware]] |
 | `aspnet-core.account-lockout-and-failed-login-throttling` | Account lockout and failed-login throttling | [[account-lockout-and-failed-login-throttling]] |
+| `aspnet-core.account-activation-email-confirmation-flow` | Account activation email confirmation flow | [[account-activation-email-confirmation-flow]] |
 | `aspnet-core.authentication-schemes-oidc-events-and-tickets` | Authentication schemes, OIDC events, and tickets | [[authentication-schemes-oidc-events-and-tickets]] |
 | `aspnet-core.status-code-pages-and-problem-details` | Status Code Pages and Problem Details responses | [[status-code-pages-and-problem-details]] |
 | `aspnet-core.createdat-route-generation` | CreatedAt route generation for creation endpoints | [[createdat-route-generation]] |
