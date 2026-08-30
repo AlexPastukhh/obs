@@ -126,3 +126,7 @@
 | `dotnet.stream-readexactly-readatleast-fixed-count-reads` | Stream ReadExactly, ReadAtLeast, and fixed-count reads | [[stream-readexactly-readatleast-fixed-count-reads]] |
 | `dotnet.hashcode-equality-contract` | GetHashCode contract, purpose, and mutable-key failure | [[hashcode-equality-contract]] |
 | `dotnet.hashcode-api-and-implementation` | GetHashCode and HashCode API implementation patterns | [[hashcode-api-and-implementation]] |
+| `dotnet.value-object-equality-and-component-streams` | ValueObject equality and declarative component streams | [[value-object-equality-and-component-streams]] |
+| `dotnet.lazy-initialization-and-argument-patterns` | Lazy<T> initialization, async tasks, and argument patterns | [[lazy-initialization-and-argument-patterns]] |
+| `dotnet.lazy-thread-safety-modes-and-exception-caching` | LazyThreadSafetyMode semantics and exception caching | [[lazy-thread-safety-modes-and-exception-caching]] |
+| `dotnet.totp-secret-generation-and-base32-encoding` | TOTP secret generation and Base32 encoding | [[totp-secret-generation-and-base32-encoding]] |

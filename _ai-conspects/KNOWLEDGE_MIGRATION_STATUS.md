@@ -3,19 +3,19 @@
 Generated inventory. Do not edit workspace rows by hand; regenerate them with `KNOWLEDGE_MIGRATION_STATUS.ps1`.
 
 - Branch: `ai-processed-conspects-text`
-- HEAD: `c16647be6729a196c421ec279ace2e0b8f85ed09`
-- Generated: 2026-08-30 08:17:43 +07:00
+- HEAD: `7928f4980593e7b6e3adec2c1b56ddfd09fe0d32`
+- Generated: 2026-08-30 13:43:34 +07:00
 
 ## Summary
 
 | Metric | Count |
 |---|---:|
 | Top-level directories included by the scan (name not starting with _) | 318 |
-| Migrated (KNOWLEDGE_REGISTRY.md present) | 282 |
-| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 33 |
+| Migrated (KNOWLEDGE_REGISTRY.md present) | 287 |
+| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 28 |
 | No SOT and no registry | 3 |
 | Registry present but SOT absent | 0 |
-| Migrated workspaces with UNRESOLVED > 0 | 0 |
+| Migrated workspaces with UNRESOLVED > 0 | 1 |
 
 Status meaning: MIGRATED = already partitioned/mapped into knowledge units; PENDING = ready candidate by the normal migration heuristic; NO_SOT = not ready by that heuristic; MIGRATED_NO_SOT = provenance anomaly worth checking.
 For rows without a registry, Units, Mapping rows, and Unresolved are unknown because those values have not been established yet.
@@ -24,15 +24,11 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 
 | Workspace | SOT | Registry | Status | Units | Mapping rows | Unresolved |
 |---|:---:|:---:|---|---:|---:|---:|
-| changetracker | yes | no | PENDING | unknown | unknown | unknown |
-| creating base32 secret | yes | no | PENDING | unknown | unknown | unknown |
-| dbcontext interseptors savechanges , dbcommand | yes | no | PENDING | unknown | unknown | unknown |
 | dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery | yes | no | PENDING | unknown | unknown | unknown |
 | ef core retry, savepoints | yes | no | PENDING | unknown | unknown | unknown |
 | ef-core-context-database-transaction-object-savechanges-dbconnection-dbtransaction | yes | no | PENDING | unknown | unknown | unknown |
 | ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger | yes | no | PENDING | unknown | unknown | unknown |
 | encoding, utf8, chunk processing | yes | no | PENDING | unknown | unknown | unknown |
-| equality | yes | no | PENDING | unknown | unknown | unknown |
 | events-delegaates-action | yes | no | PENDING | unknown | unknown | unknown |
 | event-source-browser | yes | no | PENDING | unknown | unknown | unknown |
 | FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison | yes | no | PENDING | unknown | unknown | unknown |
@@ -41,7 +37,6 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | google recapcha and recapchas | yes | no | PENDING | unknown | unknown | unknown |
 | httpclient,summary,theory,base usage,jsonoptions wrapper,handlers | yes | no | PENDING | unknown | unknown | unknown |
 | jsondocument, jsonnode, jsonelement, utf8jsonwriter | yes | no | PENDING | unknown | unknown | unknown |
-| Lazy | yes | no | PENDING | unknown | unknown | unknown |
 | linq-join-groupjoin-groupby-selectmany-selectmany-second-callback | yes | no | PENDING | unknown | unknown | unknown |
 | MEDIA TYPES OF REQUESTS | yes | no | PENDING | unknown | unknown | unknown |
 | mfa | yes | no | PENDING | unknown | unknown | unknown |
@@ -93,6 +88,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | cache control headers and response caching | yes | yes | MIGRATED | 4 | 25 | 0 |
 | cancellation,async | yes | yes | MIGRATED | 2 | 8 | 0 |
 | CASE INSENS,collate | yes | yes | MIGRATED | 1 | 4 | 0 |
+| changetracker | yes | yes | MIGRATED | 6 | 40 | 1 |
 | channel | yes | yes | MIGRATED | 1 | 2 | 0 |
 | claimstransformation | yes | yes | MIGRATED | 1 | 5 | 0 |
 | composite-key | yes | yes | MIGRATED | 1 | 4 | 0 |
@@ -111,11 +107,13 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | CORS | yes | yes | MIGRATED | 3 | 16 | 0 |
 | cors vs anti forgery | yes | yes | MIGRATED | 3 | 5 | 0 |
 | create array, fixed length | yes | yes | MIGRATED | 1 | 1 | 0 |
+| creating base32 secret | yes | yes | MIGRATED | 5 | 19 | 0 |
 | CREATION REQUEST,POST REQUEST,LOCACTION HEADER,CREATED AT | yes | yes | MIGRATED | 2 | 5 | 0 |
 | ctor type and instance type | yes | yes | MIGRATED | 1 | 1 | 0 |
 | CUSTOM ROUTE CONSTRAINT | yes | yes | MIGRATED | 0 | 0 | 0 |
 | data shaping,expando | yes | yes | MIGRATED | 1 | 5 | 0 |
 | date | yes | yes | MIGRATED | 1 | 4 | 0 |
+| dbcontext interseptors savechanges , dbcommand | yes | yes | MIGRATED | 4 | 37 | 0 |
 | dbcontextpool, queryfilter | yes | yes | MIGRATED | 1 | 4 | 0 |
 | decoding, bytes memory, start of x byte character | yes | yes | MIGRATED | 1 | 2 | 0 |
 | decorator | yes | yes | MIGRATED | 1 | 1 | 0 |
@@ -128,6 +126,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | ef-core-performance-diagnostics-compiled-linq-batching-n-1 | yes | yes | MIGRATED | 1 | 5 | 0 |
 | encapsulating-dbcontext | yes | yes | MIGRATED | 1 | 4 | 0 |
 | Enumerable static methods | yes | yes | MIGRATED | 1 | 4 | 0 |
+| equality | yes | yes | MIGRATED | 4 | 22 | 0 |
 | ETAG, e tag | yes | yes | MIGRATED | 4 | 8 | 0 |
 | event source browser | yes | yes | MIGRATED | 2 | 8 | 0 |
 | events,delegaates,action | yes | yes | MIGRATED | 4 | 11 | 0 |
@@ -185,6 +184,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | last element | yes | yes | MIGRATED | 0 | 0 | 0 |
 | last element sharp | yes | yes | MIGRATED | 1 | 3 | 0 |
 | last modified header, implementation, expirational model | yes | yes | MIGRATED | 1 | 4 | 0 |
+| Lazy | yes | yes | MIGRATED | 2 | 39 | 0 |
 | lazy loading | yes | yes | MIGRATED | 1 | 4 | 0 |
 | link generator | yes | yes | MIGRATED | 1 | 5 | 0 |
 | linq to sql | yes | yes | MIGRATED | 1 | 7 | 0 |

@@ -20,6 +20,28 @@ string codeText = code.ToString("D6");
 
 Prefer static APIs. Use `RandomNumberGenerator.Create()` only when an instance/abstraction is required; legacy `RNGCryptoServiceProvider` is obsolete for new code.
 
+## Direct alphabet selection with BitConverter
+
+An alternative to `GetBytes`-then-encode is to generate the secret string by picking characters from the Base32 alphabet directly. Four random bytes per output character are read as a `uint` via `BitConverter.ToUInt32`, then reduced to an alphabet index:
+
+```csharp
+byte[] random = RandomNumberGenerator.GetBytes(length * 4);
+for (int i = 0; i < length; i++)
+{
+    uint val = BitConverter.ToUInt32(random, i * 4);
+    sb.Append(Alphabet[val % (uint)Alphabet.Length]);
+}
+```
+
+`BitConverter` interprets bytes as a number; it does not encrypt or decode. Machine endianness changes the numeric value but the selection remains derived from uniform random bytes.
+
+For a 32-symbol alphabet: 32 divides `2^32` exactly, so `% 32` is uniformly distributed. If a different alphabet size is used, use rejection sampling or another unbiased mapping when exact uniformity matters.
+
+Entropy of direct selection: each character from a 32-symbol alphabet contributes 5 bits, so 16 characters give 80 bits and 32 characters give 160 bits. A 16-character direct-selection key is much weaker than a 20-byte (160-bit) byte-first key even when both look like Base32 text.
+
+The byte-first approach (`RandomNumberGenerator.GetBytes` + `Base32Encoding.ToString`) is preferred because its entropy is controlled by byte count, not output length, and it is conventional for TOTP libraries.
+
 ## Sources
 - Workspace: `_ai-conspects/randomnumbergenerator/`
 - Processed source: `regions/R01R02R03-final-coverage-transcript.md`, complete transcript
+- Additional provenance: `_ai-conspects/creating base32 secret/`, `regions/full-semantic-transcript-v001.md`, sections 4-5

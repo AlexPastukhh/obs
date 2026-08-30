@@ -21,19 +21,28 @@ public sealed class Person : IEquatable<Person>
     public string LastName  { get; init; } = "";
 
     public bool Equals(Person? other)
-        => other is not null
-           && FirstName == other.FirstName
-           && LastName  == other.LastName;
+    {
+        if (ReferenceEquals(null, other)) return false;
+        if (ReferenceEquals(this, other)) return true;
+        return FirstName == other.FirstName
+            && LastName  == other.LastName;
+    }
 
     public override bool Equals(object? obj)
         => obj is Person other && Equals(other);
 
     public override int GetHashCode()
         => HashCode.Combine(FirstName, LastName);
+
+    public static bool operator ==(Person? left, Person? right)
+        => Equals(left, right);
+
+    public static bool operator !=(Person? left, Person? right)
+        => !Equals(left, right);
 }
 ```
 
-Typed equality avoids repeated casts and gives generic collections an efficient, consistent equality path. The same identity fields appear in both equality and hashing.
+Typed equality avoids repeated casts through object (and avoids boxing when implemented on value types), giving generic collections an efficient, consistent equality path. Overloading `==` and `!=` ensures value equality semantics apply consistently when using operator syntax. GetHashCode must use the same identity fields and comparison rules as Equals; == and != must agree with the same equality semantics.
 
 ## Records as a shortcut
 
@@ -230,6 +239,7 @@ Two persons equal by `Equals` (same first/last name, different birth date) would
 ## Related knowledge
 
 - `dotnet.hashcode-equality-contract` - the conceptual contract, security/stability boundaries, mutable-key failure mechanics
+- `dotnet.value-object-equality-and-component-streams` - ValueObject base pattern and declarative component streams
 - `dotnet.record-value-semantics-and-representation` - record-generated equality in more detail
 
 ## Sources
@@ -238,3 +248,5 @@ Two persons equal by `Equals` (same first/last name, different birth date) would
 - Authoritative processed source: `02-source-preserving-transcript-v002.md`, sections S-001, S-004, S-005, S-006, S-007, S-008, S-009, S-010, S-011, S-013, S-014, S-015, S-017, S-018, S-019, S-020, S-021
 - Quality audit: `05-transcript-quality-correction-audit-v002.md`
 - Original SVG: `source/hashcode.svg` (Git blob SHA: 0eaf471525a9cf3056a6815b07a7c1c266ed210c)
+- Workspace: `_ai-conspects/equality/`
+- Authoritative processed source: `10-full-source-preserving-transcript-v003.md`, sections S-004, S-006, S-007, S-009, S-011, S-012, S-014, S-017, S-018

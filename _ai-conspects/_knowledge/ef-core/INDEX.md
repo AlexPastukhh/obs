@@ -33,3 +33,12 @@
 | `ef-core.database-view-and-defining-query-mapping` | EF Core database-view and defining-query mapping | [[database-view-and-defining-query-mapping]] |
 | `ef-core.rowversion-http-etag-concurrency` | SQL Server rowversion as an HTTP ETag concurrency token | [[rowversion-http-etag-concurrency]] |
 | `ef-core.aggregate-version-etag-propagation` | Aggregate-version ETags across root and child changes | [[aggregate-version-etag-propagation]] |
+| `ef-core.changetracker-detection-cascade-and-save-lifecycle` | ChangeTracker detection, cascade timing, and save lifecycle | [[changetracker-detection-cascade-and-save-lifecycle]] |
+| `ef-core.entityentry-state-values-and-property-control` | EntityEntry state, values, and property control | [[entityentry-state-values-and-property-control]] |
+| `ef-core.entityentry-navigations-explicit-load-and-query` | EntityEntry navigations, explicit load, and Query() | [[entityentry-navigations-explicit-load-and-query]] |
+| `ef-core.trackgraph-disconnected-graphs-and-nodestate` | TrackGraph, disconnected graphs, and NodeState | [[trackgraph-disconnected-graphs-and-nodestate]] |
+| `ef-core.changetracker-tracking-and-state-events` | ChangeTracker Tracking, Tracked, and state-change events | [[changetracker-tracking-and-state-events]] |
+| `ef-core.savechanges-interceptor-lifecycle-and-audit` | SaveChangesInterceptor lifecycle, event data, and audit stamping | [[savechanges-interceptor-lifecycle-and-audit]] |
+| `ef-core.savechanges-interceptor-suppression-and-failure` | SaveChangesInterceptor suppression, failure, and concurrency | [[savechanges-interceptor-suppression-and-failure]] |
+| `ef-core.dbcommand-interceptor-callbacks-and-sql-mutation` | DbCommandInterceptor callbacks, result shapes, and SQL mutation | [[dbcommand-interceptor-callbacks-and-sql-mutation]] |
+| `ef-core.dbcommand-interceptor-event-data-and-command-properties` | DbCommandInterceptor event data properties and DbCommand shortlist | [[dbcommand-interceptor-event-data-and-command-properties]] |

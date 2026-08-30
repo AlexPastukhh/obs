@@ -10,6 +10,17 @@ Enrollment is two-phase: generate a high-entropy secret; build an `otpauth://` U
 
 Allow only a narrow drift window such as previous/current/next step and keep server time synchronized. Verification must be bound to the correct user/enrollment, rate-limited, attempt-limited, and expired. Data Protection for the pending secret complements rather than replaces database/key-ring access control, auditing, and recovery/rotation planning.
 
+## Secret handling rules
+
+The Base32 secret is a credential equivalent to a password:
+
+- protect it at rest (encryption or Data Protection);
+- do not log it;
+- limit how often it is displayed to the user;
+- treat a QR code containing it as sensitive material;
+- rotate and re-enroll when exposure is suspected.
+
 ## Sources
 - Workspace: `_ai-conspects/totp, summary,theory/`
 - Processed source: `regions/R01-totp-theory-enrollment-verification-final.md`, complete transcript
+- Additional provenance: `_ai-conspects/creating base32 secret/`, `regions/full-semantic-transcript-v001.md`, section 3 (secret handling/security rules)

@@ -212,3 +212,4 @@ Both the semaphore dictionary and shared-task dictionary coordinate only callers
 - Authoritative processed source: `02-corrected-semantic-transcript-v002.md`, R02 and R03
 - Identical regional copy: `regions/R01R02R03-idistributedcache-corrected-final-v002.md`, R02 and R03
 - Original SVG: `source/idistributedcache.svg`
+- Additional provenance: `_ai-conspects/creating base32 secret/`, `regions/full-semantic-transcript-v001.md`, section 8 (compare-and-remove pattern for in-flight lazy cleanup)

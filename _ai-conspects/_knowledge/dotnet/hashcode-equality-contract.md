@@ -140,6 +140,7 @@ The same rule applies to `HashSet<T>`: each item acts as its own key. The same m
 ## Related knowledge
 
 - `dotnet.hashcode-api-and-implementation` - how to implement GetHashCode and IEquatable<T>
+- `dotnet.value-object-equality-and-component-streams` - ValueObject base pattern and declarative component streams
 - `dotnet.hashset-operations-and-ownership` - HashSet API: Add, Remove, Contains, set algebra
 
 ## Sources
@@ -148,3 +149,5 @@ The same rule applies to `HashSet<T>`: each item acts as its own key. The same m
 - Authoritative processed source: `02-source-preserving-transcript-v002.md`, sections S-001, S-002, S-003, S-012, S-016, S-022, S-023, S-024
 - Quality audit: `05-transcript-quality-correction-audit-v002.md`
 - Original SVG: `source/hashcode.svg` (Git blob SHA: 0eaf471525a9cf3056a6815b07a7c1c266ed210c)
+- Workspace: `_ai-conspects/equality/`
+- Authoritative processed source: `10-full-source-preserving-transcript-v003.md`, section S-003

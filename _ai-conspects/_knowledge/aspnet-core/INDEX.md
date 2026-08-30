@@ -36,6 +36,7 @@
 | `aspnet-core.action-parameter-binding-sources` | Action parameter binding sources | [[action-parameter-binding-sources]] |
 | `aspnet-core.cookie-auth-api-challenge-responses` | Cookie authentication responses for pages and APIs | [[cookie-auth-api-challenge-responses]] |
 | `aspnet-core.totp-enrollment-and-verification` | TOTP enrollment and verification | [[totp-enrollment-and-verification]] |
+| `aspnet-core.otpauth-uri-construction` | otpauth URI construction for TOTP provisioning | [[otpauth-uri-construction]] |
 | `aspnet-core.request-cancellation-and-pipeline-short-circuiting` | Request cancellation and pipeline short-circuiting | [[request-cancellation-and-pipeline-short-circuiting]] |
 | `aspnet-core.view-component-partial-updates` | Partial updates for View Components | [[view-component-partial-updates]] |
 | `aspnet-core.request-response-streams-and-pipelines` | Request and response streams with pipelines | [[request-response-streams-and-pipelines]] |
