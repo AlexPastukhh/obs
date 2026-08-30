@@ -20,3 +20,5 @@ An immutable `Address`-style record class can model an EF owned/complex value ob
 ## Sources
 - Workspace: `_ai-conspects/records/`
 - Processed source: `01-final-transcript.md`, complete transcript
+- Workspace: `_ai-conspects/hashcode/`
+- Processed source: `02-source-preserving-transcript-v002.md`, section S-001 (records generate equality and hash code)

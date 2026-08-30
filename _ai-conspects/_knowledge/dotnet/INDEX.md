@@ -124,3 +124,5 @@
 | `dotnet.stream-whole-content-buffering-and-byte-arrays` | Stream whole-content buffering and byte arrays | [[stream-whole-content-buffering-and-byte-arrays]] |
 | `dotnet.stream-partial-reads-and-bounded-loops` | Stream partial reads and bounded read loops | [[stream-partial-reads-and-bounded-loops]] |
 | `dotnet.stream-readexactly-readatleast-fixed-count-reads` | Stream ReadExactly, ReadAtLeast, and fixed-count reads | [[stream-readexactly-readatleast-fixed-count-reads]] |
+| `dotnet.hashcode-equality-contract` | GetHashCode contract, purpose, and mutable-key failure | [[hashcode-equality-contract]] |
+| `dotnet.hashcode-api-and-implementation` | GetHashCode and HashCode API implementation patterns | [[hashcode-api-and-implementation]] |

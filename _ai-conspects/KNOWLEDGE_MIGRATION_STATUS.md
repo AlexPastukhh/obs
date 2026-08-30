@@ -3,16 +3,16 @@
 Generated inventory. Do not edit workspace rows by hand; regenerate them with `KNOWLEDGE_MIGRATION_STATUS.ps1`.
 
 - Branch: `ai-processed-conspects-text`
-- HEAD: `c3fc9dfe61ff2caa75236ca79dd921e4a9ac9a5c`
-- Generated: 2026-08-30 06:26:29 +07:00
+- HEAD: `c16647be6729a196c421ec279ace2e0b8f85ed09`
+- Generated: 2026-08-30 08:17:43 +07:00
 
 ## Summary
 
 | Metric | Count |
 |---|---:|
 | Top-level directories included by the scan (name not starting with _) | 318 |
-| Migrated (KNOWLEDGE_REGISTRY.md present) | 281 |
-| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 34 |
+| Migrated (KNOWLEDGE_REGISTRY.md present) | 282 |
+| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 33 |
 | No SOT and no registry | 3 |
 | Registry present but SOT absent | 0 |
 | Migrated workspaces with UNRESOLVED > 0 | 0 |
@@ -39,7 +39,6 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | filters | yes | no | PENDING | unknown | unknown | unknown |
 | FULL CONTENT NEG + VALIDATION FLOW | yes | no | PENDING | unknown | unknown | unknown |
 | google recapcha and recapchas | yes | no | PENDING | unknown | unknown | unknown |
-| hashcode | yes | no | PENDING | unknown | unknown | unknown |
 | httpclient,summary,theory,base usage,jsonoptions wrapper,handlers | yes | no | PENDING | unknown | unknown | unknown |
 | jsondocument, jsonnode, jsonelement, utf8jsonwriter | yes | no | PENDING | unknown | unknown | unknown |
 | Lazy | yes | no | PENDING | unknown | unknown | unknown |
@@ -146,6 +145,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | flex,centering etc | yes | yes | MIGRATED | 1 | 4 | 0 |
 | fluent-validation | yes | yes | MIGRATED | 1 | 14 | 0 |
 | formatting, numeric formatting, what can be formatted | yes | yes | MIGRATED | 1 | 5 | 0 |
+| hashcode | yes | yes | MIGRATED | 3 | 26 | 0 |
 | hashing | yes | yes | MIGRATED | 1 | 4 | 0 |
 | hateoas | yes | yes | MIGRATED | 2 | 12 | 0 |
 | HEAD REQUEST | yes | yes | MIGRATED | 2 | 3 | 0 |
