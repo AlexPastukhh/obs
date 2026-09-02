@@ -8,7 +8,9 @@ A WebSocket uses TCP underneath but exposes a message protocol, not an unrestric
 
 On a .NET server, one logical message can require several `ReceiveAsync` calls. Accumulate the returned byte ranges and use `EndOfMessage` to recognize the final chunk. Do not treat each receive result as a complete application message.
 
-Dispatch by `WebSocketMessageType`: text, binary, and close are different protocol cases. Enforce a maximum logical-message size while accumulating, and decode UTF-8 text only after the complete message has reached `EndOfMessage`; a multibyte character can be split across receives. Binary messages remain bytes unless the application protocol defines another codec.
+Dispatch by `WebSocketMessageType`: text, binary, and close are different protocol cases. Enforce a maximum logical-message size while accumulating. Because a multibyte UTF-8 character can be split across receives, do not decode each fragment independently: either buffer the complete message and decode it after `EndOfMessage`, or incrementally use one stateful `Decoder` across all fragments. Binary messages remain bytes unless the application protocol defines another codec.
+
+Buffering the complete message before decoding is not the only safe shape. Incremental text processing may instead keep one stateful `Decoder` for all fragments of one message, decode exactly `result.Count` bytes from each receive, pass `flush: result.EndOfMessage`, and dispatch the assembled text only after that boundary. Recreating or resetting the decoder per fragment loses a partial UTF-8 sequence. Close frames terminate normal receive processing, and cancellation must flow through the receive and conversion loops.
 
 ```csharp
 static async Task<(WebSocketMessageType Type, byte[] Payload)?>
@@ -75,3 +77,6 @@ If an application needs chunk-like progress, define it at the application protoc
 - Workspace: `_ai-conspects/websockets/`
 - Authoritative processed source: `regions/R01R02R03-websockets-corrected-final-v003.md`, sections 2-4 and 8-9
 - Original SVG: `source/websockets.svg`
+- Workspace: `_ai-conspects/encoding, utf8, chunk processing/`
+- Authoritative processed source: `regions/full-semantic-transcript-v001.md`, section 9
+- Original SVG: source artifact verified by `CURRENT_SOURCE_OF_TRUTH.md` as Git blob `5763263be84e2e28658314edf49351c6b07ec35e`

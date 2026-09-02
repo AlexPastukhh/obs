@@ -10,6 +10,7 @@ Topic: `dotnet`
 Action             -> no parameters, returns void
 Action<T>          -> one parameter, returns void
 Action<T1, T2>     -> two parameters, returns void
+Action<T1, T2, T3> -> three parameters, returns void
 ```
 
 For example, `Action<int, string>` has the same call shape as:
@@ -48,3 +49,6 @@ It is shape-compatible with `Func<T, bool>`, but its name communicates that the 
 - Workspace: `_ai-conspects/events,delegaates,action/`
 - Processed source: `01-final-transcript.md`, R03
 - Original SVG: `source/events,delegaates,action.svg`
+- Workspace: `_ai-conspects/events-delegaates-action/`
+- Authoritative processed sources: `10-full-source-preserving-transcript-v003.md`, S-044–S-051; `11-technical-corrections-v002.md`, correction 5
+- Original SVG: `source/events,delegaates,action.svg`, SHA-256 `58fe05fdd4d608c36102140c4a25a6f8975bc5d914825d20ebc1aea90364778e`

@@ -95,6 +95,8 @@ context.Entry(order)
     .IsModified = true;
 ```
 
+`Attach` means that the entity already exists and should normally begin as `Unchanged`; it is not an insert instruction. For a narrow disconnected update, a key-only stub can be attached and only the intended properties marked modified. Normal change detection can instead observe mutations made after attachment.
+
 String-based access is useful for generic code:
 
 ```csharp
@@ -253,3 +255,5 @@ foreach (var n in meta.GetNavigations())
 - Authoritative processed source: `regions/R02-entityentry-properties-methods-query-and-values.md` (state/values/property/reload/SetValues/Metadata); `regions/R03-trackgraph-nodestate-and-member-api.md` sections 8-9 (`Members`, attach + `IsModified`)
 - Quality / coverage: `04-stage4-final-coverage-audit.md`
 - Original SVG: `source/changetracker.svg` (Git blob SHA: `50d75c751eb9f20252807b6433d90f496b91f960`)
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr02-constructors-attach-graphs-v002.md`, "Attach and entity state"

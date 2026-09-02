@@ -23,3 +23,13 @@
 | `sql-server.views-read-contracts-and-query-abstractions` | SQL Server views as read contracts and query abstractions | [[views-read-contracts-and-query-abstractions]] |
 | `sql-server.indexed-view-materialization-and-write-cost` | SQL Server indexed-view materialization and write cost | [[indexed-view-materialization-and-write-cost]] |
 | `sql-server.indexed-view-schemabinding-and-eligibility` | SQL Server indexed-view schemabinding and eligibility | [[indexed-view-schemabinding-and-eligibility]] |
+| `sql-server.declarative-invariants-and-cross-row-enforcement` | Declarative invariants and cross-row enforcement | [[declarative-invariants-and-cross-row-enforcement]] |
+| `sql-server.database-creation-files-system-databases-and-batches` | SQL Server database creation, files, system databases, and batches | [[database-creation-files-system-databases-and-batches]] |
+| `sql-server.logins-users-roles-and-permissions` | SQL Server logins, users, roles, and permissions | [[logins-users-roles-and-permissions]] |
+| `sql-server.procedural-control-flow-variables-and-errors` | SQL Server procedural control flow, variables, and errors | [[procedural-control-flow-variables-and-errors]] |
+| `sql-server.rowversion-concurrency-and-returning-values` | SQL Server rowversion concurrency and returned values | [[rowversion-concurrency-and-returning-values]] |
+| `sql-server.table-schema-types-identifiers-and-foreign-keys` | SQL Server table schemas, identifiers, and foreign keys | [[table-schema-types-identifiers-and-foreign-keys]] |
+| `sql-server.dml-output-rowcount-and-table-variables` | SQL Server DML, OUTPUT, row counts, and table variables | [[dml-output-rowcount-and-table-variables]] |
+| `sql-server.upsert-merge-and-concurrency` | SQL Server upsert, MERGE, and concurrency | [[upsert-merge-and-concurrency]] |
+| `sql-server.transactions-trancount-and-boundaries` | SQL Server transactions, TRANCOUNT, and boundaries | [[transactions-trancount-and-boundaries]] |
+| `sql-server.schema-evolution-indexes-and-constraints` | SQL Server schema evolution, indexes, and constraints | [[schema-evolution-indexes-and-constraints]] |

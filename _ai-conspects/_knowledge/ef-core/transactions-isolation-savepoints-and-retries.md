@@ -35,6 +35,12 @@ LINQ construction is deferred: a query joins the transaction when it is material
 
 `rowversion`, another EF concurrency token, or an HTTP precondition protects a stale write. It does not create a stable snapshot across several reads or replace an atomic multi-operation transaction.
 
+## Explicit transaction ownership and cleanup
+
+The ordinary owner-controlled lifecycle is begin, perform every required write, commit on success, and rollback on failure. The transaction object owns that begin/commit/rollback boundary; `SaveChanges` only flushes EF work into the active transaction.
+
+Disposal of an uncommitted transaction supplies a failure cleanup path, but an explicit `RollbackAsync` in `catch` can still be useful when cleanup must happen immediately before later catch logic. After rollback, application policy decides whether to log, compensate outside the rolled-back transaction, return a domain result, or rethrow. Those actions are distinct from the rollback itself.
+
 ## SQL Server isolation models
 
 - Read Uncommitted can observe dirty values and also permits non-repeatable reads and phantoms; it is normally unsuitable for correctness-sensitive decisions.
@@ -134,6 +140,14 @@ On a deadlock, SQL Server chooses a victim and rolls that transaction back. Trea
 - Why is a lost commit acknowledgement dangerous for a non-idempotent retry?
 - When are concurrency tokens, constraints, Snapshot, and Serializable appropriate?
 
+## Multiple contexts and transaction sharing
+
+Two relational contexts can participate in one transaction when they share the same underlying `DbConnection` and `DbTransaction`, and the second context is enlisted with `UseTransaction`.
+
+In that arrangement one commit or rollback covers the database work of both contexts. This is a same-database relational transaction pattern. It does not automatically provide a distributed transaction across unrelated databases.
+
+Using one context configured with retries and another without retries can be useful, for example to separate large true-streaming reads from normal resilient operations. Retry behavior is normally a context/provider configuration, not a per-query switch on the same context.
+
 ## Sources
 
 - Workspace: `_ai-conspects/transaction-isolation/`
@@ -142,3 +156,8 @@ On a deadlock, SQL Server chooses a victim and rolls that transaction back. Trea
 - Workspace: `_ai-conspects/transaction, isolation/`
 - Authoritative processed source: `01-final-transcript.md`, R01-R04
 - Original SVG: `source/transaction, isolation.svg`
+- Workspace: `_ai-conspects/ef core retry, savepoints/`
+- Authoritative processed source: `regions/full-semantic-transcript-v001.md`, section 8
+- Original SVG: `source/source-complete-v002.svg`
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr04-transactions-retries-rawsql-v002.md`, explicit-transaction lifecycle, rollback, and post-rollback uses `NU-014`-`NU-018`, `NU-029`-`NU-033`

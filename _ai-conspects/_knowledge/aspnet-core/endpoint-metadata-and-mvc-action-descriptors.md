@@ -54,6 +54,27 @@ API Explorer/OpenAPI infrastructure reads route/method/parameter/response/tag me
 
 Authentication response classification can also look for `IApiEndpointMetadata` on the selected endpoint, with attributes or custom metadata as fallbacks. Depending on framework/version and endpoint style, examples can include `[ApiController]` actions, JSON minimal APIs/`TypedResults`, and SignalR endpoints. Verify the application's actual metadata rather than assuming every API-shaped endpoint carries the marker.
 
+## Classifying selected controller endpoints for MVC policy
+
+When a filter must choose API versus view error behavior, selected endpoint/action metadata is more reliable than assuming every descriptor is a controller action:
+
+```csharp
+if (context.ActionDescriptor.EndpointMetadata
+    .OfType<ApiControllerAttribute>().Any())
+    return EndpointKind.Api;
+
+if (context.ActionDescriptor is ControllerActionDescriptor action)
+{
+    if (typeof(Controller).IsAssignableFrom(action.ControllerTypeInfo))
+        return EndpointKind.MvcView;
+
+    if (typeof(ControllerBase).IsAssignableFrom(action.ControllerTypeInfo))
+        return EndpointKind.Api;
+}
+```
+
+`[ApiController]` is a strong API signal. Controller base type and explicit application metadata are useful additional signals. `[Produces]` is only an optional heuristic: APIs may use defaults, and view endpoints can also declare media types. Razor Pages and custom MVC descriptors are reasons not to cast blindly. If the kind remains unknown, a filter-specific policy can leave it to outer middleware.
+
 ## Names and ordered lookup
 
 `IEndpointNameMetadata` identifies an endpoint in the endpoint-routing model. `IRouteNameMetadata` represents a route name used by route/link-generation scenarios. MVC attributes may contribute both, but code should not assume the concepts are interchangeable.
@@ -84,3 +105,6 @@ IReadOnlyList<T> all = endpoint.Metadata.GetOrderedMetadata<T>();
 - Workspace: `_ai-conspects/AUTH EVENTS/`
 - Authoritative processed source: `02-corrected-semantic-transcript-v002.md`, R03
 - Original SVG: `source/AUTH EVENTS.svg`
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed source: `regions/R01-main-filters-theory-ordering-exception-di-factories.md`, S-046-S-049, S-054-S-057, S-060, S-063, S-067, S-071, S-077-S-078, S-082
+- Original SVG: `source/filters.svg`

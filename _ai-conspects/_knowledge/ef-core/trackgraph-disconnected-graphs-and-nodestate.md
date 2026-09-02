@@ -104,6 +104,8 @@ TrackGraph -> custom per-node state decisions
 
 Use `TrackGraph` only when the broad APIs do not express the required rules.
 
+For a disconnected graph, existing referenced nodes must be attached or otherwise assigned an existing-state rule explicitly; otherwise EF may treat them as new inserts. Broad `Update` can mark the whole reachable graph modified, so mixed graphs require selective node-state decisions rather than one blanket update rule.
+
 Good fit: mixed new/existing entities, soft-delete flags, client-provided entity states, graph DTOs, generic repository merge code.
 
 Bad fit: simple insert, simple update of one aggregate with known state, normal tracked query + edit + `SaveChanges`.
@@ -132,3 +134,5 @@ Application code must define state rules explicitly; `TrackGraph` only supplies 
 - Authoritative processed source: `regions/R03-trackgraph-nodestate-and-member-api.md` sections 1-7
 - Quality / coverage: `04-stage4-final-coverage-audit.md`
 - Original SVG: `source/changetracker.svg` (Git blob SHA: `50d75c751eb9f20252807b6433d90f496b91f960`)
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr02-constructors-attach-graphs-v002.md`, "Attach and entity state"

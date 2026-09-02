@@ -18,11 +18,30 @@ NDJSON sends independently serialized JSON values separated by newline. SSE uses
 
 `IAsyncEnumerable<T>` can avoid first building a giant `List<T>` and can improve time to first item, but total bandwidth and client-side incremental behavior still depend on serializer/proxy/client contracts.
 
+Normal JSON array streaming remains one JSON document: an interruption before the closing bracket can leave invalid JSON. NDJSON makes every newline-delimited item independently parseable, so a client may retain complete earlier items after truncation. A resumable `afterId` or page-token contract limits duplication after reconnect.
+
+For manual NDJSON, serialize one object, write a newline, and flush at the chosen latency boundary. Once the response is started/flushed, status, content type, and headers are effectively committed; a later error cannot be replaced by a clean ordinary JSON envelope. `FlushAsync` pushes application buffers toward the network but cannot force proxies and clients not to buffer.
+
 ## Low-level output is for low-level framing
 
 `HttpResponse.BodyWriter` is appropriate for exact binary framing, direct encoding into pipeline memory, length prefixes, or delimiters. `Utf8JsonWriter` is useful when explicit JSON-token control is the requirement. Neither should replace standard DTO serialization without a concrete need.
 
 Framework-owned response pipes should normally be written/flushed, not completed by endpoint code.
+
+## Octet-stream file response example
+
+### S-005 — Download/stream response with octet-stream.
+
+```text
+Download/stream response with octet-stream.
+
+Visible code:
+- Controller action returns a file/stream.
+- `File(stream, "application/octet-stream", fileDownloadName: filename)` pattern.
+
+Meaning:
+For returning raw bytes/file content from ASP.NET, application/octet-stream is a common response Content-Type when the exact file type is not otherwise specified.
+```
 
 ## What should be recallable
 
@@ -47,3 +66,9 @@ Framework-owned response pipes should normally be written/flushed, not completed
 - Closure audit: `15-coverage-audit.md`
 - Exact source: `source/ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part,  server part, pipereader pipewriter stream reader stream writer.svg` (present on the checked branch)
 - Source region: R06
+- Workspace: `_ai-conspects/streaming/`
+- Authoritative processed source: `regions/R04-iasyncenumerable-ndjson-flushasync.md`, complete transcript
+- Original SVG: `source/streaming.svg`
+- Workspace: `_ai-conspects/MEDIA TYPES OF REQUESTS/`
+- Authoritative processed source: `regions/MEDIA-R01-content-type-accept-media-type-basics.md`, S-005
+- Original source identity: `MEDIA TYPES OF REQUESTS.svg` (named by `01-stage0-boundary-review.md`; not physically resolvable in the current workspace/branch).

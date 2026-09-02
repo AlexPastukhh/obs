@@ -91,3 +91,6 @@ Streaming the request body does not prove zero buffering end to end. Browser, pr
 - Workspace: `_ai-conspects/pipethrough,transformstream,pipeto,writablestream, readablestream/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, R01 streaming-request-body claims and R03
 - Original SVG: `source/pipethrough,transformstream,pipeto,writablestream, readablestream.svg`
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R01 upload-progress boundary and R03 `ReadableStream` request body with `duplex: "half"`
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

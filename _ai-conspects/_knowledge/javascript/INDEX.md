@@ -18,6 +18,8 @@
 | `javascript.browser-storage-lifetimes-and-security` | Memory, sessionStorage, and localStorage lifetimes | [[browser-storage-lifetimes-and-security]] |
 | `javascript.web-storage-events-and-failures` | Storage events, quotas, and failure handling | [[web-storage-events-and-failures]] |
 | `javascript.eventsource-client-lifecycle` | Browser EventSource client lifecycle | [[eventsource-client-lifecycle]] |
+| `javascript.fetch-response-contract-and-wrapper-policy` | Fetch response contract and wrapper policy | [[fetch-response-contract-and-wrapper-policy]] |
+| `javascript.fetch-requestinit-and-request-object` | Fetch RequestInit and Request browser controls | [[fetch-requestinit-and-request-object]] |
 | `javascript.array-index-iteration` | JavaScript array index iteration | [[array-index-iteration]] |
 | `javascript.index-search-apis` | JavaScript index and search APIs | [[index-search-apis]] |
 | `javascript.array-join-and-serialization` | JavaScript array join and serialization boundaries | [[array-join-and-serialization]] |
@@ -51,3 +53,4 @@
 | `javascript.incremental-streaming-and-ndjson` | Incremental streaming, peak memory, and NDJSON | [[incremental-streaming-and-ndjson]] |
 | `javascript.transformstream-pipelines-and-flush` | TransformStream pipelines, buffering, and flush | [[transformstream-pipelines-and-flush]] |
 | `javascript.writablestream-pipeto-and-sink-lifecycle` | WritableStream, pipeTo, and sink lifecycle | [[writablestream-pipeto-and-sink-lifecycle]] |
+| `javascript.vite-development-proxy-and-spa-orchestration` | Vite development proxy and ASP.NET SPA orchestration | [[vite-development-proxy-and-spa-orchestration]] |

@@ -29,8 +29,12 @@ outer present -> existence marker set -> required inner columns non-null
 
 Private/backing fields can preserve aggregate APIs, but migrations and materialization behavior still need tests. Owned and newer complex-value mappings differ by EF version, so confirm optional nested behavior against the exact provider/version before relying on conventions.
 
+Owned or complex values can map several columns into one concept such as `FullName` or `Money`. Configure names, lengths, requiredness, precision, and concurrency behavior at the component-property level. A one-column value converter, including a wrapper such as `Maybe<T>`, does not naturally represent a multi-column value. Domain-friendly optionality must therefore sit around an explicit component mapping. Requiredness should agree across the domain property, EF navigation/complex-property configuration, component columns, and database constraints.
+
 ## Sources
 
 - Workspace: `_ai-conspects/owned entity/`
 - Authoritative processed source: `06-full-combined-final-transcript.md`, R02, R04 and R05
 - Original SVG: `source/owned entity.svg`
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr03-model-owned-complex-relationships-v002.md`, "Owned and complex value objects" and "Correlated nullability and model-level rules"

@@ -61,3 +61,6 @@ Configure `paramsSerializer`, including with a serializer such as `qs`, when the
 - Workspace: `_ai-conspects/axios/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, query/body configuration in R01 and file/binary/query-serialization material in R04
 - Original SVG identity recorded by Stage0: `source/axios.svg` (not physically present under the workspace `source/` directory on the current branch)
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R01 query-shape and Blob-response comparison
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

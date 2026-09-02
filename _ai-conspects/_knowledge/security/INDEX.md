@@ -15,3 +15,5 @@
 | `security.refresh-token-family-rotation-and-reuse-detection` | Refresh-token family rotation and reuse detection | [[refresh-token-family-rotation-and-reuse-detection]] |
 | `security.browser-access-and-refresh-token-lifecycle` | Browser access-token and refresh-session lifecycle | [[browser-access-and-refresh-token-lifecycle]] |
 | `security.jwt-signing-keys-kid-and-jwks-rotation` | JWT signing keys, KID, and JWKS rotation | [[jwt-signing-keys-kid-and-jwks-rotation]] |
+| `security.recaptcha-server-verification-and-risk-policy` | reCAPTCHA server verification and risk policy | [[recaptcha-server-verification-and-risk-policy]] |
+| `security.mfa-factor-selection-trusted-devices-and-recovery` | MFA factor selection, trusted devices, and recovery | [[mfa-factor-selection-trusted-devices-and-recovery]] |

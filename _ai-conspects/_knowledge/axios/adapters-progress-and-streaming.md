@@ -81,3 +81,6 @@ Cancellation should abort the transfer and stop further UI updates. Progress cal
 - Workspace: `_ai-conspects/axios/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, cancellation/progress material in R02 and streaming/progress material in R03 excluding the `validateStatus` routing claim
 - Original SVG identity recorded by Stage0: `source/axios.svg` (not physically present under the workspace `source/` directory on the current branch)
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R01 progress comparison and R02 progressive Fetch reader model
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

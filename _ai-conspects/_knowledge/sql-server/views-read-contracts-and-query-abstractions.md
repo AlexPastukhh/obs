@@ -43,6 +43,40 @@ A view should not merely conceal bad performance. It is also a poor dumping grou
 
 Do not assume a view-mapped result behaves like an ordinary writable aggregate. SQL Server can update some simple views, but application read models should normally write through the real table/entity path instead of treating a reporting or joined view as an insert/update/delete surface.
 
+## Additional CREATE VIEW transcript
+
+## 13. Views
+
+A view is a saved SELECT definition.
+
+Create view:
+
+```sql
+CREATE VIEW dbo.ActiveUsers
+AS
+SELECT Id, Name, Email
+FROM dbo.Users
+WHERE IsActive = 1;
+```
+
+Use:
+
+```sql
+SELECT *
+FROM dbo.ActiveUsers;
+```
+
+Views are useful for:
+
+```text
+reusable query shape
+security boundary
+simplifying joins
+presenting a stable read model
+```
+
+A normal view is not necessarily stored as data. It is usually expanded into the query plan.
+
 ## Related knowledge
 
 - `ef-core.database-view-and-defining-query-mapping`
@@ -58,8 +92,11 @@ Do not assume a view-mapped result behaves like an ordinary writable aggregate. 
 - Why should a view read model normally write through real tables/entities?
 
 ## Sources
+- Workspace: `_ai-conspects/sql-syntax-sql-server/`
+- Authoritative processed source: `regions/R05-upsert-merge-transactions-indexes-alter-constraints-views.md`, section 13
+- Original SVG: `source/sql-syntax-sql-server.svg`
+
 
 - Workspace: `_ai-conspects/views-idexed-views/`
 - Authoritative processed sources: `regions/VIV01-views-concept-ef-core-mapping-toview-tosqlquery.md`, VIV01A, and `regions/VIV02-good-bad-use-cases-for-views.md`, VIV02A-VIV02B plus the read/write boundary
 - Materialized source: `assets/raw/full.svg`
-

@@ -83,4 +83,6 @@ That is an intentional default-policy change. Verify formatter order, missing/br
 - Workspace: `_ai-conspects/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON/`
 - Authoritative processed source: `regions/R01R02R03R04-content-negotiation-formatters-final-v001.md`, R01 formatter-family, strictness, ordering, and default-response sections
 - Original SVG: `source/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON.svg`
-
+- Workspace: `_ai-conspects/FULL CONTENT NEG + VALIDATION FLOW/`
+- Authoritative processed source: `13-corrected-study-transcript-v002.md`, section 2, with exact evidence in `11-exact-canvas-text-transcript-v002.md` R01 and `12-screenshot-evidence-cards-v002.md`, S-001-S-002 and S-135-S-137
+- Original SVG: `source/FULL CONTENT NEG + VALIDATION FLOW.svg`

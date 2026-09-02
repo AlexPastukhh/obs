@@ -165,6 +165,304 @@ useStore(selector)
 
 Wrapping `get` inside the initializer does not automatically wrap `useStore.getState()`. Middleware that must instrument external reads must deliberately replace or decorate `api.getState` as well.
 
+## Additional authoritative persistence transcript
+
+## 4. Zustand `persist`
+
+### Basic store
+
+```ts
+type AuthState = {
+  token: string | null;
+  user: User | null;
+  theme: "light" | "dark";
+  loginCount: number;
+
+  setAuth:
+    (
+      token: string,
+      user: User,
+    ) => void;
+
+  logout: () => void;
+};
+
+export const useAuthStore =
+  create<AuthState>()(
+    persist(
+      set => ({
+        token: null,
+        user: null,
+        theme: "light",
+        loginCount: 0,
+
+        setAuth:
+          (token, user) =>
+            set({
+              token,
+              user,
+            }),
+
+        logout:
+          () =>
+            set({
+              token: null,
+              user: null,
+            }),
+      }),
+      {
+        name: "auth-storage",
+        storage:
+          createJSONStorage(
+            () => localStorage,
+          ),
+      },
+    ),
+  );
+```
+
+Important options:
+
+```text
+name
+    storage key; changing it starts using another persisted bucket
+
+storage
+    storage adapter
+
+partialize
+    choose which state fields are written
+
+version
+    current persisted schema version
+
+migrate
+    convert older snapshots into current shape
+
+onRehydrateStorage
+    hook around restoration
+```
+
+### `partialize`
+
+```ts
+partialize: state => ({
+  token: state.token,
+  user: state.user,
+  theme: state.theme,
+})
+```
+
+Only the returned object is persisted. Runtime-only fields such as counters, loading flags and errors remain in memory.
+
+### Version and migration
+
+`version` is schema metadata for the persisted format.
+
+```ts
+{
+  name: "auth-storage",
+  version: 2,
+  migrate: (
+    persistedState,
+    persistedVersion,
+  ) => {
+    if (persistedVersion === 1) {
+      return {
+        ...persistedState,
+        theme: "light",
+      };
+    }
+
+    return persistedState;
+  },
+}
+```
+
+Flow:
+
+```text
+write
+    Zustand stores current configured version
+
+restore
+    stored version == configured version
+        restore normally
+
+    stored version != configured version
+        run migrate
+
+    migration unavailable/incompatible
+        reject or reset persisted state
+```
+
+Do not manually mutate a `state.version` field inside `migrate`. The version is persistence metadata managed by the middleware.
+
+A breaking schema change usually requires:
+
+```text
+1. update persisted shape
+2. increment configured version
+3. add migration path or intentionally return fresh defaults
+```
+
+Changing only actions or non-persisted fields normally does not require migration.
+
+Changing `name` abandons the old storage key. It is a clean reset but leaves old storage unless separately removed.
+
+### Persist middleware methods
+
+The canvas records the imperative API exposed through `store.persist`:
+
+```ts
+store.persist.clearStorage();
+await store.persist.rehydrate();
+
+store.persist.hasHydrated();
+
+const unsubStart =
+  store.persist.onHydrate(
+    state => {},
+  );
+
+const unsubFinish =
+  store.persist.onFinishHydration(
+    state => {},
+  );
+
+store.persist.setOptions({
+  name: "new-name",
+});
+```
+
+These methods support explicit clearing, forced rehydration, hydration status subscriptions and runtime option changes.
+
+### TTL for Zustand
+
+Zustand persist has schema migration and storage customization but no universal built-in `maxAge` option equivalent to React Query persistence.
+
+A practical TTL stores an expiration timestamp inside the persisted subset and rejects it during restore/migration.
+
+```ts
+const ONE_DAY =
+  24 * 60 * 60 * 1000;
+
+type PersistedAuth = {
+  token: string | null;
+  user: User | null;
+  expiresAt: number;
+};
+```
+
+```ts
+partialize: state => ({
+  token: state.token,
+  user: state.user,
+  expiresAt:
+    Date.now() + ONE_DAY,
+})
+```
+
+During migration/rehydration:
+
+```ts
+if (
+  !persisted.expiresAt
+  || Date.now()
+     > persisted.expiresAt
+) {
+  return emptyAuthState;
+}
+```
+
+### Throttling in Zustand
+
+The persistence middleware controls when it asks storage to write. To throttle/coalesce storage writes, wrap the storage adapter.
+
+The wrapper keeps:
+
+```text
+pending value
+timer
+setItem scheduling logic
+flush() method
+```
+
+Conceptual shape:
+
+```ts
+function createThrottledStorage(
+  delay: number,
+) {
+  let timer:
+    ReturnType<
+      typeof setTimeout
+    > | null = null;
+
+  let pending:
+    {
+      name: string;
+      value: string;
+    }
+    | null = null;
+
+  const flush = () => {
+    if (!pending) {
+      return;
+    }
+
+    localStorage.setItem(
+      pending.name,
+      pending.value,
+    );
+
+    pending = null;
+
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+  };
+
+  return {
+    getItem:
+      (name: string) =>
+        localStorage.getItem(name),
+
+    removeItem:
+      (name: string) =>
+        localStorage.removeItem(name),
+
+    setItem:
+      (
+        name: string,
+        value: string,
+      ) => {
+        pending = {
+          name,
+          value,
+        };
+
+        if (timer) {
+          clearTimeout(timer);
+        }
+
+        timer =
+          setTimeout(
+            flush,
+            delay,
+          );
+      },
+
+    flush,
+  };
+}
+```
+
+Expose `flush` deliberately for logout, route changes or other boundaries where pending writes must reach storage immediately.
+
+Use multiple stores or different storage wrappers when only one part of Zustand state should have a different persistence/throttle policy.
+
 ## What should be recallable
 
 - When is manual copying required, and when does direct `produce` suffice?
@@ -181,6 +479,10 @@ Wrapping `get` inside the initializer does not automatically wrap `useStore.getS
 - `react.zustand-selectors-async-actions-and-subscriptions`
 
 ## Sources
+- Workspace: `_ai-conspects/persistance, zustand,rquery,redux/`
+- Authoritative processed source: `01-final-transcript.md`, section 4
+- Original source identity: `persistance, zustand,rquery,redux.svg` (canonical and raw SVGs exist locally under `source/` but are not tracked/resolvable from the current branch tree).
+
 
 - Workspace: `_ai-conspects/zustand/`
 - Authoritative processed source: `01-final-transcript.md`, R02, R04 middleware overview and R05

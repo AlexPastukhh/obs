@@ -45,6 +45,17 @@ Use it in a route:
 app.MapGet("/numbers/{n:even}", (int n) => $"Even: {n}");
 ```
 
+The routing workspace shows the equivalent dictionary `Add` form and a second inline-use example:
+
+```csharp
+services.Configure<RouteOptions>(opts =>
+{
+    opts.ConstraintMap.Add("even", typeof(EvenNumberConstraint));
+});
+
+app.MapGet("/nums/{id:even}", (int id) => $"even {id}");
+```
+
 When the constraint returns `false`, routing continues searching for another endpoint and otherwise produces 404.
 
 ## Matching boundary
@@ -64,6 +75,10 @@ When an identifier type is already known, express it in the route (`{clientId:gu
 - What operational properties should a matcher have?
 
 ## Sources
+
+- Workspace: `_ai-conspects/routing-route-params-tech-info-custom-constraints-router-matching/`
+- Authoritative processed source: `regions/RTR02-custom-irouteconstraint-v001.md`, S-005 and native labels T-002 through T-018
+- Original SVG: `assets/raw/full.svg` (SHA-256 `ff42eda1c222260754fb8b0dceab59f3464458683626d4df14e2239e04ab5b18`; Git blob `817b5f15682925438fc9078ae4b309b37c07d579`)
 
 - Workspace: `_ai-conspects/CUSTOM ROUTE CONSTRAINT/`
 - Processed source: `regions/R01-final-coverage-transcript.md`, complete region

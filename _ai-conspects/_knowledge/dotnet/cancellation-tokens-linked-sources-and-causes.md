@@ -133,3 +133,6 @@ This distinction matters because an external caller may already be gone, while a
 - Workspace: `_ai-conspects/cancellation,async/`
 - Authoritative processed source: `regions/full-source-near-literal-v003.md`, S-001–S-011, S-015–S-019, S-024–S-026, S-031, S-033–S-034, S-037, and S-039–S-042
 - Original corrected SVG: `source/source-complete-v002.svg`
+- Workspace: `_ai-conspects/httpclient,summary,theory,base usage,jsonoptions wrapper,handlers/`
+- Authoritative processed source: `regions/R06R07-config-primary-delegating-handlers-final.md`, R06 per-request timeout, linked-token, and catch-filter material
+- Original source identity: `httpclient,summary,theory,base usage,jsonoptions wrapper,handlers.svg` (named by `00-source-check-and-boundary-review.md`; not tracked or resolvable from the current branch tree)

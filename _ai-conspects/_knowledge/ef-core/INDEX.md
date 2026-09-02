@@ -9,6 +9,9 @@
 | `ef-core.lazy-loading-and-query-shaping` | Lazy loading and query shaping | [[lazy-loading-and-query-shaping]] |
 | `ef-core.global-query-filters-and-required-navigations` | Global query filters and required navigations | [[global-query-filters-and-required-navigations]] |
 | `ef-core.dbcontext-configuration-encapsulation` | DbContext configuration encapsulation | [[dbcontext-configuration-encapsulation]] |
+| `ef-core.executeintransactionasync-ambiguous-commit-verification` | EF Core ExecuteInTransactionAsync and ambiguous commit verification | [[executeintransactionasync-ambiguous-commit-verification]] |
+| `ef-core.execution-strategies-retry-behavior-and-configuration` | EF Core execution strategies, retry behavior, and configuration | [[execution-strategies-retry-behavior-and-configuration]] |
+| `ef-core.isolation-levels-and-retry-semantics` | EF Core isolation levels and retry semantics | [[isolation-levels-and-retry-semantics]] |
 | `ef-core.query-performance-shape-diagnostics-and-batching` | Query shape, diagnostics, and batching | [[query-performance-shape-diagnostics-and-batching]] |
 | `ef-core.migrations-development-and-deployment-workflows` | Migrations in development and deployment | [[migrations-development-and-deployment-workflows]] |
 | `ef-core.composite-keys-relationships-and-indexes` | Composite keys, relationships, and indexes | [[composite-keys-relationships-and-indexes]] |
@@ -42,3 +45,21 @@
 | `ef-core.savechanges-interceptor-suppression-and-failure` | SaveChangesInterceptor suppression, failure, and concurrency | [[savechanges-interceptor-suppression-and-failure]] |
 | `ef-core.dbcommand-interceptor-callbacks-and-sql-mutation` | DbCommandInterceptor callbacks, result shapes, and SQL mutation | [[dbcommand-interceptor-callbacks-and-sql-mutation]] |
 | `ef-core.dbcommand-interceptor-event-data-and-command-properties` | DbCommandInterceptor event data properties and DbCommand shortlist | [[dbcommand-interceptor-event-data-and-command-properties]] |
+| `ef-core.fromsql-and-sqlquery-apis` | EF Core FromSql and SqlQuery APIs | [[fromsql-and-sqlquery-apis]] |
+| `ef-core.fromsql-parameterization-and-dynamic-sql` | EF Core FromSql parameterization and safe dynamic SQL | [[fromsql-parameterization-and-dynamic-sql]] |
+| `ef-core.executeupdate-executedelete-and-set-based-dml` | EF Core ExecuteUpdate, ExecuteDelete, and set-based DML | [[executeupdate-executedelete-and-set-based-dml]] |
+| `ef-core.retry-buffering-and-streaming-behavior` | EF Core retry buffering and streaming behavior | [[retry-buffering-and-streaming-behavior]] |
+| `ef-core.savepoints-savechanges-and-transaction-recovery` | EF Core savepoints, SaveChanges, and transaction recovery | [[savepoints-savechanges-and-transaction-recovery]] |
+| `ef-core.autotransaction-currenttransaction-and-autosavepoints` | EF Core AutoTransactionBehavior, CurrentTransaction, and AutoSavepoints | [[autotransaction-currenttransaction-and-autosavepoints]] |
+| `ef-core.idbcontext-transaction-savepoints-and-dbtransaction-interop` | EF Core IDbContextTransaction, savepoints, and DbTransaction interop | [[idbcontext-transaction-savepoints-and-dbtransaction-interop]] |
+| `ef-core.savechanges-flush-lifecycle-and-rollback-scope` | EF Core SaveChanges flush lifecycle and rollback scope | [[savechanges-flush-lifecycle-and-rollback-scope]] |
+| `ef-core.savechanges-generated-values-batching-and-changetracker` | EF Core SaveChanges generated values, batching, and ChangeTracker.Clear | [[savechanges-generated-values-batching-and-changetracker]] |
+| `ef-core.databasefacade-connectivity-and-migrations` | EF Core DatabaseFacade connectivity and migrations | [[databasefacade-connectivity-and-migrations]] |
+| `ef-core.dbconnection-lifetime-setdbconnection-and-timeouts` | EF Core DbConnection lifetime, SetDbConnection, and timeouts | [[dbconnection-lifetime-setdbconnection-and-timeouts]] |
+| `ef-core.manual-dbcontext-and-multi-context-patterns` | EF Core manual DbContext construction and multi-context patterns | [[manual-dbcontext-and-multi-context-patterns]] |
+| `ef-core.tracking-queries-identity-resolution-and-projections` | Tracking queries, identity resolution, and read projections | [[tracking-queries-identity-resolution-and-projections]] |
+| `ef-core.entity-materialization-and-safe-constructors` | Entity materialization and safe constructors | [[entity-materialization-and-safe-constructors]] |
+| `ef-core.shadow-properties-and-persistence-only-state` | Shadow properties and persistence-only state | [[shadow-properties-and-persistence-only-state]] |
+| `ef-core.optimistic-concurrency-resolution-and-savepoints` | Optimistic concurrency resolution and savepoints | [[optimistic-concurrency-resolution-and-savepoints]] |
+| `ef-core.database-failure-layers-and-sql-server-classification` | Database failure layers and SQL Server classification | [[database-failure-layers-and-sql-server-classification]] |
+| `ef-core.query-shape-cartesian-expansion` | Query shape and cartesian expansion | [[query-shape-cartesian-expansion]] |

@@ -90,3 +90,6 @@ builder.Services.AddControllers(options =>
 - Workspace: `_ai-conspects/SYSTEM.TEXT.JSON SER SER/`
 - Processed source: `02-source-preserving-transcript-v002.md`, S-001–S-006
 - Original SVG: `source/SYSTEM.TEXT.JSON SER SER.svg`
+- Workspace: `_ai-conspects/FULL CONTENT NEG + VALIDATION FLOW/`
+- Authoritative processed source: `13-corrected-study-transcript-v002.md`, section 2, with exact evidence in `11-exact-canvas-text-transcript-v002.md` R01 and `12-screenshot-evidence-cards-v002.md`, S-135-S-136
+- Original SVG: `source/FULL CONTENT NEG + VALIDATION FLOW.svg`

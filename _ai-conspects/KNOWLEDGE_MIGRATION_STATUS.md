@@ -3,19 +3,19 @@
 Generated inventory. Do not edit workspace rows by hand; regenerate them with `KNOWLEDGE_MIGRATION_STATUS.ps1`.
 
 - Branch: `ai-processed-conspects-text`
-- HEAD: `7928f4980593e7b6e3adec2c1b56ddfd09fe0d32`
-- Generated: 2026-08-30 13:43:34 +07:00
+- HEAD: `de2b5010bbed10653293c9da30dc910823052f8b`
+- Generated: 2026-09-02 08:00:09 +07:00
 
 ## Summary
 
 | Metric | Count |
 |---|---:|
 | Top-level directories included by the scan (name not starting with _) | 318 |
-| Migrated (KNOWLEDGE_REGISTRY.md present) | 287 |
-| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 28 |
+| Migrated (KNOWLEDGE_REGISTRY.md present) | 313 |
+| Pending (CURRENT_SOURCE_OF_TRUTH.md present, registry absent) | 2 |
 | No SOT and no registry | 3 |
 | Registry present but SOT absent | 0 |
-| Migrated workspaces with UNRESOLVED > 0 | 1 |
+| Migrated workspaces with UNRESOLVED > 0 | 2 |
 
 Status meaning: MIGRATED = already partitioned/mapped into knowledge units; PENDING = ready candidate by the normal migration heuristic; NO_SOT = not ready by that heuristic; MIGRATED_NO_SOT = provenance anomaly worth checking.
 For rows without a registry, Units, Mapping rows, and Unresolved are unknown because those values have not been established yet.
@@ -24,34 +24,8 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 
 | Workspace | SOT | Registry | Status | Units | Mapping rows | Unresolved |
 |---|:---:|:---:|---|---:|---:|---:|
-| dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery | yes | no | PENDING | unknown | unknown | unknown |
-| ef core retry, savepoints | yes | no | PENDING | unknown | unknown | unknown |
-| ef-core-context-database-transaction-object-savechanges-dbconnection-dbtransaction | yes | no | PENDING | unknown | unknown | unknown |
-| ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger | yes | no | PENDING | unknown | unknown | unknown |
-| encoding, utf8, chunk processing | yes | no | PENDING | unknown | unknown | unknown |
-| events-delegaates-action | yes | no | PENDING | unknown | unknown | unknown |
-| event-source-browser | yes | no | PENDING | unknown | unknown | unknown |
-| FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison | yes | no | PENDING | unknown | unknown | unknown |
-| filters | yes | no | PENDING | unknown | unknown | unknown |
-| FULL CONTENT NEG + VALIDATION FLOW | yes | no | PENDING | unknown | unknown | unknown |
-| google recapcha and recapchas | yes | no | PENDING | unknown | unknown | unknown |
-| httpclient,summary,theory,base usage,jsonoptions wrapper,handlers | yes | no | PENDING | unknown | unknown | unknown |
-| jsondocument, jsonnode, jsonelement, utf8jsonwriter | yes | no | PENDING | unknown | unknown | unknown |
 | linq-join-groupjoin-groupby-selectmany-selectmany-second-callback | yes | no | PENDING | unknown | unknown | unknown |
-| MEDIA TYPES OF REQUESTS | yes | no | PENDING | unknown | unknown | unknown |
-| mfa | yes | no | PENDING | unknown | unknown | unknown |
-| persistance, zustand,rquery,redux | yes | no | PENDING | unknown | unknown | unknown |
-| problem details | yes | no | PENDING | unknown | unknown | unknown |
-| proxy, server, vite dev server proxy | yes | no | PENDING | unknown | unknown | unknown |
-| react query,rquery | yes | no | PENDING | unknown | unknown | unknown |
-| react router | yes | no | PENDING | unknown | unknown | unknown |
-| REFLECTION | yes | no | PENDING | unknown | unknown | unknown |
-| routing-route-params-tech-info-custom-constraints-router-matching | yes | no | PENDING | unknown | unknown | unknown |
 | server-resources-multipleinstances-microservices | yes | no | PENDING | unknown | unknown | unknown |
-| shared-polly-cheat-sheet-production-ready-verions-exceptions-from-pipeline-and-handling | yes | no | PENDING | unknown | unknown | unknown |
-| sql-syntax-sql-server | yes | no | PENDING | unknown | unknown | unknown |
-| streaming | yes | no | PENDING | unknown | unknown | unknown |
-| time | yes | no | PENDING | unknown | unknown | unknown |
 | binding-source-attributes | no | no | NO_SOT | unknown | unknown | unknown |
 | content-disposition-header | no | no | NO_SOT | unknown | unknown | unknown |
 | protocol | no | no | NO_SOT | unknown | unknown | unknown |
@@ -115,35 +89,46 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | date | yes | yes | MIGRATED | 1 | 4 | 0 |
 | dbcontext interseptors savechanges , dbcommand | yes | yes | MIGRATED | 4 | 37 | 0 |
 | dbcontextpool, queryfilter | yes | yes | MIGRATED | 1 | 4 | 0 |
+| dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery | yes | yes | MIGRATED | 4 | 18 | 0 |
 | decoding, bytes memory, start of x byte character | yes | yes | MIGRATED | 1 | 2 | 0 |
 | decorator | yes | yes | MIGRATED | 1 | 1 | 0 |
 | default values of funcs, how to call, rest params in funcs | yes | yes | MIGRATED | 1 | 1 | 0 |
 | delete | yes | yes | MIGRATED | 1 | 1 | 0 |
 | donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable | yes | yes | MIGRATED | 6 | 15 | 0 |
 | editor,display templates | yes | yes | MIGRATED | 1 | 5 | 0 |
+| ef core retry, savepoints | yes | yes | MIGRATED | 7 | 15 | 0 |
 | ef has conversion, value converte,comparer | yes | yes | MIGRATED | 3 | 7 | 0 |
 | ef migrations, dotnet-counters | yes | yes | MIGRATED | 2 | 7 | 0 |
+| ef-core-context-database-transaction-object-savechanges-dbconnection-dbtransaction | yes | yes | MIGRATED | 8 | 14 | 0 |
+| ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger | yes | yes | MIGRATED | 22 | 30 | 0 |
 | ef-core-performance-diagnostics-compiled-linq-batching-n-1 | yes | yes | MIGRATED | 1 | 5 | 0 |
 | encapsulating-dbcontext | yes | yes | MIGRATED | 1 | 4 | 0 |
+| encoding, utf8, chunk processing | yes | yes | MIGRATED | 3 | 12 | 0 |
 | Enumerable static methods | yes | yes | MIGRATED | 1 | 4 | 0 |
 | equality | yes | yes | MIGRATED | 4 | 22 | 0 |
 | ETAG, e tag | yes | yes | MIGRATED | 4 | 8 | 0 |
 | event source browser | yes | yes | MIGRATED | 2 | 8 | 0 |
 | events,delegaates,action | yes | yes | MIGRATED | 4 | 11 | 0 |
+| events-delegaates-action | yes | yes | MIGRATED | 4 | 13 | 0 |
+| event-source-browser | yes | yes | MIGRATED | 2 | 12 | 0 |
 | exaustiveness check with sicr union for enums,classes with inher | yes | yes | MIGRATED | 1 | 4 | 0 |
 | EXCEPTIONHANDLERS | yes | yes | MIGRATED | 3 | 15 | 0 |
 | expandoobject | yes | yes | MIGRATED | 1 | 4 | 0 |
 | explicit interface inplementation | yes | yes | MIGRATED | 1 | 4 | 0 |
 | EXPRESSION TREES | yes | yes | MIGRATED | 3 | 6 | 0 |
+| FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison | yes | yes | MIGRATED | 12 | 17 | 0 |
 | FILTER,MIDDLEWARE CANCELLATION,REQUEST ABORTED | yes | yes | MIGRATED | 1 | 5 | 0 |
 | FILTERING AND SEARCHING | yes | yes | MIGRATED | 1 | 1 | 0 |
 | filter-middleware-cancellation-request-aborted | yes | yes | MIGRATED | 1 | 4 | 0 |
+| filters | yes | yes | MIGRATED | 13 | 23 | 0 |
 | find index array string | yes | yes | MIGRATED | 1 | 4 | 0 |
 | FLAT FLATMAP | yes | yes | MIGRATED | 0 | 0 | 0 |
 | flex item ,flex shrinking | yes | yes | MIGRATED | 1 | 1 | 0 |
 | flex,centering etc | yes | yes | MIGRATED | 1 | 4 | 0 |
 | fluent-validation | yes | yes | MIGRATED | 1 | 14 | 0 |
 | formatting, numeric formatting, what can be formatted | yes | yes | MIGRATED | 1 | 5 | 0 |
+| FULL CONTENT NEG + VALIDATION FLOW | yes | yes | MIGRATED | 10 | 17 | 0 |
+| google recapcha and recapchas | yes | yes | MIGRATED | 3 | 12 | 0 |
 | hashcode | yes | yes | MIGRATED | 3 | 26 | 0 |
 | hashing | yes | yes | MIGRATED | 1 | 4 | 0 |
 | hateoas | yes | yes | MIGRATED | 2 | 12 | 0 |
@@ -151,6 +136,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | header max width, sticky,fixed | yes | yes | MIGRATED | 1 | 4 | 0 |
 | headers | yes | yes | MIGRATED | 0 | 0 | 0 |
 | hexadecimal base16 how  to convert to bytes easily | yes | yes | MIGRATED | 1 | 4 | 0 |
+| httpclient,summary,theory,base usage,jsonoptions wrapper,handlers | yes | yes | MIGRATED | 8 | 12 | 0 |
 | httpcontent,custom one, readasstream buffering, compression directly to network | yes | yes | MIGRATED | 0 | 0 | 0 |
 | httpcontext items and features | yes | yes | MIGRATED | 0 | 0 | 0 |
 | httpcontext-items-and-features | yes | yes | MIGRATED | 2 | 4 | 0 |
@@ -179,6 +165,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | js url safe, encodeuri | yes | yes | MIGRATED | 1 | 3 | 0 |
 | js yield, asyncenumerable, finally of generator | yes | yes | MIGRATED | 0 | 0 | 0 |
 | jsonconverter | yes | yes | MIGRATED | 1 | 7 | 0 |
+| jsondocument, jsonnode, jsonelement, utf8jsonwriter | yes | yes | MIGRATED | 4 | 5 | 0 |
 | jwt auth | yes | yes | MIGRATED | 10 | 20 | 0 |
 | keyless entity type | yes | yes | MIGRATED | 1 | 5 | 0 |
 | last element | yes | yes | MIGRATED | 0 | 0 | 0 |
@@ -192,8 +179,10 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | lock-monitor | yes | yes | MIGRATED | 2 | 6 | 0 |
 | manual account lockout,ratelimiter middleware, idatabase vs idist cache | yes | yes | MIGRATED | 7 | 9 | 0 |
 | map and weakmap js | yes | yes | MIGRATED | 1 | 2 | 0 |
+| MEDIA TYPES OF REQUESTS | yes | yes | MIGRATED | 5 | 6 | 0 |
 | membernotnull attribute,NULL | yes | yes | MIGRATED | 1 | 2 | 0 |
 | memory vs localstorage vs sessionstorage, session storage and local storage api methods | yes | yes | MIGRATED | 0 | 0 | 0 |
+| mfa | yes | yes | MIGRATED | 5 | 11 | 0 |
 | middleware-writeasjson | yes | yes | MIGRATED | 1 | 4 | 0 |
 | modelstate | yes | yes | MIGRATED | 1 | 4 | 0 |
 | never type, exhaustion check with discriminated union | yes | yes | MIGRATED | 1 | 4 | 0 |
@@ -212,17 +201,20 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | parse string to int, convert char | yes | yes | MIGRATED | 1 | 4 | 0 |
 | parse string to int,float,double | yes | yes | MIGRATED | 1 | 1 | 0 |
 | partially initialized antipattern and possible partial inits inside repositories | yes | yes | MIGRATED | 1 | 2 | 0 |
+| persistance, zustand,rquery,redux | yes | yes | MIGRATED | 4 | 5 | 0 |
 | pipethrough,transformstream,pipeto,writablestream, readablestream | yes | yes | MIGRATED | 7 | 12 | 0 |
 | pivot unpivot | yes | yes | MIGRATED | 1 | 1 | 0 |
 | pointers | yes | yes | MIGRATED | 1 | 4 | 0 |
 | primary httphandler optoins, socket | yes | yes | MIGRATED | 5 | 17 | 0 |
 | principles,practises,patterns | yes | yes | MIGRATED | 1 | 4 | 0 |
+| problem details | yes | yes | MIGRATED | 6 | 10 | 1 |
 | problem2 | yes | yes | MIGRATED | 2 | 6 | 0 |
 | processing data as stream in dif situations, httpclient,endpoint,browser,websockets | yes | yes | MIGRATED | 4 | 8 | 0 |
 | processing-data-as-stream-in-dif-situations-httpclient-endpoint-browser-websockets | yes | yes | MIGRATED | 5 | 7 | 0 |
 | produces-consumes-input-output-formatters-406-415-vary-accept | yes | yes | MIGRATED | 2 | 6 | 0 |
 | prog inline styles css | yes | yes | MIGRATED | 1 | 1 | 0 |
 | promise.all | yes | yes | MIGRATED | 1 | 1 | 0 |
+| proxy, server, vite dev server proxy | yes | yes | MIGRATED | 8 | 9 | 0 |
 | pseudoel, pseudo with parents stacking context, darp popup on full screen pseudo el | yes | yes | MIGRATED | 2 | 8 | 0 |
 | PUT,PATCH | yes | yes | MIGRATED | 3 | 8 | 0 |
 | qs-preference-with-multiple-accept-header-values-helper | yes | yes | MIGRATED | 1 | 5 | 0 |
@@ -232,8 +224,10 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | rawconnections,dbconnection,sqlconnection,commands | yes | yes | MIGRATED | 3 | 7 | 0 |
 | RAZOR PARTIAL UPDATES FOR VIEWCOMPONENT HTMX,AJAX | yes | yes | MIGRATED | 1 | 4 | 0 |
 | react query rerenders + setting and getting data from cache outside of react | yes | yes | MIGRATED | 1 | 4 | 0 |
+| react query,rquery | yes | yes | MIGRATED | 27 | 28 | 0 |
 | react render + useEffect | yes | yes | MIGRATED | 3 | 5 | 0 |
 | react root error, trigger useeffect on route change | yes | yes | MIGRATED | 1 | 4 | 0 |
+| react router | yes | yes | MIGRATED | 7 | 8 | 0 |
 | react state and rerenders, store subscriptions | yes | yes | MIGRATED | 1 | 4 | 0 |
 | react strict mode | yes | yes | MIGRATED | 1 | 4 | 0 |
 | records | yes | yes | MIGRATED | 1 | 4 | 0 |
@@ -242,6 +236,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | redux basics | yes | yes | MIGRATED | 1 | 12 | 0 |
 | redux rtk | yes | yes | MIGRATED | 4 | 15 | 0 |
 | ref in out | yes | yes | MIGRATED | 1 | 4 | 0 |
+| REFLECTION | yes | yes | MIGRATED | 6 | 7 | 0 |
 | regex, reusing, compiled | yes | yes | MIGRATED | 1 | 1 | 0 |
 | remove from arr, copy | yes | yes | MIGRATED | 1 | 1 | 0 |
 | REPLACE | yes | yes | MIGRATED | 1 | 3 | 0 |
@@ -256,6 +251,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | ROUTE PARAMS,QUERY STRING BASICS | yes | yes | MIGRATED | 1 | 5 | 0 |
 | router and redirect tests | yes | yes | MIGRATED | 1 | 1 | 0 |
 | ROUTING,ROUTE DESIGN, RESOURCES,ROUTING ALL GOOD PRACT IN GENERAL EXPLAINED | yes | yes | MIGRATED | 2 | 10 | 0 |
+| routing-route-params-tech-info-custom-constraints-router-matching | yes | yes | MIGRATED | 4 | 5 | 0 |
 | scopes and idisposable | yes | yes | MIGRATED | 6 | 14 | 0 |
 | scroll block | yes | yes | MIGRATED | 1 | 1 | 0 |
 | scroll block css | yes | yes | MIGRATED | 1 | 1 | 0 |
@@ -265,6 +261,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | server browser threads,memory, webworkers , runtime vs compiler , es | yes | yes | MIGRATED | 4 | 6 | 0 |
 | server resources,multipleinstances,microservices | yes | yes | MIGRATED | 3 | 8 | 0 |
 | set js | yes | yes | MIGRATED | 0 | 0 | 0 |
+| shared-polly-cheat-sheet-production-ready-verions-exceptions-from-pipeline-and-handling | yes | yes | MIGRATED | 5 | 10 | 0 |
 | sharp regex options  + COND REPLACE | yes | yes | MIGRATED | 1 | 4 | 0 |
 | sheet dict | yes | yes | MIGRATED | 3 | 5 | 0 |
 | sheet exec order | yes | yes | MIGRATED | 1 | 4 | 0 |
@@ -276,9 +273,11 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | splice | yes | yes | MIGRATED | 1 | 4 | 0 |
 | sqlserver-efcore-bulk-sqlbulkcopy | yes | yes | MIGRATED | 2 | 5 | 0 |
 | sql-server-mars | yes | yes | MIGRATED | 2 | 7 | 0 |
+| sql-syntax-sql-server | yes | yes | MIGRATED | 12 | 13 | 0 |
 | stacking contexts, zindex | yes | yes | MIGRATED | 1 | 4 | 0 |
 | statuscodepages | yes | yes | MIGRATED | 1 | 5 | 0 |
 | stored procedures | yes | yes | MIGRATED | 3 | 13 | 0 |
+| streaming | yes | yes | MIGRATED | 6 | 9 | 0 |
 | STRING  TRIM | yes | yes | MIGRATED | 1 | 1 | 0 |
 | STRING CASE CONVERSION, TOLOWER,TOUPPER,INVARIANT | yes | yes | MIGRATED | 1 | 4 | 0 |
 | STRING FORMAT,INTERPOLATION | yes | yes | MIGRATED | 1 | 4 | 0 |
@@ -301,6 +300,7 @@ For rows without a registry, Units, Mapping rows, and Unresolved are unknown bec
 | SYSTEM.TEXT.JSON SER SER | yes | yes | MIGRATED | 1 | 5 | 0 |
 | tag helpers razor,partial | yes | yes | MIGRATED | 1 | 5 | 0 |
 | textdecoder, encoder, streaming and processing chunks, textdecoderstream of transformstream | yes | yes | MIGRATED | 1 | 4 | 0 |
+| time | yes | yes | MIGRATED | 9 | 10 | 0 |
 | totp, summary,theory | yes | yes | MIGRATED | 1 | 4 | 0 |
 | transaction, isolation | yes | yes | MIGRATED | 1 | 19 | 0 |
 | transaction-isolation | yes | yes | MIGRATED | 1 | 5 | 0 |

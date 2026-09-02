@@ -168,3 +168,13 @@ Domain-specific mapping, development detail, and extra extensions are applicatio
 - Current source of truth: `CURRENT_SOURCE_OF_TRUTH.md`
 - Closure evidence: `03-closure-audit.md`
 - Provenance caveat: the current SOT says preserved source images remain authoritative, but `_ai-conspects/EXCEPTIONHANDLERS/source/` is not physically resolvable on the current branch
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed source: `regions/R01-main-filters-theory-ordering-exception-di-factories.md`, S-008, S-023, S-032-S-033, S-038, S-052; `regions/R02R03-concrete-examples-lower-addendum-final.md`, S-113
+- Original SVG: `source/filters.svg`
+- Workspace: `_ai-conspects/FULL CONTENT NEG + VALIDATION FLOW/`
+- Authoritative processed source: `13-corrected-study-transcript-v002.md`, section 5, with exact evidence in `11-exact-canvas-text-transcript-v002.md` R03 and `12-screenshot-evidence-cards-v002.md`, S-020-S-027
+- Original SVG: `source/FULL CONTENT NEG + VALIDATION FLOW.svg`
+- Workspace: `_ai-conspects/problem details/`
+- Authoritative conceptual source: `09-stage9-integrated-study-transcript-v003.md`, sections 7, 11, and 15
+- Original source identity: `problem details.svg`; canonical extracted PNG placements are present, but the full SVG is not tracked or resolvable from the current branch tree (`12-export-canonical-source-instructions-v003.md`)
+- Provenance boundary: conceptual coverage is complete; literal certification remains partial per `11-remaining-literal-source-gap-v003.md`

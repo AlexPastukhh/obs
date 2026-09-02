@@ -10,6 +10,8 @@ A `ReadableStream` represents data that becomes available as chunks over time. I
 
 For browser Fetch, `response.body` is commonly a byte-oriented `ReadableStream`; its chunks are typically `Uint8Array` values.
 
+The Fetch promise resolves when response headers are available, not necessarily after the whole body arrives. `response.json()`, `text()`, and `blob()` consume and materialize their complete representations, while reading `response.body` lets application code process progressively. That does not imply zero buffering in the browser, network, or proxy layers.
+
 ## Consume with a reader
 
 `getReader()` locks the stream to one reader until that lock is released. Repeated `read()` calls return objects shaped like `{ value, done }`:
@@ -23,6 +25,8 @@ for (;;) {
   consume(value);
 }
 ```
+
+A download-progress counter can add `value.byteLength` for every received chunk.
 
 A stream can also be consumed sequentially with async iteration:
 
@@ -71,3 +75,6 @@ That makes `tee()` useful for moderate cases such as displaying a response while
 - Workspace: `_ai-conspects/pipethrough,transformstream,pipeto,writablestream, readablestream/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, R01
 - Original SVG: `source/pipethrough,transformstream,pipeto,writablestream, readablestream.svg`
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R01 download progress and R02 Fetch completion/reader model
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

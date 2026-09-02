@@ -49,9 +49,40 @@ Recognize the antiforgery response, refetch once, and retry at most once; never 
 
 Do not expose token endpoints through broad credentialed CORS. SameSite and Origin/Referer are defense in depth. Manual resource-filter validation can return stable Problem Details; result filters can mark built-in failures. Exception filters do not normally catch earlier authorization-filter failures. Use `[IgnoreAntiforgeryToken]` deliberately and avoid duplicate global validation.
 
+## Global validation and always-run result rewriting
+
+`AutoValidateAntiforgeryTokenAttribute` is suitable for global MVC registration and skips safe methods such as GET, HEAD, OPTIONS, and TRACE. A selected action can opt out with `[IgnoreAntiforgeryToken]`.
+
+Built-in validation can short-circuit to `AntiforgeryValidationFailedResult`. An `IAsyncAlwaysRunResultFilter` can replace that result with an SPA-friendly Problem Details response even though an earlier stage produced it:
+
+```csharp
+public async Task OnResultExecutionAsync(
+    ResultExecutingContext context,
+    ResultExecutionDelegate next)
+{
+    if (context.Result is AntiforgeryValidationFailedResult)
+    {
+        context.Result = new ObjectResult(new ProblemDetails
+        {
+            Title = "Antiforgery validation failed",
+            Detail = "The CSRF token is missing, expired, or invalid.",
+            Status = StatusCodes.Status400BadRequest,
+            Type = "https://example.com/problems/antiforgery-failed"
+        }) { StatusCode = StatusCodes.Status400BadRequest };
+    }
+
+    await next();
+}
+```
+
+Always-run variants exist only for result filters (`IAlwaysRunResultFilter` and `IAsyncAlwaysRunResultFilter`), not for arbitrary authorization or action filters.
+
 ## Sources
 - Workspace: `_ai-conspects/antiforgerytoken/`
 - Processed source: `02-corrected-semantic-transcript-v002.md`, complete corrected transcript
 - Workspace: `_ai-conspects/cookie auth, antiforgery/`
 - Authoritative processed source: `regions/R03-spa-antiforgery-and-cookie-policy.md`
 - Original SVG: `source/cookie auth, antiforgery.svg`
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed sources: `regions/R02R03-concrete-examples-lower-addendum-final.md`, S-097, S-099-S-100, S-102, S-105, S-107; `FINAL_TRANSCRIPT.md`, section 11; and matching native text in `NATIVE_CANVAS_TEXT.md`
+- Original SVG: `source/filters.svg`

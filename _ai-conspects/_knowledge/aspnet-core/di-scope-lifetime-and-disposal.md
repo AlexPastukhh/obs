@@ -69,3 +69,6 @@ scope creation
 - Authoritative processed source: `05-stage5-corrected-source-preserving-transcript-v002.md`, R01 S-002 and S-003
 - Closure evidence: `07-stage7-corrected-closure-audit-v002.md`
 - Provenance caveat: `CURRENT_SOURCE_OF_TRUTH.md` records `source/scopes and idisposable.svg` and Git blob SHA `8cd3795aae0bc29337018d6fc42d57281a5c8fa8`, but that path is not physically resolvable on the current branch
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed source: `regions/R02R03-concrete-examples-lower-addendum-final.md`, S-123 and S-125-S-128
+- Original SVG: `source/filters.svg`

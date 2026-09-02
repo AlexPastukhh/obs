@@ -19,3 +19,11 @@
 | `react.zustand-store-creation-and-update-semantics` | Zustand store creation and update semantics | [[zustand-store-creation-and-update-semantics]] |
 | `react.zustand-selectors-async-actions-and-subscriptions` | Zustand selectors, async actions, and subscriptions | [[zustand-selectors-async-actions-and-subscriptions]] |
 | `react.zustand-immer-persist-and-custom-middleware` | Zustand Immer, persistence, and custom middleware boundaries | [[zustand-immer-persist-and-custom-middleware]] |
+| `react.recaptcha-v2-v3-widget-and-token-lifecycle` | React reCAPTCHA v2/v3 widget and token lifecycle | [[recaptcha-v2-v3-widget-and-token-lifecycle]] |
+| `react.react-router-route-tree-and-navigation` | React Router route trees and navigation | [[react-router-route-tree-and-navigation]] |
+| `react.react-router-loaders-actions-and-testing` | React Router loaders, actions, and router-aware testing | [[react-router-loaders-actions-and-testing]] |
+| `react.react-router-revalidation-navigation-state-and-redirects` | React Router revalidation, navigation state, and redirects | [[react-router-revalidation-navigation-state-and-redirects]] |
+| `react.react-router-route-errors-and-action-data` | React Router route errors and action data | [[react-router-route-errors-and-action-data]] |
+| `react.react-router-fetchers-and-local-mutations` | React Router fetchers and local mutations | [[react-router-fetchers-and-local-mutations]] |
+| `react.react-router-matches-loader-data-handle-and-breadcrumbs` | React Router matches, shared loader data, handle, and breadcrumbs | [[react-router-matches-loader-data-handle-and-breadcrumbs]] |
+| `react.react-router-forms-react-hook-form-and-history` | React Router forms, React Hook Form, and history | [[react-router-forms-react-hook-form-and-history]] |

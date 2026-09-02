@@ -80,3 +80,6 @@ For browser XSRF integration, `xsrfCookieName` and `xsrfHeaderName` configure th
 - Workspace: `_ai-conspects/axios/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, R01 and the XSRF option notes in R02
 - Original SVG identity recorded by Stage0: `source/axios.svg` (not physically present under the workspace `source/` directory on the current branch)
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R01 Axios/Fetch comparison, base URL, query, headers, timeout, cancellation, and representation claims
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

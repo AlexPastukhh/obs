@@ -31,6 +31,22 @@ JSON can carry binary data only through a text representation such as Base64. Ba
 
 Legacy `ObjectContent` belongs to older ASP.NET Web API formatter stacks; modern `HttpClient` code normally uses the content types above.
 
+## FormUrlEncodedContent request example
+
+### S-016 — HttpClient equivalent for FormUrlEncodedContent.
+
+```text
+HttpClient equivalent for FormUrlEncodedContent.
+
+Visible:
+- Dictionary<string,string> with username/password.
+- `new FormUrlEncodedContent(form)`
+- `PostAsync("/account/login", content)`.
+
+Meaning:
+For application/x-www-form-urlencoded requests from HttpClient, use FormUrlEncodedContent; it sets the correct body format and content type.
+```
+
 ## What should be recallable
 
 - Which header collection owns `Content-Type`?
@@ -53,3 +69,9 @@ Legacy `ObjectContent` belongs to older ASP.NET Web API formatter stacks; modern
 - Closure audit: `15-coverage-audit.md`
 - Exact source: `source/ALL ABOUT REQ RES ,,,,,,,TYPES OF REQUEST CONTENT httpclient part,  server part, pipereader pipewriter stream reader stream writer.svg` (present on the checked branch)
 - Source regions: R01 and R05
+- Workspace: `_ai-conspects/httpclient,summary,theory,base usage,jsonoptions wrapper,handlers/`
+- Authoritative processed source: `regions/R01R02-httpclient-testing-create-jsonpatch-base-usage.md`, request-content and representation material
+- Original source identity: `httpclient,summary,theory,base usage,jsonoptions wrapper,handlers.svg` (named by `00-source-check-and-boundary-review.md`; not tracked or resolvable from the current branch tree)
+- Workspace: `_ai-conspects/MEDIA TYPES OF REQUESTS/`
+- Authoritative processed source: `regions/MEDIA-R02-json-body-frombody-input-formatters.md`, S-016
+- Original source identity: `MEDIA TYPES OF REQUESTS.svg` (named by `01-stage0-boundary-review.md`; not physically resolvable in the current workspace/branch).

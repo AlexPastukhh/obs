@@ -140,3 +140,6 @@ A 16-character direct-selection key is much weaker than a 20-byte (160-bit) byte
 - Authoritative processed source: `regions/full-semantic-transcript-v001.md`, sections 1-6
 - Region files: `regions/B32SEC-R01-random-secret-bytes-base32-encoding.md`, S-001..S-018
 - Original SVG: SHA-256 `00b26f65fd54c455c8d09c1cad61b2023719537afad3c427ab3ddb80179fa2a6`, Git blob `d5aad6ee05f95c43d8650f1506140fa93deb8ab4`
+- Workspace: `_ai-conspects/mfa/`
+- Authoritative processed sources: `regions/MFA-R03-secret-generation-helpers.md`; `regions/MFA-R03-v002-secret-generation-tail.md`; `regions/MFA-R04-otpauth-uri-qr-manual-key.md`, secret-generation continuation
+- Original source identity: `mfa.svg` (named by the workspace boundary review; not physically present in this workspace)

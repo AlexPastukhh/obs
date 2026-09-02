@@ -31,6 +31,8 @@ valid Accept value, but no output formatter can produce it
 
 `Accept` normally does not select the controller action. Routing selects the action, the action can execute and return an object, and result execution then negotiates and selects the output formatter. An unsupported response representation may therefore be discovered only after the action has run.
 
+An MVC exception or result filter that supplies an `ObjectResult` remains inside this formatter pipeline. The same error object can become JSON or XML according to `Accept`, registered formatters, and `[Produces]`/`ObjectResult.ContentTypes`. By contrast, middleware that writes JSON directly must own its output policy instead of assuming MVC will negotiate it. A result filter must replace/wrap the object before result execution; after `next()`, negotiation and serialization may already be complete.
+
 ## Request direction: `Content-Type`, `[Consumes]`, and 415
 
 `[Consumes]` constrains accepted request media types and participates in action selection; an input formatter deserializes the body.
@@ -66,6 +68,187 @@ Browsers often send broad `Accept` lists (`text/html`, XML, images, `*/*`). Fram
 
 When one URL returns different bodies based on `Accept`, include `Vary: Accept`. Negotiation chooses a representation; `Vary` tells caches that the choice is part of identity.
 
+## Media-type endpoint diagnostics and examples
+
+### S-037 — [Consumes] attribute.
+
+```text
+[Consumes] attribute.
+
+Visible:
+- `[Consumes("application/json")]`
+- `[Consumes("multipart/form-data")]`
+- controls/declares what request content types the action accepts.
+
+Meaning:
+Use [Consumes] to restrict and document expected request Content-Type, especially when overloads/actions could otherwise be ambiguous.
+```
+
+### S-038 — [Produces] attribute.
+
+```text
+[Produces] attribute.
+
+Visible:
+- `[Produces("application/json")]`
+- maybe response media type.
+
+Meaning:
+[Produces] is about response content type/documentation, not request body parsing. It belongs to output formatting/metadata.
+```
+
+### S-039 — Consumes vs Produces.
+
+```text
+Consumes vs Produces.
+
+Visible contrast:
+- Consumes = request Content-Type.
+- Produces = response Content-Type / Accept negotiation/documentation.
+
+Meaning:
+Do not confuse inbound and outbound media type metadata. Content-Type describes what is sent; Accept describes what response client wants.
+```
+
+### S-040 — 415 Unsupported Media Type.
+
+```text
+415 Unsupported Media Type.
+
+Visible:
+- Happens when request Content-Type is not supported by endpoint/input formatter.
+- Example: sending text/plain or form data to an action expecting JSON.
+
+Meaning:
+415 is usually a media-type/binder/formatter mismatch before your action logic runs.
+```
+
+### S-041 — 406 Not Acceptable.
+
+```text
+406 Not Acceptable.
+
+Visible:
+- Related to Accept header and response format negotiation.
+- Server cannot produce requested media type.
+
+Meaning:
+406 is about response negotiation, not request body parsing. It can be enabled by returning 406 when Accept cannot be satisfied.
+```
+
+### S-042 — 400 Bad Request.
+
+```text
+400 Bad Request.
+
+Visible:
+- Bad JSON / validation / model state errors.
+- Body parses to wrong shape or fails validation.
+
+Meaning:
+400 is after the server accepted the media type but could not bind/validate the request successfully.
+```
+
+### S-043 — Swagger/OpenAPI requestBody.
+
+```text
+Swagger/OpenAPI requestBody.
+
+Visible:
+- OpenAPI shows content types under requestBody/content.
+- multipart/form-data schema for files.
+- application/json schema for JSON DTOs.
+
+Meaning:
+Swagger metadata should reflect real endpoint behavior. If docs say JSON but endpoint expects form data, client generation/testing will be wrong.
+```
+
+### S-044 — Endpoint examples.
+
+```text
+Endpoint examples.
+
+Visible:
+- Controller/minimal API examples with attributes.
+- Different endpoints for JSON vs multipart/raw.
+
+Meaning:
+Separate endpoints or explicit Consumes metadata can make API contracts clearer than one ambiguous action trying to accept everything.
+```
+
+### S-045 — Debugging checklist.
+
+```text
+Debugging checklist.
+
+Visible list:
+- Check client Content-Type.
+- Check request body shape.
+- Check action attributes: FromBody/FromForm.
+- Check [Consumes].
+- Check formatters/model binding.
+
+Meaning:
+Most media type bugs are mismatches among body format, Content-Type header, and server binding path.
+```
+
+### S-046 — Accept header debugging.
+
+```text
+Accept header debugging.
+
+Visible:
+- Accept: application/json
+- Accept: text/plain
+- response output format.
+
+Meaning:
+If request reaches action but response type is unexpected, inspect Accept and output formatters rather than input formatter logic.
+```
+
+### S-047 — Minimal APIs / endpoint metadata.
+
+```text
+Minimal APIs / endpoint metadata.
+
+Visible:
+- Minimal API can document/consume/produce content types through metadata helpers.
+- Body binding still depends on parameter shape/content type.
+
+Meaning:
+The same media-type concepts apply in minimal APIs: request body binding, metadata, and response negotiation.
+```
+
+### S-048 — Practical mismatch examples.
+
+```text
+Practical mismatch examples.
+
+Visible:
+- Client sends multipart but action expects [FromBody] JSON DTO.
+- Client sends JSON but action expects [FromForm].
+- Client sends octet-stream but action expects byte[] through unsupported formatter.
+
+Meaning:
+When you see 415/400, first compare body media type with action parameter source and registered formatters.
+```
+
+### S-049 — Final rule summary.
+
+```text
+Final rule summary.
+
+Visible summary:
+- Content-Type chooses request parser.
+- Accept chooses desired response.
+- [FromBody] uses input formatters.
+- [FromForm] uses form binding.
+- [Consumes]/[Produces] document/restrict endpoint behavior.
+
+Meaning:
+The central model is: body bytes + Content-Type + action parameter source determine request binding; Accept + output formatters determine response media type.
+```
+
 ## What should be recallable
 
 - Which roles belong to metadata, headers, and input/output formatters in each direction?
@@ -83,3 +266,12 @@ When one URL returns different bodies based on `Accept`, include `Vary: Accept`.
 - Workspace: `_ai-conspects/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON/`
 - Authoritative processed source: `01-final-transcript.md`, R01–R04
 - Original SVG: `source/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON.svg`
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed source: `regions/R01-main-filters-theory-ordering-exception-di-factories.md`, S-003, S-028, S-049, S-072-S-073, S-076, S-079, S-084, S-087, S-089
+- Original SVG: `source/filters.svg`
+- Workspace: `_ai-conspects/FULL CONTENT NEG + VALIDATION FLOW/`
+- Authoritative processed source: `13-corrected-study-transcript-v002.md`, sections 1-3 and 6-8, with exact evidence in `11-exact-canvas-text-transcript-v002.md` and `12-screenshot-evidence-cards-v002.md`
+- Original SVG: `source/FULL CONTENT NEG + VALIDATION FLOW.svg`
+- Workspace: `_ai-conspects/MEDIA TYPES OF REQUESTS/`
+- Authoritative processed source: `regions/MEDIA-R04-endpoints-consumes-produces-errors.md`, S-037–S-049
+- Original source identity: `MEDIA TYPES OF REQUESTS.svg` (named by `01-stage0-boundary-review.md`; not physically resolvable in the current workspace/branch).

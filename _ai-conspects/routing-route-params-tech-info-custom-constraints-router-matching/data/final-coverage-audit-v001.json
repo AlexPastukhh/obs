@@ -1,0 +1,51 @@
+{
+  "generated": "2026-09-02",
+  "source": {
+    "received_name": "routing,route params tech info, custom constraints,router matching.svg",
+    "workspace_file": "assets/raw/full.svg",
+    "sha256": "ff42eda1c222260754fb8b0dceab59f3464458683626d4df14e2239e04ab5b18",
+    "git_blob": "817b5f15682925438fc9078ae4b309b37c07d579"
+  },
+  "summary": {
+    "image_uses": 18,
+    "processed_image_uses": 18,
+    "pending_image_uses": 0,
+    "text_labels": 23,
+    "processed_text_labels": 23,
+    "pending_text_labels": 0,
+    "duplicate_image_uses": 0,
+    "unresolved_visual_readings": 0,
+    "region_files": 3,
+    "technical_correction_files": 1
+  },
+  "regions": [
+    {
+      "id": "RTR01",
+      "file": "regions/RTR01-route-parameters-and-built-in-constraints-v001.md",
+      "source_ids": ["S-001", "S-002", "S-003", "S-004"],
+      "text_ids": []
+    },
+    {
+      "id": "RTR02",
+      "file": "regions/RTR02-custom-irouteconstraint-v001.md",
+      "source_ids": ["S-005"],
+      "text_ids": ["T-002", "T-003", "T-004", "T-005", "T-006", "T-007", "T-008", "T-009", "T-010", "T-011", "T-012", "T-013", "T-014", "T-015", "T-016", "T-017", "T-018"]
+    },
+    {
+      "id": "RTR03",
+      "file": "regions/RTR03-matching-precedence-order-and-overlaps-v001.md",
+      "source_ids": ["S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018"],
+      "text_ids": ["T-001", "T-019", "T-020", "T-021", "T-022", "T-023"]
+    }
+  ],
+  "corrections": {
+    "file": "02-technical-corrections-routing-order-and-fallback-v001.md",
+    "qualified_source_ids": ["S-007", "S-009"],
+    "corrected_source_ids": ["S-016", "S-017"],
+    "retained_with_boundary_source_ids": ["S-015", "S-018"]
+  },
+  "missing_source_ids": [],
+  "duplicate_source_ids": [],
+  "missing_text_ids": [],
+  "duplicate_text_ids": []
+}

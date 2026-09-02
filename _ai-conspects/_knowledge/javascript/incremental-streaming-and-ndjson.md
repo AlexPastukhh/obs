@@ -69,3 +69,6 @@ The useful claim is bounded incremental processing at the application level, not
 - Workspace: `_ai-conspects/pipethrough,transformstream,pipeto,writablestream, readablestream/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, R02 and the demand-driven comparison in R03
 - Original SVG: `source/pipethrough,transformstream,pipeto,writablestream, readablestream.svg`
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R02 NDJSON versus whole-document JSON boundary
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

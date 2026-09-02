@@ -21,6 +21,8 @@ Problem Details is especially useful for validation/client mistakes, unexpected 
 
 Never expose production stack traces, connection strings, secrets, raw SQL, internal paths, or unsafe raw exception messages. Prefer a generic public title/detail, stable error code, `traceId`, and documentation URI; retain implementation diagnostics only in correlated logs.
 
+The status still carries HTTP semantics and related headers remain part of the contract: `401` means no acceptable authenticated principal, `403` means authenticated but forbidden, `405` should preserve `Allow`, `406` concerns `Accept`, and `415` concerns request `Content-Type`. `409` fits a current-state conflict; an API may use `400` or a documented `422` policy for validation after parsing. Problem Details does not choose these meanings automatically.
+
 ## What should be recallable
 
 - What does each standard Problem Details field communicate?
@@ -33,3 +35,7 @@ Never expose production stack traces, connection strings, secrets, raw SQL, inte
 - Workspace: `_ai-conspects/REST API BASICS/`
 - Authoritative processed source: `regions/R02-problem-details-error-contracts.md`
 - Original SVG: `source/REST API BASICS.svg`
+- Workspace: `_ai-conspects/problem details/`
+- Authoritative conceptual source: `09-stage9-integrated-study-transcript-v003.md`, sections 1-2, 11-17
+- Original source identity: `problem details.svg`; canonical extracted PNG placements are present, but the full SVG is not tracked or resolvable from the current branch tree (`12-export-canonical-source-instructions-v003.md`)
+- Provenance boundary: conceptual study coverage is complete, while exact literal certification remains pending for 50 unique screenshot contents as recorded in `11-remaining-literal-source-gap-v003.md`

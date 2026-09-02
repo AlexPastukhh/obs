@@ -88,3 +88,6 @@ Use a regular union when alternatives do not share a reliable literal key. Use a
 - Authoritative processed source: `01-final-transcript.md`, R04
 - Identical regional transcript: `regions/R01R02R03R04R05-semantic-transcript-final-v001.md`, R04
 - Original SVG: `source/zod.svg`
+- Workspace: `_ai-conspects/mfa/`
+- Authoritative processed source: `regions/MFA-R00-foreign-zod-stray-cards.md`, complete stray-card transcript reassigned by semantic ownership
+- Original source identity: `mfa.svg` (named by the workspace boundary review; not physically present in this workspace)

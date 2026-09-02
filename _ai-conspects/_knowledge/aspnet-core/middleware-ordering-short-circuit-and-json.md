@@ -77,3 +77,6 @@ A branch selects a nested pipeline and may still invoke that branch's next compo
 - Workspace: `_ai-conspects/middleware-writeasjson/`
 - Authoritative processed source: `regions/R01R02R03-middleware-writeasjson-final.md`, R01-R03
 - Original SVG: `source/middleware-writeasjson.svg`
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed source: `regions/R02R03-concrete-examples-lower-addendum-final.md`, S-121-S-126, S-128-S-131
+- Original SVG: `source/filters.svg`

@@ -127,3 +127,6 @@ Refresh retry logic must not blindly replay non-idempotent operations when serve
 - Workspace: `_ai-conspects/axios/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, `validateStatus`/interceptor-routing material in R02 and R03 plus R05-R06
 - Original SVG identity recorded by Stage0: `source/axios.svg` (not physically present under the workspace `source/` directory on the current branch)
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R01 request/response interceptors and single-flight 401 refresh/retry boundaries
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

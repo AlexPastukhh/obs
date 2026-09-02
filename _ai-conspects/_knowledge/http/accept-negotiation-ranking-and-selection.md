@@ -26,7 +26,7 @@ application/*;q=0.8
 
 ## Parse and build candidates
 
-Keep each parsed range's type, subtype, parameters, quality, and original header index. Invalid syntax is a policy choice: a helper may skip invalid fragments or return a structured invalid result, but parser failures must not escape into controller code. Under the common skip-invalid policy, fail only when no valid acceptable supported match remains.
+Keep each parsed range's type, subtype, parameters, quality, and original header index. Invalid syntax is a policy choice: a helper may skip invalid fragments or return a structured invalid result, but parser failures must not escape into controller code. When the API contract distinguishes malformed syntax from a valid no-match, return a structured outcome such as `Selected`, `InvalidSyntax`, or `NotAcceptable`; a boolean `TrySelect` result cannot preserve the `400` versus `406` boundary. Under a documented skip-invalid policy, fail only when no valid acceptable supported match remains.
 
 In .NET, `MediaTypeHeaderValue.TryParse` is for one media-type value, while `TryParseList` handles the complete comma-separated `Accept` list. A custom negotiator must parse the list as a list rather than passing it to the single-value API.
 
@@ -40,6 +40,8 @@ specificity
 server preference index
 header index
 ```
+
+The supported-output list must contain only concrete representations the server can emit. `application/*` and `*/*` are client matching ranges, not valid selected response `Content-Type` values. Let those ranges match concrete server entries instead of inserting wildcards into the server preference list.
 
 Possible match classes include:
 
@@ -99,6 +101,7 @@ Test multiple values, equal-q specificity, wildcard plus exact `q=0`, unsupporte
 
 - What do missing `q`, `q=0`, and higher q values mean?
 - Why may the server choose only from its supported representations?
+- Why must the server preference list contain concrete media types rather than wildcards?
 - Which fields must survive parsing for deterministic ranking?
 - How do exact, type-wildcard, global-wildcard, and `+json` matches differ?
 - Why must a specific `q=0` exclusion constrain a broader wildcard?
@@ -113,3 +116,6 @@ Test multiple values, equal-q specificity, wildcard plus exact `q=0`, unsupporte
 - Workspace: `_ai-conspects/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON/`
 - Authoritative processed source: `01-final-transcript.md`, R02
 - Original SVG: `source/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON.svg`
+- Workspace: `_ai-conspects/FULL CONTENT NEG + VALIDATION FLOW/`
+- Authoritative processed source: `13-corrected-study-transcript-v002.md`, sections 6-7, with exact native text and screenshot evidence in `11-exact-canvas-text-transcript-v002.md` and `12-screenshot-evidence-cards-v002.md`
+- Original SVG: `source/FULL CONTENT NEG + VALIDATION FLOW.svg`

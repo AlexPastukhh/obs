@@ -69,3 +69,6 @@ awaitable hook -> Func<..., Task> callback controlled and awaited by the caller
 - Workspace: `_ai-conspects/events,delegaates,action/`
 - Processed source: `01-final-transcript.md`, R04
 - Original SVG: `source/events,delegaates,action.svg`
+- Workspace: `_ai-conspects/events-delegaates-action/`
+- Authoritative processed sources: `10-full-source-preserving-transcript-v003.md`, S-015, S-017–S-018, S-020, S-023, S-027–S-029, S-034, S-036–S-038, S-041–S-043; `11-technical-corrections-v002.md`, correction 6
+- Original SVG: `source/events,delegaates,action.svg`, SHA-256 `58fe05fdd4d608c36102140c4a25a6f8975bc5d914825d20ebc1aea90364778e`

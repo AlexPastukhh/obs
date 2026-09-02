@@ -214,3 +214,7 @@ That boundary is important: registering a customization does not automatically m
 - Current source of truth: `CURRENT_SOURCE_OF_TRUTH.md`
 - Closure evidence: `03-closure-audit.md`
 - Provenance caveat: the current SOT says preserved source images remain authoritative, but `_ai-conspects/EXCEPTIONHANDLERS/source/` is not physically resolvable on the current branch
+- Workspace: `_ai-conspects/problem details/`
+- Authoritative conceptual source: `09-stage9-integrated-study-transcript-v003.md`, sections 3-10
+- Original source identity: `problem details.svg`; canonical extracted PNG placements are present, but the full SVG is not tracked or resolvable from the current branch tree (`12-export-canonical-source-instructions-v003.md`)
+- Provenance boundary: conceptual coverage is complete; `11-remaining-literal-source-gap-v003.md` records the still-pending literal source certification

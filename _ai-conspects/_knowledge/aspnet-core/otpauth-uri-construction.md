@@ -35,6 +35,8 @@ public static string BuildOtpAuthUri(
 
 `WebUtility.UrlEncode` may represent spaces as `+`. The essential requirement is that label components are escaped as URI data rather than inserted as untrusted raw text.
 
+The QR code and manual setup key represent the same provisioning secret. The URI can also carry `algorithm`, `digits`, and `period`; these values must agree with server verification. The manual key should be shown only during enrollment and treated as secret material.
+
 ## What should be recallable
 
 - What does the `otpauth://totp/` URI path label contain?
@@ -52,3 +54,6 @@ public static string BuildOtpAuthUri(
 - Authoritative processed source: `regions/full-semantic-transcript-v001.md`, section 7
 - Region files: `regions/B32SEC-R02-totp-authenticator-qr-provisioning.md`, S-017..S-027
 - Original SVG: SHA-256 `00b26f65fd54c455c8d09c1cad61b2023719537afad3c427ab3ddb80179fa2a6`, Git blob `d5aad6ee05f95c43d8650f1506140fa93deb8ab4`
+- Workspace: `_ai-conspects/mfa/`
+- Authoritative processed sources: `regions/MFA-R01-totp-mfa-theory.md`, S-014; `regions/MFA-R02-enrollment-authentication-flow.md`, S-011/S-013; `regions/MFA-R04-otpauth-uri-qr-manual-key.md`, complete transcript
+- Original source identity: `mfa.svg` (named by the workspace boundary review; not physically present in this workspace)

@@ -65,6 +65,31 @@ Indexed views can make suitable reads faster, but every dependent write pays mai
 - `sql-server.indexed-view-schemabinding-and-eligibility`
 - `sql-server.views-read-contracts-and-query-abstractions`
 
+## Additional indexed-view transcript
+
+## 14. Indexed views
+
+An indexed view physically materializes the view result through an index.
+
+Basic idea:
+
+```text
+normal view   -> saved query definition
+indexed view  -> saved query + materialized indexed result
+```
+
+Indexed views have restrictions and maintenance costs.
+
+Use only when:
+
+```text
+query benefit is real
+data changes are not too expensive
+requirements/restrictions are understood
+```
+
+The notes position indexed views as a specialized performance tool, not the default view mechanism.
+
 ## What should be recallable
 
 - Which operation turns a normal view into physically stored indexed-view rows?
@@ -75,8 +100,13 @@ Indexed views can make suitable reads faster, but every dependent write pays mai
 - Why can indexed-view maintenance cost more than a direct table index update?
 
 ## Sources
+- Workspace: `_ai-conspects/sql-syntax-sql-server/`
+- Authoritative processed source: `regions/R05-upsert-merge-transactions-indexes-alter-constraints-views.md`, section 14
+- Original SVG: `source/sql-syntax-sql-server.svg`
+
 
 - Workspace: `_ai-conspects/views-idexed-views/`
 - Authoritative processed source: `regions/VIV03-indexed-views-materialization-write-cost.md`, complete region
 - Materialized source: `assets/raw/full.svg`
-
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr05-invariants-constraints-triggers-v002.md`, "Computed uniqueness and indexed views"

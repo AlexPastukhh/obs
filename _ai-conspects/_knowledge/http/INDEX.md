@@ -31,3 +31,4 @@
 | `http.creation-responses-and-operation-resources` | Creation responses and operation resources | [[creation-responses-and-operation-resources]] |
 | `http.canonical-resource-identities-and-lookup-routes` | Canonical resource identities and lookup routes | [[canonical-resource-identities-and-lookup-routes]] |
 | `http.websocket-upgrade-subprotocols-and-application-contracts` | WebSocket upgrade, subprotocols, and application contracts | [[websocket-upgrade-subprotocols-and-application-contracts]] |
+| `http.client-server-roles-listening-and-request-flow` | Client/server roles, listening endpoints, and HTTP flow | [[client-server-roles-listening-and-request-flow]] |

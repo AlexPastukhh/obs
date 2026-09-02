@@ -165,6 +165,14 @@ public override ValueTask<int> SavedChangesAsync(
 }
 ```
 
+## Commit verification caveat
+
+A successful SaveChanges callback does not prove that an outer transaction later committed. Command interceptors prove that a database command executed, but that command may still be rolled back later.
+
+The lifecycle scopes also differ before command execution. A SaveChanges interceptor can enter `SavingChanges`, then EF can fail during change detection or another client/model step before it sends SQL. In that case a database-command interceptor may never run because there was no command to observe; `SaveChangesFailed` can still run for the failed SaveChanges lifecycle.
+
+Conversely, when an INSERT really executes inside an outer transaction, a command interceptor can observe it and `SavedChanges` can report success, yet a later transaction rollback can remove the row. Durable audit or external event publishing at the SaveChanges boundary is therefore dangerous when it treats either callback as proof of final transaction commit.
+
 ## What should be recallable
 
 - What interface and base class does SaveChanges interception use?
@@ -173,6 +181,8 @@ public override ValueTask<int> SavedChangesAsync(
 - Which entity states get `CreatedAt` set, and which get only `UpdatedAt`?
 - What are the two normal async return forms from a post-save callback?
 - Can a post-save callback reverse committed database changes?
+- Why might SaveChanges callbacks run while no command interceptor runs?
+- Why can neither command execution nor `SavedChanges` prove that a surrounding transaction ultimately committed?
 
 ## Related knowledge
 
@@ -185,3 +195,5 @@ public override ValueTask<int> SavedChangesAsync(
 - Workspace: `_ai-conspects/dbcontext interseptors savechanges , dbcommand/`
 - Authoritative processed source: `06-stage6-corrected-source-preserving-transcript-v003.md`, R01 (S-003, S-004, S-008, S-009, S-013, S-015, S-018, S-019, S-021) and R03 (S-034, S-052 — cancellation callbacks)
 - Original SVG: `source/source-complete-v002.svg`
+- Workspace: `_ai-conspects/ef-core-context-database-transaction-object-savechanges-dbconnection-dbtransaction/`
+- Authoritative processed source: `regions/CTXDB03-savechanges-generated-values-batching-clear.md`, interceptor lifecycle/audit portion

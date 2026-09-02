@@ -64,3 +64,6 @@ C# events suit simple same-process object notifications. They do not automatical
 - Workspace: `_ai-conspects/events,delegaates,action/`
 - Processed source: `01-final-transcript.md`, R02
 - Original SVG: `source/events,delegaates,action.svg`
+- Workspace: `_ai-conspects/events-delegaates-action/`
+- Authoritative processed sources: `10-full-source-preserving-transcript-v003.md`, S-016, S-019, S-021–S-022, S-024–S-026, S-030–S-033, S-035, S-039–S-040; `11-technical-corrections-v002.md`, correction 4
+- Original SVG: `source/events,delegaates,action.svg`, SHA-256 `58fe05fdd4d608c36102140c4a25a6f8975bc5d914825d20ebc1aea90364778e`

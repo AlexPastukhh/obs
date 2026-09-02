@@ -116,6 +116,18 @@ Filtering only inside the error endpoint still pays for another pipeline executi
 
 Place Status Code Pages where it can see the statuses produced by the intended downstream pipeline. Keep exception handling separate, and make API/page branching explicit when their error representations differ.
 
+## Why an MVC filter cannot replace generic status pages
+
+Many bodyless failures occur without a controller/action filter pipeline:
+
+- 404 can mean no endpoint matched;
+- 405 can be a routing/method mismatch;
+- 401/403 can come from authentication/authorization middleware;
+- 415 can arise during input formatting/model binding;
+- 406 can arise during output formatting/negotiation.
+
+A filter can customize selected MVC cases, but it cannot guarantee a body when no MVC action runs. Status Code Pages is the broader mechanism for these otherwise bodyless statuses; exception middleware remains a separate mechanism for thrown failures.
+
 ## What should be recallable
 
 - Which status/body conditions trigger Status Code Pages?
@@ -132,3 +144,13 @@ Place Status Code Pages where it can see the statuses produced by the intended d
 - Workspace: `_ai-conspects/statuscodepages/`
 - Authoritative processed sources: `10-full-source-preserving-transcript-v002.md`, S-001 through S-012 and native canvas code, plus `11-technical-corrections-v002.md`
 - Original SVG: `source/statuscodepages.svg`
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed source: `regions/R01-main-filters-theory-ordering-exception-di-factories.md`, S-090-S-092; `FINAL_TRANSCRIPT.md`, section 10
+- Original SVG: `source/filters.svg`
+- Workspace: `_ai-conspects/FULL CONTENT NEG + VALIDATION FLOW/`
+- Authoritative processed source: `13-corrected-study-transcript-v002.md`, section 4, with exact evidence in `11-exact-canvas-text-transcript-v002.md` R02 and `12-screenshot-evidence-cards-v002.md`, S-003-S-004 and S-128-S-134
+- Original SVG: `source/FULL CONTENT NEG + VALIDATION FLOW.svg`
+- Workspace: `_ai-conspects/problem details/`
+- Authoritative conceptual source: `09-stage9-integrated-study-transcript-v003.md`, sections 7-9 and 13
+- Original source identity: `problem details.svg`; canonical extracted PNG placements are present, but the full SVG is not tracked or resolvable from the current branch tree (`12-export-canonical-source-instructions-v003.md`)
+- Provenance boundary: conceptual coverage is complete; literal certification remains partial per `11-remaining-literal-source-gap-v003.md`

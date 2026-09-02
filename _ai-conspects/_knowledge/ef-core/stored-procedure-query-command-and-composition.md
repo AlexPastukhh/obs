@@ -56,6 +56,12 @@ If filtering must stay on the server, put it inside the procedure or use a table
 
 Raw-SQL and stored-procedure API details vary across EF Core versions and providers. Verify the API/version used by the application and keep result shape, parameters, and materialization expectations synchronized with the SQL contract.
 
+## Immediate commands and transactions
+
+`ExecuteSql...` runs immediately and returns an affected-row count. It is not part of the change tracker and does not automatically wait for `SaveChanges`.
+
+Several immediate commands are not automatically one atomic unit. If multiple immediate operations and tracked changes must succeed or fail together, create an explicit transaction.
+
 ## What should be recallable
 
 - Which result shapes call for `FromSql`, `Database.SqlQuery<T>`, or `ExecuteSql`?
@@ -69,4 +75,5 @@ Raw-SQL and stored-procedure API details vary across EF Core versions and provid
 - Authoritative processed source: `01-final-transcript.md`, sections 6-7
 - Identical regional copy: `regions/R01R02R03R04R05-stored-procedures-corrected-final-v002.md`
 - Original SVG: `source/stored procedures.svg`
+- Additional provenance: `_ai-conspects/dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery/`, `regions/full-semantic-transcript-v001.md`, section 10 (immediate command APIs and transactions)
 

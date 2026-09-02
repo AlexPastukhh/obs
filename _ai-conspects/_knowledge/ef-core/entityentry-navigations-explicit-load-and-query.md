@@ -85,6 +85,8 @@ var exists = await context.Entry(post)
 
 That produces a query for the related single entity, effectively an `IQueryable<Blog>`.
 
+`Find(key)` first checks the context's identity map. If the root is already tracked, it returns that instance without a database query; calling `Find` again when the root is already in hand is redundant. Explicit `Load` can fetch only the missing navigation. Several explicitly loaded collections normally mean several queries, which can be useful in a warm unit-of-work but should be compared with eager loading or projection for a fresh read path.
+
 ## What should be recallable
 
 - The difference between `References`, `Collections`, and `Navigations`.
@@ -104,3 +106,5 @@ That produces a query for the related single entity, effectively an `IQueryable<
 - Authoritative processed source: `regions/R02-entityentry-properties-methods-query-and-values.md` sections 5-7; `regions/R03-trackgraph-nodestate-and-member-api.md` navigation inspection
 - Quality / coverage: `04-stage4-final-coverage-audit.md`
 - Original SVG: `source/changetracker.svg` (Git blob SHA: `50d75c751eb9f20252807b6433d90f496b91f960`)
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr01-tracking-query-materialization-v002.md`, "Find, tracked roots, and explicit loading"; `transcripts/fr07-query-shape-row-count-v002.md`, "Loading choices"

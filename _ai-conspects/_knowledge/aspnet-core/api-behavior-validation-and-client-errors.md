@@ -40,6 +40,10 @@ builder.Services
 
 With `[ApiController]`, invalid binding or validation state invokes this delegate before the action body. Common cases include an empty/missing JSON body for a complex body parameter, formatter errors, missing required fields, and DataAnnotations failures. Plain MVC without `[ApiController]` normally still enters the action with invalid `ModelState` and possibly a null parameter; application code owns the response.
 
+Invalid `ModelState` is normally a validation outcome, not an exception for an exception filter or middleware to catch. `InvalidModelStateResponseFactory` expects the real MVC `ActionContext` after binding/validation. Middleware can fabricate an `ActionContext` and `ModelStateDictionary`, but it does not naturally possess the selected action's true metadata or populated validation state. When only a consistent Problem Details shape is needed outside MVC, use `ProblemDetailsFactory` or `IProblemDetailsService` rather than pretending middleware is inside MVC validation.
+
+When a controller/action or MVC filter already owns a domain-validation failure, it can add the domain errors to the real `context.ModelState`, obtain `ApiBehaviorOptions.InvalidModelStateResponseFactory`, and invoke that delegate with the real action context. MVC services and formatters can then execute the returned `IActionResult`. Reconstructing those objects and services in generic middleware is possible but crosses the natural abstraction boundary.
+
 `ApiBehaviorOptions` also controls inference conventions. `SuppressInferBindingSourcesForParameters` disables implicit body/route/query/service source inference. `DisableImplicitFromServicesParameters` specifically prevents registered service types from silently becoming service-bound parameters and is meaningful while binding-source inference is enabled. `SuppressConsumesConstraintForFormFileParameters` changes the automatic consumes constraint for form-file parameters.
 
 Client-error mapping is separate from validation response creation. `SuppressMapClientErrors` disables automatic conversion of client-error results to Problem Details-style payloads; use it when middleware/custom envelopes or intentionally empty bodies own the contract. `ClientErrorMapping[statusCode]` customizes only default metadata: `Title` maps to the Problem Details title and `Link` normally maps to its type URI. It does not directly set `Detail`, `Instance`, or `Extensions`; use a factory, `IProblemDetailsService`, validation factory, or middleware for richer output.
@@ -55,3 +59,10 @@ Mapping targets MVC client-error results such as parameterless `NotFound()`/`Bad
 - Workspace: `_ai-conspects/automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory/`
 - Authoritative processed source: `regions/full-source-near-literal-v002.md`, S-002–S-005 and S-020–S-023
 - Original SVG: `source/automatic-problem-details-from-modelstate-apicontroller-filter-invalidmodelstateresponsefactory.svg`
+- Workspace: `_ai-conspects/filters/`
+- Authoritative processed source: `regions/R01-main-filters-theory-ordering-exception-di-factories.md`, S-045, S-053, S-059, S-062, S-064, S-069-S-070
+- Original SVG: `source/filters.svg`
+- Workspace: `_ai-conspects/problem details/`
+- Authoritative conceptual source: `09-stage9-integrated-study-transcript-v003.md`, sections 6 and 13-14
+- Original source identity: `problem details.svg`; canonical extracted PNG placements are present, but the full SVG is not tracked or resolvable from the current branch tree (`12-export-canonical-source-instructions-v003.md`)
+- Provenance boundary: conceptual coverage is complete; literal certification remains partial per `11-remaining-literal-source-gap-v003.md`

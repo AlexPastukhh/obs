@@ -66,3 +66,6 @@ Binary protocols can process each `Uint8Array` as bytes, but must still apply th
 - Workspace: `_ai-conspects/pipethrough,transformstream,pipeto,writablestream, readablestream/`
 - Authoritative processed source: `07-full-combined-final-transcript.md`, R04 plus decoder/framing mechanics used by the R05 line-splitting example
 - Original SVG: `source/pipethrough,transformstream,pipeto,writablestream, readablestream.svg`
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R02 TextDecoder and line-framing loop
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

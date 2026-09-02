@@ -12,3 +12,7 @@
 | `architecture.abstraction-hierarchy-and-intent` | Abstraction hierarchy and intention-revealing code | [[abstraction-hierarchy-and-intent]] |
 | `architecture.encapsulation-invariants-and-legal-transitions` | Encapsulation, invariants, and legal state transitions | [[encapsulation-invariants-and-legal-transitions]] |
 | `architecture.bff-token-storage-and-refresh-lifecycle` | BFF token storage and refresh lifecycle | [[bff-token-storage-and-refresh-lifecycle]] |
+| `architecture.client-state-persistence-snapshot-lifecycle` | Client-state persistence snapshots, hydration, and write policy | [[client-state-persistence-snapshot-lifecycle]] |
+| `architecture.forward-and-reverse-proxy-roles` | Forward and reverse proxy roles | [[forward-and-reverse-proxy-roles]] |
+| `architecture.reverse-proxy-central-routing-and-policy` | Reverse-proxy central routing and policy | [[reverse-proxy-central-routing-and-policy]] |
+| `architecture.reverse-proxy-edge-tls-isolation-and-offload` | Reverse-proxy edge TLS, isolation, and offload | [[reverse-proxy-edge-tls-isolation-and-offload]] |

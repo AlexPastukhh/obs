@@ -8,6 +8,8 @@ The primary key is an entity's default identity and the default target of relati
 
 A unique index enforces uniqueness but is not automatically a principal-key target. Use a unique index when no relationship needs to reference the value; use an alternate key when the value participates in identity/relationship semantics.
 
+Before choosing a relationship shape, decide whether the referenced identity is meaningful only inside an aggregate or globally. Aggregate-local children normally belong to the root's ownership relationship. A reference to another aggregate normally stores that aggregate's identifier and uses an ordinary relationship. Optional child entities, optional owned values, and external aggregate references are separate modeling choices even when nullable columns appear in each design.
+
 ## Relationship configuration
 
 ```csharp
@@ -59,3 +61,5 @@ Natural/business keys also require an explicit policy for normalization, case se
 - Workspace: `_ai-conspects/alternate-key/`
 - Authoritative processed source: `regions/R01R02R03-efcore-alternate-key-final.md`, R01-R03
 - Original SVG: `source/alternate-key.svg`
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr03-model-owned-complex-relationships-v002.md`, "Keys and relationships"

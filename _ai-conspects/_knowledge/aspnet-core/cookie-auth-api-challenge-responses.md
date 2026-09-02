@@ -31,3 +31,7 @@ Only one component should own the response body. An authentication event can tra
 - Workspace: `_ai-conspects/AUTH EVENTS/`
 - Authoritative processed source: `02-corrected-semantic-transcript-v002.md`, R01 and R03
 - Original SVG: `source/AUTH EVENTS.svg`
+- Workspace: `_ai-conspects/problem details/`
+- Authoritative conceptual source: `09-stage9-integrated-study-transcript-v003.md`, section 12
+- Original source identity: `problem details.svg`; canonical extracted PNG placements are present, but the full SVG is not tracked or resolvable from the current branch tree (`12-export-canonical-source-instructions-v003.md`)
+- Provenance boundary: conceptual coverage is complete; literal certification remains partial per `11-remaining-literal-source-gap-v003.md`

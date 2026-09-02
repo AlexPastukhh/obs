@@ -130,3 +130,6 @@ For a bearer-protected very large file, a protected prepare call can return a sh
 - Workspace: `_ai-conspects/donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable/`
 - Authoritative processed source: `regions/R01R02R03R04R05-semantic-transcript-final-v001.md`, R01-R03 excluding the focused signed-URL security details
 - Original SVG: `source/donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable.svg`
+- Workspace: `_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison/`
+- Authoritative processed source: `01-final-transcript.md`, R01 Blob download boundary
+- Original SVG: `source/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg`

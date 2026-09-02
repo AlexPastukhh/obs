@@ -130,4 +130,6 @@ A single action parameter has one compile-time type. If content type genuinely c
 - Workspace: `_ai-conspects/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON/`
 - Authoritative processed source: `regions/R01R02R03R04-content-negotiation-formatters-final-v001.md`, R03-R04
 - Original SVG: `source/CONTENT NEGOTIATION RES API,FORMATTERS, XML,JSON.svg`
-
+- Workspace: `_ai-conspects/FULL CONTENT NEG + VALIDATION FLOW/`
+- Authoritative processed source: `13-corrected-study-transcript-v002.md`, sections 2-3 and 7, with matching exact native text and screenshot evidence
+- Original SVG: `source/FULL CONTENT NEG + VALIDATION FLOW.svg`

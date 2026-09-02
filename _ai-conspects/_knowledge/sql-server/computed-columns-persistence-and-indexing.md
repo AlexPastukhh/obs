@@ -20,6 +20,10 @@ no row change → computed value changes → index would become stale
 
 Use non-persisted computation when read-time evaluation is acceptable, `PERSISTED` when the row should store the value, and deterministic precise expressions for indexes.
 
+For normalized-value uniqueness, first check whether the column collation already implements the required comparison semantics. A deterministic, indexable computed value is useful when an actual transformation beyond collation is required; a unique index on it can then enforce that normalized key.
+
 ## Sources
 - Workspace: `_ai-conspects/computed columns/`
 - Processed source: `02-source-preserving-transcript-v002.md`, complete transcript
+- Workspace: `_ai-conspects/ef-core-general-repo-shit-entity-shit-onmodelcreat-shit-transactions-shit-dbexceptions-db-level-invariants-protection-trigger/`
+- Authoritative processed source: `transcripts/fr05-invariants-constraints-triggers-v002.md`, "Computed uniqueness and indexed views"

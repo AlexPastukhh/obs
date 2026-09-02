@@ -71,6 +71,7 @@
 | `dotnet.system-text-json-optional-converter-factory` | System.Text.Json Optional converter factory | [[system-text-json-optional-converter-factory]] |
 | `dotnet.linq-query-syntax-joins-and-continuations` | LINQ query syntax, joins, and continuations | [[linq-query-syntax-joins-and-continuations]] |
 | `dotnet.allocations-gc-pressure-and-hot-paths` | Allocations, GC pressure, and hot-path decisions | [[allocations-gc-pressure-and-hot-paths]] |
+| `dotnet.encoding-conversion-overloads-and-buffer-sizing` | .NET text encoding APIs and destination sizing | [[encoding-conversion-overloads-and-buffer-sizing]] |
 | `dotnet.incremental-text-decoding` | Incremental text decoding across arbitrary byte chunks | [[incremental-text-decoding]] |
 | `dotnet.string-case-conversion-and-comparison` | String case conversion and comparison | [[string-case-conversion-and-comparison]] |
 | `dotnet.stackalloc-lifetime-and-stack-pressure` | stackalloc lifetime, stack pressure, and heap-safe fallback | [[stackalloc-lifetime-and-stack-pressure]] |
@@ -130,3 +131,31 @@
 | `dotnet.lazy-initialization-and-argument-patterns` | Lazy<T> initialization, async tasks, and argument patterns | [[lazy-initialization-and-argument-patterns]] |
 | `dotnet.lazy-thread-safety-modes-and-exception-caching` | LazyThreadSafetyMode semantics and exception caching | [[lazy-thread-safety-modes-and-exception-caching]] |
 | `dotnet.totp-secret-generation-and-base32-encoding` | TOTP secret generation and Base32 encoding | [[totp-secret-generation-and-base32-encoding]] |
+| `dotnet.httpclient-testing-with-message-handlers` | Testing HttpClient code with message handlers | [[httpclient-testing-with-message-handlers]] |
+| `dotnet.httpclient-requests-responses-and-ownership` | HttpClient requests, responses, and ownership | [[httpclient-requests-responses-and-ownership]] |
+| `dotnet.httpclientfactory-client-and-handler-lifetimes` | HttpClientFactory client and handler lifetimes | [[httpclientfactory-client-and-handler-lifetimes]] |
+| `dotnet.named-and-typed-httpclient-configuration` | Named and typed HttpClient configuration | [[named-and-typed-httpclient-configuration]] |
+| `dotnet.httpclient-handler-pipelines-and-transport-configuration` | HttpClient handler pipelines and transport configuration | [[httpclient-handler-pipelines-and-transport-configuration]] |
+| `dotnet.streaming-byte-object-and-memory-models` | Streaming byte, object, and memory models | [[streaming-byte-object-and-memory-models]] |
+| `dotnet.polly-pipeline-execution-and-resilience-context` | Polly pipeline execution and ResilienceContext | [[polly-pipeline-execution-and-resilience-context]] |
+| `dotnet.polly-retry-outcomes-delays-and-request-metadata` | Polly retry outcomes, delays, and request metadata | [[polly-retry-outcomes-delays-and-request-metadata]] |
+| `dotnet.polly-rate-limiter-strategies-and-partitions` | Polly rate limiter strategies and partitions | [[polly-rate-limiter-strategies-and-partitions]] |
+| `dotnet.polly-strategy-ordering-hedging-and-exception-flow` | Polly strategy ordering, hedging, and exception flow | [[polly-strategy-ordering-hedging-and-exception-flow]] |
+| `dotnet.polly-http-policy-helpers-and-httpclient-integration` | Polly HTTP policy helpers and HttpClient integration | [[polly-http-policy-helpers-and-httpclient-integration]] |
+| `dotnet.time-types-and-model-selection` | .NET time types and model selection | [[time-types-and-model-selection]] |
+| `dotnet.datetime-offset-kind-conversion-and-arithmetic` | DateTime offset, Kind, conversion, and arithmetic | [[datetime-offset-kind-conversion-and-arithmetic]] |
+| `dotnet.ticks-unix-time-and-javascript-display` | .NET ticks, Unix time, and JavaScript display | [[ticks-unix-time-and-javascript-display]] |
+| `dotnet.datetime-parsing-exactness-and-standard-formats` | Date/time parsing exactness and standard formats | [[datetime-parsing-exactness-and-standard-formats]] |
+| `dotnet.timezone-conversion-json-and-model-binding` | .NET timezone conversion, JSON, and model binding | [[timezone-conversion-json-and-model-binding]] |
+| `dotnet.timezone-date-math-and-dst` | Timezone-aware date math and DST | [[timezone-date-math-and-dst]] |
+| `dotnet.invalid-local-time-resolution-policies` | Invalid local-time resolution policies | [[invalid-local-time-resolution-policies]] |
+| `dotnet.ambiguous-local-time-scheduling-and-audit` | Ambiguous local-time scheduling and audit | [[ambiguous-local-time-scheduling-and-audit]] |
+| `dotnet.jsondocument-jsonelement-readonly-dom` | JsonDocument and JsonElement read-only DOM | [[jsondocument-jsonelement-readonly-dom]] |
+| `dotnet.jsonnode-mutable-dom` | JsonNode mutable DOM | [[jsonnode-mutable-dom]] |
+| `dotnet.utf8jsonwriter-streaming-and-token-control` | Utf8JsonWriter streaming and token control | [[utf8jsonwriter-streaming-and-token-control]] |
+| `dotnet.reflection-type-members-and-binding-flags` | Reflection Type, members, and BindingFlags | [[reflection-type-members-and-binding-flags]] |
+| `dotnet.reflection-fields-properties-and-attributes` | Reflection fields, properties, and attributes | [[reflection-fields-properties-and-attributes]] |
+| `dotnet.reflection-methods-constructors-and-parameters` | Reflection methods, constructors, and parameters | [[reflection-methods-constructors-and-parameters]] |
+| `dotnet.reflection-events-interfaces-and-member-origin` | Reflection events, interfaces, nested types, and member origin | [[reflection-events-interfaces-and-member-origin]] |
+| `dotnet.reflection-generics-type-checks-and-performance` | Reflection generics, type checks, and performance | [[reflection-generics-type-checks-and-performance]] |
+| `dotnet.reflection-element-types-and-byref-parameters` | Reflection element types and by-ref parameters | [[reflection-element-types-and-byref-parameters]] |
